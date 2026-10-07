@@ -1,0 +1,398 @@
+name = "Conntour"
+description = "Conntour is an Israeli-American AI startup whose on-premises 'video intelligence' platform lets security teams query any network of existing security cameras in plain natural language -- searching live and recorded footage for arbitrary objects, people, and situations without predefined detection rules."
+detailed_description = """
+**Product and problem.** Conntour builds a natural-language search-and-alerting layer that sits on top of an organization's existing camera network and makes it queryable the way a search engine makes documents queryable. Conventional video analytics -- the "video content analysis" (VCA) built into most video-management systems (VMS) -- can only detect a fixed menu of pre-programmed categories (a person, a car, line-crossing, loitering) that an integrator configured in advance. Anything outside that menu is invisible until someone manually scrubs hours of footage. Conntour's stated premise is that this rigidity is the core failure of physical-security surveillance: operators are drowning in cameras they cannot meaningfully watch. The platform lets a user type free-form queries such as "find a man with a tattoo on his left arm," "a van with a print of fruits on it," or "notify me if someone climbs over the wall," and it searches across live feeds and archives without any preset parameters. Public materials describe three modes -- historical search over recorded video, real-time alerting on described scenarios, and structured data extraction (for example, "how many pickup trucks entered yesterday?"). The company claims a single operator can effectively supervise thousands of cameras at once, and that investigators can review days of footage "in minutes rather than days."
+
+**Core technology and how it works.** Conntour applies modern vision-language modeling -- the same class of multimodal AI that connects images and text -- to the physical-security domain, so that an operator's plain-English description is matched against the visual content of frames rather than against a rigid taxonomy of classes. The distinguishing engineering choices, per the company, are that the system understands "complex, context-rich queries within the context of real-world environments," operates in both live-alert and historical-search modes, and is designed to run *fully on-premises* and to be compatible with "any camera at any scale." On-premises deployment is a deliberate design decision for the target buyers: government, border, and critical-infrastructure customers frequently cannot export surveillance video to a third-party cloud for legal, sovereignty, or operational-security reasons, so an air-gappable, camera-agnostic architecture removes a major adoption barrier and differentiates Conntour from cloud-first competitors. The company publishes operational-improvement figures -- up to a 90% reduction in manual review time, up to an 80% reduction in missed security events, and up to a 70% decrease in false-alarm rates -- which are vendor-reported and should be treated as directional marketing claims pending independent validation, but which correctly identify the three metrics (analyst labor, missed events, false alarms) on which physical-security operations are actually judged.
+
+**Market, customers, and go-to-market.** Conntour targets critical-infrastructure protection, border security, large public-venue monitoring, and intelligence/homeland-security operations -- buyers who already own dense camera estates and are constrained by the number of human eyes available to watch them. The go-to-market is enterprise and government direct sales, reinforced by two accelerant channels unusual for a company of its age: selection into the first cohort of Palantir's Startup Fellowship (a distribution and credibility channel into defense and government accounts) and Y Combinator's network. The most important commercial proof point is that Singapore's homeland-security apparatus became a paying customer within months of launch, per the company and reporting by Calcalist/CTech -- a reference in a sophisticated, security-conscious government market that is disproportionately valuable at seed stage. The addressable market is large and established: physical-security video surveillance and video-analytics software is a multi-billion-dollar global category, and the natural-language/"agentic" search wave is currently repricing it, but that also means Conntour is entering a crowded field rather than an empty one.
+
+**Traction, funding, and third-party validation.** Conntour launched publicly out of stealth on 26 March 2026 with a $7 million seed round led by General Catalyst, with participation from Y Combinator, SV Angel, Liquid 2 Ventures, and others. The company went through Y Combinator's Winter 2025 batch and employs roughly 14-15 people across offices in Tel Aviv-Yafo, Israel, and Miami, USA. Beyond capital, the validation stack is notable for the stage: a tier-one generalist VC lead (General Catalyst), the Palantir fellowship, an early paying government customer (Singapore), and an advisory relationship with Bob Flores, former Chief Technology Officer of the CIA, who is quoted endorsing the plain-English querying capability. Each of these is an independent, reputationally-costly signal that partly offsets the thinness of a seed-stage financial and customer record.
+
+**Founders and team.** Conntour was founded in 2024 by Matan Goldner (CEO) and Tomer Kulla (CTO), both computer-vision specialists. The founding insight is unusually well-grounded in the problem: both founders served as IDF field observers in reserve combat units after 7 October 2023, an experience that directly exposed them to the operational failure of watching many camera feeds under pressure. The broader team is reported to include computer-vision engineers from Israel's Unit 8200 signals-intelligence corps and former Israeli intelligence (Mossad) personnel, giving Conntour both the technical depth for multimodal vision AI and the domain fluency for government and defense sales. This founder-market fit -- builders who were themselves the frustrated end-users -- is a recurring pattern in the strongest Israeli dual-use companies.
+
+**Competitive dynamics.** Conntour competes in a dense and fast-moving arena. Incumbent Israeli video-analytics vendors such as BriefCam (now part of Milestone/Canon), Corsight AI, and Oosto (formerly AnyVision) approach the problem through face/attribute recognition and rule-based analytics; a wave of AI-native entrants -- including US players like Ambient.ai, Coram AI, and Verkada, and Israeli-founded Lumana -- are converging on the same "just search your cameras" value proposition. Conntour's differentiation rests on: (1) *fully open-ended natural-language querying* rather than a fixed detection menu; (2) an *on-premises, camera-agnostic* architecture that fits sovereign and classified environments where cloud-first rivals cannot go; (3) a *government-first reference base* (Singapore, Palantir fellowship, ex-CIA advisor) that is hard for consumer/commercial-first competitors to replicate; and (4) elite intelligence-community pedigree in the team. The countervailing reality is that the underlying vision-language capability is advancing industry-wide, several better-capitalized competitors are chasing the identical thesis, and it is not yet demonstrated that Conntour's accuracy, latency, and integration advantages are durable moats rather than a temporary lead.
+
+**Defense, security, and resilience dual-use.** Conntour sits squarely in the dual-use core rather than at its adjacency. The same product that lets a shopping-mall or stadium operator find a lost child or a suspicious package is what lets a homeland-security agency monitor a border, a critical-infrastructure operator watch a substation or port perimeter, or an intelligence unit triage days of surveillance in minutes. The company markets explicitly to border security, critical infrastructure, public safety, and intelligence/homeland-security missions, and its first disclosed paying customer is a national homeland-security organization. The on-premises design is itself a resilience feature: it keeps sensitive surveillance data inside sovereign, potentially air-gapped networks. The principal calibration point is that Conntour is a force-multiplier for *sensing and situational awareness* -- it makes existing camera infrastructure vastly more usable -- rather than a weapons or effects system; its strategic value is in intelligence, surveillance, and reconnaissance (ISR) and physical-security operations.
+
+**Stage, trajectory, and key diligence risks.** Conntour is an early, seed-stage company (founded 2024, out of stealth March 2026, ~15 employees, $7M raised) with an unusually strong signal-to-capital ratio for its age. The plausible trajectory is a Series A within 12-24 months predicated on converting the Singapore reference and Palantir channel into a repeatable pipeline of government and critical-infrastructure accounts, then broadening into commercial enterprise security. The key diligence risks are: (1) **crowded, well-funded competition** converging on the identical natural-language-video thesis, several rivals with more capital; (2) **defensibility** -- whether Conntour's edge is a durable data/accuracy moat or a transient lead over commoditizing vision-language models; (3) **customer concentration and long procurement cycles** -- one flagship government customer today, and government sales are slow and lumpy; (4) **accuracy, bias, and false-positive liability** in high-consequence security settings, where a missed or wrongly-flagged event carries real cost; (5) **privacy, civil-liberties, and regulatory exposure** attaching to any mass-surveillance search tool, which can constrain Western commercial and municipal adoption; and (6) **scaling the elite team** and on-premises deployment/integration engineering across heterogeneous camera estates. None is disqualifying at seed, but each materially shapes the risk-adjusted view.
+"""
+logo = "Unknown"
+website = "https://www.conntour.com"
+sector = "AI Video Intelligence / Physical Security & ISR"
+founded = "2024"
+headquarters = "Tel Aviv-Yafo, Israel (with Miami, USA office)"
+employees = "14 (CTech, March 2026); YC profile lists team size 15"
+funding_stage = "Seed ($7M, announced March 2026)"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Conntour is dual-use at its core, not by adjacency. The identical natural-language video-search-and-alert capability serves both commercial physical security (retail, campuses, stadiums, logistics) and national-security missions (border surveillance, critical-infrastructure protection, homeland-security and intelligence ISR). Its first disclosed paying customer is a national homeland-security organization (Singapore), and it markets explicitly to border, critical-infrastructure, and intelligence buyers. The on-premises, camera-agnostic, air-gappable architecture is a deliberate enabler of sovereign and classified deployment. The calibrated boundary: Conntour is a sensing/situational-awareness force-multiplier -- it makes existing surveillance infrastructure dramatically more usable -- rather than a weapons or effects system, so its dual-use value is concentrated in ISR, physical security, and operational-intelligence workflows."
+key_technologies = ["Vision-language models applied to open-ended natural-language video query", "Parameter-free search over live and recorded camera feeds (no preset detection classes)", "Real-time scenario-based alerting from plain-language descriptions", "Structured data extraction and counting from video (e.g. object tallies)", "Fully on-premises / air-gappable, camera-agnostic deployment architecture", "Scale-out indexing enabling one operator to supervise thousands of cameras"]
+use_cases = ["Homeland-security and intelligence triage of large surveillance archives in minutes", "Border and perimeter monitoring with described-scenario alerts (e.g. wall-climbing)", "Critical-infrastructure protection for ports, substations, and utilities", "Public-venue and event security (stadiums, transit hubs, malls)", "Post-incident forensic search for specific persons, vehicles, or attributes", "Real-time detection of anomalous or prohibited activity across camera estates", "Operational analytics such as vehicle or footfall counting from existing cameras", "Retail and campus loss-prevention and safety monitoring"]
+investible = true
+investment_rationale = "Conntour is a high-signal seed-stage dual-use bet with several concrete diligence positives: (1) **founder-market fit** -- computer-vision founders (Goldner/Kulla) who were themselves frustrated IDF field observers after 7 October 2023, backed by a team drawn from Unit 8200 and former Israeli intelligence; (2) **tier-one validation dense for the stage** -- a $7M seed led by General Catalyst with Y Combinator (W2025), SV Angel and Liquid 2 Ventures, selection into Palantir's first Startup Fellowship cohort, and an ex-CIA CTO (Bob Flores) as advisor; (3) **a real, sophisticated paying customer** -- Singapore's homeland-security operations within months of launch; (4) **a large, actively-repricing market** -- multi-billion-dollar physical-security video analytics being reshaped by natural-language/agentic search; (5) **a genuine architectural wedge** -- on-premises, camera-agnostic deployment that fits sovereign/classified buyers cloud-first rivals cannot serve. The offsetting risks are equally concrete and material: a crowded field of better-capitalized rivals (Ambient.ai, Coram AI, Verkada, Lumana) chasing the same thesis, unproven durability of the technical moat as vision-language models commoditize, heavy dependence on one flagship government reference, long government procurement cycles, and privacy/civil-liberties exposure inherent to mass-surveillance tooling. Net: a credible early dual-use ISR/physical-security play whose thesis rests on converting elite validation into a repeatable government-and-critical-infrastructure pipeline. This is a strategic-signal assessment, not an investment recommendation."
+strategic_value = "Conntour's strategic value is as an intelligence-force-multiplier for allied physical security and ISR. (1) It attacks the binding constraint of modern surveillance -- too many cameras, too few analysts -- by turning passive camera estates into searchable, alertable sensor networks, which directly strengthens border, critical-infrastructure, and homeland-security resilience. (2) Its on-premises, sovereign-deployable design aligns with allied requirements to keep sensitive surveillance data inside national or classified networks, making it usable where cloud-first Western competitors are excluded. (3) Its early anchoring in the US/Israel/Palantir defense-tech orbit (General Catalyst, Palantir Fellowship, ex-CIA advisor, Miami+Tel Aviv footprint) positions it within the allied dual-use ecosystem rather than as a purely commercial vendor. (4) The team's Unit 8200 and intelligence lineage embeds hard-won operational tradecraft into the product. The calibrated caveat: strategic value here is in ISR/situational-awareness enablement, and its durability depends on Conntour sustaining an accuracy/latency edge as the underlying vision-language technology becomes broadly available."
+potential_score = 76.0
+technology_score = 80.0
+market_score = 78.0
+team_score = 83.0
+dual_use_score = 86.0
+strategic_alignment_score = 83.0
+stage = "early"
+stage_rationale = "Conntour is unambiguously early-stage: founded in 2024, out of stealth only in March 2026, roughly 14-15 employees, and a single $7M seed round. It has, however, an unusually strong set of early proof points for the stage -- a Y Combinator W2025 pedigree, a General Catalyst-led seed, selection into Palantir's first Startup Fellowship, an ex-CIA-CTO advisor, and a paying national homeland-security customer (Singapore). These place it at the more validated end of 'early' but well short of 'mid': there is no disclosed Series A, no evidence of a repeatable multi-account pipeline, and the product is still proving durability against fast-moving competition. Progression to mid-stage would require converting the flagship reference and Palantir channel into recurring government and critical-infrastructure revenue and closing a materially larger round."
+competitors = ["BriefCam (Israeli video-analytics pioneer, now Milestone/Canon; rule- and attribute-based VCA)", "Corsight AI (Israeli face/attribute recognition analytics for security)", "Oosto / formerly AnyVision (Israeli watchlist and face-recognition surveillance analytics)", "Ambient.ai (US AI-native computer-vision physical-security platform)", "Coram AI (US natural-language AI camera search and alerting)", "Verkada (US cloud-first enterprise security cameras with AI search)", "Lumana (Israeli-founded AI-native video security and search)"]
+competitive_edge = "Conntour's differentiation is fourfold: (1) **open-ended natural-language querying** -- arbitrary, context-rich descriptions rather than a fixed menu of pre-programmed detection classes, the limitation on which legacy VCA (BriefCam, Corsight, Oosto) is built; (2) **on-premises, camera-agnostic, air-gappable architecture** that fits sovereign, border, and classified environments cloud-first rivals (Verkada, and to a degree Ambient.ai/Coram) cannot easily serve; (3) a **government-first reference and credibility stack** -- a paying national homeland-security customer, Palantir's first fellowship cohort, and an ex-CIA-CTO advisor -- that is hard for commercial-first competitors to assemble; and (4) **intelligence-community team pedigree** (Unit 8200, former Mossad, IDF field-observer founders) giving both technical depth and government-sales fluency. The honest counterpoint: the core vision-language capability is advancing across the whole industry, several rivals are better capitalized, and Conntour has not yet demonstrated that its accuracy, latency, and integration lead is a durable moat rather than a temporary edge."
+risk_factors = ["Crowded, better-capitalized competition (Ambient.ai, Coram AI, Verkada, Lumana) converging on the identical natural-language-video thesis", "Uncertain moat durability as commoditizing vision-language models erode any temporary accuracy/latency lead", "Customer concentration and long, lumpy government procurement cycles around a single flagship reference (Singapore)", "Accuracy, bias, and false-positive/missed-event liability in high-consequence security deployments", "Privacy, civil-liberties, and regulatory exposure inherent to mass-surveillance search tooling, constraining some Western/municipal adoption", "Execution risk in scaling an elite but ~15-person team and in integrating on-premises across heterogeneous camera estates", "Early financial base (seed-only) with no disclosed Series A or proven recurring-revenue pipeline"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Conntour merits active monitoring as a high-signal early dual-use ISR/physical-security company. Positives concentrating attention: elite founder-market fit (IDF field-observer founders, Unit 8200/intelligence team), a validation stack rare at seed (General Catalyst lead, YC W2025, Palantir first fellowship cohort, ex-CIA-CTO advisor), a real paying national homeland-security customer (Singapore), a sovereign-deployable on-premises architecture, and a large market being actively repriced by natural-language video search. Tempering factors keeping it in watch-and-verify rather than top priority: seed-only maturity, single flagship customer, a crowded field of better-funded rivals, unproven moat durability, and privacy/regulatory headwinds. Key milestones to track: a Series A, expansion beyond the first government reference into a repeatable pipeline, independent validation of the claimed accuracy/false-alarm gains, and defense/critical-infrastructure contract wins through the Palantir channel."
+public_sources = [
+  {label="Conntour seed launch release", url="https://www.prnewswire.com/news-releases/conntour-transforms-video-intelligence-with-limitless-ai-search-launches-with-7m-seed-round-302726063.html", description="Company-issued launch and seed announcement, including Singapore deployment."},
+  {label="TechCrunch funding and customer interview", url="https://techcrunch.com/2026/03/26/conntour-raises-7m-from-general-catalyst-yc-to-build-an-ai-search-engine-for-security-video-systems/", description="Independent interview on customer traction, round, product deployment model and technical trade-offs."},
+  {label="CTech company and seed coverage", url="https://www.calcalistech.com/ctechnews/article/rk5onjgjbe", description="Israeli reporting on founding, headquarters, staffing and investors."},
+  {label="Y Combinator company profile", url="https://www.ycombinator.com/companies/conntour", description="Company profile confirms active status, Winter 2025 cohort, founders, product and team size."},
+  {label="Conntour official website", url="https://www.conntour.com/", description="Current product positioning, mission-critical markets, on-premises deployment and customer testimonial."},
+  {label="Conntour Terms of Use", url="https://www.conntour.com/terms-of-use", description="Identifies the website service operator as Conntour Inc."},
+  {label="General Catalyst portfolio", url="https://www.generalcatalyst.com/companies/conntour", description="Investor portfolio listing confirms General Catalyst relationship."},
+  {label="Ambient.ai official site", url="https://www.ambient.ai/", description="Comparable computer-vision security platform."},
+  {label="Coram official site", url="https://www.coram.ai/", description="Comparable unified physical-security and video investigation platform."}
+]
+crawled_at = "2026-07-08T06:39:57Z"
+updated_at = "2026-10-04T20:37:34Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "conntour"
+source_ids = ["company_terms", "yc_profile", "ctech_seed"]
+legal_name = "Conntour Inc."
+aliases = ["Conntour"]
+operating_status = "active"
+business_model = "Enterprise and government software sales for an AI video-intelligence platform, deployable on premises, in cloud, or in hybrid configurations. Pricing and contract terms are not publicly disclosed."
+products = ["Conntour AI video intelligence platform: natural-language video search, real-time monitoring and alerts, video analysis and incident reporting"]
+locations = ["Tel Aviv-Yafo, Israel", "Miami, United States"]
+founded_on = "2024"
+
+[intelligence.funding]
+status = "reported"
+summary = "One publicly announced $7 million seed equity round in March 2026. The company said it launched with this financing; no earlier discrete financing or later round was found. The company has not disclosed a separate lifetime-total figure, so reported_total_raised is omitted rather than inferred."
+history_status = "partial"
+coverage_through = "2026-10-04"
+rounds = [{id="seed-2026", round_type="seed", instrument="equity", status="closed", announced_on="2026-03-26", amount_status="reported", amount=7000000, amount_scope="round", currency="USD", lead_investors=["General Catalyst"], participating_investors=["Y Combinator", "SV Angel", "Liquid 2 Ventures"], source_ids=["pr_seed", "tc_seed", "ctech_seed"], notes="Company press release and independent reports describe the same seed round; merged, not counted multiple times. No valuation disclosed."}]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Conntour Inc. is a private company. Public evidence confirms venture investors but does not disclose founder or investor ownership percentages or a complete cap table. No parent, acquisition, exit, or public listing was found."
+cap_table_status = "undisclosed"
+shareholders = ["Founders and private investors; individual holdings not publicly disclosed"]
+source_ids = ["company_terms", "tc_seed"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Israeli-founded company headquartered in Tel Aviv-Yafo, with an additional Miami location."
+as_of = "2026-10-04"
+source_ids = ["yc_profile", "ctech_seed"]
+
+[[intelligence.people]]
+name = "Matan Goldner"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "YC describes him as the leader of a military video-surveillance unit; TechCrunch interviewed him as CEO."
+source_ids = ["yc_profile", "tc_seed"]
+
+[[intelligence.people]]
+name = "Tomer Kulla"
+role = "Co-founder and CTO"
+is_founder = true
+current = true
+background = "YC describes him as a second-time founder and former director of engineering. CTech spells the surname Kola; the YC company profile uses Kulla."
+source_ids = ["yc_profile", "ctech_seed"]
+
+[[intelligence.investors]]
+name = "General Catalyst"
+investor_type = "vc"
+website = "https://www.generalcatalyst.com/"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["pr_seed", "tc_seed", "gc_portfolio"]
+
+[[intelligence.investors]]
+name = "Y Combinator"
+investor_type = "accelerator"
+website = "https://www.ycombinator.com/"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["pr_seed", "tc_seed", "yc_profile"]
+
+[[intelligence.investors]]
+name = "SV Angel"
+investor_type = "vc"
+website = "https://svangel.com/"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["pr_seed", "tc_seed"]
+
+[[intelligence.investors]]
+name = "Liquid 2 Ventures"
+investor_type = "vc"
+website = "https://liquid2.vc/"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["pr_seed", "tc_seed"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Conntour says its platform is actively deployed in Singapore homeland-security operations. TechCrunch identifies the customer as Singapore's Central Narcotics Bureau and reports CEO Matan Goldner's statement that the company also has several large government and publicly listed customers. Revenue, contract value, deployment scale, and production scope are undisclosed."
+date = "2026-03-26"
+source_ids = ["pr_seed", "tc_seed"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "TechCrunch reports the platform can connect to existing security systems or act as a complete platform, and can be deployed on premises, in cloud, or hybrid. CEO-reported capacity: up to 50 camera feeds on one Nvidia RTX 4090; this is a company claim, not independent benchmark evidence."
+date = "2026-03-26"
+source_ids = ["tc_seed"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Current company site describes natural-language video search, targeted real-time alerts, and analysis of unstructured video; it lists intelligence agencies, homeland security, law enforcement, military and defense, transportation, and enterprise as target industries."
+date = "2026-10-04"
+source_ids = ["company_site"]
+
+[[intelligence.comparables]]
+name = "Ambient.ai"
+website = "https://www.ambient.ai/"
+rationale = "AI computer-vision platform for physical security and incident detection."
+differentiation = "Ambient emphasizes prevention and event detection; Conntour emphasizes open-ended language search and analysis over video, including on-premises operation."
+source_ids = ["ambient_site", "company_site"]
+
+[[intelligence.comparables]]
+name = "Coram"
+website = "https://www.coram.ai/"
+rationale = "Unified physical security platform offering AI video search and investigation as well as security management."
+differentiation = "Coram combines hardware, access control and video-management offerings; Conntour positions itself as an AI intelligence layer for existing cameras and heterogeneous deployments."
+source_ids = ["coram_site", "company_site"]
+
+[intelligence.research]
+researched_at = "2026-10-04T20:37:34Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Conntour official company site product leadership", "Conntour raised funding seed investors General Catalyst 2026", "Conntour Singapore Central Narcotics Bureau customers deployment", "Conntour founders team leadership Matan Goldner Tomer Kulla", "Conntour ownership acquisition valuation revenue contracts", "Conntour patents video intelligence", "Conntour competitors Ambient Coram AI video security", "Conntour defense security military use cases", "Conntour Hebrew funding founders Conntour raises 7 million", "Conntour Series A raised acquisition funding 2026"]
+gaps = ["team: public sources identify two founders, but do not provide a complete current roster, executive biographies, or independently verified headcount.", "investors: seed participants are named, but the complete syndicate and any subsequent investments are not fully disclosed.", "financials: no revenue, ARR, profitability, cash, burn, runway, contract values, or company-reported lifetime funding total were found.", "traction: named Singapore customer and broader customer assertions are public, but customer contracts, revenue contribution, renewal, deployment scale, and other customer identities are undisclosed.", "intellectual_property: no attributable patent portfolio, registrations, or detailed proprietary technical disclosures were located; absence of public evidence does not establish absence of IP.", "competition: peer analysis is based on public product positioning; no independently verified win-loss data, market share, or comparative performance benchmarks were located.", "ownership: private cap table and founder/investor ownership percentages are not public."]
+conflicts = ["CTech spells co-founder Tomer Kulla's surname as Kola; Y Combinator uses Kulla. This dossier uses Kulla while recording the discrepancy.", "YC lists team size 15 while CTech reported 14 employees in March 2026; sources differ in date and possibly whether founders are counted, so no precise current headcount is asserted."]
+diligence_questions = ["What are paid production deployments, contract values, renewal rates, and revenue concentration, including the Central Narcotics Bureau deployment?", "What are measured search precision/recall, alert latency, false-positive rates, and per-camera compute costs across representative low-quality feeds and sites?", "What governance controls, audit logs, retention/deletion rules, customer screening, and human-review safeguards constrain sensitive surveillance use?", "What is the full cap table and remaining runway after the disclosed seed, and are any additional financing instruments outstanding?"]
+
+[[intelligence.research.sources]]
+id = "pr_seed"
+url = "https://www.prnewswire.com/news-releases/conntour-transforms-video-intelligence-with-limitless-ai-search-launches-with-7m-seed-round-302726063.html"
+title = "Conntour Transforms Video Intelligence with Limitless AI Search, Launches with $7M Seed Round"
+publisher = "Conntour via PR Newswire"
+kind = "company"
+published_on = "2026-03-26"
+accessed_at = "2026-10-04T20:37:34Z"
+claims = ["Conntour announced a $7 million seed round and launch on March 26, 2026.", "The announcement names General Catalyst, Y Combinator, SV Angel and Liquid 2 Ventures among investors.", "The company said it was actively deployed in Singapore homeland-security operations.", "The release describes natural-language video search, live monitoring, on-premises operation, and the Palantir Startup Fellowship."]
+
+[[intelligence.research.sources]]
+id = "tc_seed"
+url = "https://techcrunch.com/2026/03/26/conntour-raises-7m-from-general-catalyst-yc-to-build-an-ai-search-engine-for-security-video-systems/"
+title = "Conntour raises $7M from General Catalyst, YC to build an AI search engine for security video systems"
+publisher = "TechCrunch"
+kind = "media"
+published_on = "2026-03-26"
+accessed_at = "2026-10-04T20:37:34Z"
+claims = ["The $7 million seed was backed by General Catalyst, Y Combinator, SV Angel and Liquid 2 Ventures; CEO said it closed in 72 hours.", "CEO said Conntour has several large government and publicly listed customers and identified Singapore Central Narcotics Bureau as one.", "CEO reported capacity of up to 50 camera feeds on one Nvidia RTX 4090; this is a company assertion.", "The product supports existing security systems or full platform operation, and on-premises, cloud or hybrid deployment.", "The CEO identified balancing natural-language flexibility with compute efficiency as a major technical challenge."]
+
+[[intelligence.research.sources]]
+id = "ctech_seed"
+url = "https://www.calcalistech.com/ctechnews/article/rk5onjgjbe"
+title = "Israeli AI startup Conntour raises $7 million Seed round to transform video surveillance"
+publisher = "CTech / Calcalist"
+kind = "media"
+published_on = "2026-03-26"
+accessed_at = "2026-10-04T20:37:34Z"
+claims = ["CTech reports a $7 million seed led by General Catalyst, with Y Combinator, SV Angel, Liquid 2 Ventures and others participating.", "CTech says Conntour was founded in 2024 by Matan Goldner and Tomer Kola and has 14 employees in Tel Aviv.", "The company participated in the first Palantir Startup Fellowship cohort and founders' concept arose from IDF reserve experience after October 7."]
+
+[[intelligence.research.sources]]
+id = "yc_profile"
+url = "https://www.ycombinator.com/companies/conntour"
+title = "Conntour: AI to monitor thousands of security cameras"
+publisher = "Y Combinator"
+kind = "company"
+accessed_at = "2026-10-04T20:37:34Z"
+claims = ["YC profile identifies Conntour as active, founded 2024, Winter 2025 batch, team size 15, located in Tel Aviv-Yafo.", "YC identifies Matan as CEO and Tomer as CTO, says Matan led a military video-surveillance unit and Tomer is a second-time founder and former director of engineering.", "YC describes natural-language camera queries and customer targets including government, military, police, intelligence and businesses."]
+
+[[intelligence.research.sources]]
+id = "company_site"
+url = "https://www.conntour.com/"
+title = "Conntour | A New Era of Video Intelligence"
+publisher = "Conntour"
+kind = "company"
+accessed_at = "2026-10-04T20:37:34Z"
+claims = ["The current company site describes search, real-time monitoring and video analysis, on-premises deployment, existing-system integration and mission-critical markets.", "The company site presents a testimonial attributed to Nathaniel Sim of Singapore's Central Narcotics Bureau."]
+
+[[intelligence.research.sources]]
+id = "company_terms"
+url = "https://www.conntour.com/terms-of-use"
+title = "Terms of Use"
+publisher = "Conntour"
+kind = "company"
+accessed_at = "2026-10-04T20:37:34Z"
+claims = ["Conntour's website terms identify the service operator as Conntour Inc."]
+
+[[intelligence.research.sources]]
+id = "gc_portfolio"
+url = "https://www.generalcatalyst.com/companies/conntour"
+title = "Conntour"
+publisher = "General Catalyst"
+kind = "investor"
+accessed_at = "2026-10-04T20:37:34Z"
+claims = ["General Catalyst lists Conntour in its portfolio and states it has backed the company since 2025."]
+
+[[intelligence.research.sources]]
+id = "ambient_site"
+url = "https://www.ambient.ai/"
+title = "Prevent security incidents with computer vision intelligence"
+publisher = "Ambient.ai"
+kind = "company"
+accessed_at = "2026-10-04T20:37:34Z"
+claims = ["Ambient.ai markets a computer-vision intelligence platform for physical security incident prevention."]
+
+[[intelligence.research.sources]]
+id = "coram_site"
+url = "https://www.coram.ai/"
+title = "Coram: Unified Physical Security Platform"
+publisher = "Coram"
+kind = "company"
+accessed_at = "2026-10-04T20:37:34Z"
+claims = ["Coram markets a unified physical-security product with AI video search and investigation, video management, cameras and access control."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T20:37:34Z"
+next_review_on = "2027-01-04"
+queries = ["Conntour official company site product leadership", "Conntour legal name headquarters founded"]
+source_ids = ["company_site", "company_terms", "yc_profile", "ctech_seed"]
+summary = "Identified active Israeli-founded company, official website and Conntour Inc. name from its site terms; founded 2024 and Tel Aviv-Yafo location corroborated by YC and CTech."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T20:37:34Z"
+next_review_on = "2027-01-04"
+queries = ["Conntour raised funding seed investors General Catalyst 2026", "Conntour Series A raised acquisition funding 2026"]
+source_ids = ["pr_seed", "tc_seed", "ctech_seed", "gc_portfolio"]
+summary = "Found one disclosed $7 million seed in March 2026; no later public round or company-stated lifetime aggregate identified."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T20:37:34Z"
+next_review_on = "2027-01-04"
+queries = ["Conntour investors General Catalyst Y Combinator SV Angel Liquid 2 Ventures"]
+source_ids = ["pr_seed", "tc_seed", "ctech_seed", "gc_portfolio"]
+summary = "Named round participants are reported; complete syndicate not established."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T20:37:34Z"
+next_review_on = "2027-01-04"
+queries = ["Conntour founders team leadership Matan Goldner Tomer Kulla"]
+source_ids = ["yc_profile", "ctech_seed", "tc_seed"]
+summary = "Founders and CEO/CTO roles established, with surname spelling discrepancy noted; full team not publicly listed."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T20:37:34Z"
+next_review_on = "2027-01-04"
+queries = ["Conntour ownership acquisition valuation private cap table"]
+source_ids = ["company_terms", "tc_seed"]
+summary = "Private company; no parent, acquisition, exit or ownership percentages publicly disclosed in reviewed sources."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T20:37:34Z"
+next_review_on = "2027-01-04"
+queries = ["Conntour revenue ARR profitability contract values runway"]
+source_ids = ["tc_seed", "ctech_seed", "pr_seed"]
+summary = "No revenue, profitability, contract value, cash, burn or runway disclosures found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T20:37:34Z"
+next_review_on = "2027-01-04"
+queries = ["Conntour Singapore Central Narcotics Bureau customers deployment"]
+source_ids = ["pr_seed", "tc_seed", "company_site"]
+summary = "Company and press reporting substantiate Singapore government deployment and executive-reported additional large customers; commercial scale remains undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T20:37:34Z"
+next_review_on = "2027-01-04"
+queries = ["Conntour patents video intelligence", "Conntour USPTO WIPO patent"]
+source_ids = ["company_site", "pr_seed"]
+summary = "No attributable patent or public IP filing identified in this search; private trade secrets or unindexed filings remain possible."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T20:37:34Z"
+next_review_on = "2027-01-04"
+queries = ["Conntour competitors Ambient Coram AI video security"]
+source_ids = ["ambient_site", "coram_site", "company_site"]
+summary = "Compared official product positioning with Ambient.ai and Coram; comparative effectiveness and market shares are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T20:37:34Z"
+next_review_on = "2027-01-04"
+queries = ["Conntour defense security military use cases"]
+source_ids = ["company_site", "yc_profile", "tc_seed"]
+summary = "Evidence supports commercial enterprise security and government/security applications, including stated military/defense target markets; no specific military contract was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "YC lists Conntour as Active; TechCrunch reports current operations and customers."
+verified_at = "2026-10-04T20:37:34Z"
+source_ids = ["yc_profile", "tc_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "YC identifies Tel Aviv-Yafo, Israel as location; CTech identifies company as Israeli and Tel Aviv-based."
+verified_at = "2026-10-04T20:37:34Z"
+source_ids = ["yc_profile", "ctech_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.amount"
+support = "direct"
+summary = "The company release states $7 million seed funding, with the same amount reported independently by TechCrunch and CTech."
+verified_at = "2026-10-04T20:37:34Z"
+source_ids = ["pr_seed", "tc_seed", "ctech_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.lead_investors"
+support = "direct"
+summary = "Company release and CTech identify General Catalyst as lead investor."
+verified_at = "2026-10-04T20:37:34Z"
+source_ids = ["pr_seed", "ctech_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.participating_investors"
+support = "direct"
+summary = "Company release and independent TechCrunch coverage name Y Combinator, SV Angel and Liquid 2 Ventures among round investors."
+verified_at = "2026-10-04T20:37:34Z"
+source_ids = ["pr_seed", "tc_seed"]

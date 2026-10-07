@@ -1,0 +1,99 @@
+name = "Mobb"
+entity_type = "startup"
+description = "Mobb is an application-security startup that helps enterprises understand and remediate risks in conventional and AI-generated code. Its platform combines scanner integrations, code intelligence, deterministic or hybrid-AI fixes, and reviewable pull-request workflows so teams can reduce vulnerability backlogs without surrendering developer control."
+
+detailed_description = """
+Mobb operates at the remediation end of the application-security lifecycle. Rather than replacing a customer's SAST or code-scanning tools, it consumes findings from tools including Checkmarx, CodeQL, Fortify, Snyk, SonarQube, and Semgrep/Opengrep, analyzes the relevant code context, and proposes or applies fixes through supported source-control workflows. Its current positioning also includes AI-code trust: visibility into where AI-generated code enters repositories, how quality and risk change over time, and how recurring issues can be triaged and fixed. The product advertises one-click bulk remediation, continuous monitoring of new commits, support for more than 100 issue types, and ready-to-review pull requests. Mobb's public technical material describes a hybrid approach in which deterministic security logic and retrieval/context are used to constrain generative models to surgical code changes rather than asking a model to rewrite an entire function or application.
+
+The customer problem is credible and economically clear. Security teams can generate large volumes of findings, but engineering capacity, ownership ambiguity, false positives, and the risk of breaking behavior make remediation the bottleneck. Mobb sells to development and security organizations that already have scanners but need a faster path from finding to accepted change. Its public pricing shows a free community tier for public repositories, a per-contributor Team plan, and an Enterprise tier with broader integrations, SSO, audit logs, pull-request monitoring, and advanced deployment options. Public documentation lists GitHub, GitLab, Azure Repos, and Bitbucket cloud integrations, several on-premise SCM options, and support for Java, JavaScript/TypeScript, C#, and Python. These are useful commercialization signals, but they do not establish revenue, retention, or large-scale production deployment.
+
+The competitive set is broad. Scanner vendors such as Snyk, GitHub Advanced Security, GitLab, Checkmarx, Fortify, and Veracode can add remediation to an installed platform; Semgrep and Opengrep compete around developer-facing code analysis; and newer AI coding-security tools compete for the same workflow and budget. Mobb's potential edge is scanner agnosticism combined with repeatable, reviewable fixes and operational reporting rather than a generic chat-based coding assistant. Its own public research emphasizes that a plausible AI patch is not necessarily a compilable, safe, mergeable fix. That is a sensible product thesis, but the moat must be proven through independently reproducible fix-acceptance, regression, coverage, and time-to-remediation metrics. The company also needs to show that its integrations and policy controls remain useful as customers adopt multiple coding agents and more autonomous CI workflows.
+
+The defense and national-security relevance is real but indirect. Defense contractors, government software teams, and critical-infrastructure operators face the same vulnerability backlog and software-supply-chain pressure as commercial enterprises, and shortening exposure windows in mission software can have operational value. Mobb could therefore serve as a secure-software and DevSecOps component, especially where existing scanners already produce findings and teams need auditable remediation evidence. However, no public evidence reviewed here establishes classified use, government contracts, or deployment in air-gapped environments. Before treating it as a defense supplier, diligence should confirm data residency, tenant isolation, egress controls, on-premise or single-tenant deployment, support for restricted networks, auditability of model decisions, and validation of generated changes. The strategic case is consequently conditional: strong for secure software operations, not evidence of a defense-specific product or customer base.
+"""
+
+logo = "https://www.mobb.ai/wp-content/uploads/mobb-logo.svg"
+website = "https://mobb.ai"
+sector = "Application Security"
+founded = "2021"
+headquarters = "Acton, Massachusetts, United States; Kfar Saba, Israel"
+employees = "11-50"
+funding_stage = "Unknown"
+
+dual_use = true
+dual_use_description = "Mobb's core remediation and AI-code-governance capabilities have substantive commercial and security applicability because defense, government, and critical-infrastructure software teams also need to reduce exploitable code defects and maintain traceable changes. The adjacency is operational rather than weapons-related: it supports software assurance, vulnerability response, and supply-chain resilience. Public sources do not establish classified deployment, government contracts, or air-gapped operation, so the dual-use thesis depends on confirming restricted-network deployment, data handling, tenant isolation, audit evidence, and fix-validation controls."
+
+key_technologies = [
+  "SAST and code-scanner finding ingestion across Checkmarx, CodeQL, Fortify, Snyk, SonarQube, and Semgrep/Opengrep",
+  "Code-context extraction and semantic analysis for locating vulnerable functions, classes, and data flows",
+  "Hybrid AI remediation using retrieval/context plus constrained, surgical code transformations",
+  "Deterministic fix policies and reusable remediation patterns for recurring vulnerability classes",
+  "AI-generated-code visibility and line-level code intelligence across repositories and pull requests",
+  "Source-control, CI/CD, IDE, and pull-request automation with review, audit, and policy gates"
+]
+
+use_cases = [
+  "Create reviewable pull requests for SAST findings in Java, JavaScript/TypeScript, C#, and Python repositories",
+  "Apply one-click bulk fixes to recurring vulnerability classes across a backlog or many repositories",
+  "Monitor new commits and remediate newly introduced issues before they accumulate as technical debt",
+  "Triage and prioritize scanner findings while preserving developer approval and source-control history",
+  "Provide AI-code visibility and remediation for risks introduced by coding agents and IDE assistants",
+  "Support vulnerability response by accelerating repeatable CVE-related code changes across services",
+  "Generate auditable secure-development evidence for regulated engineering and software-supply-chain programs"
+]
+
+investible = true
+investment_rationale = "Mobb has a credible strategic fit with an early-stage dual-use software thesis because it addresses the measurable gap between vulnerability discovery and accepted remediation, and its AI-code-trust positioning expands the problem as agent-written code grows. The priority signal is conditional rather than a recommendation: diligence should establish paid-customer conversion, recurring revenue, fix-acceptance and regression rates, scanner and language coverage, gross margins, and the security of its deployment architecture. The lack of a verified public funding history and the presence of large platform competitors warrant a conservative posture."
+
+strategic_value = "Mobb could provide strategic value as a remediation and software-assurance layer for organizations that already own scanners but lack enough AppSec or engineering capacity to close findings. Its scanner-agnostic workflow may reduce dependence on any single detection vendor, while AI-code visibility could help enterprises govern increasingly automated development. For defense-oriented buyers, the value is contingent on deployability and evidence: restricted-network support, code confidentiality, provenance, approvals, and measurable reduction in exploitable exposure must be demonstrated before it is treated as mission-grade."
+
+potential_score = 75.0
+technology_score = 80.0
+market_score = 76.0
+team_score = 70.0
+dual_use_score = 74.0
+strategic_alignment_score = 78.0
+
+stage = "early"
+stage_rationale = "Mobb was founded in 2021 and remains a privately held company with a public 11-50 employee range and active product, pricing, documentation, and hiring/partner surfaces. Those signals support an operating startup with early commercial maturity, but the public record reviewed does not verify revenue scale, major customer concentration, or a later financing round. Early is therefore more defensible than mid or mature."
+
+competitors = [
+  "Snyk",
+  "GitHub Advanced Security",
+  "GitLab Application Security",
+  "Checkmarx",
+  "Veracode",
+  "Semgrep",
+  "Qwiet AI"
+]
+
+competitive_edge = "Mobb's proposed edge is the combination of SAST-agnostic ingestion, repeatable code-level remediation, and workflow governance rather than another alerting dashboard or unconstrained coding chatbot. Its hybrid-AI framing can reduce hallucination and variance when a vulnerability class has a known safe transformation, while bulk fixes and direct pull requests address the labor cost of backlog reduction. The edge is not yet proven as a durable moat: incumbent scanners can bundle fixes, open-source and model tooling can narrow the technical gap, and customers will judge Mobb on mergeable-fix rate, regression rate, coverage, latency, privacy, and total cost."
+
+risk_factors = [
+  "Fix correctness and regression risk: a security patch that compiles but changes business logic can create production or safety failures.",
+  "Platform bundling risk: scanner and code-hosting incumbents can add remediation, AI-code visibility, or workflow automation to existing contracts.",
+  "Coverage risk: limited languages, frameworks, issue classes, repository types, or scanner integrations can constrain enterprise value.",
+  "Data and deployment risk: source code, model-provider boundaries, retention, tenant isolation, and restricted-network support require technical diligence.",
+  "Adoption risk: developers may distrust automated patches, while security teams may retain manual review that reduces the promised labor savings.",
+  "Evidence risk: public product claims do not by themselves verify revenue, retention, customer scale, independent fix benchmarks, or government use.",
+  "Market-transition risk: rapid changes in coding agents and AI governance may require Mobb to keep repositioning and rebuilding integrations."
+]
+
+risk_level = "high"
+
+signals = []
+priority_rank = 0
+priority_rationale = "Mobb merits continued diligence as an early-stage strategic software-assurance company: its remediation workflow and AI-code-trust direction align with secure software supply-chain needs, but the priority signal is constrained by unverified financing and traction, indirect rather than defense-specific applicability, strong platform competition, and the need to prove safe fixes in sensitive environments."
+
+public_sources = [
+  "https://mobb.ai/",
+  "https://www.mobb.ai/about-us",
+  "https://www.mobb.ai/pricing",
+  "https://docs.mobb.ai/mobb-user-docs",
+  "https://docs.mobb.ai/mobb-user-docs/getting-started/system-requirements",
+  "https://content.mobb.ai/hubfs/Deterministic%20Fixes%20with%20Hybrid%20AI%20%7C%20Mobb%20Factsheet.pdf",
+  "https://www.linkedin.com/company/mobbai"
+]
+
+crawled_at = "2026-01-31T19:35:00+00:00"
+updated_at = "2026-07-31T18:39:19Z"

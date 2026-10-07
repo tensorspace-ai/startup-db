@@ -1,0 +1,360 @@
+name = "AbiliSense"
+description = "AbiliSense is an Israeli sound-intelligence startup that embeds AI-based acoustic event recognition into IoT devices, applications, and response workflows. Its technology converts sounds such as alarms, distress calls, gunshots, or abnormal household events into alerts for caregivers, users, security teams, and potentially emergency authorities."
+detailed_description = """**Product and the concrete problem it solves.** AbiliSense addresses a blind spot in conventional connected-device systems: microphones collect ambient audio, but most IoT products still cannot reliably interpret what is happening around them. The company’s central proposition is a listening layer that identifies meaningful acoustic events and converts them into an actionable alert. The early product story focused on people who cannot depend on hearing, including deaf and hard-of-hearing users who may miss smoke alarms, sirens, doorbells, intercoms, a microwave timer, or a baby crying. A 2017 Ynet report described a sensor and smartphone application that translated household sounds into visual notifications, vibration, and an illuminated device signal. The broader platform is designed for unexpected or life-threatening situations in homes, workplaces, cities, and transportation environments. This is a concrete resilience problem: video surveillance can be blocked by darkness, occlusion, privacy rules, or camera placement, while an acoustic event may be detected from a low-cost microphone already present in a smart speaker, camera, phone, vehicle, or industrial device. The company’s public materials do not establish a current mass-market product, a recurring-revenue model, or a named production customer, so the record treats AbiliSense as a productized technology startup with commercialization still requiring diligence.
+
+**Core technology and how it works.** The public technical description is more specific than a generic “AI audio” label. AbiliSense describes automatic sound analysis and classification that captures important sound events, determines their context, and characterizes the event before routing the result to a predefined contact, IoT endpoint, application, call center, or authority workflow. LinkedIn describes a combination of sound classification and a rule-based AI system intended to recognize early signs of deteriorating health or dangerous situations. In practical terms, an embedded microphone or connected audio stream would be transformed into time-frequency features, matched against learned acoustic classes, and then evaluated by event rules that consider timing, context, and severity. The company’s official technology page emphasizes a black-box listening component that can monitor multiple environments and send alerts directly to applications, command centers, and IoT devices. Public sources do not disclose the model architecture, training-data scale, supported microphone specifications, on-device versus cloud inference split, latency, sensitivity, false-positive rate, noise robustness, or privacy-preserving design. Those unknowns are material. Acoustic classifiers must distinguish a real alarm from television audio, a gunshot from a construction impulse, and a fall-related distress call from ordinary household noise while remaining useful across room acoustics, languages, accents, reverberation, weather, and device variation. The potential technical advantage is a reusable recognition and alert layer that can be embedded by original-equipment manufacturers rather than a single-purpose consumer gadget.
+
+**Market, customers, and go-to-market.** AbiliSense has several plausible routes to market. The first is OEM licensing or SDK integration: a smart-home vendor, CCTV maker, mobile-device developer, vehicle platform, or industrial IoT provider could add acoustic awareness without building a sound-recognition team internally. The second is a B2B or B2B2C safety product sold through healthcare, assisted-living, accessibility, home-security, and monitoring channels. The third is a B2G or public-safety deployment in which event classifications feed an operations center or emergency workflow. Startup Nation Finder lists the company’s target categories as defense, safety and security, public security, call centers, seniors, families, and digital healthcare, and identifies Israel and Singapore among its geographic markets. Its historical product examples are specific enough to define buyer pain: detecting a baby left in a vehicle, recognizing a distress call from an older person who has fallen, and translating environmental sounds for a hearing-impaired user. The commercial challenge is that every buyer may require a different label set, integration surface, service-level agreement, and liability allocation. OEM deals can scale distribution but lengthen certification and integration cycles; direct safety applications offer clearer user value but require support, trust, and potentially regulated health or emergency claims. No reviewed public source confirms a current customer, paid contract, or production volume.
+
+**Traction, funding, and third-party validation.** AbiliSense was founded in December 2015 in Tel Aviv, according to Startup Nation Finder, LinkedIn, and contemporary technology coverage. Finder reports $800,000 raised across three funding rounds, including a $600,000 seed round in November 2016, a January 2018 equity-crowdfunding event through ExitValley, and a $200,000 Israel Innovation Authority non-equity award. The precise investors and current capitalization are not public in the reviewed sources, so the amount should be treated as a historical ecosystem record rather than a current balance-sheet fact. The company was selected as a finalist in Calcalist and Microsoft’s 2018 AI and Big Data startup competition, where the publication described its technology as AI-based sound identification installed in IoT listening devices. Vodafone later included AbiliSense in its 5G DIG Top 100 healthcare startup materials, describing the company as designing AI technology to hear, identify, and predict life-threatening situations. Israel Hayom also covered AbiliSense as a contestant in Tel Aviv University’s Tau Innovation event and described public-space sound recognition for security, including detection of a shooting sound. These are useful third-party validation signals for technical relevance, but they are not equivalent to independent benchmark results, a government procurement award, clinical validation, or scaled deployment. The Israeli company registry result surfaced through public business-information reporting shows Abilisense Ltd. incorporated in December 2015 and filing an annual report in 2025; that supports continuing legal existence, while not proving operating momentum.
+
+**Founders and team background.** Public company profiles consistently identify Erez Lugashi as a co-founder and chief executive officer, and Calcalist’s 2018 finalist profile names Katerina Rotenberg as co-founder alongside him. Finder lists a 11–50 employee range and an exact count of 14 in its machine-readable profile, while LinkedIn currently presents a smaller 2–10 company-size range and shows 13 employees or followers associated with the company page. The discrepancy is important rather than something to smooth over: it may reflect different update dates, counting methods, or contraction and should be verified directly. Public bios also do not document the founders’ prior exits, military roles, academic research, patent ownership, or the current engineering leadership bench. What is visible is a team thesis spanning machine learning, sound analysis, IoT integration, mobile alerting, accessibility, and security. That combination is appropriate for a product whose difficulty sits at the boundary between signal processing, embedded deployment, user-interface design, and high-consequence alert operations. The founder-market fit is strongest around translating technical listening into safety and accessibility outcomes, while execution diligence should test whether the team has enough acoustic-data expertise, embedded optimization, enterprise sales capacity, privacy counsel, and customer-support infrastructure to move from demonstrations and competitions into dependable deployments.
+
+**Competitive dynamics.** AbiliSense competes in a fragmented market rather than against one identical Israeli peer. Audio Analytic represents the embedded sound-recognition approach for consumer electronics and smart-home devices. Sound Intelligence focuses on audio analytics for security and public-safety monitoring, including suspicious or violent acoustic events. Dataminr and other event-intelligence platforms compete for the downstream alerting and incident-awareness budget, although they generally fuse external data rather than specializing in microphone-level acoustic inference. Video-surveillance and edge-camera vendors such as Axis Communications and Motorola Solutions can offer audio analytics alongside cameras, access control, and command software. Consumer platforms from Amazon, Google, and Apple provide speech or ambient-sound features inside large device ecosystems, creating a distribution and data advantage even when their products are not positioned as high-consequence safety systems. Open-source or internally built audio-classification models are another substitute for technically capable OEMs. AbiliSense’s claimed edge is a purpose-built, context-sensitive listening component that can be inserted into existing microphone-equipped products and route structured alerts to operational destinations. To make that edge durable, the company would need to demonstrate lower false alarms, broad acoustic coverage, efficient edge operation, explainable escalation rules, and integrations that are difficult for a device maker to reproduce.
+
+**Defense, security, and resilience relevance.** AbiliSense qualifies as dual-use because the core capability is not restricted to a hearing-assistance product and has a documented security and public-safety application. The company’s official site describes monitoring suspicious activities and dangerous situations; Finder places it in Aerospace, Defense & HLS and lists homeland security, emergency response, personal safety, and security among its tags; Israel Hayom reported the use case of detecting gunfire in public space. In a defense or civil-protection setting, distributed acoustic nodes could provide an additional sensing modality for perimeter monitoring, urban security, search and rescue, critical-site protection, or early warning when cameras are unavailable or deliberately avoided. A microphone network could also support accessibility and emergency communication in shelters, hospitals, transport hubs, and assisted-living facilities. This should be framed as strategic adjacency, not evidence that AbiliSense has fielded a military system: no reviewed source names a defense customer, contract, classified deployment, or certified command-and-control integration. The main diligence questions are acoustic localization accuracy, time synchronization, sensor placement, resilience to jamming or deliberate playback, cyber hardening, retention and privacy controls, lawful interception boundaries, human review of alerts, and the consequences of missed or false detections. In resilience applications, the system’s value may come from graceful degradation and inexpensive coverage rather than perfect classification.
+
+**Growth stage, trajectory, and key diligence risks.** AbiliSense appears to be an early-stage, post-prototype or early-commercial startup: it has operated since 2015, has a released technology profile and historical product demonstrations, has received grants and competition recognition, and maintains a current official site and LinkedIn presence, but public evidence does not show a recent priced financing, significant headcount, named customer base, revenue, or scaled deployment. Its trajectory depends on converting a technically interesting listening engine into repeatable integrations. The upside case is a software or embedded-licensing layer that becomes a standard acoustic sensor in safety, healthcare, smart-city, and security products. The downside case is a long-running R&D business constrained by data-labeling cost, fragmented buyer requirements, low willingness to pay for alerts, privacy objections, and the liability associated with safety-critical decisions. Key diligence points are: (1) current operating status, cash runway, and ownership; (2) actual model performance by sound class and environment; (3) proof of production integrations and renewal economics; (4) whether inference can run privately and economically at the edge; (5) intellectual-property protection and freedom to operate; (6) cyber, privacy, accessibility, and medical-device compliance; and (7) whether defense and public-safety buyers can accept the system’s evidence threshold. The technology merits inclusion for strategic screening, but the modest disclosed funding and dated public traction justify conservative scores and a medium risk level."""
+logo = "Unknown"
+website = "https://abilisense.com/"
+sector = "Acoustic AI / IoT Safety and Security Sensing"
+founded = "2015"
+headquarters = "Tel Aviv, Israel"
+employees = "2-10 on LinkedIn; 11-50 in Startup Nation Finder (exact count reported as 14)"
+funding_stage = "Seed and grant-funded; historical funding reported at $800,000; current status undisclosed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "AbiliSense's core sound-analysis and alerting technology has documented civilian safety, accessibility, healthcare, and public-security applications, so it can credibly serve both commercial and defense or resilience contexts. Public evidence supports strategic adjacency and security use cases, including reported gunshot recognition, but does not establish a fielded military customer, defense contract, or certified operational deployment. Any high-consequence use would require independent accuracy, privacy, cyber, human-review, and false-alarm diligence."
+key_technologies = ["Context-sensitive environmental sound event classification", "Rule-based AI for acoustic alert escalation", "Embedded microphone and IoT listening-device integration", "Real-time conversion of sound events into mobile and visual notifications", "Acoustic anomaly detection for safety and security monitoring", "Command-center and emergency-workflow alert interfaces"]
+use_cases = ["Visual, vibration, and mobile alerts for deaf and hard-of-hearing users", "Baby-cry and distress detection in homes or vehicles", "Fall or emergency-call detection for older adults and assisted living", "Gunshot and dangerous-sound detection in public or protected spaces", "Acoustic perimeter and critical-site monitoring", "Search-and-rescue or civil-protection sensing when cameras are unavailable", "Smart-city and transport noise-event awareness", "OEM sound intelligence for cameras, smart speakers, phones, and other microphone-equipped devices"]
+investible = true
+investment_rationale = "AbiliSense merits focused strategic diligence because it targets a difficult sensing layer that can add event awareness to the large installed base of microphone-equipped devices. The positive signals are a defined technical product, Israeli Innovation Authority support, historical seed and crowdfunding funding, recognition in Calcalist/Microsoft and Vodafone programs, and public positioning across accessibility, safety, healthcare, and HLS. The legacy investible flag is only a priority signal, not an investment recommendation. The case remains conditional on verifying current operations, model performance, paid deployments, intellectual-property ownership, privacy posture, and whether a small team can support safety-critical integrations."
+strategic_value = "Acoustic sensing can complement cameras, radar, and human reporting in environments where visual coverage is incomplete, privacy-sensitive, power-constrained, or degraded by darkness and smoke. A reusable edge listening layer could help Israeli and allied resilience programs add low-cost early warning to shelters, transport hubs, care facilities, industrial sites, and public spaces without replacing human judgment. Strategic value is limited until independent evidence establishes accuracy, tamper resistance, secure data handling, and response-workflow integration. The strongest thesis is a dual-use enabling component rather than a standalone defense platform."
+public_sources = [
+  { label = "AbiliSense privacy policy", url = "https://abilisense.com/privacy_policy.html", description = "Company legal name, Israeli address, country, and named applications." },
+  { label = "AbiliSense technology page", url = "https://abilisense.com/tech", description = "Company description of sound recognition and alert routing." },
+  { label = "Startup Nation Finder profile", url = "https://finder.startupnationcentral.org/company_page/abilisense?section=team", description = "Historical founding, team, funding, and market classifications; directory data." },
+  { label = "Israeli company profile", url = "https://en.checkid.co.il/company/ABILISENSE%2BLTD-g3LxNbp-515361392", description = "Secondary mirror of company number, incorporation date, and reported status." },
+  { label = "Israeli Corporations Authority service", url = "https://www.gov.il/en/service/company_extract", description = "Official registry information and extract service." },
+  { label = "AbiliSense LinkedIn profile", url = "https://www.linkedin.com/company/abilisense/", description = "Company positioning, current public profile and reported employee band." },
+  { label = "CTech / Calcalist 2018 finalist profile", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3751701,00.html", description = "Founders, product proposition, and competition finalist recognition." },
+  { label = "Ynet early product report", url = "https://www.ynet.co.il/articles/0,7340,L-4911189,00.html", description = "Historical hearing accessibility sensor and app report." },
+  { label = "Jerusalem Post technology coverage", url = "https://www.jpost.com/business-and-innovation/tech-talk-making-sense-of-danger-507686", description = "Contemporary coverage of the company's sound monitoring proposition." },
+  { label = "Ruderman Family Foundation founder interview", url = "https://rudermanfoundation.org/meet-the-technology-that-allows-people-with-hearing-impairment-to-see-sounds/", description = "Founder interview on product, early pilots, and background." },
+  { label = "StartIsrael AbiliSense profile", url = "https://www.startisrael.co.il/article/1226/%D7%A1%D7%98%D7%90%D7%A8%D7%98-%D7%90%D7%A4%2B%D7%91%D7%A9%D7%91%D7%95%D7%A2%3A%2B%D7%94%D7%9B%D7%99%D7%A8%D7%95%2B%2BABILISENSE", description = "Historical company interview and early team/product detail." },
+  { label = "AbiliSense homepage", url = "https://abilisense.com/", description = "Current company homepage and Vodafone selection claim." },
+  { label = "IVC AbiliSense profile", url = "https://www.ivc-online.com/Google-Card?id=e1410938-2891-e511-bd22-80c16e7d3630", description = "Funding event, team and substitute-product directory entries." },
+  { label = "Dealroom AbiliSense profile", url = "https://app.dealroom.co/companies/abilisense", description = "Conflicting funding database entries retained as unresolved evidence." },
+  { label = "StartupSeeker AbiliSense profile", url = "https://startup-seeker.com/company/abilisense~com", description = "Secondary funding aggregation repeating 2016 seed and IIA amount." },
+  { label = "Sound Intelligence", url = "https://soundintel.com/", description = "Adjacent security audio analytics comparator information." },
+  { label = "Audio Analytic on Arm", url = "https://www.arm.com/partners/catalog/audio-analytic", description = "Arm partner profile describes Audio Analytic sound-recognition technology for consumer products." }
+]
+potential_score = 67.0
+technology_score = 76.0
+market_score = 61.0
+team_score = 58.0
+dual_use_score = 78.0
+strategic_alignment_score = 84.0
+stage = "early"
+stage_rationale = "AbiliSense has operated since 2015 and has a publicly described, released sound-recognition technology with historical product and competition validation. However, current public evidence does not establish a recent financing, scaled revenue, named production customers, large team, or repeatable deployments; LinkedIn and Finder also report different company-size ranges. Early is therefore the calibrated stage, with meaningful prototype and early-commercial signals but insufficient evidence for mid-stage scale."
+competitors = ["Audio Analytic (embedded sound-recognition AI for consumer devices)", "Sound Intelligence (audio analytics for security and public-safety monitoring)", "Axis Communications (incumbent network cameras with integrated audio analytics)", "Motorola Solutions (public-safety command and video ecosystems with audio/event analytics)", "Amazon, Google, and Apple (large device ecosystems with ambient-sound or voice intelligence)", "Customer-built edge audio models (internal or open-source acoustic classification substitutes)"]
+competitive_edge = "AbiliSense's claimed edge is a reusable listening layer that combines sound classification, context-sensitive rules, and alert routing across microphone-equipped IoT products rather than locking the technology to one device. Its accessibility and safety origins give the platform a clear high-consequence problem orientation, while HLS coverage creates a path into security and resilience deployments. The edge is not yet proven as a durable moat: larger platforms have more data and distribution, security incumbents can bundle audio with cameras, and OEMs can build narrow classifiers themselves. Durable differentiation would require measured accuracy in noisy environments, efficient private edge inference, broad integration coverage, low false-alarm rates, and referenceable deployments."
+risk_factors = ["Current operating momentum, revenue, customer base, and production deployment scale are not disclosed in the reviewed public sources", "Public employee counts conflict between LinkedIn and Startup Nation Finder, creating team-depth and continuity uncertainty", "Acoustic classifiers can generate harmful false positives or misses across reverberation, background noise, languages, device types, and adversarial audio", "Safety, healthcare, accessibility, privacy, and public-security deployments may require regulatory review, consent controls, data minimization, and clear liability allocation", "Large device, camera, telecom, and public-safety vendors can bundle competing audio analytics or subsidize distribution", "Small historical funding and an undisclosed current financing position may constrain data collection, enterprise integration, and support capacity", "No reviewed source confirms a defense contract or fielded military system, so defense traction must not be inferred from HLS classification or security-oriented marketing", "Sensitive audio streams and alert pathways create cyber, spoofing, surveillance, retention, and command-center integration risks"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "AbiliSense is a strategically relevant but evidence-constrained addition for a database focused on Israeli dual-use and resilience technology. Its core acoustic sensing layer aligns with public safety, accessibility, emergency response, homeland security, and distributed critical-infrastructure monitoring, and it has multiple independent historical validation signals. Priority is moderated by the absence of public current revenue, named customers, recent financing, independent model benchmarks, and confirmed defense deployment. The appropriate next step is targeted technical and commercial diligence rather than a conclusion about financial attractiveness."
+crawled_at = "2026-09-03T17:56:07Z"
+updated_at = "2026-10-03T09:29:50Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Erez Lugashi", role = "Founder and CEO (historically reported)", is_founder = true, current = false, background = "Ruderman Family Foundation interview described roughly ten years of information-security work and earlier ventures; public sources reviewed do not establish his current executive status.", source_ids = ["ruderman_2015", "finder_profile", "linkedin_profile"] },
+  { name = "Katerina Rotenberg", role = "Co-founder (reported in 2018)", is_founder = true, current = false, background = "Named with Erez Lugashi as a founder in Calcalist's 2018 finalist coverage; current role and continued affiliation are unverified.", source_ids = ["ctech_2018"] },
+  { name = "Anatoly Tokalov", role = "Co-founder (reported by IVC)", is_founder = true, current = false, background = "IVC lists him as co-founder; an early StartIsrael feature described him as technology lead. Current status is unverified.", source_ids = ["ivc_profile", "startisrael_2016"] }
+]
+investors = [
+  { name = "ExitValley platform participants (individuals undisclosed)", investor_type = "other", round_ids = ["seed-extension-2017"], relationship = "historical", source_ids = ["finder_profile", "ivc_profile"], notes = "Platform named as the route for equity crowdfunding; not a single disclosed fund investor." },
+  { name = "Israel Innovation Authority", investor_type = "government", website = "https://innovationisrael.org.il/en/", round_ids = ["iia-grant-2018"], relationship = "historical", source_ids = ["finder_profile", "startupseeker"], notes = "Named grant provider; award is non-equity and is not treated as an equity investor." }
+]
+financials = []
+traction = []
+intellectual_property = []
+comparables = [
+  { name = "Sound Intelligence", website = "https://soundintel.com/", rationale = "Audio analytics for security and public safety is an adjacent buyer and use case.", differentiation = "AbiliSense describes a broader sound intelligence layer across home, city, transport, and IoT devices; comparative performance is unverified.", source_ids = ["company_tech", "jpost_2017"] },
+  { name = "Bellman & Symfon", website = "https://bellman.com/", rationale = "IVC names its assistive hearing products among AbiliSense's competitors, making it a direct accessibility substitute.", differentiation = "Bellman & Symfon focuses on assistive alerting devices, while AbiliSense claims adaptable algorithmic recognition and IoT alert integration; no comparative test evidence was found.", source_ids = ["ivc_profile", "company_tech"] },
+  { name = "Amazon Echo and Google Home", website = "https://www.amazon.com/echo", rationale = "Smart speaker platforms combine microphones, installed distribution, and ambient sound features that can substitute for narrow use cases.", differentiation = "Large platform distribution contrasts with AbiliSense's safety-focused listening and alert routing claims.", source_ids = ["ivc_profile", "company_tech"] }
+]
+
+[intelligence.company]
+company_id = "il-abilisense"
+legal_name = "AbiliSense Ltd."
+aliases = ["Abilisense", "ABILISENSE LTD", "אביליסנס בע״מ"]
+operating_status = "active"
+business_model = "Private Israeli technology company offering sound recognition and analysis for integration into IoT devices, applications, and alert workflows; exact current revenue model and commercial status are not publicly disclosed."
+products = ["Sound Recognition Technology", "AbiliSense Alerts", "AbiliSense Collect", "SENSE AbiliSense sensor"]
+locations = ["Tel Aviv, Israel"]
+linkedin_url = "https://www.linkedin.com/company/abilisense/"
+country_of_incorporation = "Israel"
+founded_on = "2015-12-23"
+registry_identifiers = [
+  { jurisdiction = "Israel", scheme = "Israeli company number", identifier = "515361392", source_ids = ["registry_profile"] }
+]
+source_ids = ["official_privacy", "registry_profile", "finder_profile", "linkedin_profile"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public database records report a $600,000 seed round in November 2016, an undisclosed ExitValley equity crowdfunding event in January 2018, and a separately categorized $200,000 Israel Innovation Authority non-equity award. LinkedIn and Dealroom also list a late-2021 $50,000 grant, but no primary award notice or grantor was located. Startup Nation Finder reports $800,000 total across three entries, mixing equity and grant support; no company-announced lifetime total was found. Dealroom also displays an uncorroborated $3 million Dale Ventures seed entry, excluded from numeric rounds pending verification."
+rounds = [
+  { id = "seed-2016", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2016-11", amount_status = "reported", amount = 600000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = [], source_ids = ["finder_profile", "startupseeker"] , notes = "Startup Nation Finder reports $600,000 in November 2016 and lists investor identity as undisclosed. IVC independently lists a June 2016 seed but omits its amount; dates differ and may reflect record conventions, so November is retained as the published Finder precision." },
+  { id = "seed-extension-2017", round_type = "Seed extension / equity crowdfunding", instrument = "equity", status = "closed", announced_on = "2018-01", amount_status = "undisclosed", amount_scope = "incremental_extension", is_extension_of = "seed-2016", lead_investors = [], participating_investors = ["ExitValley platform participants; individual investors undisclosed"], source_ids = ["finder_profile", "ivc_profile"], notes = "Finder labels the event January 2018; IVC records a Seed-Extended transaction on December 15, 2017 and describes private investors through the ExitValley platform. No amount is shown." },
+  { id = "iia-grant-2018", round_type = "R&D grant", instrument = "grant", status = "closed", announced_on = "2018", amount_status = "reported", amount = 200000, amount_scope = "unknown", currency = "USD", lead_investors = [], participating_investors = ["Israel Innovation Authority"], source_ids = ["finder_profile", "startupseeker"], notes = "Finder's aggregate entry describes a $200,000 non-equity award but does not attach a grant date; other databases list several IIA grants without amounts. The amount and date should be checked against IIA award records." }
+  ,{ id = "grant-2021", round_type = "Grant", instrument = "grant", status = "closed", announced_on = "2021-12", amount_status = "reported", amount = 50000, amount_scope = "unknown", currency = "USD", lead_investors = [], participating_investors = [], source_ids = ["linkedin_profile", "dealroom"], notes = "LinkedIn and Dealroom profiles show a $50,000 grant in late 2021, but do not identify the grantor or primary award notice; treated as a secondary-source report, not verified award proceeds." }
+]
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "AbiliSense is identified as an Israeli private company. No public cap table, beneficial ownership percentages, parent company, or ownership transaction was found in reviewed sources. A business information page reports two manager/owner entries but states its information is updated only through January 2021; this is insufficient to establish current holdings."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["registry_profile", "official_privacy", "finder_profile"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "The company's own privacy policy identifies Abilisense Ltd. at a Tel Aviv address and Israel as its country; contemporary coverage identifies the company as founded in Tel Aviv, and the Israeli company number is reported as 515361392."
+as_of = "2026-10-03"
+source_ids = ["official_privacy", "ctech_2018", "registry_profile"]
+
+[intelligence.research]
+researched_at = "2026-10-03T09:29:50Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "AbiliSense company identity official site legal name Tel Aviv",
+  "AbiliSense funding 2016 600,000 ExitValley January 2018 Israel Innovation Authority",
+  "AbiliSense $600,000 seed 2016 investor",
+  "AbiliSense Dale Ventures 3 million 2019",
+  "AbiliSense founder Erez Lugashi Katerina Rotenberg team current",
+  "AbiliSense company registry 515361392 annual report",
+  "AbiliSense customer partnership deployment revenue",
+  "AbiliSense patents sound recognition Erez Lugashi",
+  "AbiliSense competitors sound recognition IoT Audio Analytic Sound Intelligence",
+  "AbiliSense defense security public safety gunshot dual use",
+  "site:innovationisrael.org.il AbiliSense grant",
+  "site:patentscope.wipo.int AbiliSense Lugashi",
+  "AbiliSense funding 2024 OR 2025 OR 2026"
+]
+gaps = [
+  "team: current named leadership roster, current headcount, founder biographies beyond Erez Lugashi, and employment status are not reliably disclosed; public directories conflict or are stale.",
+  "investors: identity of 2016 seed investors and individual ExitValley investors, round allocations, and current investor relationships are undisclosed.",
+  "financials: no company-reported revenue, ARR, profitability, cash, burn, or runway found; total raised is a directory aggregation that combines unlike instruments.",
+  "traction: no current named paying customer, signed production contract, deployment volume, renewal, or customer-reported outcome was verified; historical pilot statements are not evidence of current paid deployment.",
+  "intellectual_property: no patent or application could be confidently attributed to AbiliSense or its legal entity in the searched public patent resources; proprietary algorithm and data ownership are unknown.",
+  "competition: competitor technical benchmarks and win/loss evidence are unavailable; comparisons are based on stated product categories and substitute products.",
+  "ownership: private cap table, beneficial holdings and current directors/shareholders were not confirmed from a current official extract.",
+  "funding: no current round announcement was located; conflicting secondary database entries (including a purported $3 million Dale Ventures seed and other grant amounts) could not be corroborated, so they are excluded from numeric values.",
+  "dual_use: security and public-safety use cases are described, but no defense customer, contract, operational deployment, or certification was found."
+]
+conflicts = [
+  "Funding databases disagree materially: Startup Nation Finder reports $600,000 seed + undisclosed ExitValley crowdfunding + $200,000 IIA non-equity support and a combined $800,000 total; IVC shows a June 2016 seed, Dec 2017 seed extension, and multiple grants without amounts; Dealroom lists $3 million seed attributed to Dale Ventures and several other amounts. No primary announcement corroborating Dealroom's large round was located; it is omitted from the round amounts and reported total.",
+  "Company headcount signals differ: LinkedIn lists company size 2-10 (current page observation); Finder lists 11-50. The exact current employee count is unknown.",
+  "Founder reporting differs across sources: contemporary Calcalist names Katerina Rotenberg and Erez Lugashi as co-founders; IVC identifies Erez Lugashi and Anatoly Tokalov as co-founders; early StartIsrael names additional technical/product founders. The current founding team and role dates are unresolved."
+]
+diligence_questions = [
+  "What is the current active product, and which named customers pay for production use today? Request contracts, deployment counts, renewal data, and customer references.",
+  "What are measured precision, recall, false-alert rate, missed-event rate, latency, and power use by sound class and environment, including independent or customer-run evaluations?",
+  "Which entities and individuals own the models, training data, software, trademarks, and any patent filings, and what rights were granted to former employees, accelerators, and investors?",
+  "What is the current capitalization, cash balance, burn, liabilities, grant repayment obligations, and runway, including reconciliation of reported historical funding entries?",
+  "Can the system operate on-device without retaining ambient audio, and what controls address consent, spoofing, adversarial playback, cybersecurity, and safety-critical escalation?"
+]
+sources = [
+  { id = "official_privacy", url = "https://abilisense.com/privacy_policy.html", title = "Privacy Policy", publisher = "AbiliSense", kind = "company", accessed_at = "2026-10-03T09:29:50Z", published_on = "2024-05-21", claims = ["The legal entity is Abilisense Ltd.", "The company lists its address at 1 Eli Cohen St., Tel Aviv 6963001 and country Israel.", "The listed applications include AbiliSense Alerts, AbiliSense Collect, and SENSE AbiliSense sensor."] },
+  { id = "company_tech", url = "https://abilisense.com/tech", title = "Sound Recognition Technology", publisher = "AbiliSense", kind = "company", accessed_at = "2026-10-03T09:29:50Z", claims = ["Company describes sound analysis for home, work, city, and transport environments.", "Company says its listening technology identifies dangerous or suspicious situations and routes alerts to applications, command centers, and IoT devices."] },
+  { id = "finder_profile", url = "https://finder.startupnationcentral.org/company_page/abilisense?section=team", title = "AbiliSense company profile", publisher = "Startup Nation Finder", kind = "directory", accessed_at = "2026-10-03T09:29:50Z", claims = ["Finder reports founding in December 2015 by Erez Lugashi and Tel Aviv location.", "Finder reports $600,000 November 2016 seed, undisclosed January 2018 ExitValley equity crowdfunding, $200,000 non-equity award, and combined $800,000 across three entries.", "Finder names Erez Lugashi as co-founder and CEO and lists 11-50 employee range.", "Finder classifies use cases across safety, emergency response, IoT, digital healthcare, and HLS."] },
+  { id = "registry_profile", url = "https://en.checkid.co.il/company/ABILISENSE%2BLTD-g3LxNbp-515361392", title = "ABILISENSE LTD company profile", publisher = "CheckID", kind = "directory", accessed_at = "2026-10-03T09:29:50Z", claims = ["Reports Israeli private company number 515361392, incorporation on 2015-12-23, Tel Aviv-Jaffa address, active status, and 2025 annual report submitted.", "Reports manager information updated to 2021 and therefore does not establish current ownership."] },
+  { id = "gov_registry", url = "https://www.gov.il/en/service/company_extract", title = "Get a full extract or basic information on a company or partnership", publisher = "Israeli Corporations Authority", kind = "government", accessed_at = "2026-10-03T09:29:50Z", claims = ["Israeli Corporations Authority provides a company registry service for basic information and paid full extracts."] },
+  { id = "linkedin_profile", url = "https://www.linkedin.com/company/abilisense/", title = "Abilisense company profile", publisher = "LinkedIn", kind = "other", accessed_at = "2026-10-03T09:29:50Z", claims = ["Company profile describes sound classification and rule-based AI for IoT and safety applications.", "Profile lists Tel Aviv headquarters, privately held status, 2015 founding, and 2-10 employee band.", "Profile lists four funding rounds and a latest grant dated December 2021 with US$50,000 displayed."] },
+  { id = "ivc_profile", url = "https://www.ivc-online.com/Google-Card?id=e1410938-2891-e511-bd22-80c16e7d3630", title = "AbiliSense Ltd. company profile", publisher = "IVC Data & Insights", kind = "directory", accessed_at = "2026-10-03T09:29:50Z", claims = ["IVC lists Tel Aviv, Israel as the company address and B2B business model.", "IVC lists Erez Lugashi and Anatoly Tokalov as CEO/co-founder and co-founder, respectively.", "IVC lists a 2016 seed, a December 2017 seed extension through private investors on ExitValley, and multiple IIA R&D grants without public amounts.", "IVC identifies Bellman & Symfon, Amazon Echo, and Google Home as competitors/substitutes."] },
+  { id = "ctech_2018", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3751701,00.html", title = "These Are the 12 Finalists of Calcalist's AI and Big Data Startup Competition", publisher = "CTech", kind = "media", accessed_at = "2026-10-03T09:29:50Z", published_on = "2018-12-10", claims = ["Calcalist names Katerina Rotenberg and Erez Lugashi as founders and says company was founded in 2015 in Tel Aviv.", "Describes AI-based sound identification for microphone-equipped IoT devices that converts selected sounds to alerts, including distress and accessibility use cases.", "Names AbiliSense as a finalist in the Calcalist/Microsoft AI and Big Data competition."] },
+  { id = "ynet_2017", url = "https://www.ynet.co.il/articles/0,7340,L-4911189,00.html", title = "The sensor that will hear the alarm for you", publisher = "Ynet", kind = "media", accessed_at = "2026-10-03T09:29:50Z", published_on = "2017-01-23", claims = ["Ynet described an AbiliSense sensor and app that translated household danger sounds into visual, vibration, and phone alerts for deaf and hard-of-hearing users.", "At publication, product sales were expected during 2017; this does not verify subsequent sales."] },
+  { id = "jpost_2017", url = "https://www.jpost.com/business-and-innovation/tech-talk-making-sense-of-danger-507686", title = "Tech Talk: Making sense of danger", publisher = "The Jerusalem Post", kind = "media", accessed_at = "2026-10-03T09:29:50Z", published_on = "2017-10-17", claims = ["Contemporary coverage describes monitoring sounds in home, work, city, and transport environments."] },
+  { id = "ruderman_2015", url = "https://rudermanfoundation.org/meet-the-technology-that-allows-people-with-hearing-impairment-to-see-sounds/", title = "Meet the technology allowing people with hearing impairment to see sounds", publisher = "Ruderman Family Foundation", kind = "other", accessed_at = "2026-10-03T09:29:50Z", claims = ["Erez Lugashi described a sensor that learns local sound signatures and sends electronic alerts to desktop, wearable, or mobile devices.", "Lugashi described planned B2B pilots at the time and prior information-security work; these historical pilots do not prove current deployments.", "Article records AbiliSense's participation in the 2015 A3i accelerator cohort."] },
+  { id = "startisrael_2016", url = "https://www.startisrael.co.il/article/1226/%D7%A1%D7%98%D7%90%D7%A8%D7%98-%D7%90%D7%A4%2B%D7%91%D7%A9%D7%91%D7%95%D7%A2%3A%2B%D7%94%D7%9B%D7%99%D7%A8%D7%95%2B%2BABILISENSE", title = "Startup of the week: Meet AbiliSense", publisher = "StartIsrael", kind = "media", accessed_at = "2026-10-03T09:29:50Z", claims = ["Historical company interview described beta sound recognition and SOS applications and named early product, algorithm, and technology team members.", "The interview documents early product claims and contributors, not current roles or deployment status."] },
+  { id = "company_home", url = "https://abilisense.com/", title = "AbiliSense homepage", publisher = "AbiliSense", kind = "company", accessed_at = "2026-10-03T09:29:50Z", claims = ["Current company homepage continues to promote a smart listening IoT solution and cites Vodafone 5G DIG Top 100 selection."] },
+  { id = "dealroom", url = "https://app.dealroom.co/companies/abilisense", title = "AbiliSense company profile", publisher = "Dealroom.co", kind = "directory", accessed_at = "2026-10-03T09:29:50Z", claims = ["Dealroom displays multiple grant entries including a November 2021 $50,000 grant, a January 2018 seed entry, and a February 2019 $3 million seed attributed to Dale Ventures; these values conflict with other public tracking and lack corroborating primary announcements."] },
+  { id = "startupseeker", url = "https://startup-seeker.com/company/abilisense~com", title = "AbiliSense funding profile", publisher = "StartupSeeker", kind = "directory", accessed_at = "2026-10-03T09:29:50Z", claims = ["StartupSeeker reports a $600,000 2016 seed and $200,000 Israel Innovation Authority grant, aggregating $800,000 total."] },
+  { id = "sound_intelligence", url = "https://soundintel.com/", title = "Sound Intelligence", publisher = "Sound Intelligence", kind = "company", accessed_at = "2026-10-03T09:29:50Z", claims = ["Comparator company presents audio intelligence for security and safety contexts."] },
+  { id = "audio_analytic", url = "https://www.arm.com/partners/catalog/audio-analytic", title = "Audio Analytic", publisher = "Arm", kind = "other", accessed_at = "2026-10-03T09:40:18Z", claims = ["Arm describes Audio Analytic as a sound-recognition technology provider whose compact AI technology adds sound recognition to consumer products."] }
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T09:29:50Z"
+next_review_on = "2027-04-03"
+queries = ["AbiliSense company identity official site legal name Tel Aviv", "AbiliSense company registry 515361392 annual report"]
+source_ids = ["official_privacy", "registry_profile", "ctech_2018", "finder_profile"]
+summary = "Legal name, Israeli company number, Tel Aviv location, and founding year are supported by company materials and contemporary reporting; active standing comes from a secondary registry mirror and should be refreshed from an official extract."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-03T09:29:50Z"
+next_review_on = "2027-01-03"
+queries = ["AbiliSense funding 2016 600,000 ExitValley January 2018 Israel Innovation Authority", "AbiliSense Dale Ventures 3 million 2019", "AbiliSense funding 2024 OR 2025 OR 2026"]
+source_ids = ["finder_profile", "ivc_profile", "startupseeker", "dealroom"]
+summary = "The $600,000 seed and $200,000 IIA amount are repeated by directories; ExitValley amount remains undisclosed. Dealroom has a conflicting and uncorroborated $3 million Dale Ventures record. No recent primary round announcement found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T09:29:50Z"
+next_review_on = "2027-04-03"
+queries = ["AbiliSense investors seed round ExitValley", "AbiliSense Dale Ventures investor"]
+source_ids = ["finder_profile", "ivc_profile", "dealroom"]
+summary = "ExitValley is named as the crowdfunding platform, and the IIA as grantor. Individual seed and crowd investors are not disclosed; Dealroom's Dale Ventures attribution is uncorroborated."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "conflicting"
+checked_at = "2026-10-03T09:29:50Z"
+next_review_on = "2027-04-03"
+queries = ["AbiliSense founder Erez Lugashi Katerina Rotenberg team current"]
+source_ids = ["ctech_2018", "finder_profile", "ivc_profile", "ruderman_2015", "startisrael_2016", "linkedin_profile"]
+summary = "Erez Lugashi is consistently identified as a founder/CEO. Katerina Rotenberg and Anatoly Tokalov are also named in different records; historical team membership and current staff status require company confirmation."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T09:29:50Z"
+next_review_on = "2027-04-03"
+queries = ["AbiliSense company registry 515361392 annual report", "AbiliSense shareholders ownership parent company acquisition"]
+source_ids = ["registry_profile", "gov_registry", "official_privacy"]
+summary = "Company is identified as private, but public sources reviewed do not establish a current cap table, parent, or ownership transaction. Official registry extracts can be ordered for authoritative current details."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T09:29:50Z"
+next_review_on = "2027-04-03"
+queries = ["AbiliSense revenue ARR financial statements burn runway", "AbiliSense funding revenue customers"]
+source_ids = ["finder_profile", "linkedin_profile", "dealroom", "official_privacy"]
+summary = "No dated revenue, profitability, cash, burn, or runway disclosure was located; database funding figures are separately treated with caveats."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T09:29:50Z"
+next_review_on = "2027-04-03"
+queries = ["AbiliSense customer partnership deployment revenue", "AbiliSense customer pilot contract production"]
+source_ids = ["ruderman_2015", "ynet_2017", "ctech_2018", "company_home"]
+summary = "Historical product demonstrations, planned pilots, and a 2017 expected-sales statement exist; no current named customer, paid production contract, or scaled deployment was verified."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T09:29:50Z"
+next_review_on = "2027-04-03"
+queries = ["AbiliSense patents sound recognition Erez Lugashi", "site:patentscope.wipo.int AbiliSense Lugashi", "Abilisense Ltd Google Patents"]
+source_ids = ["company_tech", "official_privacy"]
+summary = "No patent filing confidently attributable to the company was identified in indexed searches; lack of a result does not rule out unindexed filings, trade secrets, or rights held by founders."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T09:29:50Z"
+next_review_on = "2027-04-03"
+queries = ["AbiliSense competitors sound recognition IoT Audio Analytic Sound Intelligence", "sound recognition technology embedded competitors smart home"]
+source_ids = ["ivc_profile", "audio_analytic", "sound_intelligence", "company_tech"]
+summary = "Adjacent products include embedded sound-recognition vendors, security audio analytics, smart speakers, and device/camera platform features. Comparative performance and market wins are not public."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-03T09:29:50Z"
+next_review_on = "2027-04-03"
+queries = ["AbiliSense defense security public safety gunshot dual use", "AbiliSense homeland security emergency response sound recognition"]
+source_ids = ["company_tech", "finder_profile", "ctech_2018", "jpost_2017"]
+summary = "Company describes dangerous and suspicious sound alerts and directories classify HLS/security applications; no public defense customer or contract was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "CheckID lists ABILISENSE LTD as active; LinkedIn and the company site maintain a current corporate presence. Current active operating scale remains unknown."
+verified_at = "2026-10-03T09:29:50Z"
+source_ids = ["registry_profile", "linkedin_profile", "company_home"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "The company's privacy policy names Abilisense Ltd., a Tel Aviv address, and Israel as country; CTech identifies founding in Tel Aviv; company number is reported by registry profile."
+verified_at = "2026-10-03T09:29:50Z"
+source_ids = ["official_privacy", "ctech_2018", "registry_profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2016.amount"
+support = "direct"
+summary = "Startup Nation Finder reports a November 2016 $600,000 seed; StartupSeeker independently repeats the $600,000 figure."
+verified_at = "2026-10-03T09:29:50Z"
+source_ids = ["finder_profile", "startupseeker"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.grant-2021.amount"
+support = "direct"
+summary = "LinkedIn and Dealroom company profiles each display a $50,000 grant in late 2021. No grantor or primary award notice was found, so the entry remains attributed only to those secondary databases."
+verified_at = "2026-10-03T09:29:50Z"
+source_ids = ["linkedin_profile", "dealroom"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-extension-2017.amount_status"
+support = "direct"
+summary = "Finder reports January 2018 equity crowdfunding with no amount, while IVC calls it a December 2017 seed extension through ExitValley and also shows no amount."
+verified_at = "2026-10-03T09:29:50Z"
+source_ids = ["finder_profile", "ivc_profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.iia-grant-2018.amount"
+support = "direct"
+summary = "Finder and StartupSeeker each report a $200,000 Israel Innovation Authority non-equity award; IVC lists multiple IIA grants but no individual amounts or matching date, leaving event-level reconciliation incomplete."
+verified_at = "2026-10-03T09:29:50Z"
+source_ids = ["finder_profile", "startupseeker", "ivc_profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2016.named_investors"
+support = "direct"
+summary = "Finder labels the seed investor(s) undisclosed; no individual investor name can be reported."
+verified_at = "2026-10-03T09:29:50Z"
+source_ids = ["finder_profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-extension-2017.named_investors"
+support = "direct"
+summary = "Finder names ExitValley for the crowdfunding event and IVC describes private investors using its platform; individuals are not named."
+verified_at = "2026-10-03T09:29:50Z"
+source_ids = ["finder_profile", "ivc_profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.iia-grant-2018.named_investors"
+support = "direct"
+summary = "The Israel Innovation Authority is explicitly named as the non-equity award provider."
+verified_at = "2026-10-03T09:29:50Z"
+source_ids = ["finder_profile", "startupseeker"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-extension-2017.participating_investors"
+support = "direct"
+summary = "Finder names ExitValley for the January 2018 crowdfunding entry; IVC describes the December 2017 extension as funded by private investors through ExitValley, without naming individuals."
+verified_at = "2026-10-03T09:29:50Z"
+source_ids = ["finder_profile", "ivc_profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.iia-grant-2018.participating_investors"
+support = "direct"
+summary = "The Israel Innovation Authority is explicitly named as provider of non-equity support."
+verified_at = "2026-10-03T09:29:50Z"
+source_ids = ["finder_profile", "startupseeker"]

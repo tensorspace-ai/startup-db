@@ -1,0 +1,496 @@
+name = "Averlon"
+description = "Averlon provides an agentic remediation operations platform for cloud and application security teams. It analyzes which findings are materially exploitable, models attack paths to important assets, and delivers context-aware remediation through developer workflows."
+detailed_description = """Averlon is building around a specific operational gap in vulnerability and exposure management: security organizations can collect findings faster than engineering teams can determine what matters and safely fix it. Its platform ingests security signals across areas such as vulnerability management, cloud security posture, Kubernetes posture, cloud entitlements, workload protection, application security posture, and data security posture. It then evaluates applicability and reachability in the customer environment, rather than treating severity scores as a complete risk decision. The product positioning is now framed as Agentic Remediation Operations, with a workflow that moves from triage to prioritization, remediation, and prevention.
+
+The core technical proposition combines environmental reasoning, attack-chain analysis, and remediation agents. Averlon says its system can connect vulnerabilities, misconfigurations, identity or permission conditions, and network paths to critical assets, then prioritize changes that break meaningful chains. It also describes context-aware fixes delivered in IDEs, source-control systems, command-line workflows, and pull requests, with attention to dependency compatibility, infrastructure context, and breaking changes. Its Precog capability applies similar analysis before a proposed change is merged, which extends the product from backlog reduction into prevention of new exposure. These capabilities are technically important because automated remediation is only useful when the system has enough environmental context to avoid noisy or unsafe changes; the public materials establish the intended workflow, but independent validation of precision, rollback behavior, and remediation quality remains a diligence question.
+
+The primary customer is an enterprise security organization responsible for cloud risk, vulnerability management, security operations, or application security, with engineering teams that own the resulting fixes. This creates a cross-functional buying and deployment problem: Averlon must normalize data from existing tools, map assets and identities accurately, earn trust from security leaders, and make proposed fixes acceptable to developers. The market includes large platform vendors and focused exposure-management, cloud-security, application-security, and remediation products. Averlon’s wedge is therefore operational: reducing the number of findings requiring human triage and shortening the path from a defensible decision to an applied fix. Its official site reports customer testimonials and outcome claims such as faster critical-vulnerability resolution and reduced false positives; these are useful commercial signals but are company-reported rather than independently audited metrics.
+
+Averlon publicly announced in May 2024 that it was emerging from stealth after an $8M round led by Voyager Capital, with participation from Salesforce Ventures and Outpost Ventures, bringing stated total funding to $10.5M. The company identifies Sunil Gottumukkala as CEO and co-founder and Vishal Agarwal as CTO and co-founder, and its public team and LinkedIn presence indicate a privately held company with an 11-50 employee range. The official site currently lists offices in Redmond, Washington and Bangalore, India. Public evidence supports a seed-stage, early commercial company with a developed product narrative and customer-facing materials, but does not establish revenue, retention, deployment scale, government contracts, or formal security certifications.
+
+The national-security relevance is credible but should be kept at the defensive-cyber level. Exposure prioritization, attack-path analysis, cloud entitlement context, and rapid remediation apply to government and defense networks as well as commercial critical infrastructure. They could help constrained security teams reduce exploitable exposure and understand blast radius across complex environments. There is no reliable public evidence in the reviewed sources of defense customers or government procurement, so the record should treat defense applicability as a capability-based dual-use assessment, not as demonstrated defense traction. The main strategic question is whether Averlon can turn agentic analysis into reliable, explainable, low-risk changes at enterprise scale while competing against consolidating security platforms."""
+logo = "https://averlon.ai/favicon.ico"
+website = "https://www.averlon.ai"
+sector = "Cloud Security / Exposure Management"
+founded = "2022"
+headquarters = "Redmond, Washington, United States"
+employees = "Unknown (12 reported in May 2024; current headcount not verified)"
+funding_stage = "Seed; company announced an $8M May 2024 seed and $10.5M total raised; SEC Form D separately reports $10,399,986 sold in its May 2024 equity offering, so round scope needs reconciliation"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Averlon's core capabilities have substantive defensive-security and commercial applicability: contextual exploitability analysis, attack-chain disruption, cloud entitlement visibility, and automated remediation can be used by enterprises, critical infrastructure operators, and public-sector security teams. The dual-use case is capability-based and credible for cyber defense, especially where small teams must reduce exposure across cloud and software environments. Public materials reviewed do not verify defense customers, government contracts, classified deployments, or accreditation, so the score reflects technical adjacency rather than proven government traction."
+key_technologies = [
+  "Environmental applicability and reachability analysis",
+  "Cloud asset, identity, permission, and network-context mapping",
+  "Attack-chain modeling to critical assets",
+  "Agentic vulnerability triage and remediation",
+  "Context-aware dependency, code, and infrastructure fix generation",
+  "Pre-merge exposure analysis through Precog",
+  "Integrations across VM, CSPM, KSPM, CIEM, CWPP, ASPM, and DSPM data"
+]
+use_cases = [
+  "Prioritizing vulnerabilities that are reachable and exploitable in a specific cloud environment",
+  "Breaking attack chains to sensitive applications, identities, or data stores",
+  "Generating and reviewing remediation pull requests for dependency and code findings",
+  "Reducing triage noise across vulnerability, cloud posture, and identity findings",
+  "Checking proposed changes for new exploitable exposure before production deployment",
+  "Supporting security operations investigations with blast-radius and path context",
+  "Improving vulnerability risk reduction for regulated or mission-critical enterprise systems"
+]
+investible = true
+investment_rationale = "Averlon is a credible strategic-priority signal for a dual-use cybersecurity database, not an investment recommendation. The company addresses a persistent enterprise problem: findings are abundant, but remediation is slow because exploitability, ownership, and change safety are difficult to establish. Its reported $10.5M total funding, named institutional backers, public product, and 11-50 employee profile indicate more substance than an unvalidated concept. The opportunity is attractive if Averlon can demonstrate that environmental reasoning improves precision and that agent-generated fixes are safe, explainable, and accepted by developers. Diligence should focus on paid customer count, recurring revenue and retention, time-to-value, integration depth, remediation acceptance and rollback rates, model evaluation, data handling, gross margins, and competitive displacement. The principal thesis risk is that larger security platforms absorb similar remediation features before Averlon establishes a durable data, workflow, or outcome advantage."
+strategic_value = "Averlon is strategically relevant because cyber resilience increasingly depends on closing exploitable exposure, not merely discovering more issues. Its platform sits at the intersection of cloud security, software supply-chain risk, identity context, vulnerability operations, and engineering change management. For commercial critical infrastructure and public-sector environments, the ability to identify reachable attack paths and prioritize changes that sever them could improve scarce-team efficiency and reduce time at risk. The value is strongest where organizations already operate complex cloud and software estates but lack enough analysts and remediation capacity. Strategic relevance should remain conditional until the company demonstrates reliable performance in heterogeneous environments, auditable reasoning, safe change execution, and adoption beyond marketing claims."
+public_sources = [
+  { label = "Averlon funding announcement", url = "https://www.averlon.ai/blog/averlon-comes-out-of-stealth-mode-with-10m-in-funding-to-advance-ai-powered-cloud-security", description = "Company announcement of May 2024 seed and lifetime funding" },
+  { label = "Averlon Form D", url = "https://www.sec.gov/Archives/edgar/data/1943967/000194396724000003/xslFormDX01/primary_doc.xml", description = "SEC issuer, first-sale date, security type, and offering amount sold" },
+  { label = "Averlon about", url = "https://www.averlon.ai/about", description = "Founders and current company positioning" },
+  { label = "Averlon contact", url = "https://www.averlon.ai/contact", description = "Company office locations" },
+  { label = "GeekWire funding and founders report", url = "https://www.geekwire.com/2024/salesforce-microsoft-vets-raise-8m-for-new-ai-cybersecurity-startup/", description = "Independent reporting on financing, founders, early customers, and team size at announcement" },
+  { label = "SecurityWeek funding report", url = "https://www.securityweek.com/averlon-emerges-from-stealth-mode-with-8-million-in-funding/", description = "Independent report on seed round and investors" },
+  { label = "Averlon Precog launch", url = "https://www.averlon.ai/blog/averlon-precog-preventing-exposure-before-backlog", description = "Company product announcement and technical description" },
+  { label = "Averlon and Wiz", url = "https://www.averlon.ai/blog/averlon-and-wiz-accelerate-remediation-and-reduce-exposure", description = "Company announcement of product integration partnership" },
+  { label = "Averlon and Anthropic CVP", url = "https://www.averlon.ai/blog/averlon-joins-anthropics-cyber-verification-program", description = "Company statement of participation in Anthropic program" },
+  { label = "Averlon and Snyk", url = "https://www.averlon.ai/blog/eliminate-appsec-overload-snyk-averlon", description = "Company announcement of Snyk partnership" },
+  { label = "Averlon and Tenable", url = "https://www.averlon.ai/blog/close-remediation-gap-tenable-averlon", description = "Company description of Tenable integration" },
+  { label = "Voyager Capital Averlon news", url = "https://www.voyagercapital.com/latest-news/topic/15945", description = "Lead investor news index corroborating the May 2024 announcement" }
+]
+potential_score = 78.0
+technology_score = 82.0
+market_score = 80.0
+team_score = 76.0
+dual_use_score = 82.0
+strategic_alignment_score = 83.0
+stage = "early"
+stage_rationale = "Averlon was founded in 2022 and publicly emerged from stealth in 2024 after a company-reported $8M financing that brought total funding to $10.5M. Its product, customer-facing materials, named founders, public team, and continuing 11-50 employee range indicate an operating startup rather than an unvalidated pre-product project. Seed remains the most defensible public funding-stage classification because the reviewed sources do not confirm a later priced round or growth-stage financing. Commercial maturity is ahead of the funding label, but revenue scale, retention, and deployment breadth are not publicly established."
+competitors = [
+  "Tenable One and Tenable exposure management",
+  "Rapid7 Exposure Command and InsightVM",
+  "Qualys TruRisk and VMDR",
+  "Wiz cloud and exposure-management platform",
+  "Nucleus Security vulnerability operations",
+  "Balbix cyber asset attack-surface management"
+]
+competitive_edge = "Averlon's stated edge is the combination of environmental reasoning, attack-chain prioritization, and remediation execution in developer workflows. Tenable, Rapid7, and Qualys have broader installed bases and mature vulnerability data, while Wiz and other cloud-security platforms compete for the same exposure context. Nucleus Security is a workflow-oriented substitute and Balbix is an exposure-analytics substitute. Averlon may differentiate if it can prove that it removes non-actionable findings more accurately, identifies the shortest high-impact attack-chain breaks, and produces fixes developers can safely accept without extensive manual work. That advantage is not yet proven by the public record: reported percentages and customer testimonials are encouraging commercial signals, but independent benchmarks, customer references, and evidence of sustained remediation outcomes are still needed."
+risk_factors = [
+  "Established security-platform vendors can bundle exposure prioritization and remediation into broader suites.",
+  "Agentic fixes can create operational or security risk if environmental context, dependencies, or rollback behavior are wrong.",
+  "Data normalization across cloud, identity, code, runtime, and vulnerability tools can make deployments slow and expensive.",
+  "False-positive reduction and exploitability judgments require high-quality asset, reachability, and identity data that customers may not maintain.",
+  "Enterprise security and developer teams may disagree over ownership, approval gates, and acceptable automation levels.",
+  "Public evidence does not establish recurring revenue, retention, large-scale deployments, or government traction.",
+  "Fast-moving AI security tooling may increase model, data-governance, privacy, and explainability requirements."
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Averlon remains a strong strategic-priority signal for the database because it combines a specific remediation bottleneck with technically credible defensive-cyber applicability. The score reflects strong product relevance and dual-use alignment, a funded and operating seed-stage company, and public evidence of a real platform and customer-facing motion, while discounting for unverified revenue, deployment scale, independent performance data, and government traction. Priority diligence is to validate customer outcomes, remediation safety, data and model governance, competitive win rates, and whether the product becomes a system of action rather than another exposure dashboard."
+crawled_at = "2026-02-16T14:44:00Z"
+updated_at = "2026-10-04T00:57:30Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "averlon"
+legal_name = "Averlon, Inc."
+aliases = ["Averlon"]
+operating_status = "active"
+business_model = "Enterprise cybersecurity software sold to security and engineering teams; subscription and contract pricing are not publicly disclosed."
+products = ["Averlon Remediation Operations platform", "Precog"]
+locations = ["Redmond, Washington, United States", "Bengaluru, Karnataka, India"]
+linkedin_url = "https://www.linkedin.com/company/averlon-security"
+country_of_incorporation = "United States (Delaware)"
+founded_on = "2022"
+source_ids = ["sec_form_d", "company_about", "company_contact", "company_funding", "geekwire"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Averlon announced an $8 million seed financing on 2024-05-23 led by Voyager Capital with Salesforce Ventures, Outpost Ventures, and individual security executives participating; it said the financing brought company-reported lifetime funding to $10.5 million. The SEC Form D for an equity offering with first sale on 2024-05-10 reports $10,399,986 sold. The filing amount is an offering-level disclosure and its relationship to the announced $8 million seed amount is unresolved; it is recorded as a conflicting observation rather than substituted into the round amount. No later priced financing was identified in the reviewed sources through 2026-10-04."
+rounds = [{ id = "seed-2024", round_type = "Seed", instrument = "equity", status = "announced", announced_on = "2024-05-23", amount_status = "conflicting", amount_observations = [{ id = "company-announced-seed", amount = 8000000, currency = "USD", as_of = "2024-05-23", source_ids = ["company_funding", "geekwire", "securityweek"], notes = "Company and independent reports describe the May 2024 seed as $8 million." }, { id = "sec-offering-sold", amount = 10399986, currency = "USD", as_of = "2024-05-23", source_ids = ["sec_form_d"], notes = "Form D reports the total amount sold in the equity offering as $10,399,986; the filing does not label this as the announced seed-round amount." }], amount_scope = "unknown", lead_investors = ["Voyager Capital"], participating_investors = ["Salesforce Ventures", "Outpost Ventures", "Several prominent CISOs and industry leaders (not individually named in the company announcement)"], valuation_basis = "undisclosed", source_ids = ["company_funding", "sec_form_d", "geekwire", "securityweek"] }]
+reported_total_raised = 10500000
+reported_total_currency = "USD"
+total_source_ids = ["company_funding", "geekwire", "securityweek"]
+total_as_of = "2024-05-23"
+total_scope = "Company-announced cumulative funding total, not recomputed from offering filings or individual rounds."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.people]]
+name = "Sunil Gottumukkala"
+role = "CEO and co-founder; SEC filing lists executive officer and director"
+is_founder = true
+current = true
+background = "Averlon's official site identifies him as CEO and co-founder. GeekWire reports that he and co-founder Vishal Agarwal previously led engineering teams at Salesforce."
+source_ids = ["company_about", "sec_form_d", "geekwire"]
+
+[[intelligence.people]]
+name = "Vishal Agarwal"
+role = "CTO and co-founder; SEC filing lists director"
+is_founder = true
+current = true
+background = "Averlon's official site identifies him as CTO and co-founder. GeekWire reports that he and co-founder Sunil Gottumukkala previously led engineering teams at Salesforce."
+source_ids = ["company_about", "sec_form_d", "geekwire"]
+
+[[intelligence.investors]]
+name = "Voyager Capital"
+investor_type = "vc"
+website = "https://www.voyagercapital.com"
+round_ids = ["seed-2024"]
+relationship = "current"
+source_ids = ["company_funding", "voyager_news", "geekwire"]
+
+[[intelligence.investors]]
+name = "Salesforce Ventures"
+investor_type = "corporate"
+website = "https://www.salesforce.com/company/ventures/"
+round_ids = ["seed-2024"]
+relationship = "current"
+source_ids = ["company_funding", "geekwire", "securityweek"]
+
+[[intelligence.investors]]
+name = "Outpost Ventures"
+investor_type = "vc"
+round_ids = ["seed-2024"]
+relationship = "current"
+source_ids = ["company_funding", "geekwire", "securityweek"]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "The SEC Form D identifies Averlon, Inc. as a Delaware corporation and names Sunil Gottumukkala and Vishal Agarwal as related persons, with Austin Guyette and David Dubick listed as directors. No public cap table or ownership percentages were identified. The company remains privately held in the reviewed material; investor participation does not establish ownership percentages."
+cap_table_status = "undisclosed"
+shareholders = ["Privately held; individual shareholder list and percentages not publicly disclosed"]
+source_ids = ["sec_form_d", "company_funding"]
+deals = []
+holdings = []
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Averlon announced an integration partnership with Wiz for a workflow combining Wiz cloud risk context with Averlon's agentic triage and remediation. The announcement describes a partnership and product integration, not a named paying customer or verified production deployment."
+date = "2026-01-23"
+source_ids = ["wiz_partnership"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Averlon introduced Precog, described as pre-merge exposure analysis for proposed infrastructure changes in CI workflows. This is a company-described product capability; public material reviewed does not provide independent performance validation."
+date = "2026-05-20"
+source_ids = ["precog_launch"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Averlon announced that it joined Anthropic's Cyber Verification Program. This indicates program participation and access for specified cyberdefense tasks; it does not establish a government contract or defense customer."
+date = "2026-06-08"
+source_ids = ["anthropic_cvp"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Averlon announced a strategic partnership with Snyk to assess applicability and attack-chain context for application-security issues and support remediation workflows. The public announcement does not disclose commercial terms or customer deployment outcomes."
+date = "2025-07-07"
+source_ids = ["snyk_partnership"]
+
+[[intelligence.comparables]]
+name = "Tenable"
+website = "https://www.tenable.com"
+rationale = "Established vulnerability and exposure-management provider, including an integration announced by Averlon."
+differentiation = "Tenable emphasizes broad exposure visibility; Averlon positions itself around contextual triage and remediation execution."
+source_ids = ["tenable_partner"]
+
+[[intelligence.comparables]]
+name = "Wiz"
+website = "https://www.wiz.io"
+rationale = "Cloud security platform with risk context and a publicly announced integration partnership with Averlon."
+differentiation = "Wiz supplies cloud visibility and risk context; Averlon says it adds exploitability decisioning and developer workflow remediation."
+source_ids = ["wiz_partnership"]
+
+[[intelligence.comparables]]
+name = "Nucleus Security"
+website = "https://nucleussec.com"
+rationale = "Vulnerability operations and prioritization substitute in enterprise remediation workflows."
+differentiation = "Nucleus focuses on vulnerability operations aggregation and workflows; Averlon emphasizes environmental attack-chain reasoning and agentic fix generation."
+source_ids = ["securityweek"]
+
+[intelligence.israel_connection]
+status = "not_established"
+basis = []
+summary = "Reviewed primary materials identify Averlon, Inc. as a Delaware corporation headquartered in Redmond, Washington, with an additional Bengaluru office. No Israeli incorporation, headquarters, founder connection, or Israeli R&D was established from the reviewed sources."
+as_of = "2026-10-04"
+source_ids = ["sec_form_d", "company_contact", "company_about"]
+
+[intelligence.research]
+researched_at = "2026-10-04T00:57:30Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Averlon identity legal name headquarters founded products active", "Averlon funding raised seed Series A 2025 2026", "Averlon investors Voyager Salesforce Ventures Outpost", "Averlon founders leadership CEO CTO careers team", "Averlon ownership acquired acquisition parent company", "Averlon revenue ARR customers financials", "Averlon customers contracts partnerships product traction", "Averlon patents intellectual property USPTO WIPO", "Averlon competitors exposure management remediation operations", "Averlon defense government cybersecurity dual use", "Averlon Hebrew funding founders", "Averlon SEC Form D 1943967"]
+gaps = ["financials: no dated public revenue, ARR, profitability, burn, or runway disclosure located; Form D issuer size section declines disclosure and is not financial statements.", "intellectual_property: no attributable patent or published application located in the reviewed searches; this does not establish absence of IP.", "ownership: public filing confirms entity and named officers/directors, but private cap table, share classes, and investor ownership percentages are unavailable.", "traction: named paying customers, contract values, renewals, deployment scale, and independently verified product outcomes are not publicly established. Company references to early customers and partnerships are not treated as verified recurring revenue.", "team: only the two founders are identified in direct primary and reputable contemporaneous sources reviewed; comprehensive current roster and current headcount were not verified.", "funding: the 2024 company-announced $8M seed and SEC Form D $10,399,986 amount sold require reconciliation of offering scope; no later priced round found.", "dual_use: defensive cybersecurity applicability is substantiated at a capability level, but no public defense customer, government contract, classified deployment, or security accreditation was identified."]
+conflicts = ["The 2024-05-23 company announcement and GeekWire/SecurityWeek report an $8M seed, while the SEC Form D for an equity offering first sold 2024-05-10 reports $10,399,986 total amount sold. The filing does not call that figure the seed round. Amount is withheld from the round numeric field and both published observations are preserved."]
+diligence_questions = ["What is the reconciled amount, instrument, and close date for the May 2024 financing given the $8M announcement and $10.399986M Form D amount sold?", "How many paying customers use Averlon in production, what are ARR, gross retention, net retention, and average contract value, and how have they changed since the 2024 early-customer disclosure?", "What are the measured precision and recall of exploitability triage, developer acceptance rate of generated fixes, rollback or incident rate, and performance across independent customer environments?", "What is the current employee count and hiring distribution between Redmond and Bengaluru?", "What data is retained or sent to model providers, what customer-controlled deployment and audit options exist, and what security certifications or government authorizations have been achieved?"]
+
+[[intelligence.research.sources]]
+id = "company_funding"
+url = "https://www.averlon.ai/blog/averlon-comes-out-of-stealth-mode-with-10m-in-funding-to-advance-ai-powered-cloud-security"
+title = "Averlon Comes Out of Stealth with $10M in Funding to Advance AI-Powered Cloud Security"
+publisher = "Averlon"
+kind = "company"
+accessed_at = "2026-10-04T00:57:30Z"
+published_on = "2024-05-23"
+claims = ["Averlon announced $8 million funding led by Voyager Capital with Salesforce Ventures and Outpost Ventures participating.", "The company said the financing brought total funding to $10.5 million.", "The company said Sunil Gottumukkala and Vishal Agarwal co-founded Averlon in 2022.", "The company described early customer momentum without naming customers or disclosing financial metrics."]
+
+[[intelligence.research.sources]]
+id = "sec_form_d"
+url = "https://www.sec.gov/Archives/edgar/data/1943967/000194396724000003/xslFormDX01/primary_doc.xml"
+title = "Form D, Averlon, Inc."
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-04T00:57:30Z"
+published_on = "2024-05-23"
+claims = ["Issuer is Averlon, Inc., a Delaware corporation incorporated in 2022, with principal place of business in Redmond, Washington.", "Form D identifies Sunil Gottumukkala as executive officer and director; Vishal Agarwal, Austin Guyette, and David Dubick are listed as directors.", "The equity offering's first sale date is 2024-05-10.", "The filing reports total offering amount and total amount sold of $10,399,986 and remaining amount of zero.", "The issuer declined to disclose revenue and aggregate net asset value ranges."]
+
+[[intelligence.research.sources]]
+id = "company_about"
+url = "https://www.averlon.ai/about"
+title = "About Averlon"
+publisher = "Averlon"
+kind = "company"
+accessed_at = "2026-10-04T00:57:30Z"
+claims = ["Averlon identifies Sunil Gottumukkala as CEO and co-founder and Vishal Agarwal as CTO and co-founder.", "Averlon describes its current mission as scaling exposure management with agentic AI for triage and remediation."]
+
+[[intelligence.research.sources]]
+id = "company_contact"
+url = "https://www.averlon.ai/contact"
+title = "Contact Averlon"
+publisher = "Averlon"
+kind = "company"
+accessed_at = "2026-10-04T00:57:30Z"
+claims = ["Averlon lists offices in Redmond, Washington and Bengaluru, Karnataka, India."]
+
+[[intelligence.research.sources]]
+id = "geekwire"
+url = "https://www.geekwire.com/2024/salesforce-microsoft-vets-raise-8m-for-new-ai-cybersecurity-startup/"
+title = "Salesforce, Microsoft vets raise $8M for new AI cybersecurity startup"
+publisher = "GeekWire"
+kind = "media"
+accessed_at = "2026-10-04T00:57:30Z"
+published_on = "2024-05-23"
+claims = ["GeekWire reports an $8 million seed led by Voyager Capital with Salesforce Ventures and Outpost Ventures participating.", "The report says total funding was $10.5 million and the company had 12 people at publication.", "The report identifies Sunil Gottumukkala and Vishal Agarwal as co-founders and says they previously led Salesforce engineering teams.", "The report says some early partners were paying customers at that time, without naming them."]
+
+[[intelligence.research.sources]]
+id = "securityweek"
+url = "https://www.securityweek.com/averlon-emerges-from-stealth-mode-with-8-million-in-funding/"
+title = "Averlon Emerges From Stealth Mode With $8 Million in Funding"
+publisher = "SecurityWeek"
+kind = "media"
+accessed_at = "2026-10-04T00:57:30Z"
+published_on = "2024-05-24"
+claims = ["SecurityWeek reports $8 million in seed funding led by Voyager Capital and participation from Outpost Ventures, Salesforce Ventures, and angel investors.", "The report describes Averlon as a Redmond cloud-security startup co-founded by Sunil Gottumukkala."]
+
+[[intelligence.research.sources]]
+id = "voyager_news"
+url = "https://www.voyagercapital.com/latest-news/topic/15945"
+title = "Voyager Capital news mentioning Averlon"
+publisher = "Voyager Capital"
+kind = "investor"
+accessed_at = "2026-10-04T00:57:30Z"
+claims = ["Voyager Capital's news page lists the May 23, 2024 Averlon funding announcement."]
+
+[[intelligence.research.sources]]
+id = "precog_launch"
+url = "https://www.averlon.ai/blog/averlon-precog-preventing-exposure-before-backlog"
+title = "Preventing Exposure Before It Becomes Backlog: Introducing Averlon Precog"
+publisher = "Averlon"
+kind = "company"
+accessed_at = "2026-10-04T00:57:30Z"
+published_on = "2026-05-20"
+claims = ["Averlon announced Precog for pre-merge evaluation of infrastructure changes in CI workflows.", "The company describes contextual analysis of proposed changes, existing cloud state, vulnerability posture, and exposure paths."]
+
+[[intelligence.research.sources]]
+id = "wiz_partnership"
+url = "https://www.averlon.ai/blog/averlon-and-wiz-accelerate-remediation-and-reduce-exposure"
+title = "Averlon + Wiz: Accelerate Remediation and Reduce Exposure"
+publisher = "Averlon"
+kind = "company"
+accessed_at = "2026-10-04T00:57:30Z"
+published_on = "2026-01-23"
+claims = ["Averlon announced an integration with Wiz combining Wiz risk context and Averlon agentic prioritization and remediation.", "The announcement does not disclose customer names, commercial terms, or measured deployment outcomes."]
+
+[[intelligence.research.sources]]
+id = "anthropic_cvp"
+url = "https://www.averlon.ai/blog/averlon-joins-anthropics-cyber-verification-program"
+title = "Averlon Joins Anthropic's Cyber Verification Program"
+publisher = "Averlon"
+kind = "company"
+accessed_at = "2026-10-04T00:57:30Z"
+published_on = "2026-06-08"
+claims = ["Averlon states that it joined Anthropic's Cyber Verification Program for specified cyberdefense tasks.", "The announcement describes Averlon's RemOps platform and Precog capabilities but does not claim government procurement or a defense customer."]
+
+[[intelligence.research.sources]]
+id = "snyk_partnership"
+url = "https://www.averlon.ai/blog/eliminate-appsec-overload-snyk-averlon"
+title = "Averlon + Snyk: From Vulnerability Overload to Remediation Ops with Agentic AI"
+publisher = "Averlon"
+kind = "company"
+accessed_at = "2026-10-04T00:57:30Z"
+published_on = "2025-07-07"
+claims = ["Averlon announced a strategic partnership with Snyk around applicability analysis, attack-chain context, and remediation workflows.", "Public announcement does not disclose commercial terms or customer deployment outcomes."]
+
+[[intelligence.research.sources]]
+id = "tenable_partner"
+url = "https://www.averlon.ai/blog/close-remediation-gap-tenable-averlon"
+title = "From Detection to Resolution: Closing the Remediation Gap with Tenable + Averlon"
+publisher = "Averlon"
+kind = "company"
+accessed_at = "2026-10-04T00:57:30Z"
+published_on = "2025-07-02"
+claims = ["Averlon describes integration with Tenable to connect vulnerability visibility with agentic prioritization and remediation workflows."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T00:57:30Z"
+next_review_on = "2027-01-04"
+queries = ["Averlon identity legal name headquarters founded products active", "Averlon SEC Form D 1943967"]
+source_ids = ["sec_form_d", "company_about", "company_contact"]
+summary = "SEC filing establishes the Delaware legal entity, incorporation year, and Redmond principal office; official pages identify founders, product positioning, and Bengaluru as an additional office."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-04T00:57:30Z"
+next_review_on = "2027-01-04"
+queries = ["Averlon funding raised seed Series A 2025 2026", "Averlon SEC Form D 1943967", "Averlon Hebrew funding founders"]
+source_ids = ["company_funding", "sec_form_d", "geekwire", "securityweek"]
+summary = "The $8M announced seed and $10.399986M amount sold on Form D are preserved as distinct observations because their scope is unresolved; the company separately reports $10.5M cumulative funding."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T00:57:30Z"
+next_review_on = "2027-01-04"
+queries = ["Averlon investors Voyager Salesforce Ventures Outpost"]
+source_ids = ["company_funding", "geekwire", "securityweek", "voyager_news"]
+summary = "The named institutional participants in the 2024 seed are Voyager Capital, Salesforce Ventures, and Outpost Ventures; the lead is Voyager. Company and press reports also mention unnamed executives or angels."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T00:57:30Z"
+next_review_on = "2027-01-04"
+queries = ["Averlon founders leadership CEO CTO careers team"]
+source_ids = ["company_about", "sec_form_d", "geekwire"]
+summary = "Two founders are verified. The Form D lists the founders and two directors; current full employee roster and headcount were not confirmed."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T00:57:30Z"
+next_review_on = "2027-01-04"
+queries = ["Averlon ownership acquired acquisition parent company", "Averlon SEC Form D 1943967"]
+source_ids = ["sec_form_d", "company_funding"]
+summary = "Averlon is identified as a private Delaware corporation. Public cap table and individual ownership percentages were not found; no acquisition or parent was found."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T00:57:30Z"
+next_review_on = "2027-01-04"
+queries = ["Averlon revenue ARR customers financials"]
+source_ids = ["sec_form_d", "geekwire"]
+summary = "No dated revenue, ARR, profitability, burn, or runway data was located; Form D issuer-size categories are marked decline to disclose."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T00:57:30Z"
+next_review_on = "2027-01-04"
+queries = ["Averlon customers contracts partnerships product traction"]
+source_ids = ["geekwire", "company_funding", "precog_launch", "wiz_partnership", "anthropic_cvp", "snyk_partnership"]
+summary = "Public signals include early customer statements in 2024, named product integrations/partnership announcements, Precog launch, and Anthropic CVP participation. None establishes current paid deployment scale or revenue."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T00:57:30Z"
+next_review_on = "2027-01-04"
+queries = ["Averlon patents intellectual property USPTO WIPO", "Averlon Inc patent"]
+source_ids = ["sec_form_d", "company_about"]
+summary = "No attributable patents or applications were located in the available search. This is a search limitation and not evidence that the company has no proprietary IP."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T00:57:30Z"
+next_review_on = "2027-01-04"
+queries = ["Averlon competitors exposure management remediation operations"]
+source_ids = ["wiz_partnership", "tenable_partner", "securityweek"]
+summary = "Relevant substitutes include exposure-management platforms, vulnerability-operations products, and cloud-security vendors; Tenable and Wiz are publicly connected to Averlon through integrations."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T00:57:30Z"
+next_review_on = "2027-01-04"
+queries = ["Averlon defense government cybersecurity dual use"]
+source_ids = ["anthropic_cvp", "precog_launch", "company_about"]
+summary = "The product has a defensible cyber-defense use case for commercial and public-sector operators. CVP participation is a cyberdefense program signal, not evidence of a government or military customer."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Official company pages remain active and describe current products, integrations, and current company activities."
+verified_at = "2026-10-04T00:57:30Z"
+source_ids = ["company_about", "precog_launch", "anthropic_cvp"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.legal_name"
+support = "direct"
+summary = "SEC Form D names Averlon, Inc. as issuer."
+verified_at = "2026-10-04T00:57:30Z"
+source_ids = ["sec_form_d"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.founded_on"
+support = "direct"
+summary = "SEC Form D lists the issuer's year of incorporation as 2022; company announcement also says the founders co-founded in 2022."
+verified_at = "2026-10-04T00:57:30Z"
+source_ids = ["sec_form_d", "company_funding"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "The company explicitly states that the May 2024 financing brings total funding to $10.5 million."
+verified_at = "2026-10-04T00:57:30Z"
+source_ids = ["company_funding", "geekwire", "securityweek"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.amount_observations.company-announced-seed.amount"
+support = "direct"
+summary = "Company announcement and two independent reports state the seed round was $8 million."
+verified_at = "2026-10-04T00:57:30Z"
+source_ids = ["company_funding", "geekwire", "securityweek"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.amount_observations.sec-offering-sold.amount"
+support = "direct"
+summary = "SEC Form D reports total amount sold of $10,399,986 for the equity offering; this check verifies the filing's reported observation, not that it is identical in scope to the announced seed amount."
+verified_at = "2026-10-04T00:57:30Z"
+source_ids = ["sec_form_d"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.lead_investors"
+support = "direct"
+summary = "The company and independent reports identify Voyager Capital as lead investor in the May 2024 seed."
+verified_at = "2026-10-04T00:57:30Z"
+source_ids = ["company_funding", "geekwire", "securityweek"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.participating_investors"
+support = "direct"
+summary = "The company and independent reports name Salesforce Ventures and Outpost Ventures; the company announcement also mentions unnamed CISOs and industry leaders."
+verified_at = "2026-10-04T00:57:30Z"
+source_ids = ["company_funding", "geekwire", "securityweek"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "The SEC filing directly identifies a Delaware corporation with principal office in Redmond, and the official contact page lists Redmond and Bengaluru offices. The reviewed sources establish these locations; no Israeli connection is stated in the records."
+verified_at = "2026-10-04T00:57:30Z"
+source_ids = ["sec_form_d", "company_contact", "company_about"]

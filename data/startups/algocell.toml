@@ -1,0 +1,335 @@
+name = "Algocell"
+description = "Algocell is an Israeli deep-tech startup building hybrid biological-engineering models and AI-powered digital twins to help cell-based manufacturers reduce physical trial-and-error, improve yield, and scale processes from laboratory experiments into repeatable production. Its platform targets novel foods, precision fermentation, biopharma, agriculture, bioplastics, and biofuels."
+detailed_description = """
+**Product and the concrete problem it solves.** Algocell is trying to remove one of the most expensive bottlenecks in cell-based manufacturing: the gap between a promising flask or bench-scale experiment and a stable, economical process in a production bioreactor. A cell-based company can have the right organism, pathway, or product concept and still fail because a change in vessel geometry, oxygen transfer, feeding strategy, temperature, induction timing, or harvest policy changes how living cells behave. The usual response is to run more physical experiments, but each experiment consumes time, raw materials, operator capacity, and scarce biological material, while the results may not transfer cleanly to a larger vessel. Algocell’s product is a software platform for constructing a digital twin of that bioprocess, then using the twin to simulate alternatives and recommend operating protocols. The company presents this as infrastructure for producers of cultivated meat, precision-fermented ingredients, recombinant proteins, pharmaceuticals, agricultural products, bioplastics, and biofuels. The practical value proposition is specific: help process-development and production teams understand the relationship between biology and engineering, test more scenarios in silico, shorten scale-up, reduce batch variability, and improve the economics of products whose commercial viability depends on reliable cell cultivation.
+
+**Core technology and how it actually works.** Algocell’s technical architecture combines three elements that are often separated in industrial practice: mechanistic biological models, machine-learning models, and a digital-twin workflow. A user supplies a relatively small amount of biological and engineering data, including observations about growth, productivity, feeding, gas regimes, temperature, induction, or other process variables. Algocell says its hybrid models are calibrated to that data and constrained by biological phenomena such as biomass inhibition, protein production, metabolite toxicity, and osmotic stress. The result is not simply a statistical prediction of the next batch. The company describes a model-based optimization loop in which the digital twin can be interrogated across many candidate protocols, with the goal of identifying a feasible design space and an operating strategy that balances productivity, quality, time, and cost. Its public materials emphasize data scarcity as a design constraint: a customer does not need a massive historical dataset before the tool becomes useful. A company case study on Pichia pastoris recombinant-protein production describes the use of hybrid mechanistic-ML digital twins, intensified design of experiments, model calibration and validation, and optimized fed-batch and harvest protocols. The case study reports predicted protein-expression increases of 20% for an optimized fed-batch protocol and 40% for a harvest protocol relative to its control; these are company-reported case-study results, not independently replicated benchmarks.
+
+**Market, customers, and go-to-market.** Algocell sells into a technically demanding B2B market spanning biopharmaceutical development, contract manufacturing, precision fermentation, cultivated food, agricultural biotechnology, industrial biotechnology, cosmetics, and sustainable materials. The likely economic buyer is a process-development, bioprocess engineering, manufacturing science, or operations group whose cost center is dominated by experiments, failed scale-up, inconsistent batches, or slow technology transfer. A sensible initial wedge is a focused model for one organism and process, followed by expansion into additional cell lines, products, facilities, and production stages. The company’s public website invites customers to upload a small amount of new or historical data and obtain a first model, which implies a software-led evaluation motion rather than a requirement to install new bioreactor hardware. The same platform can potentially support both R&D and production teams: R&D users can compare protocols and define a design space, while production users can use the model for in-production insight, process control, and batch consistency. Algocell’s stated target sectors are unusually broad, but breadth creates a commercial sequencing question. The startup must decide whether food, biopharma, biofuels, and industrial materials share enough model architecture and buying behavior to support one product, or whether each segment requires a distinct validation package, integration layer, regulatory story, and channel. The public record identifies leading industry players only in general terms and does not disclose named paying customers, contract values, recurring revenue, or a repeatable sales cycle.
+
+**Traction, funding, and third-party validation.** Algocell was founded in 2023 and publicly announced a $2.8 million pre-seed round in 2025, led by Good Company VC with participation from sector-focused angels and a non-dilutive Israel Innovation Authority grant. Public ecosystem data records three funding events, including earlier angel support, the Good Company financing, and the Authority grant; the exact split between equity and non-equity capital is not fully disclosed in the company’s own materials. The round is intended to expand the team, improve the predictive capabilities of the digital-twin platform, and launch commercial pilot programs with manufacturers. The company has also published technical materials rather than relying only on a funding announcement. Its site lists a design-of-experiment tool and case studies covering mammalian-cell perfusion and Pichia pastoris fermentation. The Pichia case study names concrete process objects, including biomass, protein expression, methanol and glycerol feeding, fed-batch operation, continuous or harvest protocols, and model-predicted outcomes. Startup Nation Finder identifies Algocell as a Rehovot-based Israeli company with 1-10 employees and a pre-seed stage. These are useful validation signals for a small scientific startup, but they do not prove production deployment. There is no public independent audit of the reported yield improvements, no named manufacturing customer, no disclosed paid pilot, no public ARR, and no evidence that the software has been qualified for a regulated production environment. The public sources reviewed also do not establish a granted patent assigned to Algocell itself; its freedom-to-operate and trade-secret strategy remain diligence questions.
+
+**Founders and team background.** The founding team is directly aligned with the biological-modeling problem. Official company materials identify Omri Schanin as CEO and co-founder, Eyal Betzalel as CTO and co-founder, and David Almagor, PhD, as chairman and co-founder; Shirley Weiss, PhD, is listed as VP Biology. Their roles map to the multidisciplinary requirements of the product: business and commercialization leadership, software and algorithms, scientific modeling, and cellular physiology. Public profiles connect Algocell’s work to process modeling rather than generic AI. A company job description for a process-modeling data scientist describes a platform that combines physics-based models with data-driven approaches and focuses on hybrid models, uncertainty, and optimization. The company’s biological leadership is important because a digital twin for a living system cannot be evaluated only by machine-learning accuracy; it must encode constraints that are biologically plausible and useful to an operator. David Almagor’s public startup and technology profile includes executive-chairman experience in Israeli technology, while the company’s official materials do not provide a complete employment history for every founder. Headcount is best treated as a small 1-10-person team based on ecosystem data. That is appropriate for a pre-seed R&D company, but it leaves several scale-up capabilities to verify: senior fermentation operations, industrial software deployment, validation in regulated biopharma settings, customer success, enterprise sales, and project-finance or manufacturing partnerships. The team’s scientific coherence is a strength; the organizational depth required to sell into large production environments is not yet demonstrated.
+
+**Competitive dynamics.** Algocell competes with several categories rather than one direct substitute. New Wave Biotech offers digital tools for bioprocess design and optimization, and is a close software analogue for companies trying to replace empirical process development with computational workflows. Culture Biosciences provides cloud bioreactor experimentation and process data, competing for the same bioprocess-development budget through an experimentation-as-a-service model. DataHow and BioSolve Process represent specialist approaches to bioprocess modeling, simulation, and optimization. Sartorius and Cytiva are much larger incumbents whose bioreactors, sensors, process-control products, and software can become the system of record around which a customer builds scale-up workflows. Benchling and broader laboratory-informatics systems are adjacent substitutes because they own experimental data and can add analytics or partner integrations. Algocell’s potential edge is the combination of mechanistic biological reasoning with machine learning under small-data conditions, plus a workflow that moves from data upload to calibrated digital twin to optimized protocol. That is a meaningful product thesis, but it is not automatically a moat. Competitors can add hybrid modeling, bioreactor vendors can embed optimization into installed systems, and customers may prefer a validated service provider over a new software layer. Defensibility will depend on proprietary process data, model performance across organisms and scales, integration into manufacturing execution and laboratory systems, repeatable improvement in yield or batch consistency, and a library of validated biological mechanisms. Until those assets are demonstrated, Algocell should be viewed as a technically differentiated early entrant in a specialized but crowded process-analytics market.
+
+**Defense, security, and resilience dual-use relevance.** Algocell’s dual-use case is resilience infrastructure, not a disclosed defense product. Food, pharmaceutical, fuel, and industrial-material production all depend on biological processes that can be disrupted by supply-chain shocks, climate events, disease, export controls, or loss of access to a particular facility or raw material. A digital-twin platform that helps a producer recover process knowledge from limited data, test alternatives without consuming scarce feedstock, and transfer a recipe between sites could strengthen continuity of production. The food-security relevance is especially concrete: precision fermentation and cellular agriculture can create protein and functional ingredients with less dependence on seasonal crops, imported animal feed, or a single agricultural geography, but only if their bioprocess economics and reproducibility improve. Similar logic applies to biopharmaceutical manufacturing and bio-based chemicals, where local or allied production capacity can reduce exposure to concentrated global supply chains. Algocell’s model-based approach could also support emergency process adaptation in a constrained facility, though no public source shows that it has been deployed in a crisis, defense plant, government program, or critical-infrastructure environment. There is no disclosed military customer, classified work, export-control authorization, or defense-specific certification. The core technology is commercially oriented and broadly applicable across civilian biomanufacturing; its strategic value comes from potentially making resilient, distributed production more feasible. That supports dual_use=true under the database’s resilience thesis, but the score should remain below a defense-native company because the security pathway is prospective and unvalidated.
+
+**Growth stage, trajectory, and key diligence risks.** Algocell is early stage: it is a 2023-founded company with pre-seed financing, a small team, published software and case-study materials, and an announced plan to move toward commercial pilots. It appears beyond idea formation because the platform has a defined workflow, named modeling methods, public tools, and at least two technical case-study themes, but it has not publicly crossed the harder gates of production deployment and repeatable revenue. The positive trajectory is that cell-based manufacturing is expanding into food, therapeutics, agriculture, biofuels, and materials, and each segment needs better scale-up economics. The most important diligence risks are: (1) **model-transfer risk**, because a model that performs on one organism or vessel may fail when biology, sensor quality, feedstock, or scale changes; (2) **data-quality risk**, because sparse or noisy process data can create confident but operationally wrong recommendations; (3) **validation and liability risk**, particularly in regulated pharmaceutical production where model changes require documented controls; (4) **commercial focus risk**, because serving many verticals can dilute product and sales execution; (5) **integration risk**, because production customers already use bioreactors, historians, laboratory systems, and manufacturing controls; (6) **competition risk**, because established equipment vendors can bundle software and specialist competitors can accumulate domain data; and (7) **capital and team risk**, because long industrial validation cycles may require more biological, software, and customer-success capacity than a pre-seed budget supports. Milestones that would materially improve the profile are a named paid pilot, independently measured yield or batch-variance improvement, repeatable deployment across more than one organism or facility, documented integration with production systems, and a clearer IP or proprietary-data moat.
+"""
+logo = "Unknown"
+website = "https://algocell.ai"
+sector = "Bioprocess Optimization / AI Digital Twins for Cell-Based Manufacturing"
+founded = "2023"
+headquarters = "Rehovot, Israel"
+employees = "1-10"
+funding_stage = "Pre-Seed; $2.8M pre-seed announced June 2025, preceded by undisclosed February 2024 angel pre-seed and an undisclosed June 2025 Israel Innovation Authority grant"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Algocell is dual-use through strategic production resilience rather than through a fielded defense capability. Its hybrid-model and digital-twin software can help food, pharmaceutical, biofuel, agricultural, and industrial-material producers reduce scarce-material consumption, accelerate scale-up, and transfer biological processes between facilities. That creates a plausible pathway to more distributed and less import-dependent production during supply-chain disruption, climate stress, or loss of access to a manufacturing site. The connection is strongest in food security and biomanufacturing continuity, where improving yield and repeatability can determine whether a novel process becomes a dependable supply source. No public source reviewed identifies a military customer, government production program, classified project, defense certification, or critical-infrastructure deployment. The record therefore treats the technology as credible resilience infrastructure with prospective security relevance, not as defense technology already in operational use."
+key_technologies = [
+  "Hybrid mechanistic and machine-learning models that encode biological constraints alongside empirical process data",
+  "AI-powered digital twins for cell-culture and fermentation process simulation",
+  "Model calibration and validation from limited biological and engineering datasets",
+  "Model-based optimization of feeding, gas regimes, induction timing, temperature shifts, and harvest strategies",
+  "Intensified design of experiments for defining feasible bioprocess design spaces",
+  "In-production process insight and optimization aimed at yield, quality, batch consistency, and scale-up"
+]
+use_cases = [
+  "Precision-fermented dairy proteins, enzymes, and functional food ingredients",
+  "Cultivated-meat and cellular-agriculture process development",
+  "Recombinant-protein and biopharmaceutical fermentation scale-up",
+  "Mammalian-cell perfusion process optimization and technology transfer",
+  "Biofuel and industrial-biotechnology fermentation process development",
+  "Agricultural-biological production and microbial process optimization",
+  "Bioplastics and bio-based materials manufacturing",
+  "Resilient multi-site biomanufacturing where limited data must support rapid process adaptation"
+]
+investible = true
+investment_rationale = "Algocell is a high-risk, technically coherent early-stage company addressing a real bottleneck in cell-based manufacturing. (1) The product thesis is specific: hybrid digital twins are intended to reduce physical trial-and-error and improve scale-up decisions under data scarcity. (2) The public evidence includes named founders, an official technical platform, published case studies, a $2.8M Good Company-led pre-seed, and Israel Innovation Authority participation. (3) The addressable need spans food, therapeutics, agriculture, biofuels, and industrial materials, giving the technology strategic relevance beyond a single product category. (4) The central uncertainty is commercialization: no named paying customer, production deployment, recurring revenue, independent replication, or company-level patent posture is publicly established. The diligence thesis should therefore prioritize pilot conversion, measured process improvement, integration with plant and laboratory systems, and evidence that the models generalize across organisms and scales. The investible flag is a legacy internal priority signal and not an investment recommendation."
+strategic_value = "Algocell’s strategic value is the possibility of making difficult biological production processes more portable, economical, and resilient. (1) Food security: better process control could support proteins and ingredients produced independently of seasonal agriculture and long-distance commodity supply. (2) Health security: more predictable biopharmaceutical and recombinant-protein manufacturing can reduce dependence on a small number of specialized facilities. (3) Energy and materials resilience: the same modeling layer may improve biofuel, bioplastics, and industrial-biotechnology processes that compete with fossil or geographically concentrated inputs. (4) Israeli ecosystem fit: the company links Israeli software, biology, and deep-tech entrepreneurship to an industrial problem where scientific talent matters more than consumer distribution. (5) Allied optionality: a validated model layer could be deployed across partner facilities without requiring a new hardware fleet. Strategic value is capped until the company demonstrates production-grade validation, repeatable commercial pilots, and evidence that its software creates measurable improvements rather than attractive simulations."
+potential_score = 72.0
+technology_score = 79.0
+market_score = 74.0
+team_score = 75.0
+dual_use_score = 68.0
+strategic_alignment_score = 77.0
+stage = "early"
+stage_rationale = "Algocell is early because it was founded in 2023, has publicly reported pre-seed financing, and remains a small R&D-led company whose public evidence centers on platform development, technical case studies, and planned commercial pilots. The technology is more mature than an undeveloped concept: the company describes a complete workflow from data upload and model calibration through digital-twin creation and optimized protocol, and it has published Pichia pastoris and mammalian-cell process materials. However, public sources do not establish a named paid customer, production-scale deployment, recurring revenue, independent validation, regulated manufacturing qualification, or a repeatable sales motion. The next stage gate is demonstrated commercial use across multiple processes or facilities with independently measured yield, quality, cycle-time, or cost improvement."
+competitors = [
+  "New Wave Biotech (bioprocess design and optimization software for precision fermentation and biomanufacturing)",
+  "Culture Biosciences (cloud bioreactor experimentation and process-data platform competing for process-development budgets)",
+  "DataHow (specialist bioprocess modeling and digital-twin software for scale-up and process understanding)",
+  "BioSolve Process (bioprocess simulation and optimization tools used for manufacturing and process decisions)",
+  "Sartorius and Cytiva (incumbent bioreactor, sensor, process-control, and biomanufacturing software ecosystems)",
+  "Benchling (laboratory-informatics system that can own experimental data and serve as an adjacent analytics layer)",
+  "Customer-built mechanistic models and spreadsheet experimentation (internal substitute that may be cheaper before scale-up pain becomes acute)"
+]
+competitive_edge = "Algocell’s potential edge is the combination of biological mechanism, machine learning, and an operator-facing optimization workflow designed for small datasets. (1) Hybrid modeling can be more useful than unconstrained prediction when living cells behave outside the historical data range. (2) The digital-twin workflow connects design of experiments, calibration, simulation, and protocol optimization instead of treating each activity as a separate consulting project. (3) The platform is software-led and can potentially sit across different bioreactors, organisms, and production sites rather than requiring a proprietary hardware installation. (4) Public Pichia and mammalian-cell materials show an effort to demonstrate concrete process objects and outputs. The edge is not yet proven as a durable moat: equipment vendors can bundle analytics, specialist competitors can build larger model libraries, and customers may keep process knowledge in internal teams. Algocell must demonstrate repeatable, independently measured improvements, proprietary process data, robust integrations, and a defensible IP or trade-secret posture to convert technical differentiation into lasting advantage."
+risk_factors = [
+  "Model-transfer risk: performance on one organism, vessel, or process may not generalize across biology and production scale",
+  "Data-quality and uncertainty risk: sparse, biased, or noisy process data can produce recommendations that appear precise but fail operationally",
+  "Scale-up risk: digital simulations may not capture unmodeled oxygen-transfer, mixing, contamination, sensor, or operator effects in production bioreactors",
+  "Commercial-focus risk: serving food, biopharma, agriculture, biofuels, and materials may dilute product, validation, and sales execution",
+  "Integration and qualification risk: regulated and industrial buyers require links to laboratory, historian, MES, and process-control systems plus documented validation",
+  "Competitive and bundling risk: Sartorius, Cytiva, laboratory platforms, and specialist software vendors can add overlapping optimization capabilities",
+  "Funding and disclosure risk: no named customer, revenue, independent replication, production deployment, or company-level patent posture is publicly established"
+]
+risk_level = "high"
+signals = [
+  "Founded in 2023 and publicly identified as an Israeli startup headquartered in Rehovot",
+  "$2.8M pre-seed round led by Good Company VC, with Israel Innovation Authority participation reported in 2025",
+  "Official platform combines hybrid models, digital twins, model-based AI, and design-of-experiment tooling",
+  "Published Pichia pastoris case study reports model-predicted protein-expression improvements versus a control protocol",
+  "Public resilience relevance spans food, biopharma, biofuels, agriculture, bioplastics, and industrial materials; no public defense deployment"
+]
+priority_rank = 0
+priority_rationale = "Algocell merits inclusion as a focused early-stage resilience and deep-biotech monitoring signal. (1) It addresses a real manufacturing bottleneck that affects food, pharmaceutical, fuel, and materials security: the cost and uncertainty of moving living-cell processes from laboratory scale to production. (2) The technical story is more substantive than generic AI positioning because the company names hybrid mechanistic models, biological constraints, intensified design of experiments, calibration, validation, and specific fermentation protocols. (3) Israeli ecosystem signals include a named multidisciplinary founding team, a Good Company-led pre-seed, Israel Innovation Authority support, and a Rehovot base. (4) Strategic value is prospective but broad: more efficient and portable bioprocesses could enable distributed or allied production under supply-chain stress. Priority is capped by the early stage, small disclosed team, absence of named customers and production deployments, unverified independence of case-study improvements, unclear IP posture, and the risk that a broad vertical strategy slows commercialization. Milestones that should raise priority are a named paid manufacturing pilot, independently measured process gains, deployment across multiple organisms or sites, regulated-production qualification, and evidence of a proprietary data or model moat."
+public_sources = [
+  { label = "Algocell About", url = "https://algocell.ai/about/", description = "Leadership, product mission, sector focus." },
+  { label = "Algocell platform", url = "https://algocell.ai/", description = "Official platform capabilities and company claims." },
+  { label = "Algocell funding announcement", url = "https://algocell.ai/announcement-funding-update-from-algocell-2-8-m-pre-seed-to-accelerate-ai-digital-twins-for-bioprocess-optimization/", description = "Company announcement of June 2025 financing." },
+  { label = "Algocell news", url = "https://algocell.ai/news/", description = "Product updates and January 2026 collaboration announcement." },
+  { label = "Israel Innovation Authority company profile", url = "https://innovationisrael.org.il/en/importWinner/516855830/", description = "Israeli registration number, establishment and grant-program awards." },
+  { label = "Startup Nation Finder Algocell profile", url = "https://finder.startupnationcentral.org/company_page/algocell?section=financials", description = "Historic company, team and round-level funding profile; treat as directory evidence." },
+  { label = "Cell4Food partnership announcement", url = "https://algocell.ai/cell4food-partners-with-algocell-to-build-foundation-for-scalable-cellular-aquaculture/", description = "Company announcement of collaboration, not proof of paid deployment." },
+  { label = "Pichia pastoris case study", url = "https://algocell.ai/wp-content/uploads/2025/10/Final-Algocell-case-study.pdf", description = "Company technical evidence for lab-scale process modeling and validation." },
+  { label = "Good Company portfolio", url = "https://gc-vc.com/home", description = "Investor's own portfolio page lists Algocell." },
+  { label = "Algocell CEO funding announcement", url = "https://www.linkedin.com/posts/omri-schanin_bioprocessrevolution-bioprocessoptimization-activity-7335994928965062656-Nrvo", description = "CEO's post corroborates the 2025 financing and lead investor." },
+  { label = "Algocell technical webinar", url = "https://algocell.ai/bioprocess-modeling-optimization/", description = "Company page with technical team background." },
+  { label = "Secondary patent index", url = "https://eureka.patsnap.com/patent/WO2026018205A1", description = "Unverified secondary pointer to possible PCT application; not treated as confirmed company IP." },
+  { label = "Cell4Food partnership wire release", url = "https://www.proteinreport.org/newswire/cell4food-partners-algocell-build-foundation-scalable-cellular-aquaculture", description = "Third-party-distributed release confirms collaboration details." }
+]
+crawled_at = "2026-09-02T10:55:02Z"
+updated_at = "2026-10-03T16:28:00Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Omri Schanin", role = "CEO and co-founder", is_founder = true, current = true, background = "Publicly identified as CEO and co-founder; detailed prior employment and education not established in reviewed sources.", source_ids = ["about", "finder"] },
+  { name = "Eyal Betzalel", role = "CTO and co-founder", is_founder = true, current = true, background = "Publicly identified as CTO and co-founder; detailed prior employment and education not established in reviewed sources.", source_ids = ["about", "finder"] },
+  { name = "David Almagor", role = "Chairman and co-founder", is_founder = true, current = true, background = "Company identifies him as PhD, chairman and co-founder; Finder reports his participation as an early angel.", source_ids = ["about", "finder"] },
+  { name = "Shirley Weiss", role = "VP Biology", is_founder = false, current = true, background = "Company identifies her as PhD and VP Biology; its technical webinar page describes expertise in cellular physiology and mechanistic modeling, Hebrew University PhD and MIT postdoctoral research.", source_ids = ["about", "webinar"] }
+]
+investors = [
+  { name = "Good Company VC", investor_type = "vc", website = "https://gc-vc.com/", relationship = "current", round_ids = ["preseed-2025"], source_ids = ["funding", "finder", "gcvc"] },
+  { name = "David Almagor", investor_type = "angel", relationship = "historical", round_ids = ["angel-preseed-2024"], source_ids = ["finder"] },
+  { name = "Raz Alon", investor_type = "angel", relationship = "historical", round_ids = ["angel-preseed-2024"], source_ids = ["finder"] },
+  { name = "Israel Innovation Authority", investor_type = "government", website = "https://innovationisrael.org.il/", relationship = "historical", round_ids = ["iaa-grant-2025"], source_ids = ["iaa", "finder"] }
+]
+financials = []
+traction = [
+  { kind = "partnership", description = "Algocell and Cell4Food announced a collaboration to apply Algocell P digital-twin modeling to Cell4Food cellular-aquaculture process development. The announcement states goals and intended work; payment, completed outcomes, production use and commercial deployment were not disclosed.", date = "2026-01-20", source_ids = ["cell4food", "wire"] },
+  { kind = "product", description = "Company released a DoE tool and public technical case studies for mammalian-cell perfusion and Pichia pastoris process modeling in 2025. These are company-published materials, not independent performance validation.", date = "2025-09-04", source_ids = ["news", "pichia"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "DataHow", website = "https://www.datahow.ch/", rationale = "Bioprocess modeling and digital-twin software overlaps with process understanding and scale-up needs.", differentiation = "Algocell emphasizes hybrid biological/engineering models built from few experiments; comparative performance and product scope require customer diligence.", source_ids = ["algocell"] },
+  { name = "Culture Biosciences", website = "https://www.culturebiosciences.com/", rationale = "Cloud bioreactor experimentation and process data compete for process-development budgets.", differentiation = "Culture emphasizes experimental infrastructure while Algocell positions a software modeling layer; overlap and complementarity need validation.", source_ids = ["algocell"] },
+  { name = "New Wave Biotech", website = "https://www.newwavebiotech.com/", rationale = "Bioprocess design and optimization software for fermentation and biomanufacturing.", differentiation = "Public evidence does not establish a durable Algocell differentiation versus specialist optimization products.", source_ids = ["algocell"] }
+]
+
+[intelligence.company]
+company_id = "il-algocell"
+legal_name = "Algocell Ltd."
+aliases = ["Algocell", "ALGOCELL.AI"]
+operating_status = "active"
+business_model = "B2B software/platform for bioprocess modeling, digital twins and process optimization; services or licensing terms are not publicly disclosed."
+products = ["Algocell P bioprocess modeling platform", "Hybrid mechanistic-ML digital twins", "Design of Experiments tool"]
+locations = ["Rehovot, Israel"]
+country_of_incorporation = "Israel"
+founded_on = "2023-03"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company registration number", identifier = "516855830", source_ids = ["iaa", "finder"] }]
+source_ids = ["about", "iaa", "finder"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public record identifies an undisclosed angel pre-seed in February 2024, an undisclosed Israel Innovation Authority grant in June 2025, and a $2.8 million pre-seed announced June 4, 2025. The company announcement describes the financing and investor participation; Finder separately itemizes three events. The $2.8 million figure is a company-announced financing amount; it is unclear whether it includes any grant or earlier capital, so do not add events to derive a total."
+reported_total_raised = 2800000
+reported_total_currency = "USD"
+total_source_ids = ["funding", "finder"]
+total_as_of = "2025-06"
+total_scope = "Company announced $2.8M pre-seed; not an independently reconciled lifetime sum and grant/earlier-round inclusion is unclear."
+history_status = "partial"
+coverage_through = "2026-10-03"
+rounds = [
+  { id = "angel-preseed-2024", round_type = "pre-seed", instrument = "equity", status = "announced", announced_on = "2024-02", amount_status = "undisclosed", amount_scope = "round", lead_investors = ["David Almagor"], participating_investors = ["Raz Alon"], source_ids = ["finder"], notes = "Finder profile reports this as an earlier equity pre-seed; company announcement not located." },
+  { id = "iaa-grant-2025", round_type = "grant", instrument = "grant", status = "announced", announced_on = "2025-06", amount_status = "undisclosed", amount_scope = "round", lead_investors = ["Israel Innovation Authority"], participating_investors = [], source_ids = ["iaa", "finder"], notes = "Non-dilutive award is separate from equity financing. IIA profile lists program wins in 2023 and 2025 and 'Additional Funding 0'; no award amount disclosed in sources reviewed." },
+  { id = "preseed-2025", round_type = "pre-seed", instrument = "equity", status = "closed", announced_on = "2025-06-04", amount_status = "reported", amount = 2800000, currency = "USD", amount_scope = "round", lead_investors = ["Good Company VC"], participating_investors = ["prominent angel investors (unnamed)"], source_ids = ["funding", "linkedin", "finder"], notes = "Company CEO announced completion and named lead; individual angels and terms not disclosed. Finder dates its profile entry July 2025, while the company announcement is June 4, 2025." }
+]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private company; no public cap table or ownership percentages located. No parent, acquisition, IPO or ownership transaction located in reviewed sources. Investor participation does not establish ownership percentages."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["about", "finder"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "The Israel Innovation Authority lists Algocell.AI with Israeli company number 516855830 and Israel contact country; company materials and Finder identify its Israeli team and Rehovot base."
+as_of = "2026-10-03"
+source_ids = ["iaa", "about", "finder"]
+
+[intelligence.research]
+researched_at = "2026-10-03T16:28:00Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Algocell official company about platform", "Algocell funding raised seed investors valuation 2025", "Algocell February 2024 angel pre-seed David Almagor Raz Alon", "Algocell Israel Innovation Authority grant 516855830", "Algocell founders CEO CTO team leadership", "Algocell ownership acquired parent company", "Algocell revenue ARR customers paid pilots", "Algocell Cell4Food partnership January 2026", "Algocell patent patentscope USPTO", "Algocell competitors bioprocess digital twin DataHow Culture Biosciences", "Algocell defense security dual use biomanufacturing"]
+gaps = ["team: public bios identify current leaders but independent career histories, full headcount and hiring trend are limited.", "investors: 2024 round participants beyond reported angels, individual 2025 angels and private terms/cap table are undisclosed.", "financials: no dated revenue, ARR, profitability, burn or runway disclosure located.", "traction: partnership and technical case studies are public, but paying status, contract value, commercial deployment, retention and customer outcomes are undisclosed.", "intellectual_property: no primary patent-office record was verified in this search; ownership, application status, filings and trade-secret controls need confirmation.", "competition: peer comparison is based on public positioning; no controlled product benchmarking or customer win/loss evidence located.", "dual_use: no public defense customer, contract, security deployment or defense certification located; applicability is a prospective resilience inference only.", "ownership: no public cap table or beneficial ownership percentages; private-company status limits verification.", "Funding amount scope: it is unclear whether the company-announced $2.8M includes previous angel capital or any grant; do not sum reported amounts."]
+conflicts = ["Startup Nation Finder dates its $2.8M pre-seed record July 2025, while Algocell's primary announcement is June 4, 2025; treated as one financing event using the company's announcement date.", "The $2.8M public figure is not reconciled against the separately listed February 2024 angel round or June 2025 grant; reported_total_raised reflects the company-announced figure and is not a calculated cumulative total.", "IAI company profile lists establishment in 2022 while Finder and company-origin information report founding in March 2023; legal establishment date and operating/founding date may differ and need registry confirmation."]
+diligence_questions = ["What paid pilots, contracts or renewals exist, and what are their values, duration, deployment stage and permission to reference customers?", "For each deployment, what independently measured improvement occurred in yield, titer, batch variability, cycle time or cost against a matched control and at production-relevant scale?", "Does the $2.8M pre-seed include the earlier angel funding or any non-dilutive grant, and what are the round date, instrument, ownership dilution and post-money terms?", "What patent applications or granted rights are owned or exclusively licensed by Algocell Ltd., including WO2026018205A1 reported by secondary patent indexing?", "How does model validation and uncertainty quantification work when transferring between strains, media, bioreactor geometries and facilities?", "What data rights, cybersecurity controls and integrations are in place for customer process data and regulated manufacturing workflows?"]
+
+sources = [
+  { id = "about", url = "https://algocell.ai/about/", title = "About - Algocell", publisher = "Algocell", kind = "company", accessed_at = "2026-10-03T16:28:00Z", claims = ["Current leadership names and titles", "Company describes software platform and target industries"] },
+  { id = "algocell", url = "https://algocell.ai/", title = "AI-Powered Bioprocess Optimization", publisher = "Algocell", kind = "company", accessed_at = "2026-10-03T16:28:00Z", claims = ["Platform positioning, hybrid model and digital-twin workflow", "Company-stated claims of reducing experiments and optimizing processes"] },
+  { id = "funding", url = "https://algocell.ai/announcement-funding-update-from-algocell-2-8-m-pre-seed-to-accelerate-ai-digital-twins-for-bioprocess-optimization/", title = "Algocell Secures $2.8M Funding to Accelerate AI-Powered Bioprocess Digital Twins", publisher = "Algocell", kind = "company", published_on = "2025-06-04", accessed_at = "2026-10-03T16:28:00Z", claims = ["Company announced a completed $2.8 million pre-seed on June 4, 2025", "Good Company VC led the round", "Israel Innovation Authority and unnamed angels participated", "Arnaud Lorie joined the board"] },
+  { id = "linkedin", url = "https://www.linkedin.com/posts/omri-schanin_bioprocessrevolution-bioprocessoptimization-activity-7335994928965062656-Nrvo", title = "Algocell raises $2.8M for AI-powered bioprocess optimization", publisher = "LinkedIn / Omri Schanin", kind = "company", published_on = "2025-06", accessed_at = "2026-10-03T16:28:00Z", claims = ["CEO announcement corroborates $2.8 million completed pre-seed, lead and unnamed angels", "Arnaud Lorie joins board"] },
+  { id = "finder", url = "https://finder.startupnationcentral.org/company_page/algocell?section=financials", title = "Algocell - Israeli Startup", publisher = "Startup Nation Finder", kind = "directory", accessed_at = "2026-10-03T16:28:00Z", claims = ["Algocell founded March 2023 by David Almagor, Omri Schanin and Eyal Betzalel", "Profile lists 1-10 employees and Israeli location", "Profile lists Feb 2024 angel pre-seed, June 2025 grant and July 2025 $2.8M pre-seed", "Profile lists Israel company number 516855830"] },
+  { id = "iaa", url = "https://innovationisrael.org.il/en/importWinner/516855830/", title = "ALGOCELL.AI - Winners authority investment", publisher = "Israel Innovation Authority", kind = "government", accessed_at = "2026-10-03T16:28:00Z", claims = ["IIA profile associates ALGOCELL.AI with registration number 516855830 and Israel", "IIA lists Tnufa and Startup Fund program wins in 2023 and 2025"] },
+  { id = "cell4food", url = "https://algocell.ai/cell4food-partners-with-algocell-to-build-foundation-for-scalable-cellular-aquaculture/", title = "Algocell Joins Cell4Food to Accelerate Scalable Cellular Aquaculture Development", publisher = "Algocell", kind = "company", published_on = "2026-01-20", accessed_at = "2026-10-03T16:28:00Z", claims = ["Algocell and Cell4Food announced collaboration on cellular aquaculture process development", "Release describes proposed application and aims but does not disclose payment or completed deployment"] },
+  { id = "wire", url = "https://www.proteinreport.org/newswire/cell4food-partners-algocell-build-foundation-scalable-cellular-aquaculture", title = "Cell4Food Partners With Algocell to Build Foundation for Scalable Cellular Aquaculture", publisher = "Protein Report Newswire", kind = "media", published_on = "2026-01-20", accessed_at = "2026-10-03T16:28:00Z", claims = ["Distributed release corroborates the January 2026 strategic collaboration and intended Cell4Food application"] },
+  { id = "news", url = "https://algocell.ai/news/", title = "News - Algocell", publisher = "Algocell", kind = "company", accessed_at = "2026-10-03T16:28:00Z", claims = ["News index lists 2025 DoE and mammalian-cell/Pichia case studies and January 2026 partnership"] },
+  { id = "pichia", url = "https://algocell.ai/wp-content/uploads/2025/10/Final-Algocell-case-study.pdf", title = "Digital Twin Development for Pichia pastoris Precision Fermentation", publisher = "Algocell", kind = "company", published_on = "2025-11-25", accessed_at = "2026-10-03T16:28:00Z", claims = ["Company describes four lab-scale calibration experiments and use of off-gas and process measurements", "Model validated against unseen run and customer historical data according to company case study", "Case study is company-reported and is not independent efficacy evidence"] },
+  { id = "gcvc", url = "https://gc-vc.com/home", title = "Good Company - Mission Driven VC", publisher = "Good Company VC", kind = "investor", accessed_at = "2026-10-03T16:28:00Z", claims = ["Investor portfolio lists Algocell"] },
+  { id = "webinar", url = "https://algocell.ai/bioprocess-modeling-optimization/", title = "Bioprocess Modeling & Optimization: Merging biological knowledge with AI", publisher = "Algocell", kind = "company", accessed_at = "2026-10-03T16:28:00Z", claims = ["Company page describes Shirley Weiss's cellular physiology and mechanistic modeling background"] },
+  { id = "patent-index", url = "https://eureka.patsnap.com/patent/WO2026018205A1", title = "WO2026018205A1 - System and methods for generating a hybrid model-based digital simulator", publisher = "Patsnap Eureka", kind = "other", accessed_at = "2026-10-03T16:28:00Z", claims = ["Secondary patent index associates a PCT application published in January 2026 with ALGOCELL LTD; primary WIPO record and legal status were not verified"] }
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T16:28:00Z"
+next_review_on = "2027-01-03"
+queries = ["Algocell official company about platform", "Algocell Israel company number 516855830"]
+source_ids = ["about", "iaa", "finder"]
+summary = "Official and government records support the Israeli identity and active company profile; legal establishment and March 2023 operating founding dates differ across sources."
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T16:28:00Z"
+next_review_on = "2027-01-03"
+queries = ["Algocell funding raised seed investors valuation 2025", "Algocell February 2024 angel pre-seed", "Algocell Israel Innovation Authority grant"]
+source_ids = ["funding", "linkedin", "finder", "iaa"]
+summary = "Three public events found: undisclosed 2024 angel equity, undisclosed IIA grant, and announced $2.8M 2025 pre-seed. Total scope remains unclear."
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T16:28:00Z"
+next_review_on = "2027-01-03"
+queries = ["Algocell investors Good Company VC angel", "Good Company VC Algocell portfolio"]
+source_ids = ["funding", "finder", "gcvc"]
+summary = "Good Company VC is publicly named lead, and Finder lists David Almagor, Raz Alon and IIA in separate events; full syndicate and terms are unknown."
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T16:28:00Z"
+next_review_on = "2027-01-03"
+queries = ["Algocell founders CEO CTO team leadership", "Algocell Shirley Weiss background"]
+source_ids = ["about", "finder", "webinar"]
+summary = "Current company leadership page identifies three co-founders and VP Biology; detailed independent bios and full team roster are limited."
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T16:28:00Z"
+next_review_on = "2027-01-03"
+queries = ["Algocell ownership acquired parent company", "Algocell cap table shareholders"]
+source_ids = ["about", "finder"]
+summary = "Private cap table and percentages unavailable; no parent or ownership transaction found in checked sources."
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T16:28:00Z"
+next_review_on = "2027-01-03"
+queries = ["Algocell revenue ARR customers paid pilots", "Algocell financial statements revenue"]
+source_ids = ["funding", "finder", "cell4food"]
+summary = "No public dated revenue, ARR, profitability, burn or runway metric located."
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T16:28:00Z"
+next_review_on = "2027-01-03"
+queries = ["Algocell Cell4Food partnership January 2026", "Algocell customers production deployment case study"]
+source_ids = ["cell4food", "wire", "news", "pichia"]
+summary = "Public technical case studies and Cell4Food collaboration provide activity evidence; no payment, production deployment or independent outcomes disclosed."
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T16:28:00Z"
+next_review_on = "2027-01-03"
+queries = ["Algocell patent patentscope USPTO", "WO2026018205A1 Algocell WIPO"]
+source_ids = ["patent-index"]
+summary = "A secondary index suggests a 2026 PCT application associated with Algocell, but primary WIPO/office record and current legal status were not verified; no validated patent milestone is recorded."
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T16:28:00Z"
+next_review_on = "2027-01-03"
+queries = ["Algocell competitors bioprocess digital twin DataHow Culture Biosciences New Wave Biotech"]
+source_ids = ["algocell"]
+summary = "Named peers selected from product-category overlap; no comparative performance or customer win/loss evidence located."
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T16:28:00Z"
+next_review_on = "2027-01-03"
+queries = ["Algocell defense security dual use biomanufacturing", "Algocell government defense customer contract"]
+source_ids = ["algocell", "cell4food"]
+summary = "Food and biomanufacturing resilience is a plausible indirect security application; no public defense or security deployment evidence found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current official site provides active product, leadership and contact pages."
+verified_at = "2026-10-03T16:28:00Z"
+source_ids = ["about", "algocell"]
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "IIA record identifies company registration and Israel; official leadership and directory profile corroborate the Israeli base."
+verified_at = "2026-10-03T16:28:00Z"
+source_ids = ["iaa", "about", "finder"]
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Company announced $2.8M pre-seed; the amount is reported as announced and is not a derived sum of the listed events."
+verified_at = "2026-10-03T16:28:00Z"
+source_ids = ["funding", "linkedin"]
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.preseed-2025.amount"
+support = "direct"
+summary = "Company announcement and CEO post state completed $2.8M pre-seed."
+verified_at = "2026-10-03T16:28:00Z"
+source_ids = ["funding", "linkedin"]
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.preseed-2025.lead_investors"
+support = "direct"
+summary = "Company announcement names Good Company VC as lead investor."
+verified_at = "2026-10-03T16:28:00Z"
+source_ids = ["funding", "linkedin"]
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.preseed-2025.participating_investors"
+support = "direct"
+summary = "Company announcement reports participation by prominent angel investors, without disclosing their names; the structured list preserves this aggregate disclosure."
+verified_at = "2026-10-03T16:28:00Z"
+source_ids = ["funding", "linkedin"]
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.angel-preseed-2024.lead_investors"
+support = "direct"
+summary = "Finder event listing names David Almagor as lead and Raz Alon as participant."
+verified_at = "2026-10-03T16:28:00Z"
+source_ids = ["finder"]
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.angel-preseed-2024.participating_investors"
+support = "direct"
+summary = "Finder event listing names Raz Alon as a participant."
+verified_at = "2026-10-03T16:28:00Z"
+source_ids = ["finder"]
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.iaa-grant-2025.lead_investors"
+support = "direct"
+summary = "IIA public profile and Finder identify Israel Innovation Authority support/program wins."
+verified_at = "2026-10-03T16:28:00Z"
+source_ids = ["iaa", "finder"]

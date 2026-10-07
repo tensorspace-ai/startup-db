@@ -1,0 +1,495 @@
+name = "Corbel"
+description = "Corbel is an Israeli-led industrial AI startup building an AI-powered Configure, Price, Quote platform with embedded equipment finance for manufacturers, distributors, and dealers selling complex, high-ticket machinery. Its platform turns fragmented product data, configuration rules, quoting, buyer guidance, and financing into one digital path from equipment discovery to purchase."
+detailed_description = """
+**Product and the concrete problem it solves.** Corbel is building a commercial operating layer for a part of the physical economy that remains surprisingly manual: selling complex industrial equipment. Manufacturers and distributors often explain configurable machines through PDFs, spreadsheets, phone calls, tribal knowledge, and separate financing processes. That combination creates a practical bottleneck. A buyer may know the production outcome required but not which machine, options, accessories, or payment structure is appropriate; a sales representative must translate that intent into a technically valid configuration and a finance-ready quote; and the lender then receives a separate, incomplete application. Corbel's proposition is to make the path continuous. It presents guided product exploration, captures the buyer's requirements, applies configuration and compatibility logic, produces a quote, offers payment options, and routes a financing application without requiring the equipment seller to replace its CRM or ERP. The company is therefore not selling a general chatbot. It is targeting the operational friction around durable, configurable assets that can cost tens of thousands to several hundred thousand dollars and that are consequential to the buyer's production capacity.
+
+**Core technology and how it works.** Corbel describes its product as an AI-native Configure, Price, Quote system, but the useful technical detail is the combination of generative assistance with deterministic commercial controls. Its configurator can guide a user through options, bundles, add-ons, and compatibility rules; pricing guardrails are intended to prevent an attractive but invalid or unprofitable quote; and the AI Sales Assistant can help turn product information and buyer questions into a structured sales interaction. The financing layer is not presented as an autonomous lender. Corbel says it prequalifies and routes applications using applicant, equipment, and deal attributes, while underwriting, approval, and pricing decisions remain with the financing partner. This separation matters because it places regulated credit decisions with lenders while allowing Corbel to improve intake quality and lender fit. The platform can be used internally by a sales team, shared with a buyer as a guided experience, or exposed as a self-serve front end. Its technical challenge is less about inventing a new foundation model than about converting messy manufacturer catalogs, rules, pricing, and workflow state into reliable structured intelligence that agents can use without violating commercial constraints.
+
+**Market, customers, and go-to-market.** Corbel is aimed at original equipment manufacturers, distributors, dealers, and finance partners in industrial categories where configuration and capital availability influence the sale. Public company material names metalworking, fabrication, additive manufacturing, and related industrial verticals as early focus areas. The go-to-market motion is a channel strategy: equip an OEM or distributor with a branded buying and quoting experience, introduce financing at the point of highest intent, and then extend the relationship into additional product lines, dealer networks, parts, servicing, and customer support. The company says most merchant implementations can be live in weeks rather than months, while acknowledging that timelines depend on product complexity and integrations. Its October 2025 financing announcement says Corbel planned to deepen deployments with leading OEM partners across North America and expand engineering and go-to-market teams. No named production customers, contract values, conversion metrics, or revenue figures are disclosed in the sources reviewed. That keeps the market opportunity plausible but unproven: industrial equipment is a large and fragmented category, yet each seller's catalog, margin policy, dealer structure, and financing preferences can make deployments bespoke.
+
+**Traction, funding, and third-party validation.** Corbel announced a $6.7 million Seed round on October 15, 2025, led by Ibex Investors with participation from Joule Ventures, Restive Ventures, and Selah Ventures. The company's own announcement says the capital would fund AI capability, embedded-finance network expansion, integrations, and team growth; the distributed press release describes the same platform as an AI-powered operating system for industrial-equipment sales, customer service, and parts operations. CTech independently reported the round and characterized Corbel as an Israeli startup addressing manual quoting and PDF-based workflows in a large industrial-equipment market. Corbel's FAQ provides additional product specificity: supported transactions are generally high-ticket equipment purchases, financing applications are routed to lender partners, approvals are typically returned in four to eight business hours, and merchant implementation is designed to complement rather than replace existing systems. These are useful validation signals because they describe an operating product and a commercial workflow rather than only a vision. They are not equivalent to independent proof of scale. Public evidence does not establish how many sellers are live, how many quotes have been generated, whether financing partners are repeat users, or whether Corbel's claimed efficiency improvements persist across complex catalogs.
+
+**Founders and team background.** The founding team combines financial-transaction experience with systems and security experience. CEO and co-founder Le'ora Lichtenstein is publicly described as a CFA charterholder whose prior work centered on structured credit, private equity, venture investing, and technology-enabled financial products, including equipment finance. Her founding story traces the problem to seeing a capital-equipment financing process still depend on a fax machine and paper forms; that observation gives the company an unusually direct connection between founder background and product choice. Co-founder and CTO Dor Litay is described by Corbel as an expert in building complex systems at scale in under-digitized environments. A public professional profile further attributes to him senior technology and digital-transformation work in Israeli Military Intelligence, including cyber-security and R&D leadership, although the public record does not provide a complete employment chronology or technical publication record. The pair's complement is strategically relevant: Lichtenstein understands underwriting, capital allocation, and equipment transactions, while Litay brings large-system architecture and Israeli security-technology experience. At the same time, Corbel has not publicly disclosed headcount, senior engineering depth, or a complete leadership roster, so the ability to execute many vertical integrations remains a diligence question.
+
+**Competitive dynamics.** Corbel competes with established CPQ vendors, CRM suites, equipment-finance intermediaries, and the incumbent process of spreadsheets plus specialist sales staff. Configit and Tacton offer mature configuration and quoting software for manufacturers; Salesforce Revenue Cloud and other CRM-linked CPQ products can use existing account data and distribution; Epicor CPQ and similar industrial software products sit close to manufacturing workflows; and equipment lenders or dealer-finance platforms already own parts of the application and underwriting funnel. Corbel's market is therefore not empty, and a buyer may prefer a bundled tool even if it is less elegant. The strongest competitive question is whether Corbel's unified workflow produces a measurable result that point products cannot: higher-quality inbound demand, fewer invalid configurations, faster quote turnaround, better lender matching, or higher close rates. It also faces a data-network problem. A new seller may have weak product data and limited historical quote outcomes, exactly the conditions in which AI recommendations are least reliable. Conversely, if Corbel accumulates normalized equipment attributes, configuration constraints, financing outcomes, and service history across many sellers, that data structure could become more valuable than the initial interface.
+
+**Defense, security, and resilience dual-use relevance.** Corbel is not publicly presented as a defense contractor, and no reviewed source establishes a military customer, classified deployment, government contract, or defense-specific certification. Its dual-use case is instead tied to industrial and economic resilience. The same core capabilities — translating technical catalogs into valid configurations, preserving pricing and compatibility controls, and reducing friction in the purchase of production equipment — can support manufacturers and distributors serving sectors where production capacity, repair capacity, and supplier continuity matter. Machine tools, metal-fabrication systems, additive-manufacturing equipment, and other capital assets can sit inside commercial and defense-industrial supply chains, even though Corbel has not said that its customers are defense suppliers. Faster, more auditable procurement could help smaller manufacturers obtain equipment and financing during supply disruptions, while a structured record of requirements and approvals is more resilient than scattered email attachments and paper forms. The boundary is important: Corbel improves the transaction layer around equipment; it does not control the machine, secure an industrial network, or provide battlefield autonomy. The strategic score therefore reflects enabling industrial-base optionality, not fielded defense capability.
+
+**Growth stage, trajectory, and key diligence risks.** Corbel is classified as early: it was founded in 2022, publicly announced a Seed round in 2025, and is still describing expansion of its product, lender network, integrations, and go-to-market team. Its trajectory could be attractive if it establishes a repeatable implementation template across equipment categories and converts a quoting wedge into a broader lifecycle platform spanning sales, financing, parts, and service. The principal diligence questions are concrete. (1) Can its AI preserve exact configuration, pricing, and margin rules when catalogs contain thousands of conditional combinations? (2) Are the reported weeks-to-live implementations repeatable, or do they depend on founder-led data cleanup? (3) Do lenders receive enough qualified applications to justify their participation, and does Corbel earn durable economics without taking underwriting risk? (4) Can Corbel prove revenue, retention, quote volume, conversion, and deployment concentration? (5) Will CPQ incumbents and CRM vendors bundle similar AI capabilities before Corbel builds distribution? (6) Does the Israeli-led team have enough industrial-domain and enterprise implementation capacity for North American expansion? The opportunity is meaningful because industrial transactions are mission-critical but under-digitized; the risk is that this same complexity makes every customer a services-heavy exception rather than a scalable software deployment.
+"""
+logo = "Unknown"
+website = "https://corbelpay.com"
+sector = "Industrial AI / Configure-Price-Quote and Embedded Equipment Finance"
+founded = "2022"
+headquarters = "Tel Aviv, Israel / New York, United States (Israeli-led company with U.S. go-to-market activity; exact legal headquarters is not consistently disclosed)"
+employees = "Unknown"
+funding_stage = "Seed; $6.7 million announced October 15, 2025, led by Ibex Investors with participation from Joule Ventures, Restive Ventures, and Selah Ventures"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Corbel's core platform is commercial rather than defense-specific, but it has a credible resilience-oriented dual-use pathway through the industrial equipment base. (1) AI-guided configuration, compatibility logic, quoting, and structured financing intake can serve manufacturers and distributors whose equipment supports both civilian production and defense-industrial supply chains, even though Corbel has not disclosed defense customers. (2) A faster, more auditable route to acquiring machine tools, fabrication systems, additive-manufacturing equipment, and other scarce capital assets can improve manufacturing continuity during supply shocks or constrained-credit periods. (3) The underlying data structure is more resilient than disconnected PDFs, spreadsheets, email chains, and paper financing applications, which can matter to distributed suppliers and smaller firms supporting critical production. The limits are material: no public military contract, government deployment, classified use, defense certification, or security product is evidenced. Corbel should therefore be treated as an industrial-resilience enabler with conditional defense-supply-chain relevance, not as a fielded defense technology company."
+key_technologies = [
+  "AI-guided product configuration that translates buyer requirements into compatible machine, option, bundle, and accessory selections",
+  "Deterministic CPQ rules, compatibility logic, pricing guardrails, and dynamic quote generation for complex equipment catalogs",
+  "Buyer-facing and internal AI Sales Assistant for guided exploration, qualification, recommendations, and quote preparation",
+  "Embedded equipment-finance prequalification engine using applicant, equipment, and deal attributes to match applications to lender partners",
+  "Structured industrial product-data and workflow layer connecting exploration, quote, approval, purchase, parts, and service context",
+  "White-label digital buying experience with CRM and ERP coexistence rather than mandatory system replacement"
+]
+use_cases = [
+  "Guided configuration and quoting of CNC, metalworking, and fabrication machinery",
+  "Self-serve product exploration for additive-manufacturing and other high-ticket industrial equipment",
+  "Dealer and distributor sales workflows that preserve pricing, compatibility, bundles, and margin controls",
+  "Embedded financing applications for equipment purchases typically ranging from tens of thousands to several hundred thousand dollars",
+  "Lender prequalification and routing using structured buyer, asset, and transaction information",
+  "North American OEM deployment across multiple product lines and dealer networks",
+  "Industrial parts, servicing, and customer-support workflows built on the same equipment record",
+  "Conditional resilience use in commercial and defense-industrial supplier networks where access to production assets affects continuity"
+]
+investible = true
+investment_rationale = "Corbel is a credible early-stage strategic watchlist entry because it addresses a specific, expensive workflow gap in industrial commerce rather than adding a generic AI assistant to an already digitized process. (1) The $6.7 million Seed round led by Ibex Investors, with Joule Ventures, Restive Ventures, and Selah Ventures, provides meaningful third-party financing validation. (2) The founding team has unusual domain complementarity: Le'ora Lichtenstein brings structured credit, equipment finance, and investment experience, while Dor Litay brings large-system architecture and Israeli military-technology experience. (3) The product combines AI configuration with deterministic CPQ controls and an embedded lender workflow, creating several potential monetization points. (4) Industrial equipment is a large, fragmented, under-digitized market where a repeatable data and distribution play could compound. The counterweights are substantial: no public revenue, customer count, retention, quote volume, unit economics, or independently measured conversion improvement; possible implementation intensity; competition from established CPQ and CRM vendors; and unproven lender-network durability. This is a strategic diligence assessment and legacy priority signal, not an investment recommendation."
+strategic_value = "Corbel's strategic value is conditional but real at the industrial-base layer. Its platform could help smaller manufacturers and distributors turn technical product knowledge, configuration rules, and financing requirements into an auditable transaction that is faster to execute and easier to repeat across supplier networks. That matters to resilience because production capacity is constrained not only by machine availability but also by the ability to identify, configure, finance, and procure the correct equipment when supply chains or credit markets are stressed. The same workflow could be relevant to defense-industrial suppliers without requiring Corbel to become a defense prime. Its value would rise if the company proves deployments across metalworking, fabrication, additive manufacturing, or other sectors connected to critical production, and if its structured equipment data supports parts and service continuity. Public evidence does not establish defense-sector adoption, so the current strategic assessment is enabling optionality rather than demonstrated national-security impact."
+potential_score = 66.0
+technology_score = 70.0
+market_score = 74.0
+team_score = 76.0
+dual_use_score = 43.0
+strategic_alignment_score = 59.0
+stage = "early"
+stage_rationale = "Corbel is early-stage because it was founded in 2022, publicly emerged with a $6.7 million Seed round in October 2025, and is still expanding product capabilities, financing partners, integrations, and go-to-market coverage. The company has a concrete product, an identified industrial customer profile, and public material describing configuration, quoting, financing, and implementation workflows, which places it beyond an idea-only record. It remains below mid-stage because no public source reviewed here verifies recurring revenue, customer count, quote volume, retention, production deployment scale, or repeatable implementation economics. The next stage transition depends on evidence that Corbel can standardize messy equipment data and deliver measurable outcomes across multiple OEM and distributor deployments."
+competitors = [
+  "Tacton (manufacturing-focused CPQ and product-configuration suite for complex products)",
+  "Configit (enterprise product-configuration and lifecycle-configuration software for manufacturers)",
+  "Salesforce Revenue Cloud / CPQ (CRM-bundled quoting and revenue-workflow incumbent)",
+  "Epicor CPQ (manufacturing and distribution CPQ software integrated with ERP workflows)",
+  "Equipment-finance marketplaces and specialist lenders (existing origination, prequalification, and dealer-finance relationships)",
+  "Spreadsheets, PDFs, email, and specialist sales engineers (entrenched manual process for configuring and selling complex machinery)"
+]
+competitive_edge = "Corbel's potential edge is the integration of three workflows that are usually separate: technical product configuration, commercial quote generation, and equipment financing. (1) Its AI-guided experience can let buyers express production needs in ordinary language while deterministic compatibility and pricing rules protect the seller from invalid or unprofitable recommendations. (2) Embedded financing brings payment clarity into the same moment as equipment selection, potentially improving buyer qualification and lender intake quality. (3) A white-label front end can complement existing CRM and ERP systems, lowering the organizational barrier to adoption compared with a full back-office replacement. (4) The founders' combination of equipment-finance knowledge and complex-systems experience may help Corbel model both sides of the transaction. The edge is not yet a proven moat: Tacton, Configit, CRM vendors, and lenders can add adjacent capabilities; catalog normalization may be services-heavy; and Corbel has not publicly shown comparative accuracy, conversion, deployment cost, or proprietary data-network effects."
+risk_factors = [
+  "AI configuration error: an incorrect machine, option, compatibility rule, price, or margin assumption could create costly industrial sales and fulfillment failures",
+  "Implementation intensity: each OEM or distributor may require extensive catalog cleanup, rules modeling, integrations, and founder-led services, limiting software scalability",
+  "Unverified commercial traction: public sources do not disclose revenue, customer count, recurring revenue, quote volume, conversion, retention, or customer concentration",
+  "Incumbent bundling: Tacton, Configit, Epicor, Salesforce, and ERP vendors can bundle CPQ, AI assistance, and workflow features into existing enterprise relationships",
+  "Lender dependency and regulation: Corbel relies on financing partners for approvals and economics while operating around credit, privacy, and financial-compliance requirements",
+  "Industrial sales-cycle risk: high-ticket equipment purchases, dealer relationships, and manufacturing budgets can produce long cycles and uneven demand",
+  "Strategic-adjacency risk: defense and critical-infrastructure relevance remains unvalidated until a supplier deployment, government program, or resilience outcome is publicly evidenced"
+]
+risk_level = "medium"
+signals = [
+  "Israeli-led industrial AI startup founded in 2022",
+  "$6.7 million Seed round announced in October 2025 and led by Ibex Investors",
+  "AI-powered CPQ combining configuration rules, dynamic quoting, and embedded equipment finance",
+  "Initial public focus on metalworking, fabrication, additive manufacturing, and related industrial verticals",
+  "North American OEM, distributor, dealer, and lender-partner go-to-market model",
+  "Industrial-resilience and defense-supply-chain adjacency is plausible but not publicly validated"
+]
+priority_rank = 0
+priority_rationale = "Corbel merits a monitored but not top-tier priority because it combines a concrete industrial workflow, experienced and complementary founders, and a meaningful Seed financing round with a conditional resilience thesis. Reasons to track it include: (1) equipment configuration and financing are linked bottlenecks in manufacturing capacity, and Corbel addresses them in one workflow; (2) the founding team's finance and complex-systems backgrounds are unusually well matched to the problem; (3) the platform's focus on machine tools, fabrication, additive manufacturing, and dealer networks could create relevance to industrial-base resilience; and (4) the company has a plausible expansion path from quoting into parts, service, and equipment-lifecycle data. Priority is capped by the absence of named customers, revenue, recurring metrics, deployment scale, comparative product evidence, and verified defense or critical-infrastructure use. Milestones that would justify raising priority are repeatable multi-OEM deployments, disclosed quote and conversion improvements, durable lender participation, measurable parts or service expansion, and public evidence of adoption by a defense-industrial or other critical-production supplier. This is an internal strategic-priority rationale, not an investment recommendation."
+public_sources = [
+  { label = "Corbel official site", url = "https://www.corbelpay.com/", description = "Current product positioning, feature descriptions, and NTM case study headline." },
+  { label = "Corbel FAQ", url = "https://www.corbelpay.com/faq", description = "Product and financing workflow, including lender responsibility for underwriting." },
+  { label = "Corbel company funding announcement", url = "https://www.corbelpay.com/blog/corbel-raises-6-7m-seed", description = "Company-reported seed financing and product strategy." },
+  { label = "PR Newswire: Corbel seed and operating metrics", url = "https://www.prnewswire.com/news-releases/corbel-raises-6-7m-seed-to-revolutionize-industrial-equipment-operations-with-ai-native-platform-302584938.html", description = "Round, investors, founders and company-reported operating metrics." },
+  { label = "CTech funding coverage", url = "https://www.calcalistech.com/ctechnews/article/h1axzfaplg", description = "Independent Israeli press coverage of the seed financing and founding." },
+  { label = "New Tech Machinery case study", url = "https://www.corbelpay.com/case-studies/ntm", description = "Named customer case study with reported commercial outcomes." },
+  { label = "Plant Services CEO interview", url = "https://www.plantservices.com/home/podcast/55359446/podcast-how-corbel-is-modernizing-capital-equipment-sales-with-ai", description = "Interview covering founder background, product approach, and human review boundaries." },
+  { label = "Ibex Investors portfolio list", url = "https://www.ibexinvestors.com/disclaimer", description = "Investor portfolio listing Corbel." },
+  { label = "Corbel FAQ", url = "https://www.corbelpay.com/faq", description = "Product, financing workflow, deployment, and lender decision responsibilities." },
+  { label = "IVC profile for Qipt Ltd. (Corbel)", url = "https://www.ivc-online.com/Google-Card?id=405C535F-F09F-EE11-B812-00505695CD29&type=1", description = "Secondary profile identifying the associated legal entity and Israeli location." },
+  { label = "The Org profile for Dor Litay", url = "https://theorg.com/org/corbel/org-chart/dor-litay", description = "Public profile corroborating co-founder and CTO role and background." },
+  { label = "Tacton CPQ", url = "https://www.tacton.com/", description = "Official description of manufacturing CPQ competitor capabilities." },
+  { label = "Epicor CPQ", url = "https://www.epicor.com/en/products/digital-commerce/cpq/", description = "Official description of manufacturing CPQ competitor capabilities." }
+]
+crawled_at = "2026-09-08T00:48:14Z"
+updated_at = "2026-10-04T22:04:45Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "il-corbel"
+legal_name = "Qipt Ltd."
+aliases = ["Corbel", "Corbel Payments", "Corbelpay", "Qipt"]
+operating_status = "active"
+business_model = "B2B software platform sold to industrial equipment manufacturers, distributors and dealers; connects AI-assisted product discovery and CPQ with third-party equipment-finance application routing. Public pricing and revenue model are undisclosed."
+products = ["AI Sales Assistant", "Guided Product Configuration", "Internal Quoting Tool", "Embedded Financing", "Dealer and Rep Visibility", "Analytics Dashboard"]
+locations = ["Tel Aviv, Israel", "New York, United States"]
+founded_on = "2022"
+source_ids = ["prn_seed", "ctech_seed", "corbel_site", "ivc_profile"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["other"]
+summary = "Israeli business press identifies Corbel as an Israeli startup founded by Le'ora Lichtenstein and Dor Litay in 2022, and an Israeli company profile associates Corbel with an Israel location. Corbel also has New York activity; public evidence does not establish a single exclusive operating headquarters or incorporation jurisdiction."
+as_of = "2026-10-04"
+source_ids = ["ctech_seed", "ivc_profile", "prn_seed"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One publicly disclosed equity Seed round: $6.7 million announced October 15, 2025. The company and lead investor release sources agree on amount and participants. No subsequent publicly disclosed round was found through October 4, 2026. Private round terms, instrument details beyond equity characterization, and valuation were not disclosed."
+reported_total_raised = 6700000
+reported_total_currency = "USD"
+total_source_ids = ["corbel_seed", "prn_seed", "ctech_seed"]
+total_as_of = "2025-10-15"
+total_scope = "Company-announced lifetime funding total as of the Seed announcement; no later disclosed round located."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "seed-2025"
+round_type = "Seed"
+instrument = "unknown"
+status = "announced"
+announced_on = "2025-10-15"
+amount_status = "reported"
+amount = 6700000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Ibex Investors"]
+participating_investors = ["Joule Ventures", "Restive Ventures", "Selah Ventures"]
+source_ids = ["corbel_seed", "prn_seed", "ctech_seed"]
+notes = "Published amount is $6.7 million. No pre-money or post-money valuation disclosed. The company announcement and independent CTech report publish the same amount; no conflict identified."
+
+[intelligence.ownership]
+status = "not_found"
+summary = "No public cap table, ownership percentages, parent company, acquisition, or ownership change found. The Israeli company profile identifies Qipt Ltd. as the legal entity; this alone does not disclose its shareholders."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["ivc_profile", "prn_seed"]
+deals = []
+holdings = []
+
+[[intelligence.people]]
+name = "Le'ora Lichtenstein"
+role = "Co-founder and Chief Executive Officer"
+is_founder = true
+current = true
+background = "Company release describes prior private-equity work and structured credit investments spanning real estate, venture and equipment finance. A 2026 industry interview corroborates her structured-credit and early-stage investing background and CFA charterholder credential."
+source_ids = ["prn_seed", "plant_services"]
+
+[[intelligence.people]]
+name = "Dor Litay"
+role = "Co-founder and Chief Technology Officer"
+is_founder = true
+current = true
+background = "Company release describes experience building complex systems in under-digitized environments. A public profile reports prior service in Israeli Military Intelligence, culminating in a technology leadership role, and work in cybersecurity, digital transformation and R&D; the profile is secondary and should be independently confirmed in diligence."
+source_ids = ["prn_seed", "dor_profile"]
+
+[[intelligence.investors]]
+name = "Ibex Investors"
+investor_type = "vc"
+website = "https://www.ibexinvestors.com/"
+round_ids = ["seed-2025"]
+relationship = "current"
+source_ids = ["prn_seed", "ibex_portfolio"]
+notes = "Lead investor in the announced Seed round; current portfolio page also lists Corbel."
+
+[[intelligence.investors]]
+name = "Joule Ventures"
+investor_type = "vc"
+website = "https://jouleventures.com/"
+round_ids = ["seed-2025"]
+relationship = "current"
+source_ids = ["prn_seed"]
+
+[[intelligence.investors]]
+name = "Restive Ventures"
+investor_type = "vc"
+website = "https://restiveventures.com/"
+round_ids = ["seed-2025"]
+relationship = "current"
+source_ids = ["prn_seed"]
+
+[[intelligence.investors]]
+name = "Selah Ventures"
+investor_type = "vc"
+website = "https://selahventures.com/"
+round_ids = ["seed-2025"]
+relationship = "current"
+source_ids = ["prn_seed"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Corbel stated that its platform powered configuration, quoting and financing for eight manufacturers in metalworking, woodworking and additive manufacturing. Company-reported as of the October 15, 2025 funding announcement; customer roster was not fully named."
+date = "2025-10-15"
+source_ids = ["prn_seed"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "Corbel reported more than $60 million in quoting volume in the six months since the broader sales platform launch, more than $1.7 million facilitated across 41 financing transactions, and customer application approval rates above 90%. These are company-reported activity measures, not revenue, originations owned by Corbel, or independently audited results."
+date = "2025-10-15"
+source_ids = ["prn_seed"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Corbel's case study for New Tech Machinery (NTM), a metal roofing and rollforming equipment manufacturer, says Corbel was deployed on product pages for guided configuration, quoting and financing. The case study reports over $2.5 million in net new sales in the first four months post-launch, 2.2x year-over-year qualified website conversion, complete configuration data for 77% of inbound quote requests, and 22 financed transactions closed. NTM is expanding the platform across its distributor network. These figures are customer outcomes as presented by Corbel, without independent audit or disclosed baseline definitions."
+date = "2026-10-04"
+source_ids = ["ntm_case"]
+
+[[intelligence.comparables]]
+name = "Tacton"
+website = "https://www.tacton.com/"
+rationale = "Manufacturing-focused CPQ and product-configuration platform serving complex configurable products."
+differentiation = "Overlapping configuration and quoting workflow; Corbel publicly emphasizes equipment-specific buyer-facing sales assistance combined with embedded lender routing, while Tacton describes broad enterprise manufacturing configuration and manufacturing-ready order workflows."
+source_ids = ["tacton", "corbel_site"]
+
+[[intelligence.comparables]]
+name = "Epicor CPQ"
+website = "https://www.epicor.com/en/products/digital-commerce/cpq/"
+rationale = "Established CPQ alternative for complex custom products and manufacturing workflows."
+differentiation = "Epicor emphasizes visual configuration, CAD/BOM automation and integration with enterprise systems. Corbel emphasizes industrial-equipment sales funnel and embedded financing; direct feature and deployment comparison requires customer evaluation."
+source_ids = ["epicor", "corbel_site"]
+
+[intelligence.research]
+researched_at = "2026-10-04T22:04:45Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Corbel corbelpay funding investors 2026", "site:corbelpay.com Corbel team customers partners 2026", "Corbel AI industrial CPQ customers revenue founders 2026", "Corbel startup patents ownership Le'ora Lichtenstein", "site:ibexinvestors.com Corbel $6.7 million", "site:corbelpay.com New Tech Machinery Corbel case study", "Corbel Le'ora Lichtenstein Israeli startup Tel Aviv CTech Oct 2025", "Corbel Dor Litay co-founder CTO", "official Tacton CPQ manufacturing", "official Epicor CPQ manufacturing"]
+gaps = ["team: only the two co-founders have adequate corroboration; current full roster and headcount are not reliably disclosed", "investors: round participants are named, but check sizes, ownership stakes, board rights and investor follow-on activity are unavailable", "financials: no audited or reported revenue, ARR, profitability, cash, burn or runway metrics located; quote and finance activity is not company revenue", "traction: company and customer case-study claims are not independently audited; full customer list, retention, deployments, recurring contract values and metric methodology unavailable", "intellectual_property: no attributable patent or application located; unregistered software, trade secrets and ownership/licensing arrangements unknown", "competition: exact win/loss data and customer comparisons versus established CPQ systems are unavailable", "ownership: private cap table and founder/investor ownership percentages not disclosed; no parent or ownership transaction found", "dual_use: no defense, government, export-controlled, or critical-infrastructure customer or use has been publicly evidenced"]
+conflicts = []
+diligence_questions = ["Can management provide cohort-level customer retention, ARR, gross margin and implementation cost for the eight manufacturers cited in 2025, and reconcile those figures to the NTM case-study results?", "What share of quote volume converts to completed equipment sales, and how are lender approvals, financing volume and financing-derived revenue defined and measured?", "Who owns the Corbel software, configuration models and customer-derived data, and what contractual and technical controls prevent hallucinated or incompatible machine recommendations from becoming firm quotes?", "What are the current headcount, deployment count, customer concentration, cash balance and runway following the 2025 Seed round?", "Does Corbel handle any defense supplier, government, or controlled technical data, and if so what security, export-control and data residency obligations apply?"]
+
+[[intelligence.research.sources]]
+id = "corbel_site"
+url = "https://www.corbelpay.com/"
+title = "Corbel | AI Sales Assistant for Complex Equipment Sales"
+publisher = "Corbel"
+kind = "company"
+accessed_at = "2026-10-04T22:04:45Z"
+claims = ["Canonical company website and current product positioning", "AI Sales Assistant, guided configuration, embedded financing and dealer visibility product descriptions", "Website advertises headline performance outcomes and links a New Tech Machinery case study; these are company marketing claims"]
+
+[[intelligence.research.sources]]
+id = "corbel_faq"
+url = "https://www.corbelpay.com/faq"
+title = "FAQ"
+publisher = "Corbel"
+kind = "company"
+accessed_at = "2026-10-04T22:04:45Z"
+claims = ["Target customers and product workflow", "Corbel says underwriting, approval and pricing decisions remain with lender partners", "Implementation timing and supported configuration and pricing controls"]
+
+[[intelligence.research.sources]]
+id = "corbel_seed"
+url = "https://www.corbelpay.com/blog/corbel-raises-6-7m-seed"
+title = "Corbel Raises $6.7M Seed to Supercharge Industrial Equipment Sales with AI-Powered Quoting and Embedded Financing"
+publisher = "Corbel"
+kind = "company"
+published_on = "2025-10-15"
+accessed_at = "2026-10-04T22:04:45Z"
+claims = ["Company announced $6.7 million Seed round on October 15, 2025", "Company describes industrial CPQ, AI configuration, dynamic quoting, embedded financing and target verticals", "Company said round funds AI development, financing network, integrations and hiring"]
+
+[[intelligence.research.sources]]
+id = "prn_seed"
+url = "https://www.prnewswire.com/news-releases/corbel-raises-6-7m-seed-to-revolutionize-industrial-equipment-operations-with-ai-native-platform-302584938.html"
+title = "Corbel Raises $6.7M Seed to Revolutionize Industrial Equipment Operations with AI-Native Platform"
+publisher = "PR Newswire (release provided by Corbel)"
+kind = "company"
+published_on = "2025-10-15"
+accessed_at = "2026-10-04T22:04:45Z"
+claims = ["$6.7 million Seed round, date, lead investor and participating investors", "Founding year and co-founder identities", "Company-reported eight manufacturer deployments, $60 million quote volume, $1.7 million financed across 41 transactions, and approval rate above 90%", "Piranha Fabrication customer testimonial and Corbel's intended use of proceeds"]
+
+[[intelligence.research.sources]]
+id = "ctech_seed"
+url = "https://www.calcalistech.com/ctechnews/article/h1axzfaplg"
+title = "Corbel raises $6.7 million Seed round to bring AI to industrial equipment sales"
+publisher = "CTech / Calcalist"
+kind = "media"
+published_on = "2025-10-15"
+accessed_at = "2026-10-04T22:04:45Z"
+claims = ["Independent Israeli business press identifies Corbel as an Israeli startup", "Corroborates October 2025 $6.7 million Seed financing and syndicate", "Corroborates founding year and Le'ora Lichtenstein and Dor Litay as founders"]
+
+[[intelligence.research.sources]]
+id = "ntm_case"
+url = "https://www.corbelpay.com/case-studies/ntm"
+title = "New Tech Machinery: Modernizing Equipment Sales with Corbel"
+publisher = "Corbel"
+kind = "company"
+accessed_at = "2026-10-04T22:04:45Z"
+claims = ["NTM identified as Corbel customer and equipment manufacturer", "Corbel-reported $2.5 million net new sales within four months, 2.2x qualified website conversions, 77% complete configuration capture and 22 financed transactions", "Case study says NTM is expanding deployment across its distributor network"]
+
+[[intelligence.research.sources]]
+id = "plant_services"
+url = "https://www.plantservices.com/home/podcast/55359446/podcast-how-corbel-is-modernizing-capital-equipment-sales-with-ai"
+title = "Podcast: How Corbel is modernizing capital equipment sales with AI"
+publisher = "Plant Services / New Equipment Digest"
+kind = "media"
+published_on = "2026-02-24"
+accessed_at = "2026-10-04T22:04:45Z"
+claims = ["Interview identifies Le'ora Lichtenstein as founder and CEO and describes structured-credit and early-stage investment background", "CEO explains AI extraction from unstructured product documents and human handoff for uncertain or custom equipment advice"]
+
+[[intelligence.research.sources]]
+id = "ibex_portfolio"
+url = "https://www.ibexinvestors.com/disclaimer"
+title = "Ibex Investors Investments"
+publisher = "Ibex Investors"
+kind = "investor"
+accessed_at = "2026-10-04T22:04:45Z"
+claims = ["Ibex lists Corbel among private company investments"]
+
+[[intelligence.research.sources]]
+id = "dor_profile"
+url = "https://theorg.com/org/corbel/org-chart/dor-litay"
+title = "Dor Litay - Co-founder and CTO at Corbel"
+publisher = "The Org"
+kind = "other"
+accessed_at = "2026-10-04T22:04:45Z"
+claims = ["Secondary public profile identifies Dor Litay as Corbel co-founder and CTO", "Profile describes prior Israeli Military Intelligence, cybersecurity, digital transformation and R&D experience"]
+
+[[intelligence.research.sources]]
+id = "ivc_profile"
+url = "https://www.ivc-online.com/Google-Card?id=405C535F-F09F-EE11-B812-00505695CD29&type=1"
+title = "Qipt Ltd. (Corbel) - IVC Data & Insights"
+publisher = "IVC Research Center"
+kind = "directory"
+accessed_at = "2026-10-04T22:04:45Z"
+claims = ["Public company profile associates Corbel with legal name Qipt Ltd. and Israeli location", "Profile identifies Leora Lichtenstein and Dor Litay as CEO and CTO co-founders"]
+
+[[intelligence.research.sources]]
+id = "tacton"
+url = "https://www.tacton.com/"
+title = "Tacton - CPQ Transforming the Buyer Experience"
+publisher = "Tacton"
+kind = "other"
+accessed_at = "2026-10-04T22:04:45Z"
+claims = ["Tacton offers manufacturing CPQ, configuration intelligence and manufacturing-ready quote workflows"]
+
+[[intelligence.research.sources]]
+id = "epicor"
+url = "https://www.epicor.com/en/products/digital-commerce/cpq/"
+title = "Epicor CPQ"
+publisher = "Epicor"
+kind = "other"
+accessed_at = "2026-10-04T22:04:45Z"
+claims = ["Epicor CPQ supports complex custom products, visual configuration and manufacturing/engineering workflows"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T22:04:45Z"
+next_review_on = "2027-01-04"
+queries = ["Corbel corbelpay funding investors 2026", "Corbel Le'ora Lichtenstein Israeli startup Tel Aviv CTech Oct 2025"]
+source_ids = ["corbel_site", "ctech_seed", "ivc_profile", "prn_seed"]
+summary = "Corbel is the canonical brand for Qipt Ltd., an Israeli-founded B2B software company. The live product focuses on equipment sales CPQ and finance routing; public profiles place activity in Israel and New York."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T22:04:45Z"
+next_review_on = "2027-01-04"
+queries = ["Corbel corbelpay funding investors 2026", "Corbel funding raised seed Series A investors valuation acquired"]
+source_ids = ["corbel_seed", "prn_seed", "ctech_seed"]
+summary = "Found one disclosed $6.7 million Seed equity round announced October 15, 2025. No post-Seed round or valuation disclosure found through review date; history remains partial."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T22:04:45Z"
+next_review_on = "2027-01-04"
+queries = ["Corbel investors Ibex Joule Restive Selah", "site:ibexinvestors.com Corbel $6.7 million"]
+source_ids = ["prn_seed", "ibex_portfolio"]
+summary = "Round announcement names Ibex Investors as lead and Joule Ventures, Restive Ventures and Selah Ventures as participants; check sizes, governance and current involvement are undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T22:04:45Z"
+next_review_on = "2027-01-04"
+queries = ["Corbel AI industrial CPQ founders team", "Corbel Dor Litay co-founder CTO", "Corbel Le'ora Lichtenstein interview"]
+source_ids = ["prn_seed", "plant_services", "dor_profile"]
+summary = "CEO Le'ora Lichtenstein and CTO Dor Litay are the sourced co-founders. Publicly available current full team and headcount are incomplete."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T22:04:45Z"
+next_review_on = "2027-04-04"
+queries = ["Corbel ownership parent company acquisition", "Qipt Ltd Corbel shareholders cap table"]
+source_ids = ["ivc_profile", "prn_seed"]
+summary = "No public cap table, beneficial ownership, parent, acquisition or change-of-control disclosure located. Israeli directory lists Qipt Ltd. as associated legal entity; private holdings remain unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T22:04:45Z"
+next_review_on = "2027-04-04"
+queries = ["Corbel revenue ARR profitability burn runway", "Corbel financials customers revenue"]
+source_ids = ["prn_seed", "ntm_case"]
+summary = "No company revenue, ARR, profitability, cash, burn or runway disclosed. Quoting and customer outcome values are tracked as traction and do not represent Corbel revenue."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T22:04:45Z"
+next_review_on = "2027-01-04"
+queries = ["Corbel AI industrial CPQ customers revenue founders 2026", "Corbel 8 manufacturers 60 million quoting volume", "site:corbelpay.com New Tech Machinery Corbel case study"]
+source_ids = ["prn_seed", "ntm_case", "corbel_site"]
+summary = "Company reported eight manufacturers and early platform finance/quote activity in 2025; 2026 site presents a named NTM customer case study with quantified but unaudited outcomes."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T22:04:45Z"
+next_review_on = "2027-04-04"
+queries = ["Corbel Qipt patents", "Corbel Pay patent industrial CPQ", "WIPO Corbel Qipt"]
+source_ids = ["corbel_site", "prn_seed"]
+summary = "No attributable public patent or patent application found in this review; this is not evidence that no applications or trade secrets exist."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T22:04:45Z"
+next_review_on = "2027-04-04"
+queries = ["official Tacton CPQ manufacturing", "official Epicor CPQ manufacturing", "Corbel AI industrial equipment CPQ competitors"]
+source_ids = ["tacton", "epicor", "corbel_site"]
+summary = "Tacton and Epicor are relevant direct CPQ alternatives. Corbel's differentiation claim is vertical workflow plus embedded financing; comparative win/loss evidence is absent."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T22:04:45Z"
+next_review_on = "2027-04-04"
+queries = ["Corbel defense customers government contracts", "Corbel defense industrial base suppliers", "Corbel government use"]
+source_ids = ["corbel_site", "prn_seed", "plant_services"]
+summary = "Industrial sales software could have indirect supplier-base applicability, but no defense, government, security, export-controlled or critical-infrastructure deployment was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Corbel continues to operate a live product website and publishes a customer case study and current product descriptions."
+verified_at = "2026-10-04T22:04:45Z"
+source_ids = ["corbel_site", "ntm_case"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "CTech identifies Corbel as an Israeli startup founded by Lichtenstein and Litay; IVC associates Qipt Ltd. with Corbel and an Israeli location."
+verified_at = "2026-10-04T22:04:45Z"
+source_ids = ["ctech_seed", "ivc_profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Corbel's announcement states a $6.7 million Seed raise; CTech independently reports the same amount. This reported company total is as of the announcement date."
+verified_at = "2026-10-04T22:04:45Z"
+source_ids = ["corbel_seed", "ctech_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.amount"
+support = "direct"
+summary = "Corbel and CTech both report a $6.7 million Seed round announced October 15, 2025."
+verified_at = "2026-10-04T22:04:45Z"
+source_ids = ["corbel_seed", "ctech_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.lead_investors"
+support = "direct"
+summary = "Corbel and CTech name Ibex Investors as the lead investor."
+verified_at = "2026-10-04T22:04:45Z"
+source_ids = ["corbel_seed", "ctech_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.participating_investors"
+support = "direct"
+summary = "Corbel and CTech name Joule Ventures, Restive Ventures and Selah Ventures as participants."
+verified_at = "2026-10-04T22:04:45Z"
+source_ids = ["corbel_seed", "ctech_seed"]

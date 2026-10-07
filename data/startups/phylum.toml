@@ -1,0 +1,80 @@
+name = "Phylum"
+description = "Phylum developed software supply-chain security technology that analyzes open-source packages, detects malicious behavior, and enforces package-admission policy. Veracode acquired certain Phylum assets and technology in January 2025; current Phylum documentation identifies the platform as part of Veracode, so this record represents an acquired capability rather than an independent startup."
+detailed_description = """
+Phylum developed an automated software-supply-chain security platform focused on risks that conventional vulnerability lists can miss. Its product analyzed open-source packages as they were published, ingested packages, lockfiles, and software bills of materials, and combined package behavior, authorship, provenance, licensing, engineering, and vulnerability context into policy decisions. The important distinction was malicious-package detection: a package can be newly published, deliberately weaponized, or suspicious without already appearing in a conventional CVE database. Phylum also offered a package firewall, CLI-based pre-install checks, installation sandboxing for supported ecosystems, and a threat feed for security workflows.
+
+The customer problem is structurally significant. Modern applications depend on large and fast-changing npm, PyPI, Maven, and other package ecosystems, creating opportunities for typosquatting, dependency confusion, compromised maintainers, malicious install scripts, credential theft, and targeted malware campaigns. A useful product must inspect new packages quickly, distinguish malicious intent from ordinary engineering risk, and integrate with CI/CD and developer workflows without turning every dependency update into a manual security review. Phylum's historical positioning covered package blocking, risk prioritization, governance, compliance, vendor assessment, and third-party software review, which gives the capability relevance beyond a narrow scanner.
+
+The competitive environment is crowded and increasingly platform-oriented. Snyk, Mend, Sonatype, JFrog, GitHub, Socket, and Checkmarx address overlapping combinations of software composition analysis, package reputation, malware detection, repository controls, and developer remediation. Phylum's credible differentiation was its dedicated focus on package behavior and emerging malicious activity rather than treating known vulnerabilities as the entire problem. That edge depends on research quality, corpus coverage, low-latency analysis, useful explanations, and high-confidence policy decisions. Veracode currently markets the inherited research and data through its Software Supply Chain Intelligence offering, but claims such as detecting more malicious packages than competitors remain vendor claims requiring independent benchmarking; public evidence does not establish standalone Phylum market share or customer concentration.
+
+The commercialization picture must now be read through the transaction. Veracode announced on January 6, 2025 that it acquired certain Phylum assets, including malicious-package analysis, detection, and mitigation technology, and described plans to integrate the capability into its software-supply-chain security offering. Current Phylum documentation says the service is part of Veracode and that the documentation is for a legacy platform; Veracode's current datasheet describes the Threat Research team as formerly the Phylum Research Team. This is meaningful evidence that the capability remains commercially relevant inside Veracode, but it is not evidence that Phylum remains an independent operating company, that historical standalone revenue persisted, or that the acquisition price created venture-return potential.
+
+The defense and national-security relevance is substantive but indirect. Defense contractors, government software factories, critical-infrastructure operators, and intelligence systems all rely on third-party code and build pipelines where a malicious dependency can create a route to credential theft, data exfiltration, or compromise of mission software. Package admission controls, behavioral analysis, SBOM context, sandboxing, and threat feeds can therefore contribute to secure software development and supply-chain assurance. The record should not imply a confirmed defense customer, government contract, accreditation, or operational deployment: the public evidence supports an applicable cybersecurity capability, not a documented defense program. As an acquired asset, its strategic value is best assessed through Veracode's integration, research continuity, coverage, independent efficacy, and customer adoption rather than through an independent startup financing thesis.
+"""
+logo = "https://www.veracode.com/wp-content/uploads/2025/01/Logo.svg"
+website = "https://www.veracode.com"
+sector = "Software supply-chain security"
+founded = "2020"
+headquarters = "Evergreen, CO, USA"
+employees = "Unknown (historical listings are not a reliable current count after the asset acquisition)"
+funding_stage = "Certain technology assets acquired by Veracode (January 2025; terms undisclosed)"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "Phylum's core capability addresses malicious open-source code and software supply-chain risk, a direct commercial security problem with credible applicability to defense contractors, government software factories, critical infrastructure, and other sensitive development environments. The adjacency is in protecting trusted software production, not in a confirmed weapons or government deployment."
+key_technologies = [
+  "Static, heuristic, and machine-assisted analysis of open-source packages",
+  "Malicious-package and zero-day supply-chain threat detection",
+  "Package-management firewall and automated package blocking",
+  "Dependency, lockfile, and SBOM risk contextualization",
+  "Package authorship, provenance, and reputation analysis",
+  "Real-time software-supply-chain malware and reputation intelligence feeds",
+  "Installation sandboxing and pre-install package checks"
+]
+use_cases = [
+  "Block malicious npm, PyPI, Maven, and similar packages before installation",
+  "Detect typosquatting, dependency confusion, and malicious post-install behavior",
+  "Prioritize risky direct and transitive dependencies using package context",
+  "Assess third-party software and open-source components during procurement or M&A",
+  "Enforce package admission and governance policy in enterprise CI/CD pipelines",
+  "Protect defense-contractor and government software factories from dependency compromise",
+  "Feed package-threat intelligence into security analytics and observability systems",
+  "Provide malware and reputation signals to SOC, threat-hunting, and software-assurance workflows"
+]
+tags = ["non-israeli"]
+investible = false
+investment_rationale = "The technology addresses a consequential and growing security problem and appears strategically valuable enough for Veracode to acquire selected assets. However, the transaction means Phylum is no longer an independent startup opportunity in this database; there is no basis here for a standalone financing, ownership, valuation, or investment recommendation. Diligence should instead track how fully Veracode integrates the capability, preserves research velocity, and converts detection quality into customer adoption."
+strategic_value = "Phylum's strategic value is as a high-signal control layer for deciding which third-party code is safe to admit into software-production environments. Its package analysis, threat research, and policy-enforcement concepts can strengthen Veracode's broader application-risk platform and can help sensitive organizations reduce dependency-based compromise. The value is credible but now resides primarily in an acquired technology and research capability; the key unknowns are integration depth, ongoing coverage, independent efficacy, and customer outcomes."
+public_sources = [
+  "https://www.veracode.com/blog/innovating-secure-software-supply-chains-veracode-acquires-phylum/",
+  "https://www.veracode.com/blog/introducing-veracode-threat-research/",
+  "https://docs.phylum.io/",
+  "https://docs.phylum.io/package_firewall/about",
+  "https://www.businesswire.com/news/home/20250106967344/en/Veracode-Acquires-Phylum-Inc.-Technology-to-Transform-Software-Supply-Chain-Security",
+  "https://www.veracode.com/wp-content/uploads/Veracode-Software-Supply-Chain-Intelligence.pdf",
+  "https://www.linkedin.com/company/phylum-io"
+]
+potential_score = 73.0
+technology_score = 86.0
+market_score = 80.0
+team_score = 58.0
+dual_use_score = 83.0
+strategic_alignment_score = 81.0
+stage = "mature"
+stage_rationale = "Phylum was founded in 2020 and had a commercial platform, multi-ecosystem integrations, and a documented software-supply-chain research footprint before Veracode acquired certain assets and technology in January 2025. Mature describes the capability's commercial development; acquired_asset records that the independent-company thesis has ended and that current product ownership is within Veracode."
+competitors = ["Socket", "Snyk", "Sonatype Nexus Lifecycle", "Mend", "JFrog Xray", "GitHub Dependabot"]
+competitive_edge = "Phylum's historical edge was dedicated analysis of malicious-package and emerging supply-chain behavior, including analysis near publication time, rather than reliance only on known-vulnerability databases. The package firewall, pre-install controls, and ecosystem-specific research could complement conventional SCA and application-security platforms. The edge's durability depends on proprietary coverage, detection precision, response latency, registry breadth, explainability, and successful Veracode integration; public claims about superior detection should be independently benchmarked."
+risk_factors = [
+  "The independent company and standalone product may have been absorbed into Veracode, limiting transparency into current roadmap, revenue, and retention",
+  "Crowded overlap with SCA, developer-security, package-firewall, and platform vendors can compress differentiation",
+  "False positives or unexplained blocks can disrupt builds and cause developers to bypass controls",
+  "Detection quality depends on continuously evolving package registries, attacker behavior, and proprietary research coverage",
+  "A large platform owner may prioritize bundled application-risk workflows over Phylum-specific innovation",
+  "Public evidence does not confirm defense customers, government contracts, certifications, or independently validated detection rates",
+  "No reliable public evidence confirms current employee count, standalone financial performance, acquisition terms, or post-acquisition operating structure"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Retain for strategic intelligence on software-supply-chain security and Veracode's capability expansion, but do not treat it as an independent startup priority. The technology has strong dual-use relevance and strategic alignment, while acquisition status, unknown current staffing, undisclosed terms, and limited standalone performance evidence constrain the record's priority signal."
+crawled_at = "2026-01-31T19:40:00+00:00"
+updated_at = "2026-07-31T19:45:46Z"

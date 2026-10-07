@@ -1,0 +1,113 @@
+name = "Pillar Security"
+description = "Pillar Security provides a unified AI security platform for discovering, testing, governing, and protecting AI applications, agents, models, tools, and data across the software lifecycle. Its focus is the security and control layer required as enterprise software becomes more autonomous and gains access to sensitive systems."
+
+detailed_description = """
+Pillar Security is building an AI security platform around the premise that agentic software creates a different security problem from conventional application code. Its public product material describes discovery of AI assets and workflows across code, cloud, SaaS, and endpoints; security assessment and agentic red teaming; governance across the AI lifecycle; and runtime controls. The platform is positioned to map relationships among agents, foundation models, prompts and instructions, knowledge bases, action groups, tools, and data, then connect that inventory to risk findings and enforcement. Public examples include shadow AI, sensitive-data exfiltration, credential leakage, excessive permissions, exposed infrastructure, prompt injection, and unsafe tool or MCP behavior.
+
+The target customer is an enterprise security or platform team that must let developers adopt generative AI while retaining visibility, policy control, and evidence for incident response and compliance. Pillar's commercial value is strongest where an organization has many models and agents deployed across heterogeneous environments, because a single AI gateway or a model-testing product will not by itself reveal the full application, identity, cloud-permission, data, and tool chain. The company presents integrations spanning AI development and runtime environments, including AI gateways and cloud infrastructure, and its product pages emphasize model-agnostic, self-hosted, and cloud deployment options. The practical buying test is whether Pillar can reduce dangerous exposure without adding enough latency, false positives, or engineering friction to cause teams to bypass it.
+
+The competitive field includes AI application-security specialists such as Prompt Security, Lakera, Protect AI, Aim Security, and Noma Security, as well as cloud providers, model platforms, CNAPP vendors, API gateways, and incumbent application-security suites adding AI governance features. Pillar's claimed differentiation is lifecycle breadth: discovery and attack-surface mapping are connected to testing, risk detection, policy enforcement, and runtime protection, so findings can carry business and architectural context into controls. That is strategically useful, but it also creates a demanding product surface. Diligence should test detection precision, coverage across rapidly changing agent frameworks and MCP implementations, deployment architecture, integration depth, customer retention, and the extent to which the platform is a system of record rather than a collection of adjacent scanners.
+
+Public traction signals are meaningful but still early. Pillar announced a $9 million seed round led by Shield Capital in April 2025, with Golden Ventures, Ground Up Ventures, and strategic angels participating. The company also publicly describes early enterprise adoption, a SAIL framework, an Amazon Bedrock integration, a Portkey collaboration, and a Wiz partnership; these are evidence of market activity and ecosystem engagement, not proof of scale or durable revenue. The founding team brings backgrounds in offensive security, Israeli national-security work, cloud, financial cybercrime, product development, and security companies, which is relevant to the technical problem. No specific government contract, certification, or defense deployment should be inferred from that background.
+
+The national-security relevance is credible through resilience and mission-support use rather than offensive capability. Defense, intelligence, and critical-infrastructure organizations are likely to face the same risks when internal AI agents access sensitive data, cloud resources, operational tools, or external model providers. Discovery, least-privilege analysis, red teaming, data-loss controls, audit trails, and runtime intervention could improve the safety of such deployments. The thesis remains conditional: suitability for classified or highly regulated environments would depend on deployment isolation, data handling, logging, assurance, supply-chain controls, and independently demonstrated performance.
+
+The platform's technical challenge is correlation across layers that are usually owned by different teams. An agent may be assembled in a repository, call a hosted model, retrieve documents from a vector store, use an MCP server, inherit a cloud identity, and send a result through an external integration. A useful control plane must connect those relationships into a path that a security analyst can understand, assign risk according to business context, and enforce a proportionate response. Pillar's public examples of taint or egress analysis, wildcard permissions, exposed infrastructure, and credential interception indicate an emphasis on these end-to-end paths rather than only classifying prompts and outputs. Verification should establish which capabilities are generally available, which depend on instrumentation, and which are product demonstrations.
+
+The likely enterprise sales motion is through the CISO, application-security, cloud-security, or AI platform organization, with developers and data owners becoming important users after deployment. An initial land motion could be asset discovery or an assessment of a high-value agent, followed by gateway controls, runtime protection, and governance workflows. This creates expansion potential, but also a demanding proof-of-value: customers will compare findings against existing CSPM, DLP, API-security, and red-team processes, and they may resist paying for another dashboard unless it produces distinct decisions or enforcement. Important commercial evidence includes conversion from assessment to recurring platform use, the number and criticality of protected agents, time to deploy, measurable reduction in exposed data paths, and whether security teams can tune policies without vendor services.
+
+Pillar's public ecosystem references should be read carefully. The Amazon Bedrock material demonstrates attention to a major model platform, while the Portkey and Wiz announcements suggest an effort to meet customers inside existing AI and cloud workflows. Such integrations can reduce adoption friction and increase distribution, but they can also make the company dependent on partner APIs, marketplace economics, and the willingness of larger vendors to keep a specialist in the architecture. The Wiz relationship is strategically relevant as an attack-surface and cloud-security bridge, yet it does not by itself demonstrate a formal channel, revenue contribution, or customer endorsement. Similar caution applies to the company's own descriptions of early adoption and Gartner recognition.
+
+For diligence, architecture and assurance questions are as important as benchmark detection rates. Buyers should ask whether telemetry contains customer prompts, source code, secrets, or regulated records; how data is isolated and retained; whether policy decisions can fail open or fail closed; how the service behaves during a provider outage; and whether customers can operate it in a private or disconnected environment. They should also test adversarial adaptation, multi-step attacks, indirect prompt injection, poisoned retrieval content, compromised tools, excessive agent permissions, and benign workflows with unusual language. Independent security testing, transparent evaluation methodology, secure development practices, and a clear boundary between automated recommendation and automated blocking would materially improve confidence.
+
+The strongest strategic case is therefore not that Pillar has solved AI security, but that it is positioned at a control point becoming more important as software gains agency. If its unified context materially improves visibility and response across the AI stack, it could become a durable security layer for enterprises and sensitive operators. If the market instead consolidates around cloud platforms or if customers treat AI security as a feature of existing tools, the same breadth could become a liability through long implementation cycles and overlapping functionality. The current record should preserve that upside and uncertainty together.
+"""
+
+logo = "https://www.pillar.security/favicon.ico"
+website = "https://www.pillar.security"
+sector = "AI Security"
+founded = "2023"
+headquarters = "Tel Aviv, Israel"
+employees = "11-50"
+funding_stage = "Seed"
+entity_type = "startup"
+
+dual_use = true
+dual_use_description = "Pillar's core security controls have substantive commercial and defense applicability because both enterprise and mission-support AI systems need asset discovery, least-privilege analysis, red teaming, data-loss prevention, auditability, and runtime policy enforcement. The defense case is for safer deployment of autonomous or semi-autonomous software in sensitive environments, not for weapons or offensive cyber operations; actual government suitability remains unverified."
+
+key_technologies = [
+  "AI asset and agent discovery across code, cloud, SaaS, and endpoints",
+  "AI attack-surface mapping and business-context risk correlation",
+  "Agentic red teaming and continuous AI-specific risk detection",
+  "Runtime guardrails, adaptive controls, and AI gateway enforcement",
+  "Sensitive-data and credential leakage prevention with taint or egress analysis",
+  "MCP, tool, model, prompt, knowledge-base, and action-group security",
+  "AI governance workflows and lifecycle audit evidence"
+]
+
+use_cases = [
+  "Inventorying unauthorized or unmanaged enterprise AI agents and shadow AI",
+  "Testing customer-facing agents for prompt injection, unsafe tool use, and data exfiltration",
+  "Blocking credentials, PII, intellectual property, or regulated data from leaving approved paths",
+  "Reviewing model, agent, MCP, and cloud-permission exposure before production release",
+  "Enforcing AI gateway policies and runtime controls for multi-model enterprise applications",
+  "Creating audit trails and risk evidence for regulated AI governance programs",
+  "Hardening intelligence, logistics, and other mission-support assistants without asserting defense deployment"
+]
+
+investible = true
+investment_rationale = "Pillar is a credible early-stage strategic-priority signal because it addresses a real control gap created by enterprise adoption of agents and AI-enabled software, and because its platform spans discovery, testing, governance, and runtime protection. The April 2025 $9M seed round and public ecosystem activity support, but do not establish, commercial momentum. Diligence should focus on recurring revenue and retention, deployment friction, measurable incident or exposure reduction, false-positive rates, gross-margin impact of runtime controls, coverage of fast-changing agent frameworks, and differentiation from cloud, gateway, CNAPP, and AppSec incumbents."
+
+strategic_value = "Pillar could provide strategic value to organizations that need trustworthy AI adoption without losing control of sensitive data, identities, cloud permissions, and operational tools. Its discovery and runtime-control model is relevant to allied enterprise resilience and to mission-support environments where an agent's permissions and data paths must be observable and bounded. The value is contingent on strong isolation, secure telemetry handling, explainable findings, integration with existing security operations, and evidence that controls remain effective as agents and models change."
+
+potential_score = 81.0
+technology_score = 84.0
+market_score = 82.0
+team_score = 78.0
+dual_use_score = 80.0
+strategic_alignment_score = 83.0
+
+stage = "early"
+stage_rationale = "Pillar remains an early-stage private startup: it was incorporated in 2023, announced a $9M seed round in April 2025, and publicly describes a growing platform and early enterprise adoption. The product scope and ecosystem activity are promising, but public evidence does not establish late-stage scale, broad paid deployment, or repeatable enterprise economics."
+
+competitors = [
+  "Prompt Security",
+  "Lakera",
+  "Protect AI",
+  "Aim Security",
+  "Noma Security",
+  "Cloud and model-provider AI security controls",
+  "CNAPP, API security, and application-security suites with AI governance features"
+]
+
+competitive_edge = "Pillar's proposed edge is the connection of AI discovery, attack-surface mapping, testing, governance, and runtime protection in one context-aware platform. That can be more useful than isolated prompt filtering or model scanning when customers have many agents spanning code, cloud, SaaS, endpoints, data, and tools. The edge is not yet proven: buyers may prefer incumbent cloud or security platforms, and Pillar must demonstrate broad integrations, low-noise detections, low operational overhead, and durable protection as agent frameworks and model providers evolve."
+
+risk_factors = [
+  "AI security remains a rapidly forming budget category, so enterprise buying cycles, ownership, and renewal behavior may be uncertain.",
+  "Cloud providers, model vendors, CNAPP platforms, and established AppSec suites can bundle overlapping discovery, gateway, and governance controls.",
+  "Agent frameworks, MCP implementations, model APIs, and telemetry formats change quickly, creating continuous integration and maintenance costs.",
+  "Runtime inspection and blocking can add latency, availability constraints, privacy exposure, or engineering friction that drives users around the product.",
+  "Security findings for probabilistic systems are difficult to validate; false positives or missed multi-step attack paths could damage trust.",
+  "Supporting self-hosted, cloud, regulated, and potentially isolated deployments may increase product complexity and reduce margins.",
+  "Public evidence of funding and ecosystem activity does not yet establish revenue scale, customer concentration, retention, certifications, or government adoption."
+]
+
+risk_level = "high"
+
+signals = []
+priority_rank = 0
+priority_rationale = "Priority: monitor and diligence as a high-relevance early-stage AI-security company. The combination of lifecycle coverage, Israeli cybersecurity expertise, seed backing, and credible mission-support adjacency warrants attention, while the high risk level reflects unproven scale, intense competition, fast platform change, and the absence of public evidence for durable revenue or defense adoption."
+
+public_sources = [
+  "https://www.pillar.security/",
+  "https://www.pillar.security/platform",
+  "https://www.pillar.security/about",
+  "https://www.pillar.security/blog/pillar-security-raises-9m-to-help-companies-build-and-run-secure-ai-software",
+  "https://www.pillar.security/blog/pillar-securitys-enhanced-amazon-bedrock-integration-complete-ai-security-and-governance",
+  "https://www.pillar.security/blog/from-ai-discovery-to-attack-surface-mapping-announcing-the-wiz-pillar-partnership",
+  "https://www.linkedin.com/company/pillarsecurity",
+  "https://www.globenewswire.com/news-release/2025/04/16/3062627/0/en/pillar-security-raises-9m-to-help-enterprises-build-and-run-secure-ai-software.html"
+]
+
+crawled_at = "2026-02-15T16:13:02Z"
+updated_at = "2026-07-31T18:14:25Z"

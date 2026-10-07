@@ -1,0 +1,307 @@
+name = "Digma"
+description = "Digma is a developer observability and continuous feedback product founded in 2022 by Nir Shafrir and Roni Dover. The company's official site now says Digma is part of the JetBrains AI Platform, indicating an acquisition or integration whose transaction terms and legal structure have not been publicly disclosed."
+detailed_description = """Digma is building an autonomous AI Site Reliability Engineer (SRE) system that operates at the intersection of code-level instrumentation and infrastructure intelligence. The company's core technology is a Dynamic Code Analysis (DCA) engine that processes raw observability data (traces, logs, metrics) to reveal actionable insights about performance bottlenecks, reliability risks, architectural inefficiencies, and potential security-relevant behavioral anomalies. Unlike traditional Application Performance Monitoring (APM) tools that detect problems retrospectively in production, Digma's approach identifies issues earlier—in pre-production, development, and CI/CD pipelines—allowing engineering teams to prevent production incidents before deployment. The platform integrates seamlessly with developer workflows (IDEs, code editors like Cursor and VS Code, CI/CD systems) and connects to external observability infrastructure (OpenTelemetry-compatible data sources, PostgreSQL, GitHub, Kubernetes, cloud-native environments) to correlate code changes with runtime behavior and performance impact.
+
+The core value proposition targets high-velocity engineering teams building distributed, cloud-native, and microservices-based applications. Digma's product operates via a freemium model (free for individual developers, premium for teams and enterprises), runs locally without exporting observability data to external cloud systems, and requires no code instrumentation changes or complex observability infrastructure setup. This privacy-first, zero-friction positioning directly addresses developer skepticism about data exfiltration and observability complexity—perennial pain points in the market. The DCA engine translates raw, difficult-to-interpret telemetry data into precise, actionable developer feedback (e.g., "this function allocates 2GB on every call due to unbound cache growth in line 457"), significantly reducing cognitive load and troubleshooting time. Recent product evolution includes agentic capabilities that propose pull request-ready remediation code, suggesting fixes that developers can review and merge—effectively automating root-cause remediation rather than just diagnosis.
+
+Founded in 2022 and remaining Israeli-based (Tel Aviv), Digma remains venture-backed at seed stage with a team in the 11-50 range. The founding team brings credible observability and developer-tooling expertise, and the company has demonstrated early product-market fit signals including freemium adoption, active open-source community engagement, and venture backing. The broader observability market is large ($15B+ TAM) and increasingly consolidated, but the narrower niche of developer-centric, code-level instrumentation with AI-driven remediation remains less crowded and less mature. Digma competes with narrow capabilities from well-capitalized incumbents (Datadog, New Relic, Honeycomb, Elastic, Sentry) but differentiates on developer experience, local-first privacy guarantees, pre-production/CI focus, and agentic remediation rather than production-only detection. Incumbents have largely treated developer observability as a secondary product layer bolted onto enterprise APM; Digma leads on the premise that developers should be the primary user, with enterprise-scale insights derived from developer-level feedback.
+
+From a defense-security and critical-infrastructure perspective, the dual-use relevance is moderate but substantive. Software reliability, runtime performance assurance, behavioral anomaly detection, and early identification of performance anomalies or unexpected code changes are material concerns in mission-critical systems—military software, financial infrastructure, intelligence agency computing, national-security cloud services. Organizations operating sensitive systems face constant pressure to improve observability and controllability of code execution and system behavior. Digma's technology directly addresses this: the ability to detect anomalous code behavior, performance regressions, or unexpected state changes in production or pre-production systems is valuable in any high-stakes operational environment. However, Digma is fundamentally a tooling provider for development teams, not a purpose-built defense platform—its defense utility is indirect and depends on customer adoption in sensitive contexts, security certifications, and integration into operational security and compliance frameworks. Adoption in classified or highly regulated environments would require additional hardening, audit readiness, and potentially government security clearances for key staff."""
+logo = "https://digma.ai/wp-content/uploads/2024/02/logo-alt.svg"
+website = "https://digma.ai"
+sector = "Developer Observability / Software Reliability Engineering"
+founded = "2022"
+headquarters = "Tel Aviv, Israel (historical company base; current standalone operating headquarters not established)"
+employees = "11-50"
+funding_stage = "Acquired; last disclosed financing was a $6 million Seed round (September 2023)"
+dual_use = true
+dual_use_description = "Digma's code-level instrumentation and runtime anomaly detection capabilities have substantive dual-use relevance. Commercial applications include detecting performance regressions, identifying potential security-relevant behavioral changes (e.g., unexpected memory allocation patterns, API rate changes), improving reliability and observability of distributed systems, and reducing mean-time-to-resolution (MTTR) for production incidents. Defense-adjacent applications include improving visibility and runtime controllability of military software systems, critical national infrastructure services, intelligence-agency computing environments, and defense-contractor cloud services. Specific use cases: detecting unauthorized or anomalous code changes in production via behavioral fingerprinting; ensuring mission-critical systems maintain expected performance profiles under operational stress; enabling rapid incident response in high-stakes environments where downtime is unacceptable. However, Digma is a general-purpose developer observability tool, not purpose-built for defense—its value in sensitive contexts depends on demonstrated security hardening, compliance certifications (FedRAMP, Common Criteria, or government-specific standards), data handling guarantees, and organizational adoption by defense contractors or government agencies. The technology is not inherently restricted or dual-use-only; its defense applicability derives from its core capability to detect, diagnose, and remediate code-level anomalies—a function relevant to any organization operating reliable, secure systems."
+key_technologies = ["Dynamic Code Analysis (DCA) engine with low-overhead instrumentation", "Agentic AI SRE with generative remediation suggestion and pull request drafting", "OpenTelemetry integration and observability data aggregation", "Code-to-infrastructure behavior correlation and anomaly detection", "Local-first deployment with privacy-preserved inference and zero data exfiltration", "IDE and code-editor plugin infrastructure (VS Code, Cursor, JetBrains)", "Root-cause tracing from code-level execution to infrastructure-level impact"]
+use_cases = ["Detecting performance and reliability issues in pre-production development environments before reaching production", "Identifying breaking changes and performance regressions in pull requests and CI/CD pipelines", "Autonomous root-cause diagnosis and pull request-ready remediation suggestion for code-level performance and behavioral issues", "Scaling developer troubleshooting efficiency without manual trace inspection or incident post-mortems", "Mission-critical software reliability assurance and SRE automation in high-stakes operational systems", "Compliance and quality governance for regulated software systems in finance, healthcare, and defense sectors", "Early anomaly detection for behavioral changes and potential security-relevant code modifications in production systems", "Infrastructure-level performance visibility and capacity planning without complex APM agent installation or vendor lock-in"]
+investible = true
+investment_rationale = "Digma addresses a substantial, materially underserved market gap in the observability and developer-experience ecosystems. The company demonstrates credible early product-market fit signals: freemium adoption with engaged developer community, venture backing, and organic community participation in a crowded market. The broader observability market is growing at 10-12% CAGR with secular tailwinds from cloud-native adoption, microservices, distributed systems complexity, and DevOps/SRE maturation. Digma's narrower niche—developer-centric, local-first, pre-production observability with agentic remediation—is earlier in adoption but addresses a real unmet need: developers spend significant time diagnosing and fixing performance issues, and incumbent APM vendors optimize for operations teams, not developers. The team's observability and developer-tooling expertise is credible and the product differentiation (local-first privacy, agentic remediation, developer UX focus) is tangible. However, the competitive landscape is crowded with well-funded incumbents (Datadog, Elastic, New Relic, Splunk, Sentry) and emerging AI-native competitors that can co-opt capabilities quickly. Digma's path to defensibility depends on sustained innovation in agentic SRE quality, developer ecosystem stickiness (IDE integration, community), and enterprise GTM execution. For dual-use and deep-tech portfolios, the company is strategically relevant if evidence emerges of adoption by defense contractors, government agencies, or critical-infrastructure operators—such adoption would validate national-security relevance and open alternative revenue/partnership pathways beyond commercial open-source. Near-term risk: achieving unit economics and demonstrating enterprise net-retention before Series A. Medium-term risk: consolidation by Datadog, Elastic, or New Relic could neutralize differentiation."
+strategic_value = "Digma contributes materially to a broader ecosystem of developer-centric infrastructure and developer experience platforms that enable faster, more reliable, and more secure software delivery at scale. From a strategic standpoint, improving visibility and controllability of code execution, runtime behavior, and system state in production systems is a national-competitiveness and national-security concern—both for commercial technology leadership and for the security and resilience of critical software assets that underpin national defense, financial systems, intelligence operations, and essential infrastructure. If Digma succeeds in its autonomous AI SRE vision, it could meaningfully reduce friction between software development and operational reliability, lowering cost-of-ownership and risk for secure, resilient system deployment for both commercial enterprises and government stakeholders. The company's Israeli origin and the strength of Israel's security, observability, and developer-tools ecosystem are relevant: Israel has a demonstrated comparative advantage in security/observability engineering and deep integration with U.S. defense and intelligence ecosystems. For a portfolio seeking to strengthen U.S./allied software reliability and security posture, Digma represents a credible platform play with potential second-order effects on defense operational effectiveness and digital resilience."
+potential_score = 79.0
+technology_score = 80.0
+market_score = 77.0
+team_score = 76.0
+dual_use_score = 72.0
+strategic_alignment_score = 79.0
+stage = "early"
+stage_rationale = "Digma is a seed-stage private company with a focused, rapidly evolving product scope and early validation signals (developer adoption via freemium, venture backing, community engagement, recent agentic capability expansion). The company has not yet demonstrated mature enterprise go-to-market execution, large-scale customer logos, significant recurring revenue, or path to profitability. Product-market fit is emerging and credible but not yet fully validated at enterprise scale or in sensitive/defense customer segments. Team size (11-50) is appropriate for early-stage product development but will require expansion for sales, customer success, and engineering scale. Risk is moderate-to-high: seed-stage failure rates are high, competitive response from incumbents could accelerate, and observability market consolidation could reduce addressable market. However, early signals are encouraging: venture backing, product-market traction, and clear differentiation in a growing market segment suggest better-than-average seed-stage risk profile."
+competitors = ["Lightrun (dynamic instrumentation and code-level observability)", "Datadog Observability Pipelines and developer features", "New Relic CodeStream and AI SRE initiatives", "Honeycomb developer-focused observability modules", "Elastic APM with code-level telemetry", "Sentry (error tracking and performance monitoring)", "Grafana OnCall and AIOps integrations"]
+competitive_edge = "Developer-first product design with emphasis on local-first privacy (zero data exfiltration), pre-production/CI focus (earlier detection than production-only APMs), zero-friction setup (no code instrumentation), and actionable code-level feedback. Agentic remediation capability (suggesting pull request-ready fixes) is a meaningful differentiator versus incumbent APMs, which historically optimize for post-incident analysis rather than pre-incident prevention and automated remediation. Freemium model with zero data exfiltration appeals to security-conscious teams, particularly in regulated and sensitive industries. However, differentiation is at incremental risk from incumbent product expansion (Datadog, New Relic, Elastic all investing in developer tools and AI capabilities), open-source community tooling (e.g., OpenTelemetry evolution), and emerging AI-native observability competitors. Sustaining advantage requires continuous innovation in agentic AI quality, developer ecosystem moat (IDE integration, community adoption), and enterprise GTM execution."
+risk_factors = ["Crowded observability market with entrenched, well-capitalized competitors (Datadog, Elastic, New Relic) possessing superior distribution, ecosystem lock-in, and resources to co-opt differentiation", "Rapid AI model commoditization and emerging open-source/frontier-model alternatives could compress margins on agentic capabilities", "Incumbent vendor bundling strategies could reduce addressable market if developer observability becomes a loss-leader bundled product", "Enterprise adoption risk: many organizations prefer consolidated single-vendor observability solutions to point tools, reducing TAM", "Security and compliance risk: adoption in sensitive environments (government, defense, financial) requires FedRAMP/Common Criteria certifications and regulatory hardening that could impose significant engineering burden", "Supply-chain and integration maintenance burden: dependence on open-source components (OpenTelemetry, collectors) and external observability infrastructure creates maintenance and feature-velocity constraints", "Market slowdown risk: if technology spending contracts, observability is often de-prioritized relative to core infrastructure, reducing adoption velocity and forcing consolidation/acquihire outcomes"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Israeli seed-stage developer observability startup with substantive dual-use relevance and a credibly differentiated product (code-level DCA engine, agentic remediation, developer-first UX, local-first privacy). Strategic value is real and aligned with national-security competitiveness in software reliability and critical-infrastructure resilience. strategically relevant for deep-tech, dual-use-focused portfolios with appetite for developer infrastructure plays in security-critical domains. Key monitoring points: enterprise customer acquisition (particularly defense contractors or critical-infrastructure operators), agentic SRE capability maturation and accuracy, revenue/unit economics validation, and evidence of adoption in sensitive operational contexts. Company warrants periodic re-assessment as observability market evolves, agentic AI capabilities mature, and organization demonstrates enterprise go-to-market execution."
+crawled_at = "2026-02-16T23:32:00Z"
+updated_at = "2026-10-05T07:27:13Z"
+entity_type = "acquired_asset"
+public_sources = [
+  { label = "Digma", url = "https://digma.ai/", description = "Official notice that Digma is now part of JetBrains AI Platform." },
+  { label = "Calcalist CTech", url = "https://www.calcalistech.com/ctechnews/article/s1bzgn6ka", description = "September 2023 seed, founders, investors and product announcement." },
+  { label = "New-Tech Online", url = "https://www.new-techonline.com/2023/09/digma-%D7%92%D7%99%D7%99%D7%A1%D7%94-6-%D7%9E%D7%99%D7%9C%D7%99%D7%95%D7%9F-%D7%93%D7%95%D7%9C%D7%A8-%D7%9B%D7%93%D7%99-%D7%9C%D7%94%D7%AA%D7%90%D7%99%D7%9D-%D7%AA%D7%94%D7%9C%D7%99%D7%9B%D7%99-%D7%A4/", description = "Hebrew coverage confirms round participants and Israeli connection." },
+  { label = "Digma GitHub", url = "https://github.com/digma-ai/digma", description = "Product architecture, runtime profiling and locally handled telemetry." },
+  { label = "Digma MCP server", url = "https://digma.ai/sign-up-for-digma-mcp/", description = "Company product page for MCP and agent-assisted code feedback." }
+]
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Nir Shafrir", role = "Co-founder and former CEO", is_founder = true, current = false, background = "CTech identifies Shafrir as Digma's CEO and co-founder at its 2023 launch. Hebrew launch coverage reports prior field engineering leadership at Nyotron.", source_ids = ["ctech_seed", "newtech_seed"] },
+  { name = "Roni Dover", role = "Co-founder and former CTO", is_founder = true, current = false, background = "CTech identifies Dover as Digma's CTO and co-founder. His public technical writing and Digma's repository describe a background in software development and observability.", source_ids = ["ctech_seed", "github_product"] }
+]
+investors = [
+  { name = "at.inc/", investor_type = "vc", website = "https://at.inc/", round_ids = ["seed-2023"], relationship = "historical", source_ids = ["ctech_seed", "newtech_seed"] },
+  { name = "Sorenson Ventures", investor_type = "vc", website = "https://sorensoncapital.com/ventures/", round_ids = ["seed-2023"], relationship = "historical", source_ids = ["ctech_seed", "newtech_seed"] },
+  { name = "Abstraction Capital", investor_type = "vc", website = "https://abstraction.capital/", round_ids = ["seed-2023"], relationship = "historical", source_ids = ["ctech_seed", "newtech_seed"] },
+  { name = "Inner Loop Capital", investor_type = "vc", website = "https://innerloop.capital/", round_ids = ["seed-2023"], relationship = "historical", source_ids = ["ctech_seed", "newtech_seed"] },
+  { name = "Hetz Ventures", investor_type = "vc", website = "https://www.hetz.vc/", round_ids = ["seed-2023"], relationship = "historical", source_ids = ["ctech_seed", "newtech_seed"] },
+  { name = "Guy Podjarny", investor_type = "angel", round_ids = ["seed-2023"], relationship = "historical", source_ids = ["ctech_seed", "newtech_seed"], notes = "Named angel investor; CTech describes him as Snyk co-founder." },
+  { name = "Tom Preston-Werner", investor_type = "angel", round_ids = ["seed-2023"], relationship = "historical", source_ids = ["ctech_seed", "newtech_seed"], notes = "Named angel investor; CTech describes him as GitHub co-founder." },
+  { name = "Chris Bach", investor_type = "angel", round_ids = ["seed-2023"], relationship = "historical", source_ids = ["ctech_seed", "newtech_seed"], notes = "Named angel investor; CTech describes him as Netlify co-founder." }
+]
+financials = []
+traction = [
+  { kind = "product", description = "Company's launch coverage described continuous runtime code analysis surfaced in developer IDEs, flagging regressions, anomalies and code smells. This establishes product availability, not paying adoption.", date = "2023-09-26", source_ids = ["ctech_seed"] },
+  { kind = "product", description = "Digma's current MCP signup page markets observability context for AI agents, early risk detection and proposed fixes. The page offers early access and does not establish broad release or customer deployment.", source_ids = ["mcp_product"] },
+  { kind = "other", description = "Official Digma homepage states the product/company is now part of the JetBrains AI Platform; public notice gives no transaction price or closing date.", date = "2026", source_ids = ["digma_home"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Datadog", website = "https://www.datadoghq.com/", rationale = "Broad observability platform and likely enterprise substitute for runtime performance diagnosis.", differentiation = "Digma historically emphasized feedback at code and IDE level; public evidence does not establish a durable technical moat against platform expansion.", source_ids = ["github_product", "ctech_seed"] },
+  { name = "Sentry", website = "https://sentry.io/", rationale = "Developer-oriented error and performance monitoring adjacent to code-level debugging.", differentiation = "Digma focused on continuous runtime profiling and feedback in the IDE; no independently verified comparative performance data was found.", source_ids = ["github_product"] },
+  { name = "Honeycomb", website = "https://www.honeycomb.io/", rationale = "Observability product used by engineering teams to investigate distributed system behavior.", differentiation = "Digma's repository describes local analysis and code-level IDE insights; Honeycomb is a broader event observability platform.", source_ids = ["github_product"] }
+]
+
+[intelligence.company]
+company_id = "il-digma"
+legal_name = "Digma, Inc. (reported in 2023 coverage; current legal entity name and status not independently confirmed)"
+aliases = ["Digma", "Digma.ai"]
+operating_status = "acquired"
+business_model = "Developer observability software; historical freemium developer offering with team and enterprise potential. Current standalone commercial model after JetBrains integration is not publicly disclosed."
+products = ["Digma continuous feedback and runtime profiling platform", "Digma MCP server (early-access offer described on company site)"]
+locations = ["Tel Aviv, Israel (historically identified as Israeli startup); current headquarters not established"]
+founded_on = "2022"
+source_ids = ["digma_home", "ctech_seed", "newtech_seed", "github_product"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One publicly reported $6 million Seed financing round announced September 26, 2023. CTech and Hebrew New-Tech identify the same round and participant set; secondary databases corroborate but no additional financing event was found. Current ownership transaction is not classified as financing."
+rounds = [
+  { id = "seed-2023", round_type = "Seed", instrument = "equity", status = "announced", announced_on = "2023-09-26", amount_status = "reported", amount = 6000000, amount_scope = "round", currency = "USD", lead_investors = ["at.inc/", "Sorenson Ventures"], participating_investors = ["Abstraction Capital", "Inner Loop Capital", "Hetz Ventures", "Guy Podjarny", "Tom Preston-Werner", "Chris Bach"], source_ids = ["ctech_seed", "newtech_seed"], notes = "Reported amount and list corroborated in contemporaneous English and Hebrew coverage. No valuation disclosed. No public evidence distinguishes signing from closing date." }
+]
+reported_total_raised = 6000000
+reported_total_currency = "USD"
+total_source_ids = ["ctech_seed", "newtech_seed"]
+total_as_of = "2023-09-26"
+total_scope = "Company-announced lifetime funding reported in the only located financing announcement; not independently confirmed as a current company total after acquisition."
+history_status = "partial"
+coverage_through = "2026-10-05"
+
+[intelligence.ownership]
+status = "reported"
+summary = "Digma's official site says it is now part of the JetBrains AI Platform. This establishes an integration/acquisition relationship at the product level, but the legal transaction form, exact announcement/completion dates, consideration and retained entity/cap table are not disclosed in the public materials reviewed."
+parent_company = "JetBrains"
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["digma_home"]
+deals = [
+  { id = "jetbrains-integration", deal_type = "acquisition", company_role = "target", status = "completed", counterparty = "JetBrains", amount_status = "undisclosed", source_ids = ["digma_home"], notes = "Official notice says Digma is now part of JetBrains AI Platform. Transaction's legal form, date and consideration were not stated; completed status reflects the present-tense official notice." }
+]
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders"]
+summary = "Contemporaneous Israeli business coverage identifies Digma as a startup founded by Nir Shafrir and Roni Dover, identifies Hetz as an Israeli participating investor, and Hebrew coverage reports the founders' Israel-based professional background. This supports an Israeli-founded connection; legal incorporation and current R&D footprint remain unverified."
+as_of = "2026-10-05"
+source_ids = ["ctech_seed", "newtech_seed"]
+
+[intelligence.research]
+researched_at = "2026-10-05T07:27:13Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Digma AI official funding seed investors", "Digma AI startup Israeli founders team Digma.ai", "Digma.ai funding raised seed investors", "Digma AI customers revenue patents acquisition", "site:blog.jetbrains.com Digma acquisition JetBrains 2026", "site:digma.ai JetBrains Digma acquired", "Digma acquired by JetBrains acquisition amount 2026", "Digma Roni Dover Nir Shafrir founder JetBrains AI platform", "site:github.com/digma-ai Digma open source observability", "site:digma.ai Digma MCP agentic AI SRE product", "Digma startup 2023 $6 million Calcalist Hebrew investor announcement JetBrains", "Digma AI patents company Digma.ai intellectual property", "Digma customers contracts government defense dual use", "Digma revenue ARR headcount employees", "Digma competitors observability developer runtime profiling"
+]
+gaps = [
+  "team: no current post-acquisition leadership roster or verified current employee count found; only the two founders' historical roles were corroborated.",
+  "investors: private cap table and individual ownership stakes are undisclosed; round investor list is historical only.",
+  "financials: no public revenue, ARR, profitability, burn, runway or dated headcount metric found.",
+  "traction: no named paying customer, contract value, production deployment, retention or adoption count independently substantiated.",
+  "intellectual_property: no Digma-assigned patent or other registered IP record was verified in searched public materials; proprietary rights and patent portfolio remain unknown.",
+  "competition: no independently measured comparative benchmark or defensibility evidence found; peer set is analytical, not proof of direct replacement.",
+  "ownership: acquisition legal form, dates, consideration, legal acquirer subsidiary, and post-deal corporate status are not disclosed in the reviewed sources.",
+  "dual_use: no public government, defense, intelligence or critical-infrastructure customer, contract, certification or deployment evidence found."
+]
+conflicts = ["Some commercial databases describe Digma as US-headquartered (Sunnyvale/Santa Clara) while Israeli launch coverage identifies it as an Israeli startup and the Hebrew launch account ties founders to Israeli roles. No primary legal or registry source resolving incorporation or headquarters was found; this record preserves the Israeli-founded basis and treats current headquarters/legal domicile as unknown.", "The official site confirms Digma is part of JetBrains AI Platform, but reviewed primary materials do not disclose whether this was a stock acquisition, asset purchase, acquihire or product integration. No price or transaction dates are inferred."]
+diligence_questions = ["What legal entity and transaction structure transferred Digma into JetBrains, and what consideration, liabilities and IP were included?", "Which Digma capabilities, staff and products remain supported within JetBrains AI Platform, and what is the post-acquisition roadmap?", "What were Digma's active users, paid customers, retention and revenue immediately before the transaction?", "Were Digma's code, patents, trademarks and open-source obligations assigned or licensed to JetBrains?", "Did the product ever serve defense, government or critical-infrastructure customers, and what security controls or certifications were in place?"]
+sources = [
+  { id = "digma_home", url = "https://digma.ai/", title = "Digma is now part of the JetBrains AI Platform", publisher = "Digma", kind = "company", accessed_at = "2026-10-05T07:27:13Z", claims = ["Digma's official site states that it is now part of the JetBrains AI Platform."] },
+  { id = "ctech_seed", url = "https://www.calcalistech.com/ctechnews/article/s1bzgn6ka", title = "Digma raises $6 million for continuous feedback platform to validate developer and GenAI code", publisher = "Calcalist CTech", kind = "media", published_on = "2023-09-26", accessed_at = "2026-10-05T07:27:13Z", claims = ["Digma announced a $6 million Seed round on September 26, 2023.", "The round was led by at.inc/ and Sorenson Ventures and included Abstraction Capital, Inner Loop Capital, Hetz Ventures, Guy Podjarny, Tom Preston-Werner and Chris Bach.", "Digma was founded in 2022 by Nir Shafrir and Roni Dover, respectively CEO and CTO.", "The product was described as local runtime code analysis feeding IDE and developer tools."] },
+  { id = "newtech_seed", url = "https://www.new-techonline.com/2023/09/digma-%D7%92%D7%99%D7%99%D7%A1%D7%94-6-%D7%9E%D7%99%D7%9C%D7%99%D7%95%D7%9F-%D7%93%D7%95%D7%9C%D7%A8-%D7%9B%D7%93%D7%99-%D7%9C%D7%94%D7%AA%D7%90%D7%99%D7%9D-%D7%AA%D7%94%D7%9C%D7%99%D7%9B%D7%99-%D7%A4/", title = "Digma raised $6 million to adapt development processes for the GenAI era", publisher = "New-Tech Online", kind = "media", published_on = "2023-09-26", accessed_at = "2026-10-05T07:27:13Z", claims = ["Hebrew report independently identifies the $6 million Seed round and named funds and angels.", "Report describes Digma as an Israeli startup founded by Nir Shafrir and Roni Dover in 2022 and gives their earlier technology roles."] },
+  { id = "github_product", url = "https://github.com/digma-ai/digma", title = "digma-ai/digma", publisher = "GitHub / Digma", kind = "company", accessed_at = "2026-10-05T07:27:13Z", claims = ["Repository describes runtime profiling, local container backend and IDE plugin, using OpenTelemetry data to surface code-level performance insights.", "Repository states the data is handled locally and no code changes are required."] },
+  { id = "mcp_product", url = "https://digma.ai/sign-up-for-digma-mcp/", title = "Sign up for Digma MCP server", publisher = "Digma", kind = "company", accessed_at = "2026-10-05T07:27:13Z", claims = ["Company product page describes an early-access MCP server that shares observability context with AI agents and offers issue analysis and suggested fixes."] }
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-05T07:27:13Z"
+next_review_on = "2027-01-05"
+queries = ["Digma AI official funding seed investors", "Digma AI startup Israeli founders team Digma.ai"]
+source_ids = ["digma_home", "ctech_seed", "newtech_seed"]
+summary = "Matched digma.ai to the developer observability startup founded in 2022; the official site now locates it within JetBrains AI Platform."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-05T07:27:13Z"
+next_review_on = "2027-01-05"
+queries = ["Digma.ai funding raised seed investors", "Digma startup 2023 $6 million Calcalist Hebrew investor announcement JetBrains"]
+source_ids = ["ctech_seed", "newtech_seed"]
+summary = "Found one reported $6 million Seed in September 2023; no later round located."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-05T07:27:13Z"
+next_review_on = "2027-01-05"
+queries = ["Digma AI official funding seed investors", "Digma.ai funding raised seed investors"]
+source_ids = ["ctech_seed", "newtech_seed"]
+summary = "Contemporaneous English and Hebrew coverage name five funds and three angel investors; stakes are private."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-05T07:27:13Z"
+next_review_on = "2027-01-05"
+queries = ["Digma AI startup Israeli founders team Digma.ai", "Digma Roni Dover Nir Shafrir founder JetBrains AI platform"]
+source_ids = ["ctech_seed", "newtech_seed", "digma_home"]
+summary = "Founders and historical roles verified; current post-acquisition management and headcount not disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-05T07:27:13Z"
+next_review_on = "2027-01-05"
+queries = ["site:blog.jetbrains.com Digma acquisition JetBrains 2026", "site:digma.ai JetBrains Digma acquired", "Digma acquired by JetBrains acquisition amount 2026"]
+source_ids = ["digma_home"]
+summary = "Official site confirms product/company is part of JetBrains AI Platform; transaction mechanics, dates and consideration not disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T07:27:13Z"
+next_review_on = "2027-01-05"
+queries = ["Digma revenue ARR headcount employees", "Digma AI customers revenue patents"]
+source_ids = ["ctech_seed", "digma_home"]
+summary = "No dated operating financial metrics located; acquisition price is also undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-05T07:27:13Z"
+next_review_on = "2027-01-05"
+queries = ["Digma AI customers revenue patents", "site:digma.ai Digma MCP agentic AI SRE product"]
+source_ids = ["ctech_seed", "mcp_product", "digma_home"]
+summary = "Public product launch and an early-access MCP offering found; no verifiable paying customer, deployment scale or revenue disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-05T07:27:13Z"
+next_review_on = "2027-01-05"
+queries = ["Digma AI patents company Digma.ai intellectual property", "Digma patents assignee"]
+source_ids = ["github_product"]
+summary = "No assigned patent record or disclosed portfolio found in the reviewed product and company materials; this does not establish absence of IP."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-05T07:27:13Z"
+next_review_on = "2027-01-05"
+queries = ["Digma competitors observability developer runtime profiling", "Digma AI SRE observability alternatives"]
+source_ids = ["github_product", "ctech_seed"]
+summary = "Identified adjacent observability and developer diagnosis alternatives; comparative product performance not independently assessed."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T07:27:13Z"
+next_review_on = "2027-01-05"
+queries = ["Digma customers contracts government defense dual use", "Digma observability defense government deployment"]
+source_ids = ["github_product", "ctech_seed"]
+summary = "Runtime diagnostics have general relevance to reliable software, but no defense or government customer, contract, certification or deployment was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Digma's official homepage states it is now part of JetBrains AI Platform, directly supporting acquired/integrated status."
+verified_at = "2026-10-05T07:27:13Z"
+source_ids = ["digma_home"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Contemporaneous Israeli CTech and Hebrew New-Tech coverage identify the startup and its two founders in the Israeli startup context; Hebrew source provides local founder background."
+verified_at = "2026-10-05T07:27:13Z"
+source_ids = ["ctech_seed", "newtech_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Both contemporaneous reports state Digma secured $6 million in the announced Seed round."
+verified_at = "2026-10-05T07:27:13Z"
+source_ids = ["ctech_seed", "newtech_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2023.amount"
+support = "direct"
+summary = "CTech and New-Tech each report a $6 million Seed financing in September 2023."
+verified_at = "2026-10-05T07:27:13Z"
+source_ids = ["ctech_seed", "newtech_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2023.lead_investors"
+support = "direct"
+summary = "Both reports identify at.inc/ and Sorenson Ventures as co-leads."
+verified_at = "2026-10-05T07:27:13Z"
+source_ids = ["ctech_seed", "newtech_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2023.participating_investors"
+support = "direct"
+summary = "CTech and New-Tech list Abstraction Capital, Inner Loop Capital, Hetz Ventures and angel investors Guy Podjarny, Tom Preston-Werner and Chris Bach."
+verified_at = "2026-10-05T07:27:13Z"
+source_ids = ["ctech_seed", "newtech_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Official Digma homepage says Digma is now part of the JetBrains AI Platform."
+verified_at = "2026-10-05T07:27:13Z"
+source_ids = ["digma_home"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.jetbrains-integration.status"
+support = "direct"
+summary = "Official present-tense notice confirms Digma is now part of JetBrains AI Platform; treated as completed integration/acquisition, with legal form unstated."
+verified_at = "2026-10-05T07:27:13Z"
+source_ids = ["digma_home"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.jetbrains-integration.company_role"
+support = "direct"
+summary = "Digma's official notice identifies Digma as the entity that became part of JetBrains AI Platform, so it is the target/product entering the relationship."
+verified_at = "2026-10-05T07:27:13Z"
+source_ids = ["digma_home"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.jetbrains-integration.amount"
+support = "direct"
+summary = "Official notice gives no deal consideration; amount is undisclosed in reviewed source."
+verified_at = "2026-10-05T07:27:13Z"
+source_ids = ["digma_home"]

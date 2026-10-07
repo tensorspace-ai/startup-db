@@ -1,0 +1,477 @@
+name = "Aitan"
+description = "Aitan is an Israeli-founded defense-technology startup building an orchestration layer and edge-AI robotic weapon systems for allied militaries, with a focus on coordinating heterogeneous autonomous platforms, sustaining them through disrupted supply chains, and keeping warfighters out of harm's way."
+detailed_description = """
+**Product and the concrete problem it solves.** Aitan is addressing a problem that appears after a military buys its first autonomous vehicle: a fleet of drones, ground robots, and other robotic weapon systems does not automatically become a usable force. Platforms arrive from different vendors, expose different interfaces, lose communications in contested environments, require changing payloads and tactics, and cannot be treated like static equipment when adversaries adapt and supply chains are disrupted. Aitan's public launch describes a "Robotic Sovereignty-as-a-Service" model: it supplies edge-AI robotic weapon systems and the command-and-control layer needed to field, coordinate, and evolve them as a force. The customer promise is therefore broader than a single robot. It is to help an allied military build a sovereign robotic capability in which machines can execute missions, exchange operational state, and be updated as conditions change, while reducing the need to put personnel in the most dangerous parts of the mission.
+
+**Core technology and how it actually works.** The available technical disclosure points to software infrastructure for heterogeneous autonomy rather than a proprietary airframe or a single-purpose unmanned vehicle. Dell Technologies Capital describes Aitan as building an orchestration layer that lets autonomous systems from different vendors and hardware ecosystems work together, with interoperability and fleet-scale coordination as the central design problem. Aitan's own announcement adds command and control, swarming, edge AI, and autonomy as the program pillars. In practical terms, that implies a distributed control plane that can connect mission planners and operators to multiple robotic assets, move decision-making toward the edge when links are degraded, coordinate groups of machines rather than only one vehicle, and incorporate feedback from operations into subsequent software and system changes. The exact protocols, model architectures, autonomy boundaries, cybersecurity controls, and hardware interfaces are not publicly disclosed. That opacity is normal for a defense startup, but it means the technical diligence question is not whether the category is important; it is whether Aitan's abstraction layer works across enough real platforms without creating a new single point of failure.
+
+**Market, customers, and go-to-market.** Aitan is selling into allied defense and national-security organizations, where procurement is shaped by sovereignty, operational trust, export controls, safety assurance, and the ability to support a system over a long program life. The company is not pursuing a mass-market robotics motion. Its initial wedge is defense, especially forces that need to absorb lessons from active combat quickly and cannot wait for a monolithic next-generation platform to arrive years later. The route to market is consequently programmatic: prove a capability with a government or military customer, integrate with an existing fleet or a defined next-generation program, then expand to additional missions and allied users. Aitan states that its systems are deployed across the Israel Defense Forces and Israeli national security agencies and that it has secured a joint contract to develop command and control for the IDF's next-generation attack-drone fleet. Axios separately reports that the company has secured overseas contracts for command-and-control networks and robotic weapon designs. These are powerful access signals, but the public record does not disclose contract values, delivery milestones, gross margins, or the number of foreign customers.
+
+**Traction, funding, and third-party validation.** Aitan emerged from stealth on 2 September 2026 with a $41 million financing round co-led by Deep33 and Dell Technologies Capital, bringing publicly reported total equity funding to $54 million. The named participants include Gokul Rajaram, Benjamin Ling of Bling Capital, and Kevin Weil of Scribble Ventures. Dell's investor write-up is important independent corroboration because it explains the investment thesis in concrete terms: fleets become difficult to manage as machines multiply, vendor lock-in limits military flexibility, and an orchestration layer can make heterogeneous robotic systems deployable at scale. Aitan and its investors report more than 500,000 operational or combat hours across robotic missions, while the company says the technology has been battle-tested since 2023. Those figures are company-reported and should not be read as an independently audited performance benchmark. Still, the combination of current funding, a named IDF program, claimed deployments, and a major strategic technology investor places Aitan well beyond an academic autonomy concept. Diligence should separate deployed software, contracted development, and production-scale fielding rather than treating them as interchangeable.
+
+**Founders and team background.** Aitan was founded by Israeli and American entrepreneurs Udi Oster and Daniel Almog. Both previously served as officers in the IDF's elite Unit 8200, then built Tapingo, an online ordering marketplace that was acquired by Grubhub. That combination matters because the founders bring both Israeli national-security experience and experience building a consumer technology company that had to operate at scale. The mission is also personal: public launch materials say the company was named for Eitan Oster, Udi Oster's younger brother, who was killed in combat while serving with the Egoz commando unit. Aitan says its team is built by reservists and military veterans with operational experience, but it has not published a full leadership roster, headcount, engineering breakdown, or biographies for the autonomy and systems-integration staff. The visible founder-market fit is unusually direct; the missing team data means diligence still needs to test whether the company has enough safety engineering, platform-integration, program-management, and international defense-sales depth to turn battlefield experience into a repeatable allied product.
+
+**Competitive dynamics.** Aitan competes at several layers simultaneously. Anduril Industries offers the Lattice command-and-control and autonomy stack together with its own expanding family of air, land, and maritime systems. Shield AI combines the Hivemind autonomy software platform with aircraft such as V-BAT, giving it a strong autonomy-and-hardware reference point. Milrem Robotics sells unmanned ground systems and autonomy with an open-architecture orientation, while Israeli primes Elbit Systems, Rafael, and Israel Aerospace Industries bring decades of qualification, integration, installed platforms, and government relationships. Helsing represents another European AI-defense model focused on software-enabled military capability. Aitan's argument is that a military needs a sovereign, adaptable orchestration layer rather than a closed fleet from one vendor, and that its real-world Israeli operating feedback gives it a speed advantage. The counterargument is equally strong: primes can bundle integration into larger programs, platform vendors can make their own control layer the default, and every customer may demand bespoke interfaces. A durable edge therefore requires broad interoperability, safe autonomy in degraded conditions, rapid deployment, and lower lifecycle friction than incumbent system integrators.
+
+**Defense, security, and resilience dual-use relevance.** Aitan is a direct dual-use case in the sense that its underlying orchestration and edge-AI capabilities can support both defense missions and non-combat autonomous operations, even though its disclosed product is explicitly defense-focused. In military settings, coordinated robots can support reconnaissance, perimeter security, logistics, route and obstacle assessment, communications relay, casualty-risk reduction, and other missions in which a human operator should not be the first body exposed. In civilian or resilience settings, a related control layer could coordinate machines for disaster response, hazardous industrial inspection, infrastructure security, emergency logistics, or operations in areas where communications and access are unreliable. Dell specifically identifies public safety, infrastructure, and manufacturing as possible extensions of the heterogeneous-fleet problem, but there is no public evidence that Aitan has commercial customers in those markets. The strongest strategic value is sovereign capability: allied states can adapt a fleet to their own doctrine and supply chains instead of depending entirely on a foreign vendor's closed ecosystem. The key ethical and security diligence issues are human authorization, cyber-hardening, auditability, escalation controls, and preventing autonomy from outrunning accountable command.
+
+**Growth stage, trajectory, and key diligence risks.** Aitan is best classified as early because it has only just emerged publicly, despite unusually strong funding and claimed operational exposure. The trajectory is ambitious: move from Israeli combat-derived validation to allied programs, turn a set of systems and contracts into a reusable orchestration platform, and make robotic forces resilient enough to evolve during conflict. The upside is strategically significant because defense organizations increasingly need many inexpensive, adaptable autonomous assets rather than a small number of exquisite platforms. The risks are also unusually concentrated. First, public evidence is dominated by company and investor claims, so independent data on autonomy performance, mission success, human intervention rates, safety incidents, and system availability is limited. Second, defense sales cycles, export controls, classified integration, and government concentration can make revenue lumpy. Third, interoperability is difficult: every new airframe, payload, radio, and autonomy stack can create integration liability. Fourth, the company must defend a control layer against cyberattack while operating in contested electromagnetic and communications environments. Finally, large primes and well-funded defense-tech companies can replicate or bundle orchestration. Aitan merits close strategic monitoring, but the decisive diligence milestones are independently verified deployments, repeatable allied contracts, open integration evidence, and proof that the platform scales without compromising human control.
+"""
+logo = "Unknown"
+website = "https://www.aitansystems.com"
+sector = "Defense Technology (Robotic Fleet Orchestration, Edge AI, and Autonomous Systems)"
+founded = "Unknown"
+headquarters = "New York, United States; Ramat Gan, Israel office (reported)"
+employees = "About 50 (reported August 2026)"
+funding_stage = "Venture-backed; September 2026 $41 million financing; company-reported total $54 million"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Aitan's core capability is directly defense-oriented, but the underlying technology has credible dual-use reach. (1) Its orchestration layer can coordinate heterogeneous autonomous machines for military command and control, swarming, reconnaissance, logistics, perimeter security, and communications-denied operations. (2) The same interoperability and edge-autonomy problems exist in public safety, hazardous inspection, emergency logistics, infrastructure protection, and disaster response, although no civilian customer has been publicly disclosed. (3) Israeli national-security deployment and the founders' IDF backgrounds make the defense relevance field-oriented rather than speculative; the civilian side is a credible extension, not yet demonstrated commercial traction. The dual-use assessment is therefore strong on technical adjacency and resilience value, but the current go-to-market remains defense-first."
+key_technologies = [
+  "Heterogeneous robotic-fleet orchestration across different vendors, airframes, ground systems, payloads, and hardware ecosystems",
+  "Edge-AI mission execution for autonomous robotic weapon systems in contested or communications-degraded environments",
+  "Command-and-control software for coordinating large fleets and next-generation attack-drone programs",
+  "Swarm coordination and multi-agent autonomy for distributed robotic missions",
+  "Interoperability and open integration layer designed to reduce dependence on a single closed hardware stack",
+  "Operational-feedback loop for rapidly updating autonomy, mission behavior, and sustainment workflows"
+]
+use_cases = [
+  "Command and control of next-generation attack-drone fleets",
+  "Coordinated reconnaissance and perimeter security by heterogeneous aerial and ground robots",
+  "Autonomous logistics, resupply, and route assessment in dangerous or contested terrain",
+  "Communications-degraded robotic operations with mission logic executed at the edge",
+  "Counter-infiltration, tunnel, and hazardous-area missions that keep personnel away from the first point of exposure",
+  "Disaster-response and emergency logistics fleets operating where infrastructure is damaged",
+  "Critical-infrastructure inspection and security using robots from multiple vendors",
+  "Allied defense programs seeking sovereign autonomy, local sustainment, and reduced platform lock-in"
+]
+investible = true
+investment_rationale = "Aitan is a high-priority strategic technology signal, but its investible flag is a legacy internal priority indicator rather than an investment recommendation. (1) The company addresses a real defense bottleneck: autonomous platforms are multiplying faster than the command, interoperability, sustainment, and doctrine needed to operate them as a force. (2) The founders combine IDF Unit 8200 experience with a prior consumer-tech exit through Tapingo, while the company claims substantial operational exposure and a named IDF next-generation attack-drone contract. (3) The latest $41M round co-led by Deep33 and Dell Technologies Capital, bringing reported total funding to $54M, supplies meaningful third-party validation and growth runway. (4) The strongest upside is platform leverage: a reusable orchestration layer can sit across many robotic systems rather than being tied to one airframe. Counterweights are substantial: most deployment, combat-hour, and contract claims are company-reported; customers, contract values, revenue, margins, headcount, and independent performance benchmarks are not public; government concentration and export controls can make growth lumpy; and Anduril, Shield AI, primes, and platform vendors can bundle competing control layers. Key diligence should focus on repeatable allied deployments, autonomy and safety metrics, interoperability evidence, cybersecurity, human authorization, and production support economics."
+strategic_value = "Aitan's strategic value is unusually direct for the Claw & Talon thesis because it targets the enabling layer that turns individual robots into a sovereign capability. (1) Operational leverage: a common orchestration and command-and-control layer can let an allied force integrate new platforms, payloads, and vendors without rebuilding its entire fleet architecture. (2) Resilience: the company explicitly addresses disrupted supply chains, contested communications, and the need to evolve robotic systems during conflict rather than stockpiling static hardware. (3) Force protection: autonomous systems can take on reconnaissance, security, logistics, and hazardous missions that would otherwise expose personnel. (4) Israeli ecosystem fit: Unit 8200 founders, IDF and national-security deployment claims, and the country's combat-derived autonomy experience create a credible path from operational lessons to allied technology. (5) Sovereignty: an adaptable, interoperable layer may reduce dependence on a single foreign platform vendor. The value is capped by limited public disclosure, the risk of a new software control-plane dependency, and the possibility that defense primes or closed-stack autonomy companies capture the integration layer."
+potential_score = 85.0
+technology_score = 88.0
+market_score = 76.0
+team_score = 84.0
+dual_use_score = 82.0
+strategic_alignment_score = 95.0
+stage = "early"
+stage_rationale = "Aitan is classified as early because it only emerged from stealth publicly on 2 September 2026, even though it reports significant prior operational activity and has raised $54M in equity. (1) The company has moved beyond concept stage: it describes deployments across the IDF and Israeli national security agencies, more than 500,000 operational or combat hours, overseas contracts, and a joint IDF command-and-control contract. (2) The $41M financing co-led by Deep33 and Dell Technologies Capital gives it unusually strong runway for an early defense startup. (3) It remains pre-scale in public evidence: customer count, revenue, contract values, production volume, headcount, independent autonomy benchmarks, and repeatable allied deployments are undisclosed. (4) The product also has to cross difficult defense milestones — qualification, cyber accreditation, export approvals, integration, training, sustainment, and procurement — before operational claims become a durable global business. Progression to mid stage would require independently verifiable allied programs, repeatable production and support economics, and evidence that the orchestration layer travels across platforms without bespoke engineering for every customer."
+competitors = [
+  "Anduril Industries (integrated Lattice command-and-control and autonomy stack paired with proprietary air, land, and maritime systems)",
+  "Shield AI (Hivemind autonomy software and V-BAT aircraft, with a strong military autonomy and edge-AI position)",
+  "Milrem Robotics (European unmanned ground vehicles and open-architecture autonomy for defense and security missions)",
+  "Elbit Systems (Israeli defense prime with established C4ISR, unmanned systems, sensors, and government integration capacity)",
+  "Israel Aerospace Industries (Israeli prime with autonomous platforms, command systems, and deep national-security procurement relationships)",
+  "Rafael Advanced Defense Systems (Israeli prime whose air, land, robotic, and networked-defense programs can absorb adjacent orchestration capability)",
+  "Helsing (European AI-defense company developing software-enabled military capability and autonomous-system integration)"
+]
+competitive_edge = "Aitan's potential edge is a combination of platform position, operational feedback, and sovereignty rather than a publicly documented novel algorithm. (1) It is positioning itself above individual robots: a common orchestration layer can coordinate heterogeneous systems and reduce the integration penalty of buying from multiple vendors. (2) Its claimed IDF and national-security deployments, more than 500,000 operational or combat hours, and continuous refinement through field feedback could give it a difficult-to-recreate dataset of real mission conditions. (3) Israeli and American founders with Unit 8200 and prior Tapingo experience bring a rare combination of defense context and product-building background. (4) The sovereignty thesis is relevant to allies that want local control, supply-chain resilience, and the ability to evolve systems during a conflict. (5) Dell Technologies Capital's description of interoperability across defense, public safety, infrastructure, and manufacturing supports a broader platform narrative. The edge is not proven as a durable moat: Anduril and Shield AI have strong software-and-hardware integration, primes have procurement access, and every deployment may still require expensive bespoke interface and safety work."
+risk_factors = [
+  "Public evidence is heavily company-reported: combat hours, deployments, operational scale, and contract claims lack independent performance audits in the available record",
+  "Defense concentration and procurement cycles can create lumpy revenue, long qualification periods, export-control exposure, and dependence on a small number of government customers",
+  "Interoperability complexity: integrating different airframes, ground robots, radios, payloads, autonomy stacks, and classified networks can create high engineering and support costs",
+  "Cybersecurity and resilience burden: a fleet orchestration layer is a high-value target and must remain trustworthy under jamming, spoofing, degraded communications, and active cyberattack",
+  "Autonomy and accountability risk: human authorization, auditability, rules of engagement, and safe failure modes must remain enforceable as fleet scale increases",
+  "Incumbent and platform competition from Anduril, Shield AI, Elbit Systems, IAI, Rafael, Milrem Robotics, and customer-built command systems",
+  "Limited disclosure of headcount, revenue, contract value, production scale, civilian traction, and independent benchmarks makes valuation and execution risk difficult to assess"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "Aitan merits a high strategic-priority signal because it sits at the intersection of Israeli combat-derived autonomy, allied defense demand, physical-AI infrastructure, and sovereign resilience. (1) The company is addressing an enabling bottleneck rather than a single vehicle: coordinating heterogeneous robotic systems, command and control, swarming, edge AI, and sustainment under disrupted conditions. (2) Its founders, Udi Oster and Daniel Almog, are former IDF Unit 8200 officers and previously built Tapingo, while the company claims deployments across the IDF and Israeli national security agencies, more than 500,000 operational or combat hours, and a joint next-generation attack-drone command-and-control contract. (3) The September 2026 $41M round co-led by Deep33 and Dell Technologies Capital, $54M total reported funding, and Dell's detailed interoperability thesis provide unusually strong validation for a just-public company. (4) The defense-first product has credible resilience extensions to public safety, infrastructure, hazardous inspection, and emergency logistics, although those civilian markets are not yet disclosed as customer traction. Priority is capped by high disclosure risk, government concentration, export controls, autonomy safety and cyber risk, and intense competition from Anduril, Shield AI, and major Israeli primes. The next evidence that would justify an even stronger signal is independently verified allied deployments, repeatable multi-vendor integration, measurable autonomy and safety performance, and transparent production and sustainment economics. This is a strategic monitoring assessment, not an investment recommendation."
+public_sources = [
+  { label = "Aitan financing announcement", url = "https://www.prnewswire.com/news-releases/aitan-emerges-from-stealth-defines-new-defense-category-of-robotic-sovereignty-as-a-service--closes-41-million-funding-round-to-scale-its-battle-proven-technology-globally-302867620.html", description = "Company announcement: $41 million round, $54 million total, investors, products and claimed deployments." },
+  { label = "Globes: Aitan raises $41m", url = "https://en.globes.co.il/en/article-robotic-sovereignty-as-a-service-co-aitan-raises-41m-1001554260", description = "Independent Israeli business reporting on financing, operating claims, contract and undisclosed valuation/revenue." },
+  { label = "Axios: Aitan raises $41m", url = "https://www.axios.com/2026/09/02/aitan-israel-stealth-raise-robotics-dell", description = "Independent coverage of financing, New Jersey base, overseas contracts and founder background." },
+  { label = "Calcalist: Aitan founders and acquisition history", url = "https://www.calcalistech.com/ctechnews/article/5bppmas8v", description = "Interview reporting on eyesAtop history, founder investment and control transfer, employees, sales, products and competitors." },
+  { label = "Calcalist: Digital Bat tender", url = "https://www.calcalistech.com/ctechnews/article/byjpzaxnfe", description = "Reporting on the IDF attack-drone command-and-control tender involving eyesAtop and Kela." },
+  { label = "AITAN official product site", url = "https://eyesatop.io/", description = "Official product and capability descriptions, current AITAN branding and company claims." },
+  { label = "Calcalist: Israeli drone market and company background", url = "https://www.calcalistech.com/ctechnews/article/b1dz1kbdme", description = "Independent reporting on product, 500,000-hour claim, latest financing and founder backgrounds." },
+  { label = "USPTO Patent Public Search", url = "https://www.uspto.gov/patents/search/patent-public-search/", description = "Official patent-search portal used for public patent discoverability checks." }
+]
+crawled_at = "2026-09-07T23:17:20Z"
+updated_at = "2026-10-03T18:33:08+03:00"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Udi Oster", role = "Co-CEO and co-founder/current controlling operator (reported)", is_founder = true, current = true, background = "IDF Unit 8200 officer; co-founded Tapingo with Daniel Almog, later acquired by Grubhub. Reporting says he and Almog invested in eyesAtop in 2024 and took control in 2025.", source_ids = ["company_release", "globes_2026", "calcalist_profile"] },
+  { name = "Daniel Almog", role = "Co-CEO and co-founder/current controlling operator (reported)", is_founder = true, current = true, background = "IDF Unit 8200 officer; co-founded Tapingo with Udi Oster, later acquired by Grubhub. Reporting says he and Oster invested in eyesAtop in 2024 and took control in 2025.", source_ids = ["company_release", "globes_2026", "calcalist_profile"] },
+  { name = "Yinon Atzmon", role = "eyesAtop original founder (historical)", is_founder = true, current = false, background = "Named by Calcalist among the founders of the predecessor eyesAtop company; current role/ownership not disclosed.", source_ids = ["calcalist_profile"] },
+  { name = "Idan Yitzhak", role = "eyesAtop original founder (historical)", is_founder = true, current = false, background = "Named by Calcalist among the founders of the predecessor eyesAtop company; current role/ownership not disclosed.", source_ids = ["calcalist_profile"] },
+  { name = "Ben Barkay", role = "eyesAtop original founder (historical)", is_founder = true, current = false, background = "Named by Calcalist among the founders of the predecessor eyesAtop company; current role/ownership not disclosed.", source_ids = ["calcalist_profile"] },
+  { name = "Einav Harazi", role = "eyesAtop original founder (historical)", is_founder = true, current = false, background = "Named by Calcalist among the founders of the predecessor eyesAtop company; current role/ownership not disclosed.", source_ids = ["calcalist_profile"] }
+]
+investors = [
+  { name = "Deep33", investor_type = "vc", website = "https://deep33.com", round_ids = ["series-a-2026"], relationship = "current", source_ids = ["company_release", "globes_2026"] },
+  { name = "Dell Technologies Capital", investor_type = "corporate", website = "https://delltechnologiescapital.com", round_ids = ["series-a-2026"], relationship = "current", source_ids = ["company_release", "globes_2026", "axios_2026"] },
+  { name = "Gokul Rajaram", investor_type = "angel", round_ids = ["series-a-2026"], relationship = "current", source_ids = ["company_release", "globes_2026"] },
+  { name = "Benjamin Ling / Bling Capital", investor_type = "angel", website = "https://blingcap.com", round_ids = ["series-a-2026"], relationship = "current", source_ids = ["company_release", "globes_2026"] },
+  { name = "Kevin Weil / Scribble Ventures", investor_type = "angel", website = "https://scribble.vc", round_ids = ["series-a-2026"], relationship = "current", source_ids = ["company_release", "globes_2026"] }
+]
+financials = [
+  { name = "Employees", value = "About 50 people", as_of = "2026-08", basis = "reported", metric = "employees", numeric_value = 50, value_relation = "approximate", unit = "people", source_ids = ["calcalist_profile"] },
+  { name = "Annual sales", value = "Tens of millions of dollars annually; company interview statement, not audited", as_of = "2026-08", basis = "reported", metric = "revenue", source_ids = ["calcalist_profile"], notes = "No exact revenue, period definition, audited filing, or margin disclosed; do not treat the phrase as a numeric estimate." }
+]
+traction = [
+  { kind = "contract", date = "2026-07-14", description = "Calcalist reported Kela and then-eyesAtop won an Israeli Ministry of Defense tender to jointly develop and integrate the command-and-control platform for the IDF Digital Bat next-generation attack-drone program. Financial terms were not disclosed; later tender reporting described additions/reopening, so delivery scope and final award status require confirmation.", source_ids = ["digital_bat", "globes_2026"] },
+  { kind = "customer", date = "2026-09-02", description = "Aitan says its systems are deployed at scale across the IDF and Israeli national-security agencies; Globes reports daily IDF/Ministry of Defense use. Operational deployment is evidenced in reporting, but no usage contract value or independent system-performance audit is public.", source_ids = ["company_release", "globes_2026"] },
+  { kind = "product", date = "2026-09-02", description = "Aitan and investor/company materials describe edge-AI robotic weapon systems, command and control, swarming and autonomy. Its official product site describes Autonomy Kits, AI SDK and Universal C2 layers, with Talon, Watchtower and Convoy mission systems.", source_ids = ["company_release", "official_site"] },
+  { kind = "other", date = "2026-09-02", description = "Aitan reports more than 500,000 combat/operational flight hours; company claim repeated in Israeli press, not independently audited. Scope wording varies between operational hours and flight hours.", source_ids = ["company_release", "globes_2026", "calcalist_2026"] },
+  { kind = "contract", date = "2026-09-02", description = "Axios reports overseas contracts for command-and-control networks and robotic weapon designs. Customer identities, geography, contract values and delivery stages are undisclosed.", source_ids = ["axios_2026"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Anduril Industries", website = "https://www.anduril.com", rationale = "Defense autonomy and command-and-control products compete for military systems integration and autonomous-fleet budgets.", differentiation = "Aitan emphasizes sovereign, vendor-agnostic orchestration and Israeli field feedback; Anduril also designs and sells its own hardware and Lattice platform.", source_ids = ["calcalist_profile", "official_site"] },
+  { name = "Ondas Holdings", website = "https://www.ondas.com", rationale = "Drone and autonomous systems supplier reported as competing for the Digital Bat program.", differentiation = "Ondas operates through drone hardware and acquired operating businesses; Aitan's proposition centers on control software and fleet orchestration.", source_ids = ["digital_bat", "calcalist_profile"] },
+  { name = "Xtend", website = "https://www.xtend.me", rationale = "Israeli tactical drone and autonomy company serving adjacent military drone demand.", differentiation = "Xtend is described as a platform/hardware provider while Aitan focuses on coordinating heterogeneous systems; both may partner or compete by program.", source_ids = ["calcalist_profile"] },
+  { name = "Elbit Systems", website = "https://www.elbitsystems.com", rationale = "Established Israeli defense prime with UAV systems, integration capacity and incumbent procurement access.", differentiation = "Aitan is a venture-backed specialist emphasizing rapid updates and multi-vendor C2; Elbit has a broad installed base and full-prime capability.", source_ids = ["calcalist_profile"] },
+  { name = "Shield AI", website = "https://shield.ai", rationale = "Defense autonomy software and unmanned aircraft provider in overlapping autonomy and mission-system markets.", differentiation = "Shield AI has a proprietary autonomy stack and aircraft; Aitan claims cross-vendor sovereignty and fleet orchestration.", source_ids = ["official_site"] }
+]
+
+
+
+
+[intelligence.company]
+company_id = "il-aitan"
+legal_name = "Aitan (legal registered name not established)"
+aliases = []
+operating_status = "active"
+business_model = "Defense-oriented robotics software and systems integration sold to allied military and national-security organizations, combining edge-AI systems, fleet orchestration/C2, integration, training and field deployment support."
+products = ["Ronen multi-drone operating system (legacy predecessor product)", "Universal C2", "Autonomy Kits", "AI SDK", "Talon", "Watchtower", "Convoy"]
+locations = ["New York/New Jersey, United States (reporting varies)", "Ramat Gan, Israel", "Tirat Carmel, Israel (predecessor company) "]
+source_ids = ["company_release", "globes_2026", "axios_2026", "calcalist_profile", "official_site"]
+
+[intelligence.ownership ]
+status = "reported"
+summary = "Calcalist reports Udi Oster and Daniel Almog invested $1 million in predecessor eyesAtop in March 2024 and took it over in September 2025. The legal transaction form, equity percentages, other shareholders, and any purchase consideration are not disclosed. The 2024 investment is treated as financing, not an acquisition price."
+cap_table_status = "undisclosed"
+shareholders = ["Udi Oster", "Daniel Almog", "Other shareholders not publicly identified"]
+source_ids = ["calcalist_profile"]
+deals = [
+  { id = "eyesatop-control-2025", deal_type = "other", company_role = "target", announced_on = "2025-09", completed_on = "2025-09", status = "completed", counterparty = "Udi Oster and Daniel Almog", amount_status = "undisclosed", source_ids = ["calcalist_profile"], notes = "Reported as taking over the company; whether this was a share acquisition, recapitalization, or control through other means is unspecified." }
+]
+holdings = []
+
+[intelligence.israel_connection ]
+status = "confirmed"
+basis = ["israeli_founders", "other"]
+summary = "Israeli-founded and Israeli-operating defense technology business: founders are reported as IDF Unit 8200 officers; the predecessor was based in Tirat Carmel and the company maintains an office in Ramat Gan. Aitan is also reported as based in New Jersey/New York. Corporate incorporation jurisdiction was not established."
+as_of = "2026-10-03"
+source_ids = ["company_release", "calcalist_profile", "axios_2026"]
+
+[intelligence.funding ]
+status = "reported"
+summary = "Aitan announced a closed $41 million financing on 2026-09-02, co-led by Deep33 and Dell Technologies Capital. It said this brought total capital raised to $54 million. Calcalist reports Oster and Almog invested $1 million in eyesAtop in March 2024. The $54 million company-reported total exceeds the two individually specified financings by $12 million; no source located in this pass itemized that residual, so the historical round list is partial and the total is not recomputed."
+reported_total_raised = 54000000
+reported_total_currency = "USD"
+total_source_ids = ["company_release", "globes_2026", "axios_2026"]
+total_as_of = "2026-09-02"
+total_scope = "Company-reported total capital raised; instrument composition of earlier capital not fully itemized"
+history_status = "partial"
+coverage_through = "2026-10-03"
+rounds = [
+  { id = "founder-investment-2024", round_type = "founder investment (reported)", instrument = "unknown", status = "closed", announced_on = "2024-03", amount_status = "reported", amount = 1000000, amount_scope = "round", currency = "USD", lead_investors = ["Udi Oster", "Daniel Almog"], participating_investors = ["Udi Oster", "Daniel Almog"], source_ids = ["calcalist_profile"], notes = "The interview says the founders invested $1m in eyesAtop. Terms and whether any portion was secondary are not specified; reported as financing, not control-transaction consideration." },
+  { id = "series-a-2026", round_type = "Series A (press-described; company calls it financing round)", instrument = "equity", status = "closed", announced_on = "2026-09-02", amount_status = "reported", amount = 41000000, amount_scope = "round", currency = "USD", lead_investors = ["Deep33", "Dell Technologies Capital"], participating_investors = ["Gokul Rajaram", "Benjamin Ling / Bling Capital", "Kevin Weil / Scribble Ventures"], source_ids = ["company_release", "globes_2026", "axios_2026"], notes = "The announcement calls this a financing round and does not assign a formal series label; some secondary databases label it Series A. Valuation was not disclosed." }
+]
+
+[intelligence.research ]
+researched_at = "2026-10-03T18:33:08+03:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Aitan Systems September 2026 $41 million Deep33 Dell Technologies Capital announcement",
+  "site:aitansystems.com Aitan Systems launch 54 million 500,000 hours",
+  "Aitan Systems Udi Oster Daniel Almog IDF contract Axios 2026",
+  "Aitan Systems funding investors founders Hebrew 2026",
+  "site:aitansystems.com Aitan About Udi Oster Daniel Almog eyesAtop",
+  "site:delltechnologiescapital.com Aitan investment",
+  "Aitan eyesAtop patent patents",
+  "Aitan Israel next generation attack drone contract July 2026 Kela",
+  "Aitan eyesAtop founder investment $1 million September 2025 takeover employees revenue sales August 2026",
+  "Aitan robotics competitors Anduril Ondas Xtend Elbit Shield AI",
+  "Aitan company incorporation legal entity registry New Jersey Israel"
+]
+gaps = [
+  "team: only co-CEOs and predecessor founders were found in reliable public reporting; current leadership roster, technical leaders, biographies, employee breakdown and board composition are incomplete.",
+  "investors: named September 2026 participants are known, but exact allocations, earlier investors and private cap table are not disclosed.",
+  "financials: reported annual sales are described only as 'tens of millions'; no exact revenue, audited accounts, profitability, burn, cash or runway were found. The approximately 50-person figure is press-reported.",
+  "traction: contract values, named overseas customers, delivery and production milestones, repeat purchase data, revenue concentration, and independent verification of the 500,000-hour claim are unavailable; reporting on the Digital Bat tender evolved after the initial selection.",
+  "intellectual_property: public searches did not establish a patent portfolio assigned to Aitan/eyesAtop relevant to the current orchestration product. The older assignee search produced a 2019 application with unclear relevance/status; verify by legal entity and family before concluding no IP.",
+  "competition: peer set based on public product and program evidence; comparative performance, procurement wins and share are not public.",
+  "ownership: cap table, equity percentages, exact legal transaction form and consideration for the 2025 eyesAtop takeover remain private/unreported.",
+  "identity: legal entity name, incorporation jurisdiction, registry number and precise company founding date were not established from primary filings.",
+  "dual_use: disclosed product and customers are defense/security focused; no civilian commercial deployment was found, so non-defense use remains technical adjacency rather than demonstrated sales.",
+  "funding: the company-reported $54m total is not fully reconciled to the $41m 2026 round and the $1m 2024 founder investment; prior rounds/instruments and any secondary component remain unitemized."
+]
+conflicts = [
+  "Headquarters: Axios describes the company as based in New Jersey, the September 2026 release datelines New York, and Calcalist reports offices in Ramat Gan. These may describe registered/operating locations rather than a true contradiction; no definitive HQ filing was found.",
+  "Reported historical financing: the $54m company total exceeds the $41m September 2026 round plus the $1m founder investment reported for March 2024. The missing $12m is not assigned to an invented round.",
+  "The August 2026 Calcalist interview described Aitan as raising $15m; this was a reported fundraising target/status before the September 2 announcement of a closed $41m financing. It is not counted as an additional round or conflicting closed amount."
+]
+diligence_questions = [
+  "What are the legal entity name, incorporation jurisdiction, cap table, and exact legal mechanics and consideration of the September 2025 takeover of eyesAtop?",
+  "Can the company reconcile the $54m lifetime total to dated rounds and instruments, and provide the closed-round valuation, dilution, and investor allocations?",
+  "What audited revenue, gross margin, customer concentration, contract backlog, and cash/runway support the reported tens of millions of annual sales?",
+  "For the Digital Bat award and overseas contracts, what is the funded scope, delivery schedule, production status, acceptance criteria and repeatability across customers?",
+  "How are autonomous engagement and human authorization bounded, audited, secured against spoofing/jamming/cyber compromise, and tested across vendors and degraded communications?",
+  "What independent operational records substantiate the 500,000-hour claim, and what are mission success, operator intervention, loss, safety incident and system availability rates?"
+]
+
+[[intelligence.research .sources]]
+id = "company_release"
+url = "https://www.prnewswire.com/news-releases/aitan-emerges-from-stealth-defines-new-defense-category-of-robotic-sovereignty-as-a-service--closes-41-million-funding-round-to-scale-its-battle-proven-technology-globally-302867620.html"
+title = "Aitan Emerges from Stealth; Closes $41 Million Funding Round"
+publisher = "Aitan via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-03T18:33:08+03:00"
+published_on = "2026-09-02"
+claims = ["Aitan announced a closed $41m financing co-led by Deep33 and Dell Technologies Capital and said total capital raised was $54m.", "Named participants were Gokul Rajaram, Benjamin Ling and Kevin Weil.", "Company says systems deployed across IDF and national-security agencies with 500,000+ combat hours and a joint IDF next-generation attack-drone C2 contract.", "Company says founders Udi Oster and Daniel Almog are former Unit 8200 officers and Tapingo entrepreneurs."]
+
+[[intelligence.research .sources]]
+id = "globes_2026"
+url = "https://en.globes.co.il/en/article-robotic-sovereignty-as-a-service-co-aitan-raises-41m-1001554260"
+title = "Robotic sovereignty-as-a-service co AITAN raises $41m"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-03T18:33:08+03:00"
+published_on = "2026-09-02"
+claims = ["Independent report corroborates $41m financing, Deep33 and Dell Technologies Capital leads, and $54m stated total.", "Valuation was not disclosed.", "Reports daily IDF and Ministry of Defense use and 500,000+ operational flight hours as company claims.", "Reports tender win and states contract financial scope and revenue were undisclosed.", "Identifies founders as Udi Oster and Daniel Almog and predecessor name eyesAtop."]
+
+[[intelligence.research .sources]]
+id = "axios_2026"
+url = "https://www.axios.com/2026/09/02/aitan-israel-stealth-raise-robotics-dell"
+title = "Exclusive: Aitan, battle-tested by IDF, raises $41 million"
+publisher = "Axios"
+kind = "media"
+accessed_at = "2026-10-03T18:33:08+03:00"
+published_on = "2026-09-02"
+claims = ["Reports Aitan based in New Jersey, $41m round, Deep33 and Dell Technologies Capital leads, and $54m equity raised.", "Reports overseas contracts for C2 networks and robotic weapon designs.", "Reports founders' IDF Unit 8200 background."]
+
+[[intelligence.research .sources]]
+id = "calcalist_profile"
+url = "https://www.calcalistech.com/ctechnews/article/5bppmas8v"
+title = "Today, drones seem like a given. In October 2023, they were almost nowhere"
+publisher = "Calcalist / CTech"
+kind = "media"
+accessed_at = "2026-10-03T18:33:08+03:00"
+published_on = "2026-08-06"
+claims = ["Reports predecessor eyesAtop founders as Yinon Atzmon, Idan Yitzhak, Ben Barkay and Einav Harazi and describes predecessor product as operating multiple drone types.", "Reports Oster and Almog invested $1m in eyesAtop in March 2024 and took it over in September 2025.", "Reports about 50 employees in Ramat Gan and annual sales in the tens of millions of dollars; no audit or exact amount supplied.", "Identifies Udi Oster and Daniel Almog as co-CEOs and reports Tapingo sold to Grubhub for $150m in 2018.", "Lists Anduril, Ondas, Xtend, Elbit, Rafael and IAI in the competitive landscape.", "At interview date says company was raising $15m; subsequent September announcement superseded this as current round status."]
+
+[[intelligence.research .sources]]
+id = "digital_bat"
+url = "https://www.calcalistech.com/ctechnews/article/byjpzaxnfe"
+title = "Israeli startups Kela and eyesAtop to power IDF's autonomous attack drones"
+publisher = "Calcalist / CTech"
+kind = "media"
+accessed_at = "2026-10-03T18:33:08+03:00"
+published_on = "2026-07-14"
+claims = ["Reports Kela and eyesAtop selected for an IDF Ministry of Defense tender for the Digital Bat attack-drone command-and-control program.", "Reports joint integration responsibility and describes eyesAtop's multi-drone control technology.", "Reports operational flight-hour claim as company claim."]
+
+[[intelligence.research .sources]]
+id = "official_site"
+url = "https://eyesatop.io/"
+title = "AITAN Systems - Robotic Sovereignty for Allied Militaries"
+publisher = "AITAN"
+kind = "company"
+accessed_at = "2026-10-03T18:33:08+03:00"
+claims = ["Official site describes Autonomy Kits, AI SDK and Universal C2 product layers and Talon, Watchtower and Convoy mission systems.", "Official site says AITAN is current branding and makes claims about deployment, combat hours and field use."]
+
+[[intelligence.research .sources]]
+id = "calcalist_2026"
+url = "https://www.calcalistech.com/ctechnews/article/b1dz1kbdme"
+title = "AITAN raises $41 million to take Israeli combat drone technology global"
+publisher = "Calcalist / CTech"
+kind = "media"
+accessed_at = "2026-10-03T18:33:08+03:00"
+published_on = "2026-09-02"
+claims = ["Reports $41m financing and $54m cumulative total, named investors, and company's 500,000+ operational flight-hours claim.", "Reports Aitan product as a drone operating system for operating robotic combat systems at scale."]
+
+[[intelligence.research .sources]]
+id = "uspto_search"
+url = "https://www.uspto.gov/patents/search/patent-public-search/"
+title = "Patent Public Search"
+publisher = "United States Patent and Trademark Office"
+kind = "government"
+accessed_at = "2026-10-03T18:33:08+03:00"
+claims = ["USPTO provides a public patent and published-application search portal; the current search did not establish a portfolio relevant to Aitan."]
+
+[[intelligence.research .topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T18:33:08+03:00"
+next_review_on = "2027-01-03"
+queries = ["Aitan Systems September 2026 $41 million Deep33 Dell Technologies Capital announcement", "Aitan legal entity name incorporation registry eyesAtop"]
+source_ids = ["company_release", "globes_2026", "axios_2026", "calcalist_profile"]
+summary = "Current Aitan is the defense-technology business formerly operating as eyesAtop; legal entity name and jurisdiction remain unresolved."
+
+[[intelligence.research .topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T18:33:08+03:00"
+next_review_on = "2027-01-03"
+queries = ["Aitan $41m funding raised 54m investors 2026", "Aitan eyesAtop founder investment $1 million March 2024 funding", "Aitan August 2026 raising $15 million"]
+source_ids = ["company_release", "globes_2026", "axios_2026", "calcalist_profile", "calcalist_2026"]
+summary = "Closed September 2026 financing and company-reported cumulative total found. The earlier interview fundraising target is superseded; the historical total has an unreconciled $12m gap."
+
+[[intelligence.research .topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T18:33:08+03:00"
+next_review_on = "2027-01-03"
+queries = ["Aitan funding investors Deep33 Dell Gokul Rajaram Benjamin Ling Kevin Weil", "site:delltechnologiescapital.com Aitan", "Aitan investor portfolio Deep33"]
+source_ids = ["company_release", "globes_2026", "axios_2026"]
+summary = "September 2026 co-leads and three other participants were directly named; allocations and historical investors remain undisclosed."
+
+[[intelligence.research .topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T18:33:08+03:00"
+next_review_on = "2027-01-03"
+queries = ["Aitan Udi Oster Daniel Almog founders leadership 2026", "eyesAtop original founders Aitan", "Aitan employee headcount team"]
+source_ids = ["company_release", "globes_2026", "calcalist_profile"]
+summary = "Co-CEOs and predecessor founders identified in reporting; full current team and board list unavailable."
+
+[[intelligence.research .topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-03T18:33:08+03:00"
+next_review_on = "2027-01-03"
+queries = ["Aitan eyesAtop ownership takeover September 2025 founders $1m", "Aitan acquired eyesAtop ownership cap table"]
+source_ids = ["calcalist_profile", "company_release"]
+summary = "Founders reportedly invested $1m and took over predecessor in September 2025; private shareholdings and legal deal details unavailable."
+
+[[intelligence.research .topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-03T18:33:08+03:00"
+next_review_on = "2027-01-03"
+queries = ["Aitan revenue annual sales employees 50 2026", "Aitan financials revenue burn runway funding"]
+source_ids = ["calcalist_profile", "globes_2026"]
+summary = "Interview reports approximately 50 employees and sales in the tens of millions annually; exact financial statements unavailable."
+
+[[intelligence.research .topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T18:33:08+03:00"
+next_review_on = "2027-01-03"
+queries = ["Aitan IDF deployments 500000 flight hours contracts Digital Bat", "Aitan overseas contracts command control networks Axios", "Aitan Kela IDF tender July 2026"]
+source_ids = ["company_release", "globes_2026", "axios_2026", "digital_bat", "calcalist_2026"]
+summary = "Reported IDF deployments and tender selection plus Axios-reported foreign contracts; values, stages and independent operating metrics unavailable."
+
+[[intelligence.research .topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T18:33:08+03:00"
+next_review_on = "2027-01-03"
+queries = ["Aitan eyesAtop patents", "EYESATOP LTD patents", "Aitan Israel patents drone orchestration"]
+source_ids = ["uspto_search"]
+summary = "No relevant portfolio confirmed in public search. A secondary assignee index surfaced one older application with unclear relevance and legal status; legal-entity and inventor searches are needed."
+
+[[intelligence.research .topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T18:33:08+03:00"
+next_review_on = "2027-01-03"
+queries = ["Aitan competitors Anduril Ondas Xtend Elbit systems drone C2", "Aitan eyesAtop Digital Bat competitor Ondas"]
+source_ids = ["calcalist_profile", "digital_bat", "official_site"]
+summary = "Adjacent competition includes autonomy/control software firms, drone-system manufacturers and defense primes; like-for-like product benchmarks are unavailable."
+
+[[intelligence.research .topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T18:33:08+03:00"
+next_review_on = "2027-01-03"
+queries = ["Aitan civilian commercial uses disaster response infrastructure robotics", "Aitan product public safety non-defense customers"]
+source_ids = ["official_site", "globes_2026"]
+summary = "Published products, contracts and deployments are defense/security-oriented. Civilian use is a plausible technical adjacency, but no civilian commercial customer or deployment was located."
+
+[[intelligence.research .claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Aitan announced emergence from stealth and active product/customer operations; contemporaneous reporting describes current activity and contracts."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["company_release", "globes_2026"]
+
+[[intelligence.research .claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Company release identifies founders as former IDF Unit 8200 officers; Calcalist documents predecessor operation in Tirat Carmel and Ramat Gan office."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["company_release", "calcalist_profile"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Company announcement says the $41m financing brought total capital raised to $54m; Globes and Axios repeat the total as reported company funding."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["company_release", "globes_2026", "axios_2026"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.founder-investment-2024.amount"
+support = "direct"
+summary = "Calcalist interview reports Oster and Almog invested $1m in eyesAtop in March 2024."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["calcalist_profile"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.series-a-2026.amount"
+support = "direct"
+summary = "September 2, 2026 company announcement says it closed a $41m financing round; Globes independently reports the same amount."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["company_release", "globes_2026"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.series-a-2026.lead_investors"
+support = "direct"
+summary = "Company announcement directly names Deep33 and Dell Technologies Capital as co-leads."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["company_release"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.series-a-2026.participating_investors"
+support = "direct"
+summary = "Company announcement names Gokul Rajaram, Benjamin Ling of Bling Capital and Kevin Weil of Scribble Ventures as participants."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["company_release"]
+
+[[intelligence.research .claim_checks]]
+field_path = "ownership.deals.eyesatop-control-2025.status"
+support = "direct"
+summary = "Calcalist reports Oster and Almog took over eyesAtop in September 2025."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["calcalist_profile"]
+
+[[intelligence.research .claim_checks]]
+field_path = "ownership.deals.eyesatop-control-2025.amount"
+support = "direct"
+summary = "Calcalist reports no transaction price; the separately described $1m founder investment occurred in March 2024 and is not attributed as purchase consideration."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["calcalist_profile"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.founder-investment-2024.lead_investors"
+support = "direct"
+summary = "Calcalist directly reports Oster and Almog as the people investing $1m in March 2024."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["calcalist_profile"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.founder-investment-2024.participating_investors"
+support = "direct"
+summary = "Calcalist directly reports Oster and Almog as the people investing $1m in March 2024."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["calcalist_profile"]
+
+[[intelligence.research .claim_checks]]
+field_path = "ownership.deals.eyesatop-control-2025.company_role"
+support = "direct"
+summary = "Calcalist reports Oster and Almog took over eyesAtop; eyesAtop is the target of that control change."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["calcalist_profile"]
+
+[[intelligence.research .claim_checks]]
+field_path = "financials.Employees@2026-08.numeric_value"
+support = "direct"
+summary = "Calcalist's August 2026 interview reports the company employed 50 people."
+verified_at = "2026-10-03T18:33:08+03:00"
+source_ids = ["calcalist_profile"]

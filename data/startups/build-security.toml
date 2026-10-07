@@ -1,0 +1,386 @@
+name = "Build.Security"
+description = "Build.Security was a Tel Aviv authorization-policy-management startup that used Open Policy Agent (OPA) and policy-as-code to deliver fine-grained RBAC and ABAC for cloud-native applications. Elastic completed its acquisition in September 2021, so this record now describes an acquired security technology rather than an independent startup."
+detailed_description = """Build.Security developed an authorization-as-a-service platform for application teams that needed consistent, fine-grained access decisions across APIs, services, and application portfolios. Its core approach used Open Policy Agent (OPA) and policy-as-code to separate authorization logic from application business logic. That separation can make policies easier to review, test, change, and audit than bespoke authorization code embedded throughout a distributed system. The product addressed both role-based access control (RBAC) and attribute-based access control (ABAC), with API-based data sources intended to provide context to policy decisions.
+
+The target problem was commercially important but technically difficult: modern applications distribute identity, data, and business logic across microservices, containers, Kubernetes clusters, and cloud control planes. Teams must enforce least privilege without creating inconsistent rules in every service, while also proving that access controls match internal and regulatory requirements. Build.Security's developer-oriented positioning, reusable policies, and OPA foundation were intended to reduce integration effort and let security teams apply controls earlier in the software lifecycle. The company emerged from stealth in 2020 with seed backing from YL Ventures, but public sources do not establish a durable independent customer base, recurring revenue scale, or post-acquisition standalone product trajectory.
+
+Elastic announced an agreement to acquire Build.Security in August 2021 and announced completion on September 2, 2021. Elastic described the technology as a policy-definition and enforcement platform for cloud-native security, with intended integration into Kibana, Elastic Agent, Elasticsearch, and Kubernetes admission controls. Elastic's later financial reporting classified Build Security Ltd. as an acquired business and stated that it was consolidated from the acquisition date. These facts provide credible evidence of strategic and technology validation, but they should not be read as proof of independent product-market fit or of current Build.Security availability. The original company website is not currently confirmable as a live canonical destination, and public evidence does not support a current employee count.
+
+The competitive field included authorization platforms such as AuthZed, Aserto, Oso, and Permit.io, as well as direct substitutes including self-managed OPA, cloud IAM and policy services, and authorization features built into application platforms. Build.Security's historical edge was the combination of a developer workflow, open policy standards, and a managed control-plane concept around a difficult cross-application problem. That edge was also exposed to commoditization: OPA is open source, cloud vendors control adjacent enforcement points, and enterprise buyers may prefer identity suites or platform-native controls. Acquisition by Elastic improved distribution and integration potential, while ending the company's status as an independent vendor whose roadmap, pricing, and customer support can be diligenced separately.
+
+The technology has credible dual-use relevance because authorization policy enforcement is a foundational control for commercial cloud systems, government networks, and defense mission-support software. It can support least privilege, separation of duties, policy compliance, and auditable access decisions in sensitive environments. The dual-use case remains architectural rather than evidence of defense deployment: no reliable public source reviewed here establishes a Build.Security defense customer, classified deployment, government contract, or security certification. For Claw & Talon, the record is therefore most useful as an acquired cyber capability and market signal around policy-driven cloud security, not as an investible independent defense startup."""
+logo = "https://pbs.twimg.com/profile_images/1445897869456691214/build-security-logo"
+website = "Unknown"
+sector = "Cloud Security / Authorization Policy Management"
+founded = "2020"
+headquarters = "Tel Aviv, Israel"
+employees = "Unknown"
+funding_stage = "Acquired by Elastic (2021)"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "Authorization policy infrastructure has substantive commercial and defense-adjacent applicability: the same least-privilege, separation-of-duties, context-aware policy, and audit mechanisms can protect SaaS, cloud infrastructure, government networks, and mission-support applications. The assessment is architectural rather than deployment-proven; reviewed public sources do not establish a defense customer, classified use, government contract, or certification."
+key_technologies = ["Open Policy Agent (OPA) policy engine", "Policy-as-code definition and enforcement", "Fine-grained RBAC and ABAC", "API-driven authorization decision-making", "Distributed policy evaluation and caching", "CI/CD and deployment pipeline integration"]
+use_cases = ["Fine-grained authorization for APIs and microservices", "Kubernetes admission and cloud-configuration policy enforcement", "Least-privilege controls across multi-tenant SaaS applications", "Policy testing and compliance evidence in CI/CD workflows", "Context-aware access decisions using API-backed application data", "Government and defense mission-support application access governance", "Separation of duties for sensitive administrative operations", "Continuous audit of authorization decisions and policy changes"]
+investible = false
+investment_rationale = "Build.Security is not an independent investment or priority-screening target because Elastic completed its acquisition in 2021 and public filings treat Build Security Ltd. as part of Elastic's consolidated business. The transaction is useful diligence evidence for the strategic value of authorization policy infrastructure, but any current commercial, product, or personnel assessment must be conducted through Elastic. No recommendation is implied."
+strategic_value = "The asset's strategic value was its ability to connect policy-based authorization with Elastic's cloud-security, analytics, and enforcement stack. Elastic identified uses spanning policy management, Elastic Agent enforcement, Elasticsearch evidence, Kubernetes admission control, and cloud-configuration checks. For national-security analysis, this supports a credible zero-trust and least-privilege adjacency, but the public record does not demonstrate defense deployment or sovereign-control suitability."
+public_sources = [
+  { title = "Elastic completes the acquisition of Build.Security", url = "https://www.elastic.co/fr/about/press/elastic-completes-the-acquisition-of-build-security", description = "Elastic's completion announcement confirms the September 2, 2021 closing, OPA-based platform, Amit Kanfer joining Elastic, and undisclosed deal terms." },
+  { title = "Elastic fiscal 2023 annual report", url = "https://www.sec.gov/Archives/edgar/data/1707753/000170775323000039/annualreport-fiscalyear2023.pdf", description = "SEC-filed report discloses 100% share acquisition and combined consideration with Optimyze, without allocating the price to Build.Security." },
+  { title = "Build.security raises $6M for its authorization policy management platform", url = "https://techcrunch.com/2020/11/18/build-security-raises-6m-for-its-authorization-policy-management-platform/", description = "Contemporaneous reporting identifies the seed amount, YL Ventures lead, angel participants, founders, and their backgrounds." },
+  { title = "YL Ventures portfolio: build.security", url = "https://www.ylventures.com/portfolio/build-security/", description = "Investor portfolio confirms 2020 founding, Tel Aviv HQ, founder, product area, and acquisition by Elastic." },
+  { title = "Elastic acquires build.security for security policy definition and enforcement", url = "https://techcrunch.com/2021/08/23/elastic-acquires-build-security-for-security-policy-definition-and-enforcement/", description = "Reports acquisition announcement, planned team integration, Amit Kanfer's site-lead role, and OPA use." },
+  { title = "Aserto architecture documentation", url = "https://docs.aserto.com/docs/architecture", description = "Current product documentation used to ground one comparable's OPA architecture." },
+  { title = "Aserto fine-grained authorization platform", url = "https://www.aserto.com/", description = "Current official product page used as a market comparison." },
+  { title = "Israel Cyber Startup Catalog", url = "https://en-cyber.tau.ac.il/sites/cyberstudies-english.tau.ac.il/files/media_server/all-units/Startup%20Catalog_digital.pdf", description = "Dated secondary catalog with an unresolved $5.3m total-funding figure that conflicts with the contemporaneous $6m seed report." }
+]
+potential_score = 64.0
+technology_score = 82.0
+market_score = 70.0
+team_score = 68.0
+dual_use_score = 79.0
+strategic_alignment_score = 72.0
+stage = "mature"
+stage_rationale = "The company reached an acquisition outcome rather than continuing as an independent venture: Elastic completed the acquisition on September 2, 2021. Mature is used for the lifecycle classification permitted by this schema, while entity_type records the more precise acquired_asset status. Public evidence supports technology and strategic validation, but not current standalone revenue, headcount, or product availability."
+competitors = ["Aserto", "AuthZed", "Permit.io", "Oso", "Open Policy Agent (open-source)", "Platform-native authorization such as AWS IAM, Google Cloud IAM, and Azure RBAC", "HashiCorp Sentinel"]
+competitive_edge = "Historically, Build.Security combined a developer-oriented control plane, OPA compatibility, API-backed context, and decoupled authorization logic for application portfolios. This addressed a real integration pain point between application engineering and security governance. The edge was not a proprietary policy standard: OPA is open source and cloud platforms offer adjacent controls. After acquisition, distribution and Elastic integration became more important than standalone branding, while independent differentiation and roadmap visibility became harder to assess."
+risk_factors = ["Acquisition integration and roadmap risk: the original product may be absorbed, repositioned, or discontinued within Elastic", "Open-source substitution: OPA and related policy tooling reduce switching costs and constrain standalone pricing power", "Cloud-platform competition: AWS, Google Cloud, Microsoft, and identity vendors can bundle adjacent authorization and governance controls", "Authorization correctness risk: policy errors can deny mission-critical access or grant excessive privileges, creating operational and security exposure", "Limited current disclosure: public sources do not establish current Build.Security headcount, customers, revenue, certifications, or standalone availability", "Deployment complexity: consistent enforcement across applications, Kubernetes, cloud APIs, and identity systems requires substantial integration work", "Defense evidence gap: dual-use relevance is credible, but no reviewed source proves defense adoption, classified deployment, or government procurement"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Build.Security is an acquired asset and therefore remains non-investible as an independent company. Its priority for strategic research is moderate: the acquisition provides evidence that fine-grained authorization and policy enforcement mattered to a major security-platform vendor, while the lack of current standalone disclosure and lack of public defense-use evidence limit direct diligence value."
+crawled_at = "2026-02-16T23:26:00Z"
+updated_at = "2026-10-04T11:44:07Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "build-security"
+legal_name = "Build Security Ltd."
+aliases = ["build.security", "Build.Security"]
+operating_status = "acquired"
+business_model = "Historically a B2B authorization-as-a-service and policy-management platform for application developers and enterprise security teams; acquired and integrated into Elastic in 2021."
+products = ["Authorization-as-a-service platform", "Policy definition and enforcement for cloud-native applications using Open Policy Agent"]
+locations = ["Tel Aviv, Israel", "Sunnyvale, California, United States"]
+founded_on = "2020"
+source_ids = ["yl_portfolio", "elastic_close", "tc_seed"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "YL Ventures identifies Tel Aviv as headquarters and names Amit Kanfer as founder; TechCrunch describes the cofounding team as Amit Kanfer and Dekel Braunstein."
+as_of = "2026-10-04"
+source_ids = ["yl_portfolio", "tc_seed"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One publicly reported $6 million seed equity round in November 2020, led by YL Ventures and joined by named individual investors. No later independent financing round was identified before Elastic's 2021 acquisition. A contemporaneous industry catalog later listed $5.3 million total; that conflicts with the specifically reported $6 million seed and is not used to overwrite the round or total."
+rounds = [{ id = "seed-2020", round_type = "Seed", instrument = "equity", status = "announced", announced_on = "2020-11-18", amount_status = "reported", amount = 6000000, amount_scope = "round", currency = "USD", lead_investors = ["YL Ventures"], participating_investors = ["George Kurtz", "Michael Sutton", "Sounil Yu", "Dan Amiga", "Eyal Gruner", "Eran Barak"], source_ids = ["tc_seed"] }]
+reported_total_raised = 6000000
+reported_total_currency = "USD"
+total_source_ids = ["tc_seed"]
+total_as_of = "2020-11-18"
+total_scope = "Company-announced lifetime equity funding reported by TechCrunch as the single seed round; excludes acquisition consideration and any undisclosed transaction-related employee payments."
+history_status = "partial"
+coverage_through = "2021-09-02"
+
+[[intelligence.investors]]
+name = "YL Ventures"
+investor_type = "vc"
+website = "https://www.ylventures.com/"
+round_ids = ["seed-2020"]
+relationship = "historical"
+source_ids = ["tc_seed", "elastic_close"]
+
+[[intelligence.investors]]
+name = "George Kurtz"
+investor_type = "angel"
+round_ids = ["seed-2020"]
+relationship = "historical"
+source_ids = ["tc_seed"]
+
+[[intelligence.investors]]
+name = "Michael Sutton"
+investor_type = "angel"
+round_ids = ["seed-2020"]
+relationship = "historical"
+source_ids = ["tc_seed"]
+
+[[intelligence.investors]]
+name = "Sounil Yu"
+investor_type = "angel"
+round_ids = ["seed-2020"]
+relationship = "historical"
+source_ids = ["tc_seed"]
+
+[[intelligence.investors]]
+name = "Dan Amiga"
+investor_type = "angel"
+round_ids = ["seed-2020"]
+relationship = "historical"
+source_ids = ["tc_seed"]
+
+[[intelligence.investors]]
+name = "Eyal Gruner"
+investor_type = "angel"
+round_ids = ["seed-2020"]
+relationship = "historical"
+source_ids = ["tc_seed"]
+
+[[intelligence.investors]]
+name = "Eran Barak"
+investor_type = "angel"
+round_ids = ["seed-2020"]
+relationship = "historical"
+source_ids = ["tc_seed"]
+
+[intelligence.ownership]
+status = "reported"
+summary = "Elastic announced the acquisition in August 2021 and completed it on September 2, 2021. Elastic's SEC-filed FY2023 annual report says it acquired 100% of Build Security Ltd.'s share capital. Standalone consideration was not disclosed; the filing's $57.2 million is combined with a separate acquisition and cannot be allocated. Private pre-acquisition cap table and seller proceeds were not disclosed in reviewed sources."
+parent_company = "Elastic N.V."
+stock_ticker = "NYSE: ESTC"
+cap_table_status = "undisclosed"
+shareholders = ["Elastic N.V. (100% acquired) "]
+source_ids = ["elastic_close", "elastic_10k"]
+deals = [{ id = "elastic-acquisition-2021", deal_type = "acquisition", company_role = "target", announced_on = "2021-08-23", completed_on = "2021-09-02", status = "completed", counterparty = "Elastic N.V.", amount_status = "undisclosed", source_ids = ["tc_acquisition", "elastic_close", "elastic_10k"] }]
+holdings = []
+
+[[intelligence.people]]
+name = "Amit Kanfer"
+role = "Co-founder and CEO; joined Elastic and was designated Israel site lead at announcement"
+is_founder = true
+current = false
+background = "TechCrunch reported previous experience at Intel and other companies; he joined Elastic with the acquired team."
+source_ids = ["tc_seed", "tc_acquisition", "elastic_close"]
+
+[[intelligence.people]]
+name = "Dekel Braunstein"
+role = "Co-founder and CTO"
+is_founder = true
+current = false
+background = "TechCrunch reported previous experience at Fireglass, Symantec, Cymmetria and other companies."
+source_ids = ["tc_seed"]
+
+[[intelligence.people]]
+name = "John Brennan"
+role = "YL Ventures partner; seed investor"
+is_founder = false
+current = false
+background = "TechCrunch identified him as the YL Ventures partner who helped lead the seed investment."
+source_ids = ["tc_seed", "tc_acquisition"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Elastic announced intended integration of the acquired OPA-based policy-definition and enforcement technology into cloud-native security workflows; this establishes product/technology integration intent, not continuing standalone product availability."
+date = "2021-09-02"
+source_ids = ["elastic_close"]
+
+[[intelligence.traction]]
+kind = "hiring"
+description = "Elastic stated that Amit Kanfer and other key build.security staff joined Elastic; TechCrunch reported that the technical team would continue as a unit in Elastic Security."
+date = "2021-09-02"
+source_ids = ["elastic_close", "tc_acquisition"]
+
+[[intelligence.comparables]]
+name = "Aserto"
+website = "https://www.aserto.com/"
+rationale = "Developer-focused fine-grained authorization with policy-centric controls and OPA-related architecture overlaps the historical Build.Security problem area."
+differentiation = "Aserto documents a distinct control-plane and data-plane architecture; this is a present-day category comparator, not evidence of direct head-to-head competition with the acquired historical product."
+source_ids = ["aserto_docs", "aserto_site"]
+
+[[intelligence.comparables]]
+name = "Open Policy Agent"
+website = "https://www.openpolicyagent.org/"
+rationale = "Open source policy decision engine at the core of Build.Security's historical approach and a self-managed substitute."
+differentiation = "OPA is a general-purpose open-source engine; Build.Security's intended distinction was its managed authorization workflow, policy management, and application-oriented service layer."
+source_ids = ["tc_acquisition"]
+
+[intelligence.research]
+researched_at = "2026-10-04T11:44:07Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Build.Security identity legal name headquarters founded aliases", "Build.Security funding raised seed Series A investors valuation", "Build.Security team founders leadership Amit Kanfer Dekel Braunstein", "Build.Security acquisition acquired ownership Elastic price completed", "Build.Security revenue ARR financials employees customers traction", "Build.Security patents intellectual property USPTO WIPO", "Build.Security authorization policy management competitors OPA Aserto Oso", "Build.Security defense government contract security dual use", "build.security raises $6M TechCrunch", "site:elastic.co build.security acquisition", "site:sec.gov Elastic Build Security acquisition annual report", "site:ylventures.com/portfolio/build-security"]
+gaps = ["team: Public sources identify founders and some acquisition-era roles, but do not establish a complete current or historical employee roster or post-acquisition roles.", "investors: Named seed participants are known, but allocation amounts, private cap table, and all holders are not public.", "financials: No standalone revenue, ARR, profitability, burn, or runway disclosures found; acquisition consideration was undisclosed on a company-specific basis.", "traction: No verified standalone paying-customer list, contract values, deployment counts, or post-acquisition standalone product metrics found.", "intellectual_property: No attributable patent filing or portfolio was verified in the searches; absence of a match does not establish absence of IP.", "competition: No company-authored comparison or independently documented win/loss analysis found; comparables are category-level.", "dual_use: No public government/defense customer, contract, certification, or classified deployment evidence found.", "ownership: SEC filing combines Build.Security and Optimyze acquisition consideration, so Build.Security's standalone purchase price and pre-deal cap table remain undisclosed.", "funding: Search found a single reported seed; no subsequent round surfaced before acquisition, but a complete private financing history is not established."]
+conflicts = ["A 2021 startup catalog PDF reported $5.3 million total funding, while contemporaneous TechCrunch coverage reported a $6 million seed led by YL Ventures. The specific dated round report is used for the round and company-reported total; the lower catalog figure lacks an explanation and is retained as a conflicting secondary claim.", "Elastic's FY2023 SEC filing reports $57.2 million combined consideration for Build Security Ltd. and Optimyze.cloud Inc.; the number is not attributable to Build.Security alone and is not entered as its acquisition amount."]
+diligence_questions = ["Which Elastic security products still contain Build.Security-derived policy management or enforcement code, and what has been renamed, discontinued, or materially changed since integration?", "Did the acquired technology have production customers or contracted revenue at closing, and what retention, renewal, or migration evidence exists inside Elastic?", "What were the individual Build.Security purchase consideration, earn-out or retention obligations, and allocation between cash, equity, and assumed options?", "Were patents or other protectable assets assigned to Elastic, and what third-party or open-source license obligations applied to the acquired code?"]
+claim_checks = [
+ { field_path = "company.operating_status", support = "direct", summary = "Elastic announced completion of the acquisition; its SEC-filed report confirms acquisition of all share capital.", verified_at = "2026-10-04T11:44:07Z", source_ids = ["elastic_close", "elastic_10k"] },
+ { field_path = "israel_connection", support = "direct", summary = "YL Ventures identifies Tel Aviv headquarters; TechCrunch reports the Israeli-founded company and its co-founders.", verified_at = "2026-10-04T11:44:07Z", source_ids = ["yl_portfolio", "tc_seed"] },
+ { field_path = "funding.reported_total_raised", support = "direct", summary = "Contemporaneous report states the company announced a $6 million seed round.", verified_at = "2026-10-04T11:44:07Z", source_ids = ["tc_seed"] },
+ { field_path = "funding.rounds.seed-2020.amount", support = "direct", summary = "TechCrunch reports $6 million seed funding on November 18, 2020.", verified_at = "2026-10-04T11:44:07Z", source_ids = ["tc_seed"] },
+ { field_path = "funding.rounds.seed-2020.lead_investors", support = "direct", summary = "TechCrunch identifies YL Ventures as lead investor in the seed round.", verified_at = "2026-10-04T11:44:07Z", source_ids = ["tc_seed"] },
+ { field_path = "funding.rounds.seed-2020.participating_investors", support = "direct", summary = "TechCrunch names the six participating angel investors in the seed announcement.", verified_at = "2026-10-04T11:44:07Z", source_ids = ["tc_seed"] },
+ { field_path = "ownership.deals.elastic-acquisition-2021.company_role", support = "direct", summary = "Elastic acquired Build Security Ltd.'s entire share capital, identifying Build.Security as the target.", verified_at = "2026-10-04T11:44:07Z", source_ids = ["elastic_10k"] },
+ { field_path = "ownership.parent_company", support = "direct", summary = "SEC-filed annual report says Elastic acquired 100% of Build Security Ltd.'s share capital.", verified_at = "2026-10-04T11:44:07Z", source_ids = ["elastic_10k"] },
+ { field_path = "ownership.deals.elastic-acquisition-2021.status", support = "direct", summary = "Elastic's September 2, 2021 announcement confirms closing; SEC report confirms full share acquisition.", verified_at = "2026-10-04T11:44:07Z", source_ids = ["elastic_close", "elastic_10k"] },
+ { field_path = "ownership.deals.elastic-acquisition-2021.amount", support = "direct", summary = "Elastic says transaction terms were undisclosed; SEC figure combines two acquisitions and does not allocate Build.Security consideration.", verified_at = "2026-10-04T11:44:07Z", source_ids = ["elastic_close", "elastic_10k"] }
+]
+
+[[intelligence.research.sources]]
+id = "elastic_close"
+url = "https://www.elastic.co/fr/about/press/elastic-completes-the-acquisition-of-build-security"
+title = "Elastic Completes the Acquisition of Build.Security"
+publisher = "Elastic"
+kind = "company"
+accessed_at = "2026-10-04T11:44:07Z"
+published_on = "2021-09-02"
+claims = ["Elastic completed the acquisition on September 2, 2021.", "Amit Kanfer and other key staff joined Elastic.", "Build.Security used Open Policy Agent for cloud-native policy definition and enforcement.", "Elastic did not disclose financial terms."]
+
+[[intelligence.research.sources]]
+id = "elastic_10k"
+url = "https://www.sec.gov/Archives/edgar/data/1707753/000170775323000039/annualreport-fiscalyear2023.pdf"
+title = "Annual Report Fiscal Year 2023"
+publisher = "Elastic N.V.; U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-04T11:44:07Z"
+published_on = "2023-06-30"
+claims = ["Elastic acquired 100% of Build Security Ltd.'s share capital on September 2, 2021.", "The filing reports combined $57.2 million consideration for Build.Security and Optimyze, not a standalone Build.Security price.", "Acquired companies were consolidated from acquisition dates; pro forma results were not presented because immaterial."]
+
+[[intelligence.research.sources]]
+id = "tc_seed"
+url = "https://techcrunch.com/2020/11/18/build-security-raises-6m-for-its-authorization-policy-management-platform/"
+title = "Build.security raises $6M for its authorization policy management platform"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-04T11:44:07Z"
+published_on = "2020-11-18"
+claims = ["Build.Security announced $6 million seed funding led by YL Ventures.", "Named participating angels were George Kurtz, Michael Sutton, Sounil Yu, Dan Amiga, Eyal Gruner, and Eran Barak.", "Amit Kanfer and Dekel Braunstein founded the company and served as CEO and CTO.", "The co-founders had prior experience at Intel, Fireglass, Symantec, Cymmetria and other companies.", "The company operated between Tel Aviv and Sunnyvale and built developer authorization policy management using policy-as-code."]
+
+[[intelligence.research.sources]]
+id = "yl_portfolio"
+url = "https://www.ylventures.com/portfolio/build-security/"
+title = "Build.Security portfolio profile"
+publisher = "YL Ventures"
+kind = "investor"
+accessed_at = "2026-10-04T11:44:07Z"
+claims = ["YL Ventures portfolio identifies Build.Security as founded in 2020, headquartered in Tel Aviv, operating in authorization policy management, and acquired by Elastic.", "YL Ventures names Amit Kanfer as founder."]
+
+[[intelligence.research.sources]]
+id = "tc_acquisition"
+url = "https://techcrunch.com/2021/08/23/elastic-acquires-build-security-for-security-policy-definition-and-enforcement/"
+title = "Elastic acquires build.security for security policy definition and enforcement"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-04T11:44:07Z"
+published_on = "2021-08-23"
+claims = ["Elastic announced its plan to acquire Build.Security; terms were not publicly disclosed.", "The technical team was expected to continue within Elastic Security.", "Amit Kanfer was set to become Elastic's Israel site lead.", "Build.Security used OPA and built technology for cloud-native security policy enforcement."]
+
+[[intelligence.research.sources]]
+id = "aserto_docs"
+url = "https://docs.aserto.com/docs/architecture"
+title = "Aserto architecture documentation"
+publisher = "Aserto"
+kind = "other"
+accessed_at = "2026-10-04T11:44:07Z"
+claims = ["Aserto Topaz uses OPA and a data plane with locally available authorization data."]
+
+[[intelligence.research.sources]]
+id = "aserto_site"
+url = "https://www.aserto.com/"
+title = "Fine-grained authorization service for applications and APIs"
+publisher = "Aserto"
+kind = "other"
+accessed_at = "2026-10-04T11:44:07Z"
+claims = ["Aserto markets fine-grained authorization for applications and APIs."]
+
+[[intelligence.research.sources]]
+id = "startup_catalog"
+url = "https://en-cyber.tau.ac.il/sites/cyberstudies-english.tau.ac.il/files/media_server/all-units/Startup%20Catalog_digital.pdf"
+title = "Israel Cyber Startup Catalog"
+publisher = "Tel Aviv University Cyber Studies"
+kind = "directory"
+accessed_at = "2026-10-04T11:44:07Z"
+published_on = "2021"
+claims = ["Catalog describes Build.Security's OPA-based authorization approach and reports a $5.3 million total funding figure, conflicting with the $6 million contemporaneous seed report."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T11:44:07Z"
+next_review_on = "2027-04-04"
+queries = ["Build.Security identity legal name headquarters founded aliases"]
+source_ids = ["yl_portfolio", "tc_seed", "elastic_10k"]
+summary = "Identified Build Security Ltd., aliases build.security and Build.Security; founded 2020, Tel Aviv connection, later acquired by Elastic. No registry number verified."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-04T11:44:07Z"
+next_review_on = "2027-04-04"
+queries = ["Build.Security funding raised seed Series A investors valuation", "build.security raises $6M TechCrunch"]
+source_ids = ["tc_seed", "startup_catalog"]
+summary = "One $6m 2020 seed is specifically reported by TechCrunch; a 2021 catalog gives $5.3m lifetime, an unresolved conflict. No later round found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T11:44:07Z"
+next_review_on = "2027-04-04"
+queries = ["Build.Security seed investors YL Ventures George Kurtz Michael Sutton Sounil Yu"]
+source_ids = ["tc_seed", "elastic_close"]
+summary = "YL Ventures led the reported seed; six angels were named. Participation amounts and cap-table ownership are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T11:44:07Z"
+next_review_on = "2027-04-04"
+queries = ["Build.Security founders leadership Amit Kanfer Dekel Braunstein", "Elastic Build.Security team acquisition Amit Kanfer site lead"]
+source_ids = ["tc_seed", "tc_acquisition", "elastic_close"]
+summary = "Founders Amit Kanfer and Dekel Braunstein identified; acquisition coverage describes team joining Elastic. Full roster/current positions remain unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-04T11:44:07Z"
+next_review_on = "2027-04-04"
+queries = ["Build.Security acquisition acquired ownership Elastic price completed", "site:sec.gov Elastic Build Security acquisition annual report"]
+source_ids = ["tc_acquisition", "elastic_close", "elastic_10k"]
+summary = "Acquired 100% by Elastic, completed September 2, 2021. Deal terms were undisclosed; $57.2m in SEC filing combines two acquisitions."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T11:44:07Z"
+next_review_on = "2027-04-04"
+queries = ["Build.Security revenue ARR financials employees", "Build Security Ltd Elastic annual report acquisition consideration"]
+source_ids = ["elastic_close", "elastic_10k"]
+summary = "No standalone revenue, ARR, burn, profitability, or headcount disclosed in reviewed material; acquisition consideration not allocated individually."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T11:44:07Z"
+next_review_on = "2027-04-04"
+queries = ["Build.Security authorization platform customer deployments traction", "Build.Security customers Elastic integration"]
+source_ids = ["elastic_close", "tc_acquisition"]
+summary = "Publicly evidenced milestone is acquisition and intended product/team integration; no verified standalone customer or commercial metrics found."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T11:44:07Z"
+next_review_on = "2027-04-04"
+queries = ["Build.Security patent authorization policy Amit Kanfer patent", "Build Security Ltd patent WIPO USPTO"]
+source_ids = ["elastic_close", "tc_seed"]
+summary = "No attributable patent record verified; proprietary code and acquired technology are evidenced, but patent ownership/assignments remain unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T11:44:07Z"
+next_review_on = "2027-04-04"
+queries = ["Build.Security authorization policy management competitors OPA Aserto Oso", "Aserto architecture OPA authorization"]
+source_ids = ["tc_seed", "tc_acquisition", "aserto_docs", "aserto_site"]
+summary = "Category substitutes include self-managed OPA, Aserto and embedded authorization libraries; no historical direct win/loss evidence found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T11:44:07Z"
+next_review_on = "2027-04-04"
+queries = ["Build.Security defense government contract", "Build.Security government defense customer authorization"]
+source_ids = ["elastic_close", "tc_acquisition"]
+summary = "Authorization capabilities have plausible commercial and government/defense applicability, but no public defense customer, contract, certification, or deployment was verified."

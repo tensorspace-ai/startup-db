@@ -1,0 +1,87 @@
+name = "Oligo Security"
+description = "Oligo Security provides runtime-native application and cloud security that observes what code, dependencies, models, and agents actually execute in production. It uses that execution context to prioritize exploitable vulnerabilities, detect malicious behavior, and support response across modern and legacy workloads."
+detailed_description = """
+Oligo's core product is a runtime security platform built around Deep Application Inspection and lightweight sensors. Rather than treating every package named in an SBOM or static scan as equally exposed, the platform correlates live execution with vulnerable functions, call stacks, processes, application behavior, and workload context. Its stated outputs include runtime SBOM and VEX evidence, function-level vulnerability enrichment, exploit detection, malicious-package detection, and policy-based response. The company has also expanded the platform into Cloud Application Detection and Response (CADR) and runtime AI security, including visibility and response for models and agents. These extensions are strategically coherent with the original runtime thesis, but they also raise the question of whether the product is becoming a broad security platform faster than its category and sales motion can support.
+
+The customer problem is a persistent weakness in software-security operations: SCA, SBOM, CSPM, and CNAPP tools can generate large volumes of theoretical exposure, while engineering teams need to know which code paths are loaded, reachable, and exploitable in a live environment. Oligo's value proposition is to reduce that uncertainty and connect security findings to remediation or containment decisions. The likely buyers span application-security, cloud-security, vulnerability-management, and SOC teams, which creates multiple budget paths but also complicates ownership. The platform is relevant to cloud-native microservices as well as Java and other legacy applications where immediate patching may be disruptive. Public product material claims low resource overhead and large reductions in vulnerability noise; those claims should be tested with customer telemetry and independent validation rather than accepted at face value.
+
+Commercial signals are stronger than the prior seed-stage record suggested. Oligo publicly announced a $28 million financing at launch in 2023, and reputable reporting described a $50 million Series B in January 2025, implying roughly $80 million of disclosed financing. The company's own site now describes adoption by Fortune 500 organizations and lists named customer testimonials, while its 2025 and 2026 product announcements show continued investment in CADR, AI-SPM, AI detection and response, vulnerability intelligence, and compliance evidence. These are useful traction indicators, not proof of durable retention, revenue scale, or category leadership. Diligence should seek cohort retention, deployment-to-expansion data, sensor coverage by language and runtime, false-negative rates, and evidence that runtime findings change patching or incident outcomes.
+
+Competition is broad and increasingly convergent. Contrast Security and other runtime application-security specialists compete for application visibility and protection; Snyk and Endor Labs compete for software-composition analysis, reachability, and developer workflow; Wiz, Palo Alto Networks, Aqua Security, and Sysdig can bundle adjacent cloud and workload controls. Oligo can differentiate if its function-level execution evidence is more precise, lower friction, and more actionable than metadata-driven alternatives, especially when a buyer needs to prioritize a large backlog or protect an unpatchable dependency. That edge is not guaranteed: platform vendors can add runtime context, and standalone tools must prove that their sensor provides enough incremental value to justify another agent, integration, and procurement decision.
+
+The dual-use case is credible but conditional. Defense, aerospace, government, and critical-infrastructure operators also depend on open-source components, third-party libraries, cloud workloads, and increasingly AI-enabled systems; runtime proof can help them manage patch windows, legacy software, and software-supply-chain exposure. Runtime blocking and forensic context could be relevant to mission-support applications and sensitive enterprise estates. However, no public evidence reviewed here establishes a defense contract, classified deployment, or full government authorization. The strategic case therefore depends on demonstrated operation in restricted or on-prem environments, auditable telemetry, secure update mechanisms, support for disconnected networks, and a response model that does not create unacceptable availability risk.
+"""
+logo = "https://cdn.prod.website-files.com/69288487365aaac1f9887796/697b908df1f9b851c60a5922_OLI%20Logo%20White%20(1).svg"
+website = "https://www.oligo.security"
+sector = "Runtime Security"
+founded = "2022"
+headquarters = "Tel Aviv, Israel"
+employees = "80+"
+funding_stage = "Series B"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Oligo's runtime observation and response technology has substantive commercial and security applicability because defense and critical-infrastructure software estates face the same dependency and workload risks as commercial environments, often with longer patch cycles and more legacy code. The thesis remains conditional: public evidence does not establish defense contracts or classified use, so restricted-network support, auditability, secure updates, and availability-safe enforcement require diligence."
+key_technologies = [
+  "Deep Application Inspection for function-level execution and exploit context",
+  "Kernel-safe or lightweight runtime sensors for applications, containers, and workloads",
+  "Runtime SBOM and VEX generation tied to observed behavior",
+  "Vulnerable-function enrichment and reachability analysis beyond CVE package metadata",
+  "Cloud Application Detection and Response with application-to-workload attack context",
+  "Behavioral detection for malicious packages, exploits, AI models, and agents",
+  "Runtime policy enforcement, blocking, and SOC/AppSec workflow integrations",
+]
+use_cases = [
+  "Prioritize SCA findings by the vulnerable functions and dependencies actually executed in production",
+  "Generate runtime SBOM and VEX evidence for vulnerability management and compliance workflows",
+  "Detect and contain exploitation, dependency hijacking, and malicious package behavior in live workloads",
+  "Investigate incidents using application-layer call stacks, process trees, and end-to-end attack context",
+  "Protect cloud-native microservices and Kubernetes workloads without relying only on build-time scans",
+  "Reduce exposure from legacy Java and other difficult-to-patch third-party components",
+  "Monitor AI models and agents for prompt injection, unsafe behavior, and anomalous tool activity",
+  "Support software assurance in regulated, defense-adjacent, and critical-infrastructure environments",
+]
+investible = true
+investment_rationale = "Oligo has a credible strategic fit with a dual-use software-assurance thesis: a technically differentiated runtime signal can make vulnerability backlogs more actionable across AppSec, cloud, and SOC teams, while its application to legacy and AI workloads expands relevance. The Series B and continued product expansion are meaningful maturity signals, but not substitutes for diligence on recurring revenue, retention, sensor performance, deployment friction, and competitive win rates. The principal question is whether execution-level evidence remains a durable product advantage as CNAPP and AppSec suites converge."
+strategic_value = "The company's strategic value lies in turning software inventory and vulnerability data into observed runtime exposure and response context. That can improve resilience for sensitive applications, supply chains, and AI-enabled systems where patching is slow or incomplete. Oligo becomes more relevant to national-security and critical-infrastructure users if it can operate with minimal overhead in on-prem or restricted environments, produce auditable evidence, and enforce policies safely; those capabilities should be verified rather than inferred from commercial marketing."
+potential_score = 85.0
+technology_score = 90.0
+market_score = 83.0
+team_score = 80.0
+dual_use_score = 86.0
+strategic_alignment_score = 85.0
+stage = "mid"
+stage_rationale = "Founded in 2022, Oligo has progressed from launch financing to a reported Series B, an approximately 80-plus-person organization, named enterprise references, and a materially expanded runtime platform. That supports a mid-stage classification: the product and market thesis have meaningful external validation, while durable scale, repeatable economics, public-sector readiness, and long-term category leadership remain unproven."
+competitors = [
+  "Contrast Security",
+  "Snyk",
+  "Endor Labs",
+  "Wiz",
+  "Palo Alto Networks",
+  "Aqua Security",
+  "Sysdig",
+]
+competitive_edge = "Oligo's potential edge is the depth and actionability of runtime evidence: identifying the executed vulnerable function, connecting it to application and workload behavior, and supporting response rather than merely reporting package presence. That could reduce noise and improve remediation decisions for large or legacy estates. The edge is credible but not yet defensible from public information alone; buyers may prefer bundled CNAPP, SCA, or AppSec controls, and Oligo must prove low-overhead coverage, reliable detections, useful integrations, and measurable operational outcomes."
+risk_factors = [
+  "Platform convergence could allow CNAPP, SCA, and AppSec vendors to bundle comparable reachability and runtime context.",
+  "Runtime sensors can create performance, stability, privacy, and change-control concerns in regulated or mission-critical systems.",
+  "Multiple buyer personas may lengthen sales cycles and create budget-ownership friction across AppSec, cloud security, vulnerability management, and SOC teams.",
+  "Public customer claims and noise-reduction metrics require independent validation of false positives, false negatives, coverage, and business impact.",
+  "Expansion into CADR, cloud, compliance, and AI security could dilute positioning or stretch engineering and go-to-market resources.",
+  "The defense thesis depends on restricted-network, on-prem, audit, secure-update, and availability-safe enforcement capabilities that are not publicly established.",
+  "As a private company, Oligo provides limited public visibility into revenue, retention, margins, concentration, and financing runway.",
+]
+public_sources = [
+  "https://www.oligo.security",
+  "https://www.oligo.security/company/about",
+  "https://www.oligo.security/blog/introducing-oligo-leading-application-security-to-runtime",
+  "https://www.oligo.security/resources/news",
+  "https://www.oligo.security/blog/reflecting-on-a-breakthrough-year",
+  "https://www.axios.com/newsletters/axios-pro-rata-fce6d957-eef6-4b41-969a-8d5356a7a9c7",
+  "https://www.calcalistech.com/ctechnews/article/sxpiy6kwd",
+]
+priority_rationale = "Keep this as a high-priority strategic signal because runtime evidence for software vulnerabilities, cloud applications, and AI workloads is relevant to both commercial cyber defense and software assurance in sensitive sectors. The score reflects strong technical and strategic fit plus Series B maturity, while the high risk level reflects crowded competition, private-company opacity, deployment and enforcement risks, and the absence of verified defense or restricted-network deployments."
+risk_level = "high"
+signals = []
+priority_rank = 0
+crawled_at = "2026-01-31T18:00:00+00:00"
+updated_at = "2026-07-31T19:08:14Z"

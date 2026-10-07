@@ -1,0 +1,84 @@
+name = "Redis"
+description = "Redis is a private real-time data platform company built around its in-memory database, managed cloud service, enterprise deployments, search, vector retrieval, and AI context capabilities. It serves as a low-latency data layer for application state, messaging, caching, search, and agent workloads."
+detailed_description = """Redis combines a widely adopted in-memory data store with commercial software and cloud services for organizations that need predictable latency and high-throughput access to changing data. The platform supports strings, hashes, lists, sets, sorted sets, streams, JSON, persistence, replication, clustering, transactions, Pub/Sub, and programmable operations. Redis Cloud and Redis Software add managed and on-premise deployment, availability controls, data integration, security features, and operational tooling around the core database.
+
+The commercial opportunity is broader than traditional web caching. Redis markets application caching, session management, rate limiting, real-time messaging, leaderboards, fraud detection, real-time decisions, feature stores, and operational search. Its Redis Query Engine supports full-text, geospatial, filtered, vector, and hybrid queries over data maintained in Redis. The company is also using vector sets, semantic caching, agent memory, and real-time context products to position Redis inside AI application architectures, where reducing retrieval and generation latency can be as important as model quality.
+
+Redis has unusually strong developer mindshare and a large installed base, but it operates in a crowded and increasingly bundled infrastructure market. Hyperscalers provide managed Redis-compatible services, Memcached remains adequate for simpler caches, and Valkey, KeyDB, Garnet, Aerospike, Hazelcast, and conventional databases compete for adjacent workloads. Redis differentiates through a mature ecosystem, a broad command and data-structure model, multi-region availability, integrated search and vectors, and a path from open-source development to enterprise support. The tradeoff is that breadth increases product and support complexity, while licensing changes and cloud-provider competition can affect adoption and pricing power.
+
+Public company materials indicate more than 10,000 customers, 900+ employees, a San Francisco headquarters, and a global operating footprint. Redis announced a $110 million Series G financing in 2021 and has not publicly disclosed a newer financing round in the sources reviewed; it should therefore be treated as a late-stage private company rather than as a public issuer. Current product activity around Redis 8, Redis Cloud, Redis Flex, LangCache, and Redis Iris is evidence of continued commercialization, but the public record does not establish revenue, profitability, retention, or current valuation.
+
+The national-security case is indirect but credible at the infrastructure layer. Redis can support mission applications, security operations, identity and token services, telemetry dashboards, event processing, fraud detection, and fast access to operational or geospatial data. Those are enabling uses rather than defense-specific products, and deployment in sensitive environments would require diligence on licensing, supply-chain controls, hardening, support geography, data residency, and availability guarantees. Redis is strategically relevant as a potential dependency in real-time systems, not as a direct defense technology or a standalone national-security moat."""
+logo = "https://cdn.sanity.io/images/sy1jschh/production/8379f78a4082c502446af513120eb39d98b6aa0c-64x47.svg"
+website = "https://redis.io/"
+sector = "Real-Time Data Infrastructure"
+founded = "2011"
+headquarters = "San Francisco, CA, USA"
+employees = "900+"
+funding_stage = "Late-stage private; last disclosed Series G in 2021"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Redis has substantive but indirect dual-use potential. The same low-latency storage, replication, streams, search, vector retrieval, rate limiting, and event-processing capabilities can support defense mission software, cyber operations, identity services, telemetry, logistics, and operational dashboards. The dual-use case is credible because these are core infrastructure functions, but Redis does not provide defense-specific sensing, autonomy, secure communications, or mission assurance; applicability depends on integrator architecture, deployment controls, and procurement acceptance."
+key_technologies = [
+  "In-memory data structures with sub-millisecond access patterns",
+  "Redis Cluster, replication, Sentinel, and multi-region Active-Active availability",
+  "Streams, Pub/Sub, transactions, Lua scripting, and real-time event processing",
+  "Redis Query Engine for full-text, geospatial, filtered, vector, and hybrid search",
+  "HNSW and related vector retrieval for semantic search and RAG workloads",
+  "Semantic caching, agent memory, and real-time context services",
+  "Redis Cloud, Redis Software, data integration, and hybrid-cloud operations"
+]
+use_cases = [
+  "Web and API caching for latency-sensitive applications",
+  "Distributed sessions, authentication tokens, rate limiting, and authorization state",
+  "Real-time messaging, streams, counters, leaderboards, and event-driven workflows",
+  "Fraud detection and real-time decisioning over changing operational data",
+  "Vector retrieval, RAG context, semantic caching, and AI agent memory",
+  "Operational search over JSON, text, geospatial, and vector fields",
+  "Security operations, telemetry, and mission dashboards requiring fast shared state",
+  "Logistics, identity, or command-support applications deployed on-premise or in hybrid clouds"
+]
+investible = false
+investment_rationale = "Redis has credible scale, product-market fit, and a substantial installed base, but it is a mature private infrastructure vendor rather than a high-priority early-stage company for a dual-use startup database. The strategic diligence question is whether Redis can convert its developer franchise and AI positioning into durable enterprise growth while defending against hyperscaler bundles, open-source forks, and compatible substitutes. Its private status and undisclosed current financial performance also limit confidence in valuation, unit economics, and investibility signals."
+strategic_value = "Redis has meaningful strategic value as a widely deployed speed and state-management layer. A failure, licensing change, supply-chain issue, or migration decision can affect application latency, identity flows, telemetry, and AI retrieval across many downstream systems. For defense and security readers, the relevant thesis is dependency awareness and resilient alternatives: Redis may be useful in mission software, but its value is greatest as an enabling component whose assurance, governance, and deployment context must be evaluated separately."
+public_sources = [
+  "https://redis.io/company/",
+  "https://redis.io/about/",
+  "https://redis.io/cloud/",
+  "https://redis.io/press/redis-labs-110-million-series-g-led-by-tiger-global/",
+  "https://redis.io/docs/latest/develop/ai/",
+  "https://redis.io/docs/latest/operate/rc/langcache/"
+]
+potential_score = 65.0
+technology_score = 86.0
+market_score = 91.0
+team_score = 82.0
+dual_use_score = 24.0
+strategic_alignment_score = 49.0
+stage = "mature"
+stage_rationale = "Redis has operated since 2011, reports 900+ employees and more than 10,000 customers, and sells open-source, cloud, and enterprise products across a global footprint. Its mature status reflects established infrastructure adoption and commercialization, even though it remains privately held and continues to launch new AI-oriented products."
+competitors = [
+  "Amazon ElastiCache and MemoryDB",
+  "Google Cloud Memorystore",
+  "Azure Managed Redis",
+  "Valkey",
+  "Memcached",
+  "Aerospike",
+  "Hazelcast"
+]
+competitive_edge = "Redis benefits from deep developer familiarity, a large client and tooling ecosystem, a flexible data-structure model, and a commercial path spanning cloud, on-premise, and hybrid deployment. Integrated search, vectors, streams, data integration, and AI context features can reduce the number of separate services an application team must operate. The edge is not unassailable: cloud-native substitutes are convenient, Valkey and other forks reduce switching friction, and many cache workloads do not need Redis-specific functionality."
+risk_factors = [
+  "Hyperscalers can bundle managed Redis-compatible services into broader cloud contracts and pressure pricing",
+  "Valkey, Memcached, KeyDB, Garnet, and other alternatives can capture workloads with lower licensing or operating friction",
+  "Licensing changes and source-availability policy can create adoption, governance, and ecosystem fragmentation risk",
+  "A broad product surface spanning database, search, vectors, AI, and cloud operations raises execution and support complexity",
+  "Latency, durability, failover, or security incidents can cause outsized customer harm because Redis often sits in critical paths",
+  "AI retrieval and agent-memory demand may grow, but product claims do not yet establish durable revenue or margin expansion",
+  "Private-company reporting limits visibility into current valuation, financial health, customer concentration, and retention"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Redis merits monitoring as a widely used real-time infrastructure dependency with growing relevance to AI context, vector retrieval, and operational security workloads. It is not a priority signal for this database because it is mature, privately held, only indirectly dual-use, and exposed to strong platform, licensing, and substitution pressures."
+crawled_at = "2026-03-30T10:14:14Z"
+updated_at = "2026-07-31T19:03:05Z"

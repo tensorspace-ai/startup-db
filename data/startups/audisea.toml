@@ -1,0 +1,350 @@
+name = "AudiSea"
+description = "AudiSea is a Tel Aviv-based Israeli subsea-intelligence startup developing an AI-powered multi-sensor layer that combines underwater sound and vision to monitor marine life, offshore infrastructure, and coastal activity. Its commercial wedge is offshore operations and environmental compliance, with an explicitly stated defense and strategic-asset protection adjacency."
+detailed_description = """
+**Product and the concrete problem it solves.** AudiSea is building a decision layer for a part of the physical world that is both economically important and unusually hard to observe: underwater environments around ports, offshore energy assets, cables, shorelines, and marine construction sites. Operators typically combine diver inspections, remotely operated equipment, fixed cameras, hydrophones, vessel logs, and environmental surveys, then ask specialists to review large volumes of video and acoustic recordings after the fact. That workflow is expensive, slow, and poorly suited to continuous warning. AudiSea's stated product combines underwater sound and vision into a holistic subsea intelligence service. It is intended to provide a 24/7 defense layer, remote inspection, a digital-twin view of activity, environmental-state monitoring, and reporting that supports mandatory environmental assessments. The practical problem is not merely classifying whales or objects; it is giving an offshore developer, infrastructure owner, or security operator a timely and auditable picture of what is happening below the surface, with enough context to decide whether an event is biological, operational, environmental, or potentially hostile.
+
+**Core technology and how it works.** The public technical description points to a multimodal pipeline rather than a single acoustic classifier. AudiSea says its algorithms automatically detect marine life, analyze noise levels, generate predictive insights, learn new environments, isolate target sounds from background noise, and can be trained to recognize new sound classes. Its one-page technical brief describes a multi-sensor architecture joining vision and sound, automated algorithms with a human-in-the-loop service, continuous monitoring, and regulatory-compliance outputs. The acoustic component is grounded in passive acoustic monitoring: underwater microphones capture soundscapes, signal-processing and deep-learning models represent those recordings in forms suitable for detection, and the system identifies patterns associated with species, vessels, machinery, or abnormal activity. The vision component adds an independent observation channel for surface or underwater objects, reducing the risk that an acoustic alert is interpreted without physical context. The company reports 96% accuracy and a 2% false-positive rate for its automated detections, but those figures are company materials rather than an independently reproduced benchmark. Important implementation details remain undisclosed, including sensor hardware, edge-versus-cloud placement, latency, model architecture, training-set composition, depth and weather limits, and how the system behaves when acoustic and visual signals disagree.
+
+**Market, customers, and go-to-market.** AudiSea is targeting an identifiable operational buying problem in offshore development. Wind farms, tidal projects, oil and gas facilities, subsea construction, ports, and coastal infrastructure increasingly need evidence about marine-mammal presence, underwater noise, vessel interactions, and environmental impact before and during operations. Manual review and fragmented contractors can delay permits, increase monitoring cost, and leave asset owners without a persistent operational picture. AudiSea's route to market appears to be a project-based service and technology partnership rather than a standalone sensor sale. The company positions the product for offshore operations and maintenance, environmental monitoring, and defense, while the EchoSight collaboration with UK marine-monitoring company ecodetect combines AudiSea's marine sound AI with ecodetect's vision-based object detection. That partnership provides a credible integration and distribution path into offshore wind and marine infrastructure. Public material does not identify paying customers, contract values, recurring revenue, or production fleet deployments. The most supportable description is an early company converting research and partnership pilots into a repeatable monitoring service for developers and infrastructure operators.
+
+**Traction, funding, and third-party validation.** AudiSea's strongest public signals are technical heritage, field exposure, and recognition rather than venture financing. Its one-pager claims 6,500 development hours, field testing across five continents, automated detection of 13 marine-mammal species, and three international recognitions associated with Wazoku, WILDLABS, and the National Fish and Wildlife Foundation. AudiSea also says its models are integral to NOAA frameworks, a material claim that should be verified against the relevant program documentation before being treated as formal procurement validation. The company's parent ecosystem, the Israeli nonprofit Deep Voice, publicly describes work at the intersection of AI, acoustics, signal processing, and biology, including a National Fish and Wildlife Foundation grant supported by NOAA Fisheries for detecting North Atlantic right whales. Deep Voice also reports a second-place result in the 2026 BioDCASE task for detecting Antarctic blue and fin whale calls, using an ensemble of YOLOv11 detectors and a masked-autoencoder-pretrained vision transformer on spectrogram representations. These achievements help validate the underlying acoustic-ML capability, but they are not the same as validating AudiSea's commercial subsea-security product. No funding round, valuation, patent portfolio, certification, or named government contract is publicly disclosed.
+
+**Founders and team background.** Public company data is limited but unusually coherent about the organization’s origin. AudiSea's LinkedIn page identifies it as a 2025-founded, privately held company headquartered in Tel Aviv and describes it as spun out of Deep Voice. The same page lists Yair Yanovice and Ori Roth among its visible employees. Yanovice's public profile describes seven years of service as a naval officer and shows him presenting AudiSea's EchoSight product as a subsea intelligence platform for energy, defense, and environmental applications. The Deep Voice parent organization supplies the most visible technical context: it describes a community of scientists with experience in AI, acoustics, signal processing, and biology, and its public updates name researchers working on marine-mammal detection and cross-habitat generalization. This is a sensible founder-market fit for a company translating passive-acoustic research into an operational product. At the same time, the public record does not establish a full executive roster, exact founder titles, headcount beyond a 2-10 employee range, prior company exits, patent inventorship, or dedicated defense-procurement expertise. The team should therefore score as technically promising but thinly evidenced, with a likely dependence on the continuing relationship between the commercial spinout and its nonprofit research base.
+
+**Competitive dynamics.** AudiSea competes with several different categories rather than one direct peer. Established underwater-security suppliers such as DSIT Solutions offer diver-detection sonar and coastal or offshore protection systems backed by long procurement histories. Thales and Kongsberg Discovery provide sonar, maritime sensing, and mission systems at much greater scale, while Sonardyne supplies acoustic and subsea instrumentation used by defense, energy, and research customers. Ocean Infinity and other marine-robotics operators compete through inspection services that pair autonomous or remotely operated vehicles with data processing. Ecodetect is both a partner and an adjacent competitor because its marine-vision platform addresses environmental monitoring and infrastructure compliance from the imaging side. AudiSea's plausible differentiation is the integration of passive acoustics, vision, automated environmental analysis, and a human review layer into a single service designed to reduce project timelines and monitoring costs. That position could be valuable where operators need biological and operational context together, but it is not yet a demonstrated moat. Durable advantage would require superior cross-site generalization, low false-alert rates, validated sensor fusion, a trusted compliance workflow, and enough historical data to make the system better with every deployment.
+
+**Defense, security, and resilience dual-use relevance.** AudiSea meets the dual-use threshold because the same core technology is explicitly offered for commercial offshore operations and defense-related subsea monitoring. Underwater infrastructure is a strategic attack surface: ports, energy platforms, subsea cables, pipelines, naval facilities, and coastal approaches can be disrupted by divers, unmanned underwater vehicles, anchors, or unexplained vessel activity, while ordinary industrial noise and marine life create a difficult detection environment. A multi-sensor system that learns local acoustic conditions, isolates signals, cross-checks them against visual observations, and keeps a human reviewer in the loop could support persistent monitoring of critical assets, cue inspections, and help distinguish an environmental event from an operational anomaly. The environmental side is not a cosmetic commercial wrapper. Marine-mammal detection, noise-threshold monitoring, and regulator-ready reporting create the initial deployment opportunities and generate data in the same physically difficult domains where security operators need awareness. AudiSea's naval-officer background and the one-pager's explicit defense positioning reinforce the transfer path. Calibration is essential: there is no public evidence of a fielded military system, classified deployment, defense contract, anti-diver capability, underwater-threat classification benchmark, or cyber-secure deployment architecture. The dual-use flag reflects a credible technology and mission overlap, not realized defense adoption.
+
+**Growth stage, trajectory, and key diligence risks.** AudiSea is early-stage: founded in 2025, operating with a 2-10 employee public range, emerging from a nonprofit research lineage, and still disclosing more about capability and partnerships than about commercial metrics. The upside case is that subsea monitoring becomes a software-defined, continuously updated intelligence service rather than a collection of one-off surveys and specialist reports. EchoSight can be a useful first product because it joins two complementary sensing modalities and addresses a clear offshore permitting and operations workflow. From there, the same data and models could support ports, subsea cables, desalination facilities, naval bases, and coastal resilience programs. The key risks are substantial: (1) the published accuracy and false-positive figures may not survive new sites, seasons, depths, sensors, and adversarial conditions; (2) offshore hardware installation, communications, maintenance, and power budgets may dominate the economics; (3) environmental permitting and defense procurement are both slow, evidence-heavy sales processes; (4) a small team may struggle to support multiple geographies and sensor configurations; (5) the commercial spinout's intellectual-property and data rights relative to Deep Voice require clarification; (6) incumbent sonar and marine-service providers can bundle sensing, installation, and compliance; and (7) public claims about NOAA framework integration, awards, field testing, and defense readiness need documentary validation. The next milestones that matter are a named paid deployment, independent field metrics, repeatable integration with certified subsea hardware, disclosed financing, and evidence that security customers value the same alerts that environmental customers already pay to receive.
+"""
+logo = "Unknown"
+website = "https://audiseai.com"
+sector = "Subsea Intelligence, Marine Sensing, and Offshore Infrastructure Monitoring"
+founded = "2025"
+headquarters = "Tel Aviv, Israel"
+employees = "2-10"
+funding_stage = "Unknown"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "AudiSea's core multi-sensor capability is credibly dual-use across commercial offshore operations and defense or resilience missions. (1) Commercially, acoustic and visual AI can monitor marine mammals, underwater noise, vessels, and environmental conditions for offshore wind, tidal, oil-and-gas, port, and subsea-construction operators. (2) Strategically, the same ability to maintain a persistent, contextual picture of underwater activity can support protection of ports, shorelines, subsea cables, pipelines, energy facilities, and naval or government sites. (3) AudiSea's public materials explicitly name defense alongside offshore O&M and environmental operations, while the EchoSight partnership combines sound and vision for marine infrastructure monitoring. (4) The relationship to Deep Voice supplies relevant AI, acoustics, signal-processing, and biology expertise. The limitation is material: no fielded military system, classified deployment, defense contract, anti-diver benchmark, or security certification is publicly confirmed, so this is a credible transfer path rather than demonstrated defense traction."
+key_technologies = [
+  "Passive underwater acoustic sensing and marine-sound classification",
+  "Multimodal fusion of underwater audio with computer-vision detections",
+  "Deep-learning detection of marine mammals, vessels, and anomalous acoustic events",
+  "Noise-source separation and adaptive learning across new marine environments",
+  "Continuous remote monitoring with human-in-the-loop alert review",
+  "Subsea digital-twin and regulator-ready environmental reporting workflows"
+]
+use_cases = [
+  "Continuous monitoring around offshore wind and tidal-energy construction sites",
+  "Remote inspection and anomaly detection for subsea energy and industrial assets",
+  "Marine-mammal detection and vessel-strike avoidance for maritime operators",
+  "Underwater noise-threshold monitoring for environmental-impact and permitting compliance",
+  "Persistent protection and situational awareness for ports, shorelines, and coastal infrastructure",
+  "Early-warning support for subsea cables, pipelines, and offshore platforms",
+  "Defense and government monitoring of underwater activity around sensitive sites"
+]
+investible = true
+investment_rationale = "AudiSea is a high-upside, high-uncertainty strategic-monitoring candidate rather than a validated commercial investment case. (1) The company addresses a real sensing gap in offshore infrastructure, where acoustic and visual data are fragmented and manual review delays decisions. (2) The technical lineage is credible: AudiSea is described as a Deep Voice spinout, and Deep Voice publicly demonstrates expertise in AI, acoustics, signal processing, biology, and cross-habitat marine-mammal detection. (3) The explicit defense and strategic-asset positioning gives the platform relevance to subsea resilience, while environmental and offshore O&M use cases provide a less procurement-constrained commercial wedge. (4) EchoSight, developed with ecodetect, is an evidence-backed partnership that tests whether AudiSea's acoustic intelligence can be integrated into a broader operational product. Offsetting risks are severe: no disclosed financing, revenue, paying customer, patent portfolio, certification, independent benchmark, or military deployment; a very small public team; potentially difficult hardware and data-rights economics; and competition from sonar incumbents and marine-service companies. This is a legacy priority signal for diligence and ecosystem tracking, not an investment recommendation."
+strategic_value = "AudiSea's strategic value sits in subsea awareness and maritime infrastructure resilience. (1) Ports, offshore energy facilities, pipelines, cables, and naval approaches are difficult to monitor continuously because underwater environments are opaque, noisy, and expensive to inspect. (2) A software layer that fuses sound and vision could improve persistence and reduce the burden on scarce acoustic specialists, while environmental monitoring creates a commercially legitimate route to collect data in the same operating environments. (3) Israeli naval and marine-AI heritage, combined with Deep Voice's research network, aligns with Claw & Talon's interest in sensing and allied technology. (4) The capability could support government, energy, and security operators without requiring the company to begin as a weapons supplier. Its present strategic value remains prospective because the public record does not prove classified deployment, threat discrimination, cyber hardening, sensor ownership, or procurement access."
+public_sources = [
+  { label = "AudiSea LinkedIn company profile", url = "https://il.linkedin.com/company/audisea-ai", description = "Company identity, Israel location, products, public team, and current activity." },
+  { label = "AudiSea product brief", url = "https://planetech.themarketsquare.org/wp-content/uploads/sites/2/2025/12/AudiSea-One-pager.pdf", description = "Company product, use cases and performance assertions." },
+  { label = "Paid Port of Hamburg pilot report", url = "https://techtime.co.il/2026/09/08/audisea/", description = "Hebrew reporting on the invited paid pilot, founding team, and Israeli incorporation." },
+  { label = "Maine offshore wind monitoring procurement evaluation", url = "https://www.maine.gov/dafs/bbm/procurementservices/sites/maine.gov.dafs.bbm.procurementservices/files/rfps/RFA%20202507101%20Selection%20Package_FINAL.pdf", description = "State procurement evaluation containing AudiSea's application descriptions and evaluation notes." },
+  { label = "AudiSea and ecodetect EchoSight announcement", url = "https://www.linkedin.com/posts/ecodetectuk_were-excited-to-announce-our-partnership-activity-7414267091375050752-3lSH", description = "Partner announcement of the integrated sound and vision service." },
+  { label = "Ecodetect company overview", url = "https://www.ecodetect.co.uk/about", description = "Partner product, services and marine-monitoring context." },
+  { label = "Starburst ASTRA Cohort 8 announcement", url = "https://kr.linkedin.com/company/starburst-community", description = "External program announcement listing AudiSea in the ASTRA Cohort 8." }
+]
+potential_score = 68.0
+technology_score = 73.0
+market_score = 57.0
+team_score = 62.0
+dual_use_score = 79.0
+strategic_alignment_score = 83.0
+stage = "early"
+stage_rationale = "AudiSea is presented as a 2025-founded private startup with a 2-10 employee range, a Deep Voice research spinout identity, an integrated partner product called EchoSight, and technical claims supported mainly by company materials and ecosystem recognition. It has more than a paper concept because the public brief reports field testing across five continents and the ecodetect collaboration demonstrates a concrete integration path. It remains early because no priced financing, revenue, named paying customer, production deployment, independent benchmark, or defense contract is publicly disclosed, and the company has not shown that its research capability converts into a repeatable offshore service."
+competitors = [
+  "DSIT Solutions (Israeli underwater-security incumbent offering diver-detection sonar and critical-site protection)",
+  "Thales (large defense and maritime-sensing prime with sonar, coastal surveillance, and mission systems)",
+  "Kongsberg Discovery (commercial and defense-grade sonar, subsea sensing, and maritime monitoring systems)",
+  "Sonardyne (established acoustic and subsea instrumentation supplier for defense, energy, and research)",
+  "Ocean Infinity (marine robotics and inspection operator combining autonomous vehicles with subsea data services)",
+  "Ecodetect (marine-vision and environmental-monitoring platform, partner and adjacent competitor)",
+  "Specialist hydroacoustic and environmental-survey contractors (manual and instrument-led monitoring baseline AudiSea must replace)"
+]
+competitive_edge = "AudiSea's potential edge is the combination of acoustic intelligence, visual context, and environmental workflow in one subsea service. (1) Sound-plus-vision fusion can reduce the ambiguity of single-modality monitoring, especially where underwater objects are visually obscured or acoustic signals are confounded by vessel and machinery noise. (2) The stated ability to learn new environments, separate background sound, and train for new sound classes supports adaptation across sites rather than a fixed species-only classifier. (3) A human-in-the-loop design and regulator-ready reporting connect model output to decisions, permits, and operational records instead of leaving customers with raw alerts. (4) The Deep Voice lineage offers relevant data, research, and marine-acoustics expertise, while the ecodetect partnership provides a plausible route to integrated offshore deployments. The moat is not established: sonar primes own hardware and procurement relationships, marine-service companies own field operations, and the public metrics are not independently benchmarked. Defensibility will depend on cross-site generalization, verified low false-alert rates, proprietary labeled soundscapes, installation economics, customer workflow integration, and evidence that the platform improves decisions rather than merely automating classification."
+risk_factors = [
+  "Company-reported accuracy, false-positive, field-testing, NOAA-framework, and award claims require independent documentary and technical verification",
+  "No public financing, revenue, named paying customer, contract value, production deployment, patent portfolio, or security certification",
+  "Underwater sensing hardware, power, communications, installation, maintenance, and environmental conditions may dominate software economics",
+  "Small public team and dependence on the Deep Voice nonprofit spinout create execution, staffing, intellectual-property, and data-rights questions",
+  "Long environmental-permitting and defense-procurement cycles can delay conversion from partnership pilots to repeatable revenue",
+  "Incumbent sonar suppliers, marine-service contractors, and integrated defense primes can bundle hardware, field support, and analytics",
+  "No public evidence yet of classified deployment, anti-diver or hostile-UUV detection, cyber-secure architecture, or military customer validation"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "AudiSea merits a priority-monitoring flag because it occupies a strategically scarce layer: persistent, AI-assisted understanding of underwater environments around infrastructure that is difficult to inspect and easy to overlook. (1) Its public product is explicitly multimodal and aimed at offshore O&M, defense, and environmental operations, which gives the technology a credible commercial-to-security transfer path. (2) The Israeli base and reported naval background provide useful proximity to maritime-security problems, while the Deep Voice lineage contributes evidence of real acoustic-ML work rather than generic AI positioning. (3) EchoSight is a concrete partner integration with ecodetect, and the publicly reported field-testing and recognition claims are stronger than a pure stealth-company narrative. (4) Subsea cables, ports, energy facilities, and shorelines are increasingly important resilience assets, so even a small company that improves monitoring could become strategically relevant. Priority is capped by the absence of disclosed revenue, financing, paid deployments, independent metrics, patents, security accreditation, or defense contracts; the likely hardware and support burden; and the risk that incumbents absorb multimodal analytics into larger sonar and marine-service offerings. Milestones to track are an independently documented pilot, a named customer, production-ready sensor and data architecture, a financed scale-up, and first government or critical-infrastructure validation."
+crawled_at = "2026-09-02T09:39:02Z"
+updated_at = "2026-10-03T23:37:26Z"
+
+[intelligence]
+schema_version = 2
+investors = []
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+source_ids = ["audisea-linkedin", "techtime-pilot"]
+company_id = "il-audisea"
+legal_name = "AudiSea"
+aliases = ["Audisea", "AudiSea AI"]
+operating_status = "active"
+business_model = "B2B marine-technology company offering integrated subsea sensing, acoustic and visual analysis, and monitoring/reporting services to offshore infrastructure operators and environmental users. Pricing is described by the company as tailored to project needs."
+products = ["EchoSight integrated sound and vision analysis service", "Subsea intelligence and monitoring platform"]
+locations = ["Tel Aviv, Israel"]
+founded_on = "2025"
+
+[intelligence.funding ]
+status = "not_found"
+summary = "No public equity, convertible, debt, grant, or secondary financing event attributable to AudiSea was located in company, investor, government, filing, Hebrew and English media, and startup database searches through 2026-10-03. A public startup directory classifies it as pre-funding with amount undisclosed, which is consistent with no disclosed round but is not treated as proof of no financing. The paid Hamburg pilot is a commercial milestone, not funding."
+rounds = []
+history_status = "not_found"
+coverage_through = "2026-10-03"
+
+[intelligence.ownership ]
+status = "undisclosed"
+source_ids = ["audisea-linkedin", "techtime-pilot"]
+summary = "AudiSea describes itself as spun out of the NGO Deep Voice and as privately owned. No public cap table, shareholding percentages, parent ownership, or corporate transaction was identified. A Hebrew technology report says it incorporated in Israel in February 2026; the report does not provide a registry identifier."
+cap_table_status = "undisclosed"
+shareholders = []
+deals = []
+holdings = []
+
+[intelligence.israel_connection ]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "AudiSea is headquartered in Tel Aviv, Israel, and the publicly identified CEO and CTO are Israeli-based founders. A Hebrew technology report additionally says the company incorporated in Israel in February 2026; no registry identifier is supplied here."
+as_of = "2026-10-03"
+source_ids = ["audisea-linkedin", "techtime-pilot"]
+
+[[intelligence.people]]
+name = "Yair Yanovice"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "A Hebrew technology report identifies him as AudiSea co-founder and CEO and reports seven years of service as an Israeli Navy officer. AudiSea's public profile identifies him among its team."
+source_ids = ["techtime-pilot", "audisea-linkedin"]
+
+[[intelligence.people]]
+name = "Ori Roth"
+role = "Co-founder and CTO"
+is_founder = true
+current = true
+background = "A Hebrew technology report identifies him as AudiSea co-founder and CTO; the company profile lists him among its team."
+source_ids = ["techtime-pilot", "audisea-linkedin"]
+
+[[intelligence.traction]]
+kind = "product"
+date = "2026-01"
+description = "AudiSea and ecodetect publicly announced EchoSight, an integrated service combining marine sound AI and vision-based marine-object detection for long-term underwater monitoring. The announcement describes intended energy, defense, and environmental applications; it does not establish paying customers or production deployments."
+source_ids = ["echosight-partner", "audisea-linkedin"]
+
+[[intelligence.traction]]
+kind = "contract"
+date = "2026-09-08"
+description = "Techtime reported AudiSea was invited to conduct a paid pilot at the Port of Hamburg for critical-infrastructure protection, following Ashdod Port's Hamburg conference participation. The port-side LinkedIn announcement surfaced in search with matching details, but was not independently fetchable in this research session. Reported pilot scope, amount, schedule, duration, and configuration remain undisclosed; invitation is not evidence that the pilot has begun or completed."
+source_ids = ["techtime-pilot"]
+
+[[intelligence.traction]]
+kind = "other"
+date = "2026-10"
+description = "Starburst Community's public ASTRA Cohort 8 Demo Day announcement lists AudiSea, Yair Yanovice, Ori Roth, and Dr. Michael Faran among the participating teams. This establishes accelerator/program participation, not investment or customer traction."
+source_ids = ["starburst-astra"]
+
+[[intelligence.comparables]]
+name = "Ecodetect"
+website = "https://www.ecodetect.co.uk"
+rationale = "Marine monitoring provider and AudiSea's EchoSight integration partner; its website describes AI detection, marine engineering, hardware deployment, and regulatory reporting."
+differentiation = "Ecodetect emphasizes imaging, installed marine-grade camera systems, environmental monitoring and reporting; AudiSea contributes acoustic intelligence and subsea security positioning. The firms partner on EchoSight, so this is an adjacent collaborator and potential overlap rather than a clean head-to-head competitor."
+source_ids = ["ecodetect-about", "echosight-partner"]
+
+[[intelligence.research.sources]]
+id = "audisea-linkedin"
+url = "https://il.linkedin.com/company/audisea-ai"
+title = "Audisea company profile and updates"
+publisher = "LinkedIn / AudiSea"
+kind = "company"
+accessed_at = "2026-10-03T23:37:26Z"
+claims = ["AudiSea describes itself as spun out of NGO Deep Voice and provides subsea intelligence for offshore assets and shorelines.", "The profile lists Tel Aviv, Israel as headquarters, 2025 as founding year, private ownership, and a 2-10 employee range.", "The profile lists Ori Roth and Yair Yanovice among the team.", "AudiSea and ecodetect announced EchoSight, a sound and vision subsea monitoring service.", "AudiSea public updates describe attendance and business discussions at maritime events; these do not establish signed customer contracts."]
+
+[[intelligence.research.sources]]
+id = "audisea-brief"
+url = "https://planetech.themarketsquare.org/wp-content/uploads/sites/2/2025/12/AudiSea-One-pager.pdf"
+title = "AudiSea One-pager"
+publisher = "AudiSea / PLANETech"
+kind = "company"
+accessed_at = "2026-10-03T23:37:26Z"
+published_on = "2025-12"
+claims = ["The company brief describes a vision-plus-sound system for offshore operations and maintenance, defense, and environmental operations.", "The brief claims detection of 13 marine mammal species, 96% accuracy and 2% false positives, field tests on five continents, and 6,500 development hours; these remain company-reported claims.", "The company describes project-tailored pricing, continuous monitoring, environmental assessment outputs, and human review.", "The brief claims NOAA framework integration and awards; no separate verification of these claims was found in the sources used."]
+
+[[intelligence.research.sources]]
+id = "techtime-pilot"
+url = "https://techtime.co.il/2026/09/08/audisea/"
+title = "אודיסי תבצע פיילוט אבטחה בנמל המבורג"
+publisher = "Techtime"
+kind = "media"
+accessed_at = "2026-10-03T23:37:26Z"
+published_on = "2026-09-08"
+claims = ["Techtime reports AudiSea was invited to a paid pilot at the Port of Hamburg focused on critical-infrastructure protection.", "The article says pilot value, timing, duration, and configuration were not disclosed.", "The article identifies Yair Yanovice as co-founder and CEO, Ori Roth as co-founder and CTO, and reports Yanovice's seven years as an Israeli Navy officer.", "The article says AudiSea began operating in 2025 and incorporated in Israel in February 2026.", "The article says AudiSea operates within Ashdod Port's innovation program."]
+
+[[intelligence.research.sources]]
+id = "maine-eval"
+url = "https://www.maine.gov/dafs/bbm/procurementservices/sites/maine.gov.dafs.bbm.procurementservices/files/rfps/RFA%20202507101%20Selection%20Package_FINAL.pdf"
+title = "Maine BlueTech Innovation: Offshore Wind Monitoring and Testing, selection package"
+publisher = "State of Maine Department of Administrative and Financial Services"
+kind = "government"
+accessed_at = "2026-10-03T23:37:26Z"
+published_on = "2025-10-16"
+claims = ["The state evaluation records AudiSea's application for a Maine offshore wind monitoring RFA and describes its marine sound AI experience.", "The evaluation says the application did not address the small-business eligibility requirement and records an incomplete insurance certificate.", "Evaluators questioned whether a listed U.S. Navy project meant the Navy was a client; this source does not verify a Navy customer or contract.", "The evaluation describes Ecodetect and Environmental Projects Integration as proposed subcontractors for that application."]
+
+[[intelligence.research.sources]]
+id = "echosight-partner"
+url = "https://www.linkedin.com/posts/ecodetectuk_were-excited-to-announce-our-partnership-activity-7414267091375050752-3lSH"
+title = "AudiSea Partnership for Marine Wildlife Detection"
+publisher = "ecodetect on LinkedIn"
+kind = "other"
+accessed_at = "2026-10-03T23:37:26Z"
+claims = ["Ecodetect announced a partnership with AudiSea for integrated acoustic and imaging processing for marine wildlife detection and alerting.", "The companies describe EchoSight as a long-term integrated sound and vision platform for energy, defense, and environmental sectors."]
+
+[[intelligence.research.sources]]
+id = "ecodetect-about"
+url = "https://www.ecodetect.co.uk/about"
+title = "Ecodetect | AI-Driven Marine Monitoring & Environmental Solutions"
+publisher = "Ecodetect"
+kind = "company"
+accessed_at = "2026-10-03T23:37:26Z"
+claims = ["Ecodetect describes AI-based marine monitoring, camera systems, installation, analytics, maintenance and compliance reporting.", "Ecodetect lists offshore renewable and marine infrastructure projects as target settings."]
+
+[[intelligence.research.sources]]
+id = "starburst-astra"
+url = "https://kr.linkedin.com/company/starburst-community"
+title = "Starburst Community updates: ASTRA Cohort 8 Demo Day"
+publisher = "Starburst Community"
+kind = "other"
+accessed_at = "2026-10-03T23:37:26Z"
+claims = ["Starburst's ASTRA Cohort 8 Demo Day post lists AudiSea and names Yair Yanovice, Ori Roth, and Dr. Michael Faran in its team listing."]
+
+[intelligence.research]
+researched_at = "2026-10-03T23:37:26Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["AudiSea official company identity headquarters founded products", "AudiSea OR Audisea funding raised seed Series A investors valuation", "AudiSea founder CEO CTO team leadership", "AudiSea acquired ownership parent company incorporation Israel", "AudiSea revenue customers paid pilot Port of Hamburg contract", "AudiSea patents intellectual property WIPO USPTO", "AudiSea competitors subsea intelligence underwater acoustic monitoring", "AudiSea defense security dual use maritime infrastructure", "אודיסי AudiSea מימון משקיעים גיוס", "AudiSea Deep Voice ecodetect EchoSight", "AudiSea Maine BlueTech RFA evaluation"]
+gaps = ["investors: No confirmed equity investors or named financing participants were found; Ashdod Port ecosystem access is not classified as investment.", "financials: No dated revenue, ARR, profitability, burn, runway, cash, or other company financial metrics were publicly disclosed.", "intellectual_property: No attributable patent filing, issued patent, or other public IP registration was identified; proprietary rights and data/model ownership remain diligence items.", "competition: A targeted competitor review identified categories and Ecodetect adjacency, but no comparable-company list with matched deployment and commercial metrics could be substantiated from the captured primary sources.", "funding: No attributable financing event or company-announced lifetime funding total was identified; private or unannounced financing cannot be excluded.", "ownership: Public cap table, ultimate beneficial owners, and any formal shareholding relationship with Deep Voice were not located.", "team: Public sources identify two founders and a further ASTRA-associated team member, but do not establish complete current leadership, employment status, or biographies for the full team.", "traction: Hamburg pilot is reported as invited and paid, with start/completion and actual payment unverified; no other named paid customers, contract values, or production fleet deployments were established.", "dual_use: Commercial/environmental plus defense applicability is presented by the company, but no operational defense deployment, defense contract, security accreditation, or independently validated threat-detection benchmark was found."]
+conflicts = ["Maine's 2025 state RFA scoring package includes AudiSea's application and records evaluation concerns, while later company/partner materials make broader validation claims. The package explicitly questions whether the U.S. Navy was a client; this dossier does not claim that it was."]
+diligence_questions = ["What is the signed scope, start date, duration, payment schedule, success criteria, and operational sponsor for the Port of Hamburg paid pilot, and has it started?", "What is the legal entity name and Israeli company number, and what are the cap table, beneficial owners, and any IP/data license or ownership arrangements with Deep Voice?", "Can AudiSea provide independently reproducible performance results by site, sensor, species/threat class, operating conditions, latency, and false-alert rate, including clear definitions behind the 96%/2% company figures?", "What are the first repeatable paid use cases, customer conversion, project economics, gross margins, and maintenance burden for installed sensing deployments?", "What data rights, model ownership, sensor supply, cyber hardening, and export-control constraints apply to security deployments?"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T23:37:26Z"
+next_review_on = "2027-01-03"
+queries = ["AudiSea official company identity headquarters founded products", "AudiSea Deep Voice ecodetect EchoSight"]
+source_ids = ["audisea-linkedin", "techtime-pilot", "audisea-brief"]
+summary = "Confirmed AudiSea as the Israeli subsea-intelligence startup; current product and legal/corporate identity are partially documented, with no sourced legal registry identifier."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "not_found"
+checked_at = "2026-10-03T23:37:26Z"
+next_review_on = "2027-01-03"
+queries = ["AudiSea funding raised seed Series A investors", "אודיסי AudiSea מימון גיוס", "AudiSea investors startup"]
+source_ids = ["audisea-linkedin", "techtime-pilot", "maine-eval"]
+summary = "No publicly disclosed round or company-stated total identified. Directory pre-funding classification is not treated as definitive proof of zero funding."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "not_found"
+checked_at = "2026-10-03T23:37:26Z"
+next_review_on = "2027-01-03"
+queries = ["AudiSea investors funding", "AudiSea Ashdod Port investment portfolio"]
+source_ids = ["audisea-linkedin", "techtime-pilot"]
+summary = "No equity investors publicly identified. Ashdod Port supports an innovation ecosystem, but investment was not evidenced."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T23:37:26Z"
+next_review_on = "2027-01-03"
+queries = ["AudiSea founder CEO CTO team Yair Yanovice Ori Roth", "AudiSea ASTRA Cohort 8 team"]
+source_ids = ["audisea-linkedin", "techtime-pilot", "starburst-astra"]
+summary = "Two founders and roles are reported by local media; company profile and Starburst post corroborate public association, but complete roster and third named individual role are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T23:37:26Z"
+next_review_on = "2027-01-03"
+queries = ["AudiSea ownership parent Deep Voice spinout", "AudiSea Israel incorporation February 2026 company number"]
+source_ids = ["audisea-linkedin", "techtime-pilot"]
+summary = "Private ownership is reported; no public cap table, beneficial ownership, parent ownership, or registry ID located."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T23:37:26Z"
+next_review_on = "2027-01-03"
+queries = ["AudiSea revenue ARR burn runway financials", "AudiSea paid pilot value Hamburg"]
+source_ids = ["techtime-pilot", "audisea-brief"]
+summary = "No financial metrics disclosed. Pilot is reported paid but no value or timing provided."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T23:37:26Z"
+next_review_on = "2027-01-03"
+queries = ["AudiSea customers contracts projects paid pilot Hamburg", "AudiSea EchoSight ecodetect partnership", "AudiSea Maine BlueTech RFA"]
+source_ids = ["techtime-pilot", "audisea-linkedin", "echosight-partner", "maine-eval"]
+summary = "Material new signal is the reported invitation to a paid Hamburg security pilot. EchoSight partnership and prior state grant application provide additional product and activity evidence, not proof of a completed deployment."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T23:37:26Z"
+next_review_on = "2027-01-03"
+queries = ["AudiSea patents WIPO USPTO intellectual property", "AudiSea Deep Voice model rights data IP"]
+source_ids = ["audisea-linkedin", "audisea-brief"]
+summary = "No attributable public patent or registration found; ownership and licensing should be clarified directly."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T23:37:26Z"
+next_review_on = "2027-01-03"
+queries = ["AudiSea competitors subsea acoustic intelligence underwater security monitoring", "Ecodetect marine monitoring AI offshore"]
+source_ids = ["ecodetect-about", "echosight-partner", "audisea-linkedin"]
+summary = "Ecodetect is an adjacent provider and integration partner; commercial and security competitors include established sonar vendors and environmental-monitoring contractors, but comparable operating metrics were not evidenced in the captured sources."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-03T23:37:26Z"
+next_review_on = "2027-01-03"
+queries = ["AudiSea defense security critical infrastructure underwater", "AudiSea paid pilot Port Hamburg critical infrastructure"]
+source_ids = ["audisea-linkedin", "audisea-brief", "techtime-pilot"]
+summary = "The company explicitly presents environmental/offshore and defense uses; the Hamburg paid pilot is reported in critical-infrastructure security. No defense customer or fielded military deployment is established."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "AudiSea's company profile describes it as a growing company and reports current commercial product activity; the 2026 report on a newly invited pilot also supports active operations."
+verified_at = "2026-10-03T23:37:26Z"
+source_ids = ["audisea-linkedin", "techtime-pilot"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "The company profile lists Tel Aviv, Israel headquarters, and Techtime reports Israeli incorporation and Israeli founders."
+verified_at = "2026-10-03T23:37:26Z"
+source_ids = ["audisea-linkedin", "techtime-pilot"]

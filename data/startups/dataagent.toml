@@ -1,0 +1,376 @@
+name = "DataAgent"
+description = "DataAgent is an Israeli infrastructure software startup building a remediation-first, AI-native SRE platform for Kubernetes and connected cloud systems. Its in-cluster agents are designed to detect faults, identify their cause, apply verified repairs, and reduce the telemetry-transfer burden of conventional observability."
+detailed_description = """
+**Product and the concrete problem it solves.** DataAgent is aimed at the operational gap between noticing that a production system is unhealthy and restoring that system before an engineer has spent hours reconstructing the incident. Modern cloud-native applications produce a large stream of logs, metrics, traces, events, topology changes, and configuration state. Conventional observability platforms centralize much of that telemetry, alert on symptoms, and hand the incident to an SRE or platform engineer for diagnosis and repair. That workflow is expensive in two ways: outages persist while the human investigation proceeds, and customers pay a second, often growing bill to move and retain large volumes of operational data outside their own environments. DataAgent's product thesis is remediation-first. Its platform is designed to run inside the customer's infrastructure, read the live state of Kubernetes and connected systems, identify a fault, and take a bounded corrective action such as restarting, scaling, or rolling back a workload. The intended result is not merely a better incident report; it is faster restoration with less manual intervention and less dependence on an external telemetry destination.
+
+**Core technology and how it works.** Public launch materials describe DataAgent as an AI-native autonomous SRE and a Digital Immune System for modern applications. The architecture is a lightweight overlay on top of cloud-native control planes and existing observability systems, rather than a mandatory replacement for every monitoring tool already deployed. Agents capture high-fidelity signals at the source, including live topology and configuration context, and use those signals to identify the likely cause of an incident. When the system has a sufficiently verified repair path, it can act directly in the cluster; more extensive root-cause analysis can happen after service restoration. The data-plane choice is central to the cost proposition: processing occurs in the customer's environment, relevant telemetry can be forwarded for deeper inspection only when required, and the platform does not need a continuously exported second copy of every log and metric. The company claims customers can reduce observability spend by up to 90 percent, but this is a company-reported ceiling, not an independently benchmarked result. The difficult technical questions are how the agents establish causal confidence, how they distinguish a safe rollback from a harmful one, how they learn service-specific invariants, and what approval, rollback, and audit controls protect production.
+
+**Market, customers, and go-to-market.** DataAgent sells into engineering, platform, DevOps, and site-reliability teams operating Kubernetes and related cloud infrastructure. Its initial buyer is likely an organization with meaningful production complexity, high telemetry volume, and enough service criticality for minutes of downtime to matter, but without the staff to investigate every alert manually. The company is targeting North American customer adoption while maintaining operations in Israel and the United States, and it is recruiting additional go-to-market staff in both markets. This suggests a direct enterprise-software motion in which the first sale must clear a high trust bar: a customer is being asked to place an agent close to its production control plane and permit automated changes. The commercial wedge can be attractive because the platform may coexist with incumbent observability tools and begin with a narrow set of remediation actions, allowing a buyer to measure mean-time-to-resolution and telemetry-cost improvement without a wholesale monitoring migration. Public sources do not identify paying customers, contract values, recurring revenue, retention, or vertical concentration. The strongest near-term routes are likely cloud-native enterprises, digital services, regulated operators with strict data-boundary requirements, and platform teams that already feel the operational and financial pressure of high-cardinality telemetry.
+
+**Traction, funding, and third-party validation.** DataAgent emerged from stealth on September 1, 2026 with a reported $10 million pre-seed round led by MizMaa Ventures and Alicorn Venture Partners. The capital is intended to bring the remediation-first platform to market and accelerate adoption in North America. CTech and SiliconANGLE independently describe the same launch, the Tel Aviv base, the fifteen-person team, the Kubernetes focus, and the founders' prior work at Cloudify, a cloud-orchestration company acquired by Dell in 2023. These are useful corroborating signals for a company that is only months old, and the size of the round is notable for a pre-seed infrastructure startup. The evidence remains early. There is no publicly disclosed production customer, independent performance benchmark, named design partner, audited cost reduction, uptime improvement, patent portfolio, or completed security certification in the sources reviewed. The company website is currently a concise launch and waitlist page rather than a technical documentation portal. Accordingly, the funding should be read as validation of the team, problem selection, and early architecture, not as proof of product-market fit. A serious diligence process should request controlled incident records, false-remediation and rollback rates, customer permissions, mean-time-to-resolution distributions, telemetry-cost baselines, and evidence that fixes work across more than a curated Kubernetes configuration.
+
+**Founders and team background.** DataAgent was founded in January 2026 by Ishay Yaari, its chief executive, and Nati Shalom, its chief technology officer. The public record identifies both as former Cloudify colleagues, which is relevant founder-market fit: Cloudify operated in cloud orchestration, where deployment state, infrastructure automation, and production coordination are core engineering problems. Cloudify's acquisition by Dell gives the pair a credible prior company-building and enterprise-infrastructure reference, although the public launch coverage does not provide a detailed account of their individual roles, the size of their prior teams, or the precise technical assets transferred in that transaction. DataAgent reported a fifteen-person team at launch and was recruiting for go-to-market roles in Israel and the United States. That is a reasonable starting organization for a focused infrastructure platform, but it also makes key-person and bandwidth risk material. The company needs simultaneous depth in Kubernetes control-plane behavior, distributed-systems reliability, AI-agent safety, enterprise security, customer success, and sales to technical buyers. No broader leadership roster, advisory board, employee breakdown, or headcount trend is publicly disclosed, so the team score reflects a strong founding pair and a relevant prior exit while reserving judgment on the organization's ability to support high-assurance production deployments at scale.
+
+**Competitive dynamics.** DataAgent competes against multiple layers of established software rather than one direct category. Datadog, Dynatrace, New Relic, and Splunk provide broad observability, alerting, topology, and incident-analysis platforms with deep installed bases. PagerDuty and incident-management vendors automate escalation and response workflows but generally leave the final diagnosis and production change to humans or separate automation. Shoreline.io is a closer conceptual competitor because it applies autonomous remediation to infrastructure, while Komodor and similar Kubernetes specialists compete for the platform-engineering workflow and operational budget. Customers can also build internal controllers, runbooks, Kubernetes operators, admission policies, and GitOps rollback automation, making internal engineering time an important substitute. DataAgent's proposed differentiation is the combination of in-cluster execution, remediation before exhaustive diagnosis, source-local signal processing, and a cost model that does not depend on ingesting every event into a vendor cloud. Those are coherent advantages, but they are not yet a moat. Incumbents possess data, integrations, trust, and distribution; open-source projects can cover predictable failure modes; and foundation-model improvements can be incorporated by every major observability vendor. The decisive evidence will be safe autonomy in messy, multi-service environments and measurable improvement over existing runbooks, not the novelty of an AI label.
+
+**Defense, security, and resilience relevance.** DataAgent's core product is commercial infrastructure software, but its dual-use case is credible through cyber and mission resilience. Government agencies, defense contractors, hospitals, financial networks, utilities, and communications operators all depend on cloud-native services that must remain available during faults, attacks, capacity shocks, and degraded operating conditions. A local agent that can observe service topology, recognize a known failure pattern, and execute a constrained recovery action could reduce outage duration when a centralized observability service is unreachable, when sensitive telemetry cannot leave a sovereign environment, or when a small operations team is overwhelmed. The in-cluster design also has a security benefit if implemented with least privilege, local retention, signed policies, human approval thresholds, and tamper-evident action logs. These are application-level resilience arguments, not evidence of military deployment. DataAgent has not publicly announced a defense customer, government program, classified environment, cyber incident response contract, or authorization such as FedRAMP. It also has not shown operation under adversarial manipulation, network partition, compromised telemetry, or resource exhaustion. The strategic relevance therefore comes from improving the recoverability and sovereignty of critical software infrastructure, with a plausible path into defense-industrial and public-sector environments if the company can meet their accreditation, isolation, supply-chain, and change-control requirements.
+
+**Growth stage, trajectory, and diligence risks.** DataAgent is early stage by every operating measure that is publicly available: it was founded in January 2026, emerged from stealth on September 1, 2026, raised a single disclosed $10 million pre-seed round, and reported fifteen employees. Its trajectory depends on turning a compelling infrastructure thesis into a product that customers trust to change production systems. The principal diligence risks are: (1) **autonomy safety**, because a mistaken restart, scale action, or rollback can turn a recoverable incident into a larger outage; (2) **causal inference**, because noisy distributed systems often have several simultaneous faults and a plausible symptom is not necessarily the root cause; (3) **agent security**, because an attacker who manipulates telemetry, policies, or the agent's permissions could influence recovery behavior; (4) **Kubernetes and integration breadth**, since real estates combine managed clusters, legacy services, databases, service meshes, clouds, and proprietary control planes; (5) **commercial proof**, because no named customer, revenue, retention, or independent benchmark is public; (6) **incumbent response**, as observability vendors and cloud providers can add remediation agents to existing contracts; and (7) **capital and hiring**, because enterprise trust, safety engineering, and North American sales all require investment before large contracts are likely. The early opportunity is strategically interesting and technically concrete, but progression to mid-stage should require referenceable production deployments, measured MTTR and cost outcomes, secure-action controls, and evidence of repeatable sales.
+"""
+logo = "Unknown"
+website = "https://www.data-agent.co/"
+sector = "AI Infrastructure / Autonomous Site Reliability Engineering"
+founded = "2026"
+headquarters = "Tel Aviv, Israel"
+employees = "15 reported at launch; current count not publicly updated"
+funding_stage = "Pre-seed; $10 million announced September 1, 2026"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "DataAgent's in-cluster infrastructure-reliability technology has credible commercial and security-resilience applicability. Automated fault detection, bounded remediation, local telemetry processing, and recoverability controls can support ordinary cloud operators as well as government, defense-industrial, healthcare, communications, and utility environments that require continuity and strict data boundaries. The public record does not show a defense customer, government contract, classified deployment, security certification, or operation under adversarial conditions. The dual-use case is therefore a substantive cyber-resilience pathway, not demonstrated military traction."
+key_technologies = [
+  "In-cluster AI agents for Kubernetes fault detection and remediation",
+  "Live topology and configuration-state analysis inside customer infrastructure",
+  "Verified automated recovery actions including workload restart, scaling, and rollback",
+  "Source-local high-fidelity signal capture and selective telemetry forwarding",
+  "Remediation-first autonomous SRE workflow for cloud-native applications",
+  "Observability-cost reduction through reduced external log and metric transfer",
+  "Production action controls, policy boundaries, and recovery auditability"
+]
+use_cases = [
+  "Autonomous recovery of failed Kubernetes workloads and services",
+  "Fast remediation of deployment regressions through controlled rollback",
+  "Elastic scaling during capacity spikes without waiting for manual diagnosis",
+  "Reducing observability egress and retention costs in high-volume cloud estates",
+  "Resilient operation of regulated systems where telemetry must remain in-country or on-premises",
+  "Incident recovery for defense-contractor and public-sector cloud infrastructure",
+  "Continuity support for healthcare, financial, communications, and utility platforms",
+  "Human-supervised remediation runbooks for multi-service production environments"
+]
+investible = true
+investment_rationale = "DataAgent is a high-signal but very early strategic-priority candidate. (1) It targets a concrete infrastructure bottleneck: conventional observability can be expensive, telemetry-heavy, and slow to restore service because diagnosis precedes action. (2) Its architecture is specific: agents operate in the customer's Kubernetes environment, read live topology and configuration, and apply bounded repairs rather than only generating alerts. (3) The founding pair brings relevant cloud-orchestration experience from Cloudify and a prior Dell acquisition, while a $10M pre-seed led by MizMaa Ventures and Alicorn provides meaningful early validation. (4) The same local, remediation-first design has credible cyber-resilience value for regulated and mission-support systems. Counterweights are material: no named production customer, revenue, retention, independent benchmark, certification, or public defense program; high safety and permission requirements; intense competition from observability platforms, autonomous-remediation vendors, cloud providers, and internal SRE teams; and the need to scale a fifteen-person organization across product safety and North American sales. This is a legacy priority signal and strategic diligence assessment, not an investment recommendation."
+strategic_value = "DataAgent could strengthen the reliability and sovereignty of software infrastructure by restoring service from inside the environment where the fault occurs and by reducing the need to export all operational telemetry. That matters to critical services because outage duration, data-boundary restrictions, and scarce SRE capacity are resilience constraints rather than merely IT inconveniences. The strategic value is highest if the platform can operate with least privilege, signed remediation policies, human escalation thresholds, immutable action logs, and safe behavior during network partition or telemetry manipulation. An allied public-sector or defense-industrial deployment could make the capability materially more important, but no such deployment is public. For now, the defensible assessment is an Israeli AI-infrastructure startup with a credible cyber-resilience pathway and an unproven strategic operating record."
+public_sources = [
+  { label = "Official DataAgent product site", url = "https://data-agent.co/", description = "Current product description, features, AWS integrations, staged remediation and free/paid positioning." },
+  { label = "DataAgent official launch announcement", url = "https://data-agent.co/news/prnewswire/", description = "Company announcement of September 1 launch, closed $10 million pre-seed led by MizMaa Ventures and Alicorn Venture Partners." },
+  { label = "DataAgent About and team", url = "https://data-agent.co/about/", description = "Official company positioning and named leadership/team roles." },
+  { label = "CTech / Calcalist launch coverage", url = "https://www.calcalistech.com/ctechnews/article/h1vdhnvoge", description = "Independent reporting on Tel Aviv location, funding, leadership, headcount, product and North America plans." },
+  { label = "SiliconANGLE launch coverage", url = "https://siliconangle.com/2026/09/01/dataagent-raises-10m-to-let-ai-fix-production-faults-inside-kubernetes-clusters/", description = "Independent product and funding coverage; reports open source standalone agent and paid SaaS fleet management/orchestration tier." }
+]
+potential_score = 80.0
+technology_score = 82.0
+market_score = 80.0
+team_score = 83.0
+dual_use_score = 77.0
+strategic_alignment_score = 84.0
+stage = "early"
+stage_rationale = "DataAgent was founded in January 2026, emerged from stealth on September 1, 2026, raised one disclosed $10M pre-seed round, and reported a fifteen-person team. Its launch materials describe a concrete Kubernetes and infrastructure product, but no named production customer, revenue, retention, independent benchmark, or certification is public. Early is therefore the defensible classification: the company has moved beyond an unarticulated concept, yet must still prove safe autonomy, repeatable deployment, and commercial adoption."
+competitors = [
+  "Datadog (broad cloud observability, telemetry, and incident-management platform)",
+  "Dynatrace (AI-assisted observability and application-performance operations)",
+  "New Relic (cloud monitoring and incident-analysis workflows)",
+  "Shoreline.io (autonomous infrastructure remediation and reliability automation)",
+  "Komodor (Kubernetes troubleshooting and platform-operations tooling)",
+  "PagerDuty (incident response, escalation, and event-driven automation)",
+  "Internal SRE runbooks and Kubernetes operators (customer-built remediation substitute)"
+]
+competitive_edge = "DataAgent's proposed edge is the combination of remediation-first sequencing, source-local execution, and a cost model that can coexist with existing observability rather than requiring a monitoring replacement. The platform aims to use live topology and configuration context to select a verified recovery action, restore service, and then support deeper analysis, which attacks both outage duration and telemetry-transfer cost. A durable advantage would require accumulated service-specific remediation knowledge, safe action policies, reliable integrations, and evidence that the system performs better than runbooks or incumbent automation in messy multi-service environments. The current public record establishes a coherent design thesis, not a proven moat; Datadog, Dynatrace, cloud providers, open-source operators, and internal platform teams can all add overlapping remediation capability."
+risk_factors = [
+  "Autonomous-action risk: an incorrect restart, scale decision, or rollback could worsen an outage or corrupt service state",
+  "Causal-inference risk: distributed systems can exhibit multiple simultaneous faults, making symptom-based repair unsafe",
+  "Agent-security risk: manipulated telemetry, policies, or permissions could induce harmful recovery behavior",
+  "Integration risk across managed Kubernetes, legacy services, databases, service meshes, clouds, and proprietary control planes",
+  "Commercial-evidence gap: no named production customer, revenue, retention, independent benchmark, or certification is public",
+  "Incumbent and open-source competition from observability vendors, cloud providers, runbooks, operators, and internal SRE teams",
+  "Capital and hiring risk as a fifteen-person company builds safety engineering, enterprise support, and North American go-to-market"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "DataAgent merits active monitoring because it combines a specific AI-infrastructure product, a relevant cloud-orchestration founding history, a substantial pre-seed round for its age, and a credible cyber-resilience pathway. The platform's local execution and remediation-first design align with strategic concerns around service continuity, telemetry sovereignty, and scarce operations talent. Priority is capped by the company's September 2026 launch timing, absence of named customers or independent performance evidence, high consequences of unsafe automation, and strong incumbent competition. The next signals to track are referenceable production deployments, measured MTTR and observability-cost outcomes, security controls and certifications, follow-on financing, and any adoption in regulated, public-sector, defense-industrial, or other critical-infrastructure environments."
+crawled_at = "2026-09-01T14:53:27Z"
+updated_at = "2026-10-05T04:22:17Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Ishay Yaari", role = "Co-founder and CEO", is_founder = true, current = true, background = "Previously worked at Cloudify in cloud orchestration; Cloudify was acquired by Dell in 2023.", source_ids = ["ctech_launch", "siliconangle_launch", "about_team"] },
+  { name = "Nati Shalom", role = "Co-founder and CTO", is_founder = true, current = true, background = "Previously worked with Yaari at Cloudify; infrastructure automation and distributed systems background is described by the company.", source_ids = ["ctech_launch", "siliconangle_launch", "about_team"] },
+  { name = "Alex Kul", role = "VP R&D", is_founder = false, current = true, source_ids = ["about_team"] },
+  { name = "Ohad Shushan", role = "GTM", is_founder = false, current = true, source_ids = ["about_team"] }
+]
+investors = [
+  { name = "MizMaa Ventures", investor_type = "vc", website = "https://mizmaa.com/", round_ids = ["preseed-2026"], relationship = "current", source_ids = ["launch", "ctech_launch", "siliconangle_launch"] },
+  { name = "Alicorn Venture Partners", investor_type = "vc", website = "https://alicorn.vc/", round_ids = ["preseed-2026"], relationship = "current", source_ids = ["launch", "ctech_launch", "siliconangle_launch"] }
+]
+financials = []
+traction = [
+  { kind = "product", description = "Official website presents a live product with deterministic circuit-breaker stabilization, background root-cause analysis, dry-run and gated remediation, topology discovery, integrations, and AWS-native capabilities. Company-described capabilities are not independent performance verification.", date = "2026-10-05", source_ids = ["official_home", "about_team"] },
+  { kind = "hiring", description = "At the September 2026 launch the company reported 15 employees and hiring additional go-to-market staff in Israel and the United States.", date = "2026-09-01", source_ids = ["ctech_launch"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Shoreline.io", website = "https://shoreline.io/", rationale = "Closest category comparison for infrastructure incident response and automated remediation.", differentiation = "DataAgent emphasizes stabilization before full root-cause analysis and an in-environment agent; independent comparative performance evidence is not public.", source_ids = ["siliconangle_launch"] },
+  { name = "Datadog", website = "https://www.datadoghq.com/", rationale = "Incumbent observability and incident platform that overlaps with DataAgent's operational budget and workflows.", differentiation = "DataAgent positions as a remediation layer that can coexist with observability rather than replace it.", source_ids = ["official_home", "siliconangle_launch"] },
+  { name = "Komodor", website = "https://komodor.com/", rationale = "Kubernetes operations and troubleshooting specialist competing for platform-team workflows.", differentiation = "DataAgent claims autonomous corrective action with a staged safety model; comparative evidence remains unavailable.", source_ids = ["official_home"] }
+]
+
+[intelligence.company]
+company_id = "dataagent"
+legal_name = "DataAgent Ltd."
+aliases = ["DataAgent"]
+operating_status = "active"
+business_model = "B2B infrastructure software; SiliconANGLE reports a free standalone agent and paid SaaS fleet-management and orchestration tier."
+products = ["Remediation-first autonomous SRE / Digital Immune System", "Standalone agent", "Fleet management and orchestration SaaS"]
+locations = ["Tel Aviv, Israel", "United States go-to-market hiring reported"]
+founded_on = "2026-01"
+source_ids = ["launch", "ctech_launch", "siliconangle_launch", "official_home"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One disclosed closed pre-seed equity round of $10 million, announced at launch on September 1, 2026. Both named lead investors appear in the company announcement and independent reporting. No valuation is publicly disclosed. Company-announced total is $10 million as of the announcement; no additional rounds found in searches through October 5, 2026."
+rounds = [
+  { id = "preseed-2026", round_type = "Pre-seed", instrument = "equity", status = "closed", announced_on = "2026-09-01", amount_status = "reported", amount = 10000000, amount_scope = "round", currency = "USD", lead_investors = ["MizMaa Ventures", "Alicorn Venture Partners"], participating_investors = ["MizMaa Ventures", "Alicorn Venture Partners"], source_ids = ["launch", "ctech_launch", "siliconangle_launch"] }
+]
+reported_total_raised = 10000000
+reported_total_currency = "USD"
+total_source_ids = ["launch", "ctech_launch", "siliconangle_launch"]
+total_as_of = "2026-09-01"
+total_scope = "Company-announced lifetime funding total at launch; matches disclosed pre-seed round and is not calculated by adding other financing types."
+history_status = "partial"
+coverage_through = "2026-10-05"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private-company cap table, founder percentages, investor ownership percentages, and securities terms are not publicly disclosed. No parent company, public ticker, acquisition, or ownership-change deal found."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["launch", "ctech_launch"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel"]
+summary = "Independent launch reporting identifies DataAgent as an Israeli startup based in Tel Aviv."
+as_of = "2026-10-05"
+source_ids = ["ctech_launch", "siliconangle_launch"]
+
+[intelligence.research]
+researched_at = "2026-10-05T04:22:17Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "DataAgent Israel data-agent.co 2026 funding $10 million MizMaa Alicorn official",
+  "site:data-agent.co DataAgent September 2026 team",
+  "DataAgent Ishay Yaari Nati Shalom Cloudify official funding investors",
+  "MizMaa Ventures DataAgent $10M September 2026",
+  "Alicorn Venture Partners DataAgent $10 million pre-seed 2026",
+  "DataAgent acquisition ownership funding 2026 customers patent",
+  "DataAgent autonomous SRE competitors Shoreline Datadog Kubernetes remediation",
+  "DataAgent defense government security deployment contract",
+  "DataAgent revenue ARR customers production deployments 2026",
+  "DataAgent patents WIPO USPTO Israel Patent Office"
+]
+gaps = [
+  "financials: no public revenue, ARR, profitability, cash, burn, or runway figures located; third-party database revenue fields were incomplete and not relied on.",
+  "traction: no named paying customers, production contracts, deployment counts, retention, or independent outcome benchmarks found; site product claims are company claims.",
+  "intellectual_property: no DataAgent-specific patent, patent application, or assigned IP record located in available public searches.",
+  "ownership: beneficial ownership, founder percentages, and investor cap-table positions are undisclosed.",
+  "team: official team page names several current staff but provides no complete employee roster, individual biographies, or independently verified current headcount beyond launch-time report.",
+  "dual_use: no public government, defense, classified, or critical-infrastructure customer/program evidence found; applicability remains a technical inference.",
+  "competition: no independent head-to-head benchmark or validated differentiation against named peers located."
+]
+conflicts = []
+diligence_questions = [
+  "Can the company provide referenceable production deployments and incident-level data showing intervention precision, rollback rate, MTTR change, and customer-approved autonomy boundaries?",
+  "What are the current paid customer count, ARR, renewal/retention profile, pricing model, and conversion from free standalone agent to paid fleet management?",
+  "What least-privilege permissions, signed policy controls, human-approval thresholds, audit logs, and fail-safe behavior limit blast radius under compromised telemetry or network partition?",
+  "What is the current headcount and leadership ownership across product security, customer success, and North American sales?",
+  "What IP is company-owned or licensed, and are there filed patent applications or freedom-to-operate reviews for remediation methods?"
+]
+
+[[intelligence.research.sources]]
+id = "official_home"
+url = "https://data-agent.co/"
+title = "DataAgent: Remediation-first incident response"
+publisher = "DataAgent"
+kind = "company"
+accessed_at = "2026-10-05T04:22:17Z"
+claims = ["The official product website describes staged stabilization, background root-cause analysis, dry-run and progressively earned autonomy.", "The company lists topology discovery, integrations and AWS-native capabilities."]
+
+[[intelligence.research.sources]]
+id = "about_team"
+url = "https://data-agent.co/about/"
+title = "About Us — DataAgent"
+publisher = "DataAgent"
+kind = "company"
+accessed_at = "2026-10-05T04:22:17Z"
+claims = ["The company identifies Ishay Yaari as co-founder and CEO and Nati Shalom as co-founder and CTO.", "The team page lists Alex Kul as VP R&D and additional R&D and GTM staff.", "The platform is described as operating in cloud-native control planes and integrating with existing observability systems."]
+
+[[intelligence.research.sources]]
+id = "launch"
+url = "https://data-agent.co/news/prnewswire/"
+title = "DataAgent Emerges from Stealth and Launches Remediation-First Platform with $10 Million Pre-Seed Funding"
+publisher = "DataAgent"
+kind = "company"
+published_on = "2026-09-01"
+accessed_at = "2026-10-05T04:22:17Z"
+claims = ["DataAgent announced launch and closing of a $10 million pre-seed round on September 1, 2026.", "The announcement names MizMaa Ventures and Alicorn Venture Partners as round leads.", "The company describes in-customer-infrastructure remediation and claims observability savings up to 90 percent."]
+
+[[intelligence.research.sources]]
+id = "ctech_launch"
+url = "https://www.calcalistech.com/ctechnews/article/h1vdhnvoge"
+title = "DataAgent emerges from stealth with $10 million pre-Seed to build self-healing infrastructure"
+publisher = "CTech / Calcalist"
+kind = "media"
+published_on = "2026-09-01"
+accessed_at = "2026-10-05T04:22:17Z"
+claims = ["Reports DataAgent as an Israeli startup based in Tel Aviv.", "Reports the $10 million pre-seed led by MizMaa Ventures and Alicorn Venture Partners.", "Names co-founders Ishay Yaari and Nati Shalom, reports prior shared Cloudify work and says DataAgent had 15 employees at launch.", "Describes the product's in-environment remediation approach and planned North American adoption."]
+
+[[intelligence.research.sources]]
+id = "siliconangle_launch"
+url = "https://siliconangle.com/2026/09/01/dataagent-raises-10m-to-let-ai-fix-production-faults-inside-kubernetes-clusters/"
+title = "DataAgent raises $10M to let AI fix production faults inside Kubernetes clusters"
+publisher = "SiliconANGLE"
+kind = "media"
+published_on = "2026-09-01"
+accessed_at = "2026-10-05T04:22:17Z"
+claims = ["Identifies Israeli DataAgent Ltd. and reports January 2026 founding by Ishay Yaari and Nati Shalom.", "Reports $10 million pre-seed and names MizMaa Ventures and Alicorn Venture Partners as leads.", "Reports free standalone open-source agent and paid SaaS fleet-management and orchestration tier.", "Reports Cloudify was acquired by Dell in 2023 and describes staged guardrails and customer-approved remediation."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-05T04:22:17Z"
+next_review_on = "2027-01-05"
+queries = ["DataAgent Israel data-agent.co 2026 funding $10 million MizMaa Alicorn official", "site:data-agent.co DataAgent September 2026 team"]
+source_ids = ["official_home", "about_team", "ctech_launch", "siliconangle_launch"]
+summary = "Official website and independent launch coverage identify the active Tel Aviv-based infrastructure software startup and its product."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-05T04:22:17Z"
+next_review_on = "2027-01-05"
+queries = ["DataAgent Israel data-agent.co 2026 funding $10 million MizMaa Alicorn official", "MizMaa Ventures DataAgent $10M September 2026", "Alicorn Venture Partners DataAgent $10 million pre-seed 2026"]
+source_ids = ["launch", "ctech_launch", "siliconangle_launch"]
+summary = "One closed $10 million pre-seed round announced September 1, with matching company and independent reports; no valuation disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-05T04:22:17Z"
+next_review_on = "2027-01-05"
+queries = ["MizMaa Ventures DataAgent $10M September 2026", "Alicorn Venture Partners DataAgent $10 million pre-seed 2026"]
+source_ids = ["launch", "ctech_launch", "siliconangle_launch"]
+summary = "Both lead investors named in company announcement and independently reported; other participants were not disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-05T04:22:17Z"
+next_review_on = "2027-01-05"
+queries = ["DataAgent Ishay Yaari Nati Shalom Cloudify official funding", "site:data-agent.co DataAgent team"]
+source_ids = ["about_team", "ctech_launch", "siliconangle_launch"]
+summary = "Founders and several current team members named on official team page; 15 staff was reported at launch, with current headcount not reverified."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T04:22:17Z"
+next_review_on = "2027-04-05"
+queries = ["DataAgent acquisition ownership funding 2026", "DataAgent Ltd ownership cap table shareholders"]
+source_ids = ["launch", "ctech_launch", "siliconangle_launch"]
+summary = "Private cap table and shareholder percentages not disclosed; no ownership transaction or parent company found."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "not_found"
+checked_at = "2026-10-05T04:22:17Z"
+next_review_on = "2027-04-05"
+queries = ["DataAgent revenue ARR customers production deployments 2026", "DataAgent financials revenue burn runway"]
+source_ids = ["launch", "ctech_launch", "siliconangle_launch"]
+summary = "No dated revenue, ARR, profitability, cash, burn, or runway disclosures found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-05T04:22:17Z"
+next_review_on = "2027-01-05"
+queries = ["DataAgent revenue ARR customers production deployments 2026", "DataAgent autonomous SRE product AWS integrations"]
+source_ids = ["official_home", "ctech_launch", "siliconangle_launch"]
+summary = "Official product page documents product capabilities and integrations; launch coverage records initial hiring and North America plan, but no paying customers or verified metrics."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-05T04:22:17Z"
+next_review_on = "2027-04-05"
+queries = ["DataAgent patents WIPO USPTO Israel Patent Office", "DataAgent Ltd patent autonomous remediation"]
+source_ids = ["official_home", "ctech_launch"]
+summary = "No company-specific patent or application located in public searches; proprietary software and trade-secret status are not established by these sources."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-05T04:22:17Z"
+next_review_on = "2027-01-05"
+queries = ["DataAgent autonomous SRE competitors Shoreline Datadog Kubernetes remediation"]
+source_ids = ["official_home", "siliconangle_launch"]
+summary = "Assessed overlapping observability and remediation categories; no independent head-to-head performance comparison found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T04:22:17Z"
+next_review_on = "2027-04-05"
+queries = ["DataAgent defense government security deployment contract", "DataAgent critical infrastructure public sector deployment"]
+source_ids = ["official_home", "ctech_launch"]
+summary = "No defense or public-sector deployment disclosed; resilience relevance is potential applicability, not reported traction."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Official website presents an active product, documentation, events and free trial; launch coverage confirms company launch."
+verified_at = "2026-10-05T04:22:17Z"
+source_ids = ["official_home", "ctech_launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "CTech identifies the company as Israeli and Tel Aviv-based; SiliconANGLE independently identifies it as an Israeli startup."
+verified_at = "2026-10-05T04:22:17Z"
+source_ids = ["ctech_launch", "siliconangle_launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Company announcement says it closed a $10 million pre-seed; independent CTech and SiliconANGLE report the same total."
+verified_at = "2026-10-05T04:22:17Z"
+source_ids = ["launch", "ctech_launch", "siliconangle_launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.preseed-2026.amount"
+support = "direct"
+summary = "The company announcement and independent CTech and SiliconANGLE coverage all state a $10 million pre-seed round."
+verified_at = "2026-10-05T04:22:17Z"
+source_ids = ["launch", "ctech_launch", "siliconangle_launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.preseed-2026.valuation"
+support = "direct"
+summary = "The cited funding announcements report round amount and investors but disclose no pre-money or post-money valuation; no valuation is entered."
+verified_at = "2026-10-05T04:22:17Z"
+source_ids = ["launch", "ctech_launch", "siliconangle_launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.preseed-2026.lead_investors"
+support = "direct"
+summary = "Company announcement and independent reporting name MizMaa Ventures and Alicorn Venture Partners as round leads."
+verified_at = "2026-10-05T04:22:17Z"
+source_ids = ["launch", "ctech_launch", "siliconangle_launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.preseed-2026.participating_investors"
+support = "direct"
+summary = "The same three launch sources name MizMaa Ventures and Alicorn Venture Partners as the round's leads and disclosed participants."
+verified_at = "2026-10-05T04:22:17Z"
+source_ids = ["launch", "ctech_launch", "siliconangle_launch"]

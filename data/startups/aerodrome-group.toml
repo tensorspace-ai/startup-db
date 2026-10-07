@@ -1,0 +1,474 @@
+name = "Aerodrome Group"
+description = "Aerodrome Group Ltd. is a TASE-listed Israeli unmanned-aircraft and defense technology company (ARDM; company no. 520037607) that pivoted in 2026 toward development, production and integration of military and civilian UAV systems. It reported NIS 9.73 million in FY2025 revenue and a NIS 9.219 million private share placement to EagleNXT in March 2026."
+detailed_description = """
+**Product and the concrete problem it solves.** Aerodrome Group Ltd. develops precision loitering munitions — small, expendable, one-way attack air systems that combine the persistence of a surveillance drone with the terminal effect of a guided weapon. Loitering munitions solve a specific tactical problem that has moved to the center of contemporary warfare: how to find, positively identify, and strike fleeting, mobile, or concealed targets (a launcher, a vehicle, a fire team, a boat) within seconds of detection, at low cost, without exposing an operator or committing an expensive missile from a distant platform. The system is launched into an area of interest, orbits or flies a search pattern while streaming imagery, waits for a valid target to appear, and then dives to strike with an onboard warhead — or, in "wave-off" designs, breaks off and recovers if no valid target is confirmed. Aerodrome's disclosed differentiation is not the airframe alone but the "target-discriminating technologies at the intersection of autonomy, precision strike, and next-generation aerial warfare," per the March 2026 announcement of its investment by EagleNXT (AgEagle Aerial Systems Inc.). In plain terms, the company positions its edge as the ability to help an unmanned system decide *what* it is looking at and *whether* to engage, which is the hardest and most consequential part of the loitering-munition problem.
+
+**Core technology and how it actually works.** The public record describes Aerodrome's core capability as "target discrimination and autonomous decision-support," intended to help unmanned systems identify and track specific targets while operating in contested environments. Functionally, this points to an onboard sensing-and-inference stack: an electro-optical/infrared seeker feeding computer-vision models that classify and track objects, distinguish a legitimate military target from clutter or non-combatants, and maintain lock through occlusion, evasive maneuvering, and degraded conditions. "Operating in contested environments" implies resilience to the electronic-warfare reality of modern battlefields — GPS jamming and spoofing, and radio-link disruption — which pushes intelligence onto the munition itself so it can prosecute a target even when the datalink to a human operator is degraded or severed. The genuinely difficult engineering lies in doing this at the size, weight, power, and cost budget of an attritable munition: running discrimination models on a low-cost edge processor, keeping latency low enough for terminal guidance, and holding false-positive rates low enough to be operationally and legally acceptable. None of Aerodrome's specific algorithms, sensors, warhead options, range, or endurance figures are publicly disclosed, so the depth of this stack is an unverified but plausibly central claim.
+
+**Market, customers, and go-to-market.** Loitering munitions are one of the fastest-growing segments of the defense market, their salience amplified by their decisive, heavily documented use in the wars in Ukraine and across the Middle East, where cheap precision strike has repeatedly offset expensive conventional platforms. Aerodrome's go-to-market is being shaped by its anchor relationship with EagleNXT: the March 6, 2026 agreement gives the U.S. company a reserved right to establish a U.S.-based joint venture with Aerodrome, subject to mutual agreement and regulatory approvals, explicitly aimed at serving U.S. and Canadian markets across defense, public safety, and commercial sectors. This is a coherent route for an Israeli munitions developer: the U.S. is the largest and most demanding buyer of loitering munitions (e.g., the Army's Switchblade programs), but foreign vendors typically need a domesticated manufacturing and compliance footprint to win contracts. Pairing Aerodrome's munition and autonomy IP with EagleNXT's Texas-based operations, ISR product lines (eBee VISION ISR, eBee TAC), and U.S. public-market access is a classic "technology-in, channel-out" structure.
+
+**Traction, funding, and third-party validation.** The principal validation on the public record is the EagleNXT strategic investment itself, announced March 6, 2026 by AgEagle Aerial Systems Inc. (dba EagleNXT), a company listed on the NYSE American under the ticker UAVS and headquartered in Allen, Texas. The financial terms were not disclosed. EagleNXT CEO Bill Irby framed the rationale directly: "Aerodrome Group's advanced work in autonomous loitering munitions is helping shape the reality of modern UAS tactics and precision operations." The deal is part of a visible pattern — EagleNXT also announced, weeks later, a $10 million investment and U.S. joint venture with Israeli counter-drone firm ThirdEye Systems — indicating a deliberate strategy of acquiring Israeli combat-proven autonomy and building U.S. joint ventures around it. For diligence purposes, however, the validation is thin: it rests on a single disclosed investor, undisclosed terms, and no independently verifiable customer contracts, fielded product names, or combat-use records. The coverage across Defense Post, DroneLife, EDR Magazine, and financial wires is real but largely derived from the same primary announcement.
+
+**Founders and team background.** Aerodrome Group's founders, founding year, exact headquarters city, headcount, and leadership are not disclosed in any public source reviewed, and the company does not maintain a discoverable public website. This is a material diligence gap. Israel's loitering-munition and autonomy talent pool is deep — seeded by IAI, Elbit, UVision, Rafael/Aeronautics, and elite IDF technology units — so a credible bench is plausible, but plausibility is not verification. Any assessment of the scientific and engineering depth behind the "target-discrimination" claim, patent inventorship, or prior program experience would require direct diligence with the company; none of it should be assumed from the category or from the quality of the corporate partner.
+
+**Competitive dynamics.** Aerodrome enters an unusually crowded and well-capitalized field. In Israel alone it competes with (1) **Israel Aerospace Industries** (the Harop, Harpy, Mini Harpy, and Rotem families — the incumbent global standard-setter); (2) **UVision** (the Hero-30 through Hero-1250 series, with an established U.S. presence via UVision USA); (3) **Elbit Systems** (SkyStriker); and (4) **Rafael/Aeronautics** (Spike Firefly and Orbiter-derived loitering variants). Globally, the reference competitor — especially given Aerodrome's U.S./Canada ambitions — is **AeroVironment** (Switchblade 300/600), the entrenched Western supplier. Against these primes, a young company's only defensible wedge is exactly what Aerodrome claims: superior autonomy and target discrimination that reduces operator burden and civilian risk while functioning under jamming. The competitive risks are structural: incumbents have warhead, propulsion, qualification, and production-scale advantages, and several are themselves racing to bolt on AI-based autonomy, so Aerodrome must prove its discrimination capability is meaningfully ahead and hard to replicate.
+
+**Defense, security, and resilience dual-use relevance.** Aerodrome's core product is a weapon, so its primary relevance is unambiguously defense: precision strike, counter-battery, anti-armor, and engagement of time-sensitive targets. The dual-use character sits one layer down, in the autonomy and target-discrimination stack. The same computer-vision, edge-inference, sensor-fusion, and EW-resilient navigation capabilities that let a munition identify a valid target are directly transferable to non-kinetic missions that EagleNXT's own framing names — ISR, border and perimeter security, counter-UAS, disaster response, and public safety — where the task is to detect, classify, and track objects autonomously under degraded links. This is genuine enabling adjacency rather than a marketing stretch, but it should be read with calibration: the fielded product is offensive, and any civilian or resilience application would be a derivative of the underlying autonomy IP, not a currently marketed line.
+
+**Growth stage, trajectory, and key diligence risks.** Aerodrome is an early-stage, deliberately low-profile developer whose most concrete milestone to date is a single strategic investment from a U.S. public company plus an optioned (not yet consummated) joint venture. The plausible near-term trajectory is: close the U.S. JV, stand up compliant U.S. manufacturing, and convert the EagleNXT channel into program-of-record pursuits in the U.S. and Canada. The key diligence risks are pronounced: (1) **radical opacity** — undisclosed founders, financials, product specifics, and no public website make independent verification difficult; (2) **single-partner dependence** — traction is concentrated in one investor whose JV right is conditional on regulatory approval; (3) **export-control and ITAR/defense-trade friction** on transferring munition and autonomy technology across borders; (4) **formidable incumbents** with scale and qualification advantages; (5) **ethical, legal, and reputational scrutiny** of autonomous target selection in lethal systems, which can constrain export markets and customer adoption; and (6) **unproven combat/qualification record** relative to battle-tested rivals. The upside case is that Aerodrome's discrimination-first autonomy becomes a genuinely differentiated capability that a U.S.-domesticated JV can scale into a large, tailwind-rich market; the bear case is a thinly-capitalized newcomer that never crosses the qualification-and-scale chasm against entrenched primes.
+"""
+logo = "Unknown"
+website = "https://www.aerodrome-ops.com"
+sector = "Defense / Unmanned Aircraft Systems and Services"
+founded = "1992 (corporate registration; current business lineage differs)"
+headquarters = "Petah Tikva, Israel"
+employees = "Unknown"
+funding_stage = "Public company; March 2026 private placement by EagleNXT"
+entity_type = "public_company"
+dual_use = true
+dual_use_description = "The company reports military and civilian UAV development and integration, alongside UAV-enabled data collection and analysis services. EagleNXT characterizes its strategic investment target as a precision loitering-munition developer, which is a defense application; the issuer's own annual report also describes military and civilian UAV uses. The public evidence supports adjacent civil and defense activity, but does not establish that the same aircraft or autonomy stack is dual-use or that any weapon system is fielded."
+key_technologies = [
+  "Precision loitering munition airframe and terminal-strike system (attritable, warhead-carrying one-way attack air vehicle)",
+  "Onboard target-discrimination via electro-optical/infrared seeker and computer-vision classification",
+  "Autonomous decision-support to identify, track, and maintain lock on specific targets in contested environments",
+  "Edge AI inference under strict size, weight, power, and cost (SWaP-C) constraints for an expendable munition",
+  "EW-resilient navigation and guidance intended to function under GPS jamming/spoofing and datalink disruption",
+  "Human-on-the-loop engagement logic (search, identify, confirm/wave-off, strike) for time-sensitive targets"
+]
+use_cases = [
+  "Anti-armor and anti-vehicle precision strike against mobile or fleeting ground targets",
+  "Counter-battery and suppression of enemy artillery, launchers, and air-defense assets",
+  "Engagement of time-sensitive or concealed targets within seconds of detection at low cost per shot",
+  "Small-unit organic precision fires that reduce reliance on distant, expensive missile platforms",
+  "Strike under electronic-warfare conditions where operator datalinks are jammed or intermittent",
+  "Maritime/littoral engagement of small fast boats and surface targets (category-typical application)",
+  "Derivative autonomous ISR, border security, and counter-UAS sensing built on the same target-discrimination stack (adjacent, non-kinetic)"
+]
+investible = true
+investment_rationale = "Aerodrome is a highly speculative, listed Israeli defense and UAV company undergoing a strategic reset, rather than a conventional early-stage venture investment. It has a public history of UAS-related services, but the 2026 pivot into UAV development and integration follows weak FY2025 sales and substantial losses. The EagleNXT placement provides strategic validation and some capital, while the TASE listing and recent controller investment make ownership and financing more observable than the prior record suggested. Key uncertainties remain the scale and status of defense orders, product development, corporate governance, liquidity, and whether the conditional North American JV advances. Distinguish historical services revenue from future product revenue and treat reported procurement as unverified backlog until delivery and acceptance are established."
+strategic_value = "Aerodrome provides a publicly traded route to Israeli UAV capabilities and a potential channel for North American distribution through EagleNXT. Its strategic value depends on execution: a company pivoting from services and training toward UAV design, production and integration must demonstrate products, qualified systems and repeat customer orders. The reported Israeli defense procurement could be commercially significant if any portion is active and delivered, but public reporting describes disruption and cancellation/reduction. The company is relevant for monitoring governance, defense industrial capacity and US-Israel commercialization, while its losses and product uncertainty argue for conservative treatment."
+potential_score = 60.0
+technology_score = 66.0
+market_score = 74.0
+team_score = 38.0
+dual_use_score = 62.0
+strategic_alignment_score = 76.0
+stage = "mature"
+stage_rationale = "Aerodrome is a listed company incorporated in 1992, not an early-stage startup. Its present defense-UAV product direction appears early in development, and the company reported FY2025 sales of approximately NIS 9.73m and a NIS 21.6m loss. The corporate entity is mature while the current strategic pivot is unproven."
+competitors = ["Israel Aerospace Industries", "UVision Air", "Elbit Systems", "Rafael Advanced Defense Systems", "AeroVironment"]
+competitive_edge = "The potentially differentiating feature is the combination of Israeli UAV operating experience, data services and a new focus on integrated systems, paired with a strategic US-listed partner. No company-specific performance data, product range, field trials or patent moat was located, so an autonomy or target-discrimination advantage remains an investor-described proposition rather than demonstrated comparative evidence. Incumbent competitors have greater scale, recognized systems and established customer programs."
+risk_factors = ["Reported FY2025 revenue contracted to NIS 9.73m and net loss was NIS 21.6m", "Public-market volatility and control changes complicate governance and strategic continuity", "The Ministry of Defense procurement history is reported inconsistently and realized revenue is unknown", "EagleNXT's proposed North American JV remains subject to definitive agreements and approvals", "Product readiness, technical performance, certifications, IP ownership and production capability are not publicly substantiated", "Historical operating-company and current corporate identity/business lineage require careful diligence", "No current employee count, cash runway or post-placement liquidity analysis is established"]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "Aerodrome warrants monitoring rather than conviction. Reasons to watch: (1) exact thesis fit — autonomous precision strike, target-discrimination AI, and U.S.-Israel defense-industrial integration are core Claw & Talon interests; (2) a strong category tailwind, with loitering munitions among the fastest-growing and most combat-validated defense segments; (3) differentiation on the right axis (discrimination and EW-resilient autonomy); and (4) a credible, corroborated channel via EagleNXT/AgEagle, whose parallel ThirdEye Systems JV shows a repeatable Israeli-autonomy acquisition strategy. Reasons priority is capped: the company is radically opaque (no disclosed founders, financials, products, or website), traction rests on a single investor with only an optioned JV, and it faces entrenched primes plus export-control and autonomous-weapons scrutiny. Key milestones to track: consummation of the EagleNXT U.S. joint venture and any regulatory clearance; disclosure of fielded product names, ranges, and warhead options; first independently verifiable customer contracts or program pursuits in the U.S., Canada, or Israel; and any additional financing or combat/qualification record. Priority reflects high strategic alignment tempered by early stage, single-source validation, and unusual information opacity."
+public_sources = [
+  { label = "EagleNXT SEC filing (2025 annual report)", url = "https://www.sec.gov/Archives/edgar/data/8504/000143774926010682/uavs20251231_10k.htm", description = "Records the March 4, 2026 purchase of 11,523,750 Aerodrome shares at NIS 0.80, NIS 9,219,000 aggregate, and conditional U.S./Canada JV framework." },
+  { label = "Aerodrome Group 2025 annual report (MAYA/TASE)", url = "https://mayafiles.tase.co.il/rpdf/1736001-1737000/P1736407-00.pdf", description = "Issuer filing covering FY2025 and post-year-end business pivot, financial results, and company identity." },
+  { label = "TASE security profile", url = "https://market.tase.co.il/en/market_data/security/363010/major_data", description = "Exchange record for listed ordinary shares, symbol ARDM, security 363010, and company description." },
+  { label = "Techtime: management and ownership changes", url = "https://techtime.co.il/2026/05/18/aerodrome-10/", description = "Reports 2026 control investment, leadership turnover, the EagleNXT placement, and prior Ministry of Defense tender developments." },
+  { label = "Globes company profile / ownership", url = "https://www.globes.co.il/portal/instrument.aspx?instrumentid=765&mode=company", description = "Current listed-company and interested-party ownership information." },
+  { label = "Israeli Corporations Registry data mirror", url = "https://taagidim.co.il/company/520037607", description = "Company number, legal name, active status, registration date and Petah Tikva address from public registry data." },
+  { label = "EagleNXT strategic investment announcement", url = "https://eaglenxt.com/eaglenxt-announces-strategic-investment-in-leading-israeli-precision-loitering-munition-innovator/", description = "Investor's March 2026 description of Aerodrome's loitering-munition focus and proposed collaboration." },
+  { label = "Aerodrome FY2025 financial report index", url = "https://www.globes.co.il/portal/instrument.aspx?instrumentid=765&mode=reports", description = "Issuer-linked financial reporting listing and business description." }
+]
+crawled_at = "2026-07-08T06:49:34Z"
+updated_at = "2026-10-03T12:16:36Z"
+
+[intelligence]
+schema_version = 2
+intellectual_property = []
+
+[intelligence.company]
+company_id = "il-aerodrome-group"
+legal_name = "Aerodrome Group Ltd."
+aliases = ["קבוצת אירודרום בע״מ", "Aerodrome Group Ltd.", "ARDM"]
+operating_status = "public"
+business_model = "Listed Israeli company developing, producing and integrating unmanned aircraft systems and providing UAS-related information, intelligence, training and operational services; the company announced a post-FY2025 strategic shift toward military and civilian UAV design and integration."
+products = ["Unmanned aircraft systems and fleet services", "UAV-based intelligence collection and data analysis", "Autonomous precision loitering munitions (as described by EagleNXT; product details not independently disclosed)"]
+locations = ["Petah Tikva, Israel"]
+country_of_incorporation = "Israel"
+founded_on = "1992-05-28"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "520037607", source_ids = ["registry", "annual-report"] }]
+source_ids = ["annual-report", "tase", "registry"]
+notes = "The exact legal company number, listed security and operating company/product lineage should be distinguished: public reporting says the issuer was formerly Apply Mobile Technologies, while the public filing describes the current business transition."
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel"]
+summary = "Israeli listed issuer registered as company 520037607, with a reported Petah Tikva address and Israeli TASE listing."
+as_of = "2026-10-03"
+source_ids = ["registry", "tase", "annual-report"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One specifically verified strategic private equity placement in March 2026: EagleNXT acquired 11,523,750 ordinary shares for NIS 9,219,000. This is a public-company issuance, not evidence of total lifetime funding. Other capital raises may exist in the issuer's history; this dossier does not reconstruct all historical TASE placements."
+history_status = "partial"
+coverage_through = "2026-10-03"
+rounds = [{ id = "eaglenxt-placement-2026", round_type = "Strategic private placement", instrument = "equity", status = "closed", announced_on = "2026-03-06", closed_on = "2026-03-04", amount_status = "reported", amount = 9219000, amount_scope = "round", currency = "ILS", lead_investors = ["EagleNXT (AgEagle Aerial Systems Inc.)"], participating_investors = ["EagleNXT (AgEagle Aerial Systems Inc.)"], source_ids = ["sec-10k", "eaglenxt-release"], notes = "The SEC annual report states the company purchased the shares under the March 4 agreement but notes customary closing conditions. The investor announcement followed March 6. No USD conversion applied." }]
+
+[[intelligence.investors]]
+name = "EagleNXT (AgEagle Aerial Systems Inc.)"
+investor_type = "corporate"
+website = "https://eaglenxt.com"
+round_ids = ["eaglenxt-placement-2026"]
+relationship = "current"
+source_ids = ["sec-10k", "eaglenxt-release"]
+notes = "US-listed strategic investor; acquired shares in Aerodrome under a private placement. SEC filing does not disclose resulting ownership percentage."
+
+[[intelligence.investors]]
+name = "Ronen Elad"
+investor_type = "other"
+round_ids = []
+relationship = "current"
+source_ids = ["techtime-ownership", "globes-ownership"]
+notes = "Reported control investor and chairman after a separate 2026 private placement; amount and terms of that placement not researched to primary issuer filing in this dossier."
+
+[intelligence.ownership]
+status = "reported"
+summary = "Public float and controlling-shareholder information is reported by Israeli market sources. A May 2026 private placement reportedly left Ronen Elad with approximately 28.3% and Roy Degani with approximately 12.8%. Exact beneficial ownership should be checked against the latest issuer filings. EagleNXT's 2026 placement is separately verified, but its resulting percentage is not stated in the cited SEC filing."
+parent_company = ""
+stock_ticker = "TASE: ARDM (security 363010)"
+cap_table_status = "reported"
+shareholders = ["Ronen Elad", "Roy Degani", "EagleNXT / AgEagle Aerial Systems Inc.", "Public shareholders"]
+source_ids = ["globes-ownership", "techtime-ownership", "sec-10k", "tase"]
+deals = []
+holdings = [
+  { shareholder = "Ronen Elad", ownership_percent = 28.34, as_of = "2026-10-01", source_ids = ["globes-ownership"] },
+  { shareholder = "Roy Degani", ownership_percent = 12.83, as_of = "2026-10-01", source_ids = ["globes-ownership"] },
+  { shareholder = "EagleNXT / AgEagle Aerial Systems Inc.", ownership_percent = 6.91, as_of = "2026-10-01", source_ids = ["globes-ownership"] },
+  { shareholder = "Public shareholders", ownership_percent = 51.84, as_of = "2026-10-01", source_ids = ["globes-ownership"] }
+]
+
+[[intelligence.people]]
+name = "Roy Degani"
+role = "Founder and former chief executive officer; significant shareholder"
+is_founder = true
+current = false
+background = "Public trade coverage reports that Degani resigned as CEO in April 2025 and retained a substantial shareholding. Further executive biography not verified."
+source_ids = ["techtime-ownership", "globes-ownership"]
+
+[[intelligence.people]]
+name = "Ronen Elad"
+role = "Chairman and controlling shareholder (reported)"
+is_founder = false
+current = true
+background = "Israeli reporting says Elad acquired approximately 28% in the 2026 control investment and became chairman."
+source_ids = ["techtime-ownership", "globes-ownership"]
+
+[[intelligence.people]]
+name = "Ziv Ben Baruch"
+role = "Acting chief executive officer (appointment reported effective 2026-06-01)"
+is_founder = false
+current = false
+background = "Trade coverage reported the interim appointment; whether he remains in the role at the research date was not verified."
+source_ids = ["techtime-ownership"]
+
+[[intelligence.comparables]]
+name = "Israel Aerospace Industries"
+website = "https://www.iai.co.il"
+rationale = "Israeli incumbent with unmanned aircraft and loitering-munition products; competes for defense customers and programs."
+differentiation = "Large state-owned defense prime with established product families, manufacturing scale and program history; substantially larger than Aerodrome."
+source_ids = ["eaglenxt-release"]
+
+[[intelligence.comparables]]
+name = "UVision Air"
+website = "https://uvisionuav.com"
+rationale = "Israeli specialist in loitering munition systems."
+differentiation = "Dedicated, marketed HERO product family and international positioning; Aerodrome's product maturity and performance are not publicly documented."
+source_ids = ["eaglenxt-release"]
+
+[[intelligence.comparables]]
+name = "AeroVironment"
+website = "https://www.avinc.com"
+rationale = "US competitor in small tactical loitering munitions and a relevant North American comparator."
+differentiation = "Established Switchblade products and US defense-market access; substantially greater scale and public program evidence."
+source_ids = ["eaglenxt-release"]
+
+[[intelligence.financials]]
+name = "revenue_fy2025"
+value = "NIS 9.73 million"
+as_of = "2025-12-31"
+basis = "reported"
+metric = "revenue"
+numeric_value = 9730000
+value_relation = "approximate"
+unit = "currency"
+currency = "ILS"
+period_start = "2025-01-01"
+period_end = "2025-12-31"
+source_ids = ["annual-report", "techtime-ownership"]
+
+[[intelligence.financials]]
+name = "net_loss_fy2025"
+value = "NIS 21.6 million net loss"
+as_of = "2025-12-31"
+basis = "reported"
+metric = "net_income"
+numeric_value = -21600000
+value_relation = "approximate"
+unit = "currency"
+currency = "ILS"
+period_start = "2025-01-01"
+period_end = "2025-12-31"
+source_ids = ["techtime-ownership"]
+
+[[intelligence.traction]]
+kind = "contract"
+description = "Israeli reporting said Aerodrome had a Ministry of Defense drone tender/order valued at NIS 73.6 million, subsequently cancelled or reduced; available secondary reports differ in describing the procurement history and do not establish delivered value. Treat as a disputed historical procurement lead, not recurring revenue or current backlog."
+date = "2025"
+source_ids = ["techtime-ownership"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "EagleNXT announced a strategic investment and a framework/right to pursue a US-based joint venture for distribution of autonomous uncrewed systems in the United States and Canada. The SEC filing states definitive documents and applicable regulatory approvals remained conditions; a completed JV is not established here."
+date = "2026-03-06"
+source_ids = ["sec-10k", "eaglenxt-release"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "The issuer's FY2025 report says that after the reporting period it began activity in UAV planning, development, production and integration, while continuing its existing air-club and knowledge-transfer activities."
+date = "2026-04-20"
+source_ids = ["annual-report"]
+
+[intelligence.research]
+researched_at = "2026-10-03T12:16:36Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Aerodrome Group Ltd Israel company number 520037607 TASE ARDM", "Aerodrome Group funding raised investors 2026 EagleNXT SEC private placement", "Aerodrome Group founders leadership CEO ownership changes 2026 Hebrew", "Aerodrome Group revenue 2025 annual report financial statements TASE", "Aerodrome Group Ministry of Defense contract 73.6 million Globes", "Aerodrome Group patents Israel USPTO loitering munition", "Aerodrome Group competitors UAV defense systems", "Aerodrome Group dual use civilian military UAV", "site:aerodrome-ops.com Aerodrome Group products", "site:mayafiles.tase.co.il Aerodrome Group 2025 annual report"]
+gaps = ["team: historic and current executive roster/background requires review of issuer's full 2026 governance disclosures; no founder biographies verified from primary source", "investors: complete historical public-company financing and all current beneficial ownership not reconstructed", "financials: only FY2025 sales and net loss sourced here; no current cash, debt, runway or post-placement cash balance extracted", "traction: contract delivery, customer acceptance and remaining order value are not independently established; reported NIS 73.6m procurement history needs primary buyer/issuer reconciliation", "intellectual_property: no company-specific patent number or patent family was verified in the searched public sources", "competition: comparables are category-level; detailed feature and win/loss comparison is unavailable", "website: aerodrome-ops.com is issuer-declared, but current operation and product detail have not been confirmed", "funding: prior lifetime raises and total raised are not comprehensively reconstructed; do not interpret this round as total capital raised", "ownership: exact EagleNXT post-placement percentage and current cap table need primary issuer confirmation"]
+conflicts = ["The March 2026 EagleNXT investment was described in the public release as strategic with undisclosed terms, while the SEC annual report supplies share count and NIS consideration. Use the filing's reported NIS amount; no USD equivalent is asserted.", "Public sources variably describe the NIS 73.6m Ministry of Defense procurement as a cancelled tender award or an order later reduced. No contract delivery or amount earned is confirmed here.", "EagleNXT's 2026 public announcement describes a reserved right/option for a proposed JV; later Israeli trade coverage describes subsequent negotiations and a prospective subsidiary. A completed JV is not verified."]
+diligence_questions = ["What is the current status, scope and realized revenue of the reported Ministry of Defense procurement, and what portion if any remains enforceable?", "What percentage of Aerodrome's ordinary shares does EagleNXT hold after its NIS 9.219m placement, and have definitive JV documents or required approvals been completed?", "What UAV products, technical specifications, certifications, and customer deliveries exist today, and which are company-developed versus sourced or integrated?", "What drove FY2025 revenue contraction and losses, and what are post-placement cash, debt, working capital and expected funding needs?", "Who currently leads engineering, programs and finance following the 2025-26 executive turnover, and what is the operational plan following the control investment?"]
+
+[[intelligence.research.sources]]
+id = "sec-10k"
+url = "https://www.sec.gov/Archives/edgar/data/8504/000143774926010682/uavs20251231_10k.htm"
+title = "AgEagle Aerial Systems Inc. 2025 Form 10-K"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-03T12:16:36Z"
+published_on = "2026-03-31"
+claims = ["EagleNXT entered an Aerodrome private placement agreement on 2026-03-04 and purchased 11,523,750 ordinary shares for NIS 9,219,000 at NIS 0.80 per share.", "A proposed US/Canada JV framework remained subject to definitive documents and regulatory approvals."]
+
+[[intelligence.research.sources]]
+id = "annual-report"
+url = "https://mayafiles.tase.co.il/rpdf/1736001-1737000/P1736407-00.pdf"
+title = "Aerodrome Group Ltd. 2025 Annual Report, Board Report"
+publisher = "Tel Aviv Stock Exchange / Israel Securities Authority MAYA"
+kind = "filing"
+accessed_at = "2026-10-03T12:16:36Z"
+published_on = "2026-04-20"
+claims = ["Aerodrome reported FY2025 revenue of approximately NIS 9.73 million and net loss of approximately NIS 21.6 million.", "After FY2025 it began planning, developing, producing and integrating UAVs for military and civilian uses.", "The issuer is Aerodrome Group Ltd., company number 520037607, at Petah Tikva."]
+
+[[intelligence.research.sources]]
+id = "tase"
+url = "https://market.tase.co.il/en/market_data/security/363010/major_data"
+title = "Aerodrome Group Major Data"
+publisher = "Tel Aviv Stock Exchange"
+kind = "filing"
+accessed_at = "2026-10-03T12:16:36Z"
+claims = ["Aerodrome Group is a TASE-listed ordinary share with symbol ARDM and security number 363010.", "The exchange describes the company as using drone technologies to acquire, analyze and process data for digital AI insights."]
+
+[[intelligence.research.sources]]
+id = "techtime-ownership"
+url = "https://techtime.co.il/2026/05/18/aerodrome-10/"
+title = "Following ownership changes, Aerodrome management changes"
+publisher = "Techtime"
+kind = "media"
+accessed_at = "2026-10-03T12:16:36Z"
+published_on = "2026-05-18"
+claims = ["Ronen Elad reportedly acquired about 28% and became chairman/controller; Ziv Ben Baruch was appointed acting CEO from June 1, 2026.", "Roy Degani reportedly retained approximately 12.8% after earlier leadership changes.", "The 2026 placement to EagleNXT was reported as NIS 9.2 million; a US subsidiary/JV was prospective and conditional.", "FY2025 sales and net loss were reported as approximately NIS 9.73 million and NIS 21.6 million.", "The report describes a prior NIS 73.6 million Ministry of Defense tender/procurement award as having been cancelled."]
+
+[[intelligence.research.sources]]
+id = "globes-ownership"
+url = "https://www.globes.co.il/portal/instrument.aspx?instrumentid=765&mode=company"
+title = "Aerodrome Group interested parties"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-03T12:16:36Z"
+claims = ["Globes lists Aerodrome Group as security 363010 and reports Ronen Elad 28.34%, Roy Degani 12.83%, EagleNXT 6.91%, and public holdings 51.84%."]
+
+[[intelligence.research.sources]]
+id = "registry"
+url = "https://taagidim.co.il/company/520037607"
+title = "Aerodrome Group Ltd. company registry profile"
+publisher = "Taagidim (registry data mirror)"
+kind = "directory"
+accessed_at = "2026-10-03T12:16:36Z"
+claims = ["The registry data identifies Aerodrome Group Ltd. as Israeli company 520037607, active, incorporated 1992-05-28, with address in Petah Tikva."]
+
+[[intelligence.research.sources]]
+id = "eaglenxt-release"
+url = "https://eaglenxt.com/eaglenxt-announces-strategic-investment-in-leading-israeli-precision-loitering-munition-innovator/"
+title = "EagleNXT Announces Strategic Investment in Leading Israeli Precision Loitering Munition Innovator"
+publisher = "EagleNXT"
+kind = "investor"
+accessed_at = "2026-10-03T12:16:36Z"
+published_on = "2026-03-06"
+claims = ["EagleNXT announced a strategic investment in Aerodrome Group Ltd., described as an Israel-based precision loitering munition developer focused on target-discriminating technologies.", "The announcement reserved a right to establish a US-based joint venture, subject to mutual agreement and regulatory approvals."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T12:16:36Z"
+next_review_on = "2027-01-03"
+queries = ["Aerodrome Group Ltd Israel company number 520037607 TASE ARDM"]
+source_ids = ["annual-report", "tase", "registry"]
+summary = "Matched the exact legal name and Israeli company number to active issuer filings, exchange security 363010/ARDM and a Petah Tikva address."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T12:16:36Z"
+next_review_on = "2027-01-03"
+queries = ["Aerodrome Group funding raised investors 2026 EagleNXT SEC private placement"]
+source_ids = ["sec-10k", "eaglenxt-release"]
+summary = "Verified one NIS 9.219m private equity placement; full historic listed-company financing history not reconstructed."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T12:16:36Z"
+next_review_on = "2027-01-03"
+queries = ["Aerodrome Group investors ownership EagleNXT Ronen Elad 2026"]
+source_ids = ["sec-10k", "globes-ownership", "techtime-ownership"]
+summary = "EagleNXT placement and major holders reported; comprehensive historic investor list not established."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T12:16:36Z"
+next_review_on = "2027-01-03"
+queries = ["Aerodrome Group founders leadership CEO ownership changes 2026 Hebrew"]
+source_ids = ["techtime-ownership", "annual-report"]
+summary = "Leadership change and shareholder backgrounds reported in trade press; complete executive bios and current board roster remain a gap."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-03T12:16:36Z"
+next_review_on = "2027-01-03"
+queries = ["Aerodrome Group ownership changes 2026 Ronen Elad TASE ARDM"]
+source_ids = ["globes-ownership", "techtime-ownership", "sec-10k"]
+summary = "Public ownership records identify controlling and other large holders; SEC filing confirms EagleNXT shares but not the resulting percentage."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-03T12:16:36Z"
+next_review_on = "2027-01-03"
+queries = ["Aerodrome Group revenue 2025 annual report financial statements TASE"]
+source_ids = ["annual-report", "techtime-ownership"]
+summary = "FY2025 sales and net loss found; balance sheet, liquidity and 2026 interim figures not extracted."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T12:16:36Z"
+next_review_on = "2027-01-03"
+queries = ["Aerodrome Group Ministry of Defense contract 73.6 million Globes", "Aerodrome Group 2026 UAV products customers deliveries"]
+source_ids = ["annual-report", "techtime-ownership", "sec-10k"]
+summary = "Issuer pivot, strategic investor and a historically reported MoD procurement surfaced; delivered value, current orders and customer acceptance remain unverified."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T12:16:36Z"
+next_review_on = "2027-01-03"
+queries = ["Aerodrome Group patents Israel Aerodrome Ops", "Aerodrome Group patents UAV loitering munition USPTO WIPO"]
+source_ids = []
+summary = "No attributable patent record was verified in this search; absence of a found record does not establish absence of IP."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T12:16:36Z"
+next_review_on = "2027-01-03"
+queries = ["Aerodrome Group competitors UAV defense systems", "Israeli loitering munition manufacturers IAI UVision"]
+source_ids = ["eaglenxt-release"]
+summary = "Category peers identified from public product positioning; like-for-like comparative performance evidence unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-03T12:16:36Z"
+next_review_on = "2027-01-03"
+queries = ["Aerodrome Group dual use civilian military UAV", "Aerodrome Group commercial drone services Israel"]
+source_ids = ["annual-report", "tase"]
+summary = "Issuer reports military and civilian UAV development and existing data/UAS services; weapon-specific system details remain investor-described."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "TASE lists Aerodrome Group as an ordinary share under ARDM/security 363010; issuer annual report continues active business operations."
+verified_at = "2026-10-03T12:16:36Z"
+source_ids = ["tase", "annual-report"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Issuer's Israeli registry number and Petah Tikva location are reported in registry data and issuer filings; shares are listed on TASE."
+verified_at = "2026-10-03T12:16:36Z"
+source_ids = ["registry", "annual-report", "tase"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.eaglenxt-placement-2026.amount"
+support = "direct"
+summary = "SEC annual report states 11,523,750 shares at NIS 0.80 each, aggregate NIS 9,219,000."
+verified_at = "2026-10-03T12:16:36Z"
+source_ids = ["sec-10k"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.eaglenxt-placement-2026.lead_investors"
+support = "direct"
+summary = "SEC filing identifies AgEagle Aerial Systems Inc. (doing business as EagleNXT) as purchaser under the Aerodrome Agreement."
+verified_at = "2026-10-03T12:16:36Z"
+source_ids = ["sec-10k"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.eaglenxt-placement-2026.participating_investors"
+support = "direct"
+summary = "The SEC filing identifies AgEagle Aerial Systems Inc. (EagleNXT) as the share purchaser and sole named participant in this placement."
+verified_at = "2026-10-03T12:16:36Z"
+source_ids = ["sec-10k"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.revenue_fy2025@2025-12-31.numeric_value"
+support = "direct"
+summary = "FY2025 revenue was reported as approximately NIS 9.73 million in the issuer report and corroborating trade coverage."
+verified_at = "2026-10-03T12:16:36Z"
+source_ids = ["annual-report", "techtime-ownership"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.net_loss_fy2025@2025-12-31.numeric_value"
+support = "direct"
+summary = "FY2025 net loss was reported as approximately NIS 21.6 million by Techtime."
+verified_at = "2026-10-03T12:16:36Z"
+source_ids = ["techtime-ownership"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.holdings.Ronen Elad@2026-10-01.ownership_percent"
+support = "direct"
+summary = "Globes' interested-party table reports Ronen Elad at 28.34%."
+verified_at = "2026-10-03T12:16:36Z"
+source_ids = ["globes-ownership"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.holdings.Roy Degani@2026-10-01.ownership_percent"
+support = "direct"
+summary = "Globes' interested-party table reports Roy Degani at 12.83%."
+verified_at = "2026-10-03T12:16:36Z"
+source_ids = ["globes-ownership"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.holdings.EagleNXT / AgEagle Aerial Systems Inc.@2026-10-01.ownership_percent"
+support = "direct"
+summary = "Globes' interested-party table lists an EagleNXT holding of 6.91%."
+verified_at = "2026-10-03T12:16:36Z"
+source_ids = ["globes-ownership"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.holdings.Public shareholders@2026-10-01.ownership_percent"
+support = "direct"
+summary = "Globes reports 51.84% public holdings, including provident and mutual funds."
+verified_at = "2026-10-03T12:16:36Z"
+source_ids = ["globes-ownership"]

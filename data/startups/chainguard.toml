@@ -1,0 +1,724 @@
+name = "Chainguard"
+description = "Chainguard produces hardened, production-ready open source artifacts for modern software delivery, including minimal container images, language libraries, VM images, OS packages, CI/CD actions, and agent skills. Its source-built factory combines vulnerability reduction with signed provenance, SBOMs, and compliance-oriented controls."
+detailed_description = """Chainguard is a software supply-chain security company built around changing the artifact that developers consume, rather than relying only on scanning after an organization has already adopted a vulnerable or opaque dependency. Its catalog includes minimal container images, language libraries, VM images, OS packages, CI/CD actions, and more recently agent skills. The underlying production system, Chainguard Factory, builds and maintains open source components from source, applies hardening, tests releases, and emits signed metadata. Wolfi, the company’s security-oriented Linux distribution, remains an important foundation for its container strategy, while the broader platform is moving toward a trusted-source model across more layers of the software stack.
+
+The buyer problem is both security and engineering economics. Large development organizations must continuously patch base images and dependencies, investigate scanner findings, prove what entered a build, and satisfy customers or regulators that release artifacts are authentic. Chainguard’s minimal images aim to reduce attack surface and vulnerability noise; its libraries and packages address the risk of consuming compromised or poorly maintained upstream components; and its attestations, SBOMs, signatures, and provenance make the resulting software easier to verify. The company advertises large catalog and remediation metrics on its own site, but those figures are self-reported and should be tested against customer-specific baselines, image compatibility, and actual remediation time during diligence.
+
+Commercially, Chainguard sells into platform engineering, application security, developer infrastructure, and regulated software teams. It competes with a mixture of security scanners, artifact registries, hardened-image suppliers, Linux and cloud distributions, and in-house golden-image programs. Its differentiation is strongest where a customer values a continuously maintained, source-built artifact and a contractual remediation service, but adoption is not frictionless: changing a base image or package ecosystem can expose libc, package-manager, runtime, or build reproducibility differences. The company’s April 2025 Series D announcement reported more than 100 customers added over the prior year, revenue growth from $5 million to $40 million, and 1,400 container images at that time; those are useful commercialization signals, but they are company-reported historical figures rather than independently audited operating data. The current site presents a substantially broader catalog and an AI-security positioning, which creates expansion opportunity but also raises the bar for product focus and operational quality.
+
+The defense and national-security case is credible because software provenance and rapid patching are enabling controls for mission systems, not merely office IT concerns. Chainguard’s public-sector materials explicitly target Department of Defense and intelligence-community environments and describe FIPS-validated cryptography, OS-level STIG hardening, SBOMs, signed attestations, SLSA provenance, and support for FedRAMP and CMMC-oriented workflows. Its public customer materials also identify Anduril and government-facing software providers, although customer references do not by themselves prove government-wide deployment or contract scale. The strategic value is therefore in shortening secure software delivery and audit cycles for cloud, edge, and contractor ecosystems. It does not provide a weapons capability, and its defense relevance depends on integration, authorization boundaries, customer configuration, and the continued validity of its compliance claims."""
+logo = "https://www.chainguard.dev/favicon.ico"
+website = "https://www.chainguard.dev"
+sector = "Software supply-chain security"
+founded = "2021"
+headquarters = "Kirkland, Washington, USA"
+employees = "201-500"
+funding_stage = "Series D plus $280 million General Catalyst growth financing"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Chainguard has substantive dual-use potential because its core trusted-artifact and software-factory capabilities apply to commercial cloud software and to defense, intelligence, federal, and critical-infrastructure delivery pipelines. FIPS/STIG-oriented images, provenance, SBOMs, signatures, and rapid rebuilds can support high-assurance DevSecOps and continuous authorization, but the product is an enabling cybersecurity layer rather than a defense-specific operational system; mission value still depends on customer integration and authorization evidence."
+key_technologies = ["Source-built open source artifact factory", "Wolfi minimal Linux distribution and APK packaging", "Minimal hardened container, VM, library, and OS-package images", "SBOMs, Sigstore signatures, and SLSA provenance attestations", "Automated vulnerability remediation and continuous rebuild pipelines", "FIPS-validated cryptography and OS-level STIG hardening", "Secure CI/CD actions and agent-skill distribution"]
+use_cases = ["Replacing vulnerable or oversized community base images in Kubernetes and cloud workloads", "Providing verified language libraries and packages that reduce malware and dependency-supply-chain exposure", "Generating signed SBOM and provenance evidence for enterprise software releases", "Maintaining golden images and standardized runtime foundations across large engineering organizations", "Supporting FedRAMP, CMMC, DoD, and intelligence-community DevSecOps workflows with FIPS and STIG-oriented artifacts", "Reducing patch and vulnerability-management toil for edge, industrial, and mission software deployments", "Giving AI-assisted development pipelines a more controlled source for packages, actions, and agent skills"]
+tags = ["non-israeli"]
+investible = true
+investment_rationale = "Chainguard is a credible strategic-priority signal for a dual-use software and cybersecurity thesis because it sells an infrastructure control that can become embedded in commercial and high-assurance delivery pipelines. Its Series D, broadening product catalog, public-sector motion, and reported enterprise traction support the opportunity case. Diligence should still test retention, gross margin and remediation economics, image compatibility, the distinction between product claims and independently verified outcomes, and whether cloud, registry, Linux, and security-platform vendors can bundle away the differentiation. This is a strategic diligence assessment, not an investment recommendation."
+strategic_value = "Chainguard can serve as a trusted artifact layer between upstream open source and the software deployed by enterprises, contractors, and government operators. Its strategic value is highest where provenance, fast patching, minimal attack surface, FIPS/STIG options, and audit evidence reduce the time required to ship or maintain cloud-native systems. The capability may improve resilience across a supplier ecosystem, but it is not a substitute for secure application code, host controls, identity, deployment policy, or a completed authorization process."
+potential_score = 88.0
+technology_score = 92.0
+market_score = 90.0
+team_score = 88.0
+dual_use_score = 84.0
+strategic_alignment_score = 88.0
+stage = "mature"
+stage_rationale = "Chainguard was founded in 2021, has reached a publicly announced Series D, reports a materially expanded product catalog and customer base, and presents a scaled enterprise and public-sector go-to-market motion. It remains a private startup with execution and financing risk, but the evidence supports mature commercialization rather than an early-stage classification."
+competitors = ["Aqua Security and Trivy-based container security workflows", "Snyk and Endor Labs for dependency and software-supply-chain security", "JFrog Artifactory and Xray", "Docker Hardened Images and Docker Scout", "Red Hat UBI, Red Hat OpenShift, and enterprise Linux ecosystems", "AWS, Google Cloud, and Microsoft Azure artifact, registry, and policy controls", "Internal golden-image, package-mirroring, and secure-build programs"]
+competitive_edge = "Chainguard’s strongest edge is the combination of source-built artifacts, a maintained catalog, continuous rebuild and remediation operations, and machine-verifiable metadata delivered as a developer-consumable product. That can reduce both CVE noise and the labor needed to create an internal golden-image program. Wolfi and the Factory provide technical and operational differentiation, while FIPS/STIG offerings create a route into regulated workloads. The edge is not unassailable: customers may prefer existing Linux or registry ecosystems, cloud vendors can bundle comparable controls, and the value proposition weakens if compatibility work, support, or compliance validation shifts back to the buyer."
+risk_factors = ["Cloud providers, registries, Linux vendors, and security platforms may bundle hardened artifacts and provenance, compressing standalone pricing power", "Base-image, package, libc, runtime, or build-system incompatibilities can make migration costly and delay production adoption", "The company’s rapid expansion from containers into libraries, VMs, packages, actions, and agent skills increases catalog, quality, and support complexity", "FIPS, STIG, FedRAMP, CMMC, and similar claims require careful validation of the exact image, cryptographic module, configuration, and customer deployment; they do not automatically confer authorization", "Private-company valuation and growth expectations create financing, margin, and go-to-market execution risk even after late-stage funding", "A compromise in build infrastructure, signing keys, source inputs, or release automation would have high blast radius because customers use Chainguard as a trust anchor", "Open source licensing, upstream maintainer decisions, vulnerability-disclosure volatility, and changing AI-development practices could affect coverage and economics"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Chainguard merits elevated internal review because trusted software artifacts, provenance, and compliance-ready build foundations align closely with the database’s dual-use cybersecurity thesis. The scores reflect strong technology, market, and strategic fit, while the mature-stage classification and medium risk level recognize platform substitution, migration, trust-anchor, valuation, and evidence-quality questions that require diligence."
+crawled_at = "2026-01-31T18:35:00+00:00"
+public_sources = [
+  { label = "Chainguard company overview", url = "https://www.chainguard.dev/about-us", description = "Identity, leadership, customers, and company profile." },
+  { label = "Chainguard product catalog", url = "https://www.chainguard.dev/containers", description = "Current product portfolio, technical claims, and catalog scale." },
+  { label = "Chainguard founding announcement", url = "https://www.chainguard.dev/unchained/introducing-chainguard-inc", description = "Company founding date and founders." },
+  { label = "Chainguard seed announcement", url = "https://www.chainguard.dev/fr-FR/unchained/announcing-our-seed-round-and-chainguard-services", description = "Seed announcement and lead investor." },
+  { label = "Chainguard Series A announcement", url = "https://www.chainguard.dev/fr-FR/unchained/chainguard-raises-50m-in-series-a-to-make-software-supply-chain-secure-by-default-introduces-secure-container-base-images", description = "Series A amount and investors." },
+  { label = "Chainguard Series B announcement", url = "https://www.chainguard.dev/unchained/chainguard-raises-61-million-series-b-round-as-enterprises-move-to-fortify-open-source-software", description = "Series B amount, participants, and reported customers." },
+  { label = "Chainguard Series C announcement", url = "https://www.chainguard.dev/de-DE/unchained/chainguard-raises-140-million-in-series-c-funding-to-secure-the-next-frontier-of-ai-workloads", description = "Series C amount, valuation, investors, and company-reported growth." },
+  { label = "Chainguard Series D announcement", url = "https://www.prnewswire.com/news-releases/chainguard-raises-356-million-in-series-d-funding-to-be-the-safe-source-for-all-open-source-302435220.html", description = "Series D amount, valuation, investors, ARR, and customers." },
+  { label = "Chainguard growth financing announcement", url = "https://www.prnewswire.com/news-releases/chainguard-announces-280-million-growth-financing-from-general-catalyst-to-usher-in-next-era-of-trusted-open-source-software-302592279.html", description = "Growth financing, lifetime funding, product and customer milestones." },
+  { label = "Docker Hardened Images", url = "https://www.docker.com/products/hardened-images/", description = "Direct hardened image competitor product information." },
+  { label = "Chainguard public image build configuration", url = "https://github.com/chainguard-images/images", description = "Public source build configuration and artifact production details." },
+  { label = "Docker Hardened Images", url = "https://www.docker.com/products/hardened-images/", description = "Primary competitor product information." },
+  { label = "Chainguard public build configuration", url = "https://github.com/chainguard-images/images", description = "Public repositories and image production approach." }
+]
+updated_at = "2026-10-04T16:01:04Z"
+
+[intelligence]
+schema_version = 2
+intellectual_property = []
+
+[intelligence.company]
+company_id = "chainguard"
+legal_name = "Chainguard, Inc."
+aliases = ["Chainguard"]
+operating_status = "active"
+business_model = "Private B2B software and cybersecurity vendor selling subscriptions and support for hardened open-source artifacts, secure build infrastructure, remediation SLAs, and associated enterprise services."
+products = ["Chainguard Containers", "Chainguard Libraries", "Chainguard VMs", "Chainguard OS Packages", "Chainguard Actions", "Chainguard Agent Skills", "Chainguard Factory", "Chainguard Guardener"]
+locations = ["Kirkland, Washington, United States"]
+source_ids = ["about", "products"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Chainguard publicly reported $892 million total funding through October 23, 2025. This figure includes $280 million of General Catalyst growth financing, described as balance-sheet capital that enables go-to-market expansion without diluting ownership, and should not be treated as all-equity proceeds. Earlier publicly disclosed equity rounds total $612 million through the April 2025 Series D. The 2021 seed round amount was not disclosed in the announcement."
+reported_total_raised = 892000000
+reported_total_currency = "USD"
+total_source_ids = ["growth2025"]
+total_as_of = "2025-10-23"
+total_scope = "Company-announced cumulative total, including venture rounds and General Catalyst growth financing; seed amount was undisclosed and total is reported by company, not reconstructed."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "seed-2021"
+round_type = "Seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2021-12-08"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+lead_investors = ["Amplify Partners"]
+participating_investors = []
+source_ids = ["seed"]
+notes = "Company announced a funding round led by Amplify Partners without disclosing an amount; other angel investors were acknowledged but not named."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2022"
+round_type = "Series A"
+instrument = "equity"
+status = "announced"
+announced_on = "2022-06-02"
+amount_status = "reported"
+amount = 50000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Sequoia Capital"]
+participating_investors = ["Amplify Partners", "Mantis VC", "LiveOak Venture Partners", "Banana Capital", "K5/JPMC", "CISOs from Square (Block)"]
+source_ids = ["seriesa"]
+
+[[intelligence.funding.rounds]]
+id = "series-b-2023"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2023-11-01"
+amount_status = "reported"
+amount = 61000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Spark Capital"]
+participating_investors = ["Sequoia Capital", "Amplify Partners", "Mantis VC", "Banana Capital"]
+source_ids = ["seriesb"]
+
+[[intelligence.funding.rounds]]
+id = "series-c-2024"
+round_type = "Series C"
+instrument = "equity"
+status = "closed"
+announced_on = "2024-07-25"
+amount_status = "reported"
+amount = 140000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Redpoint Ventures", "Lightspeed Venture Partners", "IVP"]
+participating_investors = ["Sequoia Capital", "Spark Capital", "Mantis VC"]
+post_money_valuation = 1120000000
+valuation_currency = "USD"
+valuation_basis = "reported"
+source_ids = ["seriesc"]
+
+[[intelligence.funding.rounds]]
+id = "series-d-2025"
+round_type = "Series D"
+instrument = "equity"
+status = "closed"
+announced_on = "2025-04-23"
+amount_status = "reported"
+amount = 356000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Kleiner Perkins", "IVP"]
+participating_investors = ["Salesforce Ventures", "Datadog Ventures", "Amplify Partners", "Lightspeed Venture Partners", "Mantis VC", "Redpoint Ventures", "Sequoia Capital", "Spark Capital", "Windpact Partners"]
+post_money_valuation = 3500000000
+valuation_currency = "USD"
+valuation_basis = "reported"
+source_ids = ["seriesd"]
+notes = "Company release identifies the $3.5 billion valuation. Windpact is named among previous investors; the release's wording says other existing investors participated."
+
+[[intelligence.funding.rounds]]
+id = "general-catalyst-growth-2025"
+round_type = "Growth financing"
+instrument = "unknown"
+status = "announced"
+announced_on = "2025-10-23"
+amount_status = "reported"
+amount = 280000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["General Catalyst Customer Value Fund"]
+participating_investors = []
+source_ids = ["growth2025"]
+notes = "Company calls this balance-sheet growth capital and says the structure scales go-to-market without diluting ownership. Exact legal instrument and repayment terms are not disclosed in the public announcement; not classified as equity or debt without evidence."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Chainguard remains privately held; public sources identify venture investors but do not disclose cap-table percentages. The October 2025 General Catalyst financing was described as non-dilutive balance-sheet growth capital. No parent company, acquisition, IPO, or ownership transfer was identified in the reviewed sources."
+cap_table_status = "undisclosed"
+shareholders = ["Amplify Partners", "Sequoia Capital", "Spark Capital", "Redpoint Ventures", "Lightspeed Venture Partners", "IVP", "Kleiner Perkins", "Salesforce Ventures", "Datadog Ventures", "General Catalyst Customer Value Fund"]
+source_ids = ["seriesa", "seriesb", "seriesc", "seriesd", "growth2025"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "not_israeli"
+basis = []
+summary = "Reviewed company materials identify Chainguard as headquartered in Kirkland, Washington and describe its U.S.-based founding and leadership; no Israeli incorporation, headquarters, founder connection, or R&D connection was established in this research."
+as_of = "2026-10-04"
+source_ids = ["about", "founding"]
+
+[[intelligence.people]]
+name = "Dan Lorenc"
+role = "Chief Executive Officer and co-founder"
+is_founder = true
+current = true
+background = "Company identifies him as CEO and co-founder; its founding announcement describes a team focused on open-source software, security, and cloud-native development."
+source_ids = ["about", "founding"]
+
+[[intelligence.people]]
+name = "Matt Moore"
+role = "Chief Technology Officer and co-founder"
+is_founder = true
+current = true
+background = "Company identifies him as CTO and co-founder; the founding team brought open-source and cloud-native software experience."
+source_ids = ["about", "founding"]
+
+[[intelligence.people]]
+name = "Ville Aikas"
+role = "Co-founder"
+is_founder = true
+current = true
+source_ids = ["about", "founding"]
+
+[[intelligence.people]]
+name = "Scott Nichols"
+role = "Co-founder"
+is_founder = true
+current = false
+source_ids = ["founding"]
+
+[[intelligence.people]]
+name = "Kim Lewandowski"
+role = "Co-founder"
+is_founder = true
+current = false
+source_ids = ["founding"]
+
+[[intelligence.people]]
+name = "Eyal Bar"
+role = "Chief Financial Officer"
+is_founder = false
+current = true
+source_ids = ["about", "growth2025"]
+
+[[intelligence.people]]
+name = "Quincy Castro"
+role = "Chief Information Security Officer"
+is_founder = false
+current = true
+source_ids = ["about"]
+
+[[intelligence.people]]
+name = "Dustin Kirkland"
+role = "Senior Vice President of Engineering"
+is_founder = false
+current = true
+background = "Joined as an engineering leader after product and engineering leadership roles at Goldman Sachs, Google, and Canonical, according to the company's Series B announcement."
+source_ids = ["about", "seriesb"]
+
+[[intelligence.investors]]
+name = "Amplify Partners"
+investor_type = "vc"
+website = "https://amplifypartners.com"
+round_ids = ["seed-2021", "series-a-2022", "series-b-2023"]
+relationship = "current"
+source_ids = ["seed", "seriesa", "seriesb"]
+
+[[intelligence.investors]]
+name = "Sequoia Capital"
+investor_type = "vc"
+website = "https://www.sequoiacap.com"
+round_ids = ["series-a-2022", "series-b-2023", "series-c-2024", "series-d-2025"]
+relationship = "current"
+source_ids = ["seriesa", "seriesb", "seriesc", "seriesd"]
+
+[[intelligence.investors]]
+name = "Spark Capital"
+investor_type = "vc"
+website = "https://www.sparkcapital.com"
+round_ids = ["series-b-2023", "series-c-2024", "series-d-2025"]
+relationship = "current"
+source_ids = ["seriesb", "seriesc", "seriesd"]
+
+[[intelligence.investors]]
+name = "Redpoint Ventures"
+investor_type = "vc"
+website = "https://www.redpoint.com"
+round_ids = ["series-c-2024", "series-d-2025"]
+relationship = "current"
+source_ids = ["seriesc", "seriesd"]
+
+[[intelligence.investors]]
+name = "Lightspeed Venture Partners"
+investor_type = "vc"
+website = "https://lsvp.com"
+round_ids = ["series-c-2024", "series-d-2025"]
+relationship = "current"
+source_ids = ["seriesc", "seriesd"]
+
+[[intelligence.investors]]
+name = "IVP"
+investor_type = "vc"
+website = "https://www.ivp.com"
+round_ids = ["series-c-2024", "series-d-2025"]
+relationship = "current"
+source_ids = ["seriesc", "seriesd"]
+
+[[intelligence.investors]]
+name = "Kleiner Perkins"
+investor_type = "vc"
+website = "https://www.kleinerperkins.com"
+round_ids = ["series-d-2025"]
+relationship = "current"
+source_ids = ["seriesd"]
+
+[[intelligence.investors]]
+name = "Salesforce Ventures"
+investor_type = "corporate"
+website = "https://salesforceventures.com"
+round_ids = ["series-d-2025"]
+relationship = "current"
+source_ids = ["seriesd"]
+
+[[intelligence.investors]]
+name = "Datadog Ventures"
+investor_type = "corporate"
+website = "https://www.datadoghq.com/ventures/"
+round_ids = ["series-d-2025"]
+relationship = "current"
+source_ids = ["seriesd"]
+
+[[intelligence.investors]]
+name = "General Catalyst Customer Value Fund"
+investor_type = "other"
+website = "https://www.generalcatalyst.com"
+round_ids = ["general-catalyst-growth-2025"]
+relationship = "current"
+source_ids = ["growth2025"]
+notes = "Investor in announced growth financing; financing legal instrument not disclosed."
+
+[[intelligence.financials]]
+name = "Annual recurring revenue"
+value = "$40 million"
+as_of = "2025"
+basis = "reported"
+metric = "arr"
+numeric_value = 40000000
+value_relation = "exact"
+unit = "currency"
+currency = "USD"
+period_start = "2024"
+period_end = "2025"
+source_ids = ["seriesd"]
+notes = "Company reported FY2025 ARR of $40 million and sevenfold annual growth; audited status not disclosed. The announced >$100 million FY2026 ARR target is a forecast and is not recorded as achieved revenue."
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Company reported more than 150 Chainguard Containers customers at the Series D announcement; this is a company-reported customer count, not a count of paying production deployments."
+date = "2025-04-23"
+source_ids = ["seriesd"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Company announced Chainguard Libraries and Chainguard VMs and reported an expanded product portfolio beyond container images."
+date = "2025-04-23"
+source_ids = ["seriesd"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "By October 2025, the company said it had launched JavaScript, Java, and Python Libraries, announced Chainguard VMs, and surpassed 1,700 minimal images in its container catalog; it also listed availability through AWS, Azure, and GCP marketplaces."
+date = "2025-10-23"
+source_ids = ["growth2025"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Booz Allen's engineer described use of Chainguard secure container images in work supporting the Department of Defense in the Series D announcement; this is customer testimony, not evidence of a government contract with Chainguard."
+date = "2025-04-23"
+source_ids = ["seriesd"]
+
+[[intelligence.comparables]]
+name = "Docker Hardened Images"
+website = "https://www.docker.com/products/hardened-images/"
+rationale = "Direct supplier of minimal, maintained container images with SBOM and provenance features."
+differentiation = "Docker emphasizes drop-in adoption within Docker Hub and broad free access; Chainguard claims broader artifact coverage, source-build control, and commercial remediation SLAs. Validate comparative coverage and patch performance in matched workloads."
+source_ids = ["docker"]
+
+[[intelligence.comparables]]
+name = "Red Hat Universal Base Image and Red Hat ecosystem"
+website = "https://www.redhat.com/en/technologies/cloud-computing/openshift/ubi"
+rationale = "Enterprise Linux and container base image substitute with established support and compliance ecosystem."
+differentiation = "Red Hat competes through a mature enterprise Linux platform and OpenShift ecosystem; Chainguard focuses on a larger source-built open-source artifact catalog and continuous rebuilds."
+source_ids = ["products"]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://www.chainguard.dev/about-us"
+title = "About: The team, customers, and investors building the future"
+publisher = "Chainguard"
+kind = "company"
+accessed_at = "2026-10-04T16:01:04Z"
+claims = ["Current company positioning and open-source security business", "Current executive roles for Dan Lorenc, Matt Moore, Ville Aikas, Eyal Bar, and Quincy Castro", "Company customer logo roster and claimed operating footprint"]
+
+[[intelligence.research.sources]]
+id = "products"
+url = "https://www.chainguard.dev/containers"
+title = "Your open source foundation for the agentic coding era"
+publisher = "Chainguard"
+kind = "company"
+accessed_at = "2026-10-04T16:01:04Z"
+claims = ["Current product catalog spans containers, libraries, VMs, OS packages, actions, and agent skills", "Chainguard states it has 3,000+ container image projects, 30,000+ packages, and FIPS and STIG offerings", "Chainguard describes signatures, SBOMs, provenance, and Factory rebuild processes"]
+
+[[intelligence.research.sources]]
+id = "founding"
+url = "https://www.chainguard.dev/unchained/introducing-chainguard-inc"
+title = "Introducing: Chainguard, Inc."
+publisher = "Chainguard"
+kind = "company"
+accessed_at = "2026-10-04T16:01:04Z"
+published_on = "2021-10-07"
+claims = ["Company was introduced in October 2021", "Founders named as Dan Lorenc, Matt Moore, Scott Nichols, Ville Aikas, and Kim Lewandowski"]
+
+[[intelligence.research.sources]]
+id = "seed"
+url = "https://www.chainguard.dev/fr-FR/unchained/announcing-our-seed-round-and-chainguard-services"
+title = "Announcing our Seed Round, and Chainguard Services!"
+publisher = "Chainguard"
+kind = "company"
+accessed_at = "2026-10-04T16:01:04Z"
+published_on = "2021-12-08"
+claims = ["Seed funding led by Amplify Partners; amount undisclosed"]
+
+[[intelligence.research.sources]]
+id = "seriesa"
+url = "https://www.chainguard.dev/fr-FR/unchained/chainguard-raises-50m-in-series-a-to-make-software-supply-chain-secure-by-default-introduces-secure-container-base-images"
+title = "Chainguard raises $50M in Series A to make software supply chain secure by default"
+publisher = "Chainguard"
+kind = "company"
+accessed_at = "2026-10-04T16:01:04Z"
+published_on = "2022-06-02"
+claims = ["Series A amount was $50 million, led by Sequoia Capital", "Series A participants included Amplify Partners, Mantis VC, LiveOak Venture Partners, Banana Capital, and K5/JPMC"]
+
+[[intelligence.research.sources]]
+id = "seriesb"
+url = "https://www.chainguard.dev/unchained/chainguard-raises-61-million-series-b-round-as-enterprises-move-to-fortify-open-source-software"
+title = "Chainguard raises $61 million Series B round"
+publisher = "Chainguard"
+kind = "company"
+accessed_at = "2026-10-04T16:01:04Z"
+published_on = "2023-11-01"
+claims = ["Series B amount was $61 million led by Spark Capital", "Company reported $116 million total fundraising after Series B", "Company cited enterprise customers including HPE, Snowflake, Sourcegraph, and Replicated", "Dustin Kirkland joined as first VP of Engineering"]
+
+[[intelligence.research.sources]]
+id = "seriesc"
+url = "https://www.chainguard.dev/de-DE/unchained/chainguard-raises-140-million-in-series-c-funding-to-secure-the-next-frontier-of-ai-workloads"
+title = "Chainguard Raises $140 Million in Series C Funding"
+publisher = "Chainguard"
+kind = "company"
+accessed_at = "2026-10-04T16:01:04Z"
+published_on = "2024-07-25"
+claims = ["Series C amount was $140 million led by Redpoint Ventures, Lightspeed Venture Partners, and IVP", "Company reported $256 million total funding and $1.12 billion valuation", "Company reported customer base increased more than five times year over year and ARR increased over 175 percent in first half of fiscal year", "Company named enterprise customers including Anduril, Canva, HPE, Snowflake, and Wiz"]
+
+[[intelligence.research.sources]]
+id = "seriesd"
+url = "https://www.prnewswire.com/news-releases/chainguard-raises-356-million-in-series-d-funding-to-be-the-safe-source-for-all-open-source-302435220.html"
+title = "Chainguard Raises $356 Million in Series D Funding"
+publisher = "PR Newswire (news provided by Chainguard)"
+kind = "media"
+accessed_at = "2026-10-04T16:01:04Z"
+published_on = "2025-04-23"
+claims = ["Series D amount was $356 million co-led by Kleiner Perkins and IVP", "Series D investors included Salesforce Ventures and Datadog Ventures", "Company reported total raised of $612 million and a $3.5 billion valuation", "Company reported FY2025 ARR of $40 million, sevenfold growth, and a target above $100 million before FY2026 end", "Company reported more than 150 container customers and named Booz Allen, Anduril, Canva, HPE, Snowflake, Snap, and others"]
+
+[[intelligence.research.sources]]
+id = "growth2025"
+url = "https://www.prnewswire.com/news-releases/chainguard-announces-280-million-growth-financing-from-general-catalyst-to-usher-in-next-era-of-trusted-open-source-software-302592279.html"
+title = "Chainguard Announces $280 Million Growth Financing from General Catalyst"
+publisher = "PR Newswire (news provided by Chainguard)"
+kind = "media"
+accessed_at = "2026-10-04T16:01:04Z"
+published_on = "2025-10-23"
+claims = ["Chainguard announced $280 million growth financing from General Catalyst Customer Value Fund", "Company reported $636 million secured during prior six months and $892 million total over time", "Company described financing as non-dilutive balance-sheet capital for go-to-market growth", "Company reported 1,700-plus minimal images and marketplace availability on AWS, Azure, and GCP", "Company named customers Anduril, Canva, Fortinet, HPE, Snap, and Snowflake", "Company announced new CFO and CISO without naming the CISO in this release"]
+
+[[intelligence.research.sources]]
+id = "docker"
+url = "https://www.docker.com/products/hardened-images/"
+title = "Docker Hardened Images"
+publisher = "Docker"
+kind = "other"
+accessed_at = "2026-10-04T16:01:04Z"
+claims = ["Docker offers minimal maintained container images with near-zero CVEs, SBOMs, provenance, and enterprise features"]
+
+[intelligence.research]
+researched_at = "2026-10-04T16:01:04Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Chainguard official company identity founders headquarters operating status", "Chainguard funding raised seed Series A Series B Series C Series D growth financing valuation", "Chainguard investors investor announcements portfolio", "Chainguard leadership CEO CTO CFO CISO team", "Chainguard ownership parent acquisition cap table General Catalyst growth financing", "Chainguard ARR revenue profitability financial metrics 2025 2026", "Chainguard customers contracts customer announcements product milestones 2025 2026", "Chainguard patents USPTO WIPO intellectual property", "Chainguard competitors Docker Hardened Images Red Hat hardened container images", "Chainguard defense government federal DoD applicability customer"]
+gaps = ["team: biographies and employment histories for all current and former leaders were not independently verified; only named leadership roles are listed", "investors: complete seed angel roster and exact participating investor set for every round are not publicly disclosed", "financials: audited statements, profitability, burn, runway, and post-FY2025 realized ARR were not found; FY2026 ARR is only a target", "traction: company customer counts and marketing metrics are not independently audited and paid production deployment, retention, and contract value are unavailable", "intellectual_property: searches did not identify attributable patent grants or applications for Chainguard, Inc.; this does not establish absence of IP", "competition: competitor comparisons were limited to publicly available product descriptions and no matched independent efficacy benchmark was located", "No Israeli founder, incorporation, HQ, or R&D link established from reviewed sources", "General Catalyst growth financing legal form, repayment terms, and detailed economics are not disclosed", "Private cap table and ownership percentages are not public"]
+conflicts = []
+diligence_questions = ["What portion of the $892 million company-reported total is equity versus repayable growth financing, and what are the covenants, repayment waterfall, and recourse terms of the General Catalyst facility?", "What were FY2026 ARR, gross retention, net retention, gross margin, customer concentration, and paid production deployments, and how do these compare with the FY2025 company-reported $40 million ARR?", "For representative customer workloads, what measured compatibility engineering, false-positive reduction, remediation SLA attainment, and total cost savings result versus Docker Hardened Images, enterprise Linux, and internal golden images?", "Which exact Chainguard product variants hold current FIPS validations or satisfy specific STIG baselines, and what customer authorization evidence supports federal deployment claims?", "How does Chainguard protect source inputs, build isolation, signing keys, AI reconciler agents, and release provenance against compromise at the scale of its current catalog?"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T16:01:04Z"
+next_review_on = "2027-01-04"
+queries = ["Chainguard official company identity founders headquarters operating status"]
+source_ids = ["about", "founding"]
+summary = "Official company profile and founding announcement identify Chainguard, Inc., its Washington headquarters, 2021 founding, current business, and founding team."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T16:01:04Z"
+next_review_on = "2027-01-04"
+queries = ["Chainguard funding raised seed Series A Series B Series C Series D growth financing valuation"]
+source_ids = ["seed", "seriesa", "seriesb", "seriesc", "seriesd", "growth2025"]
+summary = "Reviewed each located company round announcement through October 2025; later financing not identified."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T16:01:04Z"
+next_review_on = "2027-01-04"
+queries = ["Chainguard investors investor announcements portfolio"]
+source_ids = ["seed", "seriesa", "seriesb", "seriesc", "seriesd", "growth2025"]
+summary = "Named round leads and participants are recorded from company announcements; seed angels and some existing Series D participants remain unspecified."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T16:01:04Z"
+next_review_on = "2027-01-04"
+queries = ["Chainguard leadership CEO CTO CFO CISO team"]
+source_ids = ["about", "founding", "seriesb", "growth2025"]
+summary = "Official leadership page confirms current executive roles and founding release names five founders; historical roles and biographies are incomplete."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T16:01:04Z"
+next_review_on = "2027-04-04"
+queries = ["Chainguard ownership parent acquisition cap table General Catalyst growth financing"]
+source_ids = ["seriesd", "growth2025"]
+summary = "No public cap table or change-of-control deal found. Company characterizes General Catalyst growth capital as non-dilutive."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-04T16:01:04Z"
+next_review_on = "2027-04-04"
+queries = ["Chainguard ARR revenue profitability financial metrics 2025 2026"]
+source_ids = ["seriesc", "seriesd", "growth2025"]
+summary = "Only public dated metric located was company-reported $40 million FY2025 ARR; FY2026 ARR above $100 million was a target, with no public audited earnings data found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T16:01:04Z"
+next_review_on = "2027-01-04"
+queries = ["Chainguard customers contracts customer announcements product milestones 2025 2026"]
+source_ids = ["seriesb", "seriesc", "seriesd", "growth2025", "products"]
+summary = "Company announcements disclose customer examples, 150-plus container customers in April 2025, expanded products and marketplace availability; recurring revenue quality and contract amounts are not disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T16:01:04Z"
+next_review_on = "2027-04-04"
+queries = ["Chainguard patents patents USPTO WIPO intellectual property"]
+source_ids = ["about", "products"]
+summary = "Web searches for Chainguard Inc patent records did not identify attributable patent filings; the company publicly maintains open source build repositories, which are not evidence of patent ownership."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T16:01:04Z"
+next_review_on = "2027-04-04"
+queries = ["Chainguard competitors Docker Hardened Images Red Hat hardened container images"]
+source_ids = ["docker", "products"]
+summary = "Docker Hardened Images provides a direct hardened-image substitute; Red Hat and internal golden image programs are additional alternatives. Comparative product claims require workload-level diligence."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T16:01:04Z"
+next_review_on = "2027-04-04"
+queries = ["Chainguard defense government federal DoD applicability customer"]
+source_ids = ["products", "seriesd", "seriesc"]
+summary = "Software provenance, patching and hardened artifacts have commercial and security applicability; company disclosures include federal compliance positioning and customer testimony about DoD-supporting work. No direct weapons function identified."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current company page describes ongoing products, leadership, customers, and active operating strategy."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["about", "products"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Reviewed official company and founding materials identify Washington headquarters and U.S.-based founding; no Israeli connection is stated."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["about", "founding"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "October 2025 company release states $892 million in total funding over time."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["growth2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2022.amount"
+support = "direct"
+summary = "Company announcement says it raised $50 million in Series A."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesa"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2022.lead_investors"
+support = "direct"
+summary = "Company names Sequoia Capital as lead investor."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesa"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2023.amount"
+support = "direct"
+summary = "Company announcement says it completed a $61 million Series B."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesb"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2023.lead_investors"
+support = "direct"
+summary = "Company announcement identifies Spark Capital as lead."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesb"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2024.amount"
+support = "direct"
+summary = "Company announcement says it completed a $140 million Series C."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2024.post_money_valuation"
+support = "direct"
+summary = "Company announcement reports valuation of $1.12 billion."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2024.lead_investors"
+support = "direct"
+summary = "Company announcement names Redpoint Ventures, Lightspeed Venture Partners, and IVP as round leads."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2025.amount"
+support = "direct"
+summary = "Company-issued PR Newswire release states $356 million Series D."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesd"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2025.post_money_valuation"
+support = "direct"
+summary = "Company-issued PR Newswire release reports a $3.5 billion valuation."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesd"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2025.lead_investors"
+support = "direct"
+summary = "Company-issued release identifies Kleiner Perkins and IVP as co-leads."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesd"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.general-catalyst-growth-2025.amount"
+support = "direct"
+summary = "Company-issued release states $280 million of growth financing from General Catalyst's Customer Value Fund."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["growth2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.general-catalyst-growth-2025.lead_investors"
+support = "direct"
+summary = "Company-issued release identifies General Catalyst Customer Value Fund as provider."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["growth2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2021.lead_investors"
+support = "direct"
+summary = "Seed announcement names Amplify Partners as lead investor."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2022.participating_investors"
+support = "direct"
+summary = "Series A announcement names participating investors and angel group listed for the round."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesa"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2023.participating_investors"
+support = "direct"
+summary = "Series B announcement identifies existing investors Sequoia Capital, Amplify Partners, Mantis VC, and Banana Capital alongside Spark Capital."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesb"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2024.participating_investors"
+support = "direct"
+summary = "Series C announcement names Sequoia Capital, Spark Capital, and Mantis VC as existing participants."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2025.participating_investors"
+support = "direct"
+summary = "Company release names Salesforce Ventures and Datadog Ventures as new investors and states existing investors also participated; public historical releases identify listed repeat investors."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesd"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Annual recurring revenue@2025.numeric_value"
+support = "direct"
+summary = "Company-issued Series D announcement reports FY2025 ARR of $40 million."
+verified_at = "2026-10-04T16:01:04Z"
+source_ids = ["seriesd"]

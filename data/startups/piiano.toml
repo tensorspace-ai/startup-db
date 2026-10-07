@@ -1,0 +1,99 @@
+name = "Piiano"
+description = "Piiano is the original company behind Piiano Vault, a privacy and token-vault technology now used within Autonomous Security, its successor platform for discovering, governing, and enforcing security controls on enterprise AI agents at the endpoint."
+
+detailed_description = """
+Piiano was founded as a data-privacy engineering company around Piiano Vault, a self-hosted privacy vault for sensitive personal, payment, and health data. The vault used field-level encryption, tokenization, granular access controls, auditability, retention and deletion workflows, and data relationships that support privacy operations such as data-subject requests. The company’s current official site and public writing explain that the team pivoted in 2025 and now operates as Autonomous Security. The vault is not merely a historical product: Autonomous describes it as the security primitive used to store OAuth tokens, API keys, and other secrets for AI agents and MCP servers.
+
+The current product is an endpoint-oriented AI-agent security and governance platform. Its control stack combines discovery of installed agents, skills, plugins, MCP servers, and exposed configuration; risk assessment and remediation; runtime enforcement on employee workstations; and a secure MCP cloud or hub for sandboxing, centralized credential management, monitoring, policy enforcement, and audit. The platform is designed to observe prompts, tool calls, shell commands, responses, and secret use where agents actually run, complementing rather than replacing conventional EDR, identity, SIEM, and application-security controls. The company says it supports more than 50 popular AI agents and provides enterprise integrations such as SSO, SCIM, SIEM, and compliance workflows, although deployment coverage, false-positive rates, and integration depth require buyer validation.
+
+The commercial problem is becoming more concrete as coding assistants and MCP-connected agents gain access to source code, local files, credentials, SaaS systems, and production workflows. Buyers can use the platform to inventory shadow AI, identify risky or hardcoded secrets, block unsafe commands and tool calls, inspect third-party MCP and skill supply chains, and create allow or block policies for agents and integrations. A public customer quote on the current site claims visibility across 4,000 endpoints, but the customer is unnamed and the claim should be treated as a marketing signal rather than independently verified traction. Public funding evidence supports a $9 million 2021 seed led by YL Ventures and an undisclosed 2024 round listed by Startup Nation Central; a Series A is not sufficiently corroborated in the sources reviewed.
+
+Competition is fragmented across AI-use governance, prompt and model security, MCP gateways, secrets management, endpoint security, and cloud access controls. Piiano/Autonomous differentiates by placing policy enforcement and intent monitoring at the endpoint while retaining a vault and protocol-aware control plane. This creates a potentially useful wedge for organizations that cannot govern agents through network inspection alone, but it also creates difficult engineering and adoption requirements: reliable OS-level instrumentation across platforms, safe interception of legitimate developer workflows, and clear interoperability with entrenched EDR and identity stacks. The product has credible defense and national-security adjacency because defense, intelligence, and critical-infrastructure teams will face the same risks when privileged agents are introduced into controlled development or operations environments. No public evidence reviewed establishes classified deployment, government contracting, or defense certification, so that adjacency remains a diligence hypothesis rather than demonstrated traction.
+"""
+
+logo = "https://a16y.ai/figma/autonomous-wordmark.svg"
+website = "https://a16y.ai/"
+sector = "AI agent security and cybersecurity"
+founded = "2021"
+headquarters = "New York, United States"
+employees = "11-50"
+funding_stage = "Seed plus undisclosed 2024 round"
+entity_type = "startup"
+
+dual_use = true
+dual_use_description = "The core technology has substantive commercial and defense/security applicability because it governs privileged AI agents, MCP servers, plugins, credentials, and data at the endpoint. Defense, intelligence, and critical-infrastructure organizations could use it to inventory and constrain agentic tooling in sensitive development or operational environments, while the Piiano Vault lineage offers a relevant secret-isolation primitive. The public record reviewed does not establish classified deployments, government contracts, or required accreditations, so the defense case is credible adjacency rather than proven government traction."
+
+key_technologies = [
+  "OS-native endpoint agent for AI-agent discovery and runtime enforcement",
+  "Shadow-AI inventory across agents, skills, plugins, MCP servers, and exposed configurations",
+  "Real-time policy enforcement for prompts, tool calls, shell commands, and responses",
+  "MCP gateway and secure cloud or hub with sandboxed execution and audit",
+  "Piiano Vault-based tokenization, field-level encryption, and centralized secret storage",
+  "Risk assessment and remediation for agent supply-chain and credential exposure",
+  "Enterprise identity and telemetry integrations including SSO, SCIM, and SIEM"
+]
+
+use_cases = [
+  "Discovering and governing shadow AI across employee workstations",
+  "Blocking unauthorized coding-agent commands, tool calls, and data transfers",
+  "Scanning MCP servers, skills, and plugins for supply-chain and configuration risk",
+  "Centralizing OAuth tokens, API keys, and agent secrets instead of leaving them in local files",
+  "Applying least-privilege policies and audit trails to enterprise AI workflows",
+  "Safely testing agentic software in defense or intelligence development enclaves",
+  "Protecting sensitive source code, customer records, and operational data from agent exfiltration"
+]
+
+investible = true
+investment_rationale = "Piiano represents a credible strategic security startup thesis because its original privacy-vault technology has been carried into a timely endpoint-control platform for AI agents. The category addresses a real gap between traditional EDR visibility and the privileged actions taken by agents, while the vault can strengthen the platform’s credential and tenant-isolation story. The investment case is not a recommendation: diligence should establish recurring revenue, retention, deployment scale, customer concentration, gross-margin impact from endpoint and hosted infrastructure, and whether the 2024 financing and current corporate identity support sufficient runway."
+
+strategic_value = "The company could provide allied security organizations with a control layer for adopting agentic software without granting unmanaged access to credentials, code, or operational systems. Endpoint discovery, runtime blocking, MCP supply-chain inspection, centralized secret handling, and audit may be useful in secure engineering labs and controlled enterprise environments. Strategic value is reduced by the absence of public evidence for defense customers, classified deployment, government procurement, or certification; those should be explicit diligence gates rather than assumed outcomes."
+
+potential_score = 75.0
+technology_score = 81.0
+market_score = 77.0
+team_score = 76.0
+dual_use_score = 68.0
+strategic_alignment_score = 74.0
+
+stage = "early"
+stage_rationale = "The company was founded in 2021, raised a documented seed round, later reported an undisclosed 2024 round, and remains privately held with an 11-50 employee profile. Its current Autonomous Security platform is commercially presented and reports an unnamed 4,000-endpoint customer signal, but public evidence is insufficient to establish mature scale, a verified Series A, or durable product-market fit. Early is therefore more defensible than mid or mature."
+
+competitors = [
+  "Prompt Security",
+  "Lasso Security",
+  "Aim Security",
+  "Protect AI",
+  "Pillar Security",
+  "Microsoft Defender for Endpoint and Security Copilot"
+]
+
+competitive_edge = "The strongest differentiation is architectural: an OS-native endpoint agent can observe and constrain agent behavior where prompts, tools, local files, and credentials meet, while the MCP control plane and Piiano Vault address protocol and secret-management risks. That combination may cover gaps left by network-only gateways and generic EDR. The edge is not yet proven; it depends on cross-platform reliability, low latency, low false-positive rates, policy usability, secure handling of highly privileged telemetry, and integration with incumbent endpoint and identity products."
+
+risk_factors = [
+  "Rebranding and pivot risk: the company moved from Piiano privacy infrastructure through MCPTotal to Autonomous Security, which can create product, customer, and financing uncertainty",
+  "Category timing risk: enterprise AI-agent adoption, MCP standards, and buyer budgets may develop more slowly or differently than expected",
+  "Execution risk: OS-native monitoring and enforcement must remain reliable across Windows, macOS, Linux, agent versions, and developer tooling",
+  "False-positive and trust risk: blocking legitimate commands or inspecting sensitive prompts can disrupt engineering workflows and create privacy concerns",
+  "Competitive risk: EDR, identity, cloud-security, and AI-security vendors can add overlapping discovery, gateway, and policy features",
+  "Commercial concentration risk: the public customer evidence is limited and an unnamed endpoint-scale claim is not a substitute for references or retention data",
+  "Government-market risk: defense use would require procurement evidence, security reviews, deployment constraints, and potentially certifications that are not publicly demonstrated"
+]
+
+risk_level = "high"
+
+signals = []
+
+priority_rank = 0
+priority_rationale = "Maintain as a monitored strategic-priority signal: the company has a technically relevant transition from privacy vaults to endpoint AI-agent security, credible dual-use adjacency, and a current product aligned with emerging enterprise risk. Keep the ranking provisional because public evidence on revenue, financing, customer references, defense adoption, and operational scale remains limited."
+
+public_sources = [
+  "https://a16y.ai/",
+  "https://a16y.ai/blog/from-mcptotal-to-autonomous-security-a-name-for-the-ai-era",
+  "https://a16y.ai/blog/token-vault-architecture-explained",
+  "https://www.businesswire.com/news/home/20211026005132/en/Piiano-Raises-%249M-Seed-Round-to-Transform-Enterprise-Data-Privacy",
+  "https://www.linkedin.com/company/a16y",
+  "https://finder.startupnationcentral.org/company_page/autonomous-security"
+]
+
+crawled_at = "2026-02-24T05:38:00+00:00"
+updated_at = "2026-07-31T18:14:33Z"

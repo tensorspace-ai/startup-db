@@ -1,0 +1,69 @@
+name = "oneNav"
+description = "oneNav develops L5-direct GNSS receiver technology and licensable silicon IP that acquires and tracks modern multi-constellation signals without depending on legacy L1 acquisition, targeting lower-power and more resilient positioning for consumer, industrial, and defense systems."
+
+detailed_description = """oneNav is a privately held semiconductor and positioning-technology startup founded in 2019 and headquartered in Sunnyvale, California, with an additional engineering presence in Tampere, Finland. Its core product is L5-direct, a receiver architecture that acquires and tracks modern L5/E5-band GNSS signals directly rather than using an L1-first path and adding L5 later. The company describes an Application Specific Array Processor (ASAP), a wideband RF front end, embedded position-determination firmware, and machine-learning multipath rejection as the main elements of the platform. The intended system benefit is a smaller, lower-power receiver with a single RF chain and better discrimination of direct and reflected signals in difficult urban or interference-heavy environments.
+
+The commercial proposition is broader than a finished navigation device. oneNav has described a licensable digital L5-direct IP core, a mixed-signal pREX system-in-package or hard-macro implementation, and position-engine firmware for integration into a customer's silicon or embedded platform. That model could address smartphones, wearables, asset trackers, IoT devices, automotive systems, timing equipment, drones, and other constrained platforms without requiring oneNav to manufacture every end product. The market opportunity is real but execution-heavy: GNSS silicon is qualification-sensitive, incumbent vendors already offer multi-band receivers, and device OEMs generally need a compelling bill-of-materials, power, accuracy, or resilience improvement before changing a proven location stack.
+
+Public evidence indicates meaningful technical progress, but not yet proven mass-market scale. The company reports field and customer-evaluation results in urban environments, including direct L5 operation at weak signal levels, and its May 2025 account describes an FPGA-based receiver flown on a UAV through a simulated electronic-warfare interference field assessed by the Emerging Technology Lab at U.S. Special Operations Command. The company also announced a first L5-direct ASIC in 2025 and a Direct-to-Phase II SBIR award. These are stronger signals than a laboratory concept, but they remain partly company-reported and do not establish production volume, recurring licensing revenue, or broad customer deployment. The public record supports a mid-stage classification with technical validation and defense pull, while leaving partner conversion and commercial scale as central diligence questions.
+
+The competitive field includes u-blox, Quectel, Broadcom, MediaTek, Qualcomm, and other GNSS chipset or module suppliers, as well as resilient-PNT vendors such as Septentrio and Advanced Navigation. oneNav is not competing only on absolute positioning accuracy: its distinctive thesis is L1 independence, direct use of wideband L5/E5 signals, and a potentially simpler low-power RF and processing path. Alternative approaches such as tightly coupled inertial navigation, visual or lidar odometry, terrestrial positioning, anti-jam antennas, and multi-sensor PNT can substitute for or complement it. The technology therefore matters most where a modest receiver-level change can preserve navigation continuity, rather than where customers already have a fully redundant navigation architecture.
+
+The national-security relevance is credible because GNSS denial and manipulation directly affect unmanned systems, logistics, timing, communications, and situational awareness. L5-direct can reduce exposure to attacks focused on L1 and may improve resilience when selected L5/E5 sidebands or constellations remain usable. It is not a complete anti-spoofing, anti-jam, or GPS-denied solution: a capable adversary can target L5, satellite visibility can be poor, and robust platforms still need inertial, terrain-relative, visual, or other PNT layers. The strongest assessment is therefore a strategically relevant receiver primitive with dual-use applicability, not a standalone substitute for resilient navigation architectures."""
+
+logo = "Unknown"
+website = "https://onenav.ai"
+sector = "Resilient navigation semiconductors / GNSS receivers"
+founded = "2019"
+headquarters = "Sunnyvale, California, United States"
+employees = "11-50"
+funding_stage = "Series C / privately held"
+entity_type = "startup"
+dual_use = true
+
+dual_use_description = "oneNav's core L5-direct receiver and IP can serve commercial devices, industrial trackers, timing equipment, and autonomy platforms while also addressing a concrete defense problem: preserving usable PNT when L1 GNSS is jammed or manipulated. The defense case is supported by company-reported UAV interference testing and a U.S. Air Force Direct-to-Phase II SBIR announcement, but public material does not establish broad operational deployment. L5 jamming, spoofing, satellite geometry, and the need for complementary sensors limit the claim to credible receiver-level dual use rather than complete denied-navigation immunity."
+
+key_technologies = ["Direct L5/E5 GNSS acquisition and tracking independent of L1", "Wideband single-chain L5 RF front end", "ASAP application-specific parallel GNSS processing", "Multi-constellation GPS, Galileo, QZSS, and BeiDou signal support", "Machine-learning multipath and non-line-of-sight mitigation", "Embedded position, velocity, and time firmware", "Licensable RTL IP, pREX mixed-signal SIP, and future ASIC implementations"]
+
+use_cases = ["Smartphone and wearable positioning in dense urban environments", "Low-power IoT, asset-tracking, and fleet devices", "UAV and uncrewed-system navigation under L1 interference", "Commercial and military vehicle navigation and logistics", "Maritime, aviation, and critical-infrastructure monitoring", "Resilient timing and synchronization for communications or infrastructure sites", "Emergency-response location when urban multipath or GNSS disruption degrades ordinary receivers"]
+
+investible = true
+investment_rationale = "oneNav is a credible strategic-priority signal for a dual-use deep-tech database because it combines differentiated receiver architecture, an IP-and-silicon commercialization path, experienced GNSS leadership, and visible defense validation. This is not an investment recommendation. Diligence should focus on whether the 2025 technical and government signals convert into paid production integrations, how much of the claimed performance is independently reproducible, the durability of the patent and implementation moat, licensing economics, and the company's ability to manage export-control and defense procurement requirements."
+
+strategic_value = "Resilient PNT is a strategic capability for autonomy, logistics, communications timing, emergency response, and military systems. oneNav's L1-independent approach could provide a relatively compact receiver-level improvement for platforms that cannot accommodate large anti-jam antennas or expensive inertial systems. Its value is highest as one layer in a diversified PNT architecture: it can reduce a common-mode vulnerability, but cannot by itself solve broadband L5 interference, satellite outage, sophisticated spoofing, or navigation after GNSS loss."
+
+public_sources = [
+  { title = "oneNav official website", url = "https://onenav.ai/", note = "Official product and company overview describing L5-direct, ASAP processing, multi-constellation support, low-power RF, and target markets." },
+  { title = "oneNav official company page", url = "https://onenav.ai/about/", note = "Official company page identifying the Silicon Valley origin, founders, mission, management experience, and military, commercial, and consumer applications." },
+  { title = "oneNav official 2025 flight assessment announcement", url = "https://onenav.ai/onenav-l5-direct-flies-through-gps-interference-in-real-world-performance-assessment/", note = "Company account of a February 2025 UAV assessment by the USSOCOM Emerging Technology Lab, including the FPGA setup, L5 interference conditions, and the company's caveat that government organizations did not validate its claims." },
+  { title = "oneNav official media archive", url = "https://onenav.ai/media/", note = "Official archive listing the 2025 Direct-to-Phase II SBIR announcement, L5-direct ASIC announcement, field-testing material, and the 2023 funding announcement." },
+  { title = "oneNav on LinkedIn", url = "https://www.linkedin.com/company/onenav-inc", note = "Public company profile listing 2019 founding, Sunnyvale headquarters, private status, semiconductor industry, and an 11-50 employee range." },
+  { title = "GPS World: oneNav L5-direct GNSS technology", url = "https://www.gpsworld.com/onenav-l5-direct-gnss-technology/", note = "Industry coverage describing the IP core, pREX SIP, firmware, single RF chain, and claimed performance and target markets." },
+  { title = "GPS World: oneNav pureL5 field test", url = "https://www.gpsworld.com/onenav-completes-purel5-field-test-using-customer-evaluation-system/", note = "Independent trade coverage of customer-evaluation results in urban and deep-urban environments, while identifying the results as company-announced testing." }
+]
+
+potential_score = 78.0
+technology_score = 85.0
+market_score = 68.0
+team_score = 80.0
+dual_use_score = 88.0
+strategic_alignment_score = 86.0
+
+stage = "mid"
+stage_rationale = "oneNav has progressed from product and IP research to field demonstrations, silicon development, public customer-evaluation results, and a Direct-to-Phase II SBIR announcement. The public record still does not demonstrate broad production deployment or recurring commercial scale, so mid-stage is more defensible than mature."
+
+competitors = ["u-blox multi-band GNSS chipsets and modules", "Qualcomm, Broadcom, and MediaTek GNSS silicon", "Quectel and other GNSS module integrators", "Septentrio resilient and anti-interference GNSS receivers", "Advanced Navigation inertial and resilient-PNT systems", "Inertial, visual, terrain-relative, and terrestrial APNT substitutes"]
+
+competitive_edge = "oneNav's claimed edge is architectural rather than simply incremental accuracy: direct acquisition and tracking on L5/E5 without an L1-first dependency, paired with a single RF chain, parallel ASAP processing, and multipath mitigation. That combination may improve resilience, size, and power for constrained platforms. The edge remains only partially validated publicly, and incumbents can add direct-to-L5 capability or compete with sensor fusion, anti-jam antennas, and inertial systems. Defensibility therefore depends on reproducible low-SNR performance, patent scope, implementation know-how, and successful licensee integration."
+
+risk_factors = ["Public performance evidence is concentrated in company-reported demonstrations, so independent reproducibility and representative operational testing remain open diligence questions.", "L5 is more resilient than L1 in some conditions but can itself be jammed, spoofed, blocked, or unavailable; the receiver is not a complete denied-PNT solution.", "GNSS chipset qualification and OEM design cycles are long, creating material timing and adoption risk for an IP-licensing model.", "Large incumbent silicon vendors can replicate direct-to-L5 features or bundle competing multi-band, anti-jam, and sensor-fusion capabilities.", "Defense sales and government-funded development introduce export-control, procurement, security, and budget-cycle constraints.", "Commercial traction, production volumes, licensing revenue, and customer concentration are not established in the public record.", "Dependence on modern L5/E5 constellation availability and on complementary sensors can limit performance across geography, weather, interference profiles, and mission architectures."]
+
+risk_level = "medium"
+
+signals = ["2025 UAV interference assessment announcement", "2025 Direct-to-Phase II SBIR announcement", "2025 L5-direct ASIC announcement", "public IP-core and silicon commercialization model", "experienced GNSS and semiconductor leadership", "industry coverage and prior field-test reporting"]
+
+priority_rank = 0
+priority_rationale = "High strategic relevance and credible dual-use fit support a positive internal priority signal, with scores led by technology, defense applicability, and strategic alignment. Priority remains conditional on independent test evidence, production-license adoption, recurring revenue visibility, and confirmation that the company remains an independent operating startup."
+
+crawled_at = "2026-05-30T16:33:26Z"
+updated_at = "2026-07-31T19:54:46Z"

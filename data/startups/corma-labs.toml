@@ -1,0 +1,428 @@
+name = "Corma Labs"
+description = "Corma Labs, operating publicly as Corma, is an Israeli defensive-cybersecurity AI startup building foundation models and an AI workforce for security teams. Its stated aim is to give defenders specialized, scalable assistance across investigation and response as offensive AI increases the speed and volume of attacks."
+detailed_description = """
+**Product and problem.** Corma is building a specialized defensive-cybersecurity AI workforce rather than another point product for endpoint, identity, or vulnerability management. The company says its foundation models work alongside human security teams, generalize across defensive tasks, and operate through the security stack that a customer already uses. The concrete problem is an asymmetry in cyber operations: automated offense can search, exploit, and persist at machine speed, while defense still depends heavily on people correlating logs, events, configurations, alerts, and business context under time pressure. Corma’s proposed answer is a model that can perform more of the investigative and operational workload end to end, helping a small security team cover more systems and incidents without requiring every workflow to be redesigned around a new console. Public materials do not enumerate the complete product surface, supported tools, or customer-specific action permissions, so the record should treat “AI workforce” as the company’s product framing rather than as proof of unrestricted autonomous remediation.
+
+**Core technology and operating model.** Corma publicly describes a foundation model built from the ground up for defensive cybersecurity. Its materials emphasize that defensive work is not simply code generation: it involves interpreting noisy telemetry, forming and testing hypotheses, finding anomalous behavior in a large normal environment, and deciding whether and how to act. The model is intended to power agents that can use existing security tools and assist with investigation, containment, and remediation. Sequoia’s announcement describes Corma’s training direction as applying reinforcement learning and self-play to a two-player cyber-defense setting, but that account comes from the lead investor and the company has not publicly disclosed model size, training corpus, data-rights posture, reward design, or independent benchmark methodology. Corma claims materially stronger defensive performance and much lower cost and latency than general-purpose models. Its stated deployment options include fully on-premises operation and post-training on a customer’s security data and context. Those are strategically important capabilities, but diligence still needs reproducible task-level evaluations, false-positive rates, tool-use guardrails, audit trails, and evidence that local adaptation improves outcomes without leaking sensitive information.
+
+**Market, customers, and go-to-market.** The initial market is enterprise security operations, where CISOs already purchase telemetry, detection, response, identity, cloud, and managed-security products but remain constrained by analyst capacity. Corma’s “works where the human team already works” positioning suggests an integration-led enterprise motion: add specialized agents to existing workflows and data sources, then expand as the workforce proves useful across more defensive tasks. CTech reported that the company was already working with Fortune 100 and Fortune 500 organizations, while Sequoia described engagements across healthcare, finance, critical infrastructure, retail, and other large enterprises. The official site says important organizations already use the workforce, but it does not name customers, publish contracts, or disclose revenue, retention, deployment counts, or average time to value. Public evidence therefore supports early enterprise access and credible buyer interest, not yet repeatable product-market fit. Procurement will depend on least-privilege integrations, security review, data residency, human approval policies, and a clear economic case against adding more analysts or buying bundled AI from an incumbent platform.
+
+**Traction, financing, and third-party validation.** Corma was founded in 2025 and emerged publicly in August 2026 with a $60 million seed round led by Sequoia Capital, with Khosla Ventures and Coatue participating, according to CTech and Fortune. Startup Nation Finder lists the same financing, an August 2026 date, approximately 20 employees, and Alon Pluda as founder; CTech likewise reported 20 employees in Tel Aviv. Sequoia’s portfolio record marks the company as founded in 2025 and partnered in 2026, and its partner announcement confirms that the fund is backing Corma’s defensive-cybersecurity foundation-model thesis. Corma has also published a research report comparing frontier-model offense and defense in a controlled enterprise range. That report describes 241 scored engagements and reports persistent backdoors in 85% of attack runs versus detection of 19% by general-purpose defenders; it is useful evidence of a serious evaluation program, but it is company research and should not be treated as an independent product benchmark. Investor-reported customer anecdotes are encouraging, yet named references and independently audited operating metrics remain absent from the public record.
+
+**Founders and team.** Alon Pluda is publicly identified as Corma’s founder and CEO by Sequoia and CTech. The available public record presents the team as an interdisciplinary combination of advanced-AI researchers and highly capable cybersecurity practitioners, which is the right talent mix for a company attempting to train models around operational defense rather than merely fine-tune a chat interface. However, the public company page names only Pluda, and broad biographical claims about other employees, prior employers, military units, or individual research accomplishments are not sufficiently documented in the sources used for this record. The reported Tel Aviv team of about 20 people is a meaningful early hiring base, with the company also maintaining a San Francisco presence, but it is too small to assume mature 24/7 support, evaluation, security engineering, sales engineering, and government-procurement capacity. Team diligence should verify who owns model research, cyber-range design, customer deployment, trust and safety, and enterprise integrations, as well as whether the company can retain scarce security and frontier-model talent after a highly visible seed round.
+
+**Competitive dynamics.** Corma competes with several different categories rather than one direct peer. CrowdStrike, Microsoft Security, Palo Alto Networks, Google Security Operations, and SentinelOne all have large telemetry footprints and can add increasingly capable AI assistants to established detection and response platforms. Tines competes through security workflow automation, while AI-native SOC vendors such as Prophet Security and Dropzone AI compete for analyst augmentation and investigation budgets. Corma’s possible advantage is the combination of a model trained specifically for defensive cyber reasoning, agents that generalize across a customer’s existing tools, and sovereign deployment for organizations that cannot place sensitive security context in a standard multitenant service. The tradeoff is execution risk: incumbents have distribution, data, integrations, and procurement trust, while narrower AI competitors may move faster on a defined SOC workflow. Corma must show that a vertically trained model produces better defended environments and lower total operating cost, not simply stronger marketing language. Its likely competitive edges are (1) domain-specific training objectives, (2) end-to-end workforce behavior, and (3) on-premises adaptability.
+
+**Defense, security, and resilience relevance.** Dual-use relevance is direct because cyber defense is simultaneously a commercial necessity and a national-security mission. The same agents that investigate identity abuse, cloud compromise, malware persistence, or suspicious network activity for a bank or hospital could support government networks, defense contractors, communications providers, energy operators, and other critical infrastructure. On-premises deployment and customer-specific post-training are especially relevant to sovereign, classified-adjacent, or data-residency-constrained environments where telemetry cannot be sent to a public cloud. Corma’s own defensive-gap research also addresses a strategically important question: whether general AI is scaling offensive capability faster than defensive capability. That supports the resilience thesis, but it does not prove fielded military capability. No public source used here establishes a defense contract, classified authorization, government customer, or certification. The responsible strategic interpretation is therefore a high-relevance defensive technology with plausible deployment into defense and critical infrastructure, subject to accreditation, isolation, supply-chain, model-governance, and human-override requirements.
+
+**Stage, trajectory, and diligence risks.** Corma is best classified as early stage: it has a 2025 founding date, a very large seed financing, a reported 20-person Tel Aviv team, and evidence of early enterprise work, but limited public operating history. The financing gives it unusual runway to train models, build cyber-range evaluation infrastructure, and recruit scarce talent. The principal diligence risks are substantial: (1) public performance claims may not transfer from controlled ranges to messy production networks; (2) an agent with access to security tools can cause material damage through hallucination, overreaction, or a compromised integration; (3) training and post-training on security data raises privacy, provenance, retention, and cross-tenant isolation questions; (4) model inference and on-premises deployment may be expensive to operate at enterprise scale; (5) Microsoft, Google, CrowdStrike, Palo Alto Networks, and other incumbents can bundle adjacent capabilities; and (6) public customer, revenue, retention, safety, and certification evidence is still thin. The trajectory is compelling, but the next proof points should be independent efficacy tests, production references, measurable analyst-time savings, renewal data, safe-action controls, and a credible path through regulated and sovereign procurement.
+"""
+logo = "Unknown"
+website = "https://corma.ai"
+sector = "Cybersecurity / Defensive AI and Autonomous Security Operations"
+founded = "2025"
+headquarters = "Tel Aviv, Israel, and San Francisco, United States"
+employees = "20 in Tel Aviv reported August 10, 2026; current and total headcount not confirmed"
+funding_stage = "$60 million Seed (announced August 10, 2026), led by Sequoia Capital with Khosla Ventures and Coatue"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Corma's core product is credibly dual-use because defensive cyber operations protect both commercial organizations and defense, government, and critical-infrastructure networks. Its foundation-model agents could assist with threat hunting, investigation, containment, and response in hospitals, financial institutions, utilities, defense contractors, and public-sector environments. Fully on-premises deployment and post-training on local security context strengthen the sovereign-resilience case. Public sources establish the technology thesis and enterprise activity, but do not establish a military contract, classified deployment, or government certification, so those remain diligence questions rather than assumed traction."
+key_technologies = ["Foundation model trained specifically for defensive cybersecurity reasoning", "Agentic security investigation and response workflows", "Integration with existing enterprise security stacks and operator tools", "Cyber-range evaluation using attacker-defender engagements and ground-truth state changes", "On-premises foundation-model deployment for sovereign or sensitive environments", "Post-training on customer security data and operational context"]
+use_cases = ["Autonomous or analyst-supervised investigation of active enterprise intrusions", "Threat hunting across endpoint, identity, cloud, and network telemetry", "Containment and remediation of persistent backdoors and attacker campaigns", "Security operations augmentation for healthcare and financial institutions", "Cyber resilience for energy, water, communications, and other critical infrastructure", "Defense-contractor and government-network monitoring in private or on-premises environments", "Continuous defensive evaluation against AI-assisted offensive techniques"]
+investible = true
+investment_rationale = """
+Corma merits a high legacy priority signal because it targets a strategically urgent bottleneck: defensive cybersecurity has not scaled as quickly as automated offense, and enterprise security teams are already overloaded. The $60M seed led by Sequoia, with Khosla Ventures and Coatue, provides credible financing and recruiting capacity, while the reported Fortune 100/500 work and published cyber-range research indicate access to serious validation environments. This is not an investment recommendation. Strategic diligence should test whether the model improves production detection and response, whether customers renew, how much human review remains necessary, and whether on-premises economics and security controls can support regulated and sovereign deployments.
+1. Upside: specialized model objectives, AI workforce behavior, and meaningful initial capitalization.
+2. Constraints: limited public operating history, no named customers or audited revenue, and strong incumbent distribution.
+3. Decision signal: prioritize technical and customer-reference diligence, not a conclusion based on financing alone.
+"""
+strategic_value = "Corma has unusually direct strategic value for a resilience-oriented technology thesis. A defensive model that can reason over security telemetry and operate through existing tools could expand the effective capacity of national SOCs, defense suppliers, hospitals, utilities, and communications operators during incidents. On-premises deployment is important where security data must remain under national or organizational control, and customer-specific post-training could improve relevance to local infrastructure. The strategic value remains conditional on measurable efficacy, safe autonomy, explainability, supply-chain assurance, and integration into incident-command processes. Public evidence supports strong relevance, but not yet fielded military or classified adoption."
+potential_score = 85.0
+technology_score = 84.0
+market_score = 85.0
+team_score = 82.0
+dual_use_score = 93.0
+strategic_alignment_score = 92.0
+stage = "early"
+stage_rationale = "Corma was founded in 2025, emerged from stealth in August 2026, and has a reported team of approximately 20 people in Tel Aviv. The $60M seed round is unusually large and the company reports early work with major enterprises, but public evidence does not yet disclose repeatable revenue, retention, named customers, production-scale outcomes, or independently validated model benchmarks. Early is therefore the appropriate stage despite the financing size: the company has significant resources and momentum, but its commercial and technical proof points are still being established."
+competitors = ["CrowdStrike (large EDR/XDR telemetry platform with AI-assisted detection and response)", "Microsoft Security (Defender, Sentinel, and Copilot bundled into a broad enterprise security stack)", "Palo Alto Networks (Cortex XSIAM/XDR and managed security operations)", "Google Security Operations and Mandiant (cloud SOC platform, threat intelligence, and Gemini-assisted workflows)", "SentinelOne (autonomous endpoint and XDR prevention and response)", "Tines (security workflow automation across existing tools)", "Prophet Security and Dropzone AI (AI-native SOC investigation and analyst augmentation)"]
+competitive_edge = "Corma's potential edge is vertical depth: it is building the foundation model and agent behavior around defensive cybersecurity rather than adapting a general-purpose model after the fact. The combination of cross-workflow generalization, existing-stack operation, cyber-range evaluation, and fully on-premises deployment could matter to enterprises and sovereign users that need both operational coverage and control of sensitive telemetry. The edge is not proven yet. Incumbents possess distribution, integrations, data, and customer trust, while focused AI SOC vendors may deliver faster value in narrower workflows. The key tests are independent production efficacy, false-positive control, least-privilege tool use, measurable analyst-time reduction, and a cost profile that remains attractive after deployment and human oversight."
+risk_factors = ["Company-reported model and customer claims require independent production validation", "Agentic access to security tools creates hallucination, overreaction, and integration-compromise risk", "Sensitive telemetry and post-training data create privacy, provenance, and cross-tenant isolation obligations", "On-premises inference, support, and model updates may be expensive at enterprise and sovereign scale", "Large security incumbents can bundle adjacent AI capabilities into existing procurement relationships", "Public evidence of named customers, revenue, retention, certifications, and government adoption is limited", "Scarce frontier-AI and cybersecurity talent may make scaling the team and support function difficult"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Corma is a strong addition to the database because its core technology directly addresses defensive cyber capacity, a strategic resilience problem that spans private enterprises, critical infrastructure, and government networks. The company is newly public, has a substantial Sequoia-led seed round, a reported 20-person Israeli team, and a published evaluation program, while its on-premises option improves relevance to sovereign environments. The priority rank remains 0 because no local ranking was requested and public proof of production outcomes, named customers, certifications, and defense adoption is incomplete. Follow-up should focus on independent benchmarks, customer references, safety controls, deployment economics, and procurement readiness."
+crawled_at = "2026-08-31T18:55:24Z"
+updated_at = "2026-10-04T22:27:40Z"
+public_sources = [
+  { label = "Corma official website", url = "https://corma.ai/", description = "Official product, workforce, existing-stack, and on-premises deployment descriptions." },
+  { label = "Introducing Corma", url = "https://corma.ai/blog/introducing-corma", description = "Company launch, mission, product claims, and Fortune 100 deployment assertion." },
+  { label = "Measuring the AI offense-defense gap on a live network", url = "https://corma.ai/blog/defensive-gap-research", description = "Company-authored cyber-range design, reported 241 scored engagements, and outcome metrics." },
+  { label = "Sequoia: Partnering with Corma", url = "https://sequoiacap.com/article/partnering-with-corma-closing-the-defensive-cybersecurity-gap", description = "Lead investor account of the seed, founder, technical approach, customer anecdotes, and deployment sectors." },
+  { label = "Sequoia Corma portfolio", url = "https://sequoiacap.com/companies/corma", description = "Portfolio record showing Corma, founding year, 2026 partnership, and Alon Pluda." },
+  { label = "CTech: Corma raises $60 million Seed", url = "https://www.calcalistech.com/ctechnews/article/h1cwzhvigg", description = "Israeli business reporting on round, investors, locations, headcount, founder, deployments, and claimed outcomes." },
+  { label = "Fortune: Corma raises $60 million", url = "https://fortune.com/2026/08/10/exclusive-corma-raises-60-million-from-sequoia-for-ai-trained-to-defend-against-cyberattacks/", description = "Independent reporting on financing, locations, founder, early deployments, stated response-time improvement, and valuation not disclosed." }
+  ,{ label = "SiliconANGLE: Corma launches with $60M", url = "https://siliconangle.com/2026/08/10/corma-launches-60m-funding-defensive-cybersecurity-ai/", description = "Reports legal name Corma Labs Ltd., first disclosed external financing, investors, and company-claimed deployments and outcomes." }
+]
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "il-corma-labs"
+legal_name = "Corma Labs Ltd."
+aliases = ["Corma", "Corma Labs"]
+operating_status = "active"
+business_model = "Enterprise cybersecurity service: supplies AI agents as a defensive security workforce operating across customers' existing tools; public sources describe access and deployment but do not disclose pricing or contract model."
+products = ["Corma Workforce", "Foundation models for defensive cybersecurity"]
+locations = ["Tel Aviv, Israel", "San Francisco, United States"]
+source_ids = ["corma_official", "ctech_2026", "fortune_2026", "sequoia_portfolio", "siliconangle_2026"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel"]
+summary = "Corma is headquartered in Tel Aviv, Israel, with an additional San Francisco presence; Israeli headquarters establishes the connection."
+as_of = "2026-10-04"
+source_ids = ["ctech_2026", "fortune_2026"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One disclosed equity seed round of $60 million, announced August 10, 2026. No public valuation or terms were reported. Company/lead-investor and independent coverage agree on the headline amount and named participants."
+reported_total_raised = 60000000
+reported_total_currency = "USD"
+total_source_ids = ["sequoia_announcement", "fortune_2026", "ctech_2026"]
+total_as_of = "2026-08-10"
+total_scope = "Company-announced lifetime equity funding; only disclosed round found through 2026-10-04."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "seed-2026"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2026-08-10"
+closed_on = "2026"
+amount_status = "reported"
+amount = 60000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Sequoia Capital"]
+participating_investors = ["Khosla Ventures", "Coatue"]
+valuation_basis = "undisclosed"
+source_ids = ["sequoia_announcement", "fortune_2026", "ctech_2026"]
+notes = "CTech reports that the round closed in early 2026; public announcement occurred August 10, 2026. Neither valuation nor individual investor allocations were disclosed."
+
+[[intelligence.people]]
+name = "Alon Pluda"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Described by Sequoia and CTech as a skilled hacker and cybersecurity founder; detailed independently verifiable biography was not located in the reviewed sources."
+source_ids = ["ctech_2026", "sequoia_announcement", "fortune_2026"]
+
+[[intelligence.investors]]
+name = "Sequoia Capital"
+investor_type = "vc"
+website = "https://sequoiacap.com/"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["sequoia_announcement", "fortune_2026", "ctech_2026"]
+
+[[intelligence.investors]]
+name = "Khosla Ventures"
+investor_type = "vc"
+website = "https://www.khoslaventures.com/"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["fortune_2026", "ctech_2026"]
+
+[[intelligence.investors]]
+name = "Coatue"
+investor_type = "vc"
+website = "https://www.coatue.com/"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["fortune_2026", "ctech_2026"]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "No public cap table, ownership percentages, parent company, or subsequent ownership transaction was identified. Seed participation establishes investor relationships only; private ownership stakes and allocations cannot be inferred."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["fortune_2026", "ctech_2026"]
+deals = []
+holdings = []
+
+[[intelligence.traction]]
+kind = "product"
+description = "Corma publicly introduced its defensive-cybersecurity workforce and stated that its model was already deployed at Fortune 100 organizations; customer identities and independently auditable deployments were not disclosed."
+date = "2026-08-10"
+source_ids = ["corma_launch", "fortune_2026", "sequoia_announcement"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "CTech and Fortune reported work/deployment with Fortune 100 and Fortune 500 organizations across sectors including healthcare, finance, energy, critical infrastructure, and retail. This is early customer activity, not evidence of named paying customers or contracted revenue."
+date = "2026-08-10"
+source_ids = ["ctech_2026", "fortune_2026"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "The company reported a 94% reduction in threat-response times in adopting organizations; CTech separately reported over 94% and 15-times coverage expansion. Methods, sample size, baselines, and customer verification are not public, so these remain company-reported outcomes."
+date = "2026-08-10"
+source_ids = ["ctech_2026", "fortune_2026"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "Company-authored cyber-range research scored 241 engagements and reported persistent backdoors in 85% of attack runs and detection of 19% by general-purpose defenders. It is a company evaluation, not an independent benchmark of Corma's production model."
+date = "2026-08-10"
+source_ids = ["corma_research"]
+
+[intelligence.research]
+researched_at = "2026-10-04T22:27:40Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Corma Labs Corma official company identity headquarters product",
+  "Corma Labs Corma funding raised seed Series A valuation October 2026",
+  "Corma Labs Corma investors Sequoia Khosla Coatue portfolio announcement",
+  "Corma Labs Corma founder CEO team hiring background",
+  "Corma Labs Corma ownership acquired acquisition parent company filings",
+  "Corma Labs Corma revenue ARR profitability burn runway employees",
+  "Corma Labs Corma customers contracts deployments traction response time",
+  "Corma Labs Corma patents intellectual property WIPO USPTO",
+  "Corma Labs defensive cybersecurity AI SOC competitors official products",
+  "Corma Labs Corma government defense military critical infrastructure contracts",
+  "Corma Labs Corma מימון גיוס משקיעים עובדים"
+]
+gaps = [
+  "team: only co-founder/CEO Alon Pluda could be identified in reviewed sources; other leaders and named biographies are not publicly established.",
+  "investors: round participants are known, but individual allocations and other private investors are not disclosed.",
+  "financials: no revenue, ARR, profitability, burn, runway, audited accounts, or current headcount disclosure found; fundraising is not operating revenue.",
+  "traction: customers are unnamed; contracts, pricing, retention, production deployment scope, and independent verification of reported outcomes are unavailable.",
+  "intellectual_property: no Corma-specific patent or public IP filing was located in targeted searches; trade-secret/model ownership details are not disclosed.",
+  "competition: structured comparable set not added; category competitors are discussed in retained analysis, but direct product and performance comparisons lack common independent evidence.",
+  "ownership: private cap table, beneficial ownership, investor stakes, and any parent entity were not publicly established.",
+  "dual_use: no public defense/government contract, classified deployment, or relevant certification was identified."
+]
+conflicts = ["CTech and Fortune report 94%/over 94% threat-response-time reduction as a company claim; the small wording difference is preserved as a reported claim and not treated as a verified measured metric.", "CTech's summary of the company's research gives an 88% attacker success / 12% defender detection result, while the subsequently published company research page reports 85% / 19% across 241 scored engagements. The latter is used only for the research milestone; these differing reported experiment summaries are not combined."]
+diligence_questions = [
+  "Can Corma provide named customer references, contract scope, paid status, renewals, and customer-approved baselines behind the reported Fortune 100/500 deployments and response-time improvements?",
+  "What independent, reproducible evaluation supports model performance across production telemetry, unseen environments, false-positive rates, and comparison with specialist SOC agents and incumbent copilots?",
+  "Which actions require human approval, how are tools least-privileged, and what audit, rollback, incident liability, and model-update controls protect customers from agent error or compromise?",
+  "What are the actual cost, latency, hardware, and support requirements for on-premises deployments, and how does unit economics compare with managed services and incumbent platforms?",
+  "What is the company's legal entity and cap table, and what are the data provenance, customer-data retention, model-training rights, and cross-customer isolation policies?",
+  "Are any government or defense deployments under contract, and what security certifications or accreditation milestones are planned?"
+]
+
+[[intelligence.research.sources]]
+id = "corma_official"
+url = "https://corma.ai/"
+title = "Corma"
+publisher = "Corma"
+kind = "company"
+accessed_at = "2026-10-04T22:27:40Z"
+claims = ["Corma describes foundation models delivered as an AI workforce for defensive cybersecurity.", "The workforce is described as using customers' existing security stack.", "The company claims on-premises deployment and customer-context post-training options."]
+
+[[intelligence.research.sources]]
+id = "corma_launch"
+url = "https://corma.ai/blog/introducing-corma"
+title = "Introducing Corma"
+publisher = "Corma"
+kind = "company"
+accessed_at = "2026-10-04T22:27:40Z"
+published_on = "2026-08-10"
+claims = ["Corma announced its defensive cybersecurity foundation-model mission.", "The company asserts deployment at Fortune 100 organizations across several sectors.", "The company describes its proposed model training and defensive-security rationale."]
+
+[[intelligence.research.sources]]
+id = "corma_research"
+url = "https://corma.ai/blog/defensive-gap-research"
+title = "Measuring the AI offense-defense gap on a live network"
+publisher = "Corma"
+kind = "company"
+accessed_at = "2026-10-04T22:27:40Z"
+published_on = "2026-08-10"
+claims = ["Company research reports 241 scored engagements.", "The report states 85% persistent backdoor success by AI attackers and 19% detection by general-purpose defenders.", "The work uses a simulated enterprise environment and ground-truth disk-state checks."]
+
+[[intelligence.research.sources]]
+id = "sequoia_announcement"
+url = "https://sequoiacap.com/article/partnering-with-corma-closing-the-defensive-cybersecurity-gap"
+title = "Partnering with Corma: Closing the Defensive Cybersecurity Gap"
+publisher = "Sequoia Capital"
+kind = "investor"
+accessed_at = "2026-10-04T22:27:40Z"
+published_on = "2026-08-10"
+claims = ["Sequoia identifies Alon Pluda as Corma founder and CEO.", "Sequoia describes its seed investment and Corma's reinforcement-learning/self-play approach.", "Investor account describes agents deployed at Fortune 500 and large enterprises and provides customer anecdotes."]
+
+[[intelligence.research.sources]]
+id = "sequoia_portfolio"
+url = "https://sequoiacap.com/companies/corma"
+title = "Corma | Sequoia Capital"
+publisher = "Sequoia Capital"
+kind = "investor"
+accessed_at = "2026-10-04T22:27:40Z"
+claims = ["Sequoia lists Corma as a portfolio company founded in 2025 and partnered in 2026.", "The portfolio record lists Alon Pluda on the Corma team."]
+
+[[intelligence.research.sources]]
+id = "ctech_2026"
+url = "https://www.calcalistech.com/ctechnews/article/h1cwzhvigg"
+title = "Corma raises $60 million Seed to build AI designed to fight AI-powered cyberattacks"
+publisher = "Ctech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-04T22:27:40Z"
+published_on = "2026-08-10"
+claims = ["Reports $60 million seed led by Sequoia with Khosla Ventures and Coatue.", "Reports founding in 2025, Tel Aviv and San Francisco locations, and 20 Tel Aviv employees.", "Identifies Alon Pluda as CEO and co-founder.", "Reports Fortune 100/500 company activity and company-claimed response-time and coverage outcomes.", "Reports the seed round closed in early 2026."]
+
+[[intelligence.research.sources]]
+id = "fortune_2026"
+url = "https://fortune.com/2026/08/10/exclusive-corma-raises-60-million-from-sequoia-for-ai-trained-to-defend-against-cyberattacks/"
+title = "Exclusive: Corma raises $60 million from Sequoia for AI trained to defend against cyberattacks"
+publisher = "Fortune"
+kind = "media"
+accessed_at = "2026-10-04T22:27:40Z"
+published_on = "2026-08-10"
+claims = ["Reports $60 million seed led by Sequoia with Khosla Ventures and Coatue and says valuation was not announced.", "Reports 2025 founding and Tel Aviv/San Francisco presence.", "Reports first model deployed to Fortune 100/500 organizations and company-claimed 94% lower threat-response time.", "Identifies Alon Pluda as CEO."]
+
+[[intelligence.research.sources]]
+id = "siliconangle_2026"
+url = "https://siliconangle.com/2026/08/10/corma-launches-60m-funding-defensive-cybersecurity-ai/"
+title = "Corma launches with $60M in funding for defensive cybersecurity AI"
+publisher = "SiliconANGLE"
+kind = "media"
+accessed_at = "2026-10-04T22:27:40Z"
+published_on = "2026-08-10"
+claims = ["Identifies the company as Corma Labs Ltd.", "Reports first disclosed external funding was the $60 million seed led by Sequoia with Khosla Ventures and Coatue.", "Reports the company's Fortune 100/500 deployment claims and company-reported response-time and coverage outcomes."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T22:27:40Z"
+next_review_on = "2027-01-04"
+queries = ["Corma Labs Corma official company identity headquarters product"]
+source_ids = ["corma_official", "ctech_2026", "fortune_2026"]
+summary = "Verified public brand Corma, defensive-cybersecurity foundation-model product, 2025 founding, and Tel Aviv/San Francisco presence. Legal suffix Corma Labs Ltd. is retained from the record; registry confirmation was not located."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T22:27:40Z"
+next_review_on = "2027-01-04"
+queries = ["Corma Labs Corma funding raised seed Series A valuation October 2026"]
+source_ids = ["sequoia_announcement", "ctech_2026", "fortune_2026"]
+summary = "One $60 million Seed disclosed on August 10, 2026; no valuation published. No later round was located through the review date."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T22:27:40Z"
+next_review_on = "2027-01-04"
+queries = ["Corma Labs Corma investors Sequoia Khosla Coatue portfolio announcement"]
+source_ids = ["sequoia_announcement", "sequoia_portfolio", "ctech_2026", "fortune_2026"]
+summary = "Sequoia Capital led the seed; Khosla Ventures and Coatue participated. No allocations disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T22:27:40Z"
+next_review_on = "2027-01-04"
+queries = ["Corma Labs Corma founder CEO team hiring background"]
+source_ids = ["sequoia_announcement", "sequoia_portfolio", "ctech_2026", "fortune_2026"]
+summary = "Alon Pluda is named as co-founder and CEO. CTech reports 20 employees in Tel Aviv and a team including Google/DeepMind alumni and cybersecurity specialists; other individuals not identified."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T22:27:40Z"
+next_review_on = "2027-01-04"
+queries = ["Corma Labs Corma ownership acquired acquisition parent company filings"]
+source_ids = ["fortune_2026", "ctech_2026"]
+summary = "No public cap table, parent, acquisition, or disclosed ownership interests found; private stakes are not inferred."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T22:27:40Z"
+next_review_on = "2027-01-04"
+queries = ["Corma Labs Corma revenue ARR profitability burn runway employees"]
+source_ids = ["ctech_2026", "fortune_2026"]
+summary = "No revenue, ARR, profit, burn, runway, or accounts disclosed. Historical reported headcount appears in traction/team reporting only."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T22:27:40Z"
+next_review_on = "2027-01-04"
+queries = ["Corma Labs Corma customers contracts deployments traction response time"]
+source_ids = ["corma_launch", "sequoia_announcement", "ctech_2026", "fortune_2026"]
+summary = "Early large-enterprise deployment and claimed outcomes are reported, but references, contract/payment status, retention, and outcome methods are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T22:27:40Z"
+next_review_on = "2027-01-04"
+queries = ["Corma Labs Corma patents intellectual property WIPO USPTO"]
+source_ids = ["corma_official"]
+summary = "No attributable public patent filing or patent portfolio located in targeted searches; absence from public search does not establish no IP."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T22:27:40Z"
+next_review_on = "2027-01-04"
+queries = ["Corma Labs defensive cybersecurity AI SOC competitors official products"]
+source_ids = ["corma_official", "sequoia_announcement"]
+summary = "Competitive categories and named peers are covered in retained analysis; public comparative product evidence is not standardized."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T22:27:40Z"
+next_review_on = "2027-01-04"
+queries = ["Corma Labs Corma government defense military critical infrastructure contracts"]
+source_ids = ["corma_official", "ctech_2026", "fortune_2026"]
+summary = "Defensive cyber tools have commercial and national-security relevance; reviewed sources establish no government or defense contract, classified use, or certification."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Active operating company with a live official product site, August 2026 launch, and contemporaneous deployment reporting."
+verified_at = "2026-10-04T22:27:40Z"
+source_ids = ["corma_official", "corma_launch", "ctech_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "CTech reports headquarters in Tel Aviv; Fortune independently reports Corma is based in Tel Aviv and San Francisco."
+verified_at = "2026-10-04T22:27:40Z"
+source_ids = ["ctech_2026", "fortune_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "The lead investor, CTech, and Fortune report one $60 million seed financing; lifetime total is presented as company-announced disclosed equity funding, not a calculated sum of unrelated proceeds."
+verified_at = "2026-10-04T22:27:40Z"
+source_ids = ["sequoia_announcement", "ctech_2026", "fortune_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.amount"
+support = "direct"
+summary = "Sequoia, CTech, and Fortune each report a $60 million seed round."
+verified_at = "2026-10-04T22:27:40Z"
+source_ids = ["sequoia_announcement", "ctech_2026", "fortune_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.lead_investors"
+support = "direct"
+summary = "Sequoia is identified as lead investor by the company/lead-investor announcement and both media reports."
+verified_at = "2026-10-04T22:27:40Z"
+source_ids = ["sequoia_announcement", "ctech_2026", "fortune_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.participating_investors"
+support = "direct"
+summary = "Khosla Ventures and Coatue are both reported as participants by CTech and Fortune."
+verified_at = "2026-10-04T22:27:40Z"
+source_ids = ["ctech_2026", "fortune_2026"]

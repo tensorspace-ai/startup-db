@@ -1,0 +1,525 @@
+name = "Atero"
+description = "Atero was an Israeli AI infrastructure company that developed a unified memory layer for GPU clusters, helping AI operators distribute model weights and KV caches across machines to improve utilization, latency, and elastic scaling. Crusoe acquired Atero in August 2025 and integrated its team and technology into Crusoe Cloud."
+detailed_description = """
+Atero built low-level infrastructure software for a specific bottleneck in modern AI systems: GPU memory is expensive, fragmented across machines, and difficult to use efficiently as models and context windows grow. Its central idea was a unified memory layer that could use the networking fabric across a GPU cluster to move and share large AI assets, rather than forcing model weights, KV caches, and active sessions to remain tied to one physical server. Inference was the most visible target, but the architecture was also described as relevant to training and session management. This is systems software below the model layer, where gains in placement, data movement, and utilization can affect both cost and user-visible performance.
+
+The customer problem is credible and increasingly important. AI cloud operators and model developers must keep accelerators busy while handling irregular demand, large model footprints, long-context inference, and rapid scale-up or scale-down. A cluster can have substantial aggregate memory and compute while still suffering local shortages, idle GPUs, session pinning, or expensive data movement. Atero's approach aimed to make that capacity more fungible: Crusoe's post-acquisition explanation says the technology can spread KV cache across machines, reduce the dependence of a session on a particular GPU, and support scaling from a single GPU to very large clusters. Those claims explain the product's strategic value, but public benchmarks, architecture documentation, and independent customer references remain limited.
+
+Atero operated in stealth and was founded in Israel in 2024 by Alon Yariv and Omer Landau. Public reporting placed the team at about 25 people when Crusoe acquired the company, and Crusoe said the team would join its engineering organization and establish the company's first Middle East office. The acquisition is the strongest commercialization signal available: it indicates that a major AI infrastructure operator considered the technology and technical team valuable enough to incorporate into its cloud roadmap. It does not establish standalone recurring revenue, broad customer adoption, or an independently proven product-market fit. The reported transaction value in some media coverage is not used here as a confirmed fact because the parties did not disclose terms.
+
+The competitive field includes GPU orchestration and scheduling platforms, inference engines, distributed storage and caching systems, and vertically integrated GPU clouds. Atero's differentiation was not simply “GPU management”; it was the attempt to make memory and cache placement a cluster-level resource, especially for inference workloads. That creates a potentially valuable control point, but it also exposes the company to fast-moving platform development by NVIDIA, cloud operators, open-source projects, and specialized inference vendors. The defensibility question is whether the unified-memory implementation, integration work, and operational know-how produced durable performance advantages across GPU generations and cloud environments, or whether the value was primarily an acquisition of an exceptional team.
+
+For defense and national-security analysis, Atero is best classified as credible dual-use infrastructure with no public defense validation. The same ability to improve accelerator utilization, reduce latency, and manage distributed model state can support secure analytics, autonomous systems, intelligence workloads, simulation, and edge-to-cloud AI deployments where compute capacity and responsiveness matter. However, the public record identifies commercial AI-cloud objectives, not defense contracts, classified deployments, export-control approvals, or security certifications. Its strategic relevance therefore comes from enabling national and allied AI compute capacity and resilient software infrastructure, rather than from a demonstrated defense product. After the acquisition, diligence should focus on what technology was retained, how it appears in Crusoe's managed inference stack, portability across hardware and clouds, measurable efficiency gains, and the governance of sensitive workloads.
+"""
+logo = "https://cdn.prod.website-files.com/670293956c101f648388a083/677421d1c34bc6d0447c874a_Atero%20Logo%20Full.svg"
+website = "https://www.atero.ai/"
+sector = "AI Infrastructure / Distributed GPU Memory"
+founded = "2024"
+headquarters = "Tel Aviv, Israel"
+employees = "Approximately 25 at acquisition"
+funding_stage = "Acquired by Crusoe (August 2025)"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "Atero's cluster-level memory and GPU-utilization technology has substantive commercial and defense/security applicability because model serving, simulation, intelligence analytics, and autonomous systems all depend on efficient, responsive accelerator infrastructure. The public evidence supports technological adjacency, not a verified defense deployment: no public defense contract, classified use, or security certification has been identified."
+key_technologies = [
+  "Unified virtual memory across GPU clusters",
+  "Distributed model-weight and KV-cache placement",
+  "GPU memory utilization and workload orchestration",
+  "Low-latency networked data movement for AI assets",
+  "Elastic scaling of inference services across accelerators",
+  "AI infrastructure operating-system components"
+]
+use_cases = [
+  "Sharing KV cache across GPUs for long-context LLM inference",
+  "Scaling model-serving capacity from one GPU to large clusters",
+  "Reducing idle accelerator capacity in AI cloud fleets",
+  "Improving latency and throughput for production inference",
+  "Managing model weights and sessions across distributed servers",
+  "Supporting secure analytics and simulation workloads with constrained GPU capacity",
+  "Improving resilience and utilization in defense-adjacent AI compute environments"
+]
+investible = false
+investment_rationale = "Atero is not a live standalone investment target because Crusoe acquired the company in August 2025 and integrated its team and technology. The acquisition is meaningful strategic-validation evidence for Israeli AI-systems talent and for software that addresses GPU-memory economics, but it does not provide enough public information to underwrite standalone revenue, retention, margins, or a current financing opportunity. The appropriate database signal is historical strategic relevance, not an investment recommendation."
+strategic_value = "Atero is strategically valuable as an example of software leverage in an AI infrastructure stack dominated by scarce and costly accelerators. A unified memory layer can increase the effective capacity of a GPU fleet, improve responsiveness for inference, and reduce the operational penalty of fragmented memory and session placement. Its integration into Crusoe also links Israeli systems engineering to an allied AI-cloud platform and potentially strengthens regional technical capacity. The relevance is infrastructural rather than defense-specific; public evidence does not show that Atero supplied a military customer or a certified secure environment."
+public_sources = [
+  { label = "Crusoe acquisition announcement", url = "https://www.crusoe.ai/resources/newsroom/crusoe-acquires-atero", description = "Official confirmation of acquisition, founders, Israeli origin, seed backers, technical focus, team integration and undisclosed deal terms." },
+  { label = "Geektime acquisition report", url = "https://www.geektime.co.il/one-year-israeli-startup-atero-acquired-by-crusoe-for-150m/", description = "Reports the approximately $12 million seed, lead investors and named angel participants; reports an estimated acquisition price not confirmed by the parties." },
+  { label = "Techtime acquisition report", url = "https://techtime.co.il/2025/08/21/atero/", description = "Israeli coverage of founding date, seed amount, team size and undisclosed acquisition terms; its deal-value estimate is not treated as confirmed." },
+  { label = "Primary Ventures Atero portfolio", url = "https://www.primary.vc/companies/atero", description = "Investor page confirms 2024 investment, Tel Aviv headquarters, founders and exited status." },
+  { label = "Crusoe Q&A with Alon Yariv", url = "https://www.crusoe.ai/resources/blog/q-a-with-alon-yariv-on-the-atero-acquisition-and-the-future-of-crusoe-cloud", description = "Acquired-company leadership discussion of Atero's memory layer and intended inference benefits." },
+  { label = "Lool Ventures Atero portfolio", url = "https://www.lool.vc/portfolio/atero/", description = "Investor-side confirmation of Atero acquisition and Crusoe integration." },
+  { label = "Atero official website", url = "https://www.atero.ai/", description = "Official product description for unified memory across inference, training and session management." },
+  { label = "Crusoe Q&A with Alon Yariv", url = "https://www.crusoe.ai/resources/blog/q-a-with-alon-yariv-on-the-atero-acquisition-and-the-future-of-crusoe-cloud", description = "Acquired-company leadership discussion of Atero technology and intended AI workload benefits." },
+  { label = "Forbes Israel profile of Alon Yariv", url = "https://forbes.co.il/rankings/2026under30/alon-yariv/", description = "Reports Yariv's current Crusoe Israel leadership role and Atero acquisition background." },
+  { label = "Alon Yariv acquisition post", url = "https://www.linkedin.com/posts/alon-yariv_a-company-is-built-on-many-things-an-idea-activity-7365757779858354177-MncD", description = "Founder identifies Atero leadership roles at acquisition." },
+  { label = "Omer Landau acquisition post", url = "https://www.linkedin.com/posts/omer-landau-33879323a_im-thrilled-to-share-that-the-entire-atero-activity-7365757667753025539-bnxn", description = "Co-founder reflects on team and AI infrastructure work at acquisition." }
+]
+potential_score = 67.0
+technology_score = 87.0
+market_score = 77.0
+team_score = 78.0
+dual_use_score = 42.0
+strategic_alignment_score = 76.0
+stage = "early"
+stage_rationale = "Atero was founded in 2024, remained in stealth, and was acquired in August 2025 before public evidence of a long independent commercialization phase. Early is therefore the best lifecycle label for the asset at the time of exit, even though its technology and team are now part of a more mature AI-cloud company."
+competitors = [
+  "NVIDIA Dynamo and GPU Operator",
+  "Run:ai",
+  "vLLM and distributed inference stacks",
+  "Anyscale",
+  "CoreWeave",
+  "Weka"
+]
+competitive_edge = "Atero's apparent edge was a tightly integrated memory-management wedge rather than a broad cloud product. Its unified-memory approach treated networked cluster capacity as a shared resource, with particular relevance to model weights, KV caches, session placement, and elastic inference. That could improve utilization and latency for an operator able to control the surrounding GPU, networking, and managed-service stack, which helps explain the Crusoe fit. The edge remains difficult to quantify because public technical documentation, reproducible benchmarks, and independent customer evidence are sparse; acquisition integration may be as important as standalone product differentiation."
+risk_factors = [
+  "Atero is no longer an independent company, eliminating standalone financing and operating upside to evaluate",
+  "Public documentation and independent benchmarks are insufficient to verify the size and repeatability of performance gains",
+  "The technology may be tightly coupled to Crusoe's hardware, networking, orchestration, and cloud roadmap",
+  "NVIDIA, hyperscalers, GPU clouds, and open-source inference projects can absorb memory-management features into broader platforms",
+  "Portability across GPU vendors, cluster topologies, model architectures, and sovereign or disconnected environments is unproven publicly",
+  "The acquisition may have primarily valued a small expert team, making product defensibility and continuity difficult to separate",
+  "No public evidence confirms defense customers, classified deployments, security certifications, or export-control approvals"
+]
+risk_level = "medium"
+signals = [
+  "Founded in July 2024 in Tel Aviv",
+  "Operated in stealth before acquisition",
+  "Raised a seed round from Primary VC, Lool Ventures, and angels",
+  "Acquired by Crusoe in August 2025; terms were not disclosed by the parties",
+  "Crusoe said the acquisition established its first Middle East office in Tel Aviv",
+  "Reported team size at acquisition was about 25 employees"
+]
+priority_rank = 0
+priority_rationale = "Atero remains a useful historical precedent for Israeli AI-infrastructure software with a strong technical wedge, credible acquisition validation, and meaningful compute-infrastructure relevance. Its acquired status, limited public benchmarks, and absence of public defense validation justify a non-investible legacy flag, moderate risk, and no change to the existing priority rank."
+crawled_at = "2026-05-31T02:49:53Z"
+updated_at = "2026-10-03T22:57:19Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "il-atero"
+legal_name = "Atero"
+aliases = ["Atero AI"]
+operating_status = "acquired"
+business_model = "B2B infrastructure software for GPU cluster management, memory optimization and AI workload orchestration; technology and team integrated into Crusoe Cloud."
+products = ["Unified Memory platform for AI inference, training and session management"]
+locations = ["Tel Aviv, Israel"]
+founded_on = "2024"
+source_ids = ["crusoe-acquisition", "primary-portfolio", "atero-site"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One seed round is publicly reported at approximately USD 12 million, disclosed in acquisition-era Israeli reporting. Crusoe confirmed the existence of a seed round and named Primary VC and Lool Ventures but did not state an amount. Public evidence located here does not establish any other financing events or an official company-announced lifetime total; acquisition consideration is undisclosed by the parties."
+reported_total_raised = 12000000
+reported_total_currency = "USD"
+total_source_ids = ["geektime-acquisition", "techtime-acquisition"]
+total_as_of = "2025-08-21"
+total_scope = "Media-reported disclosed seed only; not a company-announced lifetime total, and not derived from acquisition consideration."
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[[intelligence.funding.rounds]]
+id = "seed-2024"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2025-08-21"
+amount_status = "reported"
+amount = 12000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Primary Venture Partners", "Lool Ventures"]
+participating_investors = ["MVP Ventures", "Assaf Rappaport", "Ofir Ehrlich", "Thomas Dohmke"]
+valuation_basis = "undisclosed"
+source_ids = ["crusoe-acquisition", "geektime-acquisition"]
+notes = "The round was reportedly raised in 2024 while Atero was in stealth and disclosed retrospectively at acquisition. USD 12 million is reported by Geektime; Crusoe confirms a seed round and names Primary VC and Lool Ventures but does not publish the amount. Other participation names here are specifically reported by Geektime. No valuation is inferred."
+
+[intelligence.ownership]
+status = "reported"
+summary = "Crusoe announced that it acquired Atero on 2025-08-21 and that the Atero team would join Crusoe engineering. Acquisition terms were not disclosed in the official announcement. Private post-transaction cap table and individual ownership stakes are not public in reviewed sources."
+parent_company = "Crusoe"
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["crusoe-acquisition", "geektime-acquisition"]
+holdings = []
+
+[[intelligence.ownership.deals]]
+id = "crusoe-acquisition-2025"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2025-08-21"
+status = "completed"
+counterparty = "Crusoe"
+amount_status = "undisclosed"
+source_ids = ["crusoe-acquisition", "lool-atero"]
+notes = "Crusoe's official announcement says it acquired Atero and explicitly states terms were not disclosed. Media estimates vary and are not recorded as transaction consideration."
+
+[[intelligence.people]]
+name = "Alon Yariv"
+role = "Co-founder and former CEO"
+is_founder = true
+current = false
+background = "Led Atero as CEO; after the acquisition became a Crusoe executive leading Israeli operations, according to 2026 Forbes Israel reporting."
+source_ids = ["crusoe-acquisition", "forbes-yariv"]
+
+[[intelligence.people]]
+name = "Omer Landau"
+role = "Co-founder and former CTO"
+is_founder = true
+current = false
+background = "Identified by Crusoe as Atero's co-founder and CTO; later public founder comments describe building its AI infrastructure and inference technology."
+source_ids = ["crusoe-acquisition", "omer-landau-post"]
+
+[[intelligence.people]]
+name = "Roy Shchory"
+role = "Former Head of R&D"
+is_founder = false
+current = false
+background = "Named by Atero co-founder Alon Yariv as Head of R&D at the time of acquisition."
+source_ids = ["yariv-acquisition-post"]
+
+[[intelligence.people]]
+name = "Carmel Galliduani"
+role = "Former Operations Lead"
+is_founder = false
+current = false
+background = "Named by Atero co-founder Alon Yariv as Operations Lead at the time of acquisition."
+source_ids = ["yariv-acquisition-post"]
+
+[[intelligence.investors]]
+name = "Primary Venture Partners"
+investor_type = "vc"
+website = "https://www.primary.vc/"
+round_ids = ["seed-2024"]
+relationship = "historical"
+source_ids = ["crusoe-acquisition", "geektime-acquisition", "primary-portfolio"]
+
+[[intelligence.investors]]
+name = "Lool Ventures"
+investor_type = "vc"
+website = "https://www.lool.vc/"
+round_ids = ["seed-2024"]
+relationship = "historical"
+source_ids = ["crusoe-acquisition", "geektime-acquisition", "lool-atero"]
+
+[[intelligence.investors]]
+name = "MVP Ventures"
+investor_type = "vc"
+round_ids = ["seed-2024"]
+relationship = "historical"
+source_ids = ["geektime-acquisition"]
+
+[[intelligence.investors]]
+name = "Assaf Rappaport"
+investor_type = "angel"
+round_ids = ["seed-2024"]
+relationship = "historical"
+source_ids = ["geektime-acquisition"]
+
+[[intelligence.investors]]
+name = "Ofir Ehrlich"
+investor_type = "angel"
+round_ids = ["seed-2024"]
+relationship = "historical"
+source_ids = ["geektime-acquisition"]
+
+[[intelligence.investors]]
+name = "Thomas Dohmke"
+investor_type = "angel"
+round_ids = ["seed-2024"]
+relationship = "historical"
+source_ids = ["geektime-acquisition"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Atero's official site described a unified-memory platform covering inference, training and session management; this is company product positioning, not independently benchmarked performance evidence."
+date = "2025"
+source_ids = ["atero-site"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Crusoe said Atero's GPU management and memory-optimization technology would be combined with Crusoe Cloud and its engineering team would join Crusoe to accelerate managed AI services. This documents integration intent, not a separately verified production milestone."
+date = "2025-08-21"
+source_ids = ["crusoe-acquisition"]
+
+[[intelligence.traction]]
+kind = "hiring"
+description = "The acquiring company said Atero's technical team would join Crusoe engineering and its acquisition established Crusoe's first Middle East office in Tel Aviv. Israeli reporting described the team as approximately 25 people at acquisition."
+date = "2025-08-21"
+source_ids = ["crusoe-acquisition", "techtime-acquisition"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Crusoe states that Atero was co-founded in Israel; Primary's investor profile lists Tel Aviv, Israel as headquarters and identifies both founders."
+as_of = "2025-08-21"
+source_ids = ["crusoe-acquisition", "primary-portfolio"]
+
+[[intelligence.research.sources]]
+id = "crusoe-acquisition"
+url = "https://www.crusoe.ai/resources/newsroom/crusoe-acquires-atero"
+title = "Crusoe acquires Atero to accelerate AI infrastructure performance on Crusoe Cloud, and establish first Middle East office"
+publisher = "Crusoe"
+kind = "company"
+accessed_at = "2026-10-03T22:57:19Z"
+published_on = "2025-08-21"
+claims = ["Crusoe acquired Atero; deal terms undisclosed", "Atero co-founded in Israel in 2024 by CEO Alon Yariv and CTO Omer Landau", "Atero raised a seed round from Primary VC and Lool Ventures", "Atero's technology focuses on GPU management and memory optimization", "Atero's technical team joined Crusoe engineering and the deal established a Tel Aviv office"]
+
+[[intelligence.research.sources]]
+id = "geektime-acquisition"
+url = "https://www.geektime.co.il/one-year-israeli-startup-atero-acquired-by-crusoe-for-150m/"
+title = "Israeli startup Atero acquired by Crusoe after raising $12 million seed"
+publisher = "Geektime"
+kind = "media"
+accessed_at = "2026-10-03T22:57:19Z"
+published_on = "2025-08-21"
+claims = ["Atero raised approximately USD 12 million in a seed round", "Primary Ventures and Lool Ventures led the round", "MVP Ventures and named private investors participated", "Some reported acquisition price estimates are media estimates and were not confirmed by the parties"]
+
+[[intelligence.research.sources]]
+id = "techtime-acquisition"
+url = "https://techtime.co.il/2025/08/21/atero/"
+title = "אקזיט תוך שנה: Crusoe רוכשת את Atero הישראלית"
+publisher = "Techtime"
+kind = "media"
+accessed_at = "2026-10-03T22:57:19Z"
+published_on = "2025-08-21"
+claims = ["Atero was founded in July 2024 by Alon Yariv and Omer Landau", "Atero raised USD 12 million in a seed round", "Atero had approximately 25 employees around acquisition", "The companies did not disclose acquisition terms", "Public technical detail was limited"]
+
+[[intelligence.research.sources]]
+id = "primary-portfolio"
+url = "https://www.primary.vc/companies/atero"
+title = "Atero"
+publisher = "Primary Venture Partners"
+kind = "investor"
+accessed_at = "2026-10-03T22:57:19Z"
+claims = ["Atero founded in 2024", "Tel Aviv, Israel headquarters", "Alon Yariv and Omer Landau are founders", "Primary invested in 2024", "Atero is exited"]
+
+[[intelligence.research.sources]]
+id = "lool-atero"
+url = "https://www.lool.vc/portfolio/atero/"
+title = "Atero"
+publisher = "Lool Ventures"
+kind = "investor"
+accessed_at = "2026-10-03T22:57:19Z"
+claims = ["Atero acquired by Crusoe in August 2025", "Technology integrated into Crusoe Cloud", "Tel Aviv office and R&D center"]
+
+[[intelligence.research.sources]]
+id = "crusoe-qa"
+url = "https://www.crusoe.ai/resources/blog/q-a-with-alon-yariv-on-the-atero-acquisition-and-the-future-of-crusoe-cloud"
+title = "Q&A with Alon Yariv on the Atero acquisition and the future of Crusoe Cloud"
+publisher = "Crusoe"
+kind = "company"
+accessed_at = "2026-10-03T22:57:19Z"
+published_on = "2025-09-22"
+claims = ["Crusoe describes Atero acquisition integration and the intended memory and inference benefits"]
+
+[[intelligence.research.sources]]
+id = "atero-site"
+url = "https://www.atero.ai/"
+title = "Atero AI: The Unified Memory Platform for AI at Scale"
+publisher = "Atero"
+kind = "company"
+accessed_at = "2026-10-03T22:57:19Z"
+claims = ["Atero positions its Unified Memory platform for inference, training and session management"]
+
+[[intelligence.research.sources]]
+id = "forbes-yariv"
+url = "https://forbes.co.il/rankings/2026under30/alon-yariv/"
+title = "Alon Yariv"
+publisher = "Forbes Israel"
+kind = "media"
+accessed_at = "2026-10-03T22:57:19Z"
+published_on = "2026-06-30"
+claims = ["Alon Yariv is described as Crusoe Israel CEO in 2026", "Atero was acquired by Crusoe in 2025"]
+
+[[intelligence.research.sources]]
+id = "yariv-acquisition-post"
+url = "https://www.linkedin.com/posts/alon-yariv_a-company-is-built-on-many-things-an-idea-activity-7365757779858354177-MncD"
+title = "A company is built on many things - Alon Yariv on Atero joining Crusoe"
+publisher = "Alon Yariv"
+kind = "other"
+accessed_at = "2026-10-03T22:57:19Z"
+published_on = "2025-08"
+claims = ["Yariv identifies Omer Landau as co-founder, Roy Shchory as Head of R&D and Carmel Galliduani as Operations Lead", "Yariv says Atero was acquired by Crusoe"]
+
+[[intelligence.research.sources]]
+id = "omer-landau-post"
+url = "https://www.linkedin.com/posts/omer-landau-33879323a_im-thrilled-to-share-that-the-entire-atero-activity-7365757667753025539-bnxn"
+title = "Omer Landau on Atero joining Crusoe"
+publisher = "Omer Landau"
+kind = "other"
+accessed_at = "2026-10-03T22:57:19Z"
+published_on = "2025-08"
+claims = ["Landau identifies Alon Yariv as co-founder and describes Atero's AI infrastructure and inference work"]
+
+[intelligence.research]
+researched_at = "2026-10-03T22:57:19Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Atero official site unified memory AI", "Crusoe acquires Atero August 2025", "Atero funding raised seed investors valuation acquisition", "Atero Alon Yariv Omer Landau team founders", "Atero revenue customers contracts traction", "Atero patents patent GPU memory", "Atero Israeli startup Hebrew funding investors 12 million", "Atero defense security dual use AI infrastructure", "Atero competition GPU cluster memory inference", "Atero Crusoe acquisition ownership terms"]
+gaps = ["investors: private cap table, individual check sizes and ownership percentages remain undisclosed; public round participants are partially identified", "financials: no public revenue, ARR, profitability, burn, runway or audited financials located", "traction: no named independent paying customers, production deployment metrics or independently validated benchmarks located", "intellectual_property: no patent or registered IP record attributable to Atero identified in the reviewed public search; proprietary know-how may remain undisclosed", "competition: competitive set described in retained analysis is not independently benchmarked against Atero and post-acquisition product positioning is evolving", "ownership: post-acquisition cap table and consideration remain private", "funding: amount surfaced in reputable media; no official company-announced lifetime funding total or complete financing history found", "dual_use: no public defense customer, contract, classified deployment or security certification found"]
+conflicts = ["Acquisition-price media estimates vary (approximately USD 150 million to USD 200 million in 2026 reporting); Crusoe's official announcement says terms were not disclosed, so transaction amount is omitted."]
+diligence_questions = ["Which Atero memory-management components remain in production in Crusoe Cloud, and what reproducible workload benchmarks show improvements in throughput, latency, GPU utilization and cost?", "How much of the original Atero team remains with Crusoe, and who owns product roadmap, support and integration decisions?", "What did the acquisition consideration comprise and how were cash, stock, retention incentives and any earn-outs structured?", "Are Atero's core technology assets protected by patents, trade secrets, or Crusoe-owned work product, and what limits portability outside Crusoe?", "Can Crusoe disclose customer adoption, production deployments or revenue attributable to the acquired technology?"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T22:57:19Z"
+next_review_on = "2027-04-03"
+queries = ["Atero official site unified memory", "Crusoe acquires Atero founders headquarters"]
+source_ids = ["crusoe-acquisition", "primary-portfolio", "atero-site"]
+summary = "Official company and investor sources establish Atero AI identity, 2024 founding, Tel Aviv location, product positioning and acquisition by Crusoe."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T22:57:19Z"
+next_review_on = "2027-04-03"
+queries = ["Atero funding raised seed investors 12 million", "Atero Crusoe acquisition seed funding"]
+source_ids = ["crusoe-acquisition", "geektime-acquisition", "techtime-acquisition"]
+summary = "One USD 12 million seed round is reported by Israeli media; official acquisition announcement confirms a seed round without amount. No full public financing history or official total located."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T22:57:19Z"
+next_review_on = "2027-04-03"
+queries = ["Atero investors Primary Lool MVP angels", "Atero seed investors Alon Yariv"]
+source_ids = ["crusoe-acquisition", "geektime-acquisition", "primary-portfolio"]
+summary = "Primary and Lool confirmed by Crusoe; Geektime reports MVP Ventures and named angels. No public cap table or stake sizes located."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T22:57:19Z"
+next_review_on = "2027-04-03"
+queries = ["Atero founders Alon Yariv Omer Landau team", "Alon Yariv Crusoe CEO Israel 2026"]
+source_ids = ["crusoe-acquisition", "primary-portfolio", "forbes-yariv", "yariv-acquisition-post"]
+summary = "Founders and leadership roles confirmed from Crusoe and Primary; Forbes Israel reports Yariv leading Crusoe Israel in 2026. Acquisition-era team size was reported at approximately 25."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-03T22:57:19Z"
+next_review_on = "2027-04-03"
+queries = ["Crusoe Atero acquisition terms amount", "Atero acquired Crusoe deal ownership"]
+source_ids = ["crusoe-acquisition", "lool-atero", "geektime-acquisition"]
+summary = "Acquisition is confirmed and treated as completed; official source says terms undisclosed. Media estimates vary and are excluded from transaction amount."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "not_found"
+checked_at = "2026-10-03T22:57:19Z"
+next_review_on = "2027-04-03"
+queries = ["Atero revenue ARR financials", "Atero startup burn runway revenue customers"]
+source_ids = ["crusoe-acquisition", "geektime-acquisition"]
+summary = "No public company financial metrics found; media-reported seed funding is recorded separately from operating performance."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T22:57:19Z"
+next_review_on = "2027-04-03"
+queries = ["Atero customers deployment benchmarks", "Atero Crusoe Cloud integration inference memory"]
+source_ids = ["atero-site", "crusoe-acquisition", "crusoe-qa"]
+summary = "Public product positioning and integration intent are available, but no independently verifiable customer metrics or benchmark results were found."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T22:57:19Z"
+next_review_on = "2027-04-03"
+queries = ["Atero GPU memory patent", "Atero AI patents USPTO WIPO Israel"]
+source_ids = ["crusoe-acquisition", "atero-site"]
+summary = "No patent filing or registered IP record surfaced in the targeted public search; absence of public result does not establish absence of protected trade secrets or unindexed filings."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T22:57:19Z"
+next_review_on = "2027-04-03"
+queries = ["GPU unified memory inference competitors Atero", "GPU cluster memory orchestration inference platform competition"]
+source_ids = ["atero-site", "crusoe-qa"]
+summary = "Relevant substitutes include orchestration, inference-serving and distributed cache/storage layers; public Atero evidence is insufficient for head-to-head performance comparison."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T22:57:19Z"
+next_review_on = "2027-04-03"
+queries = ["Atero defense government security contract", "Atero military defense AI infrastructure"]
+source_ids = ["crusoe-acquisition", "atero-site"]
+summary = "GPU memory optimization is broadly dual-use infrastructure, but reviewed sources describe commercial cloud uses and disclose no defense/security deployment, contract or certification."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Crusoe announced that it acquired Atero, and its investor Primary labels the company exited."
+verified_at = "2026-10-03T22:57:19Z"
+source_ids = ["crusoe-acquisition", "primary-portfolio"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Crusoe says Atero was co-founded in Israel; Primary identifies Tel Aviv headquarters and the founders."
+verified_at = "2026-10-03T22:57:19Z"
+source_ids = ["crusoe-acquisition", "primary-portfolio"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Geektime and Techtime independently report a USD 12 million seed; treated as reported media total only, not a company-announced lifetime figure."
+verified_at = "2026-10-03T22:57:19Z"
+source_ids = ["geektime-acquisition", "techtime-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.amount"
+support = "direct"
+summary = "Geektime reports an approximately USD 12 million seed round; Techtime independently reports USD 12 million."
+verified_at = "2026-10-03T22:57:19Z"
+source_ids = ["geektime-acquisition", "techtime-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.lead_investors"
+support = "direct"
+summary = "Crusoe names Primary VC and Lool Ventures as seed backers; Geektime says the seed was led by Primary and Lool."
+verified_at = "2026-10-03T22:57:19Z"
+source_ids = ["crusoe-acquisition", "geektime-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Crusoe's acquisition announcement and Lool's portfolio page identify Crusoe as acquirer and Atero's integration destination."
+verified_at = "2026-10-03T22:57:19Z"
+source_ids = ["crusoe-acquisition", "lool-atero"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.crusoe-acquisition-2025.status"
+support = "direct"
+summary = "Crusoe announced the completed acquisition in its dated August 21, 2025 announcement; Lool confirms the August 2025 acquisition."
+verified_at = "2026-10-03T22:57:19Z"
+source_ids = ["crusoe-acquisition", "lool-atero"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.crusoe-acquisition-2025.amount"
+support = "direct"
+summary = "The amount is intentionally absent because Crusoe explicitly states transaction terms were not disclosed. Media estimates are not encoded as deal consideration."
+verified_at = "2026-10-03T22:57:19Z"
+source_ids = ["crusoe-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.participating_investors"
+support = "direct"
+summary = "Geektime's acquisition-era report identifies MVP Ventures, Assaf Rappaport, Ofir Ehrlich and Thomas Dohmke among participants in the seed round."
+verified_at = "2026-10-03T22:57:19Z"
+source_ids = ["geektime-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.crusoe-acquisition-2025.company_role"
+support = "direct"
+summary = "Crusoe's acquisition announcement identifies Atero as the acquired company; Atero is therefore the target in this transaction."
+verified_at = "2026-10-03T22:57:19Z"
+source_ids = ["crusoe-acquisition"]

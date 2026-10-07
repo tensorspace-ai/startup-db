@@ -1,0 +1,445 @@
+name = "BH Grid Solutions"
+description = "BH Grid Solutions is an Israeli energy and carbon intelligence startup building an hourly, GHG-aligned operating layer for data centers and other energy-intensive sites. Its platform combines real-time energy, carbon, cost, contract, and workload signals so operators and tenants can forecast exposure, optimize operations, and make auditable decarbonization decisions."
+detailed_description = """
+**Product and the concrete problem it solves.** BH Grid Solutions targets a specific weakness in digital infrastructure: data-center operators, hyperscalers, tenants, and AI service providers increasingly need to know not only how much electricity they use, but which power sources supplied it, what it cost at a particular hour and location, what carbon intensity applied, and whether a workload could move without affecting service quality. Conventional carbon accounting often relies on annual or regional averages, which are useful for retrospective reporting but too coarse for operational decisions. BH Grids presents a single intelligence layer for data centers, laboratories, offices, and other energy-intensive sites. It models operators and tenants separately, supports site and portfolio views, and exposes hourly energy, carbon, and cost signals. The practical problem is therefore both financial and strategic: energy is becoming a capacity constraint for AI infrastructure, while compliance teams need evidence that environmental claims and renewable-power contracts reflect actual conditions rather than estimates.
+
+**Core technology and how it works.** The company's public materials describe a software platform that ingests energy and carbon data across multiple sites and turns it into auditable, time-granular intelligence. The architecture is intended to connect existing energy-management and building-management systems, smart meters, renewable sources, power-purchase agreements, and other enterprise data through APIs rather than requiring a new physical metering estate. On top of that monitoring layer, BH Grids says it applies AI forecasting and optimization to energy consumption, carbon emissions, prices, contracts, and workload timing. Its product pages describe tenant-operator allocation, hourly validation of clean power by geography and contract, forward-looking forecasting, and workload-shifting signals for time-zone and location decisions. PLANETech characterizes the approach as dynamic tracking of emission factors, including grid fluctuation and PPA inputs, rather than a static annual factor. The company also states that it has six provisional patents covering its high-resolution carbon accounting and optimization methodology. The public record does not disclose the underlying model architectures, training data, optimization constraints, or independent benchmark methodology, so the technical thesis is credible but not yet fully reproducible from outside.
+
+**Market, customers, and go-to-market.** BH Grids is aimed at the part of the data-center value chain where energy and carbon decisions are distributed across several buyers. Operators need tenant-facing Scope 2 and Scope 3 reporting, accurate allocation of shared infrastructure costs, and improved utilization of power contracts. Tenants and hyperscalers need portfolio-wide information that can support procurement, location selection, and workload scheduling. Neocloud providers and AI service companies have a more direct economic incentive to align compute loads with power prices, available capacity, and cleaner operating windows. The company's route to market appears to be enterprise B2B software sold through data-center operators, tenants, energy partners, and workload-orchestration integrations. Its official site emphasizes API integration and deployment in days, while the PLANETech profile reported a developed product and a pilot involving a major data-center operator and a multinational tenant. BH Grids' public materials do not name those organizations, disclose contract values, or identify recurring revenue. That anonymity is normal for a pre-scale enterprise platform, but it limits external assessment of conversion rates, procurement cycles, and whether the product is sold as a compliance tool, an optimization tool, or a combination of both.
+
+**Traction, funding, and third-party validation.** Public evidence places BH Grid Solutions in the early commercialization phase. IVC records a $1 million Seed round in August 2024, while Startupim describes a $1 million grant-led funding event in April 2024 and identifies the legal entity as BH GRID SOLUTIONS LTD. The different descriptions likely reflect grant or program accounting rather than a cleanly disclosed venture round structure, so the record treats the amount as publicly reported capital support and avoids inferring a valuation. The company says it completed a live paid pilot with a Tier 2 colocation operator and a Fortune 500 tenant, and that its carbon methodology and data controls were audited by a top-five CPA organization. Its website also states that it has SOC 1 and SOC 2 certification, received a Singapore Israel R&D Foundation grant, and won Deloitte Catalyst's Next Generation Climate Award in December 2025. PLANETech independently lists the company as founded in 2024, Israeli, Seed-stage, and at the pilot-to-first-paying-customer stage. These signals are meaningful for an eight-person startup, but most product-performance figures remain company-reported: the public record does not identify the pilot customers, publish audited carbon reductions, or show retention, revenue, deployment count, or gross-margin data.
+
+**Founders and team background.** Startupim identifies Yair Hadar as chairman and founder and Zachi Ben Moshe as CEO and founder. Public LinkedIn material also shows Ziv Gome presenting BH Grid Solutions at the Road2 Haifa accelerator demo day, with Sagi Zohar involved in the pitch preparation, and IVC lists Zachi Ben Moshe as CEO and founder. The company's website describes more than 100 combined years of experience across data centers, energy, sustainability, AI infrastructure, and enterprise software, but it does not publish a full leadership roster or a role-by-role biography set. Ben Moshe's public profile describes prior senior operating experience in the energy and industrial sector, including roles connected to BAZAN Group and petrochemicals, while the public team evidence places Gome and Zohar close to the product and engineering work. This is a useful founder-market-fit combination: energy operations knowledge can help with contracts, utilities, and industrial buying processes, while software and data-science experience is necessary to turn fragmented energy measurements into an operational product. At the same time, the team is small and the public biographies are incomplete. Diligence should test the depth of power-systems engineering, data-center operations, enterprise sales, security compliance, and carbon-accounting expertise available beyond the named founders.
+
+**Competitive dynamics.** BH Grids competes with several overlapping categories rather than one direct peer. Watershed and Persefoni provide enterprise carbon accounting and reporting, but generally center the workflow on corporate emissions management rather than real-time data-center operations. Electricity Maps and Flexidao provide electricity-carbon-intensity and renewable-energy data that could become inputs to a competing or complementary stack. Schneider Electric's EcoStruxure and Siemens' energy-management portfolios have deep facility and industrial integrations, installed bases, and the ability to bundle monitoring with hardware and controls. Green Software Foundation tooling and hyperscaler-native carbon dashboards are incumbent approaches for workload-aware sustainability, although they do not necessarily provide BH Grids' operator-tenant allocation and contract-level view. BH Grids' claimed edge is the combination of hourly carbon accounting, energy and cost intelligence, PPA lifecycle validation, tenant modeling, forecasting, and workload-shifting APIs in one product. That combination could be valuable if it reduces the gap between reporting and action. It is not yet a proven moat: data access is difficult, major cloud and infrastructure vendors can build adjacent features, and customers may prefer to assemble a carbon-data provider with an existing energy-management platform.
+
+**Defense, security, and resilience dual-use relevance.** BH Grids is a resilience-oriented dual-use case, not a defense contractor. Data-center power availability, cooling headroom, fuel and renewable contracts, and operational continuity are increasingly strategic variables for cloud services, AI infrastructure, communications, financial systems, hospitals, and defense-industrial suppliers. A platform that can expose hourly power and carbon conditions, forecast cost and capacity exposure, and shift eligible workloads across time or location could help an operator continue essential compute during grid stress or price shocks. The same methods may support sovereign or allied AI infrastructure that needs to use constrained energy assets efficiently and produce an auditable account of its resource dependencies. This is a credible resilience transfer because the core data and optimization problem remains relevant when the site is mission-critical, but it should not be overstated. BH Grids has not publicly disclosed an IDF, government, defense-prime, or critical-infrastructure contract, nor has it described offline operation, classified deployment, isolated-network support, or continuity guarantees under a cyberattack. Its strategic relevance comes from enabling reliable digital infrastructure and reducing dependence on opaque energy assumptions, with any defense use currently an adjacent deployment path.
+
+**Growth stage, trajectory, and key diligence risks.** BH Grid Solutions is classified as early: it was incorporated in 2024, has public headcount evidence of eight, has received early grant or seed support, and is described by PLANETech as moving from pilot toward its first paying customer. Its trajectory is attractive if it can become a control and intelligence layer for the rapidly expanding power demand of AI infrastructure. The key milestones are conversion of the named but undisclosed pilot into repeatable paid deployments, evidence that customers can act on the signals without disrupting service, and proof that hourly reporting survives independent assurance and changing GHG requirements. The main risks are substantial. (1) The product may be perceived as reporting software even if its optimization capability is stronger, leading to crowded budgets and weak willingness to pay. (2) Data-center operators, cloud providers, and energy-management incumbents can bundle similar dashboards. (3) Integrating heterogeneous meters, PPAs, grid data, facility systems, and workload schedulers can create implementation liability. (4) Carbon-accounting rules and hourly matching standards are evolving, creating methodology and compliance risk. (5) Workload shifting can conflict with latency, residency, security, and service-level requirements. (6) A small team may struggle to sell and support global infrastructure accounts. (7) The company has not disclosed revenue, named customers, independent savings results, or detailed patent filings. These risks leave BH Grids as a high-interest strategic monitor whose next proof point must be commercial repeatability and operational reliability.
+"""
+logo = "Unknown"
+website = "https://bhgrids.com/"
+sector = "AI Energy and Carbon Intelligence for Data Centers and Energy-Intensive Infrastructure"
+founded = "2024"
+headquarters = "Jerusalem, Israel"
+employees = "8"
+funding_stage = "Seed rounds reported; separate $1 million SIIRD R&D grant reported by the company; Seed amounts undisclosed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "BH Grid Solutions has credible resilience-oriented dual-use relevance because its core platform addresses energy visibility, capacity planning, cost exposure, and operational optimization for digital infrastructure that can be mission-critical. (1) The same hourly data and forecasting layer used by commercial data centers can help sovereign cloud, communications, hospital, financial, and defense-industrial operators manage constrained power and cooling resources. (2) Workload-shifting intelligence can improve continuity during grid stress, price shocks, renewable intermittency, or local capacity constraints, although security, latency, data-residency, and service-level limits must be proven in each deployment. (3) Auditable PPA and emissions data can reduce dependence on opaque assumptions in strategic infrastructure planning. The connection is not a fielded defense capability: BH Grids has disclosed no government or defense customer, air-gapped deployment, classified workload, or continuity guarantee under cyberattack. Dual-use value is therefore real on the resilience and critical-digital-infrastructure side, while direct defense relevance remains an adjacent diligence hypothesis."
+key_technologies = [
+  "Hourly, location-aware carbon-intensity and energy-cost accounting across multiple data-center and energy-intensive sites",
+  "AI forecasting for energy consumption, carbon emissions, pricing, capacity exposure, and facility or portfolio operations",
+  "Operator-tenant modeling for allocating shared infrastructure energy costs and Scope 2 and Scope 3 emissions",
+  "PPA lifecycle management with hourly validation of clean-power claims by geography and contract",
+  "Workload-shifting intelligence and API integration for moving eligible compute across time zones and locations",
+  "GHG-aligned, SOC-controlled, traceable carbon data methodology supported by provisional patent filings"
+]
+use_cases = [
+  "Audit-grade Scope 2 and Scope 3 reporting for data-center operators serving multiple tenants",
+  "Hourly energy and carbon allocation for hyperscalers managing geographically distributed compute portfolios",
+  "Neocloud margin optimization through workload scheduling against power prices, contracts, and available capacity",
+  "AI-service-provider planning for high-intensity training and inference workloads under constrained grid connections",
+  "Validation of renewable-energy procurement and PPA performance at the site and portfolio level",
+  "Carbon- and cost-aware workload placement for laboratories, offices, and other energy-intensive facilities",
+  "Resilience planning for hospitals, communications networks, financial infrastructure, and defense-industrial compute sites",
+  "Enterprise energy and emissions forecasting before expansion, procurement, or regulatory reporting decisions"
+]
+investible = true
+investment_rationale = "BH Grid Solutions is a high-upside, high-uncertainty infrastructure software signal rather than a settled commercial success, and the investible flag is only a legacy internal priority indicator, not an investment recommendation. (1) The problem is durable: AI-driven data-center demand turns energy availability, hourly carbon intensity, contract utilization, and cooling capacity into operating constraints rather than annual sustainability-reporting topics. (2) The product thesis is differentiated enough to test: combining operator-tenant allocation, PPA validation, audit-grade data, AI forecasting, and workload-shifting APIs could connect the sustainability budget to measurable operating savings. (3) Validation is early but concrete, including approximately $1 million in reported 2024 support, a claimed paid pilot with a colocation operator and Fortune 500 tenant, top-five CPA assurance, SOC 1/SOC 2 claims, a SIIRD grant, six provisional patents, and Deloitte climate recognition. Counterweights are decisive: the team is small, customer identities and commercial metrics are undisclosed, the funding description is inconsistent across sources, public savings figures are not independently substantiated, and hyperscalers, energy-management vendors, and carbon-accounting companies can bundle adjacent capabilities. The central diligence question is whether BH Grids is a mission-critical optimization control point or a sophisticated reporting layer with limited budget capture."
+strategic_value = "BH Grid Solutions has strategic value because it operates at the intersection of AI infrastructure growth, energy-system constraints, carbon-accounting assurance, and digital resilience. (1) Infrastructure visibility: hourly, site-specific energy and carbon data is more operationally useful than annual averages when compute loads, renewable supply, and electricity prices change rapidly. (2) Capacity leverage: workload-shifting signals may let operators use existing grid and facility capacity more effectively, delaying some expansion pressure while preserving eligible service levels. (3) Sovereign resilience: data centers supporting government, health, finance, communications, or defense supply chains need a defensible account of energy dependencies and fallback options, even if BH Grids has not yet disclosed such customers. (4) Contract integrity: PPA and renewable validation can improve confidence in procurement claims and expose the difference between purchased attributes and actual time-and-place energy conditions. (5) Ecosystem fit: the company's Israeli energy and software base, SIIRD support, and data-center focus place it inside a strategic infrastructure theme. The value remains conditional on independent proof of accuracy, security, savings, workload-control integrations, and repeatable adoption beyond pilots."
+potential_score = 67.0
+technology_score = 74.0
+market_score = 70.0
+team_score = 60.0
+dual_use_score = 72.0
+strategic_alignment_score = 79.0
+stage = "early"
+stage_rationale = "BH Grid Solutions is early because it was incorporated in 2024, has public evidence of an eight-person team, and is described by PLANETech as being at the pilot-to-first-paying-customer stage. It has moved beyond an idea: the company reports a developed product, a live paid pilot with a Tier 2 colocation operator and Fortune 500 tenant, SOC 1/SOC 2 certification, CPA-assured methodology, six provisional patents, a SIIRD grant, and a Deloitte climate award. Those signals show technical and market validation, but they do not establish mid-stage commercial scale. Revenue, recurring contracts, customer count, retention, independently audited savings, implementation duration, and detailed headcount are not public. IVC and Startupim also describe the 2024 capital event differently, so the funding history should be verified directly. Progression to mid stage requires named or independently corroborated deployments, repeatable conversion from pilots, measurable energy or carbon outcomes, and evidence that the platform integrates into real workload and facility control workflows without compromising service levels."
+competitors = [
+  "Watershed (enterprise carbon accounting and reporting platform)",
+  "Persefoni (corporate carbon-management and disclosure software)",
+  "Electricity Maps (real-time electricity carbon-intensity data and APIs)",
+  "Flexidao (renewable-energy procurement, tracking, and hourly matching tools)",
+  "Schneider Electric EcoStruxure (incumbent data-center and facility energy-management stack)",
+  "Siemens (industrial and building energy-management, automation, and optimization incumbent)",
+  "Hyperscaler-native sustainability dashboards and workload schedulers (bundled cloud-provider approach)"
+]
+competitive_edge = "BH Grids' potential edge is the combination of time-granular data, operational action, and auditability in a data-center-specific workflow. (1) Unlike annual carbon accounting, its stated model follows hourly and location-based energy, carbon, price, and contract conditions. (2) Unlike a pure intensity-data API, it adds operator-tenant allocation, PPA lifecycle management, forecasting, and portfolio optimization. (3) Unlike a facility dashboard alone, its workload-shifting interface is designed to give hyperscalers, neoclouds, and AI service providers a path from measurement to scheduling decisions. (4) The company claims SOC controls, CPA-reviewed data methodology, six provisional patents, and a live paid pilot, which could reduce trust friction with regulated enterprise buyers. (5) Its strongest defensibility would come from hard-to-replicate integrations, historical site data, assurance workflows, and measurable savings that improve with deployment. None of those advantages is yet proven as a durable moat. Large cloud providers, energy-management incumbents, and carbon platforms can add overlapping features, while customers may resist shifting workloads because of latency, security, residency, or availability constraints."
+risk_factors = [
+  "Commercial proof gap: customer identities, revenue, recurring contract value, retention, and independently audited savings are not public",
+  "Crowded category and bundling risk from hyperscalers, Schneider Electric, Siemens, carbon-accounting platforms, and electricity-data providers",
+  "Data-integration risk across smart meters, facility systems, grid data, PPAs, renewable sources, and workload schedulers",
+  "Methodology and regulatory risk as hourly matching, GHG reporting, Scope 2 and Scope 3 rules, and assurance expectations evolve",
+  "Operational trade-offs: workload shifting can conflict with latency, data residency, security, availability, and service-level requirements",
+  "Small-team execution risk in enterprise sales, global infrastructure support, security assurance, and power-systems engineering",
+  "Funding and disclosure ambiguity: public sources describe the 2024 capital support differently and do not disclose valuation or runway"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "BH Grid Solutions merits monitoring as a strategically aligned Israeli infrastructure startup at the intersection of AI compute growth and energy resilience. (1) Its product focuses on an increasingly consequential bottleneck: data-center operators need hourly, site-specific visibility into power, carbon, cost, contracts, and available capacity. (2) The platform has a credible action path through forecasting, PPA validation, operator-tenant modeling, and workload-shifting APIs rather than stopping at retrospective reporting. (3) Early validation includes a reported paid pilot, a $1 million 2024 support event, SIIRD backing, SOC 1/SOC 2 claims, top-five CPA assurance, six provisional patents, and Deloitte recognition. (4) The company is relevant to sovereign and defense-industrial resilience as an enabling layer for reliable digital infrastructure, but it has disclosed no defense or government deployment. Priority is capped by its small team, unnamed customers, undisclosed commercial metrics, inconsistent public funding classification, and strong bundling exposure. Milestones that would raise priority are independently corroborated data-center deployments, measurable cost or carbon reductions, workload-orchestration integrations, named enterprise references, and evidence of continuity value during grid or capacity stress. This is a strategic diligence assessment, not an investment recommendation."
+public_sources = [
+  {label="BH Grids official site", url="https://bhgrids.com/", description="Product, paid pilot, grant, patents, assurance, award and certification assertions."},
+  {label="IVC Research Center company profile", url="https://www.ivc-online.com/Google-Card?id=52fa6415-9ba5-ef11-b817-9319f1798f89", description="Israeli identity, location, leaders, eight-person listing and dated Seed/extension and R&D grant entries; deal amounts and investor identities are masked in public rendering."},
+  {label="JETRO J-Bridge profile", url="https://www.jetro.go.jp/j-bridge/companies/2026/bhgrids.html", description="Independent government trade-agency profile of product and use cases."},
+  {label="PLANETech Marketsquare profile", url="https://planetech.themarketsquare.org/startup/bh-grid-solutions/", description="Israeli climate-tech ecosystem profile with product, pilot stage and reported use cases."},
+  {label="Israel Innovation Authority SIIRD program", url="https://innovationisrael.org.il/en/calls_for_proposal/singapore-israel-siird-rnd-pilots-2026/", description="Government program context for SIIRD R&D grants; does not independently verify BH Grids award amount."},
+  {label="BH Grids company LinkedIn", url="https://il.linkedin.com/company/bh-grid-solutions", description="Company profile and staff/update evidence for current activity and operating identity."},
+  {label="Flexidao Microsoft case study", url="https://www.flexidao.com/case-studies/microsoft", description="Comparable hourly clean-energy tracking product and named data-center customer use case."},
+  {label="Ziv Gome Road2 Haifa post", url="https://www.linkedin.com/posts/zivgome_techforgood-cloudemissions-greendatacenter-activity-7245144054412267520-zvl6", description="Public CTO post about pitching BH Grid Solutions at the 2024 Road2 Haifa event."},
+  {label="Zachi Ben-Moshe LinkedIn profile", url="https://il.linkedin.com/in/zachibenmoshe", description="Public CEO and founder profile and company updates."}
+]
+crawled_at = "2026-09-08T01:31:34Z"
+updated_at = "2026-10-04T10:22:09+03:00"
+
+[intelligence]
+schema_version = 2
+investors = []
+financials = []
+
+[intelligence.company]
+company_id = "il-bh-grid-solutions"
+legal_name = "BH GRID SOLUTIONS LTD"
+aliases = ["BH Grids", "BH Grid Solutions"]
+operating_status = "active"
+business_model = "Israeli B2B software company providing subscription or enterprise carbon and energy intelligence to data-center operators, tenants and energy-intensive sites; commercial pricing and contract model are not publicly disclosed."
+products = ["BH Grids carbon and energy intelligence platform", "Hourly operator-tenant carbon and energy reporting", "PPA lifecycle validation", "Energy, carbon and cost forecasting and workload-shifting API"]
+locations = ["Jerusalem, Israel"]
+founded_on = "2024"
+registry_identifiers = [{jurisdiction="Israel", scheme="Israeli company number", identifier="516973609", source_ids=["ivc"]}]
+source_ids = ["official", "ivc", "jetro"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "incorporated_in_israel"]
+summary = "The company's profile and Israeli registry-linked company identifier establish BH GRID SOLUTIONS LTD as an Israeli company based in Jerusalem."
+as_of = "2026-10-04"
+source_ids = ["ivc", "jetro"]
+
+[intelligence.funding]
+status = "reported"
+summary = "IVC lists a Seed round dated 2024-08-11 and a Seed extension dated 2024-10-05, but its public rendering masks amounts and investor names. BH Grids' current official website separately reports a $1 million Singapore-Israel R&D Foundation grant. Treat the grant as non-dilutive grant support, not equity; no company-announced lifetime equity total was found."
+history_status = "partial"
+coverage_through = "2026-10-04"
+rounds = [
+ {id="seed-2024-08", round_type="Seed", instrument="equity", status="announced", announced_on="2024-08-11", amount_status="undisclosed", amount_scope="round", lead_investors=[], participating_investors=[], source_ids=["ivc"], notes="IVC displays a Seed entry on this date; amount and names are masked in its publicly rendered record."},
+ {id="seed-extension-2024-10", round_type="Seed extension", instrument="equity", status="announced", announced_on="2024-10-05", amount_status="undisclosed", amount_scope="incremental_extension", is_extension_of="seed-2024-08", lead_investors=[], participating_investors=[], source_ids=["ivc"], notes="IVC labels this Seed - Extended; amount and named investor are masked. Extension amount cannot be added to any reported total."},
+ {id="siird-grant-2026", round_type="R&D grant", instrument="grant", status="announced", announced_on="2026-05-01", amount_status="reported", amount=1000000, currency="USD", amount_scope="round", lead_investors=[], participating_investors=["Singapore-Israel Industrial R&D and Technological Innovation Fund (SIIRD)"], source_ids=["official", "ivc"], notes="The company reports a $1 million SIIRD R&D grant; IVC lists an R&D grant on 2026-05-01. Company page does not specify award or payment date, so the IVC date is used as listed event date. Grant is separate from equity financing."}
+]
+
+[intelligence.ownership]
+status = "not_found"
+summary = "No public source reviewed discloses BH Grids' current ownership percentages, full cap table, or a parent company. The Israeli company remains listed as active; no acquisition or ownership-change announcement was located."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["ivc", "official"]
+deals = []
+holdings = []
+
+[[intelligence.people]]
+name = "Zachi Ben-Moshe"
+role = "CEO and founder"
+is_founder = true
+current = true
+background = "IVC identifies him as CEO and founder; current company LinkedIn posts refer to him as CEO. Detailed prior operating history was not independently confirmed in sources reviewed."
+source_ids = ["ivc", "linkedin"]
+
+[[intelligence.people]]
+name = "Ziv Gome"
+role = "CTO"
+is_founder = false
+current = true
+background = "IVC identifies him as CTO; a public post by Gome describes pitching the company at Road2 Haifa in 2024."
+source_ids = ["ivc", "ziv"]
+
+[[intelligence.people]]
+name = "Sagi Zohar"
+role = "Engineering Projects Manager"
+is_founder = false
+current = true
+background = "Listed as Engineering Projects Manager in IVC's company profile."
+source_ids = ["ivc"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "BH Grids says it completed a live paid pilot with a Tier 2 colocation operator and a Fortune 500 tenant; neither customer is named and no contract value or production conversion is disclosed."
+date = "2026"
+source_ids = ["official"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Company says its platform provides hourly energy, carbon and cost intelligence, tenant-operator allocation, PPA lifecycle management, forecasting and workload-shifting intelligence through API integration."
+date = "2026-10-04"
+source_ids = ["official", "jetro"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "BH Grids reports receiving Deloitte Catalyst's Next Generation Climate Award in December 2025."
+date = "2025-12"
+source_ids = ["official", "linkedin"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "BH Grids reports a $1 million Singapore-Israel R&D grant; the company site does not publish award documentation, payment timing or grant terms."
+date = "2026"
+source_ids = ["official"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "The company states that it has submitted six provisional IP patent applications covering high-resolution carbon accounting and optimization. Application numbers and public patent-family records were not located, so no grant or enforceable patent right is asserted."
+date = "2026-10-04"
+source_ids = ["official"]
+
+[[intelligence.comparables]]
+name = "Flexidao"
+website = "https://www.flexidao.com/"
+rationale = "Provides clean-energy portfolio tracking and hourly matching relevant to data-center Scope 2 reporting."
+differentiation = "Flexidao's public Microsoft case study focuses on hourly renewable matching and certificates; BH Grids additionally markets operator-tenant allocation, energy-cost intelligence and workload-shifting signals."
+source_ids = ["flexidao"]
+
+[[intelligence.comparables]]
+name = "Schneider Electric EcoStruxure"
+website = "https://www.se.com/"
+rationale = "Incumbent power-monitoring and data-center infrastructure management offers a substitute or integration point for facility energy data and controls."
+differentiation = "BH Grids positions its product around cross-site hourly carbon, PPA, tenant allocation and workload decision workflows; Schneider's broad infrastructure portfolio carries established facilities relationships and deployment reach."
+source_ids = ["official"]
+
+[intelligence.research]
+researched_at = "2026-10-04T10:22:09+03:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+ "BH Grid Solutions official company identity products team",
+ "BH Grid Solutions BH Grids funding raised seed investors valuation acquisition",
+ "BH Grid Solutions IVC Seed extended October 2024 investor",
+ "BH Grid Solutions SIIRD grant 1 million May 2026",
+ "BH Grid Solutions founders CEO CTO team 2026",
+ "BH GRID SOLUTIONS LTD 516973609 ownership active status",
+ "BH Grid Solutions revenue ARR customers paid pilot contracts headcount",
+ "BH Grid Solutions patents provisional patent applications",
+ "BH Grid Solutions competitors hourly carbon data center Flexidao Schneider",
+ "BH Grid Solutions defense government security dual use"
+]
+gaps = [
+ "investors: IVC masks investor names in its public profile; no verifiable named round participants or investor portfolio announcement was found.",
+ "ownership: no disclosed cap table, ownership percentages, parent company or transaction details; private ownership percentages remain unknown.",
+ "financials: no dated revenue, ARR, profitability, burn, runway or audited financial figures disclosed.",
+ "traction: paid pilot is company-reported and customers are unnamed; no public contract values, recurring revenue, retention, independent savings measurements or production deployment evidence.",
+ "intellectual_property: company claims six provisional filings but no application identifiers or independently verifiable filing records were located.",
+ "competition: comparison set is incomplete; review of Flexidao only establishes a directly evidenced adjacent use case, and no comprehensive competitive win/loss evidence is public.",
+ "team: three roles are named in IVC; detailed biographies and independently verified full current headcount are unavailable."
+]
+conflicts = ["Older third-party coverage characterized roughly $1 million as a Seed or grant-led capital event, while current company materials specify a $1 million SIIRD R&D grant and IVC separately lists two Seed equity entries with masked amounts. These are kept as distinct instruments; no equity round amount is inferred."]
+diligence_questions = [
+ "What were the terms, dates, and amounts of the August 2024 Seed and October 2024 extension, and which investors participated?",
+ "Can the company provide the SIIRD award letter, grant agreement, eligible project scope, and disbursement schedule supporting the reported $1 million award?",
+ "Which paid-pilot customers can provide references, and did either pilot convert to a production contract with recurring revenue?",
+ "What measured cost, emissions and workload-shifting outcomes were independently validated, over what baseline and period?",
+ "What are the application numbers and filing jurisdictions for the six provisional patent applications, and what claims remain novel?",
+ "How does workload optimization integrate with facility and orchestration systems while meeting latency, security, data-residency and uptime requirements?"
+]
+
+[[intelligence.research.sources]]
+id = "official"
+url = "https://bhgrids.com/"
+title = "BH Grids: Carbon and Energy Intelligence Solution"
+publisher = "BH Grids"
+kind = "company"
+accessed_at = "2026-10-04T10:22:09+03:00"
+claims = ["BH Grids describes hourly energy, carbon and cost intelligence for data centers and energy-intensive sites.", "Company reports completion of a paid pilot with a Tier 2 colocation operator and Fortune 500 tenant.", "Company reports a $1 million SIIRD R&D grant, six provisional patent applications, audited methodology, SOC 1/SOC 2 certification and a December 2025 award."]
+
+[[intelligence.research.sources]]
+id = "ivc"
+url = "https://www.ivc-online.com/Google-Card?id=52fa6415-9ba5-ef11-b817-9319f1798f89"
+title = "BH Grid Solutions Ltd. - IVC Data & Insights"
+publisher = "IVC Research Center"
+kind = "directory"
+accessed_at = "2026-10-04T10:22:09+03:00"
+claims = ["IVC identifies BH Grid Solutions Ltd. as established in 2024, Jerusalem-based, with eight employees.", "IVC lists Zachi Ben-Moshe as CEO and founder, Ziv Gome as CTO, and Sagi Zohar as Engineering Projects Manager.", "IVC displays Seed entries dated August 11, 2024 and Seed-Extended dated October 5, 2024, with amounts and investor names masked.", "IVC lists an R&D grant entry dated May 1, 2026."]
+
+[[intelligence.research.sources]]
+id = "jetro"
+url = "https://www.jetro.go.jp/j-bridge/companies/2026/bhgrids.html"
+title = "BH Grid Solutions Ltd. - J-Bridge"
+publisher = "Japan External Trade Organization"
+kind = "government"
+accessed_at = "2026-10-04T10:22:09+03:00"
+claims = ["JETRO describes BH Grids' multi-site hourly carbon, energy and cost platform, reporting, forecasting, PPA management and optimization."]
+
+[[intelligence.research.sources]]
+id = "planetech"
+url = "https://planetech.themarketsquare.org/startup/bh-grid-solutions/"
+title = "BH Grid Solutions - PLANETech Marketsquare"
+publisher = "PLANETech"
+kind = "directory"
+accessed_at = "2026-10-04T10:22:09+03:00"
+claims = ["PLANETech describes the data-center product and a pilot with an unnamed major operator and multinational tenant.", "PLANETech describes intended workload and energy optimization; its stated emissions outcomes are promotional claims rather than measured independent results."]
+
+[[intelligence.research.sources]]
+id = "linkedin"
+url = "https://il.linkedin.com/in/zachibenmoshe"
+title = "Zachi Ben Moshe - BH Grid Solutions"
+publisher = "LinkedIn"
+kind = "other"
+accessed_at = "2026-10-04T10:22:09+03:00"
+claims = ["Zachi Ben-Moshe's public profile and posts identify him with BH Grid Solutions and describe 2025 pilots, paid-pilot, grant, SOC preparation and planned 2026 commercialization as company-reported milestones.", "Zachi Ben-Moshe's company post reports the Deloitte Catalyst climate award in December 2025."]
+
+[[intelligence.research.sources]]
+id = "ziv"
+url = "https://www.linkedin.com/posts/zivgome_techforgood-cloudemissions-greendatacenter-activity-7245144054412267520-zvl6"
+title = "How I pitched BH Grid Solutions at Road2 Haifa"
+publisher = "Ziv Gome on LinkedIn"
+kind = "other"
+accessed_at = "2026-10-04T10:22:09+03:00"
+published_on = "2024"
+claims = ["Ziv Gome publicly described pitching BH Grid Solutions at the Road2 Haifa accelerator event."]
+
+[[intelligence.research.sources]]
+id = "siird-program"
+url = "https://innovationisrael.org.il/en/calls_for_proposal/singapore-israel-siird-rnd-pilots-2026/"
+title = "Singapore-Israel R&D Foundation feasibility, R&D and pilot programs"
+publisher = "Israel Innovation Authority"
+kind = "government"
+accessed_at = "2026-10-04T10:22:09+03:00"
+claims = ["Israel Innovation Authority describes SIIRD as a bilateral R&D program with grants for joint projects; this is contextual program evidence and does not establish BH Grids' award amount or terms."]
+
+[[intelligence.research.sources]]
+id = "flexidao"
+url = "https://www.flexidao.com/case-studies/microsoft"
+title = "Microsoft Tracks Clean Power Hourly with Flexidao Case Study"
+publisher = "Flexidao"
+kind = "customer"
+accessed_at = "2026-10-04T10:22:09+03:00"
+claims = ["Flexidao describes hourly matching of a Microsoft Amsterdam data center's consumption with a renewable PPA and audit-ready reporting."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T10:22:09+03:00"
+next_review_on = "2027-01-04"
+queries = ["BH Grid Solutions official company identity products", "BH GRID SOLUTIONS LTD 516973609 Jerusalem active"]
+source_ids = ["official", "ivc", "jetro"]
+summary = "Official site, IVC and JETRO corroborate the operating brand, B2B platform and Jerusalem/Israeli identity."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T10:22:09+03:00"
+next_review_on = "2027-01-04"
+queries = ["BH Grid Solutions funding raised seed investors", "BH Grid Solutions IVC Seed extended October 2024", "BH Grid Solutions SIIRD grant 1 million 2026"]
+source_ids = ["official", "ivc", "siird-program"]
+summary = "Two Seed entries are visible in IVC with amounts masked; company reports separate $1m SIIRD R&D grant. No total equity amount or valuation verified."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "not_found"
+checked_at = "2026-10-04T10:22:09+03:00"
+next_review_on = "2027-01-04"
+queries = ["BH Grid Solutions investors seed round participants", "BH Grids investor portfolio funding"]
+source_ids = ["ivc", "official"]
+summary = "Publicly rendered IVC investor names are masked and no independently attributable investor announcement was found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T10:22:09+03:00"
+next_review_on = "2027-01-04"
+queries = ["BH Grid Solutions founders CEO CTO team 2026"]
+source_ids = ["ivc", "linkedin", "ziv"]
+summary = "IVC names the CEO-founder, CTO and engineering projects manager; biographies and full staff roster remain limited."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T10:22:09+03:00"
+next_review_on = "2027-01-04"
+queries = ["BH GRID SOLUTIONS LTD ownership parent acquisition", "BH GRID SOLUTIONS LTD 516973609 ownership status"]
+source_ids = ["ivc", "official"]
+summary = "No parent, ownership percentages, acquisition or change-of-control announcement found; private cap table undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T10:22:09+03:00"
+next_review_on = "2027-01-04"
+queries = ["BH Grid Solutions revenue ARR customers financials", "BH Grids burn runway revenue"]
+source_ids = ["official", "ivc"]
+summary = "No revenue, ARR, profitability, burn, runway or audited company financial metric located."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T10:22:09+03:00"
+next_review_on = "2027-01-04"
+queries = ["BH Grid Solutions paid pilot customers data center", "BH Grids 2026 commercial launch customers"]
+source_ids = ["official", "linkedin", "planetech"]
+summary = "Company reports paid pilot completion, successful pilots and active commercial discussions; customer identities, revenue and conversion remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T10:22:09+03:00"
+next_review_on = "2027-01-04"
+queries = ["BH Grid Solutions patents provisional patent applications", "BH Grids patent assignee"]
+source_ids = ["official"]
+summary = "Company claims six provisional applications, but no public application numbers or independently verifiable filings were located."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T10:22:09+03:00"
+next_review_on = "2027-01-04"
+queries = ["BH Grid Solutions competitors hourly data center carbon", "Flexidao Microsoft hourly matching data center", "Schneider Electric EcoStruxure data center power monitoring"]
+source_ids = ["flexidao", "official"]
+summary = "Flexidao has a directly documented hourly matching case; facility incumbents are relevant substitutes/integration points. Competitive win/loss evidence is unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-04T10:22:09+03:00"
+next_review_on = "2027-01-04"
+queries = ["BH Grid Solutions defense government customer security use", "BH Grids data center resilience government defense"]
+source_ids = ["official", "jetro"]
+summary = "Energy visibility and workload planning could support resilience of critical digital infrastructure, but no defense, government or security customer or deployment is disclosed."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "IVC identifies the company as established and active in the Israeli high-tech directory; current official website is operating and presents the platform."
+verified_at = "2026-10-04T10:22:09+03:00"
+source_ids = ["ivc", "official"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "IVC gives Jerusalem, Israel as the company's main address; JETRO identifies the subject as BH Grid Solutions Ltd.; IVC supplies its Israeli profile."
+verified_at = "2026-10-04T10:22:09+03:00"
+source_ids = ["ivc", "jetro"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.siird-grant-2026.amount"
+support = "direct"
+summary = "BH Grids explicitly reports a 1 million USD SIIRD grant; amount is recorded in absolute currency units."
+verified_at = "2026-10-04T10:22:09+03:00"
+source_ids = ["official"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024-08.amount"
+support = "direct"
+summary = "IVC displays the Seed date and round but masks amount and reports no readable value; the round amount is therefore undisclosed."
+verified_at = "2026-10-04T10:22:09+03:00"
+source_ids = ["ivc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-extension-2024-10.amount"
+support = "direct"
+summary = "IVC labels the event Seed - Extended but its public rendering masks the amount; no numeric extension value is entered."
+verified_at = "2026-10-04T10:22:09+03:00"
+source_ids = ["ivc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.siird-grant-2026.participating_investors"
+support = "direct"
+summary = "BH Grids identifies the Singapore Israel R&D Foundation (SIIRD) as the grant-awarding program."
+verified_at = "2026-10-04T10:22:09+03:00"
+source_ids = ["official"]

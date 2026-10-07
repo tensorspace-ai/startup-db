@@ -1,0 +1,374 @@
+name = "Cymmetria"
+
+description = "Cymmetria was a cyber-deception company that used realistic decoy infrastructure, credentials, and data to detect lateral movement and study intruders. Founded in 2014, it was acquired by Stage Fund in 2019; the present operating status and ownership of the product are not independently confirmed."
+
+detailed_description = """
+Cymmetria built MazeRunner and related deception capabilities for placing believable virtual servers, endpoints, credentials, breadcrumbs, and traps inside an organization’s network. The design goal was to make an attacker reveal themselves by touching an asset that legitimate users should not need, while recording the interaction for investigation. This is materially different from a conventional signature or anomaly sensor: a decoy interaction can be a high-confidence signal, but the signal only has value if the deception remains realistic, isolated, and well integrated with the defender’s response process.
+
+The target market was enterprise security operations, threat hunting, and incident response teams dealing with credential theft and post-compromise movement. Public descriptions identify MazeRunner and ActiveSOC as products for monitoring attacker movement, detecting lateral movement, automating response, and integrating with existing security infrastructure. Cymmetria also described deception-as-a-service and customized deployments. These claims establish a coherent product category, but public evidence in the current record does not establish present customers, recurring revenue, deployment scale, renewal rates, or whether the products remain commercially supported.
+
+Competition comes from dedicated deception vendors and from adjacent platforms that provide honeypots, identity-risk detection, endpoint telemetry, or XDR response. Cymmetria’s historical differentiation was the combination of automated decoy placement, realistic network context, and investigation data rather than a single honeypot appliance. That advantage is operationally fragile: defenders must maintain believable assets, avoid contaminating production systems, and connect alerts to a SOC workflow. Consolidation also changes the market. The 2019 Stage Fund acquisition validates that the asset was considered commercially meaningful, but it does not prove that the standalone company, product roadmap, or team survived the transaction.
+
+The technology has credible dual-use relevance because the same controlled deception and telemetry methods can support commercial breach detection, defense-network monitoring, insider-threat investigations, and cyber threat-intelligence collection. Defense adoption would require stronger evidence than a commercial deployment: network isolation, safe handling of captured credentials and malware, logging and evidence-retention controls, accreditation, and clear rules for any interaction with an adversary. The database should therefore treat Cymmetria as a strategically relevant historical capability and acquisition case, not as a currently investible independent startup until ownership, product availability, and operating continuity are verified.
+"""
+
+logo = "Unknown"
+website = "Unknown"
+sector = "Cybersecurity / Deception Technology"
+founded = "2014"
+headquarters = "Tel Aviv, Israel (historical R&D); Stage Fund announced Denver and Tel Aviv offices in 2019"
+employees = "Unknown; CTech reported the Israeli workforce was dismissed in 2019"
+funding_stage = "Acquired by Stage Fund in September 2019; Israeli operations subsequently shut down"
+entity_type = "acquired_asset"
+
+dual_use = true
+dual_use_description = "Cymmetria’s core deception technology has substantive commercial and defense applicability: realistic decoys can expose lateral movement, insider misuse, and reconnaissance in enterprise or mission networks while producing high-confidence telemetry. The defense case is credible at the capability level, but there is no verified evidence here of current defense contracts, classified deployment, accreditation, or continuing product support."
+
+key_technologies = [
+  "Virtual decoy servers and endpoint emulation",
+  "Deceptive credentials, breadcrumbs, and seeded data artifacts",
+  "Automated deception orchestration across network environments",
+  "Attacker interaction telemetry and forensic capture",
+  "Lateral-movement detection and threat hunting workflows",
+  "SIEM, SOAR, and existing security-stack integration"
+]
+
+use_cases = [
+  "High-confidence detection of post-compromise lateral movement",
+  "Threat hunting for unauthorized access to decoy systems and credentials",
+  "Insider-threat monitoring without placing production data at risk",
+  "Forensic collection of attacker behavior and command sequences",
+  "Enterprise SOC triage and automated incident-response enrichment",
+  "Defense-network deception and early warning for cyber reconnaissance",
+  "Cyber threat-intelligence collection in controlled environments"
+]
+
+investible = false
+investment_rationale = "This is not currently a credible standalone investment-screening opportunity because the company was acquired in 2019 and its current ownership, product availability, financial performance, and team continuity are not confirmed. The acquisition and historical product evidence support research relevance, but they do not justify treating Cymmetria as an active venture candidate or inferring present traction."
+
+strategic_value = "Cymmetria is strategically useful as a historical cyber-deception asset and as a reference point for evaluating low-noise breach detection. If the technology or team remains available, a strategic buyer could value decoy orchestration and attacker telemetry as complements to endpoint, identity, SIEM, and XDR products. That value is conditional on recoverable IP, maintained integrations, safe deployment architecture, and verifiable current support."
+
+public_sources = [
+  { label = "Stage Fund acquisition announcement", url = "https://www.prnewswire.com/news-releases/stage-fund-acquires-cymmetria-a-leader-in-cyber-deception-300911763.html", description = "Stage Fund's acquisition announcement, products, leadership comment, and office locations (2019)." },
+  { label = "CTech liquidation report", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3776070,00.html", description = "Israeli operations shutdown, employee dismissals, and employee-filed liquidation request (2019)." },
+  { label = "Dark Reading Series A report", url = "https://www.darkreading.com/cyberattacks-data-breaches/cymmetria-adds-9-million-in-funding", description = "Reported $9 million Series A and named investors (2015)." },
+  { label = "Calcalist Series A report", url = "https://www.calcalist.co.il/internet/articles/0,7340,L-3673203,00.html", description = "Local Hebrew reporting on the $9 million round and prior $1.5 million financing (2015)." },
+  { label = "TechCrunch product and founder profile", url = "https://techcrunch.com/2015/06/27/cymmetria/", description = "Historical product description and founder Gadi Evron's background (2015)." },
+  { label = "Google Patents US20180309787A1", url = "https://patents.google.com/patent/US20180309787A1/en", description = "Cymmetria-assigned deception-campaign patent application and recorded abandoned status." },
+  { label = "Ynet Hebrew company profile", url = "https://www.ynet.co.il/articles/0,7340,L-4850295,00.html", description = "Israeli founders and the cyber-deception product described in local reporting (2016)." },
+  { label = "Calcalist seed report", url = "https://www.calcalist.co.il/local/articles/0,7340,L-3664622,00.html", description = "Seed raise amount and founding team roles (2015)." },
+  { label = "Y Combinator company profile", url = "https://www.ycombinator.com/companies/cymmetria", description = "Founder, acquired status, location, and products." },
+  { label = "NoCamels Series A report", url = "https://nocamels.com/2015/11/cyber-security-company-cymmetria-raises-9m/", description = "Series A and previous investors identified in local technology reporting (2015)." }
+]
+
+potential_score = 59.0
+technology_score = 82.0
+market_score = 64.0
+team_score = 62.0
+dual_use_score = 86.0
+strategic_alignment_score = 78.0
+
+stage = "mature"
+stage_rationale = "Cymmetria was founded in 2014 and reached an acquisition by Stage Fund in 2019, so it is best represented as a mature historical company/acquired asset rather than an early- or mid-stage startup. The current operating state, successor product identity, and team continuity remain unverified."
+
+competitors = [
+  "Attivo Networks / SentinelOne",
+  "Acalvio",
+  "CounterCraft",
+  "TrapX Security",
+  "Illusive Networks / Proofpoint",
+  "Open-source honeypot and deception frameworks"
+]
+
+competitive_edge = "Historically, Cymmetria combined automated deployment of believable decoys with breadcrumbs, attacker observation, and SOC-oriented response workflows. Its potential edge was operational scale and context-rich telemetry rather than a fundamentally unique sensing primitive. That edge depended on realism, integrations, and ongoing maintenance; after the Stage Fund acquisition, any continuing differentiation must be demonstrated through surviving product, IP, customer, or team evidence."
+
+risk_factors = [
+  "Current ownership, operating status, and product availability are not independently confirmed",
+  "The historical company website returned HTTP 403 and no better canonical official site was verified",
+  "Acquisition or wind-down may have interrupted roadmap, support, integrations, and team continuity",
+  "Deception assets require continuous maintenance to remain believable and avoid false confidence",
+  "Poor isolation or mishandled captured credentials could create operational and security exposure",
+  "Dedicated deception competes with bundled XDR, identity, endpoint, and SIEM capabilities",
+  "Public evidence does not verify current customers, revenue, certifications, or defense deployments"
+]
+
+risk_level = "high"
+
+signals = []
+priority_rank = 0
+priority_rationale = "Cymmetria has strong historical technology and dual-use relevance, but its acquired-asset status and unverified current continuity sharply reduce priority as an independent investment signal. Retain it for capability mapping, acquisition history, and defense-cyber research; reopen active diligence only if ownership, product support, and deployable assets can be verified."
+
+crawled_at = "2026-02-27T14:00:00+00:00"
+updated_at = "2026-10-05T02:29:45+00:00"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Gadi Evron", role = "Co-founder and CEO (historical)", is_founder = true, current = false, background = "Former senior cybersecurity leader at Kaspersky and PwC; TechCrunch reported that he previously headed Israel's government Internet security operation.", source_ids = ["techcrunch-2015", "calcalist-seed-2015"] },
+  { name = "Dean Sysman", role = "Co-founder and CTO (historical)", is_founder = true, current = false, background = "Calcalist described him as CTO and a leader of cyber teams in Unit 8200.", source_ids = ["calcalist-seed-2015", "yc-company"] },
+  { name = "Ran Harel", role = "Co-founder and VP Product (historical)", is_founder = true, current = false, background = "Calcalist reported prior cybersecurity roles at Bank Leumi, Verint, and EY.", source_ids = ["calcalist-seed-2015"] }
+]
+investors = [
+  { name = "Sherpa Capital", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2015"], source_ids = ["darkreading-2015-series-a"] },
+  { name = "Rally Ventures", investor_type = "vc", website = "https://rallyventures.com", relationship = "historical", round_ids = ["series-a-2015"], source_ids = ["darkreading-2015-series-a"] },
+  { name = "Felicis Ventures", investor_type = "vc", website = "https://www.felicis.com", relationship = "historical", round_ids = ["series-a-2015"], source_ids = ["darkreading-2015-series-a"] },
+  { name = "Y Combinator", investor_type = "accelerator", website = "https://www.ycombinator.com", relationship = "historical", round_ids = ["series-a-2015"], source_ids = ["darkreading-2015-series-a"] },
+  { name = "Seedcamp", investor_type = "vc", website = "https://seedcamp.com", relationship = "historical", round_ids = [], source_ids = ["nocamels-2015"] },
+  { name = "Stage Fund", investor_type = "pe", relationship = "historical", round_ids = [], source_ids = ["stagefund-2019"] }
+]
+financials = []
+traction = []
+intellectual_property = [
+  { kind = "patent", description = "US patent application US20180309787A1, 'Deploying deception campaigns using communication breadcrumbs,' lists Cymmetria Inc as original and current assignee in the Google Patents record. It is recorded as abandoned; this record alone does not establish present ownership or enforceable patent rights.", date = "2018-10-25", source_ids = ["patent-breadcrumbs"] }
+]
+comparables = [
+  { name = "Acalvio", website = "https://www.acalvio.com", rationale = "Commercial deception security platform serving overlapping enterprise detection use cases.", differentiation = "Current product positioning and customer evidence should be checked independently; Cymmetria's historical differentiator emphasized automated decoys, breadcrumbs, and SOC response integration.", source_ids = ["ynet-2016"] },
+  { name = "TrapX Security", rationale = "Named in contemporaneous Israeli reporting as a deception and decoy competitor.", differentiation = "Public historical comparison only; no current product or ownership comparison established.", source_ids = ["ynet-2016"] },
+  { name = "Illusive Networks", rationale = "Named in contemporaneous Israeli reporting as a deception competitor.", differentiation = "Public historical comparison only; no current product or ownership comparison established.", source_ids = ["ynet-2016"] }
+]
+
+[intelligence.company]
+company_id = "il-cymmetria"
+legal_name = "Cymmetria Inc."
+aliases = ["Cymmetria", "Cymmetria Inc", "Cymetria"]
+operating_status = "acquired"
+business_model = "Historical enterprise cybersecurity vendor selling cyber-deception products and related deployment/services; present commercial operation is unverified."
+products = ["MazeRunner", "ActiveSOC"]
+locations = ["Tel Aviv, Israel", "Denver, Colorado, United States"]
+source_ids = ["stagefund-2019", "ctech-liquidation-2019", "techcrunch-2015"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public reporting identifies a $1.5 million financing in July 2015 and a $9 million Series A reported in November 2015. Sources describe the former as a seed round/past financing, without a complete instrument or close-date record. These two disclosed reports total $10.5 million in announced financing, but no company-announced lifetime total was located; reported_total_raised is therefore omitted. Later databases give inconsistent totals and round counts, so they are not used to alter the sourced event amounts."
+history_status = "partial"
+coverage_through = "2019-09"
+rounds = [
+  { id = "seed-2015", round_type = "Seed", instrument = "unknown", status = "closed", announced_on = "2015-07", amount_status = "reported", amount = 1500000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = [], valuation_basis = "undisclosed", source_ids = ["calcalist-2015-series-a"], notes = "Calcalist's November 2015 report says the preceding July financing totaled $1.5 million after the company's accelerator participation; no specific participants, lead, or instrument are identified there." },
+  { id = "series-a-2015", round_type = "Series A", instrument = "equity", status = "closed", announced_on = "2015-11", amount_status = "reported", amount = 9000000, amount_scope = "round", currency = "USD", lead_investors = ["Sherpa Capital"], participating_investors = ["Rally Ventures", "Felicis Ventures", "Y Combinator"], valuation_basis = "undisclosed", source_ids = ["darkreading-2015-series-a", "calcalist-2015-series-a"], notes = "Contemporaneous reporting states $9 million. Some secondary databases report $9.2 million or cumulative totals that differ; no primary source substantiating those alternatives was found, so the contemporaneous $9 million figure is retained." }
+]
+
+[intelligence.ownership]
+status = "reported"
+summary = "Stage Fund announced that it acquired Cymmetria in September 2019. CTech subsequently reported that Stage Fund shut down local operations and Cymmetria's Israeli employees sought liquidation for unpaid wages. Purchase price, legal completion records, ultimate disposition of the US entity and product/IP, and present cap table are not publicly established in sources located for this review."
+cap_table_status = "undisclosed"
+shareholders = ["Stage Fund (acquirer reported in 2019; present ownership continuity unverified)"]
+source_ids = ["stagefund-2019", "ctech-liquidation-2019"]
+deals = [
+  { id = "stage-fund-acquisition-2019", deal_type = "acquisition", company_role = "target", announced_on = "2019-09-04", status = "completed", counterparty = "Stage Fund", amount_status = "undisclosed", source_ids = ["stagefund-2019", "ctech-liquidation-2019"], notes = "Stage Fund announced the acquisition; CTech later described Cymmetria as acquired. Transaction price and legal closing documentation were not found." }
+]
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders", "israeli_rd"]
+summary = "Contemporaneous coverage identifies Cymmetria as an Israeli company founded by members of Israel's Unit 8200, with Tel Aviv operations/R&D. Stage Fund's announcement listed Tel Aviv and Denver offices; CTech later reported closure of the Israeli operation."
+as_of = "2019-12"
+source_ids = ["stagefund-2019", "ctech-liquidation-2019", "ynet-2016"]
+
+[intelligence.research]
+researched_at = "2026-10-05T02:29:45+00:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Cymmetria identity founders headquarters legal name products",
+  "Cymmetria funding raised seed Series A investors Sherpa Rally Felicis Y Combinator Seedcamp",
+  "Cymmetria acquisition acquired Stage Fund 2019 price ownership",
+  "Cymmetria liquidation Israeli operations employees Stage Fund December 2019",
+  "Cymmetria team founder Gadi Evron leadership current",
+  "Cymmetria revenue customers contracts deployments financials",
+  "Cymmetria patents intellectual property Cymmetria Inc",
+  "Cymmetria competitors deception technology Acalvio TrapX Illusive Networks",
+  "Cymmetria defense government military cybersecurity deployment",
+  "סימטריה Cymmetria גיוס משקיעים פירוק עובדים"
+]
+gaps = [
+  "team: three historically named founders and roles are sourced, but current leadership and full historical roster after acquisition are not established",
+  "investors: historical funding participants and acquirer are recorded, but full private cap table, individual allocations, and current beneficial ownership are unavailable",
+  "financials: no reliable dated revenue, ARR, profitability, burn, runway, or audited accounts found",
+  "traction: products are documented but no independently verifiable named paying customers, contract values, deployment counts, renewals, or current support status found",
+  "intellectual_property: one public US application located and recorded abandoned; full global portfolio and present rights-holder not established",
+  "competition: contemporaneous sources identify peers, but no complete current comparative feature or market-share evidence found",
+  "funding: financing coverage is partial; no primary company-announced lifetime total or later financing found",
+  "ownership: purchase price, legal closing evidence, post-shutdown disposition, and present ownership/cap table not found",
+  "dual_use: commercial cyber-deception function is documented; no verified defense contract, government customer, classified deployment, or certification found",
+  "identity: official company domain currently cannot be established from available primary sources; website remains Unknown"
+]
+conflicts = ["Secondary databases disagree on lifetime financing totals (roughly $10.62M to $10.8M) and round counts; contemporaneous reporting supports a $1.5M July 2015 financing and $9M November 2015 Series A. No company-announced lifetime total was found, so no total is asserted.", "Stage Fund announced an acquisition, while later reporting documents closure of the Israeli operation and a liquidation request by employees. This does not establish whether the US entity or specific product/IP assets continued or who owns them now."]
+diligence_questions = [
+  "What legal entity owns MazeRunner, ActiveSOC, source code, trademarks, and the Cymmetria patent family after Stage Fund acquired the business and the Israeli operation closed?",
+  "Was the Israeli employees' liquidation request granted, and what became of Cymmetria Inc. and any US operating entity after 2019?",
+  "Are MazeRunner or ActiveSOC still supported, sold, or deployed, and can current paying customers and renewals be independently verified?",
+  "Can the July 2015 seed instrument, full financing history, and any company-reported lifetime total be confirmed from original filings or investor records?",
+  "Which founders and technical staff, if any, continued with Stage Fund or transferred to another company, and what capabilities/IP did they retain?"
+]
+sources = [
+  { id = "stagefund-2019", url = "https://www.prnewswire.com/news-releases/stage-fund-acquires-cymmetria-a-leader-in-cyber-deception-300911763.html", title = "Stage Fund Acquires Cymmetria, A Leader in Cyber Deception", publisher = "Stage Fund via PR Newswire", kind = "company", accessed_at = "2026-10-05T02:29:45+00:00", published_on = "2019-09-04", claims = ["Stage Fund announced its acquisition of Cymmetria on September 4, 2019.", "The release names MazeRunner and ActiveSOC and says they support attacker hunting, lateral-movement detection, automated response, and mitigation.", "The release lists offices in Tel Aviv and Denver and quotes CEO Gadi Evron."] },
+  { id = "ctech-liquidation-2019", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3776070,00.html", title = "Employees of Cyber Deception Company Cymmetria File for Liquidation", publisher = "Calcalist Tech", kind = "media", accessed_at = "2026-10-05T02:29:45+00:00", published_on = "2019-12-18", claims = ["Cymmetria was acquired by Stage Fund in September 2019.", "Stage Fund shut down Cymmetria's local Israeli operations and Cymmetria's CEO was instructed to dismiss Israeli employees.", "Employees sought a liquidation order, alleging unpaid wages and other payments; the report does not establish the final court outcome.", "The Israeli company developed decoy servers simulating organizational IT infrastructure."] },
+  { id = "darkreading-2015-series-a", url = "https://www.darkreading.com/cyberattacks-data-breaches/cymmetria-adds-9-million-in-funding", title = "Cymmetria Adds $9 Million In Funding", publisher = "Dark Reading", kind = "media", accessed_at = "2026-10-05T02:29:45+00:00", published_on = "2015-11-16", claims = ["Cymmetria closed a $9 million funding round about four months after an earlier $1.5 million round.", "The $9 million Series A was led by Sherpa Capital with Rally Ventures, Felicis Ventures, and Y Combinator.", "The product generated high-fidelity alerts using cyber deception, as described in the article."] },
+  { id = "calcalist-2015-series-a", url = "https://www.calcalist.co.il/internet/articles/0,7340,L-3673203,00.html", title = "Cymmetria מגייסת עוד 9 מיליון דולר", publisher = "Calcalist", kind = "media", accessed_at = "2026-10-05T02:29:45+00:00", published_on = "2015-11-11", claims = ["Cymmetria raised $9 million in a round led by Sherpa Ventures.", "The company had raised $1.5 million in July 2015 after accelerator participation.", "Sherpa was identified as the lead investor."] },
+  { id = "techcrunch-2015", url = "https://techcrunch.com/2015/06/27/cymmetria/", title = "YC-Backed Cymmetria Uses Virtual Machines To Decoy And Detect Hackers", publisher = "TechCrunch", kind = "media", accessed_at = "2026-10-05T02:29:45+00:00", published_on = "2015-06-27", claims = ["Cymmetria's product used network decoys to attract attackers and identify breaches.", "Co-founder Gadi Evron previously led the Israeli government's Internet security operation and held senior security roles at PwC and Kaspersky.", "The product was described as integrating investigation and mitigation with existing security systems."] },
+  { id = "patent-breadcrumbs", url = "https://patents.google.com/patent/US20180309787A1/en", title = "US20180309787A1 - Deploying deception campaigns using communication breadcrumbs", publisher = "Google Patents", kind = "other", accessed_at = "2026-10-05T02:29:45+00:00", published_on = "2018-10-25", claims = ["The published US application lists Cymmetria Inc as original and current assignee in the displayed record.", "The application describes detecting unauthorized use of injected deception traffic in a protected network.", "The displayed legal status is abandoned and is identified as a Google Patents assumption rather than a legal opinion."] },
+  { id = "nocamels-2015", url = "https://nocamels.com/2015/11/cyber-security-company-cymmetria-raises-9m/", title = "Cyber Security Company Cymmetria Raises $9M", publisher = "NoCamels", kind = "media", accessed_at = "2026-10-05T02:29:45+00:00", published_on = "2015-11-12", claims = ["Sherpa Ventures led Cymmetria's $9 million Series A.", "Cymmetria had received past investment from Y Combinator, Seedcamp, and Felicis.", "The company was founded by veterans of an Israeli army technology unit and based in Tel Aviv and San Francisco."] },
+  { id = "calcalist-seed-2015", url = "https://www.calcalist.co.il/local/articles/0,7340,L-3664622,00.html", title = "Cymmetria גייסה 1.5 מיליון דולר", publisher = "Calcalist", kind = "media", accessed_at = "2026-10-05T02:29:45+00:00", published_on = "2015-07", claims = ["Cymmetria raised $1.5 million.", "The founders named are Gadi Evron, Dean Sysman, and Ran Harel; the report describes Evron as CEO, Sysman as CTO, and Harel as VP Product.", "The founders' cybersecurity backgrounds are described in the report."] },
+  { id = "yc-company", url = "https://www.ycombinator.com/companies/cymmetria", title = "Cymmetria: Shifting the asymmetry of cyber security", publisher = "Y Combinator", kind = "investor", accessed_at = "2026-10-05T02:29:45+00:00", claims = ["YC identifies Gadi Evron as founder/CEO and describes Cymmetria as acquired.", "YC identifies Tel Aviv-Yafo as company location and describes MazeRunner and ActiveSOC."] },
+  { id = "ynet-2016", url = "https://www.ynet.co.il/articles/0,7340,L-4850295,00.html", title = "החברה הישראלית שצדה את ההאקרים", publisher = "Ynet", kind = "media", accessed_at = "2026-10-05T02:29:45+00:00", published_on = "2016-09-05", claims = ["Cymmetria was founded by four graduates of Unit 8200 and developed cyber-deception security products.", "The article names Illusive Networks, GuardiCore, and TrapX Security as companies working on similar deception approaches."] }
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-05T02:29:45+00:00"
+next_review_on = "2027-01-05"
+queries = ["Cymmetria identity founders headquarters legal name products"]
+source_ids = ["stagefund-2019", "ctech-liquidation-2019", "techcrunch-2015", "ynet-2016"]
+summary = "Historical identity and product established; current official site and legal continuity remain unclear."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-05T02:29:45+00:00"
+next_review_on = "2027-01-05"
+queries = ["Cymmetria funding raised seed Series A investors Sherpa Rally Felicis Y Combinator Seedcamp"]
+source_ids = ["darkreading-2015-series-a", "calcalist-2015-series-a", "nocamels-2015"]
+summary = "Two 2015 rounds found with $1.5M and $9M reported amounts; no verified lifetime total or later raise found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-05T02:29:45+00:00"
+next_review_on = "2027-01-05"
+queries = ["Cymmetria funding investors Sherpa Rally Felicis Y Combinator Seedcamp Stage Fund"]
+source_ids = ["stagefund-2019", "darkreading-2015-series-a", "calcalist-2015-series-a"]
+summary = "Named round participants and Stage Fund acquirer recorded; no full cap table or allocations found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-05T02:29:45+00:00"
+next_review_on = "2027-01-05"
+queries = ["Cymmetria team founder Gadi Evron leadership current", "סימטריה Cymmetria founders 8200"]
+source_ids = ["stagefund-2019", "techcrunch-2015", "ynet-2016"]
+summary = "Gadi Evron and historical founding background identified, but a current team roster cannot be confirmed; team gap retained."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-05T02:29:45+00:00"
+next_review_on = "2027-01-05"
+queries = ["Cymmetria acquisition acquired Stage Fund 2019 price ownership", "Cymmetria liquidation Israeli operations employees Stage Fund December 2019"]
+source_ids = ["stagefund-2019", "ctech-liquidation-2019"]
+summary = "Acquisition and subsequent local shutdown reported; price and post-shutdown asset disposition remain unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T02:29:45+00:00"
+next_review_on = "2027-01-05"
+queries = ["Cymmetria revenue customers contracts deployments financials"]
+source_ids = ["ctech-liquidation-2019"]
+summary = "No reliable dated revenue, profitability, burn, runway, or audited accounts were located."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T02:29:45+00:00"
+next_review_on = "2027-01-05"
+queries = ["Cymmetria customers contracts MazeRunner ActiveSOC deployments"]
+source_ids = ["stagefund-2019", "techcrunch-2015"]
+summary = "Products and capabilities are reported, but no named customer, paid contract, deployment scale, or current support evidence found."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-05T02:29:45+00:00"
+next_review_on = "2027-01-05"
+queries = ["Cymmetria patents intellectual property Cymmetria Inc"]
+source_ids = ["patent-breadcrumbs"]
+summary = "One abandoned US application located; full family and present rights ownership not established."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-05T02:29:45+00:00"
+next_review_on = "2027-01-05"
+queries = ["Cymmetria competitors deception technology Acalvio TrapX Illusive Networks"]
+source_ids = ["ynet-2016"]
+summary = "Historical peers identified in contemporaneous reporting; current market comparison remains incomplete."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-05T02:29:45+00:00"
+next_review_on = "2027-01-05"
+queries = ["Cymmetria defense government military cybersecurity deployment"]
+source_ids = ["stagefund-2019", "techcrunch-2015"]
+summary = "Commercial deception capability supports plausible defense/security applicability, but no defense contract, public government deployment, or certification found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Stage Fund announced acquisition; subsequent CTech report explicitly describes Cymmetria as acquired and documents shutdown of its local Israeli operation."
+verified_at = "2026-10-05T02:29:45+00:00"
+source_ids = ["stagefund-2019", "ctech-liquidation-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Contemporaneous local reporting identifies the company as Israeli and its founders as Unit 8200 graduates; acquisition release lists Tel Aviv office, and CTech reports Israeli R&D operation."
+verified_at = "2026-10-05T02:29:45+00:00"
+source_ids = ["stagefund-2019", "ctech-liquidation-2019", "ynet-2016"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2015.amount"
+support = "direct"
+summary = "Calcalist reports a $1.5 million financing in July 2015."
+verified_at = "2026-10-05T02:29:45+00:00"
+source_ids = ["calcalist-2015-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2015.participating_investors"
+support = "direct"
+summary = "The seed-round article does not identify participants; accordingly, no seed investors are assigned to that round."
+verified_at = "2026-10-05T02:29:45+00:00"
+source_ids = ["calcalist-2015-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2015.amount"
+support = "direct"
+summary = "Dark Reading and Calcalist contemporaneously report a $9 million Series A in November 2015."
+verified_at = "2026-10-05T02:29:45+00:00"
+source_ids = ["darkreading-2015-series-a", "calcalist-2015-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2015.lead_investors"
+support = "direct"
+summary = "Both contemporaneous reports identify Sherpa Capital/Ventures as lead."
+verified_at = "2026-10-05T02:29:45+00:00"
+source_ids = ["darkreading-2015-series-a", "calcalist-2015-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2015.participating_investors"
+support = "direct"
+summary = "Dark Reading names Rally Ventures, Felicis Ventures, and Y Combinator alongside lead Sherpa Capital."
+verified_at = "2026-10-05T02:29:45+00:00"
+source_ids = ["darkreading-2015-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.stage-fund-acquisition-2019.status"
+support = "direct"
+summary = "Stage Fund's release announces acquisition on September 4, 2019, and the subsequent CTech report identifies it as the acquirer."
+verified_at = "2026-10-05T02:29:45+00:00"
+source_ids = ["stagefund-2019", "ctech-liquidation-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.stage-fund-acquisition-2019.amount"
+support = "direct"
+summary = "No purchase price was disclosed in the acquisition announcement or the follow-up reporting; transaction amount remains undisclosed."
+verified_at = "2026-10-05T02:29:45+00:00"
+source_ids = ["stagefund-2019", "ctech-liquidation-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.stage-fund-acquisition-2019.company_role"
+support = "direct"
+summary = "The acquisition announcement and follow-up reporting describe Cymmetria as the acquired company and Stage Fund as buyer."
+verified_at = "2026-10-05T02:29:45+00:00"
+source_ids = ["stagefund-2019", "ctech-liquidation-2019"]

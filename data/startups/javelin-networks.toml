@@ -1,0 +1,85 @@
+name = "Javelin Networks"
+description = "Javelin Networks developed Active Directory defense technology that used endpoint-side deception, directory assessment, and breach-containment methods to disrupt credential theft, reconnaissance, and lateral movement after an endpoint compromise. Symantec acquired the company in 2018, and the capability is now represented in Broadcom's Endpoint Threat Defense for Active Directory materials rather than as an independent startup."
+detailed_description = """
+Javelin Networks was an Israeli-founded cyber company focused on one of the most consequential control planes in enterprise networks: Microsoft Active Directory. Its AD Protect and AD Assess product family targeted the post-exploitation phase in which an attacker with access to one domain-joined machine queries directory data, identifies privileged users and high-value systems, steals or misuses credentials, and then moves laterally through trusted Windows infrastructure. Rather than treating the endpoint as an isolated malware problem, Javelin framed the endpoint as the place where attackers first abuse legitimate Active Directory interfaces.
+
+The technology thesis was specific and still relevant. Public Symantec and Broadcom materials describe a system that autonomously learns the structure of an organization's directory, evaluates Active Directory activity from the endpoint, and uses obfuscation or attacker-perception control to make reconnaissance and credential-use attempts noisy and containable. Broadcom's current Endpoint Threat Defense for Active Directory product brief describes capabilities for runtime AD query evaluation, memory-based obfuscation, high-fidelity alerting, automatic blocking, continuous domain assessment, and detection of misconfigurations, backdoors, privileged-account weaknesses, Group Policy issues, Kerberos exposure, and domain-controller risks. Those capabilities map closely to Javelin's original positioning around defending AD and domain resources rather than merely adding another endpoint signature layer.
+
+Commercially, the market context is strong but no longer startup-like. Active Directory remains widely deployed across large enterprises, government networks, defense contractors, hospitals, banks, and industrial operators, even as many organizations add Entra ID and other cloud identity platforms. This creates persistent demand for products that can reduce identity-plane attack paths, detect domain compromise indicators, and disrupt lateral movement using built-in tools. At the same time, the category has become more competitive: Microsoft, CrowdStrike, CyberArk, Semperis, Silverfort, Tenable, Quest, and managed detection providers all address parts of the AD and identity-security problem. Javelin's standalone differentiation therefore matters most as a historical technology asset and as a feature lineage within Symantec/Broadcom Endpoint Security, not as an independent go-to-market vehicle.
+
+The acquisition path is a credible validation signal. Symantec disclosed in its fiscal 2019 filing that it acquired Javelin technology for its Enterprise Security solutions, specifically to detect AD misconfigurations and backdoors and help prevent reconnaissance and credential misuse. Contemporary company and industry profiles describe a privately held business founded in 2014, with an 11-50 employee range and a Series A reported in 2017; those are historical indicators, not evidence of current standalone operations. Broadcom's March 2025 product brief still documents Endpoint Threat Defense for Active Directory, including endpoint containment, runtime obfuscation, continuous assessment, and attack-simulation-based analysis. This supports continuity of the capability area inside the former Symantec enterprise-security portfolio, but does not prove that the original Javelin codebase, team, or commercial packaging remains unchanged.
+
+Dual-use relevance is high because the same directory compromise mechanics appear in commercial intrusions, ransomware operations, espionage, and attacks against defense or public-sector networks. Military, intelligence, law-enforcement, and critical-infrastructure environments often retain complex Windows domains, legacy administrative practices, cross-domain trust relationships, and contractor access paths. A tool that reduces AD reconnaissance value, detects backdoors and misconfigurations, and blocks lateral movement from a compromised endpoint can therefore protect mission networks and sensitive operational systems without needing to be a weapons system. The main caveat is that Javelin itself is no longer an independent Israeli startup; strategic diligence should focus on whether the Broadcom product line still exposes the relevant capabilities, how well it integrates with modern hybrid identity environments, and whether comparable independent vendors now offer stronger control.
+"""
+logo = "Unknown"
+website = "https://www.broadcom.com/info/endpoint-security/threat-defense-for-active-directory"
+sector = "Identity Security / Active Directory Threat Defense"
+founded = "2014"
+headquarters = "Tel Aviv, Israel / Austin, TX, United States"
+employees = "11-50 (historical company range)"
+funding_stage = "Acquired by Symantec in 2018"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "Javelin's core capability has substantive dual-use value because Active Directory is a common identity backbone for enterprise, defense, government, and critical-infrastructure networks. The technology is not defense-specific, but preventing AD reconnaissance, credential misuse, domain backdoors, and lateral movement is directly relevant to mission-network resilience and incident containment in security-sensitive environments."
+key_technologies = [
+  "Endpoint-side Active Directory query inspection",
+  "Attacker-perception obfuscation for directory reconnaissance",
+  "Domain credential theft and misuse prevention",
+  "Continuous AD misconfiguration and backdoor assessment",
+  "Lateral movement detection across Windows domain resources",
+  "Privileged-account, Kerberos, Group Policy, and domain-controller risk analysis",
+  "Automated breach containment and high-fidelity forensic alerting",
+]
+use_cases = [
+  "Blocking AD reconnaissance from a compromised domain-joined endpoint",
+  "Reducing domain-admin credential theft and pass-the-hash attack paths",
+  "Identifying Active Directory misconfigurations, persistence hooks, and backdoors",
+  "Containing ransomware or espionage activity before broad Windows-domain lateral movement",
+  "Hardening defense contractor and government Windows identity infrastructure",
+  "Supporting incident responders with domain-level forensic context after endpoint compromise",
+  "Assessing privileged-account exposure across complex hybrid enterprise estates",
+  "Adding AD-specific breach-prevention controls to a broader endpoint-security stack",
+]
+investible = false
+investment_rationale = "Javelin Networks should not be treated as a live investment target because it was acquired by Symantec in 2018 and the relevant capabilities now sit inside a larger enterprise-security portfolio. The record remains strategically useful for mapping Israeli-origin identity-security technology, acquisition validation, and dual-use capability gaps, but any current commercial diligence would need to examine Broadcom's product packaging or comparable independent vendors rather than the former standalone company."
+strategic_value = "The strategic value is high at the capability level: Active Directory compromise is a common route to enterprise takeover, ransomware expansion, and espionage persistence, including in defense and public-sector networks. Javelin's value proposition directly addressed that identity-control plane by making reconnaissance less reliable, surfacing misconfigurations, and blocking lateral movement from the endpoint, which is relevant to national cyber resilience even after the company ceased to be independent."
+public_sources = [
+  { title = "Broadcom Endpoint Threat Defense for Active Directory product page", url = "https://www.broadcom.com/info/endpoint-security/threat-defense-for-active-directory" },
+  { title = "Broadcom Endpoint Threat Defense for Active Directory product brief, March 2025", url = "https://docs.broadcom.com/doc/sep-threat-defense-ad-en" },
+  { title = "Symantec fiscal 2019 Form 10-K acquisition disclosure", url = "https://www.sec.gov/Archives/edgar/data/849399/000084939919000005/symc32919-10k.htm" },
+  { title = "Javelin Networks LinkedIn company profile with historical company details", url = "https://www.linkedin.com/company/javelin-networks" },
+  { title = "Symantec product insight on acquired Javelin technology", url = "https://www.security.com/product-insights/finally-way-stop-advanced-persistent-threats-apts-their-tracks/" },
+  { title = "Contemporary Israeli technology press coverage of the acquisition", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3749133,00.html" },
+]
+potential_score = 74.0
+technology_score = 84.0
+market_score = 74.0
+team_score = 70.0
+dual_use_score = 91.0
+strategic_alignment_score = 88.0
+stage = "mature"
+stage_rationale = "The appropriate stage is mature because Javelin was founded in 2014, reached venture-backed commercialization, and was acquired by Symantec in 2018 rather than remaining an independent startup. Current diligence should evaluate the maturity, support status, and packaging of Broadcom's Threat Defense for Active Directory capability, not startup execution risk."
+competitors = [
+  "Microsoft Defender for Identity",
+  "Semperis Directory Services Protector",
+  "Silverfort Unified Identity Protection",
+  "CrowdStrike Falcon Identity Protection",
+  "CyberArk Identity Security",
+  "Tenable.ad",
+  "Quest Change Auditor / On Demand Audit",
+]
+competitive_edge = "Javelin's historical edge was its AD-specific post-exploitation design: it tried to manipulate what an attacker could learn from Active Directory at the compromised endpoint while also assessing domain weaknesses and stopping credential-driven movement. That was sharper than generic endpoint malware detection and remains strategically interesting, but the edge has narrowed as Microsoft and identity-security specialists expanded native detections, AD exposure management, and identity threat detection and response."
+risk_factors = [
+  "No independent company remains to fund, acquire, or partner with directly",
+  "Broadcom roadmap and licensing decisions determine whether the original capability remains accessible to customers",
+  "Microsoft and major endpoint platforms can bundle competing identity detections into existing security suites",
+  "Hybrid identity migrations shift some demand from on-prem Active Directory toward Entra ID, SaaS identity, and cloud privilege controls",
+  "Defense and government domains often require careful deployment validation to avoid disrupting authentication and administrative workflows",
+  "Public information does not fully confirm how much original Javelin technology remains in current Broadcom implementations",
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "High dual-use and strategic relevance as an Israeli-origin AD defense capability, with credible validation through Symantec acquisition and continuing Broadcom product references. Priority is constrained because the entity is an acquired asset rather than an active startup, so it is most useful as a capability benchmark and historical acquisition signal."
+crawled_at = "2026-02-27T10:00:00Z"
+updated_at = "2026-07-31T20:00:42Z"

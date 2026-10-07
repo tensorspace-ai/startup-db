@@ -1,0 +1,380 @@
+name = "Apiiro"
+description = "Apiiro is an application security posture management and agentic application-security platform that builds a software and risk graph across code, dependencies, identities, CI/CD, infrastructure, runtime context, and business ownership. It is designed to turn fragmented AppSec findings into prioritized controls, developer workflows, and contextual remediation actions."
+detailed_description = """
+Apiiro is an independent Israeli-founded cybersecurity startup focused on application security posture management (ASPM), software supply-chain security, and security for AI-assisted development. Its platform connects to source-control and development environments through APIs, inventories applications and their components, and applies deep code analysis to understand architecture, material changes, ownership, and security-relevant relationships. Apiiro's Software Graph and Risk Graph then correlate native and third-party signals across SAST, SCA, secrets, API security, IaC, cloud, CI/CD, and runtime context. The important product claim is contextualization: a vulnerability is more useful when tied to the affected service, exposure, business impact, developer owner, policy, and likely remediation path.
+
+The current product direction extends that foundation into an agentic AppSec control plane. Apiiro describes Guardian Agent and related AutoFix capabilities as operating across design, development, and delivery, with threat modeling before code is written, contextual fixes inside developer workflows, and guardrails for source control, artifacts, infrastructure, and pipelines. Its Secure Prompt approach is intended to add organizational policy, architecture, and business-risk context to prompts used by coding agents. These features are commercially relevant because AI-assisted development increases code-change velocity while creating new governance questions around generated code, model and plugin supply chains, MCP servers, secrets, and policy enforcement. The defensible technical question is whether Apiiro's proprietary context materially improves precision and remediation safety over generic scanners and generic coding assistants.
+
+Apiiro sells into enterprise security, application-security, engineering, and governance teams that need to reduce alert backlogs, map software inventory, support audit evidence, and enforce controls without reviewing every change manually. Public company materials identify enterprise users and publish customer references including BlackRock, CVS, Walmart, USAA, Tesco, TIAA, Cigna, Shell, and others; those references are useful traction signals but do not establish contract size, current deployment scope, renewal rates, or customer concentration. Apiiro announced a $100 million Series B in November 2022 led by General Catalyst with Greylock and Kleiner Perkins participating. It later publicized large enterprise ASPM deals and 2025 product launches, but those company-reported figures should be diligence inputs rather than independently audited revenue evidence.
+
+Competition is intense and comes from both specialists and platform vendors. Cycode, OX Security, Legit Security, Jit, Endor Labs, ArmorCode, Snyk, Checkmarx, Veracode, GitHub, GitLab, Wiz, Palo Alto Networks, and other CNAPP or developer-security providers can cover overlapping parts of the workflow. Apiiro's potential edge is the combination of deep code and architecture analysis, code-to-runtime matching, an open integration model, and risk-based workflows that connect findings to owners and business context. That edge is not automatic: buyers may prefer consolidated suites, integrations can be costly to maintain, and graph quality must be explainable enough for both security leaders and developers to trust automated prioritization and fixes.
+
+The dual-use case is credible but defensive. Defense contractors, critical-infrastructure operators, government software teams, and regulated suppliers face the same problems of vulnerable code, compromised dependencies, excessive developer access, insecure build pipelines, and weak software inventory that Apiiro addresses commercially. A future deployment could support secure software factories, supplier-risk review, continuous authorization evidence, and mission-application resilience. Public materials reviewed for this record do not establish defense contracts, classified use, or government accreditation, so strategic relevance should be treated as an adjacency requiring diligence on deployment isolation, data residency, compliance, procurement readiness, and handling of sensitive source-code telemetry.
+"""
+logo = "https://apiiro.com/wp-content/themes/apiirov2/assets/img/logo.svg"
+website = "https://apiiro.com"
+sector = "Application Security / ASPM"
+founded = "2019"
+headquarters = "New York, NY, United States; Tel Aviv, Israel (company locations)"
+employees = "51-200 (last independently reported 2022; current headcount not disclosed)"
+funding_stage = "Series B (latest publicly confirmed; 2022)"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Apiiro has substantive dual-use potential as defensive software assurance for secure development and software supply-chain operations. Its application inventory, code-to-runtime context, identity and pipeline risk mapping, policy workflows, and contextual remediation could help defense suppliers, critical-infrastructure operators, and government software teams reduce exploitable weaknesses in mission-support applications. The thesis is strongest for resilience, governance, and continuous assurance; public evidence reviewed here does not confirm defense contracts, classified deployments, or offensive cyber capability."
+key_technologies = [
+  "Deep code analysis for architecture, material-change, and application-inventory discovery",
+  "Software Graph and Risk Graph correlation across code, dependencies, owners, policies, and runtime context",
+  "Code-to-runtime matching for exposure, business-impact, and blast-radius assessment",
+  "Native and third-party SAST, SCA, secrets, API-security, and infrastructure-as-code signal integration",
+  "Software supply-chain security for source-control, artifacts, developers, and CI/CD pipelines",
+  "AI-assisted threat modeling, Secure Prompt controls, and context-aware AutoFix workflows",
+  "Risk-based policy, governance, compliance reporting, and developer-workflow automation",
+]
+use_cases = [
+  "Prioritizing exploitable application risks by linking scanner findings to code owners, exposure, business criticality, and runtime context",
+  "Maintaining continuous application and extended software-bill-of-materials inventories across repositories, APIs, dependencies, and services",
+  "Governing source-control, build-pipeline, artifact, developer-identity, secret, and open-source supply-chain risk",
+  "Triggering risk-based approvals, pull-request guardrails, threat models, remediation workflows, and audit evidence",
+  "Applying organization-specific policy and architecture context to AI-generated code and coding-agent workflows",
+  "Reducing manual AppSec triage and measuring remediation, control coverage, and compliance progress across enterprise portfolios",
+  "Assessing outsourced, acquired, or third-party code before integration into sensitive applications or software factories",
+  "Supporting secure-development and continuous-assurance programs for defense suppliers, critical infrastructure, and other regulated operators",
+]
+investible = true
+investment_rationale = "Apiiro remains a credible internal strategic-priority signal because its platform addresses a durable enterprise problem at the intersection of application security, software supply-chain assurance, and governance of AI-generated code. The 2022 Series B, enterprise customer references, expanding product scope, and reported large ASPM engagements support meaningful commercial traction, but the evidence is primarily company-reported. Diligence should focus on recurring revenue quality, retention, deployment architecture, differentiation of its graph and agentic controls, and competitive pressure from bundled security platforms; this flag is not an investment recommendation."
+strategic_value = "Apiiro could provide a common application-risk and secure-delivery layer for organizations whose mission or business operations depend on fast-moving software supply chains. For Claw & Talon's thesis, the relevant value is defensive: correlating code, dependency, identity, pipeline, infrastructure, runtime, and policy signals may help security leaders decide which weaknesses threaten operational resilience. The strategic case is conditional on Apiiro proving that sensitive telemetry can be deployed with appropriate isolation and residency, that findings are explainable, and that its controls can produce evidence acceptable to regulated or government-adjacent buyers."
+public_sources = [
+  { label = "Apiiro About", url = "https://apiiro.com/company/about", description = "Company leadership, enterprise references, product positioning." },
+  { label = "Apiiro Guardian Agent", url = "https://apiiro.com/blog/apiiro-guardian-agent/", description = "January 2026 product launch and private preview." },
+  { label = "Apiiro AutoFix Agent", url = "https://apiiro.com/blog/preventing-incidents-at-scale-introducing-apiiros-autofix-agent/", description = "August 2025 product launch." },
+  { label = "Series B announcement", url = "https://www.globenewswire.com/news-release/2022/11/03/2547949/0/en/Apiiro-Raises-100M-Series-B-Funding-Round-to-Solidify-Position-as-the-Cloud-Native-Application-Security-Leader.html", description = "Company announcement of $100 million Series B and investors." },
+  { label = "TechCrunch funding coverage", url = "https://techcrunch.com/2022/11/03/applications-security-startup-apiiro-pulls-in-100m-series-b-from-a-list-investors/", description = "Independent funding, lifetime total, 2022 ARR and headcount reporting." },
+  { label = "Apiiro customers", url = "https://apiiro.com/customers", description = "Customer references and selected customer statements." },
+  { label = "Fortune 100 deal", url = "https://apiiro.com/blog/fortune-100-insurance-provider-projected-to-save-3mm-in-security-savings-with-appsec-automation-and-the-2nd-largest-aspm-deal-in-history/", description = "Company-reported contract and projected savings." },
+  { label = "General Catalyst investment note", url = "https://www.generalcatalyst.com/stories/our-investment-in-apiiro-expanding-visibility-in-application-security", description = "Lead investor's account of its investment and founders." },
+  { label = "Apiiro DCA research", url = "https://apiiro.com/blog/genai-is-already-in-your-code-whats-at-risk-depends-on-your-industry/", description = "Company statement concerning patented Deep Code Analysis." },
+]
+potential_score = 85.0
+technology_score = 91.0
+market_score = 86.0
+team_score = 83.0
+dual_use_score = 79.0
+strategic_alignment_score = 86.0
+stage = "mid"
+stage_rationale = "Apiiro is best classified as mid-stage: it was founded in 2019, announced a substantial Series B, maintains an enterprise-oriented product and partner footprint, and is listed as a privately held company with 51-200 employees. Its 2025-2026 expansion into agentic development security and continued category positioning indicate active growth rather than a mature public-company profile, while the latest publicly confirmed financing remains the 2022 Series B."
+competitors = [
+  "Cycode",
+  "OX Security",
+  "Legit Security",
+  "Endor Labs",
+  "Snyk",
+  "Checkmarx",
+  "GitHub Advanced Security and GitLab application security",
+]
+competitive_edge = "Apiiro's potential differentiation is the depth and connectedness of its software intelligence: deep code analysis, a Software Graph and Risk Graph, code-to-runtime matching, broad third-party integrations, and policy-driven workflows are intended to turn isolated findings into an application-level risk story. Its newer Guardian Agent and Secure Prompt positioning may extend that context to AI-generated code before and during development. The edge will persist only if graph coverage, prioritization precision, explainability, and fix safety outperform scanner aggregation and bundled platform alternatives at enterprise scale."
+risk_factors = [
+  "ASPM and agentic AppSec category compression as GitHub, GitLab, CNAPP, cloud-security, and developer-platform vendors bundle overlapping capabilities",
+  "Risk-graph and code-to-runtime accuracy must be high and explainable enough for security leaders to trust prioritization, policy decisions, and automated remediation",
+  "Deep read-only access to repositories, identities, CI/CD, cloud, and runtime systems creates procurement, privacy, data-residency, and integration-maintenance friction",
+  "AI-generated fixes and Secure Prompt controls can introduce unsafe changes, policy conflicts, hallucinated context, or developer resistance if review and rollback are weak",
+  "Reported enterprise deal sizes and customer references are company-reported and do not establish recurring-revenue durability, retention, margins, or customer concentration",
+  "Defense and regulated adoption may require deployment isolation, accreditation, evidence handling, and procurement capabilities not confirmed by the public record",
+  "A broad product surface can increase implementation complexity and support burden while customers still struggle with ownership, remediation capacity, and vulnerability backlog",
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Apiiro merits a strong internal priority signal because secure application delivery and software-supply-chain governance are strategically relevant to resilient digital infrastructure and defense modernization. It is not a defense pure-play, and the dual-use case is defensive and conditional. Priority is supported by product depth, enterprise traction signals, and agentic-development relevance, but should remain evidence-calibrated pending validation of government-market readiness, deployment controls, retention, customer concentration, and differentiation against bundled platforms."
+crawled_at = "2026-01-31T20:45:00+00:00"
+updated_at = "2026-10-03T18:21:37Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Idan Plotnik", role = "Co-founder and CEO", is_founder = true, current = true, background = "Company CEO; General Catalyst notes he previously created and sold Aorato.", source_ids = ["about", "gc-investment"] },
+  { name = "Yonatan Eldar", role = "Co-founder and CTO", is_founder = true, current = true, background = "Listed as CTO on the company leadership page.", source_ids = ["about"] },
+  { name = "Moti Gindi", role = "Chief Product Officer", is_founder = false, current = true, source_ids = ["about"] },
+  { name = "Jarrod Bogue", role = "Chief Revenue Officer", is_founder = false, current = true, source_ids = ["about"] },
+]
+investors = [
+  { name = "General Catalyst", investor_type = "vc", relationship = "current", round_ids = ["series-b-2022"], source_ids = ["funding-release", "gc-investment"] },
+  { name = "Greylock", investor_type = "vc", relationship = "current", round_ids = ["series-b-2022"], source_ids = ["funding-release"] },
+  { name = "Kleiner Perkins", investor_type = "vc", relationship = "current", round_ids = ["series-b-2022"], source_ids = ["funding-release"] },
+]
+financials = []
+traction = []
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "apiiro"
+legal_name = "Apiiro Inc."
+aliases = ["Apiiro", "apiiro"]
+operating_status = "active"
+business_model = "Privately held enterprise cybersecurity software vendor; subscription platform for application security posture, software supply-chain visibility, and agentic development security."
+products = ["Apiiro Guardian Agent", "AutoFix Agent", "Deep Code Analysis", "Software Graph and Risk Graph", "AI-SAST"]
+locations = ["New York, New York, United States", "Tel Aviv, Israel"]
+source_ids = ["about", "guardian"]
+
+[intelligence.funding]
+status = "reported"
+summary = "The latest publicly confirmed financing located is a $100 million Series B announced November 3, 2022, led by General Catalyst with Greylock and Kleiner Perkins participating. TechCrunch reported $135 million total raised, attributing the total to Crunchbase; treat this as a reported cumulative total rather than an independently reconciled sum. No later financing was found in searches through 2026-10-03."
+rounds = [{ id = "series-b-2022", round_type = "Series B", instrument = "equity", status = "announced", announced_on = "2022-11-03", amount_status = "reported", amount = 100000000, amount_scope = "round", currency = "USD", lead_investors = ["General Catalyst"], participating_investors = ["Greylock", "Kleiner Perkins"], source_ids = ["funding-release", "techcrunch"] }]
+reported_total_raised = 135000000
+reported_total_currency = "USD"
+total_source_ids = ["techcrunch"]
+total_as_of = "2022-11-03"
+total_scope = "Company lifetime total reported by TechCrunch citing Crunchbase; underlying earlier rounds not reconciled from original announcements."
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Apiiro remains privately held based on available company and financing materials. Its cap table and investor ownership percentages are not publicly disclosed. No completed acquisition or ownership change was found; 2022 press coverage mentioned unconsummated acquisition interest rumors, which are not evidence of a deal."
+cap_table_status = "undisclosed"
+shareholders = ["General Catalyst", "Greylock", "Kleiner Perkins"]
+source_ids = ["funding-release", "techcrunch"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders", "israeli_rd"]
+summary = "Apiiro was founded by Israeli entrepreneurs Idan Plotnik and Yonatan Eldar, and its company announcements identify Tel Aviv alongside New York as a company location. This supports an Israeli-founded connection; no claim is made about country of incorporation."
+as_of = "2026-10-03"
+source_ids = ["funding-release", "about", "gc-investment"]
+
+[intelligence.research]
+researched_at = "2026-10-03T18:21:37Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Apiiro funding 2025 investors acquired 2026", "site:apiiro.com/blog Apiiro 2025 Guardian Agent", "Apiiro company founders CEO headquarters employees 2026", "Apiiro Series B 100 million General Catalyst Greylock official", "Apiiro founded 2019 2018 founders Nitzan Shapira Idan Plotnik official", "Apiiro $135 million total raised 2022 Series B source", "Apiiro 2026 funding raised acquisition ownership", "site:apiiro.com/blog Apiiro customer case study customer results 2025", "Apiiro patents deep code analysis patent", "Apiiro Israel headquarters Tel Aviv New York official"]
+gaps = ["team: current leadership names and roles are public, but complete biographies and independently corroborated employment histories were not verified.", "investors: only publicly named venture investors were identified; private cap table, ownership percentages, and any undisclosed participants are unavailable.", "financials: no current audited revenue, ARR, profitability, burn, cash, or runway disclosure was located; 2022 ARR growth is historical management-reported information.", "traction: enterprise customer references and company-reported large deal claims exist, but current active contracts, renewal, revenue recognition, and independent customer confirmation are incomplete.", "intellectual_property: company describes DCA as patented and Guardian as patent-pending; specific patent grants and application identifiers were not verified in an official patent database during this pass.", "competition: named peers were reviewed as category competitors, but no apples-to-apples current independent benchmark of efficacy, pricing, or deployments was found.", "No confirmed public defense, classified, or government contract evidence was found.", "No current employee count or authoritative incorporation record was established."]
+conflicts = ["TechCrunch says the $135 million cumulative total is per Crunchbase; this pass found no primary-source breakdown of the earlier funding components.", "Apiiro founder year is inconsistent in secondary material (2018 vs 2019); company public materials reviewed here do not establish an exact incorporation/founding date, so 2019 is retained from the baseline and commonly reported sources.", "The 2022 acquisition-interest rumor cited by TechCrunch did not establish an agreement and has no disclosed completed transaction; it is excluded from ownership deals."]
+diligence_questions = ["What are current ARR, net retention, gross margin, cash runway, and customer concentration, and how have these changed since the 2022 growth claims?", "Can Apiiro demonstrate comparative precision and safe remediation outcomes for Guardian and AutoFix across independently selected enterprise repositories, including false-positive and rollback rates?", "What are current paying-customer counts, renewals, deployment depth, and the share of revenue tied to its largest reported contracts?", "Which patent applications or granted patents protect DCA and related graph technology, and which rights are assigned to Apiiro?", "Can the platform be operated in customer-controlled or isolated environments with acceptable data residency and evidence controls for regulated or government-adjacent buyers?"]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://apiiro.com/company/about"
+title = "About Apiiro"
+publisher = "Apiiro"
+kind = "company"
+accessed_at = "2026-10-03T18:21:37Z"
+claims = ["Apiiro presents itself as an active agentic application-security company.", "Company lists enterprise references and management team including Idan Plotnik as CEO, Yonatan Eldar as CTO, and Moti Gindi as CPO.", "Company lists New York and Tel Aviv presence in associated corporate materials and identifies investors."]
+
+[[intelligence.research.sources]]
+id = "guardian"
+url = "https://apiiro.com/blog/apiiro-guardian-agent/"
+title = "Introducing Apiiro Guardian Agent: Preventing Vulnerable and Non-Compliant Code from Ever Being Created"
+publisher = "Apiiro"
+kind = "company"
+accessed_at = "2026-10-03T18:21:37Z"
+published_on = "2026-01-28"
+claims = ["Guardian Agent launch, product capabilities, and private preview availability.", "AutoFix Agent launched in October 2025 according to company history.", "Guardian applies organizational context to AI coding workflows; performance claims are company assertions."]
+
+[[intelligence.research.sources]]
+id = "funding-release"
+url = "https://www.globenewswire.com/news-release/2022/11/03/2547949/0/en/Apiiro-Raises-100M-Series-B-Funding-Round-to-Solidify-Position-as-the-Cloud-Native-Application-Security-Leader.html"
+title = "Apiiro Raises $100M Series B Funding Round"
+publisher = "Apiiro via GlobeNewswire"
+kind = "company"
+accessed_at = "2026-10-03T18:21:37Z"
+published_on = "2022-11-03"
+claims = ["Apiiro announced a $100 million Series B on 2022-11-03.", "General Catalyst led the Series B with participation by Greylock and Kleiner Perkins.", "Company announcement identifies Tel Aviv, London, and New York in dateline and Idan Plotnik as co-founder and CEO."]
+
+[[intelligence.research.sources]]
+id = "techcrunch"
+url = "https://techcrunch.com/2022/11/03/applications-security-startup-apiiro-pulls-in-100m-series-b-from-a-list-investors/"
+title = "Applications security startup Apiiro pulls in $100M Series B from A-list investors"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-03T18:21:37Z"
+published_on = "2022-11-03"
+claims = ["Confirms $100 million Series B, named investors, and no disclosed valuation.", "Reports $135 million lifetime funding total citing Crunchbase.", "Reports CEO-stated 400% ARR growth in Q3 and 90 employees in November 2022.", "Discusses acquisition-interest rumors as rumors, not a completed transaction."]
+
+[[intelligence.research.sources]]
+id = "gc-investment"
+url = "https://www.generalcatalyst.com/stories/our-investment-in-apiiro-expanding-visibility-in-application-security"
+title = "Our Investment in Apiiro"
+publisher = "General Catalyst"
+kind = "investor"
+accessed_at = "2026-10-03T18:21:37Z"
+published_on = "2022-11-03"
+claims = ["General Catalyst says it led Apiiro's Series B.", "Investor names founders Idan and Yonatan and describes product positioning around application visibility and security context."]
+
+[[intelligence.research.sources]]
+id = "customers"
+url = "https://apiiro.com/customers"
+title = "Apiiro Customers"
+publisher = "Apiiro"
+kind = "company"
+accessed_at = "2026-10-03T18:21:37Z"
+claims = ["Apiiro publishes customer references and selected customer quotations, including Shell, Cloudera, and SoFi.", "Customer references do not by themselves establish contract status, spend, or production scope."]
+
+[[intelligence.research.sources]]
+id = "deal-2025"
+url = "https://apiiro.com/blog/fortune-100-insurance-provider-projected-to-save-3mm-in-security-savings-with-appsec-automation-and-the-2nd-largest-aspm-deal-in-history/"
+title = "Fortune 100 Insurance Provider Projected to Save $3M"
+publisher = "Apiiro"
+kind = "company"
+accessed_at = "2026-10-03T18:21:37Z"
+published_on = "2025-01-20"
+claims = ["Apiiro reports a $4 million Fortune 100 insurance-provider deal and projected savings; company-reported, with customer unnamed.", "Apiiro says a 2024 Fortune 10 deal was $5 million; source does not provide independently audited contract evidence."]
+
+[[intelligence.research.sources]]
+id = "autofix"
+url = "https://apiiro.com/blog/preventing-incidents-at-scale-introducing-apiiros-autofix-agent/"
+title = "Preventing Incidents at Scale: Introducing Apiiro's AutoFix Agent"
+publisher = "Apiiro"
+kind = "company"
+accessed_at = "2026-10-03T18:21:37Z"
+published_on = "2025-08-04"
+claims = ["Apiiro announced AutoFix Agent in August 2025 and described it as available in preview to customers."]
+
+[[intelligence.research.sources]]
+id = "patent-claim"
+url = "https://apiiro.com/blog/genai-is-already-in-your-code-whats-at-risk-depends-on-your-industry/"
+title = "GenAI is already in your code — what’s at risk depends on your industry"
+publisher = "Apiiro"
+kind = "company"
+accessed_at = "2026-10-03T18:21:37Z"
+published_on = "2025-06-17"
+claims = ["Apiiro describes its Deep Code Analysis engine as patented and reports research over 100,000 repositories; patent identifiers were not provided on this page."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T18:21:37Z"
+next_review_on = "2027-04-03"
+queries = ["Apiiro company founders CEO headquarters 2026", "Apiiro Israel headquarters Tel Aviv New York official"]
+source_ids = ["about", "funding-release", "gc-investment"]
+summary = "Company/about materials identify Apiiro, current management and customers; funding release establishes Tel Aviv/New York references. No incorporation country or registry ID established."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T18:21:37Z"
+next_review_on = "2027-01-03"
+queries = ["Apiiro funding 2025 investors acquired 2026", "Apiiro Series B 100 million General Catalyst Greylock official", "Apiiro $135 million total raised 2022 Series B source"]
+source_ids = ["funding-release", "techcrunch", "gc-investment"]
+summary = "Verified 2022 Series B from company announcement and lead investor. Cumulative $135 million reported by TechCrunch citing Crunchbase; earlier round details unresolved."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T18:21:37Z"
+next_review_on = "2027-04-03"
+queries = ["Apiiro Series B investors funding", "Apiiro investor portfolio General Catalyst Greylock Kleiner Perkins"]
+source_ids = ["funding-release", "gc-investment", "about"]
+summary = "General Catalyst, Greylock, and Kleiner Perkins are named in the round announcement. No private holdings or full cap table available."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T18:21:37Z"
+next_review_on = "2027-04-03"
+queries = ["Apiiro company founders CEO headquarters 2026", "Apiiro founders Idan Plotnik Yonatan Eldar background"]
+source_ids = ["about", "gc-investment", "funding-release"]
+summary = "Current company page lists CEO Idan Plotnik, CTO Yonatan Eldar and other executives; detailed sourced biographies remain incomplete."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T18:21:37Z"
+next_review_on = "2027-04-03"
+queries = ["Apiiro 2026 funding raised acquisition ownership", "Apiiro acquisition Palo Alto Networks rumors status"]
+source_ids = ["techcrunch", "funding-release"]
+summary = "No disclosed cap table or completed ownership transaction found. Historical acquisition-interest reporting was expressly rumor-level."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T18:21:37Z"
+next_review_on = "2027-04-03"
+queries = ["Apiiro revenue ARR profitability 2025", "Apiiro 400% ARR growth Q3 2022 TechCrunch"]
+source_ids = ["techcrunch", "deal-2025"]
+summary = "No current audited financials found. TechCrunch relayed management's 2022 Q3 ARR growth statement; later deal values and savings are company-reported claims, not revenue disclosures."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T18:21:37Z"
+next_review_on = "2027-04-03"
+queries = ["site:apiiro.com/blog Apiiro customer case study customer results 2025", "Apiiro Fortune 100 $4 million ASPM deal source"]
+source_ids = ["customers", "deal-2025", "techcrunch"]
+summary = "Customer references and two large deal claims are published by Apiiro. Deal values and projected savings are company assertions; no independently verified revenue or renewals located."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T18:21:37Z"
+next_review_on = "2027-04-03"
+queries = ["Apiiro patents deep code analysis patent", "Apiiro USPTO WIPO patent Deep Code Analysis"]
+source_ids = ["patent-claim"]
+summary = "Company calls DCA patented and Guardian patent-pending, but this search did not verify patent numbers or status in official patent records."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T18:21:37Z"
+next_review_on = "2027-04-03"
+queries = ["Apiiro competitors ASPM Cycode OX Security Legit Security", "application security posture management platforms official"]
+source_ids = ["about", "guardian"]
+summary = "Category includes specialist ASPM and developer-security vendors plus bundled platform vendors. No comparable third-party benchmark was established in this source set."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T18:21:37Z"
+next_review_on = "2027-04-03"
+queries = ["Apiiro government defense contract", "Apiiro defense federal customer classified deployment"]
+source_ids = ["about", "guardian"]
+summary = "The defensive software assurance capability could apply to regulated and government software supply chains, but no defense contract, classified deployment, or government accreditation was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Apiiro maintains a current company site with management, products, and a January 2026 Guardian Agent launch, supporting active operating status."
+verified_at = "2026-10-03T18:21:37Z"
+source_ids = ["about", "guardian"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Company funding announcement dateline includes Tel Aviv and New York; lead investor identifies Israeli founder Idan and cofounder Yonatan."
+verified_at = "2026-10-03T18:21:37Z"
+source_ids = ["funding-release", "gc-investment"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "TechCrunch states total raised was $135 million, explicitly attributing that figure to Crunchbase."
+verified_at = "2026-10-03T18:21:37Z"
+source_ids = ["techcrunch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.amount"
+support = "direct"
+summary = "Company announcement and TechCrunch report a $100 million Series B announced November 3, 2022."
+verified_at = "2026-10-03T18:21:37Z"
+source_ids = ["funding-release", "techcrunch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.valuation"
+support = "direct"
+summary = "TechCrunch reports Apiiro did not disclose the Series B valuation; no numeric valuation is entered."
+verified_at = "2026-10-03T18:21:37Z"
+source_ids = ["techcrunch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.lead_investors"
+support = "direct"
+summary = "Apiiro announcement names General Catalyst as lead and Greylock and Kleiner Perkins as participants."
+verified_at = "2026-10-03T18:21:37Z"
+source_ids = ["funding-release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.participating_investors"
+support = "direct"
+summary = "The company announcement names Greylock and Kleiner Perkins as Series B participants."
+verified_at = "2026-10-03T18:21:37Z"
+source_ids = ["funding-release"]

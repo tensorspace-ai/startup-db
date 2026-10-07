@@ -1,0 +1,500 @@
+name = "definity"
+description = "definity is an Israeli-founded data-infrastructure company building an agentic runtime layer for operating Apache Spark and lakehouse data platforms. Its platform combines in-motion observability, data-quality and execution context, cost optimization, and guarded AI-driven remediation so enterprise data teams can prevent pipeline incidents instead of investigating them after the fact."
+detailed_description = """
+**Product and the concrete problem it solves.** definity addresses the operational gap between modern data platforms and the teams expected to keep them reliable. Enterprise analytics and AI workloads increasingly depend on Apache Spark jobs, lakehouse tables, and cloud data services, yet the operating experience for data engineering remains fragmented and reactive. When a pipeline fails, slows down, produces questionable data, or consumes more compute than expected, engineers commonly correlate logs, dashboards, job history, configuration, and data behavior manually. The result is delayed detection, missed service-level agreements, wasted engineering capacity, and cloud bills that rise before anyone understands why. definity's initial product was a data-application observability and remediation platform purpose-built for Spark-heavy environments; its April 2026 launch reframed that product as Agentic Data Engineering, a runtime layer that can understand and operate pipelines while they execute. The company is not merely presenting another dashboard. Its stated aim is to combine visibility, diagnosis, optimization, validation, and controlled action in one operating surface for production data systems.
+
+**Core technology and how it works.** The technical distinction is the company's in-motion, application-focused architecture. definity says lightweight agents can be embedded directly in Spark workloads without code changes, in on-premises, hybrid, or cloud environments. Those agents collect unified context across pipeline execution, transformation behavior, data characteristics, configuration, lineage, and infrastructure performance rather than examining only the final output or one isolated service metric. That context supports anomaly detection for data quality, job execution, and performance while a job is running; transformation-level root-cause analysis; workload profiling; and job-level cost and resource recommendations. The platform also exposes code-change validation in CI, allowing a proposed change to be tested on real data before it creates runaway spend, failures, data-integrity problems, or a missed SLA. In the newer agentic model, AI systems can act on this runtime context instead of being limited to a post hoc explanation. The important diligence question is how much of the action loop is autonomous in production and what approval, rollback, and policy guardrails customers can configure. Public materials establish the architecture and product direction, but do not disclose model choices, proprietary training data, intervention accuracy, or the full mechanics of safe remediation.
+
+**Market, customers, and go-to-market.** definity sells into data engineering, platform engineering, and data-platform leadership teams at organizations operating large Spark or lakehouse estates. Its supported ecosystem includes Databricks, AWS EMR, and Google Cloud Dataproc, which gives the company a wedge into existing infrastructure rather than requiring a customer to replace its data stack. The commercial motion appears to be enterprise software sold through direct technical evaluation, production pilots, and ecosystem relationships. A disclosed partnership with Databricks positions definity alongside the Databricks Data Intelligence Platform, where the company adds full-stack observability, workload optimization, proactive validation, and transformation-aware execution context. definity also publishes customer stories, including an anonymized top-three U.S. television and streaming provider using AWS EMR and Spark Streaming. That deployment illustrates the buyer's pain: time-sensitive pipelines fed customer-facing recommendations and advertiser analytics, so reliability and runtime were business issues rather than internal developer conveniences. Public sources do not identify the customer, contract size, pricing, renewal rate, or total customer count. That disclosure limit matters because a technically credible platform still has to convert infrastructure complexity into repeatable enterprise adoption.
+
+**Traction, funding, and third-party validation.** definity emerged from stealth in August 2024 with general availability for its Spark-first data-application observability and remediation product and a $4.5 million seed round led by StageOne Ventures, with Hyde Park Venture Partners and individual founders participating. On April 29, 2026, the company announced a $12 million Series A led by GreatPoint Ventures, joined by Dynatrace, StageOne, and Hyde Park, bringing reported total funding to $16.5 million. CTech independently reported the round, named the investors, and described the platform's focus on Apache Spark and lakehouse architectures. Geektime's Israeli coverage adds a useful technical description of the in-motion architecture and reports the company's claims that AI agents can reduce platform costs by more than 30% and resolve complex problems ten times faster; those are company-reported performance claims, not independent benchmarks. The strongest public customer evidence is definity's case study for the top-three TV provider, which reports a 74% reduction in heavy-pipeline runtime, a critical pipeline shrinking from 17 hours to 4.5 hours, and 58% lower platform resource consumption. The figures are material but come from the vendor's own case study and an unnamed customer, so customer references and reproducible measurement methodology remain important diligence requests.
+
+**Founders and team background.** The founding team is Roy Daniel, CEO; Ohad Raviv, CTO; and Tom Bar-Yacov, VP of R&D. The official company profile describes them as enterprise data, platform, and product leaders, while the company's original launch post grounds the problem in their prior experience leading data engineering and product work at PayPal and FIS/Worldpay. That background is relevant because definity is selling an operating model to teams that own production infrastructure, not a research demo to model enthusiasts. Daniel is the public voice of the company in the Series A announcement and Israeli funding coverage, while Raviv and Bar-Yacov are identified as the technical and R&D counterparts. Beyond these roles and the enterprise provenance, the public record does not provide enough detail to verify specific degrees, military units, patents, headcount composition, or prior exits; those facts should not be inferred from the founders' seniority. Startup Nation Finder and Dealroom classify the business as founded in 2023 with an estimated 11-50 employees, but those are database estimates rather than a company-disclosed census. The team signal is therefore solid domain familiarity with a deliberately modest confidence level on scale and technical depth.
+
+**Competitive dynamics.** definity sits in a crowded but still unsettled layer of the data stack. Datadog, Dynatrace, and New Relic bring broad infrastructure and application observability, but a general-purpose APM view may not capture Spark transformation semantics, data lineage, or the relationship between data quality and compute behavior. Monte Carlo, Bigeye, and Soda compete around data observability and quality monitoring, while Unravel Data and Acceldata address performance, cost, and operations for complex data platforms. Databricks itself is both an ecosystem partner and a strategic threat because it controls an important data-platform surface and can add more native monitoring or optimization over time. definity's claimed edge is the combination of application execution, data behavior, and infrastructure performance in a single real-time context, plus action and CI validation rather than alerting alone. Its 2025 Databricks partnership can reduce distribution friction, but it also increases platform dependency. The defensibility test is not whether the company can produce recommendations; it is whether its runtime instrumentation, transformation-level context, closed-loop remediation history, and customer-specific baselines improve outcomes enough to survive bundled features and incumbent contracts.
+
+**Defense, security, and resilience dual-use relevance.** definity is strategically relevant to resilience and AI infrastructure, but the public record supports adjacency rather than a fielded defense capability. Data pipelines increasingly supply AI systems, intelligence workflows, logistics planning, fraud detection, industrial control analytics, and emergency-response decisions. A platform that detects data degradation, runaway compute, and pipeline failure before downstream consumers are affected could improve continuity for a critical-infrastructure operator or defense contractor. Its support for cloud and on-premises environments also maps to organizations that cannot place all mission data in one public-cloud operating model. The same technology could eventually help a security organization maintain trustworthy data products across disconnected or intermittently connected environments, provided the product gains suitable deployment controls and assurance evidence. However, definity publicly markets to enterprise data teams and names no military, intelligence, government, or critical-infrastructure customer. There is no public evidence of defense accreditation, classified-environment deployment, secure-edge packaging, disconnected operation, or adversarial testing. I therefore set dual_use to false: the core product is a credible commercial reliability layer with useful resilience potential, but the defense connection is not yet demonstrated strongly enough to call it true dual use under this database's standard.
+
+**Growth stage, trajectory, and key diligence risks.** definity is best classified as early-to-mid transition: it has general availability, a named technology partnership, a funded Series A, and public production evidence, but it is still building category recognition and has not disclosed the commercial metrics normally associated with a mature infrastructure vendor. The trajectory is attractive if agentic operation turns data engineering from a monitoring cost center into a measurable control plane for AI readiness. The main risks are: (1) platform concentration, because Databricks, AWS, and Google can absorb adjacent functionality; (2) crowded observability competition from vendors already embedded in enterprise budgets; (3) autonomy and trust risk, because an incorrect automated intervention can corrupt data or interrupt a revenue-critical job; (4) evidence risk, because the best quantitative outcomes are vendor-reported and customer-anonymous; (5) services and deployment friction across Spark versions, cloud providers, and on-premises estates; (6) model and telemetry economics as AI agents inspect high-volume pipelines; and (7) Israeli-company identity and operating-location ambiguity, since public ecosystem sources identify an Israeli founding location while third-party databases list Chicago as headquarters. The next proof points should be named reference customers, retention and expansion data, independent validation of savings and incident prevention, disclosed guardrail behavior, stronger edge or sovereign deployment evidence, and sustained growth without becoming a feature inside a larger platform.
+"""
+logo = "Unknown"
+website = "https://www.definity.ai"
+sector = "Agentic Data Infrastructure and Spark/Lakehouse Observability"
+founded = "2023"
+headquarters = "Chicago, United States; Israeli-founded"
+employees = "11-50 (third-party ecosystem estimate; not independently confirmed)"
+funding_stage = "Series A; $12M announced April 29, 2026, bringing company-reported total funding to $16.5M; GreatPoint Ventures led, with Dynatrace, StageOne Ventures, and Hyde Park Venture Partners participating"
+entity_type = "startup"
+dual_use = false
+dual_use_description = "definity's core technology supports commercial data engineering teams operating Spark and lakehouse platforms, and its reliability, cost-control, and pre-incident validation capabilities have a credible resilience adjacency for critical infrastructure and defense contractors. The company has not publicly disclosed military, intelligence, government, or critical-infrastructure customers, nor classified deployment, disconnected operation, defense accreditation, or secure-edge packaging. The strategic relevance is therefore AI-infrastructure and operational resilience rather than demonstrated defense capability, so dual_use is conservatively set to false."
+key_technologies = [
+  "In-motion instrumentation agents embedded in Apache Spark workloads without application code changes",
+  "Unified runtime context joining pipeline execution, transformation behavior, data quality, lineage, configuration, and infrastructure performance",
+  "AI-agent-assisted anomaly detection, root-cause analysis, and guarded remediation during production execution",
+  "Job-level Spark and lakehouse workload profiling, resource allocation analysis, and cost optimization",
+  "Real-data CI validation for predicting pipeline failures, runaway compute, SLA misses, and data-integrity regressions",
+  "Cross-environment support for Databricks, AWS EMR, Google Cloud Dataproc, hybrid, and on-premises deployments"
+]
+use_cases = [
+  "Preventing Spark pipeline failures before customer-facing analytics or AI feature data is delivered",
+  "Reducing AWS EMR or Databricks compute waste through job-level and task-level workload optimization",
+  "Validating data-platform code changes against real workloads before production rollout",
+  "Diagnosing transformation-level data-quality and performance regressions across lakehouse pipelines",
+  "Maintaining SLA reliability for streaming analytics, recommendations, advertising, and operational reporting",
+  "Supporting hybrid or on-premises data estates that cannot rely only on public-cloud monitoring",
+  "Improving continuity of data products used by regulated enterprises, logistics operators, and critical infrastructure",
+  "Prospective monitoring and controlled remediation of data pipelines supporting defense or public-sector AI systems; adjacency only"
+]
+investible = true
+investment_rationale = "definity is a credible infrastructure-company priority signal, not an investment recommendation. (1) The product targets a real operating bottleneck: Spark and lakehouse systems are central to AI and analytics, but data teams still lack a unified control layer spanning data behavior, execution, and infrastructure cost. (2) The company has progressed from general availability to a $12M Series A in under two years, with GreatPoint Ventures, Dynatrace, StageOne Ventures, and Hyde Park Venture Partners validating the category and team. (3) Its Databricks relationship and customer case study create stronger evidence than a purely conceptual agent platform, including reported runtime and resource-consumption improvements. (4) The strongest upside would come from becoming the runtime control plane for agentic data engineering as AI multiplies the number and importance of production pipelines. The counterweights are significant: vendor-reported and anonymized traction, undisclosed revenue and retention, intense competition from Databricks and observability incumbents, operational risk from autonomous changes, and a still-unproven defense or sovereign deployment path. Priority should rise only with named references, independently verified savings, durable expansion metrics, and evidence that guardrails make autonomous operation safe in high-consequence environments."
+strategic_value = "definity's strategic value is concentrated in AI-infrastructure reliability rather than direct defense technology. (1) Trustworthy data is a prerequisite for trustworthy AI, and a runtime layer that can catch data, execution, and cost failures before downstream systems are affected addresses a foundational bottleneck. (2) The product's contextual approach may be more useful than disconnected dashboards because it links pipeline logic to infrastructure behavior and data quality. (3) Hybrid and on-premises support preserves optionality for regulated, sovereign, and critical-infrastructure operators that cannot centralize all workloads in one cloud. (4) The Databricks partnership can make definity an ecosystem component while giving it access to a large installed base. The ceiling is constrained by the absence of public-sector deployments, certifications, classified-environment evidence, or named strategic customers; for now, definity is best understood as a potentially important commercial reliability layer with resilience spillover."
+potential_score = 67.0
+technology_score = 77.0
+market_score = 72.0
+team_score = 75.0
+dual_use_score = 35.0
+strategic_alignment_score = 62.0
+stage = "early"
+stage_rationale = "definity is classified as early because it has moved beyond a prototype but has not publicly demonstrated the commercial scale or institutional maturity of a mid-stage infrastructure vendor. (1) Product maturity: the company announced general availability in August 2024 and now presents an Agentic Data Engineering platform with production observability, optimization, remediation, and CI validation. (2) Financing: the $4.5M seed and $12M Series A provide meaningful runway and third-party backing, but funding does not establish revenue scale. (3) Market evidence: a Databricks partnership and an anonymized production customer story are meaningful validation, while customer count, ARR, retention, contract size, and independent benchmarks remain undisclosed. (4) Category position: the company is still defining a new operating model and must establish that customers will trust agents to act inside production pipelines. Progression to mid-stage would require disclosed recurring-revenue or customer-expansion evidence, multiple named references, and proof that the product consistently prevents incidents rather than only explaining them after the fact."
+competitors = [
+  "Databricks (lakehouse platform owner with native monitoring, governance, and optimization capabilities)",
+  "Unravel Data (data-platform observability and performance optimization for Spark and cloud workloads)",
+  "Acceldata (enterprise data observability, reliability, and performance management across data systems)",
+  "Monte Carlo (data observability and data-quality monitoring with a broad enterprise footprint)",
+  "Bigeye / Soda (data-quality testing, anomaly detection, and observability approaches)",
+  "Datadog and Dynatrace (broad APM and infrastructure observability incumbents expanding toward data operations)"
+]
+competitive_edge = "definity's claimed edge is the combination of execution-time context and operational action. (1) Its lightweight agents are designed to observe Spark workloads in motion without code changes, allowing the product to connect transformation behavior, data quality, lineage, and infrastructure performance instead of presenting isolated telemetry. (2) The company combines observability with cost optimization, pre-production validation, and AI-assisted remediation, which could create a more valuable control loop than an alert-only product. (3) Spark specialization gives it a focused entry point where generic APM tools often lack data-application semantics. (4) The Databricks partnership can reduce adoption friction and validate ecosystem fit. These advantages remain contested: Databricks can bundle more functionality, observability vendors have distribution and telemetry scale, and runtime instrumentation becomes defensible only if the resulting historical context and remediation feedback produce measurably better outcomes. The key test is repeatable, independently verified prevention and optimization, not the presence of the agent label."
+risk_factors = [
+  "Platform dependency: Databricks, AWS, and Google can expand native data observability and optimization features into adjacent product territory",
+  "Incumbent competition: broad APM, data-observability, quality, and Spark-optimization vendors already hold enterprise budgets and telemetry relationships",
+  "Autonomous-action risk: incorrect remediation could corrupt data, interrupt revenue-critical jobs, or create a larger incident than the original failure",
+  "Evidence limitation: the strongest savings and runtime metrics are company-reported and tied to an anonymized customer rather than independently audited references",
+  "Deployment complexity: Spark versions, lakehouse architectures, hybrid estates, security policies, and cloud-specific behavior can make implementation and support expensive",
+  "Model and economics risk: continuous agent analysis of high-volume pipelines may create latency, compute, or third-party model costs that undermine customer savings",
+  "Strategic-market gap: no public defense, government, classified, or critical-infrastructure deployment or accreditation is disclosed"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "definity merits monitoring as an Israeli-founded AI-infrastructure company with a concrete path from data observability to agentic operation. (1) The team has lived the enterprise data-engineering problem and shipped a Spark-first product rather than starting with a generic AI narrative. (2) A $12M Series A led by GreatPoint Ventures, a total reported $16.5M raised, and participation from Dynatrace, StageOne, and Hyde Park indicate meaningful ecosystem validation. (3) The Databricks partnership and reported production case study provide identifiable commercial milestones, including runtime and resource-consumption improvements. (4) Reliable, controllable data infrastructure is strategically relevant to AI adoption, regulated operations, and future sovereign or defense-adjacent systems. Priority is capped by undisclosed revenue and retention, anonymized customer evidence, heavy platform and incumbent competition, autonomous-remediation safety risk, and the absence of public-sector or defense deployment evidence. Raise priority if definity publishes named references, independent outcome measurements, strong retention or expansion data, and secure hybrid or sovereign deployments."
+public_sources = [
+  { label = "definity Series A announcement", url = "https://www.definity.ai/blog/agentic-data-engineering-12m-series-a", description = "Company announcement of $12M Series A, named investors, $16.5M reported cumulative funding, revenue tripling claim, several Fortune 500 and enterprise customer additions, and platform positioning." },
+  { label = "PRNewswire release", url = "https://www.prnewswire.com/news-releases/definity-unveils-agentic-data-engineering-platform-with-12m-series-a-302757245.html", description = "Full company-issued release republished by PRNewswire; details funding, claimed traction, product support, and outcomes." },
+  { label = "TechCrunch seed announcement", url = "https://techcrunch.com/2024/08/14/definity-raises-4-5m-as-it-looks-to-transform-data-application-observability/", description = "Independent coverage of the $4.5M seed and founding team backgrounds." },
+  { label = "definity seed announcement", url = "https://www.definity.ai/blog/definity-emerges-from-stealth", description = "Official launch, general availability, and $4.5M Seed announcement." },
+  { label = "Geektime Series A coverage", url = "https://www.geektime.co.il/definity-agentic-data-engineering-funding/", description = "Israeli coverage confirming round participants and total, Israeli startup characterization, and product description." },
+  { label = "definity About", url = "https://www.definity.ai/about-us", description = "Official current leadership, products and supported platforms." },
+  { label = "definity product updates", url = "https://www.definity.ai/blog?category=Perspectives", description = "Company blog listing August 2026 Databricks Serverless GA and April 2026 Spark Streaming support announcements." }
+]
+crawled_at = "2026-08-31T20:12:17Z"
+updated_at = "2026-10-05T06:27:16Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "definity"
+legal_name = "definity"
+aliases = ["Definity", "דפיניטי"]
+operating_status = "active"
+business_model = "Enterprise B2B software platform for runtime observability, optimization, validation, and increasingly agentic operation of Apache Spark and lakehouse data pipelines."
+products = ["Agentic Data Engineering platform", "Spark and lakehouse runtime observability and optimization", "Databricks Serverless observability and optimization"]
+locations = ["Chicago, Illinois, United States", "Israel connection through Israeli-founded team"]
+founded_on = "2023"
+source_ids = ["about", "seed-tc", "series-prn", "series-geektime"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Two publicly disclosed equity rounds located: a $4.5 million Seed announced August 14, 2024, and a $12 million Series A announced April 29, 2026. The company and Israeli reporting state that cumulative funding is $16.5 million. No valuation or terms disclosed. No evidence located of further rounds through 2026-10-05."
+reported_total_raised = 16500000
+reported_total_currency = "USD"
+total_source_ids = ["series-prn", "series-geektime"]
+total_as_of = "2026-04-29"
+total_scope = "company-reported cumulative funding across disclosed rounds"
+history_status = "partial"
+coverage_through = "2026-10-05"
+
+[[intelligence.funding.rounds]]
+id = "seed-2024"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2024-08-14"
+amount_status = "reported"
+amount = 4500000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["StageOne Ventures"]
+participating_investors = ["Hyde Park Venture Partners", "current and former founders (individual angel identities undisclosed)"]
+source_ids = ["seed-company", "seed-tc"]
+
+[[intelligence.funding.rounds]]
+id = "series-a-2026"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2026-04-29"
+amount_status = "reported"
+amount = 12000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["GreatPoint Ventures"]
+participating_investors = ["Dynatrace", "StageOne Ventures", "Hyde Park Venture Partners"]
+source_ids = ["series-prn", "series-geektime"]
+
+[[intelligence.investors]]
+name = "StageOne Ventures"
+investor_type = "vc"
+relationship = "historical"
+round_ids = ["seed-2024", "series-a-2026"]
+source_ids = ["seed-tc", "series-prn"]
+
+[[intelligence.investors]]
+name = "Hyde Park Venture Partners"
+investor_type = "vc"
+relationship = "historical"
+round_ids = ["seed-2024", "series-a-2026"]
+source_ids = ["seed-tc", "series-prn"]
+
+[[intelligence.investors]]
+name = "GreatPoint Ventures"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["series-a-2026"]
+source_ids = ["series-prn", "series-geektime"]
+
+[[intelligence.investors]]
+name = "Dynatrace"
+investor_type = "corporate"
+relationship = "current"
+round_ids = ["series-a-2026"]
+source_ids = ["series-prn"]
+
+[[intelligence.people]]
+name = "Roy Daniel"
+role = "CEO and co-founder"
+is_founder = true
+current = true
+background = "Previously worked at FIS; company and TechCrunch describe founders' enterprise data engineering and product experience at PayPal and FIS/Worldpay."
+source_ids = ["about", "seed-tc"]
+
+[[intelligence.people]]
+name = "Ohad Raviv"
+role = "CTO and co-founder"
+is_founder = true
+current = true
+background = "TechCrunch identifies him as a Spark contributor and former big-data tech lead at PayPal."
+source_ids = ["about", "seed-tc"]
+
+[[intelligence.people]]
+name = "Tom Bar-Yacov"
+role = "VP of R&D and co-founder"
+is_founder = true
+current = true
+background = "TechCrunch reports he previously managed data engineering at PayPal."
+source_ids = ["about", "seed-tc"]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private company. Public financing announcements identify institutional round investors but disclose neither cap table nor ownership percentages. No parent, acquisition, IPO, or secondary transaction found."
+cap_table_status = "undisclosed"
+shareholders = ["Founders", "StageOne Ventures", "Hyde Park Venture Partners", "GreatPoint Ventures", "Dynatrace", "other undisclosed participants"]
+source_ids = ["series-prn", "seed-tc"]
+deals = []
+holdings = []
+
+[[intelligence.traction]]
+kind = "product"
+description = "Company blog reports Databricks Serverless support became generally available, extending observability and optimization across its Databricks platform coverage. Company announcement; independently unverified adoption impact."
+date = "2026-08-25"
+source_ids = ["product-blog"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Company blog announced support expansion to Spark Streaming for execution-level observability and optimization of continuous pipelines."
+date = "2026-04-14"
+source_ids = ["product-blog"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "The company's April 2026 release states revenue tripled over the preceding six months and that it added several Fortune 500 and large enterprise customers. No underlying revenue, customer names, contract values, or independent verification were disclosed; treat as company-reported traction."
+date = "2026-04-29"
+source_ids = ["series-prn"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Company announced a Databricks partnership in April 2025 for observability, performance tuning, and proactive validation across the Databricks and Spark ecosystem. The public announcement establishes partnership, not customer conversion or revenue."
+date = "2025-04-02"
+source_ids = ["product-blog"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders"]
+summary = "Israeli-founded company: Israeli business press identifies definity as an Israeli startup; the founding team is identified by name and company sources place its headquarters in Chicago. No Israel incorporation or current Israeli headquarters claim is made here."
+as_of = "2026-10-05"
+source_ids = ["series-geektime", "about"]
+
+[intelligence.research]
+researched_at = "2026-10-05T06:27:16Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "definity.ai definity company Chicago Israel founded identity founders",
+  "definity 4.5M seed funding StageOne Hyde Park 2024",
+  "definity 12 million Series A GreatPoint Dynatrace April 2026 total funding",
+  "definity revenue ARR customers Fortune 500 2026",
+  "definity investors ownership acquired valuation funding",
+  "definity Roy Daniel Ohad Raviv Tom Bar-Yacov founders team",
+  "definity patents Spark observability data pipeline",
+  "definity competitors Unravel Acceldata Databricks Spark observability",
+  "definity defense government security dual use data pipelines",
+  "דפיניטי גייסה 12 מיליון 2026 משקיעים",
+  "definity Databricks Serverless August 2026 product announcement",
+  "definity Spark Streaming April 2026"
+]
+gaps = [
+  "team: public sources identify three founders and executive roles, but current full roster, headcount, and detailed biographies are not disclosed; prior 11-50 figure is an ecosystem estimate.",
+  "investors: institutional participants are named, but seed angel identities and investor websites/precise terms are not fully disclosed.",
+  "financials: no numeric revenue/ARR, profitability, burn, runway, audited accounts, valuation, or round terms found; the revenue-tripling statement is company-reported without base or amounts.",
+  "traction: several Fortune 500 additions are asserted by the company but customers, counts, contracts, pricing, retention, and independent deployment verification are not public. The known case study is anonymized.",
+  "intellectual_property: no attributable patent filings or granted patents identified in public searches; absence of located records does not prove none exist.",
+  "competition: direct competitors and substitute scope are established at category level, but comparative independent benchmarks and win/loss data are unavailable.",
+  "ownership: cap table, founder/investor percentages, legal entity jurisdiction and registry identifiers remain undisclosed/unverified; no ownership change or acquisition located.",
+  "dual_use: no public defense, government, classified, certification, or critical-infrastructure customer or deployment evidence located."
+]
+conflicts = []
+diligence_questions = [
+  "Can management provide ARR/revenue by year, gross retention, net retention, customer concentration, and audited or investor-verifiable evidence behind the reported threefold revenue growth?",
+  "What share of production jobs are actively controlled by agents versus observed or recommended, and what approval, rollback, audit, and policy controls govern changes?",
+  "Can named customer references reproduce claimed cost and incident-resolution improvements with baselines, workload mix, and measurement methodology?",
+  "What are the current cap table, option pool, financing instruments, and fully diluted ownership after the 2026 Series A?",
+  "How does the product support security boundaries and data residency in Databricks Serverless and disconnected/on-premises environments?"
+]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://www.definity.ai/about-us"
+title = "About definity"
+publisher = "definity"
+kind = "company"
+accessed_at = "2026-10-05T06:27:16Z"
+claims = ["Current official page names Roy Daniel as CEO, Ohad Raviv as CTO, and Tom Bar-Yacov as VP R&D", "Official site describes Spark, Databricks, AWS EMR, and GCP Dataproc solutions"]
+
+[[intelligence.research.sources]]
+id = "seed-company"
+url = "https://www.definity.ai/blog/definity-emerges-from-stealth"
+title = "definity Emerges From Stealth with $4.5M to Transform Data Application Observability"
+publisher = "definity"
+kind = "company"
+accessed_at = "2026-10-05T06:27:16Z"
+published_on = "2024-08-14"
+claims = ["Company announced $4.5M Seed led by StageOne Ventures with Hyde Park Venture Partners and individual founders participating", "Company announced general availability of Spark-focused observability and remediation product", "Company describes founders' enterprise experience at PayPal and FIS/Worldpay"]
+
+[[intelligence.research.sources]]
+id = "seed-tc"
+url = "https://techcrunch.com/2024/08/14/definity-raises-4-5m-as-it-looks-to-transform-data-application-observability/"
+title = "Definity raises $4.5M as it looks to transform data application observability"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-05T06:27:16Z"
+published_on = "2024-08-14"
+claims = ["Independent reporting confirms $4.5M seed led by StageOne with Hyde Park and strategic angel participation", "Identifies founder roles and reported prior PayPal/FIS experience", "Describes in-motion Spark-focused observability, remediation, and no-code-change agent architecture"]
+
+[[intelligence.research.sources]]
+id = "series-prn"
+url = "https://www.prnewswire.com/news-releases/definity-unveils-agentic-data-engineering-platform-with-12m-series-a-302757245.html"
+title = "definity Unveils Agentic Data Engineering Platform With $12M Series A"
+publisher = "PRNewswire (release supplied by definity)"
+kind = "company"
+accessed_at = "2026-10-05T06:27:16Z"
+published_on = "2026-04-29"
+claims = ["Company announced $12M Series A led by GreatPoint Ventures with Dynatrace, StageOne, and Hyde Park participation", "Company reports cumulative funding of $16.5M", "Company reports revenue tripled in preceding six months and additions of several Fortune 500 and large enterprise customers", "Company states product supports Databricks, AWS EMR, GCP Dataproc, and Spark on Kubernetes", "Company asserts production cost and issue-resolution performance outcomes"]
+
+[[intelligence.research.sources]]
+id = "series-geektime"
+url = "https://www.geektime.co.il/definity-agentic-data-engineering-funding/"
+title = "גייסו 12 מיליון דולר כדי שסוכני ה-AI יעשו סדר בדאטה שלכם"
+publisher = "Geektime"
+kind = "media"
+accessed_at = "2026-10-05T06:27:16Z"
+published_on = "2026-04-29"
+claims = ["Israeli technology press describes definity as an Israeli startup", "Reports $12M Series A led by GreatPoint Ventures with Dynatrace, StageOne, Hyde Park and total funding of $16.5M", "Describes the company's in-motion pipeline architecture and vendor performance claims"]
+
+[[intelligence.research.sources]]
+id = "product-blog"
+url = "https://www.definity.ai/blog?category=Perspectives"
+title = "The definity blog: product announcements"
+publisher = "definity"
+kind = "company"
+accessed_at = "2026-10-05T06:27:16Z"
+claims = ["Blog lists August 25, 2026 general availability for Databricks Serverless support", "Blog lists April 14, 2026 Spark Streaming support expansion", "Blog lists April 2, 2025 Databricks partnership announcement"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-05T06:27:16Z"
+next_review_on = "2027-01-05"
+queries = ["definity.ai definity company Chicago Israel founded identity founders"]
+source_ids = ["about", "series-geektime", "seed-tc"]
+summary = "Official company page confirms identity and leaders; Geektime calls the startup Israeli; PR release identifies Chicago as announcement dateline. No legal entity or incorporation registry was established."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-05T06:27:16Z"
+next_review_on = "2027-01-05"
+queries = ["definity 4.5M seed funding StageOne Hyde Park 2024", "definity 12 million Series A GreatPoint Dynatrace April 2026 total funding"]
+source_ids = ["seed-company", "seed-tc", "series-prn", "series-geektime"]
+summary = "Two disclosed rounds and company-reported $16.5M total found; no valuation disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-05T06:27:16Z"
+next_review_on = "2027-01-05"
+queries = ["definity investors ownership acquired valuation funding"]
+source_ids = ["seed-tc", "series-prn", "series-geektime"]
+summary = "Lead and participating funds/corporate investor identified from financing announcements; individual seed angels are unnamed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-05T06:27:16Z"
+next_review_on = "2027-01-05"
+queries = ["definity Roy Daniel Ohad Raviv Tom Bar-Yacov founders team"]
+source_ids = ["about", "seed-tc"]
+summary = "Three founders and roles confirmed; prior enterprise work supported by TechCrunch. No full current roster or independently confirmed employee count located."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T06:27:16Z"
+next_review_on = "2027-01-05"
+queries = ["definity investors ownership acquired valuation funding"]
+source_ids = ["series-prn", "seed-tc"]
+summary = "No public cap table, percentages, parent, acquisition, IPO, or secondary transaction found; financing participation is disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T06:27:16Z"
+next_review_on = "2027-01-05"
+queries = ["definity revenue ARR customers Fortune 500 2026"]
+source_ids = ["series-prn"]
+summary = "No numeric revenue, ARR, profitability, cash, burn, runway, or valuation located. The company says revenue tripled over six months but gives no base or figure."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-05T06:27:16Z"
+next_review_on = "2027-01-05"
+queries = ["definity revenue ARR customers Fortune 500 2026", "definity Databricks Serverless August 2026 product announcement", "definity Spark Streaming April 2026"]
+source_ids = ["series-prn", "product-blog"]
+summary = "Company claims several Fortune 500 additions and triple revenue growth; product announcements document Serverless GA and Spark Streaming support. Customer identity, contracts, and metrics remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-05T06:27:16Z"
+next_review_on = "2027-01-05"
+queries = ["definity patents Spark observability data pipeline"]
+source_ids = ["about", "seed-tc"]
+summary = "No attributable patents or patent filings found in the public sources reviewed; team and company do not publicly claim patent protection in the reviewed material."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-05T06:27:16Z"
+next_review_on = "2027-01-05"
+queries = ["definity competitors Unravel Acceldata Databricks Spark observability"]
+source_ids = ["seed-tc", "series-prn"]
+summary = "Product description places definity among Spark/lakehouse observability, performance optimization, and data reliability tools; public sources do not provide comparative benchmarks or win/loss evidence."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T06:27:16Z"
+next_review_on = "2027-01-05"
+queries = ["definity defense government security dual use data pipelines"]
+source_ids = ["about", "series-prn"]
+summary = "Technical resilience applicability is plausible, but no public defense/government customer, classified deployment, certification, or specific defense use was found; no defense thesis asserted."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Official site remains active and lists current products, leadership, careers, and 2026 copyright; blog lists 2026 product releases."
+verified_at = "2026-10-05T06:27:16Z"
+source_ids = ["about", "product-blog"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Geektime identifies definity as an Israeli startup; founders named on the official company page match the reported founding team."
+verified_at = "2026-10-05T06:27:16Z"
+source_ids = ["series-geektime", "about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Company release and independent Geektime report explicitly state $16.5M cumulative funding."
+verified_at = "2026-10-05T06:27:16Z"
+source_ids = ["series-prn", "series-geektime"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.amount"
+support = "direct"
+summary = "Company launch announcement and TechCrunch each report a $4.5M Seed."
+verified_at = "2026-10-05T06:27:16Z"
+source_ids = ["seed-company", "seed-tc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.named_investors"
+support = "direct"
+summary = "TechCrunch names StageOne as lead, Hyde Park and strategic angels as participants; company post corroborates StageOne and Hyde Park."
+verified_at = "2026-10-05T06:27:16Z"
+source_ids = ["seed-company", "seed-tc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.amount"
+support = "direct"
+summary = "Company release and Geektime report a $12M Series A announced April 29, 2026."
+verified_at = "2026-10-05T06:27:16Z"
+source_ids = ["series-prn", "series-geektime"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.named_investors"
+support = "direct"
+summary = "Company release and Geektime identify GreatPoint Ventures as lead, with Dynatrace, StageOne, and Hyde Park participating."
+verified_at = "2026-10-05T06:27:16Z"
+source_ids = ["series-prn", "series-geektime"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.lead_investors"
+support = "direct"
+summary = "TechCrunch names StageOne Ventures as lead investor in the Seed round."
+verified_at = "2026-10-05T06:27:16Z"
+source_ids = ["seed-tc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.participating_investors"
+support = "direct"
+summary = "TechCrunch and the company name Hyde Park Venture Partners as a participant and report additional strategic individual angels; identities of angels not disclosed."
+verified_at = "2026-10-05T06:27:16Z"
+source_ids = ["seed-company", "seed-tc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.lead_investors"
+support = "direct"
+summary = "Company release and Geektime name GreatPoint Ventures as Series A lead."
+verified_at = "2026-10-05T06:27:16Z"
+source_ids = ["series-prn", "series-geektime"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.participating_investors"
+support = "direct"
+summary = "Company release and Geektime name Dynatrace, StageOne Ventures, and Hyde Park Venture Partners as Series A participants."
+verified_at = "2026-10-05T06:27:16Z"
+source_ids = ["series-prn", "series-geektime"]

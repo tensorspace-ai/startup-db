@@ -1,0 +1,527 @@
+name = "CorrActions"
+description = "CorrActions is an Israeli deep-tech company developing NeuroMonitor, a software-only cognitive monitoring system that analyzes involuntary muscle micro-motions captured by existing vehicle and device sensors to detect fatigue, distraction, intoxication, cognitive load, and related impairment. Its primary market is automotive safety, with a credible but unfielded extension to aviation, remote operations, and other safety-critical human-machine systems."
+detailed_description = """
+**Product and the concrete problem it solves.** CorrActions addresses a practical failure mode in modern mobility: vehicles can measure speed, lane position, steering angle, gaze, and cabin conditions, but they still have limited visibility into whether the human in control is cognitively fit to operate. NeuroMonitor is presented as a software-only, real-time monitoring layer for drivers and passengers. The company says it can detect fatigue, distraction, intoxication or elevated blood alcohol content, cognitive load, motion sickness, anxiety, and other impairments, with additional drugs, medications, and stress states on its roadmap. The problem is consequential because an advanced driver-assistance system can be technically functional while a tired, distracted, or impaired operator fails to respond. CorrActions therefore aims to let a vehicle warn the driver, adjust assistance, or escalate an intervention before a cognitive impairment becomes a crash. Its product proposition also avoids the cost and privacy objections associated with adding a dedicated medical-grade brain sensor or camera to every cabin.
+
+**Core technology and how it actually works.** NeuroMonitor does not claim to read a brainwave signal directly. Its public explanation is that unconscious, involuntary micro-motions in muscles reflect changes in brain activity, and that these tiny movement patterns can be extracted from sensors already present in a vehicle or digital device. Candidate inputs include steering-wheel motion, seat motion, in-cabin radar, infotainment interaction, smartphones, and other motion sensors. Machine-learning models analyze those streams for a person-specific cognitive signature and infer deviations associated with impairment. The architecture is deliberately software-only and processor agnostic, so the company says it can run on existing vehicle compute rather than requiring a new sensor suite. That creates an attractive integration path for OEMs and Tier 1 suppliers, but it also places the burden on model calibration, false-positive control, sensor heterogeneity, and proving that signals remain reliable across drivers, vehicle platforms, road surfaces, and weather. Public materials describe the product capabilities and regulatory work, but do not publish a reproducible accuracy table, model architecture, or independent clinical validation.
+
+**Market, customers, and go-to-market.** CorrActions sells to automotive OEMs, Tier 1 suppliers, fleets, and mobility operators rather than directly to consumers. The immediate wedge is driver and passenger safety in passenger vehicles, commercial fleets, and connected mobility platforms. A software license that uses sensors already installed in a vehicle can fit the purchasing logic of an OEM better than a hardware retrofit: integration can happen at the vehicle-compute layer, while interventions can be designed jointly with safety engineers. The company’s participation in Euro NCAP and NHTSA committees indicates that regulatory and test-protocol alignment is part of the go-to-market strategy. Its public site highlights Volvo, Goodyear, and BlackBerry branding and lists demonstrations at In Cabin USA, but it does not disclose a production vehicle program, annual recurring revenue, contract values, or a named fleet deployment. The practical sales cycle is therefore likely to be long and qualification-heavy, with a high-value design win potentially more important than a large number of small pilots.
+
+**Traction, funding, and third-party validation.** CorrActions was founded in February 2019 by Zvi Ginosar and Eldad Hochman, according to Startup Nation Central. The public funding record includes an OurCrowd seed investment, a $2.7 million 2021 seed round involving the Israel Innovation Authority, Operator Partners, VentureIsrael, Samurai Incubate Israel, and Labs/02, and a $7.25 million Series A announced in December 2023 with Volvo Group Venture Capital and BlackBerry as lead investors alongside Mobilitech Capital, Next Gear Ventures, NextLeap Ventures, Stone Ventures, OurCrowd, and Regah Ventures. Startup Nation Finder records a further $1 million SAFE in November 2025 from Next Gear Ventures and VentureIsrael, and reports total capital of about $10.95 million across four rounds. Volvo’s own April 2023 release says its Tech Fund tested the software before leading its round, which is stronger validation than a logo-only partnership. The evidence still stops short of proving scaled production: no OEM launch, safety rating, fleet volume, or independently audited performance is public.
+
+**Founders and team background.** Ginosar is identified publicly as co-founder and chairman, Hochman as co-founder and chief science officer, and Vered Levy-Ron as CEO. The company’s technical narrative combines neuroscience, artificial intelligence, automotive engineering, and human-machine interaction rather than relying on a conventional camera-only driver-monitoring approach. Startup Nation Finder lists a team including VP R&D Ofer Kruzel, product leader Ohad Kleinman, and regulation and strategy director Gal Geffen-Frenkel. The Israel Innovation Authority describes CEO Vered Levy-Ron and a 2019 establishment date, while public ecosystem records place the headquarters in Jerusalem or Tel Aviv-Yafo and report an 11–50 employee range; this record uses Tel Aviv-Yafo as the best-supported current location and preserves the range rather than guessing an exact headcount. Diligence should confirm the current legal entity, team size, scientific publication record, patent ownership, and how much engineering is performed in Israel.
+
+**Competitive dynamics.** CorrActions competes with camera-based driver-monitoring vendors such as Smart Eye, Seeing Machines, and Cipia, which use facial landmarks, gaze, eyelid closure, and head pose; with emotion and attention analytics suppliers such as Affectiva; and with incumbent automotive safety stacks from Bosch, Continental, and Aptiv that can bundle sensing, control software, and OEM integration. It also competes with the status quo of no cognitive monitoring or simple steering-behavior heuristics. Its claimed edge is a non-invasive software layer that can combine several existing motion sensors, monitor more than one symptom, work without a dedicated camera or wearable, and potentially preserve privacy by avoiding raw personal imagery. The counterargument is that camera systems benefit from a larger installed base, established regulatory testing, and visible behavioral signals, while micro-motion inference may be harder to explain, calibrate, and validate. The decisive comparison is not a single laboratory accuracy number but end-to-end reduction in dangerous interventions, latency, compute cost, privacy exposure, and false alarms across real fleets.
+
+**Defense, security, and resilience dual-use relevance.** CorrActions is a genuine dual-use candidate, but the relevance is an adjacency rather than a claimed defense contract. Safety-critical operators in military vehicles, aircraft, maritime bridges, emergency response fleets, remote-piloted systems, and industrial control rooms face the same fatigue, distraction, intoxication, stress, and cognitive-overload problems as civilian drivers. A software layer that can infer degraded operator state from controls and existing platform sensors could support crew-rest decisions, adaptive automation, supervised autonomy, or a handover to another operator. The value is especially clear where adding wearables or intrusive cameras is undesirable and where a human remains responsible for a machine moving through a hazardous environment. Israel’s defense and aerospace ecosystem provides a plausible channel for such evaluations, and the company’s regulation and safety focus is relevant to certification. However, public sources disclose no military customer, aviation certification, classified program, MIL-STD qualification, or fielded defense system. Strategic scoring therefore rewards transferability and resilience value while penalizing the absence of demonstrated security adoption.
+
+**Growth stage, trajectory, and key diligence risks.** CorrActions fits the mid stage: it has a released product, several institutional and strategic investors, committee participation, and a 2025 SAFE, yet it remains a small private company without public production revenue or a disclosed OEM launch. Its upside depends on converting Volvo and other design-partner validation into a repeatable integration product and on expanding from automotive into commercial vehicles, aviation, industrial safety, and human-autonomy teaming. Key diligence questions are: (1) What sensitivity and false-alarm rates hold across diverse drivers and sensor stacks? (2) Can the models distinguish fatigue, alcohol, medication, stress, and ordinary steering variation without collecting sensitive personal data? (3) Who owns the training data and resulting patents? (4) What approvals are required before an alert can influence an advanced driver-assistance function? (5) Does the $10.95 million public funding history provide enough runway for OEM qualification cycles? (6) Can a small team support safety cases, cybersecurity, privacy, and global regulatory requirements? (7) Will camera incumbents, OEM internal teams, or platform suppliers replicate the software approach? CorrActions is strategically interesting because it addresses the human bottleneck in autonomy, but the next proof point must be a named production deployment or independently measured fleet outcome.
+"""
+logo = "Unknown"
+website = "https://corractions.com"
+sector = "Cognitive NeuroMonitoring and Human-Machine Safety AI"
+founded = "2019"
+headquarters = "Tel Aviv-Yafo, Israel"
+employees = "11-50"
+funding_stage = "Series A and November 2025 SAFE; disclosed funding database aggregate of $10.95M across three disclosed rounds plus an undisclosed 2019 seed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "CorrActions has substantive dual-use potential because the same non-invasive cognitive-state monitoring can improve civilian driving, commercial fleet safety, aviation operations, emergency response, remote-piloted systems, and military vehicle or control-room human performance. The defense relevance is an engineering transfer path rather than a demonstrated customer relationship: no public source confirms a military contract, fielded system, aviation certification, or classified program. Strategic diligence should therefore focus on sensor robustness, operator privacy, safety-case evidence, and whether the company can adapt its models to high-stress and intermittent-connectivity environments."
+key_technologies = ["Micro-motion inference of brain-linked cognitive state", "Software-only driver and operator neuro-monitoring", "Multimodal fusion of steering, seat, radar, infotainment, and device motion sensors", "Machine-learning detection of fatigue, distraction, intoxication, and cognitive load", "Processor-agnostic edge deployment for vehicle compute", "Privacy-preserving monitoring without dedicated wearable or brain sensor", "Human-machine safety intervention and alert integration"]
+use_cases = ["Passenger-vehicle driver impairment and fatigue alerts", "Commercial truck and fleet operator safety monitoring", "Advanced driver-assistance handover and escalation", "Cabin monitoring for passenger cognitive or motion-sickness events", "Aviation and remote-piloted-system crew fatigue assessment", "Emergency-response and public-safety vehicle operator monitoring", "Industrial and maritime control-room human-performance support", "Defense vehicle and command-system operator state monitoring"]
+investible = true
+investment_rationale = "CorrActions is a strategic-priority signal because it combines a technically differentiated sensing thesis, a released product, Israel Innovation Authority support, and validation from Volvo Cars Tech Fund and BlackBerry. The legacy investible flag reflects the quality of those signals and the size of the automotive safety market; it is not an investment recommendation. The critical underwriting gap is commercial proof: public sources do not establish a production OEM launch, recurring revenue, independently audited accuracy, or a durable patent moat. Monitoring should center on design-win conversion, safety validation, privacy posture, and runway through long automotive qualification cycles."
+strategic_value = "CorrActions could strengthen resilience in systems where a human remains the last safety-critical decision maker while machines become more automated. A sensor-agnostic cognitive-state layer could reduce operator-error risk in vehicles, fleets, aircraft, remote systems, and emergency infrastructure without requiring new wearables or intrusive raw video. The strategic value is highest when fatigue and overload are operationally costly and when adaptive automation can be triggered early. Current public evidence supports a credible technology option, not a fielded national-security capability; production references and independent performance data would materially change that assessment."
+potential_score = 75.0
+technology_score = 82.0
+market_score = 73.0
+team_score = 75.0
+dual_use_score = 64.0
+strategic_alignment_score = 76.0
+stage = "mid"
+stage_rationale = "CorrActions is beyond an early concept: it reports a released NeuroMonitor product, has participated in automotive safety and regulatory forums, attracted strategic capital from Volvo and BlackBerry, and closed a 2025 SAFE. It remains below mature because no production vehicle launch, recurring revenue, deployment volume, independent benchmark, or exact headcount is publicly disclosed. Mid stage best captures a company converting validated technology and design-partner interest into OEM-scale commercialization."
+competitors = ["Smart Eye (Swedish camera-based driver-monitoring and interior-sensing systems)", "Seeing Machines (computer-vision driver and operator monitoring for automotive and fleet markets)", "Cipia (in-cabin AI using cameras for driver monitoring and occupant sensing)", "Affectiva / Smart Eye (facial and emotion analytics integrated into automotive perception stacks)", "Bosch and Continental (incumbent Tier 1 safety and driver-monitoring integration platforms)", "Aptiv (vehicle architecture and ADAS supplier able to bundle monitoring into OEM programs)", "Steering-behavior heuristics and OEM internal software (status-quo substitute without dedicated cognitive inference)"]
+competitive_edge = "CorrActions' differentiation is a software-only, multi-symptom cognitive-monitoring approach that extracts involuntary micro-motion signals from sensors an OEM may already have. That can reduce hardware integration, avoid a dedicated wearable, and offer a privacy advantage over systems that require continuous raw facial imagery. The company also frames NeuroMonitor as processor agnostic and suitable for more than one impairment state, which could simplify deployment across vehicle platforms. These advantages remain claims to validate: camera competitors have larger installed bases and mature automotive qualification, while the public record does not yet show CorrActions' independent accuracy, false-positive rate, production latency, patents, or measurable crash-risk reduction."
+risk_factors = ["No publicly confirmed production OEM launch, recurring revenue, fleet volume, or independently audited performance", "Inference robustness risk across different drivers, vehicles, road conditions, sensor quality, and cultural or behavioral variation", "False-positive and liability risk if alerts incorrectly classify fatigue, alcohol, medication, stress, or normal steering behavior", "Privacy, consent, data-governance, and cybersecurity requirements for sensitive cognitive-state signals", "Long automotive qualification and regulatory cycles may consume runway before design-partner interest becomes revenue", "Camera-based incumbents, Tier 1 suppliers, and OEM internal teams have stronger distribution and integration resources", "No public defense contract, aviation certification, MIL-STD qualification, or fielded security deployment"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "CorrActions merits a high-monitoring priority because it targets the human-performance bottleneck in increasingly autonomous systems and has concrete strategic validation from Volvo Cars Tech Fund, BlackBerry, the Israel Innovation Authority, and automotive safety forums. Its technology can plausibly transfer to aviation, remote operations, emergency fleets, and defense vehicles, but the record deliberately discounts that adjacency because no military or government deployment is public. Priority should rise after a named production OEM or fleet deployment, independent validation across sensor stacks, published privacy and cybersecurity controls, or a first safety-critical non-automotive evaluation. Priority should fall if the company cannot demonstrate low false-alarm rates, sufficient runway, or a defensible data and patent position."
+public_sources = [
+  { label = "CorrActions About", url = "https://corractions.com/about/", description = "Current product positioning, stated partners and leadership roster; the CEO listing conflicts with later company material naming Ilan Reingold." },
+  { label = "Startup Nation Finder — CorrActions", url = "https://finder.startupnationcentral.org/company_page/corractions", description = "Company profile, four dated funding entries including the November 2025 SAFE, named investors and team; legacy directory information and its total excludes/does not reconcile the undisclosed 2019 seed." },
+  { label = "TechCrunch: CorrActions raises $2.7M", url = "https://techcrunch.com/2021/05/27/corractions-raises-2-7m-to-help-avoid-errors-in-human-machine-interactions/", description = "Contemporaneous $2.7M 2021 seed announcement and named backers, including the Israel Innovation Authority." },
+  { label = "Calcalist CTech: $7.25M A round", url = "https://www.calcalistech.com/ctechnews/article/r1gz000hu6", description = "Contemporaneous December 2023 Series A amount and investors." },
+  { label = "Volvo Cars Tech Fund announcement", url = "https://www.volvocars.com/uk/media/press-releases/8041DA4564C8757A/", description = "Volvo confirmed leading CorrActions' latest funding round after testing its software; strategic investment, no separate amount disclosed." },
+  { label = "CorrActions partners with CIOT", url = "https://corractions.com/news-events-post/corractions-partners-with-ciot-to-enhance-fleet-safety-with-advanced-driver-cognitive-impairment-detection/", description = "January 2024 announced fleet-system integration and demo plan; does not establish a paying or production customer." },
+  { label = "Israel Innovation Authority CorrActions profile", url = "https://innovationisrael.org.il/en/importWinner/515999761/", description = "Israeli technology and company connection; CEO and headquarters assertions are not current corporate registry evidence." },
+  { label = "WIPO patent publication WO2025181798A3", url = "https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2025181798", description = "Published PCT application identifies Ze Corractions Ltd as applicant/assignee for a driver cognitive-condition monitoring invention." },
+  { label = "European Patent Bulletin 2025/07", url = "https://www.epo.org/bulletin/downloads/2025/bulletin2507.pdf", description = "Lists ZE Corractions Ltd as applicant on an earlier cognitive-state monitoring application." },
+  { label = "Automobil-Elektronik Kongress 2025 agenda", url = "https://www.automobil-elektronik-kongress.de/agenda/event/2025/date/day-2-2025-06-25t000000z/", description = "Independent dated conference agenda lists Ilan Reingold as CorrActions CEO in June 2025." },
+  { label = "VentureIsrael portfolio", url = "https://ventureisrael.com/portfolio", description = "Investor portfolio page currently lists CorrActions, corroborating active status and investor relationship." },
+  { label = "CorrActions and CIOT integration announcement", url = "https://corractions.com/news-events-post/corractions-partners-with-ciot-to-enhance-fleet-safety-with-advanced-driver-cognitive-impairment-detection/", description = "Company-reported partnership and product integration milestone." },
+  { label = "Next Gear Ventures portfolio", url = "https://www.nextgear.fund/venture", description = "Investor portfolio page describes CorrActions and confirms relationship, without disclosing round terms." },
+  { label = "Smart Eye driver monitoring", url = "https://smarteye.se/solutions/automotive/driver-monitoring-system/", description = "Primary competitor source describes camera/computer-vision DMS, deployment and product claims." },
+  { label = "Seeing Machines automotive solutions", url = "https://seeingmachines.com/products/automotive/", description = "Primary competitor source describes its FOVIO driver monitoring technology." },
+  { label = "HARMAN acquires Cipia assets", url = "https://news.harman.com/releases/harman-acquires-assets-of-intelligent-sensing-solutions-leader-cipia", description = "HARMAN announced acquisition of Cipia assets in June 2025, changing Cipia's independent-company status and ownership context." },
+  { label = "Cipia About", url = "https://cipia.com/about-cipia/", description = "Cipia's primary description of its in-cabin computer-vision product area." },
+  { label = "Smart Eye Driver Monitoring System", url = "https://smarteye.se/solutions/automotive/driver-monitoring-system/", description = "Smart Eye's primary description of camera-based DMS and automotive deployments." },
+  { label = "Seeing Machines Automotive Solutions", url = "https://seeingmachines.com/products/automotive/", description = "Seeing Machines' primary description of its FOVIO automotive monitoring technology." },
+]
+crawled_at = "2026-09-20T02:15:50Z"
+updated_at = "2026-10-04T22:37:28Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Eldad Hochman", role = "Co-founder and Chief Science Officer", is_founder = true, current = true, background = "PhD; company and contemporaneous reporting identify him as co-founder and science lead.", source_ids = ["company_about", "techcrunch_seed"] },
+  { name = "Zvi Ginosar", role = "Co-founder and Chairman", is_founder = true, current = true, source_ids = ["company_about", "finder_profile"] },
+  { name = "Ilan Reingold", role = "Chief Executive Officer", is_founder = false, current = true, background = "Identified as CEO by the company in its January 2024 announcement and an independent June 2025 automotive conference agenda.", source_ids = ["ciot_release", "aek_agenda"] },
+  { name = "Vered Levy-Ron", role = "CEO (company About page listing; current status unclear)", is_founder = false, current = false, notes = "Conflicts with dated 2024 company material and 2025 conference agenda identifying Ilan Reingold as CEO; retained as historical/uncertain pending company clarification.", source_ids = ["company_about", "ciot_release", "aek_agenda"] },
+  { name = "Ofer Kruzel", role = "VP R&D", is_founder = false, current = true, source_ids = ["company_about"] },
+  { name = "Ohad Kleinman", role = "Director of Product Management", is_founder = false, current = true, source_ids = ["company_about"] },
+  { name = "Gal Geffen-Frenkel", role = "Director of Regulation & Strategy", is_founder = false, current = true, source_ids = ["company_about"] },
+  { name = "Shahar Aberbach-Goodman", role = "Neurotechnology Lead", is_founder = false, current = true, source_ids = ["company_about"] },
+]
+investors = [
+  { name = "OurCrowd", investor_type = "vc", website = "https://www.ourcrowd.com/", relationship = "historical", round_ids = ["seed-2019-undisclosed", "series-a-2023"], source_ids = ["finder_profile", "calcalist_series_a"] },
+  { name = "Israel Innovation Authority", investor_type = "government", website = "https://innovationisrael.org.il/", relationship = "historical", round_ids = ["seed-2021"], source_ids = ["techcrunch_seed"] },
+  { name = "Operator Partners", investor_type = "vc", website = "https://www.operatorpartners.com/", relationship = "historical", round_ids = ["seed-2021"], source_ids = ["techcrunch_seed"] },
+  { name = "VentureIsrael", investor_type = "vc", website = "https://ventureisrael.com/", relationship = "current", round_ids = ["seed-2021", "safe-2025"], source_ids = ["techcrunch_seed", "finder_profile", "ventureisrael_portfolio"] },
+  { name = "Samurai Incubate Israel", investor_type = "vc", website = "https://www.samurai-incubate.asia/", relationship = "historical", round_ids = ["seed-2021"], source_ids = ["finder_profile"] },
+  { name = "Labs/02", investor_type = "accelerator", website = "https://labs02.com/", relationship = "historical", round_ids = ["seed-2021"], source_ids = ["techcrunch_seed", "finder_profile"] },
+  { name = "Volvo Group Venture Capital / Volvo Cars Tech Fund", investor_type = "corporate", website = "https://www.volvogroup.com/en/about-us/venture-capital.html", relationship = "current", round_ids = ["series-a-2023"], source_ids = ["volvo_announcement", "calcalist_series_a"] },
+  { name = "BlackBerry", investor_type = "corporate", website = "https://www.blackberry.com/", relationship = "current", round_ids = ["series-a-2023"], source_ids = ["calcalist_series_a"] },
+  { name = "Mobilitech Capital", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2023"], source_ids = ["calcalist_series_a"] },
+  { name = "Next Gear Ventures", investor_type = "vc", website = "https://www.nextgear.fund/", relationship = "current", round_ids = ["series-a-2023", "safe-2025"], source_ids = ["calcalist_series_a", "finder_profile", "nextgear_portfolio"] },
+  { name = "NextLeap Ventures", investor_type = "vc", website = "https://nextleapventures.com/", relationship = "historical", round_ids = ["series-a-2023"], source_ids = ["calcalist_series_a"] },
+  { name = "Stone Ventures", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2023"], source_ids = ["calcalist_series_a"] },
+  { name = "Regah Ventures", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2023"], source_ids = ["calcalist_series_a"] },
+]
+financials = []
+traction = [
+  { kind = "partnership", description = "CorrActions announced integration of NeuroMonitor into CIOT's Smart Connect FMS device and a planned live demonstration at South Korea's K-City; announcement documents collaboration/demo, not a paying customer or production deployment.", date = "2024-01-20", source_ids = ["ciot_release"] },
+  { kind = "product", description = "Company currently describes NeuroMonitor as software deployable by OTA using existing vehicle data and states compatibility with BlackBerry IVY; these are company product claims, not proof of commercial fleet scale.", date = "2026-10-04", source_ids = ["company_about"] },
+  { kind = "hiring", description = "Company About page lists CEO, CSO, R&D, product, regulation and neurotechnology leadership roles; directory/LinkedIn reports 11–50 employees, which is a broad range rather than dated audited headcount.", date = "2026-10-04", source_ids = ["company_about", "finder_profile"] },
+]
+intellectual_property = [
+  { kind = "patent", description = "WIPO PCT publication WO2025181798A3, 'System and method for monitoring operational cognitive condition of a driver,' names Ze Corractions Ltd as applicant/assignee and Eldad Izhak Hochman as inventor. Published application is pending; this is patent-application evidence, not a granted patent or freedom-to-operate conclusion.", date = "2026-01-22", source_ids = ["wipo_driver_patent"] },
+  { kind = "patent", description = "European patent bulletin lists ZE Corractions Ltd as applicant for WO 2023/242842, 'Method and system for monitoring cognitive state of an individual'; application publication demonstrates additional IP activity, not granted enforceable rights.", date = "2023-12-21", source_ids = ["epo_bulletin"] },
+]
+comparables = [
+  { name = "Smart Eye", website = "https://www.smarteye.se/", rationale = "Automotive driver and interior monitoring incumbent using camera-based sensing.", differentiation = "CorrActions claims to infer cognitive state from existing vehicle motion inputs without dedicated cameras; comparative validated performance is not public.", source_ids = ["company_about"] },
+  { name = "Seeing Machines", website = "https://seeingmachines.com/", rationale = "Driver and operator monitoring systems for automotive and transport.", differentiation = "Established eye/head computer vision and deployed programs contrast with CorrActions' motion-based software-only inference; direct benchmark data is unavailable." , source_ids = ["company_about"] },
+  { name = "Cipia (assets acquired by HARMAN in 2025)", website = "https://car.harman.com/experiences/ready-care/harman-cipia", rationale = "In-cabin computer-vision driver and occupant monitoring technology now within HARMAN's automotive portfolio.", differentiation = "Camera-based cabin perception is a different sensing modality; CorrActions' claimed benefit is hardware reuse and reduced imagery collection.", source_ids = ["cipia_about", "harman_cipia_deal"] },
+  { name = "OEM steering and camera monitoring stacks", rationale = "Substitute systems and internal OEM development address driver attention or impairment monitoring.", differentiation = "Incumbent integration and regulatory qualification may outweigh CorrActions' sensor-light installation proposition.", source_ids = ["company_about"] },
+]
+
+[intelligence.company]
+company_id = "il-corractions"
+legal_name = "ZE Corractions Ltd."
+aliases = ["ZE CorrActions Ltd", "Corractions"]
+operating_status = "active"
+business_model = "B2B software licensing and integration for automotive OEMs, Tier 1s and fleet/mobility providers; per-vehicle or contract economics are not publicly disclosed."
+products = ["NeuroMonitor"]
+locations = ["Tel Aviv, Israel", "Mevasseret Zion, Israel (patent applicant address)"]
+founded_on = "2019-02"
+source_ids = ["finder_profile", "company_about", "wipo_driver_patent", "ventureisrael_portfolio"]
+notes = "Legal name is grounded in WIPO patent applicant metadata; no Israeli company registry identifier was located. Company profile and investor portfolio provide current operating evidence."
+
+[intelligence.funding]
+status = "reported"
+summary = "Publicly reported record identifies an August 2019 undisclosed seed, a $2.7M May 2021 seed, a $7.25M December 2023 Series A, and a November 2025 $1M SAFE. The amounts for 2021, 2023, and the 2025 SAFE are recorded as disclosed reports. Startup Nation Finder states $10.95M in total, matching those three disclosed amounts but not accounting for the undisclosed 2019 seed; therefore that database aggregate is reported as its stated total with scope limitations, not derived capital and not a complete lifetime amount."
+rounds = [
+  { id = "seed-2019-undisclosed", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2019-08", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = [], participating_investors = ["OurCrowd"], source_ids = ["finder_profile"], notes = "Finder lists Aug 2019 Seed and OurCrowd but does not disclose amount or distinguish incubation from cash investment." },
+  { id = "seed-2021", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2021-05-27", amount_status = "reported", amount = 2700000, currency = "USD", amount_scope = "round", lead_investors = [], participating_investors = ["VentureIsrael", "Operator Partners", "Israel Innovation Authority", "Samurai Incubate Israel", "Labs/02"], source_ids = ["techcrunch_seed", "finder_profile"], notes = "TechCrunch reports $2.7M seed and names VentureIsrael, Operator Partners, Israel Innovation Authority and Labs/02; Finder additionally lists Samurai Incubate Israel." },
+  { id = "series-a-2023", round_type = "Series A", instrument = "equity", status = "closed", announced_on = "2023-12-12", amount_status = "reported", amount = 7250000, currency = "USD", amount_scope = "round", lead_investors = ["Volvo Group Venture Capital", "BlackBerry"], participating_investors = ["Mobilitech Capital", "Next Gear Ventures", "NextLeap Ventures", "Stone Ventures", "OurCrowd", "Regah Ventures"], source_ids = ["calcalist_series_a", "volvo_announcement", "finder_profile"], notes = "Volvo says it led the latest round after testing the software. CTech/Finder list the named participants. Volvo Cars Tech Fund and Volvo Group Venture Capital labels vary by source; treated as one Volvo strategic investor relationship." },
+  { id = "safe-2025", round_type = "SAFE", instrument = "convertible", status = "closed", announced_on = "2025-11", amount_status = "reported", amount = 1000000, currency = "USD", amount_scope = "round", lead_investors = ["Next Gear Ventures"], participating_investors = ["VentureIsrael"], source_ids = ["finder_profile", "nextgear_portfolio", "ventureisrael_portfolio"], notes = "Startup Nation Finder records $1M SAFE in November 2025 with Next Gear Ventures leading and VentureIsrael participating. Investor portfolios confirm relationships but do not independently confirm SAFE amount/terms. No valuation cap or discount found." },
+]
+reported_total_raised = 10950000
+reported_total_currency = "USD"
+total_source_ids = ["finder_profile"]
+total_as_of = "2025-11"
+total_scope = "Finder's reported aggregate equals disclosed 2021 seed + 2023 Series A + 2025 SAFE; excludes or fails to quantify listed 2019 undisclosed seed, and is not a complete verified lifetime sum."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private company; no public cap table, founder/investor ownership percentages, parent company, or ownership transaction found. Investors and financing participation do not establish percentage ownership."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["finder_profile", "volvo_announcement", "wipo_driver_patent"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Israeli deep-tech startup with Tel Aviv headquarters, Israeli-founded identity and Israeli patent applicant ZE Corractions Ltd; an exact registered legal address and incorporation jurisdiction were not independently confirmed from a registry."
+as_of = "2026-10-04"
+source_ids = ["company_about", "finder_profile", "wipo_driver_patent", "techcrunch_seed"]
+
+[intelligence.research]
+researched_at = "2026-10-04T22:37:28Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "CorrActions company legal name headquarters founders products NeuroMonitor",
+  "CorrActions funding raised seed Series A SAFE investors valuation",
+  "CorrActions acquisition acquired ownership parent cap table",
+  "CorrActions CEO leadership team founder background",
+  "CorrActions revenue ARR customers contracts deployments CIOT Volvo",
+  "CorrActions patents ZE Corractions Ltd WIPO EPO",
+  "CorrActions competitors Smart Eye Seeing Machines Cipia driver monitoring",
+  "CorrActions defense military aviation government customer dual use",
+  "CorrActions 2025 SAFE November Next Gear VentureIsrael",
+]
+gaps = [
+  "team: Current CEO is inconsistent: company About page lists Vered Levy-Ron but dated company material and 2025 event agenda name Ilan Reingold; confirm current executive roster and role transitions.",
+  "investors: Exact SAFE instrument terms, valuation cap/discount and complete syndicate are undisclosed; 2019 OurCrowd seed amount and terms unavailable.",
+  "financials: No reliable public revenue, ARR, margins, burn, runway, cash balance or financing valuation found.",
+  "traction: CIOT integration/demo and partner logos do not verify paid production deployment, customer count, volume, renewal, pricing or product effectiveness.",
+  "intellectual_property: Public patent applications establish filings, not grants; complete patent family, prosecution, assignment chain, trade-secret controls and freedom-to-operate need diligence.",
+  "competition: No public head-to-head independent benchmark against Smart Eye, Seeing Machines, Cipia or OEM systems found.",
+  "ownership: Private cap table and beneficial ownership not disclosed; no public parent, acquisition or secondary transaction found.",
+  "funding: Finder's $10.95M stated aggregate reconciles to the disclosed 2021/2023/2025 rounds, while a separate 2019 seed is listed with no amount; cannot assert complete lifetime proceeds.",
+  "dual_use: No verified defense, military, aviation, government contract, field deployment or relevant certification identified; 2021 reporting described defense projects but no named customer or outcome.",
+]
+conflicts = [
+  "Leadership: CorrActions About lists Vered Levy-Ron as CEO (accessed 2026-10-04), but CorrActions' January 2024 CIOT announcement and an independent June 2025 automotive congress agenda identify Ilan Reingold as CEO. Current role remains unresolved.",
+  "Funding total: Finder reports $10.95M total and lists an additional undisclosed 2019 seed. $10.95M equals the three disclosed later round amounts and does not account for the 2019 seed; treat as a database aggregate, not total lifetime raised.",
+  "Volvo round identity: Volvo's 2023 press release describes Volvo Cars Tech Fund leading CorrActions' latest round after prior software testing; round coverage identifies Volvo Group Venture Capital. Likely related Volvo corporate venture branding, but exact investing entity is not reconciled publicly.",
+]
+diligence_questions = [
+  "Is Ilan Reingold the current CEO, and what are the dates and reasons for the Vered Levy-Ron role change shown on the company About page?",
+  "What OEM or fleet programs are paid and in production today, and what vehicle count, contract economics, renewals and commercial launch dates can be verified?",
+  "Provide independent sensitivity, specificity, false-alert rate, calibration and subgroup performance across different drivers, sensors, road conditions and alcohol/fatigue states.",
+  "What are the terms and valuation cap/discount of the November 2025 SAFE, and does the stated $10.95M aggregate include the 2019 OurCrowd seed?",
+  "What is the complete patent family and ownership chain for ZE Corractions Ltd, and what is the freedom-to-operate analysis against camera, steering-signal and driver-monitoring patents?",
+  "What raw signals are retained, where are models trained, and what consent, privacy, cybersecurity and functional safety controls govern intervention recommendations?",
+  "Has any defense, aviation, government or safety-critical non-automotive evaluation progressed beyond exploratory work, and what qualification evidence exists?",
+]
+
+[[intelligence.research.sources]]
+id = "company_about"
+url = "https://corractions.com/about/"
+title = "CorrActions — About"
+publisher = "CorrActions"
+kind = "company"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["NeuroMonitor product description and OTA deployment claims", "Company-listed leadership includes Vered Levy-Ron as CEO and Eldad Hochman as CSO", "Company-described relationship and compatibility with BlackBerry IVY"]
+
+[[intelligence.research.sources]]
+id = "finder_profile"
+url = "https://finder.startupnationcentral.org/company_page/corractions"
+title = "CorrActions — Automotive & Mobility Technologies | Finder"
+publisher = "Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["February 2019 founding and founders Zvi Ginosar and Eldad Hochman", "Four funding entries: 2019 undisclosed seed, 2021 seed, 2023 A round, November 2025 SAFE", "2025 SAFE listed as $1M led by Next Gear Ventures with VentureIsrael", "Directory reports $10.95M aggregate and 11–50 employee band", "Team and investor listing"]
+
+[[intelligence.research.sources]]
+id = "techcrunch_seed"
+url = "https://techcrunch.com/2021/05/27/corractions-raises-2-7m-to-help-avoid-errors-in-human-machine-interactions/"
+title = "CorrActions raises $2.7M to help avoid errors in human-machine interactions"
+publisher = "TechCrunch"
+kind = "media"
+published_on = "2021-05-27"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["CorrActions announced a $2.7 million seed round", "VentureIsrael, Operator Partners and Israel Innovation Authority backed the round; company was based at Labs/02", "Company then described automotive proofs of concept and defense-industry projects without naming customers"]
+
+[[intelligence.research.sources]]
+id = "calcalist_series_a"
+url = "https://www.calcalistech.com/ctechnews/article/r1gz000hu6"
+title = "CorrActions raises $7.25 million to prevent vehicle accidents through AI-based brain activity monitoring"
+publisher = "Calcalist CTech"
+kind = "media"
+published_on = "2023-12-12"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["CorrActions raised $7.25 million in a Series A", "Named participants include Volvo, BlackBerry, Mobilitech, Next Gear, NextLeap, Stone Ventures, OurCrowd and Regah Ventures"]
+
+[[intelligence.research.sources]]
+id = "volvo_announcement"
+url = "https://www.volvocars.com/uk/media/press-releases/8041DA4564C8757A/"
+title = "Volvo Cars Tech Fund invests in AI start-up CorrActions"
+publisher = "Volvo Cars"
+kind = "investor"
+published_on = "2023-04-24"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["Volvo Cars Tech Fund announced investment in CorrActions", "Volvo says it led CorrActions' latest funding round after testing the software"]
+
+[[intelligence.research.sources]]
+id = "ciot_release"
+url = "https://corractions.com/news-events-post/corractions-partners-with-ciot-to-enhance-fleet-safety-with-advanced-driver-cognitive-impairment-detection/"
+title = "CorrActions Partners with CIOT to Enhance Fleet Safety with Advanced Driver Cognitive Impairment Detection"
+publisher = "CorrActions"
+kind = "company"
+published_on = "2024-01-20"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["Company announced integration of NeuroMonitor into CIOT Smart Connect FMS device", "Company announced a planned K-City demonstration", "Announcement identifies Ilan Reingold as CorrActions CEO"]
+
+[[intelligence.research.sources]]
+id = "innovation_authority"
+url = "https://innovationisrael.org.il/en/importWinner/515999761/"
+title = "CorrActions — Israel Innovation Authority Winner Profile"
+publisher = "Israel Innovation Authority"
+kind = "government"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["Israeli innovation authority profile describes CorrActions cognitive monitoring platform and target industries", "Profile identifies Vered Levy-Ron as CEO"]
+
+[[intelligence.research.sources]]
+id = "wipo_driver_patent"
+url = "https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2025181798"
+title = "System and method for monitoring operational cognitive condition of a driver — WO2025181798"
+publisher = "World Intellectual Property Organization"
+kind = "filing"
+published_on = "2026-01-22"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["PCT publication WO2025181798 names Ze Corractions Ltd as applicant/assignee", "Application identifies Eldad Izhak Hochman as inventor and claims driver cognitive-condition monitoring"]
+
+[[intelligence.research.sources]]
+id = "epo_bulletin"
+url = "https://www.epo.org/bulletin/downloads/2025/bulletin2507.pdf"
+title = "European Patent Bulletin 2025/07"
+publisher = "European Patent Office"
+kind = "filing"
+published_on = "2025-02-12"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["Patent bulletin identifies ZE Corractions Ltd as applicant on WO 2023/242842 for a cognitive-state monitoring method and system"]
+
+[[intelligence.research.sources]]
+id = "aek_agenda"
+url = "https://www.automobil-elektronik-kongress.de/agenda/event/2025/date/day-2-2025-06-25t000000z/"
+title = "Automobil-Elektronik Kongress 2025 — Day 2 Agenda"
+publisher = "Automobil-Elektronik Kongress"
+kind = "other"
+published_on = "2025-06-25"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["Independent conference agenda identifies Ilan Reingold as CorrActions CEO in 2025"]
+
+[[intelligence.research.sources]]
+id = "ventureisrael_portfolio"
+url = "https://ventureisrael.com/portfolio"
+title = "VentureIsrael Portfolio"
+publisher = "VentureIsrael"
+kind = "investor"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["VentureIsrael currently lists CorrActions in its portfolio", "VentureIsrael describes its investments in Israeli early-stage deep-tech companies"]
+
+[[intelligence.research.sources]]
+id = "nextgear_portfolio"
+url = "https://www.nextgear.fund/venture"
+title = "Next Gear Ventures — Portfolio"
+publisher = "Next Gear Ventures"
+kind = "investor"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["Next Gear Ventures currently lists CorrActions and describes its neuro-monitoring product", "Next Gear page confirms portfolio relationship but not SAFE terms"]
+
+[[intelligence.research.sources]]
+id = "smarteye_dms"
+url = "https://smarteye.se/solutions/automotive/driver-monitoring-system/"
+title = "Driver Monitoring System (DMS)"
+publisher = "Smart Eye"
+kind = "other"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["Smart Eye describes camera, computer-vision and AI based driver monitoring for distraction and drowsiness", "Smart Eye reports deployment in production vehicles"]
+
+[[intelligence.research.sources]]
+id = "seeing_machines_auto"
+url = "https://seeingmachines.com/products/automotive/"
+title = "Automotive Solutions"
+publisher = "Seeing Machines"
+kind = "other"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["Seeing Machines describes its FOVIO embedded driver monitoring software and automotive offering"]
+
+[[intelligence.research.sources]]
+id = "cipia_about"
+url = "https://cipia.com/about-cipia/"
+title = "About Cipia"
+publisher = "Cipia"
+kind = "other"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["Cipia describes computer-vision AI for driver and cabin sensing"]
+
+[[intelligence.research.sources]]
+id = "harman_cipia_deal"
+url = "https://news.harman.com/releases/harman-acquires-assets-of-intelligent-sensing-solutions-leader-cipia"
+title = "HARMAN Acquires Assets of Intelligent Sensing Solutions Leader Cipia"
+publisher = "HARMAN"
+kind = "other"
+published_on = "2025-06-17"
+accessed_at = "2026-10-04T22:37:28Z"
+claims = ["HARMAN announced acquisition of Cipia assets in June 2025", "Cipia technology was already integrated into HARMAN Ready Care"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T22:37:28Z"
+next_review_on = "2027-04-04"
+queries = ["CorrActions legal name headquarters founders products NeuroMonitor"]
+source_ids = ["company_about", "finder_profile", "wipo_driver_patent", "ventureisrael_portfolio"]
+summary = "Israeli B2B startup ZE Corractions Ltd, founded 2019, develops NeuroMonitor; company and investor materials indicate active operations. No registry number or confirmed incorporation jurisdiction found."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T22:37:28Z"
+next_review_on = "2027-01-04"
+queries = ["CorrActions funding raised seed Series A SAFE investors valuation", "CorrActions 2025 SAFE November Next Gear VentureIsrael"]
+source_ids = ["finder_profile", "techcrunch_seed", "calcalist_series_a", "volvo_announcement"]
+summary = "Four publicly listed rounds across Aug 2019–Nov 2025; 2019 amount undisclosed, three subsequent amounts reported. No valuation or SAFE terms found; record remains partial."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T22:37:28Z"
+next_review_on = "2027-04-04"
+queries = ["CorrActions investors 2019 2021 2023 2025 funding participants", "CorrActions portfolio Next Gear VentureIsrael OurCrowd"]
+source_ids = ["finder_profile", "techcrunch_seed", "calcalist_series_a", "volvo_announcement", "ventureisrael_portfolio", "nextgear_portfolio"]
+summary = "Named round investors captured with round relationships. Complete cap table, beneficial owners and SAFE syndicate terms are not public."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "conflicting"
+checked_at = "2026-10-04T22:37:28Z"
+next_review_on = "2026-11-04"
+queries = ["CorrActions CEO leadership team founder background", "CorrActions Ilan Reingold CEO Vered Levy-Ron"]
+source_ids = ["company_about", "ciot_release", "aek_agenda", "finder_profile"]
+summary = "Founders and leadership roles documented; CEO page conflicts with dated company/independent 2024–2025 references. Background and exact current team/headcount remain incomplete."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T22:37:28Z"
+next_review_on = "2027-04-04"
+queries = ["CorrActions acquisition acquired ownership parent cap table", "ZE Corractions Ltd shareholders ownership registry"]
+source_ids = ["finder_profile", "wipo_driver_patent", "volvo_announcement"]
+summary = "Private standalone company; no disclosed shareholders, percentages, acquisition or parent company found. Investor participation alone does not show ownership share."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T22:37:28Z"
+next_review_on = "2027-04-04"
+queries = ["CorrActions revenue ARR financials burn runway valuation", "CorrActions contracts revenue financial statements"]
+source_ids = ["finder_profile", "calcalist_series_a", "company_about"]
+summary = "No dated and sourced revenue, ARR, profitability, cash, burn, runway or valuation figures located. Financial metrics list is empty for this reason."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T22:37:28Z"
+next_review_on = "2027-01-04"
+queries = ["CorrActions revenue ARR customers contracts deployments CIOT Volvo", "CorrActions customer production vehicle fleet deployment"]
+source_ids = ["ciot_release", "company_about", "finder_profile"]
+summary = "Company reports CIOT integration and automotive partnerships; no independent evidence of a paid production deployment, volume, revenue or measured outcomes found."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-04T22:37:28Z"
+next_review_on = "2027-04-04"
+queries = ["CorrActions patents ZE Corractions Ltd WIPO EPO", "ZE Corractions driver cognitive condition patent"]
+source_ids = ["wipo_driver_patent", "epo_bulletin"]
+summary = "At least two public patent application families located, assigned to ZE Corractions Ltd. Public applications do not prove grant, enforceability, complete portfolio or freedom to operate."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T22:37:28Z"
+next_review_on = "2027-04-04"
+queries = ["CorrActions competitors Smart Eye Seeing Machines Cipia driver monitoring", "Smart Eye driver monitoring official", "Seeing Machines driver monitoring official"]
+source_ids = ["smarteye_dms", "seeing_machines_auto", "cipia_about", "harman_cipia_deal"]
+summary = "Camera-based DMS vendors Smart Eye and Seeing Machines plus Cipia's acquired assets inside HARMAN and OEM/Tier 1 internal systems are relevant modality/substitute peers. No comparable independent benchmark found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T22:37:28Z"
+next_review_on = "2027-04-04"
+queries = ["CorrActions defense military aviation government customer dual use", "CorrActions fighter jet defense contract pilot"]
+source_ids = ["techcrunch_seed", "ciot_release", "company_about"]
+summary = "Operator-state monitoring has plausible aviation and defense transfer, and 2021 coverage mentioned unnamed defense-industry projects. No named government customer, contract, field deployment or certification verified."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Company still describes an active product and current leadership, and VentureIsrael currently lists CorrActions in its portfolio."
+verified_at = "2026-10-04T22:37:28Z"
+source_ids = ["company_about", "ventureisrael_portfolio"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Startup Nation Finder identifies Tel Aviv-Yafo company location and founders; WIPO identifies ZE Corractions Ltd as Israeli applicant; government profile covers the Israeli company."
+verified_at = "2026-10-04T22:37:28Z"
+source_ids = ["finder_profile", "wipo_driver_patent", "innovation_authority"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Finder states reported total raised of $10.95M; this appears to add the disclosed later rounds and excludes the separate 2019 undisclosed seed, so it is retained only as a directory-reported aggregate."
+verified_at = "2026-10-04T22:37:28Z"
+source_ids = ["finder_profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2021.amount"
+support = "direct"
+summary = "TechCrunch's May 27, 2021 report says CorrActions announced a $2.7M seed round."
+verified_at = "2026-10-04T22:37:28Z"
+source_ids = ["techcrunch_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2019-undisclosed.participating_investors"
+support = "direct"
+summary = "Finder lists an August 2019 seed round with OurCrowd; no amount or detailed terms are disclosed."
+verified_at = "2026-10-04T22:37:28Z"
+source_ids = ["finder_profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2021.participating_investors"
+support = "direct"
+summary = "TechCrunch names VentureIsrael, Operator Partners and Israel Innovation Authority; Finder adds Samurai Incubate Israel and Labs/02."
+verified_at = "2026-10-04T22:37:28Z"
+source_ids = ["techcrunch_seed", "finder_profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2023.amount"
+support = "direct"
+summary = "Contemporaneous CTech report gives the Series A amount as $7.25M."
+verified_at = "2026-10-04T22:37:28Z"
+source_ids = ["calcalist_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2023.lead_investors"
+support = "direct"
+summary = "CTech identifies Volvo and BlackBerry as lead participants; Volvo independently states its corporate fund led CorrActions' latest funding round."
+verified_at = "2026-10-04T22:37:28Z"
+source_ids = ["calcalist_series_a", "volvo_announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2023.participating_investors"
+support = "direct"
+summary = "Contemporaneous CTech report names Mobilitech, Next Gear, NextLeap, Stone Ventures, OurCrowd and Regah Ventures as participants."
+verified_at = "2026-10-04T22:37:28Z"
+source_ids = ["calcalist_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-2025.amount"
+support = "direct"
+summary = "Startup Nation Finder lists the November 2025 SAFE as $1M; amount lacks a primary company or investor announcement."
+verified_at = "2026-10-04T22:37:28Z"
+source_ids = ["finder_profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-2025.lead_investors"
+support = "direct"
+summary = "Finder names Next Gear Ventures as lead; its portfolio page confirms its CorrActions relationship but not round terms."
+verified_at = "2026-10-04T22:37:28Z"
+source_ids = ["finder_profile", "nextgear_portfolio"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-2025.participating_investors"
+support = "direct"
+summary = "Finder names VentureIsrael as SAFE participant; its current portfolio page confirms relationship, without independently confirming this round."
+verified_at = "2026-10-04T22:37:28Z"
+source_ids = ["finder_profile", "ventureisrael_portfolio"]

@@ -1,0 +1,594 @@
+name = "Backslash Security"
+description = "Backslash Security is an Israeli cybersecurity startup protecting agentic AI on employee and developer endpoints. Its platform discovers AI agents, MCP servers, skills, plugins, hooks, and related activity, then provides governance, risk assessment, and runtime controls."
+detailed_description = """Backslash Security focuses on a security layer that traditional application-security, endpoint, and network products do not model well: the agentic AI fabric running inside employee workstations. The company describes a platform that continuously discovers AI coding agents, copilots, MCP servers, skills, hooks, plugins, rules, and the models and tools they invoke. It combines inventory and posture scoring with policy controls such as allowlists, blocklists, approval workflows, configuration hardening, and contextual permissions. Its protection layer is intended to detect or block prompt injection, tool poisoning, unsafe scope or privilege use, suspicious agent behavior, and data or source-code exfiltration before an agent's action reaches an external system. The product also records harness-layer events, including MCP communications, agent network access, and file access, for investigation and compliance reporting.
+
+The commercial problem is becoming more concrete as enterprises move from chat assistants to autonomous coding and workforce agents. Claude Code, Cursor, GitHub Copilot, Windsurf, Gemini CLI, OpenAI Codex, and similar tools can read files, execute commands, call APIs, install extensions, and use MCP-connected services. That creates a control problem for CISOs: the organization may need to permit rapid AI adoption while still knowing which tools are present, which identities or permissions they hold, what data they can reach, and whether a workflow is behaving as intended. Backslash's public positioning therefore sits between AI security, endpoint security, developer security, and software-supply-chain governance. The free MCP Server Security Hub and Skills Security Scanner also function as public educational and assessment surfaces, while the enterprise platform is sold around visibility, governance, and real-time protection.
+
+The competitive case is plausible but not yet proven. Backslash differentiates itself by asserting that it observes agent intent and tool activity at the workstation or harness layer, rather than only processes, network traffic, repositories, generated code, or model inputs. That can complement GitHub Advanced Security, Snyk, Semgrep, Apiiro, Wiz, Palo Alto Networks, CrowdStrike, and AI gateway products, but the same adjacency creates buyer and budget ambiguity. Platform vendors can add controls to their own agents and IDEs, while endpoint and identity vendors can extend existing telemetry. Backslash must demonstrate that its cross-agent and cross-endpoint coverage remains materially better than combinations of native controls, EDR, DLP, identity policy, and software-supply-chain tools. The company's public materials identify enterprise users and a growing supported-tool set, but they do not provide independently verified revenue, retention, deployment scale, or customer concentration data.
+
+Commercial momentum is supported by the company's February 2026 announcement of a $19 million Series A led by KOMPAS VC, with Maniv, Artofin Venture Capital, StageOne Ventures, and First Rays Capital participating; the announcement says this followed an $8 million seed round. The same release says funding is intended to expand research and development, deepen the platform, and scale go-to-market in the United States and Europe. LinkedIn currently lists the company in the 11-50 employee range, with a Tel Aviv headquarters and a 2022 founding year. Those are useful maturity signals, but they should not be treated as proof of product-market fit. Relevant diligence includes paid production deployments, endpoint-agent installation and bypass resistance, false-positive rates, support for regulated environments, renewal and expansion behavior, and whether the company can convert public research and assessments into durable enterprise contracts.
+
+The dual-use case is credible but indirect. The core technology protects software-development and knowledge-work endpoints, not weapons or military systems. Nevertheless, defense contractors, government software factories, critical-infrastructure operators, and other mission-critical organizations increasingly face the same risks from autonomous agents, untrusted extensions, data access, and software supply-chain compromise. A platform that can inventory and constrain agentic actions could support secure development environments and contractor governance, subject to deployment, sovereignty, procurement, and classified-environment requirements. There is no public evidence in the reviewed sources of defense contracts or military deployments, so national-security relevance should be treated as an addressable market and diligence hypothesis rather than established traction."""
+logo = "https://www.backslash.security/favicon.ico"
+website = "https://www.backslash.security"
+sector = "Cybersecurity / Agentic AI Endpoint Security"
+founded = "2022"
+headquarters = "Tel Aviv, Israel"
+employees = "11-50"
+funding_stage = "Series A"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Backslash's endpoint and harness-layer controls have substantive applicability to commercial software development, defense contractors, government software factories, and critical infrastructure that use autonomous agents. The dual-use case is security-infrastructure adjacency rather than direct defense technology, and public evidence does not establish military customers or classified deployments."
+key_technologies = ["Agentic AI endpoint discovery and inventory", "MCP server, skill, plugin, and hook risk assessment", "Policy enforcement, allowlisting, blocklisting, and approval workflows", "Harness-layer monitoring of prompts, tool calls, file access, and network activity", "Real-time detection and prevention of prompt injection, tool poisoning, and exfiltration", "AI development posture scoring, audit trails, and forensic investigation"]
+use_cases = ["Discovering shadow AI agents and MCP integrations across developer endpoints", "Governing Claude Code, Cursor, Copilot, Codex, Windsurf, and similar coding agents", "Vetting MCP servers, skills, plugins, and hooks before enterprise installation", "Blocking prompt injection, tool poisoning, excessive permissions, and data exfiltration", "Auditing autonomous agent activity for incident response and AI governance", "Protecting software-factory and contractor development environments in regulated sectors", "Supporting secure adoption of AI-assisted development without banning approved tools"]
+investible = true
+investment_rationale = "Backslash is a credible strategic-priority signal because it targets a fast-forming security control point created by autonomous AI agents and has publicly announced a $19 million Series A after an $8 million seed round. Its product thesis is specific: inventory and govern agentic activity at the endpoint and harness layer, where conventional EDR, DLP, network controls, and code scanning may lack semantic context. The opportunity is supported by rapid enterprise adoption of coding agents and by the need to control shadow AI. The case remains diligence-dependent: the category is immature, platform vendors can bundle adjacent features, and public sources do not establish revenue scale, retention, or defense adoption. This flag is an internal strategic-fit signal, not an investment recommendation."
+strategic_value = "Backslash could provide strategic visibility and control over autonomous software-production activity, including the agents, MCP services, permissions, files, and external tools connected to enterprise endpoints. That is relevant to software supply-chain resilience, AI governance, and secure development in critical industries. Its value for national-security users would depend on endpoint deployment in constrained environments, evidence of low-friction enforcement, procurement readiness, data handling, and support for organizations with strict network or sovereignty requirements."
+public_sources = [
+  { label = "Backslash Security", url = "https://www.backslash.security/", description = "Current product positioning and platform capabilities." },
+  { label = "Backslash Series A announcement", url = "https://www.backslash.security/press-releases/backslash-security-raises-19m-series-a-to-secure-vibe-coding-boom-in-the-enterprise-bolsters-board-with-cybersecurity-industry-leader", description = "Series A amount, investors, seed history, and board appointment." },
+  { label = "Backslash about", url = "https://www.backslash.security/about", description = "Founders, headquarters context, product purpose, and investor/advisor names." },
+  { label = "Backslash seed announcement", url = "https://www.globenewswire.com/news-release/2023/03/22/2632254/0/en/backslash-security-emerges-from-stealth-to-fuse-code-security-with-cloud-native-context-transforming-a-decades-long-appsec-paradigm.html", description = "Seed financing, early investors, founders, and original AppSec product." },
+  { label = "Artofin Backslash investment post", url = "https://www.artofin.com/our-new-investment-in-backslash/", description = "Artofin's 2024 investment; instrument and amount not disclosed on the page." },
+  { label = "Backslash Agentic Fabric Graph announcement", url = "https://www.globenewswire.com/news-release/2026/07/29/3335286/0/en/backslash-introduces-agentic-fabric-graph-to-visualize-and-assess-endpoint-ai-risks.html", description = "July 2026 product milestone and current agentic endpoint positioning." },
+  { label = "Backslash AI Skills announcement", url = "https://www.globenewswire.com/news-release/2026/03/18/3258240/0/en/Backslash-Security-Adds-Discovery-and-Guardrails-for-Agentic-AI-Skills.html", description = "March 2026 cross-product AI Skills discovery and guardrails." },
+  { label = "Happy Returns case study", url = "https://www.backslash.security/case-studies/happy-returns", description = "Company-published deployment evidence and customer testimony." },
+  { label = "Backslash 2025 traction release", url = "https://www.globenewswire.com/news-release/2025/04/09/3058480/0/en/backslash-security-s-digital-twin-approach-to-application-security-gains-traction-as-legacy-tools-fall-short.html", description = "Company-reported AppSec revenue and customer growth for the twelve months before April 2025." },
+  { label = "KOMPAS investment rationale", url = "https://www.kompas.vc/news/why-we-invested-in-backslash", description = "Lead investor's account of the platform, founding team, and investment." },
+  { label = "Backslash agentic endpoint security", url = "https://www.backslash.security/agentic-endpoint-security", description = "Current product details and supported endpoints and controls." },
+  { label = "Backslash MCP security research", url = "https://www.backslash.security/blog/mcp-server-security-hub", description = "Company research and public security assessment surface." }
+]
+potential_score = 82.0
+technology_score = 86.0
+market_score = 87.0
+team_score = 78.0
+dual_use_score = 76.0
+strategic_alignment_score = 81.0
+stage = "early"
+stage_rationale = "Backslash remains an early-stage private startup, but it has progressed beyond seed validation with a publicly announced Series A and a stated plan to expand R&D and go-to-market. Its category is commercially timely but still forming, and current public evidence is stronger for product positioning, research activity, and financing than for independently verified recurring revenue, retention, or deployment scale."
+competitors = ["GitHub Advanced Security and native Copilot governance", "Snyk and Semgrep application and developer security", "Apiiro software-development security governance", "CrowdStrike, SentinelOne, and other endpoint platforms", "Wiz and Palo Alto Networks AI and cloud security controls", "AI gateways and identity or DLP tools used as substitutes"]
+competitive_edge = "Backslash's claimed edge is a unified control plane for the agentic AI fabric across endpoints, rather than a product limited to source-code findings, network traffic, or one model vendor. Its focus on agent inventory, MCP and skill vetting, contextual permissions, harness-layer event telemetry, and real-time intervention gives it a coherent wedge into shadow-AI governance. The edge is not yet durable by default: it must prove broad agent coverage, reliable blocking with acceptable developer friction, low false positives, and materially better visibility than native controls combined with EDR, identity, DLP, and AppSec products."
+risk_factors = ["The agentic-AI security category is immature, so ownership of budget and risk may remain split among CISO, AppSec, endpoint, developer-platform, and AI-governance teams.", "Microsoft, GitHub, Anthropic, Google, OpenAI, CrowdStrike, Palo Alto Networks, and other platforms could bundle overlapping inventory, policy, and runtime controls.", "Rapid changes in agents, IDEs, MCP specifications, skills, hooks, and model providers create continual integration, reverse-engineering, and compatibility costs.", "Endpoint-level enforcement can create developer friction or blind spots if users work from personal accounts, unmanaged devices, remote environments, or heavily customized toolchains.", "Detection quality is difficult to validate: prompt injection, tool poisoning, privilege abuse, and exfiltration controls must limit false positives without allowing evasive agent behavior.", "Public financing and customer references indicate momentum, but independently verified revenue, retention, deployment scale, and customer concentration remain diligence gaps.", "Defense and regulated-sector expansion may require procurement, data-residency, platform-hardening, and isolated-environment capabilities not established by the public record."]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Backslash merits a strong but not top-ranked strategic-priority signal because it combines a specific emerging security control point, credible Series A financing, and plausible relevance to secure software production in critical sectors. Scores are moderated by the absence of public evidence for defense deployments, independently verified commercial scale, or a durable moat against platform bundling. The record therefore supports continued diligence rather than recommendation language."
+crawled_at = "2026-02-15T18:24:00Z"
+updated_at = "2026-10-04T02:11:01Z"
+
+[intelligence]
+schema_version = 2
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "il-backslash-security"
+legal_name = "Backslash Security"
+aliases = ["Backslash", "Backslash Security"]
+operating_status = "active"
+business_model = "B2B enterprise cybersecurity software; subscription and platform revenue model inferred from enterprise product marketing, with pricing and contract terms not publicly disclosed."
+products = ["Agentic AI Endpoint Security platform", "Agentic Fabric Graph", "AI Endpoint Exposure Assessment", "AI Skills discovery and guardrails", "MCP Server Security Hub", "Skills Security Scanner"]
+locations = ["Tel Aviv, Israel"]
+linkedin_url = "https://www.linkedin.com/company/backslashsecurity/"
+founded_on = "2022"
+source_ids = ["about", "series_a", "fabric_graph"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public announcements disclose an $8 million seed round in March 2023 and a $19 million Series A announced February 10, 2026. Both amounts are company-announced equity rounds. Artofin separately announced an investment in October 2024, but its source does not disclose instrument, amount, or whether it was included in the later cumulative seed amount; it is recorded as an undisclosed, unquantified event and is not added to the disclosed rounds or any total. No round valuation was found."
+history_status = "partial"
+coverage_through = "2026-10-04"
+rounds = [
+  { id = "seed-2023", round_type = "Seed", instrument = "equity", status = "announced", announced_on = "2023-03-22", amount_status = "reported", amount = 8000000, amount_scope = "round", currency = "USD", lead_investors = ["StageOne Ventures", "First Rays Venture Partners", "D. E. Shaw & Co."], participating_investors = ["Shlomo Kramer", "Ron Zoran", "Brian Fielder"], source_ids = ["seed_announcement"] },
+  { id = "artofin-2024", round_type = "Investment (instrument undisclosed)", instrument = "unknown", status = "announced", announced_on = "2024-10-08", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = ["Artofin Venture Capital Fund"], participating_investors = [], source_ids = ["artofin_2024"], notes = "Artofin's October 8, 2024 post says it made a new investment in Backslash. It does not disclose instrument, amount, or whether this was a SAFE, equity round, or part of another financing. Startup Nation Finder describes a September 2024 SAFE, but that secondary database account is not used to assert a specific instrument here." },
+  { id = "series-a-2026", round_type = "Series A", instrument = "equity", status = "announced", announced_on = "2026-02-10", amount_status = "reported", amount = 19000000, amount_scope = "round", currency = "USD", lead_investors = ["KOMPAS VC"], participating_investors = ["Maniv", "Artofin Venture Capital", "StageOne Ventures", "First Rays Capital"], source_ids = ["series_a"], notes = "The announcement says the round followed the $8 million seed. It does not disclose a valuation." }
+]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Backslash is presented as a private company. No parent company, acquisition, exit, public listing, or ownership percentages were identified in the reviewed sources. Private cap table and beneficial ownership are not publicly disclosed."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["about", "series_a"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "The company identifies Tel Aviv, Israel as its headquarters in its financing announcement; the founders and current leadership are identified in company and investor materials."
+as_of = "2026-10-04"
+source_ids = ["series_a", "about", "kompas"]
+
+[intelligence.research]
+researched_at = "2026-10-04T02:11:01Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Backslash Security official company about founders headquarters products operating status",
+  "Backslash Security funding raised seed Series A investors valuation acquisition",
+  "Backslash Security Artofin 2024 investment SAFE",
+  "Backslash Security leadership CEO CTO board Ron Zoran founders",
+  "Backslash Security ownership acquisition parent company",
+  "Backslash Security revenue ARR profitability runway employees financial metrics",
+  "Backslash Security customers deployments Happy Returns partnership contract traction",
+  "Backslash Security patents WIPO USPTO",
+  "Backslash Security competitors agentic AI endpoint security",
+  "Backslash Security defense government military dual use deployment",
+  "Backslash Security Israel CTech Calcalist funding February 2026",
+  "site:backslash.security/press-releases Backslash Security 2026 product announcement"
+]
+gaps = [
+  "team: founders and the Series A board appointment are identified, but no complete current employee or executive roster with independently verified roles and biographies was found.",
+  "investors: round participants are named where disclosed; the full private cap table, ownership percentages, and details of the October 2024 Artofin instrument are unavailable.",
+  "financials: no current audited revenue, ARR, profitability, burn, cash, or runway disclosure was found; 2025 growth claims are historical company-reported metrics.",
+  "traction: Happy Returns is a named company-published customer deployment, but contract value, renewal, retention, deployment count, and independently verified customer scale are undisclosed.",
+  "intellectual_property: no company-assigned patent or published patent application was identified in targeted public patent searches; this does not establish that none exists.",
+  "competition: no independent head-to-head evaluation or market-share evidence was found; comparative positioning relies on vendor product descriptions and the company thesis.",
+  "ownership: company is private; beneficial ownership, cap table, share classes, and any non-public transaction details were not found.",
+  "dual_use: no public defense, military, classified, or government deployment or contract evidence was found."
+]
+conflicts = []
+diligence_questions = [
+  "What percentage of deployments are paid production deployments, and what are gross retention, net retention, and customer concentration by ARR?",
+  "What is the exact instrument, amount, and capitalization treatment of Artofin's October 2024 investment, and is it already included in the disclosed seed or Series A figures?",
+  "How does endpoint/harness coverage compare in measured detection, prevention, false-positive rate, bypass resistance, OS coverage, and developer friction against native controls and EDR/DLP combinations?",
+  "What customer evidence, renewal data, and independently referenceable outcomes support the transition from earlier AppSec products to the agentic endpoint platform?",
+  "Can the platform operate in isolated or sovereignty-constrained environments, and are there any confirmed public-sector deployments or procurement qualifications?"
+]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://www.backslash.security/about"
+title = "About Backslash - Securing Agentic AI at the Endpoint"
+publisher = "Backslash Security"
+kind = "company"
+accessed_at = "2026-10-04T02:11:01Z"
+claims = ["Company describes agentic endpoint security products and purpose.", "Shahar Man and Yossi Pik are CEO/co-founder and CTO/co-founder.", "Company identifies investor and cybersecurity-advisor names."]
+
+[[intelligence.research.sources]]
+id = "series_a"
+url = "https://www.backslash.security/press-releases/backslash-security-raises-19m-series-a-to-secure-vibe-coding-boom-in-the-enterprise-bolsters-board-with-cybersecurity-industry-leader"
+title = "Backslash Security Raises $19M Series A to Secure Vibe Coding Boom in the Enterprise, Bolsters Board with Cybersecurity Industry Leader"
+publisher = "Backslash Security"
+kind = "company"
+published_on = "2026-02-10"
+accessed_at = "2026-10-04T02:11:01Z"
+claims = ["Announced $19 million Series A led by KOMPAS VC, with Maniv, Artofin, StageOne, and First Rays participating.", "Series A followed an announced $8 million seed round.", "Ronen Zoran joined the board as an independent member.", "Announcement gives Tel Aviv, Israel as company location."]
+
+[[intelligence.research.sources]]
+id = "seed_announcement"
+url = "https://www.globenewswire.com/news-release/2023/03/22/2632254/0/en/backslash-security-emerges-from-stealth-to-fuse-code-security-with-cloud-native-context-transforming-a-decades-long-appsec-paradigm.html"
+title = "Backslash Security Emerges from Stealth to Fuse Code Security with Cloud-Native Context"
+publisher = "GlobeNewswire / Backslash Security"
+kind = "company"
+published_on = "2023-03-22"
+accessed_at = "2026-10-04T02:11:01Z"
+claims = ["Company announced an $8 million seed round led by StageOne Ventures, First Rays Venture Partners, and D. E. Shaw & Co.", "Names Shlomo Kramer, Ron Zoran, and Brian Fielder among seed angels.", "Identifies founders Shahar Man and Yossi Pik and their prior experience.", "Company described its original cloud-native AppSec product."]
+
+[[intelligence.research.sources]]
+id = "artofin_2024"
+url = "https://www.artofin.com/our-new-investment-in-backslash/"
+title = "Our new investment in Backslash"
+publisher = "Artofin"
+kind = "investor"
+published_on = "2024-10-08"
+accessed_at = "2026-10-04T02:11:01Z"
+claims = ["Artofin publicly announced a new investment in Backslash on October 8, 2024; amount and instrument are not stated on the announcement."]
+
+[[intelligence.research.sources]]
+id = "fabric_graph"
+url = "https://www.globenewswire.com/news-release/2026/07/29/3335286/0/en/backslash-introduces-agentic-fabric-graph-to-visualize-and-assess-endpoint-ai-risks.html"
+title = "Backslash Introduces Agentic Fabric Graph to Visualize and Assess Endpoint AI Risks"
+publisher = "GlobeNewswire / Backslash Security"
+kind = "company"
+published_on = "2026-07-29"
+accessed_at = "2026-10-04T02:11:01Z"
+claims = ["Backslash announced Agentic Fabric Graph for visualization and assessment across endpoint AI components.", "Company offers a guided, agentless, read-only exposure assessment for organizations with 200+ endpoints.", "Announcement describes broader agentic AI endpoint platform and current positioning."]
+
+[[intelligence.research.sources]]
+id = "skills_release"
+url = "https://www.globenewswire.com/news-release/2026/03/18/3258240/0/en/Backslash-Security-Adds-Discovery-and-Guardrails-for-Agentic-AI-Skills.html"
+title = "Backslash Security Adds Discovery and Guardrails for Agentic AI Skills"
+publisher = "GlobeNewswire / Backslash Security"
+kind = "company"
+published_on = "2026-03-18"
+accessed_at = "2026-10-04T02:11:01Z"
+claims = ["Backslash announced cross-product discovery, vetting, risk assessment, and guardrails for AI Skills.", "Company said this capability was available on its platform as of March 18, 2026.", "Yossi Pik is named co-founder and CTO."]
+
+[[intelligence.research.sources]]
+id = "happy_returns"
+url = "https://www.backslash.security/case-studies/happy-returns"
+title = "Happy Returns - Backslash"
+publisher = "Backslash Security"
+kind = "customer"
+accessed_at = "2026-10-04T02:11:01Z"
+claims = ["Company case study says Happy Returns deployed across all Mac and Windows endpoints and was fully operational in under 30 days.", "Case study describes centralized guardrails blocking unapproved models and monitoring risky AI behavior.", "Case study quotes Phillip Walsh, Director and Head of Information Security at Happy Returns."]
+
+[[intelligence.research.sources]]
+id = "traction_2025"
+url = "https://www.globenewswire.com/news-release/2025/04/09/3058480/0/en/backslash-security-s-digital-twin-approach-to-application-security-gains-traction-as-legacy-tools-fall-short.html"
+title = "Backslash Security’s Digital Twin Approach to Application Security Gains Traction as Legacy Tools Fall Short"
+publisher = "GlobeNewswire / Backslash Security"
+kind = "company"
+published_on = "2025-04-09"
+accessed_at = "2026-10-04T02:11:01Z"
+claims = ["Company stated its revenue quadrupled and its customer base grew 150% over the preceding twelve months.", "Company described App Graph and named monday.com as a user of its AppSec technology."]
+
+[[intelligence.research.sources]]
+id = "kompas"
+url = "https://www.kompas.vc/news/why-we-invested-in-backslash"
+title = "Why we invested in Backslash: Securing the future of AI-generated code"
+publisher = "KOMPAS VC"
+kind = "investor"
+published_on = "2026-02-17"
+accessed_at = "2026-10-04T02:11:01Z"
+claims = ["KOMPAS identifies itself as lead Series A investor.", "Investor describes Backslash product focus and names Shahar Man, Yossi Pik, and Rani as builders."]
+
+[[intelligence.research.sources]]
+id = "product"
+url = "https://www.backslash.security/agentic-endpoint-security"
+title = "Securing the Agentic AI Fabric on Every Endpoint"
+publisher = "Backslash Security"
+kind = "company"
+accessed_at = "2026-10-04T02:11:01Z"
+claims = ["Company describes agent discovery, governance, monitoring, and runtime controls across endpoints.", "Company says its audit trail covers MCP communications and agent network and file access."]
+
+[[intelligence.research.sources]]
+id = "mcp_research"
+url = "https://www.backslash.security/blog/mcp-server-security-hub"
+title = "MCP Server Security Hub"
+publisher = "Backslash Security"
+kind = "company"
+accessed_at = "2026-10-04T02:11:01Z"
+claims = ["Company publishes an MCP server security assessment and research resource."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T02:11:01Z"
+next_review_on = "2027-01-04"
+queries = ["Backslash Security official company about founders headquarters products operating status"]
+source_ids = ["about", "series_a", "fabric_graph"]
+summary = "Official company materials and company funding and product releases consistently identify Backslash Security as an active Israeli agentic AI endpoint security startup founded by Shahar Man and Yossi Pik. No distinct legal entity name or registry identifier was established."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T02:11:01Z"
+next_review_on = "2027-01-04"
+queries = ["Backslash Security funding raised seed Series A investors valuation acquisition", "Backslash Security Artofin 2024 investment SAFE"]
+source_ids = ["series_a", "seed_announcement", "artofin_2024", "kompas"]
+summary = "Primary company announcements verify $8 million seed and $19 million Series A. Artofin's 2024 announcement verifies a separate investment without amount or instrument. No valuation, debt, grant, or other disclosed round amount found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T02:11:01Z"
+next_review_on = "2027-01-04"
+queries = ["Backslash Security funding raised seed Series A investors valuation", "Backslash Security Artofin 2024 investment SAFE"]
+source_ids = ["series_a", "seed_announcement", "artofin_2024", "about"]
+summary = "Named round investors come from the seed and Series A announcements; the public pages do not establish full cap table or individual ownership."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T02:11:01Z"
+next_review_on = "2027-01-04"
+queries = ["Backslash Security leadership CEO CTO board Ron Zoran founders"]
+source_ids = ["about", "series_a", "seed_announcement", "kompas"]
+summary = "Company pages identify Shahar Man and Yossi Pik as co-founder CEO and co-founder CTO. Series A release says Ron Zoran joined the board as an independent member. A complete current employee roster is not publicly established."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T02:11:01Z"
+next_review_on = "2027-01-04"
+queries = ["Backslash Security ownership acquisition parent company", "Backslash Security acquired parent ownership"]
+source_ids = ["about", "series_a"]
+summary = "Company remains presented as a private independent startup in reviewed materials. No parent, acquisition, public listing, or disclosed cap table was found."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T02:11:01Z"
+next_review_on = "2027-01-04"
+queries = ["Backslash Security revenue ARR profitability runway employees financial metrics"]
+source_ids = ["traction_2025", "series_a"]
+summary = "No current audited revenue, ARR, profitability, burn, or runway was identified. Company reported 4x revenue growth and 150% customer-base growth for the twelve months ending April 2025; no base or absolute revenue was disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T02:11:01Z"
+next_review_on = "2027-01-04"
+queries = ["Backslash Security customers deployments Happy Returns partnership contract traction"]
+source_ids = ["happy_returns", "traction_2025", "fabric_graph"]
+summary = "A company-published case study names Happy Returns and claims a full Mac/Windows endpoint deployment under 30 days. An earlier press release reported revenue and customer growth. These are not independently audited; contract value and renewal information remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T02:11:01Z"
+next_review_on = "2027-01-04"
+queries = ["Backslash Security patents WIPO USPTO", "Backslash Security patent assignee Shahar Man Yossi Pik"]
+source_ids = ["product", "mcp_research"]
+summary = "Targeted public patent searches did not identify a company-assigned patent or published application. No positive IP registration claim is made; unindexed or unpublished applications may exist."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T02:11:01Z"
+next_review_on = "2027-01-04"
+queries = ["Backslash Security competitors agentic AI endpoint security"]
+source_ids = ["product", "fabric_graph", "kompas"]
+summary = "Competitive set remains endpoint/EDR, developer/AppSec, AI governance, and agent security vendors. No independent head-to-head product evidence or market-share data identified."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T02:11:01Z"
+next_review_on = "2027-01-04"
+queries = ["Backslash Security defense government military dual use deployment"]
+source_ids = ["fabric_graph", "product", "happy_returns"]
+summary = "Endpoint security for AI development has plausible commercial and defense-contractor applicability, but no government, military, classified, or defense deployment evidence was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current company platform, about, and July 2026 product release are active and describe its current commercial product."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["about", "fabric_graph"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "The Series A announcement gives Tel Aviv, Israel as company location; company materials identify its Israeli founders."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["series_a", "about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2023.amount"
+support = "direct"
+summary = "The March 22, 2023 company announcement says it secured an $8 million round."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["seed_announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2023.lead_investors"
+support = "direct"
+summary = "The announcement names StageOne Ventures, First Rays Venture Partners, and D. E. Shaw & Co. as leading the $8 million round."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["seed_announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2023.participating_investors"
+support = "direct"
+summary = "The March 22, 2023 announcement names Shlomo Kramer, Ron Zoran, and Brian Fielder among security-industry angel investors in the seed round."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["seed_announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.amount"
+support = "direct"
+summary = "The February 10, 2026 company announcement states the Series A raised $19 million."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.lead_investors"
+support = "direct"
+summary = "The company announcement names KOMPAS VC as lead investor in the $19 million Series A."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.participating_investors"
+support = "direct"
+summary = "The February 10, 2026 company announcement names Maniv, Artofin Venture Capital, StageOne Ventures, and First Rays Capital as round participants."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Reviewed company and financing announcements present Backslash as a private standalone company; no parent is disclosed."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["about", "series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.artofin-2024.amount_status"
+support = "direct"
+summary = "Artofin's October 8, 2024 investment announcement confirms an investment but states no amount or instrument."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["artofin_2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.artofin-2024.lead_investors"
+support = "direct"
+summary = "Artofin identifies its own investment in Backslash on its October 8, 2024 news page."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["artofin_2024"]
+
+[[intelligence.people]]
+name = "Shahar Man"
+role = "CEO and co-founder"
+is_founder = true
+current = true
+background = "Company and investor materials identify him as Backslash CEO and co-founder; the 2023 announcement reports prior leadership roles at Aqua Security and SAP."
+source_ids = ["about", "seed_announcement", "kompas"]
+
+[[intelligence.people]]
+name = "Yossi Pik"
+role = "CTO and co-founder"
+is_founder = true
+current = true
+background = "Company identifies him as CTO and co-founder; the 2023 announcement reports prior co-founder/CTO role at FARMIGO and a VP role at SAP."
+source_ids = ["about", "seed_announcement", "skills_release"]
+
+[[intelligence.people]]
+name = "Ron Zoran"
+role = "Independent board member; former CyberArk CRO"
+is_founder = false
+current = true
+background = "Backslash's February 2026 Series A release says he joined its board as an independent member; the 2023 seed announcement identifies him as a former CyberArk CRO and seed angel."
+source_ids = ["series_a", "seed_announcement"]
+
+[[intelligence.financials]]
+name = "revenue_growth_multiple"
+value = "Company reported revenue quadrupled over the preceding twelve months."
+as_of = "2025-04-09"
+basis = "reported"
+metric = "other"
+numeric_value = 4
+value_relation = "exact"
+unit = "other"
+notes = "Company-announced growth multiple; absolute revenue and base period values were not disclosed. Do not interpret as audited revenue or current ARR."
+source_ids = ["traction_2025"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2025-04-09"
+description = "Backslash reported that its customer base increased 150% over the preceding twelve months; this company-announced percentage has no disclosed customer-count baseline and is not independently verified."
+source_ids = ["traction_2025"]
+
+[[intelligence.investors]]
+name = "StageOne Ventures"
+investor_type = "vc"
+website = "https://stageone.vc/"
+round_ids = ["seed-2023", "series-a-2026"]
+relationship = "historical"
+source_ids = ["seed_announcement", "series_a"]
+
+[[intelligence.investors]]
+name = "First Rays Venture Partners"
+investor_type = "vc"
+round_ids = ["seed-2023", "series-a-2026"]
+relationship = "historical"
+source_ids = ["seed_announcement", "series_a"]
+
+[[intelligence.investors]]
+name = "D. E. Shaw & Co."
+investor_type = "other"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["seed_announcement"]
+
+[[intelligence.investors]]
+name = "KOMPAS VC"
+investor_type = "vc"
+website = "https://www.kompas.vc/"
+round_ids = ["series-a-2026"]
+relationship = "current"
+source_ids = ["series_a", "kompas"]
+
+[[intelligence.investors]]
+name = "Maniv"
+investor_type = "vc"
+round_ids = ["series-a-2026"]
+relationship = "current"
+source_ids = ["series_a"]
+
+[[intelligence.investors]]
+name = "Artofin Venture Capital Fund"
+investor_type = "vc"
+round_ids = ["artofin-2024", "series-a-2026"]
+relationship = "current"
+source_ids = ["artofin_2024", "series_a"]
+
+[[intelligence.investors]]
+name = "Shlomo Kramer"
+investor_type = "angel"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["seed_announcement", "about"]
+
+[[intelligence.investors]]
+name = "Ron Zoran"
+investor_type = "angel"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["seed_announcement", "about"]
+
+[[intelligence.investors]]
+name = "Brian Fielder"
+investor_type = "angel"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["seed_announcement", "about"]
+
+[[intelligence.investors]]
+name = "Amir Jerbi"
+investor_type = "angel"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["about"]
+
+[[intelligence.investors]]
+name = "Dror Davidoff"
+investor_type = "angel"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["about"]
+
+[[intelligence.investors]]
+name = "Yevgeny Dibrov"
+investor_type = "angel"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["about"]
+
+[[intelligence.investors]]
+name = "Nadir Izrael"
+investor_type = "angel"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["about"]
+
+[[intelligence.investors]]
+name = "Rani Osnat"
+investor_type = "angel"
+round_ids = ["seed-2023"]
+relationship = "unknown"
+source_ids = ["about", "kompas"]
+
+[[intelligence.investors]]
+name = "Ran Nahmias"
+investor_type = "angel"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["about"]
+
+[[intelligence.investors]]
+name = "Yaad Oren"
+investor_type = "angel"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["about"]
+
+[[intelligence.investors]]
+name = "Dror Bereznitsky"
+investor_type = "angel"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "traction"
+support = "direct"
+summary = "The company-published case study names Happy Returns and states rollout across all Mac and Windows endpoints within 30 days; this remains company-published customer evidence, not independently audited deployment data."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["happy_returns"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.revenue_growth_multiple@2025-04-09.numeric_value"
+support = "direct"
+summary = "The April 9, 2025 company release states that revenue quadrupled over the preceding twelve months; the multiple is recorded without inventing absolute revenue."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["traction_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "intellectual_property"
+support = "inferred"
+summary = "Targeted searches surfaced no assigned patents or published applications; absence from these searches does not prove no IP exists."
+verified_at = "2026-10-04T02:11:01Z"
+source_ids = ["product", "mcp_research"]

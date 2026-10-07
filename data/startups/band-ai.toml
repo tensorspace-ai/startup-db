@@ -1,0 +1,236 @@
+name = "BAND AI"
+description = "BAND (operated by Israeli company Thenvoi AI Ltd.) builds interaction infrastructure for distributed AI agents: an agent collaboration mesh for discovery, delegation, and context exchange, plus a control plane for authority boundaries and auditability. Its public product spans framework adapters, APIs, agent rooms, and coding-agent collaboration."
+detailed_description = """
+**Product and problem.** BAND is the current operating brand of Thenvoi AI Ltd., an Israeli-founded software startup focused on agent interaction infrastructure. Its thesis is that enterprise agents will increasingly run across different teams, clouds, and frameworks, while their owners need ways to discover collaborators, route work, carry context, and enforce authority boundaries. Instead of asking customers to adopt a single agent framework, BAND describes a two-layer architecture: a collaboration mesh that supports discovery, delegation, and context exchange, and an organizational control plane for governing interactions and maintaining auditability. These are company-described capabilities; independent operational security or efficacy evaluations were not located in this review.
+
+The live product makes the initial thesis more concrete than the April 2026 stealth announcement. BAND publishes documentation for an Agent API, real-time WebSocket events, identity and room membership, messaging and handoffs, and SDK or adapter paths for a wide range of frameworks and coding agents. Its integrations directory lists Google A2A, ACP, LangGraph, CrewAI, Anthropic SDK, Claude Code, Codex, GitHub Copilot, Salesforce Agentforce, Microsoft Copilot Studio, AWS AgentCore, Azure AI Foundry, and others. Listing an integration establishes advertised compatibility, not proof that each integration is production-certified or adopted by a paying customer. The public Hacker Guide describes a free tier with up to ten agents and paid Pro and Enterprise capabilities; the Enterprise tier includes memory and human-facing management APIs according to that guide. A separate Jam product is presented for coordinating coding-agent work, initially supporting macOS and Linux with Claude Code. These pages indicate productization and self-serve developer access, but do not establish usage, retention, or revenue scale.
+
+**Commercial model and market.** The likely model is software subscription with free entry and paid Pro and Enterprise tiers, based on BAND's public product guide and pricing references. The natural buyers are developer-platform, AI-infrastructure, and enterprise engineering teams that need agents from distinct stacks to collaborate under shared identity and policies. Potential use cases include coordinated coding agents, internal research and operations agents, and cross-team or cross-organization agent workflows. The launch-era Calcalist report said BAND had initial revenue and roughly ten partners in April 2026, but it did not name those partners or disclose contract values; that snapshot should not be extrapolated into current revenue or customer counts. No named production customer, contract size, ARR, renewal, or usage metric was found in the reviewed company material through October 4, 2026.
+
+**Funding and ownership.** BAND announced a $17 million seed in April 2026. Calcalist described Sierra Ventures, Hetz Ventures, and Team8 as leading the round; BAND's own launch post names all three as backers. The company's official about page continues to list those investors. The round is the only publicly verifiable BAND financing located in this review. The previously published expectation that a Series A might follow within one or two quarters is now stale: targeted searches through October 4 did not find a subsequent round announcement. This absence is not evidence that no financing or private secondary activity occurred. The company's public materials identify the legal operating name as Thenvoi AI Ltd. and the brand as BAND; no parent company, ownership percentages, or complete cap table were disclosed. Company-registration aggregators surfaced an Israeli registration number, but no registry primary-source record was verified here, so no registry identifier is asserted.
+
+**Team.** The official company page identifies Arick Goomanovsky as co-founder and CEO and Vlad Luzin as co-founder and CTO. Team8's profile describes Goomanovsky as a serial entrepreneur who co-founded Sygnia and Ermetic, both acquired, and records his Israel Intelligence Community service and Talpiot education. Calcalist reports Sygnia's sale to Temasek and Ermetic's sale to Tenable, and describes Luzin's Ministry of Defense DDR&D/MAFAT background and work at Verint, CME Group, and Samsung, including leading a multi-agent systems team. These are strong founder credentials relevant to enterprise infrastructure, security, and distributed systems, though founder pedigree does not substitute for evidence of product-market fit. Beyond the two founders, current leadership, team size, hiring pace, and engineering capacity remain insufficiently documented in reviewed primary sources.
+
+**Competition and technical position.** BAND's cross-framework proposition competes with both products and standards. Google introduced A2A as an open protocol for agents built by different vendors and frameworks to collaborate. Anthropic's MCP standardizes connections between AI applications and tools or data, and therefore overlaps with parts of the broader interoperability stack while addressing a different interaction boundary. LangGraph offers framework-native multi-agent supervisor and swarm patterns. BAND lists support for A2A and multiple framework ecosystems, suggesting a strategy of complementing protocols and runtimes with a managed interaction and governance layer. Its potential differentiation is persistent identity, discovery, cross-stack routing, interaction policy, and auditability in one operating service. This is a strategic claim that still requires product comparisons under realistic workloads: standards may add identity, authorization, and observability; cloud or SaaS platforms may bundle cross-agent coordination; and open-source orchestration may be good enough for many buyers.
+
+**Traction and maturity.** Evidence has improved from a launch announcement to a functioning public developer surface, continuously updated documentation, integration listings, self-serve access, and a specialized coding-agent product. The public SDK changelog includes entries dated September 27, 2026, and the platform changelog shows a September 16, 2026 update, indicating active product maintenance at those dates. These are evidence of shipping and ongoing development, not of enterprise adoption or commercial scale. The April 2026 claim of early revenue and roughly ten partners is reported by media and remains company-attributed launch traction without named counterparties. No public evidence reviewed establishes employee count, deployment count, revenue, gross retention, or security certification.
+
+**Strategic and dual-use assessment.** Governance of autonomous software can matter to enterprises, public services, and security-sensitive operators because identity, least privilege, review, and traceability become more consequential as software agents take actions. The same generic capabilities could be relevant to defense or critical infrastructure, but the public product and funding materials reviewed are commercially oriented. No defense contract, government deployment, classified capability, or defense certification was found. Accordingly, dual-use is an adjacency based on the general-purpose technology and founder background, not validated defense demand. The core diligence issue is whether BAND can prove that its managed control plane solves a costly operational problem beyond what protocols and platform-native features supply. Further questions include actual paid usage and renewals, policy enforcement boundaries and failure handling, security architecture and independent assurance, gross margins at scale, and the degree to which customers can migrate off the service.
+"""
+logo = "https://a.storyblok.com/f/291236425241163/533x144/0005dbb82b/logo.svg"
+website = "https://band.ai"
+sector = "AI Infrastructure (multi-agent interaction, orchestration, and governance layer / 'Internet of Agents')"
+founded = "2025 (founded mid-2025; exited stealth April 2026)"
+headquarters = "Israel (Israeli-founded; precise operating headquarters not independently verified in this review)"
+employees = "Unknown; no current headcount verified"
+funding_stage = "Seed; $17 million announced in April 2026; no later round verified through 2026-10-04"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "BAND AI's dual-use relevance is a credible adjacency rather than a fielded defense capability, and is written here as such. (1) The core problem — enforcing identity, permissioning, auditable policy, and human-in-the-loop control over what autonomous AI agents are allowed to do at runtime — is exactly the governance and resilience problem defense, intelligence, and critical-infrastructure operators must solve before safely fielding agentic AI, where an ungoverned autonomous action can be operationally or physically consequential. (2) A neutral, cross-framework governance/control plane maps onto military and government requirements for accountable, resilient automation across heterogeneous systems. (3) The CTO, Vlad Luzin, is a graduate of Israel's DDR&D (MAFAT) at the Ministry of Defense, and the launch was covered by Israel Defense, signaling genuine awareness of the strategic context. Calibration: BAND's disclosed market is commercial enterprise AI; there is no publicly disclosed defense contract, classified capability, or fielded government deployment. The dual-use case rests on the general applicability of runtime AI-agent governance to security and resilience contexts, not on any weaponized or defense-specific product — a genuine adjacency, not a forced fit."
+key_technologies = [
+  "Vendor-neutral, cross-framework agent interaction layer (interoperates with LangChain/LangGraph, CrewAI, Salesforce Agentforce, SaaS and coding agents rather than replacing them)",
+  "Agent discovery and addressing across heterogeneous frameworks and clouds",
+  "Structured task delegation and context-preserving hand-off between agents and human operators",
+  "Runtime governance 'control center' enforcing organizational policy, identity, and permissions before an agent acts",
+  "Human-in-the-loop approval and real-time, two-way communication between agents, other AI systems, and people",
+  "Enterprise identity, audit, and policy enforcement positioned as a neutral control plane above emerging open protocols (e.g., MCP, A2A)"
+]
+use_cases = [
+  "Coordinating production 'swarms' of many enterprise agents built on different frameworks without custom message buses",
+  "Enforcing organizational policy, permissions, and audit over autonomous agent actions at runtime",
+  "Cross-vendor task delegation and context hand-off between SaaS agents, coding agents, and internal agents",
+  "Human-in-the-loop approval gates for high-consequence autonomous agent actions",
+  "Agent discovery and secure addressing across multiple clouds and vendors",
+  "Governance and interoperability backbone to reduce the high predicted failure rate of enterprise agent deployments",
+  "Prospective: accountable, auditable runtime control over agentic AI for government and critical-infrastructure operators",
+  "Neutral control plane that lets enterprises adopt emerging agent-interoperability standards without vendor lock-in"
+]
+investible = true
+investment_rationale = "BAND AI is a high-conviction team in a timely, large category, offset by real standards and stage risk; this is a priority-signal assessment, not an investment recommendation. (1) Team quality is the standout: CEO Arick Goomanovsky is a Unit 8200 graduate and two-time enterprise founder (Sygnia to Temasek ~$250M; Ermetic to Tenable ~$300M), and CTO Vlad Luzin is a DDR&D (MAFAT) graduate with 20+ years of distributed- and multi-agent-systems experience across Verint, CME Group, and Samsung — an unusually senior pairing for seed stage. (2) Market timing is favorable: BAND sells into a documented gap (industry forecasts that ~half of agent deployments may fail on governance/interoperability and that only ~21% of firms have a mature governance model) as enterprises scale from single agents to production swarms. (3) Validation is strong for the stage: a $17M seed led by Sierra Ventures with Hetz Ventures and Team8, early revenue with ~10 partners, and a Series A expected within one to two quarters. Counterweights that should dominate diligence: (a) standards risk — MCP/A2A or framework/hyperscaler incumbents could commoditize the interaction layer; (b) category-timing risk — the 'Internet of Agents' thesis is still being validated; (c) thin public traction — no named marquee customers or retention data; (d) unproven defensibility of governance-plus-neutrality as a moat; and (e) dual-use is adjacency, not contracted defense demand. Fit with an AI-infrastructure and resilience thesis is strong; the risk is that value migrates to open standards before BAND establishes a durable governance moat."
+strategic_value = "BAND AI's strategic value concentrates in the governance and control layer for autonomous AI — a capability whose importance rises as agents gain the ability to take consequential actions. (1) Enabling infrastructure: a neutral interaction-and-governance backbone is high-leverage plumbing that can sit beneath many agent deployments rather than serve a single use case, and controlling that layer would be strategically significant if it becomes a standard. (2) Governance-as-resilience: enforcing identity, permissioning, audit, and human-in-the-loop control over what agents may do is a resilience capability directly relevant to enterprises and, prospectively, to defense, intelligence, and critical-infrastructure operators that cannot field agentic AI without accountable control. (3) Talent and pedigree: Unit 8200 and DDR&D founder backgrounds and a top-tier syndicate (Sierra, Team8, Hetz) reflect the kind of team that can execute an infrastructure land-grab. (4) Ecosystem positioning: by aiming to be neutral above emerging standards (MCP, A2A) rather than a competing framework, BAND could benefit from, rather than be displaced by, standardization — if that neutrality plus governance proves sticky. The realized strategic weight depends on BAND converting an early product and thesis into a durable, standard control plane with named enterprise (and ideally government) adoption; absent that, the value remains promising but latent, and the dual-use dimension prospective."
+potential_score = 62.0
+technology_score = 62.0
+market_score = 66.0
+team_score = 81.0
+dual_use_score = 45.0
+strategic_alignment_score = 58.0
+stage = "early"
+stage_rationale = "BAND AI is classified 'early' on multiple axes. (1) Financing: a $17M seed round completed at its April 2026 stealth exit, with a Series A only stated to be expected within one to two quarters — pre-Series-A by definition. (2) Product maturity: an early interaction-and-governance layer shipped into a category ('Internet of Agents') that is still forming, rather than a mature, widely adopted standard. (3) Traction: reported early revenue with roughly ten partners, but no publicly disclosed marquee customers, contract values, or retention/expansion data. (4) Organization: a small, founder-led team whose depth beyond the two principals is not yet publicly documented. The company is past pure concept — it has a strong syndicate, early revenue, a clear product thesis, and a senior founding team with prior exits — but it remains pre-Series-A, pre-named-anchor-customer, and pre-standardization. Progression to 'mid' would require a completed Series A, named enterprise customers with demonstrated retention, evidence that governance-plus-neutrality is a durable moat against open standards and incumbents, and ideally an initial public-sector or critical-infrastructure deployment substantiating the dual-use thesis."
+competitors = [
+  "LangChain / LangGraph (agent framework increasingly adding native multi-agent orchestration, but ecosystem-bound rather than vendor-neutral)",
+  "CrewAI (multi-agent orchestration framework; solves coordination within its own stack)",
+  "Anthropic Model Context Protocol (MCP) and Google Agent2Agent (A2A) (open interoperability standards that could commoditize the raw agent-communication layer BAND governs)",
+  "Salesforce Agentforce / ServiceNow / hyperscaler agent stacks (vendor-locked agent platforms that coordinate agents inside their own walls)",
+  "Microsoft AutoGen and Microsoft/Slack collaboration surfaces (framework and human-agent surfaces extending toward multi-agent workflows)",
+  "In-house custom message buses and hand-rolled hand-off/identity layers (the status-quo approach BAND must displace)"
+]
+competitive_edge = "BAND AI's edge is the combination of neutrality and enterprise governance, though its defensibility is unproven. (1) Cross-framework, cross-cloud neutrality: BAND aims to interoperate with LangChain/LangGraph, CrewAI, Salesforce Agentforce, SaaS and coding agents rather than compete as another framework, positioning it as a Switzerland above fragmented ecosystems. (2) Governance-first control plane: identity, permissioning, audit, human-in-the-loop approval, and runtime policy enforcement — enterprise requirements that raw agent-to-agent protocols do not supply on their own — are the layer BAND monetizes. (3) Standards tailwind, not just threat: by sitting above emerging standards (MCP, A2A), BAND can ride standardization instead of being erased by it, if its governance layer proves sticky. (4) Team and capital: a two-time-exited CEO (Sygnia, Ermetic) and a DDR&D-pedigreed CTO, backed by Sierra Ventures, Team8, and Hetz, give it credibility and reach uncommon at seed. The vulnerabilities are real: open protocols or incumbents could absorb the interaction layer; the moat depends on governance/neutrality proving durable; and there is no disclosed marquee traction yet to convert the edge into lock-in."
+risk_factors = [
+  "Standards risk: open protocols (Anthropic MCP, Google A2A) or framework/hyperscaler incumbents could commoditize or absorb the agent-interaction layer, compressing BAND's value to governance alone",
+  "Category-timing risk: the 'Internet of Agents' thesis is still being validated, and building ahead of durable demand is a real hazard",
+  "Thin public traction: no named marquee customers, contract values, or retention/expansion metrics disclosed as of the April 2026 launch",
+  "Unproven defensibility: the moat depends on governance-plus-neutrality proving stickier than raw messaging and vendor-native orchestration",
+  "Early stage and financing risk: pre-Series-A with a small founder-led team; execution depth beyond the two principals is not publicly documented",
+  "Dual-use is adjacency, not contracted: strategic value to defense/government is prospective, with no disclosed public-sector deployment",
+  "Crowded, fast-moving competitive field with well-capitalized framework, standards, and platform incumbents moving into multi-agent coordination"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "BAND AI merits monitoring as an AI-infrastructure play with an exceptional founding team and a governance/resilience angle, tempered by category and stage risk. Strengths supporting attention: (1) a senior, security-native founding team — CEO Arick Goomanovsky (Unit 8200; Sygnia to Temasek, Ermetic to Tenable) and CTO Vlad Luzin (Israel DDR&D/MAFAT; multi-agent systems at Samsung) — that has built and exited enterprise-infrastructure companies before; (2) a timely, large market with a documented governance/interoperability gap in enterprise agent deployments; (3) strong seed validation ($17M led by Sierra Ventures with Team8 and Hetz, early revenue, ~10 partners, Series A expected soon); and (4) fit with an AI-infrastructure and resilience thesis, with a credible (if prospective) dual-use adjacency in accountable runtime control of autonomous agents. Offsetting factors that cap priority: standards and incumbent risk that could commoditize the interaction layer; an unproven 'Internet of Agents' category; thin disclosed traction; and dual-use that is adjacency rather than contracted defense demand. Milestones to track: a completed Series A, named enterprise customers with retention, evidence that governance-plus-neutrality is a durable moat, and any public-sector or critical-infrastructure deployment. Priority reflects strong team and thesis fit weighed against real defensibility and dual-use-proof risk."
+public_sources = [
+  { label = "BAND official about page", url = "https://www.band.ai/about", description = "Legal operating name, BAND brand, founders, product architecture, and named backers." },
+  { label = "BAND Hacker Guide", url = "https://www.band.ai/hacker-guide", description = "Public developer product, APIs, free/paid tiers, and enterprise feature distinctions." },
+  { label = "BAND integrations directory", url = "https://www.band.ai/integrations", description = "Advertised framework, protocol, coding agent, and enterprise application integrations." },
+  { label = "BAND platform updates", url = "https://docs.band.ai/changelog/changelog/platform", description = "Dated platform maintenance and release evidence." },
+  { label = "BAND SDK changelog", url = "https://docs.band.ai/changelog/changelog/sdks", description = "SDK and adapter maintenance, including September 2026 updates." },
+  { label = "Calcalist: BAND raises $17M seed", url = "https://www.calcalist.co.il/calcalistech/article/byn80vwtbe", description = "April 23, 2026 round amount, investors, founding date, founder backgrounds, and launch-era traction report." },
+  { label = "BAND launch post", url = "https://www.linkedin.com/posts/bandhq_hello-world-meet-band-today-were-coming-activity-7453113195969310720-gnOr", description = "Company-announced $17M seed and named backers." },
+  { label = "Hetz Ventures BAND portfolio", url = "https://www.hetz.vc/portfolio/band-ai", description = "Investor portfolio description, founders, and BAND profile." },
+  { label = "Team8 Arick Goomanovsky profile", url = "https://team8.vc/team/arick-goomanovsky/", description = "Founder role and background, including prior companies and military/education claims." },
+  { label = "Hebrew University alumni: BAND seed", url = "https://alumni.huji.ac.il/news/band_seed_round", description = "Israeli founders and independently hosted seed-round announcement." },
+  { label = "Google Developers: A2A announcement", url = "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/", description = "Official competing interoperability protocol description." },
+  { label = "Anthropic: Model Context Protocol", url = "https://www.anthropic.com/news/model-context-protocol", description = "Official description of MCP's scope connecting AI systems to tools and data." },
+  { label = "LangChain LangGraph supervisor", url = "https://reference.langchain.com/python/langgraph-supervisor", description = "Official framework-native multi-agent supervisor capability." },
+  { label = "BAND Jam launch blog", url = "https://www.band.ai/blog/loop-engineering-meet-band-desktop", description = "Company's coding-agent collaboration product and supported environments." }
+]
+crawled_at = "2026-07-14T05:02:20Z"
+updated_at = "2026-10-04T05:26:00+03:00"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Arick Goomanovsky", role = "Co-founder and CEO", is_founder = true, current = true, background = "Team8 identifies him as a serial entrepreneur and co-founder of Sygnia and Ermetic, and reports service in the Israel Intelligence Community and graduation from Talpiot. Calcalist reports the exits to Temasek and Tenable.", source_ids = ["band-about", "team8-arick", "calcalist-seed"] },
+  { name = "Vlad Luzin", role = "Co-founder and CTO", is_founder = true, current = true, background = "Calcalist reports a Ministry of Defense DDR&D/MAFAT background, experience at Verint and CME Group, and leadership of a multi-agent systems team at Samsung. BAND identifies him as co-founder and CTO.", source_ids = ["band-about", "calcalist-seed"] }
+]
+investors = [
+  { name = "Sierra Ventures", investor_type = "vc", website = "https://www.sierraventures.com", round_ids = ["seed-2026"], relationship = "current", source_ids = ["calcalist-seed", "band-launch", "band-about"] },
+  { name = "Hetz Ventures", investor_type = "vc", website = "https://www.hetz.vc", round_ids = ["seed-2026"], relationship = "current", source_ids = ["calcalist-seed", "band-launch", "hetz-band", "band-about"] },
+  { name = "Team8", investor_type = "vc", website = "https://team8.vc", round_ids = ["seed-2026"], relationship = "current", source_ids = ["calcalist-seed", "band-launch", "band-about"] }
+]
+financials = []
+traction = [
+  { kind = "product", description = "Public developer platform offers Agent API, real-time WebSocket, agent rooms, SDK/adapters, a free tier and paid Pro/Enterprise tiers; company documentation describes Enterprise-only memory and human APIs.", date = "2026-10-04", source_ids = ["band-guide"] },
+  { kind = "product", description = "BAND advertises integrations for A2A, ACP, major agent frameworks, coding agents, and enterprise platforms; listing is not evidence of customer deployment.", date = "2026-10-04", source_ids = ["band-integrations"] },
+  { kind = "product", description = "BAND introduced Jam for coordinating coding-agent workflows, initially supporting macOS and Linux with Claude Code.", date = "2026-07-19", source_ids = ["band-jam"] },
+  { kind = "other", description = "Calcalist reported that at its April 2026 launch BAND had initial revenue and roughly ten partners; counterparties and revenue amounts were not named or quantified.", date = "2026-04-23", source_ids = ["calcalist-seed"] },
+  { kind = "hiring", description = "Public SDK changelog shows ongoing adapter updates through September 27, 2026; this is product activity and does not establish workforce size.", date = "2026-09-27", source_ids = ["band-sdk-changelog"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Google Agent2Agent (A2A)", website = "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/", rationale = "Open agent interoperability protocol for agents from different vendors and frameworks.", differentiation = "Protocol-level interoperability; BAND presents itself as an operational mesh and control plane that can integrate A2A while adding identity, policy, and managed collaboration.", source_ids = ["google-a2a", "band-integrations", "band-about"] },
+  { name = "Anthropic Model Context Protocol (MCP)", website = "https://www.anthropic.com/news/model-context-protocol", rationale = "Open protocol connecting AI applications with tools and data sources; a relevant adjacent standard in the agent connectivity stack.", differentiation = "MCP focuses on tool and data connections, while BAND markets agent-to-agent discovery, delegation, and governance across frameworks.", source_ids = ["anthropic-mcp", "band-about"] },
+  { name = "LangGraph", website = "https://reference.langchain.com/python/langgraph-supervisor", rationale = "Framework-native multi-agent supervisor and swarm orchestration patterns.", differentiation = "LangGraph provides orchestration within its framework; BAND markets a framework-agnostic service spanning separate stacks and organizations.", source_ids = ["langgraph-supervisor", "band-integrations"] }
+]
+
+[intelligence.company ]
+company_id = "il-band-ai"
+legal_name = "Thenvoi AI Ltd."
+aliases = ["BAND", "BAND AI", "Thenvoi"]
+operating_status = "active"
+business_model = "B2B software platform with free developer access and paid Pro and Enterprise tiers, according to public product documentation."
+products = ["BAND agent collaboration mesh", "BAND control plane", "Agent API and SDK adapters", "Jam coding-agent collaboration"]
+locations = ["Israel"]
+source_ids = ["band-about", "band-guide", "band-jam"]
+
+[intelligence.israel_connection ]
+status = "confirmed"
+basis = ["israeli_founders"]
+summary = "Israeli-founded company. The official site identifies Thenvoi AI Ltd. as BAND's operator; BAND's founders are identified by Hebrew University alumni materials, and the official company page identifies the same two founders. No headquarters city or place of incorporation is asserted here."
+as_of = "2026-10-04"
+source_ids = ["band-about", "huji-band"]
+
+[intelligence.funding ]
+status = "reported"
+summary = "One $17 million seed financing was announced in April 2026. Searches through 2026-10-04 found no verified subsequent round. Funding history is partial: undisclosed private financings or secondary transactions cannot be ruled out."
+rounds = [
+  { id = "seed-2026", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2026-04-23", amount_status = "reported", amount = 17000000, amount_scope = "round", currency = "USD", lead_investors = ["Sierra Ventures"], participating_investors = ["Hetz Ventures", "Team8"], source_ids = ["calcalist-seed", "band-launch"], notes = "Calcalist identifies Sierra Ventures, Hetz Ventures, and Team8 as leading the round; BAND names all three as backers. No valuation was disclosed." }
+]
+reported_total_raised = 17000000
+reported_total_currency = "USD"
+total_source_ids = ["band-launch"]
+total_as_of = "2026-04-23"
+total_scope = "Company-announced lifetime funding total; no separately announced later round located as of 2026-10-04."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[intelligence.ownership ]
+status = "undisclosed"
+summary = "The company identifies Thenvoi AI Ltd. as the legal operating entity and BAND as its d/b/a brand. No parent company, cap table, founder ownership, or investor ownership percentages were publicly disclosed in the reviewed sources. No acquisition, IPO, or other ownership deal was found."
+cap_table_status = "undisclosed"
+shareholders = ["Sierra Ventures", "Hetz Ventures", "Team8"]
+source_ids = ["band-about", "calcalist-seed", "band-launch"]
+deals = []
+holdings = []
+
+[intelligence.research ]
+researched_at = "2026-10-04T05:26:00+03:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "BAND AI official company BAND Thenvoi AI Ltd founders product 2026",
+  "BAND AI Thenvoi funding raised seed Series A investors valuation acquired 2026",
+  "BAND AI investors Sierra Ventures Hetz Ventures Team8 portfolio announcement",
+  "BAND Arick Goomanovsky Vlad Luzin founders leadership background 2026",
+  "Thenvoi AI BAND ownership parent subsidiary cap table acquired",
+  "BAND AI Thenvoi revenue ARR profitability burn runway employees headcount",
+  "BAND AI customers partners contracts product integrations hiring 2026",
+  "Thenvoi AI Ltd BAND patents Arick Goomanovsky Vlad Luzin patent",
+  "BAND AI alternatives agent orchestration interoperability A2A MCP LangGraph",
+  "BAND AI defense government security deployment contract dual use",
+  "BAND AI Series A October 2026 BAND.ai blog changelog",
+  "BAND AI גיוס משקיעים הכנסות לקוחות סבב A 2026"
+]
+gaps = [
+  "team: only two founders are verifiably named in reviewed primary material; broader leadership, headcount, hiring, and current executive roles remain undisclosed.",
+  "investors: three seed backers are identified, but ownership percentages, check sizes, board rights, and complete cap table are undisclosed.",
+  "financials: no dated revenue/ARR, profitability, burn, runway, or audited accounts were found; launch-era initial-revenue reporting is unquantified.",
+  "traction: no named customers, contract values, deployment counts, renewal or retention data, or production case studies were found; partner identities remain undisclosed.",
+  "intellectual_property: no company-assigned patent or published application was verified in targeted public searches; this does not establish absence of trade secrets or unindexed filings.",
+  "competition: comparables capture representative standards and framework alternatives, not a complete competitor map or independent feature benchmark.",
+  "dual_use: no disclosed defense or government customer, contract, certification, or fielded deployment was found; applicability remains prospective.",
+  "ownership: public sources identify the legal operating name but not incorporation details, a complete cap table, or disclosed ownership percentages."
+]
+conflicts = []
+diligence_questions = [
+  "What is current paid customer count, ARR, gross retention, expansion, and usage concentration, and can management provide references for the launch-era roughly ten partners?",
+  "Which authorization, tenant-isolation, audit, and human-approval controls are enforced technically at runtime, and what independent security testing or certifications support those claims?",
+  "How does BAND's value persist if A2A and other open standards add discovery, identity, policy, and audit features, or if hyperscaler platforms bundle cross-agent coordination?",
+  "What are the current headcount, runway, hiring plan, and financing status after the April 2026 seed?",
+  "Which parts of the mesh and control plane are proprietary, and what patent filings, trade secrets, switching costs, or network effects protect them?"
+]
+topic_checks = [
+  { topic = "identity", status = "reported", checked_at = "2026-10-04T05:26:00+03:00", next_review_on = "2027-01-04", queries = ["BAND AI official company BAND Thenvoi AI Ltd founders product 2026"], source_ids = ["band-about", "huji-band"], summary = "Official site identifies Thenvoi AI Ltd. d/b/a BAND and names its co-founders; Hebrew University alumni material supports the founders' Israeli connection." },
+  { topic = "funding", status = "reported", checked_at = "2026-10-04T05:26:00+03:00", next_review_on = "2027-01-04", queries = ["BAND AI Thenvoi funding raised seed Series A investors valuation acquired 2026", "BAND AI Series A October 2026 BAND.ai blog changelog"], source_ids = ["calcalist-seed", "band-launch", "band-about"], summary = "Verified one $17 million seed announced in April 2026; searches found no verified later round. The prior Series A expectation is stale and not treated as a completed event." },
+  { topic = "investors", status = "reported", checked_at = "2026-10-04T05:26:00+03:00", next_review_on = "2027-01-04", queries = ["BAND AI investors Sierra Ventures Hetz Ventures Team8 portfolio announcement"], source_ids = ["calcalist-seed", "band-launch", "hetz-band"], summary = "Sierra Ventures, Hetz Ventures, and Team8 are named as seed backers; ownership percentages and full cap table are not public." },
+  { topic = "team", status = "reported", checked_at = "2026-10-04T05:26:00+03:00", next_review_on = "2027-01-04", queries = ["BAND Arick Goomanovsky Vlad Luzin founders leadership background 2026"], source_ids = ["band-about", "team8-arick", "calcalist-seed"], summary = "Official company material confirms the two founders and roles; background corroborated by Team8 and Calcalist. Broader team and headcount remain unknown." },
+  { topic = "ownership", status = "no_public_disclosure", checked_at = "2026-10-04T05:26:00+03:00", next_review_on = "2027-01-04", queries = ["Thenvoi AI BAND ownership parent subsidiary cap table acquired"], source_ids = ["band-about", "band-launch"], summary = "Official site names the operator as Thenvoi AI Ltd. d/b/a BAND; no parent, ownership percentages, cap table, or ownership transaction was disclosed in reviewed sources." },
+  { topic = "financials", status = "no_public_disclosure", checked_at = "2026-10-04T05:26:00+03:00", next_review_on = "2027-01-04", queries = ["BAND AI Thenvoi revenue ARR profitability burn runway employees headcount"], source_ids = ["calcalist-seed", "band-guide"], summary = "No quantified current revenue, ARR, profitability, burn, runway, or current headcount was found. Calcalist's April report of initial revenue is unquantified." },
+  { topic = "traction", status = "reported", checked_at = "2026-10-04T05:26:00+03:00", next_review_on = "2027-01-04", queries = ["BAND AI customers partners contracts product integrations hiring 2026"], source_ids = ["band-guide", "band-integrations", "band-sdk-changelog", "calcalist-seed", "band-jam"], summary = "Public docs show a product, integrations, tiered access, Jam, and ongoing SDK updates; launch-era initial revenue and roughly ten partners are media-reported but unnamed. No named production customer or quantified current usage was located." },
+  { topic = "intellectual_property", status = "not_found", checked_at = "2026-10-04T05:26:00+03:00", next_review_on = "2027-01-04", queries = ["Thenvoi AI Ltd BAND patents Arick Goomanovsky Vlad Luzin patent"], source_ids = [], summary = "Targeted company and founder patent queries yielded no verified company-assigned filing. No conclusion that unindexed filings or non-patent IP are absent." },
+  { topic = "competition", status = "reported", checked_at = "2026-10-04T05:26:00+03:00", next_review_on = "2027-01-04", queries = ["BAND AI alternatives agent orchestration interoperability A2A MCP LangGraph"], source_ids = ["google-a2a", "anthropic-mcp", "langgraph-supervisor", "band-integrations"], summary = "Official sources establish A2A, MCP, and LangGraph as relevant protocol/framework alternatives; feature-level comparative performance and a complete competitor set were not independently verified." },
+  { topic = "dual_use", status = "no_public_disclosure", checked_at = "2026-10-04T05:26:00+03:00", next_review_on = "2027-01-04", queries = ["BAND AI defense government security deployment contract dual use"], source_ids = ["band-about", "calcalist-seed", "team8-arick"], summary = "Product governance and Israeli founder backgrounds indicate possible security relevance, but no defense customer, government contract, certification, or fielded deployment was found." }
+]
+claim_checks = [
+  { field_path = "company.operating_status", support = "direct", summary = "The company maintains a current product, documentation, integrations directory, and 2026 release notes, directly supporting active operation.", verified_at = "2026-10-04T05:26:00+03:00", source_ids = ["band-about", "band-sdk-changelog"] },
+  { field_path = "israel_connection", support = "direct", summary = "Hebrew University alumni identifies the two BAND founders as alumni and reports the BAND seed; BAND's official page identifies these founders. This confirms Israeli founder connection, not a precise headquarters or incorporation claim.", verified_at = "2026-10-04T05:26:00+03:00", source_ids = ["huji-band", "band-about"] },
+  { field_path = "funding.reported_total_raised", support = "direct", summary = "BAND's launch post announces $17 million seed funding and names Team8, Hetz Ventures, and Sierra Ventures; no later round was verified in this search.", verified_at = "2026-10-04T05:26:00+03:00", source_ids = ["band-launch"] },
+  { field_path = "funding.rounds.seed-2026.amount", support = "direct", summary = "Calcalist reports the April 23, 2026 BAND seed round at $17 million; the company launch post also announces $17 million.", verified_at = "2026-10-04T05:26:00+03:00", source_ids = ["calcalist-seed", "band-launch"] },
+  { field_path = "funding.rounds.seed-2026.lead_investors", support = "direct", summary = "Calcalist reports the seed as led by Sierra Ventures with Hetz Ventures and Team8.", verified_at = "2026-10-04T05:26:00+03:00", source_ids = ["calcalist-seed"] },
+  { field_path = "funding.rounds.seed-2026.participating_investors", support = "direct", summary = "BAND's launch post names Team8, Hetz Ventures, and Sierra Ventures as seed backers; Calcalist names the same participants.", verified_at = "2026-10-04T05:26:00+03:00", source_ids = ["band-launch", "calcalist-seed"] }
+]
+sources = [
+  { id = "band-about", url = "https://www.band.ai/about", title = "About | BAND", publisher = "BAND", kind = "company", accessed_at = "2026-10-04T05:26:00+03:00", claims = ["Thenvoi AI Ltd. is the legal operating name and BAND is its d/b/a brand.", "Arick Goomanovsky and Vlad Luzin are co-founders and CEO/CTO.", "BAND describes its mesh and control-plane product architecture.", "BAND lists Team8, Hetz Ventures, and Sierra Ventures as backers."] },
+  { id = "band-guide", url = "https://www.band.ai/hacker-guide", title = "Hacker Guide | BAND", publisher = "BAND", kind = "company", accessed_at = "2026-10-04T05:26:00+03:00", claims = ["BAND documents an Agent API, WebSocket, rooms, messaging, SDK adapters, and agent collaboration.", "BAND describes free, paid Pro, and Enterprise features, including Enterprise memory and human APIs."] },
+  { id = "band-integrations", url = "https://www.band.ai/integrations", title = "Integrations | BAND", publisher = "BAND", kind = "company", accessed_at = "2026-10-04T05:26:00+03:00", claims = ["BAND advertises integrations across frameworks, coding agents, enterprise applications, and protocols including A2A and ACP."] },
+  { id = "band-platform-changelog", url = "https://docs.band.ai/changelog/changelog/platform", title = "Platform Updates | Band", publisher = "BAND documentation", kind = "company", accessed_at = "2026-10-04T05:26:00+03:00", published_on = "2026-09-16", claims = ["The platform changelog displays a September 16, 2026 update."] },
+  { id = "band-sdk-changelog", url = "https://docs.band.ai/changelog/changelog/sdks", title = "SDKs | Band", publisher = "BAND documentation", kind = "company", accessed_at = "2026-10-04T05:26:00+03:00", published_on = "2026-09-27", claims = ["The SDK changelog documents adapter and SDK maintenance through September 27, 2026."] },
+  { id = "calcalist-seed", url = "https://www.calcalist.co.il/calcalistech/article/byn80vwtbe", title = "הווטסאפ של הסוכנים: הסטארט-אפ BAND גייס 17 מיליון דולר", publisher = "Calcalist", kind = "media", accessed_at = "2026-10-04T05:26:00+03:00", published_on = "2026-04-23", claims = ["BAND raised a $17 million seed round led by Sierra Ventures, Hetz Ventures, and Team8.", "BAND was founded in mid-2025 by Arick Goomanovsky and Vlad Luzin.", "Calcalist reported initial revenue and roughly ten partners at launch; no names or revenue amount were stated.", "Calcalist described founders' prior companies and backgrounds."] },
+  { id = "band-launch", url = "https://www.linkedin.com/posts/bandhq_hello-world-meet-band-today-were-coming-activity-7453113195969310720-gnOr", title = "BAND Raises $17M in Seed Funding for Internet of Agents", publisher = "BAND on LinkedIn", kind = "company", accessed_at = "2026-10-04T05:26:00+03:00", published_on = "2026-04-23", claims = ["BAND announced $17 million seed funding and named Team8, Hetz Ventures, and Sierra Ventures as backers.", "BAND describes a communication and interaction layer for agents across frameworks, clouds, and organizations."] },
+  { id = "hetz-band", url = "https://www.hetz.vc/portfolio/band-ai", title = "Band - A Hetz Ventures Portfolio Company", publisher = "Hetz Ventures", kind = "investor", accessed_at = "2026-10-04T05:26:00+03:00", claims = ["Hetz Ventures lists BAND as a portfolio company and describes the mesh/control-plane thesis and founders."] },
+  { id = "team8-arick", url = "https://team8.vc/team/arick-goomanovsky/", title = "Arick Goomanovsky - Team8", publisher = "Team8", kind = "investor", accessed_at = "2026-10-04T05:26:00+03:00", claims = ["Team8 identifies Goomanovsky as BAND co-founder and CEO and describes prior Sygnia and Ermetic founding, Israel Intelligence Community service, and Talpiot background."] },
+  { id = "huji-band", url = "https://alumni.huji.ac.il/news/band_seed_round", title = "הסוף לבלגן הדיגיטלי? חברת BAND עם גיוס סיד של 17 מיליון דולר לחיבור סוכני AI", publisher = "Hebrew University alumni organization", kind = "other", accessed_at = "2026-10-04T05:26:00+03:00", published_on = "2026-04-27", claims = ["The article identifies Arick Goomanovsky and Vlad Luzin as Hebrew University alumni and BAND founders.", "The article reports BAND's $17 million seed round."] },
+  { id = "band-jam", url = "https://www.band.ai/blog/loop-engineering-meet-band-desktop", title = "Loop Engineering, Meet Jam. | BAND", publisher = "BAND", kind = "company", accessed_at = "2026-10-04T05:26:00+03:00", published_on = "2026-07-19", claims = ["BAND presents Jam as a coding-agent collaboration product, initially supporting macOS, Linux, and Claude Code."] },
+  { id = "google-a2a", url = "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/", title = "Announcing the Agent2Agent Protocol (A2A)", publisher = "Google Developers Blog", kind = "other", accessed_at = "2026-10-04T05:26:00+03:00", published_on = "2025-04-09", claims = ["Google describes A2A as an interoperability protocol for collaboration among agents built by different vendors and frameworks."] },
+  { id = "anthropic-mcp", url = "https://www.anthropic.com/news/model-context-protocol", title = "Introducing the Model Context Protocol", publisher = "Anthropic", kind = "other", accessed_at = "2026-10-04T05:26:00+03:00", published_on = "2024-11-25", claims = ["Anthropic describes MCP as an open standard for connecting AI assistants to systems where data lives, including tools and data sources."] },
+  { id = "langgraph-supervisor", url = "https://reference.langchain.com/python/langgraph-supervisor", title = "langgraph_supervisor | LangChain Reference", publisher = "LangChain", kind = "other", accessed_at = "2026-10-04T05:26:00+03:00", claims = ["LangChain documents a LangGraph multi-agent supervisor capability."] }
+]

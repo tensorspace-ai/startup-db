@@ -1,0 +1,586 @@
+name = "Aryon Security"
+description = "Aryon Security develops a cloud-security enforcement platform that applies preventive policies across infrastructure-as-code, ClickOps, and third-party-managed cloud changes. Its central proposition is to stop risky configurations before they reach production, reducing the exposure window that reactive posture-management tools discover only after deployment."
+detailed_description = """Aryon Security is an Israeli cloud-security startup developing a preventive control layer for cloud infrastructure. The company says its Cloud Security Enforcement Platform applies security policies when cloud resources are created or changed, including through infrastructure-as-code, console operations (ClickOps), command-line and third-party workflows. Its product materials describe AI-assisted policy recommendations, a policy marketplace, gradual and granular rollout, managed exceptions, multicloud rule management, guided configurations, and policy-drift tracking. The intended outcome is to block misconfigurations before they reach production, complementing posture-management products that identify risk after deployment.
+
+This product thesis addresses a clear workflow problem, but prevention moves risk into the enforcement path. A blocking control must understand provider-specific semantics, avoid false positives, preserve business continuity, and handle partial failure, rollback, drift, and bypass routes. Security leaders will need to determine whether Aryon's integrations cover all material create and modify APIs and IaC flows, how policies are tested before enforcement, how emergency exceptions are audited, and whether Aryon itself becomes a privileged dependency or single point of operational failure. Product claims about reducing exposure time are company assertions; public sources reviewed here do not independently quantify efficacy across a representative customer base.
+
+The company has moved beyond the seed-stage signal preserved in the earlier record. Aryon announced $9 million in seed funding in March 2025, with Viola Ventures and Blumberg Capital leading. In November 2025, company newsroom material and contemporaneous Israeli reporting described a separate $4 million uncapped SAFE, including $1 million from Omer Adam. In June 2026, a company-distributed Business Wire announcement and Axios reported a $29 million Series A led by Brightmind Partners. Calcalist and other Israeli outlets reported $25 million for that same round. No reviewed source reconciles the difference, so the Series A amount remains conflicting in this dossier. Aryon itself reported $38 million lifetime funding; that cumulative statement is preserved as reported rather than recalculated from disputed round figures. No valuation was disclosed.
+
+Commercial evidence has also advanced. Calcalist reported 44 employees and named IBI Investment House, Valley Bank, OceanFirst Bank, International Seaways, and New American Funding as customers in June 2026. Aryon CEO Ron Arbel separately said that one customer reported more than 200 misconfigurations prevented in a week. These statements are useful traction signals but remain company-attributed or media-reported: contract values, paid status, production scope, duration, renewal, referenceability, and independent efficacy measurement are not public. Hiring and doubled development capacity are intentions or reported plans, not proof of sustained growth.
+
+Aryon was founded by Ron Arbel, Ariel Litmanovich, and Yair Ladizhensky, reported as CEO, CTO, and CPO in current company materials. Earlier seed coverage called Ladizhensky VP of R&D, indicating a role-title evolution rather than a separate executive. The founders are described by the company and seed investors as alumni of Matzov and as having worked on Israel's Project Nimbus; that background is relevant experience, not evidence that the Israeli government is an Aryon customer. The current company site displays a broad roster of prominent individual backers, and round coverage names institutional investors including Brightmind Partners, Datadog Ventures, Skinos Ventures, Blumberg Capital, and Viola Ventures. Private ownership percentages, option pool, SAFE conversion terms, and board rights were not found in public sources.
+
+Competition spans CNAPP and CSPM vendors such as Wiz, Palo Alto Networks Prisma Cloud, Orca Security, and Check Point CloudGuard; policy-as-code and infrastructure-governance tools such as HashiCorp Sentinel, Open Policy Agent, and Firefly; and cloud-native AWS, Azure, and Google Cloud controls. These alternatives may detect, prevent, or govern different subsets of change. Aryon's claimed differentiation is a common enforcement plane across multiple change paths and cloud providers, potentially reducing the integration burden of assembling native controls and IaC gates. That differentiation is not yet independently established. Large incumbents can bundle preventive controls, open tools can be cheaper and more customizable, and platform teams may prefer controls maintained by their cloud providers.
+
+Commercially, the named customer list across financial services, shipping, and mortgage suggests an enterprise-oriented use case and a potentially useful range of operational environments. It does not disclose recurring revenue, average contract value, customer concentration, gross margin, sales-cycle length, or renewal rates. Diligence should test whether the customers are paid production deployments or pilots, what percentage of cloud changes Aryon intercepts, and how frequently enforcement blocks legitimate work. The financing and named customer evidence supports a stronger commercialization assessment than the older 11-50 employee band alone, but it does not establish repeatable product-market fit.
+
+The dual-use relevance is cybersecurity and operational assurance. Preventive cloud policy controls could help commercial enterprises, government contractors, critical infrastructure, and defense organizations reduce configuration risk in sensitive cloud workloads. No public evidence reviewed establishes an Aryon defense contract, government deployment, security authorization, or defense-specific product. Its founders' Israeli cyber backgrounds and reported Nimbus experience are relevant context but do not justify claiming deployment on government systems. Strategic diligence should focus on enforcement reliability, access scope, tenant isolation, fail-open versus fail-closed behavior, cloud API coverage, evidence retention, and the security of Aryon's own service. The company appears to be an active Israeli startup with material financing and initial customer traction, alongside unresolved funding disclosure, ownership, financial, IP, and independent performance questions."""
+logo = "https://cdn.prod.website-files.com/67c6ebed5e970e118a34d795/686bb6499c49b9f6e197cc9c_logo-icon.svg"
+website = "https://www.aryon.security"
+sector = "Cloud Security Enforcement"
+founded = "2024"
+headquarters = "Tel Aviv, Israel"
+employees = "44 (reported June 2026; earlier public band was 11-50)"
+funding_stage = "Series A"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Aryon has substantive dual-use potential because preventive cloud controls apply to ordinary enterprise infrastructure as well as government contractors, critical infrastructure, and defense programs operating sensitive cloud workloads. The relevance is cybersecurity and operational assurance rather than a weapons capability, and no public defense customer or contract is established in this record."
+key_technologies = [
+  "Cross-cloud policy enforcement at deployment",
+  "Infrastructure-as-code, ClickOps, and third-party change interception",
+  "AI-assisted policy generation from environment and active-risk context",
+  "Granular policy rollout and auditable exception management",
+  "Cloud configuration and policy-drift tracking",
+  "Policy marketplace and research-backed attack-prevention rules",
+  "Guided remediation and security-control governance",
+]
+use_cases = [
+  "Blocking exposed storage, permissive identity, and other high-risk cloud changes before production",
+  "Applying consistent guardrails across multicloud infrastructure-as-code pipelines",
+  "Controlling console, script, and third-party-provider changes that bypass a single CI/CD path",
+  "Managing auditable policy exceptions for regulated production environments",
+  "Detecting and correcting drift from approved cloud security policies",
+  "Reducing ephemeral exposure windows that periodic CSPM scans may miss",
+  "Hardening cloud workloads operated by defense suppliers and critical-infrastructure providers",
+]
+investible = true
+investment_rationale = "Aryon merits continued internal diligence because preventive cloud enforcement addresses a real control gap, the founding team has relevant Israeli cyber experience, and June 2026 reporting names enterprise customers across finance, shipping, and mortgage. Reported fundraising rose substantially, but the Series A amount conflicts ($25 million versus $29 million), lifetime funding is company-reported, and there are no public audited revenue, retention, or independently verified control efficacy metrics. This is an internal strategic priority signal, not an investment recommendation."
+strategic_value = "A reliable cloud-enforcement layer could improve resilience for organizations whose infrastructure is changed by large engineering teams, contractors, automated pipelines, or multiple cloud providers. It is strategically relevant to defense-adjacent and critical-infrastructure operators because it can reduce configuration error and create auditable change controls, but public evidence does not yet demonstrate government adoption or special-purpose defense certification."
+public_sources = [
+  {label = "Aryon Security About", url = "https://www.aryon.security/about", description = "Company identity, founders, current roles, and displayed backers."},
+  {label = "Aryon Security Product", url = "https://www.aryon.security/product", description = "Company description of product capabilities and use cases."},
+  {label = "Aryon Security newsroom: Series A", url = "https://www.aryon.security/authors/ron", description = "Company newsroom index containing the June 2026 Series A and November 2025 SAFE announcements."},
+  {label = "Business Wire Series A announcement", url = "https://www.businesswire.com/news/home/20260610103874/en/Aryon-Security-Raises-29-Million-in-Series-A-Funding-to-Bring-Preventive-Enforcement-to-Modern-Cloud-Security", description = "Company-distributed June 2026 Series A announcement reporting $29 million and $38 million total funding."},
+  {label = "Calcalist Series A reporting", url = "https://www.calcalistech.com/ctechnews/article/rjg0xcubmg", description = "Israeli media report of $25 million Series A, customers, and 44 employees."},
+  {label = "Israel Hayom SAFE reporting", url = "https://www.israelhayom.co.il/tech/tech-news/article/19275898?amp=1", description = "November 2025 report of $4 million strategic round, $1 million from Omer Adam, and $13 million cumulative then."},
+  {label = "Blumberg Capital seed announcement", url = "https://blumbergcapital.com/news-insights/aryon-raises-9m-seed-round/", description = "Seed round, founders, and named seed angels."},
+  {label = "Brightmind Partners on Aryon", url = "https://www.brightmindpartners.com/blog/aryon-building-the-proactive-cloud-security-policy-enforcement-platform", description = "Lead investor's Series A discussion, total funding, and investor participants."},
+  {label = "The Next Web Series A coverage", url = "https://thenextweb.com/news/aryon-security-29m-series-a-cloud-prevention", description = "Independent coverage describing product, customer-reported prevention metric, and no disclosed valuation."},
+  {label = "WIPO PATENTSCOPE search", url = "https://patentscope.wipo.int/search/en/search.jsf", description = "Public patent search did not surface an attributable Aryon Security filing in the reviewed search."},
+  {label = "Aryon Security seed release", url = "https://www.globenewswire.com/news-release/2025/03/04/3036458/0/en/Aryon-Security-Raises-9M-in-Seed-Funding-to-Transform-Cloud-Security-Industry.html", description = "Company announcement of its $9 million seed and founders."},
+  {label = "Axios Series A coverage", url = "https://www.axios.com/pro/enterprise-software-deals/2026/06/10/cloud-security-aryon-datadog", description = "CEO-attributed $29 million Series A report."},
+  {label = "Aryon SAFE newsroom item", url = "https://www.aryon.security/authors/joshua-behar", description = "Company newsroom account of the $4 million strategic SAFE."},
+  {label = "Wiz platform", url = "https://www.wiz.io/platform", description = "Competitor product positioning used for comparison."}
+]
+potential_score = 84.0
+technology_score = 84.0
+market_score = 82.0
+team_score = 84.0
+dual_use_score = 82.0
+strategic_alignment_score = 86.0
+stage = "early"
+stage_rationale = "Aryon was founded in late 2024, exited stealth with a $9 million seed announced in March 2025, disclosed a separate $4 million strategic SAFE in November 2025, and announced a Series A in June 2026. Public reporting disagrees whether the Series A was $25 million or $29 million, while Aryon reports $38 million total funding. Calcalist reported 44 employees and named several enterprise customers in June 2026. The company remains early commercialization stage: no audited revenue, retention, or independently verified deployment metrics are public."
+competitors = ["Wiz", "Palo Alto Networks Prisma Cloud", "Orca Security", "Check Point CloudGuard", "Firefly", "HashiCorp Sentinel", "Open Policy Agent", "AWS, Azure, and Google Cloud native policy controls"]
+competitive_edge = "Aryon's proposed edge is enforcement across IaC, ClickOps, and third-party-managed cloud changes, with AI-assisted policies, scoped rollout, managed exceptions, and drift tracking. If its integrations reliably intercept all relevant changes while preserving context and safe failure behavior, it could be more complete than a scanner or a single IaC gate. The edge is not yet independently proven: CNAPP vendors can bundle prevention, native cloud controls are close to the API, and open policy engines may offer lower-cost flexibility to mature platform teams."
+risk_factors = [
+  "CNAPP vendors, cloud providers, and open policy engines can bundle or replicate parts of the prevention workflow.",
+  "False positives, unsafe blocking, or poor rollback behavior could cause outages and drive engineering bypasses.",
+  "Supporting cloud-provider semantics across IaC, ClickOps, scripts, and third parties is technically complex.",
+  "AI-generated policies may be incomplete, opaque, or difficult to validate against organization-specific risk tolerance.",
+  "Public materials show financing and hiring momentum but do not establish recurring revenue, retention, or deployment depth.",
+  "A centralized enforcement plane becomes a high-value target and must itself be secured, highly available, and auditable.",
+  "Defense relevance may remain indirect if the company cannot meet procurement, assurance, residency, or authorization requirements.",
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "Aryon merits a strong internal priority signal because preventive cloud enforcement is strategically relevant to dual-use cybersecurity and public reports identify early enterprise customers and a 44-person team. The Series A disclosure conflict, absence of public financial metrics, unknown retention and deployment scope, and lack of confirmed government adoption keep the assessment evidence-dependent. This is a diligence priority, not a recommendation."
+crawled_at = "2026-02-15T16:33:40Z"
+updated_at = "2026-10-03T21:20:23Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  {name = "Ron Arbel", role = "Co-founder and CEO", is_founder = true, current = true, background = "Aryon's biography says he previously served as COO of Cyberilium; its Baseline product was acquired by CYE in 2023. Company and seed sources describe him as a Matzov alumnus.", source_ids = ["company_about", "seed_company", "ron_bio"]},
+  {name = "Ariel Litmanovich", role = "Co-founder and CTO", is_founder = true, current = true, background = "Company and seed sources describe him as a Matzov alumnus with prior work connected to Israel's Project Nimbus; detailed employment chronology was not located.", source_ids = ["company_about", "seed_company"]},
+  {name = "Yair Ladizhensky", role = "Co-founder and CPO", is_founder = true, current = true, background = "Current company materials list him as CPO; the 2025 seed announcement listed VP of R&D. Company and investor sources describe him as a Matzov alumnus.", source_ids = ["company_about", "seed_company"]}
+]
+investors = [
+  {name = "Brightmind Partners", investor_type = "vc", website = "https://www.brightmindpartners.com", relationship = "current", round_ids = ["series-a-2026"], source_ids = ["businesswire_a", "brightmind_a"]},
+  {name = "Datadog Ventures", investor_type = "corporate", website = "https://www.datadoghq.com", relationship = "current", round_ids = ["series-a-2026"], source_ids = ["businesswire_a", "calcalist_a"]},
+  {name = "Skinos Ventures", investor_type = "vc", relationship = "current", round_ids = ["series-a-2026"], source_ids = ["businesswire_a", "calcalist_a"], notes = "Shlomo Kramer's fund; participation reported in Series A."},
+  {name = "Viola Ventures", investor_type = "vc", website = "https://www.viola-group.com", relationship = "current", round_ids = ["seed-2025", "series-a-2026"], source_ids = ["seed_blumberg", "calcalist_a"]},
+  {name = "Blumberg Capital", investor_type = "vc", website = "https://blumbergcapital.com", relationship = "current", round_ids = ["seed-2025", "series-a-2026"], source_ids = ["seed_blumberg", "calcalist_a"]},
+  {name = "Operator Partners", investor_type = "vc", relationship = "historical", round_ids = ["strategic-safe-2025"], source_ids = ["safe_israelhayom"]},
+  {name = "Omer Adam", investor_type = "angel", relationship = "current", round_ids = ["strategic-safe-2025", "series-a-2026"], source_ids = ["safe_israelhayom", "calcalist_a"], notes = "Israel Hayom reported $1 million invested in the $4 million November 2025 SAFE."},
+  {name = "George Kurtz", investor_type = "angel", relationship = "current", round_ids = ["series-a-2026"], source_ids = ["businesswire_a", "calcalist_a"]},
+  {name = "Yevgeny Dibrov", investor_type = "angel", relationship = "current", round_ids = ["series-a-2026"], source_ids = ["businesswire_a", "calcalist_a"]},
+  {name = "Nadir Izrael", investor_type = "angel", relationship = "current", round_ids = ["series-a-2026"], source_ids = ["businesswire_a", "calcalist_a"]}
+]
+financials = [
+  {name = "Employees", value = "44 employees", as_of = "2026-06-10", basis = "reported", metric = "employees", numeric_value = 44, value_relation = "exact", unit = "people", source_ids = ["calcalist_a"], notes = "Media-reported headcount, not independently verified payroll."}
+]
+traction = [
+  {kind = "customer", description = "Calcalist reported that Aryon's customers included IBI Investment House, Valley Bank, OceanFirst Bank, International Seaways, and New American Funding. It did not disclose contract value, paid status, deployment scope, or term.", date = "2026-06-10", source_ids = ["calcalist_a"]},
+  {kind = "product", description = "CEO Ron Arbel said a first customer reported more than 200 cloud misconfigurations prevented in a single week; this is company-attributed, not independent efficacy measurement.", date = "2026-06-10", source_ids = ["nextweb_a"]},
+  {kind = "product", description = "Aryon exited stealth and launched its Cloud Security Enforcement Platform with its $9 million seed announcement.", date = "2025-03-04", source_ids = ["seed_company"]}
+]
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "il-aryon-security"
+aliases = ["Aryon"]
+operating_status = "active"
+business_model = "Enterprise cloud security software platform; subscription or contract terms not publicly disclosed."
+products = ["Cloud Security Enforcement Platform"]
+locations = ["Tel Aviv, Israel"]
+source_ids = ["company_about", "company_product", "calcalist_a"]
+founded_on = "2024"
+
+[intelligence.funding]
+status = "conflicting"
+summary = "Public funding evidence identifies a $9 million Seed announced March 4, 2025; a $4 million strategic uncapped SAFE reported in November 2025; and a June 10, 2026 Series A described as $29 million by Aryon's company-distributed Business Wire release and Axios, but $25 million by Calcalist. Aryon reported $38 million total funding in its Series A announcement. The Series A amount is left unset because the sources conflict. The company-reported cumulative total is retained without deriving it from round arithmetic. No valuation was disclosed."
+history_status = "partial"
+coverage_through = "2026-10-03"
+reported_total_raised = 38000000
+reported_total_currency = "USD"
+total_source_ids = ["businesswire_a", "brightmind_a"]
+total_as_of = "2026-06-10"
+total_scope = "company-reported cumulative funding through Series A announcement; not independently reconciled to round amounts"
+
+[[intelligence.funding.rounds]]
+id = "seed-2025"
+round_type = "Seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2025-03-04"
+amount_status = "reported"
+amount = 9000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Viola Ventures", "Blumberg Capital"]
+participating_investors = ["Shlomo Kramer", "Maty Siman", "Rubi Aronashvili"]
+source_ids = ["seed_company", "seed_blumberg"]
+valuation_basis = "undisclosed"
+
+[[intelligence.funding.rounds]]
+id = "strategic-safe-2025"
+round_type = "Strategic SAFE"
+instrument = "convertible"
+status = "closed"
+announced_on = "2025-11-18"
+closed_on = "2025-11"
+amount_status = "reported"
+amount = 4000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = []
+participating_investors = ["Omer Adam", "Shlomo Kramer", "Yasmin Lukatz", "Operator Partners", "Blumberg Capital", "Viola Ventures"]
+source_ids = ["safe_israelhayom", "safe_company"]
+notes = "Reported as an uncapped SAFE/strategic round. Contemporaneous coverage said $1 million came from Omer Adam and that cumulative funding then stood at $13 million. SAFE conversion terms are not public."
+valuation_basis = "undisclosed"
+
+[[intelligence.funding.rounds]]
+id = "series-a-2026"
+round_type = "Series A"
+instrument = "equity"
+status = "announced"
+announced_on = "2026-06-10"
+amount_status = "conflicting"
+amount_scope = "unknown"
+currency = "USD"
+lead_investors = ["Brightmind Partners"]
+participating_investors = ["Datadog Ventures", "Skinos Ventures", "Blumberg Capital", "Viola Ventures", "George Kurtz", "Robert Herjavec", "Yevgeny Dibrov", "Nadir Izrael", "Sharin Fisher Dibrov / Startpoint Capital", "Assi Cohen", "Ehud Barak", "Omer Adam"]
+source_ids = ["businesswire_a", "axios_a", "calcalist_a"]
+notes = "Aryon/Business Wire and Axios report $29 million; Calcalist reports $25 million for the same Series A. No source reviewed reconciles the difference. Both observations are preserved below and neither is selected as the numeric amount. No valuation disclosed."
+valuation_basis = "undisclosed"
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "company-release-29m"
+amount = 29000000
+currency = "USD"
+source_ids = ["businesswire_a", "brightmind_a"]
+as_of = "2026-06-10"
+notes = "Company-distributed release reports $29 million Series A."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "calcalist-25m"
+amount = 25000000
+currency = "USD"
+source_ids = ["calcalist_a"]
+as_of = "2026-06-10"
+notes = "Calcalist reports $25 million Series A."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Aryon is described as a private, active startup. Public announcements disclose funding participants but no cap table, founder ownership, share classes, SAFE conversion terms, board rights, parent company, or shareholder percentages. No acquisition, IPO, or ownership change was found."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["businesswire_a", "calcalist_a", "safe_israelhayom"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Aryon's official materials and contemporaneous Israeli business reporting identify it as based in Tel Aviv, Israel. Its three named co-founders are described as Matzov alumni."
+as_of = "2026-10-03"
+source_ids = ["company_about", "seed_company", "calcalist_a"]
+
+[intelligence.research]
+researched_at = "2026-10-03T21:20:23Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Aryon Security official site about product founders headquarters company identity",
+  "Aryon Security funding raised seed Series A investors valuation acquired 2025 2026",
+  "Aryon Security $29 million Series A Brightmind Datadog Skinos announcement",
+  "Aryon Security $25 million Series A Calcalist Hebrew customers employees",
+  "Aryon Security $4 million uncapped SAFE November 2025 Omer Adam Hebrew",
+  "Aryon Security founders leadership Ron Arbel Ariel Litmanovich Yair Ladizhensky background",
+  "Aryon Security ownership parent company acquisition IPO cap table",
+  "Aryon Security revenue ARR profitability burn runway financials",
+  "Aryon Security customers contracts partnerships deployments 200 misconfigurations 44 employees",
+  "Aryon Security patents Aryon Security Ltd WIPO USPTO",
+  "Aryon Security competitors cloud security enforcement Wiz Firefly Sentinel OPA",
+  "Aryon Security defense government military customer contract dual use"
+]
+gaps = [
+  "team: public sources identify the three founders and current titles but do not provide a complete leadership roster, employment histories for every executive, or independently verified headcount.",
+  "investors: public round reporting identifies institutional and selected angel backers; private investment amounts, ownership percentages, and complete round-by-round participation are not disclosed.",
+  "financials: no public revenue, ARR, profitability, burn, runway, or audited accounts were located; lifetime funding is company-reported and the Series A amount conflicts.",
+  "traction: named customer organizations and a customer-attributed prevention metric are public, but contracts, paid status, production deployment, retention, and independent efficacy evidence are unavailable.",
+  "intellectual_property: name-based public searches did not identify attributable Aryon patents; no public patent or proprietary-IP inventory was located, which does not establish that none exists.",
+  "competition: comparisons are based on public positioning and product descriptions; independently verified feature parity, win/loss data, and customer substitution evidence are unavailable.",
+  "ownership: private cap table, shareholdings, SAFE conversion terms, and board rights are undisclosed; no acquisition or parent company was identified.",
+  "dual_use: cloud controls are relevant to sensitive enterprise and government environments, but no public Aryon government, defense, or critical-infrastructure contract or authorization was identified."
+]
+conflicts = ["Series A amount is reported as $29 million by Aryon's June 10, 2026 Business Wire release and Axios, but $25 million by Calcalist. The numeric amount is omitted and both source observations are retained. The company-reported $38 million lifetime total is not independently reconciled; adding individual rounds would create an unsupported total."]
+diligence_questions = [
+  "Can Aryon provide the Series A closing statement and reconcile the $25 million versus $29 million reports, including whether any amount represents gross proceeds, a cumulative or extension figure, or different instruments?",
+  "For each named customer, is Aryon deployed in production under a paid contract, which clouds and change paths are covered, and what are renewal, expansion, and customer concentration metrics?",
+  "What are measured false-positive, bypass, rollback, latency, and availability rates for enforced changes, and how does the system fail safely during Aryon or cloud-provider outages?",
+  "What are ARR, gross margin, net retention, sales-cycle length, burn, and runway following the 2026 financing?",
+  "What are the SAFE conversion terms, fully diluted capitalization, board and information rights, and beneficial ownership of founders and investors?",
+  "What patents, trade secrets, and third-party licenses protect the product, and has the company completed independent security testing of its privileged control plane?"
+]
+
+[[intelligence.research.sources]]
+id = "company_about"
+url = "https://www.aryon.security/about"
+title = "About Aryon Security"
+publisher = "Aryon Security"
+kind = "company"
+accessed_at = "2026-10-03T21:20:23Z"
+claims = ["Company identifies founders Ron Arbel, Yair Ladizhensky, and Ariel Litmanovich with current roles CEO, CPO, and CTO.", "Company lists prominent individual backers and describes its mission and product positioning."]
+
+[[intelligence.research.sources]]
+id = "company_product"
+url = "https://www.aryon.security/product"
+title = "Cloud Security Policy Enforcement Platform"
+publisher = "Aryon Security"
+kind = "company"
+accessed_at = "2026-10-03T21:20:23Z"
+claims = ["Company says its platform supports AI-assisted recommendations, policy marketplace, rollout controls, multicloud policy management, exceptions, guided configuration, and drift tracking.", "Company positions its product as preventing cloud misconfigurations before production deployment."]
+
+[[intelligence.research.sources]]
+id = "safe_company"
+url = "https://www.aryon.security/authors/joshua-behar"
+title = "Joshua Behar - Aryon Security newsroom author page"
+publisher = "Aryon Security"
+kind = "company"
+accessed_at = "2026-10-03T21:20:23Z"
+claims = ["Aryon newsroom reports a $4 million uncapped SAFE from strategic investors, including $1 million from Omer Adam."]
+
+[[intelligence.research.sources]]
+id = "businesswire_a"
+url = "https://www.businesswire.com/news/home/20260610103874/en/Aryon-Security-Raises-29-Million-in-Series-A-Funding-to-Bring-Preventive-Enforcement-to-Modern-Cloud-Security"
+title = "Aryon Security Raises $29 Million in Series A Funding to Bring Preventive Enforcement to Modern Cloud Security"
+publisher = "Business Wire (company-distributed release)"
+kind = "company"
+accessed_at = "2026-10-03T21:20:23Z"
+published_on = "2026-06-10"
+claims = ["Aryon announced a $29 million Series A led by Brightmind Partners with Datadog Ventures, Skinos Ventures, Blumberg Capital, and Viola Ventures participating.", "The announcement states the Series A brought company-reported total funding to $38 million.", "The release names angel investors George Kurtz, Robert Herjavec, Yevgeny Dibrov, and Nadir Izrael."]
+
+[[intelligence.research.sources]]
+id = "brightmind_a"
+url = "https://www.brightmindpartners.com/blog/aryon-building-the-proactive-cloud-security-policy-enforcement-platform"
+title = "Aryon: Building the Proactive Cloud Security Policy Enforcement Platform"
+publisher = "Brightmind Partners"
+kind = "investor"
+accessed_at = "2026-10-03T21:20:23Z"
+claims = ["Brightmind says it led Aryon's $29 million Series A and that the round brings total funding to $38 million.", "Brightmind describes product deployment in its test lab and names participating investors."]
+
+[[intelligence.research.sources]]
+id = "calcalist_a"
+url = "https://www.calcalistech.com/ctechnews/article/rjg0xcubmg"
+title = "Aryon Security raises $25 million Series A backed by Shlomo Kramer, George Kurtz and Datadog Ventures"
+publisher = "Calcalist CTech"
+kind = "media"
+accessed_at = "2026-10-03T21:20:23Z"
+published_on = "2026-06-10"
+claims = ["Calcalist reports a $25 million Series A led by Brightmind Partners and Skinos Ventures, with Datadog Ventures, named angels, and existing seed investors participating.", "Calcalist reports company total funding of $38 million.", "Calcalist reports 44 employees and customers IBI Investment House, Valley Bank, OceanFirst Bank, International Seaways, and New American Funding."]
+
+[[intelligence.research.sources]]
+id = "safe_israelhayom"
+url = "https://www.israelhayom.co.il/tech/tech-news/article/19275898?amp=1"
+title = "Omer Adam invests $1 million in Aryon Security as part of $4 million strategic round"
+publisher = "Israel Hayom"
+kind = "media"
+accessed_at = "2026-10-03T21:20:23Z"
+published_on = "2025-11-19"
+claims = ["Israel Hayom reports Aryon completed a $4 million strategic round, including $1 million from Omer Adam, and had raised $13 million cumulatively at that time.", "The report names Operator Partners, Blumberg Capital, Viola Ventures, Shlomo Kramer, Yasmin Lukatz, and Arik Liberzon among backers.", "The report states Aryon employed 28 people in November 2025."]
+
+[[intelligence.research.sources]]
+id = "seed_company"
+url = "https://www.globenewswire.com/news-release/2025/03/04/3036458/0/en/Aryon-Security-Raises-9M-in-Seed-Funding-to-Transform-Cloud-Security-Industry.html"
+title = "Aryon Security Raises $9M in Seed Funding to Transform Cloud Security Industry"
+publisher = "Aryon Security via GlobeNewswire"
+kind = "company"
+accessed_at = "2026-10-03T21:20:23Z"
+published_on = "2025-03-04"
+claims = ["Aryon announced $9 million in seed funding led by Viola Ventures and Blumberg Capital.", "The company names Ron Arbel as CEO, Ariel Litmanovich as CTO, and Yair Ladizhensky as VP R&D, and describes the founders' Matzov and Project Nimbus experience.", "Company announced its stealth exit and Cloud Security Enforcement Platform launch."]
+
+[[intelligence.research.sources]]
+id = "seed_blumberg"
+url = "https://blumbergcapital.com/news-insights/aryon-raises-9m-seed-round/"
+title = "Aryon Security Debuts With Platform to Prevent Cloud Misconfigurations"
+publisher = "Blumberg Capital"
+kind = "investor"
+accessed_at = "2026-10-03T21:20:23Z"
+published_on = "2025-03-05"
+claims = ["Blumberg confirms $9 million seed funding raised from Blumberg Capital and Viola Ventures, with angel support from Shlomo Kramer, Maty Siman, and Rubi Aronashvili.", "Blumberg identifies founders Ron Arbel, Ariel Litmanovich, and Yair Ladizhensky and describes their Matzov backgrounds."]
+
+[[intelligence.research.sources]]
+id = "axios_a"
+url = "https://www.axios.com/pro/enterprise-software-deals/2026/06/10/cloud-security-aryon-datadog"
+title = "Cloud security provider Aryon Security locks up $29M"
+publisher = "Axios Pro"
+kind = "media"
+accessed_at = "2026-10-03T21:20:23Z"
+published_on = "2026-06-10"
+claims = ["Axios reports a $29 million Series A led by Brightmind Partners and attributes the information to CEO Ron Arbel."]
+
+[[intelligence.research.sources]]
+id = "nextweb_a"
+url = "https://thenextweb.com/news/aryon-security-29m-series-a-cloud-prevention"
+title = "Aryon Security raises $29M to stop cloud breaches before they happen"
+publisher = "The Next Web"
+kind = "media"
+accessed_at = "2026-10-03T21:20:23Z"
+published_on = "2026-06-10"
+claims = ["The Next Web reports the $29 million Series A and names the lead investor and participating backers.", "The article reports Aryon's CEO said one customer had more than 200 misconfigurations prevented in one week.", "The article states Aryon has not disclosed valuation."]
+
+[[intelligence.research.sources]]
+id = "company_blog_index"
+url = "https://www.aryon.security/authors/ron"
+title = "Ron Arbel - Aryon Security newsroom author page"
+publisher = "Aryon Security"
+kind = "company"
+accessed_at = "2026-10-03T21:20:23Z"
+claims = ["Company newsroom index reproduces the June 2026 $29 million Series A announcement and reports $38 million lifetime funding.", "Company newsroom includes the November 2025 $4 million SAFE announcement.", "Company founder biography describes Ron Arbel's prior Cyberilium role and CYE product acquisition in 2023."]
+
+[[intelligence.research.sources]]
+id = "ron_bio"
+url = "https://www.aryon.security/authors/ron"
+title = "Ron Arbel biography"
+publisher = "Aryon Security"
+kind = "company"
+accessed_at = "2026-10-03T21:20:23Z"
+claims = ["Aryon's biography says Ron Arbel was COO at Cyberilium and that its Baseline product was acquired by CYE in August 2023."]
+
+[[intelligence.research.sources]]
+id = "wiz_product"
+url = "https://www.wiz.io/platform"
+title = "Wiz Cloud and AI Security Platform"
+publisher = "Wiz"
+kind = "company"
+accessed_at = "2026-10-03T21:20:23Z"
+claims = ["Wiz describes cloud and AI visibility, security graph, code-to-cloud correlation, runtime protection, and remediation workflows."]
+
+[[intelligence.research.sources]]
+id = "patentscope_search"
+url = "https://patentscope.wipo.int/search/en/search.jsf"
+title = "WIPO PATENTSCOPE"
+publisher = "World Intellectual Property Organization"
+kind = "government"
+accessed_at = "2026-10-03T21:20:23Z"
+claims = ["Name-based public patent searches did not identify a filing attributable to Aryon Security; absence from this search is not proof that no IP exists."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T21:20:23Z"
+next_review_on = "2027-01-03"
+queries = ["Aryon Security official site about product founders headquarters company identity"]
+source_ids = ["company_about", "seed_company", "calcalist_a"]
+summary = "Official About page and dated company/investor materials establish Aryon Security as an active Tel Aviv cloud security startup founded in 2024. No legal registry number or formal legal-name verification was found."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-03T21:20:23Z"
+next_review_on = "2026-11-03"
+queries = ["Aryon Security funding raised seed Series A investors valuation acquired 2025 2026", "Aryon Security $29 million Series A Brightmind Datadog Skinos announcement", "Aryon Security $25 million Series A Calcalist Hebrew", "Aryon Security $4 million uncapped SAFE November 2025 Omer Adam"]
+source_ids = ["seed_company", "safe_israelhayom", "businesswire_a", "axios_a", "calcalist_a"]
+summary = "Seed ($9M) and SAFE ($4M) are reported; Series A appears as $29M or $25M in contemporaneous sources. The company-reported cumulative total is $38M."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T21:20:23Z"
+next_review_on = "2027-01-03"
+queries = ["Aryon Security investors Brightmind Partners Datadog Ventures Viola Blumberg Skinos"]
+source_ids = ["businesswire_a", "brightmind_a", "calcalist_a", "seed_blumberg", "safe_israelhayom"]
+summary = "Round sources identify institutional leads and selected participating funds and angels. Complete ownership percentages and all allocations are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T21:20:23Z"
+next_review_on = "2027-01-03"
+queries = ["Aryon Security founders leadership Ron Arbel Ariel Litmanovich Yair Ladizhensky background"]
+source_ids = ["company_about", "seed_company", "ron_bio", "calcalist_a"]
+summary = "Company identifies three current co-founder executives; seed and investor sources describe Matzov backgrounds. Complete leadership bios are not public."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T21:20:23Z"
+next_review_on = "2027-01-03"
+queries = ["Aryon Security ownership parent company acquisition IPO cap table", "Aryon Security Ltd Israeli Corporations Authority"]
+source_ids = ["company_about", "businesswire_a", "calcalist_a"]
+summary = "No cap table, disclosed holdings, parent, acquisition, or IPO found; private ownership terms remain unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T21:20:23Z"
+next_review_on = "2027-01-03"
+queries = ["Aryon Security revenue ARR profitability burn runway financials"]
+source_ids = ["calcalist_a", "businesswire_a"]
+summary = "No reported revenue, ARR, profitability, burn, or runway found. A media-reported June 2026 employee count is recorded separately."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T21:20:23Z"
+next_review_on = "2026-12-03"
+queries = ["Aryon Security customers contracts partnerships deployments 200 misconfigurations 44 employees"]
+source_ids = ["calcalist_a", "nextweb_a", "company_product"]
+summary = "Calcalist names five customer organizations and reports 44 employees; The Next Web reports a CEO-attributed customer metric. Contract value, production status, and retention are undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T21:20:23Z"
+next_review_on = "2027-04-03"
+queries = ["Aryon Security patents Aryon Security Ltd WIPO USPTO", "Aryon Security intellectual property patent application"]
+source_ids = ["patentscope_search"]
+summary = "Name-based patent searches did not identify attributable public filings. No portfolio or trade secret disclosure found; this is not evidence that the company has no IP."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T21:20:23Z"
+next_review_on = "2027-01-03"
+queries = ["Aryon Security competitors cloud security enforcement Wiz Firefly Sentinel OPA"]
+source_ids = ["company_product", "wiz_product"]
+summary = "Positioning reviewed against CNAPP/posture tools and policy-as-code or cloud-native alternatives. No independent win/loss or feature parity data found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T21:20:23Z"
+next_review_on = "2027-01-03"
+queries = ["Aryon Security defense government military customer contract dual use"]
+source_ids = ["company_about", "calcalist_a", "seed_company"]
+summary = "Preventive cloud controls have plausible commercial and sensitive-sector applicability. No public government or defense customer, contract, or authorization was found; Project Nimbus founder experience is not evidence of Aryon deployment."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Official company site is active, lists its current leadership and product, and Calcalist reports current employees and customers."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["company_about", "company_product", "calcalist_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Official materials and Israeli media identify Aryon as Tel Aviv-based and its founders as Israeli Matzov alumni."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["company_about", "seed_company", "calcalist_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Aryon's Business Wire release and lead investor Brightmind state that the Series A brought total company funding to $38 million."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["businesswire_a", "brightmind_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.amount"
+support = "direct"
+summary = "Aryon and its seed investor report a $9 million seed round."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["seed_company", "seed_blumberg"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.strategic-safe-2025.amount"
+support = "direct"
+summary = "Company newsroom and contemporaneous Israel Hayom report a $4 million strategic uncapped SAFE."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["safe_company", "safe_israelhayom"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.amount"
+support = "conflicting"
+summary = "Business Wire/Aryon reports $29 million; Calcalist reports $25 million. No amount is selected."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["businesswire_a", "calcalist_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.amount_observations.company-release-29m.amount"
+support = "direct"
+summary = "Aryon's June 10, 2026 Business Wire announcement reports $29 million for Series A."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["businesswire_a", "brightmind_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.amount_observations.calcalist-25m.amount"
+support = "direct"
+summary = "Calcalist's June 10, 2026 report states the Series A was $25 million."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["calcalist_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.lead_investors"
+support = "direct"
+summary = "Aryon and Blumberg Capital identify Viola Ventures and Blumberg Capital as seed leads."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["seed_company", "seed_blumberg"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.strategic-safe-2025.participating_investors"
+support = "direct"
+summary = "Israel Hayom reports the strategic SAFE included Omer Adam and names Operator Partners, Blumberg Capital, Viola Ventures, Shlomo Kramer, and Yasmin Lukatz among company backers."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["safe_israelhayom"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.lead_investors"
+support = "direct"
+summary = "Aryon/Business Wire and Calcalist identify Brightmind Partners as a lead; Calcalist also names Skinos Ventures as a lead."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["businesswire_a", "calcalist_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.participating_investors"
+support = "direct"
+summary = "Series A participant names are reported across the company release and Calcalist; individual investors are named in those specific reports."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["businesswire_a", "calcalist_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Employees@2026-06-10.numeric_value"
+support = "direct"
+summary = "Calcalist reports Aryon had 44 employees at the time of its June 2026 Series A coverage."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["calcalist_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.participating_investors"
+support = "direct"
+summary = "Aryon's launch announcement and Blumberg Capital identify named angel participants including Shlomo Kramer, Maty Siman, and Rubi Aronashvili."
+verified_at = "2026-10-03T21:20:23Z"
+source_ids = ["seed_company", "seed_blumberg"]

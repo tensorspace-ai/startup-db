@@ -1,0 +1,474 @@
+name = "Anchor Browser"
+
+description = "Anchor Browser provides managed, security-oriented browser infrastructure for AI agents and software automations that must operate authenticated web applications where APIs are incomplete, unavailable, or too brittle. Its platform combines isolated cloud Chromium sessions, identity and authentication controls, network policy, and agent-facing interfaces."
+
+detailed_description = """
+Anchor Browser is an infrastructure layer for AI agents and deterministic automations that need to use the web through a real browser. Its API and tooling provision managed, headful Chromium sessions, expose browser control over standard automation and agent interfaces, and support persistent profiles, live views, recordings, and parallel execution. This matters because a large part of enterprise software remains locked behind web UIs, SSO, MFA, session state, file downloads, or anti-bot controls rather than stable APIs. Anchor is selling the execution environment and operational reliability beneath the agent, not merely another prompt wrapper.
+
+The initial commercial market includes research and monitoring, customer support, procurement, finance operations, logistics portals, compliance review, and other back-office workflows. The company’s current product direction extends from cloud browsers into authentication and agent identity: its public material describes session-based credential handling, native MFA flows, OmniConnect, domain-scoped secrets, proxy and VPN options, and MCP/CLI integrations. These capabilities can reduce the engineering burden of maintaining fragile Playwright-style workflows, but they also make the product responsible for browser patching, identity continuity, egress reputation, observability, and safe handling of customer data. Buyers will therefore evaluate task success rates and latency alongside isolation, retention, residency, and incident response.
+
+Anchor has meaningful external traction signals for an early startup, though they are not substitutes for audited revenue or retention data. In October 2025, Blumberg Capital announced a $6M seed round led by Blumberg with participation from Gradient; Gradient described early customers and partners including Unify, Browser Use, Coinbase, Groq, and Cloudflare. Those references indicate ecosystem and developer adoption, while the company’s own site names customer examples and continues to publish technical launches. The public evidence still leaves important questions open: customer concentration, gross margin per browser-minute, conversion from experimentation to production, workflow success rates across difficult sites, and how much platform value persists if general-purpose agent stacks bundle browser access.
+
+Competition spans Browserbase, Browserless, Steel.dev, Hyperbrowser, Browser Use, Skyvern, and cloud or self-hosted Playwright/Selenium deployments. Anchor’s differentiator is the attempt to combine secure ephemeral execution, authenticated identity, network guardrails, and agent ergonomics in one managed service. Its security documentation states that sessions run in dedicated disposable VMs, that tenant isolation and encrypted session authentication are used, and that SOC 2 Type II, ISO 27001, HIPAA, and GDPR controls are available; the public Trust Portal is useful evidence, but customers should verify scope, dates, plan limits, and audit reports directly. The company also advertises BYOC/on-premise paths and AWS Marketplace procurement, which could help enterprise sales but increase operational complexity.
+
+The national-security and defense relevance is credible but indirect. A controlled browser execution layer could support defensive OSINT, monitoring of public or partner portals, intelligence-analysis workflows, secure interaction with legacy systems, and mission-support automation where no API exists. It could also enable credentialed collection or actions that create abuse, privacy, and cyber risk. There is no reliable public evidence here of defense contracts or classified deployment, so the strategic case should be framed as enabling infrastructure with security-sensitive dual-use potential, not as an established defense vendor. Diligence should focus on abuse controls, customer screening, logging and retention choices, export and sanctions compliance, isolation under adversarial workloads, and whether enterprise governance is strong enough for high-consequence use."""
+
+logo = "https://cdn.prod.website-files.com/68e76a236cc487333075990b/68e76a236cc487333075996a_webclip.png"
+website = "https://anchorbrowser.io"
+
+sector = "Secure browser and AI agent infrastructure"
+
+founded = "2024"
+headquarters = "Wilmington, Delaware"
+employees = "51-200"
+funding_stage = "Seed"
+
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Anchor's core technology has substantive commercial and security applicability. Isolated browser execution, authenticated-session controls, domain guardrails, network routing, and zero-retention options can support defensive OSINT, portal monitoring, secure access to legacy systems, and mission-support workflows, while the same browser and bot-access capabilities can facilitate unauthorized collection or actions. The dual-use thesis is therefore credible but indirect and governance-dependent; no public defense contract or classified deployment is established in this record."
+
+key_technologies = [
+  "Cloud-hosted browser fleet orchestration",
+  "Managed Chromium sessions with session isolation",
+  "Authenticated browser automation and MFA handling",
+  "CAPTCHA solving and bot-protected site access",
+  "Proxy routing and dedicated sticky IPs",
+  "Sensitive-data masking and session guardrails",
+  "MCP and agent-framework integrations"
+]
+
+use_cases = [
+  "Automating workflows on websites with no or limited API coverage",
+  "Credentialed SaaS operations that require login, MFA, and session continuity",
+  "Parallel web research and data collection at scale",
+  "Customer support and operations tasks that must interact with live web UIs",
+  "Back-office processing for finance, insurance, healthcare, or procurement portals",
+  "Controlled access to bot-protected or rate-limited web properties",
+  "Secure internal browser tasks for regulated or sensitive workflows"
+]
+
+investible = true
+investment_rationale = "Anchor is a credible early-stage priority signal because it addresses a difficult infrastructure bottleneck for computer-using agents: reliable, authenticated, policy-constrained browser execution. The $6M seed announcement, named ecosystem relationships, live developer product, and documented security architecture provide stronger evidence than a concept-stage automation wrapper. Strategic diligence should test production retention, browser-minute economics, task reliability, abuse prevention, and differentiation against Browserbase, Browserless, open-source stacks, and agent platforms that may bundle browser infrastructure. This is a strategic assessment, not an investment recommendation."
+
+strategic_value = "Anchor offers reusable execution infrastructure for AI-enabled web operations: isolated browsers, identity continuity, policy-controlled network access, and integrations that let agents act where APIs are absent. That can improve resilience and reduce the cost of automating commercial and government-adjacent portals, but strategic value depends on proving trustworthy operation at scale and controlling the abuse surface of credentialed browser access."
+
+public_sources = [
+  { label = "About and founding team", url = "https://anchorbrowser.io/about", description = "Official company description, founders, customer and partner references." },
+  { label = "Seed round and investor announcement", url = "https://www.gradient.com/blog/posts/anchor-browser/", description = "Gradient's October 2025 announcement of the $6M Seed round and early customer/partner references." },
+  { label = "Seed round reporting", url = "https://www.calcalistech.com/ctechnews/article/b1k00f48all", description = "Independent reporting on the seed round, Israeli origins, founding date and product." },
+  { label = "Groq deployment announcement", url = "https://www.prnewswire.com/news-releases/anchor-browser-powers-groqs-agent-platform-enabling-reliable-ai-access-to-the-web-302658445.html", description = "Anchor announcement describing its role powering Groq agent infrastructure." },
+  { label = "Groq integration documentation", url = "https://console.groq.com/docs/anchorbrowser", description = "Customer-side technical guide to the Anchor Browser integration." },
+  { label = "Company LinkedIn profile", url = "https://www.linkedin.com/company/anchorbrowser", description = "Company-reported Wilmington headquarters and employee-size band." },
+  { label = "Trust portal", url = "https://trust.anchorbrowser.io/", description = "Company trust portal listing security/compliance materials; detailed reports gated." },
+  { label = "Security documentation", url = "https://docs.anchorbrowser.io/security", description = "Official security architecture and controls documentation." }
+]
+
+potential_score = 82.0
+technology_score = 86.0
+market_score = 83.0
+team_score = 78.0
+dual_use_score = 80.0
+strategic_alignment_score = 82.0
+
+stage = "early"
+stage_rationale = "Early startup founded in 2024 with a live production product, named ecosystem relationships, public customer references, and a reported $6M seed round announced in October 2025. It remains early because public evidence does not establish scale, repeatable revenue, broad retention, or a long operating history."
+
+competitors = [
+  "Browserbase",
+  "Browserless",
+  "Steel.dev",
+  "Skyvern",
+  "Island",
+  "Menlo Security"
+]
+
+competitive_edge = "Anchor's strongest potential edge is the integration of managed headful browser execution with identity, MFA, network, retention, and governance controls. That combination addresses the operational failure modes that appear when agents move from demos to authenticated production workflows. The edge is not yet proven durable: competitors can add similar controls, and customers with engineering capacity can assemble much of the stack from Playwright, browser fleets, identity tooling, and proxies."
+
+risk_factors = [
+  "Category crowding: browser automation, agent infrastructure, and secure browsing vendors can overlap quickly",
+  "Bot-evasion, CAPTCHA resolution, and large-scale collection can trigger platform restrictions, legal scrutiny, or customer abuse concerns",
+  "Web UI changes, browser-engine churn, MFA changes, and site-specific defenses can break production workflows",
+  "Enterprise trust depends on the actual scope and currency of isolation, compliance attestations, credential controls, and incident response",
+  "Compute-heavy browser sessions, recordings, proxies, and support requirements can pressure gross margins and pricing",
+  "Security, credential leakage, cross-tenant isolation, or abusive-customer incidents would be unusually damaging",
+  "General-purpose agent platforms and open-source browser stacks may bundle or commoditize the execution layer; public evidence is still thin on revenue scale, retention, customer concentration, and success rates on the hardest workflows"
+]
+
+risk_level = "high"
+
+signals = []
+priority_rank = 0
+priority_rationale = "Early-stage browser infrastructure with real strategic relevance, but the category is crowded and execution-sensitive, so it is best treated as a monitoring and selective-diligence name rather than a broad priority signal."
+
+crawled_at = "2026-02-15T16:33:40Z"
+updated_at = "2026-10-03T17:32:44Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+traction = []
+intellectual_property = []
+
+[[intelligence.people]]
+name = "Idan Raman"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "The official company page identifies Raman as co-founder and CEO. Israeli reporting describes the founding team as including graduates/veterans of Israeli technology and intelligence units; specific past roles should be verified directly."
+source_ids = ["about", "ctech"]
+
+[[intelligence.people]]
+name = "Dor Dankner"
+role = "Co-founder and CTO"
+is_founder = true
+current = true
+background = "Identified as co-founder and CTO on the official company page."
+source_ids = ["about"]
+
+[[intelligence.people]]
+name = "Guy Ben Simhon"
+role = "Co-founder and CPO"
+is_founder = true
+current = true
+background = "Identified as co-founder and CPO on the official company page."
+source_ids = ["about"]
+
+[[intelligence.investors]]
+name = "Blumberg Capital"
+investor_type = "vc"
+website = "https://blumbergcapital.com/"
+relationship = "current"
+round_ids = ["seed-2025"]
+source_ids = ["gradient", "ctech"]
+
+[[intelligence.investors]]
+name = "Gradient Ventures"
+investor_type = "vc"
+website = "https://www.gradient.com/"
+relationship = "current"
+round_ids = ["seed-2025"]
+source_ids = ["gradient", "ctech"]
+
+[[intelligence.investors]]
+name = "Angel investors affiliated with OpenAI, ServiceNow, and SentinelOne"
+investor_type = "angel"
+relationship = "current"
+round_ids = ["seed-2025"]
+source_ids = ["gradient"]
+notes = "Investor announcement identifies angels from these organizations but does not name the individuals; the organizations are not represented as direct corporate investors."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "No public cap table or ownership percentages found. Private ownership remains undisclosed. No parent company, acquisition, or ownership transaction was identified in the reviewed sources."
+cap_table_status = "undisclosed"
+shareholders = ["Founders and private investors; percentages undisclosed"]
+source_ids = ["gradient", "about"]
+deals = []
+holdings = []
+
+[intelligence.funding]
+status = "reported"
+summary = "One publicly announced $6 million Seed equity round, announced October 22, 2025. Gradient Ventures and Blumberg Capital are both described as leads. The investor announcement also names angel participants affiliated with OpenAI, ServiceNow, and SentinelOne. No later financing located in searches through 2026-10-03."
+reported_total_raised = 6000000
+reported_total_currency = "USD"
+total_source_ids = ["gradient"]
+total_as_of = "2025-10-22"
+total_scope = "Company/investor-announced lifetime funding represented by the disclosed Seed round; no independent funding total was found."
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[[intelligence.funding.rounds]]
+id = "seed-2025"
+round_type = "Seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2025-10-22"
+amount_status = "reported"
+amount = 6000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Blumberg Capital", "Gradient Ventures"]
+participating_investors = ["Angel investors affiliated with OpenAI, ServiceNow, and SentinelOne"]
+source_ids = ["gradient", "ctech"]
+notes = "Both Gradient and CTech describe the round as led by Blumberg Capital and Gradient. No valuation was disclosed."
+
+[[intelligence.comparables]]
+name = "Browserbase"
+website = "https://browserbase.com/"
+rationale = "Managed browser infrastructure for AI agents and automation is a direct product-market peer."
+differentiation = "Anchor emphasizes identity, authenticated sessions and enterprise security controls; relative performance and customer overlap require diligence."
+source_ids = ["about", "gradient"]
+
+[[intelligence.comparables]]
+name = "Browserless"
+website = "https://browserless.io/"
+rationale = "Hosted browser infrastructure and remote browser execution overlap with Anchor's execution layer."
+differentiation = "Anchor's public positioning adds agent-specific identity and workflow controls; comparative production reliability has not been independently benchmarked here."
+source_ids = ["about"]
+
+[[intelligence.comparables]]
+name = "Steel"
+website = "https://steel.dev/"
+rationale = "Cloud browser sessions and browser automation for agents make Steel a direct category competitor."
+differentiation = "Anchor combines hosted execution with credential, network and security positioning; product parity and economics need testing."
+source_ids = ["about"]
+
+[intelligence.company]
+company_id = "anchor-browser"
+source_ids = ["about", "ctech", "linkedin"]
+aliases = ["Anchor Browser", "Anchor"]
+operating_status = "active"
+business_model = "B2B cloud infrastructure/API and developer platform for managed browser sessions used by AI agents and software automation; public pricing and enterprise deployment options are offered."
+products = ["Managed cloud browser sessions", "Browser agent API and SDKs", "Agent identity and authentication tooling", "MCP/CLI integrations"]
+locations = ["Wilmington, Delaware, United States", "Tel Aviv, Israel (reported founding/operating connection)"]
+linkedin_url = "https://www.linkedin.com/company/anchorbrowser"
+founded_on = "2024"
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders"]
+summary = "The founders and company are publicly described by the official company page and Israeli business press as an Israeli founding team/startup. The current public profile lists Wilmington, Delaware as headquarters, so this is a founder connection rather than a claim of Israeli incorporation or current headquarters."
+as_of = "2026-10-03"
+source_ids = ["about", "ctech", "linkedin"]
+
+[intelligence.research]
+researched_at = "2026-10-03T17:32:44Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Anchor Browser official identity founders legal name headquarters products",
+  "Anchor Browser funding raised seed Series A investors valuation acquisition",
+  "Anchor Browser team founder CEO leadership backgrounds",
+  "Anchor Browser ownership parent company acquired cap table",
+  "Anchor Browser revenue ARR profitability burn runway employees",
+  "Anchor Browser customers contracts partnerships Groq deployment",
+  "Anchor Browser patents patent Anchor Forge browser automation",
+  "Anchor Browser competitors Browserbase Browserless Steel agent browser",
+  "Anchor Browser defense government security dual use contracts",
+  "Anchor Browser גיוס משקיעים מייסדים לקוחות"
+]
+gaps = [
+  "team: public founder roles are verified, but detailed current headcount, biographies and non-founder leadership roster are not independently established.",
+  "investors: individual angel identities and exact allocations are undisclosed; corporate affiliations are not proof of direct corporate investment.",
+  "financials: no public revenue, ARR, profitability, burn, cash or runway figures found.",
+  "traction: Groq is an announced named deployment; other named relationships include customer/partner references, but payment, contract values, production scope and retention are not public.",
+  "intellectual_property: no company-assigned patents were identified in targeted public searches; this does not establish that no applications or trade secrets exist.",
+  "competition: comparables reflect category overlap; independent comparative benchmarks, win/loss data and customer overlap are unavailable.",
+  "ownership: private cap table, investor percentages and legal entity/registry mapping not established from available primary sources.",
+  "funding: public search located the October 2025 Seed only; private, unannounced or non-equity financing may exist.",
+  "dual_use: no public defense contract, government deployment or classified use located; applicability is technical inference only."
+]
+conflicts = ["The legacy profile says Wilmington, Delaware; Israeli reporting locates the startup/team in Tel Aviv. Current company LinkedIn also lists Wilmington. This appears to distinguish profile headquarters from Israeli founding/operations; no contradictory legal incorporation evidence was located.", "LinkedIn lists a 51-200 company-size band, while older directory and third-party profiles reported 1-10. These are inconsistent, non-audited indicators; employee count is not treated as a verified metric."]
+diligence_questions = [
+  "What portion of the Groq relationship is a paid production deployment, and what usage, retention and renewal metrics can Anchor share?",
+  "What are gross margin and unit economics by browser session/minute after compute, proxy, recording and support costs?",
+  "Which controls restrict credential abuse, unauthorized collection and high-risk workflows, and how are customer actions audited?",
+  "What is the legal operating entity and where are the browser fleet, customer data and support operations located?",
+  "How does Anchor benchmark task completion, latency, isolation and reliability against Browserbase, Browserless and self-hosted Playwright?"
+]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://anchorbrowser.io/about"
+title = "About Anchor Browser"
+publisher = "Anchor Browser"
+kind = "company"
+accessed_at = "2026-10-03T17:32:44Z"
+claims = ["Three named co-founders and roles", "Company description and active product positioning", "Company displays customer and investor references"]
+
+[[intelligence.research.sources]]
+id = "gradient"
+url = "https://www.gradient.com/blog/posts/anchor-browser/"
+title = "Our Investment in Anchor"
+publisher = "Gradient Ventures"
+kind = "investor"
+published_on = "2025-10-22"
+accessed_at = "2026-10-03T17:32:44Z"
+claims = ["$6 million Seed round", "Blumberg Capital and Gradient Ventures are round leads", "Angel investors affiliated with OpenAI, ServiceNow and SentinelOne participated", "Named early customers/partners include Unify, Browser Use, Coinbase, Groq and Cloudflare", "Founders Idan, Dor and Guy founded Anchor"]
+
+[[intelligence.research.sources]]
+id = "ctech"
+url = "https://www.calcalistech.com/ctechnews/article/b1k00f48all"
+title = "Google’s AI fund backs $6M Seed in Anchor Browser, an Israeli AI automation platform"
+publisher = "CTech / Calcalist"
+kind = "media"
+published_on = "2025-10-22"
+accessed_at = "2026-10-03T17:32:44Z"
+claims = ["Israeli startup identity and founding in 2024", "$6 million Seed led by Blumberg Capital and Gradient Ventures", "Product automates online operations through web interfaces"]
+
+[[intelligence.research.sources]]
+id = "groq-pr"
+url = "https://www.prnewswire.com/news-releases/anchor-browser-powers-groqs-agent-platform-enabling-reliable-ai-access-to-the-web-302658445.html"
+title = "Anchor Browser Powers Groq's Agent Platform, Enabling Reliable AI Access to the Web"
+publisher = "PR Newswire (news provided by Anchor Browser)"
+kind = "company"
+published_on = "2026-01-12"
+accessed_at = "2026-10-03T17:32:44Z"
+claims = ["Anchor announced that it powers Groq agent infrastructure", "Groq selected Anchor for agents interacting with real-world web environments", "Groq builders said they built an MVP in under an hour and ran parallel browsers for Compound"]
+
+[[intelligence.research.sources]]
+id = "groq-docs"
+url = "https://console.groq.com/docs/anchorbrowser"
+title = "Anchor Browser + Groq: Blazing Fast Browser Agents"
+publisher = "Groq"
+kind = "customer"
+accessed_at = "2026-10-03T17:32:44Z"
+claims = ["Groq publishes technical integration documentation for Anchor Browser", "The integration targets web applications with limited or absent APIs"]
+
+[[intelligence.research.sources]]
+id = "linkedin"
+url = "https://www.linkedin.com/company/anchorbrowser"
+title = "Anchor Browser company profile"
+publisher = "LinkedIn"
+kind = "other"
+accessed_at = "2026-10-03T17:32:44Z"
+claims = ["Company profile lists Wilmington, Delaware headquarters", "Company profile reports 51-200 employee size band"]
+
+[[intelligence.research.sources]]
+id = "trust"
+url = "https://trust.anchorbrowser.io/"
+title = "Anchor Browser Trust Portal"
+publisher = "Anchor Browser / SafeBase"
+kind = "company"
+accessed_at = "2026-10-03T17:32:44Z"
+claims = ["Trust portal lists SOC 2 Type 2 and other compliance materials; detailed reports require access"]
+
+[[intelligence.research.sources]]
+id = "security"
+url = "https://docs.anchorbrowser.io/security"
+title = "Security"
+publisher = "Anchor Browser Documentation"
+kind = "company"
+accessed_at = "2026-10-03T17:32:44Z"
+claims = ["Official security documentation describes browser session isolation, credential and data safeguards"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T17:32:44Z"
+next_review_on = "2027-01-03"
+queries = ["Anchor Browser official identity founders legal name headquarters products"]
+source_ids = ["about", "ctech", "linkedin"]
+summary = "Official site verifies brand, founders and product. Wilmington is listed on LinkedIn; legal entity name and incorporation jurisdiction remain unverified."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T17:32:44Z"
+next_review_on = "2027-01-03"
+queries = ["Anchor Browser funding raised seed Series A investors valuation acquisition", "Anchor Browser גיוס משקיעים"]
+source_ids = ["gradient", "ctech"]
+summary = "One $6M Seed round publicly announced October 22, 2025; no later public round located."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T17:32:44Z"
+next_review_on = "2027-01-03"
+queries = ["Anchor Browser investors Blumberg Gradient angels"]
+source_ids = ["gradient", "ctech"]
+summary = "Two named VC leads and angel affiliations identified; angel names and allocations unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T17:32:44Z"
+next_review_on = "2027-01-03"
+queries = ["Anchor Browser team founder CEO leadership backgrounds"]
+source_ids = ["about", "ctech"]
+summary = "Official site lists three current co-founders and roles; biographies and broad employee roster remain incomplete."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T17:32:44Z"
+next_review_on = "2027-01-03"
+queries = ["Anchor Browser ownership parent company acquired cap table", "Anchor Forge Ltd"]
+source_ids = ["about", "gradient"]
+summary = "No public cap table, parent, or ownership transaction found; no legal entity linkage confirmed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T17:32:44Z"
+next_review_on = "2027-01-03"
+queries = ["Anchor Browser revenue ARR profitability burn runway employees"]
+source_ids = ["gradient", "linkedin"]
+summary = "No reported financial metrics located. LinkedIn employee band is inconsistent with older directories and is not treated as a precise headcount."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T17:32:44Z"
+next_review_on = "2027-01-03"
+queries = ["Anchor Browser customers contracts partnerships Groq deployment"]
+source_ids = ["gradient", "groq-pr", "groq-docs"]
+summary = "Investor named early customer/partner relationships; Anchor announced powering Groq agents and Groq published integration docs. Commercial terms and usage remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T17:32:44Z"
+next_review_on = "2027-01-03"
+queries = ["Anchor Browser patents patent Anchor Forge browser automation"]
+source_ids = ["about"]
+summary = "No attributable patent record located in targeted searches; no inference that the company has no IP."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T17:32:44Z"
+next_review_on = "2027-01-03"
+queries = ["Anchor Browser competitors Browserbase Browserless Steel agent browser"]
+source_ids = ["about"]
+summary = "Direct peers include hosted browser infrastructure vendors; product comparisons and independent benchmarks are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-03T17:32:44Z"
+next_review_on = "2027-01-03"
+queries = ["Anchor Browser defense government security dual use contracts"]
+source_ids = ["security", "trust"]
+summary = "Security-oriented browser infrastructure has plausible defensive and sensitive-workflow applications, but no public defense contract or classified deployment was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The official company site describes the live browser automation product and current founding team; current customer integration documentation and announcement also evidence ongoing operations."
+verified_at = "2026-10-03T17:32:44Z"
+source_ids = ["about", "groq-pr", "groq-docs"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "CTech identifies Anchor Browser as an Israeli startup and official company material confirms the same founding team named in investor coverage; Israeli founders are the basis recorded."
+verified_at = "2026-10-03T17:32:44Z"
+source_ids = ["ctech", "about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Gradient's dated investor announcement calls this a $6M Seed round and identifies Anchor's backers; recorded as the only publicly announced lifetime total located."
+verified_at = "2026-10-03T17:32:44Z"
+source_ids = ["gradient"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.amount"
+support = "direct"
+summary = "Gradient announced the $6M Seed on October 22, 2025; CTech independently reported the same amount."
+verified_at = "2026-10-03T17:32:44Z"
+source_ids = ["gradient", "ctech"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.lead_investors"
+support = "direct"
+summary = "Gradient's announcement names Blumberg Capital alongside itself; CTech reports both led the round."
+verified_at = "2026-10-03T17:32:44Z"
+source_ids = ["gradient", "ctech"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.participating_investors"
+support = "direct"
+summary = "Gradient reports angel investors affiliated with OpenAI, ServiceNow and SentinelOne participated, without disclosing individual names."
+verified_at = "2026-10-03T17:32:44Z"
+source_ids = ["gradient"]

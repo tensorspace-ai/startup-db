@@ -1,0 +1,106 @@
+name = "Hirundo"
+
+description = "Hirundo develops a machine-unlearning platform that evaluates trained AI models and selectively removes unwanted data traces or behaviors without requiring full retraining. Its product targets model builders and enterprises that need measurable remediation for privacy, safety, security, and data-quality failures."
+
+detailed_description = """
+Hirundo is building infrastructure for machine unlearning: the post-training modification of a model so that specified data, concepts, or behaviors have materially less influence, while retained capabilities are tested for regression. Its public product positioning spans two related workflows. LLM unlearning addresses behaviors such as jailbreak susceptibility, bias, hallucination tendencies, and memorized personally identifiable information; data-quality tooling addresses mislabels, outliers, and other defects in vision, radar, LiDAR, time-series, speech-to-text, and NLP datasets and models. The company describes a workflow that detects or evaluates a risk, targets the relevant model parameters or representations, applies a modular edit, and measures both forget performance and retained utility.
+
+The customer problem is credible but technically demanding. Model teams currently choose among guardrails, filtering, fine-tuning, or full retraining when a deployed model contains a privacy problem, an unsafe behavior, poisoned data, or a quality defect. Hirundo’s proposed advantage is shortening that remediation loop from a large retraining project to an evaluated edit that can run on standard GPU infrastructure. The company advertises up to 85% fewer successful prompt injections, up to 70% lower bias on stated benchmarks, and complete removal of fine-tuned PII in particular evaluations; these are company-reported results and should be independently reproduced across architectures, datasets, attack suites, and operating conditions before being treated as general performance guarantees. Its public materials also describe SaaS, VPC, Kubernetes, S3-compatible, and air-gapped deployment options, which are relevant to regulated and security-sensitive buyers.
+
+Commercially, Hirundo sits at the intersection of AI security, model governance, data quality, and post-training infrastructure. Its stated buyers include AI and product teams, security and privacy teams, and frontier-model or AI research labs. Public evidence includes a reported $8 million seed round in June 2025 led by Maverick Ventures Israel, public testimonials from Intel Ignite and Taranis, model and dataset artifacts on Hugging Face, and references to work on open-weight models including Liquid AI and Gemma. LinkedIn lists the company as a privately held Tel Aviv software company founded in 2023 with an 11–50 employee range. These signals indicate meaningful technical and ecosystem activity, but they do not establish recurring revenue, production scale, customer concentration, or the durability of the claimed benchmark improvements.
+
+The competitive field includes model-monitoring and AI-security vendors that detect risks, guardrail and firewall products that block problematic outputs, internal MLOps and evaluation teams, and the continuing substitute of fine-tuning or retraining. Hirundo’s differentiation depends on turning detection into a model-level remediation artifact that is auditable, reversible, and cheap enough to repeat. The defensibility question is whether its influence analysis and weight-editing methods retain precision on larger and changing model families, including cases where knowledge is distributed or behavior is entangled with useful capabilities. A strong enterprise position would require reproducible evaluations, provenance and rollback controls, secure deployment, and evidence that an edited checkpoint remains safe under adaptive red-teaming rather than only on a fixed benchmark.
+
+The defense and national-security relevance is substantive but should be framed as an enabling control, not as evidence of defense contracts. Model unlearning could help sanitize sensitive or export-controlled artifacts before a model is transferred, reduce exploitable behaviors in mission-support systems, remediate data contamination, and support lifecycle governance in disconnected or air-gapped environments. The same capability could also be misused to conceal provenance, remove audit-relevant evidence, or create a false sense that a model is safe because one measured behavior improved. Strategic diligence should therefore focus on cryptographic provenance, change logs, independent validation, authorization boundaries, and the difference between reducing model behavior and proving that information is mathematically or operationally unrecoverable.
+"""
+
+logo = "https://www.hirundo.io/favicon.ico"
+website = "https://www.hirundo.io"
+sector = "AI Safety, Security, and Model Governance"
+
+founded = "2023"
+headquarters = "Tel Aviv, Israel"
+employees = "11-50"
+funding_stage = "Seed; $8M round reported in June 2025"
+entity_type = "startup"
+
+dual_use = true
+
+dual_use_description = "Hirundo's model-level remediation technology has credible commercial and security applicability. It can help organizations reduce memorized sensitive data, harden open-weight models against prompt-injection or other unsafe behaviors, and prepare models for controlled sharing or deployment in regulated and air-gapped environments. The defense case is an enabling governance and hardening capability rather than a demonstrated weapons system or confirmed government program. Auditability is essential because selective editing could also obscure provenance or create unjustified confidence in a model's safety."
+
+key_technologies = [
+  "Machine-unlearning methods for targeted data and behavior removal",
+  "Data-influence analysis and parameter-level weight editing",
+  "Behavior vectors and modular LoRA-style remediation adapters",
+  "Model evaluation, red-team testing, and forget-versus-retain benchmarks",
+  "Data-quality diagnosis for mislabeled, anomalous, and under-sampled training data",
+  "Secure API and platform deployment across SaaS, VPC, Kubernetes, and air-gapped environments"
+]
+
+use_cases = [
+  "Removing memorized PII, copyrighted material, leaked records, or poisoned examples from trained models",
+  "Reducing jailbreak and prompt-injection susceptibility in open-weight or enterprise LLMs",
+  "Correcting measured bias, hallucination tendencies, or other localized model behaviors",
+  "Finding mislabeled and anomalous examples that limit computer-vision, radar, LiDAR, speech, or NLP accuracy",
+  "Remediating a model before controlled sharing, export, or deployment in a disconnected environment",
+  "Producing repeatable risk, utility, rollback, and provenance evidence for AI governance teams",
+  "Hardening mission-support or other high-consequence models after red-team findings without a full retrain"
+]
+
+investible = true
+
+investment_rationale = "Hirundo addresses a narrow but increasingly important control point in the AI lifecycle: remediation after a model has already been trained. The reported seed financing, active public model artifacts, research-oriented founding team, and enterprise deployment claims support meaningful technical momentum. The priority signal is strategic rather than an investment recommendation. The central diligence tests are independent replication of reported results, performance on larger and changing architectures, evidence of paid production adoption, protection of proprietary methods, and whether model vendors or internal platform teams can reproduce the workflow as a feature."
+
+strategic_value = "Hirundo could provide an allied AI supply-chain control for inspecting, hardening, and selectively remediating models before deployment or transfer. Its value is highest where retraining is slow, compute-constrained, operationally disruptive, or incompatible with air-gapped environments. Strategic value remains conditional on proving that edits are reversible, provenance-preserving, resistant to adaptive attacks, and useful beyond the company's chosen benchmarks."
+
+potential_score = 84.0
+technology_score = 88.0
+market_score = 81.0
+team_score = 79.0
+dual_use_score = 85.0
+strategic_alignment_score = 88.0
+
+stage = "early"
+
+stage_rationale = "Hirundo is a 2023-founded private company that publicly reported a seed round in 2025 and continues to present early-access, demo, research-artifact, and pilot-oriented signals. Public technical activity and named ecosystem references suggest progress beyond a purely academic prototype, but recurring revenue, broad production deployment, and independently verified scale are not established in the available evidence."
+
+competitors = [
+  "Internal retraining, fine-tuning, and MLOps remediation teams",
+  "Guardrail and AI-security platforms such as Lakera, HiddenLayer, and Protect AI",
+  "Model-evaluation and monitoring vendors that detect but do not edit model weights",
+  "Academic and open-source model-editing and machine-unlearning toolchains",
+  "Foundation-model providers adding native post-training safety and data-removal features"
+]
+
+competitive_edge = "Hirundo's claimed edge is the combination of risk detection, targeted model-level editing, and regression testing in one operational workflow. Public materials emphasize parameter-level data influence, behavior-vector or adapter-based changes, deployment in controlled environments, and faster remediation than retraining. That edge will be durable only if the company demonstrates lower collateral damage, stronger recovery resistance, better auditability, and repeatable economics across model families than general-purpose post-training stacks and security substitutes."
+
+risk_factors = [
+  "Scientific generalization: unlearning results may degrade when knowledge is distributed, behaviors are entangled, or models and datasets change",
+  "Verification risk: lower benchmark attack rates do not prove complete information removal or safety against adaptive red teams",
+  "Utility and regression risk: edits can reduce reasoning, accuracy, calibration, or capabilities that were not intended to change",
+  "Platform substitution: foundation-model vendors, cloud providers, and internal AI teams may absorb model remediation features",
+  "Commercialization risk: enterprise and government sales require long security, procurement, and validation cycles",
+  "Governance and provenance risk: post-hoc edits can complicate audit trails, legal discovery, licensing, and responsibility for model behavior",
+  "Evidence concentration: many public efficacy claims are company-reported and require independent replication across representative workloads"
+]
+
+risk_level = "high"
+
+signals = []
+
+priority_rank = 0
+
+priority_rationale = "High strategic-priority signal because Hirundo addresses model remediation, privacy, and AI-security gaps that are relevant to controlled allied deployments. The score reflects strong technical and strategic fit plus public evidence of financing and artifacts, while the early stage and high risk level require diligence on independent benchmarks, production references, provenance controls, and commercial repeatability. This is an internal prioritization flag, not an investment recommendation."
+
+public_sources = [
+  "https://www.hirundo.io/",
+  "https://www.hirundo.io/about",
+  "https://www.hirundo.io/ai-labs",
+  "https://www.hirundo.io/dataset-optimization",
+  "https://www.linkedin.com/company/gethirundo",
+  "https://huggingface.co/hirundo-io",
+  "https://www.prnewswire.com/news-releases/hirundo-raises-8m-seed-to-make-ai-forget-hallucinations-biases-and-vulnerabilities-302476302.html"
+]
+
+crawled_at = "2026-02-15T16:41:43Z"
+updated_at = "2026-07-31T18:00:39Z"

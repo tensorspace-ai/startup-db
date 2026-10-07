@@ -1,0 +1,472 @@
+name = "Actasys"
+description = "Actasys is an Israeli-linked deep-tech hardware startup developing ActaJet, a compact electronically controlled synthetic-air-jet platform for cleaning optical sensors and cooling localized hotspots in AI, mobility, robotics, and other high-performance electronic systems. Its current public positioning has shifted toward precision cooling for data-center networking and edge-AI components while retaining a sensor-enablement thesis for autonomous machines."
+detailed_description = """
+**Product and the concrete problem it solves.** Actasys addresses two physical failure modes that become strategically important when machines depend on continuous perception or computation: optical sensors become unusable when rain, mud, dust, snow, or other contaminants obscure the transmission surface, and dense electronic components throttle when heat accumulates faster than the surrounding system can remove it. A dirty camera or LiDAR is not merely a cosmetic problem for an autonomous vehicle, robot, drone, security camera, or industrial machine; it can degrade the data supplied to perception and control software at the exact moment the system is operating in difficult conditions. Likewise, a thermal hotspot in a network interface card, data-processing unit, switch, or edge-AI module can reduce sustained compute, increase failure risk, or force a bulky redesign. Actasys's public materials present one platform family for both problems: compact air-based actuators and control software that direct airflow exactly where cleaning or heat removal is required. The current data-center product page calls the approach ActaJet and targets NICs, DPUs, switches, and printed-circuit-board components in dense 1U and 2U environments. The earlier mobility proposition focused on preserving camera, LiDAR, and infrared-sensor visibility in assisted and autonomous driving. The unifying value proposition is performance continuity in systems whose usefulness depends on a sensor or electronic component staying within an operating envelope.
+
+**Core technology and how it actually works.** The original ActaJet architecture is described as a distributed array of small actuator cartridges that generate strong jets of air without a conventional compressor, pump, or fan. Public technical material and patent records describe a synthetic-jet actuator: an electronically driven piezoelectric membrane oscillates against a small cavity, alternately compressing and expanding the contained air so that flow is expelled through an orifice. This creates a pulsed or turbulent jet without rotary mechanical parts. For sensor cleaning, the cartridges can be placed close to the optical surface rather than relying on a centralized washer-fluid tank, wiper, or large blower. The company has described software embedded in the host system or vehicle ECU that selects actuator behavior according to environmental conditions, particle characteristics, temperature, or sensor-performance data. For thermal management, the same type of active-flow-control device disrupts the stagnant thermal boundary layer over a hot surface and directs air to a specific component rather than moving a large volume of air through the entire enclosure. The current company website claims jets up to 80 meters per second, a thickness below 3 millimeters, and 2–3 watts of power for the data-center implementation. Its LinkedIn material also describes an Active Heat Sink that combines localized jet cooling with a passive heat sink and reports 66% higher sustained AI performance on an NVIDIA Jetson Orin AGX test setup. Those performance figures are company-reported and require independent replication. Actasys has additionally described OLA, or Obscuration Level Analysis, as a software layer that measures localized sensor obscuration and cleaning efficiency rather than relying only on a human's visual judgment. That measurement capability could make cleaning a closed-loop system: detect degradation, actuate only as needed, and verify whether the optical surface actually recovered.
+
+**Market, customers, and go-to-market.** Actasys has two connected routes to market. In mobility, it works with automakers and Tier-1 suppliers during vehicle and sensor-module design, where a component that fits the available size, weight, power, and packaging budget is more valuable than a generic cleaning mechanism. An Actasys-hosted 2022 trade feature described an electronically controlled distributed system for camera and LiDAR cleaning and referenced development work involving Webasto. A 2023 industry report also described an agreement with Alstom for thermal-management devices in train control and monitoring systems. The company's earlier one-page profile says its licensing model includes design and integration support, low-volume production, and manufacturing partners for higher-volume actuator cartridges and electronics. That is a sensible model for a component supplier: preserve the core IP and control electronics while allowing an automotive, industrial, or equipment partner to integrate the system into a larger platform. The newer data-center positioning broadens the market beyond vehicles to networking components, AI accelerators, edge devices, and high-density server racks. Actasys's official site is currently oriented to data-center buyers, while its LinkedIn profile still lists mobility, ADAS, autonomous vehicles, sensor cleaning, data centers, and connectivity. The public record does not disclose recurring revenue, named production vehicle programs, unit shipments, or signed data-center customers, so the commercial thesis remains design-in and qualification potential rather than proven scale. The operating hire for a Head of Operations, which describes an NPI line, manufacturing partners, and a goal of reaching tens of thousands of units, is a useful execution signal but a hiring-page ambition, not evidence that those volumes were achieved.
+
+**Traction, funding, and third-party validation.** Startup Nation Finder identifies Actasys as founded in December 2013, with 11–50 employees and $8 million raised across two rounds. The database reports a February 2020 $5 million seed round involving Volvo Cars Tech Fund and NextGear Ventures, followed by a December 2022 $3 million seed investment from q fund and Stage One Capital. The 2020 financing is independently corroborated by mobility and semiconductor trade coverage, which describes the Volvo and NextGear investment and the ActaJet sensor-cleaning mechanism. Actasys's selection for the 2025 Israel Innovation Pavilion at InnoVEX is another ecosystem signal: the official export catalogue places it among Israeli companies in AI, Industry 4.0, processors, robotics, and telecommunications and describes precision cooling for AI and high-performance computing. The company was also promoted by Israel's trade ecosystem as one of the Israeli startups exhibiting at InnoVEX 2026. Current LinkedIn posts report a 66% sustained-performance improvement for an NVIDIA Jetson Orin AGX test, 50% additional power headroom, operation at 15 degrees Celsius higher ambient temperature, and a separate MIL-STD-810 qualification claim for a precision-cooling device. These are useful indicators of active product development and target-market repositioning, but they remain self-published results rather than an independent qualification report. Patent-indexing records identify Actasys-owned U.S. applications and an issued 2024 patent for temperature control using active-flow-control actuators, with David Menicovich and Anthony Mickalauskas listed as inventors; the same records list in-force applications for synthetic-jet actuator design and environmental sensor-surface cleaning. This is meaningful IP evidence, but freedom-to-operate, international coverage, enforceability, and commercial claim scope still require legal diligence.
+
+**Founders and team background.** The public founder history is not perfectly consistent, and the inconsistency should be retained rather than silently resolved. Startup Nation Finder identifies David Menicovich as co-founder and CEO. Crunchbase lists Daniele Gallardo, David Menicovich, and Michael Amitay as founders and describes a Brooklyn-based company with a Tel Aviv team. An earlier company profile and a 2023 interview identify Miles Flamenbaum as CEO, say that Menicovich served as CTO, and describe Flamenbaum as joining the company in 2017 and becoming the leader of its second, sensor-cleaning phase. The most defensible reading is that Actasys went through a leadership and product evolution, but the exact legal founder roster and current executive titles are not fully confirmable from public sources. The company was described in the earlier profile as a spinout of Rensselaer Polytechnic Institute, and the patent record ties its core inventions to Menicovich, Gallardo, Amitay, Mickalauskas, and other technical inventors. Current LinkedIn material names Jeff Webster as COO and presents his background as decades of global operational leadership, including senior roles at Vishay Intertechnology. This is a relevant addition because the central commercialization risk for a small hardware company is not only invention; it is repeatable manufacturing, qualification, supply-chain control, and customer support. The combination of actuator, electronics, software, and thermal-engineering expertise is promising, but public sources do not provide a complete current headcount, biographies for the full engineering team, or evidence that the team has already delivered production programs at the volumes described in its operations hiring materials.
+
+**Competitive dynamics.** Actasys competes across two markets with different incumbents. In automotive and robotics sensor cleaning, alternatives include Valeo and Gentex-style integrated sensor modules, washer-fluid systems, heated windows and sensor covers, mechanical wipers, air compressors, and designs that simply overprovision sensing or tolerate degraded data. The 2021 technical profile argues that liquid sprays can struggle with rain, while compressors and wipers add mechanical complexity, packaging, maintenance, and failure points; ActaJet's proposed advantage is a distributed low-profile air system that can be combined with liquid cleaning when needed. In data-center and edge thermal management, the competing approaches are traditional fans and heat sinks, heat pipes, vapor chambers, liquid cold plates, immersion cooling, and direct-to-chip systems from companies such as CoolIT Systems and ZutaCore. Actasys is not a replacement for bulk rack cooling when a server is generating large aggregate heat. Its more credible wedge is a localized hotspot that remains thermally limiting after the enclosure or rack has adequate bulk cooling, especially around optics, networking ports, power electronics, or fanless edge computers. The company therefore has a systems-integration edge if it can deliver a thin, low-power, software-controlled device that avoids redesigning the host platform. That edge is not automatically a moat: piezoelectric actuators and thermal-management assemblies are manufacturable by capable competitors, automotive design wins are slow and qualification-heavy, and large cooling or Tier-1 suppliers can bundle an adequate alternative. The most important proof points are independently measured heat-transfer coefficients, contamination-removal performance, lifetime under vibration and thermal cycling, acoustic behavior, cost at volume, and repeatable customer design-ins.
+
+**Defense, security, and resilience dual-use relevance.** Actasys's dual-use case is credible at the enabling-component layer, though no public source reviewed here establishes a defense contract or fielded military deployment. The same sensor-surface cleaning capability designed for an ADAS camera or autonomous robot can support electro-optical and LiDAR payloads on drones, unmanned ground vehicles, perimeter-security cameras, and search-and-rescue platforms that must keep operating through dust, rain, mud, or ice. The same thermal-control capability designed for a data-center NIC or edge-AI board can help maintain compute performance in compact fanless systems, mobile command equipment, industrial controls, or autonomous platforms where liquid cooling, large fans, and frequent maintenance are undesirable. Resilience value is particularly clear in three situations: persistent outdoor sensing, where an obscured lens can create a perception blackout; resource-constrained edge computing, where thermal throttling reduces autonomy; and critical infrastructure monitoring, where remote cameras or controllers may be difficult to service. Israel's official trade-pavilion placement and Startup Nation Finder classification establish an Israeli ecosystem connection, while the company's Brooklyn headquarters and U.S. incorporation are disclosed rather than obscured. The defense thesis should remain bounded: Actasys has not publicly claimed ruggedized military production, anti-jam capability, classified use, defense procurement, or compliance with a complete military qualification regime. Its strategic relevance is that a small, low-power, no-moving-parts actuator could remove a recurring reliability bottleneck in allied autonomy and sensing stacks; conversion of that potential into a defense program is still an open diligence question.
+
+**Growth stage, trajectory, and key diligence risks.** Actasys is best classified as mid-stage in age and product development, but early in publicly demonstrated scale. It has operated since 2013, raised approximately $8 million according to Startup Nation Finder, maintains an 11–50-person public company profile, owns an identifiable patent and trademark portfolio, and has moved from an automotive sensor-cleaning proposition into a broader precision-cooling platform for AI infrastructure and edge systems. It is not mature: there is no public revenue history, audited deployment count, named production customer, independently verified performance report, or transparent current financing runway. The trajectory is attractive if ActaJet can become a licensing and component standard across several host platforms rather than a bespoke engineering project for each customer. Key diligence points are: (1) independently reproduce the Jetson, 80-meter-per-second, thermal-boundary-layer, and MIL-STD-810 claims; (2) verify whether the reported Volvo, Webasto, Alstom, automotive, and Tier-1 programs reached production or remained development exercises; (3) inspect the patent family, international filings, freedom to operate, and ownership after the leadership and product transitions; (4) establish current headcount, Israeli R&D footprint, manufacturing partners, yields, unit economics, and supply-chain concentration; (5) test actuator lifetime, contamination tolerance, noise, electromagnetic compatibility, vibration, and maintenance under real vehicle, drone, robot, and edge-compute conditions; (6) determine whether data-center buyers view localized air jets as complementary to or displaced by liquid cooling; and (7) clarify the legal entity and geography behind the Israeli ecosystem classification. If those questions resolve favorably, Actasys could become a small but strategically useful enabling supplier at the intersection of physical AI reliability, autonomous sensing, and energy-efficient compute. If not, it may remain a technically interesting component company with long design cycles and insufficient volume economics.
+"""
+logo = "https://www.actasysinc.com/images/Logo.png"
+website = "https://www.actasysinc.com/"
+sector = "AI Infrastructure and Autonomous-Systems Thermal Management / Optical Sensor Enablement"
+founded = "2013"
+headquarters = "Brooklyn, New York, United States; Israeli ecosystem presence and a separate Actasys LTD profile in Tel Aviv-Yafo are reported in Israeli company and export records"
+employees = "11-50"
+funding_stage = "Seed / early commercialization; public profile reports $8 million across two seed rounds through December 2022"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Actasys has credible dual-use relevance as an enabling hardware and software layer for reliable sensing and edge compute, but the public record does not establish defense procurement or military deployment. (1) Its sensor-cleaning actuators can preserve camera, LiDAR, infrared, and other optical inputs on commercial vehicles, robots, drones, security cameras, and search-and-rescue systems operating in rain, dust, mud, snow, or ice. (2) Its localized precision-cooling devices can sustain compute in fanless or space-constrained edge-AI, communications, industrial-control, and autonomous platforms where bulk airflow, liquid cooling, or frequent maintenance are undesirable. (3) Reliable perception and thermally stable compute are resilience capabilities for critical infrastructure monitoring and allied autonomy. The Israeli ecosystem connection is documented by Startup Nation Finder and Israel's official InnoVEX trade catalogue, while the company publicly lists a Brooklyn headquarters. No source reviewed here proves a defense contract, classified deployment, anti-jam capability, or complete military qualification regime, so the dual-use score reflects credible transfer potential rather than fielded defense capability."
+key_technologies = [
+  "Piezoelectric synthetic-jet actuators that generate directed airflow without compressors, pumps, or rotary fans",
+  "Distributed low-profile ActaJet cartridges for optical-sensor surface cleaning",
+  "Active-flow-control cooling that disrupts thermal boundary layers at localized electronic hotspots",
+  "Software-controlled adaptive actuation based on temperature, environmental conditions, and sensor-performance data",
+  "OLA (Obscuration Level Analysis) for quantitative regional sensor-clarity and cleaning-efficiency measurement",
+  "Active Heat Sink integration for fanless edge-AI compute and high-density networking components",
+  "Patent-protected actuator, thermal-control, and sensor-surface-cleaning architectures"
+]
+use_cases = [
+  "Localized cooling of NICs, DPUs, switches, and optical ports in high-density AI data-center racks",
+  "Fanless edge-AI systems using NVIDIA Jetson-class compute in hot or space-constrained enclosures",
+  "Camera, LiDAR, and infrared sensor cleaning for ADAS and autonomous vehicles",
+  "Outdoor machine-vision and perception reliability for drones, unmanned ground vehicles, and mobile robots",
+  "Remote security, traffic, and critical-infrastructure cameras exposed to rain, dust, mud, or snow",
+  "Thermal management for rail control, monitoring, and other industrial electronic systems",
+  "Search-and-rescue and emergency-response platforms requiring persistent sensing in harsh weather",
+  "Defense-adjacent mobile compute and electro-optical payloads requiring low-maintenance resilience"
+]
+investible = true
+investment_rationale = "Actasys merits a positive legacy priority signal because it combines a specific physical bottleneck, identifiable patent activity, two reported institutional seed rounds, and a current repositioning into AI infrastructure and edge-AI thermal management. (1) The core synthetic-jet architecture is materially differentiated from ordinary fans, wipers, washer-fluid systems, and bulk cooling because it targets a localized surface or hotspot with a thin, low-power, electronically controlled device. (2) Volvo Cars Tech Fund, NextGear Ventures, q fund, and Stage One Capital provide credible ecosystem validation, while Israel's official InnoVEX catalogue and current product materials show continuing strategic positioning. (3) The technology is relevant to both commercial autonomy and resilience-oriented sensing and compute, although no defense deployment is publicly verified. The counterweights are substantial: no transparent revenue or shipment history, conflicting public founder and headquarters descriptions, company-reported rather than independently replicated performance data, slow automotive design cycles, and competition from large Tier-1, thermal-management, and liquid-cooling vendors. This is a strategic diligence assessment and internal priority signal, not an investment recommendation."
+strategic_value = "Actasys could provide strategic value at a neglected layer of physical AI: keeping the sensor and compute substrate usable when weather, contamination, heat, or packaging constraints would otherwise degrade the system. (1) Persistent optical clarity reduces the risk of perception dropouts in outdoor autonomy, remote monitoring, security cameras, and emergency response. (2) Localized cooling can extend useful compute in compact edge devices and communications equipment without the water, plumbing, bulk airflow, or maintenance burden of larger thermal architectures. (3) A small Israeli-linked supplier with patent-backed actuator technology could become a component partner across allied mobility, robotics, industrial, and defense-adjacent platforms. The strategic case is conditional on manufacturing readiness, independent performance validation, and actual design wins. Public evidence does not yet show that Actasys is a fielded defense supplier or a nationally critical asset; it shows a plausible enabling technology whose resilience value would rise materially if ruggedized platforms and government or critical-infrastructure deployments are confirmed."
+potential_score = 72.0
+technology_score = 82.0
+market_score = 75.0
+team_score = 68.0
+dual_use_score = 61.0
+strategic_alignment_score = 72.0
+stage = "mid"
+stage_rationale = "Actasys is classified as mid-stage because it has operated since 2013, has a released product family, reports $8M raised across two rounds, maintains an 11–50-person public company profile, owns identifiable patent and trademark filings, and is actively positioning ActaJet for AI infrastructure and edge devices. It remains below mature because public sources do not establish recurring revenue, production volume, named current customers, audited performance, or portfolio-wide commercial scale. The earlier automotive and rail development references, the reported Webasto work, and the current operations hiring signal show a path beyond laboratory research, but they do not prove that high-volume commercialization targets were met."
+competitors = [
+  "Valeo (automotive ADAS sensor cleaning, heating, and integration systems)",
+  "Gentex (automotive camera, sensing, and integrated optical-module incumbent)",
+  "CoolIT Systems (liquid cooling and coolant-distribution infrastructure for high-density compute)",
+  "ZutaCore (waterless two-phase direct-to-chip cooling for AI data centers; adjacent rather than identical architecture)",
+  "Boyd Corporation (thermal-management components and engineered cooling assemblies)",
+  "Traditional fans, heat sinks, compressors, wipers, and washer-fluid systems (proven incumbent approaches for bulk cooling and sensor cleaning)"
+]
+competitive_edge = "Actasys's potential edge is the combination of a compact distributed synthetic-jet actuator, software-controlled airflow, and a cross-domain product thesis spanning optical-sensor cleaning and localized thermal management. (1) The actuator can direct air at the point of need without the bulk and mechanical failure modes of compressors, pumps, fans, or wipers. (2) The low-profile form factor is designed for constrained vehicle, sensor, PCB, 1U/2U, and edge-device packaging. (3) OLA and other performance-monitoring concepts could turn sensor cleaning from a periodic mechanism into a measured closed-loop function. (4) The same physics can address compute hotspots that remain after bulk rack cooling, giving Actasys a complementary wedge rather than requiring it to displace every liquid-cooling system. The edge is not yet proven as a durable moat: piezoelectric actuators, heat sinks, and control electronics are accessible to larger suppliers, and the company must demonstrate reliability, cost, qualification, manufacturing yield, and production design-ins against entrenched Tier-1 and thermal-management vendors."
+risk_factors = [
+  "Company-reported thermal, sensor-cleaning, sustained-performance, and MIL-STD-810 claims require independent replication under representative operating conditions",
+  "Automotive, rail, robotics, and data-center design cycles are long, qualification-heavy, and vulnerable to customer platform cancellations or redesigns",
+  "Public sources do not establish current revenue, shipments, named production customers, recurring software income, or achieved manufacturing volumes",
+  "Founder, leadership, and headquarters descriptions differ across public sources, creating legal-entity, governance, and continuity diligence needs",
+  "Actuator lifetime, acoustic emissions, vibration tolerance, contamination behavior, electromagnetic compatibility, and maintenance burden may undermine the value proposition",
+  "Large Tier-1 suppliers and cooling incumbents can bundle competing sensor-cleaning, thermal, liquid-cooling, or enclosure solutions into existing customer relationships",
+  "The defense and critical-infrastructure thesis is adjacency only until ruggedized deployment, procurement, cybersecurity, and military qualification evidence emerges"
+]
+risk_level = "medium"
+signals = [
+  "Startup Nation Finder reports $8M raised across two rounds and 11-50 employees",
+  "2020 seed round involving Volvo Cars Tech Fund and NextGear Ventures",
+  "2022 funding reported from q fund and Stage One Capital",
+  "Israeli official InnoVEX catalogue places Actasys in AI, processors, robotics, and telecommunications categories",
+  "Patent-indexing records identify Actasys-owned synthetic-jet and active-flow-control filings",
+  "Current product repositioning toward precision cooling for AI data centers and edge devices"
+]
+priority_rank = 0
+priority_rationale = "Actasys merits active monitoring as an Israeli-linked strategic hardware company at the intersection of physical-AI reliability, edge compute, and energy-aware thermal management. Reasons to track it include: (1) a concrete reliability problem shared by autonomous vehicles, drones, robots, security cameras, and critical infrastructure; (2) a compact synthetic-jet architecture with identifiable patent activity rather than generic cooling software; (3) reported backing from Volvo Cars Tech Fund, NextGear Ventures, q fund, and Stage One Capital; and (4) a current shift toward AI infrastructure, where localized hotspot cooling may complement rather than replace bulk cooling. Priority remains below the strongest fielded defense records because public evidence does not verify revenue, production design wins, achieved unit volumes, independent performance, or defense procurement. Milestones that would justify raising priority are a named production customer, audited thermal and sensor-cleaning test results, demonstrated manufacturing scale, a disclosed Israeli R&D and legal-entity structure, or a ruggedized government, defense, emergency-response, or critical-infrastructure deployment. This is an internal strategic-priority rationale, not an investment recommendation."
+public_sources = [
+  { label = "Actasys official website", url = "https://www.actasysinc.com/", description = "Current company positioning, product claims, and Brooklyn contact address" },
+  { label = "Startup Nation Finder company profile", url = "https://finder.startupnationcentral.org/company_page/actasys-1", description = "Israeli registry identifier, company/founder profile, and reported funding history" },
+  { label = "InnoVEX 2026 Actasys exhibitor profile", url = "https://innovex.computex.biz/show/exhibitor.aspx?companyId=7266&exhibitorID=2998", description = "Current product descriptions and Israeli pavilion listing" },
+  { label = "Actasys $5M seed round", url = "https://vcnewsdaily.com/actasys/venture-capital-funding/xlmxrgswtt", description = "December 2020 seed round amount and lead investors" },
+  { label = "q fund Actasys portfolio", url = "https://qfund.io/actasys/", description = "Investor portfolio association and company product positioning" },
+  { label = "IVC qFund portfolio data", url = "https://www.ivc-online.com/Google-Card?id=e0306058-49d4-ec11-b80e-00505695cd29", description = "December 2022 $3M Series A financing record" },
+  { label = "Actasys Alstom development agreement", url = "https://www.prnewswire.com/news-releases/actasys-signs-development-agreement-with-alstom-301699809.html", description = "Company-announced development agreement and Brooklyn headquarters" },
+  { label = "Actasys temperature-control patent family", url = "https://patents.google.com/patent/EP4081442A4/en", description = "Patent applicant, inventors, subject matter, and 2026 European grant record" },
+  { label = "Webasto development MoU", url = "https://actasysinc.com/wp-content/uploads/2022/08/Actasys-Webasto-in-Sensor-Cleaning-Pact-DVN-1.pdf", description = "Reported sensor-cleaning memorandum of understanding" },
+  { label = "NextGear Ventures portfolio", url = "https://www.nextgear.fund/venture", description = "Investor portfolio association" },
+  { label = "CoolIT Systems", url = "https://www.coolitsystems.com/", description = "Adjacent data-center liquid cooling competitor" },
+  { label = "ZutaCore", url = "https://zutacore.com/", description = "Adjacent data-center direct liquid cooling competitor" },
+  { label = "Valeo", url = "https://www.valeo.com/", description = "Automotive incumbent source" }
+]
+crawled_at = "2026-08-31T19:35:39Z"
+updated_at = "2026-10-03T10:42:58Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "David Menicovich", role = "Founder; current executive title not independently confirmed", is_founder = true, current = true, background = "Named as founder by Startup Nation Finder and q fund; patent records identify him as an inventor on Actasys active-flow-control technology.", source_ids = ["finder", "qfund", "patent"] },
+  { name = "Miles Flamenbaum", role = "CEO (historical, reported December 2022)", is_founder = false, current = false, background = "Identified as Actasys CEO in its December 2022 release announcing the Alstom development agreement; current status not established.", source_ids = ["alstom"] },
+  { name = "Jeff Webster", role = "COO (directory listing, current status unverified)", is_founder = false, current = false, background = "Listed as COO in Startup Nation Finder's profile, last updated May 2026; no current company confirmation located.", source_ids = ["finder"] }
+]
+investors = [
+  { name = "Volvo Cars Tech Fund", investor_type = "corporate", website = "https://www.volvocars.com/intl/innovation/tech-fund/", round_ids = ["seed-2020"], relationship = "historical", source_ids = ["seed2020"] },
+  { name = "NextGear Ventures", investor_type = "vc", website = "https://www.nextgear.fund/", round_ids = ["seed-2020"], relationship = "historical", source_ids = ["seed2020", "nextgear"] },
+  { name = "q fund", investor_type = "vc", website = "https://qfund.io/", round_ids = ["seed-2022"], relationship = "historical", source_ids = ["finder", "qfund", "ivc"] },
+  { name = "Stage One Capital", investor_type = "vc", round_ids = ["seed-2022"], relationship = "historical", source_ids = ["finder"] }
+]
+financials = []
+traction = [
+  { kind = "partnership", date = "2022-08-09", description = "Trade coverage hosted on Actasys's site reports a memorandum of understanding with Webasto to integrate the sensor-cleaning system into a roof sensor module; this is development cooperation, not proof of production deployment.", source_ids = ["webasto"] },
+  { kind = "partnership", date = "2022-12-12", description = "Actasys announced a development agreement with Alstom to implement thermal-management devices in train control and monitoring systems. The release describes a development agreement and does not disclose production status, revenue, or contract value.", source_ids = ["alstom"] },
+  { kind = "product", date = "2026", description = "The InnoVEX 2026 exhibitor catalog lists D44 ActaJet, Active Heat Sink, and ActaJet NIC for compact cooling and surface cleaning; its NIC listing claims hotspot reduction up to 35°C, a company claim without independent validation in the source.", source_ids = ["innovex"] }
+]
+intellectual_property = [
+  { kind = "patent", date = "2024-03-19", description = "US patent 11,936,025, Temperature control using active flow control actuators, was granted to Actasys Inc.; its abstract describes a piezoelectric synthetic-jet actuator with controller inputs related to target temperature or performance.", source_ids = ["patent"] },
+  { kind = "patent", date = "2026-04-08", description = "The related European patent EP4081442B1 is listed as granted on 8 April 2026, with Actasys Inc. as current assignee according to the patent record. Patent database legal status should be confirmed with counsel.", source_ids = ["patent"] }
+]
+comparables = [
+  { name = "CoolIT Systems", website = "https://www.coolitsystems.com/", rationale = "Alternative thermal-management supplier for high-performance computing and data-center infrastructure.", differentiation = "CoolIT's principal public positioning emphasizes liquid cooling systems; Actasys targets localized air-jet cooling at component hotspots. This is a product-level distinction, not evidence of superior performance.", source_ids = ["official"] },
+  { name = "ZutaCore", website = "https://zutacore.com/", rationale = "Israeli-linked data-center cooling company listed alongside Actasys in the InnoVEX 2026 Israel pavilion.", differentiation = "ZutaCore markets direct-to-chip two-phase liquid cooling, while Actasys presents low-profile piezoelectric air jets for board and component hotspots; the approaches may be complementary or compete in specific thermal envelopes.", source_ids = ["innovex"] },
+  { name = "Valeo", website = "https://www.valeo.com/", rationale = "Automotive Tier 1 with adjacent visibility and sensor-system products that can compete with standalone sensor-cleaning approaches.", differentiation = "Valeo can integrate across vehicle systems and production programs; Actasys's proposed edge is a compact distributed synthetic-jet actuator. Public evidence does not establish a head-to-head win.", source_ids = ["official"] }
+]
+
+[intelligence.company ]
+company_id = "actasys"
+legal_name = "Actasys Inc."
+aliases = ["Actasys", "Actasys LTD"]
+operating_status = "active"
+business_model = "B2B component and technology commercialization for localized thermal management and optical-surface cleaning; historical company material describes licensing, design/integration support, and manufacturing partners, while current revenue model is not publicly disclosed."
+products = ["ActaJet", "D44 ActaJet", "ActaJet NIC", "Active Heat Sink", "Total Thermal", "Obscuration Level Analysis (OLA)"]
+locations = ["Brooklyn, New York, United States", "Tel Aviv-Yafo, Israel (Israeli company profile/location; relation to the US legal entity is not clarified)"]
+country_of_incorporation = "United States (Brooklyn headquarters stated by company; jurisdictional incorporation filing not independently retrieved)"
+founded_on = "2013-12"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "516762176", source_ids = ["finder"] }]
+source_ids = ["official", "finder", "alstom"]
+
+[intelligence.funding ]
+status = "reported"
+summary = "Public funding profiles report two seed rounds totaling $8 million through December 2022: $5 million in February 2020 and $3 million in December 2022. The second event is recorded as Series A by IVC while Startup Nation Finder classifies it as Seed; retain the amount and investor evidence but note this round-label discrepancy. No later equity round was found in the reviewed public sources."
+rounds = [
+  { id = "seed-2020", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2020", amount_status = "reported", amount = 5000000, amount_scope = "round", currency = "USD", lead_investors = ["Volvo Cars Tech Fund", "NextGear Ventures"], participating_investors = [], source_ids = ["seed2020", "finder"] },
+  { id = "seed-2022", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2022-12", amount_status = "reported", amount = 3000000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["q fund", "Stage One Capital"], source_ids = ["finder", "ivc"] }
+]
+reported_total_raised = 8000000
+reported_total_currency = "USD"
+total_source_ids = ["finder"]
+total_as_of = "2022-12"
+total_scope = "Company profile reported cumulative equity raised across two rounds; grant awards and non-equity support excluded."
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[intelligence.ownership ]
+status = "not_found"
+summary = "No parent company, acquisition, exit, or disclosed cap table was identified in reviewed public sources. Investor participation does not establish ownership percentages; private cap table remains unavailable."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["finder", "official"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection ]
+status = "confirmed"
+basis = ["other"]
+summary = "Startup Nation Finder assigns Israeli company number 516762176 and lists an Actasys profile with Tel Aviv-Yafo as location; the InnoVEX exhibitor record lists Actasys LTD in the Israel Innovation Pavilion. The operating company's own website identifies Actasys Inc. at a Brooklyn address, and public records reviewed do not explain the legal relationship between these records."
+as_of = "2026-10-03"
+source_ids = ["finder", "innovex", "official"]
+
+[intelligence.research ]
+researched_at = "2026-10-03T10:42:58Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Actasys company official ActaJet Brooklyn Israeli company identity",
+  "Actasys funding raised seed investors 2020 2022",
+  "Actasys q fund Stage One Capital 3 million December 2022",
+  "Actasys investors Volvo Cars Tech Fund NextGear Ventures",
+  "Actasys founder CEO leadership team David Menicovich Miles Flamenbaum Jeff Webster",
+  "Actasys acquired acquisition ownership parent company",
+  "Actasys revenue customers contracts Alstom Webasto",
+  "Actasys patents ActaJet temperature control active flow control",
+  "Actasys competitors data center cooling sensor cleaning",
+  "Actasys defense military security dual use applications"
+]
+gaps = [
+  "financials: no dated revenue, ARR, profitability, cash, burn, or runway disclosure was located; historical employee estimates are stale and not treated as current financial evidence.",
+  "ownership: no public cap table, shareholder percentages, parent company, or disclosed acquisition/exit; exact ownership links between Actasys Inc. and Actasys LTD are unresolved.",
+  "traction: Webasto and Alstom evidence describes an MoU/development agreement; current production deployment, paying customer status, unit volumes, and contract economics are not publicly verified.",
+  "team: current executive roster and complete leadership biographies are not confirmed; the available CEO and COO references are dated or directory-derived.",
+  "funding: no post-December 2022 equity round was located; verify directly with the company, and reconcile seed versus Series A round nomenclature for the 2022 event.",
+  "intellectual_property: patent databases identify filings and grants, but a complete live family/status, freedom-to-operate opinion, and chain of title were not independently audited.",
+  "competition: no independent side-by-side benchmark or verified customer procurement comparison was found for Actasys against liquid, fan, and sensor-cleaning alternatives.",
+  "dual_use: no public defense/security customer, contract, deployment, or military qualification was found; relevance is inferred from commercial sensor and thermal capabilities."
+]
+conflicts = ["The 2022 $3M financing is labeled Seed by Startup Nation Finder and Series A in IVC portfolio data; funding stage terminology is inconsistent.", "Startup Nation Finder links an Israeli company number and Tel Aviv-Yafo profile, while Actasys Inc.'s official website and company release state Brooklyn, New York as headquarters; the relationship between the legal records is unclear.", "Older sources describe Miles Flamenbaum as CEO, while the current company site does not publish leadership; public evidence does not establish the present CEO."]
+diligence_questions = [
+  "What portion of the reported $8M was equity versus any separately awarded grants, and was there any financing after December 2022?",
+  "Did the Webasto and Alstom development work progress to paid production programs, and what are the current customer names, unit volumes, and annual recurring or component revenue?",
+  "What is the legal and ownership relationship between Actasys Inc. and Actasys LTD / Israeli company number 516762176, including the location of R&D and IP ownership?",
+  "Can an independent lab reproduce the published airflow, power, thermal improvement, and 35°C hotspot reduction claims under a customer-representative setup?",
+  "What are actuator lifetime, yield, cost at volume, qualification status, and the manufacturing partner dependencies?"
+]
+
+[[intelligence.research .sources]]
+id = "official"
+url = "https://www.actasysinc.com/"
+title = "Actasys - Revolutionary Data Center Cooling Solutions"
+publisher = "Actasys"
+kind = "company"
+accessed_at = "2026-10-03T10:42:58Z"
+claims = ["Official site markets ActaJet cooling for NICs, DPUs and switches.", "Official site claims jets up to 80 m/s, thickness below 3 mm, and 2-3 W power consumption.", "Official site identifies Actasys Inc. and a Brooklyn, New York address."]
+
+[[intelligence.research .sources]]
+id = "finder"
+url = "https://finder.startupnationcentral.org/company_page/actasys-1"
+title = "Actasys - Industrial Technologies | Finder"
+publisher = "Startup Nation Finder / Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-03T10:42:58Z"
+published_on = "2026-05-18"
+claims = ["Profile reports Actasys founded in December 2013 by David Menicovich.", "Profile reports $8 million across two rounds: $5 million in February 2020 and $3 million in December 2022, naming Volvo Cars Tech Fund, NextGear Ventures, q fund, and Stage One Capital.", "Profile reports Israeli company number 516762176, Tel Aviv-Yafo location, 11-50 employees, and Jeff Webster as COO."]
+
+[[intelligence.research .sources]]
+id = "innovex"
+url = "https://innovex.computex.biz/show/exhibitor.aspx?companyId=7266&exhibitorID=2998"
+title = "InnoVEX Exhibitor - Actasys LTD"
+publisher = "Taipei Computer Association / InnoVEX"
+kind = "other"
+accessed_at = "2026-10-03T10:42:58Z"
+claims = ["InnoVEX lists Actasys LTD in the Israel Innovation Pavilion in 2026.", "Profile describes D44 ActaJet, Active Heat Sink, and ActaJet NIC products.", "ActaJet NIC listing claims hotspot reduction up to 35 degrees Celsius."]
+
+[[intelligence.research .sources]]
+id = "seed2020"
+url = "https://vcnewsdaily.com/actasys/venture-capital-funding/xlmxrgswtt"
+title = "Actasys Closes $5M Seed Funding Round"
+publisher = "VC News Daily"
+kind = "media"
+accessed_at = "2026-10-03T10:42:58Z"
+published_on = "2020-12-03"
+claims = ["Reports a $5 million seed round led by Volvo Cars Tech Fund and NextGear Ventures."]
+
+[[intelligence.research .sources]]
+id = "qfund"
+url = "https://qfund.io/actasys/"
+title = "Actasys - q fund"
+publisher = "q fund"
+kind = "investor"
+accessed_at = "2026-10-03T10:42:58Z"
+claims = ["q fund lists Actasys in its portfolio and identifies David Menicovich as founder.", "q fund describes Actasys's data-center cooling positioning and records investment timing as 2023."]
+
+[[intelligence.research .sources]]
+id = "ivc"
+url = "https://www.ivc-online.com/Google-Card?id=e0306058-49d4-ec11-b80e-00505695cd29"
+title = "qFund - IVC Data & Insights"
+publisher = "IVC Research Center"
+kind = "directory"
+accessed_at = "2026-10-03T10:42:58Z"
+claims = ["IVC portfolio data lists Actasys under qFund as Series A, announced 29 December 2022, with $3 million deal amount; the page's investor field is not named."]
+
+[[intelligence.research .sources]]
+id = "alstom"
+url = "https://www.prnewswire.com/news-releases/actasys-signs-development-agreement-with-alstom-301699809.html"
+title = "Actasys Signs Development Agreement with Alstom"
+publisher = "PR Newswire (release provided by Actasys)"
+kind = "company"
+accessed_at = "2026-10-03T10:42:58Z"
+published_on = "2022-12-12"
+claims = ["Actasys announced a development agreement with Alstom for thermal-management devices in train control and monitoring systems.", "Actasys release identifies Miles Flamenbaum as CEO at that time and states Brooklyn headquarters."]
+
+[[intelligence.research .sources]]
+id = "webasto"
+url = "https://actasysinc.com/wp-content/uploads/2022/08/Actasys-Webasto-in-Sensor-Cleaning-Pact-DVN-1.pdf"
+title = "Actasys, Webasto in Sensor-Cleaning Pact"
+publisher = "Automotive News / Design News (PDF hosted by Actasys)"
+kind = "media"
+accessed_at = "2026-10-03T10:42:58Z"
+published_on = "2022-08-09"
+claims = ["Reports an MoU between Actasys and Webasto to integrate sensor cleaning into Webasto's roof sensor module; the source describes an initial step toward partnership."]
+
+[[intelligence.research .sources]]
+id = "patent"
+url = "https://patents.google.com/patent/EP4081442A4/en"
+title = "EP4081442A4 - Temperature control using active flow control actuators"
+publisher = "Google Patents / European Patent Office data"
+kind = "other"
+accessed_at = "2026-10-03T10:42:58Z"
+claims = ["Patent family names Actasys Inc. as applicant/current assignee and David Menicovich and Anthony Mickalauskas as inventors.", "Related US patent 11,936,025 is listed as granted 19 March 2024; EP4081442B1 is listed as granted 8 April 2026."]
+
+[[intelligence.research .sources]]
+id = "nextgear"
+url = "https://www.nextgear.fund/venture"
+title = "Portfolio - NextGear Ventures"
+publisher = "NextGear Ventures"
+kind = "investor"
+accessed_at = "2026-10-03T10:42:58Z"
+claims = ["NextGear's portfolio page lists Actasys and describes its data-center thermal-management offering."]
+
+[[intelligence.research .sources]]
+id = "coolit"
+url = "https://www.coolitsystems.com/"
+title = "CoolIT Systems"
+publisher = "CoolIT Systems"
+kind = "company"
+accessed_at = "2026-10-03T10:42:58Z"
+claims = ["Official competitor website presents liquid cooling products for data center and high-performance computing environments."]
+
+[[intelligence.research .sources]]
+id = "zuta"
+url = "https://zutacore.com/"
+title = "ZutaCore"
+publisher = "ZutaCore"
+kind = "company"
+accessed_at = "2026-10-03T10:42:58Z"
+claims = ["Official competitor website describes direct liquid cooling for data center systems."]
+
+[[intelligence.research .sources]]
+id = "valeo"
+url = "https://www.valeo.com/"
+title = "Valeo"
+publisher = "Valeo"
+kind = "company"
+accessed_at = "2026-10-03T10:42:58Z"
+claims = ["Valeo's official site identifies it as an automotive technology supplier; used here as an adjacent sensor-system incumbent, not as proof of a directly competing product."]
+
+[[intelligence.research .topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T10:42:58Z"
+next_review_on = "2027-04-03"
+queries = ["Actasys official website company identity headquarters founded", "Actasys Israeli company number 516762176"]
+source_ids = ["official", "finder", "innovex"]
+summary = "Official site identifies Actasys Inc. in Brooklyn; Startup Nation Finder and InnoVEX separately establish the Israeli connection and report Actasys LTD. Legal relationship requires clarification."
+
+[[intelligence.research .topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-03T10:42:58Z"
+next_review_on = "2027-01-03"
+queries = ["Actasys raised funding seed 2020 2022", "Actasys q fund Stage One Capital 3 million"]
+source_ids = ["finder", "seed2020", "ivc"]
+summary = "Two rounds and $8M cumulative are reported. 2022's amount is corroborated by IVC, but that source calls it Series A while Finder calls it Seed; no later round was found."
+
+[[intelligence.research .topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T10:42:58Z"
+next_review_on = "2027-04-03"
+queries = ["Actasys investors Volvo Cars Tech Fund NextGear Ventures q fund Stage One Capital"]
+source_ids = ["finder", "seed2020", "qfund", "ivc"]
+summary = "The 2020 lead investors are named by the funding report; Finder names q fund and Stage One Capital for 2022, while IVC's record does not name an investor."
+
+[[intelligence.research .topic_checks]]
+topic = "team"
+status = "conflicting"
+checked_at = "2026-10-03T10:42:58Z"
+next_review_on = "2027-01-03"
+queries = ["Actasys founder CEO David Menicovich Miles Flamenbaum Jeff Webster"]
+source_ids = ["finder", "qfund", "alstom"]
+summary = "David Menicovich is repeatedly identified as founder; Miles Flamenbaum was CEO in 2022. Current leadership is not confirmed; directory lists Jeff Webster as COO."
+
+[[intelligence.research .topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T10:42:58Z"
+next_review_on = "2027-04-03"
+queries = ["Actasys acquisition acquired parent ownership cap table"]
+source_ids = ["official", "finder"]
+summary = "No parent, acquisition, exit, cap table or ownership percentages found in reviewed sources; legal relationship between US Inc. and Israeli LTD profile is unresolved."
+
+[[intelligence.research .topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T10:42:58Z"
+next_review_on = "2027-04-03"
+queries = ["Actasys revenue ARR profitability cash burn runway"]
+source_ids = ["official", "finder"]
+summary = "No dated company financial metrics were located. The $8M financing total is not revenue or a proxy for current runway."
+
+[[intelligence.research .topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T10:42:58Z"
+next_review_on = "2027-04-03"
+queries = ["Actasys customers contracts Alstom Webasto production deployment"]
+source_ids = ["alstom", "webasto", "innovex"]
+summary = "Public evidence establishes a Webasto MoU and Alstom development agreement plus current product listings, but does not prove paying production customers or deployment volumes."
+
+[[intelligence.research .topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-03T10:42:58Z"
+next_review_on = "2027-04-03"
+queries = ["Actasys patent synthetic jet temperature control ActaJet"]
+source_ids = ["patent"]
+summary = "Patent data identifies an Actasys temperature-control patent family and 2024 US / 2026 European grants; full portfolio and freedom to operate were not assessed."
+
+[[intelligence.research .topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T10:42:58Z"
+next_review_on = "2027-04-03"
+queries = ["data center localized cooling competitors CoolIT ZutaCore", "automotive sensor cleaning Valeo alternatives"]
+source_ids = ["coolit", "zuta", "valeo", "innovex"]
+summary = "Adjacent data-center alternatives include liquid cooling from CoolIT and ZutaCore; Valeo represents an automotive systems incumbent. No comparative benchmark or procurement evidence located."
+
+[[intelligence.research .topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T10:42:58Z"
+next_review_on = "2027-04-03"
+queries = ["Actasys defense military security government customers"]
+source_ids = ["official", "innovex"]
+summary = "Commercial sensing and localized cooling could transfer to rugged security and autonomy applications, but no defense customer, contract, military deployment, or qualification is publicly documented."
+
+[[intelligence.research .claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The official company website is active and presents current products, contact information, and an Actasys Inc. Brooklyn address."
+verified_at = "2026-10-03T10:42:58Z"
+source_ids = ["official"]
+
+[[intelligence.research .claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Startup Nation Finder records Israeli company number 516762176 and Tel Aviv-Yafo location; InnoVEX lists Actasys LTD in the Israel Innovation Pavilion."
+verified_at = "2026-10-03T10:42:58Z"
+source_ids = ["finder", "innovex"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Startup Nation Finder reports $8 million total funding across two rounds."
+verified_at = "2026-10-03T10:42:58Z"
+source_ids = ["finder"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.seed-2020.amount"
+support = "direct"
+summary = "VC News Daily reports the December 2020 seed round closed at $5 million; Finder lists the round as February 2020. Amount supported, month differs between sources."
+verified_at = "2026-10-03T10:42:58Z"
+source_ids = ["seed2020", "finder"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.seed-2022.amount"
+support = "direct"
+summary = "Startup Nation Finder reports $3 million for December 2022; IVC lists a $3 million qFund-associated transaction dated 29 December 2022."
+verified_at = "2026-10-03T10:42:58Z"
+source_ids = ["finder", "ivc"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.seed-2020.lead_investors"
+support = "direct"
+summary = "VC News Daily reports Volvo Cars Tech Fund and NextGear Ventures as co-leads of the $5 million seed round."
+verified_at = "2026-10-03T10:42:58Z"
+source_ids = ["seed2020"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.seed-2022.participating_investors"
+support = "direct"
+summary = "Startup Nation Finder lists q fund and Stage One Capital as participants in the December 2022 round. IVC's portfolio record does not name the investor, so participant names rely on the Finder disclosure."
+verified_at = "2026-10-03T10:42:58Z"
+source_ids = ["finder"]

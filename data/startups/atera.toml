@@ -1,0 +1,470 @@
+name = "Atera"
+description = "Atera is a privately held Israeli IT-management software company whose cloud platform combines remote monitoring and management, service desk, ticketing, patching, remote access, and automation for MSPs and internal IT teams. Its current product direction centers on Robin, an autonomous IT agent that can investigate and resolve defined support issues through governed actions."
+detailed_description = """
+Atera is a cloud-based IT operations platform for managed service providers and internal IT departments. Its core product combines endpoint and network monitoring, remote access, patch management, asset and software inventory, helpdesk and ticketing, professional-services automation, reporting, billing, and scripting. Atera deploys agents across Windows, macOS, and Linux environments, turns device and network data into alerts and context, and gives technicians a common console for investigation and remediation. The current product direction separates Robin, an end-user-facing autonomous IT agent, from AI Copilot features that assist technicians with ticket summaries, responses, scripts, health checks, and other workflow tasks. Official materials describe Robin as able to use diagnostics, knowledge, identities, approved scripts, software actions, and remote commands, with escalation when it cannot safely complete a task.
+
+The technical value is the closed loop between telemetry, policy, ticket context, and action. Endpoint agents and network discovery provide visibility; automation profiles, PowerShell/BAT/SH scripts, patching, and integrations provide control; ticketing, audit logs, role-based access, SSO, MFA, and SIEM connectivity provide governance. That combination is operationally useful because an MSP can standardize repeatable remediation across many tenants, while an internal IT team can connect detection to service-level workflows. Robin makes the platform more strategically interesting but also raises the burden of proof: Atera describes orchestration across large-language models and tools, while its security materials describe logical tenant separation, regional Azure hosting, and restrictions on using customer data for model training. Diligence should test evaluation methodology, permissions, approval gates, rollback behavior, prompt and tool isolation, logging completeness, and the boundary between recommended and unattended execution.
+
+The market is established and competitive. Atera differentiates through an all-in-one product, per-technician economics, a relatively low-friction MSP deployment model, and a push toward autonomous IT rather than a standalone monitoring feature. Competitors and substitutes include ConnectWise, Kaseya/Datto, NinjaOne, Syncro, N-able, Microsoft Intune, and ServiceNow-centered workflows. Atera’s own pages and LinkedIn profile report a substantial international customer footprint, but those figures are company-reported and have changed over time. Commercial diligence should therefore request recurring-revenue growth, net retention, gross margin, customer concentration, partner contribution, churn by cohort, support burden, and the proportion of revenue from larger enterprise accounts. The key commercial question is whether AI-driven resolution improves retention and expansion enough to offset model, support, security, and integration costs.
+
+For defense and national security, the relevant adjacency is enterprise IT resilience rather than weapons, sensors, or mission systems. Atera could help manage distributed administrative networks, support sites with limited local IT staff, and connect endpoint health to an operations or security team. That is a credible dual-use pathway because the underlying needs—asset visibility, patch discipline, remote troubleshooting, ticket triage, and controlled remediation—also occur in public-sector and defense support environments. It is not evidence of military deployment. Atera’s commercial security and compliance materials are useful positive signals, but they do not establish authorization for classified, disconnected, sovereign, or mission-critical environments. The key diligence questions are offline or private deployment options, privileged-command safeguards, agent and supply-chain security, tenant isolation, incident response, data residency, export controls, human approval requirements, and whether any defense customer has actually approved the platform for operational use. Until those questions are answered, the defense thesis should be treated as adjacency and integration potential, not validated procurement traction."""
+logo = "https://www.atera.com/favicon.ico"
+website = "https://www.atera.com"
+sector = "IT Management / Remote Monitoring"
+founded = "2011"
+headquarters = "Tel Aviv, Israel"
+employees = "201-500"
+funding_stage = "Series B"
+dual_use = true
+dual_use_description = "Atera has substantive but indirect dual-use potential: its endpoint telemetry, asset inventory, remote support, ticket workflows, and governed remediation could support distributed public-sector or defense administrative IT. The core product is commercial IT operations software, not a military system, and no defense deployment is established here. Practical adoption would require hardened or sovereign deployment, offline tolerance, privileged-action controls, supply-chain assurance, and customer-specific authorization for sensitive environments."
+key_technologies = ["Cross-platform endpoint agents for Windows, macOS, and Linux", "Real-time RMM telemetry, network discovery, and asset inventory", "Policy-based patching, scripting, and automated remediation", "Agentic IT automation with Robin and AI Copilot workflows", "Integrated PSA, ticketing, SLA, billing, and reporting", "Role-based access, SSO, MFA, audit logs, and SIEM integrations"]
+use_cases = ["Multi-tenant RMM and helpdesk operations for MSPs", "Enterprise endpoint health monitoring and remote support", "Automated patching and scripted remediation across mixed operating systems", "Network discovery and software inventory for audit and compliance workflows", "AI-assisted ticket triage, response drafting, and Tier-1 resolution", "Remote IT support for branch, campus, and distributed field sites", "Centralized monitoring of administrative networks supporting public-sector or defense organizations"]
+investible = true
+investment_rationale = "Atera merits strategic diligence as a private, established SaaS company with a credible automation thesis and a sizeable operational footprint, not as a pure defense technology bet. The strongest evidence is the integrated RMM and service-management product, continued investment in Robin and AI Copilot, a documented Series B, and stated security controls. The case depends on independently verified ARR and retention, sustainable AI-unit economics, measured rates of safe autonomous resolution, enterprise expansion, and proof that regulated customers accept the deployment and data-handling model. This legacy priority flag reflects strategic fit and diligence value, not an investment recommendation."
+strategic_value = "Atera offers tooling to centralize management and reduce operating overhead for distributed IT fleets. For a strategic buyer or public-sector integrator, its telemetry, workflow, and remediation layer could become an integration point into higher-assurance security stacks if the company can provide stronger deployment isolation, offline behavior, identity controls, and evidence for sensitive environments."
+potential_score = 75.0
+technology_score = 85.0
+market_score = 82.0
+team_score = 78.0
+dual_use_score = 61.0
+strategic_alignment_score = 66.0
+stage = "mid"
+stage_rationale = "Atera is a privately held company founded in 2011, with a documented Series B, a 201–500 employee range, an established international customer base, and a product that has expanded from RMM into service management and autonomous IT. That supports a mid-stage classification: it is well beyond early product validation, but its current AI-led growth, enterprise penetration, and high-assurance deployment maturity still require independent financial, retention, safety, and customer evidence."
+competitors = ["ConnectWise PSA and RMM", "Kaseya and Datto MSP platforms", "NinjaOne RMM", "N-able N-sight and N-central", "Syncro MSP", "Microsoft Intune and ServiceNow as enterprise substitutes"]
+competitive_edge = "Atera's defensible angle is workflow consolidation: RMM telemetry, service desk, PSA, patching, remote access, and AI-assisted or agentic remediation are presented in one system with per-technician economics. That can reduce integration and training overhead for smaller IT teams. The edge is less certain for large enterprises, where incumbent identity, endpoint, ITSM, and security platforms have deeper procurement relationships and more granular control requirements."
+risk_factors = ["Crowded RMM/PSA and endpoint-management market with strong incumbents and pricing pressure", "Privileged remote access and unattended remediation create a high-impact attack surface if agents or control planes are compromised", "Autonomous AI actions may misdiagnose issues, execute unsafe changes, or be difficult to validate across heterogeneous environments", "Cloud dependence, service outages, agent regressions, and third-party integration failures can disrupt many customer endpoints", "MSP channel churn, customer concentration, and competitive bundling can pressure retention and margins", "SOC 2 and related certifications do not by themselves satisfy classified, air-gapped, sovereign, or mission-critical deployment requirements", "Enterprise and defense expansion may require procurement, data-residency, export-control, and incident-response capabilities beyond the current commercial model"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Medium-priority for dual-use diligence: Atera has credible IT-resilience adjacency, meaningful product maturity, and a live autonomous-operations thesis, but the defense case remains conditional on deployment controls, procurement evidence, and independent validation of autonomous actions. The score reflects strong commercial technology and market signals offset by crowded competition, AI execution risk, and the gap between commercial compliance and high-assurance operational use."
+entity_type = "startup"
+public_sources = [
+  { label = "Atera legal terms and registered identity", url = "https://www.atera.com/terms-of-use/", description = "Legal name, Israeli company number, and Tel Aviv address." },
+  { label = "Atera about and leadership", url = "https://www.atera.com/about-us/", description = "Company overview, current leadership, product milestones, and current headline operating metrics." },
+  { label = "Atera Series A announcement", url = "https://www.atera.com/blog/thank-you-we-raised-25-million/", description = "Company announcement of the $25 million Series A investment from K1." },
+  { label = "Atera Series B announcement", url = "https://www.atera.com/blog/atera-raises-77m-in-series-b-funding-from-general-atlantic-at-half-a-billion-valuation/", description = "Company announcement of the $77 million Series B and participating investors." },
+  { label = "TechCrunch Series B coverage", url = "https://techcrunch.com/2021/07/28/atera-raises-77m-at-a-500m-valuation-to-help-smbs-manage-their-remote-networks-like-enterprises-do/", description = "Independent reporting on the Series B, valuation, company history, and product market." },
+  { label = "Atera terms of use", url = "https://www.atera.com/terms-of-use/", description = "Legal entity and registered address in Tel Aviv-Jaffa, Israel." },
+  { label = "Atera Robin support guide", url = "https://support.atera.com/hc/en-us/articles/20037204628124-Atera-s-Robin", description = "Current Robin functionality and its customer-facing workflows." },
+  { label = "Atera customer story: CCI", url = "https://www.atera.com/customer-stories/cci/", description = "Company-published customer case study documenting customer use of Robin." },
+  { label = "Atera Robin renaming notice", url = "https://support.atera.com/hc/en-us/articles/26035545466652-IT-Autopilot-is-now-Robin", description = "Confirms Robin is the new name for IT Autopilot." },
+  { label = "PR Newswire Series A announcement", url = "https://www.prnewswire.com/news-releases/atera-partners-with-k1-to-meet-the-new-demands-of-it-management-for-dispersed-workforces-301233349.html", description = "Announcement of the Series A investment from K1." },
+  { label = "Gil Pekelman patent listing", url = "https://patents.justia.com/inventor/gil-pekelman", description = "Patent listing associates applications with Atera Networks Ltd." },
+  { label = "NinjaOne RMM product", url = "https://www.ninjaone.com/msp/rmm/", description = "Official competitor product positioning for managed service providers." },
+  { label = "Atera product alternatives", url = "https://www.atera.com/blog/atera-alternatives/", description = "Company's comparison of Atera with alternative RMM and IT management products." },
+  { label = "Atera RMM", url = "https://www.atera.com/products/rmm/", description = "Official RMM product description." },
+  { label = "Atera PSA", url = "https://www.atera.com/features/psa/", description = "Official PSA product description." },
+  { label = "Atera security and compliance FAQ", url = "https://support.atera.com/hc/en-us/articles/26232309357980-Robin-Security-Compliance-FAQ", description = "Company support documentation on Robin security and compliance." },
+  { label = "Atera SOC 2 Type 2", url = "https://www.atera.com/blog/soc-2-type-2/", description = "Atera's published SOC 2 Type 2 information." },
+  { label = "Atera on LinkedIn", url = "https://www.linkedin.com/company/atera-networks", description = "Company profile, including company scale information." },
+]
+crawled_at = "2026-02-26T08:30:00Z"
+updated_at = "2026-10-03T22:52:53Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Gil Pekelman", role = "Chief Executive Officer and co-founder", is_founder = true, current = true, background = "Atera identifies him as CEO and co-founder. TechCrunch's 2021 interview described him as CEO and co-founder.", source_ids = ["about", "seriesa", "techcrunch"] },
+  { name = "Oshri Moyal", role = "Chief Technology Officer and co-founder", is_founder = true, current = true, background = "Atera identifies him as CTO; the company's funding announcement and TechCrunch identify him as co-founder.", source_ids = ["about", "seriesa", "techcrunch"] },
+]
+financials = []
+intellectual_property = [
+  { kind = "patent", description = "Justia's USPTO-derived index lists U.S. Patent 11,676,114, 'Automated control of distributed computing devices,' granted June 13, 2023, with Atera Networks Ltd. as assignee and Oshri Moyal, Gil Pekelman, and Eliezer Dikstein as inventors. The listed claims cover recording a technician's resolution actions into a profile and replaying applicable actions on another device.", date = "2023-06-13", source_ids = ["patents"] },
+]
+
+[intelligence.company]
+company_id = "il-atera"
+legal_name = "Atera Networks Ltd."
+aliases = ["Atera"]
+operating_status = "active"
+business_model = "Privately held B2B SaaS vendor selling a cloud-based RMM, IT service management, PSA, and autonomous IT platform to managed service providers and internal IT departments, primarily on per-technician subscription plans."
+products = ["Atera IT management platform", "Robin autonomous IT agent (formerly IT Autopilot)", "AI Copilot", "RMM", "PSA and ticketing"]
+locations = ["Tel Aviv-Jaffa, Israel"]
+founded_on = "2011"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "513409631", source_ids = ["terms"] }]
+source_ids = ["terms", "about", "seriesb", "techcrunch"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Two publicly announced equity rounds were identified: a $25 million Series A in February 2021 led by K1 Investment Management and a $77 million Series B in July 2021 led by General Atlantic with K1 participating. Atera's Series B announcement says it had raised over $100 million in the preceding year, but does not give a precise company-announced lifetime total; therefore no exact reported_total_raised is entered. No newer public financing announcement was found in the sources checked through 2026-10-03. Private cap table and detailed round terms are not publicly disclosed."
+history_status = "partial"
+coverage_through = "2026-10-03"
+rounds = [
+  { id = "series-a-2021", round_type = "Series A", instrument = "equity", status = "announced", announced_on = "2021-02-23", amount_status = "reported", amount = 25000000, amount_scope = "round", currency = "USD", lead_investors = ["K1 Investment Management"], participating_investors = ["K1 Investment Management"], source_ids = ["seriesa", "prnewswire"] },
+  { id = "series-b-2021", round_type = "Series B", instrument = "equity", status = "announced", announced_on = "2021-07-28", amount_status = "reported", amount = 77000000, amount_scope = "round", currency = "USD", lead_investors = ["General Atlantic"], participating_investors = ["General Atlantic", "K1 Investment Management"], post_money_valuation = 500000000, valuation_currency = "USD", valuation_basis = "reported", source_ids = ["seriesb", "techcrunch"] },
+]
+
+[[intelligence.investors]]
+name = "K1 Investment Management"
+investor_type = "pe"
+relationship = "historical"
+round_ids = ["series-a-2021", "series-b-2021"]
+source_ids = ["seriesa", "seriesb", "prnewswire"]
+notes = "Led the February 2021 Series A and participated in the July 2021 Series B. No current ownership percentage is disclosed in the reviewed sources."
+
+[[intelligence.investors]]
+name = "General Atlantic"
+investor_type = "pe"
+relationship = "historical"
+round_ids = ["series-b-2021"]
+source_ids = ["seriesb", "techcrunch"]
+notes = "Led the July 2021 Series B. No current ownership percentage is disclosed in the reviewed sources."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Atera remains a privately held company in the reviewed sources. Investors in the 2021 rounds are named, but the cap table, current shareholders, ownership percentages, and any later transfers are not publicly disclosed. No acquisition, IPO, or change-of-control event was found."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["seriesa", "seriesb", "techcrunch", "about"]
+deals = []
+holdings = []
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Atera's current about page headline reports 13,000+ customers, 6 million devices under management, and 1 million tickets handled per month. These are company-reported metrics; the same page's historical journey section still gives an older 8,000-customer and 1-million-device figure, so the page is internally inconsistent."
+date = "2026-10-03"
+source_ids = ["about"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Atera's customer story says CCI initially rolled out Robin to 25% of employees before deciding after around 30 days to deploy it company-wide; Atera reports ticket and technician time savings, which remain vendor-published customer-case claims rather than independently audited outcomes."
+date = "2026"
+source_ids = ["cci"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Atera renamed IT Autopilot to Robin; the support notice states that the name change did not change its capabilities, workflows, or support flow."
+date = "2026"
+source_ids = ["robinrename"]
+
+[[intelligence.comparables]]
+name = "NinjaOne"
+website = "https://www.ninjaone.com/"
+rationale = "Cloud RMM and endpoint management platform competing for MSP and IT-team use cases."
+differentiation = "Its official product materials emphasize RMM and endpoint management; Atera's positioning bundles RMM with PSA, ticketing, and Robin autonomous IT."
+source_ids = ["ninja", "about"]
+
+[[intelligence.comparables]]
+name = "ConnectWise"
+website = "https://www.connectwise.com/"
+rationale = "Established MSP software provider with RMM and PSA products competing for the same MSP workflows."
+differentiation = "Atera markets an integrated cloud platform and autonomous support agent, while ConnectWise offers a broad, mature MSP product suite."
+source_ids = ["atera_alternatives", "about"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel"]
+summary = "Atera Networks Ltd. is identified in its legal terms as an Israeli company registered under company number 513409631 with an address in Tel Aviv-Jaffa, Israel."
+as_of = "2026-10-03"
+source_ids = ["terms"]
+
+[intelligence.research]
+researched_at = "2026-10-03T22:52:53Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Atera company funding investors Series B 2021 $77 million official",
+  "Atera raises funding 2024 2025 investors revenue customers",
+  "Atera leadership CEO founder official 2026",
+  "Atera acquisition ownership company private",
+  "site:atera.com/blog Atera Series A $25 million February 2021 K1 official",
+  "Atera Series A funding 25 million K1 2021",
+  "Atera funding total $100 million Series B $77m Series A 25m investors",
+  "Atera funding investors cap table ownership",
+  "Atera number customers 2025 2026 company official customers",
+  "Atera revenue ARR profitability financials",
+  "Atera patents patent autonomous IT inventor Gil Pekelman",
+  "site:patents.google.com Atera Networks patent",
+  "Atera MSP competitor official NinjaOne RMM ConnectWise",
+  "Atera Israeli company Tel Aviv headquarters legal terms",
+  "Atera government defense customer contract security",
+  "Atera defense national security deployment",
+]
+gaps = [
+  "team: leadership page names current executives, but detailed biographies and verified professional histories for the full team were not established from primary sources in this pass.",
+  "investors: current ownership percentages, board rights, and whether named 2021 investors retain positions are not publicly disclosed.",
+  "financials: no dated revenue, ARR, profitability, cash, burn, or runway disclosure was located; private-company accounts were not available.",
+  "traction: current metrics are company assertions and the about page contains conflicting old and new customer/device counts; independent retention, revenue, and usage validation is unavailable.",
+  "intellectual_property: one granted U.S. patent and its indexed assignee/inventors are identified, but a complete patent portfolio, current status, foreign family, and independent direct USPTO/WIPO verification were not completed.",
+  "competition: competitive positioning is based on product pages and vendor-authored comparisons; independent win/loss, share, and pricing evidence was not established.",
+  "dual_use: no public defense or national-security customer deployment, contract, or authorization was found; commercial administrative IT applicability remains an adjacency only.",
+  "funding: no exact company-announced lifetime total or financing after the 2021 Series B was found in the sources checked; private cap table unavailable.",
+]
+conflicts = ["Atera's current about page shows 13,000+ customers and 6 million devices in headline metrics, while its historical timeline on the same page shows 8,000 customers and 1 million devices; likely different vintages, but the page does not label a measurement date for either figure.", "Atera's Series B post says its valuation was almost half a billion dollars; TechCrunch reported $500 million. The structured post-money figure uses the latter's direct reported figure, with the company wording retained as a rounded corroboration."]
+diligence_questions = [
+  "What are current ARR, net revenue retention, gross margin, churn, and customer concentration by MSP versus internal IT segment, and how have they changed since the 2021 financing?",
+  "What proportion of Robin-assisted tickets are autonomously resolved without reopening or human correction, measured across customer cohorts and issue categories, and what are the safety and rollback controls for privileged actions?",
+  "Which security certifications and deployment controls are currently available for regulated customers, including tenant isolation, data residency, offline operation, incident response, and privileged command auditability?",
+  "What are the present investor ownership and governance rights, and has any secondary or extension financing occurred since July 2021?",
+]
+
+[[intelligence.research.sources]]
+id = "terms"
+url = "https://www.atera.com/terms-of-use/"
+title = "Atera Terms of Use"
+publisher = "Atera"
+kind = "company"
+accessed_at = "2026-10-03T22:52:53Z"
+claims = ["Atera Networks Ltd. is the legal name, company number 513409631, with a Tel Aviv-Jaffa address."]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://www.atera.com/about-us/"
+title = "About Atera – The People Behind the Product"
+publisher = "Atera"
+kind = "company"
+accessed_at = "2026-10-03T22:52:53Z"
+claims = ["Atera reports current customer, device, and monthly ticket metrics.", "Atera names Gil Pekelman CEO and Oshri Moyal CTO, alongside current leadership.", "Atera's company history presents enterprise product and autonomous IT milestones.", "Atera describes its all-in-one platform and Robin autonomous IT direction."]
+
+[[intelligence.research.sources]]
+id = "seriesa"
+url = "https://www.atera.com/blog/thank-you-we-raised-25-million/"
+title = "THANK YOU! We Raised $25 Million! Here's What's Coming Next"
+publisher = "Atera"
+kind = "company"
+published_on = "2021-02-23"
+accessed_at = "2026-10-03T22:52:53Z"
+claims = ["Atera announced a $25 million Series A investment from K1 in February 2021.", "Gil Pekelman and Oshri Moyal identified themselves as Atera co-founders."]
+
+[[intelligence.research.sources]]
+id = "prnewswire"
+url = "https://www.prnewswire.com/news-releases/atera-partners-with-k1-to-meet-the-new-demands-of-it-management-for-dispersed-workforces-301233349.html"
+title = "Atera Partners with K1 to Meet the New Demands of IT Management for Dispersed Workforces"
+publisher = "PR Newswire"
+kind = "media"
+published_on = "2021-02-23"
+accessed_at = "2026-10-03T22:52:53Z"
+claims = ["Atera announced a $25 million investment from K1 Investment Management on February 23, 2021."]
+
+[[intelligence.research.sources]]
+id = "seriesb"
+url = "https://www.atera.com/blog/atera-raises-77m-in-series-b-funding-from-general-atlantic-at-half-a-billion-valuation/"
+title = "Atera raises $77M in Series B funding from General Atlantic at a half-billion-dollar valuation"
+publisher = "Atera"
+kind = "company"
+published_on = "2021-07-28"
+accessed_at = "2026-10-03T22:52:53Z"
+claims = ["Atera announced a $77 million Series B with General Atlantic and K1 Investment Management.", "Atera said it had raised over $100 million in the prior year and described its valuation as almost half a billion dollars."]
+
+[[intelligence.research.sources]]
+id = "techcrunch"
+url = "https://techcrunch.com/2021/07/28/atera-raises-77m-at-a-500m-valuation-to-help-smbs-manage-their-remote-networks-like-enterprises-do/"
+title = "Atera raises $77M at a $500M valuation to help SMBs manage their remote networks like enterprises do"
+publisher = "TechCrunch"
+kind = "media"
+published_on = "2021-07-28"
+accessed_at = "2026-10-03T22:52:53Z"
+claims = ["Atera's Series B was $77 million, led by General Atlantic with K1 participating.", "Atera's reported post-money valuation was $500 million.", "Atera was described as Tel Aviv-based and its founders were Gil Pekelman and Oshri Moyal."]
+
+[[intelligence.research.sources]]
+id = "robin"
+url = "https://support.atera.com/hc/en-us/articles/20037204628124-Atera-s-Robin"
+title = "Atera's Robin"
+publisher = "Atera Support"
+kind = "company"
+accessed_at = "2026-10-03T22:52:53Z"
+claims = ["Robin handles first-tier support across customer portal, email, Slack, Teams, and web widget channels.", "Atera states customer data is not used to train AI models."]
+
+[[intelligence.research.sources]]
+id = "cci"
+url = "https://www.atera.com/customer-stories/cci/"
+title = "How CCI scaled IT support and freed 50+ technician hours every week"
+publisher = "Atera"
+kind = "customer"
+accessed_at = "2026-10-03T22:52:53Z"
+claims = ["CCI adopted Atera and Robin for first-line IT support after a limited rollout.", "Atera publishes customer-reported outcomes for CCI; these are case-study claims, not independently audited metrics."]
+
+[[intelligence.research.sources]]
+id = "robinrename"
+url = "https://support.atera.com/hc/en-us/articles/26035545466652-IT-Autopilot-is-now-Robin"
+title = "IT Autopilot is now Robin"
+publisher = "Atera Support"
+kind = "company"
+accessed_at = "2026-10-03T22:52:53Z"
+claims = ["Robin is the new name for IT Autopilot and the name change did not change product capabilities or workflows."]
+
+[[intelligence.research.sources]]
+id = "patents"
+url = "https://patents.justia.com/inventor/gil-pekelman"
+title = "Gil Pekelman Inventions, Patents and Patent Applications"
+publisher = "Justia"
+kind = "other"
+accessed_at = "2026-10-03T22:52:53Z"
+claims = ["The secondary patent index lists Gil Pekelman applications and identifies Atera Networks Ltd. as an assignee on listed records."]
+
+[[intelligence.research.sources]]
+id = "ninja"
+url = "https://www.ninjaone.com/msp/rmm/"
+title = "MSP RMM Software | Multi-tenant RMM for MSPs"
+publisher = "NinjaOne"
+kind = "other"
+accessed_at = "2026-10-03T22:52:53Z"
+claims = ["NinjaOne markets multi-tenant RMM and endpoint management software to MSPs."]
+
+[[intelligence.research.sources]]
+id = "atera_alternatives"
+url = "https://www.atera.com/blog/atera-alternatives/"
+title = "6 Atera Alternatives Compared in 2026"
+publisher = "Atera"
+kind = "company"
+accessed_at = "2026-10-03T22:52:53Z"
+claims = ["Atera identifies NinjaOne, ConnectWise, SuperOps, Pulseway, and ServiceNow as alternatives in its market comparison."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T22:52:53Z"
+next_review_on = "2027-04-03"
+queries = ["Atera Israeli company Tel Aviv headquarters legal terms", "Atera company funding investors Series B 2021 $77 million official"]
+source_ids = ["terms", "about", "techcrunch"]
+summary = "Legal terms establish Atera Networks Ltd., an Israeli company with Tel Aviv-Jaffa address; official company page confirms active products and current leadership."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T22:52:53Z"
+next_review_on = "2027-04-03"
+queries = ["Atera company funding investors Series B 2021 $77 million official", "Atera raises funding 2024 2025 investors revenue customers", "site:atera.com/blog Atera Series A $25 million February 2021 K1 official"]
+source_ids = ["seriesa", "prnewswire", "seriesb", "techcrunch"]
+summary = "Verified public Series A and Series B. No exact reported lifetime total or newer round was found in the checked source set."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T22:52:53Z"
+next_review_on = "2027-04-03"
+queries = ["Atera funding total $100 million Series B $77m Series A 25m investors"]
+source_ids = ["seriesa", "seriesb", "techcrunch"]
+summary = "K1 and General Atlantic are identified as investors in the 2021 equity rounds; present holdings are unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T22:52:53Z"
+next_review_on = "2027-04-03"
+queries = ["Atera leadership CEO founder official 2026"]
+source_ids = ["about", "seriesa", "techcrunch"]
+summary = "Atera currently lists Gil Pekelman as CEO and Oshri Moyal as CTO; both are identified as co-founders. Full biographies were not established."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T22:52:53Z"
+next_review_on = "2027-04-03"
+queries = ["Atera acquisition ownership company private", "Atera funding investors cap table ownership"]
+source_ids = ["seriesa", "seriesb", "about"]
+summary = "No public cap table, ownership percentages, secondary sale, acquisition, or IPO located; ownership details remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T22:52:53Z"
+next_review_on = "2027-04-03"
+queries = ["Atera raises funding 2024 2025 investors revenue customers", "Atera revenue ARR profitability financials"]
+source_ids = ["seriesb", "techcrunch", "about"]
+summary = "No dated company revenue, ARR, profitability, burn, or runway metric was identified. Customer and product usage claims are recorded under traction, not treated as financials."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T22:52:53Z"
+next_review_on = "2027-04-03"
+queries = ["Atera number customers 2025 2026 company official customers", "Atera Robin customer use cases autonomous agent 2026"]
+source_ids = ["about", "cci", "robinrename"]
+summary = "Company page provides current headline scale metrics and customer story evidence; figures are company-published and include a stale historical inconsistency."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T22:52:53Z"
+next_review_on = "2027-04-03"
+queries = ["Atera patents patent autonomous IT inventor Gil Pekelman", "site:patents.google.com Atera Networks patent"]
+source_ids = ["patents", "techcrunch"]
+summary = "No complete patent family or status review was completed; a secondary listing associates inventor Gil Pekelman with Atera Networks Ltd. and TechCrunch reported Atera had been granted patents for AI analytics."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T22:52:53Z"
+next_review_on = "2027-04-03"
+queries = ["Atera MSP competitor official NinjaOne RMM ConnectWise", "Atera RMM PSA competitive alternatives 2026"]
+source_ids = ["ninja", "atera_alternatives", "about"]
+summary = "Primary vendor pages confirm overlapping RMM/MSP positioning; relative win rates, shares, and independent product comparisons remain unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T22:52:53Z"
+next_review_on = "2027-04-03"
+queries = ["Atera government defense customer contract security", "Atera defense national security deployment"]
+source_ids = ["about", "robin"]
+summary = "Endpoint visibility and remote IT remediation have administrative public-sector applicability, but no defense or national-security deployment or authorization was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Atera's official about page lists active current products, customer metrics, and current executives; the legal terms name the operating entity."
+verified_at = "2026-10-03T22:52:53Z"
+source_ids = ["about", "terms"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Legal terms identify Atera Networks Ltd. with an Israeli company number and Tel Aviv-Jaffa, Israel address."
+verified_at = "2026-10-03T22:52:53Z"
+source_ids = ["terms"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.amount"
+support = "direct"
+summary = "Atera's Series A announcement and same-day PR Newswire notice report a $25 million K1 investment."
+verified_at = "2026-10-03T22:52:53Z"
+source_ids = ["seriesa", "prnewswire"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.participating_investors"
+support = "direct"
+summary = "Atera and PR Newswire name K1 Investment Management as the Series A investor."
+verified_at = "2026-10-03T22:52:53Z"
+source_ids = ["seriesa", "prnewswire"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.lead_investors"
+support = "direct"
+summary = "Atera and PR Newswire name K1 Investment Management as the Series A investor."
+verified_at = "2026-10-03T22:52:53Z"
+source_ids = ["seriesa", "prnewswire"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2021.amount"
+support = "direct"
+summary = "Atera and TechCrunch report a $77 million Series B."
+verified_at = "2026-10-03T22:52:53Z"
+source_ids = ["seriesb", "techcrunch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2021.post_money_valuation"
+support = "direct"
+summary = "TechCrunch reports a $500 million valuation; Atera described the valuation as almost half a billion dollars."
+verified_at = "2026-10-03T22:52:53Z"
+source_ids = ["techcrunch", "seriesb"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2021.participating_investors"
+support = "direct"
+summary = "Atera and TechCrunch identify General Atlantic as lead and K1 Investment Management as participating investor."
+verified_at = "2026-10-03T22:52:53Z"
+source_ids = ["seriesb", "techcrunch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2021.lead_investors"
+support = "direct"
+summary = "Atera and TechCrunch identify General Atlantic as lead investor in the Series B."
+verified_at = "2026-10-03T22:52:53Z"
+source_ids = ["seriesb", "techcrunch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.registry_identifiers"
+support = "direct"
+summary = "Atera's legal terms give Israeli company number 513409631."
+verified_at = "2026-10-03T22:52:53Z"
+source_ids = ["terms"]

@@ -1,0 +1,425 @@
+name = "CPR Robotics"
+description = "CPR Robotics is an Israeli deep-tech medical-robotics startup developing an autonomous CPR system for field and hospital use. Its device combines mechanical chest compression, closed-loop motor control, and pressure, motion, and contact sensing to provide consistent resuscitation when human fatigue, staffing, or access delays threaten CPR quality."
+detailed_description = """
+**Product and the concrete problem it solves.** CPR Robotics is developing a robotic system intended to perform cardiopulmonary resuscitation when a patient needs immediate chest compressions and trained rescuers cannot maintain consistent quality for the duration of an event. The company's stated deployment frame is deliberately broad: the field and the hospital. In a pre-hospital emergency, responders may be carrying equipment, moving a patient, managing an airway, operating an AED, or evacuating through a constrained environment while also needing uninterrupted compressions. In a hospital, clinicians may face prolonged resuscitation, transfers, staffing pressure, or a requirement to keep compressions going while other interventions are performed. CPR Robotics positions its system as an always-available mechanical operator rather than as a diagnostic replacement for clinicians. The official site describes an automated CPR robot that delivers consistent, precise, and safe chest compressions, with a user interface designed for clinical teams and an emphasis on reducing human variability. This matters because CPR quality is not a single start-stop action: rate, depth, recoil, placement, and continuity must be maintained while the patient's anatomy, surface, transport context, and responder workload change. The company is therefore attacking an operational reliability problem in emergency medicine, not merely selling a conventional robot arm.
+
+**Core technology and how it actually works.** Public product information describes a mechatronic system combining advanced mechanics, algorithms, and motor control. The control loop is the key disclosed technical feature. CPR Robotics says its system maintains 100-120 chest compressions per minute and uses pressure, motion, and contact sensing to adapt to the patient's anatomy in real time. That implies a closed-loop controller that measures the interaction between the compression mechanism and the patient or training surrogate, compares the measured behavior with the target compression trajectory, and adjusts motor actuation rather than replaying an open-loop motion. The company also emphasizes hardware/software redundancy, which is appropriate for a life-critical device, although the public record does not disclose the exact redundant architecture, sensor tolerances, failure modes, or safety case. The patent record adds technical substance without warranting overstatement: Israeli publication IL296056A, titled “Portable automatic resuscitation system with dynamic adaptation,” lists CPR Robotics Ltd as the original assignee, carries a 2020-03-02 priority date, and is classified around cardiovascular measurement, heart-rate sensing, closed-loop treatment systems, and user notification. The site says the system is designed for fast operation and rigorous standards, but it does not publicly identify a regulatory clearance, clinical-trial result, final enclosure specification, battery endurance, or production certification. The most defensible description is an actively controlled, sensor-rich mechanical CPR platform whose distinctive claim is dynamic adaptation; the engineering maturity of that claim remains a diligence question.
+
+**Market, customers, and go-to-market.** The natural initial buyers are emergency medical services, hospitals, military and disaster-response medical units, ambulance operators, and clinical simulation or training organizations. CPR Robotics does not publicly name a commercial customer, distributor, hospital deployment, government contract, or reimbursement pathway, so the commercial model must be treated as an inferred route rather than a confirmed one. A plausible go-to-market sequence would begin with controlled prototypes and clinician-led validation, then proceed through medical-device regulatory work and channel partnerships with EMS equipment distributors or hospital procurement groups. The field-use proposition is strongest where the device can preserve compressions during transport, free a responder to perform airway and medication tasks, or support care in austere locations. The hospital proposition is strongest in resuscitation bays, intensive-care transfers, catheterization or imaging workflows, and settings where a mechanical system can standardize the physical portion of a team response. The company can also use manikin-based simulation to refine operator workflow before human deployment, but the independent manufacturing case study confirms only that prototype parts and low-volume iterations were being produced, not that the device has entered clinical use. Pricing, consumables, service requirements, sterilization workflow, disposable patient-contact components, and the intended regulatory classification are not public. Those unknowns are central to whether CPR Robotics becomes a high-value clinical platform or a technically impressive but difficult-to-procure device.
+
+**Traction, funding, and third-party validation.** The public evidence is early but unusually concrete for a small medical-robotics company. CPR Robotics has an official, currently accessible product site describing the autonomous CPR system and its sensing and control claims. HLH Rapid published a customer case study identifying CPR Robotics as a research-driven Israeli startup and documenting physical prototype work: enclosures, frames, spur gears, assemblies, and other parts were made in stainless steel, aluminum, engineering plastics, and additive-manufactured materials, often in one-off or four-to-six-unit iterations. The case study quotes Barak Harrison as Design and Product Manager and explicitly says the company was in prototyping and testing, which is useful negative evidence against treating the product as fielded. A public Israeli company-information page lists CPR Robotics Ltd as an active private Israeli company, founded on 2022-08-14, at HaKedma 7 in Yokne'am Illit. An archived LinkedIn job listing sought an embedded C/C++ software engineer for a medical-device startup and described integration with a hardware design team, corroborating that the work includes embedded control rather than only a rendered concept. The patent publication is a further validation of an identifiable technical program and intellectual-property posture. No reliable public source discloses venture funding, grants, revenue, clinical outcomes, regulatory approval, production volume, or named end users; these absences should materially cap the score.
+
+**Founders and team background.** The public record does not provide a clean official founder biography or complete organizational chart. The patent publication names Chanoch Levin and Danny Knafou among the inventors associated with the portable adaptive resuscitation system, but an inventor listing is not by itself proof of current executive or founder status. The company has publicly been represented by Barak Harrison, whose title is Design and Product Manager in the manufacturing case study; LinkedIn material also associates Nissim Fintz with CPR Robotics and identifies engineering experience in machine design, robotics, and simulation, while Yarden Guetta's public profile associates her with CPR Robotics and a Technion education. These are useful signals of a multidisciplinary engineering group, not a basis for guessing roles, seniority, or ownership. The available evidence points to a team spanning mechanical design, embedded software, control, robotics, and medical-device prototyping, which is the right capability mix for a closed-loop resuscitation machine. It does not yet establish experience with human factors, clinical medicine, quality systems, regulatory submissions, manufacturing scale-up, or hospital procurement. The likely strength is hands-on iteration across mechanism, electronics, and software; the likely organizational risk is that a very small team may have to cover a safety-critical product lifecycle with limited redundancy. Confirming the founders, clinical advisers, quality lead, regulatory pathway, and current headcount would be a first diligence step.
+
+**Competitive dynamics.** CPR Robotics faces established mechanical-CPR devices and a powerful low-cost incumbent: trained people performing manual compressions. **Stryker LUCAS** is a widely recognized piston-based mechanical CPR platform with EMS and hospital channel reach. **ZOLL AutoPulse** uses a load-distributing band approach and competes on automated compressions and transport workflow. **corpuls cpr** provides a mechanical chest-compression system integrated with the broader corpuls emergency-care ecosystem. **Defibtech Lifeline ARM** represents another automated CPR device approach, while **Physio-Control/Stryker and ZOLL AED ecosystems** can bundle resuscitation equipment, service, and procurement relationships around the buyer. Manual CPR remains the substitute when cost, training, device availability, or speed of deployment outweigh the benefits of mechanization. CPR Robotics' potential edge is not yet a proven clinical outcome; it is the proposed combination of adaptive sensing, closed-loop control, hardware/software redundancy, and a compact field-to-hospital design. If those claims survive validation, the company could differentiate on patient-specific adjustment, ease of setup, and performance consistency in changing conditions. The counterargument is formidable: incumbents have regulatory approvals, installed bases, clinical evidence, training programs, service networks, and procurement familiarity. A new system must demonstrate not just that it compresses at the correct rate, but that it improves workflow or outcomes enough to justify switching, while avoiding injury, interruption, cleaning complexity, and false confidence in the operator.
+
+**Defense, security, and resilience dual-use relevance.** CPR Robotics qualifies as dual-use because the core technology addresses civilian emergency care and credible defense, disaster, and continuity-of-operations scenarios without changing its fundamental function. The most direct military application is prolonged field care and casualty evacuation: a mechanical CPR system could maintain compressions while medics manage airway, hemorrhage, monitoring, communications, or movement, subject to the device proving rugged, portable, safe, and clinically effective. The same logic applies to mass-casualty incidents, collapsed infrastructure, remote industrial sites, maritime rescue, and emergency shelters where responder numbers are limited and patient access is difficult. A resilient national emergency system also benefits from equipment that can standardize a time-critical intervention across ambulance crews, hospitals, and surge facilities. The dual-use case is strategically relevant but not fielded. CPR Robotics publicly names no military customer, defense trial, government program, disaster deployment, ruggedization standard, or operational test. The official site says “field and hospitals,” which supports a field-care target but does not establish use in contested environments. The patent's dynamic-adaptation and sensing themes are technically adjacent to autonomy and human-machine teaming, but the product should not be described as an autonomous medical decision-maker: public material supports automated mechanical compressions under an operator's clinical workflow, not diagnosis, triage, medication selection, or independent patient care. Strategic value therefore comes from potential casualty-care resilience and workforce multiplication, with a substantial evidence discount until regulatory and operational milestones are visible.
+
+**Growth stage, trajectory, and key diligence risks.** CPR Robotics is best classified as early: the company is active and legally established, has a public product identity, a published patent, and physical prototypes, but the independent evidence still places it in prototyping and testing rather than commercial deployment. The trajectory is attractive if the team can convert a credible control concept into a validated medical device. Near-term milestones should include a disclosed regulatory strategy, bench and animal or clinical evidence where applicable, human-factors testing, measurable compression-quality performance against manual CPR and incumbent devices, and a production design that can be cleaned, transported, powered, and serviced in real emergencies. The key risks are substantial. (1) **Clinical and regulatory risk:** a life-critical device requires evidence and quality controls that a prototype alone cannot supply. (2) **Mechanical safety risk:** excessive force, poor placement, incomplete recoil, movement during transport, or sensor failure could cause harm. (3) **Workflow risk:** setup time, patient fit, operator training, and interaction with defibrillation or airway care may erase the theoretical benefit. (4) **Commercial risk:** Stryker, ZOLL, and other incumbents already own trust and procurement channels. (5) **Capital risk:** no public funding or runway information is available, while medical-device development is expensive and slow. (6) **Manufacturing risk:** the documented low-volume parts program must become a repeatable, quality-controlled supply chain. (7) **Evidence risk:** no public customer, clinical outcome, clearance, or revenue is disclosed. The upside is a differentiated Israeli medical-robotics capability aligned with emergency resilience; the present record supports monitoring and diligence, not claims of deployment or clinical efficacy.
+"""
+logo = "Unknown"
+website = "https://www.cpr-robotics.com"
+sector = "Medical Robotics and Emergency Resuscitation Systems"
+founded = "2022"
+headquarters = "Yokne'am Illit, Israel"
+employees = "Unknown"
+funding_stage = "Early-stage private medical-device startup in prototype and testing phase; no publicly disclosed equity funding, revenue, or commercial financing round located"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "CPR Robotics has credible dual-use relevance because the same automated chest-compression platform can serve civilian EMS and hospitals as well as military casualty evacuation, mass-casualty response, remote industrial rescue, maritime rescue, and disaster-relief settings. Its sensing and closed-loop control could reduce responder fatigue and preserve medical bandwidth during prolonged or logistically constrained care. The connection is strategically meaningful but not yet fielded: public sources disclose no defense customer, government trial, ruggedization certification, or operational deployment. The product should be treated as automated mechanical assistance within a clinician-led workflow, not as an autonomous diagnostic or triage system."
+key_technologies = [
+  "Closed-loop motor control for maintaining a 100-120 compressions-per-minute target",
+  "Pressure, motion, and contact sensing for patient-anatomy-aware compression adjustment",
+  "Mechanical chest-compression actuation for automated CPR",
+  "Hardware/software redundancy for a life-critical medical device",
+  "Embedded control software and hardware integration for a portable robotic platform",
+  "Dynamic-adaptation architecture covered by Israeli patent publication IL296056A"
+]
+use_cases = [
+  "Ambulance and pre-hospital cardiac-arrest response where responders must manage airway, defibrillation, or transport simultaneously",
+  "Hospital resuscitation bays and intensive-care workflows requiring sustained, consistent compressions",
+  "Mechanical CPR during patient movement, elevator transfer, helicopter evacuation, or constrained transport",
+  "Military prolonged field care and casualty evacuation, subject to ruggedization and clinical validation",
+  "Mass-casualty incidents and disaster shelters with limited trained responder capacity",
+  "Remote industrial, maritime, and infrastructure-site emergency response",
+  "Clinical simulation and medical training using instrumented robotic CPR prototypes",
+  "Continuity-of-operations stockpiles for emergency medical systems and public-health resilience"
+]
+investible = true
+investment_rationale = "CPR Robotics is a high-uncertainty but strategically coherent early medical-robotics entry, and the legacy investible flag should be read only as an internal priority signal. (1) The technical thesis is specific: sensed, closed-loop mechanical compressions address the degradation and staffing burden of manual CPR rather than adding generic robotics. (2) The evidence is tangible but pre-commercial: an active Israeli company, a published adaptive-resuscitation patent, an official product site, embedded-software hiring, and independent documentation of physical prototype iterations. (3) Strategic adjacency is stronger than for a generic healthcare robot because the platform maps directly to casualty care, disaster response, and emergency-system resilience. Counterweights are decisive: no public funding, revenue, clinical outcome, regulatory clearance, customer, or defense deployment; strong incumbents already own the category; and safety-critical medical-device development can consume substantial capital before commercialization. The appropriate diligence question is whether the team can produce validated patient-specific compression performance and a procurement-ready workflow, not whether the prototype photograph itself proves efficacy. This is not an investment recommendation."
+strategic_value = "CPR Robotics' strategic value is potential workforce multiplication in a time-critical medical function. (1) Emergency resilience: a reliable mechanical CPR system could preserve compression quality when responders are fatigued, diverted to other interventions, or operating in a mass-casualty environment. (2) Defense relevance: during prolonged field care and evacuation, automated compressions could allow scarce medics to manage airway, bleeding, monitoring, and movement, although no military deployment is publicly confirmed. (3) Sovereign capability: an Israeli company developing the mechanism, embedded controls, and medical-device IP contributes to domestic depth in robotics and emergency care rather than relying solely on imported systems. (4) Dual-market leverage: hospital and EMS validation could create a path toward disaster, maritime, industrial, and defense users without changing the core device. Strategic value remains conditional on regulatory approval, human-factors performance, ruggedization, and proof that the system improves real workflows compared with manual CPR and incumbent devices."
+potential_score = 63.0
+technology_score = 72.0
+market_score = 55.0
+team_score = 58.0
+dual_use_score = 76.0
+strategic_alignment_score = 78.0
+stage = "early"
+stage_rationale = "CPR Robotics is classified as early because the company is active and legally established, but public evidence places it in prototype and testing rather than commercial deployment. (1) The official website presents the product concept and specific control and sensing claims. (2) The HLH Rapid case study documents low-volume physical iterations and explicitly describes the company as being in prototyping and testing. (3) The Israeli company listing reports an active private company founded in 2022, and the patent establishes an identifiable technical program. (4) No public source located for this record confirms regulatory clearance, clinical trials, revenue, named customers, production volume, or disclosed funding. Progression toward mid-stage would require a regulatory pathway, validated clinical or pre-clinical evidence, production-quality hardware, and repeatable deployments with EMS or hospital users."
+competitors = [
+  "Stryker LUCAS (piston-based mechanical CPR system with established EMS and hospital distribution)",
+  "ZOLL AutoPulse (load-distributing-band automated CPR platform and incumbent resuscitation channel)",
+  "corpuls cpr (mechanical chest-compression device integrated with a broader emergency-care ecosystem)",
+  "Defibtech Lifeline ARM (automated CPR device competing on portability and emergency-response workflow)",
+  "Manual CPR by trained responders (low-cost incumbent and default clinical approach)",
+  "AED and resuscitation-equipment vendors (bundled procurement alternatives that compete for the same emergency-care budget)"
+]
+competitive_edge = "CPR Robotics' potential edge is a specific control architecture rather than a generic claim of robotization. (1) Closed-loop operation uses pressure, motion, and contact sensing to adjust compression behavior to the patient and maintain the target rate over time. (2) A portable field-and-hospital design could address more deployment contexts than a device optimized only for one ambulance or resuscitation-room workflow. (3) The company emphasizes hardware/software redundancy and medical-device rigor, which are appropriate design priorities for a life-critical machine. (4) The Israeli patent publication provides an identifiable intellectual-property posture around portable resuscitation with dynamic adaptation. None of these points is yet a proven commercial moat: incumbents possess clinical evidence, regulatory approvals, installed bases, service networks, and buyer trust, while the public record does not yet show CPR Robotics' final specifications, measured outcomes, or freedom-to-operate position."
+risk_factors = [
+  "Clinical and regulatory risk: no public regulatory clearance, clinical outcome, or complete validation program was confirmed",
+  "Life-critical mechanical safety risk from incorrect placement, excess force, incomplete recoil, sensor failure, or movement during transport",
+  "Workflow risk involving setup time, patient fit, operator training, cleaning, defibrillation, airway care, and power endurance",
+  "Incumbent competition from Stryker, ZOLL, corpuls, and manual CPR with stronger procurement and clinical evidence",
+  "Capital and financing opacity: no publicly disclosed equity round, revenue, runway, or production financing located",
+  "Manufacturing scale-up risk because public evidence documents low-volume prototype parts rather than controlled mass production",
+  "Dual-use evidence gap: no public defense customer, ruggedization standard, government trial, or operational deployment"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "CPR Robotics merits a monitoring priority because it combines a concrete Israeli medical-robotics program with a credible emergency-resilience and defense-casualty-care transfer path. (1) The official product site discloses a technically specific combination of mechanical CPR, closed-loop motor control, and pressure, motion, and contact sensing. (2) The Israeli patent publication and active-company listing provide identifiable IP and legal-entity evidence. (3) Independent manufacturing documentation confirms repeated physical prototype iterations and an embedded engineering need, moving the record beyond a purely conceptual startup. (4) The strategic use case is clear: automated compressions could free scarce responders during evacuation, disasters, and prolonged field care. Priority is capped by the absence of clinical validation, regulatory clearance, named customers, disclosed funding, production scale, or defense deployment, plus strong incumbent competition. Milestones that would justify raising priority are a disclosed regulatory pathway, clinical or bench evidence against incumbent devices, first EMS or hospital deployment, field ruggedization, and a credible financing or manufacturing plan."
+crawled_at = "2026-08-12T14:09:38Z"
+updated_at = "2026-08-12T14:09:38Z"
+
+[[public_sources]]
+"label" = "CPR Robotics — official product page"
+"url" = "https://www.cpr-robotics.com/"
+"description" = "Company product and operating claims."
+
+[[public_sources]]
+"label" = "Israeli company information — CPR Robotics Ltd"
+"url" = "https://next.obudget.org/i/org/company/516663614"
+"description" = "Legal identity, active status, founding date, registration number and address."
+
+[[public_sources]]
+"label" = "HLH Rapid prototype case study"
+"url" = "https://hlhrapid.com/case_study/cnc-rapid-prototyping-cpr-robot/"
+"description" = "Independent prototype/testing and supplier evidence."
+
+[[public_sources]]
+"label" = "Israeli patent publication IL296056B1"
+"url" = "https://patents.google.com/patent/IL296056B1/en"
+"description" = "Patent family, assignee and Israeli publication history."
+
+[[public_sources]]
+"label" = "US patent US12629092B2"
+"url" = "https://patents.google.com/patent/US12629092B2/en"
+"description" = "US grant, assignee and inventors."
+
+[[public_sources]]
+"label" = "Stryker LUCAS 3"
+"url" = "https://www.stryker.com/us/en/emergency-care/products/lucas-3.html"
+"description" = "Official competitor product evidence."
+
+[[public_sources]]
+"label" = "ZOLL AutoPulse NXT"
+"url" = "https://www.zoll.com/en-us/products/emergency-care/automated-cpr/autopulse-resuscitation-system-nxt"
+"description" = "Official competitor product evidence."
+
+[[public_sources]]
+"label" = "corpuls cpr"
+"url" = "https://corpuls.world/en/products/corpuls-cpr/"
+"description" = "Official competitor product and certification evidence."
+
+[[public_sources]]
+"label" = "LinkedIn historical embedded software engineer listing"
+"url" = "https://il.linkedin.com/jobs/view/embedded-software-engineer-at-cpr-robotics-4005310410"
+"description" = "Historical role listing, not current headcount evidence."
+"updated_at" = "2026-10-04T23:04:18Z"
+
+[intelligence]
+"schema_version" = 2
+"investors" = []
+"financials" = []
+[intelligence."company"]
+"company_id" = "il-cpr-robotics"
+"legal_name" = "CPR ROBOTICS LTD"
+"aliases" = ["CPR Robotics", "סי.פי.אר. רובוטיקס בע״מ"]
+"operating_status" = "active"
+"business_model" = "Develops a medical device platform intended for automated chest compressions; no public sales or commercial deployment evidence located."
+"products" = ["Portable automated CPR robot (prototype/testing stage)"]
+"locations" = ["Yokne’am Illit, Israel"]
+"founded_on" = "2022-08-14"
+"country_of_incorporation" = "Israel"
+"source_ids" = ["registry", "official", "hlh"]
+
+[[intelligence."company"."registry_identifiers"]]
+"jurisdiction" = "Israel"
+"scheme" = "Israeli company number"
+"identifier" = "516663614"
+"source_ids" = ["registry"]
+[intelligence."funding"]
+"status" = "not_found"
+"summary" = "Searches of company announcements, investor announcements, public reporting, Israeli company information, and indexed funding coverage found no verifiable equity round or company-announced total through 2026-10-04. This is a public-disclosure search result, not evidence that no financing occurred. Government-support data pages were checked but did not return a reliable grant amount."
+"rounds" = []
+"history_status" = "not_found"
+"coverage_through" = "2026-10-04"
+[intelligence."ownership"]
+"status" = "undisclosed"
+"summary" = "No public parent, acquisition, financing ownership change, or named shareholder information was located. Israeli company information identifies an active private limited company and directs users to the Companies Authority extract for shareholder details; private cap table therefore remains unavailable from consulted public material."
+"cap_table_status" = "undisclosed"
+"shareholders" = []
+"source_ids" = ["registry"]
+"deals" = []
+"holdings" = []
+[intelligence."israel_connection"]
+"status" = "confirmed"
+"basis" = ["incorporated_in_israel", "headquarters_in_israel"]
+"summary" = "Israeli private limited company CPR ROBOTICS LTD, registered under Israeli company number 516663614, listed active with a Yokne’am Illit address. The product company identifies itself as an Israeli startup; the manufacturing case study also lists Yokne’am Illit."
+"as_of" = "2026-10-04"
+"source_ids" = ["registry", "official", "hlh"]
+[intelligence."research"]
+"researched_at" = "2026-10-04T23:04:18Z"
+"topics_checked" = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+"search_queries" = ["CPR Robotics Israel company CPR robot official site product", "\"CPR Robotics\" funding raised seed Series A investors valuation acquisition", "\"CPR Robotics Ltd\" founder CEO team leadership", "\"CPR Robotics\" revenue customers contract hospital EMS regulatory clinical trial", "\"CPR Robotics\" Israel patent patents IL296056A WO2021176451", "CPR Robotics ישראל גיוס השקעה מייסדים הכנסות לקוחות", "\"CPR ROBOTICS LTD\" 516663614 grants government support", "Stryker LUCAS chest compression system official product", "ZOLL AutoPulse official resuscitation system", "corpuls cpr official thorax compression product"]
+"gaps" = ["Funding: no public round or reported lifetime funding identified; private financing and non-indexed grants remain possible.", "Investors: no named investors were found in public sources; investor identities and round participation remain undisclosed or unlocated.", "Team: founders, executive leadership, current roles, clinical/regulatory advisers, and verified current headcount remain unclear. The inventor names and one historical product-manager quotation do not establish founders or current executives.", "Ownership: public sources do not disclose shareholders, beneficial owners, or a full cap table; obtain a current Companies Authority extract and company confirmation.", "Financials: no dated revenue, ARR, profitability, burn, cash, or runway disclosure was found.", "Traction: prototype iteration and historical hiring are evidenced, but no paying customer, clinical deployment, contract, revenue, clinical outcome, regulatory clearance, or production volume was found.", "Intellectual_property: public patent records identify a patent family and grants, but portfolio completeness, claim scope, maintenance, freedom to operate, and enforceability need specialist diligence.", "Competition: official LUCAS, AutoPulse and corpuls pages establish product peers; no verified comparative head-to-head CPR Robotics performance or pricing is public.", "Dual-use: no military, government, defense, or disaster-response customer, trial, ruggedization, or operational deployment was found.", "No exact product regulatory classification, quality-system certification, final product specification, or clinical validation program was located."]
+"conflicts" = ["HLH Rapid describes CPR Robotics as located in Haifa in its narrative but identifies Yokne’am Illit in the project location field; Israeli company information also lists Yokne’am Illit. This appears to be a geographic wording discrepancy, not evidence of a company move. Use Yokne’am Illit as the registered/headquarters location while retaining Haifa as a broad regional description only."]
+"diligence_questions" = ["What is the current regulatory classification and submission plan in Israel, the EU, and the United States, and what bench, animal, or clinical evidence supports safety and performance?", "Who are the founders, current executives, clinical and regulatory advisers, and shareholders, and can the company provide an up-to-date cap table and financing history?", "Has CPR Robotics secured paid pilots, customer commitments, public grants, or production orders, and what are the corresponding revenue, runway, and unit economics?", "How does the device perform against manual CPR and LUCAS/AutoPulse/corpuls on compression depth, recoil, interruptions, injury, placement time, transport stability, and patient outcomes?", "What patent family assets remain in force, where are they granted, and what freedom-to-operate analysis covers competing mechanical CPR architectures?"]
+
+[[intelligence."research"."sources"]]
+"id" = "official"
+"url" = "https://www.cpr-robotics.com/"
+"title" = "CPR Robotics – Smarter CPR, When Every Second Counts"
+"publisher" = "CPR Robotics"
+"kind" = "company"
+"accessed_at" = "2026-10-04T23:04:18Z"
+"claims" = ["Company describes itself as an Israeli deep-tech startup developing an automated CPR system for field and hospital use.", "Company claims closed-loop compression rate of 100–120 CPM and pressure, motion, and contact sensing.", "Company positions system for clinical teams and states hardware/software redundancy; these are company assertions, not independent validation."]
+
+[[intelligence."research"."sources"]]
+"id" = "registry"
+"url" = "https://next.obudget.org/i/org/company/516663614"
+"title" = "CPR Robotics Ltd — Israeli public company information"
+"publisher" = "Mפתח התקציב / Hasadna (government-data aggregator)"
+"kind" = "directory"
+"accessed_at" = "2026-10-04T23:04:18Z"
+"claims" = ["Lists CPR ROBOTICS LTD, Israeli private company number 516663614, founded 2022-08-14, active, at HaKedma 7, Yokne’am Illit.", "Page states company registry extract is the source for shareholder details and those details are not shown on the page."]
+
+[[intelligence."research"."sources"]]
+"id" = "hlh"
+"url" = "https://hlhrapid.com/case_study/cnc-rapid-prototyping-cpr-robot/"
+"title" = "CNC Rapid Prototyping Case Study - CPR Robot"
+"publisher" = "HLH Rapid"
+"kind" = "customer"
+"accessed_at" = "2026-10-04T23:04:18Z"
+"claims" = ["HLH case study identifies CPR Robotics as a medical robotics startup and names Barak Harrison as Design and Product Manager in its account.", "Case study says company was prototyping and testing, with low-volume parts and repeated prototype iterations.", "Case study project breakdown lists Yokne’am Illit, Israel; narrative also says Haifa, Israel."]
+
+[[intelligence."research"."sources"]]
+"id" = "uspatent"
+"url" = "https://patents.google.com/patent/US12629092B2/en"
+"title" = "US12629092B2 - Portable automated life-saving system with dynamic adaptation"
+"publisher" = "Google Patents / USPTO bibliographic data"
+"kind" = "filing"
+"accessed_at" = "2026-10-04T23:04:18Z"
+"published_on" = "2026-05-19"
+"claims" = ["US patent US12629092B2 names Chanoch Levin and Danny Knafou as inventors and CPR Robotics Ltd as original assignee.", "The US patent was granted and published on 2026-05-19, based on an application filed 2021-03-02; patent abstract describes sensor-informed automated life-saving treatment adaptation."]
+
+[[intelligence."research"."sources"]]
+"id" = "ilpatent"
+"url" = "https://patents.google.com/patent/IL296056B1/en"
+"title" = "IL296056B1 - A portable automated life-saving system with dynamic adaptation"
+"publisher" = "Google Patents / Israel Patent Office bibliographic data"
+"kind" = "filing"
+"accessed_at" = "2026-10-04T23:04:18Z"
+"published_on" = "2025-07-01"
+"claims" = ["Israeli patent publication IL296056B1 identifies CPR Robotics Ltd as original assignee for a portable automated life-saving system with dynamic adaptation.", "Record lists priority 2020-03-02, filing 2021-03-02, A publication 2022-10-01, and B1 publication 2025-07-01."]
+
+[[intelligence."research"."sources"]]
+"id" = "linkedinjob"
+"url" = "https://il.linkedin.com/jobs/view/embedded-software-engineer-at-cpr-robotics-4005310410"
+"title" = "Embedded Software Engineer at CPR Robotics"
+"publisher" = "LinkedIn"
+"kind" = "other"
+"accessed_at" = "2026-10-04T23:04:18Z"
+"claims" = ["Historical job listing sought an embedded C/C++ software engineer in Yokne’am Illit for a medical-device startup and described integration with a hardware design team.", "The LinkedIn listing is closed and does not establish current headcount or hiring status."]
+
+[[intelligence."research"."sources"]]
+"id" = "stryker"
+"url" = "https://www.stryker.com/us/en/emergency-care/products/lucas-3.html"
+"title" = "LUCAS 3, v3.1 chest compression system"
+"publisher" = "Stryker"
+"kind" = "other"
+"accessed_at" = "2026-10-04T23:04:18Z"
+"claims" = ["Stryker product page documents LUCAS as a mechanical chest-compression system intended for EMS and hospital/transport workflows, with published product specifications and clinical evidence references."]
+
+[[intelligence."research"."sources"]]
+"id" = "zoll"
+"url" = "https://www.zoll.com/en-us/products/emergency-care/automated-cpr/autopulse-resuscitation-system-nxt"
+"title" = "AutoPulse NXT Resuscitation System"
+"publisher" = "ZOLL"
+"kind" = "other"
+"accessed_at" = "2026-10-04T23:04:18Z"
+"claims" = ["ZOLL describes AutoPulse NXT as an automated CPR system used through treatment and transport."]
+
+[[intelligence."research"."sources"]]
+"id" = "corpuls"
+"url" = "https://corpuls.world/en/products/corpuls-cpr/"
+"title" = "corpuls cpr - Thorax compression device"
+"publisher" = "corpuls"
+"kind" = "other"
+"accessed_at" = "2026-10-04T23:04:18Z"
+"claims" = ["corpuls describes a mechanical thorax compression device for pre-hospital and hospital use and reports MDR certification."]
+
+[[intelligence."research"."topic_checks"]]
+"topic" = "identity"
+"status" = "reported"
+"checked_at" = "2026-10-04T23:04:18Z"
+"next_review_on" = "2027-04-04"
+"queries" = ["CPR Robotics Israel company CPR robot official site", "\"CPR Robotics Ltd\" 516663614 company identity"]
+"source_ids" = ["official", "registry", "hlh"]
+"summary" = "Official site and Israeli company-information record identify CPR ROBOTICS LTD/CPR Robotics as an active Israeli medical-robotics startup; registered address is Yokne’am Illit."
+
+[[intelligence."research"."topic_checks"]]
+"topic" = "funding"
+"status" = "not_found"
+"checked_at" = "2026-10-04T23:04:18Z"
+"next_review_on" = "2027-01-04"
+"queries" = ["\"CPR Robotics\" funding raised seed Series A investors valuation acquisition", "\"CPR ROBOTICS LTD\" 516663614 grants government support", "CPR Robotics ישראל גיוס השקעה"]
+"source_ids" = ["registry", "official"]
+"summary" = "No reliable publicly disclosed investment round, valuation, or company-reported total was found after company, investor, press, and government-data searches. No grant amount could be verified."
+
+[[intelligence."research"."topic_checks"]]
+"topic" = "investors"
+"status" = "not_found"
+"checked_at" = "2026-10-04T23:04:18Z"
+"next_review_on" = "2027-01-04"
+"queries" = ["\"CPR Robotics\" investors venture capital portfolio", "\"CPR Robotics Ltd\" seed investors Israel"]
+"source_ids" = ["official", "registry"]
+"summary" = "No public investor identities or investor portfolio announcement located; empty investor list reflects lack of attributable evidence."
+
+[[intelligence."research"."topic_checks"]]
+"topic" = "team"
+"status" = "reported"
+"checked_at" = "2026-10-04T23:04:18Z"
+"next_review_on" = "2027-04-04"
+"queries" = ["\"CPR Robotics Ltd\" founder CEO team leadership", "\"CPR Robotics\" Design Product Manager", "\"CPR Robotics\" inventor Chanoch Levin Danny Knafou"]
+"source_ids" = ["hlh", "uspatent", "linkedinjob"]
+"summary" = "Public sources identify product manager Barak Harrison in a supplier case study, patent inventors Chanoch Levin and Danny Knafou, and historical embedded-engineering recruitment; founder status, executive roles and current roster are not verified."
+
+[[intelligence."research"."topic_checks"]]
+"topic" = "ownership"
+"status" = "no_public_disclosure"
+"checked_at" = "2026-10-04T23:04:18Z"
+"next_review_on" = "2027-04-04"
+"queries" = ["\"CPR Robotics Ltd\" ownership shareholders 516663614", "CPR Robotics Ltd acquired parent company"]
+"source_ids" = ["registry"]
+"summary" = "Company record shows active Israeli private-company status but no shareholder list; no parent, acquisition, or ownership transaction identified."
+
+[[intelligence."research"."topic_checks"]]
+"topic" = "financials"
+"status" = "not_found"
+"checked_at" = "2026-10-04T23:04:18Z"
+"next_review_on" = "2027-04-04"
+"queries" = ["\"CPR Robotics\" revenue ARR financials runway", "\"CPR Robotics Ltd\" revenue funding"]
+"source_ids" = ["registry", "hlh"]
+"summary" = "No public revenue, ARR, cash, burn, profitability, or runway measures located. Prototype manufacturing case study does not disclose commercial financials."
+
+[[intelligence."research"."topic_checks"]]
+"topic" = "traction"
+"status" = "reported"
+"checked_at" = "2026-10-04T23:04:18Z"
+"next_review_on" = "2027-04-04"
+"queries" = ["\"CPR Robotics\" revenue customers contract hospital EMS regulatory clinical trial", "\"CPR Robotics\" prototypes testing HLH Rapid", "\"CPR Robotics\" hiring embedded engineer"]
+"source_ids" = ["hlh", "official", "linkedinjob"]
+"summary" = "Independent supplier account documents prototype iterations and testing; company site describes product claims and historical job listing indicates engineering activity. No paid deployment, clinical outcome, clearance or commercial customer was identified."
+
+[[intelligence."research"."topic_checks"]]
+"topic" = "intellectual_property"
+"status" = "reported"
+"checked_at" = "2026-10-04T23:04:18Z"
+"next_review_on" = "2027-04-04"
+"queries" = ["\"CPR Robotics\" Israel patent patents IL296056A WO2021176451", "\"CPR Robotics Ltd\" US patent dynamic adaptation"]
+"source_ids" = ["ilpatent", "uspatent"]
+"summary" = "Patent records document an Israeli patent publication and a US patent grant assigned to CPR Robotics Ltd for the portable adaptive life-saving system family. Portfolio completeness and legal scope were not independently assessed."
+
+[[intelligence."research"."topic_checks"]]
+"topic" = "competition"
+"status" = "reported"
+"checked_at" = "2026-10-04T23:04:18Z"
+"next_review_on" = "2027-04-04"
+"queries" = ["Stryker LUCAS chest compression system official product", "ZOLL AutoPulse official resuscitation system", "corpuls cpr official thorax compression product"]
+"source_ids" = ["stryker", "zoll", "corpuls"]
+"summary" = "Official manufacturer pages document established mechanical CPR alternatives with operational or certification evidence; CPR Robotics has no public head-to-head comparison."
+
+[[intelligence."research"."topic_checks"]]
+"topic" = "dual_use"
+"status" = "not_found"
+"checked_at" = "2026-10-04T23:04:18Z"
+"next_review_on" = "2027-04-04"
+"queries" = ["\"CPR Robotics\" military defense government EMS deployment", "\"CPR Robotics\" defense contract IDF field trial"]
+"source_ids" = ["official", "hlh"]
+"summary" = "Field and hospital application is described by the company, but no military, government, defense, disaster-relief customer or operational deployment was found; defense relevance remains a potential application."
+
+[[intelligence."research"."claim_checks"]]
+"field_path" = "company.operating_status"
+"support" = "direct"
+"summary" = "Israeli company-information record lists CPR ROBOTICS LTD as active; the official company website remains published and identifies the operating business."
+"verified_at" = "2026-10-04T23:04:18Z"
+"source_ids" = ["registry", "official"]
+
+[[intelligence."research"."claim_checks"]]
+"field_path" = "israel_connection"
+"support" = "direct"
+"summary" = "Israeli company record identifies an Israeli private company registered at Yokne’am Illit; company and supplier pages independently describe Israeli/Yokne’am Illit operations."
+"verified_at" = "2026-10-04T23:04:18Z"
+"source_ids" = ["registry", "official", "hlh"]
+
+[[intelligence."people"]]
+"name" = "Barak Harrison"
+"role" = "Design and Product Manager (historical supplier-case-study attribution)"
+"is_founder" = false
+"current" = false
+"background" = "Named by HLH Rapid as CPR Robotics Design and Product Manager in its case study; current employment was not established."
+"source_ids" = ["hlh"]
+
+[[intelligence."people"]]
+"name" = "Chanoch Levin"
+"role" = "Patent inventor"
+"is_founder" = false
+"current" = false
+"background" = "Named as an inventor on CPR Robotics Ltd patent US12629092B2; patent inventorship alone does not establish founder or executive status."
+"source_ids" = ["uspatent"]
+
+[[intelligence."people"]]
+"name" = "Danny Knafou"
+"role" = "Patent inventor"
+"is_founder" = false
+"current" = false
+"background" = "Named as an inventor on CPR Robotics Ltd patent US12629092B2; patent inventorship alone does not establish founder or executive status."
+"source_ids" = ["uspatent"]
+
+[[intelligence."traction"]]
+"kind" = "product"
+"description" = "HLH Rapid reported low-volume physical prototype manufacture and said the company was in prototyping and testing; this is prototype activity, not a customer deployment."
+"source_ids" = ["hlh"]
+
+[[intelligence."traction"]]
+"kind" = "hiring"
+"description" = "Historical LinkedIn listing sought an embedded C/C++ engineer for the medical-device startup and hardware integration work; listing is closed and does not establish present hiring."
+"source_ids" = ["linkedinjob"]
+
+[[intelligence."intellectual_property"]]
+"kind" = "patent"
+"description" = "Patent family for a portable automated life-saving system with dynamic adaptation: Israeli B1 publication dated 2025-07-01 and US patent US12629092B2 granted/published 2026-05-19; records name CPR Robotics Ltd as assignee. Patent records do not establish freedom to operate or commercial efficacy."
+"date" = "2026-05-19"
+"source_ids" = ["ilpatent", "uspatent"]
+
+[[intelligence."comparables"]]
+"name" = "Stryker LUCAS 3"
+"website" = "https://www.stryker.com/us/en/emergency-care/products/lucas-3.html"
+"rationale" = "Established mechanical chest-compression product for transport and hospital care; a direct clinical and procurement incumbent."
+"differentiation" = "Published device specifications and clinical evidence, broad support ecosystem and installed base; CPR Robotics asserts patient-responsive sensing, but comparative performance is unverified."
+"source_ids" = ["stryker", "official"]
+
+[[intelligence."comparables"]]
+"name" = "ZOLL AutoPulse NXT"
+"website" = "https://www.zoll.com/en-us/products/emergency-care/automated-cpr/autopulse-resuscitation-system-nxt"
+"rationale" = "Automated CPR system positioned for treatment and transport, competing for EMS and hospital adoption."
+"differentiation" = "Established whole-chest load-distributing approach and ZOLL channel; CPR Robotics describes a sensed adaptive system, without public comparative data."
+"source_ids" = ["zoll", "official"]
+
+[[intelligence."comparables"]]
+"name" = "corpuls cpr"
+"website" = "https://corpuls.world/en/products/corpuls-cpr/"
+"rationale" = "Mechanical thorax compression device for pre-hospital and hospital resuscitation."
+"differentiation" = "corpuls reports MDR certification and ecosystem/workflow capabilities; CPR Robotics remains publicly described in prototype/testing stage."
+"source_ids" = ["corpuls", "hlh"]

@@ -1,0 +1,88 @@
+name = "Dig Security"
+description = "Dig Security developed an agentless cloud data security posture management (DSPM) and data detection and response platform that discovered, classified, and prioritized risk across cloud data stores. Palo Alto Networks completed its acquisition in December 2023 and integrated the capability into Prisma Cloud Data Security, so this record describes an acquired asset rather than an independent startup."
+detailed_description = """
+Dig Security operated in the cloud data security posture management (DSPM) segment, where the core problem is not simply finding databases or object stores but understanding which contain sensitive data, how that data is classified, and which access paths or misconfigurations make it vulnerable. Its agentless approach was designed to discover cloud data assets, inspect content and metadata, identify sensitive information, and connect data exposure with identity, permissions, network paths, and configuration context. The adjacent data detection and response capability extended the proposition from periodic inventory toward monitoring for suspicious access, policy violations, or possible exfiltration.
+
+Commercially, this addressed a real enterprise control gap. Organizations spread regulated and proprietary data across AWS, Azure, GCP, Snowflake, databases, object stores, analytics systems, and newer AI infrastructure. Security and privacy teams need an inventory that goes beyond cloud-resource metadata: they need to know whether a bucket, warehouse, or database contains credentials, personal information, financial records, source code, or other high-impact data, and whether the effective access path makes that asset exploitable. The value proposition was therefore strongest for large, cloud-first environments where existing CSPM, DLP, IAM, and data-governance tools each saw only part of the problem.
+
+The market was crowded and consolidated quickly. Cyera, Normalyze, BigID, Wiz, Rubrik, Orca Security, and other security or governance platforms competed for overlapping budgets, while CNAPP vendors bundled data visibility into broader code-to-cloud workflows. Palo Alto Networks announced an agreement to acquire Dig in October 2023 and announced completion on December 5, 2023. Palo Alto's current product material refers to Prisma Cloud DSPM as formerly Dig Security, and the former Dig domain redirects to Palo Alto's Cloud Data Security page. These are strong, official signals that the standalone company and go-to-market have been absorbed into a larger platform; they do not establish the size of the transaction, post-acquisition staffing, or the exact set of capabilities still shipped under the Prisma brand.
+
+Operationally, DSPM wins only when it remains useful after the first discovery pass. Buyers must validate cloud-service coverage, scan speed, classification accuracy, structured and unstructured data support, identity-context quality, tenant isolation, and the ability to avoid copying or unnecessarily exposing sensitive content during analysis. Findings also need to become remediation: tickets, policy changes, access reviews, configuration fixes, or incident-response investigations. If a product inventories data but cannot explain the permission chain or configuration that created exposure, it risks becoming a noisy dashboard that is displaced by a platform vendor with stronger workflow integration and distribution.
+
+The relevant diligence questions therefore concern coverage, trust, and integration rather than novelty. A reviewer should confirm which Prisma Cloud data-security functions are directly descended from Dig, what roadmap and support commitments exist, how the acquisition affected the original team, and whether customers received a coherent migration path. Technical diligence should test false positives, missed detections, incremental scan behavior, least-privilege onboarding, data residency, and performance across heterogeneous cloud estates. Commercial diligence should separate historical Dig traction from Palo Alto Networks' current cross-sell and renewal economics; public sources do not provide enough evidence here to state customer counts, revenue, or retention.
+
+For defense and national-security use, the relevance is credible but defensive and conditional. Government and defense organizations face the same cloud-data sprawl problems, with stricter audit, residency, segmentation, supply-chain, and deployment requirements. DSPM can help protect mission data, personnel records, intelligence-support information, and sensitive operational datasets in authorized cloud environments, and can improve incident scoping after credential compromise or suspected exfiltration. Nothing in the reviewed public evidence demonstrates a defense contract, classified deployment, or military-specific feature. The defensible thesis is therefore protection of sensitive cloud data and governance of regulated workloads, not offensive capability or proven battlefield use.
+
+In practice, Dig Security is a useful case study in a broader strategic pattern: data security is moving from a point-solution checkbox toward a control plane embedded in larger security suites. The acquisition validates strategic interest in the capability, but it also removes the independent-company investment case and makes current product verification more important than historical startup branding. The underlying technology remains relevant because cloud-data visibility is increasingly a prerequisite for incident response, regulatory reporting, least-privilege enforcement, and safer adoption of AI and analytics workloads.
+"""
+logo = "https://www.paloaltonetworks.com/etc/clientlibs/pan-templates/seoimages/social-prisma.png"
+website = "https://www.paloaltonetworks.com/prisma/cloud/cloud-data-security"
+sector = "Cybersecurity"
+founded = "2021"
+headquarters = "Tel Aviv, Israel"
+employees = "51-200 (historical LinkedIn company-size range)"
+funding_stage = "Acquired"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "Yes, as a defensive cybersecurity capability with credible government and defense adjacency. The same discovery, classification, exposure analysis, and response workflows can protect sensitive commercial, public-sector, and mission-support cloud data, but public evidence does not demonstrate a defense contract, classified deployment, or military-specific functionality."
+key_technologies = [
+  "Agentless cloud data discovery across databases, object stores, and warehouses",
+  "Sensitive-data classification using content and metadata context",
+  "Data security posture management (DSPM)",
+  "Data detection and response for suspicious access and policy violations",
+  "Identity, entitlement, and effective access-path analysis",
+  "Cloud exposure and misconfiguration prioritization",
+  "Multi-cloud security workflows integrated into a CNAPP"
+]
+use_cases = [
+  "Discovering and classifying sensitive data across cloud object stores, databases, and warehouses",
+  "Detecting public exposure, over-permissive access, and risky sharing paths",
+  "Prioritizing remediation for high-risk cloud data assets",
+  "Continuous privacy and compliance monitoring for financial, healthcare, and regulated datasets",
+  "Investigating suspicious data access after credential compromise or suspected exfiltration",
+  "Reducing exposure of data used by analytics, AI, and vector-database workloads",
+  "Protecting government or defense cloud workloads containing mission, personnel, or operational data"
+]
+investible = false
+investment_rationale = "Not an independent startup for current direct diligence because Palo Alto Networks completed the acquisition and integrated the technology into Prisma Cloud. The historical product addressed an important security gap and attracted strategic acquisition interest, but ownership, standalone financials, cap table, and independent go-to-market are no longer available as a conventional venture case. The appropriate diligence lens is the quality and strategic importance of the acquired capability, not a new investment recommendation."
+strategic_value = "High capability value but limited standalone entity value. Cloud data security can reduce the chance that sensitive information remains exposed in cloud stores, analytics platforms, AI systems, or overly permissive access paths. Dig added data-centric visibility and response context to a broader cloud security stack; Palo Alto's integration gives that capability enterprise distribution, while also creating dependency on Prisma Cloud packaging, roadmap, licensing, and deployment constraints."
+public_sources = [
+  "https://investors.paloaltonetworks.com/news-releases/news-release-details/palo-alto-networks-completes-acquisition-dig-security",
+  "https://www.paloaltonetworks.com/company/press/2023/palo-alto-networks--announces-intent-to-acquire-cloud-security-start-up-dig-security",
+  "https://www.paloaltonetworks.com/prisma/cloud/cloud-data-security",
+  "https://www.linkedin.com/company/dig-security",
+  "https://www.prnewswire.com/news-releases/dig-security-secures-strategic-investment-from-samsung-ventures-for-cloud-data-security-posture-management-dspm-301839332.html"
+]
+potential_score = 68.0
+technology_score = 84.0
+market_score = 78.0
+team_score = 58.0
+dual_use_score = 70.0
+strategic_alignment_score = 65.0
+stage = "mature"
+stage_rationale = "Treat as mature and acquired because Palo Alto Networks announced the transaction in 2023, completed it on December 5, 2023, and now describes Prisma Cloud DSPM as formerly Dig Security. The historical company had enterprise-oriented technology and strategic investment before the transaction; current independent operating status, staffing, and roadmap should not be inferred from older startup materials."
+competitors = [
+  "Cyera",
+  "Normalyze",
+  "BigID",
+  "Wiz",
+  "Rubrik",
+  "Orca Security",
+  "Microsoft Purview"
+]
+competitive_edge = "Historically, Dig's differentiation was the combination of DSPM with real-time data detection and response in an agentless cloud workflow, connecting sensitive-data discovery to exposure and access context. That could be more actionable than a simple data catalog, but the advantage depended on coverage, classification quality, low-friction permissions, and remediation integrations. Today the strongest distribution edge belongs to Palo Alto Networks' Prisma Cloud platform, while the former Dig brand has little standalone differentiation that can be assessed independently."
+risk_factors = [
+  "Standalone brand and go-to-market uncertainty after integration into Palo Alto Networks",
+  "Category commoditization as CNAPP and data-governance platforms bundle overlapping DSPM features",
+  "Need for broad cloud-service coverage, accurate classification, and low false-positive rates at scale",
+  "Permission and privacy friction because discovery may require sensitive IAM access or content inspection",
+  "Government, sovereignty, residency, and restricted-environment deployment constraints",
+  "Unclear post-acquisition staffing, roadmap ownership, packaging, and customer migration experience",
+  "Pricing pressure and displacement risk from larger incumbents with stronger distribution"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Retain as a strategic capability and acquisition case study, not as an independent priority signal. The technology is relevant to cloud, government, and defense data protection, but the acquired-asset status, lack of standalone financial visibility, and dependence on Palo Alto Networks justify investible=false and a medium risk classification."
+crawled_at = "2026-03-30T10:14:54Z"
+updated_at = "2026-07-31T19:25:09Z"

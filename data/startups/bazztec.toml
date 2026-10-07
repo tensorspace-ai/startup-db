@@ -1,0 +1,350 @@
+name = "BazzTec"
+description = "BazzTec is an Israeli industrial technology company developing BMon battery-monitoring hardware and software for real-time battery health, fault alerts, diagnostics, and capacity visibility. Its stated customer references include the IDF, Israel Electric Company, Mekorot, Hagihon, and Tower Semiconductor, making it relevant to backup power and critical-infrastructure resilience."
+detailed_description = """
+**Product and the concrete problem it solves.** BazzTec addresses a quiet but consequential failure mode in critical infrastructure: a battery can appear available while its usable capacity, a cell, a connection, or its charging path is deteriorating. That uncertainty matters in emergency lighting, UPS systems, generator starting batteries, telecommunications, water pumping, manufacturing controls, and other systems that are expected to work during a power interruption. The company's BMon product family is presented as a continuous monitoring and diagnostic system rather than a one-time tester. BazzTec says BMon provides 24/7 oversight, real-time alerts, battery-health and capacity information, and integration with customer systems. Its public catalog lists BMon U1224 and BMon R-5 units with Israeli shekel prices, which is unusually concrete for a small company whose market profile otherwise remains sparse. The practical value proposition is fewer surprise failures, better maintenance timing, longer battery service life, and evidence that a backup-power bank is ready before an outage or mission.
+
+**Core technology and how it works.** Public technical material describes an installed monitoring device that collects battery-system signals continuously, applies diagnostics, exposes states and faults, and communicates through industrial interfaces. The product pages provide separate state, fault, description, calibration, and Modbus documentation links for the U1224 and R-5 products; the Startup Nation Finder profile also identifies Modbus and 4-20 mA compatibility, automated testing, early issue alerts, and real-time capacity measurements. Those details point to a pragmatic instrumentation and integration architecture: measure electrical behavior at the battery or bank, normalize the measurements into health and fault states, and make the result available to an operator or a supervisory system. BazzTec does not publicly disclose the sensing topology, cell-balancing method, diagnostic algorithms, sampling rates, communications security, or whether capacity estimates are model-based or load-test based. That limits claims about technical novelty. The defensible technical question is whether the system detects degradation early enough, across enough chemistries and operating temperatures, to change maintenance decisions without creating nuisance alarms.
+
+**Market, customers, and go-to-market.** BazzTec is aimed at organizations that cannot treat battery failure as an ordinary maintenance inconvenience. The official website displays logos for Tower Semiconductor, Israel Electric Company, Mekorot Israel National Water Company, the IDF, and Hagihon Company, which the company labels as trusted industry leaders. These logos are company-stated references rather than independently documented contracts, so their scope, current status, deployment count, and revenue contribution require confirmation. They nevertheless outline a coherent beachhead: utilities, water operators, defense, semiconductor manufacturing, and municipal infrastructure all maintain distributed backup or control power and all value a retrofit that can fit existing monitoring practices. The Finder profile classifies BazzTec as B2B and B2G, lists industrial, defense, utilities, transportation, manufacturing, and municipal buyers, and says the released BMon device is designed for small and large applications. A likely route to market is direct technical sales and systems integration, with channel partners for UPS, generators, telecom shelters, and industrial automation. Public evidence does not establish international distributors or recurring software revenue.
+
+**Traction, funding, and third-party validation.** The clearest traction signal is product availability: BazzTec's live site publishes two purchasable BMon models, prices, product documentation links, and a contact number at Bar Lev Industrial Park in Misgav. Its site also names the five customer or reference organizations above. Startup Nation Finder records BazzTec as a claimed profile, formerly named Bazmatech, with a released product, 1-10 employees, a 2024 founding date, and no disclosed funding. LinkedIn describes a 2-10-person company, while the same profile displays 2005 as the founding year; that conflict may reflect an older operating history, a predecessor, or a profile error and is not resolved by the public record. No institutional financing round, grant amount, revenue, certification, independent test report, or published failure-detection benchmark was found in the reviewed sources. The resulting assessment is a real, currently operating product company with customer-signaling evidence, not a fully diligenced scale-up. The most useful next proof would be anonymized fleet data, verified reference calls, mean-time-to-detect results, warranty returns, and repeat-order history.
+
+**Founders and team background.** BazzTec does not publish a conventional leadership page or a detailed founding biography. The public company profile names Kobi Mais among its employees, and Mais's LinkedIn profile describes his work at BazzTec and his Technion education; LinkedIn also surfaces Paz Nisim and Rotem Mayes as employees. The official site lists a single Israeli phone number and a Misgav industrial-park address, consistent with a small engineering and manufacturing operation. This limited disclosure is a diligence issue, but it also suggests that BazzTec may have grown from an engineering or industrial-services business rather than from a heavily funded venture model. The Finder alias Bazmatech and the LinkedIn 2005 date should be investigated through Israeli corporate records before treating 2024 as a definitive incorporation year. The team must ultimately demonstrate competence in battery electrochemistry, embedded electronics, industrial networking, field service, cybersecurity, and regulated procurement. The current public record confirms people associated with the company, not the depth of that capability or the ownership of the underlying intellectual property.
+
+**Competitive dynamics.** BazzTec competes with established battery-monitoring and critical-power vendors more than with consumer battery apps. Vertiv's Alber systems, Schneider Electric's EcoStruxure and battery-monitoring products, NDSL's battery monitoring, BTECH's BDAQ family, and Generex monitoring platforms all offer combinations of voltage, impedance, temperature, alarm, and UPS integration. Large UPS manufacturers can bundle monitoring into equipment and service contracts, while electrical contractors can use manual testing and preventive replacement as an incumbent approach. BazzTec's claimed edge is a focused, lower-cost instrument with local engineering, direct integration, and a product sized for retrofit use across Israeli utilities, water, defense, and industrial sites. Publishing Modbus and 4-20 mA compatibility helps an installer fit the system into existing controls, but those interfaces are standards rather than moats. Durable differentiation would require verified detection accuracy, broad chemistry support, a richer historical dataset, lower total maintenance cost, or a distribution position in sites where global vendors are too expensive or slow. Without those proofs, the company is a credible niche supplier facing strong bundled competition.
+
+**Defense, security, and resilience dual-use relevance.** BazzTec's dual-use case is concrete at the infrastructure layer. Military command posts, communications shelters, radar and sensor sites, unmanned-system charging points, and emergency facilities depend on batteries for continuity when generators are delayed, grid power is disrupted, or equipment is moved into austere locations. A monitor that identifies declining capacity before a mission can reduce the chance that a communications or control system fails at the moment it is needed. The same capability applies to water pumping and treatment, electric utilities, semiconductor fabs, hospitals, telecom networks, and municipal emergency systems. The IDF logo on the company site is a company-stated customer signal, not public proof of a specific military deployment, so this record does not claim fielded defense performance. Strategic relevance also depends on cyber hygiene: a connected monitor expands the attack surface and could expose operational topology if poorly segmented. BazzTec would need secure updates, authenticated telemetry, offline-safe operation, tamper resistance, and procurement documentation to become a trusted defense or critical-infrastructure component.
+
+**Growth stage, trajectory, and key diligence risks.** BazzTec is classified as early because it appears to have released hardware and reference customers but no disclosed financing, headcount beyond a small range, audited revenue, or independent validation. Its trajectory could be attractive if a simple retrofit product becomes a standard layer across Israel's distributed backup-power estate and then expands through utilities, telecom, data centers, and defense integrators. The risks are substantial. First, the public record is thin and contains contradictory founding-year signals, making legal entity history and continuity important. Second, battery monitoring is a crowded category with powerful incumbents, long service relationships, and hardware margins that can be pressured by commoditization. Third, false alarms or missed failures can both destroy trust: nuisance maintenance costs erode ROI, while a missed outage undermines the product's purpose. Fourth, the company may depend on a few reference accounts and on founder-led sales. Fifth, chemistry coverage, environmental qualification, calibration drift, cybersecurity, and after-sales support are unknown. Finally, the listed customer logos may represent pilots, installations, or historical work rather than repeatable scale. The strategic case is worth tracking, with priority milestones of verified deployments, repeat orders, independent reliability data, secure industrial certification, and a clear corporate and funding history.
+"""
+logo = "Unknown"
+website = "https://www.bazztec.com/"
+sector = "Critical Infrastructure Resilience / Battery Monitoring and Industrial Power Electronics"
+founded = "2024 (Startup Nation Finder; LinkedIn profile says 2005, unresolved)"
+headquarters = "Bar Lev Industrial Park, Misgav, Israel"
+employees = "1-10 (Startup Nation Finder; LinkedIn range differs)"
+funding_stage = "Pre-funding; no public financing round identified"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "BazzTec's battery-monitoring technology has credible civilian and defense/security use because the same backup-power failure problem appears in utilities, water systems, factories, telecom sites, municipal infrastructure, and military facilities. Continuous health and fault visibility can help operators replace weak batteries before an outage, keep emergency systems available, and prioritize maintenance across distributed sites. The company website displays the IDF among its reference logos, but the public record does not disclose a contract, deployment scope, or defense performance benchmark, so the defense assessment remains evidence of adjacency and claimed customer relevance rather than proof of fielded military capability. Secure industrial networking, authenticated telemetry, ruggedization, and procurement certifications would determine whether the product can move from commercial resilience into trusted defense infrastructure."
+key_technologies = [
+  "BMon U1224 and R-5 battery-monitoring hardware for continuous system health and fault visibility",
+  "Real-time battery diagnostics and capacity measurement for backup and critical-power systems",
+  "Automated testing and early-warning alerts designed to identify degradation before operational failure",
+  "Industrial integration through Modbus and 4-20 mA interfaces",
+  "24/7 remote monitoring and operator notifications for distributed battery assets",
+  "Battery performance optimization and life-extension analytics for reducing premature replacement"
+]
+use_cases = [
+  "UPS and emergency-power battery banks in semiconductor fabs and industrial plants",
+  "Water pumping and treatment facilities operated by utilities such as Mekorot and municipal providers",
+  "Electric utility substations and grid-support systems requiring backup control power",
+  "Defense communications, command-post, sensor, and field-support power systems",
+  "Telecommunications shelters and network sites with unattended battery backup",
+  "Hospitals, municipal emergency centers, and public-safety facilities",
+  "Generator starting batteries and industrial machinery where failure interrupts production",
+  "Distributed renewable-energy or storage installations requiring preventive battery maintenance"
+]
+investible = true
+investment_rationale = "BazzTec is a small, evidence-light company whose strategic value comes from deployed infrastructure relevance rather than venture-scale metrics. (1) The product is concrete: BMon models are listed with prices, documentation links, and industrial interfaces, which is stronger than an undemonstrated concept. (2) The company publicly names the IDF, Mekorot, Israel Electric Company, Hagihon, and Tower Semiconductor as trusted references, creating a diligence path across defense, water, utilities, and manufacturing. (3) Battery health is a recurring resilience problem, and a retrofit monitor can be sold into installed assets without asking customers to replace an entire UPS or generator system. The counterweights are decisive: no disclosed financing, revenue, contract values, independent validation, certifications, or recurring software economics; conflicting founding-year records; a small team; and intense competition from bundled global power-management vendors. This is a legacy priority signal for strategic monitoring, not an investment recommendation. The next diligence step should be reference calls and field data, not extrapolation from logos."
+strategic_value = "BazzTec's strategic value is tied to continuity of power for systems that Israel and allied economies cannot afford to lose. (1) Water and utility resilience: monitoring batteries at pumping, treatment, and grid sites can reduce hidden single points of failure in critical services. (2) Defense readiness: power availability under outage, movement, or attack is a prerequisite for communications and sensing, even when the monitor itself is not a weapon. (3) Industrial sovereignty: a local Israeli supplier can tailor interfaces and service to domestic utilities, fabs, and security customers rather than relying only on imported platforms. (4) Resource efficiency: earlier fault detection can extend battery life and reduce hazardous replacement waste. The ceiling is limited by the public evidence: customer logos are not contracts, and no public record shows national-scale deployment, cyber accreditation, or export traction. Strategic value should rise only after verified installations, secure product architecture, and repeatable sales beyond founder relationships."
+potential_score = 57.0
+technology_score = 58.0
+market_score = 52.0
+team_score = 43.0
+dual_use_score = 72.0
+strategic_alignment_score = 75.0
+stage = "early"
+stage_rationale = "BazzTec is classified as early because the public evidence shows released hardware and a small operating footprint, but not the financing, organizational scale, or independently measured commercial traction associated with a mid-stage company. Startup Nation Finder lists a released BMon product, 1-10 employees, B2B/B2G positioning, and pre-funding status. The official site publishes two models, prices, integration documentation, and customer-reference logos, which places the company beyond an idea or stealth prototype. At the same time, no funding round, revenue, contract value, deployment count, certification, or audited reliability study is public. The founding year is also unresolved: Finder says 2024 while LinkedIn says 2005, and the former Bazmatech name suggests a predecessor or profile-history issue. Progression to mid-stage would require verified repeat orders, disclosed team growth, documented installations across multiple sites, and evidence that monitoring outcomes produce measurable maintenance or uptime savings."
+competitors = [
+  "Vertiv Alber (global critical-power vendor with established battery-monitoring and UPS service relationships)",
+  "Schneider Electric EcoStruxure (bundled power-management and data-center monitoring platform)",
+  "NDSL (specialist battery monitoring for telecom and industrial backup systems)",
+  "BTECH BDAQ (battery monitoring and impedance diagnostics for critical power)",
+  "Generex (UPS and battery-management software and hardware ecosystem)",
+  "Manual preventive testing and replacement (incumbent maintenance approach that BazzTec must economically displace)"
+]
+competitive_edge = "BazzTec's possible edge is focus, retrofit simplicity, and local critical-infrastructure access rather than a publicly established proprietary algorithm. (1) A small BMon device with Modbus and 4-20 mA integration can fit installed control environments without requiring a customer to replace its UPS, generator, or supervisory system. (2) Israeli engineering and service proximity may matter for utilities, water operators, fabs, and defense sites that value rapid support and local accountability. (3) The company presents references across the IDF, Mekorot, Israel Electric Company, Hagihon, and Tower Semiconductor, suggesting a cross-sector operating context if those relationships are active and material. (4) A battery-life and early-warning proposition can create measurable maintenance ROI. The vulnerabilities are equally clear: global incumbents bundle monitoring into larger contracts, the public record does not prove unique sensing or diagnostic IP, and low-cost industrial monitors can converge on the same interfaces. A defensible edge would require verified detection performance, chemistry breadth, cyber hardening, field data, and repeatable distribution."
+risk_factors = [
+  "Thin public disclosure: no audited revenue, contract values, deployment counts, independent reliability tests, or published failure-detection benchmarks",
+  "Founding-history discrepancy: Startup Nation Finder lists 2024 while LinkedIn lists 2005 and the former Bazmatech name suggests unresolved predecessor or profile history",
+  "Incumbent bundling: Vertiv, Schneider Electric, UPS vendors, and industrial integrators can include battery monitoring inside broader service contracts",
+  "Safety and trust asymmetry: missed degradation can cause an outage, while nuisance alarms can create costly maintenance and customer abandonment",
+  "Unknown technical coverage: battery chemistries, cell-level granularity, calibration drift, temperature range, and environmental qualification are not public",
+  "Cybersecurity exposure: networked battery telemetry can reveal infrastructure topology and requires authenticated communications, secure updates, and segmentation",
+  "Small-team and concentration risk: public employee signals are in the 1-10 or 2-10 range, with no disclosed leadership bench or international channel"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "BazzTec merits a non-zero monitoring priority because it sits at the intersection of Israeli critical-infrastructure resilience and practical defense readiness. (1) The product is specific and purchasable, with BMon U1224 and R-5 units, operator documentation, and Modbus/4-20 mA integration rather than an abstract battery-software promise. (2) The company's public reference list spans the IDF, Mekorot, Israel Electric Company, Hagihon, and Tower Semiconductor, covering defense, water, utilities, municipal services, and advanced manufacturing. (3) Battery reliability is a cross-sector bottleneck that can be addressed with retrofits and measured maintenance savings. Priority is capped because the references are company-stated, the funding and revenue picture is undisclosed, employee and founding data conflict across public profiles, and the category has strong global incumbents. Milestones that would justify raising priority are independently confirmed deployments, repeat orders, reliability and false-alarm data, secure industrial certification, and a clarified legal and corporate history."
+public_sources = [
+  { label = "BazzTec official website", url = "https://www.bazztec.com/", description = "Current company overview, products and company-stated reference logos" },
+  { label = "BazzTec product catalogue", url = "https://www.bazztec.com/products", description = "BMon models, published prices, documentation and contact location" },
+  { label = "Startup Nation Finder profile", url = "https://finder.startupnationcentral.org/company_page/bazztec", description = "Company profile, alias, founding date, employee range and funding status" },
+  { label = "BazzTec company LinkedIn", url = "https://il.linkedin.com/company/bazztec", description = "Company profile and employee range" },
+  { label = "Kobi Mais LinkedIn profile", url = "https://il.linkedin.com/in/kobi-mais-87975396", description = "Public professional profile associating Kobi Mais with BazzTec" },
+  { label = "BazzTec blog", url = "https://www.bazztec.com/blog", description = "Company product posts attributed to Kobi Mais" },
+  { label = "Israeli Corporations Authority lookup", url = "https://ica.justice.gov.il/GenericCorporarionInfo/SearchCorporation?unit=8", description = "Official company registry search; public page states searches may return incomplete or outdated data" },
+  { label = "Vertiv Albér battery monitors", url = "https://www.vertiv.com/en-in/products/trusted-names/alber/alber-stationary-battery-monitors/", description = "Official competitor product information for stationary battery monitors" }
+]
+crawled_at = "2026-09-20T01:58:41Z"
+updated_at = "2026-10-04T02:58:00Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Kobi Mais", role = "Company-associated professional and blog author; formal title not publicly established", is_founder = false, current = true, background = "Public LinkedIn profile associates him with BazzTec; BazzTec lists him as author of product articles. No founder status or additional biography was verified.", source_ids = ["kobi-linkedin", "bazz-blog"] }
+]
+investors = []
+financials = []
+traction = []
+intellectual_property = []
+comparables = [
+  { name = "Vertiv Albér", website = "https://www.vertiv.com/en-in/products/trusted-names/alber/alber-stationary-battery-monitors/", rationale = "Established supplier of continuous battery health monitoring for utilities, telecom, UPS and industrial sites.", differentiation = "Vertiv describes multiple stationary and portable monitors and global product support; BazzTec presents a smaller, locally based product range with listed unit prices. Relative technical performance and cost are not independently established.", source_ids = ["vertiv-alber"] }
+]
+
+[intelligence.company]
+company_id = "il-bazztec"
+aliases = ["BazzTec", "Bazmatech"]
+operating_status = "active"
+business_model = "Israeli B2B/B2G industrial hardware supplier offering battery-monitoring devices and associated diagnostics/integration; no recurring software or service revenue model is publicly documented."
+products = ["BMon U1224", "BMon R-5"]
+locations = ["Bar Lev Industrial Park, Misgav, Israel"]
+source_ids = ["bazz-products", "snf-bazztec"]
+notes = "The exact registered legal entity and company number were not established by public sources reviewed. Finder gives January 2024, while LinkedIn has a 2005 founding-year signal; this may indicate a predecessor or profile discrepancy and remains unresolved."
+
+[intelligence.funding]
+status = "not_found"
+summary = "No public equity, convertible, debt, grant or other financing event was identified in the reviewed company and profile sources. Startup Nation Finder lists total funding as undisclosed, pre-funding, and zero reported rounds; this is not evidence that the company has never received private or non-public support."
+rounds = []
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[intelligence.ownership]
+status = "not_found"
+summary = "No parent, acquisition, sale, public listing, or disclosed shareholder/cap-table information was found. Private ownership percentages are unavailable and are not inferred. Israeli registry search requires a verified legal name or identifier; no company number was established."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["snf-bazztec", "ica-search"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel"]
+summary = "BazzTec's official product page identifies its contact location as Bar Lev Industrial Park, Misgav, Israel; its Startup Nation Finder profile also lists an Israel location."
+as_of = "2026-10-04"
+source_ids = ["bazz-products", "snf-bazztec"]
+
+[intelligence.research]
+researched_at = "2026-10-04T02:58:00Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "BazzTec BMon battery monitoring Bazztec official",
+  "BazzTec funding investors raised BazzTec Israel",
+  "BazzTec BazzTec Israel company founders Kobi Mais",
+  "בזטק BazzTec גיוס",
+  "site:gov.il BazzTec Bazztec Israel company",
+  "BazzTec patent battery BMon",
+  "BazzTec customer Mekorot BMon",
+  "BazzTec BazzTec funding investors valuation",
+  "site:vertiv.com battery monitoring Alber battery monitoring system official",
+  "site:ndsl.com battery monitoring system official",
+  "site:bazztec.com BazzTec Modbus 4-20 mA BMon",
+  "BazzTec Bazmatech company name battery monitoring Kobi Mais"
+]
+gaps = [
+  "funding: No public financing round or company-announced lifetime funding total was identified; Finder marks total funding undisclosed and pre-funding, which does not establish zero lifetime funding.",
+  "team: No authoritative leadership roster or sourced founder biography was found; Kobi Mais is associated with company blog authorship and a public professional profile, but founder status is not confirmed.",
+  "investors: No named investors or financing participants were found in reviewed sources.",
+  "financials: No dated revenue, profitability, burn, runway, cash, or audited accounts were publicly located.",
+  "traction: Company website lists organizations as trusted references but no independently verifiable customer deployments, contract values, site counts, repeat orders, or paid status were found.",
+  "intellectual_property: No patent record or public patent assignment attributable to BazzTec/Bazmatech was located; this is not proof that no IP exists.",
+  "competition: Vertiv Albér is a sourced direct category competitor; a broader peer-by-peer product comparison and local substitute map remain incomplete.",
+  "identity: Registered legal name, incorporation date, registry number and relationship between 2024 founding and LinkedIn's 2005 date remain unresolved.",
+  "ownership: Shareholders, cap table, parent company and ownership percentages are not publicly established."
+]
+conflicts = ["Founding date conflict: Startup Nation Finder gives January 2024; LinkedIn company profile reports 2005. No primary incorporation record was identified, so the discrepancy is unresolved.", "Employee range differs among public profiles; Finder reports 1-10 and LinkedIn reports a different small-company range. Neither is a dated official headcount disclosure."]
+diligence_questions = [
+  "What is the exact registered legal entity and company number, and does the 2005 LinkedIn date refer to a predecessor, the founders' earlier activity, or an error?",
+  "Can the company provide customer-authorized references, deployment dates and counts, purchase orders, repeat-order history, and the distinction between pilots and production installations for the organizations shown on its website?",
+  "What are the BMon sensing method, supported chemistries and configurations, accuracy and false-alarm results, environmental qualification, cybersecurity controls, and independently measured maintenance or uptime outcomes?",
+  "Has BazzTec received equity, grants, debt, or founder financing that is absent from public databases, and who owns the product and associated IP?"
+]
+
+[[intelligence.research.sources]]
+id = "bazz-home"
+url = "https://www.bazztec.com/"
+title = "BazzTec | Battery Monitoring Systems"
+publisher = "BazzTec"
+kind = "company"
+accessed_at = "2026-10-04T02:58:00Z"
+claims = ["Official site describes the battery monitoring business and lists Tower Semiconductor, Israel Electric Company, Mekorot, IDF and Hagihon under trusted industry leaders; these are company-stated references, not independently documented contracts.", "Official site gives the Bar Lev Industrial Park, Misgav, Israel contact location."]
+
+[[intelligence.research.sources]]
+id = "bazz-products"
+url = "https://www.bazztec.com/products"
+title = "Products | Bazztec"
+publisher = "BazzTec"
+kind = "company"
+accessed_at = "2026-10-04T02:58:00Z"
+claims = ["BazzTec presents BMon as a real-time battery health and diagnostic system with continuous monitoring, alerts and integration.", "The live product catalogue lists BMon U1224 and BMon R-5 with prices and documentation links, including Modbus documentation for R-5.", "The page lists company contact details and Bar Lev Industrial Park, Misgav, Israel."]
+
+[[intelligence.research.sources]]
+id = "snf-bazztec"
+url = "https://finder.startupnationcentral.org/company_page/bazztec"
+title = "BazzTec - Israeli Startup | Startup Nation Finder"
+publisher = "Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-04T02:58:00Z"
+claims = ["Profile identifies former name Bazmatech and describes battery monitoring and life-extension solutions.", "Profile reports January 2024 founding, 1-10 employees, pre-funding stage, undisclosed total funding and zero reported rounds.", "Profile lists Israel location and describes BMon product capabilities including Modbus and 4-20 mA compatibility."]
+
+[[intelligence.research.sources]]
+id = "bazz-linkedin"
+url = "https://il.linkedin.com/company/bazztec"
+title = "BazzTec | LinkedIn"
+publisher = "LinkedIn"
+kind = "other"
+accessed_at = "2026-10-04T02:58:00Z"
+claims = ["Public company profile provides a small employee-range signal and a 2005 founding-year signal, which conflicts with Finder's 2024 date."]
+
+[[intelligence.research.sources]]
+id = "kobi-linkedin"
+url = "https://il.linkedin.com/in/kobi-mais-87975396"
+title = "Kobi Mais | LinkedIn"
+publisher = "LinkedIn"
+kind = "other"
+accessed_at = "2026-10-04T02:58:00Z"
+claims = ["Public professional profile associates Kobi Mais with BazzTec; it does not establish founder status or provide independently verified executive history."]
+
+[[intelligence.research.sources]]
+id = "bazz-blog"
+url = "https://www.bazztec.com/blog"
+title = "Blog | Bazztec"
+publisher = "BazzTec"
+kind = "company"
+accessed_at = "2026-10-04T02:58:00Z"
+claims = ["BazzTec blog lists Kobi Mais as author of company product articles dated January 25, 2025."]
+
+[[intelligence.research.sources]]
+id = "ica-search"
+url = "https://ica.justice.gov.il/GenericCorporarionInfo/SearchCorporation?unit=8"
+title = "Online Corporations Information and Services"
+publisher = "Israeli Corporations Authority, Ministry of Justice"
+kind = "government"
+accessed_at = "2026-10-04T02:58:00Z"
+claims = ["Official registry page permits company searches by number or name and warns that basic public information may be incomplete, inaccurate or outdated; a definitive BazzTec registration was not established in this review."]
+
+[[intelligence.research.sources]]
+id = "vertiv-alber"
+url = "https://www.vertiv.com/en-in/products/trusted-names/alber/alber-stationary-battery-monitors/"
+title = "Albér Stationary Battery Monitors"
+publisher = "Vertiv"
+kind = "other"
+accessed_at = "2026-10-04T02:58:00Z"
+claims = ["Vertiv describes stationary battery monitors for continuous health status and abnormal-condition alerts across backup battery applications."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "conflicting"
+checked_at = "2026-10-04T02:58:00Z"
+next_review_on = "2027-01-04"
+queries = ["BazzTec BMon battery monitoring Bazztec official", "BazzTec Bazmatech company name battery monitoring Kobi Mais", "site:gov.il BazzTec Bazztec Israel company"]
+source_ids = ["bazz-home", "bazz-products", "snf-bazztec", "bazz-linkedin", "ica-search"]
+summary = "The canonical company is the Israeli BMon battery monitoring business using BazzTec and formerly Bazmatech; official site identifies Misgav. Legal entity and founding date remain uncertain because 2024 and 2005 profile signals conflict and no registry match was verified."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T02:58:00Z"
+next_review_on = "2027-01-04"
+queries = ["BazzTec funding investors raised BazzTec Israel", "BazzTec BazzTec funding investors valuation", "בזטק BazzTec גיוס"]
+source_ids = ["snf-bazztec"]
+summary = "No round announcement or amount was found. Finder reports undisclosed total funding, pre-funding stage and zero rounds; private or non-public support cannot be ruled out."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "not_found"
+checked_at = "2026-10-04T02:58:00Z"
+next_review_on = "2027-01-04"
+queries = ["BazzTec funding investors raised BazzTec Israel", "BazzTec BazzTec funding investors valuation"]
+source_ids = ["snf-bazztec"]
+summary = "No investor names or named financing participants found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "not_found"
+checked_at = "2026-10-04T02:58:00Z"
+next_review_on = "2027-01-04"
+queries = ["BazzTec BazzTec Israel company founders Kobi Mais", "BazzTec Bazmatech company name battery monitoring Kobi Mais"]
+source_ids = ["bazz-blog", "kobi-linkedin", "bazz-linkedin"]
+summary = "Kobi Mais is publicly associated with BazzTec and authored company articles; no source reviewed confirms founder status or provides a complete leadership roster."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "not_found"
+checked_at = "2026-10-04T02:58:00Z"
+next_review_on = "2027-01-04"
+queries = ["BazzTec funding investors raised BazzTec Israel", "site:gov.il BazzTec Bazztec Israel company"]
+source_ids = ["ica-search", "snf-bazztec"]
+summary = "No parent, acquisition, public listing or cap-table disclosures found; registry identity remains unconfirmed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T02:58:00Z"
+next_review_on = "2027-01-04"
+queries = ["BazzTec funding investors raised BazzTec Israel", "BazzTec BazzTec funding investors valuation"]
+source_ids = ["snf-bazztec", "bazz-products"]
+summary = "No company financial metrics found. Product prices are public catalogue prices, not evidence of sales, revenue or margins."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T02:58:00Z"
+next_review_on = "2027-01-04"
+queries = ["BazzTec customer Mekorot BMon", "BazzTec BMon battery monitoring Bazztec official"]
+source_ids = ["bazz-home", "bazz-products", "snf-bazztec"]
+summary = "Current product pages, documents and prices establish product availability; company-listed logos are company assertions only, with no independent contract, deployment or paid-customer evidence located."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T02:58:00Z"
+next_review_on = "2027-01-04"
+queries = ["BazzTec patent battery BMon", "BazzTec Bazmatech patent battery monitor"]
+source_ids = ["bazz-products"]
+summary = "No patent publication or assignment attributable to BazzTec/Bazmatech was located in the searches; ownership and proprietary implementation remain unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T02:58:00Z"
+next_review_on = "2027-01-04"
+queries = ["site:vertiv.com battery monitoring Alber battery monitoring system official", "site:ndsl.com battery monitoring system official"]
+source_ids = ["vertiv-alber", "bazz-products"]
+summary = "Vertiv Albér is a documented direct competitor with continuous stationary battery monitors; wider competitor comparison is not complete."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T02:58:00Z"
+next_review_on = "2027-01-04"
+queries = ["BazzTec BMon battery monitoring Bazztec official", "BazzTec customer Mekorot BMon"]
+source_ids = ["bazz-home", "bazz-products"]
+summary = "Battery monitoring for backup power has clear commercial infrastructure uses and potential defense/security applicability; the company's IDF reference is not independent proof of military deployment."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Official company site currently offers BMon products with live catalogue prices, documentation and contact details, supporting an active operating status."
+verified_at = "2026-10-04T02:58:00Z"
+source_ids = ["bazz-products"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Official product page states Bar Lev Industrial Park, Misgav, Israel, and Finder independently lists Israel location."
+verified_at = "2026-10-04T02:58:00Z"
+source_ids = ["bazz-products", "snf-bazztec"]

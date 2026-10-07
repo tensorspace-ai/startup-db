@@ -1,0 +1,85 @@
+name = "Pliops"
+description = "Pliops develops hardware- and software-accelerated data infrastructure for NVMe storage, databases, and AI systems. Its XDP platform offloads key-value, compression, protection, and storage-management work, while LightningAI adds a disaggregated, persistent memory tier for LLM inference and other data-intensive workloads."
+detailed_description = """
+Pliops is an Israeli semiconductor and data-infrastructure company founded in 2017. Its core product family is the Extreme Data Processor (XDP), a PCIe accelerator that presents standard block and key-value interfaces while moving storage-management and data-path functions away from host CPUs. Public product material describes XDP capabilities including inline compression, SSD-aware data protection, rapid rebuilds, high-density NVMe management, and APIs or integrations for workloads such as MySQL, MongoDB, Cassandra, RocksDB, and analytics. The architectural proposition is to make commodity flash more usable by reducing software overhead, improving usable capacity, and preserving performance during protection and rebuild operations.
+
+Pliops is now positioning the same acceleration foundation for AI infrastructure through LightningAI and related XDP-PRO products. The public architecture describes a scale-out networked storage tier with RDMA, NVMe media, a key-value interface, and a GPU-initiated path for moving LLM key-value cache out of scarce high-bandwidth memory. It also describes support for vLLM, vector search, retrieval-augmented generation, and persistent long-term LLM memory. These are credible responses to a current infrastructure constraint: model serving can be limited by memory capacity, data movement, and I/O rather than by arithmetic throughput alone. The commercial question is whether the added servers, cards, software integration, and operational complexity deliver a better total cost and latency profile than larger GPU footprints, local memory, or increasingly capable storage and caching software.
+
+The target market spans enterprise data centers, cloud and managed-service providers, storage and server integrators, and operators of database, analytics, and AI platforms. Pliops reports a broad technology-partner ecosystem and publishes customer or partner material, including a Paperspace test of XDP-RAIDplus with Solidigm QLC NVMe SSDs. Those materials provide useful evidence that the products are engineered for deployable server environments, but many performance figures are vendor- or test-configuration claims and should not be generalized without workload-level benchmarking. Public evidence also does not establish revenue, customer concentration, renewal rates, gross margins, or the scale of production deployments. The 2022 Series D announcement documented $100 million in that round and more than $200 million raised in total; it is a meaningful financing signal, but not proof of current operating momentum.
+
+Strategically, Pliops matters as enabling infrastructure rather than as a defense product. Faster, denser, and more resilient data paths can support secure analytics, cyber telemetry processing, sensor-data repositories, geospatial or imagery pipelines, and inference systems operating in constrained or sovereign facilities. That is a substantive dual-use adjacency because the underlying capabilities are general-purpose and relevant to high-throughput mission data, but no public evidence reviewed here demonstrates a defense contract, accreditation, or operational military deployment. Diligence should therefore test export-control and supply-chain exposure, secure deployment options, software support in restricted environments, reproducibility of AI benchmarks, and whether the company can sustain a hardware-enabled sales and support model against much larger platform vendors.
+"""
+logo = "https://pliops.com/wp-content/uploads/2022/03/Pliops-XDP-Logo.png"
+website = "https://pliops.com/"
+sector = "Data Infrastructure"
+founded = "2017"
+headquarters = "Ramat Gan, Israel"
+employees = "51-200"
+funding_stage = "Series D"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Pliops has credible but indirect dual-use potential. XDP and LightningAI address storage efficiency, key-value access, data protection, and persistent AI memory; those capabilities can support cyber analytics, intelligence data processing, sensor or imagery pipelines, and secure inference infrastructure as well as commercial databases and AI. The public evidence supports technology adjacency, not a claim of defense customers, contracts, certifications, or fielded military use. The score is therefore meaningful but below a mission-specific defense supplier."
+key_technologies = [
+  "XDP PCIe data-acceleration ASIC and firmware",
+  "Hardware-offloaded key-value storage and AccelKV",
+  "Inline NVMe compression and SSD data reduction",
+  "XDP-RAIDplus drive-failure protection and accelerated rebuilds",
+  "RDMA-connected disaggregated LightningAI storage nodes",
+  "GPU-initiated KV-cache and persistent LLM memory tier",
+  "Standard block, KV, RocksDB, and MongoDB integration APIs",
+]
+use_cases = [
+  "Database acceleration for MySQL, MongoDB, Cassandra, and RocksDB workloads",
+  "High-density NVMe storage with compression and resilient rebuilds",
+  "LLM inference KV-cache extension below GPU HBM",
+  "Vector search and retrieval-augmented generation data serving",
+  "Cloud and managed-service bare-metal storage acceleration",
+  "Cybersecurity telemetry and threat-hunting analytics",
+  "Large-scale imagery, geospatial, or sensor-data repositories",
+  "Secure data-center inference and analytics in capacity-constrained facilities",
+]
+investible = true
+investment_rationale = "Pliops is a credible strategic-priority signal for a deep-tech infrastructure thesis because it combines specialized silicon, systems software, and a current AI-memory use case around a persistent data-movement bottleneck. The financing history and product breadth indicate substantial development and commercialization effort, while the partner and customer materials indicate deployable integrations. The case remains diligence-dependent: public information is thin on revenue, repeat deployments, margins, customer concentration, and the proportion of the business coming from newer LightningAI products. The flag reflects strategic fit and technology relevance, not an investment recommendation."
+strategic_value = "Pliops could improve throughput per server, usable flash capacity, rebuild behavior, and memory economics for organizations running large databases or AI clusters. For security-sensitive or sovereign operators, a more efficient data path may reduce rack, power, and compute requirements and make large analytic datasets easier to serve locally. The strategic value is strongest where data movement and storage overhead are limiting scarce GPUs or constrained facilities; it is weaker where customers prefer fully managed cloud abstractions or can obtain equivalent benefits from incumbent CPU, GPU, storage, or caching platforms."
+public_sources = [
+  "https://pliops.com/about-us/",
+  "https://pliops.com/",
+  "https://pliops.com/contact/",
+  "https://pliops.com/resource/extreme-data-processor-xdp/",
+  "https://pliops.com/resource/enabling-performant-dense-and-reliable-ai-infrastructure/",
+  "https://www.linkedin.com/company/pliops",
+  "https://www.globenewswire.com/news-release/2022/08/16/2499529/0/en/Pliops-Secures-100M-in-Series-D-Funding-as-Data-Center-Professionals-Continue-to-Rethink-Storage-Architectures.html",
+]
+potential_score = 76.0
+technology_score = 89.0
+market_score = 76.0
+team_score = 74.0
+dual_use_score = 63.0
+strategic_alignment_score = 72.0
+stage = "mid"
+stage_rationale = "Pliops is best classified as mid-stage: it is a privately held company with a documented 2022 Series D, a substantial prior financing base, commercial accelerator products, and a multi-office or partner-led go-to-market footprint. The newer LightningAI positioning shows an effort to expand from storage acceleration into AI infrastructure. It is not early-stage research, but public evidence is insufficient to call it a mature incumbent because current revenue, scale, profitability, and long-term production adoption are not disclosed."
+competitors = [
+  "NVIDIA BlueField DPUs and NVMe-over-Fabrics ecosystem",
+  "Intel infrastructure processing units and storage acceleration",
+  "Samsung SmartSSD and computational-storage platforms",
+  "VAST Data AI data platform",
+  "WEKA AI-native data platform",
+  "Pure Storage FlashArray and Portworx",
+  "Software caching, database, and cloud-managed storage substitutes",
+]
+competitive_edge = "Pliops combines dedicated data-path silicon with software interfaces that can accelerate existing block or key-value workloads without requiring every application to be rewritten. XDP-RAIDplus and compression address the economics and resilience of dense flash, while LightningAI extends the architecture into shared, persistent AI memory and KV-cache serving. That combination can be differentiated when customers need predictable performance, high I/O density, and tighter control of infrastructure cost. The edge is not automatically durable: incumbents can bundle adjacent acceleration, cloud providers can absorb features into managed services, and customers may choose software-only caching or larger GPU and memory configurations. Integration effort, benchmark reproducibility, ecosystem support, and supply continuity are central moat tests."
+risk_factors = [
+  "Public financial and adoption evidence is limited relative to the scale implied by the financing history",
+  "Specialized cards and disaggregated storage add integration, operations, support, and procurement friction",
+  "NVIDIA, Intel, SSD vendors, cloud providers, and storage platforms can bundle competing functionality",
+  "AI workloads and model-serving architectures are changing quickly, creating product-roadmap risk",
+  "Vendor benchmark gains may vary materially by database, model, networking, SSD, and failure profile",
+  "Semiconductor supply, component availability, export controls, and manufacturing economics may affect delivery and margins",
+  "Defense or regulated deployments may require security evidence, certifications, isolation, and support capabilities not established publicly",
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Pliops merits continued strategic tracking because it addresses a real AI and data-center bottleneck with specialized silicon, deployable storage products, and plausible security-sector adjacency. Its dual-use relevance is infrastructure-level rather than mission-specific, and the public record does not establish defense adoption or current commercial scale. Keep it as a mid-tier priority signal until diligence confirms production deployments, repeatable workload economics, supply-chain resilience, and the security posture needed for restricted environments."
+crawled_at = "2026-01-30T14:18:00+00:00"
+updated_at = "2026-07-31T19:36:37Z"

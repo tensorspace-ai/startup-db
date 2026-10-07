@@ -1,0 +1,81 @@
+name = "Oxeye Security"
+description = "Oxeye Security was an Israeli cloud-native application security company whose technology connected code-level findings with runtime context to identify and prioritize exploitable application risks. GitLab acquired Oxeye on 20 March 2024, so this record now represents an acquired security technology and team rather than an independently investible startup."
+detailed_description = """Oxeye built cloud-native application security testing and risk-management technology for software teams operating across the software development lifecycle. Its product went beyond a conventional list of SAST, software-composition, and dynamic-testing findings by correlating application-layer vulnerabilities with execution and deployment context. The practical objective was to show which findings were reachable or exploitable, and therefore deserved engineering attention, instead of treating every scanner result as equally urgent. GitLab described the acquired capability as tracing risk from code to cloud through data collection and analysis, with an emphasis on reducing false positives and producing actionable remediation information.
+
+The customer problem was credible and commercially important. Modern applications combine first-party code, open-source dependencies, containers, microservices, and rapidly changing cloud environments; security teams can discover more findings than developers can investigate. Oxeye's approach targeted AppSec alert fatigue and the operational gap between a vulnerability's theoretical presence in source code and its exposure in a running application. The likely buyers were enterprise security and development organizations seeking better prioritization, faster remediation, and less manual triage inside DevSecOps pipelines. Public reporting indicates Oxeye raised a $5.3 million seed round in 2021; the available evidence does not support the prior record's Series A claim.
+
+Competition came from broad platform vendors and specialized application-security tools. Static-analysis, dependency-scanning, DAST, IAST, runtime application protection, and cloud-security products can each address part of the workflow, while larger vendors increasingly combine these functions. Oxeye's strongest differentiation was therefore not simply that it scanned code, but that it used contextual reachability and exploitability signals to improve prioritization. That distinction could be valuable if accuracy held across languages, frameworks, build systems, and production-like environments, but it also created integration and proof-of-ROI requirements. Oxeye's public vulnerability research, including reports credited to its researchers in GitLab's advisory database, is a useful technical credibility signal but not a substitute for independently verified customer retention or deployment scale.
+
+GitLab announced the acquisition on 20 March 2024 and said it would use Oxeye to accelerate its SAST roadmap and augment software-composition analysis and compliance capabilities. GitLab subsequently stated that Advanced SAST was powered by technology acquired from Oxeye and used a proprietary engine to identify exploitable vulnerabilities in first-party code. This is stronger commercialization evidence than an unverified standalone growth claim, but it also changes the diligence question: the relevant outcome is now adoption and performance inside GitLab rather than Oxeye's standalone revenue, headcount, or fundraising trajectory. Financial terms were not disclosed in GitLab's announcement; GitLab's SEC filing records the acquisition and consideration, but does not establish a standalone valuation suitable for this database.
+
+The defense and national-security case is technically plausible but evidence-limited. Reachability-aware application security can help secure mission software, government services, and critical-infrastructure systems, where prioritizing exploitable weaknesses matters. However, public sources reviewed here do not establish defense contracts, military deployments, security clearances, or government-specific certifications for Oxeye. Its dual-use value should therefore be assessed as an adjacency of the underlying technology, not as proof of defense traction. Since GitLab owns the technology, strategic relevance is best understood as evidence that a major DevSecOps platform considered the capability important to its security roadmap, not as a current standalone investment opportunity."""
+logo = "Unknown"
+website = "Unknown"
+sector = "Application Security"
+founded = "2020"
+headquarters = "Tel Aviv, Israel"
+employees = "Unknown (pre-acquisition public profiles reported 11-50)"
+funding_stage = "Acquired by GitLab (2024)"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "Oxeye's code-to-cloud risk analysis and exploitability prioritization have substantive commercial and security-sector applicability: the same methods can help teams assess mission software, government applications, and critical infrastructure. Public evidence reviewed does not establish defense customers, military deployment, clearances, or government certifications, so the dual-use case is technical adjacency rather than demonstrated defense traction."
+key_technologies = [
+  "Cloud-native application security testing",
+  "Static analysis for exploitable first-party vulnerabilities",
+  "Runtime-context and code-to-cloud correlation",
+  "Static reachability analysis for application dependencies",
+  "Contextual vulnerability prioritization",
+  "Software composition analysis enrichment",
+  "DevSecOps and CI/CD security workflow integration"
+]
+use_cases = [
+  "Prioritizing exploitable vulnerabilities in first-party code",
+  "Reducing false positives in enterprise SAST programs",
+  "Correlating source-code findings with deployed cloud application context",
+  "Triage of open-source dependency risk using reachability signals",
+  "Security review of microservices and containerized applications",
+  "Integrating application risk decisions into CI/CD workflows",
+  "Assessing mission or critical-infrastructure software attack surface, where validated"
+]
+investible = false
+investment_rationale = "Oxeye had a credible technical problem, a reported $5.3 million seed round, and an acquisition by GitLab that validates strategic value in application security. It is not, however, an independently investible startup after the 2024 acquisition. Standalone diligence should not rely on the former Series A label, unverified revenue estimates, or assumed customer traction. The relevant follow-up is to evaluate how GitLab's Advanced SAST incorporates Oxeye technology, including detection quality, adoption, retention, and product differentiation, while recognizing that those metrics belong to GitLab's platform rather than to an available Oxeye security."
+strategic_value = "Oxeye is strategically relevant as an acquired application-security capability that helped GitLab extend security analysis from source code toward runtime-informed risk and more accurate SAST results. That supports software-supply-chain resilience and secure delivery for commercial, government, and potentially mission systems. The acquisition also demonstrates platform-level demand for exploitability prioritization. Its value to this database is therefore as a technology and acquisition reference for cyber strategy, not as a current independent company or financing candidate."
+public_sources = [
+  "https://about.gitlab.com/press/releases/2024-03-20-gitlab-acquires-oxeye-to-advance-application-security-and-governance-capabilities/",
+  "https://www.sec.gov/Archives/edgar/data/1653482/000162828025021579/arsedgargitlabform10k.pdf",
+  "https://s204.q4cdn.com/984476563/files_financials/2025/q3/GitLab-Q3-FY25-Earnings-Prepared-Remarks.pdf",
+  "https://www.calcalistech.com/ctech/articles/0,7340,L-3921607,00.html",
+  "https://advisories.gitlab.com/pkg/golang/github.com/goharbor/harbor/GMS-2022-4260/"
+]
+potential_score = 62.0
+technology_score = 84.0
+market_score = 78.0
+team_score = 68.0
+dual_use_score = 72.0
+strategic_alignment_score = 80.0
+stage = "unknown"
+stage_rationale = "Oxeye was founded around 2020, raised a reported seed round in 2021, and was acquired by GitLab in March 2024. An independent current startup stage is no longer applicable; public sources do not justify carrying forward the prior Series A label or assigning a standalone mature-stage designation."
+competitors = [
+  "GitLab Advanced SAST",
+  "Snyk",
+  "Veracode",
+  "Checkmarx",
+  "Contrast Security",
+  "Semgrep"
+]
+competitive_edge = "Oxeye's defensible concept was contextual exploitability prioritization: combining static findings with runtime or reachability evidence so teams could focus on risks that matter in an actual application. This addressed a real weakness of scanner-centric AppSec programs. The edge was not automatically durable because Snyk, GitLab, Veracode, Checkmarx, and other vendors can add reachability, runtime, and correlation features. The acquisition gave the capability distribution through GitLab's integrated platform, but independent product differentiation and standalone brand strength are no longer the right measures."
+risk_factors = [
+  "Acquisition dependency: Oxeye no longer operates as an independent company, so product direction, staffing, and availability depend on GitLab.",
+  "Evidence gap on standalone traction: public sources reviewed do not establish customer count, retention, defense adoption, or durable pre-acquisition revenue.",
+  "Platform competition: large AppSec and DevSecOps vendors can bundle SAST, SCA, DAST, runtime, and compliance features, raising switching and distribution barriers.",
+  "Technical coverage risk: reachability and exploitability judgments can vary across languages, frameworks, build pipelines, and cloud architectures.",
+  "False-negative risk: aggressive prioritization that suppresses theoretical findings could miss vulnerabilities whose execution context changes after deployment.",
+  "Commercial proof burden: buyers need measurable remediation-time and analyst-efficiency gains to justify replacing existing scanners or adding another tool.",
+  "Defense diligence uncertainty: no public evidence reviewed confirms military contracts, certifications, cleared personnel, or deployment in national-security environments."
+]
+risk_level = "medium"
+signals = [ ]
+priority_rank = 0
+priority_rationale = "Retain as a strategic cyber-technology reference, not a current priority investment signal. The technology scores well for application-security relevance and plausible dual-use value, and GitLab's acquisition and subsequent Advanced SAST statements provide meaningful validation. The acquired_asset classification, lack of a current independent website, absence of public defense traction, and limited standalone operating evidence justify investible=false and a moderate overall potential score."
+crawled_at = "2026-01-31T18:40:00+00:00"
+updated_at = "2026-07-31T19:52:32Z"

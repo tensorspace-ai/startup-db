@@ -1,0 +1,66 @@
+name = "Upwind Security"
+description = "Runtime-centric cloud security platform combining real-time threat detection, vulnerability prioritization, and workload protection through eBPF-based inside-out visibility."
+detailed_description = """
+Upwind Security is an Israeli cybersecurity company founded in 2022 providing cloud-native application protection through runtime visibility and threat detection. The platform implements an "inside-out" security model that operates at the network, application, and data-flow layers within running cloud environments. Rather than relying solely on static configuration scanning and vulnerability databases, Upwind monitors actual workload behavior using eBPF kernel instrumentation, API telemetry, and cloud-native logs to deliver context-aware risk prioritization, real-time threat detection, and anomaly identification in Kubernetes and cloud-native infrastructure.
+
+The company addresses a critical architectural gap in cloud security. Traditional Cloud Native Application Protection Platform (CNAPP) solutions emphasize configuration discovery and posture management from external APIs, but miss threats, misconfigurations, and exploitability context visible only at runtime. Upwind's approach prioritizes fixing actual threats based on real traffic patterns and actual workload connections rather than theoretical attack surface. This reduces alert noise by approximately 95% according to company claims, lowering mean-time-to-remediation and improving security team efficiency in large containerized and Kubernetes environments. The platform integrates with AWS, Azure, and GCP cloud APIs, Kubernetes cluster instrumentation, network sensors, and security information and event management (SIEM) platforms used by enterprise security operations centers (SOCs).
+
+Upwind has achieved remarkable early traction for a 2022 company foundation. The founding team includes security leaders and researchers from Wiz (which itself became a decacorn), Israeli cybersecurity talent, and international security researchers. The company has secured Series B funding and customers including Agoda, Nextdoor, TheRealReal, and other large cloud-native enterprises. Recent analyst recognition includes Gartner recognition in the CNAPP Market Guide, Frost & Sullivan Company of the Year 2025, GigaOm Leader status in container security, and QKS Group SPARK Matrix leadership position. Practitioners at a cloud security showdown voted Upwind #1 among competing CNAPP platforms, and the company holds a 4.9/5 rating on Gartner Peer Insights in the CNAPP category.
+
+The market timing favors Upwind's approach. Cloud workload velocity, agentic AI systems, and the proliferation of ephemeral containers make static scanning increasingly ineffective. Defense and intelligence organizations increasingly operate classified and operational systems on commercial cloud platforms (AWS, Azure, GCP, OCI) under government contracts, driving demand for runtime security solutions that integrate with production Kubernetes and serverless infrastructure while supporting compliance requirements like FedRAMP and specific DoD cloud security certifications. The company's ability to operate with minimal performance overhead (a critical requirement for production systems) and provide unified visibility across heterogeneous cloud environments aligns with trends in modern infrastructure security.
+
+Competitive dynamics are intensifying. Pure-play competitors include Wiz (which has a broader posture and scanning focus), Orca Security (acquired by Darktrace in 2024), Lacework, and Prisma Cloud (part of Palo Alto Networks). However, Upwind's distinct runtime-first and eBPF-centric strategy differentiates it from configuration-first competitors and creates defensible technical moats in threat detection accuracy and workload visibility. The eBPF approach is intrinsically difficult to replicate, requiring deep kernel and container orchestration expertise."""
+logo = "https://www.upwind.io/wp-content/uploads/upwind-logo.svg"
+website = "https://www.upwind.io"
+sector = "Cybersecurity"
+founded = "2022"
+headquarters = "Tel Aviv, Israel"
+employees = "100+"
+funding_stage = "Series B"
+dual_use = true
+dual_use_description = "Runtime cloud security has direct dual-use applications spanning commercial enterprise and defense/intelligence missions. The core eBPF-based threat detection, workload visibility, and anomaly identification capabilities directly address requirements of DoD, intelligence agencies, and allied government organizations operating classified or sensitive workloads on commercial cloud platforms. U.S. and allied militaries use AWS GovCloud, Azure Government, and commercial cloud services for command-and-control systems, intelligence analysis, logistics, and operational planning. Runtime protection against zero-days, lateral movement, container escapes, and supply-chain attacks is operationally critical for classified systems migrating to cloud. DARPA and DoD cloud modernization initiatives (Cloud One, JEDI successor programs) specifically emphasize runtime detection capabilities. The technology transfers directly to protecting defense AI systems, classified data repositories, and operational networks in cloud environments. While Upwind's current customer base is primarily commercial enterprises, the technical architecture and threat model are purpose-built for government cloud security requirements."
+key_technologies = [
+  "eBPF-based kernel instrumentation",
+  "Runtime workload behavior profiling",
+  "Kubernetes and container orchestration integration",
+  "Cloud API telemetry and flow analysis",
+  "Machine learning anomaly detection",
+  "API security and data exfiltration detection"
+]
+use_cases = [
+  "Kubernetes and container workload threat detection",
+  "Runtime vulnerability prioritization and exploitation context",
+  "Zero-day and advanced persistent threat detection in cloud environments",
+  "Lateral movement and post-breach detection",
+  "API abuse and data exfiltration detection",
+  "Supply-chain attack detection through dependency and container scanning",
+  "Defense and intelligence cloud workload protection",
+  "Compliance and audit trail generation for SOX, HIPAA, classified systems"
+]
+investible = true
+investment_rationale = "Upwind represents a genuine technical breakthrough in cloud security addressing architectural limitations of current CNAPP platforms. Series B funding, rapid enterprise adoption, and recent analyst recognition (Gartner, Frost & Sullivan, GigaOm, QKS Group, Latio) confirm strong market timing and competitive positioning. The founding team's prior Wiz experience and Israeli cybersecurity backgrounds provide operational credibility and network advantages. eBPF-based runtime detection creates defensible technical moats against pure-scanning competitors. Significant dual-use applications for defense cloud modernization (DoD, intelligence agencies using commercial cloud) create strategic acquisition value beyond commercial cloud security market. Early customer references (Agoda, Nextdoor, TheRealReal) demonstrate enterprise credibility. Primary commercial risk is competitive response from larger CNAPP vendors (Palo Alto Networks, CrowdStrike, Microsoft) and emerging eBPF-native competitors, but Upwind's founding team depth and early market position provide advantages for either independent growth or strategic acquisition."
+strategic_value = "Upwind provides runtime detection and threat response capabilities critical for defense cloud adoption. DoD and intelligence agencies deploying AI systems, command-and-control infrastructure, and classified data repositories on commercial cloud platforms require runtime visibility and threat detection that Upwind's eBPF-native architecture uniquely provides. Lateral movement detection, zero-day identification, container escape prevention, and API-layer attack detection are operational requirements for classified systems on AWS GovCloud, Azure Government, and related platforms. Acquisition of Upwind by a defense contractor, intelligence agency technology partner (in-Q-tel model), or U.S. cloud infrastructure provider would provide defensible market differentiation and security control over government cloud workloads. From an independent growth perspective, Upwind can capture significant market share in the $3+ billion CNAPP market by selling to Fortune 500 enterprises and international government organizations with cloud security requirements, positioning as a runtime-first alternative to configuration-first CNAPP incumbents."
+potential_score = 82
+technology_score = 90
+market_score = 80
+team_score = 88
+dual_use_score = 85
+strategic_alignment_score = 84
+stage = "early"
+stage_rationale = "Founded in 2022 but achieved Series B funding with customer traction (hundreds of enterprises), analyst leadership recognition (Gartner, QKS, Frost & Sullivan, GigaOm), and rapid product adoption demonstrates exceptional early-stage execution. Still pre-IPO, fully private, and early in market penetration despite strong position. Trajectory and team depth similar to other Israeli cloud security unicorns at Series B stage."
+competitors = [ "Wiz", "Orca Security / Darktrace", "Lacework", "Prisma Cloud (Palo Alto)", "CrowdStrike Falcon Cloud Security" ]
+competitive_edge = "Runtime-first and eBPF-native architecture provides threat detection and context impossible for external-scanning-only competitors. Upwind operates inside running workloads, detecting actual exploitation attempts, lateral movement, and anomalous behavior missed by static configuration and vulnerability scanners. eBPF kernel instrumentation creates high technical barriers to entry and defensible IP moat. Founding team's Wiz experience and Israeli security research pedigree provide operational speed, product instincts, and network advantages. Practitioners voted Upwind #1 in recent cloud security showdown over pure-scanning competitors. Multi-cloud API integration and minimal performance overhead differentiate from heavier agent-based competitors."
+risk_factors = [
+  "Intense competition from larger vendors (Palo Alto, CrowdStrike, Microsoft, AWS) with larger sales and channel capacity",
+  "Technical execution risk on eBPF kernel instrumentation across Linux kernel versions and container runtimes",
+  "Customer adoption risk: enterprises may prefer integrated CNAPP solutions from established vendors despite technical superiority",
+  "Regulatory and export control constraints on defense applications may limit non-U.S. market expansion",
+  "Dependency on Kubernetes and cloud-native adoption trajectory; legacy infrastructure companies may not be addressable",
+  "Potential acquisition of team by larger competitor or consolidation among CNAPP vendors could reduce independent growth"
+]
+risk_level = "medium"
+signals = [ ]
+priority_rank = 0
+priority_rationale = "High priority for strategic evaluation. Runtime cloud security directly addresses future defense cloud architecture requirements. Technical approach (eBPF-native, runtime-centric) creates defensible differentiation vs. configuration-scanning incumbents. Early analyst validation and customer traction confirm market timing. Dual-use potential clear and substantive. Team pedigree and execution speed suggest either strong independent growth or high strategic acquisition value for defense contractors and government technology partners."
+crawled_at = "2026-01-31T18:45:00+00:00"
+updated_at = "2026-05-07T07:31:20Z"

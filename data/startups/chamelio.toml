@@ -1,0 +1,365 @@
+name = "Chamelio"
+description = "Chamelio is an Israeli-founded legal technology company building an AI-native operating platform for in-house legal teams. It announced a $26 million Series A in September 2026 after earlier seed financing; the company reports fourfold ARR growth and hundreds of customers, without disclosing absolute ARR."
+detailed_description = """
+**Product and the problem it solves.** Chamelio targets the administrative load inside in-house legal departments: contract requests arrive through email and chat, agreements are scattered across drives and legacy contract lifecycle management (CLM) tools, reviewers search manually for precedent, and routine work competes with higher-consequence legal judgment. The company positions its product as a system of action for legal work, not only a database that records executed agreements. Its public product pages describe a suite that accepts legal requests, routes work, tracks matters and tasks, supports approval and signature workflows, and retains the resulting documents and institutional knowledge. The contract review experience lives in a Microsoft Word add-in, where a legal user can work through third-party paper or company templates while seeing deal context, past agreements, and playbook guidance. Chamelio says its customers can use the platform to answer questions about contracts, draft and edit clauses, extract key dates and obligations, and hand routine first-pass work to an AI agent. The economic objective is to reduce the delay and coordination cost of legal review without making lawyers abandon familiar document workflows. The important limitation is that public materials describe product capability and customer testimonials, but do not quantify time saved across a representative customer cohort or disclose independent accuracy evaluations.
+
+**Core technology and how it works.** The disclosed product is a layered application rather than a newly published foundation model. Chamelio organizes a customer's contracts, policies, historical negotiations, and legal playbooks, then exposes that material to features for search, metadata extraction, drafting, comparison, review, and workflow execution. Its Negotiate tool places AI-assisted review and proposed redlines inside Word; company documentation says generated answers link to source documents, and its product page describes playbooks generated from historical agreements and maintained as the team negotiates. A Smart Repository extracts metadata, links amendments and related agreements, supports custom fields and fine-grained permissions, and tracks renewal dates. An agent interface can answer questions or perform bounded drafting and review tasks using the customer's document context. The broader workflow layer connects intake, approvals, matters, tasks, email, shared drives, and CRM records. The company also publishes security commitments including encryption in transit and at rest, restricted production access, regular security scans, independent penetration testing, and SOC 2 Type II; these are vendor disclosures, and buyers should review the current attestation and subprocessor terms directly. Public materials do not identify the underlying model providers, model architecture, benchmark methodology, or whether deployments can run in customer-controlled environments. As a result, the technical differentiation that can be verified today is the workflow integration, organization-specific context, and legal product design rather than a uniquely demonstrated model breakthrough.
+
+**Market, customers, and route to market.** The initial buyer is a general counsel, legal operations lead, or department head who needs to process commercial agreements with a limited staff and make contract status legible to business stakeholders. The platform's described workflows span intake and triage, vendor and customer contract review, playbook-based negotiation, obligation tracking, renewal management, legal research, and repository search. Chamelio has reported hundreds of customers, naming Wiz, monday.com, Socure, AppsFlyer, and Wonderful.ai; customer references on its product pages also include general counsel testimonials from Socure and Lightricks. This is meaningful early distribution evidence because enterprise legal software often needs internal security review, integrations, and behavior change before becoming part of daily work. The go-to-market is enterprise software sold to in-house departments, with a product-led implementation pitch: the company says teams can deploy in days rather than endure a multi-quarter CLM implementation. The claim is commercially attractive but company-stated, and the public record does not disclose annual contract values, deployment durations by customer, customer retention, gross margin, or usage per seat. Chamelio is therefore exposed both to the sizable installed base of legacy CLM providers and to newer AI tools that can enter through a narrower contract-review use case before expanding into broader legal operations.
+
+**Traction, funding, and outside validation.** Chamelio announced a $10 million seed financing in January 2026, led by Work-Bench and Emerge Ventures. On September 22, 2026, it announced a $26 million Series A led by Entrée Capital, with Work-Bench and Emerge participating again and Bright Pixel Capital joining; the two disclosed rounds total at least $36 million. The company said ARR had grown fourfold since the seed round and that it serves hundreds of customers, including several recognizable Israeli and US technology companies. Those are useful operating signals, but they are company-reported and do not substitute for audited revenue, retention, or customer references. External validation includes reporting by CTech and Ynet on the financing and customer list, and product-specific documentation on Chamelio's own site that shows the Word add-in, repository, intake, agent, and security feature set. Microsoft's app-certification directory identifies the publisher as Innvo AI Inc and lists Israel as the company's headquarters in its February 2026 snapshot. That snapshot predates the September reporting that the company is now headquartered in New York, so this record treats Chamelio as Israeli-founded rather than asserting that its current legal or operational headquarters remain in Israel. No public patent portfolio, named public-sector contract, formal legal-industry award, or independent model-performance study was located in the sources reviewed.
+
+**Founders and team.** The company was founded in 2024 by Alex Zilberman, Gal Lellouche, and Gil Banyas. Zilberman is CEO and previously held leadership roles at Pagaya and served as COO and co-founder of AnyVision, now known as Oosto. Lellouche is CTO; CTech's seed coverage reports that he previously founded Task Sheriff, an AI-oriented company acquired by Sage, and later held senior AI roles there. Banyas is COO and a former general counsel, bringing approximately 15 years of legal experience and having served as general counsel at AnyVision. The mix is relevant to the product thesis: a repeat technology founder responsible for company building, an AI and software leader, and an operator who has worked inside a legal department. It offers a plausible route to translating legal process pain into product requirements while retaining the engineering capacity to automate routine work. The public sources reviewed do not disclose total employee count, detailed leadership depth beyond the co-founders, staff distribution, or the allocation of product and engineering work between Israel and the United States. The disclosed move of the CEO to New York and the continued Israeli presence of the other co-founders suggest a cross-border operating model whose hiring, tax, and R&D footprint merit confirmation in diligence.
+
+**Competitive dynamics.** Chamelio competes across two overlapping categories: mature CLM systems adding generative AI and AI-first legal products trying to replace pieces of the traditional contract stack. **Ironclad** offers enterprise contracting workflows, repositories, and AI-assisted review at substantially greater maturity; **Icertis** competes for large global CLM deployments with configurable contract lifecycle software; **DocuSign** combines agreement execution with contract management and is extending AI into agreement workflows; **Juro** offers browser-native contracting and workflow automation; **Spellbook** focuses on AI drafting and review in Word; and **Harvey** sells broader legal AI capabilities to law firms and corporate legal teams. Chamelio's stated edge is breadth in a single legal workspace: Word-based negotiation, a repository, playbooks, intake, approvals, and agent-assisted tasks are designed to share context rather than sit in separate products. Its reported fourfold ARR growth and hundreds of customers indicate that some buyers are adopting the package, but there is no public evidence yet that Chamelio replaces major CLM incumbents at scale or has a lower implementation burden in measured deployments. The principal competitive test is whether its legal-specific workflow and data context improve accuracy and adoption enough to outweigh the switching costs, established integrations, compliance programs, and account control of incumbent platforms.
+
+**Security, resilience, and dual-use assessment.** Chamelio's core product is commercial legal operations software, and no disclosed defense, intelligence, government, or critical-infrastructure deployment was identified; the appropriate classification is therefore **not dual-use**. Its indirect strategic relevance comes from the fact that legal teams handle sensitive commercial agreements, regulatory obligations, security addenda, and supplier relationships, and the company is building an AI system that touches this information. Its published controls—encryption, access restrictions, production access limits, penetration testing, incident response planning, and claimed SOC 2 Type II compliance—address buyer concerns around confidentiality and operational continuity. These controls may matter to regulated companies and defense suppliers as customers, but they do not establish a defense capability, security authorization, or data-sovereignty offering. In addition, a Microsoft app-catalog snapshot from February 2026 marked SOC 2 compliance as “No,” while Chamelio's current security page advertises SOC 2 Type II. The older listing may simply predate a later attestation; the discrepancy makes a current report, its audit period, scope, hosting configuration, and AI subprocessor list concrete diligence items. The national-security thesis is consequently limited to Israeli-founded enterprise AI and the protection of sensitive business workflows, not fielded military or cyber-defense technology.
+
+**Stage, trajectory, and key diligence risks.** Founded in 2024, Chamelio remains an early-stage company even after a relatively substantial Series A. The near-term trajectory depends on converting reported customer uptake and ARR growth into durable renewals, expanding from review and repository functions into daily legal workflows, and showing that its agent saves time without introducing unacceptable drafting errors or confidentiality risk. The strongest positive case is the combination of legal-domain founder experience, recognizable customer references, a clear workflow pain point, repeat participation from early investors, and product documentation specific enough to inspect. The main risks are: (1) AI output quality and source grounding may fail on unusual clauses, jurisdictional nuances, or incomplete records, requiring costly attorney review; (2) contract and legal data are highly sensitive, making security posture, model-provider controls, retention terms, and customer isolation central to procurement; (3) the crowded category includes well-funded platforms that can bundle similar agent features into existing CLM, e-signature, office, and productivity relationships; (4) the reported fourfold ARR growth has no disclosed base, revenue amount, retention, or cohort detail, so its durability is unknown; (5) rapid growth across hundreds of customers could increase onboarding and support costs, while the company has not published deployment economics; (6) the New York headquarters and Israeli-founded identity leave the durable location of R&D and strategic IP unclear; and (7) the company has not disclosed patents or independent AI benchmarks that would establish a hard-to-replicate technical moat. Key milestones to monitor are verified retention and expansion, customer-approved case studies with measured cycle-time changes, audited security documentation, transparent model and subprocessor controls, and evidence that users rely on the system for end-to-end legal processes rather than isolated contract drafting.
+"""
+logo = "Unknown"
+website = "https://www.chamelio.ai"
+sector = "AI-Native Legal Operations and Contract Lifecycle Management"
+founded = "2024"
+headquarters = "New York, United States; Israeli-founded with reported Israeli operating presence"
+employees = "Unknown"
+funding_stage = "Series A; $26 million announced September 2026; earlier seed financing and Emerge-led pre-seed; company announced $10 million aggregate seed financing, while Work-Bench specifies a $5.7 million Seed following pre-seed"
+entity_type = "startup"
+dual_use = false
+dual_use_description = "Chamelio's core technology is a commercial legal-workflow platform, and no defense, intelligence, government, or critical-infrastructure deployment has been publicly disclosed. Its AI agent, contract repository, and access controls may be relevant to regulated businesses and defense suppliers that manage sensitive agreements, but that is customer adjacency rather than evidence of defense capability. The product does not appear to provide cyber defense, mission software, sovereign compute, or military-specific functionality. Dual-use scoring is therefore low; the strategic relevance is as an Israeli-founded enterprise AI company handling sensitive corporate workflows."
+key_technologies = [
+  "Context-grounded contract review and redlining through a Microsoft Word add-in using customer playbooks and historical agreements",
+  "AI-generated and maintained legal playbooks based on precedent contracts and negotiation history",
+  "Contract repository with metadata extraction, linked amendments, custom fields, permissions, and renewal tracking",
+  "Agent-assisted drafting, comparison, legal Q&A, and research over customer documents and approved external sources",
+  "Legal intake, matter and task management, approval routing, and workflow orchestration across email and shared drives",
+  "Enterprise data controls including encryption, least-privilege access, restricted production access, and audit processes"
+]
+use_cases = [
+  "First-pass review and redlining of vendor or customer agreements inside Microsoft Word",
+  "Applying legal-team playbooks consistently across NDAs, MSAs, DPAs, and procurement contracts",
+  "Searching executed agreements for obligations, renewal dates, clauses, and prior negotiation positions",
+  "Routing business requests to the correct legal reviewer and collecting required approvals",
+  "Tracking contract amendments and linking them to their parent agreements",
+  "Answering internal questions about contract terms with links to source documents",
+  "Managing legal tasks and matter status across legal and business stakeholders"
+]
+investible = false
+investment_rationale = "Chamelio has several positive company-building signals: a founding team combining legal operations experience with AI and repeat-startup backgrounds, a $10 million seed followed by a $26 million Series A, reported fourfold ARR growth, and a roster of named technology-company customers. The product also addresses a concrete workflow budget inside businesses and combines review, repository, and intake rather than relying on a standalone chatbot. However, the present public record does not establish revenue scale, retention, contract values, independent accuracy, or a durable model advantage, while incumbent CLM vendors can bundle similar features. The company is relevant as an Israeli-founded enterprise AI platform, but its commercial legal focus and lack of demonstrated defense or critical-infrastructure work place it outside this database's highest strategic-priority band; the flag is a legacy sorting signal, not a recommendation."
+strategic_value = "Chamelio contributes to the Israeli technology ecosystem through an AI software company founded by Israeli operators and built for a global enterprise market. The product addresses a real information-management problem in which agreement terms, obligations, and legal decisions otherwise remain distributed across documents and internal workflows. Its security claims and handling of sensitive corporate records make procurement readiness strategically relevant, particularly for regulated companies and suppliers. Public evidence does not support classifying it as a defense, cyber-defense, or critical-infrastructure capability, so strategic value is moderate and rests on enterprise AI execution and data stewardship rather than national-security use."
+potential_score = 56.0
+technology_score = 66.0
+market_score = 78.0
+team_score = 72.0
+dual_use_score = 18.0
+strategic_alignment_score = 43.0
+stage = "early"
+stage_rationale = "Chamelio was founded in 2024 and announced a $26 million Series A in September 2026 after a $10 million seed round earlier that year. The company reports hundreds of customers and fourfold ARR growth since seed, but has not disclosed absolute ARR, retention, revenue quality, employee count, or audited financials. It remains an early-stage private company, with commercial traction signals that are promising but not yet independently measurable."
+competitors = [
+  "Ironclad (enterprise CLM suite with contract workflows, repository, and AI review)",
+  "Icertis (configurable contract lifecycle platform for large global enterprises)",
+  "DocuSign (agreement execution and CLM platform extending into AI-assisted workflows)",
+  "Juro (browser-native contract lifecycle management and workflow automation)",
+  "Spellbook (AI drafting and contract review embedded in Microsoft Word)",
+  "Harvey (legal AI assistant and workflow tools for law firms and corporate legal teams)"
+]
+competitive_edge = "Chamelio's public product proposition is to unify contract review, precedent-informed playbooks, repository search, intake, and workflow execution in one legal workspace. Keeping negotiation in Word reduces friction for lawyers, while shared document context can make an AI response more relevant than a generic model prompt. The reported customer base and ARR growth suggest early commercial pull, though the figures are company-reported and lack disclosed cohort detail. Its edge remains execution-dependent: incumbent CLM providers have mature integrations, procurement trust, and installed contract data, and AI drafting features can be copied or bundled. Evidence of lower implementation cost, materially faster cycle times, strong retention, and reliable source-grounded outputs would make the differentiation more defensible."
+risk_factors = [
+  "AI may miss unusual legal language, jurisdiction-specific effects, or obligations in incomplete contract records, so attorney review remains necessary",
+  "Contract repositories contain confidential and potentially privileged information, requiring clear controls over retention, access, training use, and model subprocessors",
+  "Crowded market with mature CLM incumbents and AI-native legal tools that can bundle overlapping drafting, review, and workflow features",
+  "Fourfold ARR growth and hundreds of customers are company-reported; absolute revenue, retention, customer concentration, and contract values are undisclosed",
+  "Implementation and customer support costs may rise as the platform expands across repositories, Word, email, drives, and approval workflows",
+  "Current New York headquarters and Israeli operating footprint are not fully detailed, leaving R&D location and IP ownership structure unclear",
+  "No public independent accuracy benchmark, patent portfolio, or named government/defense deployment establishes technical moat or defense relevance"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Chamelio merits inclusion as a well-sourced Israeli-founded enterprise AI company with evidence of product breadth, repeat financing, and early customer adoption. The strongest monitoring signals are its reported fourfold ARR growth since seed, hundreds of named enterprise customers, the $26 million Series A led by Entrée Capital, and a founding team that combines AI company-building with in-house legal experience. Priority is capped because the company serves corporate legal departments rather than a strategic defense or infrastructure market, and public disclosure does not yet establish durable retention, absolute revenue, AI accuracy, or implementation economics. Track audited security materials, customer case studies with quantified outcomes, customer retention and expansion, and clear evidence of ongoing Israeli R&D before assigning a higher strategic priority."
+public_sources = [{ "label" = "Chamelio Raises $26M Series A to Replace Legacy CLM with AI-Native In-House Legal Operations", "url" = "https://www.prnewswire.com/news-releases/chamelio-raises-26m-series-a-to-replace-legacy-clm-with-ai-native-in-house-legal-operations-302886011.html", "description" = "Research source supporting: $26 million Series A led by Entrée Capital; Work-Bench, Emerge Ventures, and Bright Pixel Capital participated; ARR grew fourfold since seed, as stated by company; Hundreds of customers, including Wiz, monday.com, Socure, AppsFlyer, and Wonderful.ai; Company founded in 2024; named co-founder roles" }, { "label" = "Announcing Our Investment in Chamelio", "url" = "https://ebs.publicnow.com/view/4DA840825C2B6025E6023A51D8EA84F26262DA07", "description" = "Research source supporting: Work-Bench said it led a $5.7 million Seed round after an Emerge-led pre-seed and said total funding was $10 million; Work-Bench reported approximately 100 in-house legal teams and a customer example with 15% more completed contracts, flat turnaround, and claimed monthly savings; Platform supports intake, drafting, negotiation, signing, post-signature operations and repository intelligence" }, { "label" = "Chamelio Raises $10M Seed Round To Scale End-to-End Legal Intelligence Platform", "url" = "https://www.businesswire.com/news/home/20260127115341/en/Chamelio-Raises-$10M-Seed-Round-To-Scale-End-to-End-Legal-Intelligence-Platform", "description" = "Research source supporting: Company announced $10 million seed financing led by Work-Bench and Emerge with additional investors; Company reported approximately 100 clients including Wiz, Socure, Lightricks, Integrity, Global-e, Cellebrite, and Fiverr" }, { "label" = "Chamelio Raises $26 Million to Take on Legacy Contract Tech", "url" = "https://news.bloomberglaw.com/legal-ops-and-tech/chamelio-raises-26-million-to-take-on-legacy-contract-tech", "description" = "Research source supporting: CEO described Series A valuation only as in the hundreds of millions; exact valuation undisclosed; CEO said company had more than 100 customers and added seven to eight monthly; Series A participants were Entrée Capital, Work-Bench, Emerge Ventures, Bright Pixel Capital" }, { "label" = "Chamelio raises $26 million Series A to replace legacy legal software with AI agents", "url" = "https://www.calcalistech.com/ctechnews/article/sjxcxry9gl", "description" = "Research source supporting: Series A amount, investors, fourfold ARR growth and hundreds of customers reported; Alex Zilberman held prior leadership roles at Pagaya and AnyVision" }, { "label" = "Chamelio raises $10 million to expand AI platform for in-house legal teams", "url" = "https://www.ynetnews.com/business/article/rkeoyzwiwl", "description" = "Research source supporting: Alex Zilberman is CEO and co-founder; Gil Banyas COO with legal and AnyVision GC background; Gal Lellouche CTO with AI company acquired by Sage background; Company Israeli-founded and product serves corporate in-house legal workflows" }, { "label" = "Israeli-founded Chamelio raises $26m to bring AI agents into legal teams", "url" = "https://www.jewishnews.co.uk/israeli-founded-chamelio-raises-26m-to-bring-ai-agents-into-legal-teams/", "description" = "Research source supporting: New York headquarters; founders Alex Zilberman, Gal Lellouche and Gil Banyas are Israeli entrepreneurs; Lellouche and Banyas based in Israel as reported; Hundreds of international customers including UK businesses" }, { "label" = "Innvo AI Ltd. (Chamelio) - IVC Data & Insights", "url" = "https://www.ivc-online.com/Google-Card?id=1a2cdfc5-ce6e-ef11-b817-00505695cd29", "description" = "Research source supporting: IVC profile identifies Innvo AI Ltd. / Chamelio, New York main address, Ramat Gan branch, and Delaware branch" }, { "label" = "Chamelio Product", "url" = "https://www.chamelio.ai/product", "description" = "Research source supporting: Official product materials describe contract review, Word redlining, playbooks, repository, intake and legal workflows" }, { "label" = "Ivo Alternative for In-house Legal Teams", "url" = "https://www.chamelio.ai/comparison/chamelio-so-much-better-than-ivo", "description" = "Research source supporting: Company positions its suite against Ivo based on repository, intake, workflows and contract review; comparison is vendor-authored" }, { "label" = "9 Best Spellbook Alternatives (2026 Comparison)", "url" = "https://spellbook.com/learn/spellbook-alternatives", "description" = "Research source supporting: Spellbook describes its product as commercial contract drafting, review and negotiation primarily in Microsoft Word and lists Ironclad, Ivo, LegalOn, Harvey and others in adjacent landscape" }]
+crawled_at = "2026-10-02T02:06:05Z"
+updated_at = "2026-10-04T16:05:30Z"
+
+[intelligence]
+
+schema_version = 2
+
+
+
+financials = []
+
+
+intellectual_property = []
+
+
+
+
+[intelligence.company]
+company_id = "chamelio"
+legal_name = "Innvo AI Ltd. (reported by IVC; legal entity form not independently confirmed)"
+aliases = ["Chamelio", "Innvo AI", "Innvo AI Inc. (reported variant; unconfirmed)"]
+operating_status = "active"
+business_model = "B2B subscription software and implementation/legal engineering for corporate in-house legal teams; pricing and contract economics are undisclosed."
+products = ["AI-assisted contract review and redlining in Microsoft Word", "Contract repository and contextual legal intelligence", "Legal intake, matter workflows, approvals, obligations and agent-assisted drafting"]
+locations = ["New York, United States", "Ramat Gan, Israel"]
+founded_on = "2024"
+source_ids = ["series-a", "ivc", "product"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders", "israeli_rd"]
+summary = "Contemporary reporting describes the three founders as Israeli entrepreneurs and says two co-founders remain based in Israel; IVC lists a Ramat Gan branch. The precise current Israeli R&D headcount is not disclosed."
+as_of = "2026-10-04"
+source_ids = ["jewishnews", "ivc"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public financing evidence includes an Emerge-led pre-seed with no amount found, a Work-Bench-led $5.7M Seed as specifically described by Work-Bench, and a $26M Series A. Company/Business Wire described the earlier financing as a $10M Seed, apparently aggregating the seed and pre-seed; do not count this as an additional round. Bloomberg says the Series A valuation was described only as in the hundreds of millions, with no exact figure."
+rounds = [{ "id" = "pre-seed-2026", "round_type" = "pre-seed", "instrument" = "equity", "status" = "closed", "announced_on" = "2026-01", "amount_status" = "undisclosed", "amount_scope" = "round", "lead_investors" = ["Emerge Ventures"], "participating_investors" = [], "source_ids" = ["workbench-seed"], "notes" = "Work-Bench describes this as a pre-seed led by Emerge; public primary evidence reviewed does not disclose a separate amount or precise close date." }, { "id" = "seed-2026", "round_type" = "seed", "instrument" = "equity", "status" = "closed", "announced_on" = "2026-01-27", "amount_status" = "reported", "amount" = 5700000, "amount_scope" = "round", "currency" = "USD", "lead_investors" = ["Work-Bench"], "participating_investors" = ["Emerge Ventures"], "source_ids" = ["workbench-seed", "seed-wire"], "notes" = "Work-Bench specifically says it led a $5.7M Seed following the Emerge-led pre-seed; company/Business Wire labels $10M as the seed financing, apparently aggregating the seed and preceding pre-seed. Do not add $10M as another round." }, { "id" = "series-a-2026", "round_type" = "Series A", "instrument" = "equity", "status" = "announced", "announced_on" = "2026-09-22", "amount_status" = "reported", "amount" = 26000000, "amount_scope" = "round", "currency" = "USD", "lead_investors" = ["Entrée Capital"], "participating_investors" = ["Work-Bench", "Emerge Ventures", "Bright Pixel Capital"], "source_ids" = ["series-a", "bloomberg"], "notes" = "Announced by company. Bloomberg reports CEO characterized valuation as in the hundreds of millions but declined to provide exact figure; no numeric valuation entered." }]
+reported_total_raised = 10000000
+reported_total_currency = "USD"
+total_source_ids = ["seed-wire"]
+total_as_of = "2026-01-27"
+total_scope = "Company-announced aggregate seed financing including earlier pre-seed; not lifetime funding after Series A."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private company; no public cap table, ownership percentages, parent-company relationship, or transaction located. IVC labels the company Innvo AI Ltd.; the legal entity and jurisdiction should be verified directly because secondary sources also say Inc."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["ivc", "series-a"]
+deals = []
+holdings = []
+
+[[intelligence.people]]
+name = "Alex Zilberman"
+role = "CEO and co-founder"
+is_founder = true
+current = true
+background = "Previously held leadership roles at Pagaya and AnyVision; reporting also cites EY and PwC early-career experience."
+source_ids = ["series-a", "ctech-series", "ynet-seed"]
+
+[[intelligence.people]]
+name = "Gil Banyas"
+role = "COO and co-founder"
+is_founder = true
+current = true
+background = "Former general counsel at AnyVision; Ynet reported more than 15 years of legal experience."
+source_ids = ["series-a", "ynet-seed"]
+
+[[intelligence.people]]
+name = "Gal Lellouche"
+role = "CTO and co-founder"
+is_founder = true
+current = true
+background = "Previously founded an AI company acquired by Sage and later held senior AI leadership roles there, according to Ynet."
+source_ids = ["series-a", "ynet-seed"]
+
+
+[[intelligence.investors]]
+name = "Work-Bench"
+investor_type = "vc"
+website = "https://www.work-bench.com"
+relationship = "current"
+round_ids = ["seed-2026", "series-a-2026"]
+source_ids = ["workbench-seed", "seed-wire", "series-a"]
+
+[[intelligence.investors]]
+name = "Emerge Ventures"
+investor_type = "vc"
+website = "https://emergecapital.vc"
+relationship = "current"
+round_ids = ["pre-seed-2026", "seed-2026", "series-a-2026"]
+source_ids = ["workbench-seed", "seed-wire", "series-a"]
+
+[[intelligence.investors]]
+name = "Entrée Capital"
+investor_type = "vc"
+website = "https://entreecap.com"
+relationship = "current"
+round_ids = ["series-a-2026"]
+source_ids = ["series-a", "bloomberg"]
+
+[[intelligence.investors]]
+name = "Bright Pixel Capital"
+investor_type = "corporate"
+website = "https://brpx.com"
+relationship = "current"
+round_ids = ["series-a-2026"]
+source_ids = ["series-a", "bloomberg"]
+
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2026-01"
+description = "Work-Bench and company seed announcement said Chamelio supported approximately 100 legal teams/clients, listing enterprise and Israeli technology customers. This is investor/company-reported adoption, not an audited paying-customer count."
+source_ids = ["workbench-seed", "seed-wire"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2026-09-22"
+description = "Company announced hundreds of customers including Wiz, monday.com, Socure, AppsFlyer and Wonderful.ai; Bloomberg separately reported more than 100 customers and seven to eight new customers monthly, quoting the CEO."
+source_ids = ["series-a", "bloomberg"]
+
+[[intelligence.traction]]
+kind = "other"
+date = "2026-01"
+description = "Work-Bench described one customer bake-off and customer-estimated 15% increase in completed contracts, flat turnaround, and $10K+ monthly savings; this is an investor-reported case, with customer unnamed and methodology undisclosed."
+source_ids = ["workbench-seed"]
+
+[[intelligence.traction]]
+kind = "other"
+date = "2026-09-22"
+description = "Company stated ARR had grown fourfold since the seed round; absolute ARR, cohort, and accounting basis were not disclosed."
+source_ids = ["series-a", "ctech-series"]
+
+
+[[intelligence.comparables]]
+name = "Ivo"
+website = "https://www.ivo.ai"
+rationale = "AI contract review and negotiation for in-house teams, directly overlapping with Chamelio."
+differentiation = "Chamelio claims broader repository, legal intake and workflow execution; the comparison is company-authored and not independent."
+source_ids = ["ivo-comp"]
+
+[[intelligence.comparables]]
+name = "Ironclad"
+website = "https://ironcladapp.com"
+rationale = "Established contract lifecycle management platform with AI capabilities and enterprise deployment."
+differentiation = "Chamelio emphasizes AI-native contextual workflows; Ironclad has established CLM footprint and workflow infrastructure."
+source_ids = ["spells"]
+
+[[intelligence.comparables]]
+name = "Spellbook"
+website = "https://spellbook.legal"
+rationale = "AI-assisted commercial contract review, drafting and negotiation with Word-centric workflow."
+differentiation = "Spellbook centers on contract workbench; Chamelio presents a broader in-house legal operating system."
+source_ids = ["spells"]
+
+[[intelligence.comparables]]
+name = "Harvey"
+website = "https://www.harvey.ai"
+rationale = "Broad legal AI platform competing for legal-team workflow budgets."
+differentiation = "Harvey has broad legal research and drafting scope; Chamelio targets corporate legal operations and contract lifecycle context."
+source_ids = ["spells"]
+
+
+[[intelligence.research.sources]]
+id = "series-a"
+url = "https://www.prnewswire.com/news-releases/chamelio-raises-26m-series-a-to-replace-legacy-clm-with-ai-native-in-house-legal-operations-302886011.html"
+title = "Chamelio Raises $26M Series A to Replace Legacy CLM with AI-Native In-House Legal Operations"
+publisher = "Chamelio via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-04T16:05:30Z"
+published_on = "2026-09-22"
+claims = ["$26 million Series A led by Entrée Capital; Work-Bench, Emerge Ventures, and Bright Pixel Capital participated", "ARR grew fourfold since seed, as stated by company", "Hundreds of customers, including Wiz, monday.com, Socure, AppsFlyer, and Wonderful.ai", "Company founded in 2024; named co-founder roles"]
+
+[[intelligence.research.sources]]
+id = "workbench-seed"
+url = "https://ebs.publicnow.com/view/4DA840825C2B6025E6023A51D8EA84F26262DA07"
+title = "Announcing Our Investment in Chamelio"
+publisher = "Work-Bench"
+kind = "investor"
+accessed_at = "2026-10-04T16:05:30Z"
+published_on = "2026-01-27"
+claims = ["Work-Bench said it led a $5.7 million Seed round after an Emerge-led pre-seed and said total funding was $10 million", "Work-Bench reported approximately 100 in-house legal teams and a customer example with 15% more completed contracts, flat turnaround, and claimed monthly savings", "Platform supports intake, drafting, negotiation, signing, post-signature operations and repository intelligence"]
+
+[[intelligence.research.sources]]
+id = "seed-wire"
+url = "https://www.businesswire.com/news/home/20260127115341/en/Chamelio-Raises-$10M-Seed-Round-To-Scale-End-to-End-Legal-Intelligence-Platform"
+title = "Chamelio Raises $10M Seed Round To Scale End-to-End Legal Intelligence Platform"
+publisher = "Chamelio via Business Wire"
+kind = "company"
+accessed_at = "2026-10-04T16:05:30Z"
+published_on = "2026-01-27"
+claims = ["Company announced $10 million seed financing led by Work-Bench and Emerge with additional investors", "Company reported approximately 100 clients including Wiz, Socure, Lightricks, Integrity, Global-e, Cellebrite, and Fiverr"]
+
+[[intelligence.research.sources]]
+id = "bloomberg"
+url = "https://news.bloomberglaw.com/legal-ops-and-tech/chamelio-raises-26-million-to-take-on-legacy-contract-tech"
+title = "Chamelio Raises $26 Million to Take on Legacy Contract Tech"
+publisher = "Bloomberg Law"
+kind = "media"
+accessed_at = "2026-10-04T16:05:30Z"
+published_on = "2026-09-22"
+claims = ["CEO described Series A valuation only as in the hundreds of millions; exact valuation undisclosed", "CEO said company had more than 100 customers and added seven to eight monthly", "Series A participants were Entrée Capital, Work-Bench, Emerge Ventures, Bright Pixel Capital"]
+
+[[intelligence.research.sources]]
+id = "ctech-series"
+url = "https://www.calcalistech.com/ctechnews/article/sjxcxry9gl"
+title = "Chamelio raises $26 million Series A to replace legacy legal software with AI agents"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-04T16:05:30Z"
+published_on = "2026-09-22"
+claims = ["Series A amount, investors, fourfold ARR growth and hundreds of customers reported", "Alex Zilberman held prior leadership roles at Pagaya and AnyVision"]
+
+[[intelligence.research.sources]]
+id = "ynet-seed"
+url = "https://www.ynetnews.com/business/article/rkeoyzwiwl"
+title = "Chamelio raises $10 million to expand AI platform for in-house legal teams"
+publisher = "Ynet News"
+kind = "media"
+accessed_at = "2026-10-04T16:05:30Z"
+published_on = "2026-01-28"
+claims = ["Alex Zilberman is CEO and co-founder; Gil Banyas COO with legal and AnyVision GC background; Gal Lellouche CTO with AI company acquired by Sage background", "Company Israeli-founded and product serves corporate in-house legal workflows"]
+
+[[intelligence.research.sources]]
+id = "jewishnews"
+url = "https://www.jewishnews.co.uk/israeli-founded-chamelio-raises-26m-to-bring-ai-agents-into-legal-teams/"
+title = "Israeli-founded Chamelio raises $26m to bring AI agents into legal teams"
+publisher = "Jewish News"
+kind = "media"
+accessed_at = "2026-10-04T16:05:30Z"
+published_on = "2026-09-23"
+claims = ["New York headquarters; founders Alex Zilberman, Gal Lellouche and Gil Banyas are Israeli entrepreneurs; Lellouche and Banyas based in Israel as reported", "Hundreds of international customers including UK businesses"]
+
+[[intelligence.research.sources]]
+id = "ivc"
+url = "https://www.ivc-online.com/Google-Card?id=1a2cdfc5-ce6e-ef11-b817-00505695cd29"
+title = "Innvo AI Ltd. (Chamelio) - IVC Data & Insights"
+publisher = "IVC Research Center"
+kind = "directory"
+accessed_at = "2026-10-04T16:05:30Z"
+claims = ["IVC profile identifies Innvo AI Ltd. / Chamelio, New York main address, Ramat Gan branch, and Delaware branch"]
+
+[[intelligence.research.sources]]
+id = "product"
+url = "https://www.chamelio.ai/product"
+title = "Chamelio Product"
+publisher = "Chamelio"
+kind = "company"
+accessed_at = "2026-10-04T16:05:30Z"
+claims = ["Official product materials describe contract review, Word redlining, playbooks, repository, intake and legal workflows"]
+
+[[intelligence.research.sources]]
+id = "ivo-comp"
+url = "https://www.chamelio.ai/comparison/chamelio-so-much-better-than-ivo"
+title = "Ivo Alternative for In-house Legal Teams"
+publisher = "Chamelio"
+kind = "company"
+accessed_at = "2026-10-04T16:05:30Z"
+claims = ["Company positions its suite against Ivo based on repository, intake, workflows and contract review; comparison is vendor-authored"]
+
+[[intelligence.research.sources]]
+id = "spells"
+url = "https://spellbook.com/learn/spellbook-alternatives"
+title = "9 Best Spellbook Alternatives (2026 Comparison)"
+publisher = "Spellbook"
+kind = "other"
+accessed_at = "2026-10-04T16:05:30Z"
+published_on = "2026-09-25"
+claims = ["Spellbook describes its product as commercial contract drafting, review and negotiation primarily in Microsoft Word and lists Ironclad, Ivo, LegalOn, Harvey and others in adjacent landscape"]
+
+
+[intelligence.research]
+researched_at = "2026-10-04T16:05:30Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Chamelio official company identity legal name operating status headquarters", "Chamelio funding raised seed pre-seed Series A investors valuation acquired", "Chamelio Alex Zilberman Gil Banyas Gal Lellouche team founder background", "Chamelio ownership parent company cap table acquisition", "Chamelio revenue ARR financials burn runway", "Chamelio customers traction contracts partnerships ARR growth", "Chamelio patents intellectual property Innvo AI", "Chamelio competitors Ivo Ironclad Spellbook Harvey", "Chamelio defense security government dual use applications", "Chamelio Hebrew funding founders Israel גיוס"]
+gaps = ["team: founder team sourced, but current total headcount, organization chart and Israel R&D staffing not publicly verified.", "investors: named round investors found; full syndicate, cap table, ownership percentages and any secondary transactions are not disclosed.", "financials: absolute ARR, revenue, gross margin, profitability, burn and runway not disclosed; only company-reported 4x ARR growth.", "traction: paying status, customer concentration, retention, ACV, contract duration and independent ROI validation are unavailable.", "intellectual_property: no company-attributed patent or published patent application identified; verify assignments and trade-secret controls.", "competition: no independent head-to-head performance, win/loss or pricing comparison found.", "dual_use: no public defense, government, intelligence, or security customer/use case identified; no substantive defense/security applicability established.", "Ownership: exact legal entity, incorporation jurisdiction, parent and ownership are unverified; private cap table unavailable.", "Funding: exact amount and close date for pre-seed, full seed syndicate, seed/pre-seed allocation and lifetime total after Series A remain unclear."]
+conflicts = ["Company/Business Wire announcement calls $10M the Seed round; Work-Bench says its Seed was $5.7M following an Emerge-led pre-seed and says combined funding totaled $10M. Treat $10M as the earlier aggregate financing, not as another round amount.", "IVC names Innvo AI Ltd. while LegalAI List describes Innvo AI Inc.; exact contracting entity and incorporation jurisdiction require primary-document verification.", "Headquarters is reported as New York while an Israeli branch and Israel-based co-founders are reported; current R&D scale is unknown."]
+diligence_questions = ["What are current ARR, gross retention, net revenue retention, gross margin, and revenue concentration by customer and cohort?", "How much of the reported $10M seed aggregate was the Emerge-led pre-seed versus Work-Bench-led $5.7M Seed, and who participated in each?", "What is the exact contracting entity and incorporation jurisdiction, and which entity owns product IP and employs Israeli R&D staff?", "Can management provide customer-level deployment, paid status, ACV, implementation time, renewal, and quantified ROI evidence behind “hundreds of customers” and reported 4x ARR growth?", "What are measured error and escalation rates for agent-performed legal actions across contract types, jurisdictions and customer-specific playbooks?", "What security certifications, subprocessors, data-retention controls and customer-specific model-training terms apply to production deployments?"]
+topic_checks = [{ "topic" = "identity", "status" = "reported", "checked_at" = "2026-10-04T16:05:30Z", "next_review_on" = "2027-01-04", "queries" = ["Chamelio official company identity legal name operating status headquarters"], "source_ids" = ["series-a", "jewishnews", "ivc"], "summary" = "Official product and recent reporting identify an active AI platform for in-house corporate legal teams; the legal entity name is not conclusively established by primary company filings." }, { "topic" = "funding", "status" = "reported", "checked_at" = "2026-10-04T16:05:30Z", "next_review_on" = "2027-01-04", "queries" = ["Chamelio funding raised seed pre-seed Series A investors valuation acquired", "Chamelio Hebrew funding founders Israel גיוס"], "source_ids" = ["series-a", "workbench-seed", "seed-wire", "bloomberg"], "summary" = "Seed and Series A announcements located; seed announcement terminology aggregates undisclosed pre-seed plus explicitly reported $5.7M seed." }, { "topic" = "investors", "status" = "reported", "checked_at" = "2026-10-04T16:05:30Z", "next_review_on" = "2027-01-04", "queries" = ["Chamelio funding raised seed pre-seed Series A investors valuation acquired", "Chamelio Hebrew funding founders Israel גיוס"], "source_ids" = ["series-a", "workbench-seed"], "summary" = "Named investors are recorded from financing announcements; no public cap table or ownership percentages found." }, { "topic" = "team", "status" = "reported", "checked_at" = "2026-10-04T16:05:30Z", "next_review_on" = "2027-01-04", "queries" = ["Chamelio Alex Zilberman Gil Banyas Gal Lellouche team founder background"], "source_ids" = ["ynet-seed", "series-a"], "summary" = "Three co-founders and roles/backgrounds identified in reporting and company materials." }, { "topic" = "ownership", "status" = "no_public_disclosure", "checked_at" = "2026-10-04T16:05:30Z", "next_review_on" = "2027-01-04", "queries" = ["Chamelio ownership parent company cap table acquisition"], "source_ids" = ["ivc", "series-a"], "summary" = "No disclosed parent or ownership percentages located. Private cap table not public; IVC describes Innvo AI Ltd. (Chamelio), while secondary source calls it Innvo AI Inc.; legal entity form unresolved." }, { "topic" = "financials", "status" = "no_public_disclosure", "checked_at" = "2026-10-04T16:05:30Z", "next_review_on" = "2027-01-04", "queries" = ["Chamelio revenue ARR financials burn runway"], "source_ids" = ["series-a", "bloomberg"], "summary" = "Company disclosed relative ARR growth only; absolute ARR, revenue, profitability, burn and runway not disclosed." }, { "topic" = "traction", "status" = "reported", "checked_at" = "2026-10-04T16:05:30Z", "next_review_on" = "2027-01-04", "queries" = ["Chamelio customers traction contracts partnerships ARR growth"], "source_ids" = ["workbench-seed", "series-a", "bloomberg"], "summary" = "Investor/company announcements and Bloomberg report legal-team adoption, customer examples, monthly additions and reported ARR growth; customer counts are not independently audited." }, { "topic" = "intellectual_property", "status" = "no_public_disclosure", "checked_at" = "2026-10-04T16:05:30Z", "next_review_on" = "2027-01-04", "queries" = ["Chamelio patents intellectual property Innvo AI"], "source_ids" = ["series-a"], "summary" = "No company-attributed patent record or specific granted/pending patent surfaced in the searches; proprietary legal action model is a company claim, not verified IP protection." }, { "topic" = "competition", "status" = "reported", "checked_at" = "2026-10-04T16:05:30Z", "next_review_on" = "2027-01-04", "queries" = ["Chamelio competitors Ivo Ironclad Spellbook Harvey"], "source_ids" = ["ivo-comp", "spells"], "summary" = "Direct overlap with AI contract review and enterprise CLM; comparison sources include vendor materials and are not neutral benchmarking." }, { "topic" = "dual_use", "status" = "no_public_disclosure", "checked_at" = "2026-10-04T16:05:30Z", "next_review_on" = "2027-01-04", "queries" = ["Chamelio defense security government dual use applications"], "source_ids" = ["product", "series-a"], "summary" = "Commercial legal operations evidence only; no public government, defense, or security deployment identified." }]
+claim_checks = [{ "field_path" = "company.operating_status", "support" = "direct", "summary" = "The September 2026 company funding announcement describes current product operations, customer base, and a new financing.", "verified_at" = "2026-10-04T16:05:30Z", "source_ids" = ["series-a"] }, { "field_path" = "israel_connection", "support" = "direct", "summary" = "Israeli-founded identity and founders are identified in contemporaneous reporting; IVC lists a Ramat Gan branch.", "verified_at" = "2026-10-04T16:05:30Z", "source_ids" = ["jewishnews", "ivc"] }, { "field_path" = "funding.reported_total_raised", "support" = "direct", "summary" = "Company/Business Wire announced $10M aggregate seed financing on January 27, 2026. The recorded total is explicitly scoped to that announcement and is not presented as a post-Series A lifetime total.", "verified_at" = "2026-10-04T16:05:30Z", "source_ids" = ["seed-wire", "series-a"] }, { "field_path" = "funding.rounds.seed-2026.amount", "support" = "direct", "summary" = "Work-Bench expressly says it led the $5.7M Seed; this is distinct from the $10M aggregate financing label in company release.", "verified_at" = "2026-10-04T16:05:30Z", "source_ids" = ["workbench-seed"] }, { "field_path" = "funding.rounds.seed-2026.lead_investors", "support" = "direct", "summary" = "Work-Bench says it led the Seed round.", "verified_at" = "2026-10-04T16:05:30Z", "source_ids" = ["workbench-seed"] }, { "field_path" = "funding.rounds.series-a-2026.amount", "support" = "direct", "summary" = "Company announcement reports a $26M Series A announced September 22, 2026.", "verified_at" = "2026-10-04T16:05:30Z", "source_ids" = ["series-a"] }, { "field_path" = "funding.rounds.series-a-2026.lead_investors", "support" = "direct", "summary" = "Company release names Entrée Capital as lead and lists existing investors plus Bright Pixel Capital as participants.", "verified_at" = "2026-10-04T16:05:30Z", "source_ids" = ["series-a"] }, { "field_path" = "funding.rounds.pre-seed-2026.lead_investors", "support" = "direct", "summary" = "Work-Bench says pre-seed was led by Emerge Ventures.", "verified_at" = "2026-10-04T16:05:30Z", "source_ids" = ["workbench-seed"] }, { "field_path" = "funding.rounds.seed-2026.participating_investors", "support" = "direct", "summary" = "The company seed announcement names Emerge as co-lead alongside Work-Bench.", "verified_at" = "2026-10-04T16:05:30Z", "source_ids" = ["seed-wire"] }, { "field_path" = "funding.rounds.series-a-2026.participating_investors", "support" = "direct", "summary" = "Company release names Work-Bench, Emerge Ventures, and Bright Pixel Capital as participants.", "verified_at" = "2026-10-04T16:05:30Z", "source_ids" = ["series-a"] }]

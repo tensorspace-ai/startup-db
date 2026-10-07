@@ -1,0 +1,447 @@
+name = "Adaptive Shield"
+
+description = "Adaptive Shield developed an agentless SaaS Security Posture Management (SSPM) and SaaS identity-security platform. CrowdStrike acquired the company in November 2024 and now markets the technology as Falcon Shield, protecting SaaS configurations, identities, connected applications, data exposure, and activity."
+
+detailed_description = """
+Adaptive Shield was an Israel-founded cybersecurity company focused on the security controls that live inside business SaaS applications rather than on the endpoint or network. Its technology connected to applications through APIs and OAuth, inventoried users, privileged roles, devices, connected applications, permissions, and exposed data, and evaluated native configuration controls against security checks and compliance-oriented policies. The product was designed to be agentless, which is important for SaaS environments where customers generally cannot install a traditional sensor in the provider's infrastructure. Current CrowdStrike materials describe the successor Falcon Shield offering as covering more than 200 SaaS applications, with more than 3,500 built-in hardening checks and support for custom checks.
+
+The commercial problem is persistent and specific: SaaS providers expose security settings and identity relationships, but responsibility for configuring and monitoring those controls remains with the customer. Falcon Shield addresses weak MFA or SSO settings, excessive privileges, public or over-shared data, dormant and partially deprovisioned users, risky third-party applications, and suspicious activity across connected SaaS services. It combines posture scoring and historical reporting with remediation guidance, role-based access for application owners, configurable reports, and policy-based actions such as revoking or blocking risky connected applications. This places it alongside SSPM, SaaS identity threat detection and response, CASB, identity governance, and security operations products rather than making it a general-purpose endpoint tool.
+
+Market evidence is stronger for the integrated product than for an independently operating startup. CrowdStrike publicly announced the acquisition on November 6, 2024, and its regulatory filing records the acquisition of 100% of A.S. Adaptive Shield Ltd. on November 20, 2024. CrowdStrike's current product pages, trial workflow, customer stories, and analyst-material references show continued commercialization under the Falcon brand. They also indicate an expanding scope around non-human identities, AI agents, SaaS-to-SaaS and device interactions, and automated response. Those claims establish active product investment and distribution, but they do not independently verify renewal rates, standalone Adaptive Shield revenue, customer concentration, or the effectiveness of every automated action.
+
+The defense and national-security case is credible but enabling. Military, government, and defense-industrial organizations increasingly use collaboration, identity, development, and workflow SaaS for administrative and mission-support functions. Continuous checks can reduce accidental exposure, privilege sprawl, shadow applications, and lateral movement through compromised SaaS identities; activity monitoring can add context to investigations that endpoint telemetry cannot see. The technology is not a weapons system and does not itself provide offensive capability, classified-cloud authorization, or mission assurance. Its value depends on the customer's SaaS authorization boundary, data residency, identity architecture, connector permissions, incident-response process, and ability to operate the product in an environment meeting the relevant accreditation requirements.
+"""
+
+# Metadata and identification
+logo = "https://www.crowdstrike.com/content/dam/crowdstrike/brand-assets/crowdstrike-logo.svg"
+website = "Unknown"
+sector = "Cybersecurity"
+founded = "2019"
+headquarters = "Tel Aviv, Israel (acquired by US-headquartered CrowdStrike)"
+employees = "51-200"
+funding_stage = "Acquired by CrowdStrike (closed 2024)"
+entity_type = "acquired_asset"
+
+dual_use = true
+
+dual_use_description = "SSPM has substantive commercial and security applicability because the same SaaS identity, configuration, connected-application, and data-exposure risks affect enterprises and government or defense organizations. The defense relevance is strongest for mission-support and contractor workflows that use commercial SaaS; it is an enabling control, not a uniquely military capability, and public evidence does not establish classified deployment or government accreditation."
+
+key_technologies = [
+  "Agentless SaaS API and OAuth connectors across 200+ business applications",
+  "Continuous configuration assessment with 3,500+ built-in and custom security checks",
+  "Human and non-human identity, privilege, role, and entitlement inventory",
+  "Connected-application, OAuth-scope, shadow-SaaS, and AI-agent discovery",
+  "SaaS activity monitoring, anomaly context, and threat detection",
+  "Policy-based remediation, access revocation, RBAC, reporting, and compliance mapping"
+]
+
+use_cases = [
+  "Find and prioritize weak MFA, SSO, sharing, public-site, and other SaaS configuration controls",
+  "Inventory privileged, dormant, external, and partially deprovisioned SaaS users",
+  "Identify over-permissioned OAuth apps and revoke or block risky connected applications",
+  "Track SaaS posture over time and produce evidence for security and compliance reviews",
+  "Investigate suspicious user, application, device, and SaaS-to-SaaS activity",
+  "Reduce data-exposure and lateral-movement paths in collaboration and development platforms",
+  "Harden government, defense-contractor, and coalition mission-support SaaS environments where authorized"
+]
+
+investible = false
+
+investment_rationale = "Adaptive Shield is no longer an independent investment target: CrowdStrike's filing records a 100% acquisition that closed on November 20, 2024. The relevant diligence question is strategic capability and execution inside Falcon, not startup financing or standalone investibility. Public materials support continued commercialization, but do not establish independent revenue, retention, margins, or government accreditation."
+
+strategic_value = "The asset extends CrowdStrike's endpoint, identity, cloud, and security-operations coverage into SaaS-native control planes. It can give security teams a common view of misconfiguration, identity, connected-app, device, and activity risk, with particular value for organizations whose business or mission-support workflows depend on Microsoft 365, Google Workspace, Salesforce, Atlassian, GitHub, Slack, and similar services. Strategic value is reduced where SaaS is prohibited, isolated, self-hosted, or subject to accreditation and residency constraints that the public product materials do not resolve."
+
+# Calibrated scores (0-100)
+potential_score = 81.0
+technology_score = 85.0
+market_score = 84.0
+team_score = 78.0
+dual_use_score = 73.0
+strategic_alignment_score = 82.0
+
+stage = "mature"
+stage_rationale = "Founded in 2019, Adaptive Shield had a released enterprise product and established SSPM market presence before CrowdStrike announced the acquisition in November 2024. The acquisition closed on November 20, 2024, so this record represents a mature acquired product line rather than an independently financeable startup."
+
+competitors = [
+  "AppOmni",
+  "Obsidian Security",
+  "Valence Security",
+  "Wing Security",
+  "DoControl",
+  "Microsoft Defender for Cloud Apps"
+]
+
+competitive_edge = "The defensible product advantage is depth across SaaS-native controls: broad connectors, application-specific checks, identity and connected-app context, posture history, and remediation workflows. CrowdStrike distribution and correlation with endpoint, identity, cloud, and security-operations telemetry can make Falcon Shield more useful than a standalone SSPM console. The counterpoint is that competitors and platform vendors can add overlapping SaaS posture features, so differentiation depends on connector quality, detection fidelity, response safety, and sustained integration rather than on the category label alone."
+
+risk_factors = [
+  "Acquisition integration risk: Falcon packaging, roadmap changes, or product consolidation may alter the original feature set and customer experience",
+  "Connector and API maintenance risk: coverage and detection quality depend on changing SaaS APIs, permissions, event semantics, and provider limits",
+  "False-positive and remediation risk: automated blocking or revocation can disrupt business workflows unless approval, rollback, and ownership controls are strong",
+  "Crowded-category risk: CASB, SSE, identity-governance, CNAPP, and SaaS vendors are adding overlapping posture and connected-application controls",
+  "Government deployment risk: residency, tenant isolation, supply-chain review, and accreditation requirements may restrict use in sensitive environments",
+  "Privileged-access risk: deep posture and activity analysis requires broad application permissions, creating concentration and credential-governance concerns",
+  "Evidence gap: public materials show product capabilities and acquisition status but do not verify renewal rates, standalone economics, or classified/government deployments"
+]
+
+risk_level = "medium"
+
+signals = []
+
+priority_rank = 0
+
+priority_rationale = "Moderate strategic priority as an acquired cybersecurity capability: SSPM addresses a real and growing attack surface, and Falcon integration can improve distribution and cross-domain context. The record is not an investment priority because the asset is owned by CrowdStrike; further diligence should focus on integration depth, connector permissions, response safeguards, data handling, and eligibility for sensitive government environments."
+
+crawled_at = "2026-01-31T19:35:00+00:00"
+updated_at = "2026-10-03T11:01:57Z"
+
+public_sources = [
+  { label = "CrowdStrike Falcon Shield", url = "https://www.crowdstrike.com/en-us/platform/falcon-shield/", description = "Current product capabilities, SaaS application coverage, hardening checks, customer evidence, and active trial." },
+  { label = "CrowdStrike FY2026 Form 10-K", url = "https://ir.crowdstrike.com/static-files/1d8bec20-2e6c-4d62-9df4-3e37cc2fd779", description = "Acquisition of 100% of A.S. Adaptive Shield Ltd. on November 20, 2024, purchase accounting, and product assets." },
+  { label = "CrowdStrike FY2025 Form 10-K", url = "https://ir.crowdstrike.com/static-files/26d52307-1e24-44b7-bbc9-498b534480e2", description = "Confirms 100% acquisition on November 20, 2024 and the recorded purchase consideration." },
+  { label = "Adaptive Shield Blackstone investment announcement", url = "https://www.businesswire.com/news/home/20230725843418/en/Adaptive-Shield-Secures-Strategic-Investment-from-Blackstone", description = "Company announcement of Blackstone investment and $44M cumulative capital raised; Blackstone customer use and company-reported platform scope." },
+  { label = "Calcalist: Blackstone investment", url = "https://www.calcalist.co.il/calcalistech/article/bk26ir6ch", description = "Israeli reporting that Blackstone's strategic investment was $10M." },
+  { label = "Adaptive Shield Series A announcement", url = "https://www.prnewswire.com/news-releases/adaptive-shield-receives-30m-series-a-investment-from-insight-partners-to-help-businesses-gain-control-of-all-their-saas-investments-301392818.html", description = "Company announcement of the $30M Series A, named participants, leadership, board addition, Fortune 100 customer assertions, and product." },
+  { label = "TechCrunch: Series A funding", url = "https://techcrunch.com/2021/10/05/adaptive-shield-lands-30m-series-a-to-build-out-its-saas-security-platform/", description = "Independent report confirming the Series A, prior seed round, investors, product coverage, and company-reported customer evidence." },
+  { label = "CTech: seed funding and founders", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3844703,00.html", description = "Israeli reporting on the $4M seed, 2019 founding, Tel Aviv headquarters, founders, and founder backgrounds." },
+  { label = "Calcalist: acquisition estimate", url = "https://www.calcalist.co.il/calcalistech/article/sybkjiubjx", description = "Israeli reporting states the approximately $300M purchase price is an estimate and describes the company and investors." },
+  { label = "Forrester: acquisition analysis", url = "https://www.forrester.com/blogs/crowdstrike-acquires-saas-security-specialist-adaptive-shield/", description = "Analyst view of product fit and competitive strategy; explicitly treats the $300M price as a press estimate." },
+  { label = "USPTO patent publication", url = "https://patents.google.com/patent/US20240430303A1/en", description = "Patent record reviewed during IP search; no ownership attributed to Adaptive Shield without confirming assignee linkage." }
+  ,{ label = "TechCrunch: seed funding", url = "https://techcrunch.com/2020/08/12/adaptive-shield-raises-4m-for-its-saas-security-platform/", description = "Independent confirmation of the seed round and company identity." }
+  ,{ label = "CrowdStrike acquisition announcement", url = "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-acquire-adaptive-shield-deliver-only-platform", description = "CrowdStrike announcement of the November 2024 acquisition agreement." }
+]
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Maor Bin", role = "Co-founder and former CEO", is_founder = true, current = false, background = "Former head of cloud security research at Proofpoint; CTech reports he met co-founder Jony Shlomoff during Israeli Defense Forces service.", source_ids = ["ctech_seed", "tc_series_a", "company_series_a"] },
+  { name = "Jony Shlomoff", role = "Co-founder and former CTO", is_founder = true, current = false, background = "Previously co-founder and VP of engineering at Placer.ai; CTech reports he met Maor Bin during Israeli Defense Forces service.", source_ids = ["ctech_seed"] },
+  { name = "Thomas Krane", role = "Insight Partners principal and Adaptive Shield board appointee (2021)", is_founder = false, current = false, background = "Insight Partners principal; the Series A announcement said he would join the company's board.", source_ids = ["company_series_a"] }
+]
+investors = [
+  { name = "Vertex Ventures Israel", investor_type = "vc", website = "https://www.vertexventures.co.il/", round_ids = ["seed-2019", "series-a-2021"], relationship = "historical", source_ids = ["ctech_seed", "tc_series_a", "company_series_a"] },
+  { name = "Insight Partners", investor_type = "vc", website = "https://www.insightpartners.com/", round_ids = ["series-a-2021"], relationship = "historical", source_ids = ["tc_series_a", "company_series_a"] },
+  { name = "Okta Ventures", investor_type = "corporate", website = "https://www.okta.com/", round_ids = ["series-a-2021"], relationship = "historical", source_ids = ["tc_series_a", "company_series_a"] },
+  { name = "Blackstone Innovations Investments", investor_type = "corporate", website = "https://www.blackstone.com/", round_ids = ["strategic-2023"], relationship = "historical", source_ids = ["blackstone_announcement", "calcalist_blackstone"] }
+]
+financials = []
+traction = [
+  { kind = "customer", description = "Adaptive Shield said it served Fortune 100 customers in its 2021 company funding announcement. This is a company assertion and the announcement does not identify those customers.", date = "2021-10-05", source_ids = ["company_series_a"] },
+  { kind = "customer", description = "Blackstone said it was using Adaptive Shield to monitor the security posture of its business-critical SaaS applications while making a strategic investment.", date = "2023-07-25", source_ids = ["blackstone_announcement"] },
+  { kind = "product", description = "CrowdStrike currently markets Falcon Shield with more than 200 integrated SaaS apps and more than 3,500 application hardening checks; these are current product claims, not independently measured efficacy results.", date = "2026-10-03", source_ids = ["falcon_shield"] },
+  { kind = "customer", description = "CrowdStrike's Falcon Shield page publishes customer testimonials from Ashton Woods, People First Bank, and Doctolib. These support current product usage statements but do not disclose contract value or deployment scale.", date = "2026-10-03", source_ids = ["falcon_shield"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "AppOmni", website = "https://appomni.com/", rationale = "Direct SSPM and SaaS security competitor." , differentiation = "Independent vendor positioning centers on SaaS security across connected apps; compare connector depth, response controls, and integration breadth." , source_ids = ["forrester_analysis"] },
+  { name = "Obsidian Security", website = "https://www.obsidiansecurity.com/", rationale = "Competes in SaaS application security and identity threat detection." , differentiation = "Evaluate SaaS threat detection and identity context against Falcon Shield's integration into CrowdStrike's wider platform." , source_ids = ["forrester_analysis"] },
+  { name = "Palo Alto Networks SaaS Security", website = "https://www.paloaltonetworks.com/prisma/saas-security", rationale = "Platform vendor with overlapping SaaS security posture capabilities." , differentiation = "Platform distribution and security-suite bundling make this a relevant alternative; capability overlap changes with product roadmaps." , source_ids = ["forrester_analysis"] },
+  { name = "Microsoft Defender for Cloud Apps", website = "https://www.microsoft.com/en-us/security/business/cloud-security/microsoft-defender-cloud-apps", rationale = "Large-suite substitute for SaaS discovery, control, and threat visibility." , differentiation = "Native Microsoft ecosystem coverage can reduce deployment friction for Microsoft-centric tenants, while cross-vendor SaaS coverage and control depth require direct evaluation." , source_ids = ["falcon_shield"] }
+]
+
+[intelligence.company]
+company_id = "il-adaptive-shield"
+legal_name = "A.S. Adaptive Shield Ltd."
+aliases = ["Adaptive Shield", "A.S. Adaptive Shield Ltd."]
+operating_status = "acquired"
+business_model = "Enterprise cybersecurity software sold as a SaaS security posture and identity-risk product; the independent company was acquired and the product is now marketed within CrowdStrike Falcon as Falcon Shield."
+products = ["Adaptive Shield SSPM", "CrowdStrike Falcon Shield"]
+locations = ["Tel Aviv, Israel"]
+founded_on = "2019-08"
+source_ids = ["sec_10k_2025", "ctech_seed", "falcon_shield"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public sources identify a $4M 2019 seed, a $30M 2021 Series A, and a 2023 Blackstone strategic investment. Adaptive Shield's 2023 announcement states cumulative capital raised of $44M. Calcalist reported the Blackstone check at $10M, which reconciles with the earlier rounds; the company did not disclose the check size in its announcement. The acquisition payment is recorded separately as M&A consideration, not financing. No public valuation for the private funding rounds was verified."
+reported_total_raised = 44000000
+reported_total_currency = "USD"
+total_source_ids = ["blackstone_announcement"]
+total_as_of = "2023-07-25"
+total_scope = "Company-reported cumulative capital raised as of the Blackstone strategic investment announcement; not derived by summing individual event amounts."
+history_status = "partial"
+coverage_through = "2024-11-20"
+rounds = [
+  { id = "seed-2019", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2020-08-12", amount_status = "reported", amount = 4000000, amount_scope = "round", currency = "USD", lead_investors = ["Vertex Ventures Israel"], participating_investors = [], source_ids = ["ctech_seed", "techcrunch_seed"] },
+  { id = "series-a-2021", round_type = "Series A", instrument = "equity", status = "closed", announced_on = "2021-10-05", amount_status = "reported", amount = 30000000, amount_scope = "round", currency = "USD", lead_investors = ["Insight Partners"], participating_investors = ["Okta Ventures", "Vertex Ventures Israel"], source_ids = ["company_series_a", "tc_series_a"] },
+  { id = "strategic-2023", round_type = "Strategic investment", instrument = "equity", status = "closed", announced_on = "2023-07-25", amount_status = "reported", amount = 10000000, amount_scope = "round", currency = "USD", lead_investors = ["Blackstone Innovations Investments"], participating_investors = [], notes = "Adaptive Shield announced a new Blackstone investment and $44M total raised but did not state this check's size. Calcalist reported $10M. The $10M amount is attributed to that media report; the separate company-announced total is recorded independently.", source_ids = ["calcalist_blackstone", "blackstone_announcement"] }
+]
+
+[intelligence.ownership]
+status = "reported"
+summary = "CrowdStrike agreed to acquire Adaptive Shield on November 6, 2024. CrowdStrike's FY2025 filing confirms it acquired 100% of A.S. Adaptive Shield Ltd. on November 20, 2024. Its FY2026 10-K records $213.7M cash consideration net of $13.7M cash acquired plus $0.7M fair value for replacement awards attributable to pre-acquisition service. Calcalist separately reported an estimated approximately $300M deal value and explicitly said the companies had not published a purchase price; that estimate is not substituted for the accounting consideration."
+parent_company = "CrowdStrike Holdings, Inc."
+stock_ticker = "NASDAQ: CRWD"
+cap_table_status = "undisclosed"
+shareholders = ["CrowdStrike Holdings, Inc."]
+source_ids = ["sec_10k_2025", "crowdstrike_acquisition", "calcalist_acquisition"]
+deals = [
+  { id = "crowdstrike-acquisition-2024", deal_type = "acquisition", company_role = "target", announced_on = "2024-11-06", completed_on = "2024-11-20", status = "completed", counterparty = "CrowdStrike Holdings, Inc.", amount = 214400000, amount_status = "reported", currency = "USD", notes = "Approximate accounting consideration: $213.7M cash net of acquired cash plus $0.7M replacement equity awards for pre-acquisition service. This is distinct from press estimates of approximately $300M that include other employee retention/vesting components.", source_ids = ["sec_10k_2025", "crowdstrike_acquisition", "calcalist_acquisition"] }
+]
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Founded in Tel Aviv by Israeli founders Maor Bin and Jony Shlomoff; Adaptive Shield announced its seed financing as a Tel Aviv-based company, and CrowdStrike's filing identifies the acquired Israeli legal entity as A.S. Adaptive Shield Ltd."
+as_of = "2026-10-03"
+source_ids = ["ctech_seed", "techcrunch_seed", "sec_10k_2025"]
+
+[intelligence.research]
+researched_at = "2026-10-03T11:01:57Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Adaptive Shield CrowdStrike acquisition November 2024 amount investors funding raised",
+  "Adaptive Shield funding rounds investors Series B 2022 2021",
+  "Adaptive Shield founder co-founder CEO leadership CrowdStrike acquisition",
+  "Adaptive Shield patents SaaS security posture management",
+  "Adaptive Shield $10 million July 2023 Blackstone funding",
+  "site:adaptiveshield.com Adaptive Shield $10 million Blackstone",
+  "Adaptive Shield $4 million seed 2019 investor Vertex announcement",
+  "Adaptive Shield CrowdStrike $213 million 10-K 100% November 20 2024",
+  "site:adaptiveshield.com Maor Bin Adaptive Shield founders",
+  "Adaptive Shield founders Maor Bin Jony Shlomoff company history",
+  "Adaptive Shield Blackstone investment amount 2023 strategic investment",
+  "Adaptive Shield acquired $300 million Calcalist November 2024",
+  "site:crowdstrike.com/en-us/platform/falcon-shield 200 applications 3500 checks",
+  "Adaptive Shield investors Vertex Insight Okta portfolio Adaptive Shield"
+]
+gaps = [
+  "financials: No public standalone Adaptive Shield revenue, ARR, profitability, burn, or runway was found; CrowdStrike says the acquisition did not materially affect consolidated financial statements and provides no standalone results.",
+  "intellectual_property: Patent search found potentially relevant SaaS-control patent records, but no assignment to Adaptive Shield was confirmed; no company-attributed patent is asserted.",
+  "ownership: Private pre-acquisition cap table and individual shareholder percentages were not disclosed in reviewed primary sources; no percentages inferred.",
+  "team: Leadership evidence is strongest for the two founders and the named 2021 board appointee; post-acquisition product leadership and current employee roster were not publicly established.",
+  "traction: Customer references and Fortune 100/Fortune 500 claims are limited; contract values, renewal rates, deployment scale, customer count, and revenue are not public.",
+  "competition: Competitor comparison is based on public product positioning; no like-for-like independent benchmark of connector depth, efficacy, or pricing was found.",
+  "dual_use: No public evidence found for classified deployments, government contracts, security certifications, or defense accreditation; defense relevance remains an enabling use case only.",
+  "The 2024 Calcalist story cites $34M raised and estimates the acquisition at approximately $300M; the later 2023 company announcement states $44M raised. The reported total used here is the company-announced cumulative figure, while the acquisition estimate remains distinct from SEC purchase accounting."
+]
+conflicts = ["Acquisition value: Calcalist reported an estimated approximately $300M and explicitly noted no published transaction price; CrowdStrike FY2026 10-K purchase accounting gives about $214.4M of consideration on its stated accounting basis. These figures use different scopes and must not be treated as interchangeable.", "A November 2024 Calcalist article reported $34M raised through the acquisition, but the company's July 2023 Blackstone announcement reported $44M total capital raised. The company-announced $44M cumulative total is retained; no event amount is inferred from the inconsistent later article."]
+diligence_questions = [
+  "What is the current Falcon Shield deployment footprint, paid customer count, renewal rate, and revenue contribution following the integration?",
+  "Which original Adaptive Shield connectors, posture checks, threat detections, and remediation workflows remain in the product, and how are breaking SaaS API changes tested?",
+  "What minimum OAuth/API privileges does each connector require, how are credentials isolated, and what approval and rollback safeguards govern automated remediation?",
+  "Which government or defense environments are authorized to use Falcon Shield, and what data residency, tenant isolation, and accreditation controls are available?",
+  "How much of the reported acquisition consideration was cash to shareholders versus employee retention or replacement awards under the full transaction documents?"
+]
+sources = [
+  { id = "falcon_shield", url = "https://www.crowdstrike.com/en-us/platform/falcon-shield/", title = "Falcon Shield", publisher = "CrowdStrike", kind = "company", accessed_at = "2026-10-03T11:01:57Z", claims = ["CrowdStrike currently markets Falcon Shield for SaaS posture and identity security.", "Falcon Shield product page claims 200+ SaaS integrations and 3,500+ hardening checks.", "CrowdStrike publishes customer testimonials for Falcon Shield.", "Falcon Shield page describes coverage for human and non-human identities, AI agents, misconfigurations, and SaaS threats."] },
+  { id = "sec_10k_2025", url = "https://ir.crowdstrike.com/static-files/26d52307-1e24-44b7-bbc9-498b534480e2", title = "CrowdStrike Holdings, Inc. Form 10-K", publisher = "U.S. Securities and Exchange Commission / CrowdStrike", kind = "filing", accessed_at = "2026-10-03T11:01:57Z", published_on = "2025-03-10", claims = ["CrowdStrike acquired 100% of A.S. Adaptive Shield Ltd. on November 20, 2024.", "Adaptive Shield was a SaaS-based cybersecurity company offering SSPM solutions.", "The filing reports $213.7M cash consideration net of acquired cash plus $0.7M replacement awards attributable to pre-acquisition service.", "CrowdStrike reported that Adaptive Shield did not materially affect consolidated financial statements."] },
+  { id = "blackstone_announcement", url = "https://www.businesswire.com/news/home/20230725843418/en/Adaptive-Shield-Secures-Strategic-Investment-from-Blackstone", title = "Adaptive Shield Secures Strategic Investment from Blackstone", publisher = "Business Wire (company release)", kind = "company", accessed_at = "2026-10-03T11:01:57Z", published_on = "2023-07-25", claims = ["Adaptive Shield announced a strategic investment from Blackstone Innovations Investments.", "The company stated the investment brought total capital raised to $44M.", "Blackstone stated it used Adaptive Shield to monitor SaaS security posture across its business-critical applications.", "Adaptive Shield was founded by Maor Bin and Jony Shlomoff and claimed integrations with more than 130 applications."] },
+  { id = "calcalist_blackstone", url = "https://www.calcalist.co.il/calcalistech/article/bk26ir6ch", title = "Strategic investment for Blackstone in Israeli Adaptive Shield", publisher = "Calcalist", kind = "media", accessed_at = "2026-10-03T11:01:57Z", published_on = "2023-07-25", claims = ["Calcalist reported that Blackstone would invest $10M in Adaptive Shield.", "Calcalist reported the company had raised $44M through the investment."] },
+  { id = "company_series_a", url = "https://www.prnewswire.com/news-releases/adaptive-shield-receives-30m-series-a-investment-from-insight-partners-to-help-businesses-gain-control-of-all-their-saas-investments-301392818.html", title = "Adaptive Shield Receives $30M Series A Investment from Insight Partners", publisher = "PR Newswire (company release)", kind = "company", accessed_at = "2026-10-03T11:01:57Z", published_on = "2021-10-05", claims = ["Adaptive Shield announced a $30M Series A led by Insight Partners with Okta Ventures and Vertex Ventures Israel.", "The release identifies Maor Bin as co-founder and CEO and Jony Shlomoff as co-founder.", "The company said it served Fortune 100 customers.", "The release said Thomas Krane of Insight Partners would join the board."] },
+  { id = "tc_series_a", url = "https://techcrunch.com/2021/10/05/adaptive-shield-lands-30m-series-a-to-build-out-its-saas-security-platform/", title = "Adaptive Shield lands $30M Series A to build out its SaaS security platform", publisher = "TechCrunch", kind = "media", accessed_at = "2026-10-03T11:01:57Z", published_on = "2021-10-05", claims = ["The $30M Series A was led by Insight Partners with Okta Ventures and Vertex Ventures Israel.", "Adaptive Shield previously raised a $4M seed round in 2019.", "Maor Bin was co-founder and CEO and previously led cloud research at Proofpoint.", "The company said it had Fortune 500 customers and supported more than 50 SaaS applications at the time."] },
+  { id = "ctech_seed", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3844703,00.html", title = "Adaptive Shield emerges from stealth with $4 million seed round", publisher = "CTech / Calcalist", kind = "media", accessed_at = "2026-10-03T11:01:57Z", published_on = "2020-08-12", claims = ["Adaptive Shield raised a $4M seed round led by Vertex Ventures Israel.", "The company was founded in August 2019 by Maor Bin and Jony Shlomoff and based in Tel Aviv.", "The article describes founders' prior security and Placer.ai experience and their Israeli Defense Forces service."] },
+  { id = "techcrunch_seed", url = "https://techcrunch.com/2020/08/12/adaptive-shield-raises-4m-for-its-saas-security-platform/", title = "Adaptive Shield raises $4M for its SaaS security platform", publisher = "TechCrunch", kind = "media", accessed_at = "2026-10-03T11:01:57Z", published_on = "2020-08-12", claims = ["Adaptive Shield announced a $4M seed round led by Vertex Ventures Israel.", "The company was a Tel Aviv-based security startup founded by co-founders with cybersecurity backgrounds in the Israeli Defense Forces."] },
+  { id = "crowdstrike_acquisition", url = "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-acquire-adaptive-shield-deliver-only-platform", title = "CrowdStrike to Acquire Adaptive Shield to Deliver Integrated SaaS Protection", publisher = "CrowdStrike Investor Relations", kind = "company", accessed_at = "2026-10-03T11:01:57Z", published_on = "2024-11-06", claims = ["CrowdStrike announced an agreement to acquire Adaptive Shield on November 6, 2024.", "CrowdStrike described the intended strategic integration of Adaptive Shield SaaS security technology."] },
+  { id = "calcalist_acquisition", url = "https://www.calcalist.co.il/calcalistech/article/sybkjiubjx", title = "Israeli Adaptive Shield sold to CrowdStrike for estimated $300 million", publisher = "Calcalist", kind = "media", accessed_at = "2026-10-03T11:01:57Z", published_on = "2024-11-06", claims = ["Calcalist reported an estimated approximately $300M acquisition value and explicitly said no purchase price had been published.", "The article identifies Adaptive Shield as a Tel Aviv company founded by Maor Bin and Jony Shlomoff.", "The article lists Insight Partners, Okta Ventures, and Vertex Ventures Israel as investors.", "Calcalist described the product as monitoring and remediating SaaS configuration errors."] },
+  { id = "forrester_analysis", url = "https://www.forrester.com/blogs/crowdstrike-acquires-saas-security-specialist-adaptive-shield/", title = "CrowdStrike Acquires SaaS Security Specialist Adaptive Shield", publisher = "Forrester", kind = "media", accessed_at = "2026-10-03T11:01:57Z", published_on = "2024-11-14", claims = ["Forrester describes Adaptive Shield's SSPM role and strategic fit with CrowdStrike's cloud security platform.", "Forrester reports that some sources estimated $300M and labels the value conditional, not a disclosed transaction price.", "Forrester discusses configuration drift detection and SaaS security product overlap."] },
+  { id = "patent_search", url = "https://patents.google.com/patent/US20240430303A1/en", title = "US20240430303A1: Security controls across SaaS apps", publisher = "Google Patents / USPTO record", kind = "filing", accessed_at = "2026-10-03T11:01:57Z", claims = ["The patent record describes methods for grouping security settings across SaaS apps and detecting policy noncompliance.", "The reviewed record did not establish Adaptive Shield ownership, so it is not attributed to the company."] }
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T11:01:57Z"
+next_review_on = "2027-04-03"
+queries = ["Adaptive Shield CrowdStrike acquisition November 2024 amount investors funding raised", "Adaptive Shield founders Maor Bin Jony Shlomoff company history"]
+source_ids = ["sec_10k_2025", "ctech_seed", "falcon_shield"]
+summary = "Confirmed the legal name in CrowdStrike's filing, the Tel Aviv startup identity and founder names in CTech, and continued product identity under Falcon Shield."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T11:01:57Z"
+next_review_on = "2027-04-03"
+queries = ["Adaptive Shield funding rounds investors Series B 2022 2021", "Adaptive Shield $10 million July 2023 Blackstone funding", "Adaptive Shield $4 million seed 2019 investor Vertex announcement"]
+source_ids = ["ctech_seed", "techcrunch_seed", "company_series_a", "tc_series_a", "blackstone_announcement", "calcalist_blackstone"]
+summary = "Verified seed and Series A amounts and investors with company and media sources. The 2023 company release disclosed cumulative $44M but not its own check amount; Calcalist reports $10M. No later pre-acquisition financing round found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T11:01:57Z"
+next_review_on = "2027-04-03"
+queries = ["Adaptive Shield investors Vertex Insight Okta portfolio Adaptive Shield", "Adaptive Shield Blackstone investment amount 2023 strategic investment"]
+source_ids = ["ctech_seed", "company_series_a", "blackstone_announcement", "calcalist_blackstone"]
+summary = "Round announcements identify Vertex Ventures Israel, Insight Partners, Okta Ventures, and Blackstone Innovations Investments. Exact pre-acquisition ownership percentages are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T11:01:57Z"
+next_review_on = "2027-04-03"
+queries = ["Adaptive Shield founder co-founder CEO leadership CrowdStrike acquisition", "site:adaptiveshield.com Maor Bin Adaptive Shield founders"]
+source_ids = ["ctech_seed", "company_series_a", "tc_series_a"]
+summary = "Founders and historical CEO/CTO roles and sourced backgrounds verified; current post-acquisition Adaptive Shield leadership not established."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-03T11:01:57Z"
+next_review_on = "2027-04-03"
+queries = ["Adaptive Shield CrowdStrike $213 million 10-K 100% November 20 2024", "Adaptive Shield acquired $300 million Calcalist November 2024"]
+source_ids = ["sec_10k_2025", "crowdstrike_acquisition", "calcalist_acquisition"]
+summary = "CrowdStrike's filing confirms 100% acquisition and completion date. Private cap table unavailable. Press estimate and recorded acquisition consideration are kept distinct."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T11:01:57Z"
+next_review_on = "2027-04-03"
+queries = ["Adaptive Shield revenue ARR profitability financials", "CrowdStrike 10-K Adaptive Shield revenue material impact"]
+source_ids = ["sec_10k_2025"]
+summary = "No public standalone revenue, ARR, profitability, burn, or runway metrics found; the 10-K says the acquisition did not materially affect consolidated financial statements."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T11:01:57Z"
+next_review_on = "2027-04-03"
+queries = ["Adaptive Shield Fortune 100 customers SaaS security", "CrowdStrike Falcon Shield customers product 200 apps 3500 checks", "Adaptive Shield Blackstone customer use"]
+source_ids = ["company_series_a", "blackstone_announcement", "falcon_shield"]
+summary = "Company-reported Fortune 100 customer assertion, Blackstone's explicit use as a customer, and current Falcon Shield product claims and customer testimonials found. Commercial metrics and individual testimonial deployment sizes remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T11:01:57Z"
+next_review_on = "2027-04-03"
+queries = ["Adaptive Shield patents SaaS security posture management", "Adaptive Shield USPTO WIPO patent assignee"]
+source_ids = ["patent_search"]
+summary = "Patent record search found a SaaS security-control patent publication but did not verify Adaptive Shield as assignee; no company-owned patent claim made."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T11:01:57Z"
+next_review_on = "2027-04-03"
+queries = ["Adaptive Shield competitors SSPM AppOmni Obsidian Security Valence Wing", "CrowdStrike Adaptive Shield competitors SaaS posture security"]
+source_ids = ["forrester_analysis", "falcon_shield"]
+summary = "Identified AppOmni, Obsidian Security, Palo Alto Networks, and Microsoft as relevant direct competitors or suite substitutes. Public descriptions support category overlap, not a controlled feature benchmark."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T11:01:57Z"
+next_review_on = "2027-04-03"
+queries = ["Adaptive Shield government defense customers contracts classified deployment", "Adaptive Shield government projects SaaS security"]
+source_ids = ["tc_series_a", "ctech_seed", "falcon_shield"]
+summary = "Technology has commercial SaaS and plausible mission-support security applicability, and early company messaging referenced government projects. No verified government contract, classified deployment, certification, or defense customer was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "CrowdStrike's FY2026 10-K says it acquired 100% of A.S. Adaptive Shield Ltd. on November 20, 2024; current commercial product is offered as Falcon Shield."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["sec_10k_2025", "falcon_shield"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "CTech identifies the 2019-founded company and founders as based in Tel Aviv; the acquisition filing identifies A.S. Adaptive Shield Ltd."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["ctech_seed", "sec_10k_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "The company-authored Blackstone investment announcement states the investment brought total capital raised to $44M."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["blackstone_announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2019.amount"
+support = "direct"
+summary = "CTech and TechCrunch report the $4M seed round led by Vertex Ventures Israel."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["ctech_seed", "techcrunch_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2019.investors"
+support = "direct"
+summary = "CTech and TechCrunch name Vertex Ventures Israel as lead investor in the seed round."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["ctech_seed", "techcrunch_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2019.lead_investors"
+support = "direct"
+summary = "CTech and TechCrunch name Vertex Ventures Israel as lead investor in the seed round."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["ctech_seed", "techcrunch_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.amount"
+support = "direct"
+summary = "Adaptive Shield's announcement and TechCrunch report a $30M Series A."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["company_series_a", "tc_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.investors"
+support = "direct"
+summary = "The company announcement and TechCrunch name Insight Partners as lead and Okta Ventures and Vertex Ventures Israel as participating investors."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["company_series_a", "tc_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.lead_investors"
+support = "direct"
+summary = "The company announcement and TechCrunch identify Insight Partners as Series A lead."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["company_series_a", "tc_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.participating_investors"
+support = "direct"
+summary = "The company announcement and TechCrunch identify Okta Ventures and Vertex Ventures Israel as Series A participants."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["company_series_a", "tc_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.strategic-2023.amount"
+support = "direct"
+summary = "Calcalist reports Blackstone's strategic check as $10M; the company announcement separately confirms Blackstone's investment but leaves the check amount undisclosed."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["calcalist_blackstone", "blackstone_announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.strategic-2023.investors"
+support = "direct"
+summary = "Adaptive Shield's investment announcement names Blackstone Innovations Investments."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["blackstone_announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.strategic-2023.lead_investors"
+support = "direct"
+summary = "Adaptive Shield's investment announcement names Blackstone Innovations Investments as investor."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["blackstone_announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "CrowdStrike's SEC filing confirms acquisition of 100% of A.S. Adaptive Shield Ltd."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["sec_10k_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.crowdstrike-acquisition-2024.status"
+support = "direct"
+summary = "CrowdStrike's FY2026 filing says the acquisition was completed November 20, 2024; the November 6 release announced the agreement."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["sec_10k_2025", "crowdstrike_acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.crowdstrike-acquisition-2024.company_role"
+support = "direct"
+summary = "CrowdStrike's filing states it acquired the company, establishing Adaptive Shield as the target."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["sec_10k_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.crowdstrike-acquisition-2024.amount"
+support = "direct"
+summary = "The 10-K's disclosed $213.7M net cash consideration plus $0.7M replacement awards equals approximately $214.4M accounting consideration."
+verified_at = "2026-10-03T11:01:57Z"
+source_ids = ["sec_10k_2025"]

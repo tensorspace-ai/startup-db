@@ -1,0 +1,84 @@
+name = "Spectral"
+description = "Israeli developer-security company acquired by Check Point in 2022; its code-security technology detects hardcoded secrets, vulnerabilities, source-code leakage, and infrastructure-as-code misconfigurations across the software delivery lifecycle."
+detailed_description = """
+Spectral built a developer-first code-security platform for finding security defects before software reaches production. Its documented capabilities include infrastructure-as-code scanning, hardcoded-secret detection, source-code leakage detection, code-tampering prevention, and source-control and CI/CD security. The product was designed to run quickly in developer workflows, including pre-commit and build-time checks, and to scan code, configuration, binaries, and other repository assets without requiring the platform to copy the customer’s code. Official product material describes a programming-language-agnostic engine, more than 2,000 AI-assisted detectors for secrets and sensitive data, and a YAML-based SPEQL language for custom detection and policy modules. Those details make Spectral more than a password-pattern list: its value proposition is context-aware discovery and policy enforcement close to the point where insecure code or credentials are introduced.
+
+The customer problem is persistent and commercially important. Modern engineering teams distribute source code, dependencies, build logs, containers, and cloud configuration across many repositories and CI systems. A leaked API key or an unsafe Terraform setting can turn a small developer mistake into unauthorized access, data exposure, or a supply-chain incident. Spectral’s integrations covered mainstream source-control and CI tooling, while its later CloudGuard positioning connected developer controls to broader cloud-security workflows. Check Point said at acquisition that Spectral’s tools were used by developers at more than 300 organizations and that the products would be integrated into its Infinity platform as part of CloudGuard. That is a credible historical commercialization signal, although public materials do not establish current standalone revenue, retention, or the exact present-day scope of the former Spectral product.
+
+Spectral’s competitive position has two sides. It competed with focused secrets and code-security tools such as GitGuardian, TruffleHog, Gitleaks, and GitHub Advanced Security, as well as with native scanning in GitLab and broader developer-security suites from Snyk and Palo Alto Networks. Open-source scanners reduce switching costs and can be good enough for basic repository checks; integrated application-security platforms can bundle scanning into existing enterprise contracts. Spectral’s defensible advantages were its fast developer workflow, breadth across repositories, CI/CD, registries, code, and IaC, custom detector and policy support, and the distribution and threat-intelligence resources of Check Point after the acquisition. Those advantages are meaningful, but secrets detection and basic IaC scanning are increasingly baseline capabilities, so differentiation depends on detection quality, low false-positive rates, remediation workflow, coverage of new developer tools, and successful integration into the parent platform.
+
+Check Point announced the acquisition on 2022-02-01 and its 2024 annual report records completion of the purchase of all outstanding shares of Spectral Cyber Technologies Ltd. on 2022-02-03. Spectral should therefore be treated as an acquired asset rather than an active independent startup. Its national-security relevance is real but bounded: preventing credential leakage, insecure build configuration, and source-code compromise can improve the resilience of defense, intelligence, government, and critical-infrastructure software supply chains. The reviewed sources do not establish a named defense customer, government contract, or deployment in a military program, so the dual-use case rests on the general importance of secure software production and on the technology’s applicability to high-consequence environments, not on claimed defense traction. The main diligence question is now product continuity and operational impact inside CloudGuard, not venture-scale company growth.
+"""
+logo = "https://spectralops.io/wp-content/uploads/spectral-logo.svg"
+website = "https://spectralops.io"
+sector = "Cybersecurity"
+founded = "2020"
+headquarters = "Tel Aviv, Israel"
+employees = "11-50 (historical standalone range; current Spectral headcount not publicly confirmed)"
+funding_stage = "Acquired by Check Point Software Technologies (completed 2022)"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "Spectral’s core controls have substantive commercial and security-sector applicability because the same secret leakage, source-code exposure, CI/CD compromise, and IaC misconfiguration risks affect defense contractors, government suppliers, and critical-infrastructure operators. The reviewed public record supports technology applicability, but does not establish a named military deployment, government contract, or defense-specific certification. Dual-use strength is therefore credible and practical rather than proven through defense traction."
+key_technologies = [
+  "Hardcoded-secret and credential detection using pattern, entropy, and AI-assisted detectors",
+  "Static analysis for source-code vulnerabilities, leakage, and tampering risks",
+  "Infrastructure-as-code scanning for cloud configuration misconfigurations",
+  "Fast pre-commit, source-control, CI/CD, and build-time scanning",
+  "Multi-artifact analysis across code, configuration, binaries, logs, and public assets",
+  "Custom SPEQL policy language and organization-specific detector modules",
+  "Software-composition analysis for open-source dependency exploitability"
+]
+use_cases = [
+  "Preventing API keys, passwords, tokens, and certificates from entering Git repositories",
+  "Blocking insecure Terraform and other infrastructure-as-code changes before deployment",
+  "Scanning CI/CD pipelines, build logs, container artifacts, and registries for exposed data",
+  "Prioritizing exploitable open-source dependency findings in enterprise applications",
+  "Protecting defense-contractor and government-supplier development environments from supply-chain credential theft",
+  "Reviewing third-party source code and build artifacts during software procurement or incident response",
+  "Applying organization-specific security and privacy policies to developer workflows"
+]
+investible = false
+investment_rationale = "Spectral is not an independent investible startup: Check Point completed its acquisition of all outstanding shares in February 2022. The acquisition and subsequent CloudGuard positioning provide useful market-validation evidence for developer-first code security, but they do not provide a current Spectral equity opportunity or public standalone financial disclosure. Any present diligence would need to focus on the contribution, adoption, and product continuity of the acquired technology inside Check Point rather than on venture financing, standalone growth, or company-level ownership."
+strategic_value = "Spectral is strategically relevant as a reference implementation of code-to-cloud security. Its controls address a foundational failure mode in software supply chains: credentials, unsafe configuration, vulnerable dependencies, or sensitive source can be introduced before conventional runtime defenses see the application. That makes the capability useful to organizations building high-consequence software, including defense and critical-infrastructure suppliers, while the acquisition gives Check Point a route to distribute it through an established cloud-security platform. The record supports strategic applicability, not proof of defense deployment or government procurement."
+public_sources = [
+  "https://www.checkpoint.com/press-releases/check-point-software-technologies-extends-its-cloud-security-offering-with-developer-first-security-platform/",
+  "https://www.checkpoint.com/downloads/investor/20F-2024.pdf",
+  "https://spectralops.io/",
+  "https://spectralops.io/features/",
+  "https://spectralops.io/sca/",
+  "https://spectralops.io/wp-content/uploads/2024/11/23072_CloudGuard-Code-Security_Data_Sheet-1.pdf",
+  "https://www.calcalist.co.il/calcalistech/article/syqkxhucy"
+]
+potential_score = 72.0
+technology_score = 80.0
+market_score = 78.0
+team_score = 70.0
+dual_use_score = 72.0
+strategic_alignment_score = 68.0
+stage = "mature"
+stage_rationale = "Spectral reached released-product and early commercial scale before Check Point acquired all outstanding shares in February 2022. It is mature as a technology and transaction outcome, but it is no longer an independent startup with a separately observable financing, employee, or growth stage. Current maturity should be assessed through CloudGuard product adoption and roadmap evidence, which is not fully disclosed in the reviewed sources."
+competitors = [
+  "GitGuardian",
+  "TruffleHog",
+  "Gitleaks",
+  "GitHub Advanced Security",
+  "GitLab application security and secret detection",
+  "Snyk",
+  "Palo Alto Networks Prisma Cloud Code to Cloud"
+]
+competitive_edge = "Spectral’s strongest edge was the combination of fast developer-facing scanning, coverage across code, CI/CD, public assets, and IaC, customizable SPEQL detectors, and Check Point’s post-acquisition distribution and cloud-security context. The acquisition also reduced the burden of selling a standalone security tool into large regulated organizations. The edge is not unassailable: open-source scanners cover basic secret detection, GitHub and GitLab can bundle controls into existing workflows, and larger CNAPP vendors can offer broader telemetry. Sustained differentiation depends on coverage, precision, remediation, developer adoption, and demonstrable product integration within CloudGuard."
+risk_factors = [
+  "Acquisition removes standalone equity access and makes product outcomes dependent on Check Point’s roadmap and integration priorities",
+  "Secrets detection, IaC scanning, and basic SCA are increasingly bundled or commoditized across developer and CNAPP platforms",
+  "False positives, missed proprietary credentials, and poor remediation guidance can erode developer trust and security value",
+  "Fast-changing repositories, CI providers, package ecosystems, and AI-generated code require continuous detector maintenance",
+  "Scanning sensitive source and build artifacts creates privacy, retention, access-control, and deployment-model diligence requirements",
+  "Public evidence does not establish current standalone revenue, headcount, retention, defense customers, or government contracts",
+  "Customers may resist adding another developer control where GitHub, GitLab, cloud, or endpoint vendors already provide overlapping checks"
+]
+risk_level = "medium"
+signals = [ ]
+priority_rank = 0
+priority_rationale = "Spectral remains a useful strategic reference for developer-first software supply-chain security, but it is not a current priority signal for independent startup screening because Check Point completed the acquisition in 2022. Its scores reflect credible technology and market relevance, moderated dual-use evidence, and limited current company-level visibility. The appropriate follow-up is product and deployment diligence within CloudGuard, not an independent investment thesis."
+crawled_at = "2026-01-30T13:13:00+00:00"
+updated_at = "2026-07-31T19:58:43Z"

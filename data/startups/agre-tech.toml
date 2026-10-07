@@ -1,0 +1,614 @@
+name = "agRE.tech"
+description = "agRE.tech is an Israeli agrivoltaics robotics company developing A²PV and agRE.os to coordinate autonomous field robotics, sensors, and solar infrastructure. Its reported activity now includes the Farm Natur vineyard project in the Golan, a Netherlands pear-orchard PVgrow demonstration, and an Israel Ministry of Energy grant for agrivoltaic panel cleaning."
+detailed_description = """
+**Product and the concrete problem it solves.** agRE.tech attacks a land-use collision that sits at the intersection of two strategic resources: food and energy. Solar developers and farmers compete for the same flat, sunny, well-serviced land, and regulators in many countries block or restrict photovoltaic deployment on arable ground precisely because it displaces agriculture. Agrivoltaics — co-locating crops and solar panels on one plot — is the theoretical answer, but in practice mixing tall solar structures with growing crops makes the land hard to farm with conventional machinery and hard to service for the solar operator. agRE.tech's answer is A²PV (Autonomous-Agri-Photovoltaic), a patent-pending operating-system infrastructure that layers autonomous ground robots, robotic manipulators, sensors, controllable photovoltaic panels, and AI onto an agrivoltaic site so the same land simultaneously maximizes renewable-energy yield and crop output while cutting the labor that would otherwise make the combination uneconomic. The company frames its posture as "helping agriculture without interfering with it," and its public tagline — "Make Agriculture, Solar and Technology WORK TOGETHER" — captures the wedge: automate the operational friction that has kept agrivoltaics from scaling.
+
+**Core technology and how it actually works.** The heart of agRE.tech is not a single robot but an orchestration layer. The A²PV platform coordinates autonomous robots that monitor and clean solar panels, collect high-resolution agricultural data around the clock, and perform selective, dexterous field tasks — spraying, pruning, and harvesting — using robotic manipulators rather than bulk machinery ill-suited to a panel-dense environment. A software layer the company calls agRE.os ingests the 24/7 sensor feed and applies AI to turn raw field data into actionable insight: hazard and disease detection, yield optimization, and coordination of when panels tilt or move versus when the crop needs light or servicing. Crucially, agRE.tech positions itself as an integration-and-autonomy company built on open standards rather than a vertically integrated hardware vendor; its published partner list spans industrial robotics (FANUC), solar tracking and mounting (Solar Tracker, Metreel), crop-monitoring AI (Fermata's Croptimus), and perception (Robotic Perception), among others. The defensible asset is therefore the operating system and the manipulation/perception know-how that let heterogeneous robots and movable solar hardware work a live agricultural field together — a genuinely hard robotics-in-the-wild problem — rather than any one commodity component.
+
+**Market, customers, and go-to-market.** agRE.tech is aiming at the fast-growing agrivoltaics and dual-use-land segment, where energy transition targets, farmland-preservation politics, and rising farm-labor costs all push toward getting two yields from one hectare. Its go-to-market is partnership-led and pilot-anchored: rather than sell robots piecemeal, it seeks to install the A²PV operating layer on agrivoltaic projects developed with energy and agricultural partners. Publicly named ecosystem relationships include EDF Renewables, Israel's Zemach Regional Industries (an agricultural-industrial group owned by 27 kibbutzim), Kinneret Innovation, KKL-JNF, and Tulip Winery, and the company has said it is establishing first commercial fields in Israel and Italy. The buyer set is inherently two-sided — energy developers who want to unlock farmland for solar without regulatory rejection, and growers who want yield and labor relief — which is both the opportunity (agRE.tech can be the neutral operating layer that satisfies both) and the challenge (long, capital-intensive project cycles gated by land, permitting, and utility economics).
+
+**Traction, funding, and third-party validation.** agRE.tech raised roughly $2 million in pre-seed funding disclosed in July 2024, led by French energy major **EDF** with participation from **Zemach Regional Industries** — a notable signal because EDF is a strategic energy investor rather than a generalist VC, and its involvement validates the solar-operations side of the thesis. The strongest external validation to date is a working half-dunam (about 0.05-hectare) vineyard demonstration site in northern Israel that combines the robotics and controllable-solar hardware, a completed product prototype, and a stated ambition to secure a ~100-dunam project to prove the system at field scale. The honest calibration: this is an early, pre-revenue company. Headline capability claims (simultaneous energy-and-crop optimization, labor reduction) are company-stated and demonstrated at pilot scale, not independently validated at commercial hectare-scale; disclosed funding is a single pre-seed round; and named "customers" are best read as pilot, partner, and design-partner relationships rather than proven recurring revenue.
+
+**Founders and team background.** agRE.tech's central asset on the team axis is founder and CEO **Elad Levy**, an unusually credentialed robotics operator for an early agritech company. Levy co-founded and led **Roboteam** — an Israeli maker of tactical unmanned ground robots — as CEO for roughly a decade, taking it from inception to sales in 25-plus countries and strategic agreements with tier-1 corporations and governments, and he also co-founded **temi**, a consumer/service personal-robot company. His stated background includes service as a Special Operations officer in the Israeli Air Force and a BSc in mechanical engineering from the Technion. That pedigree matters here for two reasons: fielding autonomous manipulators that operate reliably outdoors in an unstructured, weather-exposed environment is precisely the discipline Roboteam lived in, and Levy's government/enterprise go-to-market experience is directly relevant to selling into utilities and agricultural cooperatives. The depth of the broader engineering, agronomy, and manufacturing bench beyond the founder is not fully documented in public sources and is a primary diligence item.
+
+**Competitive dynamics.** agRE.tech competes on three fronts at once. (1) **Agrivoltaics system builders and trackers** — companies such as Israel's **TriSolar** and solar-tracking specialists like **Solargik** pursue elevated or movable-panel agrivoltaics but generally emphasize the solar-structure side rather than a robotics/autonomy operating layer. (2) **Agricultural robotics pure-plays** — **Tevel Aerobotics** (flying fruit-picking robots), **FFRobotics** (robotic harvesters), and perception/AI vendors compete for the "automate the farm task" budget, but without the integrated solar-and-crop optimization. (3) **Vertically integrated energy developers** who might build agrivoltaics in-house. agRE.tech's differentiation is the combination itself: an OS that treats the panels and the crop as one jointly optimized system and orchestrates third-party robots and solar hardware through open integration, rather than forcing a customer to buy one vendor's full stack. The risks are that (i) large solar developers or agri-robotics incumbents fold the same idea into their platforms, and (ii) an integration-first strategy leaves agRE.tech dependent on partners for the hardware that actually touches the field.
+
+**Defense, security, and resilience dual-use relevance.** The dual-use case here is real but should be framed precisely, because agRE.tech is a food-and-energy company with no disclosed defense program or contract. (1) **Food and energy security / resilience** — the core mission squarely serves strategic resilience: distributed, land-efficient generation of both calories and clean power hardens a nation's food and energy supply against disruption, which is the primary strategic value and the reason the record marks dual_use true. (2) **Autonomous outdoor manipulation as a shared robotics substrate** — reliable autonomous navigation, perception, and dexterous manipulation in unstructured outdoor terrain is the same core competency that underpins defense ground robotics, and it is literally the founder's prior domain (Roboteam); the A²PV/agRE.os autonomy-and-sensor-fusion stack is a credible adjacency to security and critical-infrastructure robotics even though repurposing it would be a separate, unproven effort. (3) **Critical-infrastructure monitoring** — 24/7 robotic sensing of energy assets and land is adjacent to perimeter, site-security, and infrastructure-inspection use cases. The appropriate calibration: agRE.tech is a resilience play (food + energy security) whose defense applicability is an adjacency grounded in the team's robotics lineage, not a fielded capability.
+
+**Growth stage, trajectory, and key diligence risks.** agRE.tech is an early-stage, founder-driven robotics company: founded circa 2023, a pre-seed round disclosed in 2024, a completed prototype, one working demonstration vineyard, and first commercial fields still being established. The trajectory it is betting on — that agrivoltaics scales once the operational friction is automated away, and that food-plus-energy land productivity becomes a policy and economic imperative — is plausible and well-aligned to strategic resource-security tailwinds, but execution risk is high. Key diligence risks: (1) **scale-up risk** — pilot-scale demonstrations must survive the jump to 100-dunam-plus commercial fields with real utility and agronomic economics; (2) **capital intensity** — combining robotics fleets with solar infrastructure is expensive, and disclosed funding is a single pre-seed round; (3) **integration dependence** — an open-standards, partner-reliant model cedes control of field hardware and margin; (4) **adoption and regulatory risk** — agrivoltaics economics hinge on permitting, land-use rules, and utility tariffs that vary by country; (5) **team-depth risk** — public sourcing centers on the founder, and the broader bench is undocumented; and (6) **claims risk** — simultaneous energy-and-crop optimization and labor savings are company-stated at pilot scale and not yet independently field-validated. The bull case is a uniquely credentialed robotics founder attacking a genuine food-energy land conflict with an OS-and-autonomy wedge and a strategic energy backer; the bear case is a capital-hungry integration play that cannot cross the pilot-to-commercial chasm before better-funded solar or agri-robotics incumbents absorb the idea.
+"""
+logo = "Unknown"
+website = "https://www.agre.tech"
+sector = "Agrivoltaics Robotics & Autonomy — Food-Security and Energy-Resilience Operating Systems"
+founded = "2022 (IVC profile; exact incorporation date not verified; some records use 2023)"
+headquarters = "Zemach, Israel (IVC company profile; city-level headquarters not independently confirmed)"
+employees = "Unknown; an IVC profile lists 7 but has no visible update date, so the figure is not treated as current."
+funding_stage = "Seed-stage; IVC lists seed and extension events from 2022–2024; the latest quantified report is a July 2024 $2 million pre-seed, with later investment and grant amounts undisclosed."
+entity_type = "startup"
+dual_use = true
+dual_use_description = "agRE.tech's dual-use relevance is genuine but should be framed precisely: it is a food-and-energy company with no disclosed defense program or contract. (1) Food and energy security / resilience is the primary case — an A²PV site produces both crops and renewable power on one plot, so distributed, land-efficient generation of calories and clean electricity directly hardens national food and energy supply against disruption, which is why this record marks dual_use true. (2) Autonomous outdoor manipulation is a shared robotics substrate — reliable navigation, perception, and dexterous manipulation in unstructured, weather-exposed terrain is the same competency that underpins defense ground robotics and is literally the founder's prior domain (Roboteam tactical UGVs), making the agRE.os autonomy-and-sensor-fusion stack a credible adjacency to security and critical-infrastructure robotics, though repurposing it would be a separate, unproven effort. (3) Critical-infrastructure monitoring — 24/7 robotic sensing of energy assets and land is adjacent to site-security and infrastructure-inspection use cases. Calibration: this is a resilience play whose defense applicability is an adjacency grounded in the team's robotics lineage, not a fielded capability."
+key_technologies = [
+  "A²PV (Autonomous-Agri-Photovoltaic) patent-pending operating-system infrastructure jointly optimizing crops and solar generation on one plot",
+  "agRE.os software layer applying AI to 24/7 high-resolution field data for hazard/disease detection and yield optimization",
+  "Autonomous ground robots with robotic manipulators for selective spraying, pruning, and harvesting in a panel-dense field",
+  "Robotic monitoring and cleaning of photovoltaic panels integrated with controllable/movable solar hardware",
+  "Sensor fusion and outdoor autonomous navigation/perception in unstructured agricultural terrain",
+  "Open-standards integration orchestrating heterogeneous third-party robots and solar hardware (e.g., FANUC, Solar Tracker, Fermata, Robotic Perception)"
+]
+use_cases = [
+  "Co-located crop cultivation and solar generation on regulator-restricted farmland (agrivoltaics)",
+  "Autonomous solar-panel inspection, cleaning, and performance maintenance in agrivoltaic arrays",
+  "Selective robotic spraying, pruning, and harvesting to cut farm labor in panel-dense fields",
+  "24/7 crop and asset monitoring with AI disease/pest and hazard detection",
+  "Utility-scale renewable projects seeking to unlock arable land without displacing agriculture",
+  "Vineyard and specialty-crop operations combining energy yield with premium produce (e.g., demo vineyard, winery partner)",
+  "Distributed food-and-energy resilience for kibbutzim, cooperatives, and rural communities",
+  "Critical-infrastructure and site monitoring via outdoor autonomous robots (adjacency)"
+]
+investible = true
+investment_rationale = "agRE.tech is an early, high-strategic-fit robotics bet whose priority-signal case rests on founder quality, thesis timing, and a strategic energy backer, offset by heavy execution and capital risk. (1) Founder pedigree: Elad Levy co-founded and led Roboteam (tactical UGVs, 25+ countries) for roughly a decade and co-founded temi, bringing exactly the outdoor-autonomy and government/enterprise go-to-market experience the problem demands. (2) Strategic thesis: A²PV attacks a real food-versus-energy land conflict and squarely serves the food-security and energy-resilience axes of the thesis, with agrivoltaics tailwinds from energy-transition targets and farmland-preservation politics. (3) Differentiated wedge: an OS-and-autonomy layer that jointly optimizes crops and panels and orchestrates third-party hardware via open standards, rather than a single-vendor stack. (4) Strategic validation: a ~$2M pre-seed led by EDF (a strategic energy major, not a generalist VC) with Zemach, plus a working demo vineyard, named ecosystem partners, and stated first commercial fields in Israel and Italy. Counterweights are heavy: disclosed funding is a single pre-seed round against a capital-intensive robotics-plus-solar buildout; the model depends on partners for field hardware and margin; pilot-to-commercial scale-up is unproven; agrivoltaics economics hinge on country-specific permitting and utility tariffs; and defense relevance is an adjacency, not a fielded capability. This is a strategic-fit and technical-credibility assessment, not an investment recommendation."
+strategic_value = "agRE.tech's strategic value sits at the food-energy-resilience nexus. (1) Resource security: co-producing calories and clean power on one plot hardens national food and energy supply and improves land productivity, directly relevant to resilience and critical-infrastructure priorities. (2) Autonomy substrate: the outdoor robotic manipulation, perception, and sensor-fusion competencies are dual-use robotics capabilities with credible adjacency to security and infrastructure robotics, reinforced by the founder's tactical-UGV lineage. (3) Ecosystem leverage: an open-standards operating layer positions agRE.tech as the neutral coordination point between energy developers and growers rather than a niche hardware vendor, and a strategic EDF relationship anchors credibility on the energy side. (4) Sovereignty and rural resilience: distributed food-plus-energy generation for kibbutzim and cooperatives supports decentralized, disruption-resistant supply. The ultimate strategic weight depends on converting a single demo vineyard and pre-seed capital into validated, at-scale commercial fields — the value is high in fit but early in proof."
+potential_score = 58.0
+technology_score = 64.0
+market_score = 59.0
+team_score = 75.0
+dual_use_score = 48.0
+strategic_alignment_score = 62.0
+stage = "early"
+stage_rationale = "agRE.tech is classified 'early' on multiple grounds: (1) maturity — founded circa 2023 with a completed prototype and a single half-dunam demonstration vineyard, and first commercial fields still being established rather than operating at scale; (2) capitalization — disclosed financing is a single ~$2M pre-seed round (EDF and Zemach, July 2024) against a capital-intensive robotics-plus-solar roadmap; (3) commercialization — named relationships (EDF Renewables, Zemach, Kinneret Innovation, KKL-JNF, Tulip Winery) are best read as pilot, partner, and design-partner engagements rather than proven recurring revenue; and (4) validation — headline energy-and-crop optimization and labor-savings claims are demonstrated at pilot scale and not independently validated at commercial hectare-scale. The company has clearly moved past concept — a credentialed founder, a strategic energy investor, a working demo, and named ecosystem partners — but it remains pre-revenue and pre-scale. Progression to 'mid' would require a validated ~100-dunam-plus commercial deployment, a substantial growth round, and documented team depth beyond the founder."
+competitors = [
+  "TriSolar / InnoWadi (Israeli agrivoltaics developer emphasizing elevated/movable-panel solar over farmland)",
+  "Solargik (Israeli adaptive solar-tracking systems, including for agrivoltaic and complex terrain)",
+  "Tevel Aerobotics (Israeli flying autonomous fruit-picking robots; competes for the farm-automation budget)",
+  "FFRobotics (Israeli robotic fresh-fruit harvesting systems)",
+  "Vertically integrated solar/agrivoltaic developers that could build robotics-enabled dual-use land in-house",
+  "Incumbent manual agrivoltaics operations relying on conventional machinery and labor (the status quo agRE.tech seeks to automate)"
+]
+competitive_edge = "agRE.tech's edge is the combination itself plus a rare founder profile. (1) Joint optimization: A²PV treats the solar panels and the crop as one system to be co-optimized, rather than bolting robots onto a solar farm or a farm onto a solar site — a differentiated wedge versus tracker-first or harvester-first competitors. (2) OS-and-autonomy layer: agRE.os and open-standards integration let agRE.tech orchestrate heterogeneous third-party robots and solar hardware (FANUC, Solar Tracker, Fermata, Robotic Perception), positioning it as a neutral coordination layer instead of a single-vendor stack. (3) Founder pedigree: Elad Levy's Roboteam and temi background brings genuine outdoor-autonomy engineering and government/enterprise go-to-market experience that most agritech founders lack. (4) Strategic backer: EDF's investment validates the solar-operations economics and opens utility channels. The principal vulnerabilities are dependence on partners for the hardware that touches the field, the capital intensity of a robotics-plus-solar buildout, and the risk that larger solar developers or agri-robotics incumbents absorb the joint-optimization idea before agRE.tech reaches commercial scale."
+risk_factors = [
+  "Scale-up risk: pilot-scale demonstration (half-dunam vineyard) must survive the jump to 100-dunam-plus commercial fields with real utility and agronomic economics",
+  "Capital intensity: combining robot fleets with solar infrastructure is expensive, and disclosed funding is a single ~$2M pre-seed round",
+  "Integration dependence: an open-standards, partner-reliant model cedes control of field hardware and margin to third parties",
+  "Adoption/regulatory risk: agrivoltaics economics hinge on country-specific permitting, land-use rules, and utility tariffs",
+  "Team-depth risk: public sourcing centers on the founder; the broader engineering, agronomy, and manufacturing bench is undocumented",
+  "Claims risk: simultaneous energy-and-crop optimization and labor savings are company-stated at pilot scale and not independently field-validated",
+  "Dual-use is an adjacency: no disclosed defense program or contract, so defense/security relevance is potential rather than demonstrated"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "agRE.tech merits monitoring as an early, strategically well-aligned robotics bet on the food-energy-resilience nexus, led by an unusually credentialed founder, but tempered by pre-seed-stage traction and capital risk. Strengths supporting attention: (1) a differentiated A²PV operating-system wedge that jointly optimizes crops and solar on one plot; (2) a founder — Elad Levy of Roboteam and temi — with directly relevant outdoor-autonomy and government/enterprise experience; (3) strategic validation via a ~$2M pre-seed led by energy major EDF with Zemach, plus a working demo vineyard and named ecosystem partners; and (4) squarely thesis-aligned relevance to food security, energy resilience, and dual-use robotics/autonomy. Offsetting factors that cap priority: single-round pre-seed funding against a capital-intensive buildout, unproven pilot-to-commercial scale-up, dependence on partners for field hardware, permitting/utility-economics exposure, undocumented team depth, and defense relevance that is an adjacency rather than a fielded capability. Milestones to track: a validated ~100-dunam-plus commercial deployment, first commercial fields in Israel and Italy going live, a substantial growth round, expansion of the engineering/agronomy team, and any move toward critical-infrastructure or security robotics applications."
+public_sources = [
+  { label = "agRE.tech official website", url = "https://www.agre.tech/", description = "Official description of A²PV, agRE.os, the company team, open integrations, and partner ecosystem." },
+  { label = "Calcalist: agRE.tech pre-seed announcement", url = "https://www.calcalist.co.il/calcalistech/article/hyluzglwr", description = "July 2024 report on the approximately $2 million pre-seed, EDF and Zemach participation, founder Elad Levy, and early product development." },
+  { label = "pv magazine: agRE.tech financing", url = "https://www.pv-magazine.com/2024/07/08/edf-invests-in-israeli-robotic-agrivoltaics-startup/", description = "Trade press account of the reported $2 million pre-seed, lead investors, agrivoltaics product, and commercial-field plans." },
+  { label = "agRE.tech company updates", url = "https://il.linkedin.com/company/agretech", description = "Company-posted updates on Nofar Israel investment/partnership, the Ministry of Energy grant, PVgrow, and current company activity." },
+  { label = "agRE.tech Farm Natur project update", url = "https://www.linkedin.com/posts/agretech_naturproject-agrivoltics-sustainable-activity-7410676785996259328-F2at", description = "Company account says agRE.tech contributes robotics to the Farm Natur project with Tulip Winery and Meshek Energy." },
+  { label = "New-Tech: agRE.tech and FANUC partnership", url = "https://www.new-techonline.com/2025/06/%D7%94%D7%A8%D7%95%D7%91%D7%95%D7%98-%D7%9E%D7%99%D7%A4%D7%9F-%D7%99%D7%92%D7%96%D7%95%D7%9D-%D7%99%D7%A8%D7%A1%D7%A1-%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A3-%D7%9B%D7%9E%D7%95-%D7%97%D7%A7%D7%9C%D7%90/", description = "June 2025 report on an agreement to integrate FANUC robots and cobots into an agrivoltaic agriculture-energy project in the Jordan Valley." },
+  { label = "Future Farming: agRE.tech and Fermata", url = "https://www.futurefarming.com/smart-farming/fermata-and-agre-tech-join-forces-to-integrate-pest-monitoring-and-robotic-systems/", description = "August 2024 report on integrating Fermata's Croptimus crop monitoring with agRE.tech's robotic system; collaboration does not by itself establish a paying customer." },
+  { label = "ESIL: Partnership in Action", url = "https://esil.co.il/partnership-in-action/", description = "ESIL's 2025 statement that ESIL and EDF invested in agRE.tech and that it will support an agrivoltaic initiative with Kibbutz Alummot." },
+  { label = "WO2024176234A2: Automated solar arrays", url = "https://patents.google.com/patent/WO2024176234A2/en", description = "Published patent application record naming RE-Agre.Tech Ltd. and describing movable solar arrays and robotic operation; application publication is not a granted-patent finding." },
+  { label = "IVC agRE.tech company profile", url = "https://www.ivc-online.com/Google-Card?ID=e8da96c4-0709-ee11-b811-00505695cd29&type=1", description = "Secondary profile for Re-agRE.tech Ltd. reporting its former name, 2022 establishment, Zemach address, seven employees of unknown recency, and several seed/extension and grant records with amounts or investor names masked." },
+  { label = "Ynet: Farm Natur vineyard", url = "https://www.ynet.co.il/environment-science/article/yokra14656049", description = "Independent reporting on a 300-dunam Farm Natur agrivoltaic vineyard under development with robotics, solar panels, Tulip Winery, and Meshek Energy." },
+  { label = "Tulip Winery: Farm Natur project", url = "https://www.linkedin.com/posts/tulip-winery-ltd_in-the-last-few-weeks-we-have-all-seen-the-activity-7404918951022960642-RzTm", description = "Project partner statement describing Farm Natur as a developing smart vineyard with agRE.tech among seven participating technology and energy companies." },
+  { label = "Solargik Agri-PV Tracker", url = "https://www.solargik.com/agri-pv-tracker/", description = "Official competitor product information on elevated agrivoltaic trackers and SCADA control that balances crop sunlight with solar production." },
+  { label = "Tevel robotics technology", url = "https://www.tevel-tech.com/technology/", description = "Official competitor information on autonomous fruit-picking robots, vision, and harvesting systems." }
+]
+crawled_at = "2026-07-13T22:00:30Z"
+updated_at = "2026-10-03T13:08:27Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+
+[intelligence.company]
+company_id = "il-agre-tech"
+legal_name = "Re-agRE.tech Ltd."
+aliases = ["agRE.tech", "AgRE.tech", "Re-agRE.tech", "Robovali"]
+operating_status = "active"
+business_model = "Israeli B2B agritech and energy-technology company developing an operating layer and integrated robotics for agrivoltaic farms. Public materials establish product development, demonstrations, and project collaboration, but do not disclose recurring revenue or a production customer base."
+products = ["A²PV agrivoltaics operating-system infrastructure", "agRE.os farm operations software", "PVgrow crop-aware agrivoltaics decision-intelligence layer", "Autonomous robotic panel-cleaning capability in development under a Ministry of Energy grant"]
+locations = ["Zemach, Israel"]
+founded_on = "2022"
+source_ids = ["company-site", "calcalist-2024", "patent-wo2024", "company-linkedin-2026", "ivc-esil"]
+notes = "IVC identifies the company as Re-agRE.tech Ltd., formerly Robovali, established 2022, with its main address in Zemach; the patent publication uses a closely matching applicant name. The supplied baseline says 2023 and no primary incorporation filing was located, so the founding year and city-level headquarters should be treated as secondary-directory data pending registry confirmation. Employee count is not adopted because the profile's update date is unavailable."
+
+[intelligence.funding]
+status = "reported"
+summary = "Public records show a longer but incomplete funding history than the original record captured. IVC lists seed events in July 2022, May and July 2023, July and November 2024, and an R&D grant dated September 2024, but masks amounts and most investor names. Calcalist and pv magazine report the July 2024 pre-seed at USD 2 million with EDF and Zemach as leads. ESIL confirms investment by 2025; agRE.tech later names Nofar Israel as investor and partner and says it was awarded a Ministry of Energy grant. Amounts and terms for these later/other events remain undisclosed. Do not add IVC's extension entries to the reported USD 2 million amount because it is unclear whether amounts would be incremental or cumulative."
+history_status = "partial"
+coverage_through = "2026-10-03"
+total_scope = "No company-announced lifetime total found. The USD 2 million figure is a reported round amount, not verified cumulative funding; later financing and grant values are unknown."
+
+[[intelligence.funding.rounds]]
+id = "seed-2022"
+round_type = "Seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2022-07-13"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+lead_investors = []
+participating_investors = []
+source_ids = ["ivc-esil"]
+notes = "IVC lists a Seed round on this date; amount and investor identity are redacted in the public card and no primary confirmation was found."
+
+[[intelligence.funding.rounds]]
+id = "seed-extension-2023-05"
+round_type = "Seed extension"
+instrument = "equity"
+status = "announced"
+announced_on = "2023-05-15"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+is_extension_of = "seed-2022"
+lead_investors = []
+participating_investors = []
+source_ids = ["ivc-esil"]
+notes = "IVC labels this a Seed - Extended event; amount and investor identity are redacted. No primary announcement was located, so the reported date/classification are secondary database evidence."
+
+[[intelligence.funding.rounds]]
+id = "seed-extension-2023-07"
+round_type = "Seed extension"
+instrument = "equity"
+status = "announced"
+announced_on = "2023-07-06"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+is_extension_of = "seed-2022"
+lead_investors = []
+participating_investors = []
+source_ids = ["ivc-esil"]
+notes = "IVC labels this a Seed - Extended event; amount and investor identity are redacted. No primary announcement was located, so the reported date/classification are secondary database evidence."
+
+[[intelligence.funding.rounds]]
+id = "pre-seed-2024"
+round_type = "Pre-seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2024-07-01"
+amount_status = "reported"
+amount = 2000000
+amount_scope = "unknown"
+currency = "USD"
+is_extension_of = "seed-2022"
+lead_investors = ["EDF (EDF Renewables / EDF Power Solutions Israel)", "Zemach Regional Industries"]
+participating_investors = ["EDF (EDF Renewables / EDF Power Solutions Israel)", "Zemach Regional Industries"]
+source_ids = ["calcalist-2024", "pv-magazine-2024"]
+notes = "Calcalist described approximately USD 2 million from EDF and Zemach; pv magazine reported a USD 2 million pre-seed led by both. IVC also lists a Seed - Extended event on the same date, following earlier seed events. It is unclear whether the reported figure is incremental or cumulative, so amount_scope is unknown and it is not used as a lifetime total. No valuation or terms were disclosed. ESIL's participation in this specifically quantified event is unresolved."
+
+[[intelligence.funding.rounds]]
+id = "r-and-d-grant-2024"
+round_type = "R&D grant (database-reported)"
+instrument = "grant"
+status = "announced"
+announced_on = "2024-09-01"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+lead_investors = []
+participating_investors = []
+source_ids = ["ivc-esil"]
+notes = "IVC lists an R&D grant with a masked government-agency identity and no amount. It may or may not correspond to a later public description of the Ministry of Energy grant; no amount or shared program identifier establishes that these are the same or separate awards."
+
+[[intelligence.funding.rounds]]
+id = "seed-extension-2024"
+round_type = "Undisclosed seed extension (secondary-database record)"
+instrument = "unknown"
+status = "announced"
+announced_on = "2024-11-19"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+is_extension_of = "seed-2022"
+lead_investors = []
+participating_investors = []
+source_ids = ["ivc-esil"]
+notes = "IVC lists a Seed - Extended event dated 2024-11-19 and identifies an investor type of Innovation Lab, but the actual investor name and amount are masked. ESIL separately confirms it invested in agRE.tech, without dating the investment; the two facts are not sufficient to assign ESIL to this round. Event classification/date are secondary database reporting, not independently confirmed."
+
+[[intelligence.funding.rounds]]
+id = "ministry-energy-grant-2026"
+round_type = "Israel Ministry of Energy and Infrastructure grant"
+instrument = "grant"
+status = "announced"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+participating_investors = ["Israel Ministry of Energy and Infrastructure"]
+source_ids = ["company-linkedin-2026"]
+notes = "The company announced that it had been awarded a grant to develop a dedicated cleaning capability for its autonomous robot platform in agrivoltaic fields. Public amount, award date, and payment schedule were not disclosed. Nofar Israel is described as the project's energy partner, not as the grantor."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "No public cap table, ownership percentages, parent company, or ownership transaction was found. ESIL, EDF and Nofar have been publicly identified as investors; their stake sizes and current shareholdings are not disclosed. No acquisition or exit of agRE.tech was found."
+cap_table_status = "undisclosed"
+shareholders = ["EDF", "Zemach Regional Industries", "ESIL", "Nofar Israel"]
+source_ids = ["calcalist-2024", "pv-magazine-2024", "esil-2025", "company-linkedin-2026"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Israeli company with operations and project activity in Israel. Calcalist identifies agRE.tech as an Israeli startup; the official company team page describes CEO Elad Levy's Israeli Air Force and Technion background, and the company's recent project disclosures concern Israeli agrivoltaic sites."
+as_of = "2026-10-03"
+source_ids = ["calcalist-2024", "company-site", "company-linkedin-2026"]
+
+[[intelligence.people]]
+name = "Elad Levy"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Company biography says he co-founded Roboteam and temi, led one company from inception to sales in more than 25 countries, served as an Israeli Air Force Special Operations officer, and holds a BSc in mechanical engineering from the Technion. Calcalist independently identifies him as agRE.tech's founder and CEO and former Roboteam CEO."
+source_ids = ["company-site", "calcalist-2024"]
+
+[[intelligence.people]]
+name = "Yaniv Marmur"
+role = "CTO"
+is_founder = false
+current = true
+background = "The company lists Marmur as CTO and describes more than 20 years in design and systems engineering, multidisciplinary R&D leadership, and a robotics and control engineering degree from the Technion. The published patent application names Yaniv Marmur among its inventors."
+source_ids = ["company-site", "patent-wo2024"]
+
+[[intelligence.investors]]
+name = "EDF (EDF Renewables / EDF Power Solutions Israel)"
+investor_type = "corporate"
+website = "https://www.edf-renouvelables.com/"
+round_ids = ["pre-seed-2024"]
+relationship = "unknown"
+source_ids = ["calcalist-2024", "pv-magazine-2024", "esil-2025"]
+notes = "Named as a lead in the 2024 pre-seed reports. ESIL later states both ESIL and EDF invested. No stake or current cap-table information is public."
+
+[[intelligence.investors]]
+name = "Zemach Regional Industries"
+investor_type = "corporate"
+round_ids = ["pre-seed-2024"]
+relationship = "unknown"
+source_ids = ["calcalist-2024", "pv-magazine-2024"]
+notes = "Reported as a lead/co-investor in the July 2024 pre-seed. No public ownership percentage found."
+
+[[intelligence.investors]]
+name = "Environmental Sustainability Innovation Lab (ESIL)"
+investor_type = "other"
+website = "https://esil.co.il/"
+round_ids = []
+relationship = "unknown"
+source_ids = ["esil-2025"]
+notes = "ESIL's 2025 site says both ESIL and EDF invested in agRE.tech. IVC assigns an agri-seed extension date in November 2024, but the exact financing event and date have not been confirmed by ESIL or agRE.tech."
+
+[[intelligence.investors]]
+name = "Nofar Israel"
+investor_type = "corporate"
+website = "https://www.nofar-energy.com/"
+round_ids = []
+relationship = "current"
+source_ids = ["company-linkedin-2026"]
+notes = "agRE.tech calls Nofar an investor and partner in a company post displayed as approximately one month before the October 2026 access date. No amount, security, date, or stake is disclosed."
+
+[[intelligence.traction]]
+kind = "product"
+description = "The company says its PVgrow crop-aware decision-intelligence layer was demonstrated in a real pear orchard in the Netherlands following the TALOS EU project; it describes the work as a demonstration, not a paid deployment."
+source_ids = ["company-linkedin-2026"]
+notes = "Company-posted update; no customer, revenue, performance metric, or production contract was disclosed."
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Farm Natur / Project Natur is being developed as a large-scale smart vineyard with Tulip Winery and Meshek Energy; agRE.tech says it is contributing robotics. Independent Ynet reporting describes the project under development over 300 dunams in Natur, Golan Heights, with solar panels and a robotic system."
+source_ids = ["ynet-farm-natur", "company-linkedin-project", "tulip-farm-natur"]
+notes = "The project is under development. The 300-dunam project size is not an agRE.tech deployment or customer-revenue figure; Ynet attributes the project and development objective to Tulip Winery and its partners."
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "ESIL reports that agRE.tech will play a role in an agrivoltaic initiative being explored by EDF Power Solutions Israel and Kibbutz Alummot."
+date = "2025-08-26"
+source_ids = ["esil-2025"]
+notes = "Exploratory collaboration; no signed customer contract, project size, deployment date, or revenue is disclosed."
+
+[[intelligence.traction]]
+kind = "other"
+description = "The company announced an Israel Ministry of Energy and Infrastructure grant to develop a dedicated panel-cleaning capability for its autonomous platform, with Nofar Israel joining the project as energy partner."
+source_ids = ["company-linkedin-2026"]
+notes = "Grant award disclosed by the company; amount and award date unavailable."
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "New-Tech reported an agreement to integrate FANUC robots and cobots into an agrivoltaic agriculture-energy project in the Jordan Valley. agRE.tech is described as the integrator; the announcement establishes collaboration intent, not recurring revenue or commercial results."
+date = "2025-06-25"
+source_ids = ["newtech-fanuc", "ivc-esil"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Fermata and agRE.tech announced a collaboration to integrate the Croptimus computer-vision pest and disease monitoring platform with agRE.tech's autonomous robotic system for open-field agrivoltaics."
+date = "2024-08-22"
+source_ids = ["future-farming-fermata"]
+notes = "The sources describe a collaboration and intended integration, not a paid deployment or measured customer outcome."
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "Published PCT application WO2024176234A2, titled 'Automated solar arrays,' names RE-Agre.Tech Ltd. as applicant/assignee and describes solar-array movement/control and robotic operation in an agrivoltaic setting. It is a published patent application; no grant or enforceable scope is asserted here."
+date = "2024-08-29"
+source_ids = ["patent-wo2024"]
+notes = "Patent family status and national-phase prosecution require a current register review; the company also characterizes A²PV as patent-pending."
+
+[[intelligence.comparables]]
+name = "Solargik"
+website = "https://www.solargik.com/agri-pv-tracker/"
+rationale = "Israeli agrivoltaics and solar-tracking company whose official AgriTrack/SOMA offering balances sunlight for crops and solar generation through trackers and SCADA."
+differentiation = "Solargik's public product focus is solar structures, tracking, and SCADA. agRE.tech describes a broader operational robotics layer for crop work, sensing, cleaning, and integration; the two may be partners or competitors depending on project scope."
+source_ids = ["solargik-agripv", "company-site"]
+
+[[intelligence.comparables]]
+name = "Tevel Aerobotics Technologies"
+website = "https://www.tevel-tech.com/"
+rationale = "Israeli agricultural robotics company providing autonomous fruit-picking robots and harvesting data systems."
+differentiation = "Tevel targets autonomous fruit harvesting, while agRE.tech positions itself as an agrivoltaic operating and integration layer across solar operations and multiple farm tasks. They can compete for orchard automation budgets but are not identical products."
+source_ids = ["tevel-tech", "company-site"]
+
+[[intelligence.research.sources]]
+id = "company-site"
+url = "https://www.agre.tech/"
+title = "agRE.tech | Agrivoltaics Robotic Farms"
+publisher = "agRE.tech"
+kind = "company"
+accessed_at = "2026-10-03T13:08:27Z"
+claims = ["Official product descriptions for A²PV and agRE.os", "Company describes its open integration approach and agricultural/solar tasks", "Company identifies Elad Levy as CEO and Yaniv Marmur as CTO, and publishes their backgrounds"]
+
+[[intelligence.research.sources]]
+id = "calcalist-2024"
+url = "https://www.calcalist.co.il/calcalistech/article/hyluzglwr"
+title = "After merging with Psagot: Roboteam founder launches an agriculture startup"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-03T13:08:27Z"
+published_on = "2024-07-01"
+claims = ["Identifies agRE.tech as an Israeli startup and Elad Levy as founder/CEO", "Reports a pre-seed of approximately USD 2 million with EDF and Zemach participation", "Describes robotic operating-system product development and early agricultural/solar tasks"]
+
+[[intelligence.research.sources]]
+id = "pv-magazine-2024"
+url = "https://www.pv-magazine.com/2024/07/08/edf-invests-in-israeli-robotic-agrivoltaics-startup/"
+title = "EDF invests in Israeli robotic agrivoltaics startup"
+publisher = "pv magazine International"
+kind = "media"
+accessed_at = "2026-10-03T13:08:27Z"
+published_on = "2024-07-08"
+claims = ["Reports USD 2 million pre-seed led by EDF and Zemach Regional Industries", "Describes A²PV operating system and the company's commercial field plans"]
+
+[[intelligence.research.sources]]
+id = "company-linkedin-2026"
+url = "https://il.linkedin.com/company/agretech"
+title = "agRE.tech company updates"
+publisher = "agRE.tech on LinkedIn"
+kind = "company"
+accessed_at = "2026-10-03T13:08:27Z"
+claims = ["Company currently presents itself as active and developing agrivoltaics technology", "Company identifies Nofar Israel as investor and partner; no investment amount is disclosed", "Company reports award of an Israel Ministry of Energy and Infrastructure grant for panel-cleaning development; amount is undisclosed", "Company reports PVgrow demonstration in a Netherlands pear orchard", "Company describes recent project activity with Nofar Israel"]
+
+[[intelligence.research.sources]]
+id = "company-linkedin-project"
+url = "https://www.linkedin.com/posts/agretech_naturproject-agrivoltics-sustainable-activity-7410676785996259328-F2at"
+title = "agRE.tech's Farm Natur project update"
+publisher = "agRE.tech on LinkedIn"
+kind = "company"
+accessed_at = "2026-10-03T13:08:27Z"
+claims = ["agRE.tech says it is contributing robotics to Farm Natur with Tulip Winery and Meshek Energy"]
+
+[[intelligence.research.sources]]
+id = "esil-2025"
+url = "https://esil.co.il/partnership-in-action/"
+title = "Partnership in Action"
+publisher = "Environmental Sustainability Innovation Lab (ESIL)"
+kind = "investor"
+accessed_at = "2026-10-03T13:08:27Z"
+published_on = "2025-08-26"
+claims = ["ESIL states both ESIL and EDF invested in agRE.tech", "ESIL says agRE.tech will play a role in an exploratory agrivoltaic initiative with EDF Power Solutions Israel and Kibbutz Alummot"]
+
+[[intelligence.research.sources]]
+id = "ivc-esil"
+url = "https://www.ivc-online.com/Google-Card?ID=e8da96c4-0709-ee11-b811-00505695cd29&type=1"
+title = "Re-agRE.tech Ltd. company profile"
+publisher = "IVC Data & Insights"
+kind = "directory"
+accessed_at = "2026-10-03T13:08:27Z"
+claims = ["IVC lists the legal name Re-agRE.tech Ltd., formerly Robovali, established in 2022, and main address in Zemach, Israel", "IVC lists 7 employees, with no visible profile update date", "IVC records seed and extension events in 2022, 2023, and 2024 with amounts and most investor names redacted", "IVC records an R&D grant dated September 2024 with the government agency and amount redacted", "IVC lists CEO Elad Levy and CTO Yaniv Marmur"]
+
+[[intelligence.research.sources]]
+id = "newtech-fanuc"
+url = "https://www.new-techonline.com/2025/06/%D7%94%D7%A8%D7%95%D7%91%D7%95%D7%98-%D7%9E%D7%99%D7%A4%D7%9F-%D7%99%D7%92%D7%96%D7%95%D7%9D-%D7%99%D7%A8%D7%A1%D7%A1-%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A3-%D7%9B%D7%9E%D7%95-%D7%97%D7%A7%D7%9C%D7%90/"
+title = "FANUC and agRE.tech announce robotics collaboration"
+publisher = "New-Tech Online"
+kind = "media"
+accessed_at = "2026-10-03T13:08:27Z"
+published_on = "2025-06-25"
+claims = ["Reports an agreement to integrate FANUC robots and cobots into an agrivoltaic agriculture-energy project in the Jordan Valley", "Describes intended tasks and project ecosystem; does not establish sales revenue or commercial performance"]
+
+[[intelligence.research.sources]]
+id = "future-farming-fermata"
+url = "https://www.futurefarming.com/smart-farming/fermata-and-agre-tech-join-forces-to-integrate-pest-monitoring-and-robotic-systems/"
+title = "Fermata and agRE.tech integrate pest monitoring and robotic systems"
+publisher = "Future Farming"
+kind = "media"
+accessed_at = "2026-10-03T13:08:27Z"
+published_on = "2024-08-22"
+claims = ["Reports collaboration integrating Fermata's Croptimus crop-monitoring platform with agRE.tech's autonomous robotic system", "Describes intended crop screening and selective treatment; no paid contract or revenue is disclosed"]
+
+[[intelligence.research.sources]]
+id = "ynet-farm-natur"
+url = "https://www.ynet.co.il/environment-science/article/yokra14656049"
+title = "The smart vineyard: robots, solar panels and Israeli wine in the Golan Heights"
+publisher = "Ynet"
+kind = "media"
+accessed_at = "2026-10-03T13:08:27Z"
+claims = ["Reports a 300-dunam Farm Natur vineyard under development in Natur, Golan Heights", "Describes solar panels and an AI-enabled robotic system for vineyard operations", "Identifies Tulip Winery and energy/agritech partners; does not establish agRE.tech revenue or a production deployment"]
+
+[[intelligence.research.sources]]
+id = "tulip-farm-natur"
+url = "https://www.linkedin.com/posts/tulip-winery-ltd_in-the-last-few-weeks-we-have-all-seen-the-activity-7404918951022960642-RzTm"
+title = "Tulip Winery describes its Farm Natur vineyard project"
+publisher = "Tulip Winery on LinkedIn"
+kind = "customer"
+accessed_at = "2026-10-03T13:08:27Z"
+claims = ["Tulip Winery says Farm Natur is being built as a smart vineyard and names agRE.tech among seven participating partners"]
+
+[[intelligence.research.sources]]
+id = "patent-wo2024"
+url = "https://patents.google.com/patent/WO2024176234A2/en"
+title = "WO2024176234A2 - Automated solar arrays"
+publisher = "Google Patents (WIPO PCT publication record)"
+kind = "filing"
+accessed_at = "2026-10-03T13:08:27Z"
+published_on = "2024-08-29"
+claims = ["Published PCT application WO2024176234A2 bears the title Automated solar arrays", "The application record identifies RE-Agre.Tech Ltd. and inventors including Yaniv Marmur", "The published description concerns movable solar arrays and robotic operation; it is an application record, not proof of granted rights"]
+
+[[intelligence.research.sources]]
+id = "solargik-agripv"
+url = "https://www.solargik.com/agri-pv-tracker/"
+title = "Agri-PV Tracker"
+publisher = "Solargik"
+kind = "company"
+accessed_at = "2026-10-03T13:08:27Z"
+claims = ["Solargik markets elevated Agri-PV trackers and SCADA that balance crop sunlight needs with solar generation"]
+
+[[intelligence.research.sources]]
+id = "tevel-tech"
+url = "https://www.tevel-tech.com/technology/"
+title = "Technology"
+publisher = "Tevel Aerobotics Technologies"
+kind = "company"
+accessed_at = "2026-10-03T13:08:27Z"
+claims = ["Tevel describes autonomous fruit-picking robots, AI perception and fruit tracking, and harvesting optimization"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T13:08:27Z"
+next_review_on = "2027-04-03"
+queries = ["agRE.tech official company team products A²PV", "agRE.tech legal name Re-Agre.Tech Ltd Israeli startup", "agRE.tech founding date Israel headquarters"]
+source_ids = ["company-site", "calcalist-2024", "patent-wo2024"]
+summary = "Canonical brand is agRE.tech; IVC lists Re-agRE.tech Ltd., formerly Robovali, an establishment year of 2022, and a main address in Zemach, Israel. The supplied baseline says 2023 and no primary incorporation filing was located, so year and city remain secondary-directory data pending registry verification."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T13:08:27Z"
+next_review_on = "2027-01-03"
+queries = ["agRE.tech funding raised seed pre-seed Series A 2025 2026", "agRE.tech investors EDF Zemach ESIL Nofar grant", "agRE.tech raised funding valuation amount", "site:ivc-online.com agRE.tech seed extended"]
+source_ids = ["calcalist-2024", "pv-magazine-2024", "company-linkedin-2026", "esil-2025", "ivc-esil"]
+summary = "IVC reports seed and extension entries from 2022 through November 2024, with a September 2024 R&D grant; its public card masks most amounts and investor names. Calcalist and pv magazine report the July 2024 pre-seed at USD 2 million led by EDF and Zemach. ESIL and Nofar investment amounts and the later Ministry grant amount are undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T13:08:27Z"
+next_review_on = "2027-04-03"
+queries = ["agRE.tech investors EDF Zemach", "agRE.tech ESIL investment investor", "agRE.tech Nofar Israel investor partner"]
+source_ids = ["calcalist-2024", "pv-magazine-2024", "esil-2025", "company-linkedin-2026", "ivc-esil"]
+summary = "EDF and Zemach are identified in the reported pre-seed; ESIL and EDF confirm investment by 2025; agRE.tech identifies Nofar Israel as an investor in 2026. Investment amounts and ownership stakes are undisclosed, and ESIL's precise round attribution remains unresolved."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T13:08:27Z"
+next_review_on = "2027-04-03"
+queries = ["agRE.tech team Elad Levy CEO Yaniv Marmur CTO", "Elad Levy Roboteam temi Technion background", "Yaniv Marmur agRE.tech CTO background patents"]
+source_ids = ["company-site", "calcalist-2024", "patent-wo2024"]
+summary = "The current company team page names CEO/co-founder Elad Levy and CTO Yaniv Marmur. Public leadership information beyond these operating roles is limited; company reports Marmur's experience and the patent names him as an inventor."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T13:08:27Z"
+next_review_on = "2027-04-03"
+queries = ["agRE.tech ownership cap table shareholders acquisition", "RE-Agre.Tech Ltd parent company ownership", "agRE.tech Nofar investment stake percentage"]
+source_ids = ["company-linkedin-2026", "esil-2025", "patent-wo2024"]
+summary = "No public cap table, share percentages, parent company, or acquisition/exit disclosure found; several investors are named but their holdings are private."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T13:08:27Z"
+next_review_on = "2027-04-03"
+queries = ["agRE.tech revenue ARR financials profitability runway", "agRE.tech revenue customers employees financial results", "agRE.tech valuation burn rate"]
+source_ids = ["calcalist-2024", "company-site", "company-linkedin-2026"]
+summary = "No dated revenue, ARR, profit, burn, runway, or verified headcount figure found in reviewed primary disclosures or reporting; financials is intentionally empty and must not be read as zero revenue."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T13:08:27Z"
+next_review_on = "2027-01-03"
+queries = ["agRE.tech customers pilot contracts commercial fields 2025 2026", "agRE.tech Farm Natur Tulip Winery Meshek Energy 300 dunam", "agRE.tech Netherlands pear orchard PVgrow TALOS", "agRE.tech Israel Ministry of Energy grant Nofar", "agRE.tech FANUC Jordan Valley 2025", "agRE.tech Fermata Croptimus partnership"]
+source_ids = ["company-linkedin-2026", "company-linkedin-project", "tulip-farm-natur", "ynet-farm-natur", "esil-2025", "newtech-fanuc", "future-farming-fermata", "ivc-esil"]
+summary = "Evidence has advanced beyond the original small demonstration: the Farm Natur vineyard project under development is reported at 300 dunams and includes agRE.tech as a robotics participant. Company/partner and press sources also document FANUC and Fermata collaborations, a Netherlands orchard demo, and a Ministry-funded development project. None proves recurring revenue or full-scale product performance."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-03T13:08:27Z"
+next_review_on = "2027-04-03"
+queries = ["agRE.tech patents WO2024176234 automated solar arrays", "RE-Agre.Tech Ltd patent automated solar arrays", "agRE.tech patent applications agrivoltaics"]
+source_ids = ["patent-wo2024", "company-site"]
+summary = "One published PCT application titled Automated solar arrays was located under the legal-name variant RE-Agre.Tech Ltd. A published application is not a granted patent; current family and national-phase status require register diligence."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T13:08:27Z"
+next_review_on = "2027-04-03"
+queries = ["Solargik Agri-PV tracker SCADA official", "Tevel autonomous fruit harvesting robotics official", "Trisolar agrivoltaics Israel official", "agRE.tech agrivoltaics robotics competitors"]
+source_ids = ["solargik-agripv", "tevel-tech", "company-site"]
+summary = "Solargik directly overlaps in Agri-PV controls and solar/crop optimization; Tevel competes for autonomous fruit-harvesting budgets. Their public products emphasize tracking/SCADA and harvesting respectively, while agRE.tech claims an integrated agrivoltaic robotics and operating layer."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T13:08:27Z"
+next_review_on = "2027-04-03"
+queries = ["agRE.tech defense security government contracts", "agRE.tech critical infrastructure security robotics", "Elad Levy Roboteam agRE.tech dual use"]
+source_ids = ["company-site", "calcalist-2024"]
+summary = "No agRE.tech defense program, security contract, or government defense customer was located. Food/energy resilience and outdoor autonomy offer plausible strategic adjacency; this is not evidence of a defense product or contract."
+
+[intelligence.research]
+researched_at = "2026-10-03T13:08:27Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["agRE.tech official company team products A²PV", "agRE.tech legal name Re-Agre.Tech Ltd Israeli startup", "agRE.tech founding date Israel headquarters", "agRE.tech funding raised seed pre-seed Series A 2025 2026", "agRE.tech investors EDF Zemach ESIL Nofar grant", "agRE.tech raised funding valuation amount", "site:ivc-online.com agRE.tech seed extended", "agRE.tech team Elad Levy CEO Yaniv Marmur CTO", "Elad Levy Roboteam temi Technion background", "Yaniv Marmur agRE.tech CTO background patents", "agRE.tech ownership cap table shareholders acquisition", "RE-Agre.Tech Ltd parent company ownership", "agRE.tech Nofar investment stake percentage", "agRE.tech revenue ARR financials profitability runway", "agRE.tech revenue customers employees financial results", "agRE.tech valuation burn rate", "agRE.tech customers pilot contracts commercial fields 2025 2026", "agRE.tech Farm Natur Tulip Winery Meshek Energy 300 dunam", "agRE.tech Netherlands pear orchard PVgrow TALOS", "agRE.tech Israel Ministry of Energy grant Nofar", "agRE.tech patents WO2024176234 automated solar arrays", "RE-Agre.Tech Ltd patent automated solar arrays", "agRE.tech patent applications agrivoltaics", "Solargik Agri-PV tracker SCADA official", "Tevel autonomous fruit harvesting robotics official", "Trisolar agrivoltaics Israel official", "agRE.tech agrivoltaics robotics competitors", "agRE.tech defense security government contracts", "agRE.tech critical infrastructure security robotics", "Elad Levy Roboteam agRE.tech dual use"]
+gaps = ["Funding terms and current cumulative total remain incomplete: the USD 2 million is a July 2024 reported round amount, IVC's older rounds have masked amounts/investors, and later ESIL/Nofar investment and grant amounts are undisclosed.", "The ownership.cap_table_status is undisclosed; investor stakes, fully diluted capitalization, option pool, and any parent-company relationship are unavailable.", "financials: no verified dated revenue, ARR, margins, profitability, burn, runway, or headcount data were found; an empty financials list does not mean zero revenue. IVC lists 7 employees without a visible update date, so it is not adopted as current headcount.", "The exact incorporation date remains unverified; IVC lists Zemach, Israel as the main address but no primary source confirms a specific headquarters city.", "The paid-customer and commercial-deployment status of Farm Natur and the Netherlands PVgrow orchard demonstration is not disclosed; partnership/demo evidence should not be treated as recurring revenue.", "Patent family prosecution and granted-rights status need confirmation through current national and PCT registers.", "No public defense or security contract, certified product, or defense deployment was found; dual-use relevance remains an adjacency."]
+conflicts = ["Funding attribution/history: IVC lists seed/extension events in July 2022, May/July 2023, July/November 2024, and an R&D grant in September 2024; amounts and investor identities are masked. Calcalist and pv magazine identify EDF and Zemach in a USD 2 million July 2024 pre-seed. ESIL later confirms it invested but does not identify its round. No extension amount is added because incremental versus cumulative scope is unknown.", "Grant history: IVC lists an R&D grant in September 2024 with the agency redacted. agRE.tech later announced a Ministry of Energy grant for agrivoltaic cleaning; dates and program identifiers do not show whether these are the same award or separate awards.", "Founding date: IVC lists Established 2022, while the supplied baseline says 2023. No primary incorporation filing or company statement establishing the exact date was located.", "Headquarters city: IVC lists Zemach, Israel as the main address, but the official site and press sources reviewed do not corroborate city-level headquarters."]
+diligence_questions = ["What are the instrument, amount, date, dilution, and current ownership terms for the ESIL and Nofar investments, and how does ESIL's November 2024 extension entry relate to the July 2024 pre-seed?", "What paid scope, acceptance criteria, uptime, labor savings, crop outcomes, and solar-generation results have been achieved or contracted for Farm Natur and the Netherlands pear-orchard PVgrow demonstration?", "What are current recurring revenue, customer concentration, gross margin, hiring/headcount, cash balance, burn, and runway after the latest grant and strategic financing?", "What jurisdictions have granted or are prosecuting the Automated solar arrays patent family, and which claims are owned by RE-Agre.Tech Ltd. versus inventors or partners?", "Which agronomic crop types and array formats are supported in production, and what third-party robot, tracker, sensor, and control integrations have passed field acceptance testing?"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The official company website remains live with product, team, and contact content, while the company's 2026 profile posts announce new investment, grant, and project activity."
+verified_at = "2026-10-03T13:08:27Z"
+source_ids = ["company-site", "company-linkedin-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Calcalist identifies agRE.tech as an Israeli startup; the official team page and company updates document Israeli leadership background and Israeli project activity."
+verified_at = "2026-10-03T13:08:27Z"
+source_ids = ["calcalist-2024", "company-site", "company-linkedin-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2024.amount"
+support = "direct"
+summary = "Calcalist reports approximately USD 2 million and pv magazine reports USD 2 million for the July 2024 pre-seed."
+verified_at = "2026-10-03T13:08:27Z"
+source_ids = ["calcalist-2024", "pv-magazine-2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2024.lead_investors"
+support = "direct"
+summary = "The round reports name EDF and Zemach Regional Industries as the lead investors."
+verified_at = "2026-10-03T13:08:27Z"
+source_ids = ["calcalist-2024", "pv-magazine-2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2024.participating_investors"
+support = "direct"
+summary = "The July 2024 reports identify EDF and Zemach Regional Industries as participants; ESIL's later investment is not assigned to this round absent direct confirmation."
+verified_at = "2026-10-03T13:08:27Z"
+source_ids = ["calcalist-2024", "pv-magazine-2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.ministry-energy-grant-2026.participating_investors"
+support = "direct"
+summary = "The company says the Israel Ministry of Energy and Infrastructure awarded the grant for panel-cleaning development."
+verified_at = "2026-10-03T13:08:27Z"
+source_ids = ["company-linkedin-2026"]

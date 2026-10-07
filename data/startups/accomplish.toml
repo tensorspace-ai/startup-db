@@ -1,0 +1,482 @@
+name = "Accomplish"
+description = "Accomplish (formerly Openwork) is a privately held, Israeli-founded AI software company. It publishes a free MIT-licensed desktop agent for local file, document, and browser workflows, and is developing enterprise execution infrastructure that runs autonomous agents in virtual-machine sandboxes with separately controlled access to user files, credentials, and networks."
+detailed_description = """
+**Product and the concrete problem it solves.** Accomplish targets the gap between an AI assistant that can answer questions and an AI operator that can complete work inside the software people already use. Its public desktop product can organize files, draft and rewrite documents, summarize material, conduct browser workflows, connect to services such as Notion, Google Drive, and Dropbox, and save repeatable procedures as skills. The problem is operational rather than cosmetic: knowledge workers have information spread across local folders, browser tabs, documents, and SaaS applications, while cloud agents create privacy, vendor lock-in, and control concerns when they are allowed to act on that information. Accomplish puts the agent on the user's computer and makes actions visible and approvable. This gives a user a practical way to automate multi-step work without migrating every file into a vendor-controlled workspace, while giving the company a wedge into the larger market for reliable computer-use infrastructure.
+
+**Core technology and how it actually works.** The product is an Electron desktop application built primarily in TypeScript, with reusable agent logic separated into an agent-core package and a daemon or headless execution layer described in the public repository documentation. The agent receives a natural-language objective, uses a selected model provider to plan work, calls local tools for files and applications, and streams progress back to the desktop interface. The important architectural choice is that Accomplish does not provide a proprietary foundation model. Its documentation supports user-supplied keys for OpenAI, Anthropic, Google Gemini, xAI, and other providers, while also supporting local models through Ollama and LM Studio. API keys are stored locally, and the user selects the folders and actions the agent may access. A permission and approval loop exposes proposed steps before execution, which is materially different from an opaque server-side automation API. The open-source MIT-licensed codebase also makes the control path inspectable, forkable, and adaptable. That does not prove the agent is secure against every prompt-injection or tool-abuse scenario, but it makes the security boundary legible enough for technical diligence.
+
+**Market, customers, and go-to-market.** Accomplish has a two-sided go-to-market opportunity. The first side is a developer and power-user community that can download a free open-source desktop agent, bring its own model credentials, run a local model, create skills, and contribute code. The second is enterprise infrastructure for computer-use agents, where organizations need a governed way for AI to interact with existing web applications and internal workflows rather than waiting for every vendor to expose a clean API. The public hiring description explicitly calls Accomplish an enterprise platform and execution layer for computer-use agents, with a focus on secure and reliable interaction with enterprise software through the UI. This suggests a path from community adoption to hosted or supported enterprise controls, although public materials do not disclose the commercial packaging, pricing, conversion rate, or named enterprise customers. The developer-led motion is strategically sensible because an open implementation can generate integrations and workflow knowledge faster than a closed product, but it also creates a monetization question: a permissive license may build distribution while leaving the company to capture value through a commercial control plane, support, managed deployment, or enterprise governance layer that has not yet been fully described.
+
+**Traction, funding, and third-party validation.** Accomplish was included in CTech and Calcalist's 2026 list of the 50 most promising Israeli startups. That profile identifies the founders as Amit Avner, Guy Zipori, and Or Hiltch and reports $20 million of funding from Lightspeed and 8VC. The same public coverage describes the product as an open-source AI coworker that operates directly on a user's PC and provides enterprise infrastructure for control, visibility, and scale. The official GitHub repository supplies a second kind of validation: it is public, MIT licensed, documents a multi-provider architecture, and showed roughly 10,000 public stars and an active release history when researched. The company also maintains public documentation, a product website, and technical hiring in Tel Aviv, including a role describing computer-use agent infrastructure, browser automation, secure execution, and real-world software interaction. These are meaningful ecosystem signals, not evidence of revenue or production scale. Accomplish does not publicly disclose customer names, paid deployment counts, annual recurring revenue, retention, security certifications, or independent benchmark results. The funding headline therefore supports technical and market attention, while the open-source footprint supports developer interest; both require conversion into durable enterprise usage before the company can be considered commercially mature.
+
+**Founders and team background.** The public record identifies Amit Avner, Guy Zipori, and Or Hiltch as the founding team. CTech's profile and the company's technical hiring materials describe them as repeat entrepreneurs with deep roots in enterprise software and AI, while the recruiting material places active research and development in Tel Aviv. The available evidence is stronger on the founders' product and operating thesis than on a detailed biography for each individual: public sources do not provide a complete, independently verified chronology of prior exits, military service, degrees, or exact division of responsibilities. That information gap should be preserved rather than filled with assumptions. What can be said confidently is that the team has recruited around a difficult systems problem at the intersection of AI agents, desktop software, browser automation, and enterprise controls, and has shipped a public codebase rather than limiting the company to a slideware API. The visible engineering surface includes desktop packaging, agent orchestration, provider adapters, secure storage, permissions, and asynchronous task execution. Those are several failure-prone layers, so team diligence should focus on how the founders handle reliability, security response, release discipline, and the transition from an enthusiast tool to a product that can be operated safely inside organizations with sensitive data.
+
+**Competitive dynamics.** Accomplish competes in a fast-forming category where the boundary between desktop assistants, browser automation, coding agents, and enterprise computer-use platforms is still unsettled. 1. Anthropic's Claude desktop and computer-use capabilities, OpenAI's computer-use agents, and Google's Gemini tooling compete with stronger proprietary models and distribution. 2. Microsoft Copilot and Windows integrations can bundle local context, identity, and enterprise administration into software that many target users already own. 3. Browser-native agents such as Browserbase, Browser Use, and startups built around remote browser sessions attack the same execution problem from a cloud control plane. 4. Open-source alternatives such as OpenHands and other agent runtimes compete for developers who value inspectability and self-hosting. 5. Traditional automation platforms such as UiPath and Microsoft Power Automate have mature connectors, audit controls, and enterprise procurement relationships, even if they are less flexible with natural-language computer use. Accomplish's potential edge is the combination of local execution, broad model portability, explicit human approval, open code, and a single desktop surface that can combine files, documents, browser actions, and skills. The weaknesses are equally clear: foundation-model providers can absorb the interface, open-source forks can capture adoption without returning value, and safe reliable UI automation is difficult to maintain as websites, operating systems, and model behavior change.
+
+**Defense, security, and resilience dual-use relevance.** Accomplish's dual-use relevance is credible at the secure execution and human-control layer, but it is not a defense product in the public record. Commercially, local processing can reduce the amount of sensitive material sent to a third-party agent vendor, while bring-your-own-key and local-model support can reduce dependence on one cloud provider. In a security or resilience setting, the same properties could support controlled workstations for incident response, offline or intermittently connected operations, sensitive document handling, continuity planning, and administrative workflows in organizations that cannot place all context in a remote SaaS environment. The explicit approval loop is relevant where an operator must understand and authorize each consequential action, and the open code can in principle be reviewed or adapted for a restricted deployment. These are architectural adjacencies, not verified deployments. Accomplish has not publicly named military, intelligence, emergency-services, critical-infrastructure, or defense-industrial customers; it has not documented air-gapped certification, hardened endpoint controls, classified-data handling, supply-chain accreditation, or resistance to prompt injection under adversarial testing. A local agent can also enlarge the attack surface if permissions, browser sessions, or model outputs are mishandled. The strategic case is therefore that Accomplish is building a potentially useful control and execution substrate for trusted AI adoption, not that it has demonstrated battlefield autonomy or government-grade security.
+
+**Growth stage, trajectory, and key diligence risks.** Accomplish is classified as early: it has a disclosed Seed-level financing signal, a public product and open-source repository, and meaningful developer-facing activity, but no public revenue, customer scale, retention, or certification metrics. The trajectory to watch is whether an open desktop agent can become durable enterprise infrastructure rather than a short-lived interface around rapidly commoditizing models. Key diligence points are: 1. **Security boundary:** test prompt injection, malicious documents, browser-session theft, excessive file permissions, local secret storage, and rollback behavior under adversarial conditions. 2. **Reliability:** measure task completion across changing websites and applications, not just curated demos, and separate model failures from orchestration failures. 3. **Enterprise conversion:** establish whether organizations pay for support, fleet management, policy enforcement, audit logs, private deployment, or a hosted control plane, and whether those features can coexist with the open-source core. 4. **Distribution economics:** determine whether repository interest produces active users, contributors, and repeat workflows rather than one-time downloads. 5. **Model dependence:** track cost, latency, and quality across cloud and local providers, because Accomplish controls the execution surface but not the intelligence layer. 6. **Team depth:** verify the founders' operating history and the company's ability to staff security, platform reliability, and enterprise deployment. 7. **Strategic positioning:** assess whether the company can become a trusted neutral layer between many models and many applications before hyperscalers, operating systems, and automation incumbents bundle the same capability. The $20 million backing and Israeli engineering base give Accomplish room to pursue that transition, but the main milestone is paid, secure, repeatable usage rather than additional launch attention.
+"""
+logo = "Unknown"
+website = "https://accomplish.ai/"
+sector = "AI Infrastructure / Local-First Computer-Use Agents"
+founded = "2025 (Israeli subsidiary incorporated November 16, 2025; broader company founding year reported as 2025)"
+headquarters = "San Francisco, California, United States; Israeli subsidiary and R&D branch in Tel Aviv"
+employees = "Unknown; IVC directory lists 10 without a clear as-of date, so not treated as current headcount"
+funding_stage = "Seed; CTech reported $20 million of funding. Caplight records a Seed round dated December 1, 2025, but no public primary round announcement or valuation was located."
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Accomplish has credible commercial and security/resilience applicability because agent execution controls, sandboxing, and audited access gates can protect sensitive enterprise workflows and could transfer to incident response or continuity settings. Its October 2026 engineering article describes VM isolation and host-controlled gates for files, credentials, and network access. This is technical applicability, not evidence of government or defense adoption: no military, intelligence, emergency-services, classified, or critical-infrastructure customer, deployment, contract, certification, or accreditation was found."
+key_technologies = [
+  "Local-first Electron desktop agent for file, document, browser, and workflow automation",
+  "Model-provider abstraction supporting user-supplied cloud APIs and local models through Ollama or LM Studio",
+  "Permissioned human-in-the-loop execution with visible proposed actions and user approval",
+  "TypeScript agent-core and headless execution architecture for reusable tasks outside the desktop UI",
+  "Skill-based workflow authoring for repeatable multi-step automations",
+  "Local secure storage for provider credentials and application state",
+  "Open-source MIT-licensed computer-use codebase designed for inspectable and forkable deployment"
+]
+use_cases = [
+  "Local organization and classification of sensitive project files without uploading them to an agent vendor",
+  "Drafting, summarizing, and revising reports from approved local documents and notes",
+  "Browser-based research and form-entry workflows across existing enterprise web applications",
+  "Repeatable skills for weekly reporting, meeting preparation, and cross-application knowledge work",
+  "Developer and security-operations workstations using model choice and explicit approval controls",
+  "Private or intermittently connected administrative workflows where local models and local data access matter",
+  "Enterprise computer-use infrastructure for governed interaction with software that lacks modern APIs",
+  "Continuity and incident-response documentation workflows in regulated or resilience-sensitive organizations"
+]
+investible = true
+investment_rationale = "Accomplish is a strategic-priority signal rather than an investment recommendation. (1) It addresses a real infrastructure gap: enterprises want agents that can act inside existing software, but they also need control over data, credentials, model choice, and consequential actions. (2) The open-source MIT-licensed repository creates a distribution and trust mechanism that is difficult for a closed cloud-only entrant to reproduce, while the reported $20 million backing from Lightspeed and 8VC gives the team time to build an enterprise layer. (3) The founding team has recruited around a technically hard intersection of desktop software, browser automation, agent orchestration, and permissions, and is hiring in Tel Aviv for the execution substrate itself. (4) The diligence burden is unusually important: public evidence does not establish revenue, named customers, conversion from repository interest, security certification, or independent task-completion benchmarks. (5) The central strategic question is whether Accomplish can monetize governance, deployment, support, and reliability around an open core before model vendors, operating systems, and automation incumbents bundle computer use. The flag records fit and monitoring priority, not a conclusion about valuation or returns."
+strategic_value = "Accomplish's strategic value comes from the control point between AI models and the software environments where real work occurs. (1) A model-neutral execution layer can preserve optionality across U.S. and open model providers rather than making every workflow dependent on one vendor. (2) Local processing, user-scoped permissions, and human approval are relevant to organizations protecting sensitive data or maintaining operations during cloud, connectivity, or vendor disruptions. (3) The same execution primitives can support commercial knowledge work, security operations, continuity planning, and regulated administration, giving the company a credible resilience adjacency. (4) An open implementation can attract developers who need inspectability and customization, which may help establish integrations faster than a closed enterprise product. The strategic value remains prospective: there is no public proof of government procurement, classified deployment, critical-infrastructure adoption, or hardened assurance suitable for national-security systems."
+potential_score = 72.0
+technology_score = 76.0
+market_score = 74.0
+team_score = 80.0
+dual_use_score = 64.0
+strategic_alignment_score = 70.0
+stage = "early"
+stage_rationale = "Accomplish is early because the public record shows a Seed-backed company with a shipped open-source product and active technical hiring, but not the operating metrics associated with a mid-stage platform. CTech reported $20 million from Lightspeed and 8VC and placed the company in its 2026 list of promising Israeli startups; the official repository and documentation show a functioning multi-provider desktop agent with releases and public adoption. Those are meaningful product and ecosystem signals. Public sources do not disclose revenue, paid customer count, retention, commercial packaging, security certifications, or independently measured reliability across enterprise applications. The company is therefore beyond an idea or private prototype, but its transition from developer product to repeatable enterprise infrastructure remains unproven."
+competitors = [
+  "Anthropic and OpenAI (proprietary model vendors adding computer-use and desktop-agent capabilities to their own ecosystems)",
+  "Microsoft Copilot and Power Automate (bundled enterprise identity, desktop, workflow, and automation distribution)",
+  "UiPath (mature enterprise RPA platform with connectors, governance, and procurement relationships)",
+  "Browser Use and Browserbase (browser-agent and remote-browser execution approaches targeting the same UI automation layer)",
+  "OpenHands (open-source agent runtime competing for developer adoption and self-hosted workflows)",
+  "Google Gemini tooling (hyperscaler model, desktop, and agent platform integration with broad distribution)"
+]
+competitive_edge = "Accomplish's potential edge is architectural and distributional. (1) Local-first execution keeps files, state, and much of the control path on the user's machine, which addresses a trust objection to cloud-only agents. (2) Model portability lets users bring cloud or local providers and reduces direct vendor lock-in. (3) The visible approval loop and user-scoped permissions make consequential actions legible, while the open-source MIT license enables inspection, customization, and self-hosted experimentation. (4) A single desktop surface spans files, documents, browsers, integrations, and reusable skills, giving it a broader workflow wedge than a narrow browser API. (5) The public repository can compound integrations and contributors. The edge is conditional: model vendors can bundle comparable interfaces, traditional RPA vendors have deeper governance, and an open core may create adoption without a durable monetization moat. Accomplish must prove security, reliability, enterprise support, and repeatable task completion to turn architectural intent into defensible advantage."
+risk_factors = [
+  "Prompt injection and tool abuse: local agents with browser sessions, files, and credentials can turn a malicious page or document into a high-impact control-path attack",
+  "Reliability gap: UI automation is brittle as websites, operating systems, permissions, and model behavior change, so curated demos may not predict production completion rates",
+  "Model dependency: Accomplish controls orchestration but relies on third-party cloud or local models whose cost, latency, availability, and behavior it does not control",
+  "Open-source monetization: community adoption and forks may not convert into paid enterprise support, governance, fleet management, or hosted-control revenue",
+  "Incumbent bundling: Microsoft, Google, Anthropic, and OpenAI can combine models, identity, operating-system integration, and enterprise distribution",
+  "Enterprise assurance gap: no public evidence yet of certifications, hardened deployment, audit-grade controls, or government and critical-infrastructure authorization",
+  "Commercial traction opacity: public sources do not disclose revenue, named customers, paid deployments, retention, or conversion from repository activity",
+  "Team and execution scaling: public biographies are limited, and the company must add security, reliability, and enterprise-deployment depth while preserving product velocity"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Accomplish merits monitoring as a distinctive Israeli AI-infrastructure entry because it is building the execution and control layer beneath computer-use agents rather than another general chatbot. (1) The local-first architecture, user-scoped permissions, human approval loop, model portability, and open-source license are directly relevant to trusted AI adoption and resilience-sensitive workflows. (2) CTech's 2026 Israeli startup ranking reports $20 million from Lightspeed and 8VC, while the public repository, documentation, and Tel Aviv engineering hiring provide corroborating evidence that the company has shipped a real technical surface. (3) The company could become strategically useful if it turns a developer distribution wedge into secure enterprise deployment across software that lacks APIs. Priority is capped by the absence of public revenue, named customers, independent security testing, certifications, and defense or critical-infrastructure deployments. Milestones that would justify raising priority include audited prompt-injection and permission-boundary results, disclosed paid enterprise usage, private or offline deployment controls, durable contributor and user activity, and a documented resilience or government-sector pilot."
+crawled_at = "2026-09-01T01:38:20Z"
+updated_at = "2026-09-01T01:38:20Z"
+
+[[public_sources]]
+label = "CTech 2026 Top 50 profile"
+url = "https://www.calcalistech.com/ctechnews/article/p9n9w144o"
+description = "Israeli business-press entry identifying founders and reporting $20 million funding and Lightspeed and 8VC."
+
+[[public_sources]]
+label = "Accomplish engineering article: Thinking Inside the Box"
+url = "https://www.accomplish.ai/blog/thinking-inside-the-box/"
+description = "Company-authored October 2026 description of VM sandbox architecture, controlled access gates, and product direction."
+
+[[public_sources]]
+label = "Accomplish desktop agent repository"
+url = "https://github.com/algsoch/accomplish"
+description = "Current public MIT-licensed desktop agent repository; identifies former name Openwork and describes supported workflows and model providers."
+
+[[public_sources]]
+label = "Accomplish Ltd. IVC directory record"
+url = "https://www.ivc-online.com/Google-Card?id=c0fa4620-390b-f111-b81c-00505695cd29"
+description = "Lists Accomplish Ltd., former name Openwork, company locations, founders, and a December 2025 Seed record; some financial fields are redacted."
+
+[[public_sources]]
+label = "Accomplish AI funding profile, Caplight"
+url = "https://www.caplight.com/company/accomplish"
+description = "Secondary company dataset records a December 1, 2025 Seed and names AI10 Ventures, Lightspeed, and 8VC; its round amount and valuation fields are blank."
+
+[[public_sources]]
+label = "Accomplish Ltd. company record, CheckID"
+url = "https://www.checkid.co.il/company/%D7%90%D7%A7%D7%95%D7%9E%D7%A4%D7%9C%D7%99%D7%A9-%D7%91%D7%A2~%D7%9E-517244802"
+description = "Israeli company-record aggregator reports registration number, incorporation date, active status, directors, and Accomplish AI, Inc. as shareholder."
+
+[[public_sources]]
+label = "Accomplish Ashby hiring page"
+url = "https://jobs.ashbyhq.com/accomplish/abd6be17-c021-46bc-a51f-b0515fd671bd"
+description = "Company hiring description identifies founders, Tel Aviv R&D, and enterprise computer-use infrastructure focus."
+
+[[public_sources]]
+label = "Anthropic computer-use announcement"
+url = "https://www.anthropic.com/news/developing-computer-use"
+description = "Official competitor product description for Claude computer use."
+
+[[public_sources]]
+label = "Boundary-Bench benchmark repository"
+url = "https://github.com/boundary-bench/boundary-bench"
+description = "Accomplish and NYU research repository for evaluating AI agents under enterprise security controls."
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company ]
+company_id = "accomplish"
+legal_name = "Accomplish Ltd."
+aliases = ["Openwork", "Accomplish AI", "Accomplish AI, Inc."]
+operating_status = "active"
+business_model = "Open-source desktop distribution with a free MIT-licensed agent; the company's current enterprise direction is secure execution infrastructure and sandbox controls. Public pricing, paid conversion, and revenue model are undisclosed."
+products = ["Accomplish desktop AI agent", "Enterprise computer-use execution and sandbox infrastructure", "Boundary-Bench agent evaluation benchmark"]
+locations = ["San Francisco, California, United States", "Tel Aviv, Israel"]
+source_ids = ["ctech", "github", "blog", "ivc", "registry", "hiring"]
+founded_on = "2025"
+country_of_incorporation = "Israel (Accomplish Ltd. subsidiary; parent incorporation jurisdiction not established)"
+
+[[intelligence.company .registry_identifiers]]
+jurisdiction = "Israel"
+scheme = "Companies Authority company number"
+identifier = "517244802"
+source_ids = ["registry"]
+
+[intelligence.funding ]
+status = "reported"
+summary = "CTech's April 2026 Top 50 entry reports $20 million funding and names Lightspeed and 8VC. Caplight records a Seed dated December 1, 2025 and identifies AI10 Ventures as lead with Lightspeed and 8VC participating. IVC also displays a Seed dated December 1, 2025, but redacts the amount and investor identities. Because no company or lead-investor primary financing announcement was found, the $20 million is recorded as reported round financing, not as a company-announced lifetime total."
+rounds = [{ id = "seed-2025", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2025-12-01", amount_status = "reported", amount = 20000000, amount_scope = "round", currency = "USD", lead_investors = ["AI10 Ventures"], participating_investors = ["Lightspeed Venture Partners", "8VC"], source_ids = ["ctech", "caplight", "ivc"], notes = "CTech reports $20 million and lists Lightspeed and 8VC. Caplight identifies AI10 Ventures as lead and lists Lightspeed and 8VC as participants; IVC redacts amount and names. CTech may be reporting total financing rather than the same round's precise closed amount; no primary announcement was found. No valuation disclosed." }]
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[[intelligence.people]]
+name = "Amit Avner"
+role = "Co-founder"
+is_founder = true
+current = true
+background = "Named as a founder by CTech, IVC, and the company's hiring page. A public professional profile describes prior operating experience but does not provide a complete independently verified biography."
+source_ids = ["ctech", "ivc", "hiring"]
+
+[[intelligence.people]]
+name = "Guy Zipori"
+role = "Co-founder"
+is_founder = true
+current = true
+background = "Named as a founder by CTech, IVC, and the company's hiring page. IVC lists a prior product role at iMedix; broader chronology was not verified."
+source_ids = ["ctech", "ivc", "hiring"]
+
+[[intelligence.people]]
+name = "Or Hiltch"
+role = "Co-founder"
+is_founder = true
+current = true
+background = "Named as a founder by CTech, IVC, and the company's hiring page. Also credited as an author of the Boundary-Bench research paper in the public repository record."
+source_ids = ["ctech", "ivc", "hiring", "boundary"]
+
+[[intelligence.people]]
+name = "Ben Gordon"
+role = "Member of Technical Staff"
+is_founder = false
+current = true
+background = "Authored Accomplish's October 2026 engineering article describing its agent sandbox design."
+source_ids = ["blog"]
+
+[[intelligence.investors]]
+name = "AI10 Ventures"
+investor_type = "vc"
+website = "https://ai10.vc/"
+relationship = "historical"
+round_ids = ["seed-2025"]
+source_ids = ["caplight"]
+notes = "Caplight identifies AI10 as Seed lead; no direct investor announcement naming Accomplish was located."
+
+[[intelligence.investors]]
+name = "Lightspeed Venture Partners"
+investor_type = "vc"
+website = "https://lsvp.com/"
+relationship = "historical"
+round_ids = ["seed-2025"]
+source_ids = ["ctech", "caplight"]
+
+[[intelligence.investors]]
+name = "8VC"
+investor_type = "vc"
+website = "https://8vc.com/"
+relationship = "historical"
+round_ids = ["seed-2025"]
+source_ids = ["ctech", "caplight"]
+
+[intelligence.ownership ]
+status = "reported"
+summary = "Accomplish Ltd. is an Israeli private company. CheckID's company record names Accomplish AI, Inc. as a shareholder; the English record categorizes it as an option holder while its Hebrew source wording indicates shareholder. IVC describes San Francisco as the main address and Tel Aviv as a branch. No percentage, complete cap table, or primary corporate filing proving the parent/subsidiary structure was obtained."
+parent_company = "Accomplish AI, Inc. (reported as shareholder of Accomplish Ltd.; precise legal relationship and ownership percentage not disclosed)"
+cap_table_status = "undisclosed"
+shareholders = ["Accomplish AI, Inc. (reported; percentage unavailable)"]
+source_ids = ["registry", "ivc"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection ]
+status = "confirmed"
+basis = ["incorporated_in_israel", "israeli_founders"]
+summary = "Confirmed Israeli connection: Accomplish Ltd. is recorded as an active Israeli private company incorporated in Tel Aviv in November 2025; IVC also lists a Tel Aviv branch, and CTech identifies the three founders in its Israeli startup ranking. IVC separately lists San Francisco as the main address, so the operating parent appears US-based while the Israeli company and R&D presence are confirmed."
+as_of = "2026-10-03"
+source_ids = ["registry", "ivc", "ctech", "hiring"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Public repository describes an available free, MIT-licensed desktop agent for local file management, document creation, browser tasks, and user-approved workflows, with macOS and Windows support stated. Repository describes broad cloud and local model options."
+date = "2026"
+source_ids = ["github"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Company-authored engineering article describes a VM-based agent environment, host-controlled file grants, network egress proxy, MCP gateway, and credential broker. This is a company technical description, not independent security validation or proof of enterprise deployment."
+date = "2026-10-01"
+source_ids = ["blog"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "Company and NYU researchers published Boundary-Bench, an open benchmark/paper assessing agent performance under enterprise-style security controls. Public social posts describe tests of 12 agents across roughly 10,000 runs; this is research activity, not customer adoption."
+date = "2026-09"
+source_ids = ["boundary"]
+
+[[intelligence.comparables]]
+name = "Anthropic Claude computer use"
+website = "https://www.anthropic.com/news/developing-computer-use"
+rationale = "Foundation-model provider offers a computer-use capability that can perform UI tasks and may be an upstream provider or direct product competitor."
+differentiation = "Anthropic supplies the model and capability; Accomplish positions itself as a model-portable application and controlled execution environment."
+source_ids = ["anthropic"]
+
+[intelligence.research ]
+researched_at = "2026-10-03T10:00:26Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Accomplish formerly Openwork company identity legal name headquarters Israel", "Accomplish Openwork funding raised seed Series A investors valuation 2025 2026", "Accomplish AI Amit Avner Guy Zipori Or Hiltch team leadership", "Accomplish AI Ltd ownership Accomplish AI Inc shareholders company registry", "Accomplish AI revenue ARR employees financials customers traction", "Accomplish AI patents intellectual property USPTO WIPO", "Accomplish desktop agent competitors Anthropic computer use UiPath", "Accomplish AI defense government dual use security resilience", "Accomplish AI Boundary-Bench sandbox research 2026"]
+gaps = ["funding: No primary company or lead-investor round announcement, valuation, or company-announced lifetime funding total was located; public accounts differ in which investors they name.", "investors: AI10 Ventures appears as lead only in Caplight; CTech lists Lightspeed and 8VC. Confirm syndicate and investment entities with company or investors.", "team: Founder roles are sourced, but detailed biographies, executive responsibilities, and current headcount lack authoritative company disclosure.", "ownership: Parent relationship is reported by a directory/registry-data aggregator, but ownership percentage and full cap table are unavailable; source wording differs between shareholder and option holder.", "financials: No dated revenue, ARR, profitability, burn, cash, or runway disclosure found.", "traction: No named paid customers, contract values, paid deployment counts, retention, or verified usage conversion found; repository activity and research are not revenue evidence.", "intellectual_property: No patent or registered-IP record linked to Accomplish was found; open-source publication is documented but patent status is unverified.", "competition: Only a narrow official comparator was directly reviewed; broader substitute mapping across platform vendors and open-source runtimes needs further source-by-source work.", "dual_use: No defense, government, classified, emergency-services, or critical-infrastructure customer or contract evidence found; potential is architectural only."]
+conflicts = ["Funding syndicate: CTech reports $20 million and names Lightspeed and 8VC, whereas Caplight identifies AI10 Ventures as lead with Lightspeed and 8VC participating. IVC redacts identities and amount. The reports may omit rather than contradict participants; no primary terms announcement resolved this.", "Ownership wording: CheckID's English rendering labels Accomplish AI, Inc. an option holder, while the Hebrew record labels it a shareholder. Percentage and precise legal relationship remain unknown.", "Headquarters: IVC lists San Francisco as main address and Tel Aviv as branch; the hiring page has Tel Aviv as an R&D work location. Avoid describing Tel Aviv as the sole corporate headquarters.", "Product status: Accomplish's official site currently presents an early-access enterprise sandbox direction, while its public repository continues to describe the free local desktop coworker. They appear to be related product surfaces; current commercial packaging is not disclosed."]
+diligence_questions = ["What exact legal entity issued the December 2025 Seed, what amount closed, and how do AI10 Ventures, Lightspeed, and 8VC divide lead and participation roles?", "What is the legal relationship between Accomplish AI, Inc. and Israeli Accomplish Ltd., and what are the fully diluted ownership and option-pool figures?", "Are desktop agent users converting to paid enterprise sandbox deployments, and what are current active usage, customer, retention, pricing, and revenue metrics?", "Can Accomplish share independent penetration-test results, threat model, VM escape tests, and audit evidence for file, credential, network, and MCP gates?", "What support and governance functions are commercially available today versus still in research or early access?"]
+
+[[intelligence.research .sources]]
+id = "ctech"
+url = "https://www.calcalistech.com/ctechnews/article/p9n9w144o"
+title = "The 50 most promising Israeli startups - 2026"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-03T10:00:26Z"
+published_on = "2026-04-21"
+claims = ["Names Amit Avner, Guy Zipori, and Or Hiltch as Accomplish founders.", "Reports Accomplish funding of $20 million and lists Lightspeed and 8VC.", "Describes Accomplish as an open-source AI coworker operating directly on a PC and serving enterprise agent infrastructure needs."]
+
+[[intelligence.research .sources]]
+id = "blog"
+url = "https://www.accomplish.ai/blog/thinking-inside-the-box/"
+title = "Thinking Inside the Box: The engineering choices behind Accomplish's agent sandbox"
+publisher = "Accomplish"
+kind = "company"
+accessed_at = "2026-10-03T10:00:26Z"
+published_on = "2026-10-01"
+claims = ["Describes a virtual machine agent sandbox and separate host-controlled access gates for files, credentials, networks, and MCP calls.", "Identifies Ben Gordon as Member of Technical Staff and article author.", "States the company intends to support open-ended agent work while gating and auditing access beyond the sandbox."]
+
+[[intelligence.research .sources]]
+id = "github"
+url = "https://github.com/algsoch/accomplish"
+title = "Accomplish: Open Source AI Desktop Agent"
+publisher = "GitHub / Accomplish"
+kind = "company"
+accessed_at = "2026-10-03T10:00:26Z"
+claims = ["Repository calls Accomplish formerly Openwork and describes a free MIT-licensed local desktop agent.", "Repository lists file management, document creation, browser tasks, user approvals, model providers, and local model options.", "Repository lists macOS Apple Silicon and Windows 11 support."]
+
+[[intelligence.research .sources]]
+id = "ivc"
+url = "https://www.ivc-online.com/Google-Card?id=c0fa4620-390b-f111-b81c-00505695cd29"
+title = "Accomplish Ltd. - IVC Data & Insights"
+publisher = "IVC Research Center"
+kind = "directory"
+accessed_at = "2026-10-03T10:00:26Z"
+claims = ["Identifies Accomplish Ltd. as formerly Openwork and lists company as established in 2025.", "Lists San Francisco main address and Tel Aviv branch address.", "Names founders Amit Avner, Or Hiltch, and Guy Zipori; lists a December 1, 2025 Seed record with amount and investor details redacted.", "Lists 10 employees without an explicit as-of date and marks company as seeking capital as of February 2026."]
+
+[[intelligence.research .sources]]
+id = "caplight"
+url = "https://www.caplight.com/company/accomplish"
+title = "Accomplish AI Valuation & Funding History"
+publisher = "Caplight"
+kind = "directory"
+accessed_at = "2026-10-03T10:00:26Z"
+claims = ["Records a Seed round dated December 1, 2025 with undisclosed amount and valuation.", "Identifies AI10 Ventures as lead and Lightspeed and 8VC as Seed investors.", "Describes Accomplish as a private company with San Francisco headquarters and 2025 founding year."]
+
+[[intelligence.research .sources]]
+id = "registry"
+url = "https://www.checkid.co.il/company/%D7%90%D7%A7%D7%95%D7%9E%D7%A4%D7%9C%D7%99%D7%A9-%D7%91%D7%A2~%D7%9E-517244802"
+title = "Accomplish Ltd. company record"
+publisher = "CheckID"
+kind = "directory"
+accessed_at = "2026-10-03T10:00:26Z"
+claims = ["Reports Israeli company number 517244802, active private-company status, incorporation on November 16, 2025, and Tel Aviv address.", "Lists Amit Avner, Guy Zipori, and Or Hiltch as directors and Accomplish AI, Inc. as a shareholder or option holder; the English rendering and Hebrew label differ."]
+
+[[intelligence.research .sources]]
+id = "hiring"
+url = "https://jobs.ashbyhq.com/accomplish/abd6be17-c021-46bc-a51f-b0515fd671bd"
+title = "Member of the Technical Staff - Accomplish"
+publisher = "Accomplish / Ashby"
+kind = "company"
+accessed_at = "2026-10-03T10:00:26Z"
+claims = ["Company hiring page places an R&D role in Tel Aviv.", "Company hiring page describes enterprise computer-use infrastructure and names Amit Avner, Guy Zipori, and Or Hiltch as founders."]
+
+[[intelligence.research .sources]]
+id = "boundary"
+url = "https://github.com/boundary-bench/boundary-bench"
+title = "Boundary-Bench research and benchmark"
+publisher = "Accomplish / Boundary-Bench"
+kind = "company"
+accessed_at = "2026-10-03T10:00:26Z"
+claims = ["Accomplish and NYU researchers published an open benchmark evaluating agents under enterprise-style policies.", "Public project citation credits Or Hiltch among research authors."]
+
+[[intelligence.research .sources]]
+id = "anthropic"
+url = "https://www.anthropic.com/news/developing-computer-use"
+title = "Developing a computer use model"
+publisher = "Anthropic"
+kind = "other"
+accessed_at = "2026-10-03T10:00:26Z"
+published_on = "2024-10-22"
+claims = ["Anthropic describes Claude computer-use capability for controlling a computer UI, a direct product substitute and model-provider competitor."]
+
+[[intelligence.research .topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T10:00:26Z"
+next_review_on = "2027-01-03"
+queries = ["Accomplish formerly Openwork company identity legal name headquarters Israel", "Accomplish Ltd Israeli company 517244802"]
+source_ids = ["ctech", "ivc", "registry", "github"]
+summary = "Matched the current Accomplish brand to former name Openwork, Israeli Accomplish Ltd., US-based parent signal, and active desktop and enterprise sandbox products."
+
+[[intelligence.research .topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T10:00:26Z"
+next_review_on = "2027-01-03"
+queries = ["Accomplish Openwork funding raised seed Series A investors valuation 2025 2026", "Accomplish AI funding $20 million Israeli startup 8VC Lightspeed"]
+source_ids = ["ctech", "caplight", "ivc"]
+summary = "Found one reported $20 million Seed funding event; exact company-announced total, valuation, and round terms remain unverified."
+
+[[intelligence.research .topic_checks]]
+topic = "investors"
+status = "conflicting"
+checked_at = "2026-10-03T10:00:26Z"
+next_review_on = "2027-01-03"
+queries = ["Accomplish AI investors Lightspeed 8VC AI10 Ventures", "Accomplish Openwork funding investors"]
+source_ids = ["ctech", "caplight", "ivc"]
+summary = "CTech names Lightspeed and 8VC; Caplight names AI10 as lead and those two as participants; IVC redacts investors."
+
+[[intelligence.research .topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T10:00:26Z"
+next_review_on = "2027-01-03"
+queries = ["Accomplish AI Amit Avner Guy Zipori Or Hiltch team leadership", "Accomplish AI company site leadership team"]
+source_ids = ["ctech", "ivc", "hiring", "blog"]
+summary = "Verified founder names and current technical staff evidence; full executive bios and exact headcount are not public."
+
+[[intelligence.research .topic_checks]]
+topic = "ownership"
+status = "conflicting"
+checked_at = "2026-10-03T10:00:26Z"
+next_review_on = "2027-01-03"
+queries = ["Accomplish AI Ltd ownership Accomplish AI Inc shareholders company registry"]
+source_ids = ["registry", "ivc"]
+summary = "Registry-data aggregator reports Accomplish AI, Inc. as shareholder/option holder in Israeli Accomplish Ltd.; percentage and legal relationship remain unknown."
+
+[[intelligence.research .topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T10:00:26Z"
+next_review_on = "2027-01-03"
+queries = ["Accomplish AI revenue ARR employees financials customers traction", "Accomplish AI financials revenue funding"]
+source_ids = ["ctech", "ivc", "caplight"]
+summary = "No dated revenue, ARR, profit, burn, cash, or runway disclosure located; directory headcount is undated and treated as stale."
+
+[[intelligence.research .topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T10:00:26Z"
+next_review_on = "2027-01-03"
+queries = ["Accomplish AI revenue ARR employees financials customers traction", "Accomplish AI Boundary-Bench sandbox research 2026"]
+source_ids = ["github", "blog", "boundary", "hiring"]
+summary = "Product availability, engineering work, research publication, and hiring are visible; no named paid customers or production deployments were found."
+
+[[intelligence.research .topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T10:00:26Z"
+next_review_on = "2027-01-03"
+queries = ["Accomplish AI patents intellectual property USPTO WIPO", "Accomplish Ltd patent Openwork"]
+source_ids = ["github", "boundary"]
+summary = "No linked patent or registered-IP record found; repository documents an MIT-licensed codebase and benchmark."
+
+[[intelligence.research .topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T10:00:26Z"
+next_review_on = "2027-01-03"
+queries = ["Accomplish desktop agent competitors Anthropic computer use UiPath", "Anthropic official computer use product"]
+source_ids = ["anthropic", "github", "blog"]
+summary = "Anthropic computer use is a directly relevant substitute; broader competitor mapping remains a diligence gap."
+
+[[intelligence.research .topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T10:00:26Z"
+next_review_on = "2027-01-03"
+queries = ["Accomplish AI defense government dual use security resilience", "Accomplish enterprise sandbox security government customers"]
+source_ids = ["blog", "hiring", "ctech"]
+summary = "Commercial security controls have plausible resilience applicability, but no public defense or government customer, contract, certification, or deployment evidence was found."
+
+[[intelligence.research .claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The company's current GitHub repository and October 2026 engineering blog describe active products and new engineering work; Israeli registry-data shows the local company as active."
+verified_at = "2026-10-03T10:00:26Z"
+source_ids = ["github", "blog", "registry"]
+
+[[intelligence.research .claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Israeli company record gives Tel Aviv incorporation/address, IVC lists a Tel Aviv branch, and CTech identifies Accomplish in its Israeli startup ranking."
+verified_at = "2026-10-03T10:00:26Z"
+source_ids = ["registry", "ivc", "ctech"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.seed-2025.amount"
+support = "direct"
+summary = "CTech's company profile reports $20 million funding; Caplight and IVC independently identify a Seed round dated December 1, 2025, though neither discloses the amount."
+verified_at = "2026-10-03T10:00:26Z"
+source_ids = ["ctech", "caplight", "ivc"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.seed-2025.lead_investors"
+support = "direct"
+summary = "Caplight names AI10 Ventures as lead; CTech does not list it and names Lightspeed and 8VC, so lead status is supported only by Caplight and syndicate coverage differs."
+verified_at = "2026-10-03T10:00:26Z"
+source_ids = ["caplight", "ctech"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.seed-2025.participating_investors"
+support = "direct"
+summary = "CTech names Lightspeed and 8VC as investors; Caplight lists them as Seed participants alongside AI10 Ventures."
+verified_at = "2026-10-03T10:00:26Z"
+source_ids = ["ctech", "caplight"]
+
+[[intelligence.research .claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "CheckID's Israeli company record lists Accomplish AI, Inc. as a shareholder/option holder of Accomplish Ltd.; no percentage or complete corporate structure is disclosed."
+verified_at = "2026-10-03T10:00:26Z"
+source_ids = ["registry"]

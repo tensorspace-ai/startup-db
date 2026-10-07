@@ -1,0 +1,523 @@
+name = "Deceptive Bytes"
+
+description = "Israeli cybersecurity startup developing an endpoint deception and active ransomware-prevention platform that changes what malware sees, detects reconnaissance and defense impairment, and complements EDR, EPP, XDR, and SOC workflows."
+
+detailed_description = """
+Deceptive Bytes develops Active Endpoint Deception, a Windows-focused endpoint security platform intended to interfere with malware during reconnaissance and pre-execution rather than waiting for a known signature or a post-compromise behavioral verdict. The company describes a user-mode agent that dynamically creates or changes deceptive endpoint artifacts, including apparent operating-system and software states, registry and process indicators, files, and other attacker-visible signals. Its newer Custom Protection capability lets a defender define protection points around selected paths, processes, registry keys, mutexes, or other artifacts. An interaction that is legitimate for a normal user should remain inert, while malware probing for security tools, sandbox indicators, vulnerable software, or high-value files is intended to reveal itself or break its own execution logic. The architecture is attractive where low resource use and coexistence with installed security controls matter, but the prevention-rate and resource figures on the company site remain vendor claims that require reproducible third-party testing.
+
+The commercial problem is concrete: ransomware and intrusion tooling increasingly checks the endpoint before encrypting, escalating privileges, disabling defenses, or moving laterally. Deceptive Bytes sells a complementary control for enterprises, managed security providers, and organizations with high availability requirements rather than a replacement for identity security, patching, backups, EDR, or incident response. The product page emphasizes a single lightweight user-mode process, low CPU and memory overhead, no threat-signature database, integration with existing EDR/EPP/XDR systems, and high-fidelity alerts intended to reduce SIEM noise. Those characteristics could support deployment across distributed Windows estates, but the database has no independently verified ARR, customer count, retention, win rate, or recent financing data. Public material does show ongoing product and marketing activity, including a 2026 Custom Protection announcement and current technical publications, while older third-party profiles describe deployments and channel activity without establishing scale.
+
+The competitive set spans endpoint prevention suites and deception specialists. Deceptive Bytes may be differentiated by placing adaptive deception directly on each endpoint and by focusing the deception logic on malware evasion, security-control tampering, and ransomware decision points. That is a sharper proposition than a generic honeypot, but it also creates a demanding proof burden: the platform must avoid breaking legitimate administrative tools, remain useful when attackers recognize the deception, and demonstrate incremental outcomes beside Microsoft Defender, SentinelOne, CrowdStrike, Palo Alto Cortex, or a customer’s existing EDR. Network and identity deception vendors such as Illusive, TrapX, Thinkst, and Acalvio are substitutes for parts of the problem, while platform vendors can bundle adjacent features. A durable edge therefore depends on measured evasion coverage, low false-positive rates, integrations, operational simplicity, and evidence that customers renew after realistic adversary emulation.
+
+The dual-use case is credible but bounded. The same endpoint deception mechanisms can protect commercial enterprises, healthcare, finance, manufacturers, and critical infrastructure from ransomware and hands-on-keyboard intrusion, while defense, intelligence, and government operators could use them to increase attacker uncertainty on sensitive Windows networks and expose reconnaissance before mission systems are disrupted. The technology is not itself a military system, and public evidence does not establish classified deployments, government contracts, security certifications, or performance in air-gapped and austere environments. Strategic diligence should therefore focus on secure update and management paths, compatibility with sovereign or disconnected operations, telemetry export to government SOC tooling, supply-chain controls, red-team results, and whether deceptive artifacts remain believable against capable state-sponsored operators. On present evidence, Deceptive Bytes is a strategically relevant early-stage cyber capability with meaningful endpoint resilience potential, but its commercial scale and defense readiness remain unproven.
+"""
+
+logo = "https://deceptivebytes.com/wp-content/uploads/2025/05/Color-version_White-BG-200x39-1.png"
+website = "https://www.deceptivebytes.com"
+sector = "Endpoint cybersecurity and cyber deception"
+founded = "2016"
+headquarters = "Holon, Israel"
+employees = "1-10 (public third-party profiles; current headcount unverified)"
+funding_stage = "Private; one reported 2017 seed round has conflicting public amount estimates; no later round verified"
+entity_type = "startup"
+
+dual_use = true
+
+dual_use_description = "Endpoint deception has substantive commercial and security applicability: it can disrupt ransomware reconnaissance and defense impairment in enterprise Windows estates, while the same mechanisms could increase attacker uncertainty and provide early warning on government, critical-infrastructure, and defense networks. The adjacency is technically credible, but there is no public evidence here of classified deployment, government contracts, or certification, so defense readiness should not be inferred from the product description alone."
+
+key_technologies = [
+  "Adaptive endpoint deception and attacker-perception manipulation",
+  "Dynamic false operating-system, software, registry, process, and mutex artifacts",
+  "Anti-sandbox, anti-VM, and malware reconnaissance countermeasures",
+  "User-mode lightweight endpoint agent with low resource overhead",
+  "Custom protection points for virtual patching and high-value assets",
+  "High-fidelity event telemetry and EDR, EPP, XDR, and SIEM integration"
+]
+
+use_cases = [
+  "Disrupting unknown ransomware before encryption and extortion workflows begin",
+  "Detecting malware reconnaissance for security products, sandboxes, and vulnerable software",
+  "Protecting critical files, processes, registry keys, and endpoint security controls",
+  "Buying time through virtual patching while a vendor fix is tested and deployed",
+  "Reducing low-confidence SOC alerts by triggering on interaction with deceptive artifacts",
+  "Hardening distributed Windows endpoints in regulated and critical-infrastructure environments",
+  "Providing early-warning telemetry for government or defense SOC investigation",
+  "Supporting incident response with endpoint-level evidence of attacker probing and evasion"
+]
+
+investible = true
+
+investment_rationale = "Deceptive Bytes fits a credible dual-use cyber thesis because it addresses ransomware, endpoint resilience, and defense-control impairment with a differentiated deception approach. The priority signal is tempered by limited public evidence on financing, recurring revenue, customer scale, independent efficacy testing, and government readiness; diligence should establish whether the low-overhead deployment produces measurable incremental protection beside incumbent EDR and whether the company has enough sales and engineering capacity to scale. This is a strategic assessment, not an investment recommendation."
+
+strategic_value = "Provides a potentially useful defensive layer for increasing attacker uncertainty at the endpoint, protecting the security stack itself, and surfacing reconnaissance before destructive actions. Its strategic value is highest for organizations where ransomware downtime is costly or where early warning on sensitive Windows estates matters; value is reduced if deceptive artifacts are easily fingerprinted, cause administrative friction, or cannot operate in disconnected and tightly controlled environments."
+
+public_sources = [
+  { label = "Company website", url = "https://www.deceptivebytes.com/", description = "Current product positioning and company presence" },
+  { label = "Company CyLon announcement", url = "https://deceptivebytes.com/deceptive-bytes-is-participating-in-cylon-accelerator/", description = "2017 accelerator cohort participation" },
+  { label = "CB Insights funding profile", url = "https://www.cbinsights.com/company/deceptive-bytes/financials", description = "Reports a $20,000 seed round and Cyber London Accelerator" },
+  { label = "Prospeo funding profile", url = "https://prospeo.io/c/deceptive-bytes-revenue", description = "Reports $18,200 in funding; financial estimates are third-party modeled" },
+  { label = "Crunchbase profile", url = "https://www.crunchbase.com/organization/deceptive-bytes-ltd", description = "Identifies CyLon Ventures as funder" },
+  { label = "US patent US11062028B2", url = "https://patents.google.com/patent/US11062028B2/en", description = "Patent grant, inventors, assignee, priority and grant dates" },
+  { label = "Company Emotet case study", url = "https://deceptivebytes.com/wp-content/uploads/docs/Deceptive%20Bytes%20-%20Case%20Study%20-%20Emotet%20Attack.pdf", description = "Company-authored customer deployment case study" },
+  { label = "Italian public procurement notice", url = "https://trasparenza.cds.giustizia-amministrativa.it/documents/1284375/1564025/documentazione%2Bgara%2BRDO%2BMEPA%2B112020%2B2694482.pdf/06deb539-5ef9-19d5-0150-8bd60de74967?t=1605714119000", description = "Italian administrative judiciary procurement document for 2,000 licenses over 36 months" },
+  { label = "Pico Technologies product listing", url = "https://www.pico-t.co.jp/product/deceptive-bytes/", description = "Japanese channel listing describes supported platforms, on-prem deployment, minimum scale and Israeli headquarters" },
+  { label = "Startup Nation Finder founder profile", url = "https://finder.startupnationcentral.org/user/profile/avi-lamay", description = "Avi Lamay role and prior professional background" },
+  { label = "Softprom distribution announcement", url = "https://softprom.com/news/softprom-has-signed-a-distribution-agreement-with-deceptive-bytes", description = "Regional distribution relationship announced in 2024" },
+  { label = "Company 2022 interview", url = "https://www.deceptivebytes.com/?p=1267", description = "Founder account of origins and company roles" }
+]
+
+potential_score = 73.0
+technology_score = 82.0
+market_score = 68.0
+team_score = 65.0
+dual_use_score = 76.0
+strategic_alignment_score = 78.0
+
+stage = "early"
+
+stage_rationale = "Public profiles place the company in the early private-company category and identify it as founded in 2016, while available financing data points to seed rather than a verified Series A. The product appears commercially packaged and supported by ongoing product activity and channel or customer references, but public evidence is insufficient to establish late-stage scale, repeatable enterprise growth, or broad government adoption."
+
+competitors = [
+  "Microsoft Defender for Endpoint",
+  "CrowdStrike Falcon",
+  "SentinelOne Singularity",
+  "Illusive Networks",
+  "TrapX Security",
+  "Thinkst Canary",
+  "Acalvio Technologies"
+]
+
+competitive_edge = "The clearest claimed edge is endpoint-native, adaptive deception aimed at breaking malware reconnaissance and protecting security controls, delivered through a lightweight user-mode agent that can sit beside incumbent EDR. That focus may reduce deployment friction and generate high-confidence signals, but it is only a durable advantage if independent tests confirm evasion coverage, low false positives, believable artifacts, and measurable prevention gains against modern ransomware and hands-on-keyboard operators."
+
+risk_factors = [
+  "Vendor-reported prevention, alert-reduction, and resource-use metrics lack visible independent validation in the public record.",
+  "Microsoft and other EDR platform vendors can bundle deception, virtual patching, and tamper-resistance features into broader contracts.",
+  "Deception can lose effectiveness when adversaries fingerprint the agent or learn which artifacts are synthetic.",
+  "False positives or interference with legitimate administration, patching, and security tooling could slow enterprise adoption.",
+  "Limited public evidence on recurring revenue, customer concentration, retention, financing, and current employee capacity makes scale difficult to assess.",
+  "Defense and critical-infrastructure sales may require certifications, disconnected-operation support, procurement partners, and long evaluation cycles.",
+  "A small company may face support, secure-update, incident-response, and platform-compatibility burdens as Windows and attacker tradecraft change."
+]
+
+risk_level = "high"
+
+signals = []
+
+priority_rank = 0
+
+priority_rationale = "A credible but evidence-constrained dual-use cyber priority: endpoint deception addresses ransomware and defense impairment, and the official product materials show continuing development. The score remains below top-tier priority because financing, scale, independent efficacy, customer concentration, and defense deployment evidence are not sufficiently public."
+
+crawled_at = '2026-02-28T17:00:00Z'
+updated_at = "2026-10-05T05:30:48Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+
+[intelligence.company]
+company_id = "il-deceptive-bytes"
+legal_name = "Deceptive Bytes Ltd"
+aliases = ["Deceptive Bytes", "Deceptive Bytes Ltd."]
+operating_status = "active"
+business_model = "B2B endpoint cybersecurity software sold to enterprises and through distributors/MSSPs; public channel material describes license sales and optional on-premises deployment."
+products = ["Active Endpoint Deception", "Custom Protection"]
+locations = ["Holon, Israel"]
+founded_on = "2016"
+source_ids = ["company_site", "patent", "pitchfinder", "pico"]
+
+[intelligence.funding]
+status = "conflicting"
+summary = "One historical 2017 Seed round is reported by third-party company databases, but public amount records conflict ($20,000 vs. $18,200) and no primary financing announcement or filing confirming the investment terms was located. The company confirms CyLon cohort participation; that alone does not establish investment. No later financing was found in the searches performed. No lifetime total is reported because the competing round figures are unresolved."
+history_status = "partial"
+coverage_through = "2026-10-05"
+[[intelligence.funding.rounds]]
+id = "seed-2017"
+round_type = "Seed"
+instrument = "unknown"
+status = "closed"
+announced_on = "2017"
+amount_status = "conflicting"
+amount_scope = "round"
+lead_investors = []
+participating_investors = ["CyLon Ventures / Cyber London Accelerator"]
+valuation_basis = "undisclosed"
+notes = "CB Insights reports $20,000 dated 2017-03-18 and Cyber London Accelerator; Prospeo reports $18,200 dated 2017-04-10. These appear to refer to the same early seed/accelerator financing but their dates and amounts differ. Company confirms accelerator participation, not the size or investment instrument."
+source_ids = ["cbinsights", "prospeo", "crunchbase", "cylon_company"]
+amount_observations = [
+  { id = "cbinsights-20k", amount = 20000, currency = "USD", source_ids = ["cbinsights"], as_of = "2017-03-18", notes = "Third-party database reports Seed financing of $0.02M." },
+  { id = "prospeo-18200", amount = 18200, currency = "USD", source_ids = ["prospeo"], as_of = "2017-04-10", notes = "Third-party database reports $18,200; no primary announcement located." }
+]
+
+[[intelligence.investors]]
+name = "CyLon Ventures (Cyber London Accelerator)"
+investor_type = "accelerator"
+relationship = "historical"
+round_ids = ["seed-2017"]
+source_ids = ["cbinsights", "crunchbase", "cylon_company"]
+notes = "CB Insights and Crunchbase identify CyLon/CyLon Ventures in connection with the seed round. The company itself confirms accelerator cohort participation in 2017 but does not state the investment terms; funding relationship is therefore based on third-party databases."
+
+[[intelligence.people]]
+name = "Sagi Lamay"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "The company’s 2022 interview describes him as CEO with sales and project-management experience; partner/distributor profiles likewise identify him as CEO."
+source_ids = ["company_interview", "pitchfinder", "pico"]
+
+[[intelligence.people]]
+name = "Avi Lamay"
+role = "Co-founder and CTO"
+is_founder = true
+current = true
+background = "Startup Nation Finder describes his software R&D background at Check Point and Verint. He is a named inventor on the company-assigned US patent."
+source_ids = ["pitchfinder", "patent"]
+
+[[intelligence.people]]
+name = "Hen Lamay"
+role = "Co-founder and COO"
+is_founder = true
+current = true
+background = "The company’s 2022 interview identifies him as co-founder and COO and describes his background as a senior software developer and team leader."
+source_ids = ["company_interview", "pico"]
+
+[intelligence.ownership]
+status = "not_found"
+summary = "No public cap table, disclosed ownership percentages, parent company, acquisition or exit was found. The company remains presented as a private Israeli company in available profiles; this does not establish beneficial ownership."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["crunchbase", "patent"]
+deals = []
+holdings = []
+
+[[intelligence.traction]]
+kind = "contract"
+date = "2020"
+description = "A publicly posted Italian Council of State procurement document specifies supply of 2,000 licenses of Deceptive Bytes Active Endpoint Deception for 36 months through the official Italian distribution channel. This is procurement evidence, but the document alone does not establish award completion, deployment, revenue recognized, or renewal."
+source_ids = ["italy_procurement"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2021"
+description = "Company-authored case study describes deployment at an unnamed West European events-services company and a 2019–2020 Emotet incident. It is a vendor case study and does not provide customer identity, contract value, or independently verified outcomes."
+source_ids = ["emotet_case"]
+
+[[intelligence.traction]]
+kind = "partnership"
+date = "2024-02-18"
+description = "Softprom announced a distribution agreement with Deceptive Bytes, indicating channel expansion; the announcement does not disclose sales or customer conversion."
+source_ids = ["softprom"]
+
+[[intelligence.traction]]
+kind = "product"
+date = "2026"
+description = "The current company site describes Custom Protection and protection of security tools from ransomware manipulation. These are company product claims; no independently tested performance data was identified."
+source_ids = ["company_site"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+date = "2021-07-13"
+description = "US patent US11062028B2, 'Methods and systems for end-point malware prevention to refrain malware components from being executed,' names Avi, Hen, and Sagi Lamay as inventors and Deceptive Bytes Ltd as original/current assignee according to the patent record. Priority is 2016-07-07; grant publication is 2021-07-13. Google Patents lists legal status as active, while disclaiming that status is not a legal conclusion."
+source_ids = ["patent"]
+
+[[intelligence.comparables]]
+name = "Acalvio Technologies"
+website = "https://www.acalvio.com/"
+rationale = "Cyber deception and active defense can substitute for parts of endpoint deception workflows."
+differentiation = "Acalvio's public positioning centers on enterprise deception across environments; Deceptive Bytes focuses its proposition on endpoint-native malware and ransomware behavior."
+source_ids = ["company_site"]
+
+[[intelligence.comparables]]
+name = "CrowdStrike Falcon"
+website = "https://www.crowdstrike.com/"
+rationale = "Endpoint protection platform incumbent and customer alternative for detection, prevention, and response."
+differentiation = "Broad endpoint security platform versus Deceptive Bytes' specialized deception layer intended to complement EDR."
+source_ids = ["company_site", "emotet_case"]
+
+[[intelligence.comparables]]
+name = "Microsoft Defender for Endpoint"
+website = "https://www.microsoft.com/en-us/security/business/endpoint-security/microsoft-defender-endpoint"
+rationale = "Bundled endpoint protection and response capability that can compete with or absorb adjacent prevention use cases."
+differentiation = "Large integrated security platform versus a specialist deception product."
+source_ids = ["company_site"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Company and distributor material identify Deceptive Bytes as headquartered in Holon, Israel; its three co-founders are the Lamay brothers, and company-assigned patent inventorship corroborates the founders' involvement."
+as_of = "2026-10-05"
+source_ids = ["pico", "patent", "company_interview"]
+
+[intelligence.research]
+researched_at = "2026-10-05T05:30:48Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Deceptive Bytes funding raised seed investors",
+  "Deceptive Bytes 2025 2026 Custom Protection company team",
+  "Deceptive Bytes acquisition funding investors Israel",
+  "site:deceptivebytes.com Deceptive Bytes about team",
+  "Deceptive Bytes CyLon funding",
+  "Deceptive Bytes Israel cybersecurity founder CEO",
+  "Deceptive Bytes revenue customers employees",
+  "Deceptive Bytes patents",
+  "Deceptive Bytes Israeli news funding",
+  "Deceptive Bytes Italian government procurement 2000 licenses",
+  "Deceptive Bytes competition endpoint deception alternatives"
+]
+gaps = [
+  "funding: primary financing terms, round instrument, exact close/announcement date, and definitive amount unavailable; conflicting third-party estimates remain unresolved.",
+  "investors: no primary investor announcement or independently confirmed current investor roster; CyLon relationship is database-reported.",
+  "financials: no reliable public revenue, ARR, profitability, burn, runway, or current exact headcount disclosure; third-party revenue/valuation estimates lack company-specific validated basis.",
+  "traction: contract completion, deployments, paid customer count, renewals, revenue contribution, and customer identity for the case study are not publicly established.",
+  "intellectual_property: additional patent families, prosecution status outside the cited US patent, and freedom-to-operate position not assessed.",
+  "competition: no independent head-to-head efficacy, false-positive, resource-use, or renewal comparison located.",
+  "team: current employment and roles of all founders were not independently confirmed through current first-party biographies.",
+  "ownership: beneficial ownership, cap table, and any private transfers remain undisclosed.",
+  "dual_use: no substantiated public defense or government deployment, security certification, or disconnected-environment evaluation found."
+]
+conflicts = ["Seed amount and exact funding date differ between CB Insights ($20,000; 2017-03-18) and Prospeo ($18,200; 2017-04-10). Neither source is a primary financing record; numeric round amount and total raised are omitted."]
+diligence_questions = [
+  "Can the company provide primary records for the reported 2017 seed/accelerator financing, including instrument, cash received, date, and investor identity, and reconcile the $20,000 versus $18,200 reports?",
+  "What are current ARR, paid endpoint count, renewal and gross retention rates, customer concentration, and conversion from the Italian public procurement and channel agreements?",
+  "Can an independent red-team evaluation quantify incremental prevention, false positives, endpoint overhead, and resilience against agent fingerprinting alongside Microsoft Defender and major EDR products?",
+  "What is the current cap table, founder ownership, employee option pool, and any outstanding debt or convertible instruments?",
+  "What deployment, update-signing, telemetry, and offline management controls exist for government or critical-infrastructure use, and are any such deployments actually contracted?"
+]
+
+[[intelligence.research.sources]]
+id = "company_site"
+url = "https://www.deceptivebytes.com/"
+title = "Deceptive Bytes official website"
+publisher = "Deceptive Bytes"
+kind = "company"
+accessed_at = "2026-10-05T05:30:48Z"
+claims = ["Company continues to present an active endpoint deception product and Custom Protection capability.", "Company claims product performance and customer references; these are vendor assertions."]
+
+[[intelligence.research.sources]]
+id = "cylon_company"
+url = "https://deceptivebytes.com/deceptive-bytes-is-participating-in-cylon-accelerator/"
+title = "Deceptive Bytes is participating in CyLon accelerator"
+publisher = "Deceptive Bytes"
+kind = "company"
+accessed_at = "2026-10-05T05:30:48Z"
+published_on = "2017-03-26"
+claims = ["Company announced selection and participation in CyLon's fifth cohort; the post does not state investment terms."]
+
+[[intelligence.research.sources]]
+id = "cbinsights"
+url = "https://www.cbinsights.com/company/deceptive-bytes/financials"
+title = "Deceptive Bytes Stock Price, Funding, Valuation, Revenue & Financial Statements"
+publisher = "CB Insights"
+kind = "directory"
+accessed_at = "2026-10-05T05:30:48Z"
+claims = ["Reports one Seed round for $20,000 dated 2017-03-18 and lists Cyber London Accelerator as investor."]
+
+[[intelligence.research.sources]]
+id = "prospeo"
+url = "https://prospeo.io/c/deceptive-bytes-revenue"
+title = "Deceptive Bytes Revenue"
+publisher = "Prospeo"
+kind = "directory"
+accessed_at = "2026-10-05T05:30:48Z"
+claims = ["Reports one funding record of $18,200 dated 2017-04-10; separately labels revenue and valuation as estimates based on industry averages."]
+
+[[intelligence.research.sources]]
+id = "crunchbase"
+url = "https://www.crunchbase.com/organization/deceptive-bytes-ltd"
+title = "Deceptive Bytes - Crunchbase Company Profile & Funding"
+publisher = "Crunchbase"
+kind = "directory"
+accessed_at = "2026-10-05T05:30:48Z"
+claims = ["Identifies the company as private and reports CyLon Ventures as funder; detailed amounts are obfuscated."]
+
+[[intelligence.research.sources]]
+id = "patent"
+url = "https://patents.google.com/patent/US11062028B2/en"
+title = "US11062028B2 - Methods and systems for end-point malware prevention to refrain malware components from being executed"
+publisher = "Google Patents / USPTO record"
+kind = "filing"
+accessed_at = "2026-10-05T05:30:48Z"
+published_on = "2021-07-13"
+claims = ["Patent record identifies Deceptive Bytes Ltd as original and current assignee and Avi, Hen, and Sagi Lamay as inventors.", "Patent record reports priority date 2016-07-07, filing date 2017-07-05 and grant publication date 2021-07-13.", "Patent describes endpoint malware prevention through deceptive behavior and modification of execution environment."]
+
+[[intelligence.research.sources]]
+id = "emotet_case"
+url = "https://deceptivebytes.com/wp-content/uploads/docs/Deceptive%20Bytes%20-%20Case%20Study%20-%20Emotet%20Attack.pdf"
+title = "Customer Profile: Emotet Attack"
+publisher = "Deceptive Bytes"
+kind = "company"
+accessed_at = "2026-10-05T05:30:48Z"
+published_on = "2021"
+claims = ["Company case study describes an unnamed West European events-services customer and an Emotet incident around 2019-2020.", "The case study is company-authored and does not disclose the customer's identity or contract economics."]
+
+[[intelligence.research.sources]]
+id = "italy_procurement"
+url = "https://trasparenza.cds.giustizia-amministrativa.it/documents/1284375/1564025/documentazione%2Bgara%2BRDO%2BMEPA%2B112020%2B2694482.pdf/06deb539-5ef9-19d5-0150-8bd60de74967?t=1605714119000"
+title = "Italian administrative judiciary procurement document, tender 2694482"
+publisher = "Consiglio di Stato, Italy"
+kind = "government"
+accessed_at = "2026-10-05T05:30:48Z"
+published_on = "2020"
+claims = ["Procurement document specifies 2,000 licenses of Deceptive Bytes Active Endpoint Deception for 36 months through the manufacturer's official Italian channel."]
+
+[[intelligence.research.sources]]
+id = "pico"
+url = "https://www.pico-t.co.jp/product/deceptive-bytes/"
+title = "Deceptive Bytes product listing"
+publisher = "Pico Technologies"
+kind = "other"
+accessed_at = "2026-10-05T05:30:48Z"
+claims = ["Distributor identifies Deceptive Bytes as headquartered in Israel and names Sagi, Hen, and Avi Lamay as co-founders/executives.", "Distributor describes Windows and Linux support, on-premises availability, enterprise sales from 25 endpoints, and pricing on request.", "Product efficacy statements and 99.9% prevention rate on this page are distributor/vendor claims."]
+
+[[intelligence.research.sources]]
+id = "pitchfinder"
+url = "https://finder.startupnationcentral.org/user/profile/avi-lamay"
+title = "Avi Lamay - Startup Nation Finder"
+publisher = "Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-05T05:30:48Z"
+claims = ["Profile identifies Avi Lamay as Deceptive Bytes co-founder and CTO and summarizes prior Check Point and Verint experience."]
+
+[[intelligence.research.sources]]
+id = "softprom"
+url = "https://softprom.com/news/softprom-has-signed-a-distribution-agreement-with-deceptive-bytes"
+title = "Softprom has signed a distribution agreement with Deceptive Bytes"
+publisher = "Softprom"
+kind = "other"
+accessed_at = "2026-10-05T05:30:48Z"
+published_on = "2024-02-18"
+claims = ["Softprom announced a distribution agreement with Deceptive Bytes."]
+
+[[intelligence.research.sources]]
+id = "company_interview"
+url = "https://www.deceptivebytes.com/?p=1267"
+title = "Deceptive Bytes' interview to CyberNews"
+publisher = "Deceptive Bytes"
+kind = "company"
+accessed_at = "2026-10-05T05:30:48Z"
+published_on = "2022-04-13"
+claims = ["Interview identifies Hen Lamay as co-founder and COO and describes the three Lamay brothers' company founding story and roles."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-05T05:30:48Z"
+next_review_on = "2027-04-05"
+queries = ["Deceptive Bytes Israel cybersecurity founder CEO", "Deceptive Bytes company headquarters legal name"]
+source_ids = ["company_site", "pico", "company_interview", "patent"]
+summary = "Confirmed active product presence, Israeli headquarters in Holon, 2016 origin, company legal name as stated on patent assignment, and founders."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-05T05:30:48Z"
+next_review_on = "2027-01-05"
+queries = ["Deceptive Bytes funding raised seed investors", "Deceptive Bytes CyLon funding", "Deceptive Bytes Israel funding raised seed"]
+source_ids = ["cbinsights", "prospeo", "crunchbase", "cylon_company"]
+summary = "Databases indicate one historical seed/accelerator round with conflicting dates and dollar values. No company or investor primary financing announcement located; no subsequent round verified."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-05T05:30:48Z"
+next_review_on = "2027-01-05"
+queries = ["Deceptive Bytes investors CyLon Ventures", "Deceptive Bytes funding investors"]
+source_ids = ["cbinsights", "crunchbase", "cylon_company"]
+summary = "CyLon is identified as investor in third-party databases; company confirms cohort participation but not financing. Private cap table remains unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-05T05:30:48Z"
+next_review_on = "2027-04-05"
+queries = ["Deceptive Bytes Israel cybersecurity founder CEO", "Deceptive Bytes team founders Lamay"]
+source_ids = ["company_interview", "pitchfinder", "pico", "patent"]
+summary = "Three co-founders and roles are identified across the company interview, channel material, and patent inventorship; current roles not independently refreshed from a current company leadership page."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T05:30:48Z"
+next_review_on = "2027-04-05"
+queries = ["Deceptive Bytes acquisition ownership parent company", "Deceptive Bytes Ltd shareholders acquisition"]
+source_ids = ["crunchbase", "patent"]
+summary = "No public acquisition, parent, cap table, disclosed holdings, or ownership percentages found; private company status only."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T05:30:48Z"
+next_review_on = "2027-04-05"
+queries = ["Deceptive Bytes revenue customers employees", "Deceptive Bytes annual recurring revenue financials"]
+source_ids = ["prospeo", "cbinsights", "crunchbase"]
+summary = "No company-reported financial metrics located. Third-party revenue and valuation estimates are model-generated and excluded from reported metrics."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-05T05:30:48Z"
+next_review_on = "2027-04-05"
+queries = ["Deceptive Bytes Italian government procurement 2000 licenses", "Deceptive Bytes case study customer", "Deceptive Bytes Softprom distribution"]
+source_ids = ["italy_procurement", "emotet_case", "softprom", "company_site"]
+summary = "Found public procurement specification, an anonymous company case study, a 2024 distribution agreement, and current product activity; none establish current paid deployment scale or recurring revenue."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-05T05:30:48Z"
+next_review_on = "2027-04-05"
+queries = ["Deceptive Bytes patents", "Deceptive Bytes Ltd US11062028B2"]
+source_ids = ["patent"]
+summary = "Verified a granted US patent assigned to Deceptive Bytes Ltd with the three Lamay founders listed as inventors; broader portfolio and freedom to operate not assessed."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-05T05:30:48Z"
+next_review_on = "2027-04-05"
+queries = ["Deceptive Bytes competition endpoint deception alternatives", "endpoint deception Acalvio endpoint security alternatives"]
+source_ids = ["company_site"]
+summary = "Compared the product category with endpoint platform incumbents and deception specialists; no independent comparative tests located."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T05:30:48Z"
+next_review_on = "2027-04-05"
+queries = ["Deceptive Bytes government defense customer contract", "Deceptive Bytes government deployment certification"]
+source_ids = ["italy_procurement", "company_site"]
+summary = "Endpoint security has plausible government and critical-infrastructure applicability. Located public Italian administrative procurement evidence but no direct evidence of defense, classified, or Israeli government deployment or certification."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current official company site actively presents products and contact; this supports active public operations as of the research date."
+verified_at = "2026-10-05T05:30:48Z"
+source_ids = ["company_site"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Pico Technologies identifies headquarters in Israel; patent record assigns intellectual property to Deceptive Bytes Ltd and lists Lamay founders as inventors."
+verified_at = "2026-10-05T05:30:48Z"
+source_ids = ["pico", "patent"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2017.amount_observations.cbinsights-20k.amount"
+support = "direct"
+summary = "CB Insights reports the 2017 Seed amount as $0.02M; this check verifies the reported observation only, not that it is the definitive amount raised."
+verified_at = "2026-10-05T05:30:48Z"
+source_ids = ["cbinsights"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2017.amount_observations.prospeo-18200.amount"
+support = "direct"
+summary = "Prospeo reports one funding record of $18,200 dated 2017-04-10; this check verifies the database observation only."
+verified_at = "2026-10-05T05:30:48Z"
+source_ids = ["prospeo"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2017.participating_investors"
+support = "direct"
+summary = "CB Insights and Crunchbase name Cyber London Accelerator/CyLon Ventures in connection with the seed round; company independently confirms cohort participation but not investment terms."
+verified_at = "2026-10-05T05:30:48Z"
+source_ids = ["cbinsights", "crunchbase", "cylon_company"]

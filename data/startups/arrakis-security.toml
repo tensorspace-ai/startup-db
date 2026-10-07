@@ -1,0 +1,363 @@
+name = "Arrakis Security"
+description = "Arrakis Security is an Israeli cybersecurity startup building a behavioral-governance layer for autonomous AI agents. Its platform discovers agent activity, profiles expected behavior, enforces policies before and during tool use, and provides real-time detection and response across enterprise SaaS, cloud, and workflow environments."
+detailed_description = """
+**Product and the concrete problem it solves.** Arrakis Security addresses the gap between an enterprise knowing that an AI agent exists and knowing what that agent is actually doing. Traditional identity, endpoint, and application-security controls are designed around human users, deterministic software, or static permissions. An autonomous agent can instead chain tool calls, query internal systems, change records, send data, invoke another agent, or adapt its behavior to new context without a person approving each intermediate step. That creates a practical visibility problem: a security team may see that an agent is connected to Salesforce, GitHub, an internal API, or an automation platform, but not whether it is using the intended resources, following the intended workflow, or crossing a dangerous boundary. Arrakis calls this the **visibility illusion**. Its product treats the agent, its workflow, and the surrounding SaaS graph as a security object, with the goal of making autonomous software observable and controllable without requiring organizations to abandon useful automation.
+
+**Core technology and how it works.** The platform is presented as a three-stage architecture. First, Arrakis discovers and inventories agents across SaaS, cloud, and endpoint environments, tracks ownership, and builds a behavioral baseline for each non-human actor. Second, its AI Security Posture Management layer applies pre-execution controls, including static analysis, Model Context Protocol gateway enforcement, allow-lists, data-loss-prevention rules, and correlation with vulnerability frameworks such as OWASP, NIST, and MITRE ATLAS. Third, its AI Detection and Response layer treats agent outputs as untrusted and compares live activity with the expected profile, looking for anomalous intent, privilege abuse, data exfiltration, cross-agent contagion, and other deviations. The company says customers can connect through a Python or TypeScript SDK or a transparent HTTP proxy, with no need to fork agent code or replace the underlying model provider. The proxy and SDK model is technically important because it gives Arrakis a chance to observe tool calls and resource accesses at runtime while leaving model choice and application architecture intact. Public material does not establish independent accuracy, latency, false-positive, or coverage benchmarks, so these claims remain product assertions that require customer validation.
+
+**Market, customers, and go-to-market.** Arrakis is selling into the rapidly forming market for AI-agent security, but its wedge is narrower and more operational than generic responsible-AI governance. Its buyers are likely to include CISOs, security-operations leaders, platform-engineering teams, AI program owners, and compliance managers who must permit agents to act inside business systems while preserving least privilege and an audit trail. The initial target environments are enterprises using a mix of SaaS automation, coding agents, no-code platforms, internal copilots, and custom agent frameworks. Arrakis explicitly names environments such as Workday, Salesforce, Make, n8n, Copilot Studio, Claude, GitHub, Cursor, and other agentic systems as examples of where autonomous behavior is accumulating. The go-to-market motion appears to start with a fast instrumentation assessment that inventories unknown agents and surfaces policy violations, then expands into continuous monitoring, gateway enforcement, red teaming, and response. The company says it has early enterprise customers and design partners, but it has not publicly named those customers, disclosed contract values, or reported recurring revenue, retention, or conversion rates. That makes the product's enterprise relevance credible but its repeatability and sales efficiency unproven.
+
+**Traction, funding, and third-party validation.** Arrakis emerged from stealth on August 2, 2026 with an $8 million Seed round led by Hetz Ventures. The official announcement identifies participation from ElevenLabs CEO Mati Staniszewski, Torq CEO Ofer Smadari, Pentera founder Amitai Ratzon, and senior Palantir executives. Hetz's portfolio page independently describes the company's three-stage approach: discovery and behavioral baselines, pre-execution controls through an MCP gateway, and real-time monitoring of agent outputs and cross-agent behavior. The official launch post says Arrakis has a 20-person team, is expanding R&D and product teams in Israel, and is using the financing to strengthen detection and response and accelerate deployments. Geektime reported a concrete early proof point from a customer evaluation: after connection, the platform mapped more than 1,000 active AI agents in under an hour, most previously unknown to the security team, and identified dozens of policy violations and critical exposures during the proof of concept. That is a company-reported result rather than a published independent benchmark, but it is more informative than a logo wall because it tests the discovery problem at the heart of the thesis. There is no public evidence yet of a later financing round, audited revenue, government contract, security certification, or independently reproducible efficacy study.
+
+**Founders and team background.** Arrakis was founded by Tal Baron, Omer Efrat, and Ron Shani, with the company and investor materials describing the group as veterans of Torq and Palantir. Baron is CEO, Efrat is CPO, and Shani is CTO. Their prior experience is unusually relevant to the problem: Torq worked on enterprise security automation, while Palantir exposed the founders to large-scale data infrastructure, complex workflows, and high-consequence deployments where system behavior must be explainable and controllable. The founders say they saw the gap while building automation and AI-security systems for large organizations, and Shani has described work on a large energy-company project that connected millions of sensors in real time and required attention to model reliability and operational safety. Arrakis Labs adds a research dimension, with the company describing personnel from Microsoft security research and elite military-technology backgrounds who study agent-specific threats and feed new patterns into product controls. The launch announcement gives a total team size of 20, which is substantial for a company founded in late 2025 but still small relative to the breadth of agent frameworks, integrations, threat research, and enterprise support it is attempting to cover. Specific employee counts by function, founders' military units, customer references, and retention data are not publicly confirmed and should not be inferred.
+
+**Competitive dynamics.** Arrakis competes in a crowded and rapidly converging category where the control point is still unsettled. **Zenity** (Israeli AI-security platform spanning low-code applications, agents, posture, and runtime controls) has greater disclosed funding and broader enterprise history. **Willow** (Israeli agentic access platform focused on identities, scoped permissions, tool governance, and human-attributed audit trails) competes for the same CISO and AI-platform budgets from the access-control side. **Prompt Security** (Israeli AI-security gateway for employee use, applications, coding assistants, and agents) overlaps in inspection and policy enforcement. **Koi Security** (acquired Israeli endpoint platform governing AI agents, MCP servers, extensions, and software supply-chain risk) attacks the endpoint and agent perimeter. **Microsoft Entra, Defender, and Copilot controls** (bundled identity, endpoint, and AI governance from the incumbent productivity stack) are the most important distribution threat. **Okta** (identity and access incumbent extending toward non-human identities and agent governance) can own the authorization layer. **Palo Alto Networks Prisma AIRS and Cortex** (security-platform approach combining AI application controls with endpoint and SOC distribution) can bundle monitoring and response. Arrakis's claimed edge is the behavioral layer: it seeks to understand what a permitted agent does at runtime, not only whether the agent has access. That edge becomes durable only if its behavioral baselines, attack research, policy data, and integrations produce better decisions than bundled controls without introducing unacceptable blocking or analyst workload.
+
+**Defense, security, and resilience relevance.** Arrakis has direct dual-use relevance because autonomous software is becoming part of the digital infrastructure of defense contractors, government agencies, utilities, hospitals, financial institutions, and emergency-response organizations. In a high-assurance environment, an agent that can read sensitive material, write to operational systems, or invoke tools with inherited credentials is a non-human insider whose behavior must be attributable, bounded, and interruptible. Discovery can reveal unauthorized or forgotten agents in a mission-support environment; behavioral profiles can identify drift from an approved workflow; MCP gateway controls can restrict tool servers and data paths; and a runtime kill switch or policy block can stop a dangerous action before it propagates. These capabilities could support secure coding agents in defense supply chains, intelligence-analysis workflows, critical-infrastructure operations, cyber-defense automation, and logistics planning while preserving human authority over consequential actions. The connection is defensive and infrastructural, not a claim that Arrakis supplies weapons autonomy or has fielded a military system. No public source reviewed establishes a defense customer, classified deployment, government accreditation, FedRAMP authorization, or operation on disconnected tactical networks. Its strategic relevance is therefore credible at the control-plane layer but still an adjacency until high-assurance deployments are documented.
+
+**Growth stage, trajectory, and key diligence risks.** Arrakis is classified as **early**: the company was incorporated in Israel on December 31, 2025 according to a public company registry, emerged from stealth less than a year later, raised a first $8 million Seed round, and publicly reports a 20-person team. It has a live product architecture, early enterprise proof-of-concept evidence, and a research publication stream, so it is beyond an idea or purely pre-product phase. The trajectory depends on whether autonomous agents become a durable enterprise operating layer and whether security buyers accept a dedicated behavioral-control product instead of waiting for identity, cloud, endpoint, or AI-platform vendors to bundle it. Key diligence points are: (1) independently verify the 1,000-agent discovery result and measure precision, recall, latency, and deployment effort; (2) determine whether anomaly detection can distinguish legitimate workflow changes from attacks without blocking useful automation; (3) test coverage across custom agents, no-code platforms, MCP servers, multi-agent chains, and browser or coding workflows; (4) examine how credentials, tenant isolation, data residency, and policy failure modes behave in self-hosted or restricted environments; (5) establish whether named customers, renewal behavior, and expansion exist beyond founder-network design partners; (6) assess the cost of maintaining threat research and integrations against competitors with larger platforms; and (7) clarify the legal entity, U.S. commercial presence, certification roadmap, and public-sector procurement path. The company is a high-quality strategic watch candidate, but the market is young, the product claims are largely vendor-reported, and the most important moat remains to be proven in production.
+"""
+logo = "Unknown"
+website = "https://arrakis.security/"
+sector = "AI Agent Security and Behavioral Governance"
+founded = "2025"
+headquarters = "Ramat Hasharon and Tel Aviv, Israel; the company’s Israeli incorporation and public address are in Tel Aviv"
+employees = "20 (company-reported at August 2026 launch)"
+funding_stage = "Seed; $8M announced August 2, 2026, led by Hetz Ventures"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Arrakis's core technology is directly useful for both commercial enterprise security and defensive government, defense-industrial, and critical-infrastructure environments. Its agent discovery, behavioral baselining, policy enforcement, MCP gateway, audit trail, anomaly detection, and response controls address the non-human insider problem created when autonomous software can access sensitive systems and execute workflows without a human approving every intermediate action. That transfer path is credible for secure coding, intelligence-analysis support, cyber-defense automation, logistics, utilities, healthcare, and emergency-response systems. The assessment must remain calibrated: public sources show no named defense customer, classified deployment, government accreditation, or tactical disconnected-network operation. Arrakis is therefore dual-use at the defensive infrastructure layer, with strategic relevance that is promising but not yet demonstrated in a national-security deployment."
+key_technologies = [
+  "Cross-environment AI-agent discovery and inventory across SaaS, cloud, endpoint, and workflow systems",
+  "Dynamic behavioral baselines for non-human agents, their workflows, owners, permissions, and surrounding SaaS graph",
+  "Pre-execution AI Security Posture Management with static analysis, MCP gateway enforcement, allow-lists, and data-loss controls",
+  "Runtime AI Detection and Response using intent-aware anomaly detection and cross-agent contagion tracking",
+  "Python and TypeScript SDK instrumentation plus transparent HTTP proxy interception of agent tool calls and API requests",
+  "Granular policy enforcement, action blocking, permission revocation, kill switches, and audit-ready event trails",
+  "Arrakis Labs threat research mapping prompt injection, tool poisoning, privilege abuse, data exfiltration, and agent-specific attack patterns"
+]
+use_cases = [
+  "Discovering and governing unsanctioned AI agents created in Salesforce, Workday, n8n, Make, or internal automation systems",
+  "Monitoring coding agents and MCP servers that can read repositories, access credentials, modify infrastructure, or affect software supply chains",
+  "Enforcing least-privilege tool access and approval boundaries for enterprise agents handling finance, HR, legal, or customer data",
+  "Detecting prompt injection, tool poisoning, privilege escalation, data exfiltration, or behavioral drift during live agent sessions",
+  "Providing security operations teams with attributable traces of agent actions, policy decisions, approvals, and blocked events",
+  "Testing agent resilience through red-team simulations before production deployment and during continuous posture review",
+  "Securing defense-contractor, government, utility, hospital, and emergency-response AI workflows where autonomous software touches high-consequence systems",
+  "Containing a rogue or compromised agent through runtime blocking, permission revocation, workflow suspension, or a granular kill switch"
+]
+investible = true
+investment_rationale = "Arrakis is a high-signal but high-uncertainty early-stage company whose main asset is the timing and specificity of its thesis. (1) The underlying problem is real: organizations are deploying software that can reason, call tools, and change systems, while legacy controls still center on human identities and static permissions. (2) The founding team has unusually direct experience in enterprise security automation and large-scale operational data systems through Torq and Palantir. (3) The $8M Hetz-led Seed round and participation from leaders at ElevenLabs, Torq, Pentera, and Palantir provide relevant ecosystem validation rather than generic capital. (4) The reported proof-of-concept discovery of more than 1,000 agents and dozens of policy violations is a concrete signal, though it remains company-reported. (5) The product can occupy a valuable runtime control point if it turns behavioral telemetry into reliable prevention and response. Counterweights are material: identity, endpoint, cloud, and AI-platform incumbents can bundle adjacent capabilities; the category overlaps with several well-funded Israeli startups; the 20-person team must cover research, integrations, product, and enterprise support; customer names and commercial metrics are undisclosed; and no defense deployment or certification is public. This is a strategic diligence assessment, not an investment recommendation."
+strategic_value = "Arrakis's strategic value is concentrated in the control of autonomous software before it becomes an unaccountable operational actor. (1) Sovereign and resilience value: government, defense-industrial, utility, healthcare, and emergency-response operators increasingly need agents that can work with sensitive systems without receiving unrestricted standing authority. (2) Control-plane value: behavioral monitoring and runtime enforcement sit between access permission and actual action, a boundary that is not fully covered by identity or endpoint products. (3) Threat-intelligence value: Arrakis Labs can turn new agent-specific attack research into detection patterns, policy templates, and response logic, although the durability of that feedback loop is unproven. (4) Israeli ecosystem value: the company combines Israeli cyber talent, a Hetz-led financing network, and founders with experience in global enterprise deployments. (5) Allied-technology value: a portable agent-governance layer could support organizations that need model choice, data-residency control, and human accountability across cloud and self-hosted environments. The strategic ceiling depends on production efficacy, high-assurance deployment, and independent customer proof; absent those, Arrakis remains a promising cyber-resilience vendor rather than an established national capability."
+potential_score = 78.0
+technology_score = 79.0
+market_score = 77.0
+team_score = 86.0
+dual_use_score = 72.0
+strategic_alignment_score = 79.0
+stage = "early"
+stage_rationale = "Arrakis is early-stage because it was incorporated in late 2025, emerged from stealth on August 2, 2026, announced its first $8M Seed round, and publicly reports a 20-person team. The company has moved beyond an idea: the official product site documents a multi-stage platform, SDK and proxy integration paths, a threat-research arm, and early proof-of-concept evidence. It has not yet demonstrated the operating history associated with a mid-stage company. Public sources do not disclose recurring revenue, customer count, renewal rates, contract scale, independent efficacy benchmarks, or a second financing round. The next maturity markers are repeatable deployments outside the founders' network, independently referenceable customers, measured reduction in risky agent actions, a mature certification and data-residency posture, and evidence that the product can scale its integrations and response operations beyond a 20-person team."
+competitors = [
+  "Zenity (Israeli AI-security platform spanning low-code applications, agent posture, and runtime controls)",
+  "Willow (Israeli agentic access platform for scoped permissions, tool governance, and human-attributed audit trails)",
+  "Prompt Security (Israeli AI-security gateway covering employee AI use, applications, coding assistants, and agents)",
+  "Koi Security (acquired Israeli endpoint platform governing AI agents, MCP servers, extensions, and software supply-chain risk)",
+  "Microsoft Entra, Defender, and Copilot controls (bundled identity, endpoint, and AI governance from the incumbent productivity stack)",
+  "Okta (identity and access incumbent extending toward non-human identities and agent governance)",
+  "Palo Alto Networks Prisma AIRS and Cortex (broader AI-security, endpoint, and SOC platform with bundling power)"
+]
+competitive_edge = "Arrakis's most credible edge is its attempt to govern runtime behavior rather than merely inventory agents or grant them permissions. (1) The three-stage architecture links discovery, pre-execution posture enforcement, and live detection and response, allowing the company to connect a suspicious action to the agent, workflow, owner, tool, and policy context. (2) SDK and transparent-proxy deployment paths reduce the need to rewrite existing agents or commit to one model provider. (3) The company treats all agent outputs as untrusted and emphasizes intent-aware monitoring, cross-agent contagion, and a kill switch, which is a more operational stance than static AI policy documentation. (4) The founders' Torq and Palantir experience should help with enterprise workflow complexity and security-buyer credibility. (5) Arrakis Labs can create a threat-research-to-detection feedback loop. These advantages are not yet a proven moat: behavioral detection can generate false positives, integrations are expensive to maintain, and Microsoft, Okta, Palo Alto Networks, Zenity, Willow, and other vendors can bundle overlapping controls. Durability will depend on proprietary telemetry, high-quality behavioral models, low-friction enforcement, and referenceable production outcomes."
+risk_factors = [
+  "Unproven detection quality: public materials do not disclose independent precision, recall, latency, false-positive, or false-negative measurements",
+  "Incumbent bundling: Microsoft, Okta, Palo Alto Networks, cloud platforms, and identity vendors can extend existing control planes into AI-agent governance",
+  "Crowded Israeli category: Zenity, Willow, Prompt Security, Koi, and other local companies compete for overlapping AI-security and enterprise-control budgets",
+  "Enterprise deployment complexity: supporting custom agents, SaaS automation, MCP servers, SDKs, proxies, data residency, and restricted environments can outgrow a 20-person team",
+  "Customer concentration and disclosure gap: early enterprise proof is company-reported, with no named customers, revenue, retention, or contract values public",
+  "Operational blocking risk: incorrect anomaly decisions or policy enforcement could interrupt critical workflows and make buyers reluctant to grant runtime authority",
+  "Defense-readiness gap: no public defense customer, classified deployment, government authorization, or disconnected tactical-network evidence",
+  "Category and timing risk: enterprise agent adoption may remain fragmented or stall, shrinking the population of production agents that require a dedicated security layer"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Arrakis merits active monitoring because it sits at the intersection of Israeli cyber expertise, AI infrastructure, autonomous-workforce governance, and defensive resilience. (1) The company targets a sharply defined control gap: security teams cannot reliably inventory or understand what autonomous agents do after they receive access. (2) The founders bring Torq and Palantir experience that maps directly to security automation, data infrastructure, and complex enterprise deployments. (3) Hetz Ventures led an $8M Seed round with relevant security and AI operators, and the company reports a 20-person team plus a discovery proof of concept that found more than 1,000 agents and dozens of policy violations. (4) Its architecture has direct transfer potential to defense suppliers, government, utilities, hospitals, and other high-consequence environments. Priority is capped by the absence of named customers, independent efficacy data, disclosed revenue, public-sector accreditation, or demonstrated defense deployment, as well as intense competition from Israeli startups and platform incumbents. Milestones that should raise priority are independently referenceable production customers, quantified detection and prevention performance, self-hosted or disconnected deployment evidence, and a first high-assurance or critical-infrastructure engagement."
+public_sources = [
+  { label = "Arrakis Security official website", url = "https://arrakis.security/", description = "Official product positioning, product architecture and target use cases." },
+  { label = "Arrakis Security launch and funding announcement", url = "https://blog.arrakis.security/out-of-stealth-securing-the-era-of-the-autonomous-enterprise", description = "Company announcement of the August 2026 $8 million Seed, investors, founders, team size and Israeli R&D plans." },
+  { label = "Hetz Ventures Arrakis portfolio page", url = "https://www.hetz.vc/portfolio/arrakis-security", description = "Lead investor profile corroborating founders, product, company background and location." },
+  { label = "Geektime launch and POC report", url = "https://www.geektime.co.il/arrakis-security-raies-seed/", description = "Independent Israeli reporting on the round, founders, investors, supported agent environments and company-described POC." },
+  { label = "Arrakis Security registry profile", url = "https://en.checkid.co.il/company/ARRAKIS%2BSECURITY%2BLTD-xbLpj3g-517266466", description = "Israeli legal name, registration number, active status, incorporation date and registered address." },
+  { label = "The Arrakis Chronicles", url = "https://blog.arrakis.security/", description = "Dated company threat-research publication history." },
+  { label = "Arrakis Security how it works", url = "https://arrakis.security/how-it-works", description = "Official technical product and integration description." },
+  { label = "Israeli Corporations Authority company information service", url = "https://www.gov.il/he/service/company_extract", description = "Government description of official company-information and extract service." }
+]
+crawled_at = "2026-08-31T20:17:36Z"
+updated_at = "2026-10-03T21:00:08Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Tal Baron", role = "CEO and co-founder", is_founder = true, current = true, background = "Company CEO; co-founded Arrakis with Omer Efrat and Ron Shani after work at Torq and Palantir.", source_ids = ["launch", "hetz", "geektime"] },
+  { name = "Omer Efrat", role = "CPO and co-founder", is_founder = true, current = true, background = "Company CPO and co-founder; reported Torq and Palantir experience.", source_ids = ["hetz", "geektime"] },
+  { name = "Ron Shani", role = "CTO and co-founder", is_founder = true, current = true, background = "Company CTO and co-founder; reported Torq and Palantir experience.", source_ids = ["hetz", "geektime", "chronicles"] }
+]
+investors = [
+  { name = "Hetz Ventures", investor_type = "vc", website = "https://www.hetz.vc/", relationship = "current", round_ids = ["seed-2026-08"], source_ids = ["launch", "hetz", "geektime"] },
+  { name = "Mati Staniszewski", investor_type = "angel", relationship = "current", round_ids = ["seed-2026-08"], source_ids = ["launch", "geektime"] },
+  { name = "Ofer Smadari", investor_type = "angel", relationship = "current", round_ids = ["seed-2026-08"], source_ids = ["launch", "geektime"] },
+  { name = "Amitai Ratzzon", investor_type = "angel", relationship = "current", round_ids = ["seed-2026-08"], source_ids = ["launch", "geektime"] },
+  { name = "Senior Palantir executives (individual identities undisclosed)", investor_type = "angel", relationship = "current", round_ids = ["seed-2026-08"], source_ids = ["launch", "geektime"] }
+]
+financials = []
+traction = [
+  { kind = "product", description = "Arrakis announced its public launch from stealth and described a three-stage platform for discovery, posture management and runtime detection and response.", date = "2026-08-02", source_ids = ["launch", "official", "hetz"] },
+  { kind = "customer", description = "Geektime reported a company-described proof of concept at an unnamed organization with over 2,000 employees: the platform mapped more than 1,000 active agents in under an hour and identified dozens of policy violations and critical vulnerability exposures. The report does not establish a paid contract or production deployment.", date = "2026-08-02", source_ids = ["geektime"] },
+  { kind = "hiring", description = "At launch, Arrakis said it had a 20-person team and planned to expand R&D and product teams in Israel.", date = "2026-08-02", source_ids = ["launch"] },
+  { kind = "product", description = "The company publishes dated AI agent security research through The Arrakis Chronicles, including posts by its founders and research staff.", date = "2026-08-26", source_ids = ["chronicles"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Zenity", website = "https://zenity.io/", rationale = "Israeli enterprise AI security company addressing agent and low-code application risks.", differentiation = "Overlapping agent discovery and runtime governance; public materials do not establish a head-to-head comparison.", source_ids = ["geektime"] },
+  { name = "Willow", website = "https://www.willow.com/", rationale = "Israeli agent security company focused on controlling agent access and tool use.", differentiation = "Adjacent governance and permissions positioning; specific product differentiation requires customer-side comparison.", source_ids = ["geektime"] },
+  { name = "Microsoft Security", website = "https://www.microsoft.com/security", rationale = "Large platform incumbent with identity, cloud and AI ecosystem controls that may overlap or bundle agent governance.", differentiation = "Broad existing distribution and control-plane integration versus Arrakis's dedicated agent behavior focus.", source_ids = ["official"] }
+]
+
+[intelligence.company]
+company_id = "il-arrakis-security"
+legal_name = "ARRAKIS SECURITY LTD"
+aliases = ["Arrakis Security", "אראקיס סקיוריטי בע\"מ"]
+operating_status = "active"
+business_model = "B2B enterprise cybersecurity software; subscription and deployment terms are not publicly disclosed."
+products = ["Autonomous workforce governance platform", "AI Observability", "AI Security Posture Management", "AI Detection and Response", "Arrakis Labs"]
+locations = ["Tel Aviv, Israel", "Ramat Hasharon, Israel"]
+country_of_incorporation = "Israel"
+founded_on = "2025-12-31"
+registry_identifiers = [
+  { jurisdiction = "Israel", scheme = "Israeli company number", identifier = "517266466", source_ids = ["registry"] }
+]
+source_ids = ["official", "launch", "hetz", "registry"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One publicly announced equity Seed round found: $8 million, announced at the August 2, 2026 launch and led by Hetz Ventures. Company and lead investor announcements agree on the headline amount. No valuation or terms were disclosed. Company-announced lifetime funding at launch was $8 million; no later financing announcement was found through 2026-10-03."
+reported_total_raised = 8000000
+reported_total_currency = "USD"
+total_source_ids = ["launch", "geektime"]
+total_as_of = "2026-08-02"
+total_scope = "Company-announced cumulative fundraising total at launch; represents the Seed round and is not an independently audited total."
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[[intelligence.funding.rounds]]
+id = "seed-2026-08"
+round_type = "Seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2026-08-02"
+amount_status = "reported"
+amount = 8000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Hetz Ventures"]
+participating_investors = ["Mati Staniszewski", "Ofer Smadari", "Amitai Ratzzon", "Senior Palantir executives (individual identities undisclosed)"]
+valuation_basis = "undisclosed"
+source_ids = ["launch", "hetz", "geektime"]
+notes = "Company announced completion at public launch. The announcement identifies investor names/categories but no individual check sizes, ownership percentages, pre-money or post-money valuation."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private Israeli company. Public funding and registry sources establish the operating entity and round participants, but no cap table, beneficial ownership percentages, parent company or equity transaction terms were found. The listed registry directors are not treated as shareholders."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["registry", "launch", "geektime"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "The company is an active Israeli private company registered as ARRAKIS SECURITY LTD, with company number 517266466 and a Tel Aviv address. Arrakis and its lead investor identify the founders and the company's R&D team as Israel-based; independent Israeli reporting also describes the startup as Israeli."
+as_of = "2026-10-03"
+source_ids = ["registry", "launch", "hetz", "geektime"]
+
+[intelligence.research]
+researched_at = "2026-10-03T21:00:08Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Arrakis Security official site company identity products founders Israel",
+  "Arrakis Security 2026 funding raised Seed investors valuation",
+  "site:arrakis.security Arrakis Security launch $8 million Seed August 2026",
+  "site:hetz.vc/portfolio/arrakis-security Arrakis founders product",
+  "Arrakis Security leadership Tal Baron Omer Efrat Ron Shani team",
+  "Arrakis Security acquisition ownership parent company company number 517266466",
+  "Arrakis Security revenue ARR customers contracts traction proof of concept",
+  "Arrakis Security patents USPTO WIPO patent AI agent governance",
+  "Arrakis Security competitors Zenity Willow Prompt Security agent governance",
+  "Arrakis Security defense government military dual use security deployment",
+  "Arrakis Security גיוס משקיעים לקוחות הכנסות פטנטים"
+]
+gaps = [
+  "team: no complete employee roster, individual biographies beyond founders, current headcount update, or independently verified hiring data found; the 20-person figure is company-reported at launch.",
+  "investors: no private cap table, check sizes, shareholder percentages, or identities for the senior Palantir executives was disclosed.",
+  "financials: no dated revenue, ARR, profitability, burn, cash, or runway disclosures found; round size is not company revenue or valuation.",
+  "traction: the sole specific deployment evidence is an unnamed company-reported POC; paid status, production use, contract value, renewals and customer names are not public.",
+  "intellectual_property: no patent or application attributable to Arrakis Security / company number 517266466 was located in indexed public searches; this does not establish that none exist.",
+  "competition: no sourced head-to-head win/loss, market share, or comparative efficacy evidence found; competitor list reflects adjacent product categories.",
+  "ownership: no public cap table, parent company, ownership percentages, or disclosed equity deal located.",
+  "dual_use: no public defense or government customer, classified deployment, government authorization, or tactical disconnected-network deployment found.",
+  "identity: unrelated or ambiguous businesses use similar Arrakis Security names on arraksisecurity.com and arrakissecurity.com; they are not verified as the Israeli company at arrakis.security and are excluded."
+]
+conflicts = [
+  "Dealroom's company profile shows an enterprise value range of $32-48 million, but provides no method, date, or primary source. This is not a disclosed financing valuation and is excluded from funding valuation fields.",
+  "Some web results for arraksisecurity.com describe a different Austin-based team and product, while arrakissecurity.com describes unrelated open protocols. The funded Israeli company is identified by arrakis.security, Hetz Ventures and Israeli reporting; lookalike-domain claims are excluded."
+]
+diligence_questions = [
+  "Can management provide referenceable customer evidence, including the POC's conversion status, production deployment dates, paid contract value and renewal/expansion results?",
+  "What are independently measured detection precision/recall, false-positive rates, enforcement latency, policy bypass rates and customer-approved rollback procedures across supported agent frameworks?",
+  "How does runtime instrumentation collect reasoning or action telemetry while minimizing sensitive-content exposure, and what are the data residency, retention, tenant-isolation and self-hosted deployment options?",
+  "What are the current fully diluted ownership and option-pool structure, Seed terms, and remaining runway after the announced $8 million round?",
+  "Which integrations are generally available versus proof-of-concept, and what are the engineering and maintenance costs for each agent ecosystem?",
+  "What independent security assessment or certification milestones are completed, and what evidence exists for disconnected or high-assurance deployment?"
+]
+sources = [
+  { id = "official", url = "https://arrakis.security/", title = "Arrakis Security | Autonomous Workforce Governance Platform", publisher = "Arrakis Security", kind = "company", accessed_at = "2026-10-03T21:00:08Z", claims = ["official domain and product identity", "product architecture and stated capabilities", "commercial agent-governance use cases"] },
+  { id = "launch", url = "https://blog.arrakis.security/out-of-stealth-securing-the-era-of-the-autonomous-enterprise", title = "Out of Stealth: Securing the Era of the Autonomous Enterprise", publisher = "Arrakis Security", kind = "company", published_on = "2026-08-02", accessed_at = "2026-10-03T21:00:08Z", claims = ["company launch date", "$8 million Seed round and lead investor", "named individual investors", "founders and prior experience", "20-person team at launch", "Israeli R&D expansion plan", "Arrakis Labs launch"] },
+  { id = "hetz", url = "https://www.hetz.vc/portfolio/arrakis-security", title = "Arrakis - A Hetz Ventures Portfolio Company", publisher = "Hetz Ventures", kind = "investor", accessed_at = "2026-10-03T21:00:08Z", claims = ["lead investor portfolio confirmation", "founders and executive roles", "Torq and Palantir background", "product positioning and three-stage architecture", "Tel Aviv location"] },
+  { id = "geektime", url = "https://www.geektime.co.il/arrakis-security-raies-seed/", title = "בכירים ב-Palantir ו-ElevenLabs משקיעים בסטארטאפ ישראלי שנחשף היום", publisher = "Geektime", kind = "media", published_on = "2026-08-02", accessed_at = "2026-10-03T21:00:08Z", claims = ["Israeli company identity and 2025 founding", "$8 million Seed round led by Hetz Ventures", "named investor participants", "founders and CEO role", "platform integration claims", "unnamed 2,000-plus-employee organization POC and reported discovery of over 1,000 agents", "POC policy violations and vulnerability exposures"] },
+  { id = "registry", url = "https://en.checkid.co.il/company/ARRAKIS%2BSECURITY%2BLTD-xbLpj3g-517266466", title = "Arrakis Security Ltd. / ARRAKIS SECURITY LTD - 517266466", publisher = "CheckID, citing Israeli company registry data", kind = "directory", accessed_at = "2026-10-03T21:00:08Z", claims = ["legal name ARRAKIS SECURITY LTD", "company number 517266466", "active private Israeli company status", "incorporation date 2025-12-31", "Tel Aviv registered address"] },
+  { id = "chronicles", url = "https://blog.arrakis.security/", title = "The Arrakis Chronicles", publisher = "Arrakis Security", kind = "company", accessed_at = "2026-10-03T21:00:08Z", claims = ["dated company research posts through August 2026", "research content attributed to company founders and staff"] },
+  { id = "how-it-works", url = "https://arrakis.security/how-it-works", title = "How It Works", publisher = "Arrakis Security", kind = "company", accessed_at = "2026-10-03T21:00:08Z", claims = ["SDK and proxy integration pathways", "discovery, behavioral profiling, monitoring, response and remediation product descriptions"] },
+  { id = "gov-registry", url = "https://www.gov.il/he/service/company_extract", title = "נסח חברה בעברית ובאנגלית או מידע בסיסי בחינם על חברות ושותפויות", publisher = "Israeli Corporations Authority, Ministry of Justice", kind = "government", accessed_at = "2026-10-03T21:00:08Z", claims = ["official Israeli government registry service provides company information and extracts"] }
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T21:00:08Z"
+next_review_on = "2027-01-03"
+queries = ["Arrakis Security official site company identity products founders Israel", "Arrakis Security company number 517266466"]
+source_ids = ["official", "hetz", "registry", "geektime"]
+summary = "Identified the funded Israeli AI-agent cybersecurity startup at arrakis.security as ARRAKIS SECURITY LTD; separated it from lookalike domains."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T21:00:08Z"
+next_review_on = "2027-01-03"
+queries = ["Arrakis Security 2026 funding raised Seed investors valuation", "Arrakis Security $8 million Seed August 2026"]
+source_ids = ["launch", "hetz", "geektime"]
+summary = "Found one $8 million USD Seed announcement on 2026-08-02. No further financing disclosed in reviewed sources."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T21:00:08Z"
+next_review_on = "2027-01-03"
+queries = ["Arrakis Security Seed investors Hetz Mati Staniszewski Ofer Smadari Amitai Ratzzon"]
+source_ids = ["launch", "hetz", "geektime"]
+summary = "Lead and publicly named angels confirmed; unidentified Palantir executives and private terms remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T21:00:08Z"
+next_review_on = "2027-01-03"
+queries = ["Arrakis Security leadership Tal Baron Omer Efrat Ron Shani team"]
+source_ids = ["launch", "hetz", "geektime"]
+summary = "Founders and roles corroborated; launch source reports 20 team members. No complete current roster found."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T21:00:08Z"
+next_review_on = "2027-01-03"
+queries = ["Arrakis Security ownership parent company company number 517266466", "Arrakis Security cap table shareholders"]
+source_ids = ["registry", "launch"]
+summary = "Private company; no public cap table, ownership percentages, parent or equity deal disclosures found."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "not_found"
+checked_at = "2026-10-03T21:00:08Z"
+next_review_on = "2027-01-03"
+queries = ["Arrakis Security revenue ARR customers contracts traction", "Arrakis Security burn runway valuation"]
+source_ids = ["launch", "geektime"]
+summary = "No dated revenue, ARR, profitability, burn, cash or runway disclosure found; the announced funding amount is separately recorded."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T21:00:08Z"
+next_review_on = "2027-01-03"
+queries = ["Arrakis Security customer deployment proof of concept 1000 agents", "Arrakis Security customers contracts production"]
+source_ids = ["geektime", "launch"]
+summary = "A specific unnamed POC was reported; no named paid customer, contract value or production deployment evidence found."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T21:00:08Z"
+next_review_on = "2027-01-03"
+queries = ["Arrakis Security patents USPTO WIPO patent AI agent governance", "Arrakis Security 517266466 patent"]
+source_ids = ["registry", "gov-registry"]
+summary = "No company-attributed patent record was located in indexed searches; this is not evidence that no filing exists."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T21:00:08Z"
+next_review_on = "2027-01-03"
+queries = ["Arrakis Security competitors Zenity Willow Prompt Security agent governance"]
+source_ids = ["official", "geektime"]
+summary = "Reviewed product positioning and mapped adjacent Israeli agent-security vendors and platform incumbents; no sourced comparative performance available."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T21:00:08Z"
+next_review_on = "2027-01-03"
+queries = ["Arrakis Security defense government military dual use security deployment"]
+source_ids = ["official", "launch", "geektime"]
+summary = "Defensive agent governance has plausible government and critical-infrastructure relevance, but no public defense or government customer or authorization was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The registry profile identifies ARRAKIS SECURITY LTD as an active Israeli private company; the launch and current official site confirm ongoing operations."
+verified_at = "2026-10-03T21:00:08Z"
+source_ids = ["registry", "official"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Israeli registry identity/address and the company's Israeli R&D plans plus Israeli reporting directly establish the connection."
+verified_at = "2026-10-03T21:00:08Z"
+source_ids = ["registry", "launch", "geektime"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "The company announced its completed $8 million Seed round; independent Israeli reporting corroborates the same total."
+verified_at = "2026-10-03T21:00:08Z"
+source_ids = ["launch", "geektime"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026-08.amount"
+support = "direct"
+summary = "The August 2 company launch announcement states the completed Seed round was $8 million; Geektime reports the same amount."
+verified_at = "2026-10-03T21:00:08Z"
+source_ids = ["launch", "geektime"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026-08.lead_investors"
+support = "direct"
+summary = "Company launch, lead investor portfolio and Geektime identify Hetz Ventures as the round lead."
+verified_at = "2026-10-03T21:00:08Z"
+source_ids = ["launch", "hetz", "geektime"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026-08.participating_investors"
+support = "direct"
+summary = "Company launch and Geektime name Mati Staniszewski, Ofer Smadari, Amitai Ratzzon and senior Palantir executives as participants."
+verified_at = "2026-10-03T21:00:08Z"
+source_ids = ["launch", "geektime"]

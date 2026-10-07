@@ -1,0 +1,509 @@
+name = "Beacon Security"
+description = "Beacon Security is an Israeli-founded, New York-headquartered cybersecurity startup building an AI-native security data layer that normalizes, enriches, and contextualizes telemetry across a company's tools so that both human analysts and autonomous AI agents can run detection, investigation, and posture management on trustworthy data."
+detailed_description = """
+**Product and the concrete problem it solves.** Beacon Security attacks one of the least glamorous but most consequential bottlenecks in modern cyber defense: security data is fragmented, noisy, inconsistently formatted, and scattered across dozens of tools (EDR, SIEM, cloud logs, identity providers, network sensors), which makes it hard for humans — and nearly impossible for AI agents — to reason over reliably. As enterprise vendors race to bolt "AI agents" onto every part of the security operations center (SOC), Beacon's founders argue that those agents are only as good as the data they are grounded in; feed an autonomous investigator hallucination-prone, half-normalized telemetry and you get confident, wrong answers at machine speed. Beacon's answer is a **central intelligence / data-foundation layer** that sits between raw telemetry sources and downstream security tools and agents. It ingests data vendor-agnostically, cleans and normalizes it into a consistent schema, correlates and enriches it with context, and exposes that trustworthy substrate to both analysts and a library of specialized security agents. The pitch to a CISO is that Beacon is the "trusted data layer" that finally makes an agentic SOC safe to operate — the plumbing that determines whether autonomous security operations succeed or quietly fail.
+
+**Core technology and how it actually works.** Beacon describes itself as an **AI-native security platform** providing "the data foundation and context layer required for modern security operations." Technically, the platform performs three jobs that are conventionally spread across SIEMs, security data pipelines, and SOAR tooling: (1) it fuses telemetry across heterogeneous vendors and formats, automating normalization and enrichment at enterprise scale so that identity, endpoint, cloud, and network signals share a common, queryable structure; (2) it ships a **library of specialized "Beacon Agents"** — purpose-built for detection engineering, alert investigation, threat detection, and security-posture analysis — that operate on the normalized context rather than on raw logs; and (3) it exposes an **open harness/framework** for security teams to compose their own custom agentic workflows on top of the same grounded data. The agents are reportedly developed with offensive-security expertise, aligning detection logic with how attackers actually operate. The strategic bet is architectural: rather than competing head-on as "yet another AI SOC agent," Beacon positions itself one layer down as the data fabric every agent depends on — a classic "sell picks and shovels" posture in an AI gold rush.
+
+**Market, customers, and go-to-market.** Beacon sells into large, regulated enterprises where SOC complexity, alert volume, and analyst shortages are most acute. Reported early customers and target verticals span **Fortune 500 organizations in financial services, healthcare, hospitality, technology, and insurance**, and the company has named AI-compute company **Cerebras** among its customers (via its Director of Detection and Response). Go-to-market is enterprise direct, sold to CISOs and detection-and-response leaders, and Beacon's cap table is engineered as a distribution asset: the seed round drew participation from 60-plus cybersecurity founders and CISOs, including operators from Talon, Descope, Gem Security, Dig Security, and Cider Security — a network of buyers and design partners as much as investors. The company reports early commercial pull rather than pure vision, which is unusual for a 2024-founded seed-stage vendor and suggests the data-layer pain point resonates with real budgets. Because the platform is horizontal infrastructure, its natural expansion path is to become the default grounding layer beneath whatever agents an enterprise adopts, deepening switching costs over time.
+
+**Traction, funding, and third-party validation.** Beacon emerged publicly in mid-July 2026 with a **$13 million seed round led by Notable Capital**, with participation from Holly Ventures, AlphaDrive Ventures, SVCI (a syndicate of security executives), the Jefferies Family Office, and the aforementioned CISO/founder angels. The strongest quantitative signal is commercial: Beacon reports **more than 300% ARR growth in the first half of 2026** and deployments across **dozens of enterprises**, including Fortune 500 names in regulated industries. Those figures are company-reported and should be treated as unaudited, but they are specific and, combined with the named customer and the caliber of the angel roster, constitute meaningful third-party validation for a seed-stage company. Independent trade coverage from Calcalist (Ctech), Ynetnews, SecurityWeek, MSSP Alert, and TechStartups corroborates the round size, lead investor, founding team, and product category, which lowers the risk that this is a thinly-sourced directory entry.
+
+**Founders and team background.** Beacon's three co-founders carry an unusually strong pedigree for a seed-stage team. **Gal Tal-Hochberg (CEO)** previously co-founded HiredScore, acquired by Workday for a reported $520 million, and most recently served as **Group CTO at Team8**, the Israeli venture-and-company-building group founded by former Unit 8200 leadership; he is an IDF Unit 8200 veteran with 15-plus years building software companies across cybersecurity, AI, and blockchain. **Or Mattatia (CPO)** was VP Product at incident-response firm Mitiga and is likewise an 8200 veteran. **Iddo Israely (CTO)** was VP R&D at Skyline AI (acquired by JLL), led cybersecurity engineering teams, and served in **Unit 81**, the IDF's elite technology unit. The founding trio therefore combines a proven exit, deep enterprise-product and incident-response experience, and hands-on national-cyber-defense backgrounds — precisely the blend a data-layer-for-agentic-SOC thesis requires. The principal open questions are headcount, the depth of the engineering bench beyond the founders, and how much R&D sits in Israel versus New York, none of which is publicly disclosed.
+
+**Competitive dynamics.** Beacon operates in one of cybersecurity's most crowded and fast-moving 2026 arenas, and its differentiation rests on the "data layer, not the agent" positioning. (1) Against **security data pipeline / fabric players** such as Cribl and Abstract Security, Beacon competes on AI-native enrichment purpose-built to ground agents rather than merely route or reduce telemetry. (2) Against **agentic-SOC vendors** such as Dropzone AI, Prophet Security, Simbian, Radiant Security, and Torq, Beacon argues it is complementary infrastructure — the substrate those agents should run on — but in practice it will compete for the same SOC-modernization budget and must avoid being commoditized as a feature. (3) Against **incumbent SIEM/data platforms** (Splunk/Cisco, Microsoft Sentinel, CrowdStrike's data ambitions), it faces gravity from platforms that already own the data and are adding their own AI layers. Beacon's plausible edges are: an architecture deliberately optimized for trustworthy agent grounding; agents co-designed with offensive-security expertise; a design-partner network of CISOs; and speed. The countervailing risk is that "security data layer for AI agents" is a category every large platform will claim, and defensibility depends on integration breadth, data-normalization quality, and lock-in that a seed-stage company has not yet proven.
+
+**Defense, security, and resilience dual-use relevance.** Beacon's dual-use relevance should be read as **cyber-resilience adjacency**, not a fielded defense capability. Cybersecurity is inherently dual-use — the same SOC tooling that protects a bank protects a defense contractor, a utility, a hospital network, or a government agency — and Beacon's founders come directly from Israel's national-cyber-defense ecosystem (Unit 8200, Unit 81, Team8, Mitiga). An AI-native data layer that lets autonomous agents defend at machine speed is directly relevant to critical-infrastructure and government SOCs confronting AI-accelerated, high-volume attacks, and to allied-force and national-CERT contexts where analyst scarcity is acute. The honest calibration: Beacon is a commercial enterprise-security product with no disclosed defense contracts, classified deployments, or government accreditations; its strategic weight on the defense axis is the resilience it could bring to critical-infrastructure and public-sector defenders, an adjacency that would strengthen materially if it converts government or defense-industrial customers and earns relevant security authorizations.
+
+**Growth stage, trajectory, and key diligence risks.** Beacon reads as an **early-stage** company with above-average momentum: founded 2024, a single disclosed $13M seed, an elite founding team, real (if company-reported) ARR growth, and named enterprise customers. The trajectory — from stealth to fast ARR growth grounded in a genuine architectural insight — is what a strong seed looks like, but the diligence risks are substantial. (1) **Category crowding and commoditization**: "data layer for AI security agents" is a claim every SIEM, XDR, and SOAR incumbent will make; Beacon must prove durable differentiation and lock-in. (2) **Metric opacity**: 300%+ ARR growth off a small base and "dozens of enterprises" are unaudited and lack absolute revenue anchors. (3) **Platform-gravity risk**: incumbents that already own the telemetry can add a "good-enough" grounding layer natively. (4) **Execution and team depth**: headcount, R&D location, and bench beyond the founders are undisclosed. (5) **Dual-use is adjacency, not fielded**: no public defense or government footprint yet. Progression would be evidenced by disclosed absolute revenue and logo retention, broad integration coverage, defensible normalization IP, and — for the strategic thesis specifically — critical-infrastructure, government, or defense-sector adoption with the accreditations that entails.
+"""
+logo = "Unknown"
+website = "https://beacon.security/"
+sector = "Cybersecurity — AI-Native Security Data Layer / Agentic SOC Infrastructure"
+founded = "2024"
+headquarters = "New York, USA (Israeli-founded; founders' Israeli military intelligence backgrounds confirmed; no Israel R&D location publicly confirmed)"
+employees = "Unknown (seed-stage; dozens of enterprise deployments reported, exact headcount not publicly disclosed)"
+funding_stage = "Seed — $13M seed round led by Notable Capital, announced July 16, 2026; no further round publicly located"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Beacon's dual-use relevance is cyber-resilience adjacency rather than a fielded defense capability. (1) Cybersecurity is inherently dual-use: the same SOC tooling that defends a bank also defends defense contractors, utilities, hospitals, and government agencies, and Beacon's data-foundation layer is a horizontal capability that serves commercial and public-sector defenders alike. (2) The founding team comes directly from Israel's national-cyber-defense ecosystem — IDF Unit 8200 and Unit 81, plus incident response at Mitiga and Team8 — giving the company deep exposure to nation-state threat operations. (3) An AI-native layer that grounds autonomous security agents in trustworthy, normalized data is directly applicable to critical-infrastructure and government SOCs facing AI-accelerated, high-volume attacks, and to allied national-CERT and defense contexts where analyst scarcity is acute. Calibration: Beacon is a commercial enterprise-security product with no disclosed defense contracts, classified deployments, or government accreditations; its defense-axis weight is the resilience it could bring to public-sector and critical-infrastructure defenders, an adjacency that strengthens only as it converts government/defense-industrial customers and earns relevant authorizations."
+key_technologies = [
+  "Vendor-agnostic security data fabric that ingests, normalizes, correlates, and enriches telemetry across EDR, SIEM, cloud, identity, and network sources into a common schema",
+  "AI-native 'data foundation / context layer' purpose-built to ground autonomous security agents in trustworthy, structured data and reduce hallucination in machine-speed operations",
+  "Library of specialized 'Beacon Agents' for detection engineering, alert investigation, threat detection, and security-posture analysis, co-designed with offensive-security expertise",
+  "Open harness/framework letting security teams compose custom agentic SOC workflows on top of the same normalized data substrate",
+  "Automated data normalization and enrichment at enterprise scale, positioned between raw telemetry sources and downstream security tools",
+  "Central intelligence layer that unifies fragmented, multi-vendor security signal for both human analysts and AI agents"
+]
+use_cases = [
+  "Grounding AI SOC agents with normalized, enriched security context for reliable autonomous investigation",
+  "Automated alert triage and investigation across fragmented, multi-vendor security tooling",
+  "Detection engineering and detection-rule development at scale",
+  "Continuous security-posture analysis across cloud and hybrid environments",
+  "Consolidating and normalizing telemetry from disparate EDR, SIEM, identity, and cloud sources into a queryable substrate",
+  "Reducing analyst workload and mitigating SOC talent shortages in large regulated enterprises",
+  "Providing a trusted data layer for critical-infrastructure and government SOCs adopting AI agents (adjacency)",
+  "Threat detection and response for regulated industries such as financial services, healthcare, and insurance"
+]
+investible = true
+investment_rationale = "Beacon is an early-stage, Israeli-founded cybersecurity play whose appeal rests on a sharp architectural thesis, an elite team, and unusually early commercial pull, tempered by category-crowding and disclosure risk. (1) Architectural positioning: rather than competing as another AI SOC agent, Beacon sells the data/context layer every agent depends on — a 'picks and shovels' posture in the 2026 agentic-SOC gold rush that, if it holds, yields horizontal leverage and switching costs. (2) Elite founding team: CEO Gal Tal-Hochberg co-founded HiredScore (acquired by Workday for a reported $520M) and was Group CTO at Team8; co-founders bring Unit 8200, Unit 81, and Mitiga incident-response backgrounds — a rare blend of proven exit, enterprise product depth, and national-cyber-defense experience. (3) Early traction and validation: a $13M seed led by Notable Capital, 60+ CISO/founder angels (from Talon, Descope, Gem Security, Dig Security, Cider Security), a named customer in Cerebras, and reported 300%+ ARR growth in H1 2026 across dozens of enterprises. Counterweights that should dominate assessment: (a) 'security data layer for AI agents' is a claim every SIEM/XDR/SOAR incumbent will make, so defensibility is unproven; (b) growth metrics are company-reported and lack absolute revenue anchors; (c) platform-gravity risk from incumbents that already own the telemetry; and (d) dual-use is adjacency, not a fielded defense capability. This is a priority-signal assessment of strategic and technical fit, not an investment recommendation."
+strategic_value = "Beacon's strategic value sits in the cyber-resilience layer rather than in a fielded defense product. (1) Enabling infrastructure: a trustworthy, AI-native security data layer is horizontal capability that can serve commercial, critical-infrastructure, and government defenders simultaneously, making it high-leverage if it becomes the default grounding substrate for agentic SOCs. (2) Resilience thesis: as attacks are increasingly AI-accelerated and analyst talent is scarce, letting autonomous agents defend at machine speed on reliable data is directly relevant to national-CERT, utility, and defense-sector SOCs — a resilience contribution rather than a weapons capability. (3) Sovereign and allied relevance: an Israeli-founded team drawn from Unit 8200, Unit 81, and Team8 reflects the depth of Israel's cyber-defense ecosystem and its export of dual-use security capability to allied enterprises and, potentially, public-sector defenders. (4) Adjacency, honestly stated: realized strategic weight on the defense axis depends on Beacon converting critical-infrastructure, government, or defense-industrial customers and earning the accreditations that entails; absent those, its value is strong commercially but remains a resilience adjacency rather than a fielded defense capability."
+potential_score = 58.0
+technology_score = 62.0
+market_score = 68.0
+team_score = 73.0
+dual_use_score = 45.0
+strategic_alignment_score = 52.0
+stage = "early"
+stage_rationale = "Beacon is classified 'early' on the strength of a 2024 founding, a single disclosed seed round, and pre-scale but real commercial traction. (1) Funding maturity: one $13M seed (led by Notable Capital, July 2026) with no later institutional round places it firmly at seed stage. (2) Product maturity: a shipping platform with a library of production agents and named enterprise deployments indicates it is past pure concept, but the architecture and integration breadth are still early. (3) Commercial signal: reported 300%+ ARR growth in H1 2026 and deployments across dozens of enterprises (including a named customer, Cerebras) reflect unusual early pull for a seed company, though off a small, unaudited base. (4) Gaps that keep it 'early': no disclosed absolute revenue, undisclosed headcount and R&D footprint, an unproven moat in a crowded category, and no public defense/government footprint. Progression toward 'mid' would require a priced growth round, disclosed absolute revenue and retention, broad integration coverage, and defensible data-normalization IP."
+competitors = [
+  "Cribl (security/observability data pipeline; ingests, reduces, and routes telemetry — competes at the data-layer level)",
+  "Abstract Security (AI-driven security data fabric/pipeline for the SOC — direct data-layer competitor)",
+  "Dropzone AI (autonomous AI SOC analyst agents; competes for SOC-modernization budget and can build its own grounding layer)",
+  "Prophet Security (agentic AI SOC investigation and alert triage)",
+  "Torq (agentic SOC / hyperautomation platform integrating AI agents into security operations)",
+  "Simbian and Radiant Security (AI SOC agents/alert triage — adjacent agentic-SOC entrants)",
+  "Incumbent SIEM/data platforms — Splunk/Cisco, Microsoft Sentinel, CrowdStrike — that already own telemetry and are adding native AI data layers"
+]
+competitive_edge = "Beacon's edge rests on positioning and pedigree rather than proven moat. (1) Layer-below positioning: selling the trustworthy data/context substrate that autonomous agents depend on, rather than another agent, is a 'picks and shovels' posture that — if it holds — makes Beacon complementary to many agent vendors while capturing durable, sticky infrastructure. (2) Agent quality: a library of Beacon Agents co-designed with offensive-security expertise aligns detection logic with real attacker behavior. (3) Grounding focus: architecture explicitly optimized to reduce hallucination and error in machine-speed operations addresses the single biggest failure mode of agentic SOCs. (4) Distribution via cap table: 60+ CISO/founder angels (Talon, Descope, Gem Security, Dig Security, Cider Security) function as design partners and a buyer network. (5) Team credibility: a proven exit (HiredScore→Workday) plus Team8, Unit 8200, and Unit 81 backgrounds accelerate enterprise trust. Vulnerabilities: 'data layer for AI security agents' is a claim every large platform will make; incumbents that own the telemetry can add a good-enough native layer; defensibility depends on integration breadth, normalization quality, and lock-in that a seed-stage company has not yet demonstrated."
+risk_factors = [
+  "Extremely crowded, fast-moving agentic-SOC and security-data-fabric category where every SIEM/XDR/SOAR incumbent is adding an AI data layer, threatening commoditization",
+  "Growth metrics (300%+ ARR growth, 'dozens of enterprises') are company-reported, unaudited, and lack absolute-revenue anchors",
+  "Platform-gravity risk: incumbents (Splunk/Cisco, Microsoft Sentinel, CrowdStrike) already own the telemetry and can build native grounding layers",
+  "Seed-stage with a single disclosed round; runway, burn, and path to a priced growth round are unproven",
+  "Headcount, engineering bench beyond the founders, and Israel-versus-US R&D split are undisclosed",
+  "Dual-use is cyber-resilience adjacency only — no disclosed defense/government contracts, classified deployments, or security accreditations",
+  "Defensibility of the data-normalization/enrichment IP and integration breadth remains to be demonstrated at scale"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Beacon Security merits monitoring as a fresh, credibly-sourced, Israeli-founded cybersecurity company with an elite team and a sharp architectural thesis, with dual-use relevance that is resilience-adjacency rather than fielded. Strengths supporting attention: (1) a 'data layer, not the agent' positioning that could make it horizontal infrastructure beneath the agentic-SOC wave; (2) an unusually strong founding team — HiredScore→Workday exit, Team8 Group CTO, and IDF Unit 8200/81 national-cyber-defense pedigree; (3) early validation via a $13M Notable Capital-led seed, 60+ CISO/founder angels, a named customer (Cerebras), and reported 300%+ H1-2026 ARR growth; and (4) squarely within the cyber and AI-infrastructure thesis. Offsetting factors that cap priority: a crowded category prone to commoditization, unaudited early metrics off a small base, platform-gravity risk from telemetry-owning incumbents, undisclosed team/R&D footprint, and dual-use that is adjacency rather than a defense capability. Milestones to track: a priced growth round with disclosed absolute revenue and retention, integration breadth and normalization IP, and — for the strategic thesis specifically — any critical-infrastructure, government, or defense-sector adoption with the accreditations that entails."
+public_sources = [
+  {label = "Beacon Security — seed announcement", url = "https://beacon.security/resources/beacon-security-raises-13-million-in-seed-funding-to-give-ai-agents-a-trustworthy-data-foundation-for-cyber-defense", description = "Company announcement of the July 16, 2026 seed, investors, company background, product, Fortune 500 deployment claim, and H1 2026 ARR growth."},
+  {label = "Beacon Security — About Us", url = "https://beacon.security/about-us", description = "Official founder biographies, current roles, military intelligence backgrounds, and product positioning."},
+  {label = "Calcalist CTech — Beacon Security raises $13 million Seed", url = "https://www.calcalistech.com/ctechnews/article/r1hg5zuefg", description = "Independent Israeli technology reporting on the round, investors, founders, product, and company-reported traction."},
+  {label = "SecurityWeek — Beacon Security Raises $13 Million", url = "https://www.securityweek.com/beacon-security-raises-13-million-for-security-data-platform/", description = "Independent cybersecurity trade reporting corroborating the seed round, New York base, founders, and product."},
+  {label = "Beacon Security — Lemonade case study", url = "https://beacon.security/resources/how-lemonade-transformed-its-security-data-pipeline-with-beacon", description = "Company-authored customer case study describing Lemonade's Beacon deployment and claimed data-volume outcomes."},
+  {label = "Cribl Stream product", url = "https://cribl.io/products/stream/", description = "Official competitor product description for telemetry collection, processing, enrichment, and routing."},
+  {label = "Abstract Security platform", url = "https://www.abstract.security/", description = "Official competitor product description for a composable SIEM/security data fabric."},
+  {label = "Dropzone AI Agentic SOC", url = "https://www.dropzone.ai/", description = "Official competitor product description for AI agents conducting security investigations and threat hunting."}
+]
+crawled_at = "2026-07-20T21:23:27Z"
+updated_at = "2026-10-04T02:56:22Z"
+
+[intelligence]
+schema_version = 2
+intellectual_property = []
+
+[intelligence.company]
+company_id = "beacon-security"
+legal_name = "Beacon Security"
+aliases = ["Beacon"]
+operating_status = "active"
+business_model = "Enterprise cybersecurity software sold as a security data-management and agentic operations platform; public materials describe enterprise deployments but do not publish pricing or contract terms."
+products = ["Beacon security data and context layer", "Beacon Fabric", "Beacon Agents", "Open harness for security workflows"]
+locations = ["New York, United States", "Israeli founder and military-intelligence background; a current Israel office or R&D site is not confirmed in the sources reviewed"]
+source_ids = ["beacon-funding", "beacon-about", "ctech-round", "securityweek-round"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One publicly documented equity seed round: $13 million, announced as closed July 16, 2026 and led by Notable Capital. Company and independent reporting agree on the amount and named institutional participants. No earlier or later financing was located in the sources searched. The company's announcement does not explicitly state a company-wide lifetime cumulative total, so reported_total_raised is omitted."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "seed-2026"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2026-07-16"
+closed_on = "2026-07-16"
+amount_status = "reported"
+amount = 13000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Notable Capital"]
+participating_investors = ["Holly Ventures", "AlphaDrive Ventures", "SVCI", "Jefferies Family Office", "More than 60 founders and CISOs (individual identities mostly undisclosed)"]
+source_ids = ["beacon-funding", "ctech-round", "securityweek-round"]
+notes = "Company announcement says the round successfully closed on July 16, 2026. No valuation or allocation by investor was disclosed. Do not infer valuation or equate this single located round with a verified lifetime total."
+
+[[intelligence.investors]]
+name = "Notable Capital"
+investor_type = "vc"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["beacon-funding", "ctech-round", "securityweek-round"]
+
+[[intelligence.investors]]
+name = "Holly Ventures"
+investor_type = "vc"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["beacon-funding", "ctech-round"]
+
+[[intelligence.investors]]
+name = "AlphaDrive Ventures"
+investor_type = "vc"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["beacon-funding", "ctech-round"]
+
+[[intelligence.investors]]
+name = "SVCI"
+investor_type = "other"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["beacon-funding", "ctech-round"]
+notes = "The company expands the name as Silicon Valley CISO Investments in its social post; the funding announcement uses SVCI."
+
+[[intelligence.investors]]
+name = "Jefferies Family Office"
+investor_type = "other"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["beacon-funding", "ctech-round"]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Beacon is presented as an independent private startup. Public sources identify the seed-round investors but provide no cap table, ownership percentages, parent company, or security-class details. No acquisition, merger, IPO, or other ownership transaction involving Beacon was found in the reviewed sources."
+cap_table_status = "undisclosed"
+shareholders = ["Publicly named seed investors; individual ownership and percentages undisclosed"]
+source_ids = ["beacon-funding", "ctech-round"]
+deals = []
+holdings = []
+
+[[intelligence.people]]
+name = "Gal Tal-Hochberg"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Company biography says he has more than 15 years building software companies, most recently served as Group CTO at Team8, co-founded HiredScore and ClearX, advised cybersecurity engagements at Sygnia, and served as an officer in Israeli Military Intelligence. Calcalist reports HiredScore was acquired by Workday for $520 million; Workday confirms it closed the HiredScore acquisition but does not confirm that price in the cited source."
+source_ids = ["beacon-about", "ctech-round"]
+
+[[intelligence.people]]
+name = "Or Mattatia"
+role = "Co-founder and CPO"
+is_founder = true
+current = true
+background = "Beacon identifies him as a co-founder and says he was VP of Product at Mitiga, has led data and security initiatives, and served more than a decade in Israeli Military Intelligence Unit 8200."
+source_ids = ["beacon-about", "ctech-round"]
+
+[[intelligence.people]]
+name = "Iddo Israely"
+role = "Co-founder and CTO"
+is_founder = true
+current = true
+background = "Beacon identifies him as a co-founder, a Talpiot alumnus, and a 13-year Israeli Military Intelligence veteran who led cybersecurity development in Unit 8200. The company says he was VP of R&D at Skyline AI, whose technology/business was acquired by JLL."
+source_ids = ["beacon-about", "ctech-round"]
+
+[[intelligence.financials]]
+name = "ARR growth"
+value = "More than 300% growth in H1 2026"
+as_of = "2026-07-16"
+basis = "reported"
+metric = "arr"
+numeric_value = 300
+value_relation = "more_than"
+unit = "percent"
+period_start = "2026-01-01"
+period_end = "2026-06-30"
+source_ids = ["beacon-funding", "ctech-round"]
+notes = "Company-reported growth rate, repeated by Calcalist; neither source gives the ARR starting or ending value, calculation details, churn, or independent audit. This is growth, not an ARR level."
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Beacon's December 2025 company-authored case study describes Lemonade's security team adopting Beacon to route and enrich security telemetry, reporting 72.5 TB ingested and 18.5 TB streamed, with a 97% reduction in VPC Flow Logs and 75% reduction in total data volume. This is vendor-published customer evidence; validate with Lemonade and do not treat the metrics as independently audited."
+date = "2025-12"
+source_ids = ["lemonade-case"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Beacon announced launch of its agentic data layer alongside the seed financing in July 2026, describing automated telemetry normalization and enrichment between sources and downstream tools."
+date = "2026-07-16"
+source_ids = ["beacon-funding"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Beacon says it is trusted by Fortune 500 security teams across critical, highly regulated industries; Calcalist reports dozens of enterprise deployments. These are company-reported aggregate claims, and named logos beyond the Lemonade case study and customer-level deployment status require diligence."
+date = "2026-07-16"
+source_ids = ["beacon-funding", "ctech-round", "securityweek-round"]
+
+[[intelligence.comparables]]
+name = "Cribl"
+website = "https://cribl.io/"
+rationale = "Telemetry collection, processing, enrichment, reduction, and routing overlap with Beacon's security data layer and customer budgets."
+differentiation = "Cribl describes a broad observability pipeline with security support; Beacon positions its platform around security-specific context plus security agents and agentic workflows. Compare normalization fidelity, integrations, deployment economics, and security-specific workflows in customer evaluations."
+source_ids = ["cribl-stream", "beacon-funding"]
+
+[[intelligence.comparables]]
+name = "Abstract Security"
+website = "https://www.abstract.security/"
+rationale = "Its stated security data fabric and composable SIEM capabilities overlap with Beacon on security telemetry and context."
+differentiation = "Abstract presents a composable SIEM with distributed and in-stream detection and multiple data tiers; Beacon describes a data foundation feeding human and AI security workflows. Their product boundaries and competitive overlap need buyer-level validation."
+source_ids = ["abstract-platform", "beacon-funding"]
+
+[[intelligence.comparables]]
+name = "Dropzone AI"
+website = "https://www.dropzone.ai/"
+rationale = "Competes for SOC modernization budgets through autonomous investigation and hunting agents, although its stated integration approach does not require data lift or normalization."
+differentiation = "Dropzone positions itself as an agentic SOC operating over existing tools; Beacon pitches a data and context substrate with its own agent library. This makes Dropzone an adjacent workflow competitor and potential complement, subject to customer architecture."
+source_ids = ["dropzone-home", "beacon-funding"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders"]
+summary = "Beacon's official founder biographies state that all three co-founders served in Israeli Military Intelligence, including service in Unit 8200; Calcalist independently reports the founders' Israeli intelligence backgrounds and Unit 8200/81 service. The available sources confirm an Israeli-founded connection, but do not establish Israeli incorporation, headquarters, or current R&D operations."
+as_of = "2026-10-04"
+source_ids = ["beacon-about", "ctech-round"]
+
+[intelligence.research]
+researched_at = "2026-10-04T02:56:22Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Beacon Security beacon.security July 2026 $13 million seed Notable Capital",
+  "Beacon Security cybersecurity startup Gal Tal-Hochberg funding 2026 ARR 300%",
+  "site:beacon.security Beacon Security team product customers",
+  "Beacon Security company founders acquisition Workday HiredScore Team8",
+  "site:notablecap.com Beacon Security Gal Tal-Hochberg",
+  "site:beacon.security/about Beacon Security Gal Tal-Hochberg Or Mattatia Iddo Israely New York Tel Aviv",
+  "Beacon Security patent Beacon Security Gal Tal-Hochberg patents",
+  "Beacon Security security data management competitors Abstract Security Cribl customer Lemonade",
+  "Beacon Security Israel Tel Aviv New York founder company location official",
+  "Beacon Security funding previous financing seed investor Notable July 2026",
+  "Beacon Security acquired ownership parent company acquisition cap table",
+  "Beacon Security revenue ARR burn runway financials",
+  "Beacon Security government defense customers contracts public sector certifications",
+  "Beacon Security patents WIPO USPTO Israel patent",
+  "Cribl Stream security data pipeline official product",
+  "Abstract Security platform official security data",
+  "Dropzone AI official autonomous SOC platform"
+]
+gaps = [
+  "team: founder biographies are public, but current total headcount, organization chart, non-founder leadership, and Israel-versus-US R&D staffing are not disclosed in sources reviewed.",
+  "investors: institutional participants are named, but individual identities among the more than 60 founder/CISO participants, check sizes, and investor ownership percentages are not public.",
+  "financials: only a company-reported H1 2026 ARR growth percentage was found; absolute ARR, revenue, margins, burn, cash, and runway remain undisclosed.",
+  "traction: Lemonade is described in a company case study and the company reports Fortune 500 deployments/dozens of enterprises; independent customer confirmation, contract values, retention, and named-logo deployment scope remain limited.",
+  "intellectual_property: no Beacon-assigned patent or patent application was identified in targeted public searches; this is not a comprehensive freedom-to-operate or patent-register review.",
+  "competition: public product pages establish adjacent offerings, but no buyer-side win/loss, pricing, performance benchmark, or independent comparative assessment for Beacon was found.",
+  "ownership: private cap table, share classes, investor percentages, and beneficial ownership are undisclosed; no ownership change involving Beacon was located.",
+  "funding: one disclosed seed round was found; earlier financing, if any, and a company-confirmed cumulative lifetime funding total were not established.",
+  "dual_use: no defense or government contracts, classified deployments, government accreditations, or defense-specific deployments were found; relevance is commercial cybersecurity applicability only."
+]
+conflicts = []
+diligence_questions = [
+  "What are current ARR, net retention, gross margin, customer concentration, and dollar retention by cohort, and how is the reported >300% H1 2026 ARR growth calculated?",
+  "Which enterprise customers are live in production, including Lemonade and the Fortune 500 cohort, and what measurable renewal, coverage, analyst-time, and data-cost outcomes can customers independently validate?",
+  "How broad and reliable are supported source integrations and schema mappings, and what security-specific normalization/context IP or operational data creates defensibility against Cribl, Abstract, and incumbent SIEM platforms?",
+  "What is the current headcount, leadership bench, engineering/R&D location split, cash runway, and planned use of the $13 million seed proceeds?",
+  "What customer data isolation, access controls, human approval, auditability, and failure-containment controls govern Beacon Agents when they recommend or execute SOC actions?",
+  "Has Beacon disclosed a complete financing history, capitalization table, or investor rights and board composition beyond the reported Notable Capital board representation?"
+]
+
+[[intelligence.research.sources]]
+id = "beacon-funding"
+url = "https://beacon.security/resources/beacon-security-raises-13-million-in-seed-funding-to-give-ai-agents-a-trustworthy-data-foundation-for-cyber-defense"
+title = "Beacon Security Raises $13 Million in Seed Funding to Give AI Agents a Trustworthy Data Foundation for Cyber Defense"
+publisher = "Beacon Security"
+kind = "company"
+published_on = "2026-07-16"
+accessed_at = "2026-10-04T02:56:22Z"
+claims = ["Beacon announced a closed $13 million seed round led by Notable Capital, with Holly Ventures, AlphaDrive Ventures, SVCI, Jefferies Family Office and more than 60 founders/CISOs participating.", "Beacon was founded in 2024 by Gal Tal-Hochberg, Or Mattatia, and Iddo Israely.", "Beacon reported more than 300% ARR growth in H1 2026 and said it serves Fortune 500 security teams.", "Beacon describes a data layer that normalizes and enriches telemetry and supports human analysts and agents.", "Beacon said the agentic data layer launched in July 2026."]
+
+[[intelligence.research.sources]]
+id = "beacon-about"
+url = "https://beacon.security/about-us"
+title = "Building the data-driven future of security"
+publisher = "Beacon Security"
+kind = "company"
+accessed_at = "2026-10-04T02:56:22Z"
+claims = ["Beacon identifies Gal Tal-Hochberg as CEO, Or Mattatia as CPO, and Iddo Israely as CTO and describes each founder's professional background.", "Beacon states the founders served in Israeli Military Intelligence, including Unit 8200, and describes its security data-layer product thesis."]
+
+[[intelligence.research.sources]]
+id = "ctech-round"
+url = "https://www.calcalistech.com/ctechnews/article/r1hg5zuefg"
+title = "Beacon Security raises $13 million Seed to build the data layer powering AI cybersecurity agents"
+publisher = "Calcalist CTech"
+kind = "media"
+published_on = "2026-07-16"
+accessed_at = "2026-10-04T02:56:22Z"
+claims = ["Calcalist reports the $13 million seed led by Notable Capital and names Holly Ventures, AlphaDrive Ventures, SVCI, and Jefferies Family Office as participants.", "Calcalist reports more than 300% ARR growth in H1 2026 and deployments across dozens of enterprises, attributing these claims to Beacon.", "Calcalist identifies the 2024 founding team, roles, and reported military/service and prior-company backgrounds.", "Calcalist describes Beacon's security data foundation, agents, and product capabilities."]
+
+[[intelligence.research.sources]]
+id = "securityweek-round"
+url = "https://www.securityweek.com/beacon-security-raises-13-million-for-security-data-platform/"
+title = "Beacon Security Raises $13 Million for Security Data Platform"
+publisher = "SecurityWeek"
+kind = "media"
+published_on = "2026-07-17"
+accessed_at = "2026-10-04T02:56:22Z"
+claims = ["SecurityWeek reports Beacon announced a $13 million seed led by Notable Capital, with named institutional participants.", "SecurityWeek reports Beacon is New York-based, was founded in 2024 by Gal Tal-Hochberg, Or Mattatia, and Iddo Israely, and offers an agentic security data platform.", "SecurityWeek reports company claims of Fortune 500 enterprise adoption."]
+
+[[intelligence.research.sources]]
+id = "lemonade-case"
+url = "https://beacon.security/resources/how-lemonade-transformed-its-security-data-pipeline-with-beacon"
+title = "How Lemonade Transformed Its Security Data Pipeline with Beacon"
+publisher = "Beacon Security"
+kind = "company"
+published_on = "2025-12"
+accessed_at = "2026-10-04T02:56:22Z"
+claims = ["Beacon's vendor-authored case study says Lemonade adopted Beacon for security data management and reports data-volume reductions, enriched telemetry, and use in its security operations.", "The case study attributes a statement about Beacon's deployment and impact to Lemonade CISO Jonathan Jaffe."]
+
+[[intelligence.research.sources]]
+id = "cribl-stream"
+url = "https://cribl.io/products/stream/"
+title = "Cribl Stream - Simplify Data Collection, Control, & Routing"
+publisher = "Cribl"
+kind = "company"
+accessed_at = "2026-10-04T02:56:22Z"
+claims = ["Cribl describes Stream as collecting, reducing, enriching, and routing telemetry data from sources to tools, including security use cases."]
+
+[[intelligence.research.sources]]
+id = "abstract-platform"
+url = "https://www.abstract.security/"
+title = "Abstract | Composable SIEM Platform"
+publisher = "Abstract Security"
+kind = "company"
+accessed_at = "2026-10-04T02:56:22Z"
+claims = ["Abstract describes a composable SIEM and security data fabric, with distributed detection, data tiers, and AI-enabled security workflows."]
+
+[[intelligence.research.sources]]
+id = "dropzone-home"
+url = "https://www.dropzone.ai/"
+title = "Agentic SOC | AI Agents for Alert Triage & Threat Hunting"
+publisher = "Dropzone AI"
+kind = "company"
+accessed_at = "2026-10-04T02:56:22Z"
+claims = ["Dropzone positions its platform as an agentic SOC with agents for autonomous alert investigation and threat hunting across existing security tools."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T02:56:22Z"
+next_review_on = "2027-01-04"
+queries = ["Beacon Security beacon.security July 2026 $13 million seed Notable Capital", "Beacon Security Israel Tel Aviv New York founder company location official"]
+source_ids = ["beacon-funding", "beacon-about", "ctech-round", "securityweek-round"]
+summary = "Official company and independent reporting identify the active cybersecurity startup, its canonical site, New York base, 2024 founding, product category, founders, and confirmed Israeli founder connection."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T02:56:22Z"
+next_review_on = "2027-01-04"
+queries = ["Beacon Security cybersecurity startup Gal Tal-Hochberg funding 2026 ARR 300%", "Beacon Security funding previous financing seed investor Notable July 2026"]
+source_ids = ["beacon-funding", "ctech-round", "securityweek-round"]
+summary = "One closed $13 million seed round is confirmed by company and independent sources; no valuation or company-confirmed lifetime cumulative total is disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T02:56:22Z"
+next_review_on = "2027-01-04"
+queries = ["Beacon Security $13M seed investors Notable Capital Holly AlphaDrive SVCI Jefferies"]
+source_ids = ["beacon-funding", "ctech-round", "securityweek-round"]
+summary = "Five institutional participants are named; more than 60 additional founders and CISOs are described collectively and largely unnamed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T02:56:22Z"
+next_review_on = "2027-01-04"
+queries = ["site:beacon.security Beacon Security team founders Gal Tal-Hochberg Or Mattatia Iddo Israely", "Beacon Security founders interviews founder CEO CTO"]
+source_ids = ["beacon-about", "ctech-round"]
+summary = "Official biographies identify three current co-founders and executive roles; headcount and wider leadership roster are not disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T02:56:22Z"
+next_review_on = "2027-01-04"
+queries = ["Beacon Security acquired ownership parent company acquisition", "Beacon Security seed cap table board Notable Capital ownership"]
+source_ids = ["beacon-funding", "ctech-round"]
+summary = "Private independent-company status and seed investors are reported, but no cap table, beneficial ownership, ownership percentages, or ownership transaction was publicly identified."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-04T02:56:22Z"
+next_review_on = "2027-01-04"
+queries = ["Beacon Security revenue ARR growth financials 2026", "Beacon Security burn runway revenue ARR"]
+source_ids = ["beacon-funding", "ctech-round"]
+summary = "Beacon reports greater than 300% ARR growth in H1 2026, but no absolute ARR/revenue or profitability, burn, cash, or runway figure was found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T02:56:22Z"
+next_review_on = "2027-01-04"
+queries = ["Beacon Security customers deployments Lemonade Cerebras customer case study", "Beacon Security Fortune 500 customers enterprise deployments 2026"]
+source_ids = ["beacon-funding", "ctech-round", "securityweek-round", "lemonade-case"]
+summary = "Company materials name Lemonade in a detailed deployment case study and claim Fortune 500 and dozens-of-enterprise use; claims are not independently audited here."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T02:56:22Z"
+next_review_on = "2027-04-04"
+queries = ["Beacon Security patent Beacon Security Gal Tal-Hochberg patents", "Beacon Security patents WIPO USPTO Israel patent"]
+source_ids = ["beacon-about"]
+summary = "Targeted public web searches did not identify a patent assigned to Beacon Security; no comprehensive patent-register search was performed."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T02:56:22Z"
+next_review_on = "2027-01-04"
+queries = ["Beacon Security security data management competitors Abstract Security Cribl customer Lemonade", "Cribl Stream security data pipeline official product", "Abstract Security platform official security data", "Dropzone AI official autonomous SOC platform"]
+source_ids = ["cribl-stream", "abstract-platform", "dropzone-home", "beacon-funding"]
+summary = "Official product materials show overlapping telemetry pipeline, security data-fabric, and AI SOC offerings; competitive differentiation and win/loss evidence require customer diligence."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T02:56:22Z"
+next_review_on = "2027-04-04"
+queries = ["Beacon Security government defense customers contracts public sector", "Beacon Security defense government deployment certification"]
+source_ids = ["beacon-funding", "beacon-about", "securityweek-round"]
+summary = "The product and founder backgrounds establish commercial cyber-resilience relevance, but public government/defense customers, contracts, classified deployment, or accreditations were not located."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The company announced a financing and an operating product launch in July 2026; its current About page continues to describe the company and founders."
+verified_at = "2026-10-04T02:56:22Z"
+source_ids = ["beacon-funding", "beacon-about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Beacon's founder biographies state service in Israeli Military Intelligence, including Unit 8200; Calcalist independently identifies the founders as veterans of Israeli IDF intelligence units."
+verified_at = "2026-10-04T02:56:22Z"
+source_ids = ["beacon-about", "ctech-round"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.amount"
+support = "direct"
+summary = "The company's financing announcement states the seed round closed at $13 million; Calcalist and SecurityWeek independently report the same round amount."
+verified_at = "2026-10-04T02:56:22Z"
+source_ids = ["beacon-funding", "ctech-round", "securityweek-round"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.lead_investors"
+support = "direct"
+summary = "The company announcement names Notable Capital as lead investor, corroborated by Calcalist and SecurityWeek."
+verified_at = "2026-10-04T02:56:22Z"
+source_ids = ["beacon-funding", "ctech-round", "securityweek-round"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.participating_investors"
+support = "direct"
+summary = "The company announcement lists Holly Ventures, AlphaDrive Ventures, SVCI, Jefferies Family Office, and a group of more than 60 founders/CISOs; Calcalist and SecurityWeek confirm the named institutional participants."
+verified_at = "2026-10-04T02:56:22Z"
+source_ids = ["beacon-funding", "ctech-round", "securityweek-round"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.ARR growth@2026-07-16.numeric_value"
+support = "direct"
+summary = "Beacon reported greater than 300% ARR growth for H1 2026; Calcalist repeats the metric as company-reported. The numeric value represents the lower bound 300 with value_relation=more_than, not an absolute ARR amount."
+verified_at = "2026-10-04T02:56:22Z"
+source_ids = ["beacon-funding", "ctech-round"]

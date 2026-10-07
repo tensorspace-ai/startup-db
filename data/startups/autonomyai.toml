@@ -1,0 +1,375 @@
+name = "AutonomyAI"
+description = "AutonomyAI develops Fei Studio, an AI-powered production software workflow that connects product intent, design inputs, and an existing codebase to generate reviewable frontend changes and pull requests. Its thesis is that product and design teams can advance real software work while engineers retain approval and merge control."
+detailed_description = """
+AutonomyAI is a software-infrastructure startup whose current product is Fei Studio, an AI-native workflow for moving from an idea to a change in a real application. The company says Fei can accept prompts, screenshots, Figma designs, product requirements, and issue tickets; ingest a repository; model its components, APIs, hooks, design-system conventions, and architecture; and produce a visual preview, implementation, specification, and pull request. The important distinction from a generic code assistant is the intended operating environment: output is grounded in the customer's existing codebase and is presented as a reviewable change rather than an isolated code snippet or disposable prototype. AutonomyAI describes its Agentic Context Engine, or ACE, as the context layer that keeps this model of the application current as the repository evolves.
+
+The commercial target is the handoff bottleneck between product management, design, and engineering. Fei Studio is positioned as a second lane to production for product teams, with engineers acting as a human approval gate. The website claims 160-plus product teams are building in production, and says AutonomyAI's own product team has opened more than 50 production pull requests with zero code written by product staff and every merge approved by an engineer. These are company-reported traction and performance signals rather than independently audited KPIs, but they indicate a more concrete adoption thesis than a generic AI productivity narrative. The stated pricing model is per task rather than per seat, which could align revenue with shipped work but also makes task quality, usage frequency, and gross margin important diligence questions.
+
+AutonomyAI operates in a highly competitive AI software-creation market. GitHub Copilot, Cursor, Claude Code, Replit, v0, Lovable, Bolt.new, and Qodo all address parts of coding, application generation, review, or agentic development. AutonomyAI's proposed edge is the combination of codebase ingestion, design-system awareness, frontend-focused execution, multi-step orchestration, visual validation, and an output format that engineers can review and merge. That edge is plausible if ACE materially improves first-pass quality across unfamiliar enterprise stacks, but it is not automatically durable: foundation-model providers and larger developer platforms can add repository indexing, pull-request workflows, design inputs, and governance features. The company must therefore demonstrate repeatable acceptance, retention, integration depth, and workflow ownership rather than relying on novelty.
+
+The company has public evidence of an early commercialization phase. Reporting in 2025 described a $4 million pre-seed financing, and AutonomyAI's own December 2025 product update said it launched Fei IDE and Fei Studio and had onboarded more than 80 companies in six months. Its current site reports more than 160 teams, so the trajectory appears positive, although the definitions of company, team, onboarded, active, and paying customer should be reconciled. The official compliance material states that AutonomyAI is SOC 2 compliant as of June 2025, supports private deployments, limits retention, does not use customer data for model training, and can support customer-hosted models; these statements should be verified through security documentation and a customer reference during diligence.
+
+The dual-use case is substantive but indirect. The core product is commercial software-delivery automation, not a defense system, sensor, or mission application. Its private-deployment options, access controls, auditability, human approval gate, and ability to operate on sensitive code could nevertheless serve regulated companies, critical-infrastructure operators, public-sector engineering teams, and defense contractors that need acceleration without surrendering control of source code or deployment decisions. There is no reliable public evidence here of defense contracts, military deployments, or government procurement. Strategic relevance should therefore be framed around secure software production and cyber-resilient engineering workflows. Key diligence questions are whether private deployment is operationally mature, whether generated changes can be bounded and audited, how the system handles prompt injection and poisoned repository context, and whether customers will permit an agent to alter production-adjacent code at scale.
+"""
+logo = "https://autonomyai.io/wp-content/uploads/2026/04/AutonomyAI_logo_light-1-scaled.png"
+website = "https://autonomyai.io"
+sector = "AI software infrastructure"
+founded = "2023"
+headquarters = "New York, United States; Israeli product and engineering development"
+employees = "11-50"
+funding_stage = "Pre-seed; $4 million announced April 2025; no later round publicly verified through 2026-10-04"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "AutonomyAI has credible indirect dual-use potential: its repository-grounded agent workflow, private deployment options, security controls, and engineer approval gate can support sensitive or regulated software teams as well as commercial product organizations. Public materials do not establish defense contracts or military deployments, so the security relevance is stronger than the defense-specific evidence."
+key_technologies = ["Agentic Context Engine for repository and architecture modeling", "Repository-grounded frontend code generation", "Multi-step agent orchestration for task execution", "Design-system, API, hook, and component inference", "Visual preview and validation before pull-request creation", "Private deployment and customer-hosted model integration", "Auditable human-in-the-loop pull-request workflow"]
+use_cases = ["Turning product requirements, screenshots, Figma designs, and tickets into codebase-aligned changes", "Generating frontend pull requests that follow an organization's components and design system", "Letting product managers and designers validate behavior in a real application before engineering review", "Modernizing legacy interfaces while preserving existing frontend patterns", "Reducing UI rebuild and handoff work across distributed product teams", "Accelerating software delivery in regulated environments with private deployment and audit controls", "Supporting secure engineering workflows for critical-infrastructure or defense-adjacent software teams"]
+investible = true
+investment_rationale = "AutonomyAI is a credible strategic-fit startup because it targets a measurable enterprise software bottleneck and combines agentic execution with repository context, reviewable pull requests, and security-oriented deployment controls. The $4 million pre-seed round, reported onboarding, and current 160-plus-team claim support early momentum, but this remains a crowded market and the claims require customer, retention, acceptance-rate, security, and unit-economics verification. This is an internal priority signal, not an investment recommendation."
+strategic_value = "AutonomyAI could become a secure software-factory layer for organizations that need more engineering throughput without giving an unconstrained agent direct production authority. Its strategic value is highest where code, design artifacts, and deployment workflows are sensitive: regulated enterprises, critical infrastructure, and defense contractors. The company has not publicly demonstrated a defense program, so its relevance should not be overstated beyond secure and auditable software production."
+public_sources = [
+  { label = "AutonomyAI homepage", url = "https://autonomyai.io/", description = "Current product positioning, 160-plus product-team claim, 50-plus internal production PRs, and September 2026 feature comparison." },
+  { label = "AutonomyAI about", url = "https://autonomyai.io/about/", description = "Official company description and 160-plus product-team claim." },
+  { label = "AutonomyAI MCP release", url = "https://autonomyai.io/blog/fei-studio-now-works-inside-claude-code-cursor-and-any-ai-agent/", description = "July 2026 product integration announcement and early-access rollout." },
+  { label = "Globes funding and company report", url = "https://en.globes.co.il/en/article-israeli-autonomous-frontend-co-autonomyai-raises-4m-1001507200", description = "April 2025 pre-seed, participants, founding team, Israel development, and company-reported $100,000 monthly revenue at announcement." },
+  { label = "Calcalist launch report", url = "https://www.calcalist.co.il/article/hyz8otkayg", description = "Hebrew coverage of launch, $4 million pre-seed, investors, founders, and product claims." },
+  { label = "AutonomyAI team", url = "https://autonomyai.io/human-intelligence/", description = "Current official leadership and team page." },
+  { label = "AutonomyAI Fei Studio overview", url = "https://autonomyai.io/solutions/", description = "Official description of workflow, supported inputs, codebase grounding, and review process." },
+  { label = "AutonomyAI product launch", url = "https://autonomyai.io/business/introducing-fei-studio-opening-a-new-era-of-software-creation/", description = "December 2025 Fei Studio product-launch statement." }
+]
+potential_score = 73.0
+technology_score = 78.0
+market_score = 76.0
+team_score = 80.0
+dual_use_score = 58.0
+strategic_alignment_score = 68.0
+stage = "early"
+stage_rationale = "AutonomyAI remains early: it has a public product, a reported $4 million pre-seed round, visible hiring, and company-reported onboarding and production-use signals, but public evidence does not yet establish revenue scale, retention, independent product benchmarks, or a later financing stage. The 2025 launch of Fei Studio also means the current product surface is relatively young."
+competitors = ["GitHub Copilot", "Cursor", "Claude Code", "Replit", "v0", "Lovable", "Qodo"]
+competitive_edge = "AutonomyAI's strongest claimed differentiator is workflow position rather than model ownership: Fei Studio ingests the real repository and design system, accepts product and design artifacts, previews and validates changes, and opens a pull request for engineer approval. This could outperform generic assistants for frontend handoffs and organization-specific conventions, but the edge will only be durable if independent acceptance, retention, security, and integration results remain better than bundled developer platforms."
+risk_factors = ["Large developer-platform and foundation-model vendors can bundle repository context, agent execution, design inputs, and pull-request governance.", "The 160-plus-team, onboarding, productivity, and internal pull-request figures are primarily company-reported and need definitions and independent customer validation.", "Generated code can introduce security defects, dependency risk, prompt-injection effects, or subtle regressions when repository context is incomplete or poisoned.", "Private deployment, customer-hosted models, SOC 2 claims, and data-residency controls require technical and audit diligence rather than reliance on marketing pages.", "A frontend-focused wedge may be narrow if buyers consolidate around broader coding agents or if backend and infrastructure work remains the true delivery bottleneck.", "Enterprise sales cycles, permissions, procurement, and integration with Git providers and issue systems can make deployment expensive and slow.", "The public record has unresolved metadata discrepancies around founding year, headquarters, and the meaning of team or company counts."]
+risk_level = "medium"
+signals = ["official website", "pre-seed funding", "enterprise security controls", "private deployment", "product-team workflow automation", "early customer traction"]
+priority_rank = 0
+priority_rationale = "AutonomyAI merits continued strategic tracking as an early software-infrastructure company with repository-grounded agents, enterprise controls, and a plausible secure-software use case. Its priority is supported by product and traction signals, but the indirect defense connection and unverified commercial metrics warrant medium risk and continued diligence rather than recommendation language."
+crawled_at = "2026-05-31T02:23:01Z"
+updated_at = "2026-10-04T00:30:57Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Adir Ben Yehuda", role = "CEO", is_founder = false, current = true, background = "CEO; quoted describing the company's organization-level product positioning.", source_ids = ["team", "globes2025"] },
+  { name = "Tamuz Dubnov", role = "Co-founder and CTO", is_founder = true, current = true, background = "Leads ACE engineering; company describes experience in AI across text, vision, audio, and vector modalities.", source_ids = ["team", "globes2025"] },
+  { name = "Arik Faingold", role = "Chairman and co-founder", is_founder = true, current = true, background = "Pentera founder and Commit chairman, as reported at launch.", source_ids = ["team", "globes2025"] }
+]
+investors = [
+  { name = "Inbound Capital", investor_type = "vc", relationship = "historical", round_ids = ["pre-seed-2025"], source_ids = ["globes2025", "calcalist2025"] },
+  { name = "Gilad Shany", investor_type = "angel", relationship = "historical", round_ids = ["pre-seed-2025"], source_ids = ["globes2025", "calcalist2025"], notes = "Reported as an individual investor associated with ION Crossover; reports also ambiguously refer to ION Crossover Partners." },
+  { name = "Vikram Makija", investor_type = "angel", relationship = "historical", round_ids = ["pre-seed-2025"], source_ids = ["globes2025", "calcalist2025"], notes = "Reported individual participant; no personal website verified." },
+  { name = "Fiverr", investor_type = "corporate", relationship = "historical", round_ids = ["pre-seed-2025"], source_ids = ["globes2025"], notes = "Globes says companies such as Fiverr and JFrog among investors; role and direct participation are not described precisely." },
+  { name = "JFrog", investor_type = "corporate", relationship = "historical", round_ids = ["pre-seed-2025"], source_ids = ["globes2025"], notes = "Globes says companies such as Fiverr and JFrog among investors; role and direct participation are not described precisely." }
+]
+financials = [
+  { name = "monthly_revenue", value = "$100,000 monthly revenue", as_of = "2025-04-06", basis = "reported", metric = "revenue", numeric_value = 100000, value_relation = "exact", unit = "currency", currency = "USD", period_start = "2025-04-06", period_end = "2025-04-06", source_ids = ["globes2025"], notes = "Press-reported company statement at launch; point-in-time monthly revenue run rate, not audited and not necessarily ARR." }
+]
+traction = []
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "autonomyai"
+aliases = ["AutonomyAI", "Autonomy AI"]
+operating_status = "active"
+business_model = "B2B software subscription; the company describes task-based pricing. Public pricing and customer contract terms are not disclosed."
+products = ["Fei Studio", "Autonomy MCP server", "Agentic Context Engine (ACE)"]
+locations = ["New York, United States", "Israel (product and engineering development)"]
+source_ids = ["about", "mcp2026", "globes2025", "team"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One publicly reported $4 million pre-seed round announced 2025-04-06. No subsequent financing was located in the reviewed company and press sources through 2026-10-04. The reported total is company-announced/reported coverage, not an independently verified cap table."
+reported_total_raised = 4000000
+reported_total_currency = "USD"
+total_source_ids = ["globes2025", "calcalist2025"]
+total_as_of = "2025-04-06"
+total_scope = "Company-reported lifetime equity funding disclosed at launch; no later round publicly verified."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "pre-seed-2025"
+round_type = "pre-seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2025-04-06"
+amount_status = "reported"
+amount = 4000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = []
+participating_investors = ["Inbound Capital", "Gilad Shany", "Vikram Makija", "Fiverr", "JFrog"]
+source_ids = ["globes2025", "calcalist2025"]
+notes = "Globes describes the financing as pre-seed. Press reports name Inbound Capital, Gilad Shany of ION Crossover, Vikram Makija, and companies including Fiverr and JFrog. No lead is specified in the primary source reviewed, so lead_investors is left empty. Amount and investor list are press-reported; no primary company or investor financing announcement was located. No valuation terms disclosed."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private-company ownership percentages and cap table are not public in reviewed sources. No parent company, acquisition, or exit identified."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["globes2025", "about"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_rd", "israeli_founders"]
+summary = "The 2025 launch coverage identifies AutonomyAI as an Israeli startup and reports that its Agentic Context Engine was developed entirely in Israel. Its current site lists the CEO and CTO among company leadership."
+as_of = "2026-10-04"
+source_ids = ["globes2025", "calcalist2025", "team"]
+
+[intelligence.research]
+researched_at = "2026-10-04T00:30:57Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "AutonomyAI Fei Studio official company about team products",
+  "AutonomyAI Fei Studio funding raised seed Series A investors valuation acquired 2026",
+  "AutonomyAI Autonomy AI LLC Inbound Capital investors portfolio",
+  "AutonomyAI founders CEO CTO leadership team background",
+  "AutonomyAI ownership acquisition parent company cap table",
+  "AutonomyAI revenue ARR customers monthly revenue 2025 2026",
+  "AutonomyAI Fei Studio customers product teams traction MCP 2026",
+  "AutonomyAI patents ACE Agentic Context Engine USPTO WIPO",
+  "AutonomyAI competitors Cursor Copilot Lovable Fei Studio",
+  "AutonomyAI defense government security dual use deployment"
+]
+gaps = [
+  "team: Public bios and full historical executive roster/background verification are incomplete.",
+  "investors: No primary round announcement or comprehensive participant list located; some reported participants are described ambiguously.",
+  "financials: Current revenue, ARR, profitability, burn, runway, and audited accounts are not publicly disclosed; 2025 monthly revenue is a single press-reported point-in-time claim.",
+  "traction: Current 160-plus team claim has no disclosed active, paying, retention, or deployment definitions; named customer and production contract evidence is sparse.",
+  "intellectual_property: No attributable patent filing or granted patent located in searched public sources; trade-secret status is unknown.",
+  "competition: Comparative performance and pricing statements on company site are vendor claims; independent head-to-head benchmarks were not located.",
+  "dual_use: No public defense, government, or military customer or contract evidence located."
+]
+conflicts = ["Public founding-date signals differ: company database/current professional profile signals and April 2025 launch reporting are not fully consistent; retained original founded year pending primary registration evidence.", "The April 2025 press coverage cites a company-reported $100,000 monthly revenue figure; no independent or later financial figure was found."]
+diligence_questions = [
+  "How many of the 160-plus product teams are active and paying, and what are cohort retention, task frequency, and conversion from trial?",
+  "Can management provide monthly recurring revenue, gross margin, inference and human support costs, burn, and runway since the April 2025 report of $100,000 monthly revenue?",
+  "What measured acceptance, rework, security incident, and cycle-time outcomes does Fei Studio deliver across customer codebases, and how are these independently validated?",
+  "What are the exact private deployment, data retention, model-provider, and audit controls, and can the company provide current SOC 2 evidence and customer references?",
+  "What is the full financing history and cap table, including whether the 2025 round was entirely primary equity and whether any later financing or secondary transactions occurred?"
+]
+
+[[intelligence.research.sources]]
+id = "home"
+url = "https://autonomyai.io/"
+title = "AutonomyAI, the OS for Building in Production - Homepage"
+publisher = "AutonomyAI"
+kind = "company"
+accessed_at = "2026-10-04T00:30:57Z"
+claims = ["Current product positioning and repository-grounded workflow", "Company claims 50-plus internally opened production pull requests with engineer-approved merges", "September 2026 comparison presents Fei Studio alongside coding products"]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://autonomyai.io/about/"
+title = "About - AutonomyAI"
+publisher = "AutonomyAI"
+kind = "company"
+accessed_at = "2026-10-04T00:30:57Z"
+claims = ["Company identifies Fei Studio as its execution engine", "Company claims 160-plus product teams building in production"]
+
+[[intelligence.research.sources]]
+id = "mcp2026"
+url = "https://autonomyai.io/blog/fei-studio-now-works-inside-claude-code-cursor-and-any-ai-agent/"
+title = "The MCP is here: Fei Studio now works inside Claude Code, Cursor, and any AI agent"
+publisher = "AutonomyAI"
+kind = "company"
+published_on = "2026-07-20"
+accessed_at = "2026-10-04T00:30:57Z"
+claims = ["AutonomyAI announced MCP integration for Fei Studio with Claude Code, Claude Desktop, Cursor, and MCP clients", "Release was rolling out to early-access teams", "PRs remain subject to engineer review and merge"]
+
+[[intelligence.research.sources]]
+id = "globes2025"
+url = "https://en.globes.co.il/en/article-israeli-autonomous-frontend-co-autonomyai-raises-4m-1001507200"
+title = "Israeli autonomous frontend co AutonomyAI raises $4m"
+publisher = "Globes"
+kind = "media"
+published_on = "2025-04-06"
+accessed_at = "2026-10-04T00:30:57Z"
+claims = ["Company emerged from stealth with $4 million pre-seed", "Reported Inbound Capital, Gilad Shany of ION Crossover, Vikram Makija, Fiverr and JFrog as investors/participants", "Arik Faingold is chairman and co-founder, Tamuz Dubnov is co-founder and CTO, and Adir Ben-Yehuda is CEO", "ACE developed entirely in Israel", "Company-reported monthly revenue was $100,000 at publication"]
+
+[[intelligence.research.sources]]
+id = "calcalist2025"
+url = "https://www.calcalist.co.il/article/hyz8otkayg"
+title = "AutonomyAI, the new startup of Pentera's founder, emerges from stealth"
+publisher = "Calcalist"
+kind = "media"
+published_on = "2025-04-06"
+accessed_at = "2026-10-04T00:30:57Z"
+claims = ["Israeli startup announced $4 million pre-seed", "Names Inbound Capital, Gilad Shany, and Vikram Makija among investors", "Identifies Faingold, Dubnov, and Ben-Yehuda leadership roles", "Describes ACE as developed in Israel"]
+
+[[intelligence.research.sources]]
+id = "team"
+url = "https://autonomyai.io/human-intelligence/"
+title = "Human Intelligence - AutonomyAI"
+publisher = "AutonomyAI"
+kind = "company"
+accessed_at = "2026-10-04T00:30:57Z"
+claims = ["Official team page identifies Arik Faingold, Tammuz Dubnov, and Adir Ben Yehuda"]
+
+[[intelligence.research.sources]]
+id = "solutions"
+url = "https://autonomyai.io/solutions/"
+title = "Fei Studio - Build Products, not Prototypes"
+publisher = "AutonomyAI"
+kind = "company"
+accessed_at = "2026-10-04T00:30:57Z"
+claims = ["Fei Studio accepts prompts, screenshots, Figma, and tickets and builds changes aligned with existing codebase", "Positioning describes product/design collaboration with engineering review"]
+
+[[intelligence.research.sources]]
+id = "launch2025"
+url = "https://autonomyai.io/business/introducing-fei-studio-opening-a-new-era-of-software-creation/"
+title = "Introducing Fei Studio: Opening a New Era of Software Creation"
+publisher = "AutonomyAI"
+kind = "company"
+published_on = "2025-12-10"
+accessed_at = "2026-10-04T00:30:57Z"
+claims = ["Company announced Fei Studio launch in December 2025"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T00:30:57Z"
+next_review_on = "2027-04-04"
+queries = ["AutonomyAI Fei Studio official company about team products", "Autonomy AI LLC company identity legal name"]
+source_ids = ["about", "team", "globes2025"]
+summary = "Active Israeli-founded software startup operating Fei Studio; US legal form surfaced in trademark search, but no primary filing was used to confirm exact legal entity name."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T00:30:57Z"
+next_review_on = "2027-01-04"
+queries = ["AutonomyAI funding raised seed Series A 2026", "AutonomyAI $4 million pre-seed investors"]
+source_ids = ["globes2025", "calcalist2025"]
+summary = "One $4 million pre-seed round found; no later round surfaced in reviewed queries."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T00:30:57Z"
+next_review_on = "2027-04-04"
+queries = ["AutonomyAI Inbound Capital ION Crossover investors", "AutonomyAI investors portfolio 2025"]
+source_ids = ["globes2025", "calcalist2025"]
+summary = "Press names Inbound Capital, Gilad Shany, Vikram Makija, and possibly Fiverr/JFrog; individual/company participant roles are not uniformly explicit."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T00:30:57Z"
+next_review_on = "2027-04-04"
+queries = ["AutonomyAI founders CEO CTO leadership team background"]
+source_ids = ["team", "globes2025"]
+summary = "Current official team page and launch coverage identify chairman/co-founder Arik Faingold, CEO Adir Ben Yehuda, and CTO/co-founder Tamuz Dubnov; broader bios remain limited."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T00:30:57Z"
+next_review_on = "2027-10-04"
+queries = ["AutonomyAI ownership acquisition parent company cap table", "Autonomy AI LLC ownership shareholders"]
+source_ids = ["globes2025", "about"]
+summary = "No public cap table, ownership percentages, parent, or acquisition identified."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-04T00:30:57Z"
+next_review_on = "2027-04-04"
+queries = ["AutonomyAI revenue ARR monthly revenue 2025 2026"]
+source_ids = ["globes2025", "calcalist2025"]
+summary = "Only a press-reported company statement of $100,000 monthly revenue in April 2025 was found; no current or audited metric located."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T00:30:57Z"
+next_review_on = "2027-04-04"
+queries = ["AutonomyAI Fei Studio customers product teams traction MCP 2026"]
+source_ids = ["about", "home", "mcp2026", "globes2025"]
+summary = "Company claims 160-plus teams and 50-plus internal PRs; 2025 press described several production customers. Active and paying counts remain unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T00:30:57Z"
+next_review_on = "2027-10-04"
+queries = ["AutonomyAI patents ACE Agentic Context Engine USPTO WIPO"]
+source_ids = ["globes2025"]
+summary = "No attributable patent filing or grant found in name-based public web search; absence is not proof no filings exist."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T00:30:57Z"
+next_review_on = "2027-04-04"
+queries = ["AutonomyAI competitors Cursor Copilot Lovable Fei Studio"]
+source_ids = ["home", "solutions"]
+summary = "Company compares itself with Cursor, Copilot, Claude Code, and Lovable. Broader substitutes include Replit and v0; independent comparative evidence not located."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-04T00:30:57Z"
+next_review_on = "2027-10-04"
+queries = ["AutonomyAI defense government security dual use deployment"]
+source_ids = ["solutions", "globes2025"]
+summary = "Software automation and Israeli R&D are evidenced, but no public defense, government, or military customer/contract was located."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Official company site is active, publishes current products and a July 2026 release, and offers demos."
+verified_at = "2026-10-04T00:30:57Z"
+source_ids = ["about", "mcp2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Launch reporting calls the startup Israeli and states ACE was developed entirely in Israel."
+verified_at = "2026-10-04T00:30:57Z"
+source_ids = ["globes2025", "calcalist2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Launch coverage reports $4 million pre-seed financing; no later round located, so reported company total remains the last company-announced amount."
+verified_at = "2026-10-04T00:30:57Z"
+source_ids = ["globes2025", "calcalist2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2025.amount"
+support = "direct"
+summary = "Globes and Calcalist both report a $4 million pre-seed financing announced April 6, 2025."
+verified_at = "2026-10-04T00:30:57Z"
+source_ids = ["globes2025", "calcalist2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2025.lead_investors"
+support = "direct"
+summary = "Globes identifies Inbound Capital in the investor group for the $4 million pre-seed; lead status is reported in later funding databases, but not explicitly stated in this article, so this confirms named investor participation only."
+verified_at = "2026-10-04T00:30:57Z"
+source_ids = ["globes2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2025.participating_investors"
+support = "direct"
+summary = "Globes names Gilad Shany, Vikram Makija, Fiverr, and JFrog among investors; the article's wording does not fully disambiguate the roles of all participants."
+verified_at = "2026-10-04T00:30:57Z"
+source_ids = ["globes2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.monthly_revenue@2025-04-06.numeric_value"
+support = "direct"
+summary = "Globes reports $100,000 monthly revenue at launch; this is company-reported and time-specific."
+verified_at = "2026-10-04T00:30:57Z"
+source_ids = ["globes2025"]

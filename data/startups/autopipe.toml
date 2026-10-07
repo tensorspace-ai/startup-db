@@ -1,0 +1,359 @@
+name = "AutoPipe"
+description = "AutoPipe is an Israeli AI-infrastructure startup building a multi-agent cloud-architecture copilot that turns business and technical requirements into validated designs, documentation, diagrams, cost and security analysis, and deployment-ready infrastructure outputs. Founded by Unit 8200 alumni, it targets the slow, error-prone architecture bottleneck behind complex multi-cloud projects."
+detailed_description = """
+**Product and the concrete problem it solves.** AutoPipe is aimed at the part of cloud delivery that happens before production code: translating an organization's business requirements, compliance constraints, reliability targets, traffic expectations, and budget into a coherent infrastructure architecture. That work is still performed through interviews, spreadsheets, whiteboards, static diagrams, proposal documents, and the judgment of a scarce senior solution architect. AutoPipe's public positioning is a cloud co-pilot that lets teams design, optimize, and deploy infrastructure across clouds in minutes; its target workflow includes architecture lifecycle management, multi-cloud mapping, cost estimation, infrastructure optimization, version control, collaboration, and conversion from diagrams to Terraform. The commercial problem is concrete rather than purely cosmetic. A flawed architecture can lock a customer into one availability zone, create an avoidable security exposure, produce a cloud bill that cannot be justified, or make an application impossible to recover after a regional outage. AutoPipe is therefore trying to move architecture from an artisanal, front-loaded consulting deliverable into a versioned and continuously improvable engineering artifact.
+
+**Core technology and how it actually works.** AutoPipe describes a set of AI agents that analyze customer requirements, apply architectural logic and best practices, and generate technical deliverables while preserving the reasoning behind decisions. The public record does not disclose the model providers, training corpus, evaluation methodology, or proprietary architecture, so the defensible description is an agentic orchestration layer around cloud-architecture reasoning rather than a claim of a novel foundation model. The product surface suggests several linked technical steps: ingest structured or natural-language requirements; map them to cloud services and infrastructure patterns; produce diagrams, documentation, cost estimates, and deployment plans; simulate or compare alternatives; and translate an approved design into infrastructure-as-code. The official site names a Diagram to Terraform workflow, an AI Architecture Engine, Architecture Version Control, Multi Cloud Mapping, Infrastructure Cost Estimation, Infrastructure Optimization, and a Simulation system. In a production setting, the hard engineering problem is not producing a plausible diagram. It is maintaining a reliable graph of dependencies and constraints across AWS, Azure, Google Cloud, networking, identity, observability, data, and security; exposing assumptions; preventing unsupported service combinations; and ensuring that generated Terraform is reviewable and safe. AutoPipe's chance to build a moat depends on accumulating structured architecture decisions, failure feedback, policy controls, and customer-specific context that generic chat interfaces do not retain.
+
+**Market, customers, and go-to-market.** AutoPipe initially targets IT consulting companies, system integrators, managed-service providers, and cloud-professional-services firms that repeatedly design infrastructure for customers. This is a sensible wedge because an architecture firm has a direct economic incentive to answer more proposals, shorten pre-sales cycles, reduce rework, and let a small number of senior architects supervise a larger delivery team. CTech reports that AutoPipe also sees a path into large enterprises and technology companies managing complex internal environments. The company has said that it completed dozens of customer use cases and generated early paid activity, but the public sources do not name customers, disclose annual recurring revenue, or distinguish pilots from repeatable subscriptions. The product can be sold as a SaaS workspace, an assistant embedded in an existing consulting workflow, or a controlled enterprise deployment that connects to cloud inventories and policy repositories. Each route has a different burden: consultants will demand speed and proposal quality; enterprises will demand security, auditability, tenancy isolation, and integration; regulated or defense buyers will demand a deployment model that can operate with restricted data and explicit human approval. The planned United States expansion broadens the market, but it also puts AutoPipe against better-funded developer-platform, infrastructure-as-code, and cloud-management vendors.
+
+**Traction, funding, and third-party validation.** AutoPipe was publicly described by CTech in May 2026 as an Israeli startup with a working product, three employees, a $210,000 pre-seed round from HCS Capital, and early paid activity. The Jerusalem Post's July 2026 report described five employees and two advisors, dozens of completed customer projects, early-paying users, a Tel Aviv operating base, and a new $1.5 million round being raised at a stated $6 million valuation; that round should be treated as a fundraising target, not closed capital. Caplight independently lists AutoPipe as an Israel-based AI, data, and cloud-infrastructure company, records the April 24, 2026 pre-seed signal, names HCS Capital Partners, and categorizes its business as B2B subscription SaaS. The official website is also concrete about product modules rather than only publishing a mission statement. These are meaningful validation signals for a very early company, but they are not evidence of product-market fit at scale. There are no public revenue figures, retention data, named enterprise references, third-party architecture benchmarks, security certifications, or independent tests showing that generated plans outperform experienced architects. The strongest near-term proof would be repeat deployments, measurable reductions in proposal-to-delivery time, customer-approved Terraform reaching production, and evidence that AutoPipe catches resilience or cost failures that human teams missed.
+
+**Founders and team background.** Jonathan Or is identified as AutoPipe's co-founder and CEO, while Nadav Aharon is the co-founder and VP of R&D. Both are reported as veterans of Israel's Unit 8200; CTech describes Or as leading strategy, partnerships, and growth and Aharon as responsible for product and engineering, while its founder profile says Aharon completed the Gamma Cyber program. Or has said that he began building software as a teenager and that the idea came from seeing, during military technology work, how much time teams spent selecting infrastructure and planning architectures. The combination is relevant to the problem: the founders have direct exposure to security-sensitive software systems, DevOps, cloud architecture, and environments where infrastructure decisions have operational consequences. The team remains tiny and the public headcount is inconsistent, with CTech reporting three employees, LinkedIn displaying three employees, and the Jerusalem Post describing five employees plus two advisors. That difference may reflect hiring timing rather than a substantive contradiction, but it reinforces the early-stage classification. AutoPipe will need additional depth in cloud-provider integrations, formal methods or policy validation, enterprise security, customer success, and infrastructure-as-code operations. Founder-market fit is credible; the public record does not yet establish that the team has the scale to support production deployments across many cloud environments.
+
+**Competitive dynamics.** AutoPipe sits in a layered market with no single direct incumbent. Catio competes with an AI-oriented architecture decision and optimization copilot. StackGen and Pulumi compete around AI-assisted infrastructure-as-code generation and deployment workflows. Cloudcraft and Lucidchart address visual cloud architecture design and documentation, while Miro serves as the flexible collaboration substitute used by consulting teams. Terraform and HCP Terraform represent the entrenched provisioning and workflow layer that AutoPipe must complement or integrate with rather than displace casually. Human cloud architects, system integrators, and internal platform-engineering teams remain the strongest substitute because they own context, approval authority, and accountability when a design fails. AutoPipe's stated distinction is upstream completeness: it wants to start with requirements and produce architecture, rationale, cost, documentation, and deployment-ready outputs, rather than only draw diagrams or generate snippets after a design decision has already been made. That is strategically attractive but technically difficult to defend. Large cloud providers can add architecture assistants to their consoles, IaC vendors can move into requirements and validation, and consulting firms can build private agent workflows around their own templates. A durable edge would require trustworthy multi-cloud reasoning, policy-aware simulation, a growing library of validated design patterns, and high-quality change tracking across the full architecture lifecycle.
+
+**Defense, security, and resilience dual-use relevance.** AutoPipe is a genuine but early dual-use case because its core product governs how digital infrastructure is designed for both ordinary commercial workloads and high-consequence services. The resilience pathway is direct: the Jerusalem Post describes the founders' example of a data center failure caused by reliance on a single availability zone without disaster recovery, exactly the kind of architectural fragility that can interrupt hospitals, logistics, utilities, financial services, or government operations. A controlled AutoPipe deployment could help teams model multi-region recovery, redundant identity and networking, offline or degraded operating modes, blast-radius boundaries, and cost-aware redundancy before implementation. The security pathway is also plausible because architecture decisions determine segmentation, secrets handling, access boundaries, logging, backup isolation, and the attack surface exposed by cloud services. In defense or critical-infrastructure settings, the company could become an architecture-assurance layer for systems that need to survive cyberattack, regional disruption, or loss of a cloud dependency. However, there is no public defense customer, government contract, classified deployment, formal authorization, or evidence that the product runs in restricted environments. The company currently sells into commercial cloud work, and dual-use should therefore be scored as credible resilience adjacency rather than fielded defense capability. The decisive questions are data sovereignty, model isolation, deterministic validation, human approval, audit trails, and whether generated designs can be trusted when a wrong assumption has mission-level consequences.
+
+**Growth stage, trajectory, and key diligence risks.** AutoPipe is early: founded in 2024, operating with roughly three to five employees, backed by a small pre-seed round, and still raising a larger round to fund a U.S. expansion. Its trajectory is attractive if it can turn one-off architecture projects into a repeatable system of record for infrastructure decisions. The upside is not merely labor reduction; an architecture graph that links requirements, costs, controls, dependencies, changes, and deployment outputs could become a high-leverage layer between business intent and cloud execution. The diligence risks are substantial. First, generated architecture can be fluent but wrong, and a confident error in networking, identity, recovery, or data placement can be more dangerous than an obvious failure. Second, the product may depend heavily on third-party foundation models and cloud APIs, leaving its economics and reliability exposed to vendors it does not control. Third, integrations are a moving target: every provider service, Terraform resource, policy framework, and enterprise environment creates maintenance work. Fourth, the market is crowded with platform incumbents and open-source tooling that can bundle adjacent capabilities. Fifth, security-sensitive customers may resist sending architecture and infrastructure metadata to a young SaaS vendor. Sixth, the funding plan is not yet proven, and a five-person team must balance research, integrations, sales, support, and compliance. Milestones worth tracking are a closed financing round, named repeat customers, independently measured time or error reduction, production use of generated infrastructure, provider coverage, and a credible pathway to private or sovereign deployment.
+"""
+logo = "Unknown"
+website = "https://www.autopipecloud.com/"
+sector = "AI Cloud Infrastructure and Agentic Architecture Automation"
+founded = "2024"
+headquarters = "Herzliya, Israel"
+employees = "3 employees reported by CTech in May 2026; 5 employees plus 2 advisors reported by The Jerusalem Post in July 2026; current headcount unverified."
+funding_stage = "Pre-seed; $210,000 reported raised from HCS Capital in April 2026. A $1.5 million round at a reported $6 million valuation was being raised in July 2026; closing has not been publicly verified."
+entity_type = "startup"
+dual_use = true
+dual_use_description = "AutoPipe's core capability is commercial cloud-architecture automation, but it has a credible resilience and security dual-use pathway. (1) The product can help design redundant, multi-region, segmented, observable, and recoverable infrastructure for government, defense-industrial, healthcare, utility, and other critical services. (2) Its architecture reasoning can encode security controls, blast-radius limits, identity boundaries, backup isolation, and degraded-operation requirements before deployment, addressing failures that are operationally relevant to cyber resilience. (3) The founders' Unit 8200 background supports security-sensitive execution, but does not prove defense capability. No public defense customer, government contract, classified deployment, or restricted-environment certification is disclosed. The appropriate assessment is credible strategic-infrastructure adjacency, not fielded defense technology; the dual-use value depends on private deployment, deterministic validation, human approval, and auditable outputs."
+key_technologies = [
+  "Multi-agent requirements-to-cloud-architecture reasoning",
+  "Multi-cloud architecture mapping across provider services and dependencies",
+  "Architecture version control and lifecycle change management",
+  "Diagram-to-Terraform infrastructure-as-code generation",
+  "Cloud cost estimation and architecture optimization",
+  "Architecture simulation and resilience trade-off analysis",
+  "AI-generated technical documentation and deployment planning"
+]
+use_cases = [
+  "Rapid architecture proposals for cloud consultancies, system integrators, and managed-service providers",
+  "Multi-region disaster-recovery planning for critical business and public-sector workloads",
+  "Security and segmentation review before deploying a new cloud application",
+  "Migration planning across AWS, Azure, Google Cloud, and hybrid environments",
+  "Generating reviewable Terraform and technical documentation from approved architecture designs",
+  "Cost and performance comparison of alternative architectures before implementation",
+  "Continuous versioned governance of changing enterprise cloud architectures",
+  "Prospective resilience planning for defense-industrial and critical-infrastructure systems"
+]
+investible = true
+investment_rationale = "AutoPipe merits a positive legacy priority signal because it addresses a real AI-infrastructure bottleneck with a technically coherent product and unusually direct founder experience. (1) The product sits upstream of expensive cloud implementation mistakes and could improve both consulting throughput and infrastructure resilience. (2) Early evidence includes a working product, dozens of reported customer use cases, early paid activity, and a disclosed HCS Capital pre-seed round. (3) The team is small, technically relevant, and reported to have Unit 8200, DevOps, cloud, and software-engineering backgrounds. Counterweights are decisive: the funding base is tiny, the larger round is not confirmed closed, no customer names or recurring-revenue metrics are public, and the core agentic reasoning claims lack independent benchmarks. Competitive pressure from cloud vendors, IaC platforms, and human integrators is severe. This flag is an internal diligence priority, not an investment recommendation."
+strategic_value = "AutoPipe's strategic value is concentrated in the control point between organizational intent and digital infrastructure execution. (1) Reliable architecture automation can reduce the shortage of senior cloud architects and make resilient designs more accessible to smaller organizations. (2) A requirements, policy, dependency, and change graph could improve cyber and operational resilience by making hidden single points of failure visible before deployment. (3) Multi-cloud and private-deployment support could help Israeli, allied, government, and defense-industrial operators reduce dependence on one provider or one availability region. (4) The founders' Israeli cyber background is relevant to security-sensitive product development, but public-sector strategic value remains prospective because no government deployment or accreditation is disclosed. The value case rises materially if AutoPipe proves deterministic validation and sovereign deployment; it falls if the product remains a generic diagram and text generator."
+potential_score = 65.0
+technology_score = 67.0
+market_score = 68.0
+team_score = 70.0
+dual_use_score = 61.0
+strategic_alignment_score = 68.0
+stage = "early"
+stage_rationale = "AutoPipe is classified as early because it was founded in 2024, has only three to five publicly visible employees, has reported a $210,000 pre-seed round, and is still raising a larger round. The company appears to have a working product, dozens of reported use cases, and early paid users, so it is beyond an idea or purely technical prototype. It does not yet have public evidence of repeatable subscription revenue, named enterprise customers, customer retention, independent benchmarks, or a scaled deployment and support organization. The combination of product existence and commercial experimentation with limited capitalization and headcount places it at the early stage rather than mid-stage."
+competitors = [
+  "Catio (AI-assisted architecture decision-making and optimization)",
+  "StackGen (AI-powered infrastructure-as-code generation and deployment workflows)",
+  "Pulumi (infrastructure-as-code platform with automation and AI-assisted developer workflows)",
+  "Cloudcraft (visual cloud architecture design, mapping, and documentation)",
+  "Lucidchart and Miro (diagramming and collaborative architecture-design substitutes)",
+  "Terraform / HCP Terraform (incumbent infrastructure-as-code provisioning and workflow layer)",
+  "Cloud solution architects and system integrators (human-context and accountability substitute)"
+]
+competitive_edge = "AutoPipe's potential edge is workflow integration rather than a disclosed proprietary model. (1) It starts from business and technical requirements and aims to connect reasoning, diagrams, documentation, cost, optimization, version control, and Terraform output in one lifecycle. (2) Its multi-cloud orientation is useful for consulting firms and enterprises that cannot treat one provider's native assistant as a neutral design authority. (3) The founders' direct cloud, DevOps, software, and security background may help encode practical constraints instead of producing generic infrastructure prose. (4) Early customer use cases and paid activity suggest the product has moved past a demo. The edge is not yet proven: public materials disclose no unique model, benchmark, patent, certification, or named reference customer, and platform vendors can bundle similar capabilities. AutoPipe must demonstrate that its architecture graph, validation loop, and change history produce fewer costly errors than generic copilots plus experienced human review."
+risk_factors = [
+  "Agentic architecture errors could create insecure, unavailable, non-compliant, or uneconomic infrastructure while appearing plausible to users",
+  "Very small team and limited disclosed funding may not support simultaneous provider integrations, security hardening, sales, and customer support",
+  "Cloud providers, Terraform ecosystem vendors, and large consultancies can bundle architecture copilots into existing workflows",
+  "Dependence on third-party foundation models and cloud APIs may expose reliability, latency, unit economics, and data-governance risk",
+  "Architecture and infrastructure metadata is sensitive, creating customer resistance to SaaS deployment and demanding strong isolation and auditability",
+  "No public named customers, recurring-revenue metrics, retention data, independent benchmarks, or defense deployments are disclosed",
+  "Generated Terraform and automated deployment outputs require robust human approval, policy enforcement, and rollback controls before production use"
+]
+risk_level = "high"
+signals = [
+  "Official site presents an AI Architecture Engine, Diagram to Terraform, multi-cloud mapping, cost estimation, optimization, version control, and simulation workflow.",
+  "CTech reports a working product, dozens of customer use cases, early paid activity, a $210,000 HCS Capital pre-seed round, and three employees.",
+  "The Jerusalem Post reports early-paying users, a Tel Aviv base, five employees plus two advisors, and a planned $1.5 million raise at a $6 million valuation.",
+  "Founders Jonathan Or and Nadav Aharon are publicly identified as Unit 8200 veterans with cloud, DevOps, software, and infrastructure backgrounds."
+]
+priority_rank = 0
+priority_rationale = "AutoPipe should be monitored as a small but strategically relevant Israeli AI-infrastructure company. (1) It targets a bottleneck that affects every cloud-dependent organization: architecture quality, recovery planning, security boundaries, and the shortage of experienced architects. (2) The product surface is more substantive than a generic chatbot because it claims a lifecycle spanning requirements, diagrams, simulation, cost, optimization, version control, and Terraform outputs. (3) Unit 8200 founder background and early paid use make the security and execution thesis credible enough to track. Priority remains capped by the company's tiny team, small disclosed funding, lack of named customers and independent evaluation, and unproven defense or public-sector deployment. Milestones that would justify increasing priority are a closed larger round, repeatable subscription revenue, production deployments, measured reduction in architecture errors or delivery time, private or sovereign deployment, and a named critical-infrastructure or defense-industrial reference."
+public_sources = [
+  { label = "AutoPipe official website", url = "https://www.autopipecloud.com/", description = "Official product and company positioning." },
+  { label = "AutoPipe official Our Technology page", url = "https://www.autopipecloud.com/our-technology", description = "Official technology claims and feature descriptions." },
+  { label = "CTech company profile and interview, May 5, 2026", url = "https://www.calcalistech.com/ctechnews/article/eby6fa7rb", description = "Founders, product, disclosed seed, HCS Capital, early paid use, customer use cases, team member and competitors." },
+  { label = "The Jerusalem Post, July 22, 2026", url = "https://www.jpost.com/business-and-innovation/article-903275", description = "Fundraising target and valuation, traction, team count and US expansion plans." },
+  { label = "Caplight AutoPipe company profile", url = "https://www.caplight.com/company/autopipecloud", description = "Independent structured funding and investor signal; funding date and company status." },
+  { label = "Startup Nation Finder AutoPipe profile", url = "https://finder.startupnationcentral.org/company_page/autopipe?section=team", description = "Directory record for Israeli identity, founders, team, registry identifier and funding; treated as corroboration rather than primary proof." }
+]
+crawled_at = "2026-09-07T23:48:35Z"
+updated_at = "2026-10-04T03:35:00+03:00"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Jonathan Or", role = "Co-founder and CEO", is_founder = true, current = true, background = "CTech reports Unit 8200 service and experience across DevOps, cloud, AI and infrastructure.", source_ids = ["ctech-2026", "jpost-2026"] },
+  { name = "Nadav Aharon", role = "Co-founder and VP of R&D", is_founder = true, current = true, background = "CTech reports Unit 8200 service and software development experience; leads product and engineering.", source_ids = ["ctech-2026", "jpost-2026"] },
+  { name = "Lidor Sorkin", role = "AI team member", is_founder = false, current = true, background = "CTech describes him as contributing to AI direction and core intelligence capabilities and as having studied mathematics and computer science at the Technion.", source_ids = ["ctech-2026"] }
+]
+investors = [
+  { name = "HCS Capital Partners", investor_type = "vc", relationship = "current", round_ids = ["pre-seed-2026"], website = "https://hcscapital.com/", source_ids = ["ctech-2026", "caplight"] }
+]
+financials = []
+traction = [
+  { kind = "product", date = "2026-05-05", description = "Company described an existing agentic cloud architecture product; it said it had completed dozens of customer use cases and generated paid activity. This is company-reported evidence and does not establish recurring revenue or production deployment.", source_ids = ["ctech-2026"] },
+  { kind = "product", date = "2026-07-22", description = "Jerusalem Post reported dozens of completed customer projects and early-paying users; no customers were named and no contract values or deployment status were disclosed.", source_ids = ["jpost-2026"] },
+  { kind = "hiring", date = "2026-05-05", description = "CTech reported three employees and open software-development and product positions.", source_ids = ["ctech-2026"] },
+  { kind = "other", date = "2026-07-22", description = "Company was reported to be preparing a US rollout and expanding customers beyond Asia-Pacific; plans do not establish completed expansion.", source_ids = ["jpost-2026"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Catio", website = "https://catio.tech/", rationale = "AI-assisted technology architecture decision-making and optimization overlap with AutoPipe's design workflow.", differentiation = "CTech characterizes Catio as focused on architecture decision-making and optimization; AutoPipe says it starts from requirements and targets deployment-ready plans. Both descriptions are company/press claims; comparative performance is unverified.", source_ids = ["ctech-2026"] },
+  { name = "StackGen", website = "https://stackgen.com/", rationale = "AI-assisted infrastructure-as-code generation and automation competes for adjacent cloud engineering workflows.", differentiation = "StackGen is an IaC generation and deployment workflow alternative; AutoPipe positions itself earlier in requirements-to-architecture planning.", source_ids = ["caplight"] },
+  { name = "Cloudcraft", website = "https://www.cloudcraft.co/", rationale = "Cloud architecture visualization and documentation substitute.", differentiation = "Visualization-led workflow versus AutoPipe's claimed agentic requirements, analysis and Terraform pipeline.", source_ids = ["ctech-2026"] },
+  { name = "Pulumi", website = "https://www.pulumi.com/", rationale = "Infrastructure-as-code platform and adjacent AI-enabled cloud engineering workflow.", differentiation = "Established provisioning and IaC ecosystem compared with AutoPipe's architecture design focus.", source_ids = ["official-home"] }
+]
+
+[intelligence.company]
+company_id = "il-autopipe"
+legal_name = ""
+aliases = ["AutoPipe"]
+operating_status = "active"
+business_model = "B2B software; public materials describe a planned SaaS platform for IT consulting firms, system integrators, MSPs and enterprises. Pricing and recurring subscription terms are not publicly disclosed."
+source_ids = ["official-home", "ctech-2026", "jpost-2026", "finder"]
+products = ["AI cloud architecture copilot", "Architecture lifecycle management", "Diagram to Terraform", "Multi-cloud mapping", "Infrastructure cost estimation and optimization", "Architecture version control", "Simulation system"]
+locations = ["Herzliya, Israel", "Tel Aviv, Israel (reported operating base)"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One $210,000 pre-seed investment is reported for April 24, 2026, with HCS Capital named as investor. CTech calls it pre-seed and Caplight dates the event April 24; Startup Nation Finder calls it seed. A July 2026 article reported the company had begun raising $1.5 million at a $6 million valuation; no evidence found that this target closed, so it is not entered as a completed round or included in total raised."
+rounds = [
+  { id = "pre-seed-2026", round_type = "pre-seed", instrument = "equity", status = "closed", announced_on = "2026-04-24", amount_status = "reported", amount = 210000, amount_scope = "round", currency = "USD", lead_investors = ["HCS Capital"], participating_investors = [], valuation_basis = "undisclosed", source_ids = ["ctech-2026", "caplight"], notes = "CTech and Caplight report $210,000. Startup Nation Finder labels this event seed; CTech and Caplight label it pre-seed. No public terms or valuation." },
+  { id = "raise-target-2026", round_type = "fundraising target", instrument = "equity", status = "targeted", announced_on = "2026-07-22", amount_status = "not_applicable", amount_scope = "unknown", lead_investors = [], participating_investors = [], valuation_basis = "undisclosed", source_ids = ["jpost-2026"], notes = "The Jerusalem Post reports a $1.5 million raise begun at a $6 million valuation. It describes an active raise, not a closed financing; neither figure is recorded as closed funding or an established valuation." }
+]
+reported_total_raised = 210000
+reported_total_currency = "USD"
+total_source_ids = ["ctech-2026", "caplight"]
+total_as_of = "2026-07-22"
+total_scope = "Company-reported disclosed pre-seed total; excludes unclosed July 2026 target."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[intelligence.ownership]
+status = "not_found"
+summary = "No public cap table, ownership percentages, parent company, acquisition or secondary transaction found. AutoPipe is reported as privately held; private ownership terms remain undisclosed."
+cap_table_status = "undisclosed"
+shareholders = ["Founders and investors; individual holdings undisclosed"]
+source_ids = ["ctech-2026", "caplight"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Israeli startup founded by Unit 8200 alumni; reports place the company in Herzliya/Tel Aviv, Israel."
+as_of = "2026-10-04"
+source_ids = ["ctech-2026", "jpost-2026", "finder"]
+
+[intelligence.research]
+researched_at = "2026-10-04T03:35:00+03:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["AutoPipe autopipecloud funding 2026 HCS Capital Jonathan Or Nadav Aharon", "site:autopipecloud.com AutoPipe news funding team", "AutoPipe Israel startup raised $1.5 million 2026", "AutoPipecloud patent cloud architecture AI"]
+gaps = ["team: no independently verified current roster or current headcount; only founder and one AI team member plus dated reports found.", "investors: no public cap table or terms; only HCS Capital is identified.", "financials: no dated revenue, ARR, profitability, burn or runway metrics found.", "traction: no named customers, contract values, renewal data or independently verified production deployments found.", "intellectual_property: no company-assigned patent or other registered IP record identified in reviewed public search; proprietary status unknown.", "competition: public evidence is insufficient for a verified feature-by-feature or performance comparison; no independent benchmarks found.", "ownership: no disclosed holdings or ownership percentages; private cap table unavailable.", "dual_use: no government, defense or security-sector customer, contract, certification or deployment identified; applicability remains prospective.", "Legal entity name and incorporation jurisdiction were not independently established; no registry identifier entered.", "The July 2026 $1.5 million financing target's subsequent close status remains unverified as of this review."]
+conflicts = ["The April 2026 $210,000 financing is labeled pre-seed by CTech and Caplight but seed by Startup Nation Finder; amount and investor agree, stage nomenclature differs.", "Employee count varies by publication date: three in May 2026 (CTech), five plus two advisors in July 2026 (Jerusalem Post), and older directory employee ranges; no current verified count.", "The $1.5 million at $6 million valuation is reported as a round being raised, not completed; no later closing evidence located."]
+diligence_questions = ["Has the July 2026 target round closed, and what were its final amount, instrument, investors and pre/post-money valuation?", "Which named customers have paid, renewed, and run AutoPipe-generated architectures in production, and what measurable cycle-time or error reduction was achieved?", "What is the current ARR, gross margin, burn and runway, and what proportion of paid activity is recurring SaaS rather than services or pilots?", "How are generated cloud designs and Terraform validated against provider schemas, security policies, costs and failure scenarios before deployment?", "Can AutoPipe support private or isolated deployments with auditable human approval for regulated customers?"]
+
+[[intelligence.research.sources]]
+id = "official-home"
+url = "https://www.autopipecloud.com/"
+title = "Home | AutoPipe - Your Cloud Co-pilot"
+publisher = "AutoPipe"
+kind = "company"
+accessed_at = "2026-10-04T03:35:00+03:00"
+claims = ["Official website identifies AutoPipe and describes its cloud co-pilot positioning and features including architecture lifecycle management, AI architecture engine, Diagram to Terraform, multi-cloud mapping, cost estimation, optimization, version control and simulation."]
+
+[[intelligence.research.sources]]
+id = "official-tech"
+url = "https://www.autopipecloud.com/our-technology"
+title = "Our Technology | AutoPipe"
+publisher = "AutoPipe"
+kind = "company"
+accessed_at = "2026-10-04T03:35:00+03:00"
+claims = ["Official technology page listed in AutoPipe navigation; supports product and technology claims."]
+
+[[intelligence.research.sources]]
+id = "ctech-2026"
+url = "https://www.calcalistech.com/ctechnews/article/eby6fa7rb"
+title = "AutoPipe says agentic AI platform is reducing work that takes architects weeks to one day"
+publisher = "CTech by Calcalist"
+kind = "media"
+published_on = "2026-05-05"
+accessed_at = "2026-10-04T03:35:00+03:00"
+claims = ["Company founded in 2024 by Jonathan Or and Nadav Aharon, Unit 8200 veterans; founder roles and biographies.", "CTech reports a $210,000 pre-seed, April 24, 2026, total funding $210,000 and HCS Capital as investor.", "CTech reports three employees and open roles.", "Company says product exists, has completed dozens of customer use cases and generated paid activity; recurring revenue and named customers not specified.", "CTech identifies Lidor Sorkin as contributing to AI direction and core intelligence capabilities.", "Product and target-customer descriptions and company-stated competitive positioning."]
+
+[[intelligence.research.sources]]
+id = "jpost-2026"
+url = "https://www.jpost.com/business-and-innovation/article-903275"
+title = "Israeli startup is using AI to shorten cloud architecture timeline"
+publisher = "The Jerusalem Post"
+kind = "media"
+published_on = "2026-07-22"
+accessed_at = "2026-10-04T03:35:00+03:00"
+claims = ["Reports AutoPipe was founded in 2024 by Jonathan Or and Nadav Aharon and operates from Israel.", "Reports five employees and two advisors, dozens of customer projects and early-paying users.", "Reports the company recently began raising $1.5 million at a $6 million valuation; presented as an active fundraising target, not closed capital.", "Reports US rollout preparation and expansion beyond Asia-Pacific as plans.", "Describes the product as a multi-agent cloud architecture system."]
+
+[[intelligence.research.sources]]
+id = "caplight"
+url = "https://www.caplight.com/company/autopipecloud"
+title = "AutoPipe | Valuation, Funding Rounds & Stock Price | Caplight"
+publisher = "Caplight"
+kind = "other"
+accessed_at = "2026-10-04T03:35:00+03:00"
+claims = ["Lists AutoPipe as private, Israel-based, founded 2024, with pre-seed dated April 24, 2026, $210,000 total funding and HCS Capital Partners as investor.", "Describes B2B subscription SaaS business model and adjacent cloud infrastructure category."]
+
+[[intelligence.research.sources]]
+id = "finder"
+url = "https://finder.startupnationcentral.org/company_page/autopipe?section=team"
+title = "Autopipe — Business Software | Finder"
+publisher = "Startup Nation Finder"
+kind = "directory"
+accessed_at = "2026-10-04T03:35:00+03:00"
+claims = ["Directory lists Israel headquarters, 2024 founding, registry identifier 517071411, founders/roles and $210,000 HCS Capital round labelled seed in April 2026; historical directory evidence, not independently checked against the registrar."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T03:35:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["AutoPipe autopipecloud funding 2026 HCS Capital Jonathan Or Nadav Aharon", "site:autopipecloud.com AutoPipe news funding team"]
+source_ids = ["official-home", "ctech-2026", "jpost-2026", "finder"]
+summary = "Confirmed Israeli cloud architecture software startup. Public evidence names founders but does not establish legal entity name or incorporation jurisdiction."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-04T03:35:00+03:00"
+next_review_on = "2026-11-04"
+queries = ["AutoPipe autopipecloud funding 2026 HCS Capital Jonathan Or Nadav Aharon", "AutoPipe Israel startup raised $1.5 million 2026"]
+source_ids = ["ctech-2026", "jpost-2026", "caplight", "finder"]
+summary = "One $210,000 round reported; stage label differs between sources. July $1.5 million at $6 million was an active fundraising target, with no verified close found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T03:35:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["AutoPipe autopipecloud funding 2026 HCS Capital Jonathan Or Nadav Aharon"]
+source_ids = ["ctech-2026", "caplight"]
+summary = "HCS Capital is the sole publicly named investor; no terms or cap table found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T03:35:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["site:autopipecloud.com AutoPipe news funding team", "AutoPipe Israel startup founders Jonathan Or Nadav Aharon Lidor Sorkin"]
+source_ids = ["ctech-2026", "jpost-2026", "finder"]
+summary = "Founders Jonathan Or and Nadav Aharon and team contributor Lidor Sorkin found; dated headcount estimates conflict and no current roster verified."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T03:35:00+03:00"
+next_review_on = "2027-04-04"
+queries = ["AutoPipe autopipecloud ownership acquired shareholders parent company", "AutoPipe Israel company registry 517071411"]
+source_ids = ["caplight", "finder"]
+summary = "Private status reported; no public cap table, ownership percentages, parent, acquisition or secondary transaction found."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T03:35:00+03:00"
+next_review_on = "2027-04-04"
+queries = ["AutoPipe autopipecloud revenue ARR financials", "AutoPipe Israel startup revenue customers funding"]
+source_ids = ["ctech-2026", "jpost-2026"]
+summary = "No dated revenue, ARR, profitability, burn or runway values disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T03:35:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["AutoPipe autopipecloud customers projects paid users", "AutoPipe Israel startup raised $1.5 million 2026"]
+source_ids = ["ctech-2026", "jpost-2026"]
+summary = "Company-reported dozens of use cases/projects and early paid activity/users; no customer names, recurring metrics or verified production status."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T03:35:00+03:00"
+next_review_on = "2027-04-04"
+queries = ["AutoPipecloud patent cloud architecture AI", "AutoPipe Israel patent architecture software"]
+source_ids = ["official-tech"]
+summary = "No relevant assigned patent or public IP registration identified in reviewed search; no claim that none exists."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T03:35:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["AutoPipe autopipecloud competitors Catio StackGen Cloudcraft", "AutoPipe cloud architecture AI startup competition"]
+source_ids = ["ctech-2026", "caplight"]
+summary = "Catio, StackGen and visualization/IaC substitutes identified; comparative product performance and independent benchmarks unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-04T03:35:00+03:00"
+next_review_on = "2027-04-04"
+queries = ["AutoPipe autopipecloud government defense security customers contract", "AutoPipe cloud architecture defense deployment Israel"]
+source_ids = ["ctech-2026", "jpost-2026"]
+summary = "Cloud resilience and security capabilities could be relevant to sensitive infrastructure, but no defense, government or security-sector customer, contract or deployment is publicly evidenced."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "AutoPipe's official site is active and presents an available product; 2026 reporting describes ongoing operations and fundraising."
+verified_at = "2026-10-04T03:35:00+03:00"
+source_ids = ["official-home", "jpost-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "CTech identifies the company as Israeli and both founders as Unit 8200 veterans; Jerusalem Post reports Israeli operating base."
+verified_at = "2026-10-04T03:35:00+03:00"
+source_ids = ["ctech-2026", "jpost-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "CTech reports total investment to date of $210,000; Caplight independently lists total funding of $210,000."
+verified_at = "2026-10-04T03:35:00+03:00"
+source_ids = ["ctech-2026", "caplight"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2026.amount"
+support = "direct"
+summary = "CTech reports $210,000 pre-seed and Caplight lists $210,000 for the April 24, 2026 pre-seed."
+verified_at = "2026-10-04T03:35:00+03:00"
+source_ids = ["ctech-2026", "caplight"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2026.lead_investors"
+support = "direct"
+summary = "CTech names HCS Capital and Caplight lists HCS Capital Partners for the pre-seed."
+verified_at = "2026-10-04T03:35:00+03:00"
+source_ids = ["ctech-2026", "caplight"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.raise-target-2026.status"
+support = "direct"
+summary = "Jerusalem Post says the company had recently begun raising $1.5 million, supporting targeted status only."
+verified_at = "2026-10-04T03:35:00+03:00"
+source_ids = ["jpost-2026"]

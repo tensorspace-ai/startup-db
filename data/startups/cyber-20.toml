@@ -1,0 +1,325 @@
+name = "Cyber 2.0"
+
+description = "Cyber 2.0 develops network-containment software and gateways intended to stop cyberattacks from spreading after an initial compromise. Its portfolio targets enterprise IT, industrial OT/IoT, and connected-vehicle environments through a combination of allow-listing, port scrambling, and isolation controls."
+
+detailed_description = """
+Cyber 2.0's product thesis is that an organization should be able to limit attack propagation even when the first endpoint has been compromised and the malicious process is unknown. The company describes Cyber2IT as an IT network product and Cyber2OT as an OT/IoT product; it also markets protection for connected cars. Public product material describes a Chaos Engine or Containment Engine that continually changes communication ports and a Dynamic List that allows approved software or communication behavior while restricting unknown activity. The Vortex Gateway extends the model to devices that cannot run an endpoint agent, including industrial controllers and other embedded or legacy equipment. These are vendor-described capabilities, so the database should treat claims such as “total” or “unbreakable” protection as positioning rather than independently established performance.
+
+The commercial opportunity spans three difficult but related environments. In enterprise IT, the value proposition is reducing ransomware and worm blast radius after EDR, antivirus, identity, or firewall controls have missed an event. In OT and IoT, the proposed advantage is protecting controllers and legacy devices without changing the device software or interrupting deterministic operations. In connected vehicles, the relevant buyer problem is controlling communication among ECUs, telematics systems, and gateways. Each market has different deployment, safety, and evidence requirements; success in one should not be assumed to transfer automatically to the others. OT buyers will want deterministic failure behavior, maintenance procedures, segmentation evidence, and integration with existing monitoring, while automotive buyers will require extensive validation and supply-chain acceptance.
+
+Cyber 2.0 competes across overlapping categories rather than against one identical product. Illumio and Akamai Guardicore represent policy-driven segmentation and workload isolation; Dragos, Claroty, and Nozomi Networks represent OT visibility and detection; firewalls, NAC, EDR/NDR, and unidirectional gateways are important substitutes. The company's differentiation is the attempt to make containment itself the primary control, using dynamic port scrambling and an allow-list model instead of relying only on threat signatures or behavioral detection. A 2024 Frost & Sullivan award document describes the Containment Engine and Vortex Gateway, references nine patents, and cites customer testimonials, but it is not a substitute for audited revenue, independently reproducible testing, or a full customer reference list. Current LinkedIn activity and hiring indicate an operating commercial team, while public sources do not establish scale, retention, or broad production adoption.
+
+The dual-use case is substantive because the underlying problem is shared by civilian critical infrastructure and defense networks: an initial foothold must not become access to the rest of the environment. Potential defense and national-security applications include protecting logistics and maintenance networks, limiting propagation across defense-industry partner environments, and isolating compromised systems in utilities or other critical services. This is a technology adjacency, not evidence of classified deployment or government contracting. Sensitive customers would need to validate the cryptographic and operational properties of port scrambling, understand how authorized traffic is maintained, test loss-of-control and recovery scenarios, and confirm that the gateway cannot itself become a high-impact choke point. The most important diligence question is whether the system produces measurable containment and availability benefits under realistic, independently designed attack and safety tests.
+"""
+
+logo = "https://logo.clearbit.com/cyber20.com"
+
+website = "https://cyber20.com"
+
+sector = "Cybersecurity"
+
+founded = "2015"
+
+headquarters = "Rishon LeZion, Israel"
+
+employees = "11-50 (historical directory range; current headcount unverified)"
+
+funding_stage = "Private; historical rounds reported, current financing and company-announced lifetime total not independently corroborated"
+
+dual_use = true
+
+dual_use_description = "Cyber 2.0's network-containment and gateway technology has credible commercial and defense applicability because both enterprise and mission-critical networks need to limit lateral movement after an initial compromise. The defense case is prospective: no public evidence here proves classified deployment, government contracts, or military validation, and high-assurance adoption would require independent testing, accreditation, resilient failover, and proof that containment cannot disrupt safety-critical operations."
+
+key_technologies = [
+  "Chaos-model-based port scrambling and moving-target defense",
+  "Dynamic allow-list or approved-software control",
+  "Agent-based enterprise network containment",
+  "Vortex Gateway for agentless legacy and OT devices",
+  "Network access control and micro-segmentation",
+  "Remote tracking, audit visibility, and containment telemetry"
+]
+
+use_cases = [
+  "Contain ransomware and worm propagation after an enterprise endpoint is compromised",
+  "Restrict unknown software from using internal network paths in data-center and cloud estates",
+  "Protect PLC, SCADA, and other controller communications without installing software on the controller",
+  "Add a gateway control layer for legacy OT, IoT, and embedded devices",
+  "Limit communication among connected-car ECUs, telematics, and vehicle gateways",
+  "Isolate compromised systems in hybrid IT/OT incident response",
+  "Reduce lateral-movement exposure across defense-industrial-base and critical-infrastructure partner networks"
+]
+
+investible = true
+
+investment_rationale = "Cyber 2.0 is relevant to strategic diligence because it focuses on a persistent failure mode in cybersecurity: attackers can spread after perimeter and detection controls are bypassed. Its product claims, patents, current commercial activity, and 2024 OT-security recognition support a credible technology thesis, but public evidence is insufficient to establish revenue scale, funding depth, customer concentration, renewal rates, or independently measured efficacy. The key diligence work is to validate deployment friction, false-blocking rates, recovery behavior, integration with EDR/NDR and OT monitoring, and the repeatability of outcomes across more than one vertical. The legacy investible flag reflects strategic fit, not an investment recommendation."
+
+strategic_value = "The company addresses a strategically important layer of cyber resilience: limiting the blast radius of an intrusion in connected enterprise, industrial, and vehicle environments. Its potential value is highest where legacy equipment, air-gapped or intermittently connected networks, and safety constraints make agent deployment or rapid patching difficult. Strategic significance remains conditional on proof that the system interoperates with existing security operations, fails safely, and can be administered at scale; the record should not imply current defense adoption."
+
+potential_score = 76.0
+
+technology_score = 80.0
+
+market_score = 68.0
+
+team_score = 70.0
+
+dual_use_score = 84.0
+
+strategic_alignment_score = 82.0
+
+stage = "mid"
+
+stage_rationale = "Cyber 2.0 is best classified as mid-stage: it has named products, an operating team, public customer-oriented materials, a 2024 industry award document, and ongoing commercial hiring. Public evidence does not establish broad product-market fit, audited scale, or a disclosed growth round, so the former Growth label is not retained as a verified funding status. OT and automotive qualification cycles also make commercialization slower and more evidence-intensive than a typical enterprise software sale."
+
+competitors = ["Illumio", "Akamai Guardicore", "Dragos", "Claroty", "Nozomi Networks", "Waterfall Security Solutions"]
+
+competitive_edge = "Cyber 2.0's distinctive claim is that dynamic port scrambling and an approved-software model can make lateral movement difficult even when the initial malware is unknown or an endpoint agent is removed. The Vortex Gateway broadens the addressable environment to legacy and OT devices that cannot host an agent. That could complement EDR, NDR, firewalls, and static segmentation, but the edge is only durable if independent tests demonstrate low latency, low false blocking, safe recovery, and materially better containment than established segmentation and OT-security architectures."
+
+risk_factors = [
+  "Long procurement and qualification cycles in OT and automotive verticals",
+  "Need to prove non-disruptiveness, deterministic behavior, and safe recovery in control networks",
+  "Competition from well-funded segmentation and NDR incumbents with established channel partners",
+  "Technical and assurance burden around explaining port scrambling, authorized traffic, and failure modes",
+  "Risk that allow-listing creates operational friction or blocks legitimate new software and maintenance activity",
+  "Scaling and support complexity across IT, OT, IoT, and automotive domains simultaneously",
+  "Limited public disclosure of funding, revenue, customer concentration, independent efficacy testing, and certifications"
+]
+
+risk_level = "medium"
+
+signals = []
+
+priority_rank = 0
+
+priority_rationale = "Cyber 2.0 merits continued strategic diligence because its containment-first approach maps to enterprise resilience, OT security, and defense-industrial network protection. The dual-use and strategic-alignment scores are strong, but the moderate market and team/traction scores reflect limited public disclosure of scale, funding, independent efficacy testing, and high-assurance deployments; this is a diligence priority rather than a recommendation."
+
+entity_type = "startup"
+
+public_sources = [
+  { label = "Cyber 2.0 official website", url = "https://cyber20.com/", description = "Current product positioning and capabilities." },
+  { label = "Cyber 2.0 MIC Israel profile", url = "https://mic.org.il/solution/cyber20/", description = "Company profile, patent and customer claims, and Israel footprint; company-provided claims." },
+  { label = "Calcalist interview with founder Hertzel Ozer", url = "https://www.calcalist.co.il/internet/articles/0,7340,L-3730260,00.html", description = "2018 founding, executive background, team size, named customers, and product claims." },
+  { label = "Startup Nation Finder archived profile", url = "https://finder.startupnationcentral.org/company_page/cyber-2-0", description = "Historical funding table, team, registration number, location, product, and subsequent BIRD project/customer coverage; directory data last updated 2025-02-09." },
+  { label = "BIRD Foundation approved projects", url = "https://www.birdf.com/news/bird-cyber-approved-projects/", description = "Official 2022/2023 project selection with Cincinnati/Northern Kentucky International Airport." },
+  { label = "BIRD Foundation August 2023 announcement", url = "https://www.birdf.com/wp-content/uploads/2023/08/BIRD-Cyber-PR-August-2023-F.pdf", description = "Original announcement of joint airport cyber project; distinguishes project collaboration from a disclosed company financing amount." },
+  { label = "BIRD Cyber program", url = "https://www.birdf.com/bird_programs/bird-cyber/", description = "Program terms for conditional project grants and pilots." },
+  { label = "Israel Trade catalog, Cybertech Tel Aviv 2024", url = "https://israeltrade.org.au/wp-content/uploads/2024/03/catalog_cybertech-tel-aviv-2024.pdf", description = "2024 company/product description and founded year." },
+  { label = "Frost & Sullivan recognition document", url = "https://cyber20.com/Materials%20for%20Website/18.%20Frost%20and%20Sullivan.pdf", description = "Company-hosted award/recognition material, product descriptions, patent-count claim and customer testimonial; not independent efficacy evidence." },
+  { label = "MIC Israel company profile", url = "https://mic.org.il/solution/cyber20/", description = "Company claims on patents, Innovation Authority support, customers, and kibbutz and US-city installations." }
+]
+
+crawled_at = "2026-02-28T17:00:00Z"
+
+updated_at = "2026-10-05T00:18:39Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Hertzel Ozer", role = "Co-founder; historical CEO; chairman per Startup Nation Finder", is_founder = true, current = false, background = "Calcalist reported in 2018 that Ozer co-founded the company and had previously led HOT, Careline, and Nesher. Current executive status is not verified.", source_ids = ["calcalist-2018", "snc-profile"] },
+  { name = "Erez Kaplan Haelion", role = "Co-founder; CTO per Startup Nation Finder", is_founder = true, current = false, background = "Co-founded Cyber 2.0 with Hertzel Ozer in 2015; historical CTO title is reported by Startup Nation Finder. Current role is not verified.", source_ids = ["calcalist-2018", "snc-profile"] },
+  { name = "Tanya Sarel", role = "COO per Startup Nation Finder", is_founder = false, current = false, background = "Listed as COO in the directory profile; no current company leadership page or recent primary confirmation was found.", source_ids = ["snc-profile"] }
+]
+investors = [
+  { name = "Hertzel Ozer", investor_type = "angel", round_ids = ["seed-2016"], relationship = "historical", notes = "Startup Nation Finder lists Ozer as investor for the $3.2 million seed; the round participant has not been corroborated in a primary announcement.", source_ids = ["snc-profile"] }
+]
+financials = []
+traction = [
+  { kind = "customer", description = "A 2018 Calcalist interview named Jerusalem Post, NEC, and Bezeq International as customers; payment, contract size, deployment scope, and continued use were not disclosed.", date = "2018-01-23", source_ids = ["calcalist-2018"] },
+  { kind = "contract", description = "BIRD approved a joint Cyber 2.0 and Cincinnati/Northern Kentucky International Airport project to develop an airport and air-traffic cyber platform. This establishes project selection, not a production deployment or paid customer contract.", date = "2023-08", source_ids = ["bird-projects", "bird-2023-pdf"] },
+  { kind = "customer", description = "MIC Israel states that Cyber 2.0 is deployed in more than 20 Israeli kibbutzim and in the City of Peachtree Corners, Georgia; these are company-profile claims without dates, contract terms, or independent customer confirmation.", source_ids = ["mic-profile"] },
+  { kind = "product", description = "The 2024 Israel Trade catalog continued to describe Cyber 2.0's network attack-containment product; company-hosted materials describe IT, OT, and gateway offerings.", date = "2024", source_ids = ["trade-catalog-2024", "official-site"] }
+]
+intellectual_property = [
+  { kind = "patent", description = "MIC Israel states that the company is protected by nine patents and that principal patents were approved in the United States, Singapore, and Israel; no patent numbers or assignee-level patent records were independently verified in this research.", source_ids = ["mic-profile"] },
+  { kind = "patent", description = "A 2018 Calcalist interview reported several registered patents and additional applications in process; this is historical reporting and does not establish present portfolio status.", date = "2018-01-23", source_ids = ["calcalist-2018"] }
+]
+comparables = [
+  { name = "Illumio", website = "https://www.illumio.com/", rationale = "Enterprise microsegmentation and lateral-movement containment overlap with Cyber 2.0's network containment use case.", differentiation = "Illumio is an established segmentation platform; Cyber 2.0 differentiates through its own claim of chaos-based dynamic port scrambling and allow-list controls.", source_ids = ["official-site"] },
+  { name = "Akamai Guardicore Segmentation", website = "https://www.akamai.com/products/guardicore-segmentation", rationale = "Workload segmentation and policy-based control are substitutes for limiting lateral movement.", differentiation = "Akamai Guardicore offers mature workload visibility and segmentation; Cyber 2.0 emphasizes prevention/containment mechanisms and an agentless gateway for constrained OT assets.", source_ids = ["official-site"] },
+  { name = "Dragos", website = "https://www.dragos.com/", rationale = "OT cybersecurity is a relevant competitive category and buyer substitute.", differentiation = "Dragos is known for OT threat intelligence and detection/response; Cyber 2.0 positions its product as a containment layer. No independent comparison was located.", source_ids = ["trade-catalog-2024"] },
+  { name = "Claroty", website = "https://claroty.com/", rationale = "Industrial and healthcare cyber-physical security overlaps with Cyber 2.0's OT target markets.", differentiation = "Claroty's broad asset visibility and risk platform differs from Cyber 2.0's claimed inline/software control and gateway approach.", source_ids = ["trade-catalog-2024"] },
+  { name = "Waterfall Security Solutions", website = "https://waterfall-security.com/", rationale = "Industrial networks may use unidirectional gateways as an alternative or complementary control.", differentiation = "Waterfall focuses on hardware-enforced one-way transfer; Cyber 2.0 describes containment of communication paths and managed endpoint/gateway controls.", source_ids = ["trade-catalog-2024"] }
+]
+
+[intelligence.company]
+company_id = "il-cyber-2-0"
+legal_name = "Cyber 2.0 Ltd."
+aliases = ["Cyber 2.0", "Cyber2.0", "Cyber20"]
+operating_status = "active"
+business_model = "Privately held B2B cybersecurity vendor; software and gateway products are marketed for enterprise IT, OT/IoT, critical infrastructure, and connected vehicles. Public pricing and revenue model are not disclosed."
+products = ["Cyber2IT", "Cyber2OT", "Vortex Gateway", "Containment Engine"]
+locations = ["Rishon LeZion, Israel"]
+country_of_incorporation = "Israel"
+founded_on = "2015-08"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "515300580", source_ids = ["snc-profile"] }]
+source_ids = ["calcalist-2018", "snc-profile", "official-site"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "incorporated_in_israel"]
+summary = "The company is identified as an Israeli company headquartered in Rishon LeZion; the Israeli company number is listed in the Startup Nation Finder profile."
+as_of = "2026-10-05"
+source_ids = ["snc-profile", "bird-projects"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Startup Nation Finder's directory profile reports a $3.2 million June 2016 Seed and a $5 million January 2019 A Round, totaling the profile's $8.2 million equity figure. These precise private-round amounts and investor attribution are not corroborated by a primary company or investor announcement in this research, so treat them as directory-reported. The same profile records an August 2023 non-equity BIRD project award; the BIRD primary source confirms selection of a joint airport project but does not disclose Cyber 2.0's grant amount. No newer financing was found in targeted searches through 2026-10-05."
+history_status = "partial"
+coverage_through = "2026-10-05"
+reported_total_raised = 8200000
+reported_total_currency = "USD"
+total_source_ids = ["snc-profile"]
+total_as_of = "2025-02-09"
+total_scope = "Directory-reported equity funding total; excludes the separate BIRD project grant and is not company-announced or independently corroborated."
+rounds = [
+  { id = "seed-2016", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2016-06", amount_status = "reported", amount = 3200000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["Hertzel Ozer"], notes = "Amount and investor attribution reported in the Startup Nation Finder profile; no primary round announcement located. The directory says June 2016.", source_ids = ["snc-profile"] },
+  { id = "series-a-2019", round_type = "A Round", instrument = "equity", status = "closed", announced_on = "2019-01", amount_status = "reported", amount = 5000000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = [], notes = "Amount and January 2019 date reported by Startup Nation Finder; investor names and primary round announcement not found. The profile's two equity entries sum to its $8.2 million reported lifetime total.", source_ids = ["snc-profile"] },
+  { id = "bird-cyber-2023", round_type = "BIRD Cyber conditional project grant", instrument = "grant", status = "announced", announced_on = "2023-08", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = [], participating_investors = ["BIRD Foundation", "Cincinnati/Northern Kentucky International Airport"], notes = "BIRD approved a joint development project. The company-specific conditional grant value is not stated in the primary approval announcement; the overall program announcement's aggregate amount is not Cyber 2.0's grant. Not included in reported_total_raised.", source_ids = ["bird-projects", "bird-2023-pdf"] }
+]
+
+[intelligence.ownership]
+status = "not_found"
+summary = "No public cap table, controlling shareholder, or ownership change was found. The company appears private in the directory profile; private ownership percentages and current beneficial owners remain undisclosed. No acquisition or exit located."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["snc-profile"]
+deals = []
+holdings = []
+
+[intelligence.research]
+researched_at = "2026-10-05T00:18:39Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Cyber 2.0 cybersecurity company funding investors raised", "Cyber 2.0 Israel Cyber20 founders CEO customers patents", "site:cyber20.com Cyber 2.0 about leadership products", "Cyber 2.0 חברה מימון משקיעים", "Cyber 2.0 $3.2M seed 2016 Hertzel Ozer", "Cyber 2.0 $5 million 2019 funding", "site:birdf.com Cyber 2.0 grant August 2023 BIRD", "Cyber 2.0 Kentucky airport official announcement August 2023", "Cyber 2.0 acquired ownership valuation revenue customers patents", "Cyber 2.0 CEO leadership team 2025 2026", "Cyber 2.0 funding גיוס 2016 2019 משקיעים", "Cyber 2.0 patents assignee USPTO WIPO", "Cyber 2.0 competitors network containment OT cybersecurity", "Cyber 2.0 defense government contract cybersecurity"
+]
+gaps = [
+  "investors: the 2016 profile attributes seed investment to Hertzel Ozer, but a primary round announcement and complete investor list were not found.",
+  "team: historical founder and executive names were identified, but current leadership and current team size are not independently confirmed.",
+  "financials: no dated revenue, ARR, profitability, cash, burn, or runway disclosures located.",
+  "traction: named historic customers and company-reported installations exist, but current paid customer count, contract values, renewals, and production deployment evidence are unavailable.",
+  "intellectual_property: nine-patent count and jurisdictions are company/profile claims; patent numbers, legal status, assignees, and expiry dates were not verified.",
+  "competition: no independent head-to-head performance evidence or customer substitution data located.",
+  "ownership: no public cap table, ownership percentages, or beneficial ownership record reviewed; no transaction located.",
+  "funding: directory-reported 2016 and 2019 figures lack primary round announcements; BIRD grant company-specific amount is undisclosed.",
+  "dual_use: product capabilities plausibly apply to security networks, but no sourced military contract, classified deployment, or defense certification was found."
+]
+conflicts = ["Startup Nation Finder reports $8.2 million from Hertzel Ozer across three rounds, but its detailed table shows only $3.2 million Seed and $5 million A Round plus a non-equity BIRD grant; those equity entries sum to $8.2 million, while the third item is not financing included in equity total. No primary sources corroborate the two private round amounts or identify complete participants."]
+diligence_questions = [
+  "Can management provide financing documents and a round-by-round cap table reconciling the directory-reported $3.2 million Seed and $5 million A Round, including the full investor list and any later capital?",
+  "What were the scope, grant value, technical milestones, and completion status of the BIRD/Cincinnati-Northern Kentucky Airport project, and did it advance to production procurement?",
+  "How many paying customers are live today, what are ARR, gross retention, and deployment concentration by IT versus OT/critical infrastructure?",
+  "Can an independent red team and OT safety engineer validate containment under endpoint removal, network partition, failover, false-blocking, and recovery scenarios?",
+  "What are the current patent numbers, granted jurisdictions, ownership/assignment chain, maintenance status, and freedom-to-operate position?"
+]
+sources = [
+  { id = "official-site", url = "https://cyber20.com/", title = "Cyber 2.0 - prevents the spread of cyber-attacks", publisher = "Cyber 2.0", kind = "company", accessed_at = "2026-10-05T00:18:39Z", claims = ["Company product positioning and current claimed network-containment capabilities"] },
+  { id = "mic-profile", url = "https://mic.org.il/solution/cyber20/", title = "MIC Israel - Cyber 2.0", publisher = "MIC Israel", kind = "other", accessed_at = "2026-10-05T00:18:39Z", claims = ["Company profile lists public-sector, infrastructure, and security domains", "Profile claims nine patents with approvals in the US, Singapore, and Israel", "Profile claims support from Israel Innovation Authority", "Profile claims installations in more than 20 kibbutzim and City of Peachtree Corners"] },
+  { id = "calcalist-2018", url = "https://www.calcalist.co.il/internet/articles/0,7340,L-3730260,00.html", title = "Hertzel Ozer: 'We can stop every cyberattack'", publisher = "Calcalist", kind = "media", accessed_at = "2026-10-05T00:18:39Z", published_on = "2018-01-23", claims = ["Ozer and Erez Kaplan founded Cyber 2.0 in 2015", "Ozer was company CEO and had previously led HOT, Careline, and Nesher", "Company employed 18 people in Tel Aviv at publication", "Jerusalem Post, NEC, and Bezeq International were named as customers at publication", "Company had several registered patents and additional patent applications at publication"] },
+  { id = "snc-profile", url = "https://finder.startupnationcentral.org/company_page/cyber-2-0", title = "Cyber 2.0 — Cyber Security | Finder", publisher = "Startup Nation Central", kind = "directory", accessed_at = "2026-10-05T00:18:39Z", published_on = "2025-02-09", claims = ["Directory lists company as private, founded August 2015, and headquartered in Rishon LeZion", "Directory lists Israeli company number 515300580", "Directory funding table reports June 2016 $3.2 million Seed and January 2019 $5 million A Round", "Directory reports $8.2 million total funding and attributes investor to Hertzel Ozer", "Directory lists Hertzel Ozer, Erez Kaplan Haelion, and Tanya Sarel roles", "Directory lists 11-50 employee range", "Directory describes airport project and 2023 BIRD selection"] },
+  { id = "bird-projects", url = "https://www.birdf.com/news/bird-cyber-approved-projects/", title = "BIRD Cyber Approved Projects", publisher = "BIRD Foundation", kind = "government", accessed_at = "2026-10-05T00:18:39Z", claims = ["BIRD lists the 2022/2023 Cyber 2.0 and Cincinnati/Northern Kentucky International Airport project to develop an airport and air-traffic cyber platform"] },
+  { id = "bird-2023-pdf", url = "https://www.birdf.com/wp-content/uploads/2023/08/BIRD-Cyber-PR-August-2023-F.pdf", title = "Cybersecurity for critical infrastructure", publisher = "BIRD Foundation", kind = "government", accessed_at = "2026-10-05T00:18:39Z", published_on = "2023-08", claims = ["BIRD approved joint Cyber 2.0 and Cincinnati/Northern Kentucky International Airport development project", "Project objective includes continuous cyber visibility, real-time monitoring, and data traffic detection", "Announcement identifies the project as a development effort and does not state Cyber 2.0's grant amount"] },
+  { id = "bird-program", url = "https://www.birdf.com/bird_programs/bird-cyber/", title = "BIRD Cyber", publisher = "BIRD Foundation", kind = "government", accessed_at = "2026-10-05T00:18:39Z", claims = ["BIRD Cyber provides conditional grants up to $1.5 million and supports joint US-Israel development and pilot projects"] },
+  { id = "trade-catalog-2024", url = "https://israeltrade.org.au/wp-content/uploads/2024/03/catalog_cybertech-tel-aviv-2024.pdf", title = "Cybertech Global Tel Aviv 2024 catalog", publisher = "Israel Trade and Investment Commission", kind = "government", accessed_at = "2026-10-05T00:18:39Z", published_on = "2024-03", claims = ["Catalog identifies Cyber 2.0 as founded in 2015 and describes its network attack-containment product"] },
+  { id = "frost-document", url = "https://cyber20.com/Materials%20for%20Website/18.%20Frost%20and%20Sullivan.pdf", title = "Best Practices Recognition", publisher = "Frost & Sullivan / Cyber 2.0 hosted", kind = "company", accessed_at = "2026-10-05T00:18:39Z", claims = ["Document describes Containment Engine and Vortex Gateway", "Document includes company claims about nine patents and customer testimonials"] }
+]
+claim_checks = [
+  { field_path = "company.operating_status", support = "direct", summary = "Company maintains a current official product website and BIRD lists it as a project participant; this supports ongoing public operation, although it does not establish financial health.", verified_at = "2026-10-05T00:18:39Z", source_ids = ["official-site", "bird-projects"] },
+  { field_path = "israel_connection", support = "direct", summary = "Startup Nation Finder identifies its headquarters in Rishon LeZion and an Israeli company number; BIRD identifies Cyber 2.0 as Rishon Letzion, Israel.", verified_at = "2026-10-05T00:18:39Z", source_ids = ["snc-profile", "bird-projects"] },
+  { field_path = "funding.reported_total_raised", support = "direct", summary = "Startup Nation Finder reports $8.2 million; this is a directory claim, not a company-announced total, and its table shows the $8.2 million as the sum of two equity rows.", verified_at = "2026-10-05T00:18:39Z", source_ids = ["snc-profile"] },
+  { field_path = "funding.rounds.seed-2016.amount", support = "direct", summary = "Startup Nation Finder's table reports a June 2016 Seed amount of $3.2 million.", verified_at = "2026-10-05T00:18:39Z", source_ids = ["snc-profile"] },
+  { field_path = "funding.rounds.series-a-2019.amount", support = "direct", summary = "Startup Nation Finder's table reports a January 2019 A Round amount of $5 million.", verified_at = "2026-10-05T00:18:39Z", source_ids = ["snc-profile"] },
+  { field_path = "funding.rounds.bird-cyber-2023.status", support = "direct", summary = "BIRD's approved-project list and August 2023 announcement identify the joint airport cyber development project as approved.", verified_at = "2026-10-05T00:18:39Z", source_ids = ["bird-projects", "bird-2023-pdf"] },
+  { field_path = "funding.rounds.bird-cyber-2023.amount", support = "direct", summary = "BIRD's project announcement does not specify Cyber 2.0's company-specific grant amount; no numeric amount is entered.", verified_at = "2026-10-05T00:18:39Z", source_ids = ["bird-2023-pdf"] }
+  ,{ field_path = "funding.rounds.seed-2016.participating_investors", support = "direct", summary = "Startup Nation Finder attributes Hertzel Ozer as the investor for the 2016 Seed; this is directory-reported and not corroborated by a primary round announcement.", verified_at = "2026-10-05T00:18:39Z", source_ids = ["snc-profile"] }
+  ,{ field_path = "funding.rounds.bird-cyber-2023.participating_investors", support = "direct", summary = "BIRD's original announcement identifies the airport as the joint-project partner and BIRD as the grant program administrator; these are project participants, not private equity investors.", verified_at = "2026-10-05T00:18:39Z", source_ids = ["bird-projects", "bird-2023-pdf"] }
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-05T00:18:39Z"
+next_review_on = "2027-04-05"
+queries = ["Cyber 2.0 cybersecurity company funding investors raised", "Cyber 2.0 Israel Cyber20 founders CEO customers patents"]
+source_ids = ["official-site", "calcalist-2018", "snc-profile", "trade-catalog-2024"]
+summary = "Identity, Israeli location, product family, incorporation number, and 2015 founding are supported by company and directory sources; legal name suffix is based on the Israeli company profile and needs registry confirmation."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-05T00:18:39Z"
+next_review_on = "2027-01-05"
+queries = ["Cyber 2.0 $3.2M seed 2016 Hertzel Ozer", "Cyber 2.0 $5 million 2019 funding", "site:birdf.com Cyber 2.0 grant August 2023 BIRD", "Cyber 2.0 funding גיוס 2016 2019 משקיעים"]
+source_ids = ["snc-profile", "bird-projects", "bird-2023-pdf"]
+summary = "Directory-reported $8.2 million equity total and two private rounds; primary source corroborates the BIRD project but not its Cyber 2.0 grant amount. No newer round found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-05T00:18:39Z"
+next_review_on = "2027-04-05"
+queries = ["Cyber 2.0 $3.2M seed 2016 Hertzel Ozer", "Cyber 2.0 $5 million 2019 funding", "Cyber 2.0 funding גיוס 2016 2019 משקיעים"]
+source_ids = ["snc-profile"]
+summary = "Only Hertzel Ozer is attributed as a private-round investor in the directory profile; full investor roster and primary confirmation remain unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-05T00:18:39Z"
+next_review_on = "2027-04-05"
+queries = ["Cyber 2.0 Israel Cyber20 founders CEO customers patents", "Cyber 2.0 CEO leadership team 2025 2026"]
+source_ids = ["calcalist-2018", "snc-profile"]
+summary = "Historical founders and roles identified; current leadership and headcount could not be verified."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "not_found"
+checked_at = "2026-10-05T00:18:39Z"
+next_review_on = "2027-04-05"
+queries = ["Cyber 2.0 acquired ownership valuation revenue customers patents", "Cyber 2.0 company shareholders acquisition", "Cyber 2.0 Israeli company number 515300580 ownership"]
+source_ids = ["snc-profile"]
+summary = "No disclosed cap table, ownership change, or transaction found; private shareholder holdings remain unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T00:18:39Z"
+next_review_on = "2027-04-05"
+queries = ["Cyber 2.0 revenue ARR profitability burn runway", "Cyber 2.0 revenue customers financials"]
+source_ids = ["snc-profile", "calcalist-2018"]
+summary = "No dated revenue, profitability, burn, cash, or runway metric found; directory employee band is historical and not a financial metric."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-05T00:18:39Z"
+next_review_on = "2027-04-05"
+queries = ["Cyber 2.0 Kentucky airport official announcement August 2023", "Cyber 2.0 customers Jerusalem Post NEC Bezeq", "Cyber 2.0 deployments kibbutzim Peachtree Corners"]
+source_ids = ["calcalist-2018", "mic-profile", "bird-projects", "bird-2023-pdf"]
+summary = "Historical named customers, company-profile deployment claims, and an approved airport development project exist; no current customer count or contract economics were disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-05T00:18:39Z"
+next_review_on = "2027-04-05"
+queries = ["Cyber 2.0 patents assignee USPTO WIPO", "Cyber 2.0 nine patents Israel Singapore US"]
+source_ids = ["mic-profile", "calcalist-2018", "frost-document"]
+summary = "Sources report several/nine patents and approvals in three jurisdictions, but patent identifiers and legal status were not verified."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-05T00:18:39Z"
+next_review_on = "2027-04-05"
+queries = ["Cyber 2.0 competitors network containment OT cybersecurity", "Cyber 2.0 versus Illumio Guardicore Dragos Claroty"]
+source_ids = ["official-site", "trade-catalog-2024"]
+summary = "Competitive set assessed by overlapping function and buyer substitutes; independent head-to-head product evidence was not found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T00:18:39Z"
+next_review_on = "2027-04-05"
+queries = ["Cyber 2.0 defense government contract cybersecurity", "Cyber 2.0 military deployment defense Israel"]
+source_ids = ["official-site", "bird-projects"]
+summary = "Commercial critical-infrastructure and airport project evidence exists, but no defense or classified customer evidence was located; defense applicability remains a technical adjacency."

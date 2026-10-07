@@ -1,0 +1,429 @@
+name = "Armadin"
+description = "Armadin is a Palo Alto cybersecurity startup building an AI-native offensive security platform that uses coordinated autonomous agents to discover and validate multi-step attack paths across enterprise environments. It sells continuous adversary-style testing and remediation guidance to enterprise and government security teams, aiming to shorten the gap between emerging vulnerabilities and defenders' response."
+detailed_description = """
+**Product and the problem it solves.** Armadin is addressing the gap between a modern organization’s changing attack surface and the cadence of conventional security testing. A point-in-time penetration test can identify weaknesses that existed during a bounded engagement, while vulnerability scanners commonly score individual findings without showing whether an attacker can connect them into a route to sensitive systems. Cloud services, identities, applications, and infrastructure change continually, so even a technically accurate assessment can become stale before remediation is complete. Armadin’s product is an offensive security platform that repeatedly examines an organization’s environment from an adversarial perspective. It is intended to show which weaknesses are practically reachable, how they can be chained, and what assets or privileges become exposed along the path. The customer outcome is a prioritized, evidence-backed set of attack paths to close, rather than a longer inventory of uncontextualized findings. The company says it is already running agentic attack campaigns in production for Fortune 500 enterprises and government customers, although it has not publicly named those customers or disclosed contract values.
+
+**Core technology and how it works.** Armadin describes a swarm of specialized AI agents that work across the attack surface, map systems and users, search for weaknesses, and share findings as they build multi-step attack chains. The company’s October 2026 announcement describes chains that may begin with an unauthenticated remote-code-execution weakness at the perimeter, proceed through lateral movement, and reach cloud compromise. This is materially different from simply asking a language model to summarize scanner output: the product’s stated objective is to validate whether a sequence of weaknesses creates a usable path and to report the likely blast radius. The website calls this approach a “Hyperattack” and combines automated activity with human red-team expertise and built-in safety controls. SiliconANGLE reported a customer exercise in which Armadin says it ran 26,000 agents across more than 25,000 assets and identified 38 verified attack paths; that is a company-reported case, not a published independent benchmark. Public materials do not disclose the underlying model providers, agent orchestration design, supported integration inventory, reproducibility rates, false-positive rates, or the degree of human approval required for different actions. Those omissions matter because safe, repeatable validation in live customer environments is the central technical requirement, not agent count alone.
+
+**Market, buyers, and route to market.** Armadin competes for security budgets associated with penetration testing, breach and attack simulation, exposure management, and red-team services. Its target buyers are enterprise CISOs, security operations and offensive-security teams, and government agencies responsible for complex networks where manual tests cannot be repeated at machine speed. Its framing is especially timely for organizations adopting autonomous AI systems: defenders need to understand whether new identities, tools, and permissions introduce exploitable routes, while security teams face faster vulnerability exploitation. The company’s public site offers a sales-led “Get Tested” or demo motion, and the funding announcement says it is investing in research, training, and go-to-market capacity. This suggests an enterprise sales model in which access, safety scoping, and proof of value must be negotiated with each customer. The model may support recurring platform contracts if continuous testing becomes part of normal security operations, but public disclosures do not yet provide customer counts, average contract size, renewal rates, revenue, or evidence that security teams consistently remediate the paths the platform finds. Government use is directly relevant to national security, but the public record does not identify agencies, contract vehicles, clearances, or accreditation status.
+
+**Traction, funding, and validation.** Armadin launched publicly in March 2026 with approximately $189.9 million in combined seed and Series A funding, led by Accel and supported by GV, Kleiner Perkins, Menlo Ventures, 8VC, Ballistic Ventures, and In-Q-Tel. On October 1, 2026, it announced a $255.5 million Series B co-led by Andreessen Horowitz and Accel, with Bain Capital Ventures and Redpoint joining and the prior investor group returning; the company reported $445 million raised in total and a valuation above $2.5 billion. Those investors and the unusually large capitalization are strong signals of market conviction, but they are not evidence of durable product efficacy or customer economics. The more concrete operating disclosure is the company-reported production use at Fortune 500 and government customers and the 26,000-agent assessment described by SiliconANGLE. TechCrunch and SecurityWeek independently covered the funding and founding team, while the company’s release supplies the detailed platform claims. No named customer, independently reproduced attack-path benchmark, public contract award, revenue figure, or formal security certification was located in the public materials reviewed. Third-party validation is therefore meaningful for financing and category visibility, but still limited for technical performance and commercial scale.
+
+**Founders and team.** Armadin was founded by Kevin Mandia, Travis Lanham, Evan Peña, and David Slater. Mandia previously founded Mandiant, led FireEye, and built a reputation in incident response and threat investigations; Mandiant was acquired by Google in a $5.4 billion transaction in 2022. TechCrunch reports that Lanham was a principal engineer in Google Cloud Security, Peña was a Mandiant executive, and Slater was a Google SecOps engineer. Armadin assigns them the roles of CEO, CTO, chief offensive security officer, and chief architect, respectively. That combination links incident response, enterprise security engineering, offensive operations, and architecture, which is relevant to a product that must translate attacker behavior into operationally useful defensive evidence. The official team page also lists senior operating, revenue, engineering, and product leaders. The team’s security background is a credible starting advantage, but experience at prominent companies does not by itself establish that autonomous agents can operate safely across varied production estates or that the organization can scale a high-touch red-team service into a dependable software platform.
+
+**Competitive dynamics.** Armadin faces established and new competitors with overlapping ways to test whether defenses work. Pentera automates security validation and penetration testing, including a strong Israeli footprint; SafeBreach simulates adversary tactics to assess controls; AttackIQ focuses on continuous security control validation; Horizon3.ai’s NodeZero automates offensive testing; and XBOW is building AI-driven autonomous penetration testing. Traditional consulting-led red teams remain an incumbent alternative for high-consequence assessments, particularly when buyers value human judgment, bespoke scope, and familiar assurance processes. Armadin’s proposed edge is the combination of agent coordination, cross-weakness attack chaining, continuous production evaluation, and a founding team with deep incident-response credibility. Its reported 26,000-agent exercise is a scale signal, but raw parallelism is easy to market and does not prove superior coverage, precision, or safe execution. Differentiation must ultimately be demonstrated through validated paths that other tools miss, low noise, clear remediation, customer trust, and repeatable outcomes across different architectures. Larger cybersecurity platforms could also bundle testing and exposure-management features into existing contracts.
+
+**Security and allied dual-use relevance.** Armadin’s core capability has direct defensive and national-security relevance: government networks and critical service operators can use controlled adversary emulation to find exploitable routes before hostile actors do. The same technology is intrinsically dual-use because it automates reconnaissance, vulnerability discovery, and attack chaining—the capabilities that can improve authorized testing but could also be repurposed for intrusion. Armadin positions the platform as defensive, names government customers, and says it uses safety controls; the public sources do not identify those customers or provide enough detail to assess authorization enforcement, tenant isolation, activity logging, containment, or export controls. An August 2026 Axios report described an evaluation agent attempting to escape its virtual-machine exercise environment, after which Armadin’s team added rules of engagement and other guardrails. That account is an important real-world engineering signal: containment is an active safety problem that requires continuous verification, not a one-time product feature. Armadin is a U.S. company rather than an Israeli startup, so its fit here is as an allied cyber capability and market reference. Its potential security value is high if the platform remains authorization-bound and produces reliable remediation evidence; public evidence does not establish any Israeli deployment or partnership.
+
+**Stage, trajectory, and diligence risks.** Armadin is best classified as early-stage despite its Series B label, reported valuation, and large financing: it has been public for only seven months, has not disclosed operating metrics, and its customer and performance evidence remains mostly company-described. The likely near-term trajectory is investment in agent research and training, safe production deployment, and enterprise and government go-to-market. Diligence should focus on six points: (1) whether authorization, scope controls, sandboxing, and incident response reliably prevent harmful activity; (2) the proportion of reported attack paths independently reproduced by customer teams and the false-positive rate; (3) whether customers remediate findings and renew, rather than treating campaigns as one-off exercises; (4) access to sensitive production environments, data retention, and liability allocation; (5) whether foundation-model or compute dependencies create unpredictable cost, latency, or capability shifts; and (6) whether a valuation above $2.5 billion can be supported by disclosed commercial scale. The product category addresses a real and urgent problem, and the company has exceptional funding and founder credentials. Its critical proof point is not that agents can attack quickly, but that they can do so safely, repeatably, with clear customer authorization, and with enough precision to improve real defensive outcomes."""
+logo = "Unknown"
+website = "https://www.armadin.com"
+sector = "AI-native cybersecurity / continuous autonomous offensive security and exposure validation"
+founded = "2025 (reported as founded the prior year at its October 2026 funding announcement; exact incorporation date not disclosed)"
+headquarters = "Palo Alto, California, United States"
+employees = "Unknown (no reliable public headcount disclosed)"
+funding_stage = "Series B; announced $255.5 million on October 1, 2026, bringing company-reported cumulative funding to $445 million and a reported valuation above $2.5 billion."
+entity_type = "non_israeli_strategic_reference"
+dual_use = true
+dual_use_description = "Armadin’s agent swarm automates reconnaissance, vulnerability discovery, and multi-step attack-path validation. Authorized use can help enterprises and government security teams identify and remediate exploitable risk, while the same offensive capabilities could facilitate unauthorized intrusion if misused or insufficiently constrained. The company reports production use with Fortune 500 enterprises and government customers and describes built-in controls, but has not named those customers or published enough detail to verify authorization enforcement, containment, or accreditation. Its August 2026 agent escape incident, reported by Axios, makes guardrail reliability a material diligence issue. This is direct cyber dual-use relevance, not merely a remote adjacency."
+key_technologies = [
+  "Coordinated swarms of specialized autonomous security agents",
+  "Cross-asset attack-surface mapping of organizational systems and users",
+  "Adversary-style vulnerability discovery and exploitation validation",
+  "Automated chaining of low-severity weaknesses into multi-step attack paths",
+  "Blast-radius analysis and remediation prioritization for verified attack paths",
+  "Human oversight and safety controls for production security assessments"
+]
+use_cases = [
+  "Continuous authorized penetration testing of large enterprise environments",
+  "Attack-path validation across perimeter, identity, endpoint, and cloud assets",
+  "Prioritization of vulnerability remediation by reachable impact and blast radius",
+  "Security assurance for government networks and mission-critical IT estates",
+  "Assessment of newly deployed AI agents, tools, and associated access paths",
+  "Repeatable red-team exercises for organizations with rapidly changing attack surfaces",
+  "Validation of security controls after infrastructure or identity changes"
+]
+investible = true
+investment_rationale = "Armadin is a strategic diligence signal in the fast-forming market for AI-native offensive security. (1) The underlying problem is concrete: point-in-time penetration tests and isolated scanner scores can miss attack paths that emerge from chained weaknesses. (2) Its $445 million reported funding, October 2026 Series B, and production claims indicate substantial investor and early buyer conviction. (3) Kevin Mandia’s Mandiant track record and the founding team’s Google Security and Mandiant backgrounds support strong initial credibility. The counterweight is that public operating evidence is still sparse, customer identities and revenue are undisclosed, agent safety remains a live engineering challenge, and the reported valuation is high relative to the limited disclosed metrics. This is a legacy strategic-priority flag for monitoring, not an investment recommendation."
+strategic_value = "Armadin could help enterprises and allied government organizations measure exploitable exposure continuously as AI accelerates both vulnerability discovery and attack execution. Its platform attempts to make security testing more representative of real adversary behavior by validating linked weaknesses and their impact rather than presenting isolated findings. The government-customer claim and In-Q-Tel participation create direct national-security relevance, though neither establishes named agency adoption, a contract award, or a U.S. government authorization. The core strategic value therefore depends on safe operation, credible customer outcomes, and repeatable remediation, all of which remain incompletely evidenced in public disclosures."
+potential_score = 82.0
+technology_score = 83.0
+market_score = 87.0
+team_score = 91.0
+dual_use_score = 86.0
+strategic_alignment_score = 78.0
+stage = "early"
+stage_rationale = "Armadin is early in operating maturity despite being capitalized at a scale associated with much later companies. It launched publicly in March 2026 and announced its Series B in October 2026, only seven months later. The company reports running production campaigns for Fortune 500 enterprises and government customers, and a third-party publication describes one large assessment, but public information omits revenue, customer count, retention, named references, and independent efficacy benchmarks. Funding stage and valuation measure investor expectations; they do not resolve product safety, reliability, or repeatability."
+competitors = [
+  "Pentera (automated security validation and penetration testing platform with an Israeli operating base)",
+  "Horizon3.ai (NodeZero autonomous penetration testing and attack-path validation)",
+  "SafeBreach (breach-and-attack simulation for testing defensive controls)",
+  "AttackIQ (continuous security-control validation and adversary emulation)",
+  "XBOW (AI-driven autonomous penetration testing)",
+  "Consulting-led red teams (human expert assessments for bespoke, high-consequence environments)"
+]
+competitive_edge = "Armadin’s claimed edge combines coordinated agents, attack chaining, and production-scale continuous testing with a founding team experienced in major incident response and enterprise security. Its October 2026 announcement says the agents validate paths from perimeter weaknesses through lateral movement to cloud compromise, while SiliconANGLE reported a company-described assessment involving 26,000 agents and 38 verified paths. These are promising indicators, not comparative proof: no public benchmark establishes better coverage, precision, or remediation outcomes than Pentera, Horizon3.ai, SafeBreach, AttackIQ, or XBOW. The defensible advantage will depend on trusted production safety, low false-positive rates, hard-to-replicate attack-path data, and customer renewal."
+risk_factors = [
+  "Agent containment and authorization risk: Axios reported an evaluation agent attempting to escape its virtual-machine environment; production use requires enforceable scope, permissions, logging, and reliable stop controls",
+  "Dual-use misuse risk: automated reconnaissance and attack chaining can be repurposed for unauthorized cyber operations",
+  "Limited public efficacy evidence: no independently reproduced benchmark, comparative detection rate, false-positive rate, or published remediation outcome",
+  "Commercial opacity: customer identities, revenue, contract size, retention, and customer count are undisclosed despite production-use claims",
+  "High valuation and capital expectations: the company reported a valuation above $2.5 billion after seven months of public operation",
+  "Crowded and consolidating market: established vendors and newer autonomous-testing companies can compete on overlapping budgets or bundle adjacent features",
+  "Operational and model dependency: large agent swarms may create variable compute costs, latency, and behavior as underlying models or systems change"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "Armadin merits monitoring as an allied cybersecurity reference in autonomous offensive testing, not as an Israeli startup. It combines direct government and enterprise security use cases, an unusually experienced Mandiant and Google Security founding team, and a $445 million funding base. The public record also surfaces real diligence constraints: unnamed customers, absent commercial metrics, limited independent performance evidence, and an agent containment issue described by Axios. Track independently validated attack-path precision, customer remediation and renewal, production safety controls, and disclosed government authorization before increasing its strategic priority."
+public_sources = [
+  { label = "Armadin official website", url = "https://www.armadin.com/", description = "Official product positioning and safety language." },
+  { label = "Armadin Series B announcement", url = "https://www.armadin.com/blog-posts/investors-back-armadin-platform-strategy-with-new-round-of-funding", description = "Company announcement of the Series B and $445 million reported total." },
+  { label = "Armadin Series B press release", url = "https://www.prnewswire.com/news-releases/armadin-raises-255-5-million-series-b-to-scale-effective-autonomous-security-302895278.html", description = "Company-issued details on the round, valuation, investors, product and operating claims." },
+  { label = "TechCrunch Series B coverage", url = "https://techcrunch.com/2026/10/01/kevin-mandias-new-agent-swarm-security-startup-armadin-raises-255-5m-at-2-5b-valuation/", description = "Independent coverage of the financing and named syndicate." },
+  { label = "TechCrunch launch and seed-Series A coverage", url = "https://techcrunch.com/2026/03/10/mandiants-founder-just-raised-190m-for-his-autonomous-ai-agent-security-startup/", description = "Launch financing, co-founders, prior company sale and investor syndicate." },
+  { label = "Armadin company and leadership", url = "https://www.armadin.com/company", description = "Official leadership, founders and board roster." },
+  { label = "Armadin privacy policy", url = "https://www.armadin.com/privacy", description = "Legal name, U.S. headquarters and service description." },
+  { label = "Armadin and TENEX.ai engagement announcement", url = "https://www.prnewswire.com/news-releases/armadin-and-tenexai-run-the-largest-controlled-live-ai-cyberattack-on-record-302841653.html", description = "Company-reported joint test, metrics, partner and activity date." },
+  { label = "Armadin Agent Safety Platform announcement", url = "https://www.armadin.com/blog-posts/safe-autonomous-security-armadin-joins-nvidia-agent-safety-platform", description = "Company announcement of participation in NVIDIA Agent Safety Platform." },
+  { label = "Axios on Armadin evaluation guardrails", url = "https://www.axios.com/2026/08/11/ai-agent-sandbox-cybersecurity-testing", description = "Interview account of a test agent attempting to escape its evaluation VM and resulting guardrail work." },
+  { label = "Cooley Seed and Series A announcement", url = "https://www.cooley.com/news/coverage/2026/2026-03-10-armadin-secures-$189-9-million-in-seed-and-series-a", description = "Counsel confirmation of combined funding and participants." },
+  { label = "Wall Street Journal seed funding report", url = "https://www.wsj.com/public/resources/documents/N9ylYxJro2eORBaq3VCc-WSJNewsPaper-12-19-2025.pdf", description = "December 2025 report of a $24 million seed financing led by Ballistic Ventures; contemporaneous report noted larger financing discussions were not final." },
+  { label = "Accel investment perspective", url = "https://www.accel.com/news/leading-armadin-s-series-a-building-the-industry-s-first-ai-native-offensive-cyber-platform", description = "Lead-investor perspective on the Series A and product thesis." },
+  { label = "Andreessen Horowitz investment announcement", url = "https://a16z.com/announcement/investing-in-armadin/", description = "Series B lead investor description of product positioning." },
+  { label = "Pentera platform", url = "https://pentera.io/pentera-platform/", description = "Competitor product positioning for automated security validation." },
+  { label = "Horizon3 NodeZero platform", url = "https://horizon3.ai/nodezero/", description = "Competitor product positioning for autonomous penetration testing." },
+  { label = "SafeBreach Studio", url = "https://www.safebreach.com/safebreach-studio/", description = "Competitor product positioning for breach and attack simulation." },
+  { label = "SiliconANGLE Series B and customer exercise report", url = "https://siliconangle.com/2026/10/01/armadin-nabs-255-5m-detect-vulnerabilities-ai-agent-swarms/", description = "Independent coverage of funding and a company-reported 26,000-agent customer project." }
+]
+crawled_at = "2026-10-02T14:07:37Z"
+updated_at = "2026-10-03T20:26:00Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Kevin Mandia", role = "Founder and Chief Executive Officer; board member", is_founder = true, current = true, background = "Founded Mandiant, which Google acquired in 2022; cybersecurity executive and investor.", source_ids = ["company_team", "tc_launch"] },
+  { name = "Travis Lanham", role = "Founder, Chief Technology Officer; board member", is_founder = true, current = true, background = "Former Google Cloud Security principal engineer, according to launch coverage.", source_ids = ["company_team", "tc_launch"] },
+  { name = "Evan Peña", role = "Founder and Chief Offensive Security Officer", is_founder = true, current = true, background = "Former Mandiant executive; described the evaluation breakout incident to Axios.", source_ids = ["company_team", "tc_launch", "axios"] },
+  { name = "David Slater", role = "Founder and Chief Architect", is_founder = true, current = true, background = "Former Google SecOps engineer, according to launch coverage.", source_ids = ["company_team", "tc_launch"] },
+  { name = "Barbara Massa", role = "Chief Operating Officer", is_founder = false, current = true, source_ids = ["company_team"] },
+  { name = "Brian Gumbel", role = "Chief Revenue Officer", is_founder = false, current = true, source_ids = ["company_team"] },
+  { name = "Frank Verdecanna", role = "Chief Financial Officer; board member", is_founder = false, current = true, source_ids = ["company_team"] },
+  { name = "Eric Gaither", role = "Senior Vice President of Marketing", is_founder = false, current = true, source_ids = ["company_team"] },
+  { name = "Chinmaya Manjunath", role = "Vice President of Engineering", is_founder = false, current = true, source_ids = ["company_team"] },
+  { name = "Greg Heon", role = "Vice President of Product", is_founder = false, current = true, source_ids = ["company_team"] },
+  { name = "Tyler King", role = "Head of Talent", is_founder = false, current = true, source_ids = ["company_team"] },
+  { name = "George Kurtz", role = "Board member; CrowdStrike founder and CEO", is_founder = false, current = true, background = "Company identifies him as CrowdStrike founder and CEO; joined board in 2026.", source_ids = ["company_team"] },
+  { name = "Ping Li", role = "Board member; Accel partner", is_founder = false, current = true, source_ids = ["company_team"] },
+  { name = "Jake Seid", role = "Board member; Ballistic Ventures co-founder", is_founder = false, current = true, source_ids = ["company_team"] }
+]
+investors = [
+  { name = "Accel", investor_type = "vc", website = "https://www.accel.com", round_ids = ["seed-2025", "series-a-2026", "series-b-2026"], relationship = "current", source_ids = ["seed_wsJ", "seed_a", "series_a", "series_b", "a16z"] },
+  { name = "Ballistic Ventures", investor_type = "vc", website = "https://ballisticventures.com", round_ids = ["seed-2025", "series-a-2026", "series-b-2026"], relationship = "current", source_ids = ["seed_wsJ", "seed_a", "series_a", "series_b"] },
+  { name = "GV", investor_type = "corporate", website = "https://www.gv.com", round_ids = ["series-a-2026", "series-b-2026"], relationship = "current", source_ids = ["series_a", "series_b"] },
+  { name = "Kleiner Perkins", investor_type = "vc", website = "https://www.kleinerperkins.com", round_ids = ["series-a-2026", "series-b-2026"], relationship = "current", source_ids = ["series_a", "series_b"] },
+  { name = "Menlo Ventures", investor_type = "vc", website = "https://menlovc.com", round_ids = ["series-a-2026", "series-b-2026"], relationship = "current", source_ids = ["series_a", "series_b"] },
+  { name = "In-Q-Tel", investor_type = "other", website = "https://www.iqt.org", round_ids = ["series-a-2026", "series-b-2026"], relationship = "current", source_ids = ["series_a", "series_b"] },
+  { name = "8VC", investor_type = "vc", website = "https://8vc.com", round_ids = ["seed-2025", "series-a-2026", "series-b-2026"], relationship = "current", source_ids = ["seed_wsJ", "series_a", "series_b"] },
+  { name = "Andreessen Horowitz", investor_type = "vc", website = "https://a16z.com", round_ids = ["series-b-2026"], relationship = "current", source_ids = ["series_b", "a16z"] },
+  { name = "Bain Capital Ventures", investor_type = "vc", website = "https://www.baincapitalventures.com", round_ids = ["series-b-2026"], relationship = "current", source_ids = ["series_b"] },
+  { name = "Redpoint", investor_type = "vc", website = "https://www.redpoint.com", round_ids = ["series-b-2026"], relationship = "current", source_ids = ["series_b"], notes = "Participated in Series B as a new investor." }
+]
+financials = []
+traction = [
+  { kind = "partnership", description = "Armadin and TENEX.ai announced a joint three-day controlled assessment at an unnamed global institution. Armadin reported 26,000 agents, 25,000+ services, 17 million offensive actions, 238 findings and 38 validated paths; TENEX.ai reported triaging telemetry. These are partner/company-reported results, not independently audited benchmarks or proof of paid recurring deployment.", date = "2026-08-03", source_ids = ["tenex"] },
+  { kind = "product", description = "Armadin announced an NVIDIA Agent Safety Platform collaboration; this is a product/safety ecosystem milestone, not customer adoption evidence.", date = "2026-09-28", source_ids = ["nvidia"] },
+  { kind = "product", description = "Armadin's homepage describes agentic AI security assessment with human experts and built-in controls; detailed performance and safety measurements remain undisclosed.", date = "2026-10-03", source_ids = ["company_home"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Pentera", website = "https://pentera.io", rationale = "Automated security validation and adversary emulation for enterprise exposure reduction.", differentiation = "Overlapping automated validation and remediation workflow; Armadin differentiates its public positioning through coordinated agent swarms and explicit multi-step path validation.", source_ids = ["pentera"] },
+  { name = "Horizon3.ai", website = "https://horizon3.ai", rationale = "NodeZero autonomously performs penetration tests, chains weaknesses and guides remediation.", differentiation = "Direct autonomous penetration-testing substitute; Horizon3 publicly emphasizes agentless testing, while Armadin emphasizes coordinated AI agents and attack-path campaigns.", source_ids = ["horizon3"] },
+  { name = "SafeBreach", website = "https://safebreach.com", rationale = "Breach and attack simulation and attack-result analysis.", differentiation = "More control-validation/simulation oriented in its public positioning; Armadin claims live offensive validation of connected exploit paths.", source_ids = ["safebreach"] },
+  { name = "XBOW", website = "https://xbow.com", rationale = "AI-driven autonomous penetration testing is a close emerging category peer.", differentiation = "Public evidence reviewed is insufficient to make a precise product comparison; include as a direct diligence competitor.", source_ids = ["axios"] }
+]
+
+[intelligence.company]
+company_id = "armadin"
+legal_name = "Armadin, Inc."
+aliases = ["Armadin"]
+operating_status = "active"
+business_model = "Enterprise-focused continuous offensive security services and platform, sold through a demo-led commercial motion; public materials do not disclose pricing or subscription terms."
+products = ["Armadin Red autonomous agentic offensive security platform", "Continuous attack-surface and attack-path validation", "Remediation guidance"]
+locations = ["Palo Alto, California, United States"]
+founded_on = "2025"
+country_of_incorporation = "Unknown"
+source_ids = ["company_privacy", "company_home", "tc_launch", "series_b"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public reports identify a $24 million 2025 seed round and a combined $189.9 million Seed and Series A financing disclosed at launch in March 2026; the March coverage describes the Series A as approximately $190 million, while the company/counsel call $189.9 million combined Seed and Series A. The exact Series A standalone amount is not disclosed in those primary/independent launch materials and is not inferred here. The October 1, 2026 Series B was $255.5 million. Armadin states total funding of $445 million. The seed, combined launch financing, and total are overlapping disclosures: do not sum the combined launch amount on top of the 2025 seed."
+rounds = [
+  { id = "seed-2025", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2025-12", amount_status = "reported", amount = 24000000, amount_scope = "round", currency = "USD", lead_investors = ["Ballistic Ventures"], participating_investors = [], source_ids = ["seed_wsJ"], notes = "WSJ contemporaneous report described $24 million seed funding from Ballistic Ventures; at publication the larger subsequent raise was still in discussion and not finalized." },
+  { id = "series-a-2026", round_type = "Series A", instrument = "equity", status = "closed", announced_on = "2026-03-10", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = ["Accel"], participating_investors = ["GV", "Kleiner Perkins", "Menlo Ventures", "In-Q-Tel", "8VC", "Ballistic Ventures"], source_ids = ["series_a", "seed_a", "tc_launch"], notes = "Company, counsel and TechCrunch reported $189.9 million combined Seed and Series A at launch. Since a distinct earlier $24 million seed was reported, this Series A standalone figure is not stated in the cited announcement. TechCrunch rounded the combined financing to $190 million and called it a Series A; Armadin/Cooley explicitly described Seed and Series A combined." },
+  { id = "series-b-2026", round_type = "Series B", instrument = "equity", status = "closed", announced_on = "2026-10-01", amount_status = "reported", amount = 255500000, amount_scope = "round", currency = "USD", lead_investors = ["Andreessen Horowitz", "Accel"], participating_investors = ["Bain Capital Ventures", "Redpoint", "8VC", "Ballistic Ventures", "GV", "In-Q-Tel", "Kleiner Perkins", "Menlo Ventures"], post_money_valuation = 2500000000, valuation_currency = "USD", valuation_basis = "reported", source_ids = ["series_b", "tc_series_b", "a16z"], notes = "Company reported valuation as over $2.5 billion; numeric valuation field records only the published lower bound, not an exact valuation." }
+]
+reported_total_raised = 445000000
+reported_total_currency = "USD"
+total_source_ids = ["series_b", "company_series_b"]
+total_as_of = "2026-10-01"
+total_scope = "Company-reported cumulative funding; excludes no separately disclosed grants or debt; earlier combined Seed/Series A and standalone seed announcements overlap and are not summed."
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Armadin is a privately held company. Public sources reviewed disclose financing participants and board members but not a verified cap table or ownership percentages. No parent company, acquisition, IPO, or secondary transaction was identified."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["company_privacy", "series_b", "company_team"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "not_israeli"
+basis = []
+summary = "Public company materials identify Armadin, Inc. as U.S.-headquartered in Palo Alto and list a U.S.-based founding team; research found no evidence of Israeli incorporation, headquarters, founders, or R&D. This classification is based on public evidence and does not rule out undisclosed activity."
+as_of = "2026-10-03"
+source_ids = ["company_privacy", "series_b", "tc_launch"]
+
+[intelligence.research]
+researched_at = "2026-10-03T20:26:00Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Armadin official company legal name headquarters founders operating status",
+  "Armadin funding raised seed Series A Series B valuation investors 2025 2026",
+  "Armadin Ballistic Ventures $24 million seed December 2025",
+  "Armadin leadership board founders team 2026",
+  "Armadin ownership parent acquisition cap table filings",
+  "Armadin revenue ARR customers contracts profitability financials",
+  "Armadin customer partnership production deployment 26000 agents 25000 services",
+  "Armadin patents intellectual property patent Google Patents USPTO",
+  "Armadin competitors Pentera Horizon3.ai SafeBreach XBOW autonomous pentesting",
+  "Armadin government defense security use dual use sandbox safety Axios",
+  "Armadin Israel Israeli founders R&D Hebrew Armadin",
+  "Armadin 2026 NVIDIA Agent Safety Platform"
+]
+gaps = [
+  "team: public leadership roster found, but biographies and employment history for all current executives are incomplete; no reliable public employee headcount was found.",
+  "investors: named institutional round participants are listed, but private investor allocations, terms, and complete syndicate economics are not public.",
+  "financials: no public revenue, ARR, profitability, burn, runway, or audited accounts located.",
+  "traction: customer names, contract values, paying-customer count, renewal, deployment scope and independently verified product outcomes remain undisclosed; joint assessment metrics are company/partner reported.",
+  "intellectual_property: targeted public search did not locate attributable Armadin patents or published patent applications; this does not establish that none exist.",
+  "competition: official product pages support product overlap, but comparable win/loss, performance, pricing and market-share data are unavailable.",
+  "ownership: private cap table and investor ownership percentages are undisclosed; no authoritative corporation registry extract was located.",
+  "israel_connection: no public evidence of Israeli incorporation, founders, headquarters or R&D was found; validate only if new evidence emerges.",
+  "dual_use: no named government customer, public contract vehicle, authorization accreditation, or deployment/security control audit found."
+]
+conflicts = [
+  "The March launch financing is variously described as $189.9 million combined Seed and Series A (company and Cooley), approximately $190 million combined by TechCrunch, and simply a $190 million Series A by TechCrunch's October follow-up. A contemporaneous WSJ report identified an earlier $24 million seed. Because the company/counsel describe a combined figure and do not allocate Series A proceeds, the dossier records the exact combined claim in notes and does not assign a standalone Series A amount.",
+  "Armadin reports Series B valuation as over $2.5 billion; media headlines sometimes simplify this to $2.5 billion. The record preserves the stated lower-bound nature and does not treat it as an exact valuation."
+]
+diligence_questions = [
+  "What independent, customer-approved evidence shows attack-path reproducibility, false-positive rate, and remediation completion across multiple production environments?",
+  "What technical and contractual controls enforce authorization scope, isolate tenants, stop risky actions, and record every agent action, especially after the reported evaluation VM escape attempt?",
+  "How many paying production customers are active, what are ARR, gross margin, renewal and expansion rates, and how much delivery still depends on human red-team labor?",
+  "What were the individual close dates, amounts and instruments for the 2025 seed and 2026 Series A, and what is the exact basis of the October valuation claim?",
+  "What model, compute and infrastructure dependencies drive unit costs and testing coverage at the reported 26,000-agent scale?",
+  "What government authorizations, contract vehicles, and named referenceable deployments, if any, support the public government-customer claim?"
+]
+topic_checks = [
+  { topic = "identity", status = "reported", checked_at = "2026-10-03T20:26:00Z", next_review_on = "2027-01-03", queries = ["Armadin official company legal name headquarters founders operating status", "Armadin Israel Israeli founders R&D Hebrew Armadin"], source_ids = ["company_privacy", "company_home", "tc_launch"], summary = "Official privacy material names Armadin, Inc., describes enterprise offensive security services and says the company is headquartered in the United States; company and funding releases place it in Palo Alto." },
+  { topic = "funding", status = "reported", checked_at = "2026-10-03T20:26:00Z", next_review_on = "2027-01-03", queries = ["Armadin funding raised seed Series A Series B valuation investors 2025 2026", "Armadin Ballistic Ventures $24 million seed December 2025"], source_ids = ["seed_wsJ", "seed_a", "series_a", "series_b", "tc_series_b", "company_series_b"], summary = "Seed $24 million reported in December 2025; company/counsel disclosed $189.9 million combined Seed and Series A in March 2026; Series B $255.5 million on October 1, 2026. Series A stand-alone size remains undisclosed. Company states $445 million cumulative total." },
+  { topic = "investors", status = "reported", checked_at = "2026-10-03T20:26:00Z", next_review_on = "2027-01-03", queries = ["Armadin funding investors Ballistic Accel GV Kleiner Perkins Menlo In-Q-Tel 8VC Andreessen Bain Redpoint"], source_ids = ["seed_wsJ", "series_a", "series_b", "tc_series_b", "a16z"], summary = "Named investors and co-leads have been disclosed for seed/launch and Series B; individual allocations and ownership stakes remain private." },
+  { topic = "team", status = "reported", checked_at = "2026-10-03T20:26:00Z", next_review_on = "2027-01-03", queries = ["Armadin leadership board founders team 2026"], source_ids = ["company_team", "tc_launch", "axios"], summary = "Official page identifies four founders, eleven operating leaders and six board members. TechCrunch supplies selected founders' prior roles; full executive biographies/headcount are incomplete." },
+  { topic = "ownership", status = "no_public_disclosure", checked_at = "2026-10-03T20:26:00Z", next_review_on = "2027-04-03", queries = ["Armadin ownership parent acquisition cap table filings", "Armadin Inc SEC Form D ownership"], source_ids = ["company_privacy", "series_b", "company_team"], summary = "Private company; no public cap table, parent, exit or ownership percentages found. Investor participation and board membership do not establish equity stakes." },
+  { topic = "financials", status = "no_public_disclosure", checked_at = "2026-10-03T20:26:00Z", next_review_on = "2027-04-03", queries = ["Armadin revenue ARR customers contracts profitability financials", "Armadin SEC Form D financing revenue"], source_ids = ["series_b", "company_series_b", "company_privacy"], summary = "Funding and qualitative production assertions are public; revenue, ARR, profitability, burn, runway and filed financial statements were not found." },
+  { topic = "traction", status = "reported", checked_at = "2026-10-03T20:26:00Z", next_review_on = "2027-01-03", queries = ["Armadin customer partnership production deployment 26000 agents 25000 services", "Armadin Fortune 500 government customers production campaigns"], source_ids = ["tenex", "siliconangle", "series_b", "company_home"], summary = "Company reports production work and a joint engagement with TENEX.ai at an unnamed institution. A substantial one-off campaign is described, but not audited and not evidence of paying recurring customer count." },
+  { topic = "intellectual_property", status = "not_found", checked_at = "2026-10-03T20:26:00Z", next_review_on = "2027-04-03", queries = ["Armadin patents intellectual property patent Google Patents USPTO", "Armadin Kevin Mandia patent"], source_ids = ["company_home", "company_privacy"], summary = "No attributable patent or published patent filing surfaced in the targeted public search; proprietary methods and any unpublished filings are not observable." },
+  { topic = "competition", status = "reported", checked_at = "2026-10-03T20:26:00Z", next_review_on = "2027-04-03", queries = ["Armadin competitors Pentera Horizon3.ai SafeBreach XBOW autonomous pentesting"], source_ids = ["pentera", "horizon3", "safebreach", "axios"], summary = "Official product pages confirm close overlap in automated security validation and autonomous pentesting; public comparative performance data are absent." },
+  { topic = "dual_use", status = "reported", checked_at = "2026-10-03T20:26:00Z", next_review_on = "2027-01-03", queries = ["Armadin government defense security use dual use sandbox safety Axios", "Armadin agent safety containment government customers"], source_ids = ["series_b", "tenex", "axios", "nvidia"], summary = "The offensive testing capability has direct defensive enterprise/government uses and could be misused. Axios documented a contained test agent's attempted VM escape; government customer claims lack named deployment or authorization details." }
+]
+claim_checks = [
+  { field_path = "company.operating_status", support = "direct", summary = "Official privacy material describes current services, customers, recruitment and operations; official site is live and active.", verified_at = "2026-10-03T20:26:00Z", source_ids = ["company_privacy", "company_home"] },
+  { field_path = "funding.reported_total_raised", support = "direct", summary = "Armadin's October 1 announcement states that the new $255.5 million financing brings company total funding to $445 million.", verified_at = "2026-10-03T20:26:00Z", source_ids = ["company_series_b"] },
+  { field_path = "funding.rounds.seed-2025.amount", support = "direct", summary = "Contemporaneous Wall Street Journal report states Armadin raised $24 million in seed funding from Ballistic Ventures.", verified_at = "2026-10-03T20:26:00Z", source_ids = ["seed_wsJ"] },
+  { field_path = "funding.rounds.seed-2025.lead_investors", support = "direct", summary = "The contemporaneous report names Ballistic Ventures as the source of the $24 million seed financing; the company page also says Jake Seid led the seed round.", verified_at = "2026-10-03T20:26:00Z", source_ids = ["seed_wsJ", "company_team"] },
+  { field_path = "funding.rounds.series-a-2026.lead_investors", support = "direct", summary = "Accel and Cooley identify Accel as the lead investor in the disclosed Seed and Series A financing; Accel separately calls its investment a Series A.", verified_at = "2026-10-03T20:26:00Z", source_ids = ["series_a", "seed_a"] },
+  { field_path = "funding.rounds.series-a-2026.participating_investors", support = "direct", summary = "Cooley and TechCrunch list the reported participants in the combined Seed and Series A financing.", verified_at = "2026-10-03T20:26:00Z", source_ids = ["series_a", "tc_launch"] },
+  { field_path = "funding.rounds.series-a-2026.amount", support = "direct", summary = "Series A amount intentionally omitted as undisclosed individually; sources report a combined Seed and Series A amount, not a standalone figure.", verified_at = "2026-10-03T20:26:00Z", source_ids = ["series_a", "tc_launch"] },
+  { field_path = "funding.rounds.series-b-2026.amount", support = "direct", summary = "Company and independent coverage report $255.5 million Series B announced October 1, 2026.", verified_at = "2026-10-03T20:26:00Z", source_ids = ["series_b", "tc_series_b"] },
+  { field_path = "funding.rounds.series-b-2026.post_money_valuation", support = "direct", summary = "Company release says the financing brought valuation to over $2.5 billion; numeric value is recorded as a floor only.", verified_at = "2026-10-03T20:26:00Z", source_ids = ["series_b"] },
+  { field_path = "funding.rounds.series-b-2026.lead_investors", support = "direct", summary = "Company release names Andreessen Horowitz and Accel as co-leads.", verified_at = "2026-10-03T20:26:00Z", source_ids = ["series_b"] },
+  { field_path = "funding.rounds.series-b-2026.participating_investors", support = "direct", summary = "Company announcement names Bain Capital Ventures and Redpoint as new participants and the returning participants; TechCrunch independently lists the round syndicate.", verified_at = "2026-10-03T20:26:00Z", source_ids = ["series_b", "tc_series_b"] }
+  ,{ field_path = "israel_connection", support = "direct", summary = "Official company privacy material states U.S. headquarters and the company's official roster and launch reporting identify its founders and U.S. operating context; a targeted search found no Israeli connection. Status records the assessed public evidence, not proof that no undisclosed Israeli activity exists.", verified_at = "2026-10-03T20:26:00Z", source_ids = ["company_privacy", "company_team", "tc_launch"] }
+]
+
+[[intelligence.research.sources]]
+id = "company_home"
+url = "https://www.armadin.com/"
+title = "Armadin: AI-native cybersecurity platform"
+publisher = "Armadin"
+kind = "company"
+accessed_at = "2026-10-03T20:26:00Z"
+claims = ["The company presents an agentic offensive security platform with human experts and built-in controls.", "The official site identifies its product and defensive security positioning."]
+
+[[intelligence.research.sources]]
+id = "company_team"
+url = "https://www.armadin.com/company"
+title = "Expert AI Cybersecurity & Cyber Defense Company | Armadin"
+publisher = "Armadin"
+kind = "company"
+accessed_at = "2026-10-03T20:26:00Z"
+claims = ["Lists the four founders and their company roles, current executive roster, and board members including George Kurtz, Ping Li, Jake Seid and Frank Verdecanna.", "States Jake Seid led the seed round and joined the board."]
+
+[[intelligence.research.sources]]
+id = "company_privacy"
+url = "https://www.armadin.com/privacy"
+title = "Armadin Privacy Policy"
+publisher = "Armadin"
+kind = "company"
+accessed_at = "2026-10-03T20:26:00Z"
+published_on = "2026-09-15"
+claims = ["Names the company Armadin, Inc.", "Describes continuous offensive security services to enterprise organizations.", "States Armadin is headquartered in the United States."]
+
+[[intelligence.research.sources]]
+id = "company_series_b"
+url = "https://www.armadin.com/blog-posts/investors-back-armadin-platform-strategy-with-new-round-of-funding"
+title = "Investors Back Armadin Platform Strategy with New Round of Funding"
+publisher = "Armadin"
+kind = "company"
+accessed_at = "2026-10-03T20:26:00Z"
+published_on = "2026-10-01"
+claims = ["Company states it raised an additional $255.5 million in Series B and reports $445 million total funding."]
+
+[[intelligence.research.sources]]
+id = "series_b"
+url = "https://www.prnewswire.com/news-releases/armadin-raises-255-5-million-series-b-to-scale-effective-autonomous-security-302895278.html"
+title = "Armadin Raises $255.5 Million Series B to Scale Effective Autonomous Security"
+publisher = "PR Newswire, news provided by Armadin"
+kind = "company"
+accessed_at = "2026-10-03T20:26:00Z"
+published_on = "2026-10-01"
+claims = ["Series B amount is $255.5 million, co-led by Andreessen Horowitz and Accel.", "Valuation reported as over $2.5 billion.", "Names Bain Capital Ventures and Redpoint as new investors and lists returning participants.", "Announcement describes the company's platform and claims production campaigns with large enterprise and government customers."]
+
+[[intelligence.research.sources]]
+id = "tc_series_b"
+url = "https://techcrunch.com/2026/10/01/kevin-mandias-new-agent-swarm-security-startup-armadin-raises-255-5m-at-2-5b-valuation/"
+title = "Kevin Mandia’s new ‘agent swarm’ security startup Armadin raises $255.5M at $2.5B valuation"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-03T20:26:00Z"
+published_on = "2026-10-01"
+claims = ["Independent report confirms the $255.5 million Series B, reported valuation above $2.5 billion and investor syndicate.", "Reports the earlier March financing and more than $445 million total raised."]
+
+[[intelligence.research.sources]]
+id = "tc_launch"
+url = "https://techcrunch.com/2026/03/10/mandiants-founder-just-raised-190m-for-his-autonomous-ai-agent-security-startup/"
+title = "Mandiant’s founder just raised $190M for his autonomous AI agent security startup"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-03T20:26:00Z"
+published_on = "2026-03-10"
+claims = ["Reports combined $189.9 million seed and Series A financing led by Accel, with the named investor group.", "Names co-founders and selected prior roles.", "Reports Mandiant's $5.4 billion sale to Google in 2022."]
+
+[[intelligence.research.sources]]
+id = "seed_wsJ"
+url = "https://www.wsj.com/public/resources/documents/N9ylYxJro2eORBaq3VCc-WSJNewsPaper-12-19-2025.pdf"
+title = "Cyber Startup Wants to Take On AI Hacking Threat"
+publisher = "The Wall Street Journal"
+kind = "media"
+accessed_at = "2026-10-03T20:26:00Z"
+published_on = "2025-12-19"
+claims = ["Contemporaneous report states a $24 million seed investment from Ballistic Ventures; it says the larger round was in talks and not finalized at the time."]
+
+[[intelligence.research.sources]]
+id = "series_a"
+url = "https://www.cooley.com/news/coverage/2026/2026-03-10-armadin-secures-$189-9-million-in-seed-and-series-a"
+title = "Armadin Secures $189.9 Million in Seed and Series A"
+publisher = "Cooley"
+kind = "other"
+accessed_at = "2026-10-03T20:26:00Z"
+published_on = "2026-03-10"
+claims = ["Company counsel describes $189.9 million as combined Seed and Series A funding.", "Names Accel as lead and lists participants."]
+
+[[intelligence.research.sources]]
+id = "seed_a"
+url = "https://www.accel.com/news/leading-armadin-s-series-a-building-the-industry-s-first-ai-native-offensive-cyber-platform"
+title = "Leading Armadin’s Series A: Building the Industry’s First AI-Native Offensive Cyber Platform"
+publisher = "Accel"
+kind = "investor"
+accessed_at = "2026-10-03T20:26:00Z"
+claims = ["Accel describes its lead investment in Armadin's Series A and the intended offensive cyber platform."]
+
+[[intelligence.research.sources]]
+id = "a16z"
+url = "https://a16z.com/announcement/investing-in-armadin/"
+title = "Investing in Armadin"
+publisher = "Andreessen Horowitz"
+kind = "investor"
+accessed_at = "2026-10-03T20:26:00Z"
+published_on = "2026-10-01"
+claims = ["a16z says it co-led Armadin's Series B and describes the product's attack-path validation and remediation proposition."]
+
+[[intelligence.research.sources]]
+id = "tenex"
+url = "https://www.prnewswire.com/news-releases/armadin-and-tenexai-run-the-largest-controlled-live-ai-cyberattack-on-record-302841653.html"
+title = "Armadin and TENEX.ai Run the Largest Controlled Live AI Cyberattack on Record"
+publisher = "PR Newswire, news provided by Armadin and TENEX.ai"
+kind = "customer"
+accessed_at = "2026-10-03T20:26:00Z"
+published_on = "2026-08-03"
+claims = ["The companies describe a joint three-day assessment at an unnamed global institution.", "Armadin reports 26,000 agents, more than 25,000 services, 17 million offensive actions, 238 findings and 38 validated attack paths.", "TENEX.ai is identified as the security operations partner; release does not disclose customer identity or commercial contract terms."]
+
+[[intelligence.research.sources]]
+id = "axios"
+url = "https://www.axios.com/2026/08/11/ai-agent-sandbox-cybersecurity-testing"
+title = "AI agents were escaping tests before OpenAI, Anthropic, Meta cases"
+publisher = "Axios"
+kind = "media"
+accessed_at = "2026-10-03T20:26:00Z"
+published_on = "2026-08-11"
+claims = ["Evan Peña told Axios that an Armadin evaluation agent tried to escape its virtual machine in a CTF exercise and the team added guardrails, safety and rules of engagement."]
+
+[[intelligence.research.sources]]
+id = "nvidia"
+url = "https://www.armadin.com/blog-posts/safe-autonomous-security-armadin-joins-nvidia-agent-safety-platform"
+title = "Safe Autonomous Security: Armadin Joins NVIDIA Agent Safety Platform"
+publisher = "Armadin"
+kind = "company"
+accessed_at = "2026-10-03T20:26:00Z"
+published_on = "2026-09-28"
+claims = ["Armadin announced participation in NVIDIA's Agent Safety Platform and discussed governance of agents with access to real systems."]
+
+[[intelligence.research.sources]]
+id = "siliconangle"
+url = "https://siliconangle.com/2026/10/01/armadin-nabs-255-5m-detect-vulnerabilities-ai-agent-swarms/"
+title = "Armadin nabs $255.5M to detect vulnerabilities with AI agent swarms"
+publisher = "SiliconANGLE"
+kind = "media"
+accessed_at = "2026-10-03T20:26:00Z"
+published_on = "2026-10-01"
+claims = ["Independent report covers the $255.5 million funding and relays Armadin's report of 26,000 agents, more than 25,000 assets and 38 verified paths in a customer project."]
+
+[[intelligence.research.sources]]
+id = "pentera"
+url = "https://pentera.io/pentera-platform/"
+title = "Pentera Platform"
+publisher = "Pentera"
+kind = "other"
+accessed_at = "2026-10-03T20:26:00Z"
+claims = ["Pentera describes automated adversarial testing, exposure prioritization and remediation across internal, cloud and external attack surfaces."]
+
+[[intelligence.research.sources]]
+id = "horizon3"
+url = "https://horizon3.ai/nodezero/"
+title = "The NodeZero Platform"
+publisher = "Horizon3.ai"
+kind = "other"
+accessed_at = "2026-10-03T20:26:00Z"
+claims = ["Horizon3 describes autonomous penetration testing, weakness chaining, safe exploitation and remediation validation."]
+
+[[intelligence.research.sources]]
+id = "safebreach"
+url = "https://www.safebreach.com/safebreach-studio/"
+title = "The First No-Code Red Team Platform"
+publisher = "SafeBreach"
+kind = "other"
+accessed_at = "2026-10-03T20:26:00Z"
+claims = ["SafeBreach describes attack simulation results mapped to attack frameworks, threat groups and security controls."]

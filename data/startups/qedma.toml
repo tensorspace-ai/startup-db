@@ -1,0 +1,82 @@
+name = "Qedma"
+description = "Qedma is an Israeli quantum-software startup that develops QESEM, a characterization, error-suppression, and error-mitigation layer for extracting more reliable results from noisy quantum processors. Its cross-platform and IBM Qiskit integrations position it as infrastructure for quantum algorithm developers rather than as a quantum-computer hardware vendor."
+detailed_description = """Qedma develops software for a fundamental constraint of present-day quantum computing: physical and calibration noise makes useful circuits difficult to execute and makes measured results difficult to trust. Its main product, QESEM (Quantum Error Suppression and Error Mitigation), combines noisy-QPU characterization, noise-aware transpilation and gate optimization with suppression during execution and quasi-probabilistic or otherwise unbiased mitigation in post-processing. Qedma's documentation describes a workflow in which users provide circuits, observables, a target statistical accuracy, and a selected QPU; the service can estimate the required QPU time before execution. That is a concrete developer-facing product surface, not merely a research claim about error correction.
+
+The commercial proposition is to improve the useful circuit volume and accuracy available from current machines without requiring customers to wait for large-scale fault-tolerant hardware. QESEM is available through Qedma's own SaaS and can be installed on premises, which is relevant to research organizations and regulated or sensitive environments that cannot send workloads to a public cloud. Qedma is also present in IBM's Qiskit Functions catalog, where IBM describes the function as using proprietary characterization protocols plus error suppression and mitigation. The company's site identifies IBM and Quantinuum among its ecosystem relationships and reports continuing work across multiple hardware platforms. These integrations provide stronger commercialization evidence than an isolated academic prototype, while still not establishing recurring revenue, customer concentration, or production-scale quantum advantage.
+
+The market remains early and technically contested. Qedma competes with specialist error-mitigation and control vendors such as Q-CTRL, Riverlane, and Algorithmiq, while IBM and other hardware providers can internalize parts of the reliability stack. Open-source Qiskit tooling, hardware-specific compiler features, and in-house research teams are meaningful substitutes. Qedma's potential edge is a focused, hardware-agnostic reliability layer that can be consumed through an established quantum platform or deployed privately. Its 2025 Series A, reported at $26 million and involving Glilot Capital, TPY Capital, Korea Investment Partners, and IBM, is a meaningful financing and strategic-validation signal; it is not proof that the category has reached repeatable enterprise demand.
+
+Strategically, the company has credible dual-use adjacency because better quantum-circuit reliability can support civilian chemistry, materials, optimization, and physics research as well as government or defense laboratories studying quantum algorithms. The on-premises option and the team's stated background in Israeli technology units may matter for sensitive R&D, but public sources do not establish defense customers, classified deployments, cryptanalytic capability, or a government contract. The appropriate thesis is therefore enabling infrastructure for a strategically important computing stack, not a demonstrated defense product. Key diligence questions are benchmark reproducibility across hardware generations, QPU-time and classical-compute overhead, the durability of unbiased estimates at larger circuit volumes, conversion of platform integrations into paid usage, and whether fault-tolerant hardware eventually reduces the addressable need for standalone mitigation software."""
+logo = "https://www.qedma.com/wp-content/uploads/2022/06/logo-bold-transparent-white-e1680706046322.png"
+website = "https://www.qedma.com"
+sector = "Quantum Software / Error Mitigation"
+founded = "2020"
+headquarters = "Tel Aviv, Israel"
+employees = "11-50"
+funding_stage = "Series A"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Qedma's core reliability software has substantive commercial and strategic applicability because the same circuit-characterization and error-mitigation workflow can support private-sector quantum research, national laboratories, and defense R&D. Public evidence supports on-premises deployment for high-security or regulated environments and a team with Israeli technology-unit experience, but does not verify defense customers, classified use, or cryptanalytic deployments. The dual-use case is therefore credible infrastructure adjacency rather than demonstrated military adoption."
+key_technologies = [
+  "Quantum Error Suppression and Error Mitigation (QESEM)",
+  "Characterization of noisy QPU operations",
+  "Noise-aware quantum circuit transpilation",
+  "Gate optimization and fractional-angle Rzz circuit compilation",
+  "Quasi-probabilistic and unbiased error mitigation",
+  "Cross-platform QPU and IBM Qiskit integration",
+  "Private or on-premises quantum software deployment"
+]
+use_cases = [
+  "Improving expectation-value accuracy for noisy quantum circuits",
+  "Quantum chemistry and molecular-energy estimation",
+  "Materials and condensed-matter simulation",
+  "Physics research using larger circuit volumes",
+  "Optimization and hybrid quantum-classical algorithm experiments",
+  "Private quantum workloads in regulated or high-security environments",
+  "Government and defense laboratory research on quantum algorithms"
+]
+investible = true
+investment_rationale = "Qedma is a credible strategic-priority signal for a deep-tech database because it targets a central bottleneck in near-term quantum computing, has a concrete product, an IBM Qiskit distribution channel, on-premises deployment, and a reported $26 million Series A with IBM participation. Those signals support technical and ecosystem relevance, but do not establish investment quality or predictable revenue. The main diligence burden is commercial: buyers may continue to treat mitigation as experimental, hardware platforms may absorb reliability features, and the cost of additional QPU shots can limit customer willingness to pay. Investible is retained as a legacy internal priority flag, not as an investment recommendation."
+strategic_value = "Qedma could provide leverage at the software layer of a strategically important quantum-computing stack by helping researchers obtain more reliable results from scarce and noisy QPU time. Its cross-platform posture and private deployment option are relevant to allied research programs and sensitive industrial or government environments. The strategic value is prospective: public materials demonstrate platform integration and product capability, but do not document defense procurement, classified workloads, or a proven national-security deployment."
+public_sources = [
+  "https://www.qedma.com/",
+  "https://www.qedma.com/products/",
+  "https://docs.qedma.io/",
+  "https://docs.qedma.io/integrations/",
+  "https://quantum.cloud.ibm.com/functions?id=qedma-qesem",
+  "https://quantum.cloud.ibm.com/docs/en/api/functions/qedma-qesem",
+  "https://techcrunch.com/2025/07/03/israeli-quantum-startup-qedma-just-raised-26-million-with-ibm-joining-in/",
+  "https://www.linkedin.com/company/qedma"
+]
+potential_score = 77.0
+technology_score = 86.0
+market_score = 72.0
+team_score = 79.0
+dual_use_score = 74.0
+strategic_alignment_score = 80.0
+stage = "early"
+stage_rationale = "Qedma remains an early-stage private company: it was founded in 2020 and announced a $26 million Series A in July 2025. Product documentation, an IBM Qiskit Function, SaaS and on-premises delivery, and ongoing hardware-platform work show meaningful commercialization progress. Public sources do not disclose revenue, customer counts, retention, or profitability, so the record should not treat the company as mature or as having established product-market scale."
+competitors = [
+  "Q-CTRL",
+  "Riverlane",
+  "Algorithmiq",
+  "IBM Quantum native error-suppression and mitigation tooling",
+  "Hardware-vendor compiler and control stacks",
+  "Customer-built quantum reliability research teams"
+]
+competitive_edge = "Qedma is differentiated by a narrow focus on error handling, a hardware-agnostic product posture, and distribution through IBM's Qiskit Functions ecosystem. QESEM combines characterization, transpilation, suppression, and mitigation rather than presenting a single post-processing technique, and the on-premises option can address data-control and latency requirements. The advantage remains conditional: competing vendors and hardware providers cover adjacent functionality, and independent benchmarks must show that accuracy gains justify extra QPU time, sampling cost, and operational complexity across diverse devices and workloads."
+risk_factors = [
+  "Quantum-computing applications may remain experimental longer than expected, delaying paid adoption.",
+  "Mitigation quality and resource overhead can vary materially by QPU, noise model, circuit depth, and observable.",
+  "IBM, Quantinuum, and other hardware ecosystems could bundle competing reliability features or restrict platform access.",
+  "Fault-tolerant hardware and improved native error correction could reduce the long-term need for standalone mitigation software.",
+  "Public platform integrations and financing do not disclose recurring revenue, customer concentration, retention, or unit economics.",
+  "Unbiased or quasi-probabilistic methods may require substantial additional shots and cloud or QPU expenditure.",
+  "The dual-use case is strategically plausible but publicly unproven in terms of defense customers, classified workloads, and export-control exposure."
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Retain as a monitoring priority because Qedma is an independent Israeli quantum-software startup addressing a foundational reliability bottleneck, with credible product and ecosystem signals and plausible dual-use relevance. The 77 potential score reflects strong technical and strategic fit offset by an early market, limited public traction data, platform dependence, and unverified defense adoption."
+crawled_at = "2026-02-16T21:16:00Z"
+updated_at = "2026-07-31T18:49:35Z"

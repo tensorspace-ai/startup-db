@@ -1,0 +1,59 @@
+[project]
+name = "startup-db"
+version = "0.2.0"
+authors = [{ name = "JJ Ben-Joseph", email = "jj@tensorspace.ai" }]
+description = "Evidence-linked Israeli startup database and AI agent for funding, investors, ownership, and company research"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.11"
+keywords = ["startups", "startup-database", "ai-agents", "market-intelligence", "israel"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+  "filelock>=3.20,<4",
+  "pydantic>=2.12,<3",
+  "tomlkit>=0.13,<1",
+]
+
+[project.scripts]
+startup-agent = "startup_db.cli:main"
+
+[project.urls]
+Repository = "https://github.com/tensorspace-ai/startup-db"
+Documentation = "https://github.com/tensorspace-ai/startup-db/blob/main/docs/agent.md"
+Issues = "https://github.com/tensorspace-ai/startup-db/issues"
+Changelog = "https://github.com/tensorspace-ai/startup-db/commits/main/"
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.12"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = ["pytest>=8.4,<10", "ruff>=0.14,<1", "mypy>=1.18,<3"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/agent"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src/startup_db"]
+
+[tool.uv.build-backend]
+module-name = "startup_db"

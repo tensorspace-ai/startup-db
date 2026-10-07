@@ -1,0 +1,687 @@
+name = "Decart AI"
+description = "Decart is a vertically integrated frontier-AI lab building the Decart Optimization Stack (DOS) and real-time world models for live video, interactive media, robotics, and physical-AI simulation. Its thesis is that hardware-aware model and inference optimization can make continuously responsive generative systems practical at production scale."
+detailed_description = """
+Decart's current product architecture has three connected layers. DOS is the systems layer: hardware-aware model design, inference optimization, kernel and compiler tooling, and productization intended to improve the economics and latency of AI workloads across NVIDIA GPUs, Google TPUs, and Amazon Trainium. Lucy is the immersive-experience layer, generating and editing video while it plays, with applications in live streaming, commerce, advertising, gaming, and virtual try-on. Oasis 3 is the physical-AI layer: an API-accessible interactive world model that generates controllable environments, responds to robot or vehicle actions, and produces synchronized multi-camera views. This is a more substantive proposition than a conventional text-to-video application because the target loop is continuous perception, action, and feedback.
+
+The technical importance is systems-level as much as generative-model-level. Real-time video and world models must maintain temporal consistency, accept control signals, handle long-running sessions, and meet predictable latency and cost targets. Decart says Oasis 3 can operate below 200 milliseconds end to end at 22 frames per second in a stated configuration, while its May 2026 company announcement claims materially higher throughput for selected DOS workloads. These are company-reported performance claims, not independent benchmarks, but they identify a real bottleneck: impressive offline generation is not enough for a simulator, interactive product, or agent that must respond on every step. The potential edge is the co-design of models, compilers, kernels, and deployment infrastructure, which can be harder for an application-only competitor to reproduce.
+
+Commercially, Decart appears to be moving from viral consumer demonstrations toward infrastructure and enterprise distribution. The company offers APIs and documentation, positions DOS for external workloads, and says it has revenue-generating contracts with cloud providers, AI labs, and hyperscalers. Its May 2026 release names Amazon as a strategic customer and describes a commercial and go-to-market collaboration around AWS Trainium; those statements should be validated in diligence through contract scope, recurring revenue, customer concentration, and independently verifiable production usage. Earlier reporting documented a $21M seed round and a $32M Series A, while Decart now reports a $300M round led by Radical Ventures and more than $450M raised in total. The scale of financing and named strategic backers are meaningful traction signals, but they also raise the execution bar: the company must convert expensive technical capability into durable software revenue rather than relying on capital-intensive model demonstrations.
+
+The competitive field spans several categories. Runway, Luma, and Pika compete for generative-video users and developer attention; Google, OpenAI, and other frontier labs can fold video or world-model capabilities into broader platforms; NVIDIA, AWS, and cloud infrastructure vendors can absorb optimization features into their own stacks. In simulation, CARLA, NVIDIA Isaac Sim, Omniverse, and specialized robotics platforms offer more explicit physics, tooling, and validation workflows. Decart's differentiation is its attempt to combine photorealistic generative environments, action-conditioned interaction, synchronized views, and low-latency deployment. That can unlock rare-event generation and flexible scenario authoring, but a learned world model is not automatically a trustworthy physics simulator. Customers will need evidence of behavioral fidelity, reproducibility, calibration, safety, and transfer from synthetic training to real systems.
+
+The national-security and defense relevance is credible at the capability level, especially for autonomous-vehicle testing, drone and maritime scenario generation, mission rehearsal, sensor and perception evaluation, and training environments where dangerous or rare conditions are difficult to collect in the real world. It is not yet a confirmed defense business in this record: public materials identify robotics, autonomous vehicles, enterprise, media, and cloud relationships, but do not establish government contracts, classified deployments, or validated military performance. Strategic value therefore comes from the possibility that DOS and Oasis become enabling infrastructure for physical AI across commercial and security users, not from an assumed defense revenue stream. Diligence should focus on deployment sovereignty, data rights, export controls, secure isolation, failure behavior, scenario provenance, and whether defense users can obtain deterministic and auditable results from a probabilistic generative system.
+"""
+logo = "https://cdn.prod.website-files.com/6875c2f7957701899283e82a/695e43fb77d6eb78fa9488d2_Decart%20Logo%20Dark.png"
+website = "https://decart.ai"
+sector = "Real-Time AI Infrastructure and World Models"
+founded = "2023"
+headquarters = "San Francisco, United States"
+employees = "51-200"
+funding_stage = "Venture-backed; four publicly reported rounds, including a $300M May 2026 round; company reports more than $450M total raised"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Decart's core technology has substantive commercial and security applicability: DOS can support latency-sensitive AI infrastructure, while Oasis 3 targets controllable simulation for autonomous vehicles and other physical-AI systems. Defense use remains prospective rather than publicly demonstrated; the strongest adjacency is scenario generation, autonomy testing, mission rehearsal, and synthetic sensor or perception evaluation, subject to validation, security, and procurement requirements."
+key_technologies = ["Hardware-aware generative-model design", "Inference kernels, compilers, and optimization tooling", "Real-time diffusion and low-latency video generation", "Action-conditioned interactive world models", "Synchronized multi-camera simulation", "API infrastructure for physical-AI training", "Cross-accelerator deployment across GPUs, TPUs, and Trainium"]
+use_cases = ["Live video transformation, visual effects, and virtual try-on", "Interactive gaming, streaming, commerce, and advertising experiences", "Developer APIs for real-time generative media", "Autonomous-vehicle training and long-tail scenario testing", "Robotics policy training in controllable synthetic environments", "Drone, maritime, and off-road autonomy simulation", "Mission rehearsal and operator training where rare or dangerous events are costly to stage", "AI inference cost and latency optimization for enterprise workloads"]
+investible = true
+investment_rationale = "Decart is a credible strategic-priority signal for a frontier-AI and dual-use database because it combines proprietary systems optimization, model development, external APIs, and physical-AI simulation in one company. The May 2026 financing, named strategic investors, and stated cloud collaboration strengthen the traction case. The assessment is not an investment recommendation: key diligence questions remain around independently measured performance, recurring revenue quality, customer concentration, model and data defensibility, capital intensity, and whether Oasis transfers reliably from generated environments to real-world autonomy."
+strategic_value = "Decart could become enabling infrastructure for low-latency AI rather than only another media-model vendor. DOS matters strategically if it lets customers run demanding models across heterogeneous accelerators with predictable economics; Lucy broadens distribution through live consumer and enterprise experiences; Oasis extends the platform into physical AI, robotics, and autonomy. That combination could create useful leverage across commercial and security ecosystems, while also creating exposure to supply-chain, export-control, compute-access, and platform-dependency risks. The strategic case is strong enough to monitor closely, but defense relevance should be validated through deployment evidence rather than inferred from product language."
+potential_score = 91.0
+technology_score = 95.0
+market_score = 90.0
+team_score = 88.0
+dual_use_score = 82.0
+strategic_alignment_score = 91.0
+stage = "mid"
+stage_rationale = "Decart was founded in 2023 and has progressed from a seed round and Series A into a May 2026 $300M financing, a substantially larger employee footprint, external APIs, and stated strategic customer and infrastructure relationships. It is still a private startup with limited public operating disclosure, so it should not be treated as mature or fully de-risked. Mid-stage is the better classification: the company has moved beyond concept and early product launch, but repeatable revenue, customer retention, independent technical validation, and the commercial durability of its multi-product strategy still require diligence."
+competitors = ["Runway", "Luma AI", "Google DeepMind world-model efforts", "NVIDIA Omniverse and Isaac Sim", "CARLA and other autonomy simulators", "AWS and NVIDIA AI infrastructure stacks", "Pika"]
+competitive_edge = "The potential edge is vertical integration across hardware-aware model architecture, compiler and kernel optimization, inference systems, and proprietary real-time models. That stack can address the latency and cost constraints that separate an offline demo from a live product or closed-loop simulator. Decart also has a coherent wedge from Lucy's visible consumer and enterprise experiences into Oasis for physical AI. The edge is not yet proven as a durable moat: large platforms can replicate features, learned environments may lack the guarantees of engineered simulators, and the company must show that performance persists across hardware, customers, scenarios, and long-running workloads."
+risk_factors = ["Company-reported latency, throughput, and efficiency claims need independent benchmarking across representative workloads", "Real-time generative inference can remain compute-intensive, margin-sensitive, and dependent on scarce accelerator capacity", "A multi-product strategy spanning infrastructure, media, and physical AI may diffuse engineering and go-to-market focus", "Learned world models may produce visual plausibility without sufficient physical fidelity, determinism, or safety for autonomy and defense training", "Competition includes hyperscalers, frontier model labs, GPU vendors, video startups, and established physics-based simulators", "Enterprise and defense procurement, security review, export controls, and data-governance requirements can lengthen adoption cycles", "Copyright, consent, provenance, synthetic-data quality, and misuse risks are material for live video products"]
+risk_level = "medium"
+signals = ["Official site now presents DOS, Lucy, and Oasis as an integrated real-time AI stack", "Official Oasis 3 materials describe API access, action-conditioned environments, synchronized multi-camera output, and sub-200ms stated latency", "Company announced a $300M May 2026 round led by Radical Ventures and reported more than $450M in total funding", "LinkedIn lists 51-200 employees, 135 visible employees, San Francisco headquarters, and a 2023 founding year", "Company materials identify Amazon as a strategic customer and describe AWS Trainium collaboration; scope should be independently diligenced"]
+priority_rank = 0
+priority_rationale = "High-priority monitoring record because Decart combines frontier model research, differentiated inference optimization, meaningful financing, live commercial products, and a credible physical-AI simulation pathway. The scores reflect strong technical and strategic signals, while medium risk and the early-to-mid private-company classification reflect unresolved questions about independent performance evidence, revenue durability, safety, and validated defense adoption."
+public_sources = [
+  { label = "Decart: $300M financing announcement", url = "https://decart.ai/publications/decart-raises-300m-tech-leaders-back-the-company-as-both-customers-and-investors", description = "Company announcement of May 2026 Series B, total funding, product launches and strategic partners" },
+  { label = "Decart company history", url = "https://decart.ai/about", description = "Official company history, products and financing milestones" },
+  { label = "Radical Ventures: Decart", url = "https://radical.vc/portfolio/decart/", description = "Lead investor profile confirming founders, Series B and valuation" },
+  { label = "TechCrunch: Decart Series A", url = "https://techcrunch.com/2024/12/19/decart-adds-another-32m-at-a-500m-valuation/", description = "Independent reporting on the $32M Series A, investors and valuation; also describes seed financing" },
+  { label = "TechCrunch: Decart emerges from stealth", url = "https://techcrunch.com/2024/10/31/decarts-ai-simulates-a-real-time-playable-version-of-minecraft/", description = "Independent reporting on seed financing, founders and product" },
+  { label = "TechCrunch: Decart emerges from stealth", url = "https://techcrunch.com/2024/10/31/decarts-ai-simulates-a-real-time-playable-version-of-minecraft/", description = "Independent reporting on seed financing, founders and product" },
+  { label = "Globes: Decart $100M financing", url = "https://en.globes.co.il/en/article-israeli-ai-co-decart-raises-100m-at-31b-valuation-1001518392", description = "Israeli business reporting on August 2025 financing, investors, valuation and revenue claims" },
+  { label = "Axios: Anthropic reports", url = "https://www.axios.com/2026/08/13/anthropic-decart-nvidia-ipo", description = "Reporting on proposed acquisition talks and May 2026 round" },
+  { label = "Bloomberg Law: Anthropic walks away", url = "https://news.bloomberglaw.com/mergers-and-acquisitions/anthropic-said-to-walk-away-from-6-billion-decart-acquisition", description = "Reporting that proposed acquisition talks ended after due diligence" }
+]
+crawled_at = "2026-02-25T09:00:00Z"
+updated_at = "2026-10-05T05:25:26Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "decart-ai"
+legal_name = "Decart AI Ltd."
+aliases = ["Decart", "Decart AI"]
+operating_status = "active"
+business_model = "Develops and sells AI inference optimization and real-time generative video/world-model products, including API and enterprise services."
+products = ["Decart Optimization Stack (DOS)", "Lucy", "Oasis"]
+locations = ["San Francisco, United States", "Tel Aviv, Israel"]
+founded_on = "2023"
+source_ids = ["decart_about", "radical_portfolio", "decart_b_announcement"]
+notes = "Legal name reported by funding databases; no primary corporate registry extract located in this research. No registry identifier asserted."
+
+[intelligence.funding]
+status = "reported"
+summary = "Four publicly reported venture rounds identified: $21M seed (October 2024), $32M Series A (December 2024), $100M Series B (August 2025), and $300M Series B (May 2026). Decart states total funding is more than $450M. The repeated Series B label in company/investor materials for the 2026 event is retained as published; the round naming is unusual and has not been independently reconciled."
+reported_total_raised = 450000000
+reported_total_currency = "USD"
+total_source_ids = ["decart_b_announcement"]
+total_as_of = "2026-05"
+total_scope = "Company-reported lower bound: more than USD 450 million; 450000000 is the published threshold, not an exact total."
+history_status = "partial"
+coverage_through = "2026-10-05"
+
+[[intelligence.funding.rounds]]
+id = "seed-2024"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2024-10-31"
+amount_status = "reported"
+amount = 21000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Sequoia Capital", "Zeev Ventures"]
+participating_investors = []
+source_ids = ["tc_seed"]
+notes = "TechCrunch reports a $21M seed backed by Sequoia and Oren Zeev/Zeev Ventures."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2024"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2024-12-19"
+amount_status = "reported"
+amount = 32000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Benchmark"]
+participating_investors = ["Sequoia Capital", "Zeev Ventures"]
+post_money_valuation = 500000000
+valuation_currency = "USD"
+valuation_basis = "reported"
+source_ids = ["tc_series_a"]
+notes = "TechCrunch reports a post-money valuation above $500M; the numeric amount records the published threshold, not a precise valuation."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2025"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2025-08-07"
+amount_status = "reported"
+amount = 100000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = []
+participating_investors = ["Sequoia Capital", "Valley Capital Partners", "Benchmark", "Zeev Ventures", "Aleph"]
+post_money_valuation = 3100000000
+valuation_currency = "USD"
+valuation_basis = "reported"
+source_ids = ["globes_2025"]
+notes = "Globes reports a $100M round at $3.1B; it names existing investors and Aleph but does not identify a lead. Fortune separately reported this financing."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2026"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2026-05-18"
+amount_status = "reported"
+amount = 300000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Radical Ventures"]
+participating_investors = ["NVIDIA", "Atreides Management", "Valor Equity Partners", "Adobe Ventures", "Aleph", "Sequoia Capital", "Benchmark", "Zeev Ventures", "Alpha Partners", "eBay Ventures", "Toyota Ventures", "Valley Capital Partners", "Andrej Karpathy", "Michael Eisner", "Yamauchi-No.10 Family Office", "Moritz Baier-Lentz"]
+post_money_valuation = 4000000000
+valuation_currency = "USD"
+valuation_basis = "reported"
+source_ids = ["decart_b_announcement", "radical_portfolio", "axios_round"]
+notes = "Decart and Radical call this Series B; investor participation is sourced from company/lead-investor posts. WSJ-reported valuation is rounded to about $4B. Some individuals/family offices are listed alongside institutional investors."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Decart remains a privately held, founder-led company. Public sources disclose investors and a board representative but no cap table or ownership percentages. Anthropic reportedly explored an acquisition and walked away after diligence; no transaction completed."
+cap_table_status = "undisclosed"
+shareholders = ["Founders and employees (percentages undisclosed)", "Venture and strategic investors (percentages undisclosed)"]
+source_ids = ["radical_portfolio", "decart_b_announcement", "bloomberg_walk"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders", "israeli_rd"]
+summary = "Decart was founded by Israeli founders, including alumni of Israel's Unit 8200, and operates in Tel Aviv as well as San Francisco. The company is US-headquartered in its public-facing materials; this dossier does not assert its incorporation jurisdiction."
+as_of = "2026-10-05"
+source_ids = ["radical_portfolio", "tc_seed", "globes_2025"]
+
+[[intelligence.people]]
+name = "Dean Leitersdorf"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Radical Ventures identifies him as co-founder and CEO; company and investor materials present him as leading Decart."
+source_ids = ["radical_portfolio", "decart_b_announcement"]
+
+[[intelligence.people]]
+name = "Moshe Shalev"
+role = "Co-founder and Chief Product Officer"
+is_founder = true
+current = true
+background = "Radical Ventures identifies him as co-founder and CPO; Decart's seed announcement was shared by Shalev."
+source_ids = ["radical_portfolio", "tc_seed"]
+
+[[intelligence.people]]
+name = "Orian Leitersdorf"
+role = "Co-founder"
+is_founder = true
+current = true
+background = "Named by Radical Ventures and Decart's 2026 lead investor as a co-founder."
+source_ids = ["radical_portfolio", "decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Radical Ventures"
+investor_type = "vc"
+website = "https://radical.vc"
+round_ids = ["series-b-2026"]
+relationship = "current"
+source_ids = ["radical_portfolio", "decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Benchmark"
+investor_type = "vc"
+website = "https://benchmark.com"
+round_ids = ["series-a-2024", "series-b-2025", "series-b-2026"]
+relationship = "current"
+source_ids = ["tc_series_a", "globes_2025", "decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Sequoia Capital"
+investor_type = "vc"
+website = "https://sequoiacap.com"
+round_ids = ["seed-2024", "series-a-2024", "series-b-2025", "series-b-2026"]
+relationship = "current"
+source_ids = ["tc_seed", "tc_series_a", "globes_2025", "decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Zeev Ventures"
+investor_type = "vc"
+website = "https://zeevventures.com"
+round_ids = ["seed-2024", "series-a-2024", "series-b-2025", "series-b-2026"]
+relationship = "current"
+source_ids = ["tc_seed", "tc_series_a", "globes_2025", "decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Aleph"
+investor_type = "vc"
+website = "https://www.aleph.vc"
+round_ids = ["series-b-2025", "series-b-2026"]
+relationship = "current"
+source_ids = ["globes_2025", "decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "NVIDIA"
+investor_type = "corporate"
+website = "https://www.nvidia.com"
+round_ids = ["series-b-2026"]
+relationship = "current"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Atreides Management"
+investor_type = "vc"
+website = "https://www.atreidesmgmt.com"
+round_ids = ["series-b-2026"]
+relationship = "current"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Valor Equity Partners"
+investor_type = "vc"
+website = "https://valorep.com"
+round_ids = ["series-b-2026"]
+relationship = "current"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Adobe Ventures"
+investor_type = "corporate"
+website = "https://www.adobe.com"
+round_ids = ["series-b-2026"]
+relationship = "current"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Valley Capital Partners"
+investor_type = "vc"
+round_ids = ["series-b-2025", "series-b-2026"]
+relationship = "current"
+source_ids = ["globes_2025", "decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Alpha Partners"
+investor_type = "vc"
+website = "https://alphapartners.com"
+round_ids = ["series-b-2026"]
+relationship = "current"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "eBay Ventures"
+investor_type = "corporate"
+website = "https://www.ebayinc.com"
+round_ids = ["series-b-2026"]
+relationship = "current"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Toyota Ventures"
+investor_type = "corporate"
+website = "https://toyota.ventures"
+round_ids = ["series-b-2026"]
+relationship = "current"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Andrej Karpathy"
+investor_type = "angel"
+round_ids = ["series-b-2026"]
+relationship = "current"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Michael Eisner"
+investor_type = "angel"
+round_ids = ["series-b-2026"]
+relationship = "current"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Yamauchi-No.10 Family Office"
+investor_type = "other"
+round_ids = ["series-b-2026"]
+relationship = "current"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.investors]]
+name = "Moritz Baier-Lentz"
+investor_type = "angel"
+round_ids = ["series-b-2026"]
+relationship = "current"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Decart's official company history lists DOS, Lucy and Oasis products and a $300M financing announcement; its financing post describes DOS 2.0, Lucy and Oasis releases. Performance claims are company-reported."
+date = "2026-05"
+source_ids = ["decart_about", "decart_b_announcement"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Decart and its lead investor identify Amazon as a global customer/strategic customer, but public materials do not disclose contract value, duration or production scope."
+date = "2026-05"
+source_ids = ["decart_b_announcement", "radical_portfolio"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "Globes reported Decart's statement that it generated revenue from optimization, customer-facing model APIs and video/model services, and that GPU expenditure was covered from revenue. No audited revenue or profitability figure was disclosed."
+date = "2025-08-07"
+source_ids = ["globes_2025"]
+
+[intelligence.research]
+researched_at = "2026-10-05T05:25:26Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Decart AI official company history founders headquarters products", "Decart AI funding raised seed Series A Series B investors valuation", "Decart AI August 2025 $100 million Series B valuation investors Globes", "Decart AI May 2026 $300 million round Radical Ventures valuation investors", "Decart AI leadership team Dean Leitersdorf Moshe Shalev Orian Leitersdorf", "Decart Anthropic acquisition talks walked away September 2026 Bloomberg", "Decart revenue customers contracts financials", "Decart patents intellectual property patents", "Decart competitors real-time AI inference world models simulation", "Decart defense government military security applications"]
+gaps = ["team: public source coverage confirms the three founders and CEO/CPO roles, but a complete current executive roster and independently verified employee count were not established.", "ownership: private cap table and founder/investor ownership percentages are not publicly disclosed; no acquisition was completed.", "financials: no audited statements, precise revenue/ARR, margins, burn, or runway were found; public revenue evidence consists of reported assertions without amounts.", "traction: named strategic-customer evidence exists, but contract scope, payment, deployment scale, retention and revenue concentration are undisclosed.", "intellectual_property: no company-linked patent family or patent portfolio was verified in this pass; this is not evidence that none exists.", "competition: competitor set is described in retained analysis, but this pass did not audit each named peer's latest feature or benchmark claims.", "dual_use: public capabilities suggest possible autonomy/security applications, but no government contract, defense deployment, certification or validated military use was identified.", "funding: four public rounds are identified, but private financing history is not guaranteed complete; Series B naming appears on both 2025 and 2026 reported rounds and needs company confirmation.", "investors: 2026 announcement names institutional and individual participants, but some informal participants' legal investing entities and precise allocation are not disclosed."]
+conflicts = ["The 2025 and 2026 rounds are both styled Series B in public accounts; treated as distinct dated financings because each has separate disclosed amount and date. The 2026 event is not treated as a restatement of the 2025 round.", "Decart's May 2026 financing announcement reports more than $450M total raised; reported round amounts sum to $453M, which is compatible with a rounded lower-bound cumulative statement, but exact company total remains undisclosed.", "The reported August 2026 Anthropic acquisition interest was not a transaction: Bloomberg later reported Anthropic walked away after due diligence; no deal value or ownership change occurred."]
+diligence_questions = ["Can Decart provide independently reproducible latency, throughput, and cost benchmarks for DOS across matched workloads and hardware, including customer production workloads?", "What recurring revenue, gross margin, customer concentration, renewal and deployment metrics support the revenue-generating customer and cloud-provider claims?", "What are the legal contracting entity, incorporation jurisdiction, cap table, board rights and fully diluted ownership after the 2026 financing?", "For Oasis and other world models, how are physical fidelity, determinism, scenario provenance and sim-to-real transfer measured before use in autonomy or safety-critical workflows?", "What patent applications, trade secrets, model/data licenses and employee invention assignments protect the optimization stack and models?"]
+
+[[intelligence.research.sources]]
+id = "decart_about"
+url = "https://decart.ai/about"
+title = "AI Startup Lab for Optimizing AI Compute - About Decart"
+publisher = "Decart"
+kind = "company"
+accessed_at = "2026-10-05T05:25:26Z"
+claims = ["Official company history lists product and financing milestones, including the May 2026 $300M round and more than $450M total funding.", "Official company history describes DOS, Lucy and Oasis products."]
+
+[[intelligence.research.sources]]
+id = "decart_b_announcement"
+url = "https://decart.ai/publications/decart-raises-300m-tech-leaders-back-the-company-as-both-customers-and-investors"
+title = "Decart Raises $300M: Tech Leaders Back the Company as Both Customers and Investors"
+publisher = "Decart"
+kind = "company"
+accessed_at = "2026-10-05T05:25:26Z"
+published_on = "2026-05-18"
+claims = ["Decart announced a $300M Series B led by Radical Ventures and reported more than $450M total funding.", "Company and investor statements name participating investors including NVIDIA, Adobe, Atreides, Valor, returning investors and individual participants.", "Decart describes DOS 2.0, Lucy and Oasis product development and performance claims.", "Decart and its investor identify Amazon as a customer/strategic customer.", "Investor Jordan Jacobs says he will join the board alongside founders, Sequoia and Benchmark."]
+
+[[intelligence.research.sources]]
+id = "radical_portfolio"
+url = "https://radical.vc/portfolio/decart/"
+title = "Decart"
+publisher = "Radical Ventures"
+kind = "investor"
+accessed_at = "2026-10-05T05:25:26Z"
+claims = ["Radical states it led Decart's $300M 2026 Series B at a $4B valuation.", "Radical identifies Decart founders Dean Leitersdorf, Moshe Shalev and Orian Leitersdorf and Dean as CEO, Moshe as CPO.", "Radical describes Decart as founded in 2023 by alumni of Israel's Unit 8200."]
+
+[[intelligence.research.sources]]
+id = "tc_seed"
+url = "https://techcrunch.com/2024/10/31/decarts-ai-simulates-a-real-time-playable-version-of-minecraft/"
+title = "Decart's AI simulates a real-time, playable version of Minecraft"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-05T05:25:26Z"
+published_on = "2024-10-31"
+claims = ["TechCrunch reported Decart emerged from stealth with $21M from Sequoia and Oren Zeev.", "TechCrunch described Decart as an Israeli AI company and reported on its early interactive world model."]
+
+[[intelligence.research.sources]]
+id = "tc_series_a"
+url = "https://techcrunch.com/2024/12/19/decart-adds-another-32m-at-a-500m-valuation/"
+title = "Decart nabs $32M at $500M+ valuation to build AI tech and 'open world' apps"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-05T05:25:26Z"
+published_on = "2024-12-19"
+claims = ["TechCrunch reports a $32M Series A led by Benchmark, with Sequoia and Zeev Ventures participating.", "TechCrunch reports Decart's seed round was $21M and seed investors also participated in the Series A.", "TechCrunch reports the Series A post-money valuation was above $500M.", "TechCrunch reports an enterprise optimization product and revenue-generating business at the time."]
+
+[[intelligence.research.sources]]
+id = "globes_2025"
+url = "https://en.globes.co.il/en/article-israeli-ai-co-decart-raises-100m-at-31b-valuation-1001518392"
+title = "Israeli AI co Decart raises $100m at $3.1b valuation"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-05T05:25:26Z"
+published_on = "2025-08-07"
+claims = ["Globes reports a $100M 2025 financing at a $3.1B valuation.", "Globes names Sequoia, Valley Capital, Benchmark, Zeev Ventures and Aleph among the round investors.", "Globes reports company statements about $153M raised to date, less than $10M of investor capital spent, and revenue-supported GPU expenditure.", "Globes reports Tel Aviv as a company location and describes its product/revenue streams."]
+
+[[intelligence.research.sources]]
+id = "axios_round"
+url = "https://www.axios.com/2026/08/13/anthropic-decart-nvidia-ipo"
+title = "Anthropic ramps up pre-IPO dealmaking"
+publisher = "Axios"
+kind = "media"
+accessed_at = "2026-10-05T05:25:26Z"
+published_on = "2026-08-13"
+claims = ["Axios reports Decart raised $300M in May 2026 at a $4B valuation and identifies Radical, Benchmark, Sequoia, Aleph and Zeev as investors.", "Axios reports that Anthropic was in talks to acquire Decart for around $6B; this was reported interest, not a completed transaction."]
+
+[[intelligence.research.sources]]
+id = "bloomberg_walk"
+url = "https://news.bloomberglaw.com/mergers-and-acquisitions/anthropic-said-to-walk-away-from-6-billion-decart-acquisition"
+title = "Anthropic Said to Walk Away From $6 Billion Decart Purchase"
+publisher = "Bloomberg Law / Bloomberg News"
+kind = "media"
+accessed_at = "2026-10-05T05:25:26Z"
+published_on = "2026-09-08"
+claims = ["Bloomberg reports Anthropic explored acquiring Decart and walked away after due diligence; no acquisition was completed."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-05T05:25:26Z"
+next_review_on = "2027-01-05"
+queries = ["Decart AI official company history founders headquarters products"]
+source_ids = ["decart_about", "radical_portfolio", "tc_seed"]
+summary = "Official and investor pages identify Decart, its products and founders; public evidence links its founding to Israel and lists San Francisco and Tel Aviv operations."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-05T05:25:26Z"
+next_review_on = "2027-01-05"
+queries = ["Decart AI funding raised seed Series A Series B investors valuation", "Decart AI August 2025 $100 million Series B valuation investors Globes", "Decart AI May 2026 $300 million round Radical Ventures valuation investors"]
+source_ids = ["tc_seed", "tc_series_a", "globes_2025", "decart_b_announcement", "radical_portfolio"]
+summary = "Four distinct public rounds found through May 2026, with disclosed USD amounts and reported valuations on the Series A and later rounds."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-05T05:25:26Z"
+next_review_on = "2027-01-05"
+queries = ["Decart AI investors 2024 2025 2026 Radical Sequoia Benchmark"]
+source_ids = ["tc_seed", "tc_series_a", "globes_2025", "decart_b_announcement", "radical_portfolio"]
+summary = "Investor names are sourced to round reports and the lead investor; private allocations and precise legal entities for some individuals are undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-05T05:25:26Z"
+next_review_on = "2027-01-05"
+queries = ["Decart AI leadership team Dean Leitersdorf Moshe Shalev Orian Leitersdorf"]
+source_ids = ["radical_portfolio", "decart_b_announcement"]
+summary = "Three founders and two executive titles confirmed. A complete executive roster and verified current headcount were not found."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T05:25:26Z"
+next_review_on = "2027-01-05"
+queries = ["Decart ownership cap table parent company acquisition Anthropic talks", "Anthropic Decart acquisition walked away September 2026 Bloomberg"]
+source_ids = ["decart_b_announcement", "bloomberg_walk"]
+summary = "Private ownership percentages are unavailable. Acquisition talks were reported and subsequently abandoned; no ownership deal completed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T05:25:26Z"
+next_review_on = "2027-01-05"
+queries = ["Decart AI revenue ARR profitability burn runway financials", "Decart revenue customers contracts financials"]
+source_ids = ["tc_series_a", "globes_2025"]
+summary = "Media report revenue-related company assertions but no dated precise revenue, ARR, profitability, burn or runway figures."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-05T05:25:26Z"
+next_review_on = "2027-01-05"
+queries = ["Decart AI customers Amazon AWS Trainium contracts product launches DOS Lucy Oasis"]
+source_ids = ["decart_about", "decart_b_announcement", "globes_2025"]
+summary = "Products and customer/partner claims are public; commercial contract scope, paid deployment, and scale remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-05T05:25:26Z"
+next_review_on = "2027-01-05"
+queries = ["Decart patents intellectual property patents", "Decart AI WIPO USPTO patent"]
+source_ids = ["decart_about"]
+summary = "No company-linked patent filing was verified in this pass; proprietary code, models and trade secrets may still constitute IP."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-05T05:25:26Z"
+next_review_on = "2027-01-05"
+queries = ["Decart competitors real-time AI inference world models simulation"]
+source_ids = ["decart_about", "tc_series_a"]
+summary = "Retained analysis identifies relevant video-generation, frontier-lab, hardware-optimization and engineered-simulation competitors; current feature-by-feature comparison was not performed."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-05T05:25:26Z"
+next_review_on = "2027-01-05"
+queries = ["Decart defense government military security applications", "Decart government contracts defense autonomy simulation"]
+source_ids = ["radical_portfolio", "decart_b_announcement"]
+summary = "Technical applicability to autonomy simulation is plausible, but no public defense/security contract or validated military deployment was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Decart's official site presents active products and current financing/news; Radical maintains a current portfolio profile."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["decart_about", "radical_portfolio"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Radical says Decart was founded by Unit 8200 alumni; TechCrunch and Globes describe the company as Israeli/Tel Aviv-based and report Israeli founders."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["radical_portfolio", "tc_seed", "globes_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Decart's announcement states the Series B brings total funding to more than $450M; numeric field captures the stated lower-bound threshold."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.amount"
+support = "direct"
+summary = "TechCrunch reports the October 2024 seed round was $21M."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["tc_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.investors"
+support = "direct"
+summary = "TechCrunch names Sequoia and Oren Zeev/Zeev Ventures as seed backers."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["tc_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2024.amount"
+support = "direct"
+summary = "TechCrunch reports a $32M Series A."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["tc_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2024.valuation"
+support = "direct"
+summary = "TechCrunch reports a post-money valuation above $500M; field stores the threshold with qualification in notes."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["tc_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2024.investors"
+support = "direct"
+summary = "TechCrunch names Benchmark as lead and Sequoia and Zeev Ventures as participants."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["tc_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2025.amount"
+support = "direct"
+summary = "Globes reports the August 2025 financing amount as $100M."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["globes_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2025.valuation"
+support = "direct"
+summary = "Globes reports a $3.1B valuation for the August 2025 round."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["globes_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2025.investors"
+support = "direct"
+summary = "Globes names Sequoia, Valley Capital, Benchmark, Zeev Ventures and Aleph among participants."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["globes_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2026.amount"
+support = "direct"
+summary = "Decart announced a $300M Series B; Radical independently confirms this amount."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["decart_b_announcement", "radical_portfolio"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2026.valuation"
+support = "direct"
+summary = "Radical reports a $4B valuation for its 2026 investment; Axios reports around $4B."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["radical_portfolio", "axios_round"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2026.investors"
+support = "direct"
+summary = "Decart's round announcement names institutional and individual participants and Radical as lead."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["decart_b_announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Decart is presented as a standalone private company in its own official site and investor portfolio; no parent is disclosed."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["decart_about", "radical_portfolio"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.lead_investors"
+support = "direct"
+summary = "TechCrunch names Sequoia Capital and Zeev Ventures as seed backers."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["tc_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2024.post_money_valuation"
+support = "direct"
+summary = "TechCrunch describes the reported post-money valuation as above $500M; stored numeric threshold is qualified in the round notes."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["tc_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2024.lead_investors"
+support = "direct"
+summary = "TechCrunch names Benchmark as the Series A lead."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["tc_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2024.participating_investors"
+support = "direct"
+summary = "TechCrunch names Sequoia Capital and Zeev Ventures as Series A participants."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["tc_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2025.post_money_valuation"
+support = "direct"
+summary = "Globes reports the 2025 financing at a $3.1B valuation."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["globes_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2025.participating_investors"
+support = "direct"
+summary = "Globes names Sequoia, Valley Capital, Benchmark, Zeev Ventures and Aleph among round investors."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["globes_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2026.post_money_valuation"
+support = "direct"
+summary = "Radical Ventures reports the round valuation at $4B."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["radical_portfolio"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2026.lead_investors"
+support = "direct"
+summary = "Radical Ventures states it led the $300M Series B."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["radical_portfolio"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2026.participating_investors"
+support = "direct"
+summary = "Decart's round announcement lists the participating funds, companies and individual investors."
+verified_at = "2026-10-05T05:25:26Z"
+source_ids = ["decart_b_announcement"]

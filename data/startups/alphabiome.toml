@@ -1,0 +1,451 @@
+name = "Alphabiome"
+description = "Alphabiome is an Israeli biotechnology and AI startup building a reference-free biological intelligence layer that converts raw host and microbial DNA into predictive signals for drug-response selection and precision agriculture. Founded by Dr. Yaniv Altshuler in 2022 and previously presented as Metha.AI, the company raised an $8 million seed round led by AIX Ventures in May 2025."
+detailed_description = """
+**Product and the concrete problem it solves.** Alphabiome is building an upstream data and representation layer for biological AI. Its stated problem is that most genomics and microbiome workflows only analyze what has already been named, annotated, and placed into a reference genome or known pathway. That leaves a very large amount of raw bacterial, viral, fungal, and host DNA outside the feature space used by conventional tools. In drug development, the consequence is that teams may see a patient’s diagnosed disease and selected biomarkers but miss microbial signals that help explain why one person responds to a biologic while another does not. In agriculture, the corresponding problem is inconsistent response to feed additives: a product can work in one herd and produce little benefit in another, while the farmer still has to choose before knowing which herd biology will respond. Alphabiome’s product thesis is to make that previously ignored signal useful for decisions. The company’s first application is treatment-response prediction for pharmaceutical and clinical research workflows; its earlier and still publicly validated application is predicting which dairy herds will benefit from methane-reducing feed additives. This is a specific data bottleneck, not a generic claim that AI will improve biology.
+
+**Core technology and how it works.** Alphabiome describes its representation layer as a “Genetic Radar” that reads raw sequence directly rather than beginning with taxonomy, gene dictionaries, or manually chosen biological labels. The company’s technical materials say the system tokenizes sequencing reads, learns latent structure across trillions of fragments, and turns the resulting patterns into AI-usable features for prediction, stratification, and mechanism discovery. The peer-reviewed agricultural work makes the workflow unusually concrete. Rumen samples are deep-sequenced; the system decomposes reads into 30-nucleotide k-mers; frequent k-mers are connected in co-occurrence networks; groups of fragments with non-random connectivity become candidate biomarker clusters; and a farm-level superposition network is used to derive a predictive efficacy score. A separate supervised stage links those sequence-derived features to measured outcomes, with independent training, validation, and control groups. The 2025 Frontiers study reports that the method does not require taxonomic assignments or functional classification, which is the important technical distinction from ordinary microbiome abundance analysis. The company claims the same representation layer can span human, bacterial, viral, and fungal sequence and generate more than 100,000 novel signatures, but those scale and novelty claims remain company-reported rather than an independently reproduced benchmark.
+
+**Market, customers, and go-to-market.** Alphabiome’s commercial wedge is B2B life-science intelligence rather than a consumer microbiome test. In the human-health market, the likely buyers are pharmaceutical companies, clinical research organizations, and translational-medicine groups that need better patient stratification, response prediction, and biomarker discovery before or during a trial. The product can be sold as an analysis service, a software workflow, or a data and modeling collaboration around a defined therapy and indication. That model can create high value per engagement, but it also creates long validation cycles, data-governance obligations, and dependence on access to well-characterized clinical cohorts. The agriculture route is more immediately operational: feed-additive producers and dairy or beef operators can use a herd sample and a predictive score to decide where an additive is most likely to reduce methane or improve productivity, instead of applying it uniformly. Alphabiome’s earlier identity, Metha.AI, was explicitly associated with livestock optimization and methane reduction, while the company now presents drug development as its first application and the biological representation layer as the broader platform. Public sources do not name paying pharmaceutical customers, commercial feed companies, hospital partners, or contracted revenue. The practical go-to-market test is therefore whether published validation can become repeatable paid studies, then recurring data or licensing relationships.
+
+**Traction, funding, and third-party validation.** The company has a stronger evidence base than a purely conceptual biology-AI startup, but the evidence needs to be separated by confidence level. Alphabiome announced an $8 million seed round on May 6, 2025, led by AIX Ventures, to expand operations and R&D. Startup Nation Finder records earlier undisclosed convertible-debt, SAFE, and seed financing involving New Era Capital Partners and iSelect Fund, while the disclosed financing total is $8 million. The strongest technical validation is peer-reviewed. A Frontiers in Sustainable Food Systems article published April 10, 2025 evaluated the model across 13 commercial dairy farms in Israel and used hundreds of methane measurements to compare predicted feed-additive efficacy with observed outcomes. A second article published November 21, 2025 validated the approach across ten commercial farms and 339 Holstein cows using an allicin-based essential-oil additive; it reports an optimized, model-guided scenario outperforming uniform application. The company also reports a broader 2022-2024 animal program involving up to 30,000 cows and a later hospital study spanning seven biologics with accuracy up to three times that of state-of-the-art models, but it has not publicly named the hospital or released enough detail to treat those claims as independent validation. No regulatory approval, approved diagnostic, late-stage drug partnership, recurring-revenue metric, or commercial customer count is public.
+
+**Founders and team background.** Dr. Yaniv Altshuler is Alphabiome’s CEO and founder. The public record gives him an unusually relevant technical background: an MIT postdoctoral researcher who worked on decentralized and scalable AI, a Technion-trained computer scientist, and a researcher associated with social-physics and swarm-intelligence methods. His earlier work provides a credible bridge from distributed pattern discovery to biological representation learning, although it does not by itself prove clinical-development expertise. The company’s listed operating team includes Udi Dagan as COO, Dr. Tzruya Calvão Chebach in product strategy and partnerships, Dr. Kinneret Livnat Savitzky in biology and business development, Dr. Shalom Cohen as genetic-signal expert, Dr. Joao Gatica as bioinformatics lead, Alon Kleinman as software architect, and Oriya Gefen Klein in finance and business operations. Alphabiome also lists Nobel chemistry laureates Roger Kornberg and Michael Levitt, MIT AI researcher Alex “Sandy” Pentland, and AI researcher and entrepreneur Eli David in scientific leadership or advisory roles. Those affiliations provide meaningful scientific and network credibility, but the public sources do not specify governance terms, full-time status, ownership, or the exact contribution of each adviser. Headcount is listed as 1-10, so the central diligence question is whether this compact team can support clinical data partnerships, sequencing operations, model validation, quality systems, and commercial delivery simultaneously.
+
+**Competitive dynamics.** Alphabiome competes across two adjacent markets with different buying criteria. In microbiome and precision health, DayTwo offers microbiome-based personalized nutrition, CosmosID provides metagenomic analysis and microbial identification, and Microbiome Insights supplies sequencing and microbiome services; these companies have more established workflow familiarity even where their analytical methods differ. In computational drug discovery, Recursion, Tempus, and other data-platform companies compete for pharmaceutical budgets by combining biological data with predictive models, though they are not exact substitutes for Alphabiome’s reference-free sequence representation. In agriculture and methane reduction, Evogene and its biological platforms, Rumin8’s methane-inhibiting feed approach, and DSM-Firmenich’s Bovaer product compete for the same outcome budget through different combinations of computational selection, feed chemistry, and direct biological intervention. Alphabiome’s possible edge is that its raw-sequence layer can be reused across species, compounds, and indications, potentially allowing one core engine to support multiple verticals instead of building a single narrow product. That is also the main risk: incumbent sequencing providers can add machine learning, drug developers can build internal models, and feed-additive companies may prefer proprietary field data. Defensibility must come from longitudinal datasets, validated biomarker features, reproducible out-of-sample prediction, workflow integration, and data rights, not from the phrase “reference-free” alone.
+
+**Defense, security, and resilience dual-use relevance.** Alphabiome is not publicly a defense contractor, and there is no disclosed military customer, biosecurity program, or pathogen-detection deployment. Its strategic relevance is instead a resilience and enabling-technology case. Food-system resilience is the clearest demonstrated bridge: peer-reviewed Israeli trials show a model-guided way to target feed additives across heterogeneous dairy herds, which could improve productivity, reduce wasted inputs, and make methane-mitigation interventions more reliable across changing climate and farm conditions. A platform that can identify biological response from raw microbial signal could also support livestock disease surveillance, animal-health treatment selection, and more efficient use of scarce veterinary or agricultural inputs, although those applications remain prospective. The human-health layer has a second resilience angle: better treatment-response prediction could reduce failed clinical programs and improve the allocation of medicines in settings where patient cohorts, trial capacity, or biologic supply are constrained. A more sensitive bioinformatics substrate may eventually be relevant to biodefense or public-health surveillance, but that is a transfer hypothesis, not current capability; there is no public evidence that Alphabiome detects pathogens, classifies threats, or operates in a regulated national-security environment. Dual-use is therefore set to true for commercial and resilience applicability of the core representation technology, with a deliberately modest score and no implication of fielded defense use.
+
+**Growth stage, trajectory, and key diligence risks.** Alphabiome is early stage: it was founded in 2022, remains a 1-10-person private company in public ecosystem records, raised a disclosed seed round in 2025, and is still converting research validation into a repeatable product and commercial model. The trajectory is attractive if one representation layer can support human therapeutics, animal health, precision agriculture, and eventually other biological-response problems without retraining an entirely separate platform for each domain. The key diligence risks are substantial. (1) **Generalization risk:** results in Israeli dairy herds and selected feed additives may not transfer to human disease, new geographies, different sequencing pipelines, or clinical endpoints. (2) **Statistical and reproducibility risk:** the peer-reviewed studies are encouraging, but independent replication, preregistered validation, leakage controls, and performance against strong reference-based baselines should be examined closely. (3) **Commercialization risk:** no named customers, revenue, or regulatory pathway is public, and pharmaceutical sales can take years. (4) **Data-rights risk:** access to raw clinical, animal, and sequencing data may be restricted, expensive, or difficult to reuse across customers. (5) **Biological complexity risk:** a predictive signature can correlate with response without identifying a causal mechanism, limiting clinical adoption and therapeutic decision authority. (6) **Team and capital risk:** a very small company is attempting to serve regulated health and operational agriculture markets while maintaining scientific publication quality. The next decisive milestones are named commercial partnerships, independent human-cohort replication, transparent benchmark disclosures, a clear regulatory and quality-system strategy, and evidence that customers pay for predictions rather than only for exploratory research.
+"""
+logo = "Unknown"
+website = "https://www.alphabiome.ai"
+sector = "Biological AI / Reference-Free Microbiome Genomics for Precision Medicine and Food-System Resilience"
+founded = "2022"
+headquarters = "Ramat Yishai, Israel"
+employees = "2-10 (third-party directory estimate; company has not disclosed a current headcount)"
+funding_stage = "$8M seed (announced May 6, 2025; no later round found)"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Alphabiome's dual-use relevance is an enabling resilience case rather than a demonstrated defense capability. (1) Food-system resilience: the same reference-free biological representation and response-prediction technology has been peer-reviewed across Israeli commercial dairy herds to guide methane-reducing feed-additive use, with potential to reduce wasted inputs and improve productivity across heterogeneous farms. (2) Animal and public health: the platform could support disease-response selection, livestock health monitoring, and better allocation of scarce veterinary or biologic interventions, but these extensions are not publicly deployed products. (3) Biosecurity adjacency: raw host, bacterial, viral, and fungal sequence representation could eventually become useful in surveillance or biodefense analytics, yet Alphabiome discloses no pathogen-detection system, government program, defense customer, or regulated national-security deployment. The core technology credibly spans commercial health/agriculture and resilience contexts, so dual_use is true, but the score remains modest because the strategic transfer path is prospective and the company is not a fielded security vendor."
+key_technologies = [
+  "Reference-free tokenization of raw host, bacterial, viral, and fungal DNA sequencing data",
+  "30-nucleotide k-mer decomposition and high-dimensional sequence feature extraction",
+  "Unsupervised k-mer co-occurrence networks and farm-level superposition representations",
+  "Biomarker-cluster discovery without taxonomic assignment or functional annotation",
+  "Supervised predictive-efficacy scoring using independent training, validation, and control cohorts",
+  "Cross-species biological representation layer for treatment-response, stratification, and mechanism discovery"
+]
+use_cases = [
+  "Patient stratification and biologic treatment-response prediction in clinical research",
+  "Microbiome-derived biomarker discovery for pharmaceutical development",
+  "Selection of methane-reducing feed additives for dairy herds",
+  "Precision livestock nutrition and productivity optimization",
+  "Animal-health response prediction and veterinary intervention prioritization",
+  "Cross-farm validation of agricultural biological inputs under different climates and diets",
+  "Sequencing-informed public-health and biosecurity analytics as a future extension",
+  "Data and modeling collaborations for translational medicine and precision agriculture"
+]
+investible = true
+investment_rationale = "Alphabiome is a high-signal early-stage research-to-product company with a specific technical thesis, disclosed institutional financing, and unusually relevant peer-reviewed validation in a real agricultural setting. (1) The representation-layer approach could compound across drug development, human health, and food-system applications if the same raw-sequence substrate generalizes. (2) The $8M AIX Ventures-led seed round and the company’s scientific leadership provide credible financing and talent signals. (3) The dairy studies are more decision-useful than a laboratory-only result because they span commercial farms and compare predictions with measured outcomes. Counterweights are material: public evidence does not yet establish paying customers, recurring revenue, regulatory readiness, clinical performance, or independent replication beyond the published studies. This is a strategic diligence assessment and legacy priority signal, not an investment recommendation."
+strategic_value = "Alphabiome's strategic value lies in biological data independence and resilience-enabling prediction. A reference-free layer that extracts signal from sequence outside existing annotations could reduce dependence on narrow reference databases and create a reusable substrate for Israeli and allied pharmaceutical, agricultural, and public-health research. The strongest demonstrated value is food-system resilience: model-guided feed-additive selection may improve the reliability of methane mitigation and livestock productivity across different herds. A future biosecurity or animal-health application is plausible because the platform spans microbial and host DNA, but no such deployment is public. Strategic importance should therefore be tied to independent replication, data-governance maturity, and conversion of research into production workflows rather than to speculative pathogen or defense claims."
+potential_score = 72.0
+technology_score = 85.0
+market_score = 73.0
+team_score = 78.0
+dual_use_score = 49.0
+strategic_alignment_score = 67.0
+stage = "early"
+stage_rationale = "Alphabiome is early because it remains a small private company founded in 2022, with a single clearly disclosed $8M seed round in May 2025 and no public revenue, named commercial customer, regulatory approval, or scaled clinical deployment. The peer-reviewed dairy work shows meaningful technical progress beyond a laboratory concept, including cross-farm validation and independent outcome measurement, while the newer human-health positioning is still presented through company-reported hospital results without a named institution or full public dataset. Earlier undisclosed SAFE, convertible-debt, and seed rounds provide financing history but do not change the product maturity classification. Progression toward mid-stage would require repeatable paid deployments, independently validated human-cohort performance, quality and regulatory systems, and evidence that the representation layer supports multiple commercial programs."
+competitors = [
+  "DayTwo (microbiome-based personalized nutrition and clinical decision support)",
+  "CosmosID (metagenomic sequencing, microbial identification, and bioinformatics workflows)",
+  "Microbiome Insights (commercial microbiome sequencing and analysis services)",
+  "Evogene (computational biology and AI platforms for agricultural and biological product discovery)",
+  "Rumin8 (methane-reduction technology for livestock through feed-based biological intervention)",
+  "DSM-Firmenich / Bovaer (scaled methane-reducing feed-additive incumbent competing for the same farm outcomes)"
+]
+competitive_edge = "Alphabiome's prospective edge is the location of its product upstream of ordinary biological AI. (1) Reference-free representation: the system is designed to learn from raw sequence that taxonomy- and annotation-dependent workflows discard, potentially exposing signal unavailable to standard feature engineering. (2) Reusability: one engine is presented as applicable across host, bacterial, viral, and fungal DNA and across species, compounds, and indications, which could support a broader platform than a single biomarker test. (3) Evidence in operating conditions: the 13-farm and 10-farm dairy studies provide a stronger starting point than an in-vitro-only claim. (4) Israeli data network: work across geographically varied Israeli herds creates a coherent testbed for agriculture and climate resilience. The edge remains unproven until external groups reproduce performance, customers confirm decision value, and the company demonstrates that its feature layer is difficult for sequencing providers or pharmaceutical data teams to replicate."
+risk_factors = [
+  "Generalization from Israeli dairy-herd studies to human disease, new geographies, sequencing platforms, and clinical endpoints is unproven",
+  "Public evidence does not establish named paying customers, recurring revenue, commercial contract value, or a regulatory pathway",
+  "Peer-reviewed studies support prediction of selected feed-additive outcomes but do not prove causal mechanisms or clinical decision utility",
+  "Access, consent, ownership, privacy, and cross-customer reuse of raw human, animal, and metagenomic data may constrain the business",
+  "Small 1-10-person team must support bioinformatics, model validation, scientific publication, regulated-health partnerships, and commercial delivery",
+  "Reference-based genomics providers, pharmaceutical internal teams, and established microbiome platforms can add machine learning and compress differentiation",
+  "Human-health claims including the reported seven-biologic hospital study remain company-reported without a named hospital or full independent benchmark"
+]
+risk_level = "medium"
+signals = [
+  "Israeli legal entity and office address are stated in the official terms of use.",
+  "Startup Nation Finder records a March 2022 founding, Yaniv Altshuler as founder, 1-10 employees, and Tel Aviv-Yafo ecosystem location.",
+  "AIX Ventures led the disclosed $8M seed round announced in May 2025.",
+  "Two 2025 Frontiers in Sustainable Food Systems papers report cross-farm dairy validation of the company's feed-additive response model.",
+  "The company publicly presents Alphabiome as the successor identity to the earlier Metha.AI livestock and methane-focused positioning."
+]
+priority_rank = 0
+priority_rationale = "Alphabiome merits active monitoring as a rare Israeli biological-AI record that connects deep technical representation learning with a directly measurable food-system resilience application. (1) The raw-sequence, reference-free thesis is technically specific and potentially reusable across medicine and agriculture. (2) The $8M AIX Ventures-led seed round, MIT/Technion-linked founder profile, and listed Nobel-caliber scientific leadership provide credible ecosystem signals. (3) Peer-reviewed cross-farm studies are a meaningful validation anchor, especially for a platform claiming to guide interventions under heterogeneous field conditions. Factors that cap priority are equally important: no named commercial customers or revenue, no disclosed regulatory pathway, small-team execution risk, limited independent replication, and no demonstrated defense or biosecurity deployment. Priority should rise only after transparent human-cohort benchmarks, paid pharmaceutical or agricultural programs, and evidence of durable data and workflow advantages. The investible flag is a legacy priority signal, not an investment recommendation."
+crawled_at = "2026-09-01T02:54:55Z"
+updated_at = "2026-10-03T16:31:52Z"
+public_sources = [
+  { label = "Alphabiome official site", url = "https://www.alphabiome.ai/", description = "Current product positioning, clinical performance assertions, 2026 eight-therapy update, and published science/news." },
+  { label = "Alphabiome team", url = "https://www.alphabiome.ai/team/", description = "Current company and scientific leadership roster." },
+  { label = "Alphabiome terms of use", url = "https://www.alphabiome.ai/terms-of-use/", description = "Company's legal name, Israeli registration statement, and Ramat Yishai office." },
+  { label = "Alphabiome seed announcement", url = "https://www.prnewswire.com/news-releases/alphabiome-launches-groundbreaking-ai-technology-that-deciphers-the-genetic-code-of-the-microbiome-302446972.html", description = "Company announcement of its $8M seed round led by AIX Ventures on May 6, 2025." },
+  { label = "CheckID company record", url = "https://www.checkid.co.il/company/%D7%90%D7%9C%D7%A4%D7%90%D7%91%D7%99%D7%95%D7%9D-%D7%91%D7%99%D7%A0%D7%94-%D7%9E%D7%9C%D7%90%D7%9B%D7%95%D7%AA%D7%99%D7%AA-%D7%91%D7%A2~%D7%9E-516585163", description = "Israeli private-company status, company number 516585163, incorporation date, and reported shareholder/director listing." },
+  { label = "Alphabiome patent application listing", url = "https://patents.justia.com/assignee/alphabiome-ai-ltd", description = "US patent application assigned to Alphabiome AI Ltd, filed February 4, 2026 and published August 20, 2026." },
+  { label = "Frontiers 13-farm study", url = "https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2025.1548223/full", description = "Peer-reviewed cross-farm methane feed-additive prediction study." },
+  { label = "Frontiers 10-farm study", url = "https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2025.1637380/full", description = "Peer-reviewed validation across ten farms and 339 cows." },
+  { label = "Startup Nation Finder Alphabiome profile", url = "https://finder.startupnationcentral.org/company_page/alphabiome-ai", description = "Legacy Finder entry attributes earlier undisclosed convertible, SAFE, and seed rounds and reports a company total of $8M." },
+  { label = "Caplight Metha.ai profile", url = "https://www.caplight.com/company/metha", description = "Third-party profile associates former Metha.ai identity with the May 2025 seed and lists additional reported seed investors; investor list is not corroborated by the company announcement." },
+  { label = "FinSMEs Alphabiome funding report", url = "https://www.finsmes.com/2025/05/alphabiome-raises-8m-in-seed-funding.html", description = "Independent media corroboration of the $8M seed and AIX Ventures lead." }
+]
+legal_name = "Alphabiome AI Ltd"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Yaniv Altshuler", role = "CEO and founder", is_founder = true, current = true, background = "Company identifies him as founder and CEO; the 2025 funding announcement describes him as an MIT researcher with a background in decentralized AI methods.", source_ids = ["team", "seed"] },
+  { name = "Udi Dagan", role = "Chief Operating Officer", is_founder = false, current = true, source_ids = ["team"] },
+  { name = "Tzruya Calvão Chebach", role = "VP Product Strategy & Partnerships", is_founder = false, current = true, source_ids = ["team"] },
+  { name = "Kinneret Livnat Savitzky", role = "VP Biology & Business Development", is_founder = false, current = true, source_ids = ["team"] },
+  { name = "Oriya Gefen Klein", role = "Director of Finance & Business Operations", is_founder = false, current = true, source_ids = ["team"] },
+  { name = "Shalom Cohen", role = "Genetic Signal Expert", is_founder = false, current = true, source_ids = ["team"] },
+  { name = "Joao Gatica", role = "Bioinformatics Lead", is_founder = false, current = true, source_ids = ["team"] },
+  { name = "Alon Kleinman", role = "Software Architect", is_founder = false, current = true, source_ids = ["team"] }
+]
+investors = [
+  { name = "AIX Ventures", investor_type = "vc", website = "https://aixventures.com/", round_ids = ["seed-2025"], relationship = "current", source_ids = ["seed"] },
+  { name = "New Era Capital Partners", investor_type = "vc", website = "https://neweracap.com/", round_ids = ["convertible-debt-2022", "safe-2024"], relationship = "historical", source_ids = ["finder"] },
+  { name = "iSelect Fund", investor_type = "vc", website = "https://www.iselectfund.com/", round_ids = ["seed-2024"], relationship = "historical", source_ids = ["finder"] }
+]
+financials = []
+traction = [
+  { kind = "product", description = "Company site reports that its representation layer has been extended to response prediction across three indications and eight therapies; the underlying data, cohorts, and external validation details are not disclosed on the page.", date = "2026-04-16", source_ids = ["home"] },
+  { kind = "product", description = "Company reports a hospital study predicting response across seven biologic drugs with up to threefold higher accuracy than state-of-the-art models; the hospital is unnamed and detailed results are not publicly supplied.", date = "2026-02-04", source_ids = ["home"] },
+  { kind = "other", description = "Peer-reviewed study reports reference-free model validation across 13 commercial Israeli dairy farms for methane-mitigation feed-additive response.", date = "2025-04-10", source_ids = ["farm13"] },
+  { kind = "other", description = "Peer-reviewed study reports validation across ten commercial farms and 339 Holstein cows using an allicin-based feed additive.", date = "2025-11-21", source_ids = ["farm10"] }
+]
+intellectual_property = [
+  { kind = "patent", description = "US patent application 20260245667, Efficient Detection of Decentralized Biomarkers of Groups of DNA Sequences in Microbiome DNA, lists ALPHABIOME AI LTD as applicant and Yaniv Altshuler as inventor; filed February 4, 2026 and published August 20, 2026. Application publication does not establish grant or enforceable exclusivity.", date = "2026-08-20", source_ids = ["patent"] }
+]
+comparables = [
+  { name = "CosmosID", website = "https://www.cosmosid.com/", rationale = "Microbiome and metagenomic analysis workflows address adjacent microbial sequencing interpretation needs.", differentiation = "Publicly presented as identification and analysis centered; Alphabiome claims reference-free predictive representation from raw sequence.", source_ids = ["home"] },
+  { name = "DayTwo", website = "https://www.daytwo.com/", rationale = "Microbiome-informed prediction and intervention is an adjacent commercial application area.", differentiation = "DayTwo focuses on personalized nutrition; Alphabiome currently emphasizes drug-response prediction and agricultural applications.", source_ids = ["home"] },
+  { name = "Evogene", website = "https://www.evogene.com/", rationale = "Israeli computational biology company with AI applications in agriculture and life sciences.", differentiation = "Evogene develops discovery platforms and products across sectors; Alphabiome's asserted core is reference-free sequence representation and response prediction.", source_ids = ["home"] },
+  { name = "BiomEdit", website = "https://biomedit.com/", rationale = "Animal microbiome and livestock biology applications overlap with Alphabiome's agriculture use case.", differentiation = "BiomEdit focuses on microbiome engineering and animal health products, whereas Alphabiome reports sequencing-based prediction and intervention selection.", source_ids = ["caplight"] }
+]
+
+[intelligence.company]
+company_id = "il-alphabiome"
+legal_name = "Alphabiome AI Ltd"
+aliases = ["Alphabiome", "Alphabiome AI", "Metha.AI", "Metha.ai"]
+operating_status = "active"
+business_model = "B2B biological data and AI platform for drug-response analysis and precision agriculture; public materials describe research and partner-facing applications, while pricing and revenue model remain undisclosed."
+products = ["Reference-free biological intelligence and response prediction platform", "Genetic Radar sequence representation", "Drug-development response prediction", "Agricultural feed-additive efficacy prediction"]
+locations = ["Ramat Yishai, Israel"]
+country_of_incorporation = "Israel"
+founded_on = "2022-03-22"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "company number", identifier = "516585163", source_ids = ["registry"] }]
+source_ids = ["terms", "registry", "home"]
+
+[intelligence.funding]
+status = "reported"
+summary = "The company announced an $8 million seed financing on May 6, 2025, led by AIX Ventures. Startup Nation Finder lists three earlier undisclosed events: June 2022 convertible debt led by New Era Capital Partners, an April 2024 SAFE from New Era Capital Partners, and a July 2024 seed with iSelect Fund. Amounts and primary announcements for those events were not located. Company-reported lifetime total is $8 million as of May 2025; do not add the undisclosed rounds to that total. No later financing was found through October 3, 2026."
+rounds = [
+  { id = "convertible-debt-2022", round_type = "Convertible Debt", instrument = "debt", status = "closed", announced_on = "2022-06", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = ["New Era Capital Partners"], participating_investors = [], source_ids = ["finder"], valuation_basis = "undisclosed", notes = "Legacy Startup Nation Finder reports the event; no amount or primary announcement located." },
+  { id = "safe-2024", round_type = "SAFE", instrument = "convertible", status = "closed", announced_on = "2024-04", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = ["New Era Capital Partners"], participating_investors = [], source_ids = ["finder"], valuation_basis = "undisclosed", notes = "Legacy Startup Nation Finder reports the event; no amount or primary announcement located." },
+  { id = "seed-2024", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2024-07", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = [], participating_investors = ["iSelect Fund"], source_ids = ["finder"], valuation_basis = "undisclosed", notes = "Legacy Startup Nation Finder reports the event; no amount or primary announcement located." },
+  { id = "seed-2025", round_type = "Seed", instrument = "equity", status = "announced", announced_on = "2025-05-06", amount_status = "reported", amount = 8000000, amount_scope = "round", currency = "USD", lead_investors = ["AIX Ventures"], participating_investors = [], source_ids = ["seed"], valuation_basis = "undisclosed", notes = "Company announcement names AIX Ventures as lead and unnamed other investors, without valuation. Treated as a distinct seed, not a cumulative restatement." }
+]
+reported_total_raised = 8000000
+reported_total_currency = "USD"
+total_source_ids = ["seed"]
+total_as_of = "2025-05-06"
+total_scope = "Company-announced total at the disclosed seed round; no later financing located."
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[intelligence.ownership]
+status = "reported"
+summary = "The company is an active Israeli private company. A company-registry aggregator reports Yaniv Altshuler as a shareholder and director as of December 29, 2025, but gives no percentage or full cap table. No parent, acquisition, exit, or ownership transaction was found."
+parent_company = ""
+stock_ticker = ""
+cap_table_status = "undisclosed"
+shareholders = ["Yaniv Altshuler"]
+source_ids = ["registry", "terms"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel"]
+summary = "Alphabiome AI Ltd is identified in the company's terms as registered under Israeli law with offices in Ramat Yishai; an Israeli company record lists company number 516585163, active status, and the same town as its address."
+as_of = "2026-10-03"
+source_ids = ["terms", "registry"]
+
+[intelligence.research]
+researched_at = "2026-10-03T16:31:52Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Alphabiome company identity official site legal name", "Alphabiome funding raised seed Series A investors valuation acquired", "Alphabiome Metha.AI funding investors seed SAFE convertible", "Alphabiome team founder leadership executives", "Alphabiome ownership shareholder parent acquisition", "Alphabiome revenue ARR profitability customers contracts", "Alphabiome clinical study eight therapies hospital customers partnerships", "Alphabiome patents Alphabiome AI Ltd", "Alphabiome competitors microbiome AI drug response precision agriculture", "Alphabiome defense security biosecurity government applications", "Alphabiome אלפאביום גיוס משקיעים", "Alphabiome patent 20260245667"]
+gaps = ["financials: no dated revenue, ARR, profitability, cash, burn, or runway disclosure was found.", "traction: no named paying customer, contract value, production deployment, or independent public clinical dataset was identified; company study claims remain incompletely documented.", "intellectual_property: one published US application located; no complete family, grant status, or freedom-to-operate review performed.", "ownership: full private cap table and ownership percentages are unavailable; aggregator reports one shareholder but no share count or percent.", "team: current company roster is sourced, but biographies and employment verification for most members were not found.", "investors: AIX Ventures is directly named by the company; earlier New Era Capital Partners and iSelect Fund participants are attributed to legacy Finder data without accessible primary round announcements.", "competition: peer comparisons are based on adjacent product categories; no direct win/loss or customer-substitution evidence is public.", "dual_use: no disclosed defense, government, pathogen surveillance, or security customer/deployment was found.", "funding: earlier SAFE, convertible-debt, and seed events are attributed to the legacy Finder profile; their amounts and primary announcements are unavailable."]
+conflicts = ["Third-party profiles list differing purported additional seed investors (including New Era Capital Partners, iSelect Fund, Newland Syndicate, Moonstone VC, Visionary Future); the company announcement names only AIX Ventures and unnamed other investors. Startup Nation Finder attributes the 2022 convertible debt and 2024 SAFE to New Era and the July 2024 seed to iSelect; older snapshots list differing additional participants, so only these Finder entries are retained as attributed, undisclosed events.", "The official terms state office at Horesh Alonim 2 while the company registry aggregator lists Horesh Alonim 12. Headquarters town is consistent; exact street number needs confirmation.", "Prior directory data reported 1-10 employees while another current third-party profile reports 2-10 or eight employees. Employee count remains approximate and unverified."]
+diligence_questions = ["Can Alphabiome provide protocol, cohort size, endpoint definitions, leakage controls, confidence intervals, and independent replication for the reported eight-therapy and seven-biologic results?", "Which named pharma, clinical, or feed-additive partners have paid for work, and what portion of engagements convert to recurring licensing or production use?", "What patent families are filed or granted across jurisdictions, who owns the underlying code and sequence-derived datasets, and what freedom-to-operate analysis has been completed?", "What is the complete funding history, including dates, instruments, and participating investors behind earlier SAFE or convertible financing references?", "How does performance compare prospectively against strong host-genome, microbiome, and clinical baselines across sites and sequencing platforms?"]
+
+[[intelligence.research.sources]]
+id = "home"
+url = "https://www.alphabiome.ai/"
+title = "Alphabiome | The Biological Intelligence Layer for AI"
+publisher = "Alphabiome"
+kind = "company"
+accessed_at = "2026-10-03T16:31:52Z"
+published_on = "2026-04-16"
+claims = ["Company reports prediction across three indications and eight therapies as of April 16, 2026.", "Company reports human clinical performance claims and states its leadership and technology positioning.", "Company reports study across seven biologics dated February 4, 2026."]
+
+[[intelligence.research.sources]]
+id = "team"
+url = "https://www.alphabiome.ai/team/"
+title = "Company - Alphabiome"
+publisher = "Alphabiome"
+kind = "company"
+accessed_at = "2026-10-03T16:31:52Z"
+claims = ["Company identifies Yaniv Altshuler as CEO and founder and lists current operational and scientific leadership."]
+
+[[intelligence.research.sources]]
+id = "terms"
+url = "https://www.alphabiome.ai/terms-of-use/"
+title = "Terms of Use - Alphabiome"
+publisher = "Alphabiome"
+kind = "company"
+accessed_at = "2026-10-03T16:31:52Z"
+claims = ["Terms identify Alphabiome Ltd as registered under Israeli law and give its office as Horesh Alonim 2, Ramat Yishai."]
+
+[[intelligence.research.sources]]
+id = "seed"
+url = "https://www.prnewswire.com/news-releases/alphabiome-launches-groundbreaking-ai-technology-that-deciphers-the-genetic-code-of-the-microbiome-302446972.html"
+title = "Alphabiome Launches Groundbreaking AI Technology that Deciphers the Genetic Code of the Microbiome"
+publisher = "PR Newswire (release provided by Alphabiome)"
+kind = "company"
+accessed_at = "2026-10-03T16:31:52Z"
+published_on = "2025-05-06"
+claims = ["Company announced $8M seed funding on May 6, 2025 led by AIX Ventures.", "Company announcement names founder and CEO Yaniv Altshuler and describes its intended drug-response application."]
+
+[[intelligence.research.sources]]
+id = "registry"
+url = "https://www.checkid.co.il/company/%D7%90%D7%9C%D7%A4%D7%90%D7%91%D7%99%D7%95%D7%9D-%D7%91%D7%99%D7%A0%D7%94-%D7%9E%D7%9C%D7%90%D7%9B%D7%95%D7%AA%D7%99%D7%AA-%D7%91%D7%A2~%D7%9E-516585163"
+title = "ALPHABIOME AI LTD - 516585163"
+publisher = "CheckID"
+kind = "directory"
+accessed_at = "2026-10-03T16:31:52Z"
+claims = ["Record lists ALPHABIOME AI LTD, Israeli private-company status, active status, company number 516585163, and incorporation date March 22, 2022.", "Record lists Ramat Yishai address and Yaniv Altshuler as director and shareholder as of December 29, 2025."]
+
+[[intelligence.research.sources]]
+id = "patent"
+url = "https://patents.justia.com/assignee/alphabiome-ai-ltd"
+title = "Patents Assigned to ALPHABIOME AI LTD"
+publisher = "Justia Patents"
+kind = "other"
+accessed_at = "2026-10-03T16:31:52Z"
+published_on = "2026-08-20"
+claims = ["Listing identifies published application 20260245667, filed February 4, 2026, assigned to ALPHABIOME AI LTD, with Yaniv Altshuler as inventor."]
+
+[[intelligence.research.sources]]
+id = "farm13"
+url = "https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2025.1548223/full"
+title = "AI-driven precision agriculture for enteric methane mitigation: cross-farm validation with an essential oil-based feed additive"
+publisher = "Frontiers in Sustainable Food Systems"
+kind = "other"
+accessed_at = "2026-10-03T16:31:52Z"
+published_on = "2025-04-10"
+claims = ["Peer-reviewed study reports cross-farm prediction of feed-additive response across 13 commercial Israeli dairy farms."]
+
+[[intelligence.research.sources]]
+id = "farm10"
+url = "https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2025.1637380/full"
+title = "AI-based predictive modeling for enteric methane mitigation: cross-farm validation using an allicin based essential oil"
+publisher = "Frontiers in Sustainable Food Systems"
+kind = "other"
+accessed_at = "2026-10-03T16:31:52Z"
+published_on = "2025-11-21"
+claims = ["Peer-reviewed study reports validation across ten farms and 339 Holstein cows."]
+
+[[intelligence.research.sources]]
+id = "finder"
+url = "https://finder.startupnationcentral.org/company_page/alphabiome-ai"
+title = "Alphabiome AI - Startup Nation Finder"
+publisher = "Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-03T16:31:52Z"
+published_on = "2023-05-31"
+claims = ["Finder profile attributes June 2022 convertible debt to New Era Capital Partners, April 2024 SAFE to New Era, July 2024 seed participation to iSelect Fund, and a May 2025 $8M seed led by AIX Ventures.", "Finder profile reports four financing rounds and a total of $8M; this profile is now a legacy directory and the company total is not derived by summing its entries."]
+
+[[intelligence.research.sources]]
+id = "caplight"
+url = "https://www.caplight.com/company/metha"
+title = "Metha.ai | Valuation, Funding Rounds & Stock Price"
+publisher = "Caplight"
+kind = "directory"
+accessed_at = "2026-10-03T16:31:52Z"
+claims = ["Third-party profile links Metha.ai to Alphabiome and reports May 6, 2025 seed; its additional investor list differs from other databases and is treated as unconfirmed.", "Profile describes former livestock-focused Metha.ai positioning."]
+
+[[intelligence.research.sources]]
+id = "finsmes"
+url = "https://www.finsmes.com/2025/05/alphabiome-raises-8m-in-seed-funding.html"
+title = "Alphabiome Raises $8M in Seed Funding"
+publisher = "FinSMEs"
+kind = "media"
+accessed_at = "2026-10-03T16:31:52Z"
+published_on = "2025-05-07"
+claims = ["Media independently corroborates an $8M seed round led by AIX Ventures."]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Israeli company record identifies the entity as active; company site is operating and publishing current material."
+verified_at = "2026-10-03T16:31:52Z"
+source_ids = ["registry", "home"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Company terms state Israeli registration and a Ramat Yishai office; registry record corroborates Israeli private-company status and location."
+verified_at = "2026-10-03T16:31:52Z"
+source_ids = ["terms", "registry"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "The company announcement explicitly states an $8M seed financing; no later financing was located in this review."
+verified_at = "2026-10-03T16:31:52Z"
+source_ids = ["seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.amount"
+support = "direct"
+summary = "The May 6, 2025 company-provided announcement reports $8M seed funding."
+verified_at = "2026-10-03T16:31:52Z"
+source_ids = ["seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.convertible-debt-2022.lead_investors"
+support = "direct"
+summary = "Startup Nation Finder attributes the June 2022 convertible debt to New Era Capital Partners."
+verified_at = "2026-10-03T16:31:52Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-2024.lead_investors"
+support = "direct"
+summary = "Startup Nation Finder attributes the April 2024 SAFE to New Era Capital Partners."
+verified_at = "2026-10-03T16:31:52Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.participating_investors"
+support = "direct"
+summary = "Startup Nation Finder lists iSelect Fund as a participant in the July 2024 seed round."
+verified_at = "2026-10-03T16:31:52Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.lead_investors"
+support = "direct"
+summary = "The company announcement names AIX Ventures as lead investor in the May 2025 seed."
+verified_at = "2026-10-03T16:31:52Z"
+source_ids = ["seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.holdings.Yaniv Altshuler@2025-12-29"
+support = "direct"
+summary = "Registry aggregator lists Yaniv Altshuler as a shareholder as of December 29, 2025; it discloses no percentage, so no holding is quantified."
+verified_at = "2026-10-03T16:31:52Z"
+source_ids = ["registry"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T16:31:52Z"
+next_review_on = "2027-01-03"
+queries = ["Alphabiome company identity official site legal name", "Alphabiome Metha.AI Israeli company registry"]
+source_ids = ["home", "terms", "registry", "caplight"]
+summary = "Official materials and Israeli company record establish Alphabiome AI Ltd, its active status, Israeli registration and Ramat Yishai presence; Metha.AI is a former identity associated by third-party records."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T16:31:52Z"
+next_review_on = "2027-01-03"
+queries = ["Alphabiome funding raised seed Series A investors valuation", "Alphabiome Metha.AI SAFE convertible seed funding"]
+source_ids = ["seed", "finsmes", "caplight"]
+summary = "Verified $8M announced seed in May 2025. Prior instrument references and reported extra investors lack round-specific corroboration."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "conflicting"
+checked_at = "2026-10-03T16:31:52Z"
+next_review_on = "2027-01-03"
+queries = ["Alphabiome investors AIX Ventures New Era iSelect", "Metha.ai investors seed"]
+source_ids = ["seed", "caplight", "finsmes"]
+summary = "AIX Ventures is confirmed as lead. Other investors are unnamed in the company announcement and differ across third-party records."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T16:31:52Z"
+next_review_on = "2027-01-03"
+queries = ["Alphabiome team founder leadership executives"]
+source_ids = ["team", "seed"]
+summary = "Current roster and scientific leadership are listed on the company team page; limited independent employment/background verification found."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-03T16:31:52Z"
+next_review_on = "2027-01-03"
+queries = ["Alphabiome ownership shareholder parent acquisition", "ALPHABIOME AI LTD 516585163 shareholders"]
+source_ids = ["registry", "terms"]
+summary = "Private Israeli entity; a registry aggregator reports Yaniv Altshuler as shareholder and director but no holding percentage or complete cap table."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T16:31:52Z"
+next_review_on = "2027-01-03"
+queries = ["Alphabiome revenue ARR profitability burn runway", "Alphabiome customers contracts revenue"]
+source_ids = ["home", "seed"]
+summary = "No public dated revenue, profitability, cash, burn, or runway metric located."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T16:31:52Z"
+next_review_on = "2027-01-03"
+queries = ["Alphabiome clinical study eight therapies hospital customers partnerships", "Alphabiome peer reviewed dairy farms feed additive"]
+source_ids = ["home", "farm13", "farm10"]
+summary = "Peer-reviewed dairy validation and company-reported human results found; public named customer, revenue, and deployment evidence not found."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-03T16:31:52Z"
+next_review_on = "2027-01-03"
+queries = ["Alphabiome patents Alphabiome AI Ltd", "patent 20260245667 Alphabiome"]
+source_ids = ["patent"]
+summary = "Located one published US application assigned to Alphabiome AI Ltd; grant status and full patent family remain unverified."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T16:31:52Z"
+next_review_on = "2027-01-03"
+queries = ["Alphabiome competitors microbiome AI drug response precision agriculture"]
+source_ids = ["home", "caplight"]
+summary = "Mapped adjacent microbiome analytics, personalized nutrition, computational agriculture, and animal microbiome firms; no direct competitive win/loss evidence public."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T16:31:52Z"
+next_review_on = "2027-01-03"
+queries = ["Alphabiome defense security biosecurity government applications"]
+source_ids = ["home", "farm13"]
+summary = "Commercial agriculture and health applications are documented; no defense, government, pathogen surveillance, or security deployment was found."

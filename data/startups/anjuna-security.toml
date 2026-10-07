@@ -1,0 +1,239 @@
+name = "Anjuna Security"
+description = "Anjuna Security develops confidential-computing software that places applications, data, and secrets inside hardware-backed trusted execution environments (TEEs), with policy-based attestation and key release. Its Seaglass, Northstar, and Overwatch offerings target cross-cloud workload protection, privacy-preserving AI/data collaboration, and governance for autonomous software."
+detailed_description = """Anjuna's core product is a software layer for confidential computing. Seaglass abstracts the differences among hardware and cloud TEE implementations so organizations can run traditional, containerized, Kubernetes-managed, and AI workloads in an attested enclave without redesigning every application. The security proposition is protection of data in use: memory and execution are isolated from ordinary host software, while cryptographic attestation can be used to release keys only to an approved workload. Anjuna's public materials describe support across AWS, Azure, and Google Cloud and across multiple processor/enclave families; those compatibility claims should still be checked against the current release matrix and the customer's exact instance types.
+
+The commercial problem is trust in shared infrastructure. Financial institutions, healthcare organizations, digital-asset businesses, and other regulated enterprises increasingly want public-cloud elasticity but cannot give a cloud operator, privileged administrator, or compromised host unrestricted visibility into sensitive computation. Anjuna's pitch is operational simplification and portability: protect an existing workload with minimal or no code changes, apply a consistent trust policy, and retain control of secrets across clouds. Northstar extends the same primitive into an AI data-fusion clean room, where multiple parties can collaborate on data or models without exposing raw inputs to one another. The company has publicly announced design partners and use cases, but the database should not infer broad production adoption, revenue scale, or retention from those announcements alone.
+
+Competition comes from both specialist platforms and infrastructure vendors. Fortanix, Edgeless Systems, Enclaive, Opaque, and cloud-security or privacy-computing substitutes compete for organizations that need an abstraction, policy layer, or managed workflow around TEEs. AWS Nitro Enclaves, Azure Confidential VMs, Google Confidential Computing, and emerging confidential-GPU services can make a third-party layer unnecessary when a customer is comfortable with one cloud's APIs and operational model. Anjuna's claimed edge is a universal, lift-and-shift control plane spanning cloud and hardware variants; its durable advantage will depend on measurable portability, attestation correctness, deployment friction, performance, support quality, and integrations with identity, KMS/HSM, Kubernetes, and compliance workflows rather than on the existence of TEEs alone.
+
+The company has credible commercialization signals for an early-growth software startup: a $30 million Series B announced in 2021, a stated total investment of more than $42 million at that time, a longstanding enterprise product, a 2024 Northstar general-availability announcement, and a June 2026 launch of Overwatch for hardware-protected governance of autonomous AI agents. These are evidence of continued product development, not proof of market leadership. The latest public employee indicators are inconsistent—LinkedIn lists an 11-50 company-size band while Y Combinator lists a team size of 55—so the record uses an approximate range rather than the older unsupported “60+” count.
+
+The defense and national-security case is real but conditional. TEEs and attestation can reduce the infrastructure trust boundary for sensitive analytics, AI inference, coalition data sharing, contractor-hosted workloads, and hybrid or multi-cloud missions. They may help agencies and primes use commercial cloud for workloads that cannot tolerate ordinary host-level access. That is an enabling security primitive, not evidence that Anjuna is certified for classified environments or has a government contract. Priority diligence should therefore test export and supply-chain posture, government-cloud and authorization status, side-channel and rollback protections, support for confidential GPUs, deployment inside disconnected or controlled environments, and the company's ability to sell through government and prime procurement cycles."""
+logo = "https://www.anjuna.io/wp-content/uploads/anjuna-logo.svg"
+website = "https://www.anjuna.io"
+sector = "Confidential computing and cloud cybersecurity"
+founded = "2018"
+headquarters = "Palo Alto, California, United States"
+employees = "Unknown; current headcount not publicly verified"
+funding_stage = "Series B, with a $25 million Series B2 extension in 2024"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Confidential computing is substantively dual-use: the same TEE isolation, measured workload identity, and attestation-gated secret release can protect regulated commercial processing and sensitive defense or intelligence workloads. Credible security applications include contractor-hosted analytics, coalition data collaboration, sensitive AI inference, and hybrid-cloud systems where the infrastructure operator is outside the application's trust boundary. The defense thesis remains prospective because public sources reviewed here do not establish classified authorization, broad agency deployment, or a government contract."
+key_technologies = [
+  "Hardware-backed trusted execution environments and confidential VMs",
+  "Remote attestation, measured boot, and cryptographic workload identity",
+  "Policy-based key release and secrets integration with KMS/HSM systems",
+  "Multi-cloud workload isolation across AWS, Azure, and Google Cloud",
+  "Confidential containers, virtual machines, and Kubernetes operations",
+  "Privacy-preserving AI data-fusion clean rooms",
+  "Hardware-protected governance for autonomous AI agents"
+]
+use_cases = [
+  "Protecting financial, healthcare, and other regulated workloads from privileged host access",
+  "Cross-organization analytics or AI collaboration without exposing raw proprietary data",
+  "Safeguarding model weights, prompts, and inference data in shared cloud infrastructure",
+  "Confidential custody and processing of digital-asset keys and transaction data",
+  "Sensitive defense or contractor workloads requiring attested execution in hybrid cloud",
+  "Coalition or partner analytics where infrastructure and administrators are not fully trusted",
+  "Runtime governance and policy enforcement for autonomous AI agents"
+]
+investible = true
+investment_rationale = "Anjuna is a credible strategic-priority signal for a dual-use technology database because it addresses a difficult security boundary—protecting computation from the host environment—while selling into commercial sectors that can support a repeatable software business. The 2021 Series B, continued product launches, and multi-cloud positioning indicate more maturity than an experimental research project. The main diligence question is whether portability and policy orchestration create enough customer value to offset hyperscaler substitution and the complexity of confidential-computing deployments. This flag is not an investment recommendation: confirm current revenue, renewal rates, gross margins, customer concentration, financing runway, open-source dependencies, security evaluations, and government authorization status before drawing financial conclusions."
+strategic_value = "Anjuna could be strategically relevant as an independent trust and policy layer for cloud-based national-security and critical-infrastructure workloads. Its technology may help reduce dependence on host administrators, support controlled data sharing among organizations, and protect AI inference or agent governance when workloads run on commercial infrastructure. The U.S. headquarters and Israeli-founded security background fit the database's U.S.-Israel technology-alignment lens, but that alignment should not be confused with government adoption. Strategic value is highest if Anjuna can demonstrate verifiable attestation, resilient operation across cloud and hardware generations, confidential-GPU support, and deployment patterns suitable for restricted or disconnected environments."
+potential_score = 82.0
+technology_score = 88.0
+market_score = 78.0
+team_score = 80.0
+dual_use_score = 88.0
+strategic_alignment_score = 89.0
+stage = "mid"
+stage_rationale = "Anjuna is best classified as mid-stage or early-growth rather than early: it was founded in 2018, announced a Series B in 2021, has an established commercial platform, and has continued launching products including Northstar in 2024 and Overwatch in 2026. Public evidence is not sufficient to call it mature or to quantify revenue, customer scale, or profitability. The next maturity tests are repeatable enterprise deployment, measurable retention and unit economics, sustained differentiation from native cloud confidential-computing services, and validated compliance or government-market readiness."
+competitors = [
+  "Fortanix",
+  "Edgeless Systems",
+  "Enclaive",
+  "Opaque",
+  "AWS Nitro Enclaves and confidential-computing services",
+  "Microsoft Azure Confidential Computing",
+  "Google Cloud Confidential Computing"
+]
+competitive_edge = "Anjuna's proposed edge is abstraction and operational consistency: a customer can apply a common confidential-computing model across cloud providers and supported hardware, use attestation to govern secret release, and protect existing workloads with less application rewriting than lower-level enclave development requires. Northstar and Overwatch broaden the platform from workload isolation into privacy-preserving AI collaboration and protected agent governance. These are meaningful product directions, but they are not automatically durable moats. Differentiation must be demonstrated through portability under real workloads, predictable performance and cost, strong integrations, independently credible security evidence, and customer switching costs; hyperscalers retain a distribution and infrastructure advantage."
+risk_factors = [
+  "Hyperscaler substitution: native confidential VMs, enclaves, and confidential GPUs may absorb the platform's core capabilities or make a third-party control layer unnecessary.",
+  "TEE security and availability risk: silicon vulnerabilities, side channels, attestation failures, hardware deprecation, and uneven cloud or GPU support can undermine security claims or product coverage.",
+  "Adoption and performance friction: legacy applications, networking, observability, debugging, latency, and cost constraints can make confidential workloads harder to deploy than a product demo suggests.",
+  "Evidence and authorization gap: public materials do not establish Anjuna's current FedRAMP, DoD Impact Level, classified-environment, export-control, or supply-chain authorization status.",
+  "Commercial concentration and procurement risk: enterprise security budgets, long government cycles, and dependence on a limited number of design partners or strategic accounts could create uneven growth.",
+  "AI product execution risk: Northstar and Overwatch enter crowded, fast-moving markets where privacy, agent governance, and model-security claims require measurable controls and independent validation.",
+  "Platform and ecosystem dependency: the roadmap depends on processor vendors, cloud instance availability, Kubernetes and KMS integrations, and the company's ability to support changing attestation APIs."
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Keep as a high-priority strategic review candidate, not as a recommendation. The company combines a technically substantive dual-use primitive with a plausible commercial market and continued product activity, producing strong technology and strategic-alignment scores. The priority is conditional on diligence around current traction, hyperscaler displacement, independent security evidence, government authorization, confidential-GPU support, and the economics of selling a platform into regulated and public-sector environments."
+public_sources = [
+  { label = "Anjuna company site", url = "https://www.anjuna.io/", description = "Official product and company site" },
+  { label = "Anjuna leadership", url = "https://www.anjuna.io/our-team", description = "Current leadership and board biographies" },
+  { label = "Insight Partners company history", url = "https://www.insightpartners.com/ideas/anjuna-leadership-story/", description = "Investor account of founders and historical financing" },
+  { label = "Anjuna 2021 Series B", url = "https://www.anjuna.io/press/anjuna-closes-30-million-series-b-funding-to-bring-total-investment-to-over-42-million", description = "Company announcement of $30 million Series B and reported total funding" },
+  { label = "Anjuna 2024 Series B2", url = "https://www.anjuna.io/press/anjuna-raises-25m-funding-to-fuel-momentum-and-expand-confidential-computing-offerings-for-ai", description = "Company announcement of $25 million extension, named investors and operating metrics" },
+  { label = "Anjuna Navy case study", url = "https://www.anjuna.io/case-studies/united-states-navy", description = "Company-described U.S. Navy confidential AI evaluation" },
+  { label = "Anjuna Overwatch launch", url = "https://www.anjuna.io/press/anjuna-overwatch-trusted-control-plane-autonomous-ai", description = "June 2026 product availability announcement" },
+  { label = "SEC Anjuna Security filer record", url = "https://www.sec.gov/Archives/edgar/data/1870313/0001870313-21-000001-index.htm", description = "Form D filer identity, CIK, EIN and state of incorporation" },
+  { label = "Anjuna patent publication", url = "https://patents.google.com/patent/US20210019393A1/en", description = "Published secure runtime patent application and assignee" },
+  { label = "Anjuna Ayal Yogev profile", url = "https://www.infosecurity-magazine.com/profile/ayal-yogev/", description = "Independent confirmation of CEO and co-founder identity" },
+  { label = "CB Insights financing listing", url = "https://www.cbinsights.com/company/anjuna-security/financials", description = "Uncorroborated listing of a purported 2026 financing, retained as a research conflict only" },
+  { label = "Fortanix confidential computing", url = "https://www.fortanix.com/solutions/confidential-computing", description = "Competitor product positioning" },
+  { label = "Anjuna Northstar launch", url = "https://www.anjuna.io/press/anjuna-launches-anjuna-northstar-a-first-of-its-kind-ai-data-fusion-clean-room-now-generally-available", description = "Company product launch and Northstar positioning" }
+]
+crawled_at = "2026-01-31T21:05:00+00:00"
+updated_at = "2026-10-03T17:43:35Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Ayal Yogev", role = "CEO and co-founder; board member", is_founder = true, current = true, background = "Company biography reports enterprise-security product leadership at SafeBreach, OpenDNS, Lookout and Imperva; he studied electrical engineering and computer science at Tel Aviv University.", source_ids = ["team", "insight", "founder-profile"] },
+  { name = "Yan Michalevsky", role = "Co-founder and former CTO", is_founder = true, current = false, background = "Insight Partners identifies Michalevsky as a co-founder and former CTO; his Stanford doctoral research in security and applied cryptography led him into confidential computing.", source_ids = ["insight", "patent"] },
+  { name = "Mark Bower", role = "Chief Strategy Officer", is_founder = false, current = true, background = "Company biography describes prior product and business strategy roles at Voltage Security, HPE Atalla and Amazon Payment Cryptography.", source_ids = ["team"] },
+  { name = "Steve Van Lare", role = "Chief Technology Officer", is_founder = false, current = true, background = "Company biography reports prior engineering leadership at Automation Anywhere, 41st Parameter, Oracle and Agile Software.", source_ids = ["team"] }
+]
+investors = [
+  { name = "Y Combinator", investor_type = "accelerator", website = "https://www.ycombinator.com/", round_ids = ["seed-2018"], relationship = "historical", source_ids = ["insight"] },
+  { name = "Insight Partners", investor_type = "vc", website = "https://www.insightpartners.com/", round_ids = ["series-b-2021", "series-b2-2024"], relationship = "current", source_ids = ["series-b-2021", "series-b2-2024"] },
+  { name = "M Ventures", investor_type = "corporate", website = "https://www.m-ventures.com/", round_ids = ["series-b2-2024"], relationship = "current", source_ids = ["series-b2-2024"] },
+  { name = "SineWave Ventures", investor_type = "vc", website = "https://sinewave.vc/", round_ids = ["series-b2-2024"], relationship = "current", source_ids = ["series-b2-2024"] },
+  { name = "AI Capital Partners", investor_type = "vc", website = "https://aicapital.ai/", round_ids = ["series-b2-2024"], relationship = "current", source_ids = ["series-b2-2024"] },
+  { name = "Founder Collective", investor_type = "vc", website = "https://foundercollective.com/", round_ids = ["series-b2-2024"], relationship = "current", source_ids = ["series-b2-2024"] },
+  { name = "Playground Global", investor_type = "vc", website = "https://playground.global/", round_ids = ["series-b2-2024"], relationship = "current", source_ids = ["series-b2-2024"] },
+  { name = "Uncorrelated", investor_type = "vc", website = "https://uncorrelated.com/", round_ids = ["series-b2-2024"], relationship = "current", source_ids = ["series-b2-2024"] }
+]
+financials = []
+traction = [
+  { kind = "other", description = "Anjuna reported that bookings and customer base each more than doubled year over year in its August 2024 Series B2 announcement; this is an undated comparison period attributed to the company, with no absolute revenue, bookings or customer counts disclosed.", date = "2024-08-07", source_ids = ["series-b2-2024"] },
+  { kind = "customer", description = "Anjuna reported that the U.S. Navy tested Llama 3 on confidential NVIDIA H100 GPUs using Seaglass in NVIDIA LaunchPad; this was an evaluation and is not evidence of a paid contract or operational deployment.", date = "2024-08-07", source_ids = ["series-b2-2024", "navy-case"] },
+  { kind = "product", description = "Anjuna announced that Northstar, its confidential-computing AI data-fusion clean room, was generally available.", date = "2024", source_ids = ["northstar"] },
+  { kind = "product", description = "Anjuna announced Overwatch availability as a trusted control layer for governance of autonomous AI agents, built on Seaglass and TEE isolation.", date = "2026-06-22", source_ids = ["overwatch"] }
+]
+intellectual_property = [
+  { kind = "patent", description = "U.S. publication US20210019393A1, Secure Runtime Systems and Methods, identifies Anjuna Security, Inc. as original assignee. The application describes a secure runtime associated with a hardware-defined enclave; patent portfolio breadth and current enforceability were not exhaustively assessed.", date = "2021-01-21", source_ids = ["patent"] }
+]
+comparables = [
+  { name = "Fortanix", website = "https://www.fortanix.com/solutions/confidential-computing", rationale = "Confidential-computing security software competing for enterprise TEE deployment and policy-management use cases.", differentiation = "Anjuna emphasizes application/workload portability across cloud and hardware; Fortanix positions a broader data-security and confidential-computing platform. Relative coverage and customer preference require diligence.", source_ids = ["fortanix"] },
+  { name = "AWS Nitro Enclaves", website = "https://aws.amazon.com/ec2/nitro/nitro-enclaves/", rationale = "Cloud-native enclave alternative for customers already standardized on AWS.", differentiation = "Native service can offer tighter AWS integration; Anjuna's thesis is cross-cloud abstraction. No standalone AWS source was collected in this update.", source_ids = ["company-home"] },
+  { name = "Microsoft Azure Confidential Computing", website = "https://azure.microsoft.com/en-us/solutions/confidential-compute/", rationale = "Hyperscaler-native confidential VM and enclave offering that can substitute for an independent platform in Azure-only settings.", differentiation = "Azure optimizes for its own infrastructure; Anjuna presents a multi-cloud abstraction. No standalone Microsoft source was collected in this update.", source_ids = ["company-home"] }
+]
+
+[intelligence.company]
+company_id = "anjuna-security"
+legal_name = "Anjuna Security, Inc."
+aliases = ["Anjuna"]
+operating_status = "active"
+business_model = "Enterprise software licensing for confidential-computing workload protection, platform orchestration and related AI data collaboration and agent-governance products. Public evidence reviewed does not disclose pricing or contract terms."
+products = ["Anjuna Seaglass", "Anjuna Northstar", "Anjuna Overwatch"]
+locations = ["Palo Alto, California, United States"]
+country_of_incorporation = "United States (Delaware)"
+founded_on = "2018"
+registry_identifiers = [{ jurisdiction = "United States", scheme = "SEC CIK", identifier = "0001870313", source_ids = ["sec"] }, { jurisdiction = "United States", scheme = "EIN", identifier = "82-2737200", source_ids = ["sec"] }]
+source_ids = ["company-home", "team", "sec", "insight"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Publicly confirmed equity financing comprises the 2018 $3 million seed, June 2020 $9 million Series A, June 2021 $30 million Series B, and August 2024 $25 million Series B2 extension. The company said in 2021 that total funding then exceeded $42 million; it has not been assigned a numeric reported_total_raised because the statement is a lower-bound amount, not an exact total. A commercial database lists a purported January 2026 $0.38 million Series B III attributed to Recursive Ventures, but no primary announcement or matching SEC record was located; it is not included as a confirmed round. Private financing terms and any later undisclosed capital remain unknown."
+rounds = [
+  { id = "seed-2018", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2018-03", amount_status = "reported", amount = 3000000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = [], source_ids = ["insight"] },
+  { id = "series-a-2020", round_type = "Series A", instrument = "equity", status = "closed", announced_on = "2020-06", amount_status = "reported", amount = 9000000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = [], source_ids = ["insight"] },
+  { id = "series-b-2021", round_type = "Series B", instrument = "equity", status = "closed", announced_on = "2021-06-23", amount_status = "reported", amount = 30000000, amount_scope = "round", currency = "USD", lead_investors = ["Insight Partners"], participating_investors = [], source_ids = ["series-b-2021"], notes = "Company announced successful closing on June 23, 2021 and said cumulative company funding exceeded $42 million; that cumulative statement is not substituted for a round amount." },
+  { id = "series-b2-2024", round_type = "Series B2 extension", instrument = "equity", status = "closed", announced_on = "2024-08-07", amount_status = "reported", amount = 25000000, amount_scope = "incremental_extension", currency = "USD", lead_investors = ["M Ventures", "SineWave Ventures", "AI Capital Partners"], participating_investors = ["Founder Collective", "Insight Partners", "Playground Global", "Uncorrelated"], source_ids = ["series-b2-2024"], is_extension_of = "series-b-2021" }
+]
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "No public cap table, founder ownership percentages, or change-of-control transaction was identified. The SEC filing identifies Anjuna Security, Inc. as a Delaware corporation; named investors and board representatives do not establish share percentages or control."
+cap_table_status = "undisclosed"
+shareholders = []
+deals = []
+holdings = []
+source_ids = ["sec", "series-b2-2024"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders"]
+summary = "Anjuna is U.S.-headquartered and incorporated in Delaware. Co-founder and CEO Ayal Yogev's official biography lists electrical engineering and computer science studies at Tel Aviv University; Insight Partners independently identifies him as a co-founder. This establishes an Israel-linked founding team, without asserting Israeli incorporation or current Israeli operations."
+as_of = "2026-10-03"
+source_ids = ["team", "insight"]
+
+[intelligence.research]
+researched_at = "2026-10-03T17:43:35Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Anjuna Security funding investors 2022 2023 2024 2025 2026",
+  "site:anjuna.io/press Anjuna 2026 Overwatch",
+  "Anjuna Security acquisition ownership funding valuation revenue customers",
+  "Anjuna Security Israeli founders CEO team",
+  "site:anjuna.io/press Anjuna raises 25 million 2024 Series B2",
+  "site:sec.gov/Archives/edgar/data/1870313 Anjuna Security Form D",
+  "Anjuna Security seed Series A 2019 investors funding amount",
+  "Anjuna Security patents Google patents Anjuna Security Inc",
+  "Anjuna Security USPTO patent assignee Anjuna Security Inc",
+  "Anjuna Security financial statements revenue public disclosure",
+  "Ayal Yogev Anjuna Israeli founder Israel background",
+  "Yan Michalevsky Anjuna Israeli founder biography"
+]
+gaps = [
+  "financials: no dated absolute revenue, ARR, profitability, cash, burn, or runway figures located; the company only reported relative bookings and customer-base growth in 2024.",
+  "ownership: private cap table, share percentages, and detailed beneficial ownership are not publicly disclosed.",
+  "team: public bios identify leadership but do not provide a complete employee roster or reliable current headcount.",
+  "funding: no later primary-source confirmation was found for the third-party-listed January 2026 financing; seed and Series A named participants were not established by the reviewed primary sources.",
+  "intellectual_property: one U.S. patent publication was verified; a complete global patent-family, status, and freedom-to-operate review was not performed.",
+  "competition: direct product comparison, independent performance benchmarks, win/loss evidence, and customer switching data were not found.",
+  "traction: customer counts, contract values, renewals, concentration, and whether Navy testing converted to any paid deployment are not public.",
+  "dual_use: reviewed sources establish a Navy evaluation but do not establish classified authorization, a government contract, or operational deployment in a restricted environment."
+]
+conflicts = ["CB Insights lists a January 20, 2026 $0.38 million Series B-III financing attributed to Recursive Ventures and a $58.75 million total; no matching primary announcement or SEC filing was located in searches reviewed, so neither claim is treated as confirmed. The site's reported-total field remains absent rather than deriving a sum or adopting the uncorroborated database figure."]
+diligence_questions = [
+  "What are current ARR, net retention, gross margin, bookings, and customer concentration, and how much of the 2024 more-than-doubling growth persisted in 2025–2026?",
+  "Did the U.S. Navy/NVIDIA evaluation lead to a paid contract or an operational use case, and what security classification, cloud boundary, and authorization limits applied?",
+  "What independently tested TEE threat model, side-channel mitigations, attestation/key-release controls, and incident response commitments support Seaglass across each supported CPU/GPU and cloud combination?",
+  "What are the exact terms and status of the purported 2026 financing, and has any financing occurred after the announced 2024 B2 extension?",
+  "Which patents are granted and maintained in key jurisdictions, and how does Anjuna's IP position differ from cloud-native and specialist alternatives?"
+]
+sources = [
+  { id = "company-home", url = "https://www.anjuna.io/", title = "Cloud Data Security & Privacy Preserving AI | Anjuna", publisher = "Anjuna", kind = "company", accessed_at = "2026-10-03T17:43:35Z", claims = ["Anjuna's official site identifies its current products and confidential-computing business."] },
+  { id = "team", url = "https://www.anjuna.io/our-team", title = "Our Team | Anjuna Security", publisher = "Anjuna", kind = "company", accessed_at = "2026-10-03T17:43:35Z", claims = ["Ayal Yogev is CEO and co-founder and his biography reports Tel Aviv University education and prior security-product roles.", "Mark Bower and Steve Van Lare are listed as current executives with the stated backgrounds.", "Current company leadership and board biographies are published; this is not a complete staff census."] },
+  { id = "insight", url = "https://www.insightpartners.com/ideas/anjuna-leadership-story/", title = "Inside Anjuna's confidential computing approach to data protection", publisher = "Insight Partners", kind = "investor", published_on = "2026-04-16", accessed_at = "2026-10-03T17:43:35Z", claims = ["Ayal Yogev and Yan Michalevsky founded Anjuna; Michalevsky was its former CTO.", "Anjuna raised a $3 million seed in March 2018, $9 million Series A in June 2020, and $30 million Series B led by Insight Partners in 2021.", "The company's core product is Seaglass and its stated use includes sensitive financial, government and defense workloads."] },
+  { id = "series-b-2021", url = "https://www.anjuna.io/press/anjuna-closes-30-million-series-b-funding-to-bring-total-investment-to-over-42-million", title = "Anjuna Closes $30 Million Series B Funding to Bring Total Investment to Over $42 Million", publisher = "Anjuna", kind = "company", published_on = "2021-06-23", accessed_at = "2026-10-03T17:43:35Z", claims = ["Anjuna announced that it closed a $30 million Series B led by Insight Partners on June 23, 2021.", "Anjuna reported company funding above $42 million as of June 23, 2021; the public statement is a lower bound, not an exact total.", "Anjuna described its confidential-computing platform and Palo Alto base."] },
+  { id = "series-b2-2024", url = "https://www.anjuna.io/press/anjuna-raises-25m-funding-to-fuel-momentum-and-expand-confidential-computing-offerings-for-ai", title = "Anjuna Raises $25M Funding to Fuel Momentum and Expand Confidential Computing Offerings for AI", publisher = "Anjuna", kind = "company", published_on = "2024-08-07", accessed_at = "2026-10-03T17:43:35Z", claims = ["Anjuna closed a $25 million Series B2 financing on August 7, 2024, as an extension.", "The 2024 round was led by M Ventures, SineWave Ventures and AI Capital Partners, with Founder Collective, Insight Partners, Playground Global and Uncorrelated participating.", "Anjuna said bookings and customer base each more than doubled year over year; the announcement supplies no absolute figures.", "Anjuna reported that the U.S. Navy tested Llama 3 models on confidential NVIDIA H100 GPUs with Seaglass through NVIDIA LaunchPad.", "AI Clean Rooms were available in private preview at the announcement date."] },
+  { id = "navy-case", url = "https://www.anjuna.io/case-studies/united-states-navy", title = "Anjuna Case Study: United States Navy", publisher = "Anjuna", kind = "company", accessed_at = "2026-10-03T17:43:35Z", claims = ["Anjuna describes a U.S. Navy evaluation deploying Llama 3 on confidential H100 GPUs in NVIDIA LaunchPad with Seaglass; the described work is a test, not evidence of a paid contract."] },
+  { id = "overwatch", url = "https://www.anjuna.io/press/anjuna-overwatch-trusted-control-plane-autonomous-ai", title = "Anjuna Security Launches Industry's First Trusted Control Plane Built Upon Confidential Computing to Secure the Age of Autonomous AI", publisher = "Anjuna", kind = "company", published_on = "2026-06-22", accessed_at = "2026-10-03T17:43:35Z", claims = ["Anjuna announced Overwatch availability on June 22, 2026, describing hardware-enforced isolation and governance for autonomous AI agents."] },
+  { id = "sec", url = "https://www.sec.gov/Archives/edgar/data/1870313/0001870313-21-000001-index.htm", title = "EDGAR Filing Documents for 0001870313-21-000001", publisher = "U.S. Securities and Exchange Commission", kind = "filing", published_on = "2021-07-08", accessed_at = "2026-10-03T17:43:35Z", claims = ["Anjuna Security, Inc. is identified as SEC filer CIK 0001870313 with EIN 82-2737200 and Delaware incorporation.", "A Form D was filed on July 8, 2021; the filing record is not used as a measure of proceeds or as a separate round amount."] },
+  { id = "patent", url = "https://patents.google.com/patent/US20210019393A1/en", title = "US20210019393A1 - Secure Runtime Systems And Methods", publisher = "Google Patents", kind = "other", published_on = "2021-01-21", accessed_at = "2026-10-03T17:43:35Z", claims = ["Publication US20210019393A1 identifies Anjuna Security Inc. as original assignee for a secure-runtime patent application."] },
+  { id = "founder-profile", url = "https://www.infosecurity-magazine.com/profile/ayal-yogev/", title = "Ayal Yogev - CEO and Co-Founder, Anjuna Security", publisher = "Infosecurity Magazine", kind = "media", accessed_at = "2026-10-03T17:43:35Z", claims = ["Independent profile identifies Ayal Yogev as Anjuna Security CEO and co-founder."] },
+  { id = "cbinsights", url = "https://www.cbinsights.com/company/anjuna-security/financials", title = "Anjuna Stock Price, Funding, Valuation, Revenue & Financial Statements", publisher = "CB Insights", kind = "directory", accessed_at = "2026-10-03T17:43:35Z", claims = ["CB Insights lists a purported $0.38 million Series B-III round in January 2026 and $58.75 million total, not independently corroborated in this research."] },
+  { id = "fortanix", url = "https://www.fortanix.com/solutions/confidential-computing", title = "Confidential Computing", publisher = "Fortanix", kind = "company", accessed_at = "2026-10-03T17:43:35Z", claims = ["Fortanix markets a confidential-computing product relevant as a specialist competitor."] },
+  { id = "northstar", url = "https://www.anjuna.io/press/anjuna-launches-anjuna-northstar-a-first-of-its-kind-ai-data-fusion-clean-room-now-generally-available", title = "Anjuna Launches Anjuna Northstar: A First-of-Its-Kind AI Data Fusion Clean Room Now Generally Available", publisher = "Anjuna", kind = "company", accessed_at = "2026-10-03T17:43:35Z", claims = ["Anjuna announced Northstar as a generally available confidential-computing AI data-fusion clean room."] }
+]
+topic_checks = [
+  { topic = "identity", status = "reported", checked_at = "2026-10-03T17:43:35Z", next_review_on = "2027-04-03", queries = ["Anjuna Security Israeli founders CEO team", "Anjuna Security company legal name headquarters"] , source_ids = ["company-home", "team", "sec", "insight"], summary = "Official site and SEC record identify the active U.S. company; SEC lists Delaware incorporation and Palo Alto addresses. Ayal Yogev's official bio supports the Israel-linked founding-team connection through Tel Aviv University study." },
+  { topic = "funding", status = "conflicting", checked_at = "2026-10-03T17:43:35Z", next_review_on = "2027-01-03", queries = ["Anjuna Security funding investors 2022 2023 2024 2025 2026", "Anjuna Security seed Series A 2019 investors funding amount", "site:sec.gov/Archives/edgar/data/1870313 Anjuna Security Form D", "Anjuna Security 2026 funding January Recursive Ventures"], source_ids = ["insight", "series-b-2021", "series-b2-2024", "sec", "cbinsights"], summary = "Verified four rounds through August 2024. A third-party database claims a 2026 round that was not corroborated by primary sources; no exact current cumulative total is reported." },
+  { topic = "investors", status = "reported", checked_at = "2026-10-03T17:43:35Z", next_review_on = "2027-04-03", queries = ["Anjuna Security funding investors 2024 Series B2", "Anjuna Security Series B Insight Partners investors"], source_ids = ["insight", "series-b-2021", "series-b2-2024"], summary = "Named lead and participating investors verified for 2021 and 2024. Seed and Series A participants were not established in reviewed primary evidence." },
+  { topic = "team", status = "reported", checked_at = "2026-10-03T17:43:35Z", next_review_on = "2027-04-03", queries = ["Anjuna Security Israeli founders CEO team", "Ayal Yogev Anjuna Israeli founder Israel background", "Yan Michalevsky Anjuna Israeli founder biography"], source_ids = ["team", "insight", "founder-profile"], summary = "Current company page lists CEO, CSO and CTO and provides bios; investor source confirms both co-founders and former CTO status for Michalevsky. Headcount and full staff roster remain unknown." },
+  { topic = "ownership", status = "no_public_disclosure", checked_at = "2026-10-03T17:43:35Z", next_review_on = "2027-10-03", queries = ["Anjuna Security acquisition ownership funding valuation revenue customers", "Anjuna Security SEC company CIK incorporation"], source_ids = ["sec", "series-b2-2024"], summary = "No acquisition, parent company, public listing, cap table or disclosed shareholder percentages found. Delaware incorporation is verified; private ownership details remain undisclosed." },
+  { topic = "financials", status = "no_public_disclosure", checked_at = "2026-10-03T17:43:35Z", next_review_on = "2027-04-03", queries = ["Anjuna Security financial statements revenue public disclosure", "Anjuna Security funding revenue ARR profitability"], source_ids = ["series-b2-2024", "cbinsights"], summary = "No dated absolute revenue, ARR, profit, burn or runway metric was found. CB Insights' apparent zero revenue rows are not treated as a company-reported fact." },
+  { topic = "traction", status = "reported", checked_at = "2026-10-03T17:43:35Z", next_review_on = "2027-04-03", queries = ["Anjuna customers bookings growth 2024", "Anjuna U.S. Navy confidential H100 Llama 3 test", "Anjuna Northstar Overwatch launch"], source_ids = ["series-b2-2024", "navy-case", "northstar", "overwatch"], summary = "Company reported greater-than-twofold year-over-year bookings and customer-base growth in 2024 and a Navy/NVIDIA evaluation; absolute metrics and conversion to paid or operational adoption are not disclosed. Northstar and Overwatch launch claims are company announcements." },
+  { topic = "intellectual_property", status = "reported", checked_at = "2026-10-03T17:43:35Z", next_review_on = "2027-10-03", queries = ["Anjuna Security patents Google patents Anjuna Security Inc", "Anjuna Security USPTO patent assignee Anjuna Security Inc"], source_ids = ["patent"], summary = "Verified one assigned U.S. patent publication concerning secure runtime systems; a full portfolio and legal-status search was not completed." },
+  { topic = "competition", status = "reported", checked_at = "2026-10-03T17:43:35Z", next_review_on = "2027-04-03", queries = ["Anjuna Security competitors confidential computing Fortanix Opaque Edgeless Systems", "Fortanix confidential computing product"], source_ids = ["fortanix", "company-home"], summary = "Fortanix and native hyperscaler confidential-computing services are relevant specialist and substitute categories. No comparative benchmark or win/loss evidence was found." },
+  { topic = "dual_use", status = "reported", checked_at = "2026-10-03T17:43:35Z", next_review_on = "2027-04-03", queries = ["Anjuna government defense customers U.S. Navy confidential AI", "Anjuna Security confidential computing financial healthcare government"], source_ids = ["series-b2-2024", "navy-case", "insight"], summary = "Hardware-rooted workload protection has commercial regulated-sector and defense/government relevance. Public evidence supports Navy testing, not classified authorization, paid government contract, or operational fielding." }
+]
+claim_checks = [
+  { field_path = "company.operating_status", support = "direct", summary = "Official company site remains live and presents active products; the June 2026 Overwatch availability announcement and 2026 copyright further support active operation.", verified_at = "2026-10-03T17:43:35Z", source_ids = ["company-home", "overwatch"] },
+  { field_path = "israel_connection", support = "direct", summary = "Official leadership biography identifies co-founder Ayal Yogev and Tel Aviv University education; Insight Partners confirms his co-founder role.", verified_at = "2026-10-03T17:43:35Z", source_ids = ["team", "insight"] },
+  { field_path = "funding.rounds.seed-2018.amount", support = "direct", summary = "Insight Partners states Anjuna raised a $3 million seed round in March 2018.", verified_at = "2026-10-03T17:43:35Z", source_ids = ["insight"] },
+  { field_path = "funding.rounds.series-a-2020.amount", support = "direct", summary = "Insight Partners states Anjuna raised a $9 million Series A in June 2020.", verified_at = "2026-10-03T17:43:35Z", source_ids = ["insight"] },
+  { field_path = "funding.rounds.series-b-2021.amount", support = "direct", summary = "Anjuna's June 23, 2021 release reports closing $30 million Series B financing.", verified_at = "2026-10-03T17:43:35Z", source_ids = ["series-b-2021"] },
+  { field_path = "funding.rounds.series-b-2021.lead_investors", support = "direct", summary = "The June 2021 company announcement names Insight Partners as the round lead.", verified_at = "2026-10-03T17:43:35Z", source_ids = ["series-b-2021"] },
+  { field_path = "funding.rounds.series-b2-2024.amount", support = "direct", summary = "Anjuna announced a closed $25 million Series B2 extension on August 7, 2024.", verified_at = "2026-10-03T17:43:35Z", source_ids = ["series-b2-2024"] },
+  { field_path = "funding.rounds.series-b2-2024.lead_investors", support = "direct", summary = "The 2024 company announcement names M Ventures, SineWave Ventures and AI Capital Partners as leads.", verified_at = "2026-10-03T17:43:35Z", source_ids = ["series-b2-2024"] },
+  { field_path = "funding.rounds.series-b2-2024.participating_investors", support = "direct", summary = "The 2024 announcement names Founder Collective, Insight Partners, Playground Global and Uncorrelated as participating existing investors.", verified_at = "2026-10-03T17:43:35Z", source_ids = ["series-b2-2024"] }
+]

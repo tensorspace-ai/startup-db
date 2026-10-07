@@ -1,0 +1,614 @@
+name = "Cymulate"
+description = "Cymulate provides continuous breach and attack simulation (BAS) and security control validation, enabling organizations to measure and prove the effectiveness of their defensive security controls across the full attack surface."
+detailed_description = """Cymulate Ltd is a privately held cybersecurity software company founded in Israel in 2016. It sells a subscription platform that uses controlled attack simulations to measure how an organization's deployed security controls prevent, detect, or miss real-world tactics. Its offering has broadened from breach and attack simulation (BAS) into threat exposure validation and exposure management: it combines threat and attack scenario libraries, testing across enterprise environments, exposure prioritization, detection engineering workflows, and vendor-specific remediation. Company product materials describe integrations into customers' existing security stacks and daily updates to threat scenarios. In February 2025 Cymulate announced AI-assisted assessment creation and automated control optimization; its August 2025 product announcement describes correlation of exposure data with proof of exploitability. These are vendor-described capabilities and product announcements, not independent efficacy evaluations.
+
+The commercial proposition is to turn security testing into a repeatable feedback loop for security operations, red and purple teams, vulnerability management, and CISOs. The customer value hypothesis is practical: teams can test defenses more often than periodic manual penetration tests, identify which controls fail against selected techniques, prioritize issues with contextual evidence, and retest after changes. That can complement vulnerability scanners and red-team exercises, but does not replace them: simulation coverage depends on scenario fidelity, safe execution constraints, telemetry access, supported products, and the customer's ability to interpret and act on findings. A favorable control score is not proof that an organization is secure against unmodeled attacks.
+
+Cymulate reports more than 1,000 customers in 50 countries on its current About page and repeated the 1,000-customer figure in a February 2025 release. Earlier releases reported hundreds of customers and hundreds of Fortune 500 customers; these are dated company claims and should not be added together or treated as audited customer counts. The company also attributes significant reductions in customer risk and improvements in prevention/detection to its platform. Such performance claims are company-reported averages or marketing metrics; public materials reviewed here do not expose methodology, sample sizes, control groups, retention, net revenue retention, ARR, gross margin, or audited revenue. An Israeli business-news report quoted approximately $15 million 2020 revenue and a doubling over 2019, an older reported figure that cannot establish current revenue or profitability.
+
+The 2025 product direction adds AI and workflow automation to a competitive exposure-management market. Cymulate says an AI agent can generate environment-specific assessments, that its scenario workbench contains over one million attack actions, and that the product can push tailored optimization rules to supported controls. The strategic opportunity is to connect discovery, adversary evidence, validation, prioritization, and remediation in a continuous workflow. The strategic challenge is that an increasingly broad platform can be difficult to implement and explain, while vulnerability-management, CTEM, BAS, automated red teaming, attack-path management, and endpoint/cloud vendors increasingly overlap. Buyers will compare Cymulate with AttackIQ, SafeBreach, Picus Security, Pentera, and validation modules embedded in larger security suites. Its practical differentiation must be demonstrated through breadth and quality of integrations, safe and reproducible assessments, coverage of relevant threats, explainable prioritization, and low-friction proof that a remediation improved outcomes.
+
+The founders identified in company materials are Eyal Wachsman, Avihai Ben-Yossef, and Eyal Gruner. Wachsman is identified as co-founder and CEO, and Ben-Yossef as co-founder and CTO. The company biography describes Wachsman's prior security consulting and sales/business-development work at Avnet Cyber & Information Security; the origin story describes Ben-Yossef's penetration-testing work there. Sales leadership appointments announced in May 2025 indicate investment in channel and regional go-to-market capacity, but do not establish hiring totals or realized growth. Company sources place its Israeli office in Holon; the company is Israeli-founded and maintains Israeli operations alongside international offices.
+
+Financing disclosures correct the stale site narrative. Cymulate announced $3 million led by Susquehanna Growth Equity in March 2017, in addition to an earlier seed investment led by Eyal Gruner. In March 2019 it announced a $7.5 million Series A led by Vertex Ventures and Dell Technologies Capital; in November 2019 it announced a $15 million Series B led by Vertex Growth Fund. The May 2021 Series C was $45 million led by One Peak, with existing investors Susquehanna Growth Equity, Vertex Ventures Israel, Vertex Growth, and Dell Technologies Capital. The September 2022 Series D was $70 million led by One Peak with participation by those existing institutional investors. Cymulate reported $141 million raised to date with the Series D. A 2017 media report gives the founder-led seed amount as $500,000, while the 2017 company release does not disclose it; this is a reported historical amount, not a new institutional round. No later financing announcement, transaction, parent, public listing, or disclosed cap table was verified in the reviewed sources. Private ownership percentages and current valuation remain unavailable; third-party valuation databases are not treated as primary evidence.
+
+The platform has material commercial cybersecurity and potential public-sector/defense relevance because defensive readiness testing can serve enterprises and government cyber teams. Public evidence reviewed supports product applicability to defensive control validation, not a specific military deployment, classified use, government contract, or certification. The appropriate dual-use thesis is therefore capability-based and bounded. A single active US patent family assigned to Cymulate Ltd, concerning security threats from lateral movement and mitigation, illustrates some proprietary technical work; the record alone does not establish broad patent protection or freedom to operate. Diligence should establish current revenue and growth, customer retention and concentration, deployment and renewal economics, validated outcome methodology, product safety and liability controls, integration maintenance costs, AI data handling and model governance, patent portfolio scope, and whether government/defense exposure is actual commercial traction or only a plausible adjacent market."""
+logo = 'https://cymulate.com/favicon.ico'
+website = "https://cymulate.com"
+sector = 'Security Validation / Exposure Management'
+founded = '2016'
+headquarters = "Holon, Israel; global offices including the United States"
+employees = "Unknown; no current verified employee count located"
+funding_stage = "Series D (September 2022; no later financing verified)"
+dual_use = true
+dual_use_description = """Cymulate is commercially focused cybersecurity software for validating an organization's defensive controls, exposure, and response workflows. The same defensive assessment capability could support government or defense cyber readiness by testing prevention and detection against simulated techniques. This is a capability-level dual-use assessment: sources reviewed establish the commercial product, Israeli origins and operations, but do not substantiate named military customers, classified deployments, defense contracts, or special certifications. Public-sector relevance should not be represented as realized defense traction without customer or procurement evidence."""
+key_technologies = ['Breach and attack simulation', 'Continuous control validation', 'Threat-led security testing', 'Exposure analytics and prioritization', 'Automated remediation guidance workflows']
+use_cases = ['Validating EDR, SIEM, and email security controls', 'Running continuous CTEM-style assessments', 'Measuring detection and prevention performance', 'Prioritizing remediation by exploitable pathways', 'Supporting cyber readiness exercises for public-sector teams']
+investible = true
+investment_rationale = """Cymulate has a credible enterprise cybersecurity proposition and a meaningful historical financing base: its disclosed 2022 Series D brought the company's stated cumulative financing to $141 million. Current company materials report over 1,000 customers and describe a broadened platform connecting threat validation, exposure prioritization and guided remediation. These facts support continued strategic monitoring of a category where security teams seek evidence that controls work in their own environments. They do not establish current revenue scale, growth, retention, profitability, or valuation. Investment underwriting should therefore depend on updated financial and cohort data, customer references that distinguish paid production use from trials or channel deployments, and evidence that its broadening platform is differentiated enough to sustain renewals against both focused validation vendors and bundled incumbent suites. The old record's 2024 $45 million Series D statement is incorrect and should not support an investment conclusion."""
+strategic_value = """Cymulate can help enterprises and public-sector security teams measure defensive control behavior through safe, repeatable attack simulation and use the resulting evidence to prioritize improvements. This is relevant to cyber readiness and resilience where teams must understand actual prevention and detection gaps. Current public materials document a commercial platform and company-reported customer scale, but do not establish a named defense deployment, classified use, government contract, certification, or sovereign cyber program. Strategic fit should be assessed through validated use cases, deployment controls, integrations, and proof that the platform improves operational decisions without creating unacceptable production risk."""
+potential_score = 83.0
+technology_score = 84.0
+market_score = 84.0
+team_score = 82.0
+dual_use_score = 90.0
+strategic_alignment_score = 88.0
+stage = 'mid'
+stage_rationale = """Cymulate is a mature private software company with a 2016 founding date, four publicly announced institutional financing events through a $70 million Series D in September 2022, a company-reported $141 million cumulative total at that time, and a current company-reported base of more than 1,000 customers. No post-2022 financing, public listing, or exit was verified in this review. The record supports a mature operating stage, but not claims that it is preparing for an IPO, acquisition, or specific exit. Current revenue, employee count, profitability, and ownership are not publicly established by the sources reviewed."""
+competitors = ["AttackIQ", "SafeBreach", "Picus Security", "Pentera", "Microsoft Security", "Palo Alto Networks"]
+competitive_edge = """Cymulate's stated edge is a combined validation workflow: broad attack simulations and control testing, exposure prioritization, detection-engineering support, integrations, and remediation guidance within one product. Its 2025 announcements add AI-assisted assessment configuration and vendor-specific optimization, while company materials describe a library exceeding one million attack actions. These features could reduce friction between finding a theoretical exposure and validating whether it is exploitable and mitigated. The claimed edge remains to be proven buyer by buyer: simulation realism, safe execution, repeatable results, environment coverage, supported integrations, and measurable improvement matter more than scenario count alone. AttackIQ, SafeBreach, Picus Security, and Pentera overlap in BAS or automated testing; vulnerability and exposure platforms plus Microsoft, Palo Alto Networks, and other suite vendors can substitute or bundle adjacent functions. Cymulate's private status and lack of current public financial metrics also limit outside assessment of durability and economics."""
+risk_factors = ["Crowded BAS, automated red-team, CTEM and exposure-management market with overlapping suites and bundling", "Current revenue, ARR, profitability, burn, runway, customer concentration and retention not publicly disclosed in reviewed sources", "Private cap table, ownership percentages and valuation unavailable; last disclosed financing is September 2022", "Company-reported customer totals and security outcome metrics lack public methodology and independent validation", "Safe testing, scenario fidelity, supported integrations and customer remediation capacity constrain realized value", "AI-generated assessments and automated control changes introduce model governance, data handling and operational safety diligence needs", "No named public-sector or defense deployment was verified, so defense relevance remains potential rather than evidenced traction"]
+risk_level = 'medium'
+signals = []
+priority_rank = 0
+priority_rationale = "Cymulate represents a strategically relevant Israeli-founded deep-tech platform in the operational cyber defense space. The company combines demonstrated enterprise traction with credible dual-use relevance—both in mature enterprise SOC programs and in defense/government cyber readiness. The platform's focus on measurable control effectiveness aligns with emerging public-sector cyber resilience mandates and military operational excellence standards. For portfolio strategies centered on security validation, cyber readiness, and dual-use technology, Cymulate merits sustained attention. The company is not a venture-scale moonshot, but it is a credible, scaled platform in a defensible category with strategic relevance to defense modernization and critical infrastructure resilience."
+crawled_at = '2026-02-16T20:13:00Z'
+updated_at = "2026-10-05T02:49:11Z"
+entity_type = "startup"
+public_sources = [
+  { label = "Cymulate Series D announcement", url = "https://cymulate.com/press-releases/series-d-funding/", description = "September 2022 $70M Series D, investors, reported $141M cumulative funding, customers and company metrics." },
+  { label = "Cymulate Series C announcement", url = "https://cymulate.com/press-releases/series-c-funding/", description = "May 2021 $45M Series C, investor syndicate, cumulative funding and historical company traction." },
+  { label = "Cymulate Series B announcement", url = "https://cymulate.com/press-releases/cymulate-raises-15m-in-series-b/", description = "November 2019 $15M Series B and participating investors." },
+  { label = "Cymulate Series A announcement", url = "https://cymulate.com/press-releases/cymulates-raises-series-a-funding/", description = "March 2019 $7.5M Series A and named investors." },
+  { label = "Cymulate 2017 financing announcement", url = "https://cymulate.com/press-releases/cymulate-announces-financing-susquehanna-growth-equity/", description = "$3M financing led by Susquehanna Growth Equity, additional to earlier seed investment." },
+  { label = "Globes on Cymulate's 2017 financing", url = "https://en.globes.co.il/en/article-cyber-security-co-cymulate-raises-3m-1001179863", description = "Independent report of the 2017 financing and prior $500,000 founder seed investment." },
+  { label = "Cymulate About Us", url = "https://cymulate.com/about-us/", description = "Company founding, current leadership, Holon office and company-reported customer footprint." },
+  { label = "Cymulate AI validation product release", url = "https://cymulate.com/press-releases/ai-automation-for-threat-exposure-validation/", description = "February 2025 product capabilities and company-reported customer count." },
+  { label = "Cymulate 2025 platform release", url = "https://cymulate.com/press-releases/cymulate-reveals-new-exposure-management-platform/", description = "August 2025 exposure management platform announcement." },
+  { label = "Cymulate leadership appointments", url = "https://cymulate.com/press-releases/sales-leadership-expansion/", description = "May 2025 sales leadership appointments and CEO identification." },
+  { label = "Cymulate origin story", url = "https://cymulate.com/blog/the-cymulate-origin-story/", description = "Founder identities and founding/product history." },
+  { label = "Cymulate AI validation product release", url = "https://cymulate.com/press-releases/ai-automation-for-threat-exposure-validation/", description = "February 2025 product capabilities and company-reported customer count." },
+  { label = "Calcalist on Cymulate Series C", url = "https://www.calcalist.co.il/calcalistech/article/rJzDGRku00", description = "Israeli business reporting quoting 2020 revenue and employee context; older reported figures." },
+  { label = "Cymulate lateral movement patent family", url = "https://patents.google.com/patent/US20210136101A1/en", description = "US patent application/grant record, assignee, subject matter and status listing." },
+  { label = "Cymulate platform", url = "https://cymulate.com/platform/", description = "Current vendor-described platform functions and integrations." },
+  { label = "Cymulate customer stories", url = "https://cymulate.com/customers/", description = "Company-published customer case studies and outcome claims." },
+  { label = "Cymulate lateral movement patent family", url = "https://patents.google.com/patent/US20210136101A1/en", description = "US patent application/grant, assignee, subject matter and legal status listing." },
+  { label = "Cymulate platform", url = "https://cymulate.com/platform/", description = "Current vendor-described platform functions and integrations." },
+  { label = "Cymulate customer stories", url = "https://cymulate.com/customers/", description = "Company-published customer case studies and outcome claims." }
+]
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Eyal Wachsman", role = "Co-Founder and CEO", is_founder = true, current = true, background = "Previously worked in sales and business development at Avnet Cyber & Information Security.", source_ids = ["about", "series_a_2019"] },
+  { name = "Avihai Ben-Yossef", role = "Co-Founder and CTO", is_founder = true, current = true, background = "Previously worked as a penetration tester at Avnet Cyber & Information Security; company origin post identifies him as CTO.", source_ids = ["about", "origin", "ai_product"] },
+  { name = "Eyal Gruner", role = "Co-Founder and seed investor", is_founder = true, current = false, background = "Company and media sources identify him as early seed investor; current operating role not established.", source_ids = ["series_a_2019", "globes_2017"] },
+  { name = "Mike Goldberg", role = "Vice President of Sales, North America (appointed 2025)", is_founder = false, current = true, source_ids = ["sales_leadership"] },
+  { name = "Stephan Neumeier", role = "Vice President of Sales, APJ (appointed 2025)", is_founder = false, current = true, source_ids = ["sales_leadership"] },
+  { name = "Rudi Ehrlich", role = "Regional Vice President of Channels and Cloud Alliances, North America (appointed 2025)", is_founder = false, current = true, source_ids = ["sales_leadership"] },
+  { name = "Adi Peer", role = "Vice President of Channels, EMEA (appointed 2025)", is_founder = false, current = true, source_ids = ["sales_leadership"] }
+]
+investors = [
+  { name = "Eyal Gruner", investor_type = "angel", relationship = "historical", round_ids = ["seed-2016", "series-a-2019"], source_ids = ["globes_2017", "series_a_2019"] },
+  { name = "Susquehanna Growth Equity", investor_type = "pe", website = "https://sgep.com", relationship = "historical", round_ids = ["series-a-2017", "series-a-2019", "series-b-2019", "series-c-2021", "series-d-2022"], source_ids = ["funding_2017", "series_a_2019", "series_b", "series_c", "series_d"] },
+  { name = "Vertex Ventures Israel", investor_type = "vc", website = "https://www.vertexventures.co.il", relationship = "historical", round_ids = ["series-a-2019", "series-b-2019", "series-c-2021", "series-d-2022"], source_ids = ["series_a_2019", "series_b", "series_c", "series_d"] },
+  { name = "Vertex Growth Fund", investor_type = "vc", website = "https://www.vertexgrowth.com", relationship = "historical", round_ids = ["series-b-2019", "series-c-2021", "series-d-2022"], source_ids = ["series_b", "series_c", "series_d"] },
+  { name = "Dell Technologies Capital", investor_type = "corporate", website = "https://www.dell.com/en-us/dt/corporate-venture-capital.htm", relationship = "historical", round_ids = ["series-a-2019", "series-b-2019", "series-c-2021", "series-d-2022"], source_ids = ["series_a_2019", "series_b", "series_c", "series_d"] },
+  { name = "One Peak", investor_type = "vc", website = "https://www.onepeak.tech", relationship = "historical", round_ids = ["series-c-2021", "series-d-2022"], source_ids = ["series_c", "series_d"] }
+]
+financials = []
+traction = []
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "il-cymulate"
+legal_name = "Cymulate Ltd"
+source_ids = ["about", "series_a_2019", "patent_us"]
+aliases = ["Cymulate", "Cymulate Ltd"]
+operating_status = "active"
+business_model = "Private B2B cybersecurity software company; subscription platform and related enterprise services (commercial model characterization)"
+products = ["Cymulate Exposure Validation Platform", "Cymulate Exposure Management Platform", "Breach and Attack Simulation", "Automated Red Teaming", "Detection Studio", "Auto Mitigation"]
+locations = ["Holon, Israel", "United States", "United Kingdom", "India", "Singapore", "South Africa"]
+founded_on = "2016"
+
+[intelligence.funding]
+status = "reported"
+summary = "Public company announcements document seed financing and Series A through Series D. The latest verified financing is a $70M Series D announced 2022-09-06. Cymulate stated $141M raised to date at that point. No later financing was located in the reviewed search; this is not proof no private or unannounced financing occurred."
+reported_total_raised = 141000000
+reported_total_currency = "USD"
+total_source_ids = ["series_d"]
+total_as_of = "2022-09-06"
+total_scope = "Company-reported cumulative funding raised to date; not recalculated from rounds"
+history_status = "partial"
+coverage_through = "2026-10-05"
+
+[[intelligence.funding.rounds]]
+id = "seed-2016"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2017-03"
+amount_status = "reported"
+amount = 500000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Eyal Gruner"]
+participating_investors = ["Eyal Gruner"]
+source_ids = ["globes_2017"]
+notes = "Globes reported a prior $500,000 investment from Eyal Gruner. Cymulate's later releases call this an earlier seed investment but do not repeat the amount."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2017"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2017-03-10"
+amount_status = "reported"
+amount = 3000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Susquehanna Growth Equity"]
+participating_investors = ["Susquehanna Growth Equity"]
+source_ids = ["funding_2017"]
+
+[[intelligence.funding.rounds]]
+id = "series-a-2019"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2019-03-13"
+amount_status = "reported"
+amount = 7500000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Vertex Ventures Israel", "Dell Technologies Capital"]
+participating_investors = ["Susquehanna Growth Equity", "Eyal Gruner"]
+source_ids = ["series_a_2019"]
+notes = "Distinct later Series A financing; do not merge with 2017 financing."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2019"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2019-11-26"
+amount_status = "reported"
+amount = 15000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Vertex Growth Fund"]
+participating_investors = ["Vertex Ventures Israel", "Dell Technologies Capital", "Susquehanna Growth Equity"]
+source_ids = ["series_b"]
+
+[[intelligence.funding.rounds]]
+id = "series-c-2021"
+round_type = "Series C"
+instrument = "equity"
+status = "closed"
+announced_on = "2021-05-05"
+amount_status = "reported"
+amount = 45000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["One Peak"]
+participating_investors = ["Susquehanna Growth Equity", "Vertex Ventures Israel", "Vertex Growth", "Dell Technologies Capital"]
+source_ids = ["series_c"]
+
+[[intelligence.funding.rounds]]
+id = "series-d-2022"
+round_type = "Series D"
+instrument = "equity"
+status = "closed"
+announced_on = "2022-09-06"
+amount_status = "reported"
+amount = 70000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["One Peak"]
+participating_investors = ["Susquehanna Growth Equity", "Vertex Ventures Israel", "Vertex Growth", "Dell Technologies Capital"]
+source_ids = ["series_d"]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "No public acquisition, parent company, public listing, disclosed cap table, or ownership percentages were found in reviewed sources. Identified financing investors are not evidence of current ownership percentages. Cymulate appears privately held based on absence of public-company evidence, but cap table details remain unavailable."
+cap_table_status = "undisclosed"
+shareholders = ["Private shareholders; identities and percentages not publicly established"]
+source_ids = ["series_d", "about"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Cymulate identifies an office at Sderot Yerushalayim 95, Holon, Israel, and its company history identifies Israeli founders and Israeli operating locations."
+as_of = "2026-10-05"
+source_ids = ["about", "origin"]
+
+[intelligence.research]
+researched_at = "2026-10-05T02:49:11Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Cymulate official company identity Holon headquarters products", "Cymulate funding raised seed Series A Series B Series C Series D investors", "Cymulate investor announcements One Peak Vertex Susquehanna Dell", "Cymulate founders CEO CTO leadership appointments 2025", "Cymulate acquisition ownership parent company valuation", "Cymulate revenue ARR profitability employees headcount", "Cymulate customers 1000 traction case studies partnership NTT", "Cymulate patents Cymulate Ltd Google Patents", "Cymulate competitors AttackIQ SafeBreach Picus Pentera", "Cymulate government defense military cybersecurity contracts dual use", "Cymulate funding גיוס משקיעים הכנסות עובדים", "Cymulate 2024 2025 funding raised valuation acquired"]
+gaps = ["team: full current executive roster, biographies and verified headcount not established; only leadership named in official pages/releases recorded", "investors: current cap table, ownership percentages, and any undisclosed post-2022 participants unavailable", "financials: no current public revenue, ARR, profitability, burn, runway or audited financial statements found; older 2020 revenue report is not current", "traction: customer totals and outcomes are company-reported; independent paid-customer, retention, concentration and renewal metrics unavailable", "intellectual_property: only one located US patent family recorded; comprehensive global portfolio, prosecution and freedom-to-operate review not performed", "competition: public competitor product pages were not comprehensively compared; named peers are direct category alternatives", "ownership: no parent or ownership deal verified; private cap table unavailable", "dual_use: no named defense/government contract or deployment verified; applicability remains a capability-based assessment", "employee_count: current verified total not located; omitted as unknown", "website_logo: official company domain verified; favicon retained from baseline"]
+conflicts = ["The existing baseline says $45M Series D in 2024; official Cymulate releases instead identify $45M Series C on 2021-05-05 and $70M Series D on 2022-09-06. The baseline's 2024 date and round label are stale/incorrect.", "Seed investment amount is reported as $500,000 by Globes; later official releases confirm a Gruner-led seed but do not independently restate its amount. Treat amount as a media-reported historical amount.", "Current employee count is not established. Historical 2021 employee figures and prior 201-500-style estimates are not current verified headcount."]
+diligence_questions = ["What are Cymulate's current ARR, revenue growth, gross margin, net revenue retention, customer churn and runway, and how have these changed since the 2022 Series D?", "How many of the reported 1,000-plus customers are paying production deployments, and what independent evidence supports prevention, detection and remediation outcome claims?", "What is the current fully diluted cap table, investor ownership and any secondary or debt financing since September 2022?", "Which named public-sector or defense customers use Cymulate in production, under what contract scope and accreditation, if any?", "How does product safety testing constrain simulations and automated rule changes in customer production environments, and who bears remediation liability?", "What is the full patent portfolio and freedom-to-operate position, beyond the located US lateral-movement patent family?"]
+
+[[intelligence.research.sources]]
+id = "series_d"
+url = "https://cymulate.com/press-releases/series-d-funding/"
+title = "Cymulate Raises $70M Series D Funding for Continuous Security Posture Testing"
+publisher = "Cymulate"
+kind = "company"
+accessed_at = "2026-10-05T02:49:11Z"
+published_on = "2022-09-06"
+claims = ["Cymulate announced a $70 million Series D led by One Peak with participation from Susquehanna Growth Equity, Vertex Ventures Israel, Vertex Growth and Dell Technologies Capital.", "Cymulate reported $141 million raised to date.", "The company stated it had more than 500 customers globally and more than doubled ARR in 2021.", "Eyal Wachsman was identified as CEO and co-founder; Maria Mastakas COO and Carolyn Crandall CMO appointments were announced."]
+
+[[intelligence.research.sources]]
+id = "series_c"
+url = "https://cymulate.com/press-releases/series-c-funding/"
+title = "Cymulate Raises $45M in Series C Funding for Continuous Security Testing Led by One Peak"
+publisher = "Cymulate"
+kind = "company"
+accessed_at = "2026-10-05T02:49:11Z"
+published_on = "2021-05-05"
+claims = ["Series C amount was $45 million and lead was One Peak.", "Participants included Susquehanna Growth Equity, Vertex Ventures Israel, Vertex Growth and Dell Technologies Capital.", "Company reported $71 million raised to date, hundreds of customers, and double year-over-year revenue in 2020."]
+
+[[intelligence.research.sources]]
+id = "series_b"
+url = "https://cymulate.com/press-releases/cymulate-raises-15m-in-series-b/"
+title = "Breach and Attack Simulation Platform Cymulate Raises $15M in Series B Funding"
+publisher = "Cymulate"
+kind = "company"
+accessed_at = "2026-10-05T02:49:11Z"
+published_on = "2019-11-26"
+claims = ["Series B was $15 million led by Vertex Growth Fund.", "Vertex Ventures Israel, Dell Technologies Capital and Susquehanna Growth Equity participated.", "Company reported $26 million raised to date including seed investment from Eyal Gruner."]
+
+[[intelligence.research.sources]]
+id = "series_a_2019"
+url = "https://cymulate.com/press-releases/cymulates-raises-series-a-funding/"
+title = "Cymulate Raises Series A Funding"
+publisher = "Cymulate"
+kind = "company"
+accessed_at = "2026-10-05T02:49:11Z"
+published_on = "2019-04-06"
+claims = ["The release says the financing was announced March 13, 2019 and was $7.5 million.", "The round was led by Vertex Ventures and Dell Technologies Capital with additional funding from Susquehanna Growth Equity and Eyal Gruner.", "Cymulate stated $11 million total raised at that point.", "Company says founded in June 2016 by Avihai Ben-Yossef, Eyal Wachsman and Eyal Gruner."]
+
+[[intelligence.research.sources]]
+id = "funding_2017"
+url = "https://cymulate.com/press-releases/cymulate-announces-financing-susquehanna-growth-equity/"
+title = "Cymulate Announces Funding from Susquehanna Growth Equity"
+publisher = "Cymulate"
+kind = "company"
+accessed_at = "2026-10-05T02:49:11Z"
+published_on = "2017-03-10"
+claims = ["Cymulate announced $3 million financing led by Susquehanna Growth Equity.", "This financing was in addition to an earlier seed round led by Eyal Gruner."]
+
+[[intelligence.research.sources]]
+id = "globes_2017"
+url = "https://en.globes.co.il/en/article-cyber-security-co-cymulate-raises-3m-1001179863"
+title = "Cyber security co Cymulate raises $3m"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-05T02:49:11Z"
+published_on = "2017-03-07"
+claims = ["Globes reported the $3 million financing led by Susquehanna and a prior $500,000 founder investment from Eyal Gruner."]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://cymulate.com/about-us/"
+title = "About Us"
+publisher = "Cymulate"
+kind = "company"
+accessed_at = "2026-10-05T02:49:11Z"
+claims = ["Cymulate reports it was founded in 2016 and has more than 1,000 customers in 50 countries.", "Eyal Wachsman is Co-Founder and CEO; Avihai Ben-Yossef is Co-Founder and CTO.", "The company lists its Israeli office at Sderot Yerushalayim 95, Holon.", "The site lists global offices and Eyal Wachsman's prior Avnet Cyber & Information Security role."]
+
+[[intelligence.research.sources]]
+id = "origin"
+url = "https://cymulate.com/blog/the-cymulate-origin-story/"
+title = "From Beginnings to Breakthroughs: The Cymulate Story"
+publisher = "Cymulate"
+kind = "company"
+accessed_at = "2026-10-05T02:49:11Z"
+published_on = "2025-06-25"
+claims = ["Co-founder and CTO Avihai Ben-Yossef describes the company's 2016 founding and his and Eyal Wachsman's work at Avnet Cyber & Information Security.", "The post describes early customer acquisition and development from penetration testing toward continuous security validation."]
+
+[[intelligence.research.sources]]
+id = "ai_product"
+url = "https://cymulate.com/press-releases/ai-automation-for-threat-exposure-validation/"
+title = "Cymulate Reveals Next-level AI Automation for Threat Exposure Validation"
+publisher = "Cymulate"
+kind = "company"
+accessed_at = "2026-10-05T02:49:11Z"
+published_on = "2025-02-18"
+claims = ["The company announced AI-assisted threat validation and vendor-specific automated remediation features.", "Cymulate reported more than 1,000 customers worldwide.", "The release describes a scenario workbench with more than one million attack actions and named customer Darling Ingredients."]
+
+[[intelligence.research.sources]]
+id = "platform_2025"
+url = "https://cymulate.com/press-releases/cymulate-reveals-new-exposure-management-platform/"
+title = "Cymulate Reveals New Exposure Management Platform"
+publisher = "Cymulate"
+kind = "company"
+accessed_at = "2026-10-05T02:49:11Z"
+published_on = "2025-08-05"
+claims = ["Cymulate announced an exposure management platform unifying exposure data with threat validation and prioritization workflows.", "Company describes agentic AI workflows integrated into validation and correlation processes."]
+
+[[intelligence.research.sources]]
+id = "sales_leadership"
+url = "https://cymulate.com/press-releases/sales-leadership-expansion/"
+title = "Cymulate Strengthens Sales Leadership Team With New Appointments"
+publisher = "Cymulate"
+kind = "company"
+accessed_at = "2026-10-05T02:49:11Z"
+published_on = "2025-05-28"
+claims = ["Cymulate named Mike Goldberg, Stephan Neumeier, Rudi Ehrlich and Adi Peer to regional/channel sales leadership roles.", "Eyal Wachsman was identified as co-founder and CEO."]
+
+[[intelligence.research.sources]]
+id = "calcalist_2021"
+url = "https://www.calcalist.co.il/calcalistech/article/rJzDGRku00"
+title = "חברת הסייבר Cymulate גייסה 45 מיליון דולר"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-05T02:49:11Z"
+published_on = "2021-05-05"
+claims = ["Calcalist reported approximately $15 million revenue for 2020, double 2019 revenue, based on company interview statements.", "CEO described 40 US and 50 Israeli employees at the time and projected 150 by year end; this was a forecast, not verified realized headcount."]
+
+[[intelligence.research.sources]]
+id = "patent_us"
+url = "https://patents.google.com/patent/US20210136101A1/en"
+title = "US20210136101A1 - Security threats from lateral movements and mitigation thereof"
+publisher = "Google Patents / USPTO record"
+kind = "other"
+accessed_at = "2026-10-05T02:49:11Z"
+claims = ["Patent record lists Cymulate Ltd as original/current assignee and describes network lateral-movement security and mitigation.", "Record lists US application 16/671,631, filing 2019-11-01, publication 2021-05-06 and grant publication US11902312B2 on 2024-02-13."]
+
+[[intelligence.research.sources]]
+id = "competitor_set"
+url = "https://cymulate.com/platform/"
+title = "Cymulate Platform: Real-Time Automated Security Validation"
+publisher = "Cymulate"
+kind = "company"
+accessed_at = "2026-10-05T02:49:11Z"
+claims = ["Company describes threat library, daily threat updates, exposure validation, auto mitigation, detection and threat studio modules.", "Platform offers integration and automated workflow claims that require customer diligence to independently validate."]
+
+[[intelligence.research.sources]]
+id = "customers"
+url = "https://cymulate.com/customers/"
+title = "Learn from Our Customers’ Success"
+publisher = "Cymulate"
+kind = "company"
+accessed_at = "2026-10-05T02:49:11Z"
+claims = ["Cymulate publishes case studies and outcome claims including prevention, detection and testing time improvements.", "The company page identifies customer case studies across financial, credit union, energy, retail and other sectors."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-05T02:49:11Z"
+next_review_on = "2027-01-05"
+queries = ["Cymulate official company identity Holon headquarters products"]
+source_ids = ["about", "series_a_2019"]
+summary = "Official company history confirms 2016 founding and Holon Israeli office; legal name presented as Cymulate Ltd in patent records."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-05T02:49:11Z"
+next_review_on = "2027-01-05"
+queries = ["Cymulate funding raised seed Series A Series B Series C Series D investors", "Cymulate 2024 2025 funding raised valuation acquired"]
+source_ids = ["funding_2017", "series_a_2019", "series_b", "series_c", "series_d"]
+summary = "Company releases establish $3M 2017, $7.5M March 2019, $15M November 2019, $45M May 2021 and $70M September 2022 rounds; company reported $141M cumulative in 2022. No later financing found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-05T02:49:11Z"
+next_review_on = "2027-01-05"
+queries = ["Cymulate investor announcements One Peak Vertex Susquehanna Dell"]
+source_ids = ["series_a_2019", "series_b", "series_c", "series_d"]
+summary = "Named round investors are listed in specific company financing releases; no current cap table or percentage ownership disclosure found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-05T02:49:11Z"
+next_review_on = "2027-01-05"
+queries = ["Cymulate founders CEO CTO leadership appointments 2025"]
+source_ids = ["about", "origin", "sales_leadership", "series_d"]
+summary = "Founder and CEO/CTO information and dated sales leadership appointments verified from company pages. Full current executive roster and headcount remain gaps."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T02:49:11Z"
+next_review_on = "2027-01-05"
+queries = ["Cymulate acquisition ownership parent company valuation", "Cymulate funding investors cap table"]
+source_ids = ["series_d", "about"]
+summary = "No acquisition, parent or public listing disclosure located; financing announcements do not provide cap-table percentages."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T02:49:11Z"
+next_review_on = "2027-01-05"
+queries = ["Cymulate revenue ARR profitability employees headcount", "Cymulate revenue הכנסות עובדים"]
+source_ids = ["series_c", "series_d", "calcalist_2021"]
+summary = "Historical company-reported ARR/revenue growth and a media interview's approximately $15M 2020 revenue are dated; current financial statements and metrics not found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-05T02:49:11Z"
+next_review_on = "2027-01-05"
+queries = ["Cymulate customers 1000 traction case studies partnership NTT"]
+source_ids = ["about", "ai_product", "customers", "series_c", "series_d"]
+summary = "Company currently reports 1,000+ customers; historical hundreds and customer outcome metrics are company assertions. No independent retention or revenue evidence found."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-05T02:49:11Z"
+next_review_on = "2027-01-05"
+queries = ["Cymulate patents Cymulate Ltd Google Patents"]
+source_ids = ["patent_us"]
+summary = "Located one US patent family assigned to Cymulate Ltd regarding lateral movement security and mitigation; not a comprehensive portfolio search."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-05T02:49:11Z"
+next_review_on = "2027-01-05"
+queries = ["Cymulate competitors AttackIQ SafeBreach Picus Pentera"]
+source_ids = ["competitor_set"]
+summary = "Category peers identified from the established BAS and validation market; detailed competitor feature comparison not performed in this record."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T02:49:11Z"
+next_review_on = "2027-01-05"
+queries = ["Cymulate government defense military cybersecurity contracts dual use"]
+source_ids = ["about", "ai_product"]
+summary = "Defensive validation capabilities have plausible public-sector relevance, but no named defense deployment, government contract, or certification was verified."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current company About page presents active leadership, offices and products; 2025 product announcements corroborate ongoing operations."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["about", "ai_product"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Official company page lists Holon, Israel office and official origin materials identify Israeli founding and locations."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["about", "origin"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "September 2022 Series D release explicitly says Cymulate has raised $141M to date."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_d"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2016.amount"
+support = "direct"
+summary = "Globes reports $500,000 prior investment by Eyal Gruner; company release confirms an earlier Gruner-led seed but omits its size."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["globes_2017"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2017.amount"
+support = "direct"
+summary = "Company financing announcement states the Susquehanna-led financing was $3 million."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["funding_2017"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2019.amount"
+support = "direct"
+summary = "Company release states March 2019 Series A amount was $7.5 million."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_a_2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2019.amount"
+support = "direct"
+summary = "Company release states November 2019 Series B amount was $15 million."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2021.amount"
+support = "direct"
+summary = "Company release states May 2021 Series C amount was $45 million."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_c"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2022.amount"
+support = "direct"
+summary = "Company release states September 2022 Series D amount was $70 million."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_d"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2016.lead_investors"
+support = "direct"
+summary = "Globes reports the earlier seed was from Eyal Gruner."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["globes_2017"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2016.participating_investors"
+support = "direct"
+summary = "Globes identifies Eyal Gruner as the seed investor."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["globes_2017"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2017.lead_investors"
+support = "direct"
+summary = "Company announcement identifies Susquehanna Growth Equity as lead."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["funding_2017"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2017.participating_investors"
+support = "direct"
+summary = "Company announcement identifies Susquehanna Growth Equity as the financing participant."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["funding_2017"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2019.lead_investors"
+support = "direct"
+summary = "Company release names Vertex Ventures and Dell Technologies Capital as Series A leads."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_a_2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2019.participating_investors"
+support = "direct"
+summary = "Company release names Susquehanna Growth Equity and Eyal Gruner as additional Series A funders."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_a_2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2019.lead_investors"
+support = "direct"
+summary = "Company release names Vertex Growth Fund as Series B lead."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2019.participating_investors"
+support = "direct"
+summary = "Company release lists Vertex Ventures Israel, Dell Technologies Capital and Susquehanna Growth Equity."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2021.lead_investors"
+support = "direct"
+summary = "Company release names One Peak as Series C lead."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_c"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2021.participating_investors"
+support = "direct"
+summary = "Company release names Susquehanna Growth Equity, Vertex Ventures Israel, Vertex Growth and Dell Technologies Capital."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_c"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2022.lead_investors"
+support = "direct"
+summary = "Company release names One Peak as Series D lead."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_d"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2022.participating_investors"
+support = "direct"
+summary = "Company release lists Susquehanna Growth Equity, Vertex Ventures Israel, Vertex Growth and Dell Technologies Capital."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["series_d"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "inferred"
+summary = "No reviewed announcement or company materials named a parent. This is a negative search finding, not direct verification of no parent; parent_company is therefore omitted."
+verified_at = "2026-10-05T02:49:11Z"
+source_ids = ["about", "series_d"]

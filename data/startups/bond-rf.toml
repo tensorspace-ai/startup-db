@@ -1,0 +1,365 @@
+name = "BOND RF"
+description = "BOND RF is an Israeli startup building a distributed, continuously operating radio-frequency monitoring network that helps drone, autonomy, defense, and infrastructure operators see GNSS jamming, spoofing, and changing RF conditions before a signal failure becomes an operational failure. Its current product combines a compact receive-only sensor with mapping software, while the company’s longer-term plan is to make spectrum conditions queryable across whole operating areas."
+detailed_description = """**Product and operational problem.** BOND RF addresses the gap between the wireless signals that fielded systems depend on and the operator’s ability to know whether those signals remain trustworthy. Drone crews can check weather, batteries, and route plans before flight, yet may have no timely picture of whether GNSS is being jammed or spoofed along that route, or whether command links are becoming unreliable. A typical spectrum analyzer supplies a skilled engineer with a local reading at one location and moment; after the measurement ends, operators may again be blind. BOND’s first software product maps where GPS is functioning, jammed, or spoofed and how conditions change, so operators can inspect conditions before and during a mission. The immediate purpose is earlier warning and informed operating decisions, not a claim that the product defeats a jammer, guarantees navigation, or autonomously reconfigures aircraft. In a September 2026 CTech interview, the founders said a deployment detected interference before it was visible on a drone, allowing an operator to react before the aircraft was placed at risk; that is a company-reported example, not a published independent performance trial.
+
+**Core technology and how it works.** The company describes two product layers. The current W1 sensor is a compact receive-only unit that listens across 30 MHz to 8 GHz; its published dimensions are 20 × 15 × 6 cm, its weight is 1.2 kg, and it draws about 6 W over a combined power-and-data cable, with wireless backhaul where cabling is impractical. The sensor does not transmit, which avoids adding an RF source of its own to the monitored environment. BOND says units can be clamped to existing poles, rooftops, and masts, supporting persistent monitoring without building a dedicated tower at every site. Its HIVE software combines observations from multiple sensors, classifies signals, maps likely interference sources, and presents the result as a live area view with alerts and an API. Multiple sensors hearing a signal at the same time can provide spatial context unavailable from a single point measurement; the company says historical observations can also be reviewed after an incident. The sensor network is intended to expand the current GNSS-focused software into broader RF intelligence. Public materials do not disclose its RF front-end design, signal-classification model, source-location error distributions, detection probability, false-alarm rates, or independent validation protocol, so technical performance claims should be tested in representative environments.
+
+**Market, customers, and route to market.** BOND’s natural initial buyers are drone operators, autonomy developers, and defense organizations whose aircraft depend on reliable navigation and command links, with adjacent demand among aviation and airspace managers, telecom operators, critical-infrastructure owners, smart-city teams, and spectrum regulators. The purchasing case is strongest where an outage has an immediate cost: a drone mission abort, loss of positioning, or time-consuming field investigation. Rather than asking each customer to buy an expensive analyzer and staff it with an RF specialist, BOND proposes subscription software and a scalable sensor network that turns ongoing measurements into a map, alerts, and machine-readable data. The company’s site lists Israel Aerospace Industries, D-Fend Solutions, Kronomy, Robotican, Propeller Drones, Aerotor Unmanned Systems, ThirdEye, Kronos Group, Kela Technologies, Cando, and United Hatzalah as customer or trust logos; the site does not specify the commercial scope for each logo. A September 2026 CTech founder interview separately reported more than ten paying customers and named several of these organizations. The founders cited an approximately $30 billion broader spectrum-technology market estimate, but that is their framing rather than a validated serviceable-market calculation. Expansion from drone and defense use into telecom, cities, and infrastructure will require proof that the same low-cost, spatially distributed approach meets each buyer’s coverage, uptime, security, and procurement requirements.
+
+**Traction, financing, and third-party signals.** CTech reported BOND was founded in 2026, had two employees at the time of the profile, and received $200,000 in pre-seed investment from Israel Aerospace Industries and Deel Ventures; it also reported the company won The Pitch by Deel. This is modest financing for a hardware-plus-network business and should not be conflated with a conventional institutional seed round. The same CTech interview says the company has working software and hardware, limited sensor units deployed in the field, more than ten paying customers, and two early drone-company pilots that helped shape the GNSS mapping product. Those are unusually concrete early operating signals, though they remain largely founder-reported and do not establish revenue scale, customer retention, contract duration, or independent technical acceptance. BOND’s public technology page includes an illustrative HIVE interface with a located jammer and reported confidence and location figures; these are product-interface examples, not audited benchmark results. The official website’s named references and the breadth of early adopters are useful channel and problem-validation clues, but the record contains no disclosed annual recurring revenue, backlog, gross margins, follow-on financing, patents, or formal certification. The company says it plans to expand engineering and sensor deployment and ultimately map major cities in Israel and abroad; those plans remain forward-looking.
+
+**Founders and team.** BOND’s current official About page identifies Jonathan Gurvits as CEO and co-founder and Tomer Cohen as COO and co-founder. The September 2026 CTech profile likewise names Gurvits and Cohen as the two co-founders and says the company had two employees at the time of publication. CTech describes Gurvits as a former IDF electronic-warfare specialist who trained more than 100 spectrum controllers, and Cohen as a former UAV operator and commander who experienced signal disruption in field operations. The founders told CTech that they had worked together on businesses before BOND and left other jobs to pursue the problem. An older retained description named Oren Yokev as CTO and attributed substantial RF, embedded-systems, and technology leadership experience to him, but neither the current official leadership page nor the September profile lists him. His present role and the source of the earlier account are not established by the sources reviewed here, so that biography should not be treated as a verified current leadership fact. The publicly identified pair combines electronic-warfare knowledge with UAV operating experience, a relevant foundation for product discovery and customer conversations. The team remains small, and CTech reports plans to recruit a VP R&D; those plans do not establish a completed hire. Scaling RF hardware, software, deployments, and customer support simultaneously will test organizational depth.
+
+**Competitive dynamics and edge.** BOND competes across adjacent categories rather than against one identical product. Rohde & Schwarz and Aaronia sell sophisticated spectrum monitoring and analysis systems; these can offer breadth and measurement depth but often involve specialist tools and point deployments. SkySafe provides drone detection and airspace intelligence, with a focus on detecting and analyzing drone activity rather than mapping ambient spectrum reliability for all wireless assets. D-Fend Solutions, acquired by Motorola Solutions in August 2026, uses RF cyber-detection and takeover to identify and mitigate rogue drones; that is a counter-UAS response system, not the same persistent spectrum-monitoring network. GNSS interference-monitoring and aviation services also overlap at the data layer. BOND’s proposed edge is economic and spatial: many smaller fixed sensors, already-present infrastructure, continuous observation, correlation across locations, and a dispatcher-readable map or API rather than a single expensive instrument read by an RF specialist. If cost and installation simplicity permit much denser coverage, the network could reveal where interference begins and how it moves, support retrospective analysis, and feed operational systems. That advantage is not yet proven at country or city scale. Competitors have established products, RF expertise, sales channels, and installed base, while BOND must demonstrate sensor calibration consistency, multi-vendor interoperability, coverage economics, and reliable classification in cluttered and adversarial environments.
+
+**Defense, cyber-resilience, and dual-use relevance.** BOND’s core capability has substantive dual-use relevance because it observes and characterizes the radio environment used by both military and civilian systems. For defense, situational awareness of GNSS disruption and command-link conditions can help unmanned aircraft teams plan routes, preserve mission safety, distinguish local interference from broader outages, and investigate failed or degraded operations. It may also complement electronic-warfare planning and protection of distributed forces, although no public evidence establishes that BOND itself detects every military waveform or is fielded by a named military customer. For civilian resilience, similar monitoring can support drone fleets, emergency-response teams, telecom networks, airports, power infrastructure, and public authorities responsible for interference investigations. BOND’s official site names defense, drones and autonomy, telecom, critical infrastructure, smart cities, and regulators as intended sectors; CTech reports defense and drone customers, but the breadth of civilian paid deployments is not independently itemized. The technology is receive-only as described, which is operationally attractive in sensitive RF environments, but spectrum data itself can reveal sensitive operations and requires secure access controls, retention policy, and safeguards against exposing customer activity. Dual-use is therefore grounded in the product’s actual monitoring function, while its contribution to military resilience, deployed breadth, and security posture still require customer-level verification.
+
+**Stage, trajectory, and diligence risks.** BOND is best classified as early: it began in 2026, has only a reported $200,000 pre-seed investment, a small team, early paid users, and hardware already deployed in limited numbers. Having paying customers and pilots means it is beyond a concept-only company, but the central scaling step—building enough sensor density to provide a useful, dependable map—is still ahead. The trajectory depends on converting a narrow GNSS monitoring wedge into a durable RF data layer, earning repeat deployments, and financing hardware production and field support without losing the simplicity that differentiates it. The key diligence questions are: (1) measure detection recall, spoofing-versus-jamming classification, geolocation error, latency, false alerts, and availability across terrain, weather, altitude, and RF clutter; (2) establish which customers pay, how much, for what coverage, and whether deployments renew or expand; (3) inspect W1 calibration, installation, maintenance, cybersecurity, and sensor replacement economics at dense-network scale; (4) test how the company handles encryption, data ownership, operational security, and customer separation when maps may expose sensitive activity; (5) assess whether its hardware and software can integrate with existing spectrum tools, command platforms, and aircraft without creating new operational dependencies; and (6) verify corporate structure, intellectual-property ownership, export-control obligations, and the source and terms of the IAI and Deel financing. Major risks include long defense procurement cycles, dependence on a small number of early adopters, capital requirements for network density, competition from established sensing vendors, and the possibility that interference is intermittent or geographically difficult enough to undermine sensor utilization. BOND is a strategically relevant early company with credible initial evidence, not yet a proven global spectrum utility.
+"""
+logo = "Unknown"
+website = "https://bondrf.com"
+sector = "RF spectrum intelligence and GNSS resilience"
+founded = "2026"
+headquarters = "Tel Aviv District, Israel"
+employees = "2 reported by CTech on 2026-09-22; current count unverified"
+funding_stage = "Pre-seed; CTech reported $200,000 total investment to date as of 2026-09-22"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "BOND’s monitoring technology has a direct commercial and security use: it observes the GNSS and RF conditions on which drones, autonomous systems, communications, and infrastructure depend. Defense teams can use the map to understand jamming or spoofing conditions and investigate mission degradation; civilian operators can use the same data for fleet safety, telecom resilience, critical infrastructure, emergency response, and interference management. The company’s published product is receive-only spectrum monitoring, not a jammer, countermeasure, or autonomous navigation system. Defense relevance is credible and its public site and founders emphasize the sector, while evidence for named military deployments, classified waveform coverage, and hardened security controls remains limited. The fit is therefore substantive but the operational maturity and breadth of validated deployments should not be overstated."
+key_technologies = [
+  "W1 receive-only RF sensor covering 30 MHz to 8 GHz in a 1.2 kg, low-power enclosure",
+  "Distributed sensor installation on existing poles, rooftops, and masts with wired or wireless backhaul",
+  "HIVE multi-sensor correlation, signal classification, likely-source mapping, and live interference visualization",
+  "Real-time GNSS jamming and spoofing status mapping for drone and autonomy operations",
+  "Historical RF observation storage for post-event investigation and changing-condition analysis",
+  "API delivery of area-level spectrum status and alerts into customer operational systems"
+]
+use_cases = [
+  "Pre-flight and in-flight GNSS interference awareness for commercial and defense drone operators",
+  "Locating and tracking interference sources across a distributed operating area",
+  "Operational planning for autonomous platforms whose navigation or command links are vulnerable to jamming",
+  "Investigating drone mission failures and reconstructing when and where GNSS or RF conditions changed",
+  "Monitoring wireless continuity around telecom sites and critical infrastructure",
+  "City-scale spectrum awareness for regulators and smart-city operations teams",
+  "Supporting emergency-response and medical drone missions with live connectivity-risk information",
+  "Feeding spectrum-condition data through an API to command, fleet, or airspace-management software"
+]
+investible = true
+investment_rationale = "BOND merits priority diligence as an early Israeli resilience company because it is building persistent sensing infrastructure around a real operational blind spot: users often discover RF disruption only after navigation or control fails. The company has gone beyond a concept by reporting working hardware and software, limited field deployments, two early pilots, more than ten paying customers, and a $200,000 pre-seed investment from IAI and Deel Ventures. Its small size and limited financing make execution risk high, particularly because network value depends on coverage density and consistent sensor operations. The legacy investible flag denotes strategic screening relevance, not an investment recommendation. Further assessment should verify paid-customer concentration, coverage and hardware economics, independent detection performance, renewal behavior, data security, and the terms and status of early financing."
+strategic_value = "Spectrum visibility supports communications, navigation, and control systems that are increasingly important to defense, autonomous mobility, emergency response, and critical infrastructure. BOND’s proposed distributed network could help Israeli and allied operators identify local interference earlier and preserve mission or service continuity. Its receive-only design and use of existing infrastructure may make continuous monitoring more practical than specialist point measurements, if performance and cost claims hold under deployment. The strategic value is meaningful because interference resilience has applications across both military and civilian operators; it remains conditional on proving reliable detection, secure operation, and durable network coverage."
+potential_score = 78.0
+technology_score = 80.0
+market_score = 75.0
+team_score = 82.0
+dual_use_score = 91.0
+strategic_alignment_score = 95.0
+stage = "early"
+stage_rationale = "BOND was founded in 2026 and CTech reported a $200,000 pre-seed investment, two employees, working software and hardware, limited field sensor deployments, early pilots, and more than ten paying customers. This places it beyond research-only status, but its installed sensor base, financing, and team remain small and the broader RF network is a stated expansion plan. Early is the appropriate stage until the company demonstrates repeatable deployments, expanded coverage, and sustained commercial adoption."
+competitors = [
+  "Rohde & Schwarz (professional spectrum monitoring and RF measurement systems, often deployed as specialist instruments)",
+  "Aaronia (wideband spectrum analyzers and fixed 24/7 monitoring solutions)",
+  "SkySafe (drone detection and airspace intelligence focused on identifying aircraft and activity)",
+  "Motorola Solutions / D-Fend Solutions (acquired RF cyber-detection and counter-drone takeover systems)",
+  "Aviation GNSS interference-monitoring services (adjacent monitoring and alerting for aircraft navigation disruption)"
+]
+competitive_edge = "BOND’s potential differentiation is a dense, low-cost, always-on network rather than a single specialist spectrum analyzer or a drone-specific detection-and-mitigation unit. The W1 is described as a compact receive-only sensor that can use existing mounting infrastructure, while HIVE correlates multiple observations and presents operators with an area map, alerts, and API. This architecture could improve spatial coverage and make spectrum information available to non-specialists before a failure. BOND also has founder experience spanning electronic warfare and UAV operations and reports early field use with paying customers. The edge remains a hypothesis at scale: calibration, sensor density, signal classification accuracy, false alarms, integration burden, cybersecurity, and customer willingness to pay for network coverage need independent validation."
+risk_factors = [
+  "Very early company with a small reported team and only $200,000 in disclosed pre-seed financing",
+  "Network usefulness depends on sensor density, deployment access, calibration consistency, and ongoing maintenance economics",
+  "Public performance data do not yet establish detection recall, classification accuracy, location error, latency, or false-alarm rates across operating conditions",
+  "Early customer and pilot claims are mostly company-reported, with no disclosed revenue, contract values, renewals, or customer concentration",
+  "Established spectrum-monitoring and counter-UAS vendors have deeper RF expertise, product portfolios, procurement relationships, and installed bases",
+  "RF maps can expose sensitive operational patterns and require strong access controls, customer separation, retention, and cybersecurity",
+  "Defense procurement, export controls, and integration with existing radios, aircraft, and command platforms can slow adoption and constrain markets"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "BOND merits focused follow-up because its product sits directly at the intersection of Israeli defense innovation, autonomy, electronic warfare, and civilian infrastructure resilience. The recent CTech reporting identifies named early customers, founders with relevant operating backgrounds, a small but real pre-seed, and field deployments; the official site provides concrete sensor and software specifications. This is a high-uncertainty early-stage signal, so priority should depend on validating the reported customer base, mapping performance under realistic interference, and confirming secure and economical scale-up. The priority flag reflects strategic fit and diligence value, not a recommendation to invest."
+public_sources = [
+  { label = "BOND RF official website", url = "https://bondrf.com/", description = "Current product positioning, customer references, sectors, and company claim that organizations use BOND in production." },
+  { label = "BOND RF About", url = "https://bondrf.com/about", description = "Company founding story, Israel location context, and current co-founder/leadership titles." },
+  { label = "BOND RF Technology", url = "https://bondrf.com/technology", description = "W1 sensor specifications and HIVE network capabilities, as stated by the company." },
+  { label = "CTech by Calcalist company profile", url = "https://www.calcalistech.com/ctechnews/article/f11aq8j13", description = "Dated founder interview and company profile covering reported funding, investors, customers, team size, pilots, product deployment, and plans." },
+  { label = "Deel The Pitch", url = "https://www.deel.com/the-pitch-by-deel/", description = "Primary program information and published 2026 SAFE award structure; not evidence of BOND-specific award terms." },
+  { label = "Rohde & Schwarz spectrum monitoring", url = "https://www.sg.rohde-schwarz.com/us/solutions/critical-infrastructure/spectrum-monitoring/spectrum-monitoring_91082.html", description = "Primary description of established spectrum monitoring solutions and market presence, used for competitor context." },
+  { label = "D-Fend EnforceAir", url = "https://d-fendsolutions.com/enforceair/", description = "Primary description of adjacent RF-based counter-drone product capabilities." }
+]
+crawled_at = "2026-10-01T23:58:04Z"
+updated_at = "2026-10-04T10:04:12Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Jonathan Gurvits", role = "CEO and co-founder", is_founder = true, current = true, background = "BOND and CTech describe him as a former IDF electronic-warfare specialist; CTech reports that he trained more than 100 spectrum controllers.", source_ids = ["bond-about", "ctech-2026"] },
+  { name = "Tomer Cohen", role = "COO and co-founder", is_founder = true, current = true, background = "BOND and CTech describe him as a former IDF UAV operator/commander who experienced GNSS interference operationally.", source_ids = ["bond-about", "ctech-2026"] }
+]
+investors = [
+  { name = "Israel Aerospace Industries", investor_type = "corporate", relationship = "historical", round_ids = ["pre-seed-2026"], source_ids = ["ctech-2026"], notes = "Reported as an investor in CTech's company profile; no amount or terms disclosed. Also appears as a named customer/reference on BOND's site, a separate relationship." },
+  { name = "Deel Ventures", investor_type = "corporate", relationship = "historical", round_ids = ["pre-seed-2026"], source_ids = ["ctech-2026"], notes = "Listed as an investor in CTech's company-information panel. Article narrative links Deel to The Pitch award and lists IAI plus unnamed strategic angels as investment sources, leaving the exact Deel investment relationship unclear." }
+]
+financials = []
+traction = [
+  { kind = "customer", description = "CTech reported more than 10 paying customers and named Kela Technologies, Israel Aerospace Industries, D-Fend Solutions, Cando, Propeller Drones, Robotican, and Kronomy. Customer count and payment status are founder/company-reported in the interview; contract values, deployment scope, renewals, and revenue were not disclosed.", date = "2026-09-22", source_ids = ["ctech-2026"] },
+  { kind = "product", description = "CTech reported deployed hardware and working product, and described a founder-reported deployment where BOND signaled interference before it became visible on the drone. This is not an independently reported performance trial.", date = "2026-09-22", source_ids = ["ctech-2026"] },
+  { kind = "product", description = "Official product page describes W1 as receive-only, covering 30 MHz to 8 GHz, about 6 W, and 1.2 kg; HIVE correlates multiple sensors, classifies signals, maps likely sources, and retains observations. These are company specifications and claims, without independently published validation data.", date = "2026-10-04", source_ids = ["bond-tech"] }
+]
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+source_ids = ["bond-about", "ctech-2026"]
+company_id = "il-bond-rf"
+legal_name = "BOND RF Ltd."
+aliases = ["BOND", "BOND RF"]
+operating_status = "active"
+business_model = "B2B monitoring hardware and software/network service: receive-only distributed RF sensors feed HIVE spectrum mapping, alerts, and API capabilities. Pricing and contract model are not publicly disclosed."
+products = ["W1 receive-only RF sensor", "HIVE spectrum intelligence and mapping software"]
+locations = ["Tel Aviv District, Israel"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "The company identifies its founders as former Israeli military operators; CTech describes BOND as an Israeli startup and its founders as former IDF operators. The official About page describes the two founders' army service and the company's 2026 founding. Exact incorporation jurisdiction has not been established."
+as_of = "2026-10-04"
+source_ids = ["ctech-2026", "bond-about"]
+
+[intelligence.funding]
+status = "reported"
+summary = "CTech's 2026-09-22 profile lists a $200,000 pre-seed, $200,000 total investment to date, and IAI and Deel Ventures as investors. Its narrative says BOND received investment from IAI and several strategic angel investors, while also saying it won The Pitch by Deel; it does not reconcile Deel's role or identify the angels. No later round found in the reviewed sources."
+reported_total_raised = 200000
+reported_total_currency = "USD"
+total_source_ids = ["ctech-2026"]
+total_as_of = "2026-09-22"
+total_scope = "Company profile's reported total investment to date; CTech labels the last investment pre-seed."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "pre-seed-2026"
+round_type = "Pre-seed"
+instrument = "unknown"
+status = "closed"
+announced_on = "2026-09-22"
+amount_status = "reported"
+amount = 200000
+currency = "USD"
+amount_scope = "round"
+lead_investors = []
+participating_investors = ["Israel Aerospace Industries", "Deel Ventures"]
+valuation_basis = "undisclosed"
+source_ids = ["ctech-2026"]
+notes = "CTech published the profile on 2026-09-22 and reports $200,000 total investment to date. Its company-information panel gives the last investment date as '08/01/2026', an ambiguous numeric date; this is not normalized as a precise close date. The narrative states investment from IAI and unnamed strategic angel investors and separately says BOND won The Pitch by Deel, whereas the panel lists IAI and Deel Ventures. Deel-specific investment participation and the identity/amounts of angel investments are therefore unresolved."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "No public cap table, ownership percentages, parent company, or ownership transaction was found in the reviewed sources."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["ctech-2026", "bond-about"]
+deals = []
+holdings = []
+
+[[intelligence.research.sources]]
+id = "bond-home"
+url = "https://bondrf.com/"
+title = "BOND · Distributed spectrum intelligence"
+publisher = "BOND RF"
+kind = "company"
+accessed_at = "2026-10-04T10:04:12Z"
+claims = ["Official company product positioning and intended sectors", "Company displays named customer/reference logos", "Company states drone, autonomy and defence organizations run the product in production"]
+
+[[intelligence.research.sources]]
+id = "bond-about"
+url = "https://bondrf.com/about"
+title = "About Bond — Restoring Trust in Wireless Systems"
+publisher = "BOND RF"
+kind = "company"
+accessed_at = "2026-10-04T10:04:12Z"
+claims = ["Company states it was founded in 2026", "Official current page identifies Jonathan Gurvits as CEO/co-founder and Tomer Cohen as COO/co-founder", "Founders' military experience and Israeli company context"]
+
+[[intelligence.research.sources]]
+id = "bond-tech"
+url = "https://bondrf.com/technology"
+title = "W1 and HIVE"
+publisher = "BOND RF"
+kind = "company"
+accessed_at = "2026-10-04T10:04:12Z"
+claims = ["Company-reported W1 frequency range, receive-only design, weight, dimensions and power consumption", "Company-described HIVE aggregation, classification, mapping and historical record capabilities", "Company UI illustration includes example confidence and location figures, not independent benchmarks"]
+
+[[intelligence.research.sources]]
+id = "ctech-2026"
+url = "https://www.calcalistech.com/ctechnews/article/f11aq8j13"
+title = "How two 23-year-old former IDF operators plan to map the spectrum for wireless systems everywhere"
+publisher = "CTech by Calcalist"
+kind = "media"
+published_on = "2026-09-22"
+accessed_at = "2026-10-04T10:04:12Z"
+claims = ["BOND founded in 2026 by Gurvits and Cohen; former IDF backgrounds", "Profile reports $200,000 pre-seed and total investment to date, with IAI and Deel Ventures in its investor panel", "Narrative reports IAI and unnamed strategic angels invested; Deel Pitch award is also mentioned, creating ambiguity", "Founders reported more than ten paying customers and deployed hardware", "Names customer examples, two early pilots and a company-reported deployment", "Profile lists two employees and gives ambiguous last-investment date 08/01/2026"]
+
+[[intelligence.research.sources]]
+id = "deel-pitch"
+url = "https://www.deel.com/the-pitch-by-deel/"
+title = "The Pitch by Deel"
+publisher = "Deel"
+kind = "company"
+accessed_at = "2026-10-04T10:04:12Z"
+claims = ["Deel's program page says regional winners could receive a $50,000 SAFE and global winners a $1,000,000 SAFE", "Program-level terms do not establish BOND-specific selection, award, amount, or investment terms"]
+
+[[intelligence.research.sources]]
+id = "rs-spectrum"
+url = "https://www.sg.rohde-schwarz.com/us/solutions/critical-infrastructure/spectrum-monitoring/spectrum-monitoring_91082.html"
+title = "Spectrum monitoring"
+publisher = "Rohde & Schwarz"
+kind = "other"
+accessed_at = "2026-10-04T10:04:12Z"
+claims = ["Rohde & Schwarz sells spectrum-monitoring solutions and reports customers across more than 100 countries", "Established vendors offer standalone and networked monitoring systems"]
+
+[[intelligence.research.sources]]
+id = "dfend-enforceair"
+url = "https://d-fendsolutions.com/enforceair/"
+title = "EnforceAir anti-drone system"
+publisher = "D-Fend Solutions"
+kind = "company"
+accessed_at = "2026-10-04T10:04:12Z"
+claims = ["D-Fend describes RF cyber detection and counter-drone response capabilities adjacent to BOND's spectrum-monitoring category"]
+
+[intelligence.research]
+researched_at = "2026-10-04T10:04:12Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["BOND RF Israel official company about W1 HIVE", "BOND RF funding raised pre-seed Series A investors valuation acquired", "BOND RF IAI Israel Aerospace Industries Deel Ventures investment", "BOND RF founder CEO COO team leadership", "BOND RF ownership shareholders parent company acquisition", "BOND RF revenue ARR financials customers paying", "BOND RF customers contracts pilots production deployments", "BOND RF patents WIPO USPTO", "BOND RF competitors spectrum monitoring counter-UAS", "BOND RF defense security dual use", "Bond RF גיוס השקעה לקוחות"]
+gaps = ["investors: no primary investor announcement found; identity of unnamed angel investors, amounts, and Deel-specific investment terms require confirmation", "financials: no public revenue, ARR, profitability, cash, burn, runway, or contract values found", "intellectual_property: no company-specific patent or registered IP evidence found; ownership and freedom-to-operate are unverified", "ownership: private cap table and exact incorporation details not publicly established", "traction: customer contracts, paid amounts, renewals, concentration, and deployment scope unavailable", "team: public current leadership page and CTech profile identify two founders; current broader employee roster and hiring status remain unverified", "competition: overlap is established at category level but no like-for-like price/performance benchmark was found", "Funding date ambiguity: CTech prints 08/01/2026 without date convention and describes investor parties differently in its data panel and narrative"]
+conflicts = ["CTech's investor panel lists IAI and Deel Ventures; article narrative says investment from IAI and unnamed strategic angels, while separately crediting a Deel Pitch win. Deel's exact investment participation is unresolved.", "CTech's numeric last-investment date is 08/01/2026; date convention is unspecified, so no exact close date is asserted.", "Current BOND About page and CTech identify two co-founders, whereas an older retained analysis described a third CTO; current official page does not list that former third leader. No evidence here establishes a prior formal role or departure."]
+diligence_questions = ["Can BOND provide the executed financing instruments, closing dates, amounts by investor, and documentation distinguishing Deel Ventures investment from a Pitch award and any angel investments?", "For each of the reported paying customers, what are the contract value, deployment size, start date, renewal/expansion status, and permission to reference the customer?", "What are independently measured detection probability, false-alarm rate, location error, latency, and availability across bands, terrain, weather, mobility, and intentional deception?", "What are the per-node bill of materials, installation and maintenance cost, sensor calibration drift, and minimum network density needed to produce useful geolocation?", "Who owns the software, signal data, and sensor designs, and what patent filings, security controls, export-control reviews, and customer data-separation commitments exist?"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T10:04:12Z"
+next_review_on = "2027-01-04"
+queries = ["BOND RF Israel official company about W1 HIVE"]
+source_ids = ["bond-home", "bond-about", "ctech-2026"]
+summary = "Official website and current CTech profile identify BOND RF/BOND as an active Israeli RF intelligence startup founded in 2026; exact legal registry and incorporation jurisdiction remain unverified."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T10:04:12Z"
+next_review_on = "2026-11-04"
+queries = ["BOND RF funding raised pre-seed Series A investors valuation acquired", "BOND RF IAI Israel Aerospace Industries Deel Ventures investment"]
+source_ids = ["ctech-2026", "deel-pitch"]
+summary = "One $200,000 pre-seed and the same lifetime total were reported by CTech. Investor attribution and numeric date remain ambiguous; no separate later event or valuation was found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "conflicting"
+checked_at = "2026-10-04T10:04:12Z"
+next_review_on = "2026-11-04"
+queries = ["BOND RF IAI Israel Aerospace Industries Deel Ventures investment"]
+source_ids = ["ctech-2026"]
+summary = "CTech names IAI and Deel Ventures in its investor panel, but narrative names IAI and unnamed angels as funding sources and separately mentions winning The Pitch by Deel. No investor announcement found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T10:04:12Z"
+next_review_on = "2027-01-04"
+queries = ["BOND RF founder CEO COO team leadership"]
+source_ids = ["bond-about", "ctech-2026"]
+summary = "Current company About page and CTech identify Jonathan Gurvits and Tomer Cohen as CEO and COO co-founders; article reports two employees. Full roster and prior third-leader reference from older retained analysis require reconciliation."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T10:04:12Z"
+next_review_on = "2027-04-04"
+queries = ["BOND RF ownership shareholders parent company acquisition"]
+source_ids = ["ctech-2026", "bond-about"]
+summary = "No public cap table, holding percentages, parent company, or acquisition/ownership deal found. Private ownership details remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T10:04:12Z"
+next_review_on = "2027-04-04"
+queries = ["BOND RF revenue ARR financials customers paying"]
+source_ids = ["ctech-2026"]
+summary = "CTech reports paying customers but discloses no revenue, ARR, margins, cash, burn, runway, or contract values."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T10:04:12Z"
+next_review_on = "2026-11-04"
+queries = ["BOND RF customers contracts pilots production deployments"]
+source_ids = ["ctech-2026", "bond-home"]
+summary = "CTech reports over ten paying customers, deployed hardware, and pilots; company site lists customer logos and says organizations run BOND in production. Commercial scale and individual deployment terms are not disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T10:04:12Z"
+next_review_on = "2027-04-04"
+queries = ["BOND RF patents WIPO USPTO"]
+source_ids = ["bond-home", "bond-tech"]
+summary = "No attributable patent, patent application, or public IP portfolio was located in this search. Company proprietary rights and freedom to operate remain diligence items."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T10:04:12Z"
+next_review_on = "2027-04-04"
+queries = ["BOND RF competitors spectrum monitoring counter-UAS"]
+source_ids = ["rs-spectrum", "dfend-enforceair", "bond-tech"]
+summary = "Primary competitor materials confirm established spectrum-monitoring vendors and RF counter-UAS vendors with adjacent capabilities; public evidence does not establish a direct like-for-like competitor set or comparative performance."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T10:04:12Z"
+next_review_on = "2027-04-04"
+queries = ["BOND RF defense security dual use"]
+source_ids = ["bond-home", "bond-tech", "ctech-2026"]
+summary = "Company materials target defense, drones, telecom and infrastructure; CTech reports defense and drone users. The receive-only spectrum awareness function has both commercial and defense applicability, while military deployment breadth and security posture remain unverified."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The official site presents active product, contact, customer-reference and production-use materials; CTech published a current company profile in September 2026."
+verified_at = "2026-10-04T10:04:12Z"
+source_ids = ["bond-home", "ctech-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "CTech identifies BOND as an Israeli startup and both co-founders as former IDF operators; official About page describes founders' army service."
+verified_at = "2026-10-04T10:04:12Z"
+source_ids = ["ctech-2026", "bond-about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "CTech company-information panel explicitly reports total investment to date of $200K."
+verified_at = "2026-10-04T10:04:12Z"
+source_ids = ["ctech-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2026.amount"
+support = "direct"
+summary = "CTech lists last investment round as $200K pre-seed and total investment to date as $200K."
+verified_at = "2026-10-04T10:04:12Z"
+source_ids = ["ctech-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2026.participating_investors"
+support = "direct"
+summary = "CTech investor panel names IAI and Deel Ventures. Its narrative creates unresolved ambiguity about whether Deel Ventures invested, so this check verifies the names reported in the panel, not the relationship terms."
+verified_at = "2026-10-04T10:04:12Z"
+source_ids = ["ctech-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.cap_table_status"
+support = "inferred"
+summary = "No cap-table disclosure was found in reviewed company or media materials; treated as undisclosed rather than claiming a verified ownership structure."
+verified_at = "2026-10-04T10:04:12Z"
+source_ids = ["ctech-2026", "bond-about"]

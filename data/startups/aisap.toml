@@ -1,0 +1,415 @@
+name = "AISAP"
+description = "AISAP is an Israeli medical deep-tech startup building an AI operating system for point-of-care ultrasound. Its FDA-cleared cardiac software guides acquisition, interprets ultrasound at the bedside, and produces structured reports so clinicians can make faster decisions when specialist imaging capacity is limited."
+detailed_description = """
+**Product and the concrete problem.** AISAP targets a practical bottleneck in medical imaging: ultrasound equipment is increasingly portable, but a scan is only useful when someone can acquire a diagnostic view and interpret it. Emergency departments, internal-medicine wards, primary-care clinics, nursing facilities, and rural or underserved sites often lack immediate access to an expert sonographer or cardiologist. AISAP's Point-of-Care Assisted Diagnosis (POCAD) approach combines acquisition guidance with AI interpretation so a clinician can perform a focused exam and receive actionable measurements at the bedside. The company's first commercial package, AISAP CARDIO, focuses on cardiac ultrasound and is FDA cleared. Its broader POCUS-OS platform connects an ultrasound device to image storage, AI results, reporting, and the electronic medical record. The concrete operational goal is to shorten the time from scan to decision, reduce avoidable patient transfers, and identify structural heart disease earlier without requiring every operator to be an echocardiography specialist. AISAP is not selling a new ultrasound probe; it is building a software layer that can work with devices already deployed in a health system, which lets hospitals adopt the workflow without replacing their imaging fleet.
+
+**Core technology and how it actually works.** AISAP describes a pipeline with several distinct technical steps. During acquisition, the software gives guidance intended to help a non-expert obtain usable cardiac views and provides quality feedback. The captured study is then processed by deep-learning models that measure cardiac structures and function and return an urgency score or diagnostic suggestion in language a clinician can understand. A dedicated PACS can anonymize DICOM files and store them on premises or in the cloud, after which the system generates a structured report for user approval and sends the finalized report to an EMR. The company says its models were trained on more than 300,000 studies comprising over 24 million video clips, and that clinical and algorithm work has involved Mayo Clinic, Mass General Brigham, Inova, Jefferson, Sheba, Poriya, Ichilov, and Stanford partners. The FDA 510(k) record identifies the AISAP CARDIO V1.0 device, while the company states that the platform has FDA-cleared diagnostic algorithms. Those facts establish a regulated product and a substantial development dataset, but they do not by themselves establish performance across every probe, population, or pathology. Public sources do not disclose model architecture, subgroup sensitivity, calibration methodology, or the exact boundaries of autonomous versus clinician-reviewed output, so independent validation remains a key diligence requirement.
+
+**Market, customers, and go-to-market.** AISAP sells into health systems and clinicians that need more diagnostic capacity at the point of care. Its commercial workflow can be adopted by emergency physicians, internists, cardiologists, primary-care providers, skilled-nursing organizations, and home-care teams. The company reports that the platform works with any point-of-care ultrasound device, PACS, and EMR, which supports a software-first enterprise sale and reduces dependence on a single hardware manufacturer. The first wedge is cardiac POCUS, where earlier detection of reduced ejection fraction, valvular disease, or right-heart strain can change triage and referral decisions. The expansion path is broader ultrasound and additional care settings once the company has earned trust with a regulated cardiac workflow. AISAP's public references include Sheba Medical Center, Inova Health System, and U.S. physician practices such as Amavita Heart and Vascular Health and Soffer Health Institute; its website also lists clinical research relationships with Mayo Clinic, Mass General, Jefferson, and Stanford. The company has announced a U.S. presence in New York and Boston and an Israeli R&D base. Its global health thesis is visible in announced work in underserved Florida communities and an Africa launch, but customer counts, annual recurring revenue, contract sizes, and renewal data are not public.
+
+**Traction, funding, and third-party validation.** AISAP announced a $13 million Seed round in May 2024 led by Harel Insurance Investments and Shoni Top Ventures. The financing followed earlier support associated with the same health-focused investors and funded product development and commercialization. In 2024, the company reported that its algorithms had been trained on the large multi-site dataset described above and that a Sheba study of 660 patients who had not received a full ultrasound found at least one previously unknown moderate condition in 29% of cases; the announcement said that study was still under review, so the statistic should not be treated as a definitive clinical-outcomes result. More durable validation arrived through regulation: AISAP CARDIO received U.S. FDA clearance, and the FDA's public 510(k) summary identifies the Ramat Gan, Israel manufacturer and device name. The company also reports use across health systems, hospitals, and clinics worldwide, with customer testimonials describing faster reporting, improved throughput, and earlier recognition of structural heart disease. Those testimonials are useful commercial evidence but are company-selected and not equivalent to a randomized trial. AISAP's listing in Israel Innovation Authority materials records the company as established in 2022, with approximately 40 employees and initial revenues, while LinkedIn likewise describes a team of roughly that scale. The combination of clearance, clinical partners, and initial revenues is stronger than a preclinical medtech profile, though reimbursement, utilization, and independent post-market evidence remain open.
+
+**Founders and team background.** AISAP was founded by a deliberately cross-disciplinary group. Adiel Am-Shalom managed R&D and cyber teams in the Israel Defense Forces' elite 8200 intelligence unit and founded IDL. Ehud Raanani is associated with the Leviev Cardiovascular and Thoracic Center at Sheba Medical Center. Robert Klempfner is identified as a director of the Israeli Center for Cardiovascular Research and serves as a clinical leader at AISAP. Ehud Schwammenthal is an echocardiography specialist and the founder of Ventor Technologies and Magenta Medical. The founding composition pairs software, cybersecurity, cardiology, and medical-device commercialization rather than relying on an algorithm team alone. AISAP's current public leadership page lists Eran Taus as CEO, with algorithm, product, business, clinical education, and customer-success roles around the founders. That breadth matters because the hard part of clinical AI is not only model accuracy; it is workflow integration, regulatory evidence, clinician trust, and support across heterogeneous devices. The team still faces medtech execution risks. Public sources do not give a complete headcount by function, the current ownership structure, or the proportion of revenue from each geography. The 8200 connection is relevant to engineering discipline and secure systems, but it should not be treated as evidence of defense procurement or military medical deployment.
+
+**Competitive dynamics.** AISAP competes in a market split between ultrasound hardware manufacturers, AI-guidance specialists, and hospital imaging workflows. Butterfly Network, Clarius, and EchoNous combine portable probes with software and compete for the same bedside workflow, while GE HealthCare, Philips, and Siemens Healthineers bring installed-base trust, service organizations, and cardiology relationships. Caption Health, now part of GE HealthCare, demonstrated the value of AI-guided cardiac ultrasound and represents an incumbent route for embedding similar assistance into a large imaging portfolio. Israeli peer UltraSight focuses heavily on AI guidance for acquiring cardiac views, while AISAP's public positioning extends from guidance into interpretation, PACS, structured reporting, and EMR integration. That end-to-end workflow could reduce friction for hospitals that want one accountable vendor, but it also creates more regulatory and integration surface area. AISAP's potential edge is a device-agnostic operating layer and a large training set linked to clinical partners, not an exclusive hardware channel. The company must prove that its models generalize across probes and operators, that reports fit clinician workflows, and that time savings translate into reimbursable or outcome-relevant value. Larger imaging vendors can bundle acquisition guidance and interpretation, and hospital buyers may prefer a single incumbent contract even when a specialist product is technically stronger.
+
+**Defense, security, and resilience dual-use relevance.** AISAP's core product is civilian clinical software, yet its technical profile has a credible resilience and austere-medicine transfer path. Portable ultrasound is already used for trauma assessment, lung and cardiac evaluation, and triage in ambulances, field hospitals, ships, and disaster-response settings. A regulated AI layer that guides acquisition and provides immediate measurements could help medics or generalist clinicians operate with less access to specialist interpretation, reducing dependence on evacuation or remote consultation during mass-casualty events. On-premises deployment and anonymized DICOM handling are also relevant to organizations that cannot send sensitive medical data to an external cloud. The founders' Israeli defense and emergency-care networks make this adjacency plausible, and the company's focus on shortening time to diagnosis aligns with military medicine and civil-defense resilience. The calibration is essential: AISAP has not disclosed an IDF contract, defense trial, battlefield validation, ruggedized hardware, operation in communications-denied settings, or a government medical-device authorization. Its FDA clearance is a civilian regulatory milestone, not military qualification. The dual-use case is therefore based on a transferable point-of-care sensing and decision-support capability, with strategic value that depends on future validation in austere, high-volume, and secure environments.
+
+**Growth stage, trajectory, and key diligence risks.** AISAP fits the mid stage more than the earliest category because it was established in 2022, has a reported team of about 40, raised a $13 million Seed round, received FDA clearance for AISAP CARDIO, and reports initial revenues and use across health systems. It is still a growth-stage medtech rather than a mature platform: public sources do not disclose revenue scale, utilization per site, gross margins, payer coverage, or renewal rates, and the broader POCUS-OS vision still requires integrations and clinical adoption. The trajectory is to expand from cardiac screening and acute-care workflows into more providers, geographies, and ultrasound applications while preserving regulatory and clinical credibility. Key diligence risks are: (1) **clinical generalization**, because performance may vary by device, operator skill, patient population, and pathology; (2) **regulatory expansion**, since each new algorithm or indication can require additional evidence; (3) **workflow adoption**, because clinicians may resist generated reports or still require specialist confirmation; (4) **reimbursement and economics**, because faster diagnosis does not automatically create a paid service line; (5) **incumbent competition**, including bundled AI from GE, Philips, and cloud-imaging providers; (6) **data governance**, particularly when DICOM studies cross borders or enter cloud systems; and (7) **dual-use execution**, because austere-medicine deployment would require ruggedization, cybersecurity, offline workflows, and field validation absent from current disclosures. AISAP is strategically attractive as a regulated Israeli AI-sensing company with an observable route from commercial healthcare into resilience, but its strongest evidence today is clinical and regulatory rather than defense-specific.
+"""
+logo = "Unknown"
+website = "https://www.aisap.ai/"
+sector = "AI medical imaging / point-of-care ultrasound diagnostics"
+founded = "2022"
+headquarters = "Tel Aviv, Israel"
+employees = "Approximately 40 in the Israel Innovation Authority record; current company headcount is not publicly verified"
+funding_stage = "Seed; publicly announced $13M round in May 2024, with an earlier undisclosed Seed extension also listed in IVC"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "AISAP's civilian cardiac point-of-care ultrasound platform has a credible resilience and austere-medicine transfer path. Portable ultrasound is used in trauma, ambulances, field hospitals, ships, and disaster response, where AI guidance and immediate measurements can reduce dependence on scarce specialists and patient evacuation. AISAP's FDA clearance and on-premise deployment option strengthen the transferability of a regulated, secure bedside workflow. No IDF contract, defense trial, ruggedized deployment, communications-denied operation, or military authorization is publicly disclosed, so the dual-use case is a technology adjacency rather than a demonstrated defense program."
+key_technologies = [
+  "AI-guided point-of-care cardiac ultrasound acquisition",
+  "FDA-cleared deep-learning interpretation of echocardiography video",
+  "Automated cardiac measurements and urgency scoring",
+  "Device-agnostic POCUS integration across probes and ultrasound systems",
+  "DICOM PACS with anonymized on-premise or cloud storage",
+  "Structured report generation and EMR integration",
+  "Clinical quality assurance and accreditation workflow tools"
+]
+use_cases = [
+  "Emergency-department bedside cardiac triage",
+  "Internal-medicine and hospitalist point-of-care assessment",
+  "Primary-care screening for structural heart disease",
+  "Skilled-nursing and home-care cardiac monitoring",
+  "Underserved or rural clinics with limited cardiology access",
+  "Field hospitals, ambulances, and disaster-response triage (prospective)",
+  "Defense and civil-defense casualty care with scarce imaging specialists (prospective)",
+  "Health-system workflow automation from POCUS capture through EMR report"
+]
+investible = true
+investment_rationale = "AISAP is a regulated Israeli medical-AI company with a credible path from commercial point-of-care imaging into resilience applications. (1) Its first product is FDA cleared, which materially reduces the technical and regulatory uncertainty relative to preclinical imaging startups. (2) The $13 million Seed round led by Harel Insurance and Shoni Top Ventures, clinical relationships with Sheba, Mayo, Inova, Jefferson, Mass General, and Stanford, and reported initial revenues provide multiple forms of validation. (3) The software-first, device-agnostic workflow can expand through existing ultrasound fleets rather than requiring hospitals to buy new probes. (4) The technology has a credible austere-care transfer path because field clinicians need guided acquisition and rapid interpretation when specialists are unavailable. Counterweights include unreported revenue scale, reimbursement uncertainty, clinical generalization risk, incumbent imaging vendors, and no disclosed defense deployment. This is a strategic diligence assessment and legacy priority signal, not an investment recommendation."
+strategic_value = "AISAP's strategic value comes from reducing specialist dependence in time-sensitive medical decisions. In normal healthcare, that can shorten emergency observation, reduce transfers, and increase access to cardiac screening; in disaster or defense medicine, the same capability could extend diagnostic reach when cardiologists, imaging departments, or reliable transport are unavailable. The FDA-cleared product, device-agnostic design, and on-premise or cloud deployment options make the technology more transferable than a research-only model. Israel's clinical and deep-tech ecosystem provides a strong base for international validation. Strategic value remains conditional on proving outcomes across diverse devices and populations, securing sustainable reimbursement, hardening the platform for field use, and demonstrating privacy and cyber controls suitable for government or defense health systems."
+potential_score = 74.0
+technology_score = 82.0
+market_score = 77.0
+team_score = 84.0
+dual_use_score = 67.0
+strategic_alignment_score = 74.0
+stage = "mid"
+stage_rationale = "AISAP is classified as mid stage because it was established in 2022, reports approximately 40 employees and initial revenues, has raised a disclosed $13 million Seed round, and received FDA clearance for its AISAP CARDIO software. It has moved beyond concept and clinical research into regulated commercialization with health-system references and international expansion activity. It is not mature: public revenue, utilization, retention, margin, and market-share metrics are unavailable; broader POCUS-OS capabilities and additional indications still require adoption and evidence; and no public defense or austere-medicine deployment is confirmed."
+competitors = [
+  "Butterfly Network (portable ultrasound hardware and software ecosystem with AI features)",
+  "Clarius (wireless handheld ultrasound devices and cloud workflow)",
+  "EchoNous (portable ultrasound with AI-enabled clinical assistance)",
+  "UltraSight (Israeli AI guidance for acquiring cardiac ultrasound views)",
+  "Caption Health / GE HealthCare (AI-guided cardiac ultrasound embedded in a major imaging portfolio)",
+  "Philips and Siemens Healthineers (incumbent imaging vendors with enterprise cardiology distribution)",
+  "Eko Health (digital stethoscope and cardiac AI screening approach competing for early-detection workflows)"
+]
+competitive_edge = "AISAP's edge is a regulated, end-to-end point-of-care workflow rather than a single algorithm. (1) AISAP CARDIO combines acquisition guidance, FDA-cleared interpretation, measurements, PACS storage, structured reporting, and EMR delivery, which can simplify hospital adoption. (2) The company positions the platform as device agnostic, allowing health systems to use existing probes and avoid a hardware replacement decision. (3) The training base of more than 300,000 studies and 24 million video clips, plus partnerships with Sheba, Mayo, Inova, Jefferson, Mass General, and Stanford, gives the team a credible clinical-development foundation. (4) The founders combine cardiology, medical-device, and Israeli intelligence engineering experience. The edge is contested: GE, Philips, Siemens, Butterfly, Clarius, and UltraSight can match parts of the workflow, and independent evidence about cross-device performance, false positives, and clinical outcomes is still limited."
+risk_factors = [
+  "Clinical performance may vary across ultrasound devices, operators, patient populations, and pathologies",
+  "Additional indications and international markets require further regulatory and clinical evidence",
+  "Reimbursement and health-system procurement may not reward faster diagnosis without outcome proof",
+  "Incumbent imaging vendors can bundle AI guidance and interpretation into existing contracts",
+  "Integration, cybersecurity, and privacy complexity across PACS, EMR, and cloud or on-premise deployments",
+  "Unknown revenue scale, utilization, renewal rates, and unit economics despite reported initial revenues",
+  "Austere or defense use remains prospective and lacks ruggedization, field validation, and military authorization"
+]
+risk_level = "medium"
+signals = [
+  "FDA clearance for AISAP CARDIO point-of-care cardiac ultrasound software",
+  "$13M Seed financing announced in May 2024 led by Harel Insurance and Shoni Top Ventures",
+  "Training dataset reported at more than 300,000 studies and 24 million video clips",
+  "Clinical and research relationships including Sheba, Mayo, Inova, Jefferson, Mass General, and Stanford",
+  "Israel Innovation Authority record reports approximately 40 employees and initial revenues",
+  "Device-agnostic POCUS-OS workflow supports on-premise or cloud deployment and EMR integration",
+  "Israeli founders combine cardiology, medical-device, and Unit 8200 engineering experience"
+]
+priority_rank = 0
+priority_rationale = "AISAP merits priority monitoring as an Israeli regulated AI-sensing company with an unusually clear route from civilian healthcare into resilience and austere medicine. (1) FDA clearance and reported initial revenues distinguish it from research-only ultrasound concepts. (2) The combination of acquisition guidance, interpretation, structured reporting, and EMR integration addresses a complete workflow bottleneck rather than a narrow model feature. (3) A large clinical training base and partnerships with leading hospitals provide credible validation, although most public performance evidence remains company reported. (4) Portable, specialist-light diagnosis is relevant to rural care, disaster response, ambulances, field hospitals, and potentially defense medicine. Priority is capped by unknown commercial scale, reimbursement and adoption risk, incumbent competition, and the absence of disclosed defense deployments or ruggedized field validation. Milestones to watch are independent multi-device outcomes, recurring health-system revenue, international regulatory expansion, secure offline operation, and any validated emergency, civil-defense, or military-medical deployment."
+public_sources = [
+  { label = "AISAP official website", url = "https://www.aisap.ai/", description = "Current product positioning, workflow, partner testimonials, use claims and deployment." },
+  { label = "AISAP leadership", url = "https://www.aisap.ai/about", description = "Current leadership roles and company background." },
+  { label = "AISAP $13M Seed announcement", url = "https://www.prnewswire.com/news-releases/aisap-raises-13-million-in-seed-funding-for-first-ai-powered-point-of-care-ultrasound-diagnostic-solution-302134639.html", description = "Round amount, date, co-leads, product and company-reported research context." },
+  { label = "AISAP company record — Israel Innovation Authority", url = "https://innovationisrael.org.il/en/importWinner/516549888/", description = "Israeli company record and historical headcount/revenue descriptors." },
+  { label = "FDA 510(k) summary K234141", url = "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K234141.pdf", description = "Regulatory device identity and manufacturer." },
+  { label = "CTech round coverage", url = "https://www.calcalistech.com/ctechnews/article/h1njqfkg0", description = "Independent reporting on the 2024 round and product." },
+  { label = "IVC AISAP Ltd profile", url = "https://www.ivc-online.com/Google-Card?id=ea511b67-7f5b-ed11-b810-00505695cd29", description = "Israeli company profile, leadership and separately listed 2023 Seed-Extended round." },
+  { label = "AISAP Sheba case study", url = "https://www.aisap.ai/resources-case-studies/enterprise-wide-implementation-of-ai-powered-pocus-at-sheba-medical-center", description = "Company-reported enterprise deployment claims and operational outcomes." },
+  { label = "AISAP Amavita case study", url = "https://www.aisap.ai/resources-case-studies/amavita-heart-and-vascular-health", description = "Named South Florida customer and described screening workflow." },
+  { label = "Globes on Shoni Health Ventures", url = "https://en.globes.co.il/en/article-new-seed-stage-healthtech-fund-teams-with-sheba-1001450422", description = "Independent report that Shoni had invested in AISAP by June 2023." },
+  { label = "Shoni Health Ventures", url = "https://shonihealth.com/about-us/", description = "Investor's official healthtech and early-stage strategy." }
+]
+crawled_at = "2026-09-20T09:47:53Z"
+updated_at = "2026-10-03T15:28:47Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Adiel Am-Shalom", role = "President; co-founder", is_founder = true, current = true, source_ids = ["official-about", "iia"] },
+  { name = "Eran Taus", role = "CEO", is_founder = false, current = true, source_ids = ["official-about", "ivc"] },
+  { name = "Robert Klempfner", role = "MD, Chief Medical Officer; co-founder", is_founder = true, current = true, source_ids = ["official-about", "pr-2024"] },
+  { name = "Yonni Harif", role = "GM US and VP Sales", is_founder = false, current = true, source_ids = ["official-about"] },
+  { name = "Amit Aharoni", role = "VP Business and Strategy", is_founder = false, current = true, source_ids = ["official-about"] },
+  { name = "Michael Fiman", role = "VP Algo", is_founder = false, current = true, source_ids = ["official-about", "ivc"] },
+  { name = "Tomer Fainstein", role = "VP Finance", is_founder = false, current = true, source_ids = ["official-about", "ivc"] },
+  { name = "Micaella Ellis", role = "VP Product", is_founder = false, current = true, source_ids = ["official-about"] },
+  { name = "Ehud Raanani", role = "MD; co-founder", is_founder = true, current = true, source_ids = ["official-about", "pr-2024"] }
+]
+investors = [
+  { name = "Harel Insurance Investments & Financial Services", investor_type = "corporate", relationship = "current", round_ids = ["seed-2024"], source_ids = ["pr-2024"] },
+  { name = "Shoni Health Ventures", investor_type = "vc", website = "https://shonihealth.com/", relationship = "current", round_ids = ["seed-2023-extension", "seed-2024"], source_ids = ["pr-2024", "globes", "shoni"] }
+]
+financials = []
+traction = [
+  { kind = "customer", description = "Company case study identifies enterprise-wide AISAP POCUS implementation at Sheba Medical Center in internal medicine; it reports hundreds of clinicians enabled and company-calculated ROI, not independently audited.", date = "2025-07-22", source_ids = ["sheba-case"] },
+  { kind = "customer", description = "Company case study identifies Amavita Heart and Vascular Health in South Florida as using AISAP CARDIO for cardiac screening across clinics, skilled-nursing facilities and mobile screening units.", date = "2025-02-16", source_ids = ["amavita-case"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "UltraSight", website = "https://www.ultrasight.com/", rationale = "Israeli AI-guided cardiac ultrasound company serving the same acquisition-assistance workflow.", differentiation = "AISAP positions a broader point-of-care operating system combining cleared cardiac algorithms, PACS, reporting and EMR workflow; comparative performance is not established.", source_ids = ["official-home", "fda"] },
+  { name = "Caption Health / GE HealthCare", website = "https://www.gehealthcare.com/", rationale = "AI-guided ultrasound capability integrated into a major imaging vendor portfolio.", differentiation = "AISAP emphasizes vendor-neutral software across existing POCUS devices; GE can bundle with hardware and enterprise distribution.", source_ids = ["official-home"] },
+  { name = "Butterfly Network", website = "https://www.butterflynetwork.com/", rationale = "Portable ultrasound platform with software and AI features for point-of-care scanning.", differentiation = "Butterfly centers on its own handheld ultrasound ecosystem, while AISAP claims compatibility with multiple manufacturers.", source_ids = ["official-home"] }
+]
+
+[intelligence.company]
+company_id = "il-aisap"
+legal_name = "AISAP Ltd."
+aliases = ["AISAP", "AISAP Ltd."]
+operating_status = "active"
+business_model = "Business-to-business clinical software sold to hospitals and outpatient providers, combining AI-guided point-of-care ultrasound interpretation with PACS, reporting, workflow and EMR integration. Pricing and contract model are not publicly disclosed."
+products = ["AISAP CARDIO", "POCUS-OS"]
+locations = ["Tel Aviv, Israel", "United States operations including New York and Boston (historically reported)"]
+founded_on = "2022"
+source_ids = ["official-home", "official-about", "iia", "fda", "pr-2024"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public evidence supports an undisclosed Seed extension listed by IVC for December 2023 and a $13 million Seed round announced in May 2024. The 2024 announcement calls it a Seed round; IVC labels the prior event Seed-Extended, while commercial databases variously label 2024 Seed VC-II. Treat them as separate events, but do not infer a lifetime total from the $13 million announcement because the earlier amount is undisclosed. No public valuation or round instrument details found."
+history_status = "partial"
+coverage_through = "2026-10-03"
+rounds = [
+  { id = "seed-2023-extension", round_type = "Seed extension", instrument = "equity", status = "announced", announced_on = "2023-12", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = [], participating_investors = ["Shoni Health Ventures"], source_ids = ["ivc", "globes"], notes = "IVC lists a Seed-Extended round dated 2023-12-27 without amount; Globes reported Shoni had invested in AISAP by June 2023. IVC investor identities are not fully visible in the public profile; participant association is supported by Globes, not an amount disclosure." },
+  { id = "seed-2024", round_type = "Seed", instrument = "equity", status = "announced", announced_on = "2024-05-02", amount_status = "reported", amount = 13000000, amount_scope = "round", currency = "USD", lead_investors = ["Harel Insurance Investments & Financial Services", "Shoni Health Ventures"], participating_investors = [], source_ids = ["pr-2024", "ctech-2024"], notes = "AISAP announcement reports $13 million co-led by Harel and Shoni; no valuation or terms disclosed. Do not treat as verified company lifetime total." }
+]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private ownership and cap table are not publicly disclosed. No acquisition, public listing, parent company or ownership change was identified in the sources reviewed."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["official-home", "ivc"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "AISAP is identified as an Israeli/Tel Aviv company by its official company materials and Israeli Innovation Authority profile; the FDA filing identifies the Israeli manufacturer address."
+as_of = "2026-10-03"
+source_ids = ["official-about", "iia", "fda", "ctech-2024"]
+
+[intelligence.research]
+researched_at = "2026-10-03T15:28:47Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["AISAP official company product leadership", "AISAP funding raised seed investors valuation acquired", "AISAP 2023 seed extension IVC", "AISAP revenue customers 2025 Sheba Amavita", "AISAP patent ultrasound AISAP Ltd", "AISAP competitors AI guided cardiac ultrasound", "AISAP defense military field ultrasound", "AISAP company identity Israel Innovation Authority FDA"]
+gaps = ["team: current official titles are visible, but individual biographies and employment dates are sparse; founder status for every executive is not independently documented.", "investors: only the publicly announced 2024 co-leads and historical Shoni relationship can be named confidently; full cap table, other participants and terms are unavailable.", "financials: no current revenue, ARR, profitability, burn, runway, or audited accounts found; historical IIA 'initial revenues' descriptor lacks a dated numeric measure.", "traction: named company case studies and testimonials exist, but independent customer contract values, paying-customer counts, utilization, renewals and audited outcomes are unavailable.", "intellectual_property: no AISAP-assigned patent publication was located in targeted public web searches; this does not establish absence of patents or trade secrets.", "competition: peer products are identifiable, but no independent comparative performance study or market-share data found.", "ownership: private cap table and shareholder percentages are unavailable; no deal or parent-company disclosure identified.", "dual_use: no public defense, military, IDF, civil-defense contract, field trial, ruggedization or offline-operation evidence found.", "funding: lifetime raised amount remains unknown because an earlier Seed extension is separately listed without an amount; no valuation or disclosed round terms found."]
+conflicts = ["2024 funding announcement reports $13 million for the Seed round, while public data aggregators label it Seed VC-II and list a preceding Seed/Seed-Extended event. The separate 2023 event is kept undisclosed and no aggregate total is inferred.", "Company marketing says FDA-cleared platform and algorithms; the FDA public record specifically documents AISAP CARDIO V1.0 and its indications. Clearance should not be generalized to every POCUS-OS module or future indication."]
+diligence_questions = ["What are current ARR, paid sites, utilization per site, renewals, gross margin and customer concentration, and can management provide audited or contract-backed evidence?", "What are sensitivity, specificity, calibration, failure rates and subgroup results across supported probes, operators and care settings, and how do these compare with formal echocardiography and competitors?", "What algorithm modules and indications are within FDA clearance K234141, and what regulatory pathway and evidence are planned for broader POCUS-OS features?", "What is the full financing history, including the 2023 Seed extension amount, cap table, dilution and any outstanding convertible instruments?", "What data residency, security controls and offline functionality exist, and has any public-sector or austere-care deployment been validated?"]
+
+[[intelligence.research.sources]]
+id = "official-home"
+url = "https://www.aisap.ai/"
+title = "Transforming Point-of-Care Ultrasound with expert-level AI"
+publisher = "AISAP"
+kind = "company"
+accessed_at = "2026-10-03T15:28:47Z"
+claims = ["Current official product positioning and POCUS-OS workflow", "Company states FDA-cleared algorithms and use across health systems, hospitals and clinics", "Company describes device, PACS, cloud/on-premise, report and EMR workflow", "Company presents customer and clinician testimonials"]
+
+[[intelligence.research.sources]]
+id = "official-about"
+url = "https://www.aisap.ai/about"
+title = "About AISAP | Leading AI Diagnostics in Healthcare"
+publisher = "AISAP"
+kind = "company"
+accessed_at = "2026-10-03T15:28:47Z"
+claims = ["Official leadership page lists Adiel Am-Shalom as President, Eran Taus as CEO, Robert Klempfner as MD/CMO, Yonni Harif as US GM/VP Sales, Amit Aharoni as VP Business and Strategy, Michael Fiman as VP Algo, Tomer Fainstein as VP Finance and Micaella Ellis as VP Product", "Company presents its health technology mission and current team"]
+
+[[intelligence.research.sources]]
+id = "pr-2024"
+url = "https://www.prnewswire.com/news-releases/aisap-raises-13-million-in-seed-funding-for-first-ai-powered-point-of-care-ultrasound-diagnostic-solution-302134639.html"
+title = "AISAP Raises $13 Million in Seed Funding for First AI-Powered Point Of Care Ultrasound Diagnostic Solution"
+publisher = "AISAP via PR Newswire"
+kind = "company"
+published_on = "2024-05-02"
+accessed_at = "2026-10-03T15:28:47Z"
+claims = ["AISAP announced a $13 million Seed financing", "Round co-led by Harel Insurance Investments and Shoni Health Ventures", "Company-reported founders, product and training/clinical research claims"]
+
+[[intelligence.research.sources]]
+id = "ctech-2024"
+url = "https://www.calcalistech.com/ctechnews/article/h1njqfkg0"
+title = "AISAP raises $13 Million in Seed for its AI ultrasound solution"
+publisher = "CTech / Calcalist"
+kind = "media"
+published_on = "2024-05-02"
+accessed_at = "2026-10-03T15:28:47Z"
+claims = ["Independent media coverage of the $13 million Seed round", "AISAP is an Israeli company developing AI-assisted point-of-care ultrasound"]
+
+[[intelligence.research.sources]]
+id = "iia"
+url = "https://innovationisrael.org.il/en/importWinner/516549888/"
+title = "Winners authority investment"
+publisher = "Israel Innovation Authority"
+kind = "government"
+accessed_at = "2026-10-03T15:28:47Z"
+claims = ["Israeli Innovation Authority company record identifies AISAP and describes historical establishment, approximate employee count and initial revenues"]
+
+[[intelligence.research.sources]]
+id = "fda"
+url = "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K234141.pdf"
+title = "AISAP CARDIO V1.0 510(k) Summary K234141"
+publisher = "U.S. Food and Drug Administration"
+kind = "government"
+accessed_at = "2026-10-03T15:28:47Z"
+claims = ["FDA record identifies AISAP CARDIO V1.0, its manufacturer and device regulatory status/indications"]
+
+[[intelligence.research.sources]]
+id = "ivc"
+url = "https://www.ivc-online.com/Google-Card?id=ea511b67-7f5b-ed11-b810-00505695cd29"
+title = "AISAP Ltd. — IVC Data & Insights"
+publisher = "IVC Research Center"
+kind = "directory"
+accessed_at = "2026-10-03T15:28:47Z"
+claims = ["IVC profile lists AISAP management and a Seed-Extended round dated December 27, 2023 without a public amount", "IVC profile lists Shoni Health Ventures in connection with a Seed/Seed-II funding history"]
+
+[[intelligence.research.sources]]
+id = "globes"
+url = "https://en.globes.co.il/en/article-new-seed-stage-healthtech-fund-teams-with-sheba-1001450422"
+title = "New seed-stage healthtech fund teams with Sheba"
+publisher = "Globes"
+kind = "media"
+published_on = "2023-06-26"
+accessed_at = "2026-10-03T15:28:47Z"
+claims = ["Shoni Health Ventures said it had invested in AISAP by June 2023", "Eran Lerer was identified as Shoni fund manager and fund focus was early-stage digital health and medical devices"]
+
+[[intelligence.research.sources]]
+id = "shoni"
+url = "https://shonihealth.com/about-us/"
+title = "About Us — Shoni Health"
+publisher = "Shoni Health Ventures"
+kind = "investor"
+accessed_at = "2026-10-03T15:28:47Z"
+claims = ["Shoni describes itself as an early-stage digital health and medical device investor"]
+
+[[intelligence.research.sources]]
+id = "sheba-case"
+url = "https://www.aisap.ai/resources-case-studies/enterprise-wide-implementation-of-ai-powered-pocus-at-sheba-medical-center"
+title = "Enterprise-Wide Implementation of AI-Powered POCUS at Sheba Medical Center"
+publisher = "AISAP"
+kind = "company"
+published_on = "2025-07-22"
+accessed_at = "2026-10-03T15:28:47Z"
+claims = ["Company case study describes an enterprise-wide Sheba deployment in internal medicine and reports hundreds of clinicians enabled", "Case study reports company-calculated ROI and operational outcomes that have not been independently audited"]
+
+[[intelligence.research.sources]]
+id = "amavita-case"
+url = "https://www.aisap.ai/resources-case-studies/amavita-heart-and-vascular-health"
+title = "Amavita Heart and Vascular Health"
+publisher = "AISAP"
+kind = "company"
+published_on = "2025-02-16"
+accessed_at = "2026-10-03T15:28:47Z"
+claims = ["Company case study names Amavita Heart and Vascular Health in South Florida as a customer using AISAP CARDIO", "Case describes screening across clinics, skilled nursing facilities and mobile units"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T15:28:47Z"
+next_review_on = "2027-01-03"
+queries = ["AISAP official company product leadership", "AISAP company identity Israel Innovation Authority FDA"]
+source_ids = ["official-home", "official-about", "iia", "fda", "ctech-2024"]
+summary = "Official website, government record and FDA filing support an active Israeli medical software company operating as AISAP/AISAP Ltd.; public evidence does not establish incorporation jurisdiction or registry number."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T15:28:47Z"
+next_review_on = "2027-01-03"
+queries = ["AISAP funding raised seed investors valuation acquired", "AISAP 2023 seed extension IVC"]
+source_ids = ["pr-2024", "ctech-2024", "ivc", "globes"]
+summary = "A $13 million 2024 Seed announcement and an earlier undisclosed 2023 Seed extension listing were identified; no lifetime total or valuation is verified."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T15:28:47Z"
+next_review_on = "2027-01-03"
+queries = ["AISAP investors Harel Shoni Seed", "AISAP 2023 seed extension IVC"]
+source_ids = ["pr-2024", "ivc", "globes", "shoni"]
+summary = "Harel and Shoni are named as 2024 co-leads; Shoni's earlier investment is reported, but no full syndicate or cap table is public."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T15:28:47Z"
+next_review_on = "2027-01-03"
+queries = ["AISAP official company leadership founders", "AISAP IVC management CEO founders"]
+source_ids = ["official-about", "ivc"]
+summary = "The company lists current leadership roles, while biographies, start dates and a complete founder roster remain only partly documented."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T15:28:47Z"
+next_review_on = "2027-01-03"
+queries = ["AISAP ownership acquired parent company", "AISAP company acquisition shareholders"]
+source_ids = ["official-home", "ivc"]
+summary = "No parent, acquisition, public listing or ownership percentages found; private cap table not disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "not_found"
+checked_at = "2026-10-03T15:28:47Z"
+next_review_on = "2027-01-03"
+queries = ["AISAP revenue ARR profitability financials", "AISAP Israel Innovation Authority initial revenues"]
+source_ids = ["iia", "pr-2024"]
+summary = "Only the historical IIA descriptor 'initial revenues' was located; no dated numeric financial metric is public."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T15:28:47Z"
+next_review_on = "2027-01-03"
+queries = ["AISAP revenue customers 2025 Sheba Amavita", "AISAP customers contracts hospitals deployment"]
+source_ids = ["official-home", "sheba-case", "amavita-case"]
+summary = "Company materials identify Sheba enterprise implementation and Amavita usage; metrics and outcomes are company-reported, with no public contract values or customer counts."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T15:28:47Z"
+next_review_on = "2027-01-03"
+queries = ["AISAP patent ultrasound AISAP Ltd", "AISAP Google patents point of care ultrasound"]
+source_ids = ["fda"]
+summary = "Targeted searches did not locate an attributable patent record; FDA device clearance is not itself evidence of patent ownership."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T15:28:47Z"
+next_review_on = "2027-01-03"
+queries = ["AI-guided cardiac ultrasound competitors UltraSight Caption Health GE Clarius", "point of care ultrasound AI interpretation competitors"]
+source_ids = ["official-home", "fda"]
+summary = "Relevant peers include UltraSight, Caption Health/GE HealthCare, Butterfly, Clarius and EchoNous; no independent comparative assessment found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-03T15:28:47Z"
+next_review_on = "2027-01-03"
+queries = ["AISAP defense military field ultrasound", "AISAP IDF contract austere medicine"]
+source_ids = ["official-home", "fda"]
+summary = "Clinical POCUS capabilities have possible austere-care relevance, but no defense customer, military trial, ruggedized deployment or offline capability is publicly disclosed."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The live company website presents current product materials and contact/careers links, supporting an active operating status."
+verified_at = "2026-10-03T15:28:47Z"
+source_ids = ["official-home", "official-about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Israel Innovation Authority company record and FDA manufacturer details support Israeli identity and location; company leadership materials support founders/team context."
+verified_at = "2026-10-03T15:28:47Z"
+source_ids = ["iia", "fda", "official-about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.amount"
+support = "direct"
+summary = "AISAP's dated financing announcement states that it raised $13 million in Seed funding."
+verified_at = "2026-10-03T15:28:47Z"
+source_ids = ["pr-2024", "ctech-2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.lead_investors"
+support = "direct"
+summary = "The announcement names Harel Insurance Investments and Shoni Health Ventures as co-leads."
+verified_at = "2026-10-03T15:28:47Z"
+source_ids = ["pr-2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2023-extension.amount_status"
+support = "direct"
+summary = "IVC lists the December 2023 Seed-Extended event without a numeric amount; the public profile does not disclose terms."
+verified_at = "2026-10-03T15:28:47Z"
+source_ids = ["ivc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2023-extension.participating_investors"
+support = "direct"
+summary = "Globes reported Shoni had invested in AISAP by June 2023; IVC also associates Shoni with the Seed financing history."
+verified_at = "2026-10-03T15:28:47Z"
+source_ids = ["globes", "ivc"]

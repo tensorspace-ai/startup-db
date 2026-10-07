@@ -1,0 +1,298 @@
+name = "Cyngular Security"
+description = "Cyngular Security is an Israeli cybersecurity company building an agentic SOC for cloud and hybrid environments. Its ClouDFIR/THIRDhub platform combines agentless investigation, threat hunting, deception, response, and auditable reporting to move security teams from alert queues to evidence-backed resolution."
+detailed_description = """
+**Product and the concrete problem it solves.** Cyngular Security targets the part of security operations that remains painfully manual after a detection fires: determining what happened, how far an attacker moved, which systems are affected, what evidence supports the conclusion, and what response is safe. Its public materials describe a cloud and hybrid-cloud platform that can uncover threats, investigate them, contain them, and produce a report for leadership and regulators. The current product message calls this an agentic SOC, while earlier materials describe ClouDFIR and the THIRDhub platform for cloud hunting, investigation, response, and deception. The buyer problem is operational rather than merely analytical. More cloud accounts, identities, workloads, SaaS connections, and security tools create an alert volume that grows faster than a human SOC can investigate. Cyngular's proposed answer is to make the investigation workflow itself executable by specialized agents, so analysts receive a resolved case and an auditable explanation instead of another queue item. The product is therefore positioned as a control and decision layer across an existing security environment, not as a replacement for every detection source.
+
+**Core technology and how it actually works.** Cyngular describes six specialized agents operating as a coordinated mesh rather than one general-purpose chatbot. Its site identifies roles including an observer, threat hunter, investigator, deceptor, resolver, and reporter, with the broader platform claim that agents can detect, hunt, investigate, deceive, resolve, and report end to end. The agentless, read-only onboarding model connects to a customer's cloud environment without installing an endpoint agent, and the site says a deployment can be live in under fifteen minutes. The intended workflow is concrete: collect approved cloud and security context; correlate identity, configuration, activity, and threat signals; reconstruct an incident and root cause; use deception or investigation to clarify attacker behavior; recommend or execute a policy-bounded response; and preserve an explanation for the customer. Cyngular's public platform page claims 95% of threats resolved autonomously in under three minutes, but that is a company-reported outcome rather than an independently benchmarked result. The architecture's defensible question is not whether an LLM can summarize an alert, but whether the mesh has reliable tool permissions, evidence provenance, failure thresholds, escalation paths, and repeatable integrations across AWS, Azure, GCP, on-premises systems, and existing SOC tooling.
+
+**Market, customers, and go-to-market.** The primary market is enterprise security operations, incident response, cloud-security teams, and managed security service providers that need more investigative capacity without adding an analyst for every new tenant or alert source. Cyngular's partner page makes the MSSP route explicit: one multi-tenant agentic squad can operate across client environments, with white-label delivery, per-tenant assessments against NIST, HIPAA, PCI-DSS, and SOC 2 frameworks, and an agentless onboarding motion intended to reduce deployment friction. The direct enterprise motion is aimed at CISOs, heads of incident response, and security-operations leaders in environments spanning cloud, on-premises, and hybrid infrastructure. The company website displays anonymous customer evidence from insurance, MSSP, telecom, and a Nasdaq-traded company; those testimonials suggest product engagement and a broad buyer set, but they do not establish customer names, contract values, renewal rates, or revenue. This is a sensible wedge because cloud investigation is a high-consequence pain point and read-only access lowers the initial trust barrier. Expansion depends on proving that investigation quality, containment safety, compliance reporting, and analyst-time savings are materially better than an incumbent SIEM, XDR, SOAR, or managed service.
+
+**Traction, funding, and third-party validation.** Cyngular is not a purely unverified stealth name. Startup Nation Finder identifies it as an active Israeli company founded in 2021, with a Tel Aviv-Yafo headquarters, a reported team of 28 within an 11-50 employee range, and a released product. The same profile records a January 2022 Seed round involving Springtide Ventures, ST Engineering Ventures, and VentureIsrael, followed by a March 2024 undisclosed round led by Tachles VC. Neither the amounts nor a complete cap table are public, so the record uses an undisclosed seed/follow-on description rather than inventing a dollar figure. ST Engineering's 2025 investor-day materials identify Cyngular's CIRA, or Cloud Investigation and Response Automation, as a startup collaboration and show its positioning around autonomous cloud incident readiness and response. The company also states that it holds SOC 2 Type II, and a public company post attributes the certification to EY. Its Israeli service agreement names Cyngular Security Ltd. as an Israeli corporation, providing legal-entity evidence beyond marketing copy. These are useful validation signals, while the absence of audited revenue, named reference accounts, independent efficacy testing, and disclosed financing totals remains material.
+
+**Founders and team background.** The founding team is unusually relevant to the operational problem. Paul Moskovich is identified by the company as co-founder and CEO, with 25 years defending large enterprises across aerospace and defense, finance, and communications as a CISO; the company also states that he served as Deputy Director-General and Chief Executive Director of Israel's National Cyber Directorate at the Prime Minister's Office. Co-founder and CTO Itzik Berrebi is described as a cybersecurity leader with more than a decade across defense, finance, and technology, including work as CISO at an Israeli blockchain company and leadership of incident-response and R&D teams at an aerospace and defense enterprise. Amir Skouri, listed as VP of R&D, is described as a former Unit 8200 and Matzov R&D leader with defensive and offensive cybersecurity experience and aerospace-defense research background. This combination supplies buyer empathy, public-sector cyber context, and hands-on incident-response experience. It also creates diligence questions: the public record does not disclose the current engineering organization beyond selected leaders, the balance between Israel and U.S. operations, or the proportion of product engineering versus services and integration work. A strong executive résumé can open enterprise doors, but only a deep bench and disciplined agent evaluation process can support reliable autonomous response at scale.
+
+**Competitive dynamics.** Cyngular competes across several overlapping budgets. CrowdStrike Falcon and Palo Alto Networks Cortex XSIAM combine telemetry, detection, investigation, and response inside large installed platforms; Microsoft Defender XDR and Sentinel benefit from Microsoft 365 and Azure distribution; Google SecOps and Mandiant bring cloud-scale telemetry and incident-response expertise; and Wiz competes for cloud-security visibility and risk-management ownership. Tines and Torq automate security workflows, while Hunters and other SIEM/XDR vendors compete for the investigation and detection-engineering layer. Cyngular's claimed edge is the end-to-end agent mesh and its focus on completing the case rather than generating another alert. Its agentless, read-only onboarding and MSSP white-label model could also lower adoption friction and create leverage through service providers. These advantages are not yet a durable moat. Large platforms can add AI investigators to data they already control, SOAR vendors can package comparable playbooks, and professional-services firms can supply human investigation. Cyngular must prove that its agents reconstruct incidents with fewer false conclusions, preserve evidence, respect customer authorization boundaries, and reduce total cost across heterogeneous clouds. The critical competitive metric is resolved, trusted incidents per analyst hour, not the number of agents in the interface.
+
+**Defense, security, and resilience dual-use relevance.** Cyngular's core technology has substantive dual-use relevance because cloud incident readiness and response protect commercial enterprises, defense contractors, government agencies, telecommunications providers, hospitals, and critical infrastructure alike. The founders' aerospace-defense and National Cyber Directorate backgrounds make the security adjacency credible, and the Israeli legal entity and Tel Aviv operating base place the company inside an ecosystem with direct exposure to national cyber defense. An agentic investigation layer could help an understaffed national CERT, utility SOC, or defense-industrial security team reconstruct attacks faster, contain compromised identities or workloads, and produce defensible evidence for commanders, regulators, and executives. Its read-only onboarding is relevant where a public-sector buyer wants analysis before granting automated write permissions. The calibration is important: public sources reviewed do not establish a classified deployment, Israeli Ministry of Defense contract, military customer, or government accreditation. Deception and autonomous response also carry elevated safety and governance obligations in mission-critical environments; a mistaken containment action can interrupt a service or destroy evidence. The strategic case is therefore cyber-resilience infrastructure that could transfer into allied and public-sector use, not a claim that Cyngular is already a fielded defense system.
+
+**Growth stage, trajectory, and key diligence risks.** Cyngular is best classified as early-to-mid commercial stage, with the schema's **early** label reflecting limited financial disclosure despite a released product, institutional backers, SOC 2 Type II, and reported enterprise and MSSP usage. Its trajectory is toward an agentic operating layer for security operations: first automate cloud investigation and evidence assembly, then expand into threat hunting, deception, response, compliance reporting, and multi-tenant MSSP delivery. The most important diligence points are: (1) independently validate the 95%-resolved and under-three-minute claims by incident class, severity, and false-resolution rate; (2) establish whether autonomous actions are recommendation-only, customer-approved, or policy-bounded execution, and measure rollback and escalation behavior; (3) obtain named customer references, retention, deployment counts, gross margin, and services intensity; (4) test integration depth across AWS, Azure, GCP, Kubernetes, identity providers, SIEMs, EDRs, and ticketing systems; (5) review model-provider dependence, prompt-injection resistance, data isolation, and evidence integrity; (6) assess whether the 2024 follow-on financing and current U.S. expansion provide enough runway for enterprise sales cycles; and (7) determine whether government, defense-industrial, or critical-infrastructure adoption can meet procurement, residency, export, and high-assurance requirements. The team and product are credible, but the company must convert strong operational positioning into independently verifiable outcomes before its strategic importance can be scored as more than high-potential cyber resilience.
+"""
+logo = "Unknown"
+website = "https://www.cyngular.com"
+sector = "Cybersecurity / Cloud Digital Forensics, Incident Response, and Agentic SOC Automation"
+founded = "2021"
+headquarters = "Tel Aviv-Yafo, Israel"
+employees = "11–50 (Startup Nation Finder legacy profile; no newer verified count found)"
+funding_stage = "Seed and undisclosed strategic/follow-on financing; latest round disclosure and timing are inconsistent across secondary databases"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Cyngular's core cloud investigation, threat hunting, deception, evidence assembly, and response capabilities have substantive commercial and security applicability. The same platform can help enterprises, defense contractors, telecom operators, hospitals, utilities, government agencies, and national cyber teams investigate attacks across cloud and hybrid environments. The founders' aerospace-defense and Israeli National Cyber Directorate backgrounds make the transfer path credible. The public evidence is stronger for commercial and MSSP positioning than for defense adoption: no classified deployment, military contract, Israeli Ministry of Defense customer, or government accreditation was found in the reviewed sources. Autonomous response and deception also require strict authorization, auditability, data isolation, and rollback controls in mission-critical environments, so dual-use describes the technology's application range rather than confirmed military fielding."
+key_technologies = [
+  "Agentless, read-only cloud and hybrid-environment investigation across AWS, Azure, GCP, and connected security systems",
+  "Specialized agent mesh for observation, threat hunting, digital forensics, investigation, deception, resolution, and reporting",
+  "Cloud Digital Forensics and Incident Response (ClouDFIR) evidence collection and attack-timeline reconstruction",
+  "AI-assisted root-cause analysis, threat correlation, and policy-bounded autonomous response",
+  "Cloud deception workflows for clarifying attacker behavior and generating high-confidence investigative evidence",
+  "Multi-tenant MSSP orchestration with white-label delivery and per-tenant compliance assessments",
+  "Auditable incident reporting and security-posture outputs mapped to NIST, HIPAA, PCI-DSS, and SOC 2 frameworks"
+]
+use_cases = [
+  "Agentless investigation and root-cause analysis of cloud account compromise",
+  "Automated triage and evidence assembly for SOC and incident-response teams",
+  "Threat hunting across multi-cloud identities, workloads, configurations, and activity logs",
+  "Deception-assisted investigation of attacker movement inside cloud environments",
+  "Policy-bounded containment and response after validation of a high-confidence incident",
+  "White-label, multi-tenant SOC automation for managed security service providers",
+  "Compliance-ready incident reporting for regulated financial, healthcare, telecom, and public-sector environments",
+  "Potential cyber-resilience support for defense contractors, utilities, and national cyber teams"
+]
+investible = true
+investment_rationale = "Cyngular merits a positive legacy priority signal because it addresses the operational bottleneck between detection and trustworthy resolution, has an Israeli legal entity and strategically relevant founding team, and shows product, financing, and compliance evidence beyond a concept-stage profile. (1) The platform's agentic mesh is aimed at a measurable buyer pain: cloud alert volume and investigation time. (2) Paul Moskovich, Itzik Berrebi, and Amir Skouri combine national cyber leadership, aerospace-defense security, incident response, and offensive/defensive research backgrounds. (3) Startup Nation Finder records a 2022 seed round and 2024 undisclosed follow-on, while ST Engineering materials and the company's SOC 2 Type II claim provide third-party validation signals. (4) The MSSP route could scale distribution if the multi-tenant product reduces cost to serve. Counterweights are material: funding amounts, revenue, retention, named customers, and independent efficacy results are not public; CrowdStrike, Palo Alto Networks, Microsoft, Google, and specialist SOAR vendors can bundle overlapping functionality; and autonomous response creates asymmetric trust and safety risk. This is a strategic diligence assessment, not an investment recommendation."
+strategic_value = "Cyngular's strategic value is concentrated in cyber resilience at the cloud and hybrid-infrastructure layer. (1) Speed: an agentic investigation capability could reduce the time between an alert and a defensible attack narrative when adversaries move faster than human queues. (2) Workforce leverage: national CERTs, defense contractors, utilities, and regulated enterprises all face shortages of experienced investigators, making evidence-backed automation strategically useful. (3) Sovereign applicability: an Israeli company with a National Cyber Directorate leader and aerospace-defense practitioners could become relevant to allied security operations if it proves data isolation, deployment control, and procurement readiness. (4) Ecosystem leverage: agentless onboarding and MSSP delivery could spread the capability across many smaller organizations that cannot staff a full SOC. The current evidence supports high-potential resilience infrastructure, not a confirmed government or military capability; strategic value should rise only with named public-sector or defense-industrial deployments, high-assurance authorizations, and independent proof that autonomous decisions are safe."
+potential_score = 82.0
+technology_score = 84.0
+market_score = 80.0
+team_score = 89.0
+dual_use_score = 86.0
+strategic_alignment_score = 91.0
+stage = "early"
+stage_rationale = "Cyngular is classified as early because public evidence supports a released product, institutional seed and follow-on financing, SOC 2 Type II, and customer-facing enterprise/MSSP activity, but does not establish the revenue, retention, headcount growth, or deployment scale normally associated with a mature growth-stage company. It was founded in 2021 and Startup Nation Finder reports 28 employees, placing it beyond an unformed prototype. The 2022 seed and 2024 undisclosed round indicate financing progression, while the current agentic-SOC repositioning suggests an active product and go-to-market evolution. The appropriate diligence question is whether the platform's reported autonomous-resolution performance and anonymous customer testimonials translate into repeatable, high-margin deployments."
+competitors = [
+  "CrowdStrike Falcon and Charlotte AI (installed EDR/XDR platform adding AI investigation and response)",
+  "Palo Alto Networks Cortex XSIAM and XSOAR (integrated detection, analytics, and security orchestration)",
+  "Microsoft Defender XDR and Sentinel (bundled identity, endpoint, cloud, and SIEM distribution)",
+  "Google SecOps and Mandiant (cloud-scale security operations and incident-response expertise)",
+  "Wiz (cloud-security platform competing for cloud visibility and security ownership)",
+  "Tines and Torq (security automation and no-code orchestration substitutes)",
+  "Hunters (Israeli SIEM/XDR platform combining data analytics and threat detection)"
+]
+competitive_edge = "Cyngular's clearest edge is workflow ownership: a coordinated mesh of specialized agents is designed to observe, hunt, investigate, use deception, resolve, and report one incident rather than pass an alert through disconnected tools. Agentless, read-only onboarding can shorten the initial deployment path, while the MSSP offering gives the company a route to operate one platform across many tenants and map results to recognized compliance frameworks. The founding team's experience inside national cyber defense, aerospace and defense security, and incident response should improve threat modeling and buyer credibility. The edge is not yet proven to be durable. Incumbent platforms own more telemetry and distribution, SOAR vendors can encode similar workflows, and human incident-response firms can provide investigation as a service. Cyngular needs independently validated accuracy, evidence provenance, safe authorization boundaries, broad integrations, and measurable analyst-time or loss-reduction outcomes to turn the architecture into a moat."
+risk_factors = [
+  "Company-reported claim of resolving 95% of threats in under three minutes requires independent validation by incident type, severity, and false-resolution rate",
+  "Autonomous containment and deception can cause service disruption, destroy evidence, or create accountability problems if authorization and rollback controls fail",
+  "Crowded competition from bundled XDR/SIEM platforms, cloud-security vendors, SOAR products, and managed incident-response providers",
+  "Public disclosure does not establish revenue, retention, customer names, contract values, gross margins, or services intensity",
+  "Agentless read-only access may limit response depth, while write-enabled automation raises customer trust, permission, and safety barriers",
+  "Multi-cloud, Kubernetes, identity, SIEM, EDR, and ticketing integrations can create substantial engineering and support burden",
+  "Government and defense expansion would add procurement, data residency, export-control, high-assurance, and classified-environment requirements"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Cyngular deserves high monitoring priority because it combines a clearly defined cyber-resilience bottleneck with an Israeli legal entity, a founding team drawn from national cyber defense and aerospace security, a released product, SOC 2 Type II, and reported seed/follow-on financing. (1) The agentic-SOC thesis is strategically timely as cloud complexity and AI-accelerated attacks increase investigation load. (2) Agentless onboarding and multi-tenant MSSP delivery offer plausible distribution leverage. (3) The company could become relevant to defense contractors, utilities, and government SOCs if it proves safe autonomous action and high-assurance deployment. Priority is capped by undisclosed financing amounts, limited named-customer evidence, reliance on company-reported performance metrics, incumbent bundling, and the absence of publicly confirmed defense contracts or government accreditations. This ranking is a sourcing and diligence priority, not an investment recommendation."
+public_sources = [
+ { label = "Cyngular official site", url = "https://www.cyngular.com/", description = "Current positioning, product claims, customer logo wall, and agentic SOC features." },
+ { label = "Cyngular company and team", url = "https://www.cyngular.com/company", description = "Company history, locations, founders, and leadership biographies." },
+ { label = "Cyngular services agreement", url = "https://www.cyngular.com/service-agreement", description = "Names Cyngular Security Ltd. as an Israel corporation; agreement updated February 2026." },
+ { label = "Startup Nation Finder legacy profile", url = "https://finder.startupnationcentral.org/company_page/cyngular-security", description = "Company identity, Israeli registration number, founders, headcount range, funding rounds and investors; Finder ended operations August 31, 2026." },
+ { label = "ST Engineering strategic investment", url = "https://www.stengg.com/en/innovation/st-engineering-ventures/perspectives/our-strategic-investment-in-cyngular/", description = "Investor-authored strategic investment, product relationship, and Cellcom customer statement." },
+ { label = "Cyngular Project Nimbus announcement", url = "https://www.linkedin.com/posts/cyngular-security_aisoc-aws-azure-activity-7403456986639400960-BRT3", description = "Company announcement of winning a Nimbus cloud security tender category with Bynet; not independent confirmation of contract value or deployment." },
+ { label = "Cyngular platform launch", url = "https://www.prnewswire.com/news-releases/cyngular-launches-cybersecurity-platform-to-defeat-cloud-threats-302133023.html", description = "Company-provided launch announcement for THIRDhub and multi-tenant cloud DFIR positioning." },
+ { label = "Dealroom company profile", url = "https://app.dealroom.co/companies/cyngular_security", description = "Secondary identity, registry, employee range, and contradictory round/valuation entries; numeric valuation and amount not used." },
+ { label = "Cyngular current research blog", url = "https://www.cyngular.com/blog", description = "Dated current research and cloud security technical activity." }
+]
+crawled_at = "2026-09-02T11:42:39Z"
+updated_at = "2026-10-05T03:06:19Z"
+
+[intelligence]
+schema_version = 2
+people = [
+ { name = "Paul Moskovich", role = "Co-Founder & CEO", is_founder = true, current = true, background = "Company states 25 years as an enterprise CISO across aerospace and defense, finance, and communications, and former Deputy Director-General and Chief Executive Director of Israel National Cyber Directorate.", source_ids = ["team"] },
+ { name = "Itzik Berrebi", role = "Co-Founder & CTO", is_founder = true, current = true, background = "Company states he led security across defense, finance, and technology, served as CISO at an Israeli blockchain startup, and led incident response and R&D at an aerospace and defense enterprise.", source_ids = ["team"] },
+ { name = "Amir Skouri", role = "VP R&D", is_founder = false, current = true, background = "Company states he led R&D in Unit 8200 and Matzov and has more than a decade of defensive and offensive cybersecurity experience, including aerospace and defense research.", source_ids = ["team"] }
+]
+investors = [
+ { name = "Springtide Ventures", investor_type = "vc", relationship = "historical", round_ids = ["seed-2022"], source_ids = ["snc"] },
+ { name = "ST Engineering Ventures", investor_type = "corporate", relationship = "historical", round_ids = ["seed-2022", "strategic-follow-on-2023-2024"], source_ids = ["snc", "stengg"] },
+ { name = "VentureIsrael", investor_type = "vc", relationship = "historical", round_ids = ["seed-2022"], source_ids = ["snc"] },
+ { name = "Tachles VC", investor_type = "vc", relationship = "historical", round_ids = ["strategic-follow-on-2023-2024"], source_ids = ["snc", "dealroom"] }
+]
+financials = []
+traction = [
+ { kind = "customer", description = "ST Engineering says Cyngular had acquired Cellcom, described as Israel's largest telecommunications company, as a client. The statement does not disclose contract value or current production/renewal status.", date = "2023-09", source_ids = ["stengg"] },
+ { kind = "partnership", description = "ST Engineering announced a strategic investment and collaboration to bring Cyngular CIRA into its cybersecurity solutions suite. Investment amount and commercial deployment scope are undisclosed.", date = "2023-09", source_ids = ["stengg"] },
+ { kind = "product", description = "Cyngular announced THIRDhub, a multi-tenant cloud threat hunting, investigation, response, and deception platform for enterprise SOCs and MSSP/MDR teams.", date = "2024-05-01", source_ids = ["pr"] },
+ { kind = "contract", description = "Cyngular announced that it won a Project Nimbus government cloud security tender category, Cloud AI SOC & IR as a Platform, together with strategic partner Bynet. This is company-reported; official award record, contract terms, value, and deployments were not independently located.", date = "2026-03", source_ids = ["nimbus"] },
+ { kind = "other", description = "The current company site displays logos including Nano Dimension, Elbit Systems, ST Engineering, Phoenix, and Cellcom, alongside anonymized testimonials. Logo display is company-published evidence and does not alone establish paid production customer status for each named organization.", date = "2026-10", source_ids = ["site"] },
+ { kind = "product", description = "The current site positions the platform as a six-agent agentic SOC and claims 95% of threats are autonomously resolved in under three minutes; this performance claim is not independently benchmarked in reviewed sources.", date = "2026-10", source_ids = ["site"] }
+]
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "il-cyngular-security"
+legal_name = "Cyngular Security Ltd."
+aliases = ["Cyngular", "Cyngular Security", "THIRDhub"]
+operating_status = "active"
+business_model = "B2B SaaS cybersecurity platform for enterprise SOC/incident response teams and MSSPs; agentic cloud and hybrid incident investigation, hunting, deception, response, and reporting."
+products = ["Agentic SOC", "THIRDhub", "Cloud Investigation and Response Automation (CIRA)"]
+locations = ["Giv'atayim/Tel Aviv, Israel", "New York, United States", "Atlanta, United States"]
+linkedin_url = "https://www.linkedin.com/company/cyngular-security/"
+country_of_incorporation = "Israel"
+founded_on = "2021-10"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "516476355", source_ids = ["snc"] }]
+source_ids = ["site", "agreement", "snc", "dealroom"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "Cyngular Security Ltd. identifies itself as an Israeli corporation in its customer agreement; the legacy Startup Nation Finder profile records Tel Aviv-Yafo headquarters and Israeli registration number 516476355, and the company's founders are Israeli cybersecurity leaders."
+as_of = "2026-10-05"
+source_ids = ["agreement", "snc", "team"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public reporting identifies an undisclosed January 2022 Seed round and an undisclosed later financing associated with Tachles VC. The official ST Engineering page confirms a strategic investment but does not date or quantify it. Secondary databases disagree on timing and label (2023 Seed II versus March 2024 undisclosed round); Dealroom displays an unsupported $170k/valuation entry for May 2024. No numeric round amount, valuation, or company-announced lifetime total is treated as verified."
+history_status = "partial"
+coverage_through = "2026-10-05"
+rounds = [
+ { id = "seed-2022", round_type = "Seed", instrument = "equity", status = "announced", announced_on = "2022-01", amount_status = "undisclosed", amount_scope = "round", lead_investors = [], participating_investors = ["Springtide Ventures", "ST Engineering Ventures", "VentureIsrael"], source_ids = ["snc", "stengg"] },
+ { id = "strategic-follow-on-2023-2024", round_type = "Undisclosed strategic/follow-on financing", instrument = "unknown", status = "announced", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = ["Tachles VC"], participating_investors = [], source_ids = ["snc", "stengg", "dealroom"], notes = "Finder reports Tachles-led undisclosed round in March 2024; ST Engineering describes its strategic investment without date; Dealroom/CB Insights report differing 2023/2024 dates and participant sets. Event identity/timing is not fully reconciled, so no amounts or valuation are entered." }
+]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private ownership and cap table are not publicly disclosed in the reviewed sources. Investor participation does not establish current ownership percentages."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["snc", "dealroom", "stengg"]
+deals = []
+holdings = []
+
+[intelligence.research]
+researched_at = "2026-10-05T03:06:19Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+ "Cyngular Security funding raised seed investors valuation acquired 2025 2026",
+ "Cyngular Security Tachles VC March 2024 funding",
+ "Cyngular Security ST Engineering strategic investment Cellcom customer",
+ "Cyngular Security Project Nimbus Bynet cloud AI SOC tender",
+ "Cyngular Security founder CEO CTO leadership team hiring revenue customers patents",
+ "Cyngular Security patents WIPO Israel Patent Office USPTO",
+ "Cyngular Security competitors agentic SOC cloud incident response",
+ "Cyngular Security defense government military dual use",
+ "Cyngular Security Israeli company number headquarters legal entity",
+ "Cyngular Security financials revenue ARR profitability headcount"
+]
+gaps = [
+ "funding: no primary announcement discloses amount, instrument details, valuation, or total raised; secondary databases conflict on follow-on date and classification.",
+ "investors: full syndicate and current relationships beyond sourced named participants are not disclosed.",
+ "team: only selected senior biographies are public; no independently confirmed current full roster or current headcount.",
+ "ownership: private cap table, beneficial ownership, and shareholder percentages unavailable.",
+ "financials: no public dated revenue, ARR, profitability, cash, burn, or runway disclosures located.",
+ "traction: named deployment contracts, customer counts, revenue, retention, and Nimbus commercial terms are not disclosed; public logos and announcements do not prove paid production status.",
+ "intellectual_property: no company-assigned patent family was identified in searched public indexes; this is not proof of no patent filings.",
+ "competition: peer comparison is qualitative from official product positioning; no independent comparative efficacy benchmark located.",
+ "dual_use: Nimbus announcement indicates government tender-category selection as stated by the company, but no public award notice, contract value, agency deployment, classified use, or defense contract was verified."
+]
+conflicts = ["Funding timing and classification differ across sources: Finder reports March 2024 undisclosed Tachles-led financing; ST Engineering describes a strategic investment without a date; Dealroom lists May 2024 Seed with $170k and $3m valuation while CB Insights places a Seed VC-II in August 2023. The unsupported numeric Dealroom entry is excluded from facts.", "Cyngular's Project Nimbus win is company-announced on LinkedIn; official procurement confirmation or contract scope/value was not found."]
+diligence_questions = [
+ "Can management provide round-by-round closing dates, instruments, amounts, and an investor-confirmed financing schedule reconciling the 2023/2024 database differences?",
+ "What are current ARR, net retention, gross margin, paid production deployments, and services share, with customer references permitted for diligence?",
+ "For the Nimbus category selection and Cellcom relationship, what exact award/contract documents, deployment status, scope, value, and renewal terms can be shared?",
+ "What independent test protocol supports the 95% autonomous resolution and sub-three-minute claims, including false resolutions, incident mix, and rollback outcomes?",
+ "What authorization boundaries, human approvals, model/data isolation controls, and evidence provenance protect autonomous response in regulated and government environments?"
+]
+topic_checks = [
+ { topic = "identity", status = "reported", checked_at = "2026-10-05T03:06:19Z", next_review_on = "2027-01-05", queries = ["Cyngular Security legal name Israel company number headquarters official company"], source_ids = ["agreement", "snc", "dealroom", "team"], summary = "Official agreement identifies Cyngular Security Ltd. as an Israel corporation; legacy Finder gives Israeli registry number, founding, and Tel Aviv headquarters." },
+ { topic = "funding", status = "conflicting", checked_at = "2026-10-05T03:06:19Z", next_review_on = "2027-01-05", queries = ["Cyngular Security funding raised seed investors valuation", "Cyngular Tachles VC March 2024 funding", "Cyngular ST Engineering strategic investment"], source_ids = ["snc", "stengg", "dealroom"], summary = "Seed and follow-on financing are reported but amounts are undisclosed; secondary sources conflict on date and round label." },
+ { topic = "investors", status = "reported", checked_at = "2026-10-05T03:06:19Z", next_review_on = "2027-01-05", queries = ["Cyngular Security investors Springtide ST Engineering Ventures VentureIsrael Tachles VC"], source_ids = ["snc", "stengg"], summary = "Finder reports named seed participants and Tachles-led later round; ST Engineering independently confirms its strategic investment." },
+ { topic = "team", status = "reported", checked_at = "2026-10-05T03:06:19Z", next_review_on = "2027-01-05", queries = ["Cyngular Security founders CEO CTO leadership team"], source_ids = ["team"], summary = "Current company page describes two co-founders and VP R&D; public team roster is incomplete." },
+ { topic = "ownership", status = "no_public_disclosure", checked_at = "2026-10-05T03:06:19Z", next_review_on = "2027-04-05", queries = ["Cyngular Security ownership shareholders cap table parent company"], source_ids = ["snc", "dealroom"], summary = "No private cap table or disclosed ownership percentages located; no acquisition or public parent reported." },
+ { topic = "financials", status = "no_public_disclosure", checked_at = "2026-10-05T03:06:19Z", next_review_on = "2027-04-05", queries = ["Cyngular Security revenue ARR profitability burn runway financials"], source_ids = ["snc", "dealroom"], summary = "No reliable company-reported or filed operating financial metrics located; database estimates/zeros not treated as facts." },
+ { topic = "traction", status = "reported", checked_at = "2026-10-05T03:06:19Z", next_review_on = "2027-01-05", queries = ["Cyngular Cellcom customer ST Engineering partnership Project Nimbus Bynet"], source_ids = ["stengg", "nimbus", "site", "pr"], summary = "ST Engineering says Cellcom is a client; Cyngular reports a Nimbus category win with Bynet and currently displays customer logos. These do not establish contract value or all customers' paid production status." },
+ { topic = "intellectual_property", status = "not_found", checked_at = "2026-10-05T03:06:19Z", next_review_on = "2027-04-05", queries = ["Cyngular Security patents WIPO PATENTSCOPE Israel Patent Office USPTO"], source_ids = ["agreement"], summary = "No attributable patent record was located in indexed searches; agreement asserts company ownership/licensing of technology generally but is not patent evidence." },
+ { topic = "competition", status = "reported", checked_at = "2026-10-05T03:06:19Z", next_review_on = "2027-04-05", queries = ["agentic SOC cloud incident response CrowdStrike Cortex XSIAM Microsoft Sentinel Tines Torq"], source_ids = ["site", "pr"], summary = "Substitute landscape includes XDR/SIEM suites, cloud security platforms, SOAR vendors, and incident response services; comparative performance remains unverified." },
+ { topic = "dual_use", status = "reported", checked_at = "2026-10-05T03:06:19Z", next_review_on = "2027-01-05", queries = ["Cyngular government tender Nimbus defense security government deployments"], source_ids = ["nimbus", "stengg", "team"], summary = "Cloud incident response has commercial and government cybersecurity applicability; company reports a Nimbus category win, while no defense deployment or contract evidence was found." }
+]
+claim_checks = [
+ { field_path = "company.operating_status", support = "direct", summary = "Current official site actively presents product, current offices, and 2026 events; company remains operating." , verified_at = "2026-10-05T03:06:19Z", source_ids = ["site"] },
+ { field_path = "israel_connection", support = "direct", summary = "Services agreement names Cyngular Security Ltd. as an Israel corporation; Finder lists Tel Aviv-Yafo headquarters, founders, and Israeli company number." , verified_at = "2026-10-05T03:06:19Z", source_ids = ["agreement", "snc"] },
+ { field_path = "funding.rounds.seed-2022.amount", support = "direct", summary = "Finder lists the January 2022 Seed as undisclosed; the numeric amount field is intentionally omitted." , verified_at = "2026-10-05T03:06:19Z", source_ids = ["snc"] },
+ { field_path = "funding.rounds.strategic-follow-on-2023-2024.amount", support = "direct", summary = "Finder reports an undisclosed Tachles-led round; ST Engineering confirms strategic investment without amount. No numeric amount is asserted." , verified_at = "2026-10-05T03:06:19Z", source_ids = ["snc", "stengg"] },
+ { field_path = "funding.rounds.seed-2022.participating_investors", support = "direct", summary = "Finder identifies Springtide Ventures, ST Engineering Ventures, and VentureIsrael as seed investors." , verified_at = "2026-10-05T03:06:19Z", source_ids = ["snc"] },
+ { field_path = "funding.rounds.strategic-follow-on-2023-2024.lead_investors", support = "direct", summary = "Finder identifies Tachles VC as lead of its March 2024 undisclosed round; other sources disagree on dating and participants." , verified_at = "2026-10-05T03:06:19Z", source_ids = ["snc"] }
+]
+
+[[intelligence.research.sources]]
+id = "site"
+url = "https://www.cyngular.com/"
+title = "Cyngular — The Agentic SOC of the AI Era"
+publisher = "Cyngular Security"
+kind = "company"
+accessed_at = "2026-10-05T03:06:19Z"
+claims = ["Current product positioning and six-agent architecture", "Company-reported 95% autonomous resolution under three minutes", "Customer logo wall and anonymous testimonials", "Current offices and active 2026 marketing"]
+
+[[intelligence.research.sources]]
+id = "team"
+url = "https://www.cyngular.com/company"
+title = "About us | Cyngular"
+publisher = "Cyngular Security"
+kind = "company"
+accessed_at = "2026-10-05T03:06:19Z"
+claims = ["Company history and product origins", "Current founders and leadership roles and biographies", "Tel Aviv office and other operating locations"]
+
+[[intelligence.research.sources]]
+id = "agreement"
+url = "https://www.cyngular.com/service-agreement"
+title = "Services Agreement — Cyngular Security"
+publisher = "Cyngular Security"
+kind = "company"
+accessed_at = "2026-10-05T03:06:19Z"
+published_on = "2026-02"
+claims = ["Cyngular Security Ltd. is described as an Israel corporation", "Agreement's general intellectual property ownership/licensing clauses"]
+
+[[intelligence.research.sources]]
+id = "snc"
+url = "https://finder.startupnationcentral.org/company_page/cyngular-security"
+title = "Cyngular Security — Cyber Security | Finder"
+publisher = "Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-05T03:06:19Z"
+claims = ["Founded in 2021, Tel Aviv-Yafo headquarters, and reported employee range", "Israeli registration number 516476355", "Founders and selected team", "January 2022 seed round and participants", "March 2024 undisclosed round led by Tachles VC", "Finder service ended August 31, 2026"]
+
+[[intelligence.research.sources]]
+id = "stengg"
+url = "https://www.stengg.com/en/innovation/st-engineering-ventures/perspectives/our-strategic-investment-in-cyngular/"
+title = "Our Strategic Investment in Cyngular"
+publisher = "ST Engineering"
+kind = "investor"
+accessed_at = "2026-10-05T03:06:19Z"
+claims = ["ST Engineering made a strategic investment in Cyngular and planned product collaboration", "ST Engineering described Cellcom as a Cyngular client", "Cyngular product capabilities and founder backgrounds as represented by the investor"]
+
+[[intelligence.research.sources]]
+id = "nimbus"
+url = "https://www.linkedin.com/posts/cyngular-security_aisoc-aws-azure-activity-7403456986639400960-BRT3"
+title = "Cyngular Security announcement of Project Nimbus win"
+publisher = "Cyngular Security on LinkedIn"
+kind = "company"
+accessed_at = "2026-10-05T03:06:19Z"
+claims = ["Cyngular publicly claims it won a Nimbus cloud security tender category with Bynet", "Company executive describes Cyngular as exclusive provider in its category"]
+
+[[intelligence.research.sources]]
+id = "pr"
+url = "https://www.prnewswire.com/news-releases/cyngular-launches-cybersecurity-platform-to-defeat-cloud-threats-302133023.html"
+title = "Cyngular Launches Cybersecurity Platform to Defeat Cloud Threats"
+publisher = "PR Newswire"
+kind = "company"
+accessed_at = "2026-10-05T03:06:19Z"
+published_on = "2024-05-01"
+claims = ["THIRDhub platform launch", "Product positioned for enterprise and MSSP/MDR multi-tenant use"]
+
+[[intelligence.research.sources]]
+id = "dealroom"
+url = "https://app.dealroom.co/companies/cyngular_security"
+title = "Cyngular Security company information, funding & investors"
+publisher = "Dealroom.co"
+kind = "directory"
+accessed_at = "2026-10-05T03:06:19Z"
+claims = ["Secondary company identity and registration data", "Secondary funding and valuation entry conflicts with other sources and is not accepted as numeric fact", "Cap table information is premium/unavailable"]
+
+[[intelligence.research.sources]]
+id = "blog"
+url = "https://www.cyngular.com/blog"
+title = "Notes from the agentic SOC"
+publisher = "Cyngular Security"
+kind = "company"
+accessed_at = "2026-10-05T03:06:19Z"
+claims = ["Current 2025-2026 company-authored cloud security research activity"]

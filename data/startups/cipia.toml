@@ -1,0 +1,660 @@
+name = "Cipia"
+
+description = "Cipia develops in-cabin computer-vision systems for driver and occupant monitoring, using edge AI to detect drowsiness, distraction, occupancy and related safety events. In 2025 HARMAN announced an asset acquisition of Cipia's sensing technology, while Cipia's aftermarket business reportedly remained with the company."
+
+# Detailed analysis (3-5 substantive paragraphs)
+detailed_description = """
+Cipia builds camera- and AI-based in-cabin sensing platforms that estimate driver state and cabin occupancy from near-infrared imagery. The core stack combines head-pose and gaze estimation, eye-state analysis, classification of occupants and seat-belt usage, and embedded inference designed to run on automotive-grade processors with low latency and tight power budgets.
+
+The commercial market is driven by the spread of driver-monitoring regulations, OEM safety-roadmap commitments, and fleet operators looking to reduce crash risk and insurance exposure. Cipia's products fit passenger vehicles, commercial fleets, and mobility platforms because they do not rely on wearables or intrusive biometrics; instead they use fixed cameras and edge processing to create a continuous view of what is happening inside the cabin. That matters commercially because a non-contact system can be packaged as a persistent safety layer rather than a one-off feature, which gives suppliers more chances to be pulled into platform-level programs and later software or service updates.
+
+At a technical level, this category is hard because the system must work across different cabin geometries, lighting conditions, driver heights, eyewear, seat positions, and transient obstructions. That is why cabin-sensing vendors usually compete on data quality, model robustness, calibration tooling, and the ability to ship on automotive silicon rather than on a flashy demo alone. Cipia's product family has been aimed at those constraints from the start: low-power edge inference, minimal dependence on the cloud, and a sensor configuration intended to be integrated into a vehicle's existing electrical and software architecture.
+
+The market context is also shaped by feature bundling. OEMs increasingly want a single cabin stack that can support driver monitoring, occupant monitoring, child-presence detection, and comfort personalization rather than buying separate point solutions for each function. That favors suppliers that can show a broader cabin-sensing roadmap and a credible path into cockpit electronics or safety packages. In that environment, a vendor like Cipia is differentiated less by one detection metric than by whether it can be trusted as part of a production-grade platform across multiple model years.
+
+Competitive pressure is heavy. Cipia competes with specialists such as Seeing Machines and Smart Eye, as well as Tier-1 suppliers and vertical platform vendors that can bundle DMS/OMS into larger cockpit and ADAS programs. Public commercialization signals matter more than pure algorithm claims in this category, and Cipia's public materials indicate a meaningful design-win history, including a June 2025 HARMAN announcement that referenced 67 design wins across 11 car manufacturers. For diligence purposes, that design-win count is more informative than branding or feature-sheet comparisons because the market tends to reward suppliers that can survive OEM validation cycles, automotive-grade reliability checks, and long deployment timelines.
+
+The company-specific diligence question is no longer whether the core sensing pipeline is technically interesting. The more relevant question is how much of that value survives after HARMAN's asset acquisition and how much remains in the aftermarket business that was carved out from the deal. That split matters because it changes where revenue, product ownership, and roadmap control sit. It also means that Cipia functions today as a useful case study in how a specialized automotive AI vendor can become acquisition-relevant once it proves enough commercial maturity to slot into a broader supplier stack.
+
+From a strategic-diligence perspective, the most important change is that HARMAN announced an asset acquisition of Cipia's sensing technology in June 2025, while noting that Cipia's aftermarket business would remain with the company. That means the record should be read less as a standalone startup and more as a mature sensing asset with ongoing aftermarket adjacency, OEM integration value, and a clear place inside a larger automotive supplier's product stack. HARMAN's interest also signals that the technology was sufficiently productized to fit a larger in-cabin portfolio rather than remaining a science project. The defense relevance remains credible because the same sensing pipeline can monitor operator fatigue, distraction, and occupancy in military vehicles, logistics convoys, and other controlled fleets where sustained attention and situational awareness matter.
+
+For national-security readers, the key takeaway is not that Cipia sells a defense product, but that the same modalities used to reduce civilian crashes can support vehicle-crew supervision, convoy safety, and mission readiness. The dual-use value depends on integration: alerting a driver is useful; tying that alert into fleet command, operational logs, or mission software is where the system becomes operationally meaningful. That makes Cipia a useful reference point for any organization evaluating cabin-sensing vendors, automotive integration pathways, or the tradeoff between privacy-preserving edge inference and richer data collection.
+
+One more reason the record matters is that cabin monitoring sits at the intersection of safety regulation, privacy engineering, and procurement discipline. Companies that can satisfy all three tend to develop durable positions, because customers cannot easily swap them out once the platform is approved. Cipia is therefore interesting even as an acquired asset: it illustrates what kind of computer-vision stack can survive the jump from prototype to automotive production and then remain strategically relevant when a larger supplier absorbs the core IP.
+"""
+
+logo = "Unknown"
+website = "https://cipia.com/"
+sector = "Automotive AI / Driver Monitoring"
+
+founded = "2000"
+headquarters = "Herzliya, Israel"
+employees = "Unknown after asset sale; 2025 filing reported workforce reduction of about 50%"
+funding_stage = "Publicly listed (TASE IPO 2021); automotive assets sold in 2025"
+entity_type = "acquired_asset"
+
+dual_use = true
+dual_use_description = "Cipia's core capabilities—non-contact driver state estimation, near-IR sensing, and edge AI—translate directly to credible defense applications such as monitoring vehicle crew alertness, detecting impairment in convoy drivers, and automating alerts during prolonged operations. The functionality is not intrinsically offensive; the main concerns are reliability under harsh conditions, false positives or negatives, and the integration path needed to turn alerts into useful military workflow actions. Because the same sensor stack can serve both civilian safety and military readiness, the dual-use case is substantive rather than decorative, but it is still primarily a sensing-and-alerting layer rather than a mission system. That profile matters for procurement because it is easier to justify than weapons-adjacent software, yet it still requires serious validation around uptime, ruggedization, and operator trust."
+
+key_technologies = [
+  "Near-infrared camera-based in-cabin sensing",
+  "Head-pose and gaze estimation algorithms",
+  "Eye-state and distraction classification",
+  "Edge neural-network inference on automotive-grade processors",
+  "Occupant and seat-belt presence detection",
+  "Time-series fatigue and micro-sleep detection models",
+  "Automotive integration for OEM and Tier-1 programs"
+]
+
+use_cases = [
+  "OEM driver monitoring systems for passenger vehicles",
+  "Commercial fleet driver-score and telematics integration",
+  "Child and occupant presence detection to prevent left-behind fatalities",
+  "Post-crash occupant state detection for emergency response prioritization",
+  "Cabin safety features integrated into infotainment or ADAS stacks",
+  "Military vehicle operator fatigue and alertness monitoring",
+  "Convoy and logistics driver impairment detection during extended operations",
+  "Aftermarket telematics and video-safety packages for fleets",
+  "Vehicle cabin analytics for safety and comfort optimization"
+]
+
+investible = false
+investment_rationale = "Cipia is no longer a clean standalone startup case: HARMAN announced an asset acquisition of the sensing business, and the remaining company appears centered on aftermarket adjacency. That makes direct equity-style startup diligence a poor fit for this database, even though the underlying sensing IP and automotive integration work remain strategically useful. In practical terms, the strongest value now sits in the technology lineage, product lessons, and OEM validation history, not in a conventional early-stage ownership opportunity. If this were being evaluated at all, it would be as a technology or partnership reference rather than as an investable founder-led startup."
+
+strategic_value = "The sensing stack is strategically relevant as a benchmark for dual-use in-cabin awareness: it shows how AI vision can monitor operator state, reduce fatigue-related incidents, and feed vehicle safety systems in both civilian and military fleets. Post-acquisition, its value is more as embedded supplier IP, product reference architecture, and aftermarket adjacency than as a standalone operating company. For strategic buyers, the important lesson is how cabin sensing becomes sticky once it is validated for automotive reliability, privacy constraints, and OEM integration, because those barriers are what make the capability hard to replicate quickly. The asset also shows how a narrow safety feature can become a platform wedge once it is embedded into a larger cockpit or telematics stack."
+
+potential_score = 72.0
+technology_score = 84.0
+market_score = 73.0
+team_score = 66.0
+dual_use_score = 77.0
+strategic_alignment_score = 66.0
+
+stage = "mature"
+stage_rationale = "This is a mature, productized driver- and occupant-monitoring business with long-running OEM and aftermarket commercialization, but the 2025 HARMAN asset acquisition means the sensing platform now sits inside a larger supplier context rather than an independent startup trajectory. The maturity label fits the commercial lifecycle of the technology, while the acquired-asset classification captures the fact that standalone company-building risk is no longer the main issue. In other words, the technology is mature enough to be bought, integrated, and redistributed inside a bigger automotive portfolio."
+
+competitors = [
+  "Seeing Machines",
+  "Smart Eye",
+  "Mobileye",
+  "Valeo",
+  "Aptiv",
+  "Bosch"
+]
+
+competitive_edge = "A focused in-cabin sensing stack optimized for near-IR operation and embedded inference, with value coming from automotive integration experience rather than a single algorithmic feature. The June 2025 HARMAN announcement suggests the technology had reached a level of OEM relevance that made it attractive as an acquisition target, which is a meaningful signal in a market where many vendors remain stuck in pilot purgatory. Cipia's edge is less about owning an entirely unique model family and more about proving that the models can survive automotive validation, be packaged into sellable programs, and fit into larger supplier roadmaps. That is a real advantage in an industry where validation cycles are slow, switch costs are high, and the winner is often the vendor that can ship consistently rather than the vendor with the most impressive demo."
+
+risk_factors = [
+  "Regulatory uncertainty: regional differences in DMS requirements and slow harmonization",
+  "Privacy and data-protection constraints for camera-based in-cabin sensing",
+  "Integration and ruggedization gaps for military adoption versus consumer vehicles",
+  "Intense competition from well-funded specialist vendors and Tier-1 suppliers",
+  "Performance limits: false positives and false negatives reduce operator trust and adoption",
+  "Corporate-status ambiguity after the HARMAN asset acquisition and remaining aftermarket carve-out"
+]
+
+risk_level = "medium"
+
+signals = []
+priority_rank = 0
+priority_rationale = "Worth tracking for dual-use sensing and vehicle-crew safety, but the acquisition of the core sensing assets makes this more of a strategic reference point than a standalone startup priority. The remaining aftermarket business and the embedded HARMAN relationship are the main reasons to keep it on the radar. It is most useful here as a reference case for in-cabin monitoring, OEM validation, and the way automotive sensing IP can migrate into a larger platform owner. Keep it in the file because it is a strong example of how a niche safety vendor can matter strategically without remaining independently investable."
+
+public_sources = [
+  { label = "HARMAN acquisition announcement", url = "https://news.harman.com/releases/harman-acquires-assets-of-intelligent-sensing-solutions-leader-cipia", description = "Asset acquisition, products, design wins, and retained aftermarket business." },
+  { label = "Cipia 2025 interim filing", url = "https://mayafiles.tase.co.il/rpdf/1689001-1690000/P1689165-00.pdf", description = "Israeli incorporation, completed asset sale, transferred IP, retained aftermarket limits, and workforce reduction." },
+  { label = "Cipia 2024 funding presentation", url = "https://cipia.com/wp-content/uploads/2025/02/Cipia-English-Sep-18-2024-1.pdf", description = "Company-reported historical financing rounds and cumulative funding threshold." },
+  { label = "TASE IPO statistics", url = "https://content.tase.co.il/media/u2vihc5m/stat_210_ipo_companies_2025_eng.pdf?guid=3647be9f-7f87-491d-9bd8-fbc9de412d83", description = "IPO proceeds and post-money valuation." },
+  { label = "Cipia 2024 results", url = "https://www.ynet.co.il/capital/article/s1p1rvu6yl", description = "Company-announced 2024 revenue, gross profit, operating loss, design wins, and software orders." },
+  { label = "Cipia 2025 annual filing", url = "https://mayafiles.tase.co.il/rpdf/1731001-1732000/P1731339-00.pdf", description = "2024 HARMAN investment and strategic agreement; 2025 company status and material risks." },
+  { label = "Cipia leadership", url = "https://cipia.com/about-cipia/", description = "Leadership roles and executive backgrounds (page may no longer reflect post-sale team)." },
+  { label = "Driver monitoring patent", url = "https://patents.google.com/patent/US20190318181A1/en", description = "Patent publication and assignment history associated with Cipia/Eyesight." },
+  { label = "Tomer merger completion report", url = "https://www.calcalist.co.il/market/article/rklw11y91fg", description = "May 2026 reverse merger completion, successor operations, ownership, and management changes." },
+  { label = "IVC Cipia profile", url = "https://www.ivc-online.com/Google-Card?id=f7d67fd8-1f7a-e111-ac59-00155d32a403", description = "Secondary corroboration of asset sale and reverse merger history." }
+]
+
+crawled_at = "2026-02-26T08:30:00Z"
+updated_at = "2026-10-04T17:34:37Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Yehuda Holtzman", role = "Chief Executive Officer at time of HARMAN transaction", is_founder = false, current = false, background = "Cipia's CEO quoted in HARMAN's acquisition announcement; Cipia's leadership page describes prior executive and co-founder roles at ExploreGate and MobileAccess.", source_ids = ["harman", "team"] },
+  { name = "Itay Katz", role = "Co-founder (historical)", is_founder = true, current = false, background = "Named as Cipia co-founder in IVC's company profile; post-sale leadership status is not established.", source_ids = ["ivc"] },
+  { name = "Shelly Mesilati", role = "Chief Financial Officer (historical)", is_founder = false, current = false, background = "Cipia's 2025 annual filing says she ceased serving as CFO at completion of the Tomer merger.", source_ids = ["annual2025", "calcalist"] }
+]
+investors = [
+  { name = "Harman Becker Automotive Systems / HARMAN", investor_type = "corporate", website = "https://www.harman.com/", relationship = "historical", round_ids = ["strategic-investment-2024"], source_ids = ["annual2025"] },
+  { name = "Red Bend Ltd.", investor_type = "corporate", relationship = "historical", round_ids = [], source_ids = ["interim2025"] },
+  { name = "Jebsen Group", investor_type = "corporate", relationship = "historical", round_ids = ["convertible-2020", "series-d-2016-2018"], source_ids = ["funding-deck"] },
+  { name = "Grupo Antolin", investor_type = "corporate", website = "https://www.grupoantolin.com/", relationship = "historical", round_ids = ["convertible-2020"], source_ids = ["funding-deck"] },
+  { name = "Mitsui & Co. Global Investment", investor_type = "corporate", relationship = "historical", round_ids = ["series-b-2011-2013", "series-c-2014-2015"], source_ids = ["funding-deck"] },
+  { name = "Arie Capital", investor_type = "vc", relationship = "historical", round_ids = ["series-d-2016-2018"], source_ids = ["funding-deck"] },
+  { name = "Smart Gesture", investor_type = "other", relationship = "historical", round_ids = ["series-d-2016-2018"], source_ids = ["funding-deck"] }
+]
+financials = [
+  { name = "Revenue", value = "Approximately USD 5.7 million", as_of = "2024-12-31", basis = "reported", metric = "revenue", numeric_value = 5700000, value_relation = "approximate", unit = "currency", currency = "USD", period_start = "2024-01-01", period_end = "2024-12-31", source_ids = ["results2024"] },
+  { name = "Gross profit", value = "USD 3.9 million", as_of = "2024-12-31", basis = "reported", metric = "other", numeric_value = 3900000, value_relation = "approximate", unit = "currency", currency = "USD", period_start = "2024-01-01", period_end = "2024-12-31", source_ids = ["results2024"] },
+  { name = "Operating loss", value = "Approximately USD 8.2 million", as_of = "2024-12-31", basis = "reported", metric = "other", numeric_value = 8200000, value_relation = "approximate", unit = "currency", currency = "USD", period_start = "2024-01-01", period_end = "2024-12-31", source_ids = ["results2024"] }
+]
+traction = [
+  { kind = "product", description = "HARMAN said Cipia sensing technology was embedded in its Ready Care system and announced the acquisition of Cipia's automotive sensing assets.", date = "2025-06-17", source_ids = ["harman"] },
+  { kind = "customer", description = "Company-reported 2024 results cited 40,000 software licenses ordered by a leading global express shipping company; the public disclosure did not name the customer or establish recurring revenue.", date = "2025-03-31", source_ids = ["results2024"] },
+  { kind = "product", description = "HARMAN reported 67 design wins across 11 automakers as of June 2025; design wins are not equivalent to shipped units or recognized revenue.", date = "2025-06-17", source_ids = ["harman"] },
+  { kind = "other", description = "The 2025 interim filing says Cipia's remaining aftermarket activity could sell at most 9,000 FS10 units through December 31, 2025 and could not continue selling additional units thereafter.", date = "2025-07-29", source_ids = ["interim2025"] }
+]
+intellectual_property = [
+  { kind = "patent", description = "US patent family publication US20190318181A1 concerns a system and method for driver monitoring; Google Patents lists a later grant and assignment events, so title to this individual family should not be generalized to the entire portfolio.", date = "2019-10-17", source_ids = ["patent"] },
+  { kind = "other", description = "Cipia's interim filing states the 2025 asset sale transferred substantially all business-related assets including patents, source code, trademarks, domains, customer and supplier contracts, and know-how to Red Bend/HARMAN group.", date = "2025-07-29", source_ids = ["interim2025"] }
+]
+comparables = [
+  { name = "Seeing Machines", website = "https://seeingmachines.com/", rationale = "Public specialist in driver and occupant monitoring for automotive and fleet use.", differentiation = "Competes for OEM and fleet programs; Cipia's historic differentiation emphasized edge computer vision and integrated driver plus occupant monitoring. Cipia's automotive assets now belong to HARMAN.", source_ids = ["harman", "ivc"] },
+  { name = "Smart Eye", website = "https://www.smarteye.se/", rationale = "Automotive driver monitoring and human insight systems supplier.", differentiation = "Overlapping DMS/OMS market; current competitive position is that of HARMAN's acquired Cipia technology rather than an independent Cipia automotive vendor.", source_ids = ["ivc", "harman"] },
+  { name = "HARMAN Ready Care", website = "https://car.harman.com/solutions/ready-care", rationale = "Acquirer and incumbent product platform incorporating Cipia sensing technology.", differentiation = "HARMAN combines the acquired stack with cockpit integration and global OEM reach; Cipia's independent legacy aftermarket business was contractually constrained and is now part of a successor corporate history.", source_ids = ["harman", "interim2025"] }
+]
+
+[intelligence.company]
+company_id = "il-cipia"
+legal_name = "Cipia Vision Ltd."
+aliases = ["Eyesight Mobile Technologies Ltd.", "Cipia", "Cipia Vision"]
+operating_status = "acquired"
+business_model = "Historically B2B licensing and integration of edge computer vision and AI driver/occupant monitoring to automakers and fleet/telematics providers; most automotive operating assets were sold in 2025. The remaining public shell reverse-merged with Tomer Food in 2026 and no longer represents a standalone automotive startup."
+products = ["Driver Sense", "Cabin Sense", "Cipia-FS10"]
+locations = ["Herzliya, Israel"]
+founded_on = "2003-12-08"
+country_of_incorporation = "Israel"
+source_ids = ["interim2025", "harman", "calcalist"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Cipia's September 2024 company presentation reported over USD 100 million raised in total. The same presentation lists historical rounds, while TASE independently reports USD 22 million IPO proceeds and USD 112 million post-money value. Company historical presentation figures are retained as reported; cumulative total is a stated minimum threshold, not an exact sum. The July 2025 asset sale consideration was undisclosed in the reviewed filing."
+reported_total_raised = 100000000
+reported_total_currency = "USD"
+total_source_ids = ["funding-deck"]
+total_as_of = "2024-09-18"
+total_scope = "Company reported over USD 100 million cumulatively; numeric value is the disclosed lower threshold, not an exact total, and should not be summed with listed rounds."
+history_status = "partial"
+coverage_through = "2025-07-29"
+rounds = [
+  { id = "series-a-2007-2010", round_type = "Series A", instrument = "equity", status = "closed", announced_on = "2010", amount_status = "reported", amount = 3000000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["Private investors"], source_ids = ["funding-deck"] },
+  { id = "series-b-2011-2013", round_type = "Series B", instrument = "equity", status = "closed", announced_on = "2011", amount_status = "reported", amount = 7000000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["Mitsui & Co. Global Investment", "Other investors"], source_ids = ["funding-deck"] },
+  { id = "series-c-2014-2015", round_type = "Series C", instrument = "equity", status = "closed", announced_on = "2014", amount_status = "reported", amount = 12000000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["Mitsui & Co. Global Investment", "Other investors"], source_ids = ["funding-deck"] },
+  { id = "series-d-2016-2018", round_type = "Series D", instrument = "equity", status = "closed", announced_on = "2016", amount_status = "reported", amount = 30000000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["Jebsen Group", "Arie Capital", "Smart Gesture", "Private investors"], source_ids = ["funding-deck"], notes = "Presentation aggregates financing over 2016-2018; exact close dates and tranches are not specified." },
+  { id = "convertible-2020", round_type = "Convertible loan", instrument = "convertible", status = "closed", announced_on = "2020", amount_status = "reported", amount = 8500000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["Jebsen Group", "Grupo Antolin"], source_ids = ["funding-deck"] },
+  { id = "ipo-2021", round_type = "IPO (including pre-IPO)", instrument = "ipo", status = "closed", announced_on = "2021-11-24", amount_status = "reported", amount = 22000000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["Institutional investors"], post_money_valuation = 112000000, valuation_currency = "USD", valuation_basis = "reported", source_ids = ["tase-ipo", "interim2025", "funding-deck"], notes = "TASE states proceeds of USD 22m and post-money value USD 112m; company slide groups IPO with pre-IPO at USD 26m, a scope difference not resolved here." },
+  { id = "pipe-2022", round_type = "PIPE", instrument = "equity", status = "closed", announced_on = "2022", amount_status = "reported", amount = 11700000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["Institutional and private investors"], source_ids = ["funding-deck"] },
+  { id = "pipe-2023", round_type = "PIPE", instrument = "equity", status = "closed", announced_on = "2023", amount_status = "reported", amount = 2300000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["Private investors"], source_ids = ["funding-deck"] },
+  { id = "pipe-2024", round_type = "PIPE", instrument = "equity", status = "closed", announced_on = "2024", amount_status = "reported", amount = 5000000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["Strategic investor"], source_ids = ["funding-deck"], notes = "Company slide reports approximately USD 5m; 2025 annual filing separately details a 2024 HARMAN share investment; the amounts and scope are not assumed identical." },
+  { id = "strategic-investment-2024", round_type = "Strategic investment", instrument = "equity", status = "closed", announced_on = "2024-08-29", amount_status = "not_found", amount_scope = "unknown", lead_investors = ["Harman Becker Systems Automotive, Inc."], participating_investors = [], source_ids = ["annual2025"], notes = "2025 annual filing reports HARMAN was issued 29,792,122 ordinary shares at NIS 0.60 each under an investment agreement. This is share subscription consideration of NIS 17,875,273.20, separate from the approximate USD 5m company presentation entry; no exchange conversion made." }
+]
+
+[intelligence.ownership]
+status = "reported"
+summary = "Cipia was a TASE-listed Israeli issuer. HARMAN/Red Bend was a shareholder before acquiring the automotive assets. The automotive business and related IP transferred to Red Bend on July 29, 2025; aftermarket was excluded but constrained to up to 9,000 FS10 units through year-end 2025. In May 2026 the listed shell completed a reverse merger with Tomer Food and changed its name to Tomer Food Combination. No current Cipia standalone cap table exists in the reviewed sources."
+cap_table_status = "undisclosed"
+shareholders = ["Harman Becker Systems Automotive, Inc. (historical shareholder)", "Public shareholders"]
+source_ids = ["interim2025", "annual2025", "calcalist"]
+deals = [
+  { id = "harman-asset-sale-2025", deal_type = "other", company_role = "seller", announced_on = "2025-06-17", completed_on = "2025-07-29", status = "completed", counterparty = "Red Bend Ltd. / HARMAN group", amount_status = "undisclosed", source_ids = ["harman", "interim2025"], notes = "Asset and liability sale included most business-related assets, technology, IP, patents, source code, trademarks, customer/supplier contracts and know-how; aftermarket excluded. Filing does not disclose price." },
+  { id = "tomer-reverse-merger-2026", deal_type = "merger", company_role = "issuer", announced_on = "2026-01-20", completed_on = "2026-05-19", status = "completed", counterparty = "Tomer Import and Marketing of Food Products Ltd.", amount_status = "not_found", source_ids = ["calcalist", "ivc"], notes = "Reverse merger changed public company identity/name to Tomer Food Combination; reported successor controlling stake for Doron Kimalov was 70.99%. This does not represent ownership of Cipia automotive assets." }
+]
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel"]
+summary = "Cipia Vision Ltd. was incorporated in Israel on December 8, 2003 and had its registered office in Herzliya, according to its TASE interim filing."
+as_of = "2025-06-30"
+source_ids = ["interim2025"]
+
+[intelligence.research]
+researched_at = "2026-10-04T17:34:37Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Cipia HARMAN asset acquisition June 2025 announcement 67 design wins 11 car manufacturers",
+  "Cipia funding raised investors IPO 2021 company history",
+  "Cipia company leadership CEO founders aftermarket business 2026",
+  "Cipia patents driver monitoring Google patents",
+  "Cipia HARMAN acquisition completed closed 2025 Cipia shareholders TASE",
+  "site:mayafiles.tase.co.il Cipia 2025 asset sale Harman Red Bend",
+  "Cipia 2024 annual results revenue 2025 financials TASE",
+  "Cipia legal name incorporated 2003 Eyesight Mobile Technologies Ltd Israel",
+  "Tomer Food Combination Cipia reverse merger completed May 2026",
+  "Cipia investors Series A Series B Series C Series D funding 2024 presentation"
+]
+gaps = [
+  "team: post-asset-sale Cipia employee roster, present leadership and staffing are not publicly established; historic bios do not establish current employment.",
+  "investors: complete historical investor-by-round allocation and current successor company shareholder register are not available in reviewed sources.",
+  "financials: no complete audited standalone post-sale Cipia financial outlook or current revenue/runway was verified; asset consideration is undisclosed.",
+  "traction: no evidence reviewed establishes current Cipia-branded commercial activity after the capped 2025 aftermarket wind-down; historical design wins do not prove current deliveries.",
+  "intellectual_property: comprehensive patent-family inventory and post-sale ownership schedule were not reviewed; only a representative patent and filing-level asset transfer were verified.",
+  "competition: no new independent Cipia operating competitor set applies after transfer; comparables describe the former automotive market and HARMAN product context.",
+  "dual_use: no public defense/security customer, deployment, certification or contract was found; potential applicability is technical inference only.",
+  "identity: post-May 2026 listed successor operates as Tomer Food Combination; Cipia is retained as historical identity for the acquired automotive asset and should not be confused with the successor's food business."
+]
+conflicts = ["Cipia's September 2024 presentation states IPO including pre-IPO proceeds of USD 26m, whereas TASE lists IPO proceeds of USD 22m; the USD 22m TASE event amount is used and the difference is treated as scope, not added as another round.", "Company presentation reports approximately USD 5m 2024 PIPE/strategic financing; annual filing documents HARMAN's share subscription at NIS 0.60 per share but does not equate it to that round amount. Both disclosures are preserved without double-counting."]
+diligence_questions = [
+  "Did the May 2026 reverse merger extinguish or transfer every residual Cipia corporate obligation, employee claim and customer warranty, and what is the legal status of the original Cipia subsidiary?",
+  "What was the cash and liability-adjusted consideration paid by Red Bend/HARMAN for the July 2025 asset package, and were any royalties or earn-outs retained?",
+  "Which patent families, source repositories and customer contracts were assigned to HARMAN, and are there any residual licenses or encumbrances?",
+  "Did the 40,000-license order convert to recognized recurring software revenue before the asset sale, and what production deployments were active at closing?",
+  "What was the complete 2024 HARMAN equity subscription and its relationship to the presentation's approximate USD 5m PIPE entry?"
+]
+
+[[intelligence.research.sources]]
+id = "harman"
+url = "https://news.harman.com/releases/harman-acquires-assets-of-intelligent-sensing-solutions-leader-cipia"
+title = "HARMAN Acquires Assets of Intelligent Sensing Solutions Leader Cipia"
+publisher = "HARMAN"
+kind = "company"
+accessed_at = "2026-10-04T17:34:37Z"
+published_on = "2025-06-17"
+claims = ["HARMAN announced acquisition of Cipia automotive assets; transaction was subject to closing conditions.", "Cipia sensing was integrated in Ready Care; HARMAN reported 67 design wins across 11 automakers.", "Cipia's existing aftermarket business was to remain with the company.", "HARMAN is a wholly owned subsidiary of Samsung Electronics."]
+
+[[intelligence.research.sources]]
+id = "interim2025"
+url = "https://mayafiles.tase.co.il/rpdf/1689001-1690000/P1689165-00.pdf"
+title = "Cipia Vision Ltd. interim report for six months ended June 30, 2025"
+publisher = "Tel Aviv Stock Exchange / Cipia Vision Ltd."
+kind = "filing"
+accessed_at = "2026-10-04T17:34:37Z"
+published_on = "2025-08"
+claims = ["Cipia was incorporated in Israel on December 8, 2003 and registered in Herzliya.", "The Red Bend asset sale agreement signed June 17, 2025 completed July 29, 2025.", "Transferred assets included patents, source code, trademarks, domains, contracts and know-how; aftermarket excluded.", "Remaining FS10 sales were capped at 9,000 units through December 31, 2025, with no further sales thereafter.", "The company considered wind-down or merger alternatives and disclosed substantial going-concern uncertainty.", "A workforce reduction plan included about 50% reduction in headcount."]
+
+[[intelligence.research.sources]]
+id = "funding-deck"
+url = "https://cipia.com/wp-content/uploads/2025/02/Cipia-English-Sep-18-2024-1.pdf"
+title = "Cipia Vision Ltd. company presentation"
+publisher = "Cipia"
+kind = "company"
+accessed_at = "2026-10-04T17:34:37Z"
+published_on = "2024-09-18"
+claims = ["Company reported over USD 100m raised in total.", "Presentation lists Series A USD 3m; Series B USD 7m; Series C USD 12m; Series D USD 30m; 2020 convertible loan USD 8.5m; 2021 IPO including pre-IPO USD 26m; 2022 PIPE USD 11.7m; 2023 PIPE USD 2.3m; 2024 PIPE approximately USD 5m.", "Presentation names historical round participants including Mitsui, Jebsen Group, Grupo Antolin, Arie Capital and Smart Gesture."]
+
+[[intelligence.research.sources]]
+id = "tase-ipo"
+url = "https://content.tase.co.il/media/u2vihc5m/stat_210_ipo_companies_2025_eng.pdf?guid=3647be9f-7f87-491d-9bd8-fbc9de412d83"
+title = "TASE IPOs 2015-2025"
+publisher = "Tel Aviv Stock Exchange"
+kind = "government"
+accessed_at = "2026-10-04T17:34:37Z"
+published_on = "2025"
+claims = ["Cipia Vision issuer 1964 IPO in November 2021 raised USD 22m at USD 112m post-money company value."]
+
+[[intelligence.research.sources]]
+id = "results2024"
+url = "https://www.ynet.co.il/capital/article/s1p1rvu6yl"
+title = "Cipia reports 2024 results: revenue growth and 45% increase in gross profit"
+publisher = "Ynet / company release"
+kind = "media"
+accessed_at = "2026-10-04T17:34:37Z"
+published_on = "2025-03-31"
+claims = ["Company reported 2024 revenue of approximately USD 5.7m, gross profit USD 3.9m and operating loss USD 8.2m.", "Company reported an order for 40,000 software licenses from a leading global express shipping company.", "Company said 2024 included OEM model and truck program wins.", "Products included Driver Sense, Cabin Sense and Cipia-FS10."]
+
+[[intelligence.research.sources]]
+id = "annual2025"
+url = "https://mayafiles.tase.co.il/rpdf/1731001-1732000/P1731339-00.pdf"
+title = "Cipia annual report for 2025"
+publisher = "Tel Aviv Stock Exchange / Cipia Vision Ltd."
+kind = "filing"
+accessed_at = "2026-10-04T17:34:37Z"
+published_on = "2026-03"
+claims = ["HARMAN investment agreement and strategic cooperation entered into effect in August 2024.", "Cipia issued HARMAN 29,792,122 ordinary shares at NIS 0.60 per share.", "Shelly Mesilati ceased serving as CFO at merger completion.", "2025 filing describes risks tied to the Tomer transaction, HARMAN/Red Bend agreements and company financing."]
+
+[[intelligence.research.sources]]
+id = "team"
+url = "https://cipia.com/about-cipia/"
+title = "About Cipia"
+publisher = "Cipia"
+kind = "company"
+accessed_at = "2026-10-04T17:34:37Z"
+claims = ["Company page describes Yehuda Holtzman and historical leadership backgrounds.", "Company page describes legacy Driver Sense, Cabin Sense and in-cabin sensing activity."]
+
+[[intelligence.research.sources]]
+id = "patent"
+url = "https://patents.google.com/patent/US20190318181A1/en"
+title = "US20190318181A1: System and method for driver monitoring"
+publisher = "Google Patents"
+kind = "other"
+accessed_at = "2026-10-04T17:34:37Z"
+published_on = "2019-10-17"
+claims = ["Patent family concerns driver monitoring and includes US grant US12094224B2 published in 2024.", "Patent page records assignment events involving Cipia Vision Ltd. and Red Bend Ltd."]
+
+[[intelligence.research.sources]]
+id = "calcalist"
+url = "https://www.calcalist.co.il/market/article/rklw11y91fg"
+title = "Tomer completes merger with Cipia public shell at NIS 100m valuation"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-04T17:34:37Z"
+published_on = "2026-05-19"
+claims = ["Tomer completed reverse merger with Cipia listed shell in May 2026.", "Doron Kimalov received 70.99% of merged company and became chair and CEO.", "Shelly Mesilati ceased as CFO; the successor is a food importer/distributor, not an automotive AI business."]
+
+[[intelligence.research.sources]]
+id = "ivc"
+url = "https://www.ivc-online.com/Google-Card?id=f7d67fd8-1f7a-e111-ac59-00155d32a403"
+title = "Cipia Vision Ltd. company profile"
+publisher = "IVC Data & Insights"
+kind = "directory"
+accessed_at = "2026-10-04T17:34:37Z"
+claims = ["IVC records Cipia as public shell after July 2025 sale of automotive technology and IP to HARMAN subsidiary.", "IVC records May 2026 merger completion and public company name change to Tomer Food Combination.", "IVC lists historical founders and competitors Seeing Machines and Smart Eye."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T17:34:37Z"
+next_review_on = "2027-01-04"
+queries = ["Cipia legal name incorporated 2003 Eyesight Mobile Technologies Ltd Israel", "Tomer Food Combination Cipia reverse merger completed May 2026"]
+source_ids = ["interim2025", "calcalist"]
+summary = "Verified historical legal identity, Israel incorporation, Herzliya registered office, and the 2026 successor identity."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T17:34:37Z"
+next_review_on = "2027-01-04"
+queries = ["Cipia funding raised investors IPO 2021 company history", "Cipia investors Series A Series B Series C Series D funding 2024 presentation"]
+source_ids = ["funding-deck", "tase-ipo", "annual2025"]
+summary = "Company's 2024 presentation provides historical rounds and a cumulative over USD 100m claim; TASE independently supports IPO amount and post-money valuation. Full round-level diligence remains partial."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T17:34:37Z"
+next_review_on = "2027-01-04"
+queries = ["Cipia investors funding Jebsen Mitsui Grupo Antolin Harman"]
+source_ids = ["funding-deck", "annual2025"]
+summary = "Historical investors and the HARMAN share investment are disclosed; complete historic allocations and post-merger shareholder register were not compiled."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T17:34:37Z"
+next_review_on = "2027-01-04"
+queries = ["Cipia company leadership CEO founders aftermarket business 2026"]
+source_ids = ["team", "calcalist", "annual2025"]
+summary = "Historical executives are sourced, but public pages do not establish current Cipia staffing after asset sale and reverse merger."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-04T17:34:37Z"
+next_review_on = "2027-01-04"
+queries = ["Cipia HARMAN acquisition completed closed 2025 Cipia shareholders TASE", "Tomer Food Combination Cipia reverse merger completed May 2026"]
+source_ids = ["interim2025", "annual2025", "calcalist"]
+summary = "Filed sale completion, HARMAN share subscription, and May 2026 successor merger are documented; acquisition consideration remains undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-04T17:34:37Z"
+next_review_on = "2027-01-04"
+queries = ["Cipia 2024 annual results revenue 2025 financials TASE"]
+source_ids = ["results2024", "interim2025", "annual2025"]
+summary = "Company reported 2024 revenue, gross profit and operating loss. No current standalone post-sale financial outlook was verified."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T17:34:37Z"
+next_review_on = "2027-01-04"
+queries = ["Cipia 67 design wins 11 automakers 40000 software licenses 2024 results"]
+source_ids = ["harman", "results2024", "interim2025"]
+summary = "Historical order, reported design wins and integration are verified; none establishes continuing standalone activity after the 2025 sale."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-04T17:34:37Z"
+next_review_on = "2027-01-04"
+queries = ["Cipia patents driver monitoring Google patents", "Cipia HARMAN asset sale patents source code ownership"]
+source_ids = ["patent", "interim2025"]
+summary = "A representative driver-monitoring patent and filing-level transfer of IP assets to Red Bend were verified; portfolio-wide schedule remains unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T17:34:37Z"
+next_review_on = "2027-01-04"
+queries = ["Cipia competitors Seeing Machines Smart Eye driver monitoring"]
+source_ids = ["ivc", "harman"]
+summary = "Historical DMS/OMS competitors and the HARMAN product context were checked; independent Cipia competition is no longer a current company-level category."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-04T17:34:37Z"
+next_review_on = "2027-01-04"
+queries = ["Cipia defense military vehicle driver monitoring government contract", "Cipia security fleet defense customer deployment"]
+source_ids = ["harman", "interim2025"]
+summary = "No defense or government deployment was found in reviewed material; vehicle operator fatigue monitoring is a plausible technical adjacency, not evidenced commercial use."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "TASE filing confirms automotive assets sold and the company evaluated merger/wind-down; contemporaneous 2026 reporting confirms the reverse merger completed and the Cipia public shell changed identity."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["interim2025", "calcalist"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "TASE filing states Cipia was incorporated in Israel and gives Herzliya as registered office."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["interim2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Cipia's 2024 presentation states over USD 100 million raised in total; value represents only the threshold, not an exact total."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2007-2010.amount"
+support = "direct"
+summary = "Company presentation lists Series A, 2007-2010, USD 3 million."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2011-2013.amount"
+support = "direct"
+summary = "Company presentation lists Series B, 2011-2013, USD 7 million."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2014-2015.amount"
+support = "direct"
+summary = "Company presentation lists Series C, 2014-2015, USD 12 million."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2016-2018.amount"
+support = "direct"
+summary = "Company presentation lists Series D aggregated over 2016-2018, USD 30 million."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.convertible-2020.amount"
+support = "direct"
+summary = "Company presentation lists a 2020 convertible loan of USD 8.5 million."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.ipo-2021.amount"
+support = "direct"
+summary = "TASE IPO report lists USD 22 million proceeds."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["tase-ipo"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.ipo-2021.post_money_valuation"
+support = "direct"
+summary = "TASE IPO report lists USD 112 million company value after the money."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["tase-ipo"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pipe-2022.amount"
+support = "direct"
+summary = "Company presentation lists 2022 PIPE of USD 11.7 million."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pipe-2023.amount"
+support = "direct"
+summary = "Company presentation lists 2023 PIPE of USD 2.3 million."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pipe-2024.amount"
+support = "direct"
+summary = "Company presentation lists approximately USD 5 million 2024 PIPE/strategic investor entry."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.strategic-investment-2024.amount"
+support = "direct"
+summary = "Amount unavailable; round amount status is not_found and no amount is asserted."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["annual2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2011-2013.participating_investors"
+support = "direct"
+summary = "Company presentation names Mitsui & Co. Global Investment among Series B participants."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2007-2010.participating_investors"
+support = "direct"
+summary = "Company presentation identifies private investors as Series A participants."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2014-2015.participating_investors"
+support = "direct"
+summary = "Company presentation names Mitsui & Co. Global Investment among Series C participants."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2016-2018.participating_investors"
+support = "direct"
+summary = "Company presentation names Jebsen Group, Arie Capital and Smart Gesture among Series D participants."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.convertible-2020.participating_investors"
+support = "direct"
+summary = "Company presentation names Jebsen Group and Grupo Antolin as convertible-loan participants."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.ipo-2021.participating_investors"
+support = "direct"
+summary = "Company presentation identifies institutional investors as participants in the IPO/pre-IPO financing."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.harman-asset-sale-2025.company_role"
+support = "direct"
+summary = "TASE filing describes Cipia as seller and Red Bend/HARMAN as purchaser of the asset package."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["interim2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.tomer-reverse-merger-2026.company_role"
+support = "direct"
+summary = "Reporting describes Cipia as the listed issuer/shell into which Tomer merged."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["calcalist"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Revenue@2024-12-31.numeric_value"
+support = "direct"
+summary = "Company's 2024 results state revenue of approximately USD 5.7 million."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["results2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Gross profit@2024-12-31.numeric_value"
+support = "direct"
+summary = "Company's 2024 results state gross profit of approximately USD 3.9 million."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["results2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Operating loss@2024-12-31.numeric_value"
+support = "direct"
+summary = "Company's 2024 results state operating loss of approximately USD 8.2 million."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["results2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pipe-2022.participating_investors"
+support = "direct"
+summary = "Company presentation describes institutional and private investors, existing and new, in 2022 PIPE."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pipe-2023.participating_investors"
+support = "direct"
+summary = "Company presentation identifies private investors for 2023 PIPE."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pipe-2024.participating_investors"
+support = "direct"
+summary = "Company presentation identifies a strategic investor for the 2024 PIPE."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["funding-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.strategic-investment-2024.lead_investors"
+support = "direct"
+summary = "Annual filing identifies Harman Becker Systems Automotive, Inc. as party to the 2024 strategic investment agreement."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["annual2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.harman-asset-sale-2025.status"
+support = "direct"
+summary = "Cipia's TASE interim filing confirms closing of the asset sale on July 29, 2025."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["interim2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.harman-asset-sale-2025.amount"
+support = "direct"
+summary = "The reviewed filing describes the transferred assets but does not disclose consideration; amount is undisclosed."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["interim2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.tomer-reverse-merger-2026.status"
+support = "direct"
+summary = "Calcalist reports the Tomer reverse merger completed in May 2026."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["calcalist"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.tomer-reverse-merger-2026.amount"
+support = "direct"
+summary = "No transaction amount is disclosed in the reviewed merger completion reporting."
+verified_at = "2026-10-04T17:34:37Z"
+source_ids = ["calcalist"]

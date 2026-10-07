@@ -1,0 +1,591 @@
+name = 'ControlMonkey'
+description = 'ControlMonkey is an Israeli seed-stage infrastructure automation platform providing end-to-end governance, disaster recovery, and AI-powered code generation for Infrastructure-as-Code (Terraform) at enterprise scale.'
+detailed_description = """ControlMonkey delivers a comprehensive Infrastructure-as-Code (IaC) automation and governance platform designed to solve cloud operational complexity at enterprise scale. Founded in 2022 by Aharon Twizer (ex-AWS, ex-Spot.io CTO) and Ori Yemini (ex-Spot.io CTO), the platform unifies four critical functions: automated IaC code generation (reverse-engineering existing cloud infrastructure into validated Terraform), drift detection and remediation (catching divergence between desired and actual state), cloud disaster recovery (daily snapshots enabling infrastructure rollback), and policy-driven governance workflows. This integrated architecture addresses a fundamental pain point: 80%+ of enterprises using Terraform still manage infrastructure through manual ClickOps, creating compliance gaps, security risks, and operational brittleness.
+
+The addressable market combines three expanding segments: (1) cloud governance and compliance, where enterprises face regulatory pressure across SOC 2, FedRAMP, and industry-specific standards; (2) infrastructure reliability and disaster recovery, where cloud misconfigurations rank among top outage causes; and (3) DevOps acceleration, where enterprises seek to shift-left policy enforcement and reduce manual provisioning toil. Early customer traction spans financial services (Block, HoneyBook, Rapyd), media/edtech (CourseHero, 365Scores), security (ReasonLabs), network infrastructure (Intel/Granulate), and multinational enterprises (Comcast, Windward). Reported customer impact includes 3x faster deployments, 75% reduction in manual IaC coding, 50% fewer production incidents, and 100% infrastructure disaster recovery readiness—metrics that directly correlate with enterprise TCO and operational resilience.
+
+Competitively, ControlMonkey's strength lies in providing unified governance + disaster recovery + code generation in a single orchestration platform. Alternatives typically address one or two of these domains: Spacelift and Scalr excel at policy as code and multi-environment orchestration but lack the AI-driven code discovery and disaster recovery capabilities; env0 focuses on cost governance; Terraform Cloud (HashiCorp) provides orchestration but not disaster recovery or infrastructure reverse-engineering. ControlMonkey's AI-powered code generation (extracting existing cloud state into managed Terraform) is particularly differentiated and addresses customer acquisition friction for IaC adoption.
+
+Dual-use relevance is substantial and multifaceted. Cloud infrastructure governance directly supports both commercial and defense/national-security use cases: ensuring policy compliance, preventing configuration drift, automating remediation, and enabling auditability are foundational for both enterprise security operations and mission-critical defense systems. The platform's ability to enforce infrastructure policies at deployment time, maintain complete configuration snapshots, and rapidly recover from misconfigurations creates tangible value for zero-trust security postures and resilience requirements common to both enterprise and defense-adjacent cloud operations. Traction from advanced enterprise customers (Intel, Comcast, financial services) and technical endorsement from AWS security architects validates this relevance."""
+logo = 'https://controlmonkey.io/favicon.ico'
+website = 'https://controlmonkey.io'
+sector = "Cloud Infrastructure Software / Cyber Resilience"
+founded = '2022'
+headquarters = 'Tel Aviv, Israel'
+employees = "Unknown"
+funding_stage = "Seed (last disclosed round: January 2025)"
+dual_use = false
+dual_use_description = "Public evidence supports a commercial cloud infrastructure governance and cyber resilience business. The capabilities could be relevant to security-sensitive environments, but no public evidence located in this review establishes defense customers, government contracts, defense-specific products, or deployment in national-security systems; accordingly, a defense dual-use thesis is not asserted."
+key_technologies = ['AI-powered infrastructure code reverse-engineering and generation', 'Terraform-native policy enforcement and governance', 'Infrastructure drift detection and automated remediation', 'Cloud configuration backup and disaster recovery', 'GitOps-driven infrastructure CI/CD orchestration', 'Multi-cloud resource discovery and inventory']
+use_cases = ['Migrating ClickOps-based cloud infrastructure to managed, auditable Infrastructure-as-Code', 'Detecting and auto-remediating infrastructure drift in multi-environment deployments', 'Enforcing security and compliance policies at cloud deployment time (shift-left governance)', 'Achieving infrastructure disaster recovery in minutes rather than hours via configuration snapshots', 'Reducing manual infrastructure provisioning labor through AI-assisted code generation', 'Maintaining continuous compliance for SOC 2, FedRAMP, industry-specific regulatory requirements', 'Enabling policy-driven multi-cloud infrastructure governance for geographically distributed teams', 'Supporting zero-trust security architectures by enforcing configuration immutability and auditability']
+investible = true
+investment_rationale = """ControlMonkey presents a strong strategic diligence case for a defense-tech thesis focused on critical infrastructure and cloud resilience. The company operates in a durable, expanding market (IaC automation, cloud governance, disaster recovery) with quantified enterprise pain points (drift causing outages, compliance failures, slow provisioning). Early traction demonstrates strong product-market fit: named customers spanning finance, tech, media, security, and global enterprises; concrete impact metrics (3x deployment speed, 50-75% labor savings); and founder pedigree (ex-AWS, ex-successful exit Spot.io to Cisco) indicating execution capability. Seed funding from Lool Ventures and Joule Ventures validates institutional belief. The company is well-positioned in the expanding cloud resilience and infrastructure automation market, with differentiated capabilities (AI code generation, unified governance+DR) and customer concentration in strategic verticals (finance, enterprise security, global tech). The core technology (policy-driven automation, configuration discovery, disaster recovery) has clear strategic applicability to critical infrastructure and mission-systems operations."""
+strategic_value = """ControlMonkey directly strengthens cloud infrastructure resilience and security governance—both critical for mission-systems and critical infrastructure. The platform reduces operational risk by preventing configuration drift, enforcing compliance policies, and enabling rapid recovery from cloud incidents. For organizations operating large-scale cloud infrastructure (enterprise, defense, critical systems), the ability to automatically detect unauthorized changes, enforce policy at deployment time, maintain auditable configuration history, and recover from outages in minutes rather than hours translates to reduced mean-time-to-recovery (MTTR), stronger security posture, and improved operational continuity. This is particularly relevant for defense-adjacent operations where infrastructure availability, auditability, and policy compliance are existential requirements. The platform's unification of governance, compliance, and disaster recovery creates strategic value by consolidating multiple operational domains into a single control plane."""
+potential_score = 81.0
+technology_score = 82.0
+market_score = 81.0
+team_score = 79.0
+dual_use_score = 87.0
+strategic_alignment_score = 88.0
+stage = 'early'
+stage_rationale = """ControlMonkey is in early commercialization with strong product-market fit signals. Founded in 2022, the company has achieved product maturity (full feature set), named customer traction (10+ enterprise customers spanning finance, tech, security, global enterprises), and institutional validation (seed funding from established Israeli and international VCs). Revenue-stage indicators are not publicly confirmed, but customer logos and case studies suggest beyond-pilot commercial traction. The company remains at seed/Series A inflection point: product-market fit validated but not yet at scale. Staffing (11-50) and recent feature releases (AI code generation, disaster recovery) indicate well-capitalized early growth phase rather than pre-revenue or deep R&D mode."""
+competitors = ['Spacelift (policy-driven orchestration, multi-cloud)', 'Scalr (cost governance and enterprise IaC controls)', 'env0 (cost optimization and DevOps automation)', 'Terraform Cloud / HashiCorp (native Terraform orchestration)', 'Pulumi (multi-language IaC and policy-as-code)', 'Cloudtruth (configuration management for IaC)']
+competitive_edge = """ControlMonkey's competitive differentiation centers on unified scope: the platform combines infrastructure code generation, drift detection, disaster recovery, and policy-driven governance in a single orchestration plane—competitors typically excel in one or two of these domains. The AI-powered code generator (reverse-engineering existing cloud resources into Terraform) is particularly differentiated and solves customer acquisition friction for IaC adoption by eliminating the high-friction manual code-writing phase. The integrated disaster recovery capability (daily configuration snapshots enabling one-click rollback) addresses a widespread gap in competing platforms and directly supports enterprise resilience requirements. Founder track record (ex-AWS, ex-Spot.io) and customer roster (Block, Intel, Comcast) signal strong execution and enterprise credibility."""
+risk_factors = ['Competitive intensity in DevOps/IaC category: HashiCorp, cloud-native vendors (AWS, Azure, GCP), and well-funded startups (Spacelift, Scalr, env0) all compete for policy/orchestration mindshare', 'Customer concentration risk: traction concentrated in specific verticals; market validation across broader enterprise base remains ongoing', 'Multi-cloud integration depth: platform adoption depends on broad cloud-provider support and native integration breadth; gaps in less-common clouds or hybrid environments could limit TAM', 'Enterprise sales cycle friction: infrastructure governance is operationally critical but often a discretionary budget item; long sales cycles and high customer acquisition costs typical for category', 'Platform lock-in risk (both directions): customers may prefer cloud-native orchestration tools (AWS Control Tower, Azure governance); alternately, early lock-in could constrain expansion if product strategy diverges from customer needs']
+risk_level = 'medium'
+signals = []
+priority_rank = 0
+priority_rationale = """ControlMonkey merits high priority within a defense-tech/critical-infrastructure thesis due to converging strategic factors: (1) Core technology (automated policy enforcement, configuration recovery, drift detection) has direct applicability to mission-critical and defense-adjacent cloud operations; (2) Team pedigree (ex-AWS, ex-successful exit) and customer roster (enterprise and advanced verticals) indicate execution capability and market validation; (3) Seed-stage pricing and potential acquisition value suggest favorable entry point; (4) Market timing (cloud adoption accelerating, compliance complexity increasing, disaster recovery awareness rising) supports TAM expansion; (5) Dual-use positioning is natural rather than forced—governance automation serves both commercial resilience and national-security use cases. Primary diligence questions center on customer concentration, multi-cloud depth, and enterprise sales model sustainability."""
+crawled_at = '2026-02-23T20:10:00Z'
+updated_at = "2026-10-04T20:56:15Z"
+entity_type = "startup"
+public_sources = [
+  { label = "Seed round announcement", url = "https://www.prnewswire.com/news-releases/ai-powered-cloud-infrastructure-platform-controlmonkey-launches-in-us-with-7-million-seed-round-to-tame-cloud-complexity-302350907.html", description = "Company announcement of the $7 million seed round and co-leads, January 2025." },
+  { label = "Company leadership", url = "https://controlmonkey.io/about-us/", description = "Official company profile, founders and management." },
+  { label = "AWS collaboration", url = "https://controlmonkey.io/blog/controlmonkey-aws-strategic-collaboration-agreement/", description = "Company announcement of AWS Strategic Collaboration Agreement, August 2026." },
+  { label = "AWS Marketplace listing", url = "https://aws.amazon.com/marketplace/pp/prodview-3cuadcjyrgj4q", description = "Live commercial SaaS listing, capabilities, contract pricing and customer reviews." },
+  { label = "AWS Resilience Competency", url = "https://controlmonkey.io/news/aws-resilience-competency/", description = "Company announcement of AWS Resilience Competency, February 2026." },
+  { label = "ControlMonkey MCP Server", url = "https://controlmonkey.io/news/mcp-server-controlmonkey/", description = "Product launch and documented governance controls for AI-assisted operations, July 2026." },
+  { label = "Lool Ventures portfolio", url = "https://www.lool.vc/portfolio/control-monkey/", description = "Investor portfolio confirms founders, founding year and 2024 investment." },
+  { label = "Startup Nation Finder company record", url = "https://finder.startupnationcentral.org/company_page/controlmonkey?section=business", description = "Legacy Israeli startup directory record, last updated January 2025; used cautiously for location and registry identifier." },
+  { label = "Competitor comparison", url = "https://controlmonkey.io/resource/spacelift-vs-terraform-cloud/", description = "Company-authored comparison of ControlMonkey, Spacelift and Terraform Cloud; treated as vendor positioning." },
+  { label = "ControlMonkey and AWS Marketplace", url = "https://controlmonkey.io/solution/terraform-automation/", description = "Official product description of Terraform CI/CD, governance and code generation." },
+  { label = "AWS Partner announcement", url = "https://controlmonkey.io/news/aws-resilience-competency/", description = "Official description of resilience competency and product scope." },
+  { label = "Global DevOps case article", url = "https://controlmonkey.io/blog/how-a-global-devops-team-of-5-manages-100k-assets-on-aws/", description = "Company-authored use-case article describing scale scenario; customer identity/outcomes not independently disclosed." },
+  { label = "Product integrations and release", url = "https://controlmonkey.io/news/mcp-server-controlmonkey/", description = "Official description of MCP integration, token authorization, policy enforcement and audit logging." }
+  ,{ label = "Israeli Corporations Authority", url = "https://www.gov.il/en/service/company_extract", description = "Government registry lookup and company extract service; the specific company's extract was not retrieved." }
+  ,{ label = "Partner program", url = "https://controlmonkey.io/blog/controlmonkey-partner-era/", description = "Company announcement of partner program and current partnerships leadership." }
+  ,{ label = "AWS resource scale use case", url = "https://controlmonkey.io/blog/how-a-global-devops-team-of-5-manages-100k-assets-on-aws/", description = "Company-authored operational scenario; customer is not identified." }
+  ,{ label = "Spacelift market comparison", url = "https://spacelift.io/blog/env-zero-alternatives", description = "Competitor-authored overview of IaC orchestration alternatives." }
+  ,{ label = "Scalr alternatives guide", url = "https://scalr.com/learning-center/selecting-a-terraform-cloud-alternative/", description = "Scalr's guide to Terraform Cloud alternatives and adjacent competitors." }
+  ,{ label = "env0 market comparison", url = "https://www.envzero.com/insights/env0-vs-spacelift-vs-scalr-vs-terraform-enterprise-an-honest-2026-comparison", description = "env0's vendor comparison of IaC governance providers." }
+  ,{ label = "Firefly market comparison", url = "https://www.firefly.ai/terraform-cloud-vs-firefly-vs-env0-vs-spacelift", description = "Firefly's vendor comparison of cloud discovery and IaC products." }
+  ,{ label = "USPTO Patent Public Search", url = "https://www.uspto.gov/patents/search/patent-public-search", description = "Official search tool referenced for patent search methodology; no ControlMonkey patent record was located." }
+]
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "il-controlmonkey"
+legal_name = "ControlMonkey Ltd"
+aliases = ["ControlMonkey", "Control Monkey"]
+operating_status = "active"
+business_model = "Business-to-business SaaS sold on contract, including through AWS Marketplace; public AWS Marketplace listing prices tiers by protected resource capacity, with custom private offers available."
+products = ["ControlMonkey cloud resilience platform", "Terraform and OpenTofu infrastructure automation", "Cloud and SaaS configuration backup and recovery", "KoMo AI IaC Copilot", "ControlMonkey MCP Server"]
+locations = ["Tel Aviv, Israel", "United States (global commercial expansion; office location not verified)"]
+founded_on = "2022"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number (ח.פ.)", identifier = "516665312", source_ids = ["snc-profile"] }]
+source_ids = ["company-about", "seed-announcement", "snc-profile", "aws-marketplace"]
+
+[intelligence.funding]
+status = "reported"
+summary = "ControlMonkey announced one $7 million Seed round on 2025-01-15, co-led by Lool Ventures and Joule Ventures. No later equity, debt, grant, secondary, or public financing event was identified in searches through 2026-10-04. The announcement identifies the seed round, but does not state that $7 million is the company's lifetime total; lifetime total is therefore omitted. Private valuation and cap-table terms were not disclosed in the sources reviewed."
+history_status = "partial"
+coverage_through = "2026-10-04"
+rounds = [{ id = "seed-2025", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2025-01-15", amount_status = "reported", amount = 7000000, amount_scope = "round", currency = "USD", lead_investors = ["Lool Ventures", "Joule Ventures"], participating_investors = ["Gaia Ventures", "Deepak Krishnamurthy", "Vadim Solovey", "Yoav Toussia-Cohen", "Asaf Ezra", "Ariel Assaraf"], source_ids = ["seed-announcement"], valuation_basis = "undisclosed", notes = "Company announcement describes the round as closed and $7 million. It says Lool and Joule co-led and lists Gaia Ventures and its founder Deepak Krishnamurthy, Vadim Solovey, Yoav Toussia-Cohen, Asaf Ezra, Ariel Assaraf, among others. No valuation was reported." }]
+
+[intelligence.ownership]
+status = "not_found"
+summary = "The company remains privately held based on reviewed public material. No disclosed parent, acquisition, sale, IPO, secondary transaction, or ownership percentages were found. Private cap table and beneficial ownership are not publicly available in the sources reviewed; a government extract may provide statutory officers/shareholders but was not obtained."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["company-about", "seed-announcement", "israeli-registry-service"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel"]
+summary = "The company's own funding announcement identifies its headquarters in Tel Aviv, Israel; its official company page identifies the founders and company operations. A legacy Startup Nation Finder record lists the Tel Aviv-Yafo location and Israeli company number 516665312."
+as_of = "2026-10-04"
+source_ids = ["seed-announcement", "snc-profile", "company-about"]
+
+[[intelligence.people]]
+name = "Aharon Twizer"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Official company biography identifies him as a second-time founder, former Spot.io CTO and former AWS employee. The company reports that Spot.io was acquired by NetApp; acquisition price varies in company materials and is not needed to establish this background."
+source_ids = ["company-about", "seed-announcement"]
+
+[[intelligence.people]]
+name = "Ori Yemini"
+role = "Co-founder and CTO"
+is_founder = true
+current = true
+background = "Official company biography identifies him as a second-time founder, former Spot.io employee and former YOApss CTO; the seed announcement describes him as a Spot.io founding engineer."
+source_ids = ["company-about", "seed-announcement"]
+
+[[intelligence.people]]
+name = "Amir Regev"
+role = "Global Director of Partnerships & Cloud Alliance"
+is_founder = false
+current = true
+background = "Company-authored partner-program article identifies him as leading the partner ecosystem and describes prior work at Granulate and MSP/SI partner offerings."
+source_ids = ["partner-program"]
+
+[[intelligence.people]]
+name = "Tal Stern"
+role = "Head of Sales"
+is_founder = false
+current = true
+source_ids = ["company-about"]
+
+[[intelligence.people]]
+name = "Zack Bentolila"
+role = "Head of Marketing"
+is_founder = false
+current = true
+source_ids = ["company-about"]
+
+[[intelligence.people]]
+name = "Tal Yizraeli"
+role = "Head of Operations & HR"
+is_founder = false
+current = true
+source_ids = ["company-about"]
+
+[[intelligence.investors]]
+name = "Lool Ventures"
+investor_type = "vc"
+website = "https://www.lool.vc/"
+round_ids = ["seed-2025"]
+relationship = "historical"
+source_ids = ["seed-announcement", "lool-portfolio"]
+
+[[intelligence.investors]]
+name = "Joule Ventures"
+investor_type = "vc"
+website = "https://jouleventures.com/"
+round_ids = ["seed-2025"]
+relationship = "historical"
+source_ids = ["seed-announcement"]
+
+[[intelligence.investors]]
+name = "Gaia Ventures"
+investor_type = "vc"
+round_ids = ["seed-2025"]
+relationship = "historical"
+source_ids = ["seed-announcement"]
+
+[[intelligence.investors]]
+name = "Deepak Krishnamurthy"
+investor_type = "angel"
+round_ids = ["seed-2025"]
+relationship = "historical"
+notes = "Named as Gaia Ventures' founder and a round participant; the announcement does not separately characterize his investment vehicle."
+source_ids = ["seed-announcement"]
+
+[[intelligence.investors]]
+name = "Vadim Solovey"
+investor_type = "angel"
+round_ids = ["seed-2025"]
+relationship = "historical"
+notes = "Named as DoiT co-founder and round participant."
+source_ids = ["seed-announcement"]
+
+[[intelligence.investors]]
+name = "Yoav Toussia-Cohen"
+investor_type = "angel"
+round_ids = ["seed-2025"]
+relationship = "historical"
+notes = "Named as DoiT co-founder and round participant."
+source_ids = ["seed-announcement"]
+
+[[intelligence.investors]]
+name = "Asaf Ezra"
+investor_type = "angel"
+round_ids = ["seed-2025"]
+relationship = "historical"
+notes = "Named as Granulate CEO and co-founder and round participant."
+source_ids = ["seed-announcement"]
+
+[[intelligence.investors]]
+name = "Ariel Assaraf"
+investor_type = "angel"
+round_ids = ["seed-2025"]
+relationship = "historical"
+notes = "Named as Coralogix CEO and co-founder and round participant."
+source_ids = ["seed-announcement"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "ControlMonkey announced an AWS Strategic Collaboration Agreement to work jointly on customer cloud recovery readiness, including infrastructure configuration recovery. This is a strategic collaboration, not evidence of a paid AWS customer contract or a guarantee of sales."
+date = "2026-08-03"
+source_ids = ["aws-sca"]
+
+[[intelligence.traction]]
+kind = "regulatory"
+description = "ControlMonkey announced that AWS awarded it the AWS Resilience Competency, a partner qualification focused on resilience engineering and customer outcomes. This is a partner competency rather than a regulatory certification."
+date = "2026-02-04"
+source_ids = ["aws-competency"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Launched a ControlMonkey MCP Server connecting AI assistants to the ControlMonkey API for stack, plan, deployment, policy and disaster-recovery operations; company documentation says API token roles govern execution and actions are audited."
+date = "2026-07-09"
+source_ids = ["mcp-launch"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "AWS Marketplace lists ControlMonkey as an available SaaS product and offers 12-month Standard and Pro tiers at $30,000 and $50,000, respectively, with resource ceilings of 8,000 and 15,000. Listing availability and price establish a route to market and list pricing, not bookings or realized revenue."
+date = "2026-10-04"
+source_ids = ["aws-marketplace"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "ControlMonkey's AWS Marketplace page includes customer reviews; one review dated 2026-05-18 describes migration from Terraform Cloud completed in under two weeks and continued exploration of the disaster-recovery product. Reviewer identity is not disclosed on the page, so this is anonymized customer evidence."
+date = "2026-05-18"
+source_ids = ["aws-marketplace"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "The company reports customers including Intel, Square, Comcast and NetApp and associates product use with productivity and deployment improvements. These named customer and impact statements originate in its funding announcement; customer contracts, paid status, methodology and baseline are not independently verified here."
+date = "2025-01-15"
+source_ids = ["seed-announcement"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "Company-authored article describes a customer-like operating scenario with a five-person distributed DevOps team managing 100,000 AWS resources, but does not identify the organization or independently substantiate the scenario. Treated as a vendor case narrative, not an audited deployment metric."
+date = "2025-12-04"
+source_ids = ["scale-article"]
+
+[[intelligence.comparables]]
+name = "Spacelift"
+website = "https://spacelift.io/"
+rationale = "Terraform and multi-IaC orchestration, governance and policy automation overlap with ControlMonkey's infrastructure delivery use cases."
+differentiation = "ControlMonkey emphasizes cloud discovery, code generation and configuration recovery; Spacelift is an established orchestration competitor with broader multi-IaC workflow positioning. Relative breadth and outcomes need customer-side validation."
+source_ids = ["cm-competition", "spacelift-compare"]
+
+[[intelligence.comparables]]
+name = "Scalr"
+website = "https://www.scalr.com/"
+rationale = "Terraform/OpenTofu governance, remote execution and policy workflows overlap in enterprise IaC automation."
+differentiation = "Scalr positions around Terraform-centric governance and remote operations, while ControlMonkey foregrounds cloud discovery, configuration recovery and generated IaC."
+source_ids = ["scalr-alternatives"]
+
+[[intelligence.comparables]]
+name = "env0"
+website = "https://www.env0.com/"
+rationale = "IaC orchestration, self-service environments and policy governance overlap with ControlMonkey's delivery platform."
+differentiation = "env0 emphasizes multi-framework environment management and cost controls; ControlMonkey emphasizes live cloud visibility, unmanaged-resource codification and recovery."
+source_ids = ["env0-comparison"]
+
+[[intelligence.comparables]]
+name = "Firefly"
+website = "https://www.firefly.ai/"
+rationale = "Cloud inventory, drift management, infrastructure codification and governance overlap directly with ControlMonkey's discovery and resilience functions."
+differentiation = "Both address visibility and unmanaged infrastructure; diligence should test provider coverage, generated code quality, policy depth and recovery guarantees in matched deployments."
+source_ids = ["firefly-comparison"]
+
+[[intelligence.comparables]]
+name = "HCP Terraform / Terraform Enterprise"
+website = "https://www.hashicorp.com/products/terraform"
+rationale = "The incumbent Terraform workflow and policy product is a direct alternative for teams seeking managed Terraform plans, applies and governance."
+differentiation = "ControlMonkey is positioned as adding resource discovery and recovery around IaC; HCP Terraform is the established Terraform control plane and has brand and ecosystem advantages."
+source_ids = ["cm-competition", "aws-marketplace"]
+
+[intelligence.research]
+researched_at = "2026-10-04T20:56:15Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["ControlMonkey identity official about legal name headquarters", "ControlMonkey funding raised seed Series A 2026", "ControlMonkey investors Lool Joule Gaia funding", "ControlMonkey team founder leadership Aharon Twizer Ori Yemini", "ControlMonkey ownership acquisition parent company company registry", "ControlMonkey revenue ARR valuation financials employees 2026", "ControlMonkey customers traction AWS marketplace case studies", "ControlMonkey patents WIPO Google Patents company", "ControlMonkey competitors Spacelift Scalr env0 Firefly Terraform Cloud", "ControlMonkey defense government national security contracts dual use", "ControlMonkey Series A 2026 raised seed extension investor funding valuation"]
+gaps = ["team: leadership page names management but does not provide detailed biographies, LinkedIn profiles, full board composition or historical executive dates.", "investors: exact private cap table, check sizes, angel vehicles, and any investors beyond those named in the 2025 announcement are not public.", "ownership: statutory shareholders and beneficial ownership were not retrieved; the Israeli registry service requires a separate company extract for authoritative details.", "financials: no company-reported revenue, ARR, profitability, burn, runway or dated headcount was found; AWS Marketplace contract list prices are not company financial results.", "traction: named logos and performance improvements are company claims; customer contract values, paid-customer count, retention, deployment scale and independent outcome verification remain unavailable.", "intellectual_property: no company-owned patent or published application was located in targeted web searches; this is not proof that none exist, and trade-secret position is unknown.", "competition: comparisons are capability-level and partly vendor-authored; no independent win/loss, market share, pricing-normalized or benchmark data was found.", "dual_use: no public defense or government customer, contract, product specialization or national-security deployment was located; applicability to sensitive environments remains hypothetical.", "funding: no later financing event or company-announced lifetime funding total located after the January 2025 Seed; valuation undisclosed."]
+conflicts = ["Some ControlMonkey-authored founder biographies describe Spot.io's NetApp acquisition as more than $400 million or $450 million; these are varying descriptions of the founders' prior-company transaction and do not affect ControlMonkey's funding or ownership records.", "The official 2025 seed announcement names investor participants 'among others'; the listed participating investors should not be treated as an exhaustive cap table."]
+diligence_questions = ["What are current ARR, net retention, gross margin, customer count, churn and concentration by customer and product, and can these be reconciled to invoiced contracts?", "For the AWS SCA and resilience competency, what quantified co-sell pipeline, paid production deployments, tested recovery time objectives and AWS-verified customer outcomes exist?", "How does ControlMonkey validate that generated Terraform preserves dependencies and security semantics, and what are measured false-negative and unsafe-remediation rates?", "What is the complete capitalization table, including option pool, convertible instruments, grants and any financing after the January 2025 seed?", "Which cloud, SaaS, identity and network integrations are generally available, and what geographic, data residency, air-gap or sovereign-cloud constraints limit regulated or defense adoption?"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T20:56:15Z"
+next_review_on = "2027-01-04"
+queries = ["ControlMonkey identity official about legal name headquarters", "ControlMonkey Israel Ltd company number 516665312"]
+source_ids = ["company-about", "seed-announcement", "snc-profile"]
+summary = "Official material confirms the ControlMonkey brand, Tel Aviv headquarters and founders. A legacy Startup Nation Finder record reports Israeli company number 516665312; official registry extract not retrieved."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T20:56:15Z"
+next_review_on = "2027-01-04"
+queries = ["ControlMonkey funding raised seed Series A 2026", "ControlMonkey Series A 2026 raised seed extension investor funding valuation"]
+source_ids = ["seed-announcement", "lool-portfolio", "snc-profile"]
+summary = "The company and its lead investor support a $7 million closed seed announced 2025-01-15. Searches found no later round; private valuation is undisclosed and lifetime total is not asserted."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T20:56:15Z"
+next_review_on = "2027-01-04"
+queries = ["ControlMonkey investors Lool Joule Gaia funding", "ControlMonkey seed investors January 2025"]
+source_ids = ["seed-announcement", "lool-portfolio"]
+summary = "The announcement names two co-lead funds, Gaia Ventures and individual participants. It says 'among others', so the list is not an exhaustive cap table."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T20:56:15Z"
+next_review_on = "2027-01-04"
+queries = ["ControlMonkey team founder leadership Aharon Twizer Ori Yemini", "site:controlmonkey.io/about-us ControlMonkey management"]
+source_ids = ["company-about", "partner-program", "seed-announcement"]
+summary = "The official company page identifies current founders and several functional leaders. Detailed biographies and historical executive roster are incomplete."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T20:56:15Z"
+next_review_on = "2027-01-04"
+queries = ["ControlMonkey ownership acquisition parent company company registry", "ControlMonkey acquired acquisition company parent"]
+source_ids = ["company-about", "seed-announcement", "israeli-registry-service"]
+summary = "No parent, acquisition, IPO, secondary transaction or shareholding percentage located. Government service explains that company extracts contain official basic data, but no extract was retrieved."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T20:56:15Z"
+next_review_on = "2027-01-04"
+queries = ["ControlMonkey revenue ARR valuation financials employees 2026", "ControlMonkey revenue ARR burn runway headcount"]
+source_ids = ["aws-marketplace", "seed-announcement"]
+summary = "No reported revenue, ARR, profit, burn or runway found. Public Marketplace tiers provide list prices only. Dated current employee count not found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T20:56:15Z"
+next_review_on = "2027-01-04"
+queries = ["ControlMonkey customers traction AWS marketplace case studies", "ControlMonkey AWS SCA 2026 resilience competency", "ControlMonkey Block customer case study"]
+source_ids = ["aws-sca", "aws-competency", "aws-marketplace", "seed-announcement", "mcp-launch"]
+summary = "Current commercial evidence includes AWS Marketplace availability and anonymized customer review, an AWS strategic collaboration and competency, and company-reported customer logos. Paid customer count, revenue and performance methodology remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T20:56:15Z"
+next_review_on = "2027-01-04"
+queries = ["ControlMonkey patents WIPO Google Patents company", "ControlMonkey patent application Aharon Twizer"]
+source_ids = ["uspto-search"]
+summary = "Targeted searches did not surface a company patent or published application; no inference that none exists. No other proprietary IP registration disclosure was found."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T20:56:15Z"
+next_review_on = "2027-01-04"
+queries = ["ControlMonkey competitors Spacelift Scalr env0 Firefly Terraform Cloud", "ControlMonkey Spacelift Terraform Cloud comparison"]
+source_ids = ["cm-competition", "spacelift-compare", "scalr-alternatives", "env0-comparison", "firefly-comparison"]
+summary = "Comparable categories include Terraform workflow incumbents, IaC orchestration and policy vendors, and cloud inventory/codification vendors. Differentiation is primarily company positioning and needs independent technical and win/loss validation."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-04T20:56:15Z"
+next_review_on = "2027-01-04"
+queries = ["ControlMonkey defense government national security contracts dual use", "ControlMonkey defense customers government cloud infrastructure"]
+source_ids = ["seed-announcement", "aws-sca", "aws-marketplace"]
+summary = "No public defense/government contracts, defense customer references or national-security deployments located. General cloud resilience has security relevance, but defense use is unsubstantiated."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current official website describes active product, requests demos and lists careers; AWS Marketplace has a live purchasable SaaS listing."
+verified_at = "2026-10-04T20:56:15Z"
+source_ids = ["company-about", "aws-marketplace"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Company announcement states headquarters in Tel Aviv, Israel; the company profile confirms leadership and the legacy Israeli startup record gives the Tel Aviv-Yafo location."
+verified_at = "2026-10-04T20:56:15Z"
+source_ids = ["seed-announcement", "snc-profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.amount"
+support = "direct"
+summary = "Company announcement dated 2025-01-15 says the company closed a $7 million seed round."
+verified_at = "2026-10-04T20:56:15Z"
+source_ids = ["seed-announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.lead_investors"
+support = "direct"
+summary = "Company announcement explicitly says the $7 million seed round was co-led by Lool Ventures and Joule Ventures."
+verified_at = "2026-10-04T20:56:15Z"
+source_ids = ["seed-announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.participating_investors"
+support = "direct"
+summary = "Company announcement names Gaia Ventures and founder Deepak Krishnamurthy, Vadim Solovey, Yoav Toussia-Cohen, Asaf Ezra and Ariel Assaraf as participants, among others."
+verified_at = "2026-10-04T20:56:15Z"
+source_ids = ["seed-announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Current company profile and AWS Marketplace identify ControlMonkey as the seller; reviewed corporate and investor sources do not identify a parent. This supports no parent disclosed in reviewed sources, not a definitive legal ownership conclusion."
+verified_at = "2026-10-04T20:56:15Z"
+source_ids = ["company-about", "aws-marketplace", "lool-portfolio"]
+
+[[intelligence.research.sources]]
+id = "seed-announcement"
+url = "https://www.prnewswire.com/news-releases/ai-powered-cloud-infrastructure-platform-controlmonkey-launches-in-us-with-7-million-seed-round-to-tame-cloud-complexity-302350907.html"
+title = "AI-Powered Cloud Infrastructure Platform ControlMonkey Launches in U.S. with $7 Million Seed Round to Tame Cloud Complexity"
+publisher = "PR Newswire (news provided by ControlMonkey)"
+kind = "company"
+accessed_at = "2026-10-04T20:56:15Z"
+published_on = "2025-01-15"
+claims = ["Company announced closing a $7 million seed round co-led by Lool Ventures and Joule Ventures.", "Announcement identifies Gaia Ventures, Deepak Krishnamurthy, Vadim Solovey, Yoav Toussia-Cohen, Asaf Ezra and Ariel Assaraf among other round participants.", "Announcement states company headquarters are in Tel Aviv and identifies founders Aharon Twizer and Ori Yemini.", "Company-announced customer names and product impact claims are company assertions."]
+
+[[intelligence.research.sources]]
+id = "company-about"
+url = "https://controlmonkey.io/about-us/"
+title = "About ControlMonkey | Built for Cloud Resilience"
+publisher = "ControlMonkey"
+kind = "company"
+accessed_at = "2026-10-04T20:56:15Z"
+claims = ["Current official leadership page lists Aharon Twizer as co-founder and CEO and Ori Yemini as co-founder and CTO.", "Official biographies describe prior roles at Spot.io, AWS and YOApss.", "Official page lists additional sales, marketing, operations and partnerships leaders."]
+
+[[intelligence.research.sources]]
+id = "aws-sca"
+url = "https://controlmonkey.io/blog/controlmonkey-aws-strategic-collaboration-agreement/"
+title = "ControlMonkey and AWS: Strategic Collaboration Agreement (SCA)"
+publisher = "ControlMonkey"
+kind = "company"
+accessed_at = "2026-10-04T20:56:15Z"
+published_on = "2026-08-03"
+claims = ["ControlMonkey announced an AWS Strategic Collaboration Agreement.", "The collaboration is described as jointly helping customers improve AWS recovery readiness by pairing data recovery with infrastructure configuration recovery.", "The announcement includes an AWS customer resilience engineering director's supporting statement."]
+
+[[intelligence.research.sources]]
+id = "aws-marketplace"
+url = "https://aws.amazon.com/marketplace/pp/prodview-3cuadcjyrgj4q"
+title = "AWS Marketplace: ControlMonkey Platform"
+publisher = "Amazon Web Services"
+kind = "customer"
+accessed_at = "2026-10-04T20:56:15Z"
+claims = ["ControlMonkey platform is listed as a SaaS product sold by ControlMonkey on AWS Marketplace.", "Listing describes IaC governance, configuration backups and recovery, Terraform CI/CD, drift detection and policy enforcement.", "Public 12-month list prices are $30,000 Standard up to 8,000 cloud resources and $50,000 Pro up to 15,000 resources.", "Marketplace page contains customer reviews, including one dated 2026-05-18 describing a Terraform Cloud migration completed in under two weeks; reviewer identity is not displayed."]
+
+[[intelligence.research.sources]]
+id = "aws-competency"
+url = "https://controlmonkey.io/news/aws-resilience-competency/"
+title = "AWS Resilience Competency | ControlMonkey"
+publisher = "ControlMonkey"
+kind = "company"
+accessed_at = "2026-10-04T20:56:15Z"
+published_on = "2026-02-04"
+claims = ["ControlMonkey announced achievement of AWS Resilience Competency.", "Company describes its cloud and third-party configuration recovery, snapshots and recovery capabilities.", "Company states a Block customer testimonial/case study exists; announcement is not independent evidence of contract size or outcomes."]
+
+[[intelligence.research.sources]]
+id = "mcp-launch"
+url = "https://controlmonkey.io/news/mcp-server-controlmonkey/"
+title = "Meet the ControlMonkey MCP Server"
+publisher = "ControlMonkey"
+kind = "company"
+accessed_at = "2026-10-04T20:56:15Z"
+published_on = "2026-07-09"
+claims = ["ControlMonkey launched an MCP Server that connects AI assistants to its platform API for Terraform infrastructure operations.", "Company says API token roles enforce permissions, policies apply and actions are audited."]
+
+[[intelligence.research.sources]]
+id = "lool-portfolio"
+url = "https://www.lool.vc/portfolio/control-monkey/"
+title = "Control Monkey - Lool Ventures"
+publisher = "Lool Ventures"
+kind = "investor"
+accessed_at = "2026-10-04T20:56:15Z"
+claims = ["Lool Ventures lists ControlMonkey in its portfolio.", "Portfolio page identifies Aharon Twizer and Ori Yemini as founders, says founded 2022 and says Lool invested in 2024."]
+
+[[intelligence.research.sources]]
+id = "snc-profile"
+url = "https://finder.startupnationcentral.org/company_page/controlmonkey?section=business"
+title = "ControlMonkey — Business Software | Finder"
+publisher = "Startup Nation Finder / Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-04T20:56:15Z"
+published_on = "2025-01-15"
+claims = ["Legacy directory lists ControlMonkey headquarters in Tel Aviv-Yafo, Israeli company number 516665312, founders, employee band and a January 2025 $7 million seed round."]
+
+[[intelligence.research.sources]]
+id = "israeli-registry-service"
+url = "https://www.gov.il/en/service/company_extract"
+title = "Get a full extract or basic information on a company or partnership"
+publisher = "Israeli Corporations Authority, Ministry of Justice"
+kind = "government"
+accessed_at = "2026-10-04T20:56:15Z"
+claims = ["Israeli Corporations Authority offers a free basic company information lookup and a paid full company extract.", "Company-specific extract was not retrieved in this research."]
+
+[[intelligence.research.sources]]
+id = "partner-program"
+url = "https://controlmonkey.io/blog/controlmonkey-partner-era/"
+title = "ControlMonkey is Entering Its Partner Era"
+publisher = "ControlMonkey"
+kind = "company"
+accessed_at = "2026-10-04T20:56:15Z"
+published_on = "2025-12-04"
+claims = ["Company announced a global partner program and described partner onboarding, live POCs and co-selling plans.", "Article identifies Amir Regev as Global Director of Partnerships & Cloud Alliance and gives his background."]
+
+[[intelligence.research.sources]]
+id = "scale-article"
+url = "https://controlmonkey.io/blog/how-a-global-devops-team-of-5-manages-100k-assets-on-aws/"
+title = "How a Global DevOps Team of 5 Manages 100K Assets on AWS"
+publisher = "ControlMonkey"
+kind = "company"
+accessed_at = "2026-10-04T20:56:15Z"
+published_on = "2025-12-04"
+claims = ["Company-authored article describes a five-person distributed team scenario managing 100,000 AWS resources.", "The company article does not identify the organization or give independent evidence of deployment or customer outcomes."]
+
+[[intelligence.research.sources]]
+id = "cm-competition"
+url = "https://controlmonkey.io/resource/spacelift-vs-terraform-cloud/"
+title = "Spacelift vs. Terraform Cloud vs. ControlMonkey: Which Platform to Pick? [2026]"
+publisher = "ControlMonkey"
+kind = "company"
+accessed_at = "2026-10-04T20:56:15Z"
+published_on = "2026-02-20"
+claims = ["Company-authored comparison positions ControlMonkey around cloud discovery, Terraform generation and drift remediation versus Spacelift and Terraform Cloud."]
+
+[[intelligence.research.sources]]
+id = "spacelift-compare"
+url = "https://spacelift.io/blog/env-zero-alternatives"
+title = "env zero Alternatives: 6 IaC Platforms Compared"
+publisher = "Spacelift"
+kind = "other"
+accessed_at = "2026-10-04T20:56:15Z"
+claims = ["Competitor-authored overview places Spacelift among IaC workflow and policy competitors; used only to corroborate competitive category, not comparative superiority."]
+
+[[intelligence.research.sources]]
+id = "scalr-alternatives"
+url = "https://scalr.com/learning-center/selecting-a-terraform-cloud-alternative/"
+title = "Selecting a Terraform Cloud Alternative (2026 Guide)"
+publisher = "Scalr"
+kind = "other"
+accessed_at = "2026-10-04T20:56:15Z"
+published_on = "2026-03-31"
+claims = ["Scalr's 2026 competitor guide describes Terraform Cloud alternatives including Scalr, Spacelift and env0, confirming competitive adjacency."]
+
+[[intelligence.research.sources]]
+id = "env0-comparison"
+url = "https://www.envzero.com/insights/env0-vs-spacelift-vs-scalr-vs-terraform-enterprise-an-honest-2026-comparison"
+title = "env zero vs Spacelift vs Scalr vs Terraform Enterprise: An Honest 2026 Comparison"
+publisher = "env0"
+kind = "other"
+accessed_at = "2026-10-04T20:56:15Z"
+claims = ["Competitor comparison places env0 among enterprise Terraform and IaC orchestration alternatives."]
+
+[[intelligence.research.sources]]
+id = "firefly-comparison"
+url = "https://www.firefly.ai/terraform-cloud-vs-firefly-vs-env0-vs-spacelift"
+title = "Terraform Cloud vs. Firefly vs. Env0 vs. Spacelift"
+publisher = "Firefly"
+kind = "other"
+accessed_at = "2026-10-04T20:56:15Z"
+claims = ["Firefly describes cloud infrastructure inventory, IaC adoption and drift governance alongside Terraform Cloud, env0 and Spacelift, supporting competitor adjacency."]
+
+[[intelligence.research.sources]]
+id = "uspto-search"
+url = "https://www.uspto.gov/patents/search/patent-public-search"
+title = "Patent Public Search"
+publisher = "United States Patent and Trademark Office"
+kind = "government"
+accessed_at = "2026-10-04T20:56:15Z"
+claims = ["USPTO provides public search for US patents and published applications; targeted web search for ControlMonkey did not locate a company patent record."]

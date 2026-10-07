@@ -1,0 +1,289 @@
+name = "Cheel"
+description = "Cheel is an Israeli battery-safety startup developing an internal, cell-specific temperature-sensing platform for real-time battery health monitoring. Its technology is intended to improve state-of-health visibility, prevent thermal runaway, and extend the safe operating envelope of batteries used in mobility, stationary storage, data centers, defense, and eVTOL systems."
+detailed_description = """**Product and the concrete problem it solves.** Cheel is addressing a failure mode that becomes more consequential as batteries move into vehicles, grid storage, aircraft, robotics, and data-center backup systems: the outside of a cell can appear acceptable while a dangerous temperature gradient or localized hot spot is developing inside it. Conventional battery-management systems infer internal behavior from external measurements, pack-level voltage, current, and temperature, then apply models to estimate state of charge, state of health, and remaining useful life. That approach is useful but indirect. Cheel's public product thesis is to put the sensing capability inside the battery cell so that operators can obtain real-time, cell-specific temperature information rather than relying only on surface proxies. The intended customer outcome is earlier warning of thermal runaway, better protection against cascading cell failures, improved battery utilization, longer life, and more confidence when operating high-energy packs near their performance limits. This matters commercially because a battery incident can destroy the pack, shut down a vehicle or facility, create injury and fire exposure, and impose warranty and recall costs. The company is not publicly claiming a finished certified product, and it has not disclosed the exact sensor package, cell chemistry, production process, or measured improvement. The record should therefore treat the product as a credible deep-tech sensing thesis in R&D, not as a proven safety device.
+
+**Core technology and how it actually works.** The differentiator is the measurement location. Instead of asking a pack controller to infer internal temperature from sensors attached to the casing, Cheel says its platform provides direct, cell-specific internal temperature data. That could give a battery-management system a more granular view of thermal behavior and allow it to identify abnormal heating before the condition propagates across neighboring cells. The practical engineering challenge is substantial: the sensing element must survive cell assembly, electrolyte exposure, charging and discharging cycles, vibration, pressure, and manufacturing variation without materially reducing energy density, increasing impedance, creating a new failure mechanism, or compromising the cell's safety envelope. The sensor also needs a reliable signal path to pack electronics, calibration across temperature ranges, and a data interface that existing BMS architectures can use without a complete redesign. Cheel's official materials do not disclose whether the platform uses fiber optics, printed electronics, electrochemical sensing, embedded microelectronics, or another architecture, so the mechanism should not be guessed. Publicly supported capabilities are narrower and more useful: internal temperature sensing, cell-level telemetry, state-of-health monitoring, thermal-runaway prevention, and integration into battery applications. Diligence should demand sensor survivability data, time-to-detection versus external thermistors, accuracy and drift measurements, impact on energy density, manufacturing yield, and independent abuse-test results.
+
+**Market, customers, and go-to-market.** Cheel is pursuing a B2B component and technology-integration model rather than selling a consumer battery product. Startup Nation Finder describes applications across electric mobility, energy storage, defense, and eVTOL, while the company's own site highlights data centers and energy-system storage. These segments share a need for safety and reliable uptime but differ sharply in qualification and buying behavior. Electric-vehicle and e-mobility customers care about pack cost, range, warranty exposure, production throughput, and automotive validation. Stationary-storage operators care about fire prevention, insurance, thermal propagation, availability, and integration with the site controller. Data-center operators have unusually low tolerance for battery failure because a UPS event can interrupt critical computing loads. Defense and eVTOL customers may pay for higher assurance and lower risk, but they impose demanding constraints on mass, vibration, power, certification, secure supply, and qualification. The plausible go-to-market sequence is a design-in with a cell manufacturer, pack integrator, BMS vendor, or specialized battery developer, followed by qualification and volume licensing or component supply. Public sources do not name a customer, paid pilot, production partner, revenue stream, or commercial contract. That absence is material: a sensor can be technically valuable yet fail commercially if pack makers view it as too expensive, too invasive, or too difficult to integrate into established qualification flows.
+
+**Traction, funding, and third-party validation.** Cheel is very early, but it is not an anonymous concept. The official website publicly identifies the company, its battery-sensing thesis, and a three-person leadership group that includes co-founder and CEO Gidon Leader, co-founder and COO Yonathan Lapidus, and co-founder and CTO Prof. Yehonadav Bekenstein. Startup Nation Finder lists Cheel as founded in January 2026, headquartered in Binyamina-Giv'at Ada, operating with one to ten employees, and at a pre-funding/R&D stage. EcoMotion, a joint venture of the Israel Innovation Institute, independently presents the company as developing a real-time temperature-monitoring solution integrated directly into battery cells for electric vehicles and energy storage. An Israeli company-information record identifies CHEEL ENERGY LTD as an active private Israeli company, incorporated in December 2025 under company number 517255121. EnergyCom's Israeli energy-innovation directory also lists Cheel among the ecosystem's companies. These are useful existence, ecosystem, and product-positioning signals, but they are not proof of technical validation or commercial traction. No public source reviewed here confirms a financing amount, institutional investor, patent publication, prototype performance, customer deployment, certification, or manufacturing agreement. The appropriate stage assessment is therefore based on company formation and R&D evidence, not on an assumption that public visibility implies readiness.
+
+**Founders and team background.** The public record supports a technically oriented founding structure but offers limited biographical detail. Gidon Leader is identified as co-founder and CEO, Yonathan Lapidus as co-founder and COO, and Prof. Yehonadav Bekenstein as co-founder and CTO on the official company site. This division of responsibilities is sensible for a hard-tech battery venture: a CEO and COO can pursue company formation, partnerships, and commercialization while a technical founder leads the sensing architecture and its integration into electrochemical cells. The inclusion of a professor-level CTO suggests an academic or research connection, but the reviewed sources do not establish his institution, publication record, prior commercialization, or ownership of specific intellectual property. Similarly, public sources do not verify the other founders' earlier employers, battery-industry experience, military service, or previous exits. Those unknowns matter because Cheel must bridge several disciplines at once: electrochemistry, embedded sensing, materials compatibility, battery-pack design, signal processing, safety testing, automotive or aerospace qualification, and manufacturing quality. A small team can move quickly during feasibility work, but it will need additional cell engineers, reliability specialists, manufacturing partners, and regulatory expertise before a safety-critical component can enter production. The team's next credibility milestone is not another broad application claim; it is a reproducible demonstrator and a technical data package that an independent battery or pack partner can evaluate.
+
+**Competitive dynamics.** Cheel competes against both direct battery-intelligence companies and the incumbent measurement stack. Eatron Technologies and Elysia provide software-defined battery-management and battery-intelligence systems that estimate state of health, lifetime, and risk from electrical and thermal data. Qnovo offers battery-management software and charging optimization, while TWAICE and Voltaiq provide analytics, testing, and lifecycle intelligence for batteries and fleets. Analog Devices, Texas Instruments, Infineon, and other semiconductor suppliers provide mature battery-monitoring ICs and pack-level sensing components that are already embedded in established BMS designs. The substitute is not only a rival startup; it is the combination of external thermistors, conservative operating limits, cell balancing, propagation barriers, pack-level thermal sensors, and software models. Cheel's potential edge is measurement observability: if internal data detects hazardous gradients materially earlier or improves usable capacity without reducing safety, it could create value that software-only inference cannot reproduce. The edge is not established. Internal sensing may increase bill of materials, reduce cell yield, complicate recycling, or create a qualification burden that makes customers prefer better models and more external sensors. A defensible position would require demonstrated accuracy, long-cycle durability, low manufacturing friction, a protected architecture, and a reference design that pack and cell makers can adopt without requalifying their entire product line.
+
+**Defense, security, and resilience relevance.** Cheel's dual-use case is substantive because the same core sensing technology can protect civilian batteries and mission-critical power systems. Commercially, it can support electric vehicles, stationary energy storage, data-center UPS systems, and high-power mobility. In security and defense contexts, batteries power unmanned aerial vehicles, eVTOL platforms, ground robots, radios, sensors, portable power systems, and remote installations where a thermal failure can strand a platform or expose personnel. Cell-specific internal telemetry could improve predictive maintenance, reduce the need to operate with large safety margins, and identify developing faults in systems that cannot easily return to a depot. The resilience value is particularly clear for distributed storage and critical infrastructure: early warning can reduce fire risk, improve availability, and help operators isolate a failing module before it cascades through a larger pack or facility. The technology could also support safer operation in hot climates, rapid charging, high-altitude flight, and constrained logistics environments. Calibration is essential. No public evidence establishes a defense contract, military deployment, classified program, aerospace certification, or fielded eVTOL system. The defense score is therefore based on direct transferability of a safety-critical battery capability and the public ecosystem's stated target sectors, not on claimed procurement. Cheel should be treated as a resilience and enabling-technology startup with defense optionality, not as an established defense supplier.
+
+**Growth stage, trajectory, and key diligence risks.** Cheel is best classified as early and high risk. The legal entity was incorporated in late 2025, public ecosystem records place the operating venture in 2026, and the company remains in R&D/pre-funding status with a very small disclosed organization. Its trajectory could be attractive if it proves that internal sensing creates a measurable safety or lifetime advantage that customers cannot obtain economically through models and external instrumentation. The most important diligence sequence is: 1. demonstrate a repeatable prototype across relevant lithium-ion cell formats and chemistries; 2. quantify accuracy, latency, drift, failure modes, and early-warning performance during controlled abuse and thermal-propagation tests; 3. show that embedding the sensor does not materially reduce energy density, cycle life, manufacturing yield, or recyclability; 4. secure a design partner and complete pack-level integration; 5. obtain the automotive, stationary-storage, aerospace, or defense qualification evidence demanded by the first target market; and 6. convert the work into a funded pilot, licensing agreement, or production design-in. Principal risks include technical integration, reliability and contamination, manufacturing scale-up, customer adoption friction, long qualification cycles, unclear patent ownership and freedom to operate, competition from improving BMS models, and capital needs associated with hardware validation. Public disclosure is also thin: there are no announced performance benchmarks, funding terms, named customers, or commercial revenue. Cheel merits monitoring because battery safety is strategically important and the measurement thesis is differentiated, but its priority should rise only after independent evidence demonstrates that the sensor changes operational outcomes."""
+
+logo = "Unknown"
+website = "https://cheel.tech/"
+sector = "Energy Tech / Battery Sensing and Safety"
+founded = "2026 (ecosystem profile; CHEEL ENERGY LTD incorporated 2025-12-07)"
+headquarters = "Binyamina-Giv'at Ada, Israel"
+employees = "3 (Startup Nation Finder exact count; also reported as 1-10)"
+funding_stage = "Pre-seed non-dilutive support reported; amount undisclosed; seeking seed funding"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Cheel's core internal battery-temperature sensing capability has direct commercial and security/resilience applications. It can support electric mobility, stationary storage, data-center UPS systems, and other commercial packs, while the same cell-level monitoring can improve safety and availability in defense batteries, UAVs, eVTOL platforms, robotics, radios, and remote power systems. Public ecosystem sources identify defense and eVTOL among target markets, but no defense contract, military deployment, aerospace certification, or fielded platform is publicly confirmed. The dual-use assessment therefore reflects a genuine technology transfer path and strategic battery-resilience value, not demonstrated defense traction."
+key_technologies = ["Cell-internal temperature sensing for lithium-battery cells", "Cell-specific thermal telemetry and hotspot monitoring", "Battery-management-system integration for real-time safety data", "Thermal-runaway early-warning and propagation-risk detection", "Battery state-of-health monitoring using internal thermal signals", "Embedded sensing integration for high-power mobility and stationary-storage packs"]
+use_cases = ["Thermal-runaway prevention in electric-vehicle and electric-mobility battery packs", "Safety monitoring and predictive maintenance for grid-scale and behind-the-meter energy storage", "Battery safety and uptime protection for data-center UPS and backup-power systems", "Internal thermal monitoring for eVTOL and unmanned-aircraft battery packs", "Defense ground-vehicle, radio, robotics, and portable-power battery resilience", "High-power fast-charging systems where external temperature measurements may lag internal heating", "Remote or mission-critical battery systems operating in hot, constrained, or difficult-to-service environments"]
+investible = true
+investment_rationale = "Cheel is a high-risk early-stage strategic-priority signal, not an investment recommendation. (1) The problem is material: thermal runaway, hidden cell-level heating, and battery degradation constrain electric mobility, stationary storage, data-center continuity, and defense platforms. (2) The proposed wedge is technically specific: direct internal temperature visibility could improve on the inference limits of external sensors and software models. (3) The Israeli ecosystem signals are credible but early, including an active legal entity, Startup Nation Finder and EcoMotion listings, and a named technical co-founder. (4) The market is broad and strategically relevant, but commercialization depends on cell integration, safety validation, qualification, and a customer willing to absorb a new component into a mature supply chain. Counterweights are decisive: pre-funding status, no public performance benchmarks, no named customer or production partner, limited founder disclosure, unknown IP posture, and formidable competition from BMS incumbents and battery-analytics vendors. The priority signal should increase only after independent thermal-abuse data, a design partner, and evidence of manufacturable integration."
+strategic_value = "Cheel could strengthen battery resilience at a measurement layer that is important across civilian infrastructure and defense systems. (1) Earlier internal-temperature visibility could reduce the probability or severity of battery fires and allow operators to isolate failing cells before pack-level propagation. (2) Better observability may let operators use more of a pack's safe operating envelope, improving useful capacity and mission endurance without simply adding more cells. (3) The capability maps to data-center continuity, grid storage, unmanned systems, eVTOL, mobile command equipment, and remote energy assets, all of which face high consequences from battery failure. (4) An Israeli company developing battery-safety sensing adds optionality to an allied energy and electronics supply chain. The strategic value remains prospective: there is no public evidence of fielded defense use, safety certification, production-scale yield, or independently measured advantage over external sensing and improved BMS models."
+potential_score = 68.0
+technology_score = 78.0
+market_score = 76.0
+team_score = 65.0
+dual_use_score = 75.0
+strategic_alignment_score = 82.0
+stage = "early"
+stage_rationale = "Cheel is classified as early because public ecosystem records place it at R&D/pre-funding stage, the legal entity was incorporated only in December 2025, and the public team is very small. The company has progressed beyond an entirely unverified idea: it has an official product site, named founders, an active Israeli corporate record, and listings from Startup Nation Finder and EcoMotion. However, no public source confirms a tested prototype, paid pilot, recurring revenue, financing amount, production partner, certification, or customer deployment. Movement to mid stage would require independently measured internal-sensing performance, pack-level integration, a named design partner, and a funded commercial pilot or production qualification."
+competitors = ["Eatron Technologies (software-defined battery management and AI battery intelligence)", "Elysia by Fortescue (battery analytics and state-of-health prediction software)", "Qnovo (battery-management software and charging optimization)", "TWAICE (battery analytics, testing, and lifecycle intelligence platform)", "Analog Devices and Texas Instruments (incumbent battery-monitoring ICs and external sensing components)", "Conventional thermistors plus model-based BMS (the installed alternative using pack-level sensing and conservative operating limits)"]
+competitive_edge = "Cheel's potential edge is observability rather than another battery dashboard. (1) Measuring temperature inside each cell could reveal localized heating and gradients that external thermistors or pack-level models may miss or detect later. (2) Cell-specific data could improve thermal-runaway warning, state-of-health estimation, predictive maintenance, and safe utilization across high-consequence applications. (3) The same sensing layer can serve mobility, stationary storage, data centers, defense, and eVTOL markets, giving the company multiple design-in paths. The edge is unproven and may be outweighed by manufacturing and qualification friction: embedding sensors can affect cell yield, energy density, reliability, recycling, and cost, while BMS incumbents can improve algorithms and external instrumentation. Durable differentiation will require a protected architecture, long-cycle survivability, independent comparative data, and a reference design that cell and pack manufacturers can adopt without excessive redesign."
+risk_factors = ["No publicly disclosed prototype benchmarks, thermal-abuse results, sensor accuracy, latency, drift, or early-warning performance", "Embedding sensing inside cells may reduce manufacturing yield, energy density, cycle life, recyclability, or reliability", "Pre-funding R&D status and a very small disclosed team create capital, hiring, and execution risk", "Long automotive, stationary-storage, aerospace, and defense qualification cycles may delay revenue", "Battery-management incumbents and software vendors can improve external sensing, models, and analytics or bundle comparable features", "No named customer, paid pilot, production partner, certification, financing amount, or commercial revenue is publicly confirmed", "Patent ownership, freedom to operate, manufacturing method, and data-interface architecture are not publicly established"]
+risk_level = "high"
+signals = ["New 2026 Israeli deep-tech startup", "Pre-funding R&D-stage company", "Battery safety and energy-resilience relevance", "Listed in Israeli startup and energy-technology ecosystem directories"]
+priority_rank = 0
+priority_rationale = "Cheel merits monitoring as a new Israeli battery-safety and energy-resilience company with a technically differentiated internal-sensing thesis. Reasons to track it are: (1) battery thermal runaway is a cross-sector safety and continuity risk spanning electric mobility, grid storage, data centers, unmanned systems, and defense platforms; (2) internal, cell-specific temperature data could become a valuable enabling layer if it detects dangerous conditions earlier than external sensors and model-based BMS approaches; (3) the company has an official product presence, named technical leadership, an active Israeli legal entity, and corroborating ecosystem listings; and (4) its stated defense and eVTOL applicability gives the technology direct strategic-transfer potential. Priority remains capped by the pre-funding R&D stage, small team, absent performance benchmarks, unknown IP and manufacturing posture, and no public customers or fielded defense use. The next diligence milestones are independent abuse-test results, a demonstrated cell and pack integration, a named design partner, patent documentation, and a funded pilot or production qualification."
+crawled_at = "2026-09-08T00:32:25Z"
+updated_at = "2026-10-04T16:37:05Z"
+
+public_sources = [
+  { label = "Cheel official website", url = "https://cheel.tech/", description = "Product claims, three named co-founders, and data-center and energy-storage target markets." },
+  { label = "PLANETech Cheel profile", url = "https://planetech.themarketsquare.org/startup/cheel/", description = "Company-reported TRL 4 lab validation, family-and-friends pre-seed non-dilutive support, and seed fundraising intent." },
+  { label = "Startup Nation Finder profile", url = "https://finder.startupnationcentral.org/company_page/cheel", description = "Company identity, founders, location, employee range, company number, R&D stage, and no funding rounds recorded as of 2026-05-18." },
+  { label = "EcoMotion Cheel profile", url = "https://ecomotion.themarketsquare.org/startup/cheel/", description = "Earlier, inconsistent founding, funding-stage, and MVP-to-pilot metadata; treated as potentially stale." },
+  { label = "CheckID CHEEL ENERGY LTD record", url = "https://www.checkid.co.il/company/%D7%A6%27%D7%99%D7%9C-%D7%90%D7%A0%D7%A8%D7%92%D7%99%D7%94-%D7%91%D7%A2~%D7%9E-517255121", description = "Israeli legal name, company number, active status, incorporation date, and registered location." },
+  { label = "Texas Instruments battery monitors", url = "https://www.ti.com/product-category/battery-management-ics/battery-monitors-balancers/overview.html", description = "Incumbent battery-monitoring components and BMS substitute context." },
+  { label = "Fraunhofer battery cell-integrated sensors", url = "https://www.ikts.fraunhofer.de/en/departments/electronics_microsystems_biomedicine/hybrid_micro_systems/Microsystems_LTCCHTCC/Application_Sensors/battery_cell_integrated_sensors_and_actuators.html", description = "Cell-integrated temperature-sensor development provides technical prior-art and competitive context." },
+  { label = "Frontiers review of internal battery temperature sensing", url = "https://www.frontiersin.org/journals/chemical-engineering/articles/10.3389/fceng.2022.804704/full", description = "Peer-reviewed review of direct and model-based internal battery temperature sensing approaches and tradeoffs." },
+  { label = "Gidon Leader public profile", url = "https://www.linkedin.com/posts/gidon-leader-115707a8_preventingthermalrunaway-energy-mobility-activity-7404107383490228224-xGWK", description = "Founder statement describing leadership of Cheel and a decade in battery and automotive industry." }
+]
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Gidon Leader", role = "Co-founder and CEO", is_founder = true, current = true, background = "His public profile describes a decade in battery and automotive industry before leading Cheel; no detailed independent employment history was verified.", source_ids = ["official", "finder", "leader_post"] },
+  { name = "Yonathan Lapidus", role = "Co-founder and COO", is_founder = true, current = true, background = "Named co-founder and COO on Cheel's official site; detailed background not disclosed in sources reviewed.", source_ids = ["official", "finder"] },
+  { name = "Prof. Yehonadav Bekenstein", role = "Co-founder and CTO", is_founder = true, current = true, background = "Named co-founder and CTO on Cheel's official site. Specific role, lab, and IP arrangements were not established by reviewed public material.", source_ids = ["official"] }
+]
+investors = []
+financials = []
+traction = [
+  { kind = "product", description = "Cheel/PLANETech profile states technology is at TRL 4 and a prototype component has been validated in controlled laboratory conditions. This is company-profile reporting; no test protocol, independent validation, accuracy, cycle-life, or safety-abuse results were provided.", date = "2026", source_ids = ["planet"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Fraunhofer IKTS cell-integrated sensing", website = "https://www.ikts.fraunhofer.de/en/departments/electronics_microsystems_biomedicine/hybrid_micro_systems/Microsystems_LTCCHTCC/Application_Sensors/battery_cell_integrated_sensors_and_actuators.html", rationale = "Research and development of cell-integrated temperature and other sensors makes this a direct technical reference point.", differentiation = "Fraunhofer describes sensor development capability; no evidence reviewed that it competes as a commercial Cheel product supplier.", source_ids = ["fraunhofer"] },
+  { name = "Texas Instruments battery monitors", website = "https://www.ti.com/product-category/battery-management-ics/battery-monitors-balancers/overview.html", rationale = "Established battery-monitor and balancing components represent incumbent BMS architecture and a practical substitute ecosystem.", differentiation = "TI describes pack/BMS monitoring components; Cheel's claimed distinction is internal, cell-specific temperature data, whose advantage remains unbenchmarked.", source_ids = ["ti"] },
+  { name = "Conventional thermistors and model-based BMS", rationale = "The installed alternative uses external temperature, voltage, and current measurements plus models and conservative control limits.", differentiation = "Mature, low-friction architecture with broad integration; less direct internal observability is the problem Cheel says it addresses.", source_ids = ["official", "frontiers"] }
+]
+
+[intelligence.company]
+company_id = "il-cheel"
+legal_name = "CHEEL ENERGY LTD"
+aliases = ["Cheel", "צ'יל אנרגיה בע\"מ"]
+operating_status = "active"
+business_model = "B2B battery sensing technology intended for integration into battery cells and battery-management systems; commercial model and pricing are not publicly disclosed."
+products = ["Internal, cell-specific battery temperature sensing platform (development-stage; product architecture and commercial availability not disclosed)"]
+locations = ["Binyamina-Giv'at Ada, Israel"]
+country_of_incorporation = "Israel"
+founded_on = "2025-12-07"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "517255121", source_ids = ["checkid"] }]
+source_ids = ["official", "planet", "finder", "checkid"]
+
+[intelligence.funding]
+status = "conflicting"
+summary = "PLANETech's Cheel profile reports pre-seed non-dilutive funding from family and friends and says the company is seeking further seed funding, but gives no amount, date, instrument, or named participants. Startup Nation Finder reported total funding as undisclosed and zero recorded rounds in its 2026-05-18 profile, classifying the company as pre-funding. These may reflect different definitions or update timing. Record one qualitative support event without numeric amount; do not treat it as a priced equity round or infer a total."
+rounds = [{ id = "preseed-support", round_type = "Pre-seed non-dilutive support (family and friends; exact form undisclosed)", instrument = "unknown", status = "announced", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = [], participating_investors = [], valuation_basis = "undisclosed", source_ids = ["planet", "finder"], notes = "PLANETech says support came from family and friends and describes it as non-dilutive; no amount, date, named provider, grant, debt, or equity instrument is specified. Finder reports 0 rounds and total funding undisclosed as of 2026-05-18. Not a disclosed priced round." }]
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "CHEEL ENERGY LTD is an active Israeli private company. A secondary corporate-data profile shows directors and some shareholder/option-holder categories but does not disclose a complete cap table or ownership percentages; the records are insufficient to characterize beneficial ownership. No parent, acquisition, or ownership transaction was established."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["checkid", "finder"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel"]
+summary = "CHEEL ENERGY LTD is listed as an active Israeli private company, company number 517255121, incorporated 2025-12-07, with an address in Binyamina; Startup Nation Finder also places Cheel's headquarters in Binyamina-Giv'at Ada, Israel."
+as_of = "2026-10-04"
+source_ids = ["checkid", "finder"]
+
+[intelligence.research]
+researched_at = "2026-10-04T16:37:05Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Cheel battery startup Cheel.tech funding raised investors 2026",
+  "Cheel Energy Ltd Gidon Leader Cheel founder battery sensing",
+  "site:cheel.tech Cheel battery internal temperature founder",
+  "Cheel startup Israel funding battery sensing patents",
+  "Cheel Yonathan Lapidus Gidon Leader Yehonadav Bekenstein battery startup",
+  "Cheel battery family and friends funding",
+  "Cheel patent battery temperature",
+  "battery internal temperature sensing competitors embedded sensor battery cell official",
+  "517255121 CHEEL ENERGY LTD",
+  "Cheel TRL 4 battery sensor"
+]
+gaps = [
+  "team: Public sources name three co-founders, but detailed employment history, technical credentials, hiring plans, and current headcount beyond a directory estimate remain unverified.",
+  "investors: PLANETech reports family-and-friends support but names no individuals or institutions; no institutional investor or round participant was identified.",
+  "financials: No amount, revenue, ARR, burn, runway, profitability, audited accounts, or disclosed valuation found.",
+  "traction: Reported TRL 4 validation lacks independent protocol/results; no paying customer, signed pilot, production deployment, commercial contract, or quantified performance was found.",
+  "intellectual_property: No attributable patent/application or public evidence establishing ownership, licensing, or freedom to operate was found.",
+  "competition: No evidence located that maps named commercial competitors to Cheel's exact internal sensor architecture; technical references and incumbent substitutes are not proof of direct commercial competition.",
+  "ownership: Publicly accessible records do not establish the complete cap table or beneficial ownership percentages; no ownership deal or parent was found.",
+  "dual_use: Defense is identified as a target sector in ecosystem material, but no defense customer, government contract, military deployment, certification, or fielded platform was found.",
+  "funding: Amount, support date, legal form, and providers are undisclosed; finder says 0 rounds/pre-funding while PLANETech says non-dilutive pre-seed family-and-friends support."
+]
+conflicts = ["Funding-stage descriptions conflict or use different definitions: Startup Nation Finder listed Pre-Funding and zero rounds on 2026-05-18; PLANETech profile reports pre-seed non-dilutive family-and-friends support and seed fundraising intent, with no amount or date.", "EcoMotion profile lists founding year 2024 and PreSeed/Angel, while Startup Nation Finder lists January 2026 and pre-funding. Legal registration evidence establishes incorporation on 2025-12-07 but does not settle when the project began; retain 2026 as directory founding date and distinguish legal incorporation."]
+diligence_questions = [
+  "What exactly is the sensing element and signal path, and how does a cell manufacturer integrate it without reducing energy density, yield, cycle life, or safety?",
+  "Can Cheel provide independently witnessed accuracy, latency, drift, cycle-life, abuse-test, and thermal-runaway warning results against surface sensors and model-based BMS baselines?",
+  "What is the precise amount, date, and legal form of family-and-friends pre-seed support, and what seed financing has closed since the PLANETech profile was updated?",
+  "Who owns or licenses the underlying sensor and materials IP, including any university/Tecnion rights, and what patent applications or freedom-to-operate work exist?",
+  "Which cell maker, pack integrator, or end customer has agreed to a design-in or pilot, and what qualification milestones and economics govern conversion to production?",
+  "What are the full-time team composition, founder time commitments, manufacturing partner, and capital required to reach cell-level validation and customer qualification?"
+]
+sources = [
+  { id = "official", url = "https://cheel.tech/", title = "Cheel – Real-Time temperature sensing. Driving performance. Ensuring safety.", publisher = "Cheel", kind = "company", accessed_at = "2026-10-04T16:37:05Z", claims = ["Cheel describes internal, real-time, cell-specific battery temperature sensing and intended battery state-of-health and thermal-runaway benefits.", "The current company website names Gidon Leader as co-founder/CEO, Yonathan Lapidus as co-founder/COO, and Prof. Yehonadav Bekenstein as co-founder/CTO.", "The website identifies data centers and energy-system storage as target markets."] },
+  { id = "planet", url = "https://planetech.themarketsquare.org/startup/cheel/", title = "Cheel - PLANETech Marketsquare", publisher = "PLANETech / TheMarketSquare", kind = "other", accessed_at = "2026-10-04T16:37:05Z", claims = ["Cheel's profile reports TRL 4, lab validation, and a prototype component tested under controlled conditions.", "Cheel's profile reports pre-seed non-dilutive funding from family and friends and intent to seek further seed funding, without amount, date, or participant names.", "Cheel describes battery-cell internal temperature sensing for mobility, energy storage, defense, and battery-powered platforms."] },
+  { id = "finder", url = "https://finder.startupnationcentral.org/company_page/cheel", title = "Cheel — Energy Tech | Finder", publisher = "Startup Nation Finder", kind = "directory", accessed_at = "2026-10-04T16:37:05Z", published_on = "2026-05-18", claims = ["Finder lists Cheel as founded January 2026 by Gidon Leader and Yonathan Lapidus, located in Binyamina-Giv'at Ada, Israel, with 1-10 employees and exact directory headcount 3.", "Finder labels Cheel pre-funding, reports total funding undisclosed and zero rounds, and describes its product as R&D stage.", "Finder identifies the Israeli company number 517255121 and target sectors including energy storage, defense, and eVTOL."] },
+  { id = "ecomotion", url = "https://ecomotion.themarketsquare.org/startup/cheel/", title = "Cheel - EcoMotion", publisher = "EcoMotion / TheMarketSquare", kind = "directory", accessed_at = "2026-10-04T16:37:05Z", claims = ["EcoMotion describes an intended real-time temperature monitoring solution integrated directly into battery cells.", "EcoMotion profile lists founding year 2024, PreSeed/Angel funding stage, and MVP-to-Pilot product stage; these are inconsistent with later Finder profile and are treated as possibly stale or differently defined."] },
+  { id = "checkid", url = "https://www.checkid.co.il/company/%D7%A6%27%D7%99%D7%9C-%D7%90%D7%A0%D7%A8%D7%92%D7%99%D7%94-%D7%91%D7%A2~%D7%9E-517255121", title = "צ'יל אנרגיה בע\"מ / CHEEL ENERGY LTD - 517255121", publisher = "CheckID", kind = "other", accessed_at = "2026-10-04T16:37:05Z", claims = ["CheckID lists CHEEL ENERGY LTD as an active Israeli private company, number 517255121, incorporated 2025-12-07, with a Binyamina address.", "The accessible summary displays corporate roles and share/option-holder categories but not a complete cap table or ownership percentages."] },
+  { id = "ti", url = "https://www.ti.com/product-category/battery-management-ics/battery-monitors-balancers/overview.html", title = "Battery monitors & balancers", publisher = "Texas Instruments", kind = "other", accessed_at = "2026-10-04T16:37:05Z", claims = ["Texas Instruments markets battery monitor and balancer components used for real-time battery cell voltage, temperature, and current readings."] },
+  { id = "fraunhofer", url = "https://www.ikts.fraunhofer.de/en/departments/electronics_microsystems_biomedicine/hybrid_micro_systems/Microsystems_LTCCHTCC/Application_Sensors/battery_cell_integrated_sensors_and_actuators.html", title = "Battery cell integrated sensors and actuators", publisher = "Fraunhofer IKTS", kind = "other", accessed_at = "2026-10-04T16:37:05Z", claims = ["Fraunhofer IKTS describes development of cell-integrated battery sensors including temperature sensing."] },
+  { id = "frontiers", url = "https://www.frontiersin.org/journals/chemical-engineering/articles/10.3389/fceng.2022.804704/full", title = "Online Internal Temperature Sensors in Lithium-Ion Batteries: State-of-the-Art and Future Trends", publisher = "Frontiers in Chemical Engineering", kind = "media", accessed_at = "2026-10-04T16:37:05Z", published_on = "2022-03-03", claims = ["The review surveys direct and indirect internal lithium-ion battery temperature-sensing methods and identifies tradeoffs relevant to embedded sensing and model-based estimation."] },
+  { id = "leader_post", url = "https://www.linkedin.com/posts/gidon-leader-115707a8_preventingthermalrunaway-energy-mobility-activity-7404107383490228224-xGWK", title = "Gidon Leader on Cheel", publisher = "LinkedIn", kind = "other", accessed_at = "2026-10-04T16:37:05Z", claims = ["Gidon Leader publicly describes leading Cheel and says he has a decade of battery and automotive industry experience."] }
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T16:37:05Z"
+next_review_on = "2027-01-04"
+queries = ["Cheel Energy Ltd Gidon Leader Cheel founder battery sensing", "517255121 CHEEL ENERGY LTD", "Cheel Yonathan Lapidus Gidon Leader Yehonadav Bekenstein battery startup"]
+source_ids = ["official", "finder", "checkid", "planet"]
+summary = "Official site and company-profile sources identify the Israeli battery-sensing startup and current three-founder team. Legal record gives CHEEL ENERGY LTD, company number, active status, and 2025-12-07 incorporation. Project founding-year listings conflict (2024 vs January 2026)."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-04T16:37:05Z"
+next_review_on = "2026-11-04"
+queries = ["Cheel battery startup Cheel.tech funding raised investors 2026", "Cheel battery family and friends funding", "Cheel Israel startup pre-seed funding seed investors"]
+source_ids = ["planet", "finder", "ecomotion"]
+summary = "PLANETech reports undisclosed non-dilutive pre-seed support from family and friends and planned seed fundraising; Finder reports undisclosed total, zero recorded rounds, and pre-funding as of 2026-05-18. EcoMotion says PreSeed/Angel. No amount, date, or named investor found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T16:37:05Z"
+next_review_on = "2027-01-04"
+queries = ["Cheel funding investors raised family friends", "Cheel startup Israel investor portfolio funding", "Cheel seed investors battery"]
+source_ids = ["planet", "finder"]
+summary = "No named institutional investor or identifiable individual investor disclosed. Family-and-friends support is reported only as an unnamed source of non-dilutive pre-seed funding."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T16:37:05Z"
+next_review_on = "2027-01-04"
+queries = ["site:cheel.tech Cheel battery internal temperature founder", "Cheel Yonathan Lapidus Gidon Leader Yehonadav Bekenstein battery startup", "Gidon Leader Cheel decade battery automotive"]
+source_ids = ["official", "finder", "leader_post"]
+summary = "Official site names Gidon Leader (CEO), Yonathan Lapidus (COO), and Prof. Yehonadav Bekenstein (CTO) as co-founders. Founder background is only lightly described in public sources; directory headcount is three."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T16:37:05Z"
+next_review_on = "2027-04-04"
+queries = ["517255121 CHEEL ENERGY LTD ownership shareholders", "CHEEL ENERGY LTD Israeli company owners"]
+source_ids = ["checkid", "finder"]
+summary = "Active private company confirmed, but complete cap table and percentages are not public in reviewed accessible sources; no parent or acquisition located."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T16:37:05Z"
+next_review_on = "2027-04-04"
+queries = ["Cheel revenue ARR financials battery startup", "Cheel funding valuation burn revenue"]
+source_ids = ["finder", "planet"]
+summary = "No revenue, ARR, profitability, burn, runway, valuation, or financial statements disclosed. Funding amount is separately recorded as undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T16:37:05Z"
+next_review_on = "2027-01-04"
+queries = ["Cheel TRL 4 battery sensor", "Cheel battery customer pilot deployment contract", "Cheel internal battery temperature prototype"]
+source_ids = ["planet", "official", "finder", "ecomotion"]
+summary = "PLANETech reports TRL 4 and a controlled-condition prototype component; official site presents the sensing platform and target markets. No customer, paid pilot, contract, production use, or independent result located. EcoMotion's MVP-to-Pilot label is undated and conflicts with Finder's R&D label."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T16:37:05Z"
+next_review_on = "2027-04-04"
+queries = ["Cheel patent battery temperature", "Cheel Yehonadav Bekenstein patent battery sensing", "Cheel internal battery sensor patent application"]
+source_ids = ["official", "planet", "finder"]
+summary = "No attributable patent or patent application located through company and indexed web searches; this does not establish that no filings exist. Ownership or licensing terms remain unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T16:37:05Z"
+next_review_on = "2027-04-04"
+queries = ["battery internal temperature sensing competitors embedded sensor battery cell official", "TI battery cell temperature monitors", "Fraunhofer battery cell integrated temperature sensor"]
+source_ids = ["ti", "fraunhofer", "frontiers", "official"]
+summary = "Technical alternatives include conventional BMS monitors and model-based estimates; Fraunhofer describes cell-integrated sensor development. Commercial competitor mapping to Cheel's exact architecture remains incomplete."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T16:37:05Z"
+next_review_on = "2027-04-04"
+queries = ["Cheel defense battery sensing target market", "Cheel battery sensing defense UAV eVTOL", "Cheel contract military defense deployment"]
+source_ids = ["planet", "finder", "official"]
+summary = "Battery safety has civilian energy-storage, mobility, and data-center applications and possible defense/security relevance in battery-powered platforms; profiles name defense as a target sector. No defense contract, military deployment, or certification found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "CheckID identifies CHEEL ENERGY LTD as an active Israeli private company; Finder categorizes Cheel as a private startup."
+verified_at = "2026-10-04T16:37:05Z"
+source_ids = ["checkid", "finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "CheckID lists incorporation in Israel and a Binyamina address; Finder places headquarters in Binyamina-Giv'at Ada, Israel."
+verified_at = "2026-10-04T16:37:05Z"
+source_ids = ["checkid", "finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.preseed-support.amount"
+support = "direct"
+summary = "PLANETech says family-and-friends pre-seed non-dilutive support exists but publishes no numeric amount; Finder lists total funding as undisclosed. The structured amount is therefore omitted rather than inferred."
+verified_at = "2026-10-04T16:37:05Z"
+source_ids = ["planet", "finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.preseed-support.lead_investors"
+support = "direct"
+summary = "The funding profile names no lead investor; family and friends are not identified as named participants and are not entered as a named investor."
+verified_at = "2026-10-04T16:37:05Z"
+source_ids = ["planet", "finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.preseed-support.participating_investors"
+support = "direct"
+summary = "PLANETech refers generically to family and friends but identifies no named participants; Finder reports no recorded rounds."
+verified_at = "2026-10-04T16:37:05Z"
+source_ids = ["planet", "finder"]

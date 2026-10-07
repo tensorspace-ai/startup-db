@@ -1,0 +1,53 @@
+name = "NeuroBlade"
+description = "NeuroBlade developed purpose-built SQL Processing Units and a hardware-software stack for accelerating scan, filter, and aggregation stages in large-scale analytics. Its core engineering team joined AWS Annapurna Labs in October 2025, so the record now represents an acquired technology and team rather than an independent investible startup."
+detailed_description = """
+NeuroBlade developed a specialized analytics-acceleration architecture centered on a SQL Processing Unit (SPU) and computational-memory concepts. The design targets the part of query execution that often becomes a data-movement and memory-bandwidth problem: scanning columns, applying predicates, projecting fields, and aggregating results. Its Data Analytics Acceleration Library (DAXL) provided an integration layer for existing engines rather than asking customers to replace their entire data stack. Public product material describes integrations with Apache Spark, Presto, ClickHouse, and related execution layers, together with deployment through standard PCIe cards or selected cloud instances.
+
+The commercial proposition was performance per dollar and lower total cost of ownership for organizations running large, repetitive, scan-heavy workloads. Likely buyers included cloud data platforms, observability and telemetry operators, data-warehouse teams, and enterprises with petabyte-scale or latency-sensitive analytics. NeuroBlade announced availability on AWS EC2 F2 instances in 2025 and described a pre-built AWS Marketplace deployment path, while its on-premises card model addressed customers with data-locality, control, or infrastructure requirements. These are meaningful commercialization signals, but public evidence does not establish broad recurring revenue, a durable customer base, or sustained production adoption at scale.
+
+The competitive environment is difficult. General-purpose GPUs, FPGAs, CPUs with increasingly capable vector and memory subsystems, database-native acceleration, and cloud-provider custom silicon all compete for the same performance and infrastructure budgets. NeuroBlade’s differentiation was workload specificity: an accelerator optimized for analytical query primitives could be more efficient than a general-purpose device when the bottleneck is memory traffic rather than dense matrix computation. That advantage also creates integration and addressable-market constraints, because results depend on supported operators, data layouts, engine versions, deployment economics, and a customer’s willingness to introduce specialized hardware.
+
+The October 2025 agreement for NeuroBlade’s core engineering team to join AWS Annapurna Labs materially changes the diligence conclusion. It is evidence that Amazon saw value in the team and technology, but it also means the independent company should not be modeled as an ongoing startup without confirming residual operations, product support, intellectual-property ownership, and customer continuity. The official website remains useful as a product and historical source, while independent reporting describes the transaction as the effective end of NeuroBlade’s independent journey. The last publicly reported financing was an $83 million Series B in 2021, bringing reported pre-acquisition funding to roughly $110 million; no acquisition price should be inferred from that funding history.
+
+The defense and national-security case is credible at the enabling-infrastructure level, not as a demonstrated defense product. Faster filtering and aggregation could help cyber telemetry, intelligence fusion, geospatial data, sensor processing, and large-scale mission analytics. However, there is no reliable public evidence here of defense customers, classified deployments, government contracts, or security certifications. Any strategic value now lies mainly in the possible transfer of processing-in-memory and analytics-acceleration expertise into AWS infrastructure, with defense applicability depending on later productization, access controls, deployment environments, and procurement pathways.
+"""
+logo = "https://www.neuroblade.com/wp-content/uploads/2023/03/NB_Logo_knockout_rgb.png"
+website = "https://www.neuroblade.com"
+sector = "Semiconductors / Analytics Acceleration"
+founded = "2018"
+headquarters = "Tel Aviv, Israel"
+employees = "51-200"
+funding_stage = "Acquired in 2025; last reported Series B"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "NeuroBlade's core analytics-acceleration technology has substantive commercial and security applicability because high-throughput query processing can support both enterprise data platforms and mission data exploitation. Potential security uses include cyber telemetry analysis, intelligence fusion, geospatial filtering, and sensor-data triage. The public record does not demonstrate defense customers, government contracts, classified deployment, or certifications, so this is a credible enabling-technology adjacency rather than proven defense traction. The acquisition by AWS also means future applicability depends on how Amazon incorporates the team and intellectual property."
+key_technologies = ["SQL Processing Unit (SPU) architecture", "Processing-in-memory and computational-memory design", "Hardware acceleration for scan, predicate, projection, and aggregation operators", "Data Analytics Acceleration Library (DAXL) integration API", "Columnar and vectorized query execution", "FPGA-based PCIe and cloud-instance deployment", "Integrations with Spark, Presto, ClickHouse, and Velox-style execution"]
+use_cases = ["Petabyte-scale SQL filtering and aggregation", "Cloud data-warehouse cost and latency reduction", "Interactive business intelligence and ad-hoc analytics", "AI/ML feature preparation and large-dataset preprocessing", "Cybersecurity log and network-telemetry analysis", "Intelligence, geospatial, and multi-sensor data fusion", "Scientific and industrial time-series analytics"]
+investible = false
+investment_rationale = "NeuroBlade is not currently an independent investment opportunity in the database sense: public reporting says its core engineering team joined AWS Annapurna Labs in October 2025. The technology remains strategically notable because it addressed a real memory-bandwidth bottleneck and attracted substantial prior financing, but diligence should focus on acquisition scope, retained intellectual property, product continuity, and whether capabilities reappear inside AWS rather than on standalone startup financing or exit prospects."
+strategic_value = "Strategic value is high as an acquired semiconductor and systems capability, but it should not be confused with current standalone-company availability. NeuroBlade's SPU, processing-in-memory work, analytics integrations, and experienced chip team could strengthen cloud infrastructure and data-processing roadmaps. The national-security relevance is indirect: faster analytics substrates can improve cyber, intelligence, and sensor-data workflows, while AWS distribution may eventually provide a path into regulated environments. The public record does not prove that such defense deployment has occurred."
+potential_score = 76.0
+technology_score = 87.0
+market_score = 70.0
+team_score = 84.0
+dual_use_score = 78.0
+strategic_alignment_score = 86.0
+stage = "mature"
+stage_rationale = "NeuroBlade progressed beyond early research, raised a reported $83 million Series B in 2021, publicized accelerator deployments and engine integrations, and reached an acquisition agreement in 2025 under which its core engineering team joined AWS Annapurna Labs. Mature is used here to describe the technology and company lifecycle, not proof of large-scale independent revenue. The principal current diligence question is what assets, personnel, products, and customer obligations survived the transaction."
+competitors = ["NVIDIA GPU-accelerated analytics", "AMD and Intel CPU/vector analytics platforms", "FPGA-based query acceleration", "Cloud-provider custom analytics and database accelerators", "Database-native vectorized engines such as ClickHouse and DuckDB", "In-memory and processing-in-memory accelerator approaches"]
+competitive_edge = "NeuroBlade's historical edge was specialization: its SPU and software stack targeted analytics operators dominated by memory movement, allowing a potentially better performance-per-watt or performance-per-dollar profile than general-purpose compute on suitable workloads. DAXL and integrations with familiar engines reduced some adoption friction. The edge was not universal, however; it depended on operator coverage, data layout, engine integration, benchmark reproducibility, and a deployment model customers could support. After the AWS transaction, any remaining advantage must be assessed as part of Amazon's infrastructure strategy rather than as an independent moat."
+risk_factors = ["Independent-company and product-support continuity is uncertain after the AWS Annapurna Labs transaction", "Competition from GPUs, CPUs, FPGAs, database-native optimization, and cloud-provider silicon", "Specialized hardware adoption depends on engine integration, supported operators, and workload fit", "Fabless semiconductor design, manufacturing, packaging, and supply-chain execution risk", "Public benchmark claims may not translate to representative production workloads or recurring revenue", "No reliable public evidence in this record of defense customers, certifications, or government contracts", "Potential cloud-provider dependence and customer lock-in concerns"]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "High strategic relevance as an acquired analytics-acceleration asset, with credible deep-tech and dual-use adjacency but no current standalone investment signal. The strongest evidence is the SPU and processing-in-memory technology, public cloud/on-premises deployment work, prior financing, and AWS team transition. Key diligence should establish the transaction perimeter, intellectual-property transfer, product continuity, and whether the capability becomes available through AWS infrastructure or remains internal."
+crawled_at = "2026-02-26T09:00:00Z"
+updated_at = "2026-07-31T18:52:13Z"
+public_sources = [
+  "https://www.neuroblade.com/about/",
+  "https://www.neuroblade.com/cloud-solutions/",
+  "https://www.neuroblade.com/blog/accelerating-the-future-of-data-analytics-with-neuroblade-amazon-ec2-f2-instances/",
+  "https://www.neuroblade.com/blog/blog-on-series-b/",
+  "https://www.calcalistech.com/ctechnews/article/hkmfcvb6ll",
+  "https://il.linkedin.com/company/neuroblade"
+]

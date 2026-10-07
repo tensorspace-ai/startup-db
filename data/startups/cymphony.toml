@@ -1,0 +1,389 @@
+name = "Cymphony"
+description = "Cymphony is an Israeli cybersecurity startup building an AI-security and workforce-graph platform that connects identity, permissions, data, activity, and AI-agent behavior so enterprises can find and reduce access risk across human and non-human users."
+detailed_description = """
+**Product and the concrete problem it solves.** Cymphony is aimed at a security gap that becomes more serious as enterprises connect generative-AI tools and autonomous agents to business systems: an agent can inherit a person's permissions, reach multiple repositories at machine speed, and make the consequences of an old access mistake much larger than they were for a human employee. Traditional security programs split the problem across identity governance, data security, SaaS posture, employee behavior, and application logs. That fragmentation makes it difficult to answer a deceptively basic question: which person, machine, or AI agent can reach which sensitive information, what did it actually do, and was that access appropriate in the business context? Cymphony's product is positioned as an agentless AI-security layer for the new workforce. It seeks to give security teams one operational view of employees, contractors, machines, and AI agents, then help them prioritize and remediate risky access rather than merely produce another inventory or alert feed. The company's launch example is concrete: after an enterprise connected ChatGPT to SharePoint, an overly broad permission made highly sensitive litigation documents queryable by a much wider internal population than intended. Cymphony's value proposition is to connect the access path, the data, and the behavior quickly enough to close that exposure.
+
+**Core technology and how it works.** The central technical abstraction is a unified context or workforce graph joining data, identity, and behavior. Cymphony says the platform continuously maps identities and AI agents to the systems, permissions, and information they can access, while also incorporating activity and organizational context. In practice, that requires connectors into identity providers, HR and organizational systems, SaaS applications, file and data platforms, AI-agent inventories, and activity telemetry; a normalization layer that resolves people, service accounts, agents, files, and permissions into a common model; and an analysis layer that identifies excessive, unexpected, or newly dangerous access paths. The platform then uses AI agents to investigate findings, rank what deserves attention, recommend or automate permission changes, and coordinate the human work required for exceptions. The company describes the product as agentless and capable of being live in a day, while offering a managed-services option for complex remediation. That is a useful deployment thesis because customers can add a context and decision layer without replacing Okta, Microsoft, their data stores, or their existing security stack. Public sources do not disclose the graph database, detection models, supported connector count, tenant-isolation design, model providers, or the boundary between autonomous remediation and human approval. Those details matter because a graph that is incomplete, stale, or wrong can create a new source of security risk rather than reduce one.
+
+**Market, customers, and go-to-market.** Cymphony sells into enterprise security, identity, data-governance, and AI-adoption budgets. Its initial wedge is the growing overlap between workforce identity and AI-agent access: security leaders need to discover shadow AI, understand what agents can reach, find stale employee permissions, and establish a defensible path to reduce exposure without waiting for a multi-year identity-governance project. The company can land with an assessment or a focused access-remediation project, then expand across data repositories, SaaS applications, and agent fleets as the graph becomes more valuable. The official product framing emphasizes Data, Identity, Threat Center, and a Maestro Security Assistant, while the launch material says the platform can be deployed without an endpoint agent and can involve Cymphony experts in harder investigations. That combination supports a low-friction enterprise motion, but the buyer and budget owner may vary between the CISO, CIO, IAM leader, data-security team, and AI-governance group. CTech identifies paying customers including Syngenta, KKR, Cass Information Systems, and Athennian; TechCrunch independently reports a double-digit number of enterprise customers, with most currently in North America and early demand from Europe, the Middle East, and Africa. The company must prove that the product is a repeatable platform rather than a high-touch consulting engagement attached to a graph.
+
+**Traction, funding, and third-party validation.** Cymphony publicly launched in September 2026 with $30 million in disclosed funding. The company's own release describes $30 million led by Sequoia and Fin Capital, while TechCrunch and CTech describe the capital as a previously undisclosed Sequoia seed followed by a $25 million Series A co-led by Sequoia Capital and SMBC Fin Atlas Beyond Fund; the exact presentation of the total should therefore be treated as a disclosure inconsistency, not silently collapsed into one round structure. TechCrunch reports that Cymphony reached seven figures in annual recurring revenue in its first year of sales, signed a double-digit number of enterprise customers, and helped one public company identify approximately 85,000 files exposed to AI tools and agents, with no evidence that those files had been accessed through the AI systems. CTech reports a large paying customer replaced two leading products with Cymphony's platform, while the company says the financing will support engineering, go-to-market, and international expansion. These are meaningful early commercial signals, and Sequoia's decision to fund the same founders again is a notable external validation. They remain partly company-reported: public sources do not establish audited revenue, retention, gross margin, customer concentration, independent efficacy benchmarks, or the number of agents monitored in production. Cymphony's website also claims SOC 2 certification and GDPR compliance, but the exact report scope, audit date, and applicability to defense or sovereign environments require diligence.
+
+**Founders and team background.** Cymphony was founded by Shy Dekel, Idan Berkovits, and Edi Gotlieb, who met through Israel's Talpiot technology and leadership program. CTech reports that Dekel spent nearly six years in Unit 8200 and rose to lead its Cyber Department; Berkovits managed a research group in the Israeli Prime Minister's Office; and Gotlieb, an electrical engineer, worked at Apple and later in technological positions at Israel's Ministry of Defense. The official company biography confirms the Talpiot, Unit 8200, and Prime Minister's Office background without overclaiming specific operational accomplishments. This is unusually direct founder-market fit for an identity-and-agent-security company: the team combines offensive and defensive cyber exposure, government-security context, product engineering, and experience with sensitive data environments. The founders' technical pedigree also helped Sequoia underwrite the company before it had a clear product direction, according to TechCrunch. The public team is still small—CTech reports approximately 23 employees across Israel and the United States, while TechCrunch reports about 30—so the record should preserve the discrepancy rather than choose a false precision. The key organizational question is whether the founders can build enough connector engineering, graph reliability, enterprise support, sales, compliance, and safe-remediation expertise to serve large customers without becoming dependent on founder-led delivery.
+
+**Competitive dynamics.** Cymphony competes across several overlapping categories rather than against one identical product. Microsoft Entra, Defender, and Security Copilot can bundle identity, endpoint, data, and AI-security controls into existing enterprise agreements. Okta and SailPoint own important identity and governance relationships, CyberArk is strong in privileged and machine-identity security, and Varonis brings deep data-access analytics and remediation. Wiz and Palo Alto Networks can approach AI-agent risk from cloud-security, exposure-management, and broader platform positions. The substitute is also a patchwork of IAM reviews, data-discovery tools, DLP, SaaS-management products, SIEM telemetry, and manual access-certification projects. Cymphony's thesis is that these tools do not provide a single model of identity, information, behavior, and business context, especially when AI agents become active principals rather than passive applications. Its early customer evidence suggests a consolidation wedge, but TechCrunch reports that customers currently adopt it mostly as an additional layer and that even Sequoia views incumbent replacement as a longer-term possibility. The company therefore needs to show that a unified graph produces materially better risk prioritization, faster remediation, and safer decisions than integrations between established vendors. Large incumbents can copy the language quickly; a durable edge would have to come from graph completeness, deployment speed, proprietary activity context, remediation outcomes, and trust earned in high-consequence environments.
+
+**Defense, security, and resilience dual-use relevance.** Cymphony's dual-use case is credible because access governance is a core security requirement for defense organizations, government agencies, and critical infrastructure, even though the public record does not disclose an IDF, allied-government, defense-prime, or classified customer. Military and intelligence environments increasingly combine human operators with service accounts, automation, mission applications, data lakes, and AI-assisted analysis. A graph that can show which identity or agent can reach sensitive systems, what it actually accessed, and whether that path remains justified could support least privilege, insider-risk reduction, secure AI adoption, and incident containment in those environments. The same mechanisms are relevant to energy, water, health, transport, telecom, and financial infrastructure where a compromised identity or overpowered automation can cause operational disruption. Cymphony's Israeli cyber and government background gives it ecosystem proximity, and its agentless approach could be useful where endpoint deployment is constrained. The calibration is important: there is no public evidence of air-gapped operation, classified accreditation, sovereign deployment, military contract, export-control posture, or resilience testing during communications disruption. The strategic value is therefore an enabling cybersecurity capability with a credible transfer path, not a demonstrated defense product. Diligence should focus on data residency, deployment in restricted networks, human approval controls, auditability, cryptographic protections, and whether automated remediation can be safely bounded in mission-critical systems.
+
+**Growth stage, trajectory, and key diligence risks.** Cymphony is best classified as mid-stage early growth: it has a real product, named enterprise customers, seven-figure revenue reported by the company, roughly two dozen employees, a $25 million Series A within a $30 million disclosed funding total, and a stated international expansion plan, but it is only about two years old and has not shown the operating scale of a mature security platform. Its trajectory depends on turning the agent-security moment into a durable control-plane category, expanding from identity-and-data visibility into repeatable remediation, and proving that the workforce graph remains accurate as employees change roles, permissions drift, agents create sub-agents, and customers add new data systems. Principal diligence risks are: (1) incumbent bundling by Microsoft, Okta, CyberArk, Varonis, and broader security platforms; (2) graph completeness and false-positive risk when connector data is stale or business context is ambiguous; (3) unsafe automated remediation that interrupts legitimate work or creates a new outage; (4) model and data-security risk because the platform itself processes sensitive identity, activity, and data-access information; (5) concentration in large North American enterprise buyers and long security-procurement cycles; (6) unclear funding-round presentation, revenue quality, retention, and customer concentration; and (7) limited public evidence for defense-grade, sovereign, or offline deployment. Milestones worth tracking include independently validated reduction in excessive access, expansion of named customers outside North America, audited recurring-revenue and retention metrics, mature approval and rollback controls, and a government or critical-infrastructure deployment that demonstrates the dual-use thesis under real constraints.
+"""
+logo = "Unknown"
+website = "https://www.cymphony.io"
+sector = "AI-Agent Security, Identity and Data Access Governance"
+founded = "2024 (reported as founded about two years before the September 2026 launch; exact incorporation date is not independently confirmed)"
+headquarters = "Tel Aviv, Israel, with a New York, United States presence"
+employees = "Approximately 23-30 across Israel and the United States; CTech reported about 23 and TechCrunch about 30 in September 2026."
+funding_stage = "Series A / early growth. CTech reports a $5M Sequoia-led seed and $25M Series A co-led by Sequoia Capital and SMBC Fin Atlas Beyond Fund, totaling $30M; TechCrunch reports post-money valuation above $100M."
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Cymphony's core technology credibly serves commercial security and defense, government, and critical-infrastructure resilience contexts because the same identity-data-behavior graph can govern human, machine, and AI-agent access in both enterprise and high-consequence environments. (1) Commercially, it addresses excessive permissions, shadow AI, sensitive-data exposure, and agent behavior across SaaS and data systems. (2) Strategically, the platform could support least privilege, insider-risk reduction, AI governance, and incident containment for defense organizations, energy, water, transport, telecom, and other operators whose systems cannot tolerate uncontrolled machine access. (3) Israeli cyber and government-security backgrounds provide ecosystem proximity, but no public source reviewed here establishes an IDF or allied-government customer, classified deployment, air-gapped operation, or defense accreditation. The dual-use assessment is therefore a credible technology transfer path and resilience relevance, not demonstrated defense adoption."
+key_technologies = [
+  "Unified workforce graph linking human identities, AI agents, machines, permissions, sensitive data, and observed activity",
+  "Agentless discovery and continuous mapping across identity providers, SaaS applications, data repositories, and non-human principals",
+  "Contextual access-risk analysis that combines identity, data sensitivity, behavior, and organizational business context",
+  "AI-assisted investigation and prioritization of excessive, unexpected, or newly dangerous access paths",
+  "Controlled automated remediation for permission changes, with human involvement for complex or high-consequence cases",
+  "AI-agent security controls spanning agent inventory, data access, threat investigation, and workforce behavior"
+]
+use_cases = [
+  "Finding and closing sensitive files exposed when ChatGPT or another AI tool inherits broad employee or service-account permissions",
+  "Discovering shadow AI agents, unsanctioned tools, and non-human identities across enterprise SaaS and data environments",
+  "Prioritizing stale employee, contractor, machine, and agent permissions using actual data-access behavior",
+  "Investigating identity-linked incidents and coordinating remediation across security, IT, data, and business owners",
+  "Governing AI-agent access to SharePoint, Box, Snowflake, Salesforce, and other sensitive enterprise systems",
+  "Supporting least-privilege and insider-risk programs in defense, government, energy, water, telecom, and other critical infrastructure",
+  "Reducing fragmented identity, data-security, DLP, and SaaS-governance workflows without replacing the incumbent identity provider"
+]
+investible = true
+investment_rationale = "Cymphony merits a positive legacy priority signal because it has combined a timely security problem with unusually strong Israeli cyber and government-technology founder backgrounds, early enterprise traction, and repeat backing from Sequoia. (1) The product targets a concrete control failure: AI agents inherit access paths that security teams historically modeled around humans, creating a risk that grows with every connected data system. (2) The workforce-graph approach can become more valuable as it accumulates normalized identity, data, and behavior context across customers, while the agentless deployment claim may reduce adoption friction. (3) External evidence is stronger than a launch narrative alone: CTech reports named paying customers, approximately 23 employees, seven-figure revenue, and a $25M Series A; TechCrunch reports a double-digit customer base, roughly 30 employees, a public-company exposure finding, and customers including KKR and Syngenta. (4) The principal counterweights are material: Microsoft, Okta, CyberArk, Varonis, Wiz, and Palo Alto can bundle overlapping controls; Cymphony's funding and revenue disclosures are not fully standardized; and the public record does not establish defense-grade deployments. This is a strategic diligence assessment and legacy priority flag, not an investment recommendation."
+strategic_value = "Cymphony has strategic value as an Israeli-built control-plane candidate for the security of AI-enabled organizations. (1) It addresses the convergence of identity, data, and autonomous software behavior, a problem that affects both enterprise productivity and the security of government or critical-infrastructure systems. (2) A reliable graph could help operators identify hidden access paths before an AI agent, compromised account, contractor, or machine credential turns them into an incident. (3) Its agentless architecture and Israeli cyber pedigree could make it relevant to constrained buyers that need strong visibility without deploying another endpoint sensor. (4) The strategic case remains conditional: there is no public government contract, sovereign or air-gapped deployment, classified accreditation, or evidence that its automated remediation has been validated in mission-critical environments. The near-term value is therefore enabling cyber resilience and safer AI adoption, with national-security relevance that must be proven through deployments and controls."
+potential_score = 80.0
+technology_score = 79.0
+market_score = 82.0
+team_score = 91.0
+dual_use_score = 74.0
+strategic_alignment_score = 83.0
+stage = "mid"
+stage_rationale = "Cymphony is classified as mid-stage rather than early because it has moved beyond an unvalidated prototype: CTech reports named enterprise customers, approximately 23 employees, seven-figure revenue, and a $25M Series A after a prior seed, while TechCrunch reports about 30 employees, a double-digit customer base, and customer expansion. The product is publicly launched, the company has a canonical website and a Tel Aviv/New York operating footprint, and a large customer reportedly replaced two existing products with Cymphony. It remains far from mature: the company is only about two years old, public revenue and retention metrics are limited, most customers are currently in North America, the exact funding presentation differs across sources, and the platform has not publicly demonstrated defense-grade or sovereign deployment. Progression toward mature status would require durable recurring revenue, broader international customer density, independently verified remediation outcomes, deeper compliance and deployment options, and evidence that the graph remains reliable across large heterogeneous agent fleets."
+competitors = [
+  "Microsoft Entra / Defender / Security Copilot (bundled identity, endpoint, data, and AI-security controls distributed through existing enterprise agreements)",
+  "Okta (identity and access-management incumbent with expanding governance for non-human and AI identities)",
+  "CyberArk (privileged-access and machine-identity security platform competing for high-risk credential and access-control budgets)",
+  "Varonis (data-security and access-governance incumbent with deep file, SaaS, and remediation analytics)",
+  "Wiz (cloud-security and exposure-management platform extending into AI and identity-related risk)",
+  "SailPoint (identity-governance and access-certification incumbent with enterprise lifecycle and policy relationships)"
+]
+competitive_edge = "Cymphony's most credible edge is the decision context created by combining identity, data, and behavior in one workforce graph. (1) It treats AI agents as active principals that can inherit permissions and act across systems, rather than as ordinary applications or isolated service accounts. (2) The agentless positioning can lower deployment friction and let the company sit above existing identity providers, data stores, and security tools. (3) Early evidence of named enterprise customers, seven-figure reported revenue, and a public-company exposure finding suggests the graph is producing operational value rather than only dashboards. (4) The founders' Talpiot, Unit 8200, Prime Minister's Office, Apple, and Ministry of Defense backgrounds add credibility in security-sensitive buying processes. The edge is not yet a proven moat: incumbents have distribution and telemetry, customers currently adopt Cymphony mainly as an additional layer, and graph incompleteness or unsafe remediation could undermine trust. Durability depends on connector breadth, accurate identity-to-data resolution, measurable risk reduction, safe automation, and repeatable deployment economics."
+risk_factors = [
+  "Incumbent bundling by Microsoft, Okta, CyberArk, Varonis, Wiz, and Palo Alto Networks could compress the standalone AI-agent-security category",
+  "Graph completeness and freshness risk: stale connectors, unresolved identities, missing data lineage, or ambiguous business context can produce false priorities",
+  "Automated permission remediation has asymmetric operational risk because an incorrect change can interrupt legitimate business or mission-critical work",
+  "The platform itself processes sensitive identity, activity, and data-access information, creating data-residency, tenant-isolation, and compromise risks",
+  "Enterprise concentration and long security procurement cycles may make growth dependent on a small number of large North American buyers",
+  "Funding structure, revenue quality, retention, customer concentration, and independent product benchmarks remain only partially disclosed",
+  "No public evidence yet establishes defense-grade, air-gapped, sovereign, classified, or communications-disrupted deployment"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Cymphony merits active monitoring because it sits at the intersection of Israeli cyber capability, AI infrastructure, identity security, and resilience of sensitive organizations. (1) The founders are Talpiot graduates with reported Unit 8200, Prime Minister's Office, Apple, and Ministry of Defense experience, giving the company unusually relevant technical and public-sector context. (2) The unified workforce graph addresses an emerging control problem with concrete evidence of customer adoption: CTech and TechCrunch report named enterprises, a double-digit customer base, seven-figure revenue, and an exposure finding involving approximately 85,000 files. (3) A $25M Series A within a $30M disclosed total and repeat backing from Sequoia provide meaningful validation for a young Israeli startup. (4) Strategic alignment is capped by strong incumbent competition, incomplete public metrics, unclear round presentation, and the absence of a disclosed defense or critical-infrastructure deployment. The next milestones that would raise priority are validated access-risk reduction, audited retention and recurring revenue, safe automated remediation at larger scale, sovereign or restricted-network deployment, and a government, defense-prime, or critical-infrastructure reference. This is a strategic monitoring assessment, not an investment recommendation."
+public_sources = [
+  { label = "Official launch release", url = "https://www.cymphony.io/release", description = "Company product, funding and customer case." },
+  { label = "Official about page", url = "https://www.cymphony.io/about-us", description = "Mission and founders." },
+  { label = "Official contact page", url = "https://www.cymphony.io/contact-us", description = "Tel Aviv and New York offices." },
+  { label = "Atlas Beyond Ventures", url = "https://atlasbeyond.vc/news/", description = "SMBC Fin Atlas Beyond Fund investment announcement." },
+  { label = "CTech funding report", url = "https://www.calcalistech.com/ctechnews/article/hjpi110rozg", description = "Rounds, team, customers and reported revenue." },
+  { label = "TechCrunch funding and traction report", url = "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/", description = "Round, valuation, traction, customers and competition." }
+]
+crawled_at = "2026-09-19T23:59:57Z"
+updated_at = "2026-10-05T02:40:25Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Shy Dekel", role = "Co-founder and CEO", is_founder = true, current = true, background = "Talpiot alumnus; CTech reports nearly six years in Unit 8200 and leadership of its Cyber Department.", source_ids = ["ctech", "about", "tc"] },
+  { name = "Idan Berkovits", role = "Co-founder and Chief Product Officer", is_founder = true, current = true, background = "Talpiot alumnus; CTech reports research group manager in the Office of the Prime Minister.", source_ids = ["ctech", "about", "tc"] },
+  { name = "Edi Gotlieb", role = "Co-founder and Chief Technology Officer", is_founder = true, current = true, background = "Talpiot alumnus; CTech reports electrical engineering training, Apple employment and later technology roles at Israel's Ministry of Defense.", source_ids = ["ctech", "about", "tc"] }
+]
+investors = [
+  { name = "Sequoia Capital", investor_type = "vc", website = "https://www.sequoiacap.com/", relationship = "current", round_ids = ["seed-2024", "series-a-2026"], source_ids = ["ctech", "tc", "release"] },
+  { name = "SMBC Fin Atlas Beyond Fund", investor_type = "corporate", website = "https://atlasbeyond.vc/", relationship = "current", round_ids = ["series-a-2026"], source_ids = ["atlas", "ctech", "tc"] },
+  { name = "Fin Capital", investor_type = "vc", website = "https://fin.capital/", relationship = "current", round_ids = ["series-a-2026"], source_ids = ["release", "atlas"] }
+]
+financials = [
+  { name = "Annual recurring revenue", value = "Seven figures", as_of = "2026-09-09", basis = "reported", metric = "arr", numeric_value = 1000000, value_relation = "more_than", unit = "currency", currency = "USD", source_ids = ["tc"] },
+  { name = "Employees", value = "About 23 employees", as_of = "2026-09-09", basis = "reported", metric = "employees", numeric_value = 23, value_relation = "approximate", unit = "people", source_ids = ["ctech"] },
+  { name = "Employees", value = "About 30 employees", as_of = "2026-09-09", basis = "reported", metric = "employees", numeric_value = 30, value_relation = "approximate", unit = "people", source_ids = ["tc"] }
+]
+traction = [
+  { kind = "customer", description = "CTech and TechCrunch name Syngenta, KKR, Cass Information Systems and Athennian as enterprise customers; contract values and deployment scope are not disclosed.", date = "2026-09-09", source_ids = ["ctech", "tc"] },
+  { kind = "product", description = "Company said it found roughly 85,000 files at one U.S. public company accessible to AI tools and agents, helped close the exposure, and verified no access through those AI systems; company-reported case.", date = "2026-09-09", source_ids = ["tc"] },
+  { kind = "customer", description = "CTech reports a large paying customer replaced two leading products; customer and products unnamed.", date = "2026-09-09", source_ids = ["ctech"] },
+  { kind = "product", description = "Official launch describes an agentless platform live in a day, unifying data, identity and behavior on a context graph; company assertion.", date = "2026-09-09", source_ids = ["release"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Microsoft Entra / Defender", website = "https://www.microsoft.com/security", rationale = "Bundled identity, data and security capabilities overlap with agent access governance.", differentiation = "Cymphony presents a unified workforce graph spanning identity, data and behavior; durable technical advantage is unproven.", source_ids = ["tc"] },
+  { name = "Okta", website = "https://www.okta.com/", rationale = "Identity incumbent competing for workforce and non-human identity governance.", differentiation = "Cymphony emphasizes linking identity to data access and activity context.", source_ids = ["tc"] },
+  { name = "CyberArk", website = "https://www.cyberark.com/", rationale = "Privileged access and machine identity vendor with adjacent controls.", differentiation = "Cymphony targets cross-system data and behavior context for people and agents.", source_ids = ["tc"] },
+  { name = "Varonis", website = "https://www.varonis.com/", rationale = "Data security and access governance incumbent.", differentiation = "Cymphony combines data signals with workforce identity, behavior and agent context.", source_ids = ["tc"] },
+  { name = "Wiz", website = "https://www.wiz.io/", rationale = "Cloud security platform expanding into identity and AI security.", differentiation = "Cymphony focuses on workforce identity-to-data access and behavior graph.", source_ids = ["tc"] }
+]
+
+[intelligence.company]
+company_id = "il-cymphony"
+legal_name = "Cymphony"
+aliases = ["Cymphony"]
+operating_status = "active"
+business_model = "Enterprise cybersecurity software platform with reported managed-service support for complex remediation; pricing and contract model are undisclosed."
+products = ["AI Security platform", "Data", "Identity", "Threat Center", "Maestro Security Assistant"]
+locations = ["Tel Aviv, Israel", "New York, United States"]
+notes = "CTech and TechCrunch describe Cymphony as founded about two years before September 2026; exact founding date unknown."
+source_ids = ["about", "contact", "ctech", "tc"]
+
+[intelligence.funding]
+status = "reported"
+summary = "CTech reports a $5M Sequoia-led seed followed by a $25M Series A co-led by Sequoia Capital and SMBC Fin Atlas Beyond Fund, totaling $30M. TechCrunch confirms the Series A and says seed amount was previously undisclosed; CTech supplies the seed amount. Company release calls launch funding $30M led by Sequoia and Fin Capital without round structure."
+rounds = [
+  { id = "seed-2024", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2026-09-09", amount_status = "reported", amount = 5000000, amount_scope = "round", currency = "USD", lead_investors = ["Sequoia Capital"], participating_investors = [], source_ids = ["ctech", "tc"], notes = "CTech reports $5M and Sequoia lead; TechCrunch says the amount was previously undisclosed and the seed occurred more than two years before September 2026. Exact closing date is unavailable." },
+  { id = "series-a-2026", round_type = "Series A", instrument = "equity", status = "announced", announced_on = "2026-09-09", amount_status = "reported", amount = 25000000, amount_scope = "round", currency = "USD", lead_investors = ["Sequoia Capital", "SMBC Fin Atlas Beyond Fund"], participating_investors = [], post_money_valuation = 100000000, valuation_currency = "USD", valuation_basis = "reported", source_ids = ["ctech", "tc", "atlas"], notes = "TechCrunch reports post-money valuation greater than $100M. Numeric amount records the reported lower bound only; exact valuation and closing date are unavailable." }
+]
+reported_total_raised = 30000000
+reported_total_currency = "USD"
+total_source_ids = ["ctech", "tc", "release"]
+total_as_of = "2026-09-09"
+total_scope = "Reported cumulative equity funding; not recalculated from individual event amounts."
+history_status = "partial"
+coverage_through = "2026-10-05"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private ownership percentages and cap table are not publicly disclosed. No acquisition, IPO or parent-company transaction found."
+cap_table_status = "undisclosed"
+shareholders = ["Founders (percentages undisclosed)", "Sequoia Capital", "SMBC Fin Atlas Beyond Fund"]
+source_ids = ["ctech", "tc", "atlas"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Cymphony lists its Tel Aviv office, and its three founders are Talpiot alumni who served in Israeli cyber and government technology roles; incorporation jurisdiction is not established by reviewed sources."
+as_of = "2026-10-05"
+source_ids = ["contact", "about", "ctech"]
+
+[intelligence.research]
+researched_at = "2026-10-05T02:40:25Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Cymphony official company AI security about Tel Aviv New York", "Cymphony funding raised seed Series A investors valuation acquired September 2026", "Cymphony founders Shy Dekel Idan Berkovits Edi Gotlieb leadership background", "Cymphony revenue ARR customers Syngenta KKR CASS Athennian", "Cymphony patents intellectual property", "Cymphony מתחרים גיוס השקעה מייסדים לקוחות", "Cymphony ownership parent company acquisition", "Cymphony defense government military customer deployment"]
+gaps = ["team: no independently verified current headcount or complete leadership roster; CTech and TechCrunch give differing approximate counts.", "investors: private cap table, investor allocation and seed participant list are undisclosed.", "financials: audited revenue, exact ARR, growth, margin, burn, runway and cash are undisclosed; seven-figure ARR is reported via TechCrunch.", "traction: contract values, deployment scope, retention and independent verification of case outcomes are unavailable.", "intellectual_property: no attributable patent or registered IP record was located; proprietary methods may be unpatented.", "competition: independent benchmarks and win/loss data are not public.", "ownership: ownership percentages, legal incorporation jurisdiction and complete capitalization are undisclosed.", "dual_use: no public defense, classified, air-gapped or government deployment evidence found."]
+conflicts = ["Employee count differs by contemporaneous report: CTech says about 23 across Israel and the U.S.; TechCrunch says about 30 across Tel Aviv and New York.", "Company release describes $30M led by Sequoia and Fin Capital; CTech details $5M seed plus $25M Series A co-led by Sequoia and SMBC Fin Atlas Beyond Fund. TechCrunch confirms the Series A and total; CTech provides seed amount while TechCrunch calls it previously undisclosed.", "Company says seven-figure ARR within first sales year per TechCrunch; CTech reports seven-figure revenue without specifying ARR, period or accounting basis."]
+diligence_questions = ["Can management provide the fully diluted cap table and executed financing documents reconciling the seed, Series A, total proceeds and post-money valuation?", "What are audited ARR, net revenue retention, gross margin, customer concentration, renewal rates and paid production deployments?", "What controls govern automated permission changes, including approval thresholds, rollback, audit evidence and measured error rates?", "How complete and fresh are identity, data lineage and activity connectors, and how are blind spots surfaced?", "Can the service operate in customer-controlled or restricted networks, and what evidence supports defense or critical-infrastructure readiness?"]
+
+[[intelligence.research.sources]]
+id = "release"
+url = "https://www.cymphony.io/release"
+title = "Cymphony raises $30M to close the access gaps AI is already finding"
+publisher = "Cymphony"
+kind = "company"
+accessed_at = "2026-10-05T02:40:25Z"
+published_on = "2026-09-09"
+claims = ["Company says it launched with $30M funding led by Sequoia and Fin Capital.", "Company describes AI security unifying data, identity and behavior on a context graph and agentless deployment.", "Company describes customer exposure involving ChatGPT and SharePoint."]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://www.cymphony.io/about-us"
+title = "The AI security platform for the new workforce"
+publisher = "Cymphony"
+kind = "company"
+accessed_at = "2026-10-05T02:40:25Z"
+claims = ["Company describes mission to secure how people and AI agents access sensitive data.", "Company identifies founders as Talpiot alumni with cyber roles across Unit 8200 and the Israeli Prime Minister's Office."]
+
+[[intelligence.research.sources]]
+id = "contact"
+url = "https://www.cymphony.io/contact-us"
+title = "Contact Cymphony"
+publisher = "Cymphony"
+kind = "company"
+accessed_at = "2026-10-05T02:40:25Z"
+claims = ["Company lists offices at 3 HaSolelim St, Tel Aviv, Israel and 524 Broadway, New York, NY, United States."]
+
+[[intelligence.research.sources]]
+id = "atlas"
+url = "https://atlasbeyond.vc/news/"
+title = "SMBC Fin Atlas Beyond Fund Invests in Cymphony"
+publisher = "Atlas Beyond Ventures"
+kind = "investor"
+accessed_at = "2026-10-05T02:40:25Z"
+published_on = "2026-09-09"
+claims = ["SMBC Fin Atlas Beyond Fund announced it invested in Cymphony.", "Fund is a U.S.-focused corporate venture fund launched with Fin Capital.", "Announcement describes Cymphony's AI governance and security product."]
+
+[[intelligence.research.sources]]
+id = "ctech"
+url = "https://www.calcalistech.com/ctechnews/article/hjpi110rozg"
+title = "Cymphony raises $25 million Series A to secure the growing overlap between employees and AI agents"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-05T02:40:25Z"
+published_on = "2026-09-09"
+claims = ["Reports $5M Sequoia-led seed, $25M Series A co-led by Sequoia and SMBC Fin Atlas Beyond Fund, and $30M raised to date.", "Reports about 23 employees across Israel and the United States.", "Names founders, roles and backgrounds.", "Names customers Syngenta, KKR, Cass Information Systems and Athennian.", "Reports seven-figure revenue and large paying customer replacing two products."]
+
+[[intelligence.research.sources]]
+id = "tc"
+url = "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/"
+title = "Sequoia doubles down on Cymphony as AI agents create new enterprise security risks"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-05T02:40:25Z"
+published_on = "2026-09-09"
+claims = ["Reports $30M total including $25M Series A co-led by Sequoia and SMBC Fin Atlas Beyond Fund and post-money valuation greater than $100M.", "Reports prior Sequoia seed, previously undisclosed amount, more than two years before September 2026.", "Reports company told TechCrunch it had double-digit customers and seven figures ARR within its first sales year.", "Names KKR, Syngenta, Cass Information Systems and Athennian as customers.", "Reports approximately 85,000 files accessible to AI at a U.S. public company; Cymphony said no AI access occurred.", "Reports about 30 employees across Tel Aviv and New York and mostly North American customers.", "Identifies Microsoft, Okta, CyberArk, Wiz and Varonis as competitors."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-05T02:40:25Z"
+next_review_on = "2027-01-05"
+queries = ["Cymphony official company AI security about Tel Aviv New York", "Cymphony legal name incorporation company registry"]
+source_ids = ["about", "contact", "ctech", "tc"]
+summary = "Identity and offices confirmed from official site; legal entity suffix and incorporation jurisdiction not established."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-05T02:40:25Z"
+next_review_on = "2027-01-05"
+queries = ["Cymphony funding raised seed Series A investors valuation acquired September 2026"]
+source_ids = ["ctech", "tc", "release"]
+summary = "Found reported $5M seed and $25M Series A; cumulative reported total $30M."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-05T02:40:25Z"
+next_review_on = "2027-01-05"
+queries = ["Cymphony funding investors Sequoia SMBC Fin Atlas Beyond Fund Fin Capital"]
+source_ids = ["ctech", "tc", "atlas", "release"]
+summary = "Round leads and company-listed backers confirmed; seed participant list and investor allocations undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-05T02:40:25Z"
+next_review_on = "2027-01-05"
+queries = ["Cymphony founders Shy Dekel Idan Berkovits Edi Gotlieb leadership background"]
+source_ids = ["about", "ctech", "tc"]
+summary = "Three co-founders and reported roles/background verified; complete current roster and headcount remain unclear."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T02:40:25Z"
+next_review_on = "2027-04-05"
+queries = ["Cymphony ownership parent company acquisition", "Cymphony acquired shareholder cap table"]
+source_ids = ["ctech", "tc", "atlas"]
+summary = "No parent, transaction, ownership percentages or public cap table disclosures located."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-05T02:40:25Z"
+next_review_on = "2027-01-05"
+queries = ["Cymphony revenue ARR employees September 2026"]
+source_ids = ["ctech", "tc"]
+summary = "Seven-figure ARR reported to TechCrunch and seven-figure revenue reported by CTech; exact values and financial statements unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-05T02:40:25Z"
+next_review_on = "2027-01-05"
+queries = ["Cymphony revenue ARR customers Syngenta KKR CASS Athennian", "Cymphony 85000 files AI agents customer"]
+source_ids = ["ctech", "tc", "release"]
+summary = "Named customers and reported exposure case found; deployment value and independent efficacy evidence unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-05T02:40:25Z"
+next_review_on = "2027-04-05"
+queries = ["Cymphony patents intellectual property", "Cymphony Shy Dekel patent", "site:patents.google.com Cymphony cybersecurity"]
+source_ids = ["about", "tc"]
+summary = "No attributable patent record found in searches performed; proprietary IP may not be patented."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-05T02:40:25Z"
+next_review_on = "2027-01-05"
+queries = ["Cymphony AI agent security competitors Microsoft Okta CyberArk Varonis Wiz"]
+source_ids = ["tc"]
+summary = "TechCrunch identifies adjacent incumbents; independent product comparisons and win/loss evidence are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T02:40:25Z"
+next_review_on = "2027-04-05"
+queries = ["Cymphony defense government military customer deployment", "Cymphony classified air-gapped government security"]
+source_ids = ["about", "contact", "ctech", "tc"]
+summary = "Commercial technology may transfer to sensitive settings, but no public defense or government deployment evidence found."
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Annual recurring revenue@2026-09-09.numeric_value"
+support = "direct"
+summary = "TechCrunch reports Cymphony said it reached seven figures in ARR within its first sales year; numeric value is the one-million lower bound."
+verified_at = "2026-10-05T02:40:25Z"
+source_ids = ["tc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Employees@2026-09-09.numeric_value"
+support = "direct"
+summary = "CTech reports about 23 employees; TechCrunch separately reports about 30 employees."
+verified_at = "2026-10-05T02:40:25Z"
+source_ids = ["ctech", "tc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Official company site remains live with active product, company and contact information."
+verified_at = "2026-10-05T02:40:25Z"
+source_ids = ["about", "contact"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Official contact page lists Tel Aviv office and about page identifies founding team as Talpiot alumni."
+verified_at = "2026-10-05T02:40:25Z"
+source_ids = ["contact", "about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "CTech reports total $30M raised to date; company release also states $30M launch funding."
+verified_at = "2026-10-05T02:40:25Z"
+source_ids = ["ctech", "release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.amount"
+support = "direct"
+summary = "CTech reports a $5M seed led by Sequoia; TechCrunch confirms prior Sequoia seed but calls amount previously undisclosed."
+verified_at = "2026-10-05T02:40:25Z"
+source_ids = ["ctech", "tc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.lead_investors"
+support = "direct"
+summary = "CTech identifies Sequoia Capital as seed lead; TechCrunch confirms Sequoia seed investment."
+verified_at = "2026-10-05T02:40:25Z"
+source_ids = ["ctech", "tc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.amount"
+support = "direct"
+summary = "CTech and TechCrunch report a $25M Series A."
+verified_at = "2026-10-05T02:40:25Z"
+source_ids = ["ctech", "tc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.lead_investors"
+support = "direct"
+summary = "CTech and TechCrunch identify Sequoia Capital and SMBC Fin Atlas Beyond Fund as co-leads."
+verified_at = "2026-10-05T02:40:25Z"
+source_ids = ["ctech", "tc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.post_money_valuation"
+support = "direct"
+summary = "TechCrunch reports post-money valuation above $100M; field records reported lower bound, not exact valuation."
+verified_at = "2026-10-05T02:40:25Z"
+source_ids = ["tc"]

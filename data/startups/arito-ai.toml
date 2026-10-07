@@ -1,0 +1,496 @@
+name = "Arito AI"
+description = "Arito AI is an Israeli enterprise-AI startup building an agentic analytics and monitoring layer for finance, revenue, and operations teams. It connects fragmented business systems, applies shared organizational context and role-based permissions, and returns real-time answers, reports, dashboards, and workflow actions without requiring a traditional data-modeling project."
+detailed_description = """
+**Product and the concrete problem it solves.** Arito AI addresses a recurring operational failure inside companies: the data needed for a decision exists, but it is distributed across enterprise resource planning systems, customer-relationship management tools, sales platforms, data warehouses, spreadsheets, and collaboration software. Finance and revenue leaders consequently spend substantial time reconciling definitions, requesting extracts from analysts, rebuilding spreadsheets, and debating whose dashboard is correct. Arito presents itself as a shared intelligence layer for Finance, Go-To-Market, and Operations rather than another static dashboard. A user can ask a natural-language question, request an automatically updating report, monitor a key performance indicator, or automate a recurring calculation such as commissions or forecast variance. The concrete product promise is shorter time from a business question to a governed answer. That matters most in organizations where pricing, cash collection, sales capacity, inventory, staffing, and customer commitments change faster than a monthly reporting cycle. The company is not claiming to replace a general ledger, warehouse, or source-of-truth system; its wedge is making those systems usable by business teams without every request becoming a ticket for data engineering.
+
+**Core technology and how it actually works.** Public product material describes a context-aware platform that automatically connects to business data sources, learns their structure, and applies shared context when producing answers or reports. The technical proposition has several concrete layers. First, connectors ingest or query data from ERP, CRM, revenue, warehouse, HR, storage, and productivity systems. Second, Arito's agents are intended to interpret schemas and business relationships so a question about bookings, pipeline, margin, or runway can be answered across systems rather than from one table. Third, the product provides a common role-based access-control layer across applications, datasets, and even spreadsheets; Arito specifically claims it can add granular permissions to sources that do not natively provide them. Fourth, users can teach the system how an analysis should be performed through examples, allowing recurring organizational definitions to persist instead of being reinvented in each prompt. The website also advertises hosted, private-cloud, and bring-your-own-cloud deployment options, plus SOC 2 and ISO 27001 compliance claims. The central engineering diligence question is whether Arito's semantic context, authorization enforcement, lineage, and evaluation controls produce reliable answers under schema drift and ambiguous business language, rather than merely generating fluent summaries over a connector catalog.
+
+**Market, customers, and go-to-market.** Arito sells into B2B organizations where Finance, RevOps, Sales, and Operations teams are constrained by slow analytics workflows but cannot wait for a multi-quarter warehouse modernization project. Its first buyer is likely a CFO, finance-operations leader, revenue-operations executive, or business systems owner who already pays for several systems and wants faster self-service without surrendering control of sensitive financial data. The initial product motion is comparatively legible: connect a small number of high-value systems, prove that recurring reports and questions can be answered accurately, then expand across departments and workflows. The product can be delivered as hosted software, private cloud, or BYOC, which broadens the addressable set to organizations with stricter data-boundary requirements. Arito's public site names no customers, contract values, annual recurring revenue, retention, or deployment scale, so claims about market adoption must remain restrained. Its likely competition is not only a BI vendor; it also includes internal analysts, spreadsheet processes, warehouse projects, and finance teams that prefer controlled manual reconciliation. The commercial challenge is to show that agentic convenience does not create a new review burden for every number that management uses in a forecast or board pack.
+
+**Traction, funding, and third-party validation.** Arito AI came out of stealth and announced a $6 million Seed round in May 2026 led by Amplify Partners, with participation from experienced finance executives including Cloudflare CFO Thomas Seifert. VentureBeat independently described the company as operating between Tel Aviv and Palo Alto and positioned the raise around agentic analytics and monitoring for finance and revenue teams. The Israeli company record mirror and Startupim profile identify the active Israeli private company as incorporated in November 2024, while some commercial profiles describe the startup as founded in 2025; the record therefore uses 2024 as the legal founding anchor and treats the public year discrepancy as an open diligence item. Arito's own site provides a live product surface, self-serve trial language, connectors, deployment choices, and security positioning rather than a purely conceptual landing page. A funding announcement and public product are meaningful early validation, but they are not evidence of repeatable enterprise revenue. The reviewed sources do not disclose named paying customers, audited security reports, independent accuracy benchmarks, published customer references, patents, or a quantified reduction in analyst workload. The relevant next proof points are live deployments, renewal behavior, measurable time-to-answer improvements, answer-correction rates, and evidence that permission boundaries hold across heterogeneous systems.
+
+**Founders and team background.** Arito was founded by Daniel Zahavi and Michael Estrin, who are identified publicly as CEO and CTO. Company and press material describe the pair as repeat founders: their prior startup, Levl, was acquired by Comcast in 2022 for a reported $60 million. That history is relevant founder-market fit because Arito's problem is not an abstract model benchmark; it is the accumulated friction of building and operating a data-heavy software business where finance, growth, and operational decisions rely on inconsistent internal information. Arito's careers page is recruiting for an AI research scientist in Tel Aviv-Yafo and describes work at the intersection of deployment-driven AI research and financial applications. The public record does not provide a complete leadership roster, employee count, engineering organization, board, adviser list, or exact division of responsibilities beyond the two founders, so the team assessment should not assume a large research group. A repeat exit and a technically identified CTO improve the execution case, but the platform still needs specialists in connectors, query planning, data lineage, privacy engineering, enterprise security, evaluation, and finance-domain product design. It must also prove that a small team can maintain integrations as vendors change APIs, schemas, permission models, and rate limits.
+
+**Competitive dynamics.** Arito enters a crowded and converging market. Microsoft Power BI and Fabric, Tableau, Looker, and Domo bring installed bases, mature governance, visualization, and procurement relationships. Sigma Computing and ThoughtSpot compete more directly on cloud-native exploration and natural-language analytics, while Pigment and Planful own important planning, forecasting, and financial-performance workflows. Dataiku and other enterprise-AI platforms can offer governed data science and agentic interfaces as part of a broader deployment. The substitute is often more powerful than any single vendor: a company's own data team can create a curated semantic layer and finance-controlled reporting process, and spreadsheets remain flexible enough to survive despite their governance weaknesses. Arito's potential edge is the combination of cross-system context, persistent analysis instructions, business-user self-service, and RBAC that follows the answer rather than stopping at the source application. That is a coherent product position, not yet a durable moat. The same foundation-model capabilities are accessible to incumbents, the connector layer can be replicated, and large platform vendors can bundle analytics, copilots, and permissions into suites customers already own. Arito must demonstrate superior answer reliability, faster deployment, and lower total operating friction than both bundled BI and internal manual processes.
+
+**Defense, security, and resilience dual-use relevance.** Arito's core market is commercial enterprise decision support, not defense, intelligence, or critical-infrastructure operations. Its dual-use case is nevertheless credible at the resilience layer because organizations responsible for essential services need timely, permissioned answers from fragmented operational systems during disruption. A private-cloud or BYOC deployment could help a defense contractor, hospital network, utility, logistics operator, or public agency monitor procurement, staffing, inventory, cash exposure, maintenance backlogs, supplier concentration, and recovery milestones without sending sensitive data to an uncontrolled third-party model. Cross-system RBAC is relevant when finance, operations, security, and mission teams need different views over the same underlying data; auditability and deterministic business definitions matter when an answer informs a contingency decision. Similar capabilities could support defense-industrial program reporting or humanitarian logistics, but there is no public defense customer, government contract, classified deployment, military program, or accreditation such as FedRAMP. Arito should therefore be scored as a commercial AI/data-infrastructure company with a plausible operational-resilience pathway, not as a fielded defense technology. The diligence boundary is especially important: a fluent agent that reveals data across a permission boundary or produces an incorrect number during a crisis would reduce resilience rather than improve it.
+
+**Growth stage, trajectory, and key diligence risks.** Arito is early stage: it has an active product website, a disclosed Seed round, a repeat-founder team, and a clear enterprise wedge, but no publicly verified customer scale or revenue metrics. The trajectory depends on turning a broad platform promise into a narrow set of workflows that finance and revenue leaders trust enough to run repeatedly. Key diligence points are: (1) **answer correctness**, including reconciliation against source systems, handling of conflicting definitions, and transparent citations or lineage; (2) **authorization safety**, especially whether spreadsheet-level permissions and derived datasets can leak information through prompts, exports, or cross-user collaboration; (3) **model and dependency risk**, because third-party models, connector APIs, and changing source schemas can affect latency, availability, cost, and behavior; (4) **integration economics**, because every new enterprise system adds maintenance and support burden; (5) **enterprise sales risk**, as CFO-led purchases can be high-value but slow and require security review; (6) **category compression**, because Microsoft, Salesforce, Google, and established BI vendors can incorporate agentic analysis into existing contracts; and (7) **strategic overreach**, because private deployment and security language do not by themselves prove readiness for regulated or sovereign environments. Milestones worth tracking include named reference customers, published accuracy and permission tests, independent SOC 2 and ISO 27001 evidence, recurring revenue, renewal rates, additional funding, and a documented deployment in a critical or defense-industrial operating environment.
+"""
+logo = "Unknown"
+website = "https://arito.ai"
+sector = "Agentic enterprise analytics and governed AI data infrastructure"
+founded = "2024"
+headquarters = "Tel Aviv, Israel (with a Palo Alto, California presence)"
+employees = "Unknown"
+funding_stage = "Seed ($6M, led by Amplify Partners, May 2026)"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Arito's core product is commercial analytics for finance, revenue, and operations teams, not a defense system. Its dual-use value is a credible resilience pathway: permissioned cross-system intelligence, private-cloud or BYOC deployment, and faster operational reporting could support defense-industrial, public-sector, healthcare, utility, and logistics organizations during disruption. No public defense customer, government contract, classified deployment, or public-sector authorization is disclosed, so this is strategic adjacency rather than fielded defense capability."
+key_technologies = [
+  "Agentic natural-language querying across ERP, CRM, warehouse, spreadsheet, HRIS, and productivity data",
+  "Context-aware semantic layer for shared business definitions and cross-system relationships",
+  "Role-based access control extended across sources and spreadsheet-level data",
+  "Persistent analysis instructions and example-based workflow teaching for recurring reports",
+  "Real-time dashboards, KPI monitoring, alerts, and finance/revenue workflow automation",
+  "Hosted, private-cloud, and bring-your-own-cloud deployment with stated SOC 2 and ISO 27001 posture"
+]
+use_cases = [
+  "Finance teams reconciling bookings, revenue, cash, expenses, and forecast variance across ERP and CRM systems",
+  "Revenue operations teams monitoring pipeline, conversion, churn, renewals, and sales-commission calculations",
+  "Operations leaders tracking inventory, staffing, supplier exposure, service levels, and cost anomalies",
+  "CFO reporting that generates governed, continuously updated management and board dashboards",
+  "Defense-industrial and critical-infrastructure program reporting in private-cloud or BYOC environments",
+  "Contingency operations that combine procurement, logistics, workforce, and recovery data under role-based permissions"
+]
+investible = true
+investment_rationale = "Arito merits a positive legacy priority signal because it combines a large, expensive enterprise workflow problem with a technically coherent product thesis and a repeat-founder team. (1) The platform targets the operational bottleneck between fragmented data and decisions, a pain that persists even when companies already own multiple BI tools. (2) The $6M Seed led by Amplify Partners and the founders' reported prior $60M exit provide meaningful early validation. (3) Cross-system context, persistent analysis instructions, and permission enforcement are more substantive than a generic chatbot wrapper. (4) Private-cloud and BYOC options widen the path into data-sensitive customers. The signal is not an investment recommendation: no public revenue, retention, named customer, independent accuracy benchmark, or production-scale security evidence is available, and incumbents can bundle much of the surface area."
+strategic_value = "Arito's strategic value is as a potential governed decision layer for organizations whose financial and operational resilience depends on fragmented data. A trusted system that can answer cross-functional questions quickly, preserve role boundaries, and run in a customer-controlled environment could reduce dependence on slow manual reconciliation during supply, staffing, cash, or service disruptions. The same architecture could be useful to defense contractors, logistics operators, healthcare networks, utilities, and public agencies, but that pathway remains unvalidated. The strategic thesis therefore rests on data sovereignty, permission correctness, auditability, and operational continuity rather than a claimed national-security deployment."
+potential_score = 69.0
+technology_score = 71.0
+market_score = 73.0
+team_score = 76.0
+dual_use_score = 56.0
+strategic_alignment_score = 63.0
+stage = "early"
+stage_rationale = "Arito is early because it was incorporated in late 2024, publicly launched with a single $6M Seed round in May 2026, and has not disclosed customer count, revenue, retention, or independent production benchmarks. The live product, multiple deployment modes, named founders with a prior exit, and security-positioning claims place it beyond an idea-stage project. The early-stage classification remains appropriate until Arito demonstrates repeatable enterprise deployments, answer-quality and authorization metrics, and commercial expansion beyond the initial finance and revenue wedge."
+competitors = [
+  "Microsoft Power BI and Fabric (incumbent BI, data platform, and Copilot bundle with broad enterprise distribution)",
+  "Tableau and Salesforce Data Cloud (enterprise visualization and CRM-adjacent analytics with established governance workflows)",
+  "Sigma Computing (cloud-native collaborative analytics and natural-language exploration over warehouse data)",
+  "ThoughtSpot (search-driven and AI-assisted enterprise analytics competing on self-service answers)",
+  "Pigment and Planful (planning, forecasting, budgeting, and financial-performance platforms competing for CFO workflows)",
+  "Domo (business intelligence and operational dashboards with broad data connectors)",
+  "Internal data teams and spreadsheet-based reporting (flexible substitute that retains control but carries reconciliation and governance cost)"
+]
+competitive_edge = "Arito's potential edge is the way several familiar capabilities are combined into a single operating layer. (1) It targets business questions across systems rather than limiting users to one warehouse or dashboard. (2) It treats organizational context and reusable analysis instructions as product primitives, which could improve consistency over one-off prompts. (3) Its stated RBAC model extends to sources with weak native permissions and to spreadsheets, addressing a practical enterprise failure mode. (4) Hosted, private-cloud, and BYOC deployment gives security-sensitive buyers more options than a single SaaS architecture. (5) A repeat founding team with a prior exit may accelerate customer discovery and enterprise execution. None of these is yet a proven moat: connectors are replicable, foundation models are widely available, and Microsoft, Salesforce, Google, and BI incumbents can bundle overlapping agents into existing contracts. Durable advantage will require high answer accuracy, trustworthy lineage, permission safety, low deployment friction, and proprietary workflow context accumulated from recurring customer use."
+risk_factors = [
+  "Answer-quality risk: ambiguous definitions, conflicting source systems, schema drift, or hallucinated calculations could make finance and board reporting unsafe",
+  "Authorization and data-leakage risk: cross-system agents and spreadsheet-level permissions must prevent indirect disclosure through prompts, exports, derived metrics, and collaboration",
+  "Incumbent bundling risk from Microsoft, Salesforce, Google, Tableau, and established BI vendors that can add agentic analytics to tools customers already own",
+  "Integration economics risk as every ERP, CRM, warehouse, spreadsheet, and productivity connector creates ongoing maintenance, support, and security work",
+  "Enterprise sales risk: CFO and regulated-data purchases can have long security, procurement, and change-management cycles",
+  "Model and dependency risk from third-party foundation models, source APIs, rate limits, latency, cost, and behavior changes outside Arito's control",
+  "Dual-use evidence gap: no public defense customer, government contract, critical-infrastructure deployment, independent security audit, or sovereign-environment authorization is disclosed"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Arito deserves monitoring as an absent Israeli AI-infrastructure record with a concrete enterprise wedge and credible founder and financing signals. (1) Its platform addresses a real resilience bottleneck: decision-makers cannot act quickly when operational facts are scattered across systems and spreadsheet permissions are inconsistent. (2) The founders' reported prior Comcast exit and the $6M Seed led by Amplify Partners support a meaningful team and market-validation signal. (3) RBAC, private-cloud/BYOC deployment, and persistent business context are strategically more relevant than a generic conversational interface. (4) The potential extension into defense-industrial, healthcare, logistics, utility, and public-sector reporting is plausible but remains adjacency. Priority is capped because the public record lacks named customers, revenue, retention, independent accuracy tests, publicly inspectable SOC 2/ISO reports, and any defense or critical-infrastructure deployment. The next milestones are permission-boundary evidence, cited and reproducible answers, recurring customer use, commercial metrics, and a validated deployment in a high-consequence operating environment."
+crawled_at = "2026-09-08T04:02:10Z"
+updated_at = "2026-10-03T20:19:29Z"
+
+[[public_sources]]
+label = "Arito | Agentic AI Platform for Finance & Revenue Teams"
+url = "https://arito.ai/"
+description = "Research source: Current product categories, workflows, connectors, deployment options, and company security assertions."
+
+[[public_sources]]
+label = "Arito FAQ | Agentic AI Use Cases & GenBI Capabilities"
+url = "https://arito.ai/faq/"
+description = "Research source: Company descriptions of product functionality, supported workflows, and accuracy approach."
+
+[[public_sources]]
+label = "Arito AI raises funding to bring agentic intelligence to finance teams"
+url = "https://venturebeat.com/business/arito-ai-raises-funding-to-bring-agentic-intelligence-to-finance-teams"
+description = "Research source: Arito completed a $6 million Seed round in May 2026.; Arito operates between Tel Aviv and Palo Alto and targets finance and revenue analytics.; Round led by Amplify Partners, with participation from Thomas Seifert and other finance executives.; Product capabilities and company-stated planned hiring and expansion."
+
+[[public_sources]]
+label = "The serial entrepreneur reveals his new startup: Arito"
+url = "https://www.geektime.co.il/arito-ai-raises-6m-in-seed-round/"
+description = "Research source: Independent Hebrew-language report of $6 million Seed financing led by Amplify Partners and participation by CFOs including Thomas Seifert.; Daniel Zahavi and Michael Estrin founded Arito; prior Levl acquisition reporting."
+
+[[public_sources]]
+label = "Arito AI revealed with a $6 million seed round"
+url = "https://www.bizportal.co.il/BizTech/news/article/20032445"
+description = "Research source: Israeli business press reports founders Daniel Zahavi and Michael Estrin, roles CEO and CTO, and $6 million Seed led by Amplify Partners."
+
+[[public_sources]]
+label = "ARITO AI LTD company information"
+url = "https://en.checkid.co.il/company/ARITO%2BAI%2B%2BLTD-0O3W8Y1-517066007"
+description = "Research source: ARITO AI LTD is an active Israeli private company, number 517066007, incorporated 2024-11-14, registered in Tel Aviv-Jaffa."
+
+[[public_sources]]
+label = "ARITO AI trademark record 384131"
+url = "https://trademarks.justice.gov.il/TradeMarkSearch/ReportView?TMCaseNo=384131"
+description = "Research source: ARITO AI trademark 384131 was filed 2025-06-03 and registered 2026-01-01 to ARITO AI LTD.; The trademark classes and goods/services describe finance, corporate data, AI analytics, reporting, and revenue workflows."
+
+[[public_sources]]
+label = "Comcast to acquire startup Levl for an estimated $50 million"
+url = "https://www.calcalistech.com/ctechnews/article/bjngl9at5"
+description = "Research source: Comcast and Charter confirmed they jointly acquired Levl through an equally owned joint venture.; Calcalist estimated Levl deal value at $50 million; this was a media estimate, not a disclosed consideration.; Levl founded by Daniel Zahavi and Michael Estrin."
+
+[[public_sources]]
+label = "Amplify Partners"
+url = "https://www.amplifypartners.com/"
+description = "Research source: Amplify Partners is a venture capital investor."
+
+
+[intelligence]
+schema_version = 2
+financials = []
+
+[intelligence.company]
+company_id = "il-arito-ai"
+legal_name = "ARITO AI LTD"
+aliases = ["Arito", "Arito AI", "אריטו בינה מלאכותית בע״מ"]
+operating_status = "active"
+business_model = "B2B software subscription platform for AI-assisted enterprise finance, revenue, marketing, and operational analytics; commercial pricing terms are not publicly disclosed."
+products = ["Arito agentic analytics and monitoring platform", "Finance, revenue, operations, and marketing analytics workflows", "Real-time dashboards, KPI monitoring, and spreadsheet/workflow automation"]
+locations = ["Tel Aviv-Jaffa, Israel", "Palo Alto, California, United States"]
+country_of_incorporation = "Israel"
+founded_on = "2024-11-14"
+source_ids = ["arito-site", "checkid-company", "venturebeat-seed"]
+
+[[intelligence.company.registry_identifiers]]
+jurisdiction = "Israel"
+scheme = "Israeli company number"
+identifier = "517066007"
+source_ids = ["checkid-company"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One public equity Seed financing event identified: $6 million announced May 20, 2026, led by Amplify Partners. No valuation or separate earlier round was substantiated. Lifetime total is not stated here because the reviewed original announcements describe this round but do not clearly label $6 million as a company-announced cumulative lifetime total."
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[[intelligence.funding.rounds]]
+id = "seed-2026"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2026-05-20"
+amount_status = "reported"
+amount = 6000000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["Amplify Partners"]
+participating_investors = ["Thomas Seifert", "Other finance executives and angel investors (names not fully disclosed)"]
+source_ids = ["venturebeat-seed", "geektime-seed", "bizportal-seed"]
+notes = "Multiple contemporaneous reports agree on $6 million; no valuation terms disclosed."
+
+[[intelligence.people]]
+name = "Daniel Zahavi"
+role = "Co-founder and Chief Executive Officer"
+is_founder = true
+current = true
+background = "Previously co-founded Levl with Michael Estrin; Comcast and Charter confirmed the acquisition of Levl in 2022. A reported $50 million value was a Calcalist estimate."
+source_ids = ["geektime-seed", "bizportal-seed", "levl-acquisition"]
+
+[[intelligence.people]]
+name = "Michael Estrin"
+role = "Co-founder and Chief Technology Officer"
+is_founder = true
+current = true
+background = "Previously co-founded Levl with Daniel Zahavi; the company was acquired by Comcast and Charter in 2022."
+source_ids = ["geektime-seed", "bizportal-seed", "levl-acquisition"]
+
+[[intelligence.people]]
+name = "Thomas Seifert"
+role = "Seed investor; CFO of Cloudflare (as reported in 2026 coverage)"
+is_founder = false
+current = false
+background = "Reported among finance-executive participants in Arito’s Seed round."
+source_ids = ["venturebeat-seed", "geektime-seed"]
+
+[[intelligence.investors]]
+name = "Amplify Partners"
+investor_type = "vc"
+website = "https://www.amplifypartners.com/"
+relationship = "current"
+round_ids = ["seed-2026"]
+source_ids = ["venturebeat-seed", "geektime-seed", "bizportal-seed", "amplify"]
+
+[[intelligence.investors]]
+name = "Thomas Seifert"
+investor_type = "angel"
+relationship = "current"
+round_ids = ["seed-2026"]
+source_ids = ["venturebeat-seed", "geektime-seed", "bizportal-seed"]
+
+[[intelligence.investors]]
+name = "Other finance executive and angel participants (not individually identified)"
+investor_type = "angel"
+relationship = "current"
+round_ids = ["seed-2026"]
+source_ids = ["venturebeat-seed", "geektime-seed"]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private cap table and ownership percentages are not publicly disclosed in the reviewed sources. The Israeli registry mirror identifies Arito AI, Inc. as an option holder and Daniel Zahavi as a director, but this does not establish a parent-subsidiary relationship or ownership percentage; obtain a current official company extract and cap table for diligence."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["checkid-company"]
+deals = []
+holdings = []
+
+[[intelligence.traction]]
+kind = "product"
+description = "Arito publicly operates a product website with a self-serve trial/playground, demo funnel, product FAQ, and described finance, revenue, operations, and marketing workflows. These are company-reported product availability indicators, not proof of paid deployments."
+date = "2026-10-03"
+source_ids = ["arito-site", "arito-faq"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Israeli Ministry of Justice record shows ARITO AI trademark 384131 registered January 1, 2026, with claims spanning AI-supported financial and corporate data processing, reporting, forecasting, and revenue workflows."
+date = "2026-01-01"
+source_ids = ["israel-trademark"]
+
+[[intelligence.intellectual_property]]
+kind = "other"
+description = "Registered Israeli word mark ARITO AI, no. 384131, owned by ARITO AI LTD. The official record lists broad software and services classes covering AI finance and corporate analytics. No patent filing or grant was verified in the reviewed sources; a trademark is not evidence of patent protection."
+date = "2026-01-01"
+source_ids = ["israel-trademark"]
+
+[[intelligence.comparables]]
+name = "Microsoft Power BI / Fabric"
+website = "https://powerbi.microsoft.com/"
+rationale = "Incumbent enterprise BI and data platform competing for governed self-service analytics budgets."
+differentiation = "Broad suite distribution and mature BI footprint; Arito emphasizes agentic cross-system finance workflows and role-aware answers."
+source_ids = ["arito-site"]
+
+[[intelligence.comparables]]
+name = "ThoughtSpot"
+website = "https://www.thoughtspot.com/"
+rationale = "Search and AI-assisted analytics competitor."
+differentiation = "Established analytics platform; Arito positions around finance/revenue operations and context across business applications."
+source_ids = ["arito-site"]
+
+[[intelligence.comparables]]
+name = "Sigma Computing"
+website = "https://www.sigmacomputing.com/"
+rationale = "Cloud analytics and spreadsheet-like exploration substitute."
+differentiation = "Warehouse-oriented collaborative analytics versus Arito’s stated multi-system self-service layer."
+source_ids = ["arito-site"]
+
+[[intelligence.comparables]]
+name = "Pigment"
+website = "https://www.pigment.com/"
+rationale = "Planning and financial performance software competing for CFO workflows."
+differentiation = "Dedicated planning environment versus Arito’s cross-system analytics/monitoring proposition."
+source_ids = ["arito-site"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel"]
+summary = "ARITO AI LTD is an active Israeli private company incorporated on 2024-11-14 and registered at a Tel Aviv-Jaffa address; company and press sources also identify Tel Aviv as a company base."
+as_of = "2026-10-03"
+source_ids = ["checkid-company", "venturebeat-seed"]
+
+[intelligence.research]
+researched_at = "2026-10-03T20:19:29Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Arito AI official site products leadership", "Arito AI May 2026 funding raised seed Series A investors valuation", "Arito AI Daniel Zahavi Michael Estrin founders leadership", "Arito AI ownership parent company company number Israeli registry", "Arito AI revenue ARR customers deployments case study", "Arito AI patents trademark intellectual property", "Arito AI competitors enterprise analytics finance", "Arito AI defense government critical infrastructure dual use", "Arito AI Hebrew גיוס משקיעים לקוחות הכנסות", "Levl Comcast acquisition Daniel Zahavi Michael Estrin"]
+gaps = ["team: full current leadership roster, headcount, board, and individual executive biographies are not publicly verified.", "investors: complete identities of all individual angels and private cap-table participants are not publicly disclosed.", "financials: no verified revenue, ARR, profitability, burn, cash, or runway disclosed.", "traction: no named paying customers, contract values, deployments, renewals, or usage metrics independently verified.", "intellectual_property: trademark record found; no patent applications or grants verified in this search.", "competition: peer set is a product-category assessment; no independent comparative benchmark or win/loss data located.", "Ownership: private capitalization, beneficial ownership, and any US/Israeli subsidiary relationship need official company extracts; registry mirror data is not sufficient.", "Dual-use: no public defense, government, classified, or critical-infrastructure customer or contract found."]
+conflicts = ["Founding year: public profiles variously attribute Arito’s founding to 2024 or 2025; the Israeli legal company incorporation date is 2024-11-14, while launch/founding narrative may refer to later operating formation. Use legal incorporation date in founded_on and retain 2025 as an unresolved public narrative discrepancy only if needed.", "Levl acquisition price: Calcalist estimated $50 million; do not treat as confirmed consideration or Arito funding."]
+diligence_questions = ["What are Arito’s current paid customer count, ARR, gross retention, net retention, and deployment-to-paid conversion by cohort?", "Can the company provide independent answer-accuracy and permission-boundary evaluations on representative ERP, CRM, warehouse, and spreadsheet workloads, including failures and remediation rates?", "What is the fully diluted capitalization of ARITO AI LTD and any Arito AI, Inc. entity, including investor instruments, option pool, intercompany ownership, and beneficial owners?", "Which model and data-processing architectures support its claim that customer data is not shared with third parties or AI vendors, and what independent audit scope substantiates SOC 2 and ISO 27001 claims?"]
+
+[[intelligence.research.sources]]
+id = "arito-site"
+url = "https://arito.ai/"
+title = "Arito | Agentic AI Platform for Finance & Revenue Teams"
+publisher = "Arito AI"
+kind = "company"
+accessed_at = "2026-10-03T20:19:29Z"
+claims = ["Current product categories, workflows, connectors, deployment options, and company security assertions."]
+
+[[intelligence.research.sources]]
+id = "arito-faq"
+url = "https://arito.ai/faq/"
+title = "Arito FAQ | Agentic AI Use Cases & GenBI Capabilities"
+publisher = "Arito AI"
+kind = "company"
+accessed_at = "2026-10-03T20:19:29Z"
+claims = ["Company descriptions of product functionality, supported workflows, and accuracy approach."]
+
+[[intelligence.research.sources]]
+id = "venturebeat-seed"
+url = "https://venturebeat.com/business/arito-ai-raises-funding-to-bring-agentic-intelligence-to-finance-teams"
+title = "Arito AI raises funding to bring agentic intelligence to finance teams"
+publisher = "VentureBeat"
+kind = "media"
+published_on = "2026-05-20"
+accessed_at = "2026-10-03T20:19:29Z"
+claims = ["Arito completed a $6 million Seed round in May 2026.", "Arito operates between Tel Aviv and Palo Alto and targets finance and revenue analytics.", "Round led by Amplify Partners, with participation from Thomas Seifert and other finance executives.", "Product capabilities and company-stated planned hiring and expansion."]
+
+[[intelligence.research.sources]]
+id = "geektime-seed"
+url = "https://www.geektime.co.il/arito-ai-raises-6m-in-seed-round/"
+title = "The serial entrepreneur reveals his new startup: Arito"
+publisher = "Geektime"
+kind = "media"
+published_on = "2026-05-20"
+accessed_at = "2026-10-03T20:19:29Z"
+claims = ["Independent Hebrew-language report of $6 million Seed financing led by Amplify Partners and participation by CFOs including Thomas Seifert.", "Daniel Zahavi and Michael Estrin founded Arito; prior Levl acquisition reporting."]
+
+[[intelligence.research.sources]]
+id = "bizportal-seed"
+url = "https://www.bizportal.co.il/BizTech/news/article/20032445"
+title = "Arito AI revealed with a $6 million seed round"
+publisher = "Bizportal"
+kind = "media"
+published_on = "2026-05-20"
+accessed_at = "2026-10-03T20:19:29Z"
+claims = ["Israeli business press reports founders Daniel Zahavi and Michael Estrin, roles CEO and CTO, and $6 million Seed led by Amplify Partners."]
+
+[[intelligence.research.sources]]
+id = "checkid-company"
+url = "https://en.checkid.co.il/company/ARITO%2BAI%2B%2BLTD-0O3W8Y1-517066007"
+title = "ARITO AI LTD company information"
+publisher = "CheckID / Guideline Group"
+kind = "directory"
+accessed_at = "2026-10-03T20:19:29Z"
+claims = ["ARITO AI LTD is an active Israeli private company, number 517066007, incorporated 2024-11-14, registered in Tel Aviv-Jaffa."]
+
+[[intelligence.research.sources]]
+id = "israel-trademark"
+url = "https://trademarks.justice.gov.il/TradeMarkSearch/ReportView?TMCaseNo=384131"
+title = "ARITO AI trademark record 384131"
+publisher = "Israel Ministry of Justice, Trademarks Search"
+kind = "government"
+accessed_at = "2026-10-03T20:19:29Z"
+claims = ["ARITO AI trademark 384131 was filed 2025-06-03 and registered 2026-01-01 to ARITO AI LTD.", "The trademark classes and goods/services describe finance, corporate data, AI analytics, reporting, and revenue workflows."]
+
+[[intelligence.research.sources]]
+id = "levl-acquisition"
+url = "https://www.calcalistech.com/ctechnews/article/bjngl9at5"
+title = "Comcast to acquire startup Levl for an estimated $50 million"
+publisher = "Ctech / Calcalist"
+kind = "media"
+published_on = "2022-06-20"
+accessed_at = "2026-10-03T20:19:29Z"
+claims = ["Comcast and Charter confirmed they jointly acquired Levl through an equally owned joint venture.", "Calcalist estimated Levl deal value at $50 million; this was a media estimate, not a disclosed consideration.", "Levl founded by Daniel Zahavi and Michael Estrin."]
+
+[[intelligence.research.sources]]
+id = "amplify"
+url = "https://www.amplifypartners.com/"
+title = "Amplify Partners"
+publisher = "Amplify Partners"
+kind = "investor"
+accessed_at = "2026-10-03T20:19:29Z"
+claims = ["Amplify Partners is a venture capital investor."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T20:19:29Z"
+next_review_on = "2027-01-03"
+queries = ["Arito AI identity 2026", "Arito AI identity Israel"]
+source_ids = ["arito-site", "checkid-company"]
+summary = "Verified entity name, company number, incorporation date, Israeli address, and current product identity."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T20:19:29Z"
+next_review_on = "2027-01-03"
+queries = ["Arito AI funding 2026", "Arito AI funding Israel"]
+source_ids = ["venturebeat-seed", "geektime-seed", "bizportal-seed"]
+summary = "Contemporaneous independent reporting agrees on the May 20, 2026 $6 million Seed round."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T20:19:29Z"
+next_review_on = "2027-01-03"
+queries = ["Arito AI investors 2026", "Arito AI investors Israel"]
+source_ids = ["venturebeat-seed", "geektime-seed"]
+summary = "Round lead and named participating investor corroborated in independent reports; other individuals remain unnamed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T20:19:29Z"
+next_review_on = "2027-01-03"
+queries = ["Arito AI team 2026", "Arito AI team Israel"]
+source_ids = ["geektime-seed", "bizportal-seed"]
+summary = "Two founders and CEO/CTO roles are reported; full team roster remains a gap."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T20:19:29Z"
+next_review_on = "2027-01-03"
+queries = ["Arito AI ownership 2026", "Arito AI ownership Israel"]
+source_ids = ["checkid-company"]
+summary = "Registry mirror exposes limited roles but no reliable cap-table percentages; ownership remains undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T20:19:29Z"
+next_review_on = "2027-01-03"
+queries = ["Arito AI financials 2026", "Arito AI financials Israel"]
+source_ids = ["venturebeat-seed", "arito-site"]
+summary = "No reported financial performance metrics identified."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T20:19:29Z"
+next_review_on = "2027-01-03"
+queries = ["Arito AI traction 2026", "Arito AI traction Israel"]
+source_ids = ["arito-site", "arito-faq", "israel-trademark"]
+summary = "Public product availability and registered trademark are verified; customer/revenue traction remains undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-03T20:19:29Z"
+next_review_on = "2027-01-03"
+queries = ["Arito AI intellectual_property 2026", "Arito AI intellectual_property Israel"]
+source_ids = ["israel-trademark"]
+summary = "Official trademark record located; no patent record verified."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T20:19:29Z"
+next_review_on = "2027-01-03"
+queries = ["Arito AI competition 2026", "Arito AI competition Israel"]
+source_ids = ["arito-site"]
+summary = "Reviewed product positioning and compared with named analytics/planning substitutes; no independent benchmark found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T20:19:29Z"
+next_review_on = "2027-01-03"
+queries = ["Arito AI dual_use 2026", "Arito AI dual_use Israel"]
+source_ids = ["arito-site", "venturebeat-seed"]
+summary = "Commercial enterprise analytics is substantiated; no public defense/security customer or contract located."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Registry listing identifies ARITO AI LTD as an active Israeli private company."
+verified_at = "2026-10-03T20:19:29Z"
+source_ids = ["checkid-company"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Company number, incorporation date, and registered Tel Aviv-Jaffa address establish Israeli incorporation and headquarters connection."
+verified_at = "2026-10-03T20:19:29Z"
+source_ids = ["checkid-company"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.amount"
+support = "direct"
+summary = "Independent contemporaneous reports directly state a $6 million Seed round."
+verified_at = "2026-10-03T20:19:29Z"
+source_ids = ["venturebeat-seed", "geektime-seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.lead_investors"
+support = "direct"
+summary = "Independent reports identify Amplify Partners as the round lead."
+verified_at = "2026-10-03T20:19:29Z"
+source_ids = ["venturebeat-seed", "geektime-seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.participating_investors"
+support = "direct"
+summary = "Reports name Thomas Seifert and describe participation by other finance executives; unnamed investors are described generically."
+verified_at = "2026-10-03T20:19:29Z"
+source_ids = ["venturebeat-seed", "geektime-seed"]

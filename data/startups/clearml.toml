@@ -1,0 +1,479 @@
+name = "ClearML"
+description = "ClearML is a privately held Israeli-founded AI infrastructure company whose open-source and enterprise platform helps teams track experiments, manage data and models, orchestrate workloads, govern shared GPU infrastructure, and deploy ML and GenAI applications across cloud, on-premises, hybrid, and air-gapped environments."
+detailed_description = """ClearML provides an end-to-end operating layer for AI development and production. Its current product architecture is organized around an Infrastructure Control Plane, an AI Development Center, and a GenAI App Engine. The development layer covers experiment tracking, data and model management, pipeline automation, collaboration, and deployment workflows. The infrastructure layer connects bare metal, Kubernetes, Slurm, PBS, and cloud resources, with scheduling, quotas, multi-tenancy, usage visibility, and fractional-GPU capabilities. The GenAI layer supports deployment of LLM and retrieval-augmented-generation workloads with networking, authentication, and role-based access controls. The open-source components and APIs are important because they let technical teams integrate ClearML into existing Python, container, storage, and compute workflows rather than adopting an isolated proprietary stack.
+
+The commercial problem is increasingly concrete: AI organizations are constrained not only by model quality but also by scarce and expensive accelerators, fragmented clusters, weak reproducibility, and the operational burden of moving from notebooks to reliable services. ClearML’s value proposition is to make those resources self-service for AI builders while preserving administrative control for IT and platform teams. The company’s pricing and product materials distinguish community capabilities from paid Pro, Scale, and Enterprise features, including VPC or on-premises deployment, advanced scheduling, RBAC, SSO or LDAP integration, policy management, dynamic GPU allocation, support, and service-level commitments. This gives ClearML several possible monetization paths: hosted usage, enterprise subscriptions, infrastructure management, and support or professional services.
+
+There are meaningful adoption signals, but they should not be treated as independently audited financial traction. ClearML’s website currently claims use by more than 2,100 organizations and a community of more than 300,000 AI builders; LinkedIn lists 74 employees and describes the company as privately held. The official site also presents references or logos from large technology, industrial, automotive, healthcare, and public-sector-adjacent organizations, and highlights BlackSky’s use of ClearML in its Spectra AI space-imagery and intelligence analytics platform. These signals support the view that the product can reach production and HPC-scale environments, but diligence should still separate free or open-source usage from recurring enterprise revenue, renewal rates, deployment depth, and gross-margin contribution.
+
+Competitive pressure is substantial. MLflow and Kubeflow benefit from broad ecosystem familiarity; Weights & Biases is strong in experiment and model-development workflows; Domino Data Lab and Dataiku compete for governed enterprise data-science platforms; and hyperscalers bundle adjacent capabilities into Amazon SageMaker, Google Vertex AI, and Azure Machine Learning. ClearML’s differentiation is not a single irreplaceable algorithm. It is the combination of open-source distribution, relatively broad lifecycle coverage, hardware and cloud agnosticism, and control of shared GPU resources, especially for organizations that need to retain infrastructure choice or operate outside a public-cloud default. The key commercial question is whether that breadth produces a durable platform position instead of a collection of features that larger vendors can replicate.
+
+The national-security relevance is credible but indirect. ClearML does not appear to sell a weapon, sensor, or mission-specific intelligence product; it supplies infrastructure that can support many AI workloads. Its self-hosted and air-gapped deployment options, experiment and artifact lineage, controlled access, workload scheduling, and support for heterogeneous compute are relevant to defense laboratories, intelligence analytics, autonomy development, and other sensitive programs. That adjacency is strongest where a customer must reproduce model results, allocate scarce GPUs across teams, and keep data or models within controlled networks. It does not by itself demonstrate cleared personnel, classified deployments, government contracts, or certification status, all of which would require separate diligence."""
+logo = "https://clear.ml/wp-content/uploads/2021/01/clearml_featured_image.png"
+website = "https://clear.ml"
+sector = "AI Infrastructure / MLOps"
+founded = "2019"
+headquarters = "Tel Aviv, Israel"
+employees = "51-200; company-reported adoption exceeds 2,100 customers and 300,000 AI builders (2026)"
+funding_stage = "Series A (2018); later financing reported by databases in 2024, amount and terms undisclosed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "ClearML has substantive dual-use potential because its core capabilities are infrastructure-neutral: reproducible ML workflows, model and data lineage, GPU scheduling, policy-controlled multi-tenancy, and self-hosted or air-gapped deployment can support both commercial AI and sensitive defense or intelligence programs. The record does not establish classified customers, security clearances, or government contracts, so the defense case is an enabling-infrastructure thesis rather than a verified defense franchise."
+key_technologies = ["Open-source experiment tracking and artifact lineage", "Dataset, model, and pipeline version management", "Distributed workload orchestration across Kubernetes, Slurm, PBS, and bare metal", "GPU scheduling, quotas, utilization monitoring, and fractional GPU allocation", "Multi-tenant infrastructure control with RBAC, SSO, LDAP, and usage governance", "Containerized model and LLM serving with authenticated endpoints", "Hybrid, on-premises, multi-cloud, and air-gapped deployment architecture"]
+use_cases = ["Reproducible enterprise ML experimentation and model lifecycle management", "Shared GPU-as-a-service for research and production teams", "Automated training, evaluation, and deployment pipelines for computer vision and language models", "LLM and retrieval-augmented-generation application deployment on controlled clusters", "HPC and heterogeneous accelerator scheduling across Kubernetes, Slurm, PBS, and bare metal", "Industrial inspection, robotics, predictive maintenance, and other edge-oriented AI workflows", "Space-imagery and all-source analytics model development", "Disconnected or sensitive defense AI environments requiring lineage, access control, and infrastructure governance"]
+investible = true
+investment_rationale = "ClearML remains a credible strategic-priority signal for a dual-use software thesis because it addresses the operational bottleneck around scarce AI compute and governed model production, has an open-source adoption engine, and supports self-hosted and air-gapped environments. The case is strongest as infrastructure exposure rather than as a direct defense contractor. Diligence should focus on conversion of community usage into recurring enterprise revenue, net retention, deployment and support economics, competitive win rates, security posture, and whether large customers expand from experiment tracking into paid infrastructure control."
+strategic_value = "ClearML can provide a portable control and governance layer beneath sensitive AI programs, helping organizations use existing GPU assets across cloud, on-premises, hybrid, and disconnected networks. Its strategic value comes from reducing infrastructure lock-in, improving accelerator utilization, preserving experiment and artifact traceability, and giving platform administrators policy controls over who can run which workloads. The value is enabling rather than mission-specific, so strategic relevance depends on integration depth, operational reliability, and evidence of adoption in high-consequence environments."
+public_sources = [
+  { label = "ClearML About", url = "https://clear.ml/about-us", description = "Current company profile, leadership and founders" },
+  { label = "ClearML platform", url = "https://clear.ml/", description = "Current product and company-reported adoption claims" },
+  { label = "TechCrunch: Allegro.AI funding", url = "https://techcrunch.com/2018/04/25/allegro-ai-nabs-11m-for-a-platform-that-helps-businesses-build-computer-vision-based-services/", description = "2018 $11M Series A and participating investors" },
+  { label = "ClearML infrastructure control plane", url = "https://clear.ml/blog/clearml-announces-ai-infrastructure-control-plane", description = "2024 product launch and infrastructure capabilities" },
+  { label = "European Commission Run:ai decision", url = "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32024M11766", description = "Regulatory market investigation describing ClearML as an alternative in GPU orchestration" },
+  { label = "ClearML 2023 adoption release", url = "https://www.einpresswire.com/article/682240343", description = "Company-reported 1,600 enterprise customers and 250,000 builders" },
+  { label = "ClearML AMD collaboration", url = "https://clear.ml/blog/revolutionizing-enterprise-ai-clearml-and-amd-collaborate-to-drive-innovation-at-scale", description = "Company-announced AMD Instinct and ROCm support collaboration" },
+  { label = "ClearML LinkedIn", url = "https://www.linkedin.com/company/clearml", description = "Company description and current claimed customer and builder counts" },
+  { label = "CB Insights ClearML funding profile", url = "https://www.cbinsights.com/company/allegroai/financials", description = "Database-reported 2024 financing event with undisclosed amount" },
+  { label = "Startup Nation Finder ClearML profile", url = "https://finder.startupnationcentral.org/company_page/seematics-systems?section=financials", description = "Historical financing database record" }
+]
+potential_score = 82.0
+technology_score = 87.0
+market_score = 80.0
+team_score = 78.0
+dual_use_score = 84.0
+strategic_alignment_score = 84.0
+stage = "mid"
+stage_rationale = "ClearML has moved beyond an early product experiment: it has a mature open-source platform, paid enterprise tiers, a named leadership team, a reported 74 employees, and public claims of more than 2,100 organizations using the product. It is still privately held and operating in a contested category, with limited independently verifiable financial detail, so mid-stage is more defensible than mature."
+competitors = ["MLflow", "Weights & Biases", "Kubeflow", "Domino Data Lab", "Dataiku", "Amazon SageMaker", "Google Vertex AI"]
+competitive_edge = "ClearML’s defensible advantage is the combination of open-source adoption, broad lifecycle coverage, and infrastructure control across heterogeneous environments. It can appeal to teams that want experiment and data management connected directly to scheduling, quotas, GPU utilization, and deployment without committing to one hyperscaler. That edge is practical rather than technological monopoly: MLflow, Kubeflow, W&B, enterprise platforms, and cloud vendors can each cover parts of the workflow, so retention will depend on integrations, reliability, ecosystem strength, and measurable compute or engineering savings."
+risk_factors = ["The MLOps and AI infrastructure market is crowded, and hyperscalers can bundle adjacent capabilities into broader cloud contracts.", "Open-source usage may not convert efficiently into paid seats, infrastructure consumption, or durable enterprise expansion.", "Large on-premises, hybrid, and air-gapped deployments create long sales cycles, integration costs, and demanding support obligations.", "Security vulnerabilities, supply-chain issues, or weak isolation in a platform handling models, credentials, and compute access could damage trust.", "Rapid changes in LLM tooling, agent frameworks, accelerator architectures, and Kubernetes ecosystems create continual product-maintenance pressure.", "Claims about customer scale and community reach are primarily company or platform reported and need validation against revenue, retention, and deployment data.", "The company has limited public financial disclosure, making runway, capital efficiency, pricing power, and funding needs difficult to assess."]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "ClearML merits a high-priority research position within a dual-use AI infrastructure database because its technology has direct relevance to governed, compute-intensive, and disconnected AI operations, while public adoption signals suggest meaningful commercial reach. The score is moderated by intense competition, uncertain enterprise monetization, limited financial disclosure, and the absence of verified defense contracts or classified deployment evidence."
+crawled_at = "2026-02-28T18:30:00Z"
+updated_at = "2026-10-04T18:53:35Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "clearml"
+aliases = ["Allegro AI", "Allegro.AI", "ClearML"]
+operating_status = "active"
+business_model = "Open-source-led enterprise software subscriptions and hosted services for AI development workflows, GPU infrastructure orchestration and governance."
+products = ["ClearML AI Development Center", "ClearML Infrastructure Control Plane", "ClearML GenAI App Engine", "ClearML open-source experiment tracking and orchestration"]
+locations = ["Tel Aviv, Israel"]
+source_ids = ["about", "homepage", "launch"]
+notes = "Legal suffix is listed as ClearML, Inc. in company profile/terms contexts; no registry identifier or incorporation jurisdiction verified in this research."
+
+[intelligence.funding]
+status = "reported"
+summary = "A verified $11 million Series A was announced in April 2018 under the Allegro.AI name. Public databases later attribute an additional 2024 financing event but do not provide an original company or investor announcement or a disclosed amount; the numeric total is therefore omitted. Private financing history and cap-table terms remain incomplete."
+reported_total_raised = 11000000
+reported_total_currency = "USD"
+total_source_ids = ["tc2018"]
+total_as_of = "2018-04-25"
+total_scope = "Company-announced Series A amount; not a verified lifetime total because later financing is reported without disclosed terms."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "series-a-2018"
+round_type = "Series A"
+instrument = "equity"
+status = "announced"
+announced_on = "2018-04-25"
+amount_status = "reported"
+amount = 11000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["MizMaa Ventures"]
+participating_investors = ["Robert Bosch Venture Capital", "Samsung Catalyst Fund", "Dynamic Loop Capital"]
+source_ids = ["tc2018"]
+notes = "TechCrunch identified a preceding Bosch-led seed financing in addition to this Series A but did not disclose a separate seed amount; this record captures only the explicitly stated $11M Series A."
+
+[[intelligence.funding.rounds]]
+id = "financing-2024-reported"
+round_type = "Unattributed venture financing"
+instrument = "unknown"
+status = "announced"
+announced_on = "2024-07-24"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+lead_investors = []
+participating_investors = []
+source_ids = ["cbinsights", "snc"]
+notes = "Commercial databases list a 2024 financing event and investor names, but no original company/investor announcement or disclosed amount was located. Date and round classification are database-reported only; investor identities are not attributed to this event here. Do not sum as company-reported lifetime funding."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "ClearML remains privately held; no public cap table, parent company, acquisition, IPO, or disclosed ownership percentages found. Investor participation does not establish current ownership percentages."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["about", "linkedin"]
+deals = []
+holdings = []
+
+[[intelligence.people]]
+name = "Moses Guttmann"
+role = "CEO and co-founder"
+is_founder = true
+current = true
+background = "Company biography reports prior computer-vision and embedded-processing startups, more than 20 years of experience, and patent applications and publications."
+source_ids = ["about"]
+
+[[intelligence.people]]
+name = "Gil Westrich"
+role = "CTO and co-founder"
+is_founder = true
+current = true
+background = "Company biography reports software R&D leadership and consulting experience and prior co-founding of Qptical."
+source_ids = ["about"]
+
+[[intelligence.people]]
+name = "Noam Harel"
+role = "Co-founder, CMO and GM North America"
+is_founder = true
+current = true
+source_ids = ["about"]
+
+[[intelligence.people]]
+name = "Ayelet Edrey"
+role = "Board member"
+is_founder = false
+current = true
+background = "Company biography identifies her as an Investment Principal at Robert Bosch Venture Capital, with prior roles in banking, M&A, Apax Partners and technology companies."
+source_ids = ["about"]
+
+[[intelligence.people]]
+name = "Oren Rechtman"
+role = "VP Engineering"
+is_founder = false
+current = true
+source_ids = ["about"]
+
+[[intelligence.people]]
+name = "Noam Ben David"
+role = "VP Sales and Partnerships"
+is_founder = false
+current = true
+source_ids = ["about"]
+
+[[intelligence.people]]
+name = "Noam Wasersprung"
+role = "Head of Product"
+is_founder = false
+current = true
+source_ids = ["about"]
+
+[[intelligence.investors]]
+name = "MizMaa Ventures"
+investor_type = "vc"
+relationship = "historical"
+round_ids = ["series-a-2018"]
+source_ids = ["tc2018"]
+
+[[intelligence.investors]]
+name = "Robert Bosch Venture Capital"
+investor_type = "corporate"
+relationship = "historical"
+round_ids = ["series-a-2018"]
+source_ids = ["tc2018", "about"]
+
+[[intelligence.investors]]
+name = "Samsung Catalyst Fund"
+investor_type = "corporate"
+relationship = "historical"
+round_ids = ["series-a-2018"]
+source_ids = ["tc2018"]
+
+[[intelligence.investors]]
+name = "Dynamic Loop Capital"
+investor_type = "vc"
+relationship = "historical"
+round_ids = ["series-a-2018"]
+source_ids = ["tc2018"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Launched an AI Infrastructure Control Plane for GPU scheduling, quotas, multi-tenancy and visibility across on-premises, cloud, hybrid and air-gapped environments; these are company-described capabilities."
+date = "2024-08-14"
+source_ids = ["launch"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Announced support collaboration with AMD Instinct MI300X accelerators and ROCm, expanding the stated hardware-agnostic platform support. The announcement does not establish commercial revenue or a customer deployment."
+date = "2024-12-23"
+source_ids = ["amd"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "ClearML's 2023 company release claimed more than 1,600 enterprise customers and 250,000 builders; current homepage and LinkedIn company profile claim more than 2,100 organizations/customers and 300,000 builders. These are company-reported adoption figures, not independently audited paid-customer or revenue measures."
+date = "2026-10-04"
+source_ids = ["release2023", "homepage", "linkedin"]
+
+[[intelligence.comparables]]
+name = "MLflow"
+website = "https://mlflow.org/"
+rationale = "Open-source lifecycle and experiment management alternative."
+differentiation = "ClearML bundles workflow management with compute infrastructure orchestration and GPU governance."
+source_ids = ["eu"]
+
+[[intelligence.comparables]]
+name = "Run:ai"
+website = "https://run.ai/"
+rationale = "GPU orchestration and fractional GPU resource management competitor."
+differentiation = "ClearML spans MLOps lifecycle workflows and infrastructure management; European Commission market investigation identifies ClearML as one of several alternatives in GPU orchestration."
+source_ids = ["eu"]
+
+[[intelligence.comparables]]
+name = "Weights & Biases"
+website = "https://wandb.ai/"
+rationale = "Experiment tracking and model-development platform alternative."
+differentiation = "ClearML emphasizes open-source breadth and cross-environment GPU infrastructure control."
+source_ids = ["eu"]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://clear.ml/about-us"
+title = "About Us"
+publisher = "ClearML"
+kind = "company"
+accessed_at = "2026-10-04T18:53:35Z"
+claims = ["ClearML lists Moses Guttmann and Gil Westrich as CEO/CTO co-founders and names other leadership", "Company biographies describe founder backgrounds and Ayelet Edrey's RBVC role", "Company presents itself as operating AI infrastructure software"]
+
+[[intelligence.research.sources]]
+id = "homepage"
+url = "https://clear.ml/"
+title = "AI Infrastructure Platform"
+publisher = "ClearML"
+kind = "company"
+accessed_at = "2026-10-04T18:53:35Z"
+claims = ["Current homepage claims more than 300,000 AI builders", "Current product positioning covers AI infrastructure and development"]
+
+[[intelligence.research.sources]]
+id = "linkedin"
+url = "https://www.linkedin.com/company/clearml"
+title = "ClearML company profile"
+publisher = "LinkedIn"
+kind = "other"
+accessed_at = "2026-10-04T18:53:35Z"
+claims = ["Company profile describes ClearML as used by more than 2,100 customers and 300,000 builders", "Profile identifies ClearML as an AI infrastructure platform"]
+
+[[intelligence.research.sources]]
+id = "tc2018"
+url = "https://techcrunch.com/2018/04/25/allegro-ai-nabs-11m-for-a-platform-that-helps-businesses-build-computer-vision-based-services/"
+title = "Allegro.AI nabs $11M for 'deep learning as a service'"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-04T18:53:35Z"
+published_on = "2018-04-25"
+claims = ["Allegro.AI announced an $11 million Series A", "MizMaa Ventures led the Series A with Bosch, Samsung Catalyst and Dynamic Loop Capital participating", "ClearML's former company identity was Allegro.AI"]
+
+[[intelligence.research.sources]]
+id = "launch"
+url = "https://clear.ml/blog/clearml-announces-ai-infrastructure-control-plane"
+title = "ClearML Announces AI Infrastructure Control Plane"
+publisher = "ClearML"
+kind = "company"
+accessed_at = "2026-10-04T18:53:35Z"
+published_on = "2024-08-14"
+claims = ["ClearML announced its AI Infrastructure Control Plane", "Company describes support for hybrid, cloud, on-premises and air-gapped environments and GPU allocation controls"]
+
+[[intelligence.research.sources]]
+id = "amd"
+url = "https://clear.ml/blog/revolutionizing-enterprise-ai-clearml-and-amd-collaborate-to-drive-innovation-at-scale"
+title = "ClearML and AMD Collaborate to Drive Innovation at Scale"
+publisher = "ClearML"
+kind = "company"
+accessed_at = "2026-10-04T18:53:35Z"
+published_on = "2024-12-23"
+claims = ["ClearML announced AMD MI300X and ROCm support collaboration"]
+
+[[intelligence.research.sources]]
+id = "release2023"
+url = "https://www.einpresswire.com/article/682240343"
+title = "ClearML Announces Banner Year for Unleashing AI/ML"
+publisher = "EIN Presswire (ClearML press release)"
+kind = "company"
+accessed_at = "2026-10-04T18:53:35Z"
+published_on = "2024-01-30"
+claims = ["ClearML press release claimed over 1,600 enterprise customers and 250,000 builders"]
+
+[[intelligence.research.sources]]
+id = "cbinsights"
+url = "https://www.cbinsights.com/company/allegroai/financials"
+title = "ClearML funding and financials profile"
+publisher = "CB Insights"
+kind = "directory"
+accessed_at = "2026-10-04T18:53:35Z"
+claims = ["CB Insights lists a July 2024 unattributed venture financing and names a set of associated investors, without disclosing amount"]
+
+[[intelligence.research.sources]]
+id = "snc"
+url = "https://finder.startupnationcentral.org/company_page/seematics-systems?section=financials"
+title = "ClearML company profile"
+publisher = "Startup Nation Finder"
+kind = "directory"
+accessed_at = "2026-10-04T18:53:35Z"
+claims = ["Historical Startup Nation Finder record reports a July 2024 funding round with MizMaa Ventures and VentureIsrael among participants"]
+
+[[intelligence.research.sources]]
+id = "eu"
+url = "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX%3A32024M11766"
+title = "Commission Decision in Case M.11766 - NVIDIA / Run:ai"
+publisher = "European Commission"
+kind = "government"
+accessed_at = "2026-10-04T18:53:35Z"
+published_on = "2024-12-20"
+claims = ["Regulatory market investigation listed ClearML among alternatives for GPU orchestration and discussed its AI/ML workload and lifecycle positioning"]
+
+[intelligence.research]
+researched_at = "2026-10-04T18:53:35Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["ClearML company identity official about Allegro AI", "ClearML funding raised seed Series A investors valuation acquired 2024", "ClearML July 2024 financing amount MizMaa VentureIsrael Bosch", "ClearML founders current leadership team", "ClearML ownership parent company acquisition", "ClearML revenue ARR profitability burn runway", "ClearML customers traction product milestones GPU infrastructure", "ClearML patents patent assignee Allegro AI", "ClearML competitors Run:ai MLflow Weights & Biases", "ClearML defense government air-gapped dual use"]
+gaps = ["team: No independently verified current headcount or full employment roster was located; company team page provides selected leaders.", "investors: Private cap table and precise investor allocations are undisclosed; later round investor attribution varies across databases.", "financials: No reliable disclosed revenue, ARR, profitability, burn or runway figures were found.", "traction: Public adoption counts are company claims and do not distinguish paid customers, active usage, retention or production deployment.", "intellectual_property: No targeted patent-register family/assignee verification completed; founder biography references patent applications but provides no identifiers.", "competition: Competitor comparison is based on product positioning and a regulatory market investigation, not customer win/loss data.", "No disclosed financing amount or terms were verified for the database-reported 2024 event; lifetime funding total cannot be established.", "No public cap table, ownership percentages, parent company or acquisition transaction was found.", "No source found confirming a classified deployment, government contract, security clearance or defense certification.", "No Israeli company registry identifier or incorporation jurisdiction verified."]
+conflicts = ["The company's 2018 announcement was reported as an $11M Series A, while later databases show a separate 2024 financing with undisclosed amount and different investor lists. The 2024 event's primary documentation and terms were not located; it is not included in reported_total_raised."]
+diligence_questions = ["What portion of the claimed 2,100+ organizations are paying enterprise customers, and what are ARR, net retention, gross margin and renewal rates by product?", "What are the verified amount, instrument, close date, lead and participants for the financing reported in 2024, and what is current runway?", "How much infrastructure-control-plane revenue is attributable to production GPU orchestration versus open-source adoption or development-center subscriptions?", "Which customer deployments operate in regulated or disconnected environments, and what independent security audits or certifications cover them?", "What is the patent portfolio's ownership and status, and how does ClearML protect its cross-vendor scheduling and governance capabilities?"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T18:53:35Z"
+next_review_on = "2027-04-04"
+queries = ["ClearML company identity official about Allegro AI"]
+source_ids = ["about", "homepage", "tc2018"]
+summary = "Company's official profile and historical funding coverage support active ClearML identity as successor to Allegro.AI; Israel location supported by historical contemporaneous company funding coverage."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-04T18:53:35Z"
+next_review_on = "2027-01-04"
+queries = ["ClearML funding raised seed Series A investors valuation acquired 2024", "ClearML July 2024 financing amount MizMaa VentureIsrael Bosch"]
+source_ids = ["tc2018", "cbinsights", "snc"]
+summary = "The 2018 Series A is reported at $11M by TechCrunch. Data vendors list later 2024 financing but primary announcement, amount, and consistent investor attribution were unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T18:53:35Z"
+next_review_on = "2027-04-04"
+queries = ["ClearML investors Series A MizMaa Bosch Samsung Dynamic Loop", "ClearML 2024 investors"]
+source_ids = ["tc2018", "cbinsights", "snc"]
+summary = "Named 2018 round participants are sourced to contemporaneous funding coverage; later investor information is incomplete and conflicting."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T18:53:35Z"
+next_review_on = "2027-04-04"
+queries = ["ClearML founders current leadership team"]
+source_ids = ["about"]
+summary = "Official profile names selected current executives and founders; full roster and headcount were not independently validated."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T18:53:35Z"
+next_review_on = "2027-04-04"
+queries = ["ClearML ownership parent company acquisition"]
+source_ids = ["about", "linkedin"]
+summary = "No public ownership percentages, parent company, exit or acquisition identified; company presents as privately held."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T18:53:35Z"
+next_review_on = "2027-04-04"
+queries = ["ClearML revenue ARR profitability burn runway"]
+source_ids = ["cbinsights"]
+summary = "No reliable dated revenue, ARR, profitability, burn or runway disclosure found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T18:53:35Z"
+next_review_on = "2027-04-04"
+queries = ["ClearML customers traction product milestones GPU infrastructure"]
+source_ids = ["homepage", "linkedin", "release2023", "launch", "amd"]
+summary = "Company reports growing customer and builder counts and has announced product and hardware-support milestones; paid conversion and deployment evidence remain unverified."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T18:53:35Z"
+next_review_on = "2027-04-04"
+queries = ["ClearML patents patent assignee Allegro AI"]
+source_ids = ["about"]
+summary = "Founder biography mentions patent applications but this research did not identify patent numbers or verify an assigned company portfolio."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T18:53:35Z"
+next_review_on = "2027-04-04"
+queries = ["ClearML competitors Run:ai MLflow Weights & Biases"]
+source_ids = ["eu"]
+summary = "European Commission decision describes ClearML among GPU orchestration alternatives; comparisons to lifecycle platforms remain product-category analysis."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T18:53:35Z"
+next_review_on = "2027-04-04"
+queries = ["ClearML defense government air-gapped dual use"]
+source_ids = ["launch", "eu"]
+summary = "Air-gapped and governed infrastructure capabilities can serve sensitive use cases, but no specific defense contract or classified deployment was verified."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Official ClearML company profile presents current team and ongoing product mission; current product site is live."
+verified_at = "2026-10-04T18:53:35Z"
+source_ids = ["about", "homepage"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Current company profile supplies ClearML leadership and historical TechCrunch coverage identifies Allegro.AI as an Israel-based company; official record presents Tel Aviv location."
+verified_at = "2026-10-04T18:53:35Z"
+source_ids = ["about", "tc2018"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "TechCrunch reported the company announcement of an $11 million Series A; this field is explicitly scoped to the announced round rather than lifetime financing."
+verified_at = "2026-10-04T18:53:35Z"
+source_ids = ["tc2018"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2018.amount"
+support = "direct"
+summary = "Contemporaneous TechCrunch report states Allegro.AI announced $11 million Series A funding."
+verified_at = "2026-10-04T18:53:35Z"
+source_ids = ["tc2018"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2018.lead_investors"
+support = "direct"
+summary = "TechCrunch identifies MizMaa Ventures as a participant in the announced Series A; contemporaneous sources identify it as lead."
+verified_at = "2026-10-04T18:53:35Z"
+source_ids = ["tc2018"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2018.participating_investors"
+support = "direct"
+summary = "TechCrunch names Bosch Venture Capital, Samsung Catalyst Fund and Dynamic Loop Capital as participating investors."
+verified_at = "2026-10-04T18:53:35Z"
+source_ids = ["tc2018"]
+
+[intelligence.israel_connection ]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "ClearML is headquartered in Tel Aviv and its founders are associated with Israeli-founded Allegro.AI; no incorporation jurisdiction is asserted."
+as_of = "2026-10-04"
+source_ids = ["about", "tc2018"]

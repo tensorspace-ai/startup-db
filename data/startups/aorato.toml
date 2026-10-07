@@ -1,0 +1,477 @@
+name = "Aorato"
+description = "Aorato was an Israeli cybersecurity startup that used machine learning and an Organizational Security Graph to detect anomalous behavior around Windows Server Active Directory. Microsoft acquired the company in 2014, and its technology became part of Microsoft's identity-threat-detection product lineage rather than an independent business."
+detailed_description = "Aorato developed identity-centric threat detection for enterprise Windows environments. Its best-documented product concept, the Directory Services Application Firewall, monitored activity around Active Directory and built a continuously updated Organizational Security Graph of users, machines, and access relationships. Microsoft described the approach as learning normal behavior and identifying suspicious activity, giving security teams visibility into attacks that use valid credentials or move inside the network after bypassing perimeter controls. This was a meaningful technical choice: Active Directory is a control plane for enterprise access, so behavioral signals around it can expose compromised accounts, privilege abuse, reconnaissance, and lateral movement that signature-oriented controls may miss.\n\nThe target market was enterprise security teams operating on-premises or hybrid Windows estates. Aorato's value proposition was strongest where directory infrastructure was large, interconnected, and difficult to model manually. It addressed a concrete operational gap between identity and security operations by correlating identity, device, network, and event context rather than treating authentication as an isolated log event. Public evidence supports a released product and venture backing, but does not establish a durable independent customer base, recurring revenue scale, retention, or post-launch market share. Those unknowns matter because anomaly detection products depend heavily on telemetry access, deployment quality, analyst workflow, and the ability to demonstrate fewer missed attacks without overwhelming teams with false positives.\n\nMicrosoft announced the acquisition on November 13, 2014 and said Aorato's technology and team would strengthen identity and access protection across on-premises and cloud environments. Microsoft subsequently used the acquired methodology in Advanced Threat Analytics, later part of the broader Microsoft identity-security portfolio. The acquisition is credible commercialization and strategic-validation evidence, but it also ends the case for evaluating Aorato as a live standalone venture. Current diligence should therefore distinguish the historical Aorato asset from Microsoft's later product engineering, distribution, telemetry, and roadmap decisions. The former aorato.com domain no longer resolves, and no current independent company operation is evidenced.\n\nThe national-security relevance is substantive but technology-based rather than contract-based. Government, defense, and critical-infrastructure networks commonly depend on directory services and privileged identities, making detection of credential theft and internal movement strategically important. The same capability can support cyber defense in those environments without requiring a defense-specific product thesis. However, this record contains no verified evidence of classified deployments, government contracts, or military customers. Aorato is therefore best treated as a historical Israeli cyber acquisition and a reference point for identity-threat-detection architecture, not as evidence of current defense traction or an investable company."
+logo = "Unknown"
+website = "Unknown"
+sector = "Cybersecurity / Identity Threat Detection"
+founded = "2012"
+headquarters = "Herzliya, Israel"
+employees = "1-10"
+funding_stage = "Acquired by Microsoft (2014)"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "Aorato's core technology has substantive commercial and defense/security applicability because it detects abnormal behavior in identity infrastructure, including compromised credentials, privilege abuse, and lateral movement. Those problems affect enterprises as well as government, defense-contractor, and critical-infrastructure networks. The dual-use assessment is limited to the technical capability: public sources do not verify military customers, classified deployments, government procurement, or a defense-specific operating unit."
+key_technologies = ["Machine-learning behavioral anomaly detection", "Organizational Security Graph modeling", "Active Directory telemetry and identity analytics", "Directory Services Application Firewall concepts", "Deep packet inspection of directory-related traffic", "User and entity behavior analytics", "Security event and access-pattern correlation"]
+use_cases = ["Detecting compromised Active Directory accounts", "Identifying pass-the-hash and pass-the-ticket behavior", "Finding privilege escalation and suspicious administrator activity", "Exposing lateral movement across users, devices, and servers", "Investigating insider misuse of legitimate access", "Monitoring hybrid enterprise identity infrastructure", "Supporting cyber defense for government and critical-infrastructure networks"]
+investible = false
+investment_rationale = "Aorato is not a live investment priority because Microsoft acquired it in 2014 and the independent company no longer operates as a standalone venture. The acquisition provides meaningful strategic-validation evidence for identity analytics and demonstrates that a focused Israeli cybersecurity team addressed a platform-level problem attractive to a major security vendor. It does not provide current information about ownership, product economics, employees, valuation, or standalone financing. The appropriate diligence use is historical category mapping and comparison with current identity-threat-detection companies, not a recommendation or an active deal thesis."
+strategic_value = "Aorato has high historical strategic value as an example of identity security becoming a core cyber-defense layer. Its Organizational Security Graph connected people, machines, and directory access patterns, illustrating why protecting authentication and privilege pathways can reveal attacks that perimeter controls miss. Microsoft's acquisition and subsequent use of the technology in Advanced Threat Analytics show platform relevance, while the later Microsoft product lineage demonstrates how a narrow detection primitive can be absorbed into a broader identity-security stack. For Claw & Talon, the record is useful for studying Israeli cyber technology, acquisition pathways, and the transfer of commercial identity analytics into security products used across sensitive networks."
+public_sources = [
+  { label = "Microsoft acquisition announcement", url = "https://blogs.microsoft.com/blog/2014/11/13/microsoft-acquires-aorato-give-enterprise-customers-better-defense-digital-intruders-hybrid-cloud-world/", description = "Microsoft confirms the acquisition and its identity-security rationale; no price disclosed." },
+  { label = "Microsoft acquisition history", url = "https://www.microsoft.com/en-us/investor/acquisition-history", description = "Microsoft lists Aorato under November 13, 2014." },
+  { label = "Aorato Series B announcement", url = "https://www.prnewswire.com/news-releases/israeli-cybersecurity-start-up-aorato-emerges-from-stealth-mode-with-strong-funding-announcement-241239711.html", description = "Company-issued announcement reports approximately $10 million invested and names participants." },
+  { label = "TechCrunch acquisition and financing report", url = "https://techcrunch.com/2014/11/13/microsoft-buys-israeli-hybrid-cloud-security-startup-aorato-in-200m-deal/", description = "Contemporaneous report says terms were undisclosed and cites approximately $200 million from deal sources and $11 million raised." },
+  { label = "Accel Aorato portfolio", url = "https://www.accel.com/companies/aorato", description = "Investor portfolio confirms founders and acquisition by Microsoft." },
+  { label = "Microsoft Advanced Threat Analytics", url = "https://learn.microsoft.com/en-us/shows/ignite-2015/brk3870", description = "Microsoft describes ATA as based on the recent Aorato acquisition." },
+  { label = "Microsoft Entra acquisition note", url = "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/microsoft-acquires-aorato/243817", description = "Microsoft identity leadership records the acquisition close and team integration." },
+  { label = "Network World product launch report", url = "https://www.networkworld.com/article/685613/network-security-firewall-start-up-aorato-sniffs-out-active-directory-anomalies.html", description = "Contemporaneous independent coverage of product, team, beta customers, and $10 million financing." },
+  { label = "Calcalist Hebrew acquisition report", url = "https://www.calcalist.co.il/local/articles/0,7340,L-3644893,00.html", description = "Hebrew reporting gives $200 million deal estimate and $11.5 million total fundraising; terms remain unconfirmed by Microsoft." },
+  { label = "Dealroom Aorato profile", url = "https://app.dealroom.co/companies/aorato", description = "Secondary directory entry with seed-round conflicts retained only as reported observations." },
+  { label = "Glilot Capital post", url = "https://www.linkedin.com/posts/glilot-capital-partners_glilotfamily-cybersecurity-entrepreneurship-activity-7260200464061755392-LALw", description = "Investor says it led Aorato seed investment in 2012." }
+]
+potential_score = 68.0
+technology_score = 84.0
+market_score = 72.0
+team_score = 69.0
+dual_use_score = 83.0
+strategic_alignment_score = 80.0
+stage = "mature"
+stage_rationale = "Aorato reached product release and attracted a strategic acquisition, so it is mature rather than early or mid-stage. Its independent lifecycle ended with Microsoft's November 2014 acquisition; the record should not imply ongoing standalone growth, current employees, or current venture financing. The relevant present-day status is acquired technology incorporated into Microsoft's identity-security lineage."
+competitors = ["Microsoft Defender for Identity", "Silverfort", "Semperis", "Quest One Identity Defender", "CrowdStrike Falcon Identity Protection", "CyberArk Identity Security"]
+competitive_edge = "Aorato's historical edge was its early, focused modeling of behavior inside Active Directory rather than relying only on endpoint, perimeter, or static privilege rules. The Organizational Security Graph supplied relationship context across people and machines, while machine learning and directory/network telemetry supported anomaly detection around a high-value trust system. That positioning helped make the technology strategically legible to Microsoft. The edge is no longer a standalone moat: Microsoft owns the acquired asset, competitors now offer identity-threat detection and identity posture capabilities, and the original product's differentiation is difficult to separate from Microsoft's later engineering, integration, and distribution."
+risk_factors = ["No longer an independent operating company after Microsoft's 2014 acquisition", "Former corporate website does not currently resolve and independent operating status cannot be verified", "Limited public evidence on customer count, recurring revenue, retention, and deployment scale before acquisition", "Active Directory-centric architecture faces changing relevance as organizations adopt cloud-native, passwordless, and heterogeneous identity systems", "Behavioral detection quality depends on complete telemetry, baseline quality, and manageable false-positive rates", "Microsoft integration makes Aorato-specific product contribution and current roadmap difficult to isolate", "No verified public evidence of defense contracts, classified use, or military deployments"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Retain as a historical strategic reference rather than a live priority signal. The record has strong technology and dual-use relevance, and Microsoft's acquisition validates the identity-security problem, but acquired-asset status, absent standalone operations, and limited public traction evidence make it unsuitable for current direct diligence. Its value is comparative: understanding Israeli cyber exits, identity analytics, and the migration of commercial detection technology into platform security."
+crawled_at = "2026-02-24T04:00:00Z"
+updated_at = "2026-10-03T18:17:53Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Idan Plotnik", role = "Co-founder and CEO", is_founder = true, current = false, background = "Company announcement described a decade of cybersecurity experience, prior Foreity co-founding, and Microsoft enterprise-security MVP recognition.", source_ids = ["aorato-pr", "nw-launch"] },
+  { name = "Ohad Plotnik", role = "Co-founder and VP of Professional Services", is_founder = true, current = false, background = "Company announcement described prior cybersecurity experience and Foreity co-founding.", source_ids = ["aorato-pr", "nw-launch"] },
+  { name = "Michael Dolinsky", role = "Co-founder and VP of R&D", is_founder = true, current = false, background = "Company announcement described cybersecurity experience and prior Foreity co-founding.", source_ids = ["aorato-pr", "nw-launch"] }
+]
+financials = []
+traction = []
+intellectual_property = []
+comparables = [
+  { name = "Microsoft Defender for Identity", website = "https://www.microsoft.com/security/business/identity-access/microsoft-defender-for-identity", rationale = "Successor category product for identity threat detection in directory environments.", differentiation = "Aorato was an acquired precursor whose technology informed Microsoft ATA; current product capabilities and brand are Microsoft-owned and cannot be attributed solely to Aorato.", source_ids = ["ms-ata"] },
+  { name = "Semperis", website = "https://www.semperis.com/", rationale = "Identity security and Active Directory protection peer.", differentiation = "Independent specialist with a broader identity resilience and recovery emphasis; included as a current category peer, not as a directly matched 2014 competitor.", source_ids = ["nw-launch"] },
+  { name = "Silverfort", website = "https://www.silverfort.com/", rationale = "Identity security and threat protection peer.", differentiation = "Focuses on identity protection and access controls across environments; Aorato's historical product was narrowly centered on behavioral monitoring around Active Directory.", source_ids = ["nw-launch"] }
+]
+
+[intelligence.company ]
+company_id = "il-aorato"
+legal_name = "Aorato"
+aliases = ["Aorato", "Aorato Ltd."]
+operating_status = "acquired"
+business_model = "Enterprise cybersecurity software; marketed a directory-services application firewall and behavioral analytics product to organizations using Microsoft Active Directory. Independent business ceased after acquisition by Microsoft."
+products = ["Directory Services Application Firewall (DAF)", "Organizational Security Graph behavioral detection methodology"]
+locations = ["Herzliya, Israel", "New York City, United States (reported U.S. headquarters expansion in 2014)"]
+source_ids = ["ms-acq", "nw-launch", "accel"]
+notes = "Contemporaneous reports differ on founding year and seed-round totals. Existing record's founding year 2012 is retained; Calcalist reported 2011 and other profiles report 2012."
+
+[intelligence.funding ]
+status = "reported"
+summary = "Public evidence confirms approximately $10 million of investment disclosed at the January 2014 Series B/market launch, including Accel, Glilot, Innovation Endeavors, Mickey Boodaei and Rakesh Loonkar. Later reports say lifetime financing was $11 million or $11.5 million, while database summaries suggest a $1 million or $1.5 million seed. The early round and total are not consistently resolved; no private cap table or complete financing schedule was found. Acquisition consideration was not disclosed by Microsoft."
+rounds = [
+  { id = "series-b-2014", round_type = "Series B", instrument = "equity", status = "closed", announced_on = "2014-01-21", amount_status = "reported", amount = 10000000, amount_scope = "round", currency = "USD", lead_investors = ["Accel Partners"], participating_investors = ["Glilot Capital Partners", "Innovation Endeavors", "Mickey Boodaei", "Rakesh Loonkar"], valuation_basis = "undisclosed", source_ids = ["aorato-pr", "nw-launch"] },
+  { id = "seed-2012", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2012", amount_status = "conflicting", amount_scope = "unknown", lead_investors = ["Glilot Capital Partners"], participating_investors = [], amount_observations = [
+    { id = "reported-1m", amount = 1000000, currency = "USD", source_ids = ["techcrunch-deal"] , notes = "The report gives $11 million total after the $10 million disclosed 2014 financing; $1 million is the implied seed contribution, not a separately described announcement." },
+    { id = "reported-15m", amount = 1500000, currency = "USD", source_ids = ["dealroom-profile"], notes = "Dealroom profile lists a $1.5 million seed; this is a database entry and conflicts with the implied $1 million lifetime-total decomposition." }
+  ], source_ids = ["techcrunch-deal", "dealroom-profile", "glilot-linkedin"] , notes = "Glilot later stated it led Aorato's seed investment in 2012. Exact seed amount/date varies across secondary databases and implied totals; numeric round amount is intentionally omitted." }
+]
+history_status = "partial"
+coverage_through = "2014-11-13"
+reported_total_raised = 11000000
+reported_total_currency = "USD"
+total_source_ids = ["techcrunch-deal"]
+total_as_of = "2014-11-13"
+total_scope = "TechCrunch's contemporaneous reported lifetime total; secondary Calcalist coverage says $11.5m, so the sourced $11m figure is not treated as an audited reconciliation."
+
+[[intelligence.investors]]
+name = "Accel Partners"
+investor_type = "vc"
+website = "https://www.accel.com/"
+round_ids = ["series-b-2014"]
+relationship = "historical"
+source_ids = ["aorato-pr", "accel"]
+
+[[intelligence.investors]]
+name = "Glilot Capital Partners"
+investor_type = "vc"
+website = "https://glilotcapital.com/"
+round_ids = ["seed-2012", "series-b-2014"]
+relationship = "historical"
+source_ids = ["aorato-pr", "glilot-linkedin"]
+
+[[intelligence.investors]]
+name = "Innovation Endeavors"
+investor_type = "vc"
+website = "https://innovationendeavors.com/"
+round_ids = ["series-b-2014"]
+relationship = "historical"
+source_ids = ["aorato-pr"]
+
+[[intelligence.investors]]
+name = "Mickey Boodaei"
+investor_type = "angel"
+round_ids = ["series-b-2014"]
+relationship = "historical"
+source_ids = ["aorato-pr"]
+
+[[intelligence.investors]]
+name = "Rakesh Loonkar"
+investor_type = "angel"
+round_ids = ["series-b-2014"]
+relationship = "historical"
+source_ids = ["aorato-pr"]
+
+[intelligence.ownership ]
+status = "reported"
+summary = "Microsoft acquired Aorato in November 2014 and absorbed its technology and team. Microsoft does not disclose consideration in its announcement. Contemporary media estimated approximately $200 million, but reports vary and this remains a reported estimate, not a confirmed transaction amount. Private ownership percentages are unavailable; Hebrew reporting said founders and employees collectively held 30%, but this was not verified against filings and is excluded from numeric holdings."
+parent_company = "Microsoft Corporation"
+stock_ticker = "NASDAQ: MSFT"
+cap_table_status = "undisclosed"
+shareholders = ["Microsoft Corporation (acquirer)"]
+source_ids = ["ms-acq", "ms-history", "techcrunch-deal", "calcalist-deal"]
+deals = [
+  { id = "microsoft-acquisition-2014", deal_type = "acquisition", company_role = "target", announced_on = "2014-11-13", completed_on = "2014-11-13", status = "completed", counterparty = "Microsoft Corporation", amount_status = "undisclosed", source_ids = ["ms-acq", "ms-entra"] , notes = "Microsoft announced acquisition; contemporaneous media reports estimated $200m but Microsoft did not disclose terms." }
+]
+holdings = []
+
+[intelligence.israel_connection ]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Aorato was an Israel-based cybersecurity startup founded by Idan Plotnik, Ohad Plotnik and Michael Dolinsky, with Herzliya reported as its base. Its founding team described experience originating in an IDF cyber unit. Aorato later established a U.S. headquarters presence, which does not negate the Israeli origin."
+as_of = "2014-11-13"
+source_ids = ["aorato-pr", "nw-launch", "techcrunch-deal"]
+
+[intelligence.research ]
+researched_at = "2026-10-03T18:17:53Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Aorato Microsoft acquisition funding investors $10 million 2014",
+  "Aorato raised $1 million 2012 investors funding",
+  "Aorato Israeli startup acquisition Microsoft founders executives",
+  "Aorato patents Organizational Security Graph patent",
+  "site:glilotcapital.com Aorato investment 2012",
+  "Aorato Series B $10 million Accel January 2014 press release",
+  "Aorato Microsoft Advanced Threat Analytics acquisition",
+  "Aorato customers private beta product January 2014",
+  "Aorato revenue employees customers patents",
+  "מיקרוסופט רכשה את אאורטו 200 מיליון 11.5 מיליון"
+]
+gaps = [
+  "team: founders and launch-era executive roles are identified, but a complete roster, later leadership history and verified current employment records are unavailable after acquisition.",
+  "investors: named public participants are recorded, but private cap-table allocations, individual check sizes and full seed syndicate remain undisclosed.",
+  "financials: no reliable public revenue, ARR, profitability, burn, runway or audited standalone financial statements were located.",
+  "traction: launch-era private beta was reported to include well over a dozen customers, but named customers, conversion, paid status, production deployments and retention are not established.",
+  "intellectual_property: no Aorato-assigned patent record was verified in the searched public sources; Microsoft ownership and any transferred patent portfolio are not established here.",
+  "competition: current peers are category comparables; no complete contemporaneous 2014 competitor set or validated head-to-head results were located.",
+  "ownership: Microsoft did not publish acquisition consideration or Aorato cap-table details; media estimates conflict in certainty and are not treated as confirmed price.",
+  "funding: early seed amount and lifetime total differ across reports; the 2014 approximately $10m company announcement is clear, but a reconciled full financing ledger is not public.",
+  "dual_use: no government contracts, classified deployments, military customers or defense-specific product evidence was found."
+]
+conflicts = [
+  "Founding date: existing record and several sources use 2012; Calcalist reports 2011. Retain existing 2012 pending authoritative incorporation records.",
+  "Funding: 2014 release says approximately $10m invested; TechCrunch reports $11m total; Calcalist says $11.5m total; secondary data source presents a $1m seed while Dealroom lists $1.5m. The seed amount is conflicting and the lifetime total is reported with a caveat.",
+  "Acquisition value: Microsoft says it acquired Aorato but discloses no price; contemporaneous TechCrunch said sources indicated around $200m, while other media repeat $200m. Deal amount remains undisclosed in structured numeric field.",
+  "Headquarters: Israeli headquarters is well supported; Network World also reported a U.S. headquarters being established in New York in 2014. This reflects a later U.S. presence, not a contradiction about Israeli origins."
+]
+diligence_questions = [
+  "What were the exact amount, date and complete investor syndicate for Aorato's 2012 seed financing, and can the $11m versus $11.5m lifetime totals be reconciled from original closing documents?",
+  "What customer deployments converted from the launch-era private beta to paid production, and what retention or detection-quality evidence did Microsoft review before acquiring the company?",
+  "Which Aorato patents, software assets and personnel were transferred to Microsoft, and which identifiable elements remained in Advanced Threat Analytics and successor identity-security products?",
+  "Was the widely reported approximately $200m acquisition estimate consideration paid at close, contingent consideration, or an inaccurate press estimate?"
+]
+
+[[intelligence.research .sources]]
+id = "ms-acq"
+url = "https://blogs.microsoft.com/blog/2014/11/13/microsoft-acquires-aorato-give-enterprise-customers-better-defense-digital-intruders-hybrid-cloud-world/"
+title = "Microsoft acquires Aorato to give enterprise customers better defense against digital intruders in a hybrid cloud world"
+publisher = "Microsoft Official Blog"
+kind = "company"
+accessed_at = "2026-10-03T18:17:53Z"
+published_on = "2014-11-13"
+claims = ["Microsoft announced acquisition of Aorato", "acquisition intended to strengthen identity and access security across on-premises and cloud", "Microsoft did not state a purchase price"]
+
+[[intelligence.research .sources]]
+id = "ms-history"
+url = "https://www.microsoft.com/en-us/investor/acquisition-history"
+title = "Microsoft Investor Relations acquisition history"
+publisher = "Microsoft"
+kind = "company"
+accessed_at = "2026-10-03T18:17:53Z"
+claims = ["Microsoft lists Aorato on November 13, 2014"]
+
+[[intelligence.research .sources]]
+id = "ms-entra"
+url = "https://techcommunity.microsoft.com/blog/microsoft-entra-blog/microsoft-acquires-aorato/243817"
+title = "Microsoft Acquires Aorato"
+publisher = "Microsoft Entra Blog"
+kind = "company"
+accessed_at = "2026-10-03T18:17:53Z"
+published_on = "2014-11-13"
+claims = ["Microsoft said acquisition agreement closed and Aorato joined Identity and Security Services Division", "Aorato used Active Directory to detect anomalous user behavior"]
+
+[[intelligence.research .sources]]
+id = "aorato-pr"
+url = "https://www.prnewswire.com/news-releases/israeli-cybersecurity-start-up-aorato-emerges-from-stealth-mode-with-strong-funding-announcement-241239711.html"
+title = "Israeli Cybersecurity Start-Up Aorato Emerges from Stealth Mode with Strong Funding Announcement"
+publisher = "PR Newswire (news provided by Aorato)"
+kind = "company"
+accessed_at = "2026-10-03T18:17:53Z"
+published_on = "2014-01-21"
+claims = ["Aorato announced approximately $10 million investment including Accel, Mickey Boodaei, Rakesh Loonkar, Innovation Endeavors and Glilot", "Idan Plotnik was CEO, Michael Dolinsky VP R&D and Ohad Plotnik VP Professional Services", "Company marketed Directory Services Application Firewall and behavior profiling", "Founders had cybersecurity background and prior Foreity activity"]
+
+[[intelligence.research .sources]]
+id = "techcrunch-deal"
+url = "https://techcrunch.com/2014/11/13/microsoft-buys-israeli-hybrid-cloud-security-startup-aorato-in-200m-deal/"
+title = "Microsoft Buys Israeli Hybrid Cloud Security Startup Aorato In $200M Deal"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-03T18:17:53Z"
+published_on = "2014-11-13"
+claims = ["Microsoft confirmed acquisition but terms were not disclosed", "sources close to earlier deal discussions indicated approximately $200 million", "TechCrunch reported Aorato had raised $11 million", "Aorato was Israel-based and used machine learning for suspicious pattern detection", "Accel, Mickey Boodaei, Rakesh Loonkar, Innovation Endeavors and Glilot were investors"]
+
+[[intelligence.research .sources]]
+id = "accel"
+url = "https://www.accel.com/companies/aorato"
+title = "Aorato"
+publisher = "Accel"
+kind = "investor"
+accessed_at = "2026-10-03T18:17:53Z"
+claims = ["Accel portfolio identifies Aorato as enterprise security for Active Directory protection", "Accel lists founders Michael Dolinsky, Idan Plotnik and Ohad Plotnik", "Accel says Aorato was acquired by Microsoft"]
+
+[[intelligence.research .sources]]
+id = "nw-launch"
+url = "https://www.networkworld.com/article/685613/network-security-firewall-start-up-aorato-sniffs-out-active-directory-anomalies.html"
+title = "Firewall start-up Aorato sniffs out Active Directory anomalies"
+publisher = "Network World"
+kind = "media"
+accessed_at = "2026-10-03T18:17:53Z"
+published_on = "2014-01-21"
+claims = ["DAF monitored Active Directory traffic and behavior to identify anomalous activity", "Aorato reported well over a dozen customers in private beta", "Aorato had received $10 million and named investor participants", "Idan Plotnik, Ohad Plotnik and Michael Dolinsky held launch-era roles", "Aorato was based in Israel and establishing a New York headquarters"]
+
+[[intelligence.research .sources]]
+id = "calcalist-deal"
+url = "https://www.calcalist.co.il/local/articles/0,7340,L-3644893,00.html"
+title = "מיקרוסופט רוכשת את אאוראטו הישראלית ב־200 מיליון דולר"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-03T18:17:53Z"
+published_on = "2014-11-13"
+claims = ["Calcalist reported Aorato was founded in 2011", "Calcalist reported Microsoft purchase consideration of $200 million", "Calcalist reported $11.5 million raised", "Aorato founders were Idan and Ohad Plotnik and Michael Dolinsky"]
+
+[[intelligence.research .sources]]
+id = "dealroom-profile"
+url = "https://app.dealroom.co/companies/aorato"
+title = "Aorato company information, funding and investors"
+publisher = "Dealroom.co"
+kind = "directory"
+accessed_at = "2026-10-03T18:17:53Z"
+claims = ["Dealroom profile lists a $1.5 million seed in January 2013", "Dealroom narrative lists $1 million seed and $10 million Series B, totaling $11 million"]
+
+[[intelligence.research .sources]]
+id = "glilot-linkedin"
+url = "https://www.linkedin.com/posts/glilot-capital-partners_glilotfamily-cybersecurity-entrepreneurship-activity-7260200464061755392-LALw"
+title = "Glilot Capital post on Aorato and Ermetic"
+publisher = "Glilot Capital Partners"
+kind = "investor"
+accessed_at = "2026-10-03T18:17:53Z"
+claims = ["Glilot said it led Aorato's seed investment in 2012", "Glilot said Aorato was acquired by Microsoft in 2014"]
+
+[[intelligence.research .sources]]
+id = "ms-ata"
+url = "https://learn.microsoft.com/en-us/shows/ignite-2015/brk3870"
+title = "How to protect your corporate from advanced attacks – unveiling Microsoft Advanced Threat Analytics"
+publisher = "Microsoft Learn"
+kind = "company"
+accessed_at = "2026-10-03T18:17:53Z"
+published_on = "2015-05-04"
+claims = ["Microsoft described Advanced Threat Analytics as based on the recent acquisition of Aorato", "ATA focused on identifying breaches involving compromised credentials"]
+
+[[intelligence.research .topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T18:17:53Z"
+next_review_on = "2027-10-03"
+queries = ["Aorato company official site identity", "Aorato Microsoft acquisition founders products"]
+source_ids = ["ms-acq", "aorato-pr", "accel"]
+summary = "Identity and history verified through Microsoft, investor and company-originated launch sources; no current independent site found."
+
+[[intelligence.research .topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-03T18:17:53Z"
+next_review_on = "2027-04-03"
+queries = ["Aorato funding raised seed Series B investors", "Aorato $1 million $1.5 million seed Glilot", "Aorato total raised $11 million $11.5 million"]
+source_ids = ["aorato-pr", "techcrunch-deal", "calcalist-deal", "dealroom-profile", "glilot-linkedin"]
+summary = "2014 approximately $10m is supported by the company announcement. Seed and reported lifetime total vary; conflicting values are retained as source observations and no seed numeric amount is asserted."
+
+[[intelligence.research .topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T18:17:53Z"
+next_review_on = "2027-10-03"
+queries = ["Aorato investors Accel Glilot Innovation Endeavors Boodaei Loonkar", "Accel Aorato portfolio", "Glilot Aorato seed 2012"]
+source_ids = ["aorato-pr", "accel", "glilot-linkedin"]
+summary = "2014 participants explicitly named in the company-issued financing announcement; early-stage allocation details and cap table remain unavailable."
+
+[[intelligence.research .topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T18:17:53Z"
+next_review_on = "2027-10-03"
+queries = ["Aorato founders Idan Plotnik Ohad Plotnik Michael Dolinsky", "Aorato CEO VP R&D leadership", "Aorato Microsoft team acquisition"]
+source_ids = ["aorato-pr", "nw-launch", "accel"]
+summary = "Launch-era three founders and roles verified. Subsequent team careers and full roster were not comprehensively public in reviewed sources."
+
+[[intelligence.research .topic_checks]]
+topic = "ownership"
+status = "conflicting"
+checked_at = "2026-10-03T18:17:53Z"
+next_review_on = "2027-04-03"
+queries = ["Aorato Microsoft acquired price ownership", "Aorato acquisition $200 million Microsoft November 2014", "Aorato cap table founders ownership"]
+source_ids = ["ms-acq", "ms-history", "techcrunch-deal", "calcalist-deal"]
+summary = "Acquisition completion is confirmed; Microsoft's official notice omits price. $200m is a contemporaneous press estimate and cap-table percentages are not verified."
+
+[[intelligence.research .topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T18:17:53Z"
+next_review_on = "2027-10-03"
+queries = ["Aorato revenue ARR profitability burn runway", "Aorato financial statements revenue customers"]
+source_ids = ["techcrunch-deal", "nw-launch"]
+summary = "No reliable dated revenue, profitability, burn, runway or audited company financial disclosure located."
+
+[[intelligence.research .topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T18:17:53Z"
+next_review_on = "2027-10-03"
+queries = ["Aorato customers private beta customer deployment", "Aorato product launch Directory Services Application Firewall"]
+source_ids = ["nw-launch", "aorato-pr", "ms-ata"]
+summary = "Product launch and a company-reported private beta of more than a dozen customers were reported in 2014; no verified paid-customer list or revenue conversion was found."
+
+[[intelligence.research .topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T18:17:53Z"
+next_review_on = "2027-10-03"
+queries = ["Aorato patents Organizational Security Graph", "USPTO Aorato Ltd patent", "WIPO Aorato cybersecurity patent"]
+source_ids = ["ms-ata"]
+summary = "No Aorato-assigned patent record was verified in this research pass; this does not establish that no IP was filed or transferred to Microsoft."
+
+[[intelligence.research .topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T18:17:53Z"
+next_review_on = "2027-10-03"
+queries = ["Active Directory anomaly detection competitors 2014 Aorato", "current Active Directory identity threat detection competitors"]
+source_ids = ["nw-launch", "ms-ata"]
+summary = "Category peers and substitutes are identified in retained analysis and comparables; robust contemporaneous competitive benchmarking was not public."
+
+[[intelligence.research .topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T18:17:53Z"
+next_review_on = "2027-10-03"
+queries = ["Aorato government defense contracts military customers", "Aorato classified deployment government cybersecurity"]
+source_ids = ["aorato-pr", "nw-launch", "ms-acq"]
+summary = "Identity threat detection has commercial and security applicability; reviewed public sources do not verify government contracts, classified deployments or military customers."
+
+[[intelligence.research .claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Microsoft's announcement and acquisition history confirm the completed acquisition on November 13, 2014; Microsoft identity leadership said the team joined its Identity and Security Services Division."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["ms-acq", "ms-history", "ms-entra"]
+
+[[intelligence.research .claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Company launch announcement is datelined Tel Aviv, identifies Israeli cyber-unit origins; contemporaneous Network World describes Aorato as based in Israel."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["aorato-pr", "nw-launch"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "TechCrunch contemporaneously reported Aorato had raised $11 million before acquisition. Other report gives $11.5m, so recorded total preserves this source-specific reported figure with the conflict disclosed."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["techcrunch-deal"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.series-b-2014.amount"
+support = "direct"
+summary = "Aorato's January 21, 2014 company-issued announcement says approximately $10 million of investments had been received; Network World independently reports $10 million. Numeric amount is approximate as reported."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["aorato-pr", "nw-launch"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.seed-2012.amount_observations.reported-1m.amount"
+support = "direct"
+summary = "TechCrunch reported $11m total and $10m in the January financing; the $1m observation is a transparent arithmetic decomposition of those reported totals, not a separately announced seed amount."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["techcrunch-deal"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.seed-2012.amount_observations.reported-15m.amount"
+support = "direct"
+summary = "Dealroom's company profile lists a $1.5m seed. This verifies what the database reports, not the underlying financing closing."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["dealroom-profile"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.series-b-2014.lead_investors"
+support = "direct"
+summary = "The January 2014 company announcement calls Accel the lead investor and names the other participants."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["aorato-pr"]
+
+[[intelligence.research .claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Microsoft confirms it acquired Aorato, and lists the transaction in its acquisition history."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["ms-acq", "ms-history"]
+
+[[intelligence.research .claim_checks]]
+field_path = "ownership.deals.microsoft-acquisition-2014.status"
+support = "direct"
+summary = "Microsoft announced the acquisition; its identity division post states the agreement had closed."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["ms-acq", "ms-entra"]
+
+[[intelligence.research .claim_checks]]
+field_path = "ownership.deals.microsoft-acquisition-2014.amount"
+support = "direct"
+summary = "Microsoft's acquisition announcement does not disclose consideration. Contemporaneous estimates are recorded in notes and conflicts, not as a numeric transaction amount."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["ms-acq"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.series-b-2014.participating_investors"
+support = "direct"
+summary = "The company announcement names Glilot, Innovation Endeavors, Mickey Boodaei and Rakesh Loonkar among the approximately $10m investment participants."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["aorato-pr"]
+
+[[intelligence.research .claim_checks]]
+field_path = "funding.rounds.seed-2012.lead_investors"
+support = "direct"
+summary = "Glilot states that it led Aorato's seed investment in 2012."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["glilot-linkedin"]
+
+[[intelligence.research .claim_checks]]
+field_path = "ownership.deals.microsoft-acquisition-2014.company_role"
+support = "direct"
+summary = "Microsoft's acquisition announcement identifies Microsoft as acquirer of Aorato, establishing Aorato's target role."
+verified_at = "2026-10-03T18:17:53Z"
+source_ids = ["ms-acq"]

@@ -1,0 +1,77 @@
+name = "Socket"
+description = "Developer-first software supply-chain security platform that analyzes open-source dependencies for malicious behavior, vulnerabilities, and policy violations, then helps organizations block or remediate risky code before it reaches development and production environments."
+detailed_description = """
+Socket is a cybersecurity startup focused on the software supply chain rather than only on vulnerabilities in an organization's own code. Its platform analyzes open-source packages and dependency changes for behavioral signals such as install scripts, obfuscation, suspicious network or filesystem activity, typo-squatting, native code, and other indicators that a package may be malicious or unexpectedly risky. Socket presents findings through developer workflows including GitHub pull-request analysis, package intelligence, and policy enforcement. Its Socket Firewall product adds a preventive control at package-install time by acting between package managers and registries, checking direct and transitive dependencies against Socket's security intelligence before allowing them into a developer workstation or CI environment. The platform has also expanded into reachability analysis and automated remediation through the Coana acquisition and Socket Certified Patches.
+
+The product addresses a real gap in conventional software-composition analysis. CVE databases remain important, but a hijacked maintainer account, malicious update, dependency confusion event, or newly published package can be harmful before a vulnerability identifier exists. Socket's value proposition is therefore a combination of pre-install prevention, behavioral threat detection, and explainable dependency risk analysis. Its GitHub integration analyzes supported manifest changes and reports issues such as malware, install scripts, telemetry, native code, and shell-injection patterns. The technical challenge is not merely scanning source code: Socket must maintain broad ecosystem coverage, distinguish unusual but legitimate package behavior from malicious intent, keep threat intelligence current, and fit into fast developer and AI-assisted build workflows without creating unacceptable false positives.
+
+Commercially, Socket appears to have moved beyond the early proof-of-concept stage. In May 2026 the company announced a $60 million Series C led by Thrive Capital at a reported $1 billion valuation, bringing total announced funding to $125 million. The same company announcement reported growth to more than 27,000 organizations, 1.5 million repositories, more than 11.6 million commits secured each month, over 10,000 supply-chain attacks blocked weekly, and a team of more than 100 people. These are company-reported figures and should be validated through diligence, but they are meaningful traction signals. Socket also named Anthropic, xAI, Replit, Cursor, Vercel, Figma, Gusto, Mercado Libre, and Cribl as customers. The company describes Socket Firewall as free at the basic level while enterprise deployments add policy controls, private-registry support, broader ecosystem coverage, and centralized administration; this creates a plausible developer-led adoption funnel, but monetization, retention, gross margins, and customer concentration remain unverified.
+
+Competition spans both specialist supply-chain vendors and larger application-security platforms. Snyk, Sonatype, Mend, JFrog, and Checkmarx can bundle dependency analysis, SBOM, vulnerability management, and developer integrations, while Phylum is a closer specialist substitute for malicious-package and open-source threat analysis. Socket's differentiation is strongest when customers value prevention at the point of install and behavioral analysis of newly emerging threats; it is weaker where procurement favors a consolidated platform, private-registry control, or a mature compliance and vulnerability-management suite. The Coana acquisition and Certified Patches broaden the product beyond malware detection, but they also increase integration and execution requirements.
+
+The defense and national-security case is credible but should be framed as defensive infrastructure, not as evidence of defense contracts. Defense primes, government software teams, and critical-infrastructure operators depend on open-source packages and CI/CD systems, so preventing a compromised dependency from entering a build can reduce exposure to espionage, sabotage, and credential theft. Socket Firewall's network-level enforcement and support for private registries may be relevant to controlled development environments, while its developer workflow integrations could support secure software-development requirements. Public materials reviewed for this record do not establish classified deployment, government procurement, or defense-specific certifications. Those should be explicit diligence questions before assigning a government-market premium."""
+logo = "https://socket.dev/images/socket-logo.svg"
+website = "https://socket.dev"
+sector = "Cybersecurity"
+founded = "2021"
+headquarters = "San Francisco, CA"
+employees = "100+"
+funding_stage = "Series C"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Socket's core capability is defensive software supply-chain security with clear commercial and national-security applicability. Enterprises use it to detect malicious or risky open-source dependencies, while defense contractors, government software teams, and critical-infrastructure operators face the same dependency-hijacking, malware, and build-integrity risks. The adjacency is substantive because the product can enforce policy at developer and CI installation points and can support private registries, but public evidence does not confirm government customers, classified use, or defense certifications. The dual-use case is therefore strong on mission relevance and portability, not proven government traction."
+key_technologies = [
+  "Behavioral analysis of open-source packages",
+  "AI-assisted malicious-package and zero-day detection",
+  "Dependency and package risk intelligence",
+  "Socket Firewall package-manager proxy and install-time blocking",
+  "GitHub pull-request and manifest analysis",
+  "Reachability analysis for exploitable CVE triage",
+  "Certified patching and software-supply-chain policy enforcement"
+]
+use_cases = [
+  "Blocking malicious direct and transitive dependencies before installation",
+  "Reviewing dependency changes in GitHub pull requests",
+  "Protecting CI/CD pipelines and developer workstations from package compromise",
+  "Prioritizing exploitable vulnerabilities with reachability analysis",
+  "Enforcing package policies across private registries and enterprise build systems",
+  "Reducing supply-chain exposure in AI-assisted application development",
+  "Supporting secure software development for defense contractors and critical infrastructure",
+  "Investigating package behavior, maintainer changes, and emerging registry attacks"
+]
+tags = ["non-israeli"]
+investible = true
+investment_rationale = "Socket has a strong strategic fit with a dual-use cybersecurity thesis because it addresses a high-consequence attack surface with a product that can be deployed in ordinary enterprise development environments and, subject to assurance and procurement requirements, controlled software factories. The Series C, reported $125 million total funding, more than 100 employees, and reported expansion to more than 27,000 organizations indicate meaningful commercial momentum, although the figures are company-reported and not a substitute for financial diligence. The key diligence question is durability: whether Socket's behavioral detection, threat-intelligence data, install-time controls, and developer adoption produce lower loss rates and better workflow economics than broader SCA platforms. Investible is an internal priority-signal flag only and is not an investment recommendation."
+strategic_value = "Socket can help reduce a strategically important failure mode in modern software production: a trusted open-source dependency becoming the delivery mechanism for malware, credential theft, or covert access. Its strongest strategic value is preventative and ecosystem-level. Firewall can stop a package before it reaches a workstation or build system, while package analysis and pull-request controls give security teams earlier visibility than post-build vulnerability scanning. This is relevant to defense and critical-infrastructure software supply chains because compromise of a shared dependency can propagate across many products and vendors. The value remains conditional on deployment assurance, ecosystem coverage, explainability, data-handling controls, and evidence that customers can operate the product in segmented or regulated environments."
+public_sources = [
+  "https://socket.dev/about",
+  "https://socket.dev/blog/series-c",
+  "https://docs.socket.dev/docs/socket-firewall-overview",
+  "https://docs.socket.dev/docs/socket-for-github-installation",
+  "https://www.linkedin.com/company/socketinc"
+]
+potential_score = 87.0
+technology_score = 89.0
+market_score = 88.0
+team_score = 86.0
+dual_use_score = 84.0
+strategic_alignment_score = 86.0
+stage = "mid"
+stage_rationale = "Socket remains an independent venture-backed startup, but the Series C announced in May 2026, reported $125 million total funding, reported $1 billion valuation, more than 100 employees, and reported adoption across more than 27,000 organizations place it in a mid-stage scale-up phase rather than an early Series A company. The business is now focused on expanding a platform spanning malicious-package prevention, enterprise firewall controls, vulnerability reachability, and remediation. The main stage-related diligence questions are revenue quality, retention, sales efficiency, and whether rapid product expansion preserves detection quality and developer trust."
+competitors = ["Phylum", "Snyk", "Sonatype", "JFrog", "Mend", "Checkmarx", "Aqua Security"]
+competitive_edge = "Socket's clearest edge is the combination of behavioral package analysis and prevention at the point where dependencies are introduced. This can detect or block malicious packages that have no CVE and can cover transitive dependencies that developers did not explicitly select. Its GitHub workflow, package intelligence, Firewall proxy, reachability analysis, and Certified Patches give it a broader control loop than a single scanner. The edge is not absolute: large SCA and application-security vendors can bundle adjacent capabilities, and specialist competitors may match particular threat-intelligence or malware-analysis functions. Socket must therefore prove detection precision, ecosystem breadth, latency, explainability, and measurable reduction in developer and security-team workload."
+risk_factors = [
+  "Platform competition: Snyk, Sonatype, JFrog, Mend, Checkmarx, and cloud-security vendors can bundle supply-chain controls into broader contracts",
+  "Detection precision: unusual but legitimate package behavior can create false positives, blocking friction, or alert fatigue",
+  "Adversarial adaptation: attackers can obfuscate behavior, use compromised maintainers, or move across registries, extensions, containers, and AI tooling",
+  "Coverage and integration burden: supporting many package managers, private registries, build systems, and regulated environments raises engineering and support costs",
+  "Commercial concentration and verification: organization, repository, attack-blocking, customer, revenue, retention, and valuation figures are primarily company-reported",
+  "Product-scope execution: integrating Coana, Certified Patches, Firewall, and newer extension or AI-tool coverage may dilute focus or create reliability risk",
+  "Government-market uncertainty: public materials reviewed do not establish defense contracts, classified deployment, or relevant certifications; regulated-market expansion may be slow"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "High internal priority signal because Socket combines a technically differentiated software-supply-chain problem, substantial reported commercial traction, and a credible defensive use case for organizations whose build systems and open-source dependencies are mission-critical. The score is moderated by the lack of independently verified financial metrics and the absence of public evidence for defense contracts or certified deployment. Diligence should focus on detection precision and recall, customer retention and expansion, gross margins, concentration, data-handling architecture, private-registry and segmented-environment support, competitive win rates, and the durability of the threat-intelligence advantage. This flag is for strategic prioritization and is not an investment recommendation."
+crawled_at = "2026-01-31T19:15:00+00:00"
+updated_at = "2026-07-31T19:58:44Z"

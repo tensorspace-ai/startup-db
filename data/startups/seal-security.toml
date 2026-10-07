@@ -1,0 +1,99 @@
+name = "Seal Security"
+
+description = "Seal Security is an Israeli application-security startup that remediates open-source vulnerabilities in place, delivering production-ready patches for application dependencies, Linux packages, and container environments without forcing version upgrades or breaking migrations."
+
+detailed_description = """
+Seal Security targets the remediation bottleneck in software supply-chain security. Its platform is positioned around producing and distributing production-ready fixes for vulnerable open-source components rather than stopping at discovery, ticketing, or a recommendation to upgrade. The company's public product description covers direct and transitive application dependencies, Linux operating-system packages, container base images, and end-of-life distributions. Its workflow combines the Seal CLI in CI/CD, sealed artifacts, and source-control integrations such as GitHub, GitLab, and Azure DevOps. The central technical proposition is useful where a vulnerable package is deeply pinned, an upstream fix is unavailable, or a major-version upgrade would create unacceptable compatibility and release risk: backport the security change into the version already deployed, test it, and deliver it as a controlled artifact.
+
+The customer problem is acute for enterprises with large dependency graphs, legacy software, regulated release processes, or teams that cannot simply rebuild every application after a CVE. Seal says its platform can provide a 72-hour remediation SLA for critical and high findings and that its patches are reviewed by security researchers and regression-tested before customer use. Those are meaningful operating claims, but they should be treated as vendor-reported until diligence tests patch correctness, false-positive handling, language and package coverage, rollback behavior, and the boundary between a safe backport and a materially changed fork. The buyer set includes AppSec, vulnerability-management, platform-engineering, and DevSecOps teams that already have scanners but need to reduce the backlog of findings that engineering cannot safely close.
+
+Competition is broad rather than limited to one direct peer. Snyk, Mend, GitLab, GitHub, Checkmarx, and Veracode can bundle software-composition analysis, prioritization, upgrade pull requests, and policy controls into larger developer-security platforms. Phylum and Socket address package and supply-chain risk from different angles, while Chainguard and commercial Linux vendors compete for parts of the curated-artifact and secure-base-image budget. Seal's potential edge is depth in remediation for the versions customers already run: a narrowly focused service that can complement an incumbent scanner and reduce forced upgrades, rather than requiring a wholesale AppSec-platform replacement. Sustaining that edge will require high-quality fixes across languages and operating systems, strong provenance and reproducibility, fast coverage for newly disclosed vulnerabilities, and evidence that the workflow materially lowers time-to-remediate.
+
+Commercial signals are positive but incomplete. Seal announced a $13 million Series A in July 2025, bringing publicly stated total funding to $20 million, and says the financing will expand go-to-market execution and the core platform. Its website lists enterprise references and regulated-industry positioning, but the public record does not establish customer concentration, recurring revenue, retention, gross margin, or independent validation of remediation outcomes. A 2025 company-published impact update reported more than 10,500 vulnerabilities fixed and more than 30,000 engineering hours saved; these metrics are useful leads for diligence but are not audited performance measures. Public employee listings place the company in the 11–50 range, so an exact 70+ headcount is not sufficiently supported.
+
+The national-security relevance is credible at the software-resilience layer, not as a direct weapons technology. Defense primes, government contractors, and critical-infrastructure operators depend on open-source components and often maintain long-lived systems for which rapid upgrades are operationally or contractually difficult. In-place, auditable remediation could shorten exposure windows and support supply-chain obligations in those environments. Adoption would still face air-gapped deployment, classified or export-controlled code, certification and change-control requirements, bespoke build systems, and the need to prove patch provenance. The company has a strategically relevant capability, but there is no verified evidence in the available public sources of a defense contract or deployed military system; those claims should not be inferred.
+"""
+
+logo = "https://www.seal.security/favicon.ico"
+website = "https://www.seal.security"
+sector = "Software Supply Chain Security"
+founded = "2022"
+headquarters = "Tel Aviv, Israel"
+employees = "11-50"
+funding_stage = "Series A ($13M announced July 2025; $20M total stated by company)"
+entity_type = "startup"
+
+dual_use = true
+dual_use_description = "Seal's core remediation technology has substantive commercial and security-sector applicability because both enterprise software and defense or critical-infrastructure systems depend on vulnerable open-source components. In-place patching can reduce exposure without forcing disruptive upgrades, which is relevant to long-lived mission-support and contractor systems. The dual-use case is limited to software resilience: there is no public evidence here of defense deployment, classified workloads, or a government contract, and air-gapped environments, certification, provenance, and change-control requirements may materially constrain adoption."
+
+key_technologies = [
+  "In-place backporting of security fixes into existing open-source dependency versions",
+  "Remediation of direct and transitive application dependencies across software ecosystems",
+  "Linux package, container base-image, and end-of-life distribution patching",
+  "CI/CD-integrated Seal CLI and source-control workflow automation",
+  "Automated regression testing plus human security-researcher review of generated patches",
+  "Curated sealed artifacts with provenance, policy, and audit controls"
+]
+
+use_cases = [
+  "Closing critical and high-severity CVE backlogs in enterprise applications without forced major-version upgrades",
+  "Patching vulnerable transitive dependencies that application teams do not directly control",
+  "Maintaining security coverage for end-of-life Linux distributions and legacy runtime environments",
+  "Hardening container base images and release artifacts before deployment",
+  "Providing auditable remediation evidence for PCI DSS, FedRAMP, DORA, and similar obligations",
+  "Reducing exposure windows in defense-contractor and critical-infrastructure software pipelines",
+  "Giving AppSec teams a remediation layer that complements existing SCA and vulnerability scanners"
+]
+
+investible = true
+investment_rationale = "Seal addresses a persistent operational gap between vulnerability discovery and safe remediation. The 2025 Series A, stated $20M total funding, focused product positioning, and public remediation metrics indicate meaningful early commercial momentum, while the company remains small enough for technical and go-to-market execution risk to matter. Strategic diligence should test patch correctness, reproducibility, package coverage, customer retention, economics of researcher review, and the degree to which scanners and platform vendors can replicate or bundle the capability. This is a legacy internal priority signal and not an investment recommendation."
+
+strategic_value = "Seal can contribute to allied software-supply-chain resilience by reducing the time that exploitable open-source components remain in enterprise, contractor, and critical-infrastructure systems. Its strongest strategic value is as a remediation layer that can fit existing CI/CD and scanner investments, including difficult legacy or end-of-life environments. Value is conditional on verifiable provenance, reproducible builds, secure operation in restricted networks, and acceptance by customers with formal change-control and certification regimes."
+
+potential_score = 81.0
+technology_score = 84.0
+market_score = 82.0
+team_score = 78.0
+dual_use_score = 83.0
+strategic_alignment_score = 86.0
+
+stage = "early"
+stage_rationale = "Seal remains an independent, privately held startup founded in 2022 and announced its Series A in July 2025. Funding and reported customer-growth signals support a transition from product validation toward go-to-market scaling, but public evidence does not establish mature recurring revenue, retention, or broad deployment. The appropriate diligence posture is early-stage scale-up: validate commercial repeatability and technical coverage before treating growth claims as durable."
+
+competitors = [
+  "Snyk",
+  "Mend.io",
+  "Checkmarx",
+  "GitLab and GitHub dependency-security tooling",
+  "Phylum",
+  "Socket",
+  "Chainguard"
+]
+
+competitive_edge = "Seal's differentiation is a remediation-first workflow focused on backporting fixes into the versions customers already run, including transitive dependencies, Linux packages, containers, and end-of-life distributions. That can complement rather than replace existing scanners and may avoid breaking upgrades. The edge is credible but execution-dependent: competitors can add automated pull requests, curated artifacts, and AI-assisted remediation, so Seal must demonstrate superior patch correctness, breadth, speed, provenance, and measurable reductions in customer remediation time."
+
+risk_factors = [
+  "Large AppSec and developer-platform vendors can bundle vulnerability remediation into broader suites, compressing standalone pricing and distribution advantages.",
+  "An incorrect backport or incomplete regression test can introduce production failures or new security defects, making trust and liability central adoption risks.",
+  "Open-source package diversity, language-specific build systems, and absent upstream fixes make broad, repeatable coverage technically expensive.",
+  "Defense, regulated, and critical-infrastructure buyers may require air-gapped operation, formal certification, reproducible provenance, and lengthy change-control processes.",
+  "Public customer, revenue, retention, and gross-margin evidence is limited; company-reported fixes and hours saved require independent validation.",
+  "The service may depend on ongoing expert security-research review, creating scaling and unit-economics risk as vulnerability volume grows.",
+  "Customers may resist adding a remediation layer when existing scanners, package maintainers, or internal platform teams appear sufficient."
+]
+
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Retain as a strategic-diligence priority because Seal combines a credible software-resilience use case, early commercial validation, and a defensible potential fit with defense-contractor and critical-infrastructure supply chains. The score reflects meaningful upside but not verified defense adoption or mature business metrics; diligence should focus on independently measurable remediation quality, recurring commercial traction, restricted-environment deployment, and competitive defensibility."
+
+public_sources = [
+  "https://www.seal.security/company/about",
+  "https://www.seal.security/blog/seal-security-raises-13m-series-a-to-secure-open-source-code-at-scale",
+  "https://www.seal.security/blog/how-were-securing-our-own-supply-chain",
+  "https://www.linkedin.com/company/seal-cybersecurity",
+  "https://www.linkedin.com/posts/alon-navon-418031204_vulnerability-management-is-usually-a-race-activity-7415030217582444544-nFsP"
+]
+
+crawled_at = "2026-02-15T16:28:54Z"
+updated_at = "2026-07-31T18:12:21Z"

@@ -1,0 +1,294 @@
+name = "Caesarea Labs"
+description = "Caesarea Labs is an Israeli semiconductor-software startup building an EDA, MES, and automation platform for post-silicon validation. Its first product automates Circuit Edit design, shortening the manual loop between chip designers and focused-ion-beam laboratories while protecting sensitive layout information."
+detailed_description = """
+**Product and the concrete problem it solves.** Caesarea Labs is focused on a neglected but expensive part of chip development: validating the physical silicon after fabrication. Pre-silicon EDA has mature simulation, emulation, and design workflows, but post-silicon validation still requires engineers, lab operators, and chip designers to exchange measurements, hypotheses, layouts, and repair instructions by hand. As modern SoCs become more heterogeneous and process geometries shrink, a bug that escapes simulation can delay a product, consume scarce lab capacity, and force a costly respin or a firmware workaround. The company’s first product targets Circuit Edit, the process of creating a physical modification to a chip with a focused-ion-beam (FIB) tool so engineers can test a repair or prototype a design change without fabricating a new mask set. Caesarea Labs says the typical Circuit Edit design loop can take weeks or months because a designer creates a layout-level edit, a lab reviews it, the teams iterate on feasibility, and only then can the lab execute the change. Its platform turns that exchange into a controlled software workflow. The broader product vision includes a dedicated post-silicon EDA suite, a manufacturing-execution layer for scheduling and resource allocation, and tool automation for higher utilization and automatic diagnostics.
+
+**Core technology and how it actually works.** The first workflow is more specific than an AI assistant layered over an engineering dashboard. Caesarea Labs describes three linked steps: bug localization combines pre-silicon simulation with post-silicon methods such as optical debug and system validation to narrow a failure to a device or signal; a design engineer expresses a solution hypothesis at the electrical-schematic level; and the platform translates that hypothesis into the precise layout-level Circuit Edit instructions that a FIB operator needs, including connection points and metal layers. The automation therefore sits between engineering intent and physical lab execution. The company’s public comparison claims a move from manual, multi-week iteration to an asynchronous process that can generate a design in minutes, but the figures are company targets and should not be treated as independently benchmarked results. Security is part of the technical design rather than an afterthought. The official site says full-chip layout data remains in the customer’s own on-premises or private-cloud infrastructure, only the minimally scoped and redacted subset needed for an edit is exported, and the transmitted data is segmented through a proprietary multipath mechanism intended to prevent reconstruction of the original layout. The practical diligence question is whether this redaction and routing model is secure, interoperable with real FIB tools, and reliable across advanced backside-power and multi-die designs.
+
+**Market, customers, and go-to-market.** The target market is a narrow but valuable B2B segment: semiconductor IDMs and fabless chip companies with internal post-silicon validation teams, independent validation laboratories that serve multiple chipmakers, foundries involved in prototyping or mask repair, and academic or research institutions operating FIB-capable equipment. The customer is likely an engineering, validation, or lab-operations leader rather than a general software buyer. Caesarea Labs can enter through Circuit Edit design and expand into scheduling, test-procedure management, utilization, data collection, and diagnostics if the initial workflow becomes embedded in a customer’s lab. That land-and-expand path is attractive because a chipmaker’s validation process contains several adjacent manual handoffs, but it also means the company must integrate with proprietary design databases, lab procedures, FIB vendor tooling, access-control systems, and customer security policies. The Israel Innovation Authority’s 2025 delegation material describes Caesarea Labs as a semiconductor company specializing in post-silicon validation EDA, MES, and automation, and the company’s own site explicitly calls for pilots with Circuit Edit labs and early access for chip-design teams. These signals establish a coherent buyer and product motion, not proof of paid production deployment. Public sources do not name customers, disclose annual recurring revenue, or establish conversion from pilot to repeat license.
+
+**Traction, funding, and third-party validation.** The company appears to have been incorporated in Israel in July 2023 and to have operated as a very early-stage startup since then. Dealroom lists Caesarea Labs as founded in 2023, with two 2024 seed entries of approximately $170,000 and $120,000 and investors including Alchemist Accelerator, Forum Ventures, Right Side Capital Management, and Techstars; the amounts are third-party database figures and are not presented as company-announced round totals. IVC’s profile describes a five-person semiconductor company at seed stage and identifies Moshe Noy as CEO and co-founder. External ecosystem validation is unusually useful for such a young and private company. The Israel Innovation Authority included it in an Israeli semiconductor delegation to South Korea, where the company described its EDA, MES, and automation products. Caesarea Labs was also selected as a winner of the IC Taiwan Grand Challenge Batch 4 in the Smart Manufacturing category, according to the InnoVEX announcement, which describes its end-to-end Circuit Edit automation and a recently acquired Panasonic digital-privacy patent, US9946894B2. Techstars’ company page independently places the startup in Tel Aviv-Yafo and describes its post-silicon validation focus. These are credible ecosystem and product-definition signals, but there is no public evidence of large customer contracts, production-volume deployment, audited revenue, silicon validation success rates, or a completed enterprise-scale rollout.
+
+**Founders and team background.** Caesarea Labs’ founding logic depends on a rare combination of domain and software experience. The official site identifies Moshe Noy as founder and CEO and describes him as a post-silicon validation domain expert with insider knowledge of the target segment, including experience associated with Intel and SanDisk. It identifies Oleg Shamray as CTO and lead engineer, with EDA development and machine-learning or AI expertise and a connection to Intel and the Technion. This pairing matters because the target market has two different credibility gates: chip companies will need confidence that the product understands physical validation, lab constraints, and designer responsibilities, while technical buyers will expect software that fits existing semiconductor workflows rather than a generic manufacturing application. The company’s public team appears small, and IVC lists five employees; that lean structure can support focused product development but leaves limited redundancy for enterprise integrations, security assurance, sales engineering, and support across international semiconductor customers. The public record does not establish the founders’ exact prior job titles, patent ownership, or the size of the wider engineering team, so those details should not be inferred from the brand associations. The most supportable assessment is a specialist founding team with unusually direct problem proximity, still operating before the organizational scale normally associated with mission-critical semiconductor infrastructure.
+
+**Competitive dynamics.** Caesarea Labs competes across several layers rather than against one identical startup. Synopsys and Cadence dominate broad EDA budgets and could extend adjacent validation workflows, while Keysight Technologies and Advantest bring established electronic-design, measurement, and automated-test relationships. Tessolve and other semiconductor engineering-service providers can perform validation work or build bespoke tools around customer labs. proteanTecs is a particularly close local conceptual neighbor, but it solves a different problem: its embedded monitoring agents and analytics collect telemetry from inside chips across production and field operation, whereas Caesarea Labs is automating the external post-silicon design, lab-management, and FIB-edit process. The startup’s potential edge is therefore a focused workflow moat: (1) domain-specific translation from schematic hypothesis to FIB-executable layout; (2) an MES layer that can connect design jobs, lab capacity, procedures, and results; (3) security controls that minimize the amount of proprietary chip layout shared with external labs; and (4) a narrow wedge into a workflow that is costly, slow, and still poorly served by general EDA. That edge is not proven. Incumbents have distribution, integration teams, and installed data, while customers may use internal scripts, existing EDA customization, service providers, or additional ATE and DFT investment instead. Caesarea Labs must show that automation improves successful-edit rate and time-to-learning without creating new verification or IP risks.
+
+**Defense, security, and resilience dual-use relevance.** The dual-use case is enabling rather than direct: Caesarea Labs does not publicly present itself as a defense contractor, and the public sources reviewed do not establish military customers or defense programs. Its relevance comes from the role of post-silicon validation in the trusted electronics supply chain. Defense, aerospace, secure communications, radar, industrial-control, and critical-infrastructure systems depend on chips that behave predictably under temperature, power, radiation, aging, and unusual workload conditions. A faster and more auditable way to localize and test physical silicon defects can reduce the time required to qualify mission electronics, improve the ability to diagnose failures without immediately respinning a chip, and help sensitive organizations keep proprietary layouts within controlled infrastructure. The company’s own security architecture—on-premises or private-cloud processing, redacted exports, and constrained data transmission—also maps to environments where semiconductor IP is highly sensitive. The strategic connection should remain calibrated: workflow automation does not itself provide tamper resistance, radiation qualification, hardware-rooted trust, or assurance that a chip is free of malicious alterations. Its value is as a potential productivity and confidentiality layer for high-assurance electronics development. Validation should focus on chain-of-custody controls, audit logs, integration with classified or export-controlled programs, secure deployment architecture, and whether defense-oriented customers will accept a young vendor in a workflow that can influence hardware qualification decisions.
+
+**Growth stage, trajectory, and key diligence risks.** Caesarea Labs is best classified as early. Its legal entity dates to 2023, the public team is approximately five people, third-party databases show only small 2024 seed entries, and the official site still emphasizes pilots and early access rather than broad production availability. At the same time, the product definition is concrete, the company has appeared in semiconductor-focused government and accelerator programs, and its InnoVEX recognition indicates progress beyond an unexplained concept. The trajectory depends on converting a painful but specialized workflow into a repeatable enterprise product. The main diligence risks are: (1) **technical validation**—the claimed speed and design-success improvements need reproducible tests on real advanced-node designs and FIB processes; (2) **integration friction**—each customer may have different EDA databases, lab tools, security boundaries, and approval workflows; (3) **market narrowness**—Circuit Edit is valuable but niche, and the broader MES and automation expansion could require a much larger product organization; (4) **incumbent response**—Synopsys, Cadence, Advantest, Keysight, or service providers can bundle adjacent functionality; (5) **IP and security risk**—a breach or incorrect edit involving proprietary layouts would be disproportionately damaging; (6) **capital and support risk**—small financing and headcount may be insufficient for semiconductor-grade international sales and implementation; and (7) **patent uncertainty**—the InnoVEX article reports acquisition of a Panasonic privacy patent, but the public record does not establish its ownership scope, freedom to operate, or relevance to the full product. Milestones to track are named pilot customers, paid conversion, measured edit-success and cycle-time data, secure deployment references, additional financing, and evidence that the EDA/MES platform expands beyond one specialized workflow.
+"""
+logo = "Unknown"
+website = "https://www.caesarealabs.com"
+sector = "Semiconductor EDA / Post-Silicon Validation and Chip-Test Automation"
+founded = "2023"
+headquarters = "Tel Aviv-Yafo, Israel (company and government profiles; an IVC profile lists a Tel Aviv address)"
+employees = "About 5 (IVC profile; profile date/current headcount not established)"
+funding_stage = "Pre-seed/seed; third-party databases list two 2024 seed entries ($170,000 in June and $120,000 in September), with no company-announced totals located"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Caesarea Labs has credible dual-use relevance at the semiconductor-assurance and resilience layer, although no public source reviewed establishes a defense customer or military program. Commercial chipmakers, independent validation labs, foundries, and research institutions can use the platform to automate Circuit Edit design, lab scheduling, and post-silicon diagnostics. The same controlled workflow could support defense, aerospace, secure communications, radar, industrial-control, and critical-infrastructure electronics where proprietary layouts, validation evidence, and failure analysis must remain auditable and protected. The on-premises or private-cloud posture, redacted layout exports, and scoped data transmission are relevant to sensitive supply-chain environments. This is enabling infrastructure for trusted electronics development, not a fielded defense capability; the score is discounted for the absence of disclosed defense deployments, security accreditation, or independently validated assurance outcomes."
+key_technologies = [
+  "Automated Circuit Edit design translating electrical-schematic hypotheses into FIB-executable layout instructions",
+  "Post-silicon bug localization combining pre-silicon simulation, optical debug, and physical silicon validation inputs",
+  "Post-silicon EDA workflow for chip rapid prototyping and physical silicon repair experiments",
+  "Manufacturing-execution software for validation-job scheduling, resource allocation, and results management",
+  "Automation and diagnostics for focused-ion-beam and semiconductor validation laboratory tools",
+  "On-premises or private-cloud processing with redacted chip-layout exports and controlled data transmission",
+  "Secure, asynchronous collaboration layer between chip designers, validation engineers, and FIB laboratories"
+]
+use_cases = [
+  "Rapid Circuit Edit experiments to test silicon repairs without immediately fabricating a new mask set",
+  "Post-silicon debug and root-cause analysis for advanced CPU, GPU, AI-accelerator, and system-on-chip designs",
+  "Internal semiconductor validation-lab scheduling, capacity management, and test-procedure coordination",
+  "Independent FIB and post-silicon validation service providers serving multiple chipmaker customers",
+  "Foundry prototyping, physical debug, and adjacent automated mask-repair workflows",
+  "Academic and government semiconductor research centers operating FIB-capable equipment",
+  "High-assurance validation of chips intended for defense, aerospace, secure communications, and critical infrastructure",
+  "Secure collaboration on sensitive chip layouts where only a minimally scoped edit should leave the designer's environment"
+]
+investible = true
+investment_rationale = "Caesarea Labs is a focused strategic-priority signal because it addresses a specific semiconductor bottleneck that broad EDA suites have historically under-served. (1) The problem is economically real: post-silicon failures and manual Circuit Edit iteration can delay products, consume scarce FIB capacity, and force expensive respins. (2) The product wedge is unusually concrete, with a defined translation from engineering hypothesis to physical edit plus adjacent MES and lab automation expansion. (3) The team combines direct post-silicon validation experience with EDA software and AI capability, while government, accelerator, and semiconductor-program recognition provide early ecosystem validation. (4) The strategic case extends into trusted-electronics resilience through protected layout handling and more auditable validation workflows. The counterweights are substantial: only small third-party-reported seed entries, approximately five employees, no named customers or disclosed revenue, unproven performance claims, a narrow initial market, and strong incumbent and services competition. The legacy investible flag reflects relevance for structured diligence, not an investment recommendation."
+strategic_value = "Caesarea Labs could strengthen strategic semiconductor capacity by improving the feedback loop between fabricated silicon and the engineers responsible for fixing it. (1) Faster post-silicon learning can reduce dependence on immediate respins and improve the resilience of domestic or allied chip-development programs. (2) A secure, scoped exchange of layout data addresses a real supply-chain concern when validation is shared with specialist labs or external manufacturing partners. (3) MES and tool automation could make scarce validation infrastructure more observable and productive, which matters for advanced compute, communications, sensing, and defense electronics. (4) The company’s Israeli location and semiconductor focus fit a broader allied-technology diversification thesis. Strategic value remains conditional: the startup must prove its workflow on real designs, preserve auditability, and earn acceptance from chipmakers whose IP and qualification processes are unusually sensitive."
+potential_score = 72.0
+technology_score = 82.0
+market_score = 70.0
+team_score = 76.0
+dual_use_score = 66.0
+strategic_alignment_score = 80.0
+stage = "early"
+stage_rationale = "Caesarea Labs is early because it was incorporated in 2023, has a publicly reported team of about five people, and remains described through pilots, early access, accelerator programs, and small third-party-reported 2024 seed entries. It is beyond an unformed concept: the official product is specified around Circuit Edit design, the company has a broader EDA/MES/automation roadmap, and Israel Innovation Authority and InnoVEX materials independently describe the same post-silicon validation thesis. Public sources do not establish named production customers, recurring revenue, broad lab deployment, or a completed enterprise rollout. Progression toward mid-stage would require paid design-ins, measured workflow outcomes, supportable security controls, repeatable integrations, and a financing and hiring plan capable of serving international semiconductor customers."
+competitors = [
+  "Synopsys (dominant EDA incumbent with broad semiconductor design and verification relationships)",
+  "Cadence Design Systems (EDA and digital-design incumbent that can extend into adjacent validation workflows)",
+  "Keysight Technologies (electronic design, measurement, and silicon-validation tool ecosystem)",
+  "Advantest (automated semiconductor test equipment and established test-program relationships)",
+  "Tessolve (semiconductor engineering and validation services that can substitute for or customize tooling)",
+  "proteanTecs (Israeli on-chip monitoring and analytics platform addressing silicon health from inside the device)"
+]
+competitive_edge = "Caesarea Labs’ potential edge is workflow specialization rather than a new semiconductor process technology. (1) It targets Circuit Edit design, a hand-built interface between chip designers and FIB laboratories that general-purpose EDA vendors have not visibly productized as a dedicated category. (2) Its planned combination of post-silicon EDA, MES, and lab automation could connect design intent, physical execution, capacity, and results instead of optimizing only one tool. (3) The redaction and private-deployment model may lower the IP-exposure cost of using external validation labs. (4) Founder proximity to the post-silicon problem can support better domain fit than a generic manufacturing-software entrant. The edge remains prospective: incumbents have installed bases, customers can build scripts or use engineering services, and the startup must show that automated edits are both faster and as trustworthy as expert manual work across advanced-node designs."
+risk_factors = [
+  "Unverified performance claims: official targets for 100x faster design, 100% design success, and 10x lower cost require independent tests on real chips and FIB workflows",
+  "Small-company execution risk: approximately five publicly reported employees may limit international sales engineering, security assurance, integration, and support capacity",
+  "Narrow initial market: Circuit Edit is valuable but specialized, and broader MES or tool-automation expansion may require substantially more product breadth",
+  "Incumbent and services competition: Synopsys, Cadence, Keysight, Advantest, and semiconductor engineering firms have deeper relationships and resources",
+  "Sensitive IP and security exposure: a compromised or incorrect layout edit could damage customer trust and create serious semiconductor intellectual-property consequences",
+  "Integration complexity: customer EDA databases, FIB equipment, lab procedures, access controls, and approval chains are heterogeneous and difficult to standardize",
+  "Funding and traction uncertainty: public sources do not disclose named customers, recurring revenue, production deployments, or audited financing totals"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Caesarea Labs merits tracking as a rare Israeli semiconductor-infrastructure startup aimed at post-silicon validation rather than another general AI or chip-design claim. (1) Its Circuit Edit wedge addresses a concrete manual bottleneck in the physical-silicon feedback loop. (2) The product can expand into MES and validation-lab automation, creating a plausible workflow platform if the first module is adopted. (3) Government, accelerator, and semiconductor ecosystem references support that the company is a real active entity with a defined technical thesis. (4) Secure handling of proprietary layouts gives the platform strategic relevance for trusted and allied electronics supply chains. Priority is capped by early commercialization, small capitalization and headcount, no named customers or revenue, unverified benchmark claims, and strong incumbent competition. Milestones that would raise priority include paid chipmaker or FIB-lab deployments, reproducible cycle-time and edit-success data, independent security validation, and evidence of repeatable expansion into MES or lab automation. This is a diligence priority, not an investment recommendation."
+public_sources = [
+  { label = "Caesarea Labs — Official Website", url = "https://www.caesarealabs.com/", description = "Official product, operating status, founders, product milestones, performance claims, security posture and customer outreach." },
+  { label = "Israel Innovation Authority — Israeli Delegation to South Korea", url = "https://innovationisrael.org.il/en/israeli-delegation-to-south-korea/", description = "Government profile confirming Israeli semiconductor company and post-silicon EDA, MES and automation focus." },
+  { label = "InnoVEX — ICTGC Batch 4 Winner Introduction: Caesarea Labs", url = "https://innovex.computex.biz/SHOW/newsReleaseDetails.aspx?newsId=818", description = "Program announcement and award; prior record also attributed a Panasonic patent acquisition claim to this page, not independently reverified here." },
+  { label = "Techstars — Tel Aviv Accelerator Class, September 2024", url = "https://www.techstars.com/newsroom/tel-aviv-accelerator-class-announcement-september-2024", description = "Techstars confirms Caesarea Labs' inclusion in the 2024 Tel Aviv accelerator class." },
+  { label = "Dealroom — Caesarea Labs", url = "https://app.dealroom.co/companies/caesarea_labs", description = "Third-party profile listing June and September 2024 seed entries, investors and a reported valuation; not company-announced funding." },
+  { label = "Google Patents — US9946894B2", url = "https://patents.google.com/patent/US9946894B2/en", description = "Patent bibliographic and assignment record; the displayed current assignee is Piece Future Pte Ltd." },
+  { label = "IVC — Caesarea Labs Ltd.", url = "https://www.ivc-online.com/Google-Card?id=6e48aa62-d686-ee11-b812-00505695cd29", description = "Israeli company profile with Tel Aviv address, five-person headcount listing, founder and historical financing entries; some fields are redacted or stale." },
+  { label = "Techstars — Caesarea Labs profile", url = "https://jobs.techstars.com/companies/caesarea-labs", description = "Accelerator profile identifying the startup and product area." }
+]
+crawled_at = "2026-08-31T23:49:36Z"
+updated_at = "2026-10-04T12:17:53Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Moshe Noy", role = "Founder & CEO", is_founder = true, current = true, background = "Company site describes him as a post-silicon validation domain expert and lists prior Intel and SanDisk experience.", source_ids = ["official", "ivc"] },
+  { name = "Oleg Shamray", role = "CTO & Lead Engineer", is_founder = false, current = true, background = "Company site describes him as an experienced EDA developer with software and ML/AI expertise and lists Intel and Technion.", source_ids = ["official"] },
+  { name = "Lior Falach", role = "Co-founder (historical profile; current role unknown)", is_founder = true, current = false, background = "IVC lists Dr. Lior Falach as co-founder; the current company site does not list him.", source_ids = ["ivc"] }
+]
+investors = [
+  { name = "Alchemist Accelerator", investor_type = "accelerator", website = "https://www.alchemistaccelerator.com/", round_ids = [], relationship = "historical", source_ids = ["dealroom"], notes = "Dealroom lists this entity among company-level investors; no round-level attribution located." },
+  { name = "Forum Ventures", investor_type = "vc", website = "https://www.forumvc.com/", round_ids = [], relationship = "historical", source_ids = ["dealroom"], notes = "Dealroom lists this entity among company-level investors; no round-level attribution located." },
+  { name = "Right Side Capital Management", investor_type = "vc", website = "https://rightsidecapital.com/", round_ids = [], relationship = "historical", source_ids = ["dealroom"], notes = "Dealroom lists this entity among company-level investors; no round-level attribution located." },
+  { name = "Techstars", investor_type = "accelerator", website = "https://www.techstars.com/", round_ids = [], relationship = "historical", source_ids = ["dealroom"], notes = "Dealroom lists this entity among company-level investors; Techstars separately confirms accelerator-class participation. Investment terms and round attribution are not public." }
+]
+financials = []
+traction = []
+intellectual_property = [
+  { kind = "patent", date = "2026-06-21", description = "InnoVEX reports that Caesarea Labs recently acquired Panasonic's US9946894B2 patent, titled Data processing method and data processing device. Google Patents records an April 27, 2026 assignment from Panasonic Intellectual Property Management Co. Ltd. to Piece Future Pte Ltd, not Caesarea Labs. Beneficial ownership, an onward assignment, license, or relationship to Piece Future was not established; company ownership is unconfirmed.", source_ids = ["innovex", "patent"] }
+]
+comparables = []
+
+[intelligence.company]
+company_id = "il-caesarea-labs"
+legal_name = "Caesarea Labs Ltd."
+aliases = ["Caesarea Labs", "Caesarea Labs Ltd."]
+operating_status = "active"
+business_model = "B2B semiconductor engineering software; public materials invite labs to pilot and chip design teams to request early access."
+products = ["Circuit Edit Designer: automated layout-level design from an engineer's solution hypothesis; stated by the company to be shipping now", "Circuit Edit Professional: lab-facing product offered for piloting", "Broader post-silicon validation EDA, MES and tool automation roadmap"]
+locations = ["Tel Aviv-Yafo, Israel"]
+founded_on = "2023"
+source_ids = ["official", "gov", "dealroom", "ivc"]
+notes = "Current official site remains active and offers contact, pilot and early-access paths. Dealroom gives a 2023 launch date. IVC lists Tel Aviv as its address; the prior record's Karmiel registry-address claim is not carried forward as headquarters. Exact legal identity is reflected in the historical IVC profile; a primary registry extract was not found in this pass."
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel"]
+summary = "The company identifies as an Israeli semiconductor company; the Israel Innovation Authority includes it in an Israeli company delegation, and IVC lists a Tel Aviv address."
+as_of = "2026-10-04"
+source_ids = ["gov", "ivc"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Dealroom lists two 2024 seed entries: $170,000 in June and $120,000 in September, with the latter accompanied by a listed $850,000 valuation. IVC independently shows June 1 and September 9 seed entries but redacts amount and valuation. No company or investor announcement confirming amounts, terms, or whether September is incremental versus cumulative was located. Do not treat the database entries as verified company-announced totals."
+rounds = [
+  { id = "seed-jun-2024", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2024-06", amount_status = "reported", amount = 170000, currency = "USD", amount_scope = "unknown", lead_investors = [], participating_investors = [], source_ids = ["dealroom", "ivc"], notes = "Dealroom lists $170,000; IVC shows a June 1 seed entry but redacts its amount and investor name. Terms, close date, and investor attribution to this particular entry are not publicly established." },
+  { id = "seed-sep-2024", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2024-09-09", amount_status = "reported", amount = 120000, currency = "USD", amount_scope = "unknown", lead_investors = [], participating_investors = [], source_ids = ["dealroom", "ivc"], notes = "Dealroom lists $120,000 and a $850,000 'valuation' alongside this entry, but does not clarify valuation type or basis, so no valuation is asserted in a structured valuation field. IVC shows a September 9 seed entry but redacts amount and valuation. No primary announcement or terms located; database does not resolve whether amount is incremental or cumulative." }
+]
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[intelligence.ownership]
+status = "not_found"
+summary = "No public cap table, ownership percentages, parent, or company-level ownership transaction was located. Private-company ownership is undisclosed in the reviewed public sources."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["official", "dealroom", "ivc"]
+deals = []
+holdings = []
+
+[intelligence.research]
+researched_at = "2026-10-04T12:17:53Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Caesarea Labs official company product founders", "Caesarea Labs funding raised seed investors valuation acquired founder", "Caesarea Labs revenue customers employees traction", "Caesarea Labs patents", "Caesarea Labs competition post-silicon validation EDA Circuit Edit", "Caesarea Labs defense security dual use", "site:techstars.com Caesarea Labs", "site:innovationisrael.org.il Caesarea Labs", "Caesarea Labs מימון משקיעים גיוס", "Caesarea Labs Panasonic patent acquisition InnoVEX"]
+gaps = ["intellectual_property: InnoVEX reports acquisition of US9946894B2 by Caesarea Labs, but the patent assignment history lists Piece Future Pte Ltd as current assignee and does not show Caesarea Labs; ownership, onward transfer or license needs documentary confirmation", "team: official site names Moshe Noy and Oleg Shamray but does not provide dated biographies or a complete current roster; no verified current headcount", "investors: Dealroom provides an aggregate investor list but round-level attribution and investment amounts are unavailable; IVC investor fields are redacted", "financials: no public revenue, ARR, profitability, burn or runway disclosure located", "traction: official site seeks pilots and early access; no named paying customers, production deployment, or quantified independent results located", "competition: peer set is based on adjacent products and services; no public head-to-head evaluations located", "ownership: private cap table and percentages unavailable; exact primary registry extract not obtained", "funding: company-announced lifetime amount and round terms unavailable; the two database entries' cumulative versus incremental scope is unresolved"]
+conflicts = ["Dealroom reports $170,000 (June 2024) and $120,000 (September 2024), and a $850,000 valuation for September; IVC confirms two dated seed entries but redacts their amounts and valuation. The figures are therefore reported database claims, not independently corroborated company disclosures. Dealroom's $290,000 arithmetic total is not represented as a company-announced lifetime total.", "IVC lists five employees and a Tel Aviv address but also an establishment year of 2020; Dealroom lists launch date 2023. The incorporation/founding date remains uncertain; prior cited registry page is not independently reverified in this refresh."]
+diligence_questions = ["Can the company provide customer-approved benchmark data for design cycle time, FIB acceptance rate, and successful physical edits across representative process nodes and design types?", "Which pilots have converted to paid deployments, what is the number of active design teams or labs, and what recurring revenue and renewal evidence exists?", "Can the company document round-by-round financing, investor identities and terms, and clarify whether the June and September 2024 database entries are separate incremental closings?", "What threat model, independent security review, and customer-controlled deployment evidence support the proprietary layout-redaction and multipath-transfer claims?", "What is the current product scope and team roster, and which EDA databases and FIB toolchains have been integrated in customer environments?"]
+sources = [
+  { id = "official", url = "https://www.caesarealabs.com/", title = "Caesarea Labs — Post-Silicon Validation, Automated", publisher = "Caesarea Labs", kind = "company", accessed_at = "2026-10-04T12:17:53Z", claims = ["The company presents itself as building post-silicon validation EDA beginning with automated Circuit Edit design.", "Official product page labels Circuit Edit design shipping now and Circuit Edit execution in development.", "The website invites Circuit Edit labs to pilot and chip design teams to request early access.", "The company names Moshe Noy as Founder and CEO and Oleg Shamray as CTO and Lead Engineer.", "Performance and security statements are company claims and are not independently validated by this source."] },
+  { id = "gov", url = "https://innovationisrael.org.il/en/israeli-delegation-to-south-korea/", title = "Israeli Delegation to South Korea", publisher = "Israel Innovation Authority", kind = "government", accessed_at = "2026-10-04T12:17:53Z", claims = ["The government profile identifies Caesarea Labs in the semiconductor sector and describes its Israeli post-silicon validation EDA, MES and automation focus."] },
+  { id = "innovex", url = "https://innovex.computex.biz/SHOW/newsReleaseDetails.aspx?newsId=818", title = "ICTGC Batch 4 Winner Introduction: Caesarea Labs", publisher = "InnoVEX / COMPUTEX", kind = "other", accessed_at = "2026-10-04T12:17:53Z", published_on = "2026-06-21", claims = ["InnoVEX identifies Caesarea Labs as an Israel-based startup and IC Taiwan Grand Challenge Batch 4 Smart Manufacturing winner.", "InnoVEX reports that Caesarea Labs recently acquired Panasonic's US9946894B2 patent; the source does not give transaction details or chain-of-title evidence.", "InnoVEX describes automated translation from schematic hypotheses to layout-level Circuit Edit designs and reports the company's development claims."] },
+  { id = "patent", url = "https://patents.google.com/patent/US9946894B2/en", title = "US9946894B2 — Data processing method and data processing device", publisher = "Google Patents", kind = "other", accessed_at = "2026-10-04T12:17:53Z", claims = ["The patent record identifies Panasonic Intellectual Property Management Co Ltd as original assignee and Piece Future Pte Ltd as current assignee.", "The patent record lists an April 27, 2026 assignment from Panasonic Intellectual Property Management Co Ltd to Piece Future Pte Ltd.", "The publicly displayed chain does not identify Caesarea Labs as assignee."] },
+  { id = "techstars", url = "https://www.techstars.com/newsroom/tel-aviv-accelerator-class-announcement-september-2024", title = "Tel Aviv Accelerator Class Announcement September 2024", publisher = "Techstars", kind = "investor", accessed_at = "2026-10-04T12:17:53Z", published_on = "2024-09", claims = ["Techstars listed Caesarea Labs among its Tel Aviv 2024 accelerator class companies."] },
+  { id = "dealroom", url = "https://app.dealroom.co/companies/caesarea_labs", title = "Caesarea Labs company information, funding & investors", publisher = "Dealroom.co", kind = "directory", accessed_at = "2026-10-04T12:17:53Z", claims = ["Dealroom lists a 2023 launch date and Tel Aviv-Yafo headquarters.", "Dealroom lists a $170,000 June 2024 seed entry and a $120,000 September 2024 seed entry.", "Dealroom lists $850,000 valuation with the September 2024 seed entry.", "Dealroom names Alchemist Accelerator, Forum Ventures, Right Side Capital Management and Techstars as investors without round-level attribution."] },
+  { id = "ivc", url = "https://www.ivc-online.com/Google-Card?id=6e48aa62-d686-ee11-b812-00505695cd29", title = "Caesarea Labs Ltd. — IVC Data & Insights", publisher = "IVC", kind = "directory", accessed_at = "2026-10-04T12:17:53Z", claims = ["IVC lists a Tel Aviv, Israel address and five employees, with no as-of date for those profile fields.", "IVC identifies Moshe Noy as CEO and co-founder and Dr. Lior Falach as co-founder; this differs from the current company site, which names Oleg Shamray as CTO.", "IVC displays June 1 and September 9, 2024 seed entries but redacts financing amounts and investor identities."] },
+  { id = "techstars-profile", url = "https://jobs.techstars.com/companies/caesarea-labs", title = "Techstars — Caesarea Labs Company Profile", publisher = "Techstars", kind = "investor", accessed_at = "2026-10-04T12:17:53Z", claims = ["Techstars maintains a company profile for Caesarea Labs describing its post-silicon validation focus."] }
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T12:17:53Z"
+next_review_on = "2027-01-04"
+queries = ["Caesarea Labs official company product founders", "Caesarea Labs legal name Israel company"]
+source_ids = ["official", "gov", "dealroom", "ivc"]
+summary = "Current company and government pages confirm the product identity and Israeli semiconductor focus. The current company site supports active operations; precise legal incorporation details remain unverified in primary registry evidence."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T12:17:53Z"
+next_review_on = "2027-01-04"
+queries = ["Caesarea Labs funding raised seed investors", "Caesarea Labs גיוס seed funding", "Caesarea Labs Series A"]
+source_ids = ["dealroom", "ivc"]
+summary = "Two 2024 seed entries appear in third-party databases; amount and valuation values are published by Dealroom only and remain unconfirmed by company or investor announcements. No later public round found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T12:17:53Z"
+next_review_on = "2027-01-04"
+queries = ["Caesarea Labs investors Alchemist Forum Ventures Right Side Capital Techstars", "Caesarea Labs funding investors"]
+source_ids = ["dealroom", "ivc"]
+summary = "Dealroom lists four investors at company level; IVC investor names are redacted. No primary investor portfolio announcement tied specifically to the company was found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T12:17:53Z"
+next_review_on = "2027-01-04"
+queries = ["Caesarea Labs founders team Moshe Noy Oleg Shamray Lior Falach"]
+source_ids = ["official", "ivc"]
+summary = "The official page names Moshe Noy and Oleg Shamray in CEO and CTO roles; IVC lists Moshe Noy and Lior Falach as founders. Current full roster and detailed biographies are not public."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T12:17:53Z"
+next_review_on = "2027-01-04"
+queries = ["Caesarea Labs acquired ownership parent company", "Caesarea Labs cap table shareholders"]
+source_ids = ["official", "dealroom", "ivc"]
+summary = "No parent, acquisition, ownership percentages, or disclosed cap table located."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T12:17:53Z"
+next_review_on = "2027-01-04"
+queries = ["Caesarea Labs revenue ARR financials customers", "Caesarea Labs burn runway profitability"]
+source_ids = ["official", "dealroom", "ivc"]
+summary = "No dated revenue, ARR, profitability, cash, burn or runway metrics found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T12:17:53Z"
+next_review_on = "2027-01-04"
+queries = ["Caesarea Labs customers pilots deployments", "Caesarea Labs product shipping Circuit Edit"]
+source_ids = ["official", "gov", "innovex"]
+summary = "The official website says Circuit Edit design is shipping now, execution is in development, and solicits pilots/early access. No named customer or independently confirmed production deployment located."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "conflicting"
+checked_at = "2026-10-04T12:17:53Z"
+next_review_on = "2027-01-04"
+queries = ["Caesarea Labs patents", "Caesarea Labs Panasonic patent acquisition", "Caesarea Labs WIPO USPTO"]
+source_ids = ["official", "innovex", "patent"]
+summary = "InnoVEX reports acquisition of Panasonic patent US9946894B2 by Caesarea Labs; the patent record shows a 2026 assignment to Piece Future Pte Ltd and does not list Caesarea Labs. No onward transfer, license or corporate relationship was verified."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T12:17:53Z"
+next_review_on = "2027-01-04"
+queries = ["post-silicon validation EDA Circuit Edit software competitors Synopsys Cadence", "semiconductor Circuit Edit FIB design automation vendors"]
+source_ids = ["official"]
+summary = "The official site frames its product against manual workflows and broad EDA incumbents. Public evidence reviewed does not establish direct head-to-head comparisons or a dedicated incumbent Circuit Edit product."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T12:17:53Z"
+next_review_on = "2027-01-04"
+queries = ["Caesarea Labs defense military government customers", "Caesarea Labs security semiconductor defense application"]
+source_ids = ["official", "gov"]
+summary = "Semiconductor assurance has plausible commercial and defense relevance, but no defense customer, military program, certification, or government contract was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The current official company site presents active products, contact forms, pilot outreach, and early-access offers."
+verified_at = "2026-10-04T12:17:53Z"
+source_ids = ["official"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "The Israel Innovation Authority identifies the company in an Israeli delegation, and IVC lists a Tel Aviv address."
+verified_at = "2026-10-04T12:17:53Z"
+source_ids = ["gov", "ivc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-jun-2024.amount"
+support = "direct"
+summary = "Dealroom explicitly lists a $170,000 June 2024 seed entry; this verifies what the database reports, not a company-confirmed amount."
+verified_at = "2026-10-04T12:17:53Z"
+source_ids = ["dealroom"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-sep-2024.amount"
+support = "direct"
+summary = "Dealroom explicitly lists a $120,000 September 2024 seed entry; this verifies what the database reports, not a company-confirmed amount."
+verified_at = "2026-10-04T12:17:53Z"
+source_ids = ["dealroom"]
+
+[[intelligence.research.claim_checks]]
+field_path = "investors"
+support = "direct"
+summary = "Dealroom's company profile lists Alchemist Accelerator, Forum Ventures, Right Side Capital Management, and Techstars as investors; it does not allocate them to particular rounds."
+verified_at = "2026-10-04T12:17:53Z"
+source_ids = ["dealroom"]

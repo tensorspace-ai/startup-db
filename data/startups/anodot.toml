@@ -1,0 +1,592 @@
+name = "Anodot"
+description = "Anodot provides AI-driven business monitoring and cost management software that detects anomalies across operational and financial telemetry so teams can surface incidents, waste, and budget drift in real time."
+detailed_description = """
+Anodot is positioned around automated anomaly detection for business and operational telemetry, with a current public emphasis on business monitoring and cost management. The company’s homepage describes a platform that detects and groups anomalies across silos to help users find and fix business incidents in real time, and its product schema highlights cloud cost management capabilities such as waste detection, savings tracking, forecasting, and multi-cloud visibility. That combination places the product at the intersection of observability, AIOps, and FinOps rather than in a single narrow analytics niche. In practical terms, Anodot is selling a machine-assisted control layer for organizations that generate more telemetry, spend data, and SaaS usage data than a human team can manually inspect.
+
+Technically, the core challenge is converting noisy, high-volume time-series data into prioritized incidents and business signals. Anodot’s value comes from learning normal patterns, flagging deviations quickly, and grouping related anomalies so operators see a smaller number of more actionable events. That matters when the monitored signals span cloud infrastructure, customer-facing services, internal spend, and operational KPIs. If the detection logic is good enough, it can reduce alert fatigue, shorten triage time, and let finance, operations, and engineering teams work from the same analytic substrate instead of maintaining separate point tools.
+
+The product also appears to be broadening beyond classic alerting. The site’s current framing around cost management suggests that Anodot wants to be useful not only for incident detection but also for financial governance: identifying waste, forecasting budgets, and tracking savings across multi-cloud and SaaS environments. That matters because FinOps buyers often need the same underlying telemetry discipline as observability buyers, but they care about a different set of outputs. A platform that can surface waste, explain spend changes, and connect operational behavior to financial outcomes has a wider buyer base than a pure anomaly-detection widget.
+
+Commercially, the market is attractive but crowded. Observability vendors, IT operations platforms, and FinOps products all overlap with pieces of Anodot’s functionality, and large suites increasingly bundle anomaly detection into broader contracts. That means differentiation has to come from detection quality, integrations, explainability, and workflow fit rather than from anomaly detection as a standalone feature. The strongest commercial case is when a buyer wants one layer that can sit across engineering, finance, and business operations rather than another dashboard for a single department. The weakest case is when the customer already has a broad observability suite and only needs a small amount of anomaly detection.
+
+The competitive context matters because anomaly detection is easy to describe but difficult to operationalize. Buyers usually care about whether a system can learn seasonality, handle sparse or bursty data, suppress false positives, and connect anomalies back to root-cause workflows that humans trust. If Anodot can do that reliably across both business and infrastructure data, it has a more durable position than vendors that only wrap thresholding with an AI label. But the category is still vulnerable to feature absorption by larger platforms, especially when the customer wants consolidated procurement, shared identity management, and a single vendor for observability plus cost governance.
+
+For dual-use analysis, the most credible relevance is in mission assurance, logistics visibility, readiness monitoring, and critical infrastructure oversight where operators need to detect abnormal patterns across complex telemetry streams. The technology is not inherently defense-specific, but it can be adapted to defense, cyber, and industrial environments if it supports deployment controls, data residency, auditability, and constrained-network operation. A defense customer would care less about the commercial FinOps narrative and more about whether the same analytics engine can monitor service availability, infrastructure health, supply flows, and cyber-adjacent telemetry without becoming brittle in restricted networks.
+
+That means the main diligence issue is not theoretical applicability but operational packaging. Can the product be deployed in a way that satisfies security, procurement, and integration requirements? Can it explain why an anomaly matters and what systems are likely affected? Can it survive low-data, high-consequence conditions where operators cannot tolerate noisy suggestions? Those questions determine whether Anodot is a credible dual-use capability or simply a commercial analytics product with adjacent relevance.
+
+Anodot should therefore be evaluated as an established analytics capability with real operational utility, not as a defense-native vendor. Its strongest strategic value lies in the underlying anomaly-detection and telemetry-correlation layer, especially where business monitoring, cloud economics, and operational resilience converge. The company is interesting because it sits in a useful middle zone: more specialized than a broad observability suite, but more general than a one-workflow point solution. """
+logo = "https://www.anodot.com/wp-content/themes/anodot/images/anodot-logo.svg"
+website = "https://www.anodot.com"
+sector = "Business Monitoring / FinOps Analytics"
+founded = "2014"
+headquarters = "Ra'anana, Israel; U.S. operations were reported historically"
+employees = "Unknown; no reliable current headcount located"
+funding_stage = "Acquired by Glassbox (announced November 2025)"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "Anodot’s anomaly detection and telemetry-correlation stack has substantive dual-use value because the same methods that flag cloud cost waste or business incidents can also support mission assurance, logistics monitoring, readiness tracking, and operational resilience in defense and critical-infrastructure settings. The dual-use case is real, but it depends on deployment posture, explainability, and whether the product can operate in constrained, regulated, or partially disconnected environments without losing signal quality."
+key_technologies = [
+  "Unsupervised time-series anomaly detection for metrics, spend, and operational telemetry at scale",
+  "Seasonality-aware baselining and deviation scoring across noisy, high-volume data streams",
+  "Event grouping and incident correlation to reduce alert fatigue and duplicate escalations",
+  "FinOps analytics for cloud cost waste detection, forecasting, and savings tracking",
+  "Streaming analytics connectors for multi-cloud, Kubernetes, SaaS, and observability data sources",
+  "AI-assisted business monitoring and natural-language cost exploration for non-technical operators"
+]
+use_cases = [
+  "Cloud cost management for waste detection, budget drift, and savings tracking across accounts and teams",
+  "Business KPI monitoring for revenue, conversion, and customer-behavior anomalies that need fast explanation",
+  "Infrastructure and application monitoring for incident detection, triage, and pattern-based escalation",
+  "Multi-cloud and Kubernetes telemetry analysis across large distributed estates with heterogeneous tooling",
+  "SaaS and usage-spend monitoring for unexpected consumption spikes, license creep, and shadow growth",
+  "Critical infrastructure monitoring where operators need early warning on abnormal operational patterns",
+  "Defense mission assurance for readiness, logistics, and service-availability telemetry"
+]
+investible = false
+investment_rationale = "The technology is relevant and commercially legible, but the category is crowded and increasingly bundled into larger observability and FinOps platforms. Acquired status further reduces the case for treating Anodot as a standalone priority signal, so the main value is as a capability benchmark rather than a venture-style target. It is still useful to track because it illustrates how anomaly detection can be packaged across business monitoring and cost governance, but that is a strategic monitoring insight rather than a recommendation to pursue the company."
+strategic_value = "Anodot is strategically relevant as an anomaly-detection and telemetry-analysis capability that can inform cloud cost control, operational resilience, and mission assurance. Its value is strongest when the buyer wants a reusable analytics layer across business, IT, and potentially defense workflows rather than a narrowly scoped monitoring tool. From a strategic-diligence perspective, the company is valuable as proof that telemetry analytics can bridge finance, operations, and security-adjacent monitoring in one stack."
+public_sources = [
+  { label = "Glassbox acquisition announcement", url = "https://www.glassbox.com/news/glassbox-anodot-acquisition/", description = "Confirms Glassbox acquired Anodot on November 4, 2025 and describes the integration strategy." },
+  { label = "Anodot Series A announcement", url = "https://www.anodot.com/news-item/anodot-exits-stealth-disrupting-bi-with-real-time-analytics-and-automated-anomaly-detection-secures-3m-in-series-a-funding/", description = "Series A amount, total raised as of 2015, founding date, location and founder biographies." },
+  { label = "Anodot Series C announcement", url = "https://www.anodot.com/?p=7992", description = "Series C amount, investors, reported lifetime funding, revenue growth and customer list." },
+  { label = "Anodot 2020 business momentum announcement", url = "https://www.anodot.com/news-item/anodot-announces-record-business-momentum-in-2020/", description = "Company publication reporting an alternative cumulative funding figure and traction claims." },
+  { label = "Globes 2017 funding report", url = "https://www.globes.co.il/news/article.aspx?did=1001216235", description = "Reports the $8 million and $15 million Series B tranches, customers, headcount at the time and founders." },
+  { label = "Anodot customer stories", url = "https://www.anodot.com/customers/", description = "Current company customer references and reported product outcomes." },
+  { label = "US Patent 10,891,558", url = "https://patentimages.storage.googleapis.com/e2/1f/b9/1086cdcb59d386/US10891558.pdf", description = "Patent record naming Anodot Ltd as applicant and assignee for time-series anomaly detection." },
+  { label = "Anodot About page", url = "https://www.anodot.com/about/", description = "Company product description and reported Pileus acquisition." },
+  { label = "AdExchanger 2016 funding report", url = "https://www.adexchanger.com/data-exchanges/bi-firm-anodot-scores-8-million-try-answer-questions-havent-thought-yet/", description = "Independent report on the first $8 million Series B tranche and its investors." },
+  { label = "PR Newswire 2017 Series B release", url = "https://www.prnewswire.com/news-releases/anodot-raises-23m-triples-revenues-665232273.html", description = "Company-issued release distributed by PR Newswire on the $15 million Series B close and 2017 customer and revenue claims." },
+  { label = "Calcalist on Pileus acquisition", url = "https://www.calcalist.co.il/calcalistech/article/byyw3cpdk", description = "Israeli business media report on Anodot's acquisition of Pileus in 2021; consideration was only reported as an estimate." }
+]
+potential_score = 69.0
+technology_score = 79.0
+market_score = 71.0
+team_score = 70.0
+dual_use_score = 60.0
+strategic_alignment_score = 57.0
+stage = "mature"
+stage_rationale = "Founded in 2014 and operating with an enterprise product footprint, Anodot is past early-stage venture formation. The acquired status and broader platform positioning suggest a mature product and market posture rather than a growth-stage startup still defining its core category. The company looks like a mature analytics asset in a consolidating market: established enough to have a clear product thesis, but mature enough that strategic value depends on integration quality and category fit more than on raw startup momentum."
+competitors = [
+  "Datadog",
+  "Dynatrace",
+  "New Relic",
+  "BigPanda",
+  "OpsRamp",
+  "ScienceLogic",
+  "CloudHealth"
+]
+competitive_edge = "Anodot’s edge is its focus on automated anomaly detection and incident grouping across both operational and financial telemetry, which gives it a more specialized detection layer than broad observability suites. That specialization can be attractive when buyers care about reducing noise and spotting business-impacting deviations quickly. The differentiator is not just the model layer; it is the attempt to translate anomalous behavior into operational and financial context that different stakeholders can actually act on."
+risk_factors = [
+  "Platform bundling risk from large observability and FinOps suites that can absorb anomaly-detection features into broader contracts",
+  "Acquisition and ownership risk if roadmap, positioning, or channel strategy are constrained by a parent platform",
+  "Data-quality dependence because detection performance falls if telemetry is sparse, delayed, or poorly integrated",
+  "False-positive and explainability risk because operators may distrust opaque anomaly scores in high-consequence workflows",
+  "Defense adoption friction if the product cannot meet on-prem, air-gapped, audit, and data-residency requirements",
+  "Category overlap risk because buyers may treat the product as a feature rather than a standalone platform"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Anodot remains worth tracking because its anomaly-detection layer maps to both commercial monitoring and defense-adjacent operational resilience use cases. The priority is moderated by acquired status, broad platform competition, and the fact that its strategic value is primarily as an enabling capability rather than a uniquely differentiated standalone company. It deserves attention as a reference point for how telemetry intelligence gets productized, but not as a top-tier standalone pursuit."
+crawled_at = "2026-01-31T19:55:00+00:00"
+updated_at = "2026-10-03T17:47:57Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+traction = []
+intellectual_property = []
+comparables = []
+
+[[intelligence.people]]
+name = "David Drai"
+role = "Co-founder and historical CEO"
+is_founder = true
+current = false
+background = "Previously co-founded Cotendo, acquired by Akamai, and held a technology leadership role at Gett; roles and background are described in Anodot's 2015 announcement. Current post-acquisition role is not established."
+source_ids = ["anodot-series-a", "globes-series-b"]
+
+[[intelligence.people]]
+name = "Ira Cohen"
+role = "Co-founder and historical Chief Data Scientist"
+is_founder = true
+current = false
+background = "Previously Chief Data Scientist at HP Software, where he led machine-learning and data-mining research and development, according to Anodot's 2015 announcement. Current role is not established."
+source_ids = ["anodot-series-a"]
+
+[[intelligence.people]]
+name = "Shay Lang"
+role = "Co-founder and historical R&D leader"
+is_founder = true
+current = false
+background = "Anodot's 2015 release identifies Lang as a co-founder and R&D VP and describes his engineering leadership background. Current role is not established."
+source_ids = ["anodot-series-a", "globes-series-b"]
+
+[[intelligence.investors]]
+name = "Disrupt-ive Partners"
+investor_type = "vc"
+round_ids = ["series-a-2015"]
+relationship = "historical"
+source_ids = ["anodot-series-a"]
+
+[[intelligence.investors]]
+name = "Aleph Venture Capital"
+investor_type = "vc"
+website = "https://aleph.vc"
+round_ids = ["series-b-2016", "series-b-2017-extension", "series-c-2020"]
+relationship = "historical"
+source_ids = ["adexchanger-series-b", "prn-series-b", "anodot-series-c"]
+
+[[intelligence.investors]]
+name = "Disruptive Technologies Venture Capital"
+investor_type = "vc"
+round_ids = ["series-b-2016", "series-b-2017-extension", "series-c-2020"]
+relationship = "historical"
+source_ids = ["adexchanger-series-b", "prn-series-b", "anodot-series-c"]
+
+[[intelligence.investors]]
+name = "Redline Capital Management"
+investor_type = "vc"
+website = "https://www.redline-capital.com"
+round_ids = ["series-b-2017-extension", "series-c-2020"]
+relationship = "historical"
+source_ids = ["prn-series-b", "anodot-series-c"]
+
+[[intelligence.investors]]
+name = "Intel Capital"
+investor_type = "corporate"
+website = "https://www.intelcapital.com"
+round_ids = ["series-c-2020"]
+relationship = "historical"
+source_ids = ["anodot-series-c"]
+
+[[intelligence.investors]]
+name = "SoftBank Ventures Asia"
+investor_type = "vc"
+round_ids = ["series-c-2020"]
+relationship = "historical"
+source_ids = ["anodot-series-c"]
+
+[[intelligence.investors]]
+name = "Samsung NEXT"
+investor_type = "corporate"
+website = "https://next.samsung.com"
+round_ids = ["series-c-2020"]
+relationship = "historical"
+source_ids = ["anodot-series-c"]
+
+[[intelligence.investors]]
+name = "La Maison"
+investor_type = "other"
+round_ids = ["series-c-2020"]
+relationship = "historical"
+source_ids = ["anodot-series-c"]
+
+[intelligence.company]
+company_id = "il-anodot"
+legal_name = "Anodot Ltd."
+aliases = ["Anodot", "Anodot Ltd"]
+operating_status = "acquired"
+business_model = "Enterprise SaaS for real-time business and operational anomaly detection; its technology is being integrated into Glassbox's digital experience analytics platform."
+products = ["Anodot autonomous business monitoring and anomaly detection", "Cloud cost intelligence capabilities acquired from Pileus"]
+locations = ["Ra'anana, Israel", "United States (historically reported office presence)"]
+founded_on = "2014-06"
+source_ids = ["glassbox-acquisition", "anodot-series-a", "anodot-about"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public company announcements document a $1.5 million initial financing by 2015, a $3 million Series A in December 2015, Series B tranches of $8 million in September 2016 and $15 million in December 2017, and a $35 million Series C in April 2020. The $15 million close is an extension/completion of the Series B rather than a separate cumulative $23 million round. Anodot's Series C announcement reports $62.5 million total capital raised, matching the earlier disclosed seed/Series A/B/C amounts. A separate 2020 company publication reports $65.5 million cumulative funding, so the company's published cumulative totals conflict. No later primary evidence located establishes the reported 2022 convertible-debt item found in a directory; excluded from structured funding."
+rounds = [
+  { id = "series-a-2015", round_type = "Series A", instrument = "equity", status = "closed", announced_on = "2015-12-09", amount_status = "reported", amount = 3000000, currency = "USD", amount_scope = "round", lead_investors = ["Disrupt-ive Partners"], participating_investors = [], source_ids = ["anodot-series-a"] },
+  { id = "series-b-2016", round_type = "Series B", instrument = "equity", status = "closed", announced_on = "2016-09-22", amount_status = "reported", amount = 8000000, currency = "USD", amount_scope = "round", lead_investors = ["Aleph Venture Capital"], participating_investors = ["Disruptive Technologies Venture Capital"], source_ids = ["adexchanger-series-b"] },
+  { id = "series-b-2017-extension", round_type = "Series B", instrument = "equity", status = "closed", announced_on = "2017-12-19", amount_status = "reported", amount = 15000000, currency = "USD", amount_scope = "incremental_extension", is_extension_of = "series-b-2016", lead_investors = ["Redline Capital Management"], participating_investors = ["Aleph Venture Capital", "Disruptive Technologies Venture Capital"], source_ids = ["prn-series-b", "globes-series-b"], notes = "Company called this the additional $15 million investment and said Series B funding totaled $23 million after the close; reported total is not an additional $23 million." },
+  { id = "series-c-2020", round_type = "Series C", instrument = "equity", status = "closed", announced_on = "2020-04-16", amount_status = "reported", amount = 35000000, currency = "USD", amount_scope = "round", lead_investors = ["Intel Capital"], participating_investors = ["SoftBank Ventures Asia", "Samsung NEXT", "La Maison", "Disruptive Technologies L.P.", "Aleph", "Redline Capital Management"], source_ids = ["anodot-series-c"], notes = "The company states $62.5 million total capital raised in this announcement; a later company news item says $65.5 million. The per-round amount is consistently reported as $35 million." }
+]
+reported_total_raised = 62500000
+reported_total_currency = "USD"
+total_source_ids = ["anodot-series-c"]
+total_as_of = "2020-04-16"
+total_scope = "Company-reported cumulative capital raised; excludes the unresolved $65.5 million alternative and unverified subsequent database entries."
+history_status = "partial"
+coverage_through = "2020-04-16"
+
+[intelligence.ownership]
+status = "reported"
+summary = "Glassbox publicly announced acquisition of Anodot on 2025-11-04 and described embedding Anodot's engine into Glassbox's platform. Transaction price and detailed terms were not disclosed in the announcement. Private ownership percentages and the post-transaction cap table are not publicly established by the sources reviewed."
+parent_company = "Glassbox"
+stock_ticker = ""
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["glassbox-acquisition"]
+deals = [
+  { id = "glassbox-acquisition-2025", deal_type = "acquisition", company_role = "target", announced_on = "2025-11-04", status = "completed", counterparty = "Glassbox", amount_status = "undisclosed", source_ids = ["glassbox-acquisition"], notes = "Glassbox's announcement uses the completed-action wording 'acquisition of Anodot' and says its technology will be embedded in the platform; no price disclosed." }
+]
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel"]
+summary = "Anodot was founded in 2014 and identified by its own 2015 announcement as based in Ra'anana, Israel; the 2017 company-issued release also describes its headquarters as Ra'anana."
+as_of = "2026-10-03"
+source_ids = ["anodot-series-a", "prn-series-b"]
+
+[intelligence.research]
+researched_at = "2026-10-03T17:47:57Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Anodot acquired 2022 Anodot acquisition fully acquired by funding investors",
+  "Anodot funding raised Series C investors founder 2021",
+  "Anodot company leadership CEO 2026 Anodot official",
+  "Anodot patents customers revenue employees FinOps product 2025",
+  "Anodot acquired 2021 acquisition buyer Glassbox Anodot M&A",
+  "Anodot funding 2021 Series C II extension 2023 convertible note 2025",
+  "site:anodot.com Pileus acquisition 2021 Anodot",
+  "Anodot Ltd ownership acquired investor 2025",
+  "site:glassbox.com/news Anodot acquisition November 2025",
+  "Anodot funding rounds 2014 2015 2016 2017 amount Series A Series B",
+  "Anodot Series B funding 2017 amount investors",
+  "Anodot patent Anodot founders Israeli company official"
+]
+gaps = [
+  "team: No current Anodot-specific leadership roster after the Glassbox acquisition was located; sourced founders below are historical founders and their present roles are not established.",
+  "investors: Investor identities for early initial capital and some possible post-2020 instruments are unavailable; no private cap table or investor ownership percentages were found.",
+  "financials: No audited or dated public Anodot revenue, ARR, profitability, cash, burn, or runway disclosure was located; the 2017 and 2020 growth statements are company claims, not current financial metrics.",
+  "traction: Current customer counts, contracted revenue, paid deployment status, and retention after acquisition are not disclosed; website case studies are company-published and do not establish contract value.",
+  "intellectual_property: One attributable US patent was identified, but a complete current worldwide patent-family, maintenance, and post-acquisition ownership review was not completed.",
+  "competition: No primary source directly benchmarks Anodot against named competitors; comparisons remain product-category analysis and require buyer validation.",
+  "No source confirming Anodot-specific defense, intelligence, government, or classified deployments was found; defense applications remain analytical possibilities only.",
+  "Funding coverage is partial: a 2020 company announcement reports $62.5 million total raised while another 2020 company news publication states $65.5 million; later database-listed notes were not verified from primary documents."
+]
+conflicts = ["Anodot's Series C funding post states cumulative capital raised of $62.5 million, while its 2020 business momentum post states $65.5 million. Individual announced funding amounts through the Series C sum to $62.5 million; retain the direct Series C figure as the reported total and preserve the alternative as an unresolved company-publication conflict."]
+diligence_questions = [
+  "What legal entities, employees, product IP, customer contracts, and liabilities transferred to Glassbox, and what portion of Anodot remains an operating subsidiary versus an integrated product?",
+  "Can Glassbox provide current recurring revenue, retention, deployment counts, and customer concentration attributable to Anodot products before and after acquisition?",
+  "What is the reconciled funding ledger behind the $62.5 million and $65.5 million company-published cumulative totals, and were any post-2020 convertible notes actually funded?",
+  "Which patents and patent families remain active, who owns them after the acquisition, and how much of the anomaly detection stack is protected versus implementation know-how?",
+  "Can the product meet on-premises, restricted-network, audit, data residency, and explainability requirements for regulated or public-sector deployments?"
+]
+
+[[intelligence.research.sources]]
+id = "glassbox-acquisition"
+url = "https://www.glassbox.com/news/glassbox-anodot-acquisition/"
+title = "Glassbox Strengthens Anomaly Detection with Acquisition of Anodot"
+publisher = "Glassbox"
+kind = "company"
+accessed_at = "2026-10-03T17:47:57Z"
+published_on = "2025-11-04"
+claims = ["Glassbox announced acquisition of Anodot on 2025-11-04", "Glassbox planned to integrate Anodot's anomaly detection engine", "Anodot was founded in 2014", "Anodot product uses unsupervised machine learning for anomaly detection"]
+
+[[intelligence.research.sources]]
+id = "anodot-series-a"
+url = "https://www.anodot.com/news-item/anodot-exits-stealth-disrupting-bi-with-real-time-analytics-and-automated-anomaly-detection-secures-3m-in-series-a-funding/"
+title = "Anodot Exits Stealth; Secures $3M in Series A Funding"
+publisher = "Anodot"
+kind = "company"
+accessed_at = "2026-10-03T17:47:57Z"
+published_on = "2015-12-09"
+claims = ["Anodot announced a $3 million Series A led by Disrupt-ive Partners", "Company reported $4.5 million total funding after the Series A", "Company was founded in June 2014 and based in Ra'anana", "Founders David Drai, Ira Cohen, and Shay Lang and their historical backgrounds"]
+
+[[intelligence.research.sources]]
+id = "anodot-series-c"
+url = "https://www.anodot.com/?p=7992"
+title = "Anodot Raises $35M Led by Intel Capital"
+publisher = "Anodot"
+kind = "company"
+accessed_at = "2026-10-03T17:47:57Z"
+published_on = "2020-04-16"
+claims = ["Anodot announced a $35 million Series C led by Intel Capital", "Named Series C participants included SoftBank Ventures Asia, Samsung NEXT, La Maison, Disruptive Technologies, Aleph, and Redline", "The company reported $62.5 million total capital raised", "The company stated revenue doubled over the preceding year and reported around 100 customers"]
+
+[[intelligence.research.sources]]
+id = "anodot-2020-momentum"
+url = "https://www.anodot.com/news-item/anodot-announces-record-business-momentum-in-2020/"
+title = "Anodot Announces Record Business Momentum in 2020"
+publisher = "Anodot"
+kind = "company"
+accessed_at = "2026-10-03T17:47:57Z"
+published_on = "2020-12-01"
+claims = ["A company publication states the 2020 Series C brought total funding to $65.5 million", "Company reported more than 300 percent increase in organic inbound customer traction during 2020", "Company quoted customer Redis Labs on product use"]
+
+[[intelligence.research.sources]]
+id = "globes-series-b"
+url = "https://www.globes.co.il/news/article.aspx?did=1001216235"
+title = "Anodot of David Drai Completes $23 Million Funding"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-03T17:47:57Z"
+published_on = "2017-12-19"
+claims = ["Series B comprised an $8 million first close in September 2016 and a further $15 million close", "Redline Capital led with existing investors Aleph and Disruptive Technologies participating", "Anodot had about 100 customers and 45 employees in 2017", "Founders were David Drai, Shay Lang, and Ira Cohen", "Company was headquartered in Ra'anana"]
+
+[[intelligence.research.sources]]
+id = "adexchanger-series-b"
+url = "https://www.adexchanger.com/data-exchanges/bi-firm-anodot-scores-8-million-try-answer-questions-havent-thought-yet/"
+title = "BI Firm Anodot Scores $8 Million To Try And Answer The Questions You Haven’t Thought Of Yet"
+publisher = "AdExchanger"
+kind = "media"
+accessed_at = "2026-10-03T17:47:57Z"
+published_on = "2016-09-22"
+claims = ["Anodot raised an $8 million Series B led by Aleph Venture Capital with Disruptive Technologies participating", "The company reported $12.5 million total funding since 2014", "Reported customer examples included Wix, Microsoft, AOL, Rubicon Project, and Credit Karma"]
+
+[[intelligence.research.sources]]
+id = "prn-series-b"
+url = "https://www.prnewswire.com/news-releases/anodot-raises-23m-triples-revenues-665232273.html"
+title = "Anodot Raises $23M, Triples Revenues"
+publisher = "PR Newswire (release supplied by Anodot)"
+kind = "company"
+accessed_at = "2026-10-03T17:47:57Z"
+published_on = "2017-12-19"
+claims = ["Anodot announced an additional $15 million Series B investment led by Redline Capital Management", "Aleph and Disruptive Technologies participated", "Company said Series B funding total was $23 million", "Company reported revenue more than tripled year over year and named customer examples", "Company described headquarters in Ra'anana, Israel"]
+
+[[intelligence.research.sources]]
+id = "anodot-customers"
+url = "https://www.anodot.com/customers/"
+title = "Our Customers"
+publisher = "Anodot / Glassbox"
+kind = "company"
+accessed_at = "2026-10-03T17:47:57Z"
+claims = ["Company publishes customer case studies and attributed product outcome statements", "Company customer page includes Razorpay case study"]
+
+[[intelligence.research.sources]]
+id = "anodot-patent"
+url = "https://patentimages.storage.googleapis.com/e2/1f/b9/1086cdcb59d386/US10891558.pdf"
+title = "US Patent 10,891,558: Creation of Metric Relationship Graph Based on Windowed Time Series Data for Anomaly Detection"
+publisher = "United States Patent and Trademark Office patent publication, hosted by Google Patents Images"
+kind = "filing"
+accessed_at = "2026-10-03T17:47:57Z"
+published_on = "2021-01-12"
+claims = ["US Patent 10,891,558 names Anodot Ltd of Ra'anana as applicant and assignee", "Patent covers metric relationship graph creation from windowed time-series data for anomaly detection"]
+
+[[intelligence.research.sources]]
+id = "anodot-about"
+url = "https://www.anodot.com/about/"
+title = "About Us"
+publisher = "Anodot"
+kind = "company"
+accessed_at = "2026-10-03T17:47:57Z"
+claims = ["Anodot describes autonomous business monitoring and anomaly detection product", "Company says it acquired cloud cost intelligence platform Pileus in 2021"]
+
+[[intelligence.research.sources]]
+id = "pileus-acquisition"
+url = "https://www.calcalist.co.il/calcalistech/article/byyw3cpdk"
+title = "Israeli Cloud Deal: Anodot Acquires Pileus"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-03T17:47:57Z"
+published_on = "2021-11-09"
+claims = ["Anodot announced acquisition of Israeli cloud-cost platform Pileus in 2021", "Calcalist reported transaction value was estimated in the low single-digit millions of dollars; this is a media estimate, not a disclosed price"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T17:47:57Z"
+next_review_on = "2027-04-03"
+queries = ["Anodot company official identity legal name founded headquarters products", "Anodot site:anodot.com/about"]
+source_ids = ["anodot-series-a", "glassbox-acquisition", "anodot-about"]
+summary = "Official company material confirms 2014 founding, anomaly detection product, and Ra'anana base; Glassbox confirms acquired status and integration plan. A current public registry-backed jurisdiction of incorporation was not established, so the country field is omitted."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-03T17:47:57Z"
+next_review_on = "2027-01-03"
+queries = ["Anodot funding raised Series A B C investors total raised", "Anodot 2022 convertible debt funding", "Anodot 2020 company total raised 62.5 65.5"]
+source_ids = ["anodot-series-a", "adexchanger-series-b", "globes-series-b", "prn-series-b", "anodot-series-c", "anodot-2020-momentum"]
+summary = "Primary company announcements document through Series C and $62.5 million total; another company publication says $65.5 million. Public sources found the alternative but do not reconcile it. Later notes surfaced only in directories and are not included."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T17:47:57Z"
+next_review_on = "2027-04-03"
+queries = ["Anodot investors Intel Capital Aleph Redline Disruptive funding announcements", "Anodot investor portfolio funding round"]
+source_ids = ["anodot-series-a", "adexchanger-series-b", "prn-series-b", "anodot-series-c"]
+summary = "Named round participants were taken from contemporaneous company releases and funding coverage. Round relationships are historical; current ownership stakes and a full cap table are private or undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T17:47:57Z"
+next_review_on = "2027-04-03"
+queries = ["Anodot company leadership CEO 2026 Anodot official", "Anodot founders David Drai Ira Cohen Shay Lang background"]
+source_ids = ["anodot-series-a", "globes-series-b", "glassbox-acquisition"]
+summary = "Historical founders and backgrounds are documented in company-issued announcements and contemporaneous coverage. No reliable current Anodot-specific leadership roster after acquisition was found."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-03T17:47:57Z"
+next_review_on = "2027-01-03"
+queries = ["Anodot acquired Glassbox 2025 announcement", "Anodot acquisition price Glassbox terms", "Anodot Pileus acquisition 2021"]
+source_ids = ["glassbox-acquisition", "pileus-acquisition"]
+summary = "Glassbox announced acquisition of Anodot; price and detailed terms were not disclosed. Anodot had separately acquired Pileus in 2021; only media estimated consideration, so no transaction amount is recorded."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T17:47:57Z"
+next_review_on = "2027-04-03"
+queries = ["Anodot revenue ARR profitability financials", "Anodot revenue doubled 2020 customers", "Anodot 2017 tripled revenue"]
+source_ids = ["anodot-series-c", "anodot-2020-momentum", "prn-series-b"]
+summary = "No auditable financial statements or dated absolute revenue figures were located. Historical revenue growth claims are company-reported and not converted into numerical financial metrics."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T17:47:57Z"
+next_review_on = "2027-04-03"
+queries = ["Anodot customers customer case studies deployments contracts", "Anodot 2020 100 customers Redis Labs", "Anodot Glassbox product integration"]
+source_ids = ["anodot-series-c", "anodot-2020-momentum", "anodot-customers", "glassbox-acquisition"]
+summary = "Company reports around 100 customers in 2020 and publishes customer stories; these sources do not disclose current counts, contract values, or customer retention after acquisition."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-03T17:47:57Z"
+next_review_on = "2027-04-03"
+queries = ["Anodot patents Anodot Ltd US patent anomaly detection", "Anodot patents WIPO PATENTSCOPE USPTO"]
+source_ids = ["anodot-patent", "anodot-series-a"]
+summary = "One USPTO grant explicitly identifies Anodot Ltd as assignee and covers time-series metric relationship graphs for anomaly detection; full portfolio status remains a gap."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T17:47:57Z"
+next_review_on = "2027-04-03"
+queries = ["Anodot competitors Datadog Dynatrace BigPanda anomaly detection product", "Anodot FinOps competitors cloud cost management"]
+source_ids = ["glassbox-acquisition", "anodot-about"]
+summary = "Category overlap suggests observability and FinOps suites as substitutes, but no primary comparative benchmark was found. Existing named peers are preserved as category competitors rather than verified head-to-head losses."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-03T17:47:57Z"
+next_review_on = "2027-04-03"
+queries = ["Anodot government defense military customer deployment", "Anodot security critical infrastructure use case"]
+source_ids = ["glassbox-acquisition", "anodot-customers"]
+summary = "No public government, defense, intelligence, or classified customer evidence found. Commercial telemetry analytics could have adjacent operational resilience utility, but defense use is unverified."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Glassbox's November 4, 2025 announcement says it acquired Anodot and will integrate its engine into Glassbox's platform."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["glassbox-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Anodot's own announcement identifies its base as Ra'anana, Israel; a company-issued 2017 release states it is headquartered in Ra'anana."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["anodot-series-a", "prn-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Anodot's April 2020 Series C release states the $35 million round brought total capital raised to $62.5 million. A separate company publication says $65.5 million and is tracked as a conflict."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["anodot-series-c"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2015.amount"
+support = "direct"
+summary = "The December 9, 2015 Anodot release states that the company closed a $3 million Series A."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["anodot-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2016.amount"
+support = "direct"
+summary = "AdExchanger's September 22, 2016 report states Anodot raised an $8 million Series B led by Aleph."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["adexchanger-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2017-extension.amount"
+support = "direct"
+summary = "Anodot's PR Newswire release states an additional $15 million closed the Series B at $23 million total; Globes corroborates the $8 million first tranche and $15 million close."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["prn-series-b", "globes-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2020.amount"
+support = "direct"
+summary = "Anodot's April 2020 announcement states its Series C was $35 million."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["anodot-series-c"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2015.lead_investors"
+support = "direct"
+summary = "The Series A announcement identifies Disrupt-ive Partners as lead investor."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["anodot-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2016.lead_investors"
+support = "direct"
+summary = "AdExchanger identifies Aleph Venture Capital as lead investor in the $8 million 2016 tranche."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["adexchanger-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2017-extension.lead_investors"
+support = "direct"
+summary = "The 2017 release identifies Redline Capital Management as lead investor in the additional $15 million close."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["prn-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2020.lead_investors"
+support = "direct"
+summary = "The Series C release identifies Intel Capital as lead investor and names participating investors."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["anodot-series-c"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2016.participating_investors"
+support = "direct"
+summary = "AdExchanger names Disruptive Technologies as a participant in the 2016 Series B."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["adexchanger-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2017-extension.participating_investors"
+support = "direct"
+summary = "Anodot's 2017 financing release names Aleph Venture Capital and Disruptive Technologies Venture Capital as participants."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["prn-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2020.participating_investors"
+support = "direct"
+summary = "Anodot's Series C release names participating investors alongside lead investor Intel Capital."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["anodot-series-c"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Glassbox's announcement states it acquired Anodot and describes integration into the Glassbox platform."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["glassbox-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.glassbox-acquisition-2025.status"
+support = "direct"
+summary = "Glassbox announced the acquisition of Anodot using completed-action language on November 4, 2025."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["glassbox-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.glassbox-acquisition-2025.company_role"
+support = "direct"
+summary = "Glassbox states that it acquired Anodot, establishing Anodot as the target."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["glassbox-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.glassbox-acquisition-2025.amount"
+support = "direct"
+summary = "The Glassbox announcement gives no transaction price; acquisition consideration is recorded as undisclosed rather than estimated."
+verified_at = "2026-10-03T17:47:57Z"
+source_ids = ["glassbox-acquisition"]

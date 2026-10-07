@@ -1,0 +1,513 @@
+name = "Bionic"
+description = "Bionic developed an agentless application security posture management platform that reverse-engineered application architecture, dependencies, and production behavior to prioritize exploitable risk. CrowdStrike acquired the company in September 2023 and now incorporates its capabilities into Falcon Cloud Security and Falcon ASPM."
+detailed_description = """Bionic built an agentless application security posture management (ASPM) platform for organizations whose software changes faster than manually maintained architecture diagrams and vulnerability queues. Its central capability was automated reverse engineering of applications and their dependencies, including services, APIs, data flows, and third-party components. By observing how applications were structured and operated in production, the platform could add application and runtime context to otherwise noisy security findings. That is a meaningful technical distinction from a simple software bill of materials or a static scanner: the security team can ask which vulnerable component is reachable, important to a business process, or actually used by a deployed application.
+
+The product addressed a practical enterprise problem. Large financial institutions, technology companies, and other organizations operate heterogeneous estates spanning monoliths, microservices, cloud services, and legacy systems. Application teams, platform engineering, operations, and security teams each hold partial information, while dependencies and deployment paths change continuously. Bionic’s mapping and posture model was intended to give those groups a shared inventory and to help prioritize remediation by exposure, dependency relationships, and production relevance. Public company materials describe the product as reducing security, data-privacy, and operational risk by analyzing application architecture and production dependencies; they do not establish a specific customer list or quantified production outcomes here.
+
+Bionic was founded in 2019 by Idan Ninyo and Eyal Mamo and raised institutional venture funding before its exit. CrowdStrike announced the acquisition in September 2023 and its SEC filing states that it acquired 100% of Bionic Stork, Ltd. on September 28, 2023. The transaction means Bionic should no longer be evaluated as an independent startup with its own financing runway, hiring trajectory, or standalone product roadmap. Instead, the strongest current commercialization signal is integration: CrowdStrike describes Falcon ASPM as connecting application behavior, cloud services, code-to-runtime visibility, dependency mapping, data flows, and business impact in a unified cloud-security platform.
+
+The competitive position was credible but exposed to platform consolidation. Bionic’s application-centric graph, agentless discovery, and production-context prioritization addressed gaps between static application testing, cloud posture management, and runtime defense. Apiiro, ArmorCode, Snyk, Legit Security, Backslash Security, and broader CNAPP vendors offer overlapping portions of this workflow. The durable advantage therefore depends less on the ASPM label than on discovery quality, integration breadth, freshness of the application graph, useful prioritization, and the ability to turn findings into remediation in developers’ existing tools. CrowdStrike ownership improves distribution and adjacent telemetry, but it also makes Bionic’s independent differentiation harder to measure.
+
+The defense and national-security case is a capability adjacency, not a documented defense deployment. Software assurance, dependency visibility, and production-aware vulnerability prioritization are relevant to defense contractors, critical infrastructure, and government software environments because those users also need to understand which weaknesses can affect mission-critical services. However, the public evidence reviewed does not establish Bionic-specific government contracts, classified use, certifications, or a defense customer base. The appropriate conclusion is that Bionic represents a strong dual-use cybersecurity technology pattern whose current strategic significance is primarily as an acquired component of CrowdStrike’s commercial and government-capable platform."""
+logo = "https://www.crowdstrike.com/favicon.ico"
+website = "Unknown"
+sector = "Cybersecurity / Application Security Posture Management"
+founded = "2019"
+headquarters = "Tel Aviv, Israel; Palo Alto, California, United States"
+employees = "51-200"
+funding_stage = "Acquired by CrowdStrike (2023)"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "Bionic's core application mapping and production-context security analysis has substantive commercial and defense-adjacent applicability. The same capability can help enterprises, defense contractors, critical-infrastructure operators, and public-sector software teams identify exposed dependencies and prioritize remediation in complex applications. The evidence supports a dual-use technology assessment, but not a claim of confirmed Bionic defense contracts, classified deployments, or government-specific certification."
+key_technologies = ["Agentless application discovery and reverse engineering", "Application architecture and dependency graphing", "Production runtime behavior and data-flow mapping", "Context-aware vulnerability and exploitability prioritization", "Dynamic software and dependency inventory", "Cloud-native microservice and API visibility", "DevSecOps remediation workflow integration"]
+use_cases = ["Prioritizing vulnerabilities in deployed applications by reachability and business impact", "Mapping services, APIs, dependencies, and data flows across cloud environments", "Supporting software supply-chain and dependency-risk reviews", "Giving security and platform teams a current application inventory during cloud migration", "Improving remediation queues for financial-services and other regulated applications", "Assessing software assurance risk in defense-contractor and critical-infrastructure environments", "Connecting application findings to CI/CD and cloud-security workflows"]
+investible = false
+investment_rationale = "Bionic is not an independent investment candidate because CrowdStrike acquired 100% of Bionic Stork, Ltd. in September 2023. The acquisition is nevertheless a strong commercialization signal for the underlying ASPM thesis: a major security platform valued application architecture, dependency, and production-context analysis enough to integrate it into Falcon Cloud Security. Diligence should focus on the extent of product integration, retained technical capability, customer adoption of Falcon ASPM, and whether the acquired technology remains differentiated as CNAPP and AppSec vendors converge."
+strategic_value = "Bionic is strategically valuable as an example of application-layer context becoming a core part of cloud security. Its technology helps connect code, dependencies, runtime behavior, data flows, and business impact, which can reduce the gap between vulnerability discovery and actionable remediation. For national-security analysis, that pattern is relevant to software assurance and supply-chain risk in mission-critical systems, but the record should not be treated as evidence of Bionic-specific government delivery. Its present strategic value is best understood through CrowdStrike's Falcon ASPM integration and the broader code-to-runtime security direction."
+public_sources = [
+  { label = "CrowdStrike acquisition announcement", url = "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-bionic-to-extend-cloud-security-leadership/", description = "Acquisition announcement, product claims, and planned integration." },
+  { label = "CrowdStrike FY2024 Form 10-K", url = "https://www.sec.gov/Archives/edgar/data/1535527/000153552724000007/crwd-20240131.htm", description = "Filed acquisition date, 100% acquired equity interest, consideration, and purchase-price allocation." },
+  { label = "Bionic Series A announcement", url = "https://www.prnewswire.com/il/news-releases/bionic-emerges-from-stealth-with-17-million-in-funding-to-empower-enterprises-with-application-intelligence-873536395.html", description = "Company announcement of $17M Series A, founders, investors, and locations." },
+  { label = "Bionic Series B announcement", url = "https://www.prnewswire.com/news-releases/bionic-announces-65m-series-b-financing-from-insight-partners-cyberstarts-and-battery-ventures-301508028.html", description = "Company announcement of $65M Series B and customer examples." },
+  { label = "SecurityWeek acquisition coverage", url = "https://www.securityweek.com/crowdstrike-to-acquire-bionic/", description = "Independent contemporaneous report of transaction estimate and $77M announced financing history." },
+  { label = "CrowdStrike Falcon ASPM integration update", url = "https://www.crowdstrike.com/en-us/blog/crowdstrike-falcon-cloud-security-application-context-runtime-detections/", description = "March 2025 product integration release." },
+  { label = "CrowdStrike ASPM internal deployment account", url = "https://www.crowdstrike.com/en-us/blog/how-falcon-aspm-secures-charlotte-ai-genai-applications/", description = "September 2025 company account of ASPM use to secure Charlotte AI." },
+  { label = "The Information acquisition report", url = "https://www.theinformation.com/briefings/crowdstrike-finalizes-deal-for-bionic-for-about-350-million", description = "Secondary report estimating deal value at approximately $350M; not used as filed consideration." },
+  { label = "Eyal Mamo Series B post", url = "https://www.linkedin.com/posts/eyalmamo_bionic-announces-65m-series-b-activity-6911673506480951296-m6gW", description = "Founder post confirming participation in the Series B announcement." },
+  { label = "Bionic Stork company information", url = "https://en.checkid.co.il/company/BIONIC%2BSTORK%2B%2BLTD-v3KVW0m-516002573", description = "Secondary company record for Israeli company number and reported merger liquidation status." }
+]
+potential_score = 74.0
+technology_score = 86.0
+market_score = 79.0
+team_score = 77.0
+dual_use_score = 82.0
+strategic_alignment_score = 76.0
+stage = "mature"
+stage_rationale = "Bionic reached mature status through a released enterprise product, venture-backed commercialization, and acquisition by CrowdStrike in 2023. It is not an active independent startup: the relevant current question is how effectively its capabilities are integrated into Falcon ASPM and retained within CrowdStrike's cloud-security portfolio."
+competitors = ["Apiiro", "ArmorCode", "Snyk", "Legit Security", "Backslash Security", "Wiz and other CNAPP platforms"]
+competitive_edge = "Bionic's strongest differentiator was the combination of agentless application discovery, architecture and dependency mapping, and production context for prioritizing risk. That approach could make large vulnerability inventories more actionable than static severity alone. The edge is difficult to defend as a standalone moat because competing ASPM, software-supply-chain, and CNAPP products increasingly provide overlapping graphs, runtime signals, and workflow integrations. CrowdStrike adds distribution and adjacent telemetry, while also shifting the value proposition from Bionic as a brand to Falcon as an integrated platform."
+risk_factors = ["No longer independent; product direction, staffing, and customer experience depend on CrowdStrike", "ASPM, CNAPP, cloud workload, and software-supply-chain categories are converging", "Application mapping quality can vary across legacy systems, proprietary frameworks, and rapidly changing cloud estates", "Runtime visibility and dependency analysis may create privacy, access-control, or sensitive-architecture concerns for customers", "Enterprise buyers may favor bundled security platforms, compressing pricing and weakening point-solution differentiation", "Public evidence does not establish Bionic-specific defense contracts, certifications, or government deployments", "Integration risk includes product overlap, roadmap deprioritization, and difficulty proving incremental value inside Falcon"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Bionic merits analytical attention as a mature Israeli-founded cybersecurity acquisition with a credible dual-use software-assurance capability and a clear strategic exit. It is not marked as an investible priority because it is no longer independent. Priority is therefore for tracking CrowdStrike's ASPM integration, technology retention, and evidence of adoption in commercial, regulated, and public-sector environments rather than for standalone financing or investment action."
+crawled_at = "2026-02-24T04:00:00Z"
+updated_at = "2026-10-04T08:20:00Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+
+[intelligence.company]
+company_id = "il-bionic"
+legal_name = "Bionic Stork Ltd."
+aliases = ["Bionic", "Bionic Stork, Ltd."]
+operating_status = "acquired"
+business_model = "Enterprise cybersecurity software sold as an application security posture management platform; since acquisition its capabilities are integrated and marketed within CrowdStrike Falcon Cloud Security."
+products = ["Bionic ASPM", "Falcon ASPM (successor/integrated CrowdStrike product)"]
+locations = ["Tel Aviv, Israel", "Palo Alto, California, United States"]
+country_of_incorporation = "Israel"
+founded_on = "2019"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "516002573", source_ids = ["sec2024"] }]
+source_ids = ["sec2024", "seriesa2020", "seriesb2022"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Publicly announced venture rounds comprise a $17 million Series A announced in December 2020 and a $65 million Series B announced in March 2022. The 2023 acquisition ended independent financing. Media reported $77 million lifetime financing, consistent with the two company-announced rounds; Bionic/CrowdStrike did not announce a lifetime total in the cited primary releases, so the numeric reported_total_raised field is omitted. No public evidence found of later standalone rounds."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "series-a-2020"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2020-12-10"
+amount_status = "reported"
+amount = 17000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Battery Ventures"]
+participating_investors = ["Cyberstarts", "Dharmesh Thakker", "René Bonvanie", "Don Duet", "Sameer Jain", "Ariel Maislos"]
+source_ids = ["seriesa2020"]
+notes = "The announcement says Battery Ventures and Cyberstarts led; it identifies Thakker and Bonvanie as Battery investors and separately names additional individual investors."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2022"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2022-03-22"
+amount_status = "reported"
+amount = 65000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Insight Partners"]
+participating_investors = ["Cyberstarts", "Battery Ventures"]
+source_ids = ["seriesb2022"]
+notes = "Company announcement describes a $65 million Series B led by Insight Partners, with Cyberstarts and Battery Ventures participating."
+
+[intelligence.ownership]
+status = "reported"
+summary = "CrowdStrike Holdings, Inc. acquired 100% of Bionic Stork Ltd. on September 28, 2023. The Israeli legal entity was subsequently reported as liquidated due to merger in public company-information records; CrowdStrike remains the parent/platform owner. No current standalone cap table or Bionic shareholder percentages are public in the sources reviewed."
+parent_company = "CrowdStrike Holdings, Inc."
+stock_ticker = "NASDAQ: CRWD"
+cap_table_status = "undisclosed"
+shareholders = ["CrowdStrike Holdings, Inc."]
+source_ids = ["sec2024", "company_acq2023"]
+holdings = []
+
+[[intelligence.ownership.deals]]
+id = "crowdstrike-acquisition-2023"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2023-09-19"
+completed_on = "2023-09-28"
+status = "completed"
+counterparty = "CrowdStrike Holdings, Inc."
+amount = 239700000
+amount_status = "reported"
+currency = "USD"
+source_ids = ["sec2024", "company_acq2023", "information2023"]
+notes = "SEC reports $239.0M cash consideration net of $25.7M cash acquired plus $0.7M fair value of replacement awards attributable to pre-acquisition service, i.e. $239.7M in reported consideration on the filing's terms. Media estimates of about $350M differ and may reflect other deal economics/employee awards; they are not substituted for the filed amount."
+
+[[intelligence.investors]]
+name = "Battery Ventures"
+investor_type = "vc"
+website = "https://www.battery.com/"
+round_ids = ["series-a-2020", "series-b-2022"]
+relationship = "historical"
+source_ids = ["seriesa2020", "seriesb2022"]
+
+[[intelligence.investors]]
+name = "Cyberstarts"
+investor_type = "vc"
+website = "https://cyberstarts.com/"
+round_ids = ["series-a-2020", "series-b-2022"]
+relationship = "historical"
+source_ids = ["seriesa2020", "seriesb2022"]
+
+[[intelligence.investors]]
+name = "Insight Partners"
+investor_type = "vc"
+website = "https://www.insightpartners.com/"
+round_ids = ["series-b-2022"]
+relationship = "historical"
+source_ids = ["seriesb2022"]
+
+[[intelligence.people]]
+name = "Idan Ninyo"
+role = "Co-founder and former CEO"
+is_founder = true
+current = false
+background = "Co-founded Bionic in 2019 and served as CEO; represented the company in funding and acquisition announcements."
+source_ids = ["seriesa2020", "seriesb2022", "company_acq2023"]
+
+[[intelligence.people]]
+name = "Eyal Mamo"
+role = "Co-founder and former CTO"
+is_founder = true
+current = false
+background = "Co-founded Bionic in 2019 and served as CTO; later described the Series B as a company milestone."
+source_ids = ["seriesa2020", "social2022"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "In its March 2022 Series B announcement, Bionic said it served dozens of customers and named GSK, Armis, and Freddie Mac. Customer quotations described application visibility and modernization/compliance use; the release did not disclose contract values or establish whether each deployment was paid or production-wide."
+date = "2022-03-22"
+source_ids = ["seriesb2022"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "CrowdStrike said Falcon ASPM findings were integrated into endpoint and container runtime detections, adding application risk, business criticality, and dependency context. This demonstrates continuing product integration after Bionic's acquisition."
+date = "2025-03-05"
+source_ids = ["falcon2025"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "CrowdStrike reported using Falcon ASPM internally to map dependencies, data flows, runtime behavior, and dynamic software inventory for its Charlotte AI environment. This is company-reported internal use, not a third-party customer result."
+date = "2025-09-30"
+source_ids = ["charlotte2025"]
+
+[[intelligence.intellectual_property]]
+kind = "other"
+description = "No Bionic-assigned patent family was identified in the reviewed public company and product materials or targeted patent searches. Ownership of code, models, trade secrets, and transferred IP is not publicly itemized; the SEC filing identifies acquired developed technology as an intangible asset."
+date = "2026-10-04"
+source_ids = ["sec2024", "company_acq2023"]
+
+[[intelligence.comparables]]
+name = "Apiiro"
+website = "https://apiiro.com/"
+rationale = "Application security posture and software risk prioritization overlap with Bionic's former market."
+differentiation = "Independent vendor; current comparative performance against Falcon ASPM requires hands-on evaluation."
+source_ids = ["company_acq2023"]
+
+[[intelligence.comparables]]
+name = "Snyk"
+website = "https://snyk.io/"
+rationale = "Developer-focused application and open-source dependency security overlaps in vulnerability discovery and remediation."
+differentiation = "Broader developer security suite; Bionic emphasized agentless production application mapping and runtime context."
+source_ids = ["company_acq2023"]
+
+[[intelligence.comparables]]
+name = "Wiz"
+website = "https://www.wiz.io/"
+rationale = "Cloud security platform competing for consolidated cloud-risk budgets."
+differentiation = "CNAPP-led cloud environment view; Bionic's historical focus was application architecture and production dependencies."
+source_ids = ["company_acq2023"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "Bionic Stork Ltd. was an Israeli company founded by Idan Ninyo and Eyal Mamo, with Bionic materials identifying Tel Aviv as one of its locations. The later CrowdStrike SEC filing identifies the acquired entity as Bionic Stork, Ltd.; the specific Israeli company number is corroborated by a public company-information listing, while formal registry documentation was not available in this source set."
+as_of = "2026-10-04"
+source_ids = ["seriesa2020", "sec2024", "registry2026"]
+
+[intelligence.research]
+researched_at = "2026-10-04T08:20:00Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Bionic application security company CrowdStrike acquired Bionic funding 17 million founders", "site:crowdstrike.com Bionic CrowdStrike Falcon ASPM 2025 Bionic", "Bionic Stork Ltd Israel company Idan Ninyo Eyal Mamo funding investors", "Bionic cybersecurity acquisition funding investors revenue patents", "Bionic Series A 17 million Battery Ventures Cyberstarts 2020", "Bionic Series B 65 million Insight Partners 2022 customers", "CrowdStrike Bionic acquired 100% September 28 2023 SEC consideration", "Bionic Stork Ltd Israel company registry 516002573 merger", "Bionic ASPM patent Bionic Stork USPTO WIPO", "Bionic acquired revenue ARR customer headcount government defense contracts"]
+gaps = ["team: historical founders are identified; current former-employee roster and post-acquisition leadership were not publicly established.", "investors: disclosed institutional and named individual financing participants are recorded; private cap table, ownership percentages, and exact investor allocation are unavailable.", "financials: Bionic standalone revenue, ARR, profitability, burn, runway, and post-acquisition segment results are not publicly disclosed in reviewed filings; the reported acquisition consideration is not company financing.", "traction: customer names and product integration are documented, but contract values, current customer counts, renewal rates, and attributable revenue are unavailable.", "intellectual_property: no Bionic-specific patent record was confirmed; transferred patent and trade-secret inventory is not publicly itemized.", "competition: comparable products are identified for strategic context, but no independent benchmark establishes relative efficacy or market share.", "dual_use: software assurance has plausible government and defense-contractor applicability, but no Bionic-specific government contract, classified deployment, or security certification was found.", "ownership: SEC confirms acquisition of 100% equity, but ultimate shareholder allocation, employee proceeds, and stock/option award economics remain private.", "identity: current legal registry extract was not obtained; registry identifier and later merger-status information rely on a secondary company-information listing."]
+conflicts = ["Acquisition value: SecurityWeek and The Information reported approximately $350 million, whereas CrowdStrike's SEC filing reports $239.0 million cash net of $25.7 million cash acquired plus $0.7 million pre-combination replacement award fair value ($239.7 million on those disclosed components). The deal estimate may have included contingent/post-combination employee awards or other economics; the filings do not reconcile the press estimate, so reported deal amount uses the filed consideration and the estimate is not treated as a contradictory audited purchase price.", "Lifetime fundraising: Bionic's two company-announced rounds total $82 million arithmetically ($17 million plus $65 million), while SecurityWeek reported $77 million total. This may reflect differing round scope or a source error; no company-announced lifetime total was located, so the dossier does not state a numeric company-reported total.", "Headquarters: company announcements describe Bionic as based in both Palo Alto and Tel Aviv, while some round materials foreground Palo Alto. Headquarters is therefore represented as a dual-location footprint rather than an exclusive city claim."]
+diligence_questions = ["What Bionic-originated code, personnel, and application graph capabilities remain in Falcon ASPM, and what is the current product roadmap and lifecycle commitment?", "What portion of Falcon ASPM adoption and revenue is attributable to capabilities acquired from Bionic, and how are customer renewals, expansion, and competitive win rates trending?", "What exactly explains the approximately $350 million press estimate versus the $239.7 million consideration components in CrowdStrike's SEC filing, including employee awards, earn-outs, or contingent payments?", "Did Bionic or CrowdStrike receive any government, defense-contractor, or critical-infrastructure deployments specifically attributable to Bionic technology, and what certifications or contractual restrictions apply?", "What patents, patent applications, and trade secrets transferred in the acquisition, and how do they map to the current product?", "Has the Bionic Stork Israeli legal entity's reported 2025 merger liquidation been completed in the official registry, and which surviving entity holds relevant IP and liabilities?"]
+
+[[intelligence.research.sources]]
+id = "company_acq2023"
+url = "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-to-acquire-bionic-to-extend-cloud-security-leadership/"
+title = "CrowdStrike to Acquire Bionic to Extend Cloud Security Leadership"
+publisher = "CrowdStrike"
+kind = "company"
+accessed_at = "2026-10-04T08:12:00Z"
+published_on = "2023-09-19"
+claims = ["CrowdStrike announced a signed agreement to acquire Bionic", "Bionic platform mapped applications, services, dependencies and data flows agentlessly", "CrowdStrike described planned ASPM integration", "The announcement described purchase consideration structure as predominantly cash with stock and options subject to vesting"]
+
+[[intelligence.research.sources]]
+id = "sec2024"
+url = "https://www.sec.gov/Archives/edgar/data/1535527/000153552724000007/crwd-20240131.htm"
+title = "CrowdStrike Holdings, Inc. Form 10-K for fiscal year ended January 31, 2024"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-04T08:12:00Z"
+published_on = "2024-03-07"
+claims = ["CrowdStrike acquired 100% of Bionic Stork Ltd. equity on 2023-09-28", "Acquisition consideration included 239.0 million dollars cash net of 25.7 million cash acquired and 0.7 million fair value replacement awards", "Purchase-price allocation included 34.9 million developed technology and customer relationships and 207.5 million goodwill", "Bionic was privately held and developed an ASPM platform"]
+
+[[intelligence.research.sources]]
+id = "seriesa2020"
+url = "https://www.prnewswire.com/il/news-releases/bionic-emerges-from-stealth-with-17-million-in-funding-to-empower-enterprises-with-application-intelligence-873536395.html"
+title = "Bionic Emerges from Stealth with $17 Million in Funding"
+publisher = "Bionic via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-04T08:12:00Z"
+published_on = "2020-12-10"
+claims = ["Bionic announced a 17 million dollar Series A led by Battery Ventures investors with Cyberstarts involvement", "Bionic was founded in 2019 by CEO Idan Ninyo and CTO Eyal Mamo", "Bionic identified Palo Alto and Tel Aviv as locations", "Gili Raanan and Michael Fey were described as board members and early investors"]
+
+[[intelligence.research.sources]]
+id = "seriesb2022"
+url = "https://www.prnewswire.com/news-releases/bionic-announces-65m-series-b-financing-from-insight-partners-cyberstarts-and-battery-ventures-301508028.html"
+title = "Bionic Announces $65M Series B Financing"
+publisher = "Bionic via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-04T08:12:00Z"
+published_on = "2022-03-22"
+claims = ["Bionic announced a 65 million dollar Series B led by Insight Partners with Cyberstarts and Battery Ventures participating", "Bionic stated it had dozens of customers and named GSK, Armis, and Freddie Mac", "Bionic described its ASPM product and application data-flow visibility", "Idan Ninyo was CEO and co-founder"]
+
+[[intelligence.research.sources]]
+id = "securityweek2023"
+url = "https://www.securityweek.com/crowdstrike-to-acquire-bionic/"
+title = "CrowdStrike to Acquire Application Intelligence Startup Bionic"
+publisher = "SecurityWeek"
+kind = "media"
+accessed_at = "2026-10-04T08:12:00Z"
+published_on = "2023-09-19"
+claims = ["SecurityWeek reported an acquisition value around 350 million dollars", "SecurityWeek reported 77 million dollars total funding", "SecurityWeek described Bionic's application mapping product"]
+
+[[intelligence.research.sources]]
+id = "information2023"
+url = "https://www.theinformation.com/briefings/crowdstrike-finalizes-deal-for-bionic-for-about-350-million"
+title = "CrowdStrike Finalizes Deal For Bionic For About $350 Million"
+publisher = "The Information"
+kind = "media"
+accessed_at = "2026-10-04T08:12:00Z"
+published_on = "2023-09-19"
+claims = ["The Information reported a deal value of about 350 million dollars based on a person with direct knowledge", "The Information reported Bionic raised more than 80 million dollars and annual revenue below 50 million dollars, attributed to PitchBook/person knowledge"]
+
+[[intelligence.research.sources]]
+id = "falcon2025"
+url = "https://www.crowdstrike.com/en-us/blog/crowdstrike-falcon-cloud-security-application-context-runtime-detections/"
+title = "CrowdStrike Falcon Cloud Security Introduces Application Context to Runtime Detections"
+publisher = "CrowdStrike"
+kind = "company"
+accessed_at = "2026-10-04T08:12:00Z"
+published_on = "2025-03-05"
+claims = ["CrowdStrike said it is embedding Bionic ASPM capabilities into Falcon Cloud Security", "Falcon ASPM findings were integrated into endpoint and container runtime detections"]
+
+[[intelligence.research.sources]]
+id = "charlotte2025"
+url = "https://www.crowdstrike.com/en-us/blog/how-falcon-aspm-secures-charlotte-ai-genai-applications/"
+title = "How Falcon ASPM Secures GenAI Applications and Lessons from Dogfooding"
+publisher = "CrowdStrike"
+kind = "company"
+accessed_at = "2026-10-04T08:12:00Z"
+published_on = "2025-09-30"
+claims = ["Falcon ASPM is part of Falcon Cloud Security", "CrowdStrike reported internal use of Falcon ASPM to secure Charlotte AI", "The product maps dependencies, runtime behaviors, software dependencies, access patterns and data flows"]
+
+[[intelligence.research.sources]]
+id = "registry2026"
+url = "https://en.checkid.co.il/company/BIONIC%2BSTORK%2B%2BLTD-v3KVW0m-516002573"
+title = "Bionic Stork Ltd company information"
+publisher = "CheckID"
+kind = "directory"
+accessed_at = "2026-10-04T08:12:00Z"
+published_on = "2026-06-07"
+claims = ["The listing identifies Israeli company number 516002573", "The listing describes Bionic Stork Ltd as liquidated due to merger and identifies Tel Aviv-Jaffa address"]
+
+[[intelligence.research.sources]]
+id = "social2022"
+url = "https://www.linkedin.com/posts/eyalmamo_bionic-announces-65m-series-b-activity-6911673506480951296-m6gW"
+title = "Eyal Mamo post on Bionic Series B"
+publisher = "LinkedIn"
+kind = "other"
+accessed_at = "2026-10-04T08:12:00Z"
+published_on = "2022-03-22"
+claims = ["Eyal Mamo identified himself as a Bionic co-founder in a Series B post"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T08:12:00Z"
+next_review_on = "2027-04-04"
+queries = ["Bionic Stork Ltd Israeli company Idan Ninyo Eyal Mamo founded locations"]
+source_ids = ["seriesa2020", "sec2024", "registry2026"]
+summary = "Identity aligns Bionic's product and founders with Bionic Stork Ltd., an Israeli-incorporated company acquired by CrowdStrike."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-04T08:12:00Z"
+next_review_on = "2027-04-04"
+queries = ["Bionic funding raised Series A 17 million Series B 65 million lifetime total", "Bionic funding total 77 million 82 million"]
+source_ids = ["seriesa2020", "seriesb2022", "securityweek2023"]
+summary = "Two company announcements establish $17M Series A and $65M Series B; secondary reported lifetime total of $77M conflicts with the arithmetic $82M. No numeric company-reported aggregate is set."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T08:12:00Z"
+next_review_on = "2027-04-04"
+queries = ["Bionic investors Battery Ventures Cyberstarts Insight Partners series funding"]
+source_ids = ["seriesa2020", "seriesb2022"]
+summary = "Company releases name Battery Ventures, Cyberstarts, Insight Partners and individual early investors; no cap table percentages disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T08:12:00Z"
+next_review_on = "2027-04-04"
+queries = ["Bionic founders CEO Idan Ninyo CTO Eyal Mamo leadership CrowdStrike acquisition"]
+source_ids = ["seriesa2020", "seriesb2022", "company_acq2023"]
+summary = "Founders and historical roles are established; current post-acquisition team and leadership not established."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-04T08:12:00Z"
+next_review_on = "2027-04-04"
+queries = ["CrowdStrike Bionic acquisition closed 100% equity September 28 2023 SEC purchase price"]
+source_ids = ["sec2024", "information2023"]
+summary = "SEC directly confirms completion and 100% acquired equity. Media deal estimates differ from the filed transaction consideration."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T08:12:00Z"
+next_review_on = "2027-04-04"
+queries = ["Bionic ASPM revenue ARR profitability burn standalone acquired CrowdStrike", "Bionic annual revenue less than 50 million PitchBook"]
+source_ids = ["sec2024", "information2023"]
+summary = "No audited Bionic standalone revenue, ARR, profitability, burn, or runway located. The Information's under-$50M revenue statement is an attributed secondary estimate and is omitted as a metric."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T08:12:00Z"
+next_review_on = "2027-04-04"
+queries = ["Bionic customers GSK Armis Freddie Mac dozens customers", "CrowdStrike Falcon ASPM 2025 runtime application context", "Falcon ASPM Charlotte AI internal use"]
+source_ids = ["seriesb2022", "falcon2025", "charlotte2025"]
+summary = "Company-named customer examples and later CrowdStrike product integration/internal usage are documented; current external customer counts and attributable revenue are not."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T08:12:00Z"
+next_review_on = "2027-04-04"
+queries = ["Bionic Stork patent application security posture management USPTO", "Bionic Stork WIPO patents", "Bionic application security patent"]
+source_ids = ["sec2024", "company_acq2023"]
+summary = "No Bionic-specific publicly identified patent family was confirmed; CrowdStrike filings identify acquired developed technology but do not enumerate patent assets."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T08:12:00Z"
+next_review_on = "2027-04-04"
+queries = ["ASPM competitors Apiiro Snyk cloud security application posture management", "Falcon ASPM product comparison"]
+source_ids = ["company_acq2023", "falcon2025"]
+summary = "Peer set reflects overlapping ASPM, developer security and CNAPP workflows; no market-share or independent efficacy comparison was found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T08:12:00Z"
+next_review_on = "2027-04-04"
+queries = ["Bionic CrowdStrike defense government contract DoD federal deployment", "Bionic ASPM government security certification"]
+source_ids = ["company_acq2023", "sec2024"]
+summary = "The application-security technology has plausible defense and critical-infrastructure uses, but no Bionic-specific government contract, classified use, or certification was identified."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "CrowdStrike's SEC filing says it acquired 100% of Bionic Stork equity on September 28, 2023."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["sec2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Bionic identified Tel Aviv as a company location and was founded by its named founders; the SEC names Bionic Stork Ltd. and the company-information listing identifies its Israeli number and status."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["seriesa2020", "sec2024", "registry2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2020.amount"
+support = "direct"
+summary = "Bionic announced a $17 million Series A on December 10, 2020."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["seriesa2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.amount"
+support = "direct"
+summary = "Bionic announced a $65 million Series B on March 22, 2022."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["seriesb2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2020.lead_investors"
+support = "direct"
+summary = "Bionic named Battery Ventures and Cyberstarts as leading the Series A; Battery investors led the round."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["seriesa2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.lead_investors"
+support = "direct"
+summary = "Bionic named Insight Partners as Series B lead, with Cyberstarts and Battery Ventures participating."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["seriesb2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "inferred"
+summary = "A company-announced lifetime total could not be established; the dossier intentionally omits a numeric total because the $77M secondary report conflicts with the $82M sum of announced rounds."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["seriesa2020", "seriesb2022", "securityweek2023"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "The SEC filing identifies CrowdStrike as acquiring 100% of Bionic Stork Ltd."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["sec2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.crowdstrike-acquisition-2023.status"
+support = "direct"
+summary = "SEC filing confirms acquisition completed September 28, 2023."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["sec2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.crowdstrike-acquisition-2023.amount"
+support = "direct"
+summary = "SEC reports consideration components of $239.0M net cash and $0.7M pre-combination replacement awards; the dossier records $239.7M total of those disclosed components and explains the net-of-acquired-cash basis."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["sec2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2020.participating_investors"
+support = "direct"
+summary = "The company release identifies Cyberstarts and Battery Ventures participation and names individual additional investors."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["seriesa2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.participating_investors"
+support = "direct"
+summary = "The company release says Cyberstarts and Battery Ventures participated in the Series B."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["seriesb2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.crowdstrike-acquisition-2023.company_role"
+support = "direct"
+summary = "SEC states CrowdStrike acquired 100% of Bionic Stork's equity, directly confirming Bionic as the target."
+verified_at = "2026-10-04T08:12:00Z"
+source_ids = ["sec2024"]

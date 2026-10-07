@@ -1,0 +1,502 @@
+name = "Bubble Robotics"
+description = "Bubble Robotics is a 2025-founded, Europe- and U.S.-based ocean-robotics startup developing resident surface and subsea autonomous systems for continuous inspection of offshore infrastructure. Its commercial inspection platform has a credible maritime-security and critical-infrastructure protection adjacency, although public evidence does not yet establish a fielded defense deployment."
+detailed_description = """
+**Product and the concrete problem it solves.** Bubble Robotics is trying to replace episodic, vessel-intensive inspection of offshore assets with persistent robotic monitoring. Offshore wind foundations, subsea power links, pipelines, ports, and communications cables are expensive to inspect because operators typically charter a vessel, wait for a suitable weather window, send divers or remotely operated vehicles to a site, and then analyze a snapshot of the asset. That process leaves long intervals between observations and exposes crews to difficult sea conditions. Bubble's proposed service keeps a surface station and subsea robots resident near an asset, allowing more frequent inspections and earlier detection of structural changes or unusual activity. The company sells a monitoring outcome through a robotics-as-a-service model, rather than simply shipping a robot and asking an energy or infrastructure operator to create its own offshore robotics team. This is an ambitious operational redesign: the value depends on replacing enough ship-days, mobilization time, and inspection delay to outweigh the cost and maintenance burden of keeping a robotic system at sea.
+
+**Core technology and how it works.** The company's published architecture has two principal elements. BubbleDock is a surface station intended to anchor or hold position offshore, generate or collect energy, and launch, recover, recharge, and exchange data with subsea robots. BubbleBots are remotely operated or autonomous underwater platforms assembled around established ROV and AUV designs, with the company's own autonomy, payload integration, and data software. The stated sensor options include optical cameras, acoustic instruments, nondestructive-testing sensors, and environmental sensing; missions can collect recurring inspection data and compare it over time. Bubble says its software, Bubble OS, applies machine learning to visual, sonar, and environmental data to produce inspection intelligence. Its website describes resident missions of up to six months, support for operation in currents of up to two knots, a depth rating of up to 300 meters, and millimeter-level data precision. The technology pages also claim self-righting and station-keeping in sea state 7 and hybrid onboard energy generation. These are company-published design and performance specifications, not independently audited reliability results. The product concept is plausible, but persistent subsea autonomy requires dependable station keeping, navigation, power, corrosion control, fouling resistance, communications, recovery, and safe behavior after sensor or component faults.
+
+**Market, customers, and go-to-market.** Bubble's first commercial markets are offshore wind and other energy infrastructure, subsea transmission and data cables, ports, and marine construction or maintenance. Operators could use repeated surveys to monitor foundations, cable routes, hulls, or other underwater structures, compare inspection data across time, and prioritize repair before an outage or larger maintenance campaign. A robotics-as-a-service contract could shift spending from vessel mobilization and diver time toward a recurring inspection service, while giving the customer analyzed data instead of raw survey files. The business model also avoids requiring a customer to buy a dedicated fleet up front, although the company must finance, insure, maintain, and redeploy those assets itself. Bubble's April 2026 launch announcement reported more than $4 million in signed letters of intent across offshore wind, maritime security, and subsea infrastructure, and described upcoming deployments; it did not name the counterparties, disclose contract terms, or establish that the LOIs convert to paid recurring work. The company site now describes deployment activity, but does not publish a customer roster, site-level performance data, contract values, or renewal history. Early commercial pull is therefore promising but not yet equivalent to a demonstrated repeatable sales channel.
+
+**Traction, funding, and third-party validation.** Bubble emerged from stealth on April 21, 2026, announcing a $5 million pre-seed round led by Episode 1 Ventures, Asterion Ventures, and Norrsken Evolve after participating in Entrepreneurs First. The company announcement also named Angel Invest and operators among its supporters; public round descriptions consistently identify the three lead investors, while detailed participation beyond that varies by source. Tech.eu independently reported the same round and the company's planned offshore monitoring applications. The California Office of the Small Business Advocate profiled Bubble in 2025 as a robotics and ocean-technology business receiving business advising and access to capital, corroborating an operating presence in the San Francisco ecosystem before the public launch. Entrepreneurs First has described pairing founders Jean Crosetti and Patricia Apostol in October 2024 and following the company from initial concept through its first prototype work. Bubble's public team page lists a small multidisciplinary group, including engineers with autonomous robotics, subsea systems, sensing, electrical engineering, and AI backgrounds. These are meaningful company-formation and early-financing signals for a hardware-heavy venture. Publicly accessible evidence still lacks independently verified endurance trials, named paying customers, audited cost savings, disclosed revenue, patents, or an operational report from a customer site. The distinction between investor confidence, signed LOIs, prototype demonstrations, and recurring field contracts matters at this stage.
+
+**Founders and team background.** CEO and co-founder Jean Crosetti's company biography describes experience building climate ventures in Europe and Africa, prior work in venture capital and at the European Investment Bank, and studies at Sciences Po and Bocconi. CTO and co-founder Patricia Apostol is described as an aerospace and robotics engineer who worked on robotic systems for extreme environments at NASA's Jet Propulsion Laboratory and has robotics experience at ETH Zürich, alongside aerospace engineering training at TU Delft. The rest of the team profile adds relevant engineering depth: System Design Lead Saverio Iacoponi is described as having designed underwater robotic systems for planetary exploration and AUV swarms and holds a biorobotics PhD; Product and GTM Lead Benjamin Mottis has deployed and sold autonomous robots; and listed autonomy, electrical, and machine-learning staff bring experience in field robotics, embedded sensing, and learned navigation. This is a useful blend of founder-market framing, space robotics, and practical hardware skills. It is not yet evidence of a mature offshore service organization. Diligence should establish who owns marine operations, fleet maintenance, classification and safety processes, customer success, and around-the-clock response, and whether this small team can deliver all of those functions across distant ocean sites.
+
+**Competitive dynamics.** Bubble competes against both the existing way of doing the work and specialist marine technology providers. Fugro offers established marine survey, geodata, and asset-integrity services with vessels, survey equipment, and experienced offshore personnel. Oceaneering provides subsea engineering, ROV operations, and inspection services, while Kongsberg Maritime and Exail supply autonomous underwater vehicles, navigation, sonar, and marine robotics systems to industrial and government operators. Saab Seaeye is an established supplier of underwater vehicles and subsea systems. These vendors bring certification, installed customer relationships, support teams, and long operating records that a pre-seed startup lacks. Bubble's proposed edge is the resident service architecture: surface and subsea robots, persistent deployment, remote operation, and data analysis bundled into a recurring service could reduce vessel use and shorten the time between observations. The value would be strongest where continuous data changes maintenance decisions or security response, rather than where customers need only an occasional survey. The edge is still a hypothesis. Incumbents can automate their own service fleets, offer competing resident platforms, or partner with specialist autonomy companies; Bubble must prove that its system can reliably deliver useful data at a lower total cost under actual weather, current, fouling, communications, and maintenance conditions.
+
+**Defense, security, and resilience relevance.** The strongest strategic case is the visibility and protection of offshore critical infrastructure. Subsea cables, port approaches, energy platforms, and undersea power connections are economically important and difficult to monitor continuously. A resident robotic network could provide recurring inspection, identify physical changes, and alert operators to anomalies, supporting maritime domain awareness, infrastructure resilience, and safer repair planning. Bubble explicitly lists maritime security, acoustic anomaly detection, unexploded-ordnance detection, mine-countermeasure support, and anti-submarine surveillance among potential applications. Those are use-case claims about possible missions, not evidence that Bubble has delivered defense products, detected mines, or worked for a navy or security agency. The same surface-subsea autonomy, sensing, data transfer, and inspection functions have clear civilian commercial applications in offshore energy and ports, so the dual-use assessment is substantive rather than purely speculative. Still, no government contract, military customer, defense evaluation, classified deployment, military qualification, or export authorization is publicly identified. For allied governments and infrastructure operators, the most supportable near-term relevance is resilience-oriented inspection and awareness, with defense missions treated as an unproven expansion path.
+
+**Stage, trajectory, and diligence risks.** Bubble is early-stage: founded in 2025, publicly launched in April 2026, funded at pre-seed, and moving from prototype work toward field deployments. Its trajectory depends on proving multi-month reliability, converting letters of intent into paid projects, and showing that recurring robotic observations improve inspection economics or reduce operational risk. Hardware deployment creates a capital and service burden: systems must survive corrosion, biological fouling, storms, marine traffic, sensor failure, power interruptions, and intermittent communication, then be recovered or repaired without expensive bespoke mobilization. Market expansion also depends on customer trust, marine safety and classification requirements, data ownership, cybersecurity of remotely operated assets, and procurement cycles that can be long for energy and government buyers. The dual-use story adds export-control and secure-operations questions, particularly if the company moves from inspection into security monitoring or mine-related sensing. The diligence agenda should include third-party endurance and recovery trials, sensor accuracy and change-detection benchmarks, availability and maintenance logs, independently substantiated cost comparisons, paid customer contracts and renewal evidence, and the terms and conversion probability of its reported LOIs. Bubble merits attention as a distinctive allied ocean-autonomy venture, but its investment profile remains high-risk until operational performance and repeatable commercial demand are demonstrated.
+"""
+logo = "Unknown"
+website = "https://www.bubble-robotics.com/"
+sector = "Autonomous maritime robotics and offshore infrastructure monitoring"
+founded = "2025"
+headquarters = "Paris, France; Zürich, Switzerland; San Francisco, United States (company-listed hubs; legal headquarters not confirmed)"
+employees = "Unknown; the company currently lists 10 team members on its About page, but that page does not clarify employee versus intern status or as-of date"
+funding_stage = "Pre-seed; $5 million announced in April 2026"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Bubble's core resident surface and subsea robotics platform is designed for commercial offshore infrastructure inspection and marine monitoring, while the same autonomy, sensing, and recurring-data functions can support port security, maritime domain awareness, and protection of subsea assets. The company publicly lists military-adjacent applications such as UXO detection and mine-countermeasure support, but no defense customer, program, or fielded military capability has been disclosed. Dual-use relevance is credible at the platform level, with the security and defense use cases still at the stated or prospective stage."
+key_technologies = [
+  "Resident surface docking station for autonomous launch, recovery, recharge, and data exchange with subsea robots",
+  "Hybrid onboard energy generation and station keeping for long-duration offshore deployment",
+  "Autonomous integration of remotely operated and autonomous underwater vehicle platforms",
+  "Modular optical, acoustic, nondestructive-testing, and environmental sensor payloads",
+  "Bubble OS machine-learning pipeline for visual, sonar, and environmental inspection data",
+  "Remote fleet operations and recurring inspection data delivery under a robotics-as-a-service model"
+]
+use_cases = [
+  "Recurring inspection of offshore wind foundations and subsea power connections",
+  "Condition monitoring of pipelines and other offshore energy infrastructure",
+  "Subsea cable route inspection and anomaly reporting for telecommunications operators",
+  "Port and harbor asset inspection, hull checks, and underwater security monitoring",
+  "Marine construction progress monitoring and before-and-after seabed surveys",
+  "Environmental sensing and recurring biodiversity observations around offshore assets",
+  "Prospective UXO or mine-countermeasure survey support, subject to customer validation and system qualification"
+]
+investible = false
+investment_rationale = "Bubble is a high-risk strategic reference whose proposition joins a costly, dangerous commercial workflow to a useful maritime-resilience capability. (1) The persistent service model could increase inspection frequency and avoid some vessel and diver mobilizations if its long-duration autonomy and field economics hold up. (2) The announced $5 million pre-seed and reported $4 million in LOIs provide early capital and demand signals, but the LOIs are company-reported, unnamed, and not disclosed as paid contracts. (3) A NASA JPL and ETH Zürich robotics background is relevant to autonomy in remote environments, yet public evidence does not establish offshore reliability or customer renewals. Treat the profile as diligence-worthy allied technology, not as a recommendation; the decisive evidence is independently measured uptime, conversions to revenue, and repeated deployments across harsh sites."
+strategic_value = "Bubble's strategic value comes from persistent sensing and inspection in a maritime domain where ports, offshore energy, and subsea cables are hard to observe continuously. A robotic fleet that can operate without repeated crewed-vessel mobilization may improve infrastructure maintenance and provide earlier notice of physical anomalies. The platform also has prospective utility for allied maritime awareness and security, but its disclosed activity is still centered on commercial applications and early deployments. As a non-Israeli company, it is best treated as an allied-technology reference rather than an Israeli ecosystem company."
+potential_score = 69.0
+technology_score = 72.0
+market_score = 64.0
+team_score = 78.0
+dual_use_score = 73.0
+strategic_alignment_score = 72.0
+stage = "early"
+stage_rationale = "Bubble was founded in 2025 and announced its $5 million pre-seed in April 2026. It is developing and preparing resident robotic deployments, with the company reporting LOIs and early deployment activity but without named customers, public contract values, independently audited operational results, or recurring revenue evidence. This is an early hardware and service venture, not a scaled offshore operator."
+competitors = [
+  "Fugro (marine survey, geodata, and offshore asset-integrity services using established vessel and survey operations)",
+  "Oceaneering (subsea engineering, ROV operations, and inspection services for energy and maritime customers)",
+  "Kongsberg Maritime (AUVs, marine autonomy, navigation, and sensing systems for industrial and government operators)",
+  "Exail (autonomous marine robotics, navigation, and sonar systems with civil and defense applications)",
+  "Saab Seaeye (established remotely operated underwater vehicles and subsea systems)"
+]
+competitive_edge = "Bubble's differentiation is its proposed resident surface-and-subsea service architecture: a docking platform that supports recurring robot deployments, remote data offload, and analysis rather than a one-off vessel survey or standalone robot sale. That could improve inspection cadence while reducing some crew and vessel requirements. The team has relevant space and robotics backgrounds, and its service model may fit customers who prefer operating expenditure over ownership of specialist equipment. However, the company has not publicly demonstrated multi-month uptime, customer-verified savings, or repeat contracts. Established survey and ROV providers have broader fleets, marine certifications, operational teams, and customer relationships, and can adopt more automation themselves. The advantage remains contingent on field performance and lower total lifecycle cost."
+risk_factors = [
+  "Multi-month, unsupervised operation in saltwater, currents, storms, and biofouling conditions is not independently validated in public sources",
+  "No named customer contracts, paid deployment values, revenue, renewals, or audited savings have been disclosed; reported LOIs are company-reported and unitemized",
+  "Hardware fleet ownership, maintenance, insurance, recovery, and remote operations could require substantial capital and specialist support",
+  "Established marine survey, ROV, and AUV vendors bring certifications, customer access, support infrastructure, and long operating histories",
+  "Security and defense applications are prospective; no government customer, military evaluation, mine-countermeasure qualification, or export authorization is public",
+  "Remote connectivity, data custody, access controls, and cybersecurity for critical offshore assets require diligence before sensitive deployments"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "Bubble merits monitoring as a distinctive allied deep-tech reference at the intersection of ocean robotics, offshore infrastructure, and maritime resilience. Positive signals include a $5 million pre-seed led by three named funds, founders with NASA JPL and ETH Zürich robotics backgrounds, an integrated surface/subsea concept, and reported letters of intent across offshore wind, infrastructure, and security. Priority remains capped because the company is very young, public claims about endurance and performance are not independently verified, the LOIs are unnamed and not equivalent to revenue, and its defense-related use cases have not been shown in a fielded customer setting. Priority should rise if the company publishes independent endurance data, converts announced interest into named recurring customers, and demonstrates measurable inspection-cost or response-time improvements."
+public_sources = [
+  { label = "Bubble Robotics funding announcement", url = "https://www.bubble-robotics.com/blog/bubble-robotics-raises-5m-to-build-the-oceans-autonomous-workforce", description = "Company announcement of its $5m pre-seed, named leads, launch and early commercial signals." },
+  { label = "Bubble Robotics About", url = "https://www.bubble-robotics.com/about", description = "Company profile, leadership, team members and company-reported deployment count." },
+  { label = "Bubble Robotics product site", url = "https://www.bubble-robotics.com/", description = "Company description of its resident surface/subsea system, products and operating claims." },
+  { label = "Tech.eu funding coverage", url = "https://tech.eu/2026/04/21/bubble-robotics-emerges-from-stealth-with-5m-to-scale-autonomous-ocean-robotics/", description = "Independent coverage of the funding announcement and business model." },
+  { label = "Asterion Ventures careers", url = "https://www.asterionventures.com/en/careers", description = "Investor portfolio hiring page listing Bubble Robotics engineering roles in Zürich." },
+  { label = "TechRadar coverage", url = "https://www.techradar.com/pro/the-worlds-largest-untapped-frontier-nasa-led-startup-is-replacing-usd100k-a-day-ships-with-ai-infused-autonomous-robots", description = "Independent interview-based coverage of the company’s stated offshore value proposition." }
+]
+crawled_at = "2026-10-02T05:05:01Z"
+updated_at = "2026-10-04T11:37:43Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "bubble-robotics"
+legal_name = "Bubble Robotics"
+aliases = ["Bubble Robotics"]
+operating_status = "active"
+business_model = "Robotics-as-a-Service for persistent offshore inspection, monitoring and data collection; the company says it owns and operates the fleet and supplies analyzed outputs."
+products = ["BubbleDock", "BubbleBots", "Bubble OS"]
+locations = ["Paris, France", "Zürich, Switzerland", "San Francisco, United States"]
+source_ids = ["co_launch", "co_about", "co_product"]
+
+[intelligence.israel_connection]
+status = "not_israeli"
+basis = []
+summary = "The public company profile and funding announcement identify Paris, San Francisco and Zürich, and no Israeli incorporation, headquarters, founder connection or R&D link was found in the reviewed sources. This is a scoped negative finding, not a corporate registry search."
+as_of = "2026-10-04"
+source_ids = ["co_launch", "co_about"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One company-announced $5 million pre-seed round was identified, announced 2026-04-21. Company and independent Tech.eu reporting agree on amount, round and three lead investors. No amount-level evidence of an additional round was found through 2026-10-04. Private round documents, instrument detail beyond the pre-seed label, valuation and complete cap table are not public."
+reported_total_raised = 5000000
+reported_total_currency = "USD"
+total_source_ids = ["co_launch", "tech_eu"]
+total_as_of = "2026-04-21"
+total_scope = "Company-announced lifetime total; the sole publicly identified equity round, not an independently audited cumulative figure"
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "pre-seed-2026"
+round_type = "pre-seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2026-04-21"
+amount_status = "reported"
+amount = 5000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Episode 1 Ventures", "Asterion Ventures", "Norrsken Evolve"]
+participating_investors = ["Episode 1 Ventures", "Asterion Ventures", "Norrsken Evolve"]
+valuation_basis = "undisclosed"
+source_ids = ["co_launch", "tech_eu"]
+notes = "Company and Tech.eu announcements specify a $5m pre-seed led by the three listed firms. Some secondary databases list additional participants, but the cited primary announcement names only the leads; those unverified participant names are not included."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Bubble Robotics remains a private startup in the reviewed sources. No parent company, public ticker, acquisition, disclosed ownership percentage or public cap table was identified. Round investors are known from the announcement; their stakes and founder ownership are not disclosed."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["co_launch", "tech_eu"]
+deals = []
+holdings = []
+
+[[intelligence.people]]
+name = "Jean Crosetti"
+role = "CEO and co-founder"
+is_founder = true
+current = true
+background = "Company profile says he built climate ventures across Europe and Africa and previously worked in venture capital and at the European Investment Bank; studied at Sciences Po and Bocconi."
+source_ids = ["co_about", "co_launch"]
+
+[[intelligence.people]]
+name = "Patricia Apostol"
+role = "CTO and co-founder"
+is_founder = true
+current = true
+background = "Company profile describes robotics work at NASA JPL and ETH Zürich and aerospace engineering training at TU Delft."
+source_ids = ["co_about", "co_launch"]
+
+[[intelligence.people]]
+name = "Saverio Iacoponi"
+role = "System Design Lead"
+is_founder = false
+current = true
+background = "Company profile describes underwater robotic systems and AUV swarm work and a PhD in biorobotics from Sant’Anna."
+source_ids = ["co_about"]
+
+[[intelligence.people]]
+name = "Benjamin Mottis"
+role = "Product and GTM Lead"
+is_founder = false
+current = true
+background = "Company profile says he deployed and sold autonomous robots at ANYbotics and studied robotics at EPFL, with Caltech research experience."
+source_ids = ["co_about"]
+
+[[intelligence.people]]
+name = "Carlo Guarnieri"
+role = "Electrical Engineering Lead"
+is_founder = false
+current = true
+background = "Company profile describes mixed-signal ASIC validation, embedded systems and signal processing experience and a PhD in electrical engineering from Politecnico di Bari."
+source_ids = ["co_about"]
+
+[[intelligence.people]]
+name = "Paul Joseph"
+role = "Autonomy Lead"
+is_founder = false
+current = true
+background = "Company profile describes autonomous quadruped robotics at ETH Zürich and robotics research publications."
+source_ids = ["co_about"]
+
+[[intelligence.people]]
+name = "Alessandro De Marco"
+role = "AI and ML Engineer"
+is_founder = false
+current = true
+background = "Company profile describes robot-navigation diffusion-model work at ETH Zürich and AI engineering at Politecnico di Torino."
+source_ids = ["co_about"]
+
+[[intelligence.people]]
+name = "Yannick Van Der Laan"
+role = "Hardware Engineer"
+is_founder = false
+current = true
+background = "Company profile describes autonomous aerospace probe and reentry systems work and mechanical engineering studies at the University of Florida."
+source_ids = ["co_about"]
+
+[[intelligence.people]]
+name = "Cedric Landsmeer"
+role = "Autonomy Intern"
+is_founder = false
+current = true
+background = "Company profile describes underwater glider and wildfire-detection drone work and robotics studies at ETH Zürich."
+source_ids = ["co_about"]
+
+[[intelligence.people]]
+name = "Gabriel Kocenko"
+role = "Autonomy Intern"
+is_founder = false
+current = true
+background = "Company profile describes robotics software and point-cloud work at CERN and underwater robotics development."
+source_ids = ["co_about"]
+
+[[intelligence.investors]]
+name = "Episode 1 Ventures"
+investor_type = "vc"
+website = "https://www.episode1.com/"
+round_ids = ["pre-seed-2026"]
+relationship = "current"
+source_ids = ["co_launch", "tech_eu"]
+
+[[intelligence.investors]]
+name = "Asterion Ventures"
+investor_type = "vc"
+website = "https://www.asterionventures.com/"
+round_ids = ["pre-seed-2026"]
+relationship = "current"
+source_ids = ["co_launch", "tech_eu"]
+
+[[intelligence.investors]]
+name = "Norrsken Evolve"
+investor_type = "vc"
+website = "https://www.norrsken.org/"
+round_ids = ["pre-seed-2026"]
+relationship = "current"
+source_ids = ["co_launch", "tech_eu"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "Company About page states 10 deployments since inception (October 2025), but does not define deployment type, customer, site, payment status or performance. Treat as a company-reported activity count rather than ten paid customer deployments."
+date = "2026-10-04"
+source_ids = ["co_about"]
+
+[[intelligence.traction]]
+kind = "contract"
+description = "The April 2026 company funding announcement reports more than $4 million in signed letters of intent across offshore wind, maritime security and subsea infrastructure, and says initial deployments were upcoming. Counterparties, contract terms, conversion to paid work and subsequent completion are not disclosed."
+date = "2026-04-21"
+source_ids = ["co_launch"]
+
+[[intelligence.traction]]
+kind = "hiring"
+description = "Asterion Ventures' portfolio careers page listed multiple Bubble Robotics openings in Zürich, including autonomy, platform, field and embedded engineering roles; it reported its listings last updated 2026-07-02. Open listings are hiring evidence, not verified headcount."
+date = "2026-07-02"
+source_ids = ["asterion_jobs"]
+
+[intelligence.research]
+researched_at = "2026-10-04T11:37:43Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Bubble Robotics official identity products headquarters founders",
+  "Bubble Robotics funding raised seed Series A investors valuation acquired 2026",
+  "Bubble Robotics Episode 1 Ventures Asterion Ventures Norrsken Evolve announcement",
+  "Bubble Robotics founder team leadership Jean Crosetti Patricia Apostol",
+  "Bubble Robotics ownership parent acquisition public company cap table",
+  "Bubble Robotics revenue ARR customers contracts signed LOI deployments 2026",
+  "Bubble Robotics patents Bubble Robotics patent underwater robotics",
+  "Bubble Robotics competitors offshore resident subsea robotics Fugro Oceaneering",
+  "Bubble Robotics maritime security defense government deployments dual use",
+  "Bubble Robotics Israeli connection Israel founders R&D",
+  "Bubble Robotics acquisitions Series A funding October 2026"
+]
+gaps = [
+  "team: leadership page provides company-reported roles and backgrounds, but employment dates, full-time status and independent verification are unavailable.",
+  "investors: named leads are disclosed, but round documents, complete participant list, allocations and investor ownership percentages are private.",
+  "financials: no dated revenue, ARR, profitability, cash, burn or runway disclosure found; no value should be inferred from LOIs or funding.",
+  "traction: LOIs and a company-reported deployment count lack counterparties, paid status, site results, conversion, renewal and independently measured savings.",
+  "intellectual_property: no attributable patent or published application identified in the reviewed public search; no comprehensive patent registry clearance was performed.",
+  "competition: the retained analysis identifies relevant incumbents and substitutes, but this pass did not verify each competitor's current product and comparable contract evidence.",
+  "comparables: no structured comparable-company records added because current competitor claims were not freshly verified against official product sources.",
+  "ownership: public cap table, valuations, founder stakes and investor allocations are unavailable; no ownership deal found.",
+  "israel_connection: no Israeli nexus appeared in reviewed company sources; no exhaustive registry or founder-affiliation search was performed.",
+  "dual_use: public material supports maritime security as an intended application, but no verified defense/security customer, contract or deployment was found."
+]
+conflicts = ["The company lists Paris, San Francisco and Zürich as its hubs; third-party profiles also label Bubble Robotics Swiss-based or Dübendorf-based. No reviewed primary source establishes its legal headquarters or place of incorporation, so the record preserves the company-listed multi-hub description and marks legal headquarters unconfirmed.", "The company calls its 2026 round pre-seed; some data services normalize the same event as Seed or assign an April 22 date. Company announcement and Tech.eu agree on pre-seed and April 21, retained here."]
+diligence_questions = [
+  "Which of the reported $4m-plus LOIs converted into signed, paid contracts, with what counterparties, duration, cancellation rights and deployment dates?",
+  "What independently measured endurance, availability, navigation error, inspection precision, recovery rate and maintenance cost has the system demonstrated at customer sites and across sea states?",
+  "What are the round's closing date, instrument, valuation, complete participating investor list and remaining cash/runway, and what is the next financing milestone?",
+  "How many of the reported deployments were customer-site operations, and what recurring revenue, renewal or customer reference can be shared?",
+  "Which surface-vessel rules, class approvals, insurance terms, cybersecurity controls and emergency-recovery procedures govern each operating region?",
+  "What patents or applications are owned or licensed, and how are autonomy, sensor-fusion and collected seabed/infrastructure data rights allocated?"
+]
+
+[[intelligence.research.sources]]
+id = "co_launch"
+url = "https://www.bubble-robotics.com/blog/bubble-robotics-raises-5m-to-build-the-oceans-autonomous-workforce"
+title = "Bubble Robotics raises $5M to build the ocean’s autonomous workforce"
+publisher = "Bubble Robotics"
+kind = "company"
+accessed_at = "2026-10-04T11:37:43Z"
+published_on = "2026-04-21"
+claims = ["Company says it announced a $5m pre-seed led by Episode 1 Ventures, Asterion Ventures and Norrsken Evolve on April 21, 2026.", "Company says it was founded in 2025 and emerged from Entrepreneurs First.", "Company reports more than $4m of signed LOIs across offshore wind, maritime security and subsea infrastructure and says deployments were upcoming.", "Company describes a robotics-as-a-service model and ocean inspection/security use cases."]
+
+[[intelligence.research.sources]]
+id = "co_about"
+url = "https://www.bubble-robotics.com/about"
+title = "About Us | Ocean Robotics & AI for Offshore Resilience"
+publisher = "Bubble Robotics"
+kind = "company"
+accessed_at = "2026-10-04T11:37:43Z"
+claims = ["Company lists current executive and engineering team roles and self-described biographies.", "Company About page reports 10 deployments since inception (October 2025), without defining deployment or commercial status.", "Company describes itself as applying space robotics to ocean operations."]
+
+[[intelligence.research.sources]]
+id = "co_product"
+url = "https://www.bubble-robotics.com/"
+title = "Building the ocean's autonomous workforce"
+publisher = "Bubble Robotics"
+kind = "company"
+accessed_at = "2026-10-04T11:37:43Z"
+claims = ["Company product site describes BubbleDock, BubbleBots and Bubble OS and says the dock can remain resident up to six months.", "Company claims AI processing of visual, sonar and environmental data and advertises cost reduction and millimeter precision; these are company claims, not independently validated results."]
+
+[[intelligence.research.sources]]
+id = "tech_eu"
+url = "https://tech.eu/2026/04/21/bubble-robotics-emerges-from-stealth-with-5m-to-scale-autonomous-ocean-robotics/"
+title = "Bubble Robotics emerges from stealth with $5M to scale autonomous ocean robotics"
+publisher = "Tech.eu"
+kind = "media"
+accessed_at = "2026-10-04T11:37:43Z"
+published_on = "2026-04-21"
+claims = ["Independent coverage reports a $5m pre-seed led by Episode 1 Ventures, Asterion Ventures and Norrsken Evolve.", "Coverage describes persistent offshore inspection and robotics-as-a-service strategy and attributes vessel-cost statements to the company CEO."]
+
+[[intelligence.research.sources]]
+id = "asterion_jobs"
+url = "https://www.asterionventures.com/en/careers"
+title = "Job openings | Asterion Ventures"
+publisher = "Asterion Ventures"
+kind = "investor"
+accessed_at = "2026-10-04T11:37:43Z"
+claims = ["Asterion's portfolio careers page, marked last updated July 2 2026, lists Bubble Robotics roles in autonomy, field, platform, embedded and software engineering in Zürich."]
+
+[[intelligence.research.sources]]
+id = "techradar"
+url = "https://www.techradar.com/pro/the-worlds-largest-untapped-frontier-nasa-led-startup-is-replacing-usd100k-a-day-ships-with-ai-infused-autonomous-robots"
+title = "The world's largest untapped frontier: NASA-led startup is replacing $100k-a-day ships with AI-infused autonomous robots"
+publisher = "TechRadar Pro"
+kind = "media"
+accessed_at = "2026-10-04T11:37:43Z"
+published_on = "2026-04-27"
+claims = ["Independent interview-based report covers Bubble's April 2026 launch and funding and attributes the claimed 80–90% inspection-cost share for vessels and crews to CEO Jean Crosetti."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T11:37:43Z"
+next_review_on = "2027-01-04"
+queries = ["Bubble Robotics official identity products headquarters founders"]
+source_ids = ["co_launch", "co_about", "co_product", "tech_eu"]
+summary = "Official site describes the company and products and its announcement names Paris, San Francisco and Zürich; legal entity name, incorporation jurisdiction and registered office were not established."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T11:37:43Z"
+next_review_on = "2027-01-04"
+queries = ["Bubble Robotics funding raised seed Series A investors valuation acquired 2026", "Bubble Robotics acquisitions Series A funding October 2026"]
+source_ids = ["co_launch", "tech_eu"]
+summary = "Found the April 21, 2026 company-announced $5m pre-seed. Searches found no later financing announcement; public history remains partial."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T11:37:43Z"
+next_review_on = "2027-01-04"
+queries = ["Bubble Robotics Episode 1 Ventures Asterion Ventures Norrsken Evolve announcement"]
+source_ids = ["co_launch", "tech_eu", "asterion_jobs"]
+summary = "Three lead investors appear in the company announcement and independent coverage. Allocations, full investor list and ownership percentages remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T11:37:43Z"
+next_review_on = "2027-01-04"
+queries = ["Bubble Robotics founder team leadership Jean Crosetti Patricia Apostol"]
+source_ids = ["co_about", "co_launch", "asterion_jobs"]
+summary = "Reviewed company team page and investor hiring page. Roles and bios are self-published; employment status and team size are not independently verified."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T11:37:43Z"
+next_review_on = "2027-01-04"
+queries = ["Bubble Robotics ownership parent acquisition public company cap table"]
+source_ids = ["co_launch", "tech_eu"]
+summary = "No acquisition, parent or cap-table disclosure identified in reviewed materials; private ownership percentages are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T11:37:43Z"
+next_review_on = "2027-01-04"
+queries = ["Bubble Robotics revenue ARR customers contracts signed LOI deployments 2026"]
+source_ids = ["co_launch", "co_about", "tech_eu"]
+summary = "Funding amount and LOI value are disclosed, but no revenue, ARR, profitability, cash, burn or runway figure was found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T11:37:43Z"
+next_review_on = "2027-01-04"
+queries = ["Bubble Robotics revenue ARR customers contracts signed LOI deployments 2026"]
+source_ids = ["co_launch", "co_about", "asterion_jobs"]
+summary = "Company reports more than $4m signed LOIs and 10 deployments since October 2025, while initial deployments were described as upcoming at launch. Customer identity, payment and outcome remain unverified."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T11:37:43Z"
+next_review_on = "2027-01-04"
+queries = ["Bubble Robotics patents Bubble Robotics patent underwater robotics"]
+source_ids = ["co_product", "co_about"]
+summary = "No attributable patent or application surfaced in the limited public web search; patent registry searches were not exhaustive."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T11:37:43Z"
+next_review_on = "2027-01-04"
+queries = ["Bubble Robotics competitors offshore resident subsea robotics Fugro Oceaneering"]
+source_ids = ["co_product", "tech_eu"]
+summary = "Existing analysis identifies incumbent marine survey and subsea robotics firms and the vessel-based substitute. This pass did not freshly verify competitor product comparisons; differentiation remains a thesis to test."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T11:37:43Z"
+next_review_on = "2027-01-04"
+queries = ["Bubble Robotics maritime security defense government deployments dual use"]
+source_ids = ["co_launch", "co_product", "tech_eu"]
+summary = "Company names maritime security as an intended use and describes monitoring technology; no public evidence found for defense customer, contract or fielded security deployment."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The company currently maintains a product site and About page describing its products, team and ongoing deployments; investor portfolio hiring page also lists active vacancies."
+verified_at = "2026-10-04T11:37:43Z"
+source_ids = ["co_product", "co_about", "asterion_jobs"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Company announcement and About page list its operating hubs and team without an Israeli connection; this supports the scoped classification based on reviewed sources, not an exhaustive registry finding."
+verified_at = "2026-10-04T11:37:43Z"
+source_ids = ["co_launch", "co_about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Company announcement states $5 million pre-seed and independent Tech.eu reports the same amount; this is the company-reported total, not an independent audited total."
+verified_at = "2026-10-04T11:37:43Z"
+source_ids = ["co_launch", "tech_eu"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2026.amount"
+support = "direct"
+summary = "Company announcement dated April 21, 2026 states a $5 million pre-seed; Tech.eu independently reports the same amount and date."
+verified_at = "2026-10-04T11:37:43Z"
+source_ids = ["co_launch", "tech_eu"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2026.lead_investors"
+support = "direct"
+summary = "Company announcement and Tech.eu each name Episode 1 Ventures, Asterion Ventures and Norrsken Evolve as the round leads."
+verified_at = "2026-10-04T11:37:43Z"
+source_ids = ["co_launch", "tech_eu"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2026.participating_investors"
+support = "direct"
+summary = "The company announcement and independent Tech.eu coverage identify the same three firms as leads and the only participants confirmed by those sources; no additional participants are asserted."
+verified_at = "2026-10-04T11:37:43Z"
+source_ids = ["co_launch", "tech_eu"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "No parent company is identified in the reviewed company announcement or independent round coverage; ownership remains private and no parent is reported."
+verified_at = "2026-10-04T11:37:43Z"
+source_ids = ["co_launch", "tech_eu"]

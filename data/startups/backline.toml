@@ -1,0 +1,427 @@
+name = "Backline"
+description = "Backline is an AI-native vulnerability remediation platform that consolidates security findings, prioritizes them using environmental context, and generates, tests, and delivers fixes for application and cloud infrastructure issues."
+detailed_description = """Backline is focused on the remediation side of vulnerability management rather than adding another discovery dashboard. Its platform ingests findings from existing security tools, groups and deduplicates related issues, ranks work using factors such as severity, exploitability, reachability, service-level commitments, and asset importance, and then produces changes for review or deployment. The company describes a coordinated set of AI agents that analyze findings, plan a safe change, modify code or configuration, and validate the result. Its current product materials specifically reference open-source dependency vulnerabilities, container image CVEs, and infrastructure-as-code misconfigurations, with outputs linked to the originating findings and delivered through existing engineering workflows.
+
+The customer problem is operational and measurable: security teams can discover more weaknesses than developers and platform engineers can fix, while duplicate findings and incomplete context make prioritization expensive. Backline's stated value proposition is to reduce engineering effort and shorten mean time to remediation by using repository, build, dependency, configuration, and test context when selecting and validating a fix. The product is positioned for enterprise security and engineering organizations that already operate scanners, source-control systems, CI checks, ticketing, and collaboration tools. Public product claims include reductions in risk and faster MTTR, but these are vendor-reported outcome figures rather than independently verified performance data and should be validated through customer references, deployment telemetry, and controlled before-and-after measurements.
+
+Backline launched from stealth in January 2025 with a reported $9 million seed round led by StageOne Ventures, with Evolution Equity Partners and Gradient participating. The company says it was founded in August 2024 by Maor Goldberg, Eran Leib, and Aviad Chen, and that the founders previously built Whitebox Security and Apolicy, later acquired by SailPoint and Sysdig respectively. Its public company page lists an Israel/U.S. footprint and a LinkedIn profile currently reports 11–50 employees. These are useful commercialization and team signals, but they do not establish recurring revenue, retention, production scale, certification status, or a repeatable sales motion. Backline's website publishes testimonials from security leaders at Arkose Labs, Cockroach Labs, Celanese, and Thetaray; those references support market engagement, while the depth and contractual status of those deployments remain diligence questions.
+
+The strategic relevance is primarily defensive. Reliable remediation automation can help enterprises, public-sector organizations, and defense contractors reduce exposure windows in software and cloud environments, especially where security staffing is constrained. The same capabilities could support hardening of mission-support systems and critical infrastructure, but public evidence does not establish government contracts, classified deployments, or defense-specific controls. Backline therefore has credible dual-use adjacency through cyber resilience and exposure reduction, not a demonstrated defense product. Its main competitive challenge is distribution: vulnerability-management, application-security, cloud-security, and developer-security incumbents can add remediation workflows, while platform-native tools and internal automation can address simpler fixes. The durable question is whether Backline can safely handle complex, cross-system changes with lower total cost and better auditability than those alternatives."""
+logo = "https://backline.ai/wp-content/uploads/2025/01/Backline-logo.svg"
+website = "https://backline.ai"
+sector = "Cybersecurity Automation / Vulnerability Remediation"
+founded = "2024"
+headquarters = "Englewood, New Jersey, United States; Tel Aviv, Israel"
+employees = "11-50"
+funding_stage = "Seed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Backline's core capability—context-aware remediation of software and cloud vulnerabilities—has substantive commercial and defensive-security applicability. It can help government, defense, and critical-infrastructure operators reduce exposure windows, but public evidence does not show defense contracts, classified use, or offensive cyber capability. The dual-use case is therefore credible and primarily defensive rather than a claim of established government deployment."
+key_technologies = ["AI-agent orchestration for vulnerability analysis, planning, coding, and verification", "Cross-scanner finding consolidation and deduplication", "Context-aware prioritization using exploitability, reachability, SLA, and asset importance", "Dependency and software supply-chain remediation", "Container image CVE remediation", "Infrastructure-as-code and cloud-configuration remediation", "Automated test, regression, and pull-request validation"]
+use_cases = ["Reducing application and cloud vulnerability backlogs", "Generating safe dependency upgrades without avoidable breaking changes", "Remediating container image CVEs across build and deployment pipelines", "Fixing infrastructure-as-code misconfigurations with engineer review", "Meeting vulnerability SLAs across distributed enterprise environments", "Providing auditable remediation workflows for regulated organizations", "Accelerating security hardening for public-sector and defense-contractor software estates"]
+investible = true
+investment_rationale = "Backline has a credible fit with a dual-use cyber-resilience thesis because it addresses the gap between vulnerability discovery and verified remediation, a problem shared by commercial enterprises and security-sensitive public infrastructure. Evidence supporting the signal includes a reported $9M seed round, a team with prior cybersecurity company-building experience, a current 11–50 employee profile, and a product that addresses several concrete remediation classes. The case remains early and should not be treated as an investment recommendation: public information does not establish revenue quality, retention, gross margins, deployment scale, security certifications, or defensible model performance. Key diligence priorities are verified customer outcomes, false-fix and rollback rates, permission boundaries, data-handling architecture, integration depth, and whether incumbents can reproduce the workflow through distribution advantages."
+strategic_value = "Backline could improve cyber resilience by compressing the time between a known weakness and a tested corrective change. Its value is highest where organizations already have abundant scanner output but insufficient engineering capacity, and where auditability and human approval must coexist with automation. For government and defense-adjacent environments, the relevant benefit is faster hardening of software supply chains, cloud workloads, and mission-support systems; the record should not imply current government adoption. The strategic opportunity is to become a remediation control layer across heterogeneous security stacks, while the strategic risk is becoming a feature inside larger CNAPP, application-security, or developer-platform products."
+potential_score = 82.0
+technology_score = 84.0
+market_score = 81.0
+team_score = 82.0
+dual_use_score = 80.0
+strategic_alignment_score = 84.0
+stage = "early"
+stage_rationale = "Backline was founded in August 2024 and publicly launched from stealth with seed funding in January 2025. Its current employee profile and named early adopters indicate an operating product and initial commercialization, but public sources do not establish broad production penetration, recurring-revenue scale, or Series A maturity. The appropriate classification is early-stage: technically differentiated enough to evaluate, with product-market fit, reliability, and repeatable go-to-market still requiring evidence."
+competitors = ["Snyk", "Wiz", "Endor Labs", "Tenable", "Palo Alto Networks Prisma Cloud", "GitHub Advanced Security and Copilot Autofix", "Internal security-engineering automation"]
+competitive_edge = "Backline's proposed edge is remediation as the primary workflow: consolidating findings, selecting a context-specific change, producing code or configuration updates, and validating them before review. That end-to-end orientation can be more useful than tools that stop at detection, prioritization, tickets, or generic code suggestions. The strongest defensibility would come from accumulated remediation playbooks, environment context, integration depth, verification data, and customer trust controls. None of those advantages should be assumed permanent; Snyk, Wiz, Tenable, Palo Alto Networks, GitHub, and cloud platforms can bundle adjacent capabilities, and internal platform teams can automate repetitive fixes."
+risk_factors = ["Autonomous-change risk: an incorrect patch, dependency upgrade, or configuration edit could create outages, regressions, or new security exposure.", "Evidence gap: public outcome metrics and customer testimonials are company-reported; independent validation of MTTR, fix accuracy, rollback rates, and production usage is needed.", "Platform competition: established CNAPP, application-security, developer-tool, and cloud vendors can bundle remediation into broader products with stronger distribution.", "Integration complexity: useful remediation requires reliable access to scanners, repositories, build systems, CI, ticketing, cloud context, and approval controls across heterogeneous environments.", "Security and privacy obligations: the platform processes sensitive source code, configurations, and vulnerability data, making isolation, least privilege, retention, and compliance controls material buying criteria.", "Seed-stage execution and procurement risk: enterprise security sales cycles, implementation burden, and the need for human oversight can slow conversion and strain a small team.", "Model and workflow commoditization: foundation-model improvements and open-source automation may reduce differentiation unless Backline's verification, playbooks, and operating data remain meaningfully better."]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Backline remains a strategically relevant early-stage cyber-resilience company: its remediation-first product has credible defensive dual-use potential, the team and seed financing provide meaningful validation, and the technical problem is concrete. Scores are moderated because customer outcomes, revenue scale, production reliability, certifications, and defense adoption are not publicly established. The record merits continued diligence focused on verified remediation quality, enterprise retention, permissions and data controls, and competitive response; the priority signal is not an investment recommendation."
+public_sources = [
+  { label = "Backline official site", url = "https://backline.ai/", description = "Current product description, customer testimonials, privacy and integration claims." },
+  { label = "Backline case study", url = "https://backline.ai/case-studies/five-weeks-to-under-a-day/", description = "Company-reported customer remediation results." },
+  { label = "Backline PolicyEval article", url = "https://backline.ai/blog/policy_evaluation_for_ai_agents_open_source_policyeval/", description = "Company's remediation evaluation approach and open-source PolicyEval release." },
+  { label = "Backline LinkedIn", url = "https://www.linkedin.com/company/backline-ai-inc", description = "Current company profile, employee band, locations, and company updates." },
+  { label = "TechCrunch launch coverage", url = "https://techcrunch.com/2025/01/30/backline-automatically-remediates-security-vulnerabilities/", description = "Launch, $9 million seed report, founders, and investor participants." },
+  { label = "SecurityWeek launch coverage", url = "https://www.securityweek.com/backline-emerges-from-stealth-with-vulnerability-remediation-platform-9m-in-funding/", description = "Launch, operations in Israel and US, founders, platform, and seed investors." },
+  { label = "StageOne Ventures launch newsletter", url = "https://medium.com/stageone-ventures/stageone-ventures-newsletter-ebf4b6979238", description = "Investor announcement of Backline's $9 million seed and founder history." },
+  { label = "Startup Nation Finder historical profile", url = "https://finder.startupnationcentral.org/company_page/backline", description = "Historical Israeli ecosystem profile with company registry identifier and $9.2 million round figure; stale profile caveat." },
+  { label = "StageOne portfolio careers", url = "https://jobs.stageonevc.com/Jobs", description = "Current portfolio hiring site includes Backline." },
+  { label = "Backline remediation workflow article", url = "https://backline.ai/blog/your-ai-patches-still-break-production-the-fix-isnt-a-better-model-its-a-better-workflow/", description = "Company technical position on structured remediation planning and evaluation." }
+]
+crawled_at = "2026-02-16T07:36:50Z"
+updated_at = "2026-10-04T02:06:22Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Maor Goldberg", role = "Co-founder and CEO", is_founder = true, current = true, background = "Previously co-founded Whitebox Security, sold to SailPoint in 2015, and Apolicy, acquired by Sysdig in 2021; left Sysdig in 2024 to start Backline.", source_ids = ["tc-launch", "sw-launch"] },
+  { name = "Eran Leib", role = "Co-founder and Chief Customer Officer", is_founder = true, current = true, background = "Co-founded Backline in 2024; currently publishes company material on remediation and customer workflows.", source_ids = ["tc-launch", "sw-launch", "li-profile"] },
+  { name = "Aviad Chen", role = "Co-founder and VP of R&D", is_founder = true, current = true, background = "Previously co-founded Apolicy, acquired by Sysdig in 2021; leads R&D at Backline.", source_ids = ["tc-launch", "sw-launch", "li-profile"] },
+  { name = "Haggai Shachar", role = "Principal AI Engineer", is_founder = false, current = true, background = "Authors Backline technical articles on vulnerability remediation evaluation and planning workflows.", source_ids = ["policy-eval", "workflow-blog", "li-profile"] }
+]
+investors = [
+  { name = "StageOne Ventures", investor_type = "vc", website = "https://stageonevc.com/", round_ids = ["seed-2025"], relationship = "current", source_ids = ["tc-launch", "sw-launch", "stageone-newsletter", "snc-profile"] },
+  { name = "Evolution Equity Partners", investor_type = "vc", website = "https://evolutionequity.com/", round_ids = ["seed-2025"], relationship = "current", source_ids = ["tc-launch", "sw-launch", "snc-profile"] },
+  { name = "Gradient Ventures", investor_type = "vc", website = "https://gradient.google/", round_ids = ["seed-2025"], relationship = "current", source_ids = ["tc-launch", "sw-launch", "stageone-newsletter", "snc-profile"] }
+]
+financials = []
+traction = [
+  { kind = "product", description = "The company publishes PolicyEval, an MIT-licensed open-source evaluation tool for scoring whether AI remediation agents adhere to planned changes and avoid unrequested changes; the accompanying company benchmark describes 25 repositories and identifies defects that ordinary CI can miss.", date = "2026", source_ids = ["policy-eval"] },
+  { kind = "customer", description = "Backline's published case study describes an unnamed global data-analytics customer with thousands of repositories and a six-figure vulnerability backlog. Backline reports average time to fix falling from five weeks to under one day, hundreds of vulnerabilities closed with a few dozen fixes, 86% autonomous mode, and a 25% cycle-time recovery; these are company-reported results and the customer is not named.", date = "2026", source_ids = ["case-study"] },
+  { kind = "customer", description = "Backline's current site displays testimonials attributed to security leaders at Arkose Labs, Cockroach Labs, Celanese, and ThetaRay. Testimonials show use or evaluation claims, but do not disclose contract value, paid status, duration, or production scope.", date = "2026-10-04", source_ids = ["backline-home"] },
+  { kind = "hiring", description = "Backline's public LinkedIn page reports an 11-50 employee band and lists 25 employees as of access; this is a platform profile count, not audited headcount.", date = "2026-10-04", source_ids = ["li-profile"] },
+  { kind = "product", description = "Current company messaging positions the product as Autonomous Exposure Remediation, ingesting findings from multiple scanners and delivering fixes, with integrations to security tools, communication platforms, and code repositories.", date = "2026-10-04", source_ids = ["backline-home", "li-profile"] }
+]
+intellectual_property = [
+  { kind = "product", description = "Backline presents customer-specific remediation playbooks and a structured analyze-plan-implement-verify-evaluate workflow as its technical method. No patent grant or application was verified in the public searches performed; PolicyEval is an open-source software artifact, not evidence of patent ownership.", date = "2026-10-04", source_ids = ["policy-eval", "workflow-blog"] }
+]
+comparables = [
+  { name = "Snyk", website = "https://snyk.io/", rationale = "Developer security and software composition analysis with remediation capabilities competes for the same vulnerability fixing workflow.", differentiation = "Backline is remediation-first and coordinates fixes across findings and repositories; Snyk's broader developer security platform combines discovery, prioritization, and developer workflows.", source_ids = ["tc-launch", "backline-home"] },
+  { name = "GitHub Advanced Security", website = "https://github.com/features/security", rationale = "Native code and dependency security plus AI-assisted fixes may satisfy some repository-level remediation needs.", differentiation = "GitHub is tightly integrated with its source-hosting platform; Backline's proposition is cross-scanner and cross-environment orchestration.", source_ids = ["tc-launch", "backline-home"] },
+  { name = "Wiz", website = "https://www.wiz.io/", rationale = "Cloud security platform that discovers and prioritizes cloud risks and can extend into remediation workflows.", differentiation = "Wiz is cloud visibility and risk-platform led; Backline emphasizes generating and validating corrective changes.", source_ids = ["tc-launch", "backline-home"] },
+  { name = "Tenable", website = "https://www.tenable.com/", rationale = "Established exposure and vulnerability management vendor with broad enterprise distribution.", differentiation = "Tenable is primarily known for exposure discovery and prioritization; Backline focuses on automated corrective actions.", source_ids = ["tc-launch", "backline-home"] }
+]
+
+[intelligence.company]
+company_id = "backline"
+aliases = ["Backline AI", "Backline Security"]
+operating_status = "active"
+business_model = "Privately held enterprise cybersecurity software company; the product integrates with security and engineering stacks to automate vulnerability and misconfiguration remediation. Pricing and revenue model are not publicly disclosed."
+products = ["Autonomous Exposure Remediation platform", "PolicyEval open-source AI-agent remediation evaluation library"]
+locations = ["Englewood, New Jersey, United States", "Tel Aviv, Israel"]
+linkedin_url = "https://www.linkedin.com/company/backline-ai-inc"
+founded_on = "2024-08"
+source_ids = ["snc-profile", "li-profile", "sw-launch"]
+
+[[intelligence.company.registry_identifiers]]
+jurisdiction = "Israel"
+scheme = "Israeli Corporations Authority company number"
+identifier = "517030110"
+source_ids = ["snc-profile"]
+notes = "Identifier is listed by the Startup Nation Finder historical profile as a link to the Israeli Companies Registrar; a dynamic official record did not expose readable company details in this research session."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Backline is privately held. Public sources identify the 2025 seed investors but disclose no cap table, ownership percentages, parent company, or subsequent ownership transaction."
+cap_table_status = "undisclosed"
+shareholders = ["StageOne Ventures", "Evolution Equity Partners", "Gradient Ventures"]
+source_ids = ["tc-launch", "sw-launch"]
+deals = []
+holdings = []
+
+[intelligence.funding]
+status = "conflicting"
+summary = "One January 2025 seed round is confirmed. TechCrunch, SecurityWeek, and StageOne's own newsletter report $9 million; the historical Startup Nation Finder profile reports $9.2 million. The discrepancy remains unresolved, so the round amount and company-reported lifetime total are omitted rather than selecting or summing conflicting figures. No later round was found in searches through 2026-10-04."
+history_status = "partial"
+coverage_through = "2026-10-04"
+[[intelligence.funding.rounds]]
+id = "seed-2025"
+round_type = "Seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2025-01-30"
+amount_status = "conflicting"
+amount_scope = "unknown"
+currency = "USD"
+lead_investors = ["StageOne Ventures"]
+participating_investors = ["Evolution Equity Partners", "Gradient Ventures"]
+valuation_basis = "undisclosed"
+notes = "Media and investor announcement sources agree on $9M; the legacy ecosystem directory lists $9.2M. Amount remains absent pending resolution."
+source_ids = ["tc-launch", "sw-launch", "stageone-newsletter", "snc-profile"]
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "reported-9m"
+amount = 9000000
+currency = "USD"
+source_ids = ["tc-launch", "sw-launch", "stageone-newsletter"]
+notes = "These announcement-era sources report $9 million."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "reported-9_2m"
+amount = 9200000
+currency = "USD"
+source_ids = ["snc-profile"]
+as_of = "2025-01"
+notes = "The historical Finder profile reports $9.2 million; its funding row does not explain the $0.2 million difference."
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "israeli_founders", "israeli_rd"]
+summary = "Israeli connection is supported by the Israeli company registry identifier 517030110 listed in Startup Nation Finder, Israeli co-founders and Tel Aviv team location, and contemporaneous reporting describing operations in Israel and the United States."
+as_of = "2026-10-04"
+source_ids = ["snc-profile", "sw-launch", "li-profile"]
+
+[intelligence.research]
+researched_at = "2026-10-04T02:06:22Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Backline AI cybersecurity company 2026 funding investors acquisition",
+  "Backline.ai vulnerability remediation founders 2025 seed StageOne",
+  "Backline AI company customers 2026 security remediation",
+  "site:backline.ai Backline newsroom product company",
+  "Backline AI גייסה 9 מיליון דולר בינואר 2025",
+  "Backline AI funding 2026 Backline cybersecurity remediation",
+  "site:backline.ai/blog Backline customer case study vulnerability remediation",
+  "StageOne Ventures Backline portfolio",
+  "Backline AI founder revenue customers patents acquired funding",
+  "Backline vulnerability remediation competitors AI security defense government"
+]
+gaps = [
+  "funding.amount remains conflicting between $9.0M announcement sources and a $9.2M legacy Finder entry; no company-announced lifetime total was located.",
+  "financials: no dated revenue, ARR, profitability, burn, cash, or runway disclosure was found.",
+  "ownership: private cap table and investor ownership percentages are undisclosed; no ownership deal or parent was found.",
+  "traction: customer names in the case study are withheld and published metrics are company-reported; paid status, contracts, retention, and deployment scope are not established.",
+  "intellectual_property: no patent filings or grants were verified; search covered company materials and patent-oriented queries but no authoritative assignee result surfaced.",
+  "competition: peer product positioning is publicly documented, but comparative win rates, pricing, and independent benchmarks are unavailable.",
+  "team: founder roles and one current AI engineering contributor were verified; comprehensive current leadership roster and biographies remain unavailable.",
+  "dual_use: defensive applicability is clear from product capability, but no public government, defense, classified, or critical-infrastructure customer contract was found.",
+  "identity: no independently readable official registry extract or confirmed US legal subsidiary record was available; registry number comes from the historical ecosystem profile."
+]
+conflicts = ["The January 2025 seed amount is reported as $9 million by TechCrunch, SecurityWeek, and StageOne, but $9.2 million by Startup Nation Finder; no source explains the difference."]
+diligence_questions = [
+  "Can Backline reconcile the $9.0M versus $9.2M seed reporting and provide the company-announced lifetime funding figure, round close date, and instrument details?",
+  "For the unnamed data-analytics case study, can the customer verify baseline and post-deployment MTTR, fix acceptance and rollback rates, paid status, and sustained production use?",
+  "What safeguards constrain repository and cloud permissions, prevent unsafe or out-of-scope changes, protect customer code from model retention, and support rollback and audit?",
+  "What are current ARR, gross margin, net retention, customer concentration, sales cycle, and renewal metrics?",
+  "Which patents, trade secrets, customer-specific playbooks, or evaluation datasets are owned by Backline, and how does PolicyEval performance compare independently with incumbent and foundation-model alternatives?",
+  "What security certifications and deployment options support regulated government, defense-contractor, or critical-infrastructure buyers, if any?"
+]
+
+[[intelligence.research.sources]]
+id = "backline-home"
+url = "https://backline.ai/"
+title = "Vulnerability Management, Scaled To Fix With AI"
+publisher = "Backline"
+kind = "company"
+accessed_at = "2026-10-04T02:06:22Z"
+claims = ["product scope and current positioning", "integrations and privacy claims", "testimonials attributed to Arkose Labs, Cockroach Labs, Celanese, and ThetaRay"]
+
+[[intelligence.research.sources]]
+id = "case-study"
+url = "https://backline.ai/case-studies/five-weeks-to-under-a-day/"
+title = "Five Weeks To Under A Day: Scaling Vulnerability Remediation For a Global Data-Analytics Company"
+publisher = "Backline"
+kind = "company"
+accessed_at = "2026-10-04T02:06:22Z"
+claims = ["unnamed customer profile and scale", "company-reported time-to-fix, leverage, autonomous mode, and cycle-time outcomes"]
+
+[[intelligence.research.sources]]
+id = "policy-eval"
+url = "https://backline.ai/blog/policy_evaluation_for_ai_agents_open_source_policyeval/"
+title = "Policy Evaluation for AI Agents — Open Source PolicyEval"
+publisher = "Backline"
+kind = "company"
+accessed_at = "2026-10-04T02:06:22Z"
+claims = ["PolicyEval MIT license and open-source release", "remediation workflow and company benchmark description"]
+
+[[intelligence.research.sources]]
+id = "workflow-blog"
+url = "https://backline.ai/blog/your-ai-patches-still-break-production-the-fix-isnt-a-better-model-its-a-better-workflow/"
+title = "The Fix Isn't a Better Model. It's a Better Workflow"
+publisher = "Backline"
+kind = "company"
+accessed_at = "2026-10-04T02:06:22Z"
+claims = ["company technical position on structured remediation planning and evaluation"]
+
+[[intelligence.research.sources]]
+id = "tc-launch"
+url = "https://techcrunch.com/2025/01/30/backline-automatically-remediates-security-vulnerabilities/"
+title = "Backline automatically remediates security vulnerabilities"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-04T02:06:22Z"
+published_on = "2025-01-30"
+claims = ["$9 million seed funding led by StageOne Ventures with Evolution Equity Partners and Gradient participation", "founders and executive roles", "Maor Goldberg's prior Whitebox and Apolicy exits"]
+
+[[intelligence.research.sources]]
+id = "sw-launch"
+url = "https://www.securityweek.com/backline-emerges-from-stealth-with-vulnerability-remediation-platform-9m-in-funding/"
+title = "Backline Emerges From Stealth With $9M in Funding for Vulnerability Remediation Platform"
+publisher = "SecurityWeek"
+kind = "media"
+accessed_at = "2026-10-04T02:06:22Z"
+published_on = "2025-01-30"
+claims = ["$9 million seed and investor participants", "founders, August 2024 founding, and Israel/US operations", "platform and customer oversight description"]
+
+[[intelligence.research.sources]]
+id = "stageone-newsletter"
+url = "https://medium.com/stageone-ventures/stageone-ventures-newsletter-ebf4b6979238"
+title = "StageOne Ventures Newsletter: Starting Strong"
+publisher = "StageOne Ventures"
+kind = "investor"
+accessed_at = "2026-10-04T02:06:22Z"
+claims = ["StageOne reports Backline raised $9 million seed", "founder names and investor's prior relationship with Apolicy"]
+
+[[intelligence.research.sources]]
+id = "snc-profile"
+url = "https://finder.startupnationcentral.org/company_page/backline"
+title = "Backline — Cyber Security"
+publisher = "Startup Nation Finder"
+kind = "directory"
+accessed_at = "2026-10-04T02:06:22Z"
+claims = ["Israeli registry identifier 517030110", "historical profile identifies Israeli location, founders, and 11-50 employee band", "directory reports January 2025 seed as $9.2 million with three named investors"]
+
+[[intelligence.research.sources]]
+id = "li-profile"
+url = "https://www.linkedin.com/company/backline-ai-inc"
+title = "Backline AI"
+publisher = "LinkedIn"
+kind = "other"
+accessed_at = "2026-10-04T02:06:22Z"
+claims = ["current company profile states Englewood headquarters and 11-50 employees", "Tel Aviv location and employee listing", "current product positioning and company updates"]
+
+[[intelligence.research.sources]]
+id = "stageone-jobs"
+url = "https://jobs.stageonevc.com/Jobs"
+title = "StageOne Ventures Portfolio Careers"
+publisher = "StageOne Ventures"
+kind = "investor"
+accessed_at = "2026-10-04T02:06:22Z"
+claims = ["Backline remains listed on StageOne's portfolio hiring site in 2026"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T02:06:22Z"
+next_review_on = "2027-04-04"
+queries = ["Backline AI company legal name Israel registry headquarters", "Backline AI founders company profile"]
+source_ids = ["sw-launch", "snc-profile", "li-profile"]
+summary = "Active private cybersecurity startup founded in August 2024; Israeli registry number and Israeli/US footprint are supported by launch reporting and the historical company profile; Englewood is the LinkedIn headquarters."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-04T02:06:22Z"
+next_review_on = "2027-01-04"
+queries = ["Backline funding raised seed Series A 2026", "Backline AI גייסה 9 מיליון דולר בינואר 2025", "Backline acquired valuation investors"]
+source_ids = ["tc-launch", "sw-launch", "stageone-newsletter", "snc-profile"]
+summary = "Only the January 2025 seed was found; announcement sources say $9M and historical Finder says $9.2M, with no disclosed valuation or later round located."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T02:06:22Z"
+next_review_on = "2027-04-04"
+queries = ["Backline investors StageOne Evolution Equity Gradient Ventures", "StageOne Backline portfolio"]
+source_ids = ["tc-launch", "sw-launch", "stageone-newsletter", "snc-profile"]
+summary = "StageOne Ventures led the disclosed seed; Evolution Equity Partners and Gradient Ventures participated. No other disclosed investors found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T02:06:22Z"
+next_review_on = "2027-04-04"
+queries = ["Backline founder CEO Maor Goldberg Eran Leib Aviad Chen", "Backline AI leadership 2026 team"]
+source_ids = ["tc-launch", "sw-launch", "li-profile", "policy-eval"]
+summary = "Three co-founders and launch-era roles are corroborated; current profile shows founder presence and Haggai Shachar authored technical posts, but a full leadership roster is not public."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T02:06:22Z"
+next_review_on = "2027-10-04"
+queries = ["Backline AI acquired acquisition ownership parent company", "Backline Ltd Israeli company 517030110 shareholders"]
+source_ids = ["snc-profile", "tc-launch", "sw-launch"]
+summary = "Private company; no cap table, ownership percentages, parent, or subsequent acquisition transaction publicly disclosed in reviewed sources."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T02:06:22Z"
+next_review_on = "2027-10-04"
+queries = ["Backline AI revenue ARR profitability financials", "Backline customers revenue employees 2026"]
+source_ids = ["backline-home", "case-study", "li-profile", "tc-launch"]
+summary = "No dated revenue, ARR, profit, cash, burn, or runway figures found; a case study gives operational outcomes but does not disclose financial measures."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T02:06:22Z"
+next_review_on = "2027-04-04"
+queries = ["Backline AI customer case study vulnerability remediation", "Backline AI customers contracts deployment testimonials"]
+source_ids = ["case-study", "backline-home", "li-profile"]
+summary = "Company publishes one anonymized case study with substantial claimed backlog and time-to-fix improvements, named testimonials, and a 2026 LinkedIn profile; paid status and independently verified deployment scale remain unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T02:06:22Z"
+next_review_on = "2027-10-04"
+queries = ["Backline AI patents vulnerability remediation", "Backline Ltd patent WIPO USPTO", "Backline PolicyEval license"]
+source_ids = ["policy-eval", "workflow-blog", "snc-profile"]
+summary = "No patent record verified in the public searches; company describes playbooks and has released PolicyEval under MIT, which supports software activity but not patent ownership."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T02:06:22Z"
+next_review_on = "2027-04-04"
+queries = ["AI vulnerability remediation Backline Snyk Wiz GitHub Tenable competitors", "Backline AI autonomous exposure remediation competitor"]
+source_ids = ["tc-launch", "backline-home"]
+summary = "Adjacent incumbent alternatives include Snyk, GitHub Advanced Security, Wiz, and Tenable; public comparative pricing and performance data were not found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T02:06:22Z"
+next_review_on = "2027-04-04"
+queries = ["Backline cybersecurity remediation government defense customers contracts", "Backline AI critical infrastructure security deployments"]
+source_ids = ["backline-home", "sw-launch"]
+summary = "Product capability has defensive enterprise and potential government/critical-infrastructure applicability; no public government or defense contract or deployment evidence was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current company profile lists active product messaging and employees; current Backline site offers the product and customer references."
+verified_at = "2026-10-04T02:06:22Z"
+source_ids = ["backline-home", "li-profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Startup Nation Finder provides Israeli registrar number 517030110; SecurityWeek states Israel/US operations and LinkedIn lists Tel Aviv location."
+verified_at = "2026-10-04T02:06:22Z"
+source_ids = ["snc-profile", "sw-launch", "li-profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.amount"
+support = "conflicting"
+summary = "TechCrunch, SecurityWeek, and StageOne report $9M while Startup Nation Finder reports $9.2M; conflict preserved and amount omitted."
+verified_at = "2026-10-04T02:06:22Z"
+source_ids = ["tc-launch", "sw-launch", "stageone-newsletter", "snc-profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.amount_observations.reported-9m.amount"
+support = "direct"
+summary = "TechCrunch, SecurityWeek, and StageOne each explicitly report a $9 million seed round."
+verified_at = "2026-10-04T02:06:22Z"
+source_ids = ["tc-launch", "sw-launch", "stageone-newsletter"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.amount_observations.reported-9_2m.amount"
+support = "direct"
+summary = "Startup Nation Finder's historical funding row and total-funding field report $9.2M for one seed round."
+verified_at = "2026-10-04T02:06:22Z"
+source_ids = ["snc-profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.lead_investors"
+support = "direct"
+summary = "TechCrunch identifies StageOne Ventures as lead; other launch sources identify it as the seed lead."
+verified_at = "2026-10-04T02:06:22Z"
+source_ids = ["tc-launch", "sw-launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.participating_investors"
+support = "direct"
+summary = "TechCrunch and SecurityWeek identify Evolution Equity Partners and Gradient Ventures as participants."
+verified_at = "2026-10-04T02:06:22Z"
+source_ids = ["tc-launch", "sw-launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.valuation"
+support = "direct"
+summary = "No pre-money or post-money valuation was disclosed in the reviewed seed announcement sources; round valuation remains undisclosed."
+verified_at = "2026-10-04T02:06:22Z"
+source_ids = ["tc-launch", "sw-launch"]

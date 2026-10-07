@@ -1,0 +1,424 @@
+name = "AL Nandi"
+description = "AL Nandi is an Israeli-founded agricultural technology startup that combines Bluetooth livestock sensors, field connectivity, mobile and web software, and AI analysis to give cattle operators real-time visibility into herd location, reproduction, health signals, and water availability. Its food-security relevance comes from improving the predictability and productivity of cattle operations rather than from a defense application."
+detailed_description = """
+**Product and the concrete problem.** AL Nandi addresses a basic but consequential information gap in cattle production: operators often learn about reproductive, health, location, or water problems only during a field round or after a production cycle has already been damaged. A missed breeding event, an inactive bull, an animal that leaves its assigned paddock, or an empty water point can translate into lower calving rates, higher labor cost, animal-welfare problems, and less predictable food output. Nandi's product is a real-time livestock-management system for cow-calf, stocker, natural-service breeding, and dairy operations. The official product site describes animal-level location and behavior data, abnormal-activity alerts, reproductive reports, bull monitoring, boundary alerts, a herd health calendar, and access through a phone or computer. This is more specific than a generic farm-management dashboard: the company is trying to make individual animal events visible early enough for a producer to intervene.
+
+**Core technology and how it works.** Public product material describes an integrated stack of sensors attached to animals, field antennas, a communications layer, cloud algorithms, a mobile application, and a web portal. Bluetooth-enabled devices provide an identification and proximity signal for animals, while the company's software turns observations about location, movement, and behavior into herd-level and individual-animal records. Nandi says its algorithms use artificial intelligence and machine learning to detect patterns and anomalies, including reproductive behavior, possible illness or isolation, bull inactivity, and animals crossing a field boundary. Its public materials also describe integration with other data-producing technologies so information can be centralized by animal, herd, or establishment. The company reports that installation can be completed in one working day, that a sensor belt on bulls does not interfere with reproductive activity in a cited installation report, and that an antenna can cover a defined operation without external infrastructure. These are useful product signals, but they remain company-reported. Public sources do not disclose the model architecture, training-set size, precision and recall by alert type, battery life, radio range under different terrain conditions, or the complete mapping between sensor observations and veterinary conclusions. The most defensible technical description is therefore an IoT and applied-machine-learning workflow for livestock telemetry, not autonomous diagnosis.
+
+**Market, customers, and go-to-market.** Nandi sells business-to-business into commercial cattle operations, with Argentina as an important initial market and Israel as the technology and company-origin anchor. Founder Eduardo Zlotnik told Forbes Argentina that the company was conceived by combining Israeli technology with Argentina's large agricultural base, and described a target customer profile of larger, professionally managed ranches where managers need information about thousands of animals across multiple fields. The company's public website names Lartirigoyen, La Suerte Agro, Grobocopatel, Pereda, and Vidal as agricultural companies that trust Nandi for herd management. Nandi's product is designed to fit existing ranch workflows rather than requiring the operator to become a data scientist: a field installation adds sensors and antennas, alerts reach a manager or worker by phone, and the system presents location and reproductive information in a dashboard. Forbes reported a price structure of approximately $4,000 for initial installation and $25 per animal per year, together with management plans to grow from roughly 35 to 40 fields in 2025 toward 120 in 2026. Those figures are reported plans and historical pricing context, not verified current recurring revenue. The route to market is attractive because it can use agricultural partners and direct sales to large ranches, but customer education, field service, connectivity, and regional livestock practices will determine whether a sensor deployment becomes a repeatable product rather than a project.
+
+**Traction, funding, and third-party validation.** AL Nandi was founded in January 2021 and public ecosystem records identify two founders, Eduardo Zlotnik and Amihay Gornik. Startup Nation Finder records a $1 million SAFE or pre-seed financing in 2024 and a $1.5 million seed round led by Malbec Ventures in 2026, for $2.5 million in disclosed funding across two rounds. The same profile identifies the company as a B2B agriculture and food-technology startup headquartered in Hod Hasharon, Israel, while independent Argentine reporting places operational activity and commercialization in the country's cattle market. The official site says the system is already being used in cattle operations and publishes a success story tied to La Suerte Agro, as well as customer logos for several agricultural producers. The iOS App Store listing independently confirms a public Nandi livestock-management application and describes the technology as Israeli AI and machine learning. These signals establish a real product, a financing history, and early market activity, but they do not establish audited revenue, retention, deployment count, or a statistically representative improvement in calving rates. Finder and startupim report headcount ranges that differ from one another, so employee count is recorded as a bounded public signal rather than treated as a precise operating metric. The central traction question is whether Nandi's reported field use converts into paid, multi-season deployments at enough scale to support hardware replacement, support, and software margins.
+
+**Founders and team background.** The public record consistently identifies Eduardo Zlotnik as co-founder and CEO and Amihay Gornik as co-founder and CTO. Zlotnik is an Argentine accountant who has lived in Israel for decades and previously held business-development or executive roles connected to technology and agriculture, according to public ecosystem and Argentine media profiles. His background gives Nandi a distinctive cross-border commercial thesis: Israeli sensing and software capabilities are being applied to a cattle-production problem in Argentina, where large ranches offer a practical environment for testing herd-level economics. Gornik is publicly identified as the technical co-founder, but the available sources do not provide enough reliable detail on his prior employers, academic history, or specific engineering responsibilities to justify a more elaborate biography. This absence is itself a diligence point. The team appears well matched to customer discovery and regional commercialization, but a livestock-telemetry company needs durable capability across embedded hardware, radio networking, cloud operations, applied statistics, veterinary domain knowledge, field installation, and agricultural sales. Public evidence confirms the two founder roles and the existence of a working product, while the depth and scalability of the broader technical and customer-success team remain less visible. Diligence should therefore test founder dependence, product-support coverage, hardware sourcing, animal-science advisory depth, and the company's ability to expand beyond the founders' Argentina-Israel network.
+
+**Competitive dynamics.** Nandi competes against several categories rather than one direct clone. CowManager and similar wearable livestock-monitoring systems use collars, ear tags, or other devices to track activity and reproductive signals; Nedap and Afimilk provide established herd-management, identification, and dairy-monitoring platforms; Merck Animal Health's SenseHub offers cattle monitoring and decision-support workflows; and conventional ranch practice, periodic observation, visual tags, spreadsheets, and veterinary visits remain powerful low-tech substitutes. Nandi's claimed differentiation is the combination of Bluetooth-based animal identification, field-level location, reproduction-oriented alerts, water-point monitoring, and a relatively lightweight deployment model for extensive cattle operations. Its use of a mobile application and web portal may reduce adoption friction, while the ability to integrate other data sources could help it become a system of record rather than only a sensor feed. The edge is not yet a demonstrated moat. Larger incumbents have more data, distribution, and veterinary relationships, while low-cost hardware vendors can copy components and farm-management platforms can add telemetry features. Defensibility will depend on the quality of Nandi's labeled behavioral data, alert precision, animal-level longitudinal records, installation economics, regional workflow knowledge, and measurable production outcomes. The company must also show that its system works across breeds, pasture layouts, weather, terrain, stocking densities, and connectivity conditions, rather than only in a small number of well-instrumented operations.
+
+**Food-security, resilience, and dual-use relevance.** Nandi's core product is civilian agriculture, and no reviewed public source identifies a military customer, defense contract, or security-specific deployment. Its strategic relevance is nevertheless substantive in food-system resilience. Beef and dairy production depend on biological reproduction, animal health, water access, labor availability, and long supply chains. Earlier visibility into reproductive failure, illness, boundary breaches, and water outages can improve the predictability of output and reduce avoidable losses. A distributed, low-infrastructure monitoring model may also be relevant to remote or resource-constrained operations where daily inspection is expensive and connectivity is imperfect. The same capabilities have bounded resilience applications around emergency livestock management, disease surveillance, animal evacuation, and continuity of food production after weather or infrastructure disruption. That does not make Nandi a defense company. The dual-use classification reflects transferability of the sensing, alerting, and remote-operations stack into civil-protection and food-security contexts, not evidence of national-security adoption. Strategic diligence should examine data ownership, veterinary liability, privacy and biosecurity controls, offline behavior, cybersecurity of field devices, and whether a compromised alerting system could create operational or animal-welfare harm. The strongest Claw & Talon thesis is therefore resilient food infrastructure and agricultural continuity, with defense adjacency limited to emergency and logistics use cases.
+
+**Growth stage, trajectory, and key diligence risks.** AL Nandi is early-stage, but it has progressed beyond a laboratory concept: founded in 2021, funded through a reported 2026 seed round, operating a public application, and describing active cattle deployments and named agricultural users. Its likely trajectory is from founder-led product-market validation toward repeatable installations, more robust analytics, and expansion across large ranches in Argentina and other livestock markets. The opportunity is meaningful because better reproductive visibility can increase effective food output without requiring more land, while real-time location and water monitoring can improve labor efficiency and animal welfare. The risks are equally concrete. (1) **Measurement risk:** company claims about improved birth rates, early detection, and economic return require independent, multi-season comparison against control herds. (2) **Hardware and field risk:** sensors, antennas, batteries, and connectivity must survive animals, weather, distance, theft, and maintenance realities. (3) **Model risk:** false alerts create labor cost and alert fatigue, while missed illness or reproductive events can directly reduce trust and production. (4) **Commercial concentration:** the early market appears geographically concentrated and oriented toward larger cattle operators, which may constrain expansion and increase customer-concentration risk. (5) **Scale economics:** installation, support, replacement hardware, and regional service can consume the margin promised by annual per-animal software fees. (6) **Team and capital risk:** a $2.5 million disclosed funding history is meaningful for early validation but modest for international hardware deployment. (7) **Strategic proof risk:** food-security relevance is credible, yet there is no public evidence that the company has converted its technology into government resilience programs or defense use. The positive case is a focused Israeli-origin platform that turns basic livestock telemetry into actionable production intelligence. The bear case is a service-heavy monitoring business whose alert performance and deployment economics do not scale beyond early customers. This is a strategic diligence assessment, not an investment recommendation.
+"""
+logo = "Unknown"
+website = "https://www.nandi.ag"
+sector = "Agricultural IoT and Livestock Intelligence"
+founded = "2021"
+headquarters = "Hod Hasharon, Israel"
+employees = "51-200 public range; exact count varies by source"
+funding_stage = "Seed; $1.5 million seed round reported in March 2026; public sources report $2.5 million lifetime funding across two rounds"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "AL Nandi's core product is commercial livestock monitoring, not defense technology, and no reviewed source identifies a military customer or defense contract. Its dual-use relevance is substantive at the food-security and resilience layer: real-time animal identification, location, reproduction, health-signal, and water monitoring can improve continuity of food production and support emergency livestock management in remote or disrupted environments. The transfer is therefore to civil resilience and agricultural continuity rather than to battlefield operations, and should not be overstated as defense traction."
+key_technologies = [
+  "Bluetooth livestock identification and proximity sensing",
+  "Field antennas and local animal-location telemetry",
+  "Cloud-based machine-learning analysis of herd behavior and anomalies",
+  "Reproductive behavior monitoring for cows and bulls",
+  "Mobile and web dashboards for real-time herd operations",
+  "Automated boundary-breach and abnormal-activity alerts",
+  "Water-point availability monitoring and third-party data integration"
+]
+use_cases = [
+  "Real-time reproductive monitoring for cow-calf breeding operations",
+  "Early detection of inactive bulls and missed breeding events",
+  "Animal location and boundary alerts across multi-field ranches",
+  "Abnormal-behavior and possible illness triage for cattle managers",
+  "Water-trough availability monitoring for remote livestock operations",
+  "Herd identification and activity dashboards for agricultural companies",
+  "Emergency livestock accountability and continuity planning after field disruption",
+  "Longitudinal production data for veterinary and herd-management decisions"
+]
+investible = true
+investment_rationale = "AL Nandi is a credible early-stage strategic-priority signal because it applies a concrete sensor-and-AI workflow to a food-production bottleneck that is measurable at the animal and herd level. (1) The company has a real product, a public mobile application, named agricultural users on its official site, and field-use claims rather than only a concept deck. (2) Startup Nation Finder and independent coverage corroborate a 2021 founding, the Zlotnik-Gornik founder pair, a $1.5 million 2026 seed round, and $2.5 million in disclosed financing across two rounds. (3) The Israel-to-Argentina operating model gives the company access to Israeli technology development and a large cattle-production test market. (4) Food-security relevance is direct because reproductive predictability, animal welfare, water visibility, and lower avoidable loss can strengthen output without simply expanding land or herd size. The counterweights are substantial: public evidence does not establish audited revenue, retention, independent calving-rate improvement, or current deployment scale; headcount information is inconsistent; hardware and field-service economics may limit margins; and livestock monitoring is a competitive category with better-capitalized incumbents. This is a strategic diligence assessment and legacy priority signal, not an investment recommendation. The decisive next diligence gates are multi-season control-group results, paid-customer retention, installed-base economics, alert precision, device reliability, and evidence that the product can expand beyond founder-led sales in Argentina."
+strategic_value = "AL Nandi's strategic value is best understood as resilient food infrastructure rather than defense hardware. (1) Visibility into breeding, animal location, health anomalies, and water access can reduce avoidable losses in a production system where biological delays compound across a season. (2) The low-infrastructure sensing model is potentially useful in remote operations where manual inspection is costly, and its mobile and web interfaces can keep managers informed across multiple fields and teams. (3) Israeli-origin sensing and software applied to Argentina's livestock sector creates an allied food-technology bridge with possible relevance to agricultural continuity in other water- or labor-constrained markets. (4) The same telemetry, alerting, and remote-operations primitives could support emergency livestock management and civil resilience, but public evidence does not establish government adoption, biosecurity programs, or defense use. Strategic value therefore depends on independent proof of production impact, secure operation, and scalable deployment economics rather than on the existence of AI terminology alone."
+public_sources = [
+  { label = "Nandi official product site", url = "https://www.nandi.ag/en", description = "Product functions, active deployments, named ranch relationships, case story, and company patent claims." },
+  { label = "Startup Nation Finder AL Nandi profile", url = "https://finder.startupnationcentral.org/company_page/al-nandi", description = "Company identity, founders, Israeli registry number, funding history and headcount snapshot." },
+  { label = "Pulso Económico company profile", url = "https://pulsoeconomico.com.ar/de-israel-al-campo-argentino-el-emprendedor-que-desarrollo-una-tecnologia-para-rastrear-vacas-por-bluetooth/", description = "Founder background, deployment and investor reporting, financing chronology, pricing and expansion plans." },
+  { label = "ZonaCampo interview", url = "https://zonacampo.com.ar/nandi-trazabilidad-y-datos-en-tiempo-real-la-nueva-forma-de-manejar-el-rodeo/", description = "Argentina operating location, product explanation, investor and patent references." },
+  { label = "Malbec Ventures portfolio", url = "https://malbec.online/portfolio", description = "Investor portfolio listing and $1.5 million seed funding claim." },
+  { label = "Israeli Corporations Authority company extract service", url = "https://www.gov.il/en/service/company_extract", description = "Official registry lookup service; individual current company extract not obtained." },
+  { label = "Merck Animal Health SenseHub", url = "https://ie.sensehub.com/offload-downloads/sensehub-dairy-brochure/", description = "Official adjacent livestock monitoring competitor product." },
+  { label = "CowManager cow monitoring system", url = "https://www.cowmanager.com/cow-monitoring-system-dairy/", description = "Official adjacent livestock monitoring competitor product." }
+]
+potential_score = 74.0
+technology_score = 72.0
+market_score = 70.0
+team_score = 68.0
+dual_use_score = 66.0
+strategic_alignment_score = 78.0
+stage = "early"
+stage_rationale = "AL Nandi is early-stage because it has a product, public application, named field users, and reported seed financing, but public evidence still describes a founder-led and geographically concentrated commercialization phase. The company was founded in 2021 and Startup Nation Finder records a 2026 seed round, yet there is no independently verified revenue, retention, deployment count, or multi-season controlled evidence of production uplift. The move from pilots and early installations to repeatable, profitable deployments across large ranches is the central stage transition still ahead."
+competitors = [
+  "CowManager (wearable cattle monitoring for health, fertility, and behavior)",
+  "Merck Animal Health SenseHub (commercial livestock monitoring and decision-support platform)",
+  "Nedap Livestock Management (established animal identification and herd-management systems)",
+  "Afimilk (dairy and herd-management sensors, software, and analytics)",
+  "Allflex / MSD Animal Health monitoring approaches (ear tags, identification, and livestock data workflows)",
+  "Conventional ranch operations (visual rounds, veterinary visits, tags, spreadsheets, and manual records)"
+]
+competitive_edge = "AL Nandi's potential edge is an integrated, field-oriented workflow for extensive cattle operations rather than a single wearable sensor feature. (1) Bluetooth-based identification and field antennas can create animal-level location visibility without requiring a separate high-cost GPS tracker on every animal. (2) The software combines reproductive monitoring, bull activity, abnormal behavior, boundary alerts, and water-point signals in one operational view. (3) A mobile and web interface plus reported one-day installation may lower adoption friction for ranch managers and workers. (4) The Israel-to-Argentina model gives the company a differentiated route into large commercial cattle operations and a meaningful real-world testing environment. These advantages remain provisional. Larger livestock platforms have stronger distribution and data histories, while hardware vendors can reproduce component-level functionality. Durable differentiation will require independent alert-precision results, longitudinal animal datasets, measurable calving and labor outcomes, reliable devices under field conditions, and lower support cost per monitored animal."
+risk_factors = [
+  "Validation risk: public production and reproductive benefits are company-reported and lack independent multi-season control-group evidence",
+  "Hardware reliability risk: animal-mounted sensors, antennas, batteries, and field connectivity must withstand weather, distance, animal behavior, maintenance, and theft",
+  "Alert-quality risk: false positives can create labor and alert fatigue while missed illness or breeding events can damage customer trust and herd economics",
+  "Commercial concentration risk: early activity appears concentrated in Argentina and larger cattle operators, limiting geographic and segment diversification",
+  "Scale-economics risk: installations, replacements, connectivity, and field support may consume the margin from per-animal software fees",
+  "Competitive risk: CowManager, SenseHub, Nedap, Afimilk, and established agricultural platforms have larger distribution and may bundle overlapping telemetry",
+  "Team and capital risk: disclosed funding is meaningful for early validation but modest for international hardware deployment, support, and veterinary-domain expansion"
+]
+risk_level = "medium"
+signals = [
+  "Israeli-founded livestock intelligence startup",
+  "Patented Bluetooth and field-sensing technology claim",
+  "AI and machine-learning herd analytics",
+  "Real-time reproductive and animal-location monitoring",
+  "Named agricultural users and field deployment claims",
+  "$1.5 million seed round reported in 2026",
+  "Food-security and agricultural-resilience relevance"
+]
+priority_rank = 0
+priority_rationale = "AL Nandi merits active but measured monitoring because it sits at a practical intersection of Israeli sensing, applied AI, livestock productivity, and food-system resilience. (1) The product solves an operationally concrete problem: delayed visibility into reproduction, animal movement, abnormal behavior, and water access can reduce output and increase labor cost. (2) The official site, Startup Nation Finder, App Store listing, and independent Argentine coverage provide a credible public trail for the product, founders, company origin, funding, and field activity. (3) The resilience case is stronger than a generic agtech label because the technology can improve food-output predictability and emergency accountability in distributed operations. (4) The commercial thesis remains early: customer logos, app availability, and reported plans do not establish recurring revenue, retention, independent production impact, or scalable unit economics. Priority should rise if Nandi publishes multi-season results, paid deployment counts, renewal data, and evidence of expansion beyond Argentina. It should remain capped if the company cannot demonstrate alert precision, hardware uptime, secure data handling, and a credible path from installation-heavy pilots to repeatable software-supported operations. This is an internal strategic-priority signal, not an investment recommendation."
+crawled_at = "2026-09-01T01:11:19Z"
+updated_at = "2026-10-03T16:04:00Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+traction = []
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "il-al-nandi"
+legal_name = "A. L. NANDI LTD"
+aliases = ["AL Nandi", "Nandi"]
+operating_status = "active"
+business_model = "B2B livestock monitoring platform combining animal sensors, field antennas, software, AI-based analysis, and technical support; commercial deployment and reported per-animal annual fees in Argentina."
+products = ["Nandi livestock monitoring platform", "Animal-mounted sensor system", "Mobile and web herd-management software"]
+locations = ["Hod Hasharon, Israel", "9 de Julio, Buenos Aires Province, Argentina"]
+linkedin_url = "https://www.linkedin.com/company/81579395"
+country_of_incorporation = "Israel"
+founded_on = "2021-01"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli Companies Registrar", identifier = "516263803", source_ids = ["finder"] }]
+source_ids = ["finder", "pulso", "official"]
+
+[[intelligence.people]]
+name = "Eduardo Zlotnik"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Argentine accountant and University of Buenos Aires graduate; media reports he has resided in Israel since 1998 and has over 30 years of technology, startup, innovation, and business-development experience."
+source_ids = ["finder", "pulso", "zonacampo"]
+
+[[intelligence.people]]
+name = "Amihay Gornik"
+role = "Co-founder and CTO"
+is_founder = true
+current = true
+source_ids = ["finder"]
+notes = "Public profile identifies role; reliable background details were not located."
+
+[[intelligence.investors]]
+name = "Malbec Ventures"
+investor_type = "vc"
+website = "https://malbec.online"
+round_ids = ["seed-2026"]
+relationship = "current"
+source_ids = ["finder", "malbec"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "Israeli company headquartered in Hod Hasharon, founded by Eduardo Zlotnik (an Argentine national resident in Israel since 1998) and Amihay Gornik. Its commercial operations include Argentina."
+as_of = "2026-10-03"
+source_ids = ["finder", "pulso"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public sources list a February 2024 $1 million SAFE and a March 2026 $1.5 million seed round led by Malbec Ventures, totaling a company/profile-reported $2.5 million. A May 2025 Argentine article instead described three financing stages of $307,000, $700,000 and $1.5 million, without clearly reconciling its round count, timing, or participants to Finder's later two-round record. The figures suggest approximately the same lifetime total but event-level identity and chronology need company confirmation; no amount is inferred from that reconciliation."
+reported_total_raised = 2500000
+reported_total_currency = "USD"
+total_source_ids = ["finder", "malbec"]
+total_as_of = "2026-03"
+total_scope = "Company profile reported lifetime equity/SAFE funding; not independently audited"
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[[intelligence.funding.rounds]]
+id = "safe-2024"
+round_type = "SAFE"
+instrument = "convertible"
+status = "closed"
+announced_on = "2024-02"
+amount_status = "reported"
+amount = 1000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = []
+participating_investors = []
+source_ids = ["finder"]
+notes = "Finder lists this as a February 2024 SAFE; it does not name investors. It is unclear whether this entry maps to or summarizes the $307,000 and/or $700,000 earlier stages described by 2025 media."
+
+[[intelligence.funding.rounds]]
+id = "seed-2026"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2026-03"
+amount_status = "reported"
+amount = 1500000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Malbec Ventures"]
+participating_investors = ["Malbec Ventures"]
+source_ids = ["finder", "malbec"]
+notes = "Finder dates the seed to March 2026 and names Malbec Ventures. Malbec's portfolio page currently reports a $1.5 million raise to support product-market fit but does not display the round date. May 2025 media reported a recent $1.5 million Luxembourg fund investment; likely related, but the date discrepancy is unresolved."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "No public cap table, disclosed ownership percentages, parent company, acquisition, or exit identified. Argentine agricultural operators and individuals were described by 2025 press as investors, but their current holdings and precise legal instruments are not public."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["finder", "pulso"]
+deals = []
+holdings = []
+
+[intelligence.research]
+researched_at = "2026-10-03T16:04:00Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["AL Nandi Nandi.ag identity products leadership", "AL Nandi funding raised seed investors SAFE valuation acquired", "AL Nandi Eduardo Zlotnik Amihay Gornik team founders", "AL Nandi ownership cap table shareholders", "AL Nandi revenue ARR financials employees", "AL Nandi customers deployments traction fields cattle", "AL Nandi patents patent livestock Bluetooth", "AL Nandi competitors cattle monitoring CowManager SenseHub Nedap", "AL Nandi defense security dual-use food resilience", "Nandi funding 307000 700000 1.5 million Argentina", "AL Nandi Malbec Ventures portfolio"]
+gaps = ["team: public sources identify two cofounders and roles but provide little verifiable background on CTO Amihay Gornik or broader current team composition.", "investors: investor identities for the 2024 SAFE and earlier financing stages are not disclosed in the more authoritative round listing; press mentions some Argentine backers but details and round mapping are unclear.", "financials: no dated revenue, ARR, profitability, burn, cash, or runway disclosures located; historical pricing is not company revenue.", "traction: the company and media describe field use and customer relationships, but no verified paying-customer count, deployment count, renewal/retention, or independent impact measurement was found.", "intellectual_property: official site claims patents in the United States and Argentina and press refers to a bull-behavior patent, but patent numbers, inventors, assignees, status, and claim scope were not independently verified.", "competition: no company-specific independent win/loss or market-share evidence; comparisons are based on competitor product descriptions and product-category overlap.", "ownership: no public cap table or holdings percentages; current ownership cannot be inferred from financing participation.", "dual_use: no evidence of defense, military, security-agency, or government deployment; relevance is limited to civil food-system continuity and remote livestock operations.", "Funding chronology: media in May 2025 dates a $1.5m investment to then, while Finder records the Malbec seed round in March 2026; confirm whether both describe the same transaction and reconcile early-stage amounts."]
+conflicts = ["Funding event chronology and round count differ: May 2025 Pulso Económico describes $307,000, $700,000 and $1.5 million across three stages and attributes investments to a Luxembourg fund plus named agricultural-sector backers; Startup Nation Finder lists February 2024 $1 million SAFE and March 2026 $1.5 million Malbec seed across two rounds. Lifetime total reported by Finder/Malbec is $2.5 million. The round mapping is unresolved; no duplicate or inferred round is added.", "Finder's headcount range of 51-200 and a machine-readable exact count of 58 do not provide an as-of date and conflict in precision; retained site count remains a broad range."]
+diligence_questions = ["Can management provide a financing schedule reconciling the 2024 SAFE, the 2025 press-reported $307,000/$700,000/$1.5 million stages, and the March 2026 Malbec entry, including close dates, instruments, and participants?", "How many active paying ranches, monitored animals, installed fields, and renewals does Nandi have as of the latest quarter, and what are cohort retention and gross margin after hardware, installation, connectivity, and support?", "What independently measured alert precision/recall and multi-season breeding or labor outcomes support the product claims, segmented by terrain, herd type, sensor generation, and baseline practice?", "What are the patent numbers, jurisdictions, assignees, remaining term, and freedom-to-operate position for the claimed US/Argentina patent protection?", "What is the present headcount and where do product engineering, field support, veterinary expertise, and commercial ownership sit between Israel and Argentina?"]
+
+[[intelligence.research.sources]]
+id = "official"
+url = "https://www.nandi.ag/en"
+title = "Nandi | Real-Time Livestock Monitoring"
+publisher = "Nandi"
+kind = "company"
+accessed_at = "2026-10-03T16:04:00Z"
+claims = ["Official site describes sensor-based real-time livestock location and behavior monitoring, AI analysis, reproductive and abnormal-behavior alerts, boundary alerts, mobile access, operating installation, and active cattle use.", "Official site displays La Suerte Agro success story and names Lartirigoyen, La Suerte Agro, Grobocopatel, Pereda, and Vidal as agricultural companies trusting its herd management.", "Official site claims patented technology in the United States and Argentina; patent identifiers are not supplied."]
+
+[[intelligence.research.sources]]
+id = "finder"
+url = "https://finder.startupnationcentral.org/company_page/al-nandi"
+title = "AL Nandi — Agriculture & Food Technologies | Finder"
+publisher = "Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-03T16:04:00Z"
+claims = ["Finder identifies AL Nandi as a private Israeli agriculture technology startup founded January 2021 by Eduardo Zlotnik and Amihay Gornik, with Hod Hasharon HQ and B2B livestock platform.", "Finder lists a February 2024 $1 million SAFE and March 2026 $1.5 million seed led by Malbec Ventures and reports $2.5 million across two rounds.", "Finder lists Israeli registrar identifier 516263803 and 51-200 employees; its archived exact-count field says 58 without a clear as-of date.", "Finder disclosed its operation ended August 31, 2026; its company data should be treated as a retained directory snapshot and corroborated where possible."]
+
+[[intelligence.research.sources]]
+id = "pulso"
+url = "https://pulsoeconomico.com.ar/de-israel-al-campo-argentino-el-emprendedor-que-desarrollo-una-tecnologia-para-rastrear-vacas-por-bluetooth/"
+title = "De Israel al campo argentino, el emprendedor que desarrolló una tecnología para rastrear vacas por bluetooth"
+publisher = "Pulso Económico"
+kind = "media"
+accessed_at = "2026-10-03T16:04:00Z"
+published_on = "2025-05-27"
+claims = ["Article reports Nandi was founded in 2021 by Eduardo Zlotnik, who has lived in Israel since 1998, and describes a Bluetooth livestock monitoring product already being commercialized.", "Article reports deployments at ranches and describes Grobocopatel, Lartirigoyen, La Suerte Agro, veterinarian Carlos Acuña, and Sebastián Gavalda as investors; these are media-reported statements, not cap-table disclosures.", "Article reports financing stages of $307,000, $700,000, and a recent $1.5 million Luxembourg fund investment, creating chronology and round-mapping uncertainty with Finder.", "Article reports historical pricing of $4,000 installation and $25 per animal per year, and management plans for field expansion; these are reported historical price/plans, not audited financial results."]
+
+[[intelligence.research.sources]]
+id = "zonacampo"
+url = "https://zonacampo.com.ar/nandi-trazabilidad-y-datos-en-tiempo-real-la-nueva-forma-de-manejar-el-rodeo/"
+title = "Nandi: Trazabilidad y datos en tiempo real, la nueva forma de manejar el rodeo"
+publisher = "ZonaCampo"
+kind = "media"
+accessed_at = "2026-10-03T16:04:00Z"
+published_on = "2026-05-06"
+claims = ["Interview reports Nandi is headquartered in 9 de Julio, Buenos Aires Province, for local technical and commercial support, while founder Zlotnik lives in Israel.", "Founder describes animal sensors capturing activity and location, analyzed by AI algorithms at individual and herd levels; this is interview/company-reported product information.", "Article reports support from La Suerte Agro, Pereda, and Lartirigoyen and says there is a patent related to bull behavior; precise investor terms and patent details are absent."]
+
+[[intelligence.research.sources]]
+id = "malbec"
+url = "https://malbec.online/portfolio"
+title = "Malbec Ventures Portfolio"
+publisher = "Malbec Ventures"
+kind = "investor"
+accessed_at = "2026-10-03T16:04:00Z"
+claims = ["Malbec portfolio lists Nandi as an Israel agro-tech company and says it raised $1.5 million to support product-market fit."]
+
+[[intelligence.research.sources]]
+id = "gov"
+url = "https://www.gov.il/en/service/company_extract"
+title = "Get a full extract or basic information for a company or partnership"
+publisher = "Israeli Corporations Authority"
+kind = "government"
+accessed_at = "2026-10-03T16:04:00Z"
+claims = ["Israeli Corporations Authority provides a public basic company information and paid extract service; Finder supplies the company-specific registry number but a current individual extract was not obtained in this review."]
+
+[[intelligence.research.sources]]
+id = "sensehub"
+url = "https://ie.sensehub.com/offload-downloads/sensehub-dairy-brochure/"
+title = "SenseHub Dairy Monitoring Technology"
+publisher = "Merck Animal Health"
+kind = "company"
+accessed_at = "2026-10-03T16:04:00Z"
+claims = ["Merck Animal Health markets SenseHub dairy monitoring technology, an adjacent competitor category offering livestock monitoring and decision support."]
+
+[[intelligence.research.sources]]
+id = "cowmanager"
+url = "https://www.cowmanager.com/cow-monitoring-system-dairy/"
+title = "CowManager Cow Monitoring System"
+publisher = "CowManager"
+kind = "company"
+accessed_at = "2026-10-03T16:04:00Z"
+claims = ["CowManager describes continuous monitoring and lifetime animal monitoring system, supporting its relevance as an adjacent competitor in wearable livestock monitoring."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T16:04:00Z"
+next_review_on = "2027-01-03"
+queries = ["AL Nandi Nandi.ag identity legal name headquarters Israel", "AL Nandi 516263803 Israeli company"]
+source_ids = ["official", "finder", "gov", "zonacampo"]
+summary = "Official product identity and website align with Finder's AL Nandi profile and Israeli registrar number; an individual current registry extract was not retrieved. Argentine article reports local 9 de Julio operating base."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-03T16:04:00Z"
+next_review_on = "2026-11-03"
+queries = ["AL Nandi funding raised seed SAFE investors", "Nandi 307000 700000 1.5 million Argentina financing", "AL Nandi Malbec Ventures portfolio funding"]
+source_ids = ["finder", "pulso", "malbec"]
+summary = "Finder and Malbec report $2.5m lifetime and a $1.5m seed; Pulso's May 2025 timeline describes three stages, with a $1.5m Luxembourg fund investment then. Event mapping and chronology remain unresolved."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T16:04:00Z"
+next_review_on = "2027-01-03"
+queries = ["AL Nandi investors Malbec Ventures", "Nandi investors La Suerte Agro Pereda Lartirigoyen funding"]
+source_ids = ["finder", "malbec", "pulso", "zonacampo"]
+summary = "Malbec is named as 2026 seed lead in Finder and lists Nandi in portfolio. Press attributes investment participation to agricultural operators and individuals, but terms and round assignments are not publicly verified."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T16:04:00Z"
+next_review_on = "2027-01-03"
+queries = ["AL Nandi Eduardo Zlotnik Amihay Gornik founders CEO CTO", "Nandi team LinkedIn Israel"]
+source_ids = ["finder", "pulso", "zonacampo"]
+summary = "Eduardo Zlotnik is identified as cofounder and CEO, Amihay Gornik as cofounder and CTO. Public sources provide limited additional team and career detail."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T16:04:00Z"
+next_review_on = "2027-04-03"
+queries = ["AL Nandi ownership parent company acquisition shareholders", "AL Nandi cap table registry"]
+source_ids = ["finder", "pulso", "gov"]
+summary = "No public cap table, parent, acquisition, or disclosed percentage holdings located; reported investors do not establish current ownership shares."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T16:04:00Z"
+next_review_on = "2027-04-03"
+queries = ["AL Nandi revenue ARR profitability financials", "Nandi livestock customer revenue pricing"]
+source_ids = ["pulso", "finder"]
+summary = "No public revenue, ARR, profit, burn, or runway metrics found. Media reported historical price points, not realized sales or audited financial metrics."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T16:04:00Z"
+next_review_on = "2027-01-03"
+queries = ["AL Nandi customers fields cattle deployments traction", "Nandi La Suerte Agro success story customers"]
+source_ids = ["official", "pulso", "zonacampo"]
+summary = "Company site describes operating deployments and a La Suerte Agro case story; media describes commercial rollout and named ranch relationships. Customer counts, contract values, retention, and independent outcomes remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-03T16:04:00Z"
+next_review_on = "2027-04-03"
+queries = ["AL Nandi patents United States Argentina livestock", "Nandi patent bull behavior Argentina Israel"]
+source_ids = ["official", "zonacampo"]
+summary = "Company claims patent protection in the United States and Argentina; media reports a bull-behavior patent. No patent identifier or official patent-record confirmation was located."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T16:04:00Z"
+next_review_on = "2027-04-03"
+queries = ["cattle monitoring platform CowManager SenseHub official", "Nedap livestock monitoring official", "AL Nandi cattle monitoring competitors"]
+source_ids = ["official", "sensehub", "cowmanager"]
+summary = "Adjacent competitors offer wearable herd monitoring and decision-support solutions. Nandi's stated emphasis is broad livestock visibility for cattle field/ranch workflows; comparative performance and market share are unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-03T16:04:00Z"
+next_review_on = "2027-04-03"
+queries = ["AL Nandi defense government security customer contract", "Nandi livestock monitoring resilience emergency use"]
+source_ids = ["official", "pulso"]
+summary = "No defense, security-agency, or government contract evidence located. Potential applicability is civilian food-system continuity and remote livestock management only."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Official site remains active with current 2026 product material and contact information, while Finder profile reports a private startup and live offering."
+verified_at = "2026-10-03T16:04:00Z"
+source_ids = ["official", "finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Finder places headquarters in Hod Hasharon and identifies Israeli founders; Pulso reports founder residency in Israel since 1998."
+verified_at = "2026-10-03T16:04:00Z"
+source_ids = ["finder", "pulso"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Finder states $2.5 million total funding across two rounds; Malbec portfolio reports the $1.5 million seed component."
+verified_at = "2026-10-03T16:04:00Z"
+source_ids = ["finder", "malbec"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-2024.amount"
+support = "direct"
+summary = "Finder lists a February 2024 SAFE round with $1 million amount."
+verified_at = "2026-10-03T16:04:00Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.amount"
+support = "direct"
+summary = "Finder lists a March 2026 $1.5 million seed led by Malbec; Malbec portfolio independently states Nandi raised $1.5 million. The announcement timing differs in 2025 media and remains unresolved."
+verified_at = "2026-10-03T16:04:00Z"
+source_ids = ["finder", "malbec"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.lead_investors"
+support = "direct"
+summary = "Finder identifies Malbec Ventures as the seed investor/lead; Malbec's portfolio page lists Nandi as its portfolio company."
+verified_at = "2026-10-03T16:04:00Z"
+source_ids = ["finder", "malbec"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.participating_investors"
+support = "direct"
+summary = "Finder names Malbec Ventures for the seed round, and Malbec's investor portfolio identifies Nandi as a portfolio company; no other seed participants are named in the source record."
+verified_at = "2026-10-03T16:04:00Z"
+source_ids = ["finder", "malbec"]

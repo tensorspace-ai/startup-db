@@ -1,0 +1,310 @@
+name = "Axioma Robotics"
+description = "Axioma Robotics is an Israeli robotics startup developing a remotely operated and increasingly autonomous High-Voltage Maintenance Robot for performing complex work on energized power infrastructure from the ground. Its system combines robotic manipulation, sensing, machine learning, and human supervision to reduce worker exposure, avoid service interruptions, and strengthen critical-grid resilience."
+detailed_description = """
+**Product and the concrete problem it solves.** Axioma Robotics is developing the High-Voltage Maintenance Robot, or HVMR, for a problem that is both operationally expensive and safety-critical: utilities must inspect, repair, and modify transmission and distribution infrastructure while power lines are energized, but conventional live-line work puts crews near lethal voltages and often requires workers at height, larger teams, specialized equipment, or an outage. The public description is unusually concrete for an early robotics company. The robot is mounted on a lifting platform, is operated by a ground-based human operator, and is designed to perform maintenance tasks on live power lines without disconnecting customers. A Jerusalem Post account of the Israel Electric Corporation collaboration describes a system with two robotic arms, high-resolution cameras, LiDAR, and visual and thermal analysis. Reported task examples include installing line accessories, handling damaged conductors, trimming vegetation near lines, and placing bird-protection devices. The value proposition is therefore not a generic autonomous robot: it is a purpose-built intervention and diagnostics platform for hazardous, hard-to-reach electrical infrastructure, where reducing exposure and avoiding outages can be worth much more than labor substitution alone.
+
+**Core technology and how it works.** HVMR appears to use a layered autonomy model appropriate for a high-consequence physical environment. A human operator remains on the ground and retains real-time approval, while the machine provides positioning, perception, manipulation, and task assistance. The company says its robot can be controlled remotely, operate under live power, and accept dynamically selected tools through a modular architecture. Independent reporting adds the technical detail that high-resolution cameras and a LiDAR sensor create a spatial picture of conductors and obstacles, while machine-learning models identify work scenarios and adapt arm motion to line density and the surrounding geometry. The visual and thermal analysis layer is important because the robot is not only a pair of remote arms: it can also look for heat sources, corrosion, and structural defects before they become failures. A company LinkedIn update reports a successful live 35 kV test at an Israel Electric laboratory, including stable operation in the presence of corona effects; that is a company claim rather than independently audited certification, but it identifies a real engineering challenge. The product architecture is strategically sensible because remote supervision, perception, modular tooling, and gradual autonomy let Axioma pursue useful deployments before asking utilities to accept unsupervised decisions near energized conductors.
+
+**Market, customers, and go-to-market.** The first customer and development partner publicly identified is the Israel Electric Corporation, which collaborated with Axioma on the prototype and later put a live-grid robotic solution into operational use according to IEC personnel quoted on the company LinkedIn page and reporting in the Jerusalem Post. The immediate beachhead is electric utilities that need safer maintenance, reduced downtime, and better use of scarce skilled crews. Axioma is also listed by the Israel Innovation Authority as targeting defense systems, homeland security, and smart cities, which broadens the market thesis toward critical infrastructure and public-sector operators rather than only commercial grid maintenance. Its go-to-market is beginning with a high-value reference deployment and utility validation, then expanding through ecosystem programs: Axioma announced selection for the 2026 Free Electrons program, whose official startup list identifies the company as a live-line maintenance robotics provider and creates access to global utilities including E.ON, CLP, EDP, ESB, Hydro Quebec, and Origin Energy. The company has also publicly sought strategic partners and investors for scaling. The commercial challenge is that utility buyers require extensive safety evidence, work-process integration, insurance acceptance, and field reliability; a successful Israeli reference is valuable, but it is not yet proof of repeatable international sales.
+
+**Traction, funding, and third-party validation.** The strongest evidence of traction is the progression from prototype development with Israel Electric to field and operational demonstrations. The Jerusalem Post reports that the project required millions of shekels and hundreds of hours of planning and engineering, and describes the robot as capable of semi-autonomous work under close human supervision. Startup Nation Finder records a prototype collaboration with IEC, an Israel Innovation Authority grant, and a May 2026 launch of an autonomous high-voltage-line robot. The official Free Electrons organization selected Axioma among its 2026 Top 60 startups, a meaningful commercial-screening signal because the program is designed to connect energy startups with major utilities. The Israel Innovation Authority profile records additional funding, initial revenues as the stage marker, and the company under its hardware and industrial category, although the public profile does not disclose a round amount. A company and founder LinkedIn announcement claims a 3.5 million dollar Innovation Authority grant, a successful IEC pilot at TRL 6, and an additional 8.5 million dollar fundraise being explored; those amounts and the TRL designation should be verified directly in diligence rather than treated as closed venture financing. No public patent portfolio, safety certification, recurring revenue figure, or independently audited performance benchmark was identified in the available sources.
+
+**Founders and team background.** Public ecosystem and government records identify Asaf Shefi as CEO and co-founder and Bruria Cohen as CTO, COO, and co-founder; the company website presents Cohen as founder and CEO and emphasizes more than 30 years of engineering and leadership experience across civilian and defense programs. Startup Nation Finder also lists Amir Mamet as a founder and vice president of research and development, while LinkedIn shows a very small public company footprint. There is an important date discrepancy that should remain explicit: the Israel Innovation Authority page lists the Axioma entity as established in 2015 and 25 employees, while Axioma Robotics official materials describe the robotics business as a spin-off of Axioma Engineering and Integration established in 2025, and Startup Nation Finder lists the robotics company as founded in July 2025 with 1–10 employees. The most defensible reading is that an older engineering and integration activity preceded the newly organized robotics spin-off; the robotics team, cap table, and current headcount need confirmation. Cohen's long engineering background and Shefi's commercial and company leadership are relevant, but the public record does not yet document the full autonomy, high-voltage safety, mechanical manipulation, or utility-sales bench. For a system operating around energized infrastructure, team depth and safety-process maturity are as important as the demonstration itself.
+
+**Competitive dynamics.** Axioma competes against several different categories rather than one direct clone. Sharper Shape, Skyqraft, and similar utility-drone providers automate aerial inspection and data collection, but generally do not manipulate live conductors or perform physical maintenance. LineVision and related sensor platforms monitor conductor conditions from fixed or mobile sensors and can reduce inspection needs without attempting robotic intervention. ULC Robotics and utility engineering contractors represent closer robotic and remote-manipulation approaches for hazardous infrastructure work. GE Vernova and other large grid-equipment and services incumbents compete through installed-base relationships, engineering services, and conventional maintenance programs. The incumbent alternative remains trained live-line crews using bucket trucks, helicopters, cranes, and specialized hand tools. Axioma's potential edge is the combination of intervention and inspection in one platform, a ground operator rather than an exposed lineman, modular tooling, and a human-supervised autonomy path. Its vulnerabilities are equally clear: incumbents have procurement trust and safety documentation; drone inspection may solve a larger first wedge; and every new task requires validation of mechanical reliability, electrical isolation, fault recovery, and operator training.
+
+**Defense, security, and resilience dual-use relevance.** Axioma's core technology credibly serves commercial and security contexts, though its public evidence is strongest in energy resilience rather than fielded defense. Power grids are critical infrastructure, and a machine that can diagnose and maintain energized lines without sending people into the danger zone can support continuity after storms, sabotage, equipment failure, or other disruptions. The Israel Innovation Authority explicitly lists defense systems and homeland security among targeted customers, and the company site says its parent engineering work spans civilian and defense programs. The same capabilities could support military bases, secure facilities, border and homeland-security sites, emergency restoration teams, and remote infrastructure where minimizing human exposure is strategically valuable. High-voltage robotic manipulation also has a security-adjacent role in inspecting or isolating suspicious equipment, though no such deployment is publicly documented and it should not be claimed as current capability. The calibrated thesis is defense-industrial and critical-infrastructure resilience: Axioma is not a weapons or military-autonomy company, and there is no public evidence of a defense contract, military deployment, or certification. Its dual-use score is nevertheless high because the product's safety and continuity benefits arise from the same core system in both utility and protected-infrastructure settings.
+
+**Growth stage, trajectory, and key diligence risks.** Axioma Robotics is best classified as early: it has a real prototype, a high-value utility collaboration, public live-voltage testing, a selected energy-ecosystem program, and signs of initial revenue or grant support, but it is still a small private company building its first repeatable commercial deployment. The trajectory could be attractive if IEC validation converts into utility orders and if the same chassis, perception stack, and tool interface can support a growing library of maintenance tasks. The key diligence questions are: (1) whether the reported operational launch is a paid production deployment or an innovation pilot; (2) what safety case, electrical certification, insurance approval, and regulatory permissions govern work near energized lines; (3) whether the robot can repeat tasks across different tower geometries, voltage classes, weather conditions, and utility operating procedures; (4) whether autonomy reduces operator burden without creating unacceptable failure modes; (5) whether the company owns protectable mechanical, control, and data assets; (6) whether a small team can manufacture, service, and train customers internationally; and (7) whether the claimed grant, TRL 6 result, and prospective financing are closed and documented. Success milestones would include named utility contracts outside Israel, independently measured reductions in outage time and worker exposure, certified task procedures, repeatable production units, and evidence that the platform's economics beat specialized crews or inspection-only alternatives.
+"""
+logo = "Unknown"
+website = "https://www.axioma-in.com/robotics"
+sector = "Critical-Infrastructure Robotics / Live High-Voltage Grid Maintenance"
+founded = "2025"
+headquarters = "Netanya, Israel"
+employees = "2–10 (LinkedIn profile for robotics unit); Israel Innovation Authority profile lists 25 for the registered Axioma Robotics entity, a discrepancy requiring confirmation"
+funding_stage = "Early commercial; company reports a $3.5M IIA grant; IEC collaboration has reached operational network deployment; a further $8.5M raise was described as being sought, not closed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Axioma's core live-line robotics stack has credible commercial and security/resilience applications. It can reduce worker exposure and avoid outages in civilian power networks, while the same remote manipulation, perception, and supervised-autonomy capabilities could support military bases, homeland-security sites, emergency restoration, and other protected critical infrastructure. The public record supports energy-infrastructure validation, not a fielded defense contract or military deployment, so the dual-use case is defense-industrial and resilience adjacency rather than defense-first product-market fit."
+key_technologies = [
+  "Two-arm robotic manipulation from a lifting platform for live-line maintenance tasks",
+  "High-resolution visual perception and LiDAR spatial mapping around energized conductors",
+  "Machine-learning scene recognition and motion adaptation for changing line density and obstacles",
+  "Human-supervised remote operation with real-time approval for high-consequence actions",
+  "Visual and thermal diagnostics for heat sources, corrosion, and structural defects",
+  "Modular tool interface with dynamically selected and extensible maintenance components",
+  "High-voltage electromagnetic-environment engineering validated in a reported 35 kV test"
+]
+use_cases = [
+  "Installing and removing accessories, insulating sleeves, and bypass jumpers on energized lines",
+  "Handling damaged conductors and performing other live-line repair procedures",
+  "Trimming vegetation around transmission and distribution infrastructure",
+  "Installing bird-protection covers and other wildlife-mitigation equipment",
+  "Visual and thermal inspection for heat, corrosion, and structural defects before failure",
+  "Storm, sabotage, or accident recovery where rapid grid restoration and reduced crew exposure matter",
+  "Maintenance at military bases, homeland-security facilities, and other protected power sites",
+  "Utility work in hazardous or remote settings where ground-supervised robotics can replace exposed crews"
+]
+investible = true
+investment_rationale = "Axioma is a high-strategic-fit but high-execution-risk priority signal, not an investment recommendation. (1) The product attacks a costly, safety-critical bottleneck with a differentiated intervention platform rather than an inspection-only dashboard. (2) Collaboration with Israel Electric, reported live-voltage testing, an operational launch account, and selection for Free Electrons provide stronger validation than a laboratory concept. (3) The modular tooling and human-supervised autonomy path could create a reusable platform across utilities and protected infrastructure. Counterweights are substantial: the company is very early; public sources disagree on founding date and headcount; grant and TRL claims are not independently audited; certifications, patent posture, revenue, unit economics, and repeat utility contracts are not public; and safety-critical sales cycles can be long. The legacy flag reflects strategic relevance and evidence of a real prototype, while diligence should focus on paid deployment, safety case, repeatability, manufacturing readiness, and customer economics."
+strategic_value = "Axioma's strategic value is concentrated in critical-infrastructure resilience. (1) A robot that can maintain energized power lines from the ground can reduce the human-risk bottleneck that slows restoration and routine grid work. (2) Avoiding outages while performing maintenance is valuable for national infrastructure, especially when grids are stressed by extreme weather, conflict, aging assets, or rising demand. (3) The perception, manipulation, and supervised-autonomy stack could transfer to military bases, homeland-security facilities, and emergency-response infrastructure, although no defense deployment is publicly confirmed. (4) An Israeli company with an IEC reference and an Innovation Authority grant contributes to a domestic capability in resilient energy operations. Realized strategic value depends on certification, repeatable field performance, and exportable service economics; the present evidence supports a promising resilience platform, not yet a scaled national-security supplier."
+public_sources = [
+  { label = "Official Axioma Robotics product page", url = "https://en.axioma-in.com/robotics", description = "Product, spin-off date, founder profile and Netanya contact address" },
+  { label = "Israel Innovation Authority company profile", url = "https://innovationisrael.org.il/importWinner/517196499/", description = "Israeli company number, management, location, company description and program records" },
+  { label = "Axioma grant and pilot announcement", url = "https://www.linkedin.com/posts/axiomasystemengineeringandintegration_high-voltage-maintenance-robot-pilot-with-activity-7394648080375001089-JWep", description = "Company-reported $3.5M grant, IEC pilot tasks and an $8.5M fundraising target" },
+  { label = "Axioma live 35 kV test announcement", url = "https://www.linkedin.com/posts/axioma-in-robotics_robotics-hvmr-highvoltage-activity-7432436891842396161-t_SR", description = "Company-reported live voltage test at IEC laboratory" },
+  { label = "Walla Hebrew report on IEC robot", url = "https://tech.walla.co.il/item/3830706", description = "Technical description of remotely supervised robot and maintenance tasks" },
+  { label = "Israel Electric operational deployment statement", url = "https://il.linkedin.com/company/axioma-in-robotics", description = "IEC executive statement that the live-grid robotic system is operational on the network, relayed on Axioma profile" },
+  { label = "Israel Electric and Axioma report", url = "https://www.pc.co.il/news/450876/", description = "Hebrew trade press account of IEC and Axioma live-line robot" },
+  { label = "Axioma Robotics LinkedIn profile", url = "https://il.linkedin.com/company/axioma-in-robotics", description = "Current listed company size, location and current product updates" },
+  { label = "Axioma live 35 kV test announcement", url = "https://www.linkedin.com/posts/axioma-in-robotics_robotics-hvmr-highvoltage-activity-7432436891842396161-t_SR", description = "Company-reported live voltage test at IEC laboratory" },
+  { label = "Jerusalem Post IEC robotics report", url = "https://www.jpost.com/business-and-innovation/article-896735", description = "Independent reporting that IEC worked with Axioma on its high-voltage maintenance robot" }
+]
+potential_score = 73.0
+technology_score = 78.0
+market_score = 70.0
+team_score = 64.0
+dual_use_score = 84.0
+strategic_alignment_score = 88.0
+stage = "early"
+stage_rationale = "Axioma is early because the robotics spin-off was organized in 2025 and public evidence still centers on a prototype, IEC collaboration, live-voltage tests, an initial operational launch, and ecosystem validation rather than a disclosed international customer base or scaled production. The product is beyond an idea: it has demonstrated task capability, a real utility partner, a modular system, reported 35 kV testing, and a selected global-utility program. The unresolved questions are paid deployment status, safety certification, repeatability across grids, manufacturing scale, and financing."
+competitors = [
+  "Sharper Shape (autonomous drone-based power-line inspection and asset intelligence)",
+  "Skyqraft (AI-assisted utility drone inspection and data collection)",
+  "LineVision (non-contact sensor monitoring and predictive analytics for transmission lines)",
+  "ULC Robotics (remote and robotic utility infrastructure inspection and intervention)",
+  "GE Vernova (incumbent grid-equipment, engineering, and utility-services relationships)",
+  "Live-line utility contractors and helicopter/bucket-truck crews (established manual maintenance approach)"
+]
+competitive_edge = "Axioma's potential edge is the integration of physical intervention, inspection, and supervised autonomy in one live-line platform. Remote ground operation can reduce exposure at height and near energized conductors, while two-arm manipulation, cameras, LiDAR, thermal analysis, and modular tools target tasks that inspection drones cannot complete. The IEC reference provides an unusually relevant test environment, and the human-in-the-loop architecture may reduce adoption resistance versus fully autonomous claims. The edge is not yet a moat: utility incumbents have trusted safety processes, drone inspection may be cheaper for many jobs, and Axioma must prove reliability, certification, serviceability, and economic advantage across different voltage classes and line geometries."
+risk_factors = [
+  "Electrical safety, regulatory approval, insurance acceptance, and task certification may materially slow commercialization",
+  "Public sources disagree on the robotics spin-off's founding date and headcount, complicating team and corporate diligence",
+  "Grant, TRL 6, and performance claims are largely company or ecosystem reported rather than independently audited",
+  "Repeatability across voltage classes, weather, tower designs, line density, and utility operating procedures remains unproven publicly",
+  "Small-team manufacturing, field service, operator training, and international support could constrain scale",
+  "Utilities may prefer established contractors, inspection drones, or conventional crews for many maintenance tasks",
+  "No public patent portfolio, recurring revenue, international utility contract, or defense deployment was identified"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "Axioma merits monitoring because it is a rare Israeli robotics entry tied directly to critical power-grid operations. Its strongest signals are the IEC collaboration, live-voltage task demonstrations, government innovation support, Free Electrons selection, and a product architecture aligned with reducing human exposure and outage risk. The strategic thesis is resilience-first with credible homeland-security and defense-infrastructure adjacency, not a claim of fielded military capability. Priority is capped by early commercialization, contradictory public dates and headcounts, limited financing disclosure, and the absence of published certifications, patents, recurring revenue, and international orders. The next milestones to track are a documented paid IEC deployment, safety and electrical certifications, repeat utility pilots outside Israel, independently measured task economics, production units, and disclosure of the core engineering and commercial team."
+crawled_at = "2026-07-31T17:44:47Z"
+updated_at = "2026-10-04T04:18:00+03:00"
+
+[intelligence]
+schema_version = 2
+people = [
+ { name = "Bruria Cohen", role = "Founder & CEO (official robotics page); IIA profile lists CTO & COO & Co-Founder", is_founder = true, current = true, background = "Official company page says she has over 30 years of engineering and leadership experience across civilian and defense programs.", source_ids = ["official", "iia"] },
+ { name = "Asaf Shefi", role = "CEO & Co-Founder (IIA profile)", is_founder = true, current = true, background = "Named by the Israel Innovation Authority as CEO and co-founder; additional public background not established.", source_ids = ["iia"] }
+]
+investors = [
+  { name = "Israel Innovation Authority", investor_type = "government", website = "https://innovationisrael.org.il/", relationship = "historical", round_ids = ["grant-2025"], source_ids = ["grant_post"] }
+]
+financials = []
+traction = [
+  { kind = "product", description = "Axioma company announcement reports a live 35 kV test at an Israel Electric laboratory with stable operation during the test; this is company-reported test evidence, not third-party certification.", date = "2026", source_ids = ["test_post"] },
+  { kind = "contract", description = "Israel Electric executive Gilli Haizler stated that IEC and Axioma developed and implemented a robotic live-grid maintenance solution that was officially operational on the network. This establishes deployment, but the public post does not disclose contract value or whether it was a paid commercial contract.", date = "2026", source_ids = ["linkedin_profile"] },
+  { kind = "product", description = "Axioma reported IEC pilot tasks including installing a bypass jumper, placing/removing insulating sleeves, cutting a live cable, and installing bird covers; the company characterized the pilot as TRL 6.", date = "2025", source_ids = ["grant_post"] },
+  { kind = "product", description = "Walla describes two robotic arms, high-resolution cameras, LiDAR, human approval in a semi-autonomous operating mode, and visual/thermal analysis; reported task set includes line accessories, damaged conductor work, vegetation trimming and bird protection.", date = "2026", source_ids = ["walla"] },
+  { kind = "partnership", description = "Axioma announced selection into Free Electrons 2026, a utility-facing startup program. Selection is ecosystem access, not evidence of a paying customer or contract.", date = "2026", source_ids = ["linkedin_profile"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Sharper Shape", website = "https://sharpershape.com/", rationale = "Utility infrastructure inspection and analytics are substitutes for some inspection use cases.", differentiation = "Publicly positioned around inspection and data capture; Axioma's distinguishing claim is physical intervention on energized lines.", source_ids = ["walla"] },
+  { name = "Skyqraft", website = "https://skyqraft.com/", rationale = "AI-enabled powerline inspection provider, competing for utility inspection budgets.", differentiation = "Inspection-led offering versus Axioma's remote robotic maintenance and manipulation proposition.", source_ids = ["walla"] },
+  { name = "ULC Technologies", website = "https://ulctechnologies.com/", rationale = "Robotics and remote systems for critical infrastructure are adjacent alternatives.", differentiation = "Axioma focuses specifically on supervised manipulation of live electrical distribution/transmission lines.", source_ids = ["official"] }
+]
+
+[intelligence.company ]
+company_id = "il-axioma-robotics"
+legal_name = "Axioma Robotics Ltd. (אקסיומה רובוטיקס בע״מ)"
+aliases = ["Axioma Robotics", "אקסיומה רובוטיקס בע״מ", "Axioma System Engineering and Integration (parent/related engineering business)"]
+operating_status = "active"
+business_model = "Develop and supply a specialized robot and related integration, maintenance and support for utilities operating energized power grids; commercial terms and revenue model are not publicly disclosed."
+products = ["High Voltage Maintenance Robot (HVMR)"]
+locations = ["Netanya, Israel"]
+country_of_incorporation = "Israel"
+founded_on = "2025"
+source_ids = ["official", "iia"]
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "517196499", source_ids = ["iia"] }]
+
+[intelligence.funding ]
+status = "reported"
+summary = "The company announced a $3.5 million Israel Innovation Authority grant for HVMR development and commercialization. It separately said it was opening conversations to raise an additional $8.5 million; that is a target, not closed financing. No closed private equity round, named venture investor, valuation, or company-announced lifetime total was located in the reviewed public record. The grant is recorded separately from equity."
+reported_total_raised = 3500000
+reported_total_currency = "USD"
+total_source_ids = ["grant_post"]
+total_as_of = "2025"
+total_scope = "Company-reported grant total only; not a lifetime equity funding total"
+history_status = "partial"
+coverage_through = "2026-10-04"
+rounds = [
+  { id = "grant-2025", round_type = "Israel Innovation Authority grant", instrument = "grant", status = "closed", announced_on = "2025", amount_status = "reported", amount = 3500000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["Israel Innovation Authority"], source_ids = ["grant_post"], notes = "Company announcement calls this a $3.5M grant; no separate primary authority award value located. Grant funding, not equity." },
+  { id = "target-2025", round_type = "Fundraising target for scale-up", instrument = "unknown", status = "targeted", amount_status = "reported", amount = 8500000, amount_scope = "unknown", currency = "USD", lead_investors = [], participating_investors = [], source_ids = ["grant_post"], notes = "Company said it was opening conversations with strategic investors and partners to raise an additional $8.5M. This is an announced target only, not a closed round or funding total." }
+]
+
+[intelligence.ownership ]
+status = "not_found"
+summary = "No public cap table, ownership percentages, or parent-company ownership relationship was found. Official company page describes Axioma Robotics as a 2025 spin-off of Axioma Engineering & Integration, but does not state the legal or equity ownership relationship."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["official", "iia"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection ]
+status = "confirmed"
+basis = ["headquarters_in_israel", "incorporated_in_israel"]
+summary = "The Israel Innovation Authority lists Axioma Robotics Ltd. with Israeli company number 517196499 and an address in Netanya; the official company page likewise lists Netanya, Israel."
+as_of = "2026-10-04"
+source_ids = ["iia", "official"]
+
+[intelligence.research ]
+researched_at = "2026-10-04T04:18:00+03:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Axioma Robotics Israel HVMR funding grant investors IEC 2026",
+  "Axioma Robotics Axioma Engineering funding raised investors",
+  "Axioma Robotics Axioma רובוטיקה מימון גיוס IEC",
+  "site:axioma-in.com/robotics Axioma Robotics team",
+  "site:innovationisrael.org.il Axioma Robotics company 517196499",
+  "Axioma Robotics IEC Jerusalem Post high voltage robot",
+  "Axioma Robotics patent high voltage robot",
+  "Axioma Robotics customers revenue contract patents"
+]
+gaps = [
+  "team: public sources identify Bruria Cohen, Asaf Shefi, and the IIA lists both as co-founders, but a complete current team, full biographies, and the CEO-title discrepancy are not independently resolved.",
+  "investors: the IIA grant is disclosed, but no private equity investors or closed venture round were found; the $8.5M item is only a target.",
+  "financials: no dated revenue, ARR, profitability, cash, burn or runway figures were disclosed; IIA's 'Initial Revenues' is a stage label without an amount or period.",
+  "traction: IEC deployment is reported operational, but paid-contract status, contract value, units, utilization, customer economics and repeat orders are not public.",
+  "intellectual_property: no attributable patent publication, granted patent, or public portfolio was located in searches by the company and product name.",
+  "competition: direct live-line robotic competitor evidence and independently comparable performance/cost data remain limited; listed peers are adjacent inspection or infrastructure-robotics companies.",
+  "ownership: cap table and exact legal/equity connection between Axioma Robotics Ltd. and Axioma Engineering & Integration are undisclosed.",
+  "dual_use: public material supports power-grid resilience and the authority lists defense systems and homeland security as target sectors, but no defense customer, contract, deployment, or certification is disclosed."
+]
+conflicts = [
+  "Founding date: official product page calls Axioma Robotics a spin-off established in 2025; IIA profile for company number 517196499 lists year established 2015. The likely distinction between legacy entity/history and robotics spin-off is not resolved in official records.",
+  "Headcount: LinkedIn company profile lists 2–10 employees for Axioma Robotics, while IIA profile lists 25; entity scope and reporting dates may differ.",
+  "Leadership: official robotics page calls Bruria Cohen Founder & CEO; IIA profile lists Asaf Shefi as CEO & Co-Founder and Cohen as CTO & COO & Co-Founder. Current title requires confirmation."
+]
+diligence_questions = [
+  "What legal entity owns the HVMR IP, employs the team, receives IIA support, and contracts with IEC, and how is it related by ownership to Axioma Engineering & Integration?",
+  "Can the company provide the signed IIA award notice and clarify whether the announced $3.5M is USD, the full grant value or a multi-year ceiling, and its reimbursement/matching conditions?",
+  "Was the operational IEC deployment a paid procurement, a pilot, or a joint development arrangement, and what are the unit economics, uptime, tasks completed and repeat deployment commitments?",
+  "What financing was actually closed after the company described an $8.5M target, and what is the current runway and cap table?",
+  "What independent safety validation, voltage-class coverage, operating procedures, liability allocation, and recovery behavior support field operation around energized infrastructure?",
+  "Which patents, trade secrets, software rights and IEC-developed background IP protect the manipulator, tooling and autonomy stack?"
+]
+sources = [
+ { id = "official", url = "https://en.axioma-in.com/robotics", title = "Axioma Robotics – High Voltage Maintenance Robot", publisher = "Axioma Robotics", kind = "company", accessed_at = "2026-10-04T04:18:00+03:00", claims = ["The company describes HVMR as remotely operated, intended to work under live power lines, and extensible with dynamically selected tools.", "The official page says Axioma Robotics is a spin-off of Axioma Engineering & Integration established in 2025.", "The page identifies Bruria Cohen as Founder & CEO and lists a Netanya, Israel contact address."] },
+ { id = "iia", url = "https://innovationisrael.org.il/importWinner/517196499/", title = "Axioma Robotics Ltd. – Israel Innovation Authority profile and support records", publisher = "Israel Innovation Authority", kind = "government", accessed_at = "2026-10-04T04:18:00+03:00", claims = ["The profile names Axioma Robotics Ltd. and company number 517196499, gives Netanya, Israel as address, and lists company year 2015 and 25 employees.", "The profile identifies Asaf Shefi as CEO and co-founder and Bruria Cohen as CTO, COO and co-founder.", "The profile describes a live-grid maintenance robot and prototype developed with Israel Electric Corporation, names target sectors including defense systems and homeland security, and lists support tracks for 2023 and 2025.", "The profile labels the company stage Initial Revenues without a disclosed numerical financial metric."] },
+ { id = "grant_post", url = "https://www.linkedin.com/posts/axiomasystemengineeringandintegration_high-voltage-maintenance-robot-pilot-with-activity-7394648080375001089-JWep", title = "Axioma Secures $3.5M Grant for Robotics in Power Grid", publisher = "Axioma System Engineering and Integration", kind = "company", accessed_at = "2026-10-04T04:18:00+03:00", published_on = "2025", claims = ["The company announced a $3.5 million Israel Innovation Authority grant for HVMR development and commercialization.", "The company reported an IEC pilot and described tasks completed and claimed TRL 6; these are company-reported claims.", "The company said it was opening discussions to raise an additional $8.5 million for scaling and deployment; the post describes a target, not closed funding.", "The post mentions Israel Electric Corporation and the Israel Innovation Authority but names no equity investor."] },
+ { id = "test_post", url = "https://www.linkedin.com/posts/axioma-in-robotics_robotics-hvmr-highvoltage-activity-7432436891842396161-t_SR", title = "High-Voltage Test Success for HVMR at Israel Electric Lab", publisher = "Axioma Robotics", kind = "company", accessed_at = "2026-10-04T04:18:00+03:00", published_on = "2026", claims = ["Axioma reports that HVMR completed a live 35 kV test at an Israel Electric laboratory and maintained operation during the test."] },
+ { id = "walla", url = "https://tech.walla.co.il/item/3830706", title = "The new robot that will handle Israel Electric power lines", publisher = "Walla Technology", kind = "media", accessed_at = "2026-10-04T04:18:00+03:00", published_on = "2026", claims = ["Walla describes a lifting-platform robot with two arms, cameras and LiDAR operated semi-autonomously with real-time human oversight.", "Walla reports potential diagnostic visual and thermal analysis and several live-line maintenance task types.", "Walla says IEC and Axioma continue to improve machine-learning models and expand the system task set."] },
+ { id = "linkedin_profile", url = "https://il.linkedin.com/company/axioma-in-robotics", title = "Axioma Robotics company profile and updates", publisher = "Axioma Robotics / LinkedIn", kind = "company", accessed_at = "2026-10-04T04:18:00+03:00", claims = ["The profile lists Axioma Robotics as based in Netanya with company size 2–10 employees.", "An IEC executive post relayed on the profile says the IEC and Axioma solution was implemented and officially operational on the network.", "Axioma company posts document a Free Electrons selection and continuing demonstrations; selection does not establish a paying customer relationship."] },
+ { id = "pc", url = "https://www.pc.co.il/news/450876/", title = "IEC and Axioma launch autonomous high-voltage line robot", publisher = "People & Computers", kind = "media", accessed_at = "2026-10-04T04:18:00+03:00", published_on = "2026", claims = ["The report describes IEC and Axioma's live-grid robot as working under human supervision with two arms and AI capabilities."] },
+ { id = "jpost", url = "https://www.jpost.com/business-and-innovation/article-896735", title = "New drone-mounted robot transforms high-voltage maintenance in Israel", publisher = "The Jerusalem Post", kind = "media", accessed_at = "2026-10-04T04:18:00+03:00", published_on = "2026", claims = ["The report says IEC's April high-voltage line maintenance robot project was carried out in cooperation with Axioma Robotics; its separate drone-mounted warning-ball system was developed with Kronos."] }
+]
+claim_checks = [
+ { field_path = "company.operating_status", support = "direct", summary = "Official company product page remains live and current company profile describes ongoing deployment and testing; supports active operations.", verified_at = "2026-10-04T04:18:00+03:00", source_ids = ["official", "linkedin_profile"] },
+ { field_path = "israel_connection", support = "direct", summary = "IIA record provides Israeli company number and Netanya address; official company page also gives Netanya, Israel address.", verified_at = "2026-10-04T04:18:00+03:00", source_ids = ["iia", "official"] },
+ { field_path = "funding.reported_total_raised", support = "direct", summary = "Axioma company announcement reports the grant amount as $3.5M; this total reflects that grant only and is not presented as lifetime equity raised.", verified_at = "2026-10-04T04:18:00+03:00", source_ids = ["grant_post"] },
+ { field_path = "funding.rounds.grant-2025.amount", support = "direct", summary = "Axioma company announcement reports a $3.5 million Innovation Authority grant.", verified_at = "2026-10-04T04:18:00+03:00", source_ids = ["grant_post"] },
+ { field_path = "funding.rounds.grant-2025.participating_investors", support = "direct", summary = "The announcement names Israel Innovation Authority as grantor; no private equity investors are identified.", verified_at = "2026-10-04T04:18:00+03:00", source_ids = ["grant_post"] },
+ { field_path = "funding.rounds.grant-2025.lead_investors", support = "direct", summary = "The grant announcement does not identify a lead investor; the award is public grant support, not a venture round.", verified_at = "2026-10-04T04:18:00+03:00", source_ids = ["grant_post"] },
+ { field_path = "funding.rounds.target-2025.amount", support = "direct", summary = "The company described an $8.5M raise it was seeking; it is stored as a target and not closed funding.", verified_at = "2026-10-04T04:18:00+03:00", source_ids = ["grant_post"] },
+ { field_path = "funding.rounds.target-2025.participating_investors", support = "direct", summary = "The company described discussions with prospective strategic investors and partners, but named none; the participating-investor list is empty.", verified_at = "2026-10-04T04:18:00+03:00", source_ids = ["grant_post"] },
+ { field_path = "funding.rounds.target-2025.lead_investors", support = "direct", summary = "The fundraising target announcement names no lead investor.", verified_at = "2026-10-04T04:18:00+03:00", source_ids = ["grant_post"] }
+]
+[[intelligence.research .topic_checks ]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T04:18:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Axioma Robotics Israel HVMR", "Axioma Robotics company 517196499"]
+source_ids = ["official", "iia"]
+summary = "Official page and IIA profile identify the robotics business and Israeli company record; the 2015 vs 2025 dates likely cover different organizational scopes and remain unresolved."
+
+[[intelligence.research .topic_checks ]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T04:18:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Axioma Robotics funding grant raised seed Series A", "Axioma Robotics גיוס מימון"]
+source_ids = ["grant_post", "iia"]
+summary = "Company announced $3.5M IIA grant and an $8.5M target. No closed equity round or lifetime equity total found."
+
+[[intelligence.research .topic_checks ]]
+topic = "investors"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T04:18:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Axioma Robotics investors funding", "Axioma Robotics strategic investors"]
+source_ids = ["grant_post", "iia"]
+summary = "The government grantor is identified; no private investors or closed equity participants were named."
+
+[[intelligence.research .topic_checks ]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T04:18:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Axioma Robotics team Bruria Cohen Asaf Shefi", "site:axioma-in.com/robotics Axioma Robotics team"]
+source_ids = ["official", "iia"]
+summary = "Two co-founders are identified by IIA; official page calls Cohen CEO while IIA calls Shefi CEO, and detailed bios beyond Cohen are sparse."
+
+[[intelligence.research .topic_checks ]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T04:18:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Axioma Robotics ownership shareholders", "Axioma Engineering Integration Axioma Robotics spin off"]
+source_ids = ["official", "iia"]
+summary = "Spin-off relationship is stated, but legal parent ownership and cap table are not disclosed."
+
+[[intelligence.research .topic_checks ]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T04:18:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Axioma Robotics revenue ARR financials", "Axioma Robotics customers revenue"]
+source_ids = ["iia", "grant_post"]
+summary = "No numerical operating financials were found; IIA's Initial Revenues label is not a dated metric."
+
+[[intelligence.research .topic_checks ]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T04:18:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Axioma Robotics IEC robot operational live grid", "Axioma Robotics 35 kV test"]
+source_ids = ["linkedin_profile", "test_post", "walla"]
+summary = "Public evidence covers IEC operational use, company-reported lab test and pilot tasks; contract payment and repeatability remain unknown."
+
+[[intelligence.research .topic_checks ]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T04:18:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Axioma Robotics patent HVMR", "Google Patents Axioma Robotics Israel"]
+source_ids = ["official", "iia"]
+summary = "No attributable patent publication or granted portfolio located in name/product searches; this is not evidence that no IP exists."
+
+[[intelligence.research .topic_checks ]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T04:18:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["live line maintenance robot utility Axioma competitors", "Sharper Shape powerline inspection robots", "Skyqraft power line inspection"]
+source_ids = ["walla", "official"]
+summary = "Adjacent inspection firms and broader infrastructure robotics identified; direct like-for-like live energized-line robot comparisons and quantified benchmarks remain sparse."
+
+[[intelligence.research .topic_checks ]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T04:18:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Axioma Robotics defense homeland security power grid", "Axioma Robotics military deployment defense contract"]
+source_ids = ["iia", "official"]
+summary = "IIA lists defense systems and homeland security as target sectors and company describes parent's civil/defense experience; no defense customer or deployment found."

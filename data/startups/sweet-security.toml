@@ -1,0 +1,84 @@
+name = "Sweet Security"
+description = "Sweet Security provides a runtime-first CNAPP and AI-security platform that correlates cloud, workload, identity, application, and AI activity to detect, investigate, and contain threats in production."
+detailed_description = """
+Sweet Security is building a runtime-first cloud security platform for applications, workloads, infrastructure, identities, APIs, and AI systems. Its stated product surface combines cloud visibility and posture management with runtime event collection, vulnerability management, identity threat detection and response, cloud application detection and response, and API security. The important architectural claim is that these controls are connected through live execution context: processes, file access, network traffic, memory use, cloud IAM events, policy changes, API activity, and relationships between identities and workloads. That can make a finding more operationally useful than an isolated configuration or vulnerability alert, because analysts can see what is actually executing, what access it used, and how an incident moved across layers.
+
+The company also positions AI security as an extension of the same runtime model rather than as a completely separate governance product. Its public materials describe discovery of models, agents, LLM servers, and AI services; analysis of agent behavior; detection of prompt-injection and other adversarial activity; posture assessment; and guardrails that can block disallowed actions. SweetX and newer investigation-oriented capabilities are described as AI assistants that correlate signals, build incident narratives, and let responders search or reason over cloud and runtime events. These claims are strategically relevant, but buyers should distinguish product demonstrations and vendor-reported outcomes from independently validated efficacy, especially for fast-changing agentic attack techniques.
+
+Sweet sells into a crowded and consolidating CNAPP market. Likely buyers include CISOs, cloud-security and DevSecOps teams, application-security groups, and SOC or incident-response teams that are trying to reduce tool sprawl and shorten the time from detection to containment. The company says its platform integrates with operational systems such as Slack, Jira, ServiceNow, webhooks, and SOAR tooling, and its site reports major reductions in investigation time for teams using the product. Those are useful commercialization signals, alongside the November 2025 announcement of a $75 million Series B led by Evolution Equity Partners and the company-reported expansion of enterprise customers and ARR. They remain self-reported signals: the public record does not establish customer retention, net revenue retention, gross margins, deployment friction, or whether the reported performance generalizes across environments.
+
+Competitive pressure is substantial. Sweet must differentiate against broad platforms from Wiz, Palo Alto Networks, CrowdStrike, Microsoft, and other established security vendors, as well as focused runtime, cloud-detection, identity, API, and AI-security specialists. Its most credible edge is workflow-level correlation of runtime context with posture, identity, application, and AI behavior, potentially allowing a smaller security team to move from alert to attack story to response without stitching together multiple consoles. That edge will be durable only if the telemetry is sufficiently deep, the detections are precise, the agent footprint and cloud integrations are acceptable, and customers can quantify reduced investigation time or loss exposure.
+
+The dual-use case is substantive but should be described as applicability, not evidence of defense adoption. Runtime monitoring, identity and workload analysis, attack-path reconstruction, automated containment, and AI guardrails are relevant to government clouds, defense contractors, critical infrastructure operators, and other mission-critical systems. Sweet's June 2026 announcement of a U.S. federal-market expansion and pursuit of FedRAMP Moderate authorization is a meaningful go-to-market signal, but it is not an authorization or a government contract. Strategic diligence should therefore focus on security architecture, data residency, product isolation, audit readiness, integration with existing SOC and cloud controls, and the company's ability to support high-assurance environments while scaling internationally.
+"""
+logo = "https://cdn.prod.website-files.com/671e67b935e33231695d5a63/690cb34528bfcb4d8e119e61_sweet%20logo.svg"
+website = "https://www.sweet.security/"
+sector = "Cloud Security / Runtime CNAPP and AI Security"
+founded = "2022"
+headquarters = "Tel Aviv, Israel"
+employees = "51-200"
+funding_stage = "Series B"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Sweet's core runtime telemetry, identity and workload detection, incident investigation, automated containment, and AI guardrails have substantive commercial and public-sector applicability. They could support government, defense-contractor, critical-infrastructure, and other high-assurance cloud environments, although public evidence here demonstrates market pursuit rather than confirmed defense adoption."
+key_technologies = [
+  "Runtime collection of process, file, network, memory, cloud IAM, and API events",
+  "Cross-layer correlation of cloud, workload, application, identity, and infrastructure signals",
+  "Behavior baselining, deviation analysis, IOC/TTP detection, and MITRE ATT&CK classification",
+  "LLM-driven detection and incident narrative generation",
+  "AI-agent discovery, behavior monitoring, prompt-injection detection, and runtime guardrails",
+  "Cloud Application Detection and Response with automated process termination and SOAR integrations",
+  "Identity entitlement analysis linking granted permissions to permissions used at runtime",
+]
+use_cases = [
+  "Detecting anomalous cloud IAM activity, workload behavior, API calls, and lateral movement in production",
+  "Building a chronological attack story for SOC and incident-response investigations",
+  "Reducing alert noise by correlating runtime context with posture, vulnerability, and identity findings",
+  "Finding stale or overprivileged service accounts by comparing granted and observed permissions",
+  "Discovering shadow AI, mapping agents and LLM services, and enforcing policies on agent actions",
+  "Blocking malicious processes or disallowed AI behavior and handing containment actions to SOAR workflows",
+  "Monitoring regulated, government, defense-contractor, or critical-infrastructure workloads after cloud migration",
+]
+investible = true
+investment_rationale = "Sweet is a credible strategic-priority signal for a dual-use security database because it has a concrete runtime thesis, an expanding AI-security surface, disclosed Series B financing, and an announced federal-market and FedRAMP-readiness effort. The case depends on diligence rather than the funding headline: establish independent customer references, retention and expansion economics, detection precision, deployment overhead, data-handling controls, and whether runtime correlation produces durable advantage against larger CNAPP platforms."
+strategic_value = "Sweet could provide strategic value as a security-control layer for production cloud and AI systems, where runtime evidence can improve detection, investigation, least-privilege decisions, and containment. Its federal-market push increases relevance to public-sector modernization, but the current public evidence supports applicability and go-to-market intent, not confirmed government deployment or FedRAMP authorization."
+public_sources = [
+  "https://www.sweet.security/about",
+  "https://www.sweet.security/press-releases/sweet-security-raises-75m-series-b-and-unveils-the-first-unified-runtime-cnapp-for-cloud-and-ai-security",
+  "https://www.sweet.security/solution/sweet-for-soc-ir-teams",
+  "https://www.sweet.security/press-releases/sweet-security-expands-into-u-s-federal-market-pursues-fedramp-moderate-authorization",
+  "https://www.linkedin.com/company/sweet-security",
+]
+potential_score = 89.0
+technology_score = 90.0
+market_score = 87.0
+team_score = 84.0
+dual_use_score = 89.0
+strategic_alignment_score = 91.0
+stage = "early"
+stage_rationale = "Sweet remains an independent, privately held startup despite its Series B and reported 51-200-person company size. The financing, enterprise expansion claims, broad product surface, and U.S. federal-market initiative indicate commercial scale-up, but the company is not yet a mature or public platform vendor and key operating metrics remain undisclosed."
+competitors = [
+  "Wiz",
+  "Palo Alto Networks Prisma Cloud",
+  "CrowdStrike Falcon Cloud Security",
+  "Orca Security",
+  "Sysdig",
+  "Microsoft Defender for Cloud",
+  "Rad Security",
+]
+competitive_edge = "Sweet's clearest claimed edge is runtime-centered correlation across cloud infrastructure, workloads, applications, identities, APIs, and AI agents, coupled with investigation narratives and response actions. If its telemetry is deep and its detections materially reduce analyst work, that integrated workflow could be more useful than posture-centric products or disconnected point tools. The edge is not yet proven to be durable: larger vendors can bundle adjacent controls, and buyers will test precision, agent overhead, integration breadth, and measurable outcomes."
+risk_factors = [
+  "CNAPP is crowded, with hyperscalers and well-capitalized security vendors able to bundle posture, runtime, identity, and response capabilities.",
+  "Runtime collection across diverse clouds, containers, hosts, APIs, and AI services can create deployment, privacy, performance, and data-residency friction.",
+  "AI-security demand and attack patterns are evolving quickly; product positioning may outpace standardized buyer requirements and proven efficacy.",
+  "Vendor-reported alert-noise and MTTR improvements need independent customer validation and may vary substantially by environment and tuning quality.",
+  "Security teams often retain incumbent SIEM, EDR, CSPM, IAM, and SOAR tools, making replacement, consolidation, and expansion cycles slow.",
+  "The federal opportunity requires substantial authorization, compliance, procurement, support, and evidence-building work; pursuing FedRAMP is not the same as receiving authorization.",
+  "Public disclosure remains limited on retention, margins, customer concentration, cash efficiency, patent scope, and the economics of global expansion after the Series B.",
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Sweet merits high internal attention as an early-stage dual-use cybersecurity company with strong runtime, AI-security, and public-sector relevance signals. Its priority is supported by the disclosed Series B and federal-market initiative, while the medium risk level reflects crowded competition, unverified operating claims, and the execution burden of scaling into high-assurance markets."
+crawled_at = "2026-02-15T20:00:00Z"
+updated_at = "2026-07-31T18:03:57Z"

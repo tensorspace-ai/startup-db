@@ -1,0 +1,434 @@
+name = "BufferZone Security"
+description = "BufferZone Security builds endpoint containment and isolation software that runs risky activity inside virtualized sandboxes to keep malware, ransomware, and untrusted content away from the host system. The approach is relevant for enterprises, government users, and defense environments that need stronger prevention on workstations handling web, email, USB, or other external inputs."
+detailed_description = """
+BufferZone Security is positioned around a simple but durable security thesis: if untrusted content is kept inside an isolated execution environment, it is much harder for malware, phishing payloads, drive-by downloads, or malicious documents to compromise the underlying endpoint. The product category is typically described as endpoint containment, application isolation, or virtual sandboxing. In practice, that means the software attempts to separate high-risk actions such as browsing, opening attachments, installing software, or handling removable media from the operating system and the corporate network. The promise is not that every object is perfectly clean; it is that risky objects can be handled in a way that makes the consequences of compromise materially smaller.
+
+This matters because endpoint security remains one of the hardest parts of cyber defense. Traditional antivirus and even many modern EDR tools still rely heavily on detection, correlation, or response after suspicious behavior starts. Containment shifts the emphasis upstream: the untrusted object is allowed to run, but only in a constrained environment with limited access to local resources, credentials, and lateral movement paths. That is attractive in a world where phishing, malicious attachments, and browser-delivered payloads often succeed because users need to interact with content before a product can judge whether it is safe. For many buyers, the appeal is less about replacing existing controls and more about reducing the chance that a single mistake becomes an enterprise-wide incident.
+
+The commercial market for this type of software is crowded but understandable. The company sits at the intersection of sandboxing, browser isolation, and endpoint hardening, where buyers usually care about stopping ransomware, reducing help-desk incidents, and keeping risky workflows usable without creating a heavy productivity penalty. The strongest products in this segment usually win on deployment simplicity, low latency, policy control, and the ability to coexist with existing endpoint, identity, and network security stacks rather than replacing them. That makes the category valuable, but it also makes differentiation difficult: the buyer must believe that the containment layer is both strong enough to matter and light enough to deploy broadly.
+
+Commercially, the best-fit customers are usually organizations with a steady stream of untrusted external content and a relatively high cost of compromise. That includes enterprises with large remote-work or contractor populations, regulated industries that need to limit blast radius, and security teams that are trying to reduce the amount of manual triage their analysts and help desks perform. The decision-maker often cares about policy granularity, user experience, compatibility with existing endpoint tools, and how much the product reduces rather than adds to operational friction. In other words, this is not just a technical sale; it is a workflow sale, and products in this category tend to fail if they impose too much inconvenience on end users.
+
+BufferZone’s strategic relevance comes from the same core technical primitive being useful in both enterprise and government contexts. A workstation that processes web content, email, documents, or removable media can benefit from the same containment logic whether it belongs to a financial services analyst, a contractor, or a defense user handling sensitive material. In defense and national-security settings, that makes the technology attractive for reducing exposure from USB-borne threats, isolating browsing on higher-risk systems, and supporting controlled access to external content without relying entirely on perimeter defenses. It can also be useful where policy requires strong separation between trusted and untrusted workflows on the same endpoint, or where operational teams need a practical substitute for always-on air-gapping. The open diligence question is not whether the category is useful, but how current the product is, how differentiated it remains against browser-isolation and OS-native alternatives, and whether the company still has the commercial momentum needed to justify a growth-stage classification.
+"""
+logo = "https://logo.clearbit.com/bufferzonesecurity.com"
+website = "https://bufferzonesecurity.com"
+sector = "Cybersecurity / Endpoint Protection"
+founded = "2003"
+headquarters = "Herzliya, Israel"
+employees = "11–50 (third-party directory estimate; current count unverified)"
+funding_stage = "Private; reported cumulative funding, stage unclear"
+dual_use = true
+dual_use_description = "The commercial product is documented for endpoint protection in enterprise workstations. Isolation of untrusted browsing, email, and removable media has plausible government and defense applicability, but current government or defense deployments were not established in this review."
+key_technologies = [
+  "Endpoint containment and virtualized isolation for risky user workflows",
+  "Application sandboxing for browser sessions, downloads, and document handling",
+  "Policy-driven control of USB and removable media access on endpoints",
+  "Zero-trust endpoint segmentation that limits lateral movement and credential exposure",
+  "Ransomware and malware blast-radius reduction through constrained execution",
+  "Isolation-first architecture that complements EDR, AV, and network security tooling"
+]
+use_cases = [
+  "Secure browsing on high-risk or publicly exposed workstations that regularly reach untrusted sites",
+  "Opening email attachments without exposing the host OS or local credentials to active content",
+  "Controlling USB and external media on sensitive endpoints where removable devices are a common attack path",
+  "Reducing ransomware spread on corporate laptop fleets by keeping suspicious execution isolated",
+  "Protecting contractor and privileged-user workstations that touch valuable systems or regulated data",
+  "Supporting defense and government systems that need stronger isolation for external content and documents",
+  "Limiting malware persistence on shared, kiosk-style, or hot-desk endpoints used by many users",
+  "Providing a practical alternative to full air-gapping when organizations still need access to external content"
+]
+investible = true
+investment_rationale = "The company fits a credible dual-use security thesis because endpoint containment is a real, budgeted category for both commercial buyers and defense-oriented environments. It is strategically relevant as a niche strategic security vendor if it still has active product-market fit, a supportable installation base, and a defensible deployment model, but the case depends on whether it can keep pace with larger endpoint, browser-isolation, and platform-security vendors."
+strategic_value = "Endpoint isolation is strategically useful wherever the cost of a single compromise is high: classified workstations, regulated enterprise fleets, contractor environments, and operational systems that must interact with the open internet or external media. The technology reduces attack surface without requiring every threat to be detected first, which gives it persistent value in both cybersecurity and national-security settings. It is especially relevant when organizations need to preserve usability while still enforcing hard separation between trusted and untrusted tasks."
+potential_score = 73.0
+technology_score = 81.0
+market_score = 70.0
+team_score = 68.0
+dual_use_score = 86.0
+strategic_alignment_score = 84.0
+stage = "mid"
+stage_rationale = "This looks like a mid-stage security vendor rather than an early R&D project: the category is established, the technology is specialized, and the use case is clear, but there is not enough public evidence here to call it mature or to assume large-scale modern traction. Mid-stage is the most defensible label absent stronger data on growth, customers, or ownership. That also reflects the fact that this kind of product usually lives in a long-sales-cycle, reference-driven niche rather than a hypergrowth consumer motion."
+competitors = [
+  "Menlo Security",
+  "HP Sure Click",
+  "Island",
+  "Hysolate",
+  "Zscaler Browser Isolation"
+]
+competitive_edge = "The strongest possible edge is endpoint-native containment that keeps risky activity local while minimizing workflow friction. If BufferZone’s implementation is lightweight and easy to deploy, that can be preferable to cloud-proxy browser isolation or heavier rip-and-replace security stacks, especially in environments that care about offline operation, removable-media control, and compatibility with existing endpoint tooling. The edge is strongest when the product behaves like an added control layer rather than a disruptive new operating model for IT and security teams."
+risk_factors = [
+  "Browser isolation, sandboxing, and EDR vendors can bundle overlapping capabilities into broader suites.",
+  "Containment escape or isolation-bypass flaws would directly undermine the product’s core trust model and damage credibility.",
+  "Enterprise buyers may prefer integrated platforms from larger security vendors with broader support and procurement leverage.",
+  "The category can be difficult to explain and sell if customers do not already understand containment versus detection.",
+  "Defense and government sales typically require long cycles, compliance work, and sustained support commitments.",
+  "Current business continuity, ownership, product relevance, and installed-base strength are not obvious from the record alone."
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Keep the company in the database because the containment category still has real dual-use importance and the technical thesis is credible, but do not over-rank it without clearer evidence of current traction, differentiation, or operational continuity. It is strategically interesting, yet the diligence burden is higher than for a younger company with clearer momentum. The right stance is watchful interest: useful to track, but not a top-priority commitment until the company’s present-day status is clearer."
+crawled_at = "2026-02-28T18:30:00Z"
+updated_at = "2026-10-04T11:41:00Z"
+entity_type = "startup"
+public_sources = [
+  { label = "BUFFERZONE official site", url = "https://bufferzonesecurity.com/", description = "Current product positioning and endpoint security capabilities." },
+  { label = "BUFFERZONE team", url = "https://bufferzonesecurity.com/company/team/", description = "Company leadership and biographies." },
+  { label = "BUFFERZONE and Intel announcement", url = "https://www.prnewswire.com/news-releases/bufferzone-and-intel-release-two-new-ai-pc-security-solutions-in-ces-2025-302344742.html", description = "Company announcement of SafeBridge AI, Safe Data, and Intel collaboration." },
+  { label = "Israel Innovation Authority company profile", url = "https://innovationisrael.org.il/en/importWinner/513398768/", description = "Company identifier, Israel location, reported employee count, and technology profile." },
+  { label = "Startup Nation Finder legacy profile", url = "https://finder.startupnationcentral.org/company_page/trustware", description = "Legacy company profile, reported total funding, and historical round/team entries; stale profile data requires caution." },
+  { label = "eWEEK interview", url = "https://www.eweek.com/security/bufferzone-hooks-into-windows-to-containerize-security/", description = "2015 interview with CEO and CTO discussing funding, product architecture, and deployment context." },
+  { label = "BUFFERZONE Safe Workspace overview", url = "https://bufferzonesecurity.com/company/about/", description = "Official description of containment, CDR, and endpoint product editions." },
+  { label = "BUFFERZONE news archive", url = "https://bufferzonesecurity.com/news-and-events/news/", description = "Officially listed recent partnership and product news." },
+  { label = "Google Patents record", url = "https://patents.google.com/patent/US7613930B2/en", description = "Patent family record describing hostile-code protection and assignment history." }
+  ,{ label = "BUFFERZONE privacy policy", url = "https://bufferzonesecurity.com/bufferzone-security-inc-privacy-policy/", description = "Company policy refers to related US and Israeli entities but does not disclose ultimate ownership." }
+]
+
+[intelligence]
+schema_version = 2
+financials = []
+comparables = []
+
+[intelligence.company]
+company_id = "il-bufferzone-security"
+legal_name = "BUFFERZONE Security Ltd."
+aliases = ["BUFFERZONE", "Trustware", "BufferZone Security"]
+operating_status = "active"
+business_model = "B2B enterprise endpoint security software; company markets Safe Workspace for enterprise endpoints and related containment, content disarm and reconstruction, and on-device AI security capabilities."
+products = ["Safe Workspace", "Safe Browser", "SafeBridge / SafeBridge AI", "Safe Mail", "Safe Removable", "Safe Data", "NoCloud AI Anti-Phishing"]
+locations = ["Herzliya, Israel"]
+linkedin_url = "https://www.linkedin.com/company/1409549"
+country_of_incorporation = "Israel"
+founded_on = "2003"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "513398768", source_ids = ["iaa", "snc"] }]
+source_ids = ["official-about", "iaa", "snc", "official-team"]
+
+[intelligence.funding]
+status = "conflicting"
+summary = "Public sources report inconsistent funding histories. Startup Nation Finder states $10.5 million across two rounds but displays only a June 2006 $500,000 seed round attributed to Abe Peled; eWEEK quoted CEO Israel Levy in December 2015 saying approximately $10 million had been raised to date. The company announcement sources reviewed do not announce a full financing history. No precise round breakdown or company-announced lifetime total could be verified; the reported aggregate is preserved as a sourced third-party figure, not recomputed."
+rounds = [{ id = "seed-2006", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2006-06", amount_status = "reported", amount = 500000, amount_scope = "round", currency = "USD", lead_investors = ["Abe Peled"], participating_investors = [], source_ids = ["snc"] }]
+reported_total_raised = 10500000
+reported_total_currency = "USD"
+total_source_ids = ["snc"]
+total_as_of = "2021-11-23"
+total_scope = "Third-party directory-reported cumulative funding across two rounds; not company-announced and conflicts with underlying displayed round detail and 2015 CEO-reported approximate total."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "The company remains described as private. Public evidence reviewed did not establish beneficial ownership, a parent company, cap table, acquisition, or exit. The Israeli company identifier and US subsidiary reference on the company privacy page do not establish parent ownership."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["snc", "official-privacy"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "Israeli private company BUFFERZONE Security Ltd., company number 513398768, headquartered in Herzliya. The Israel Innovation Authority identifies the company and country as Israel; the company's team page identifies Israel Baharav as co-founder."
+as_of = "2026-10-04"
+source_ids = ["iaa", "official-team", "snc"]
+
+[[intelligence.people]]
+name = "Israel Baharav"
+role = "Co-founder and COO"
+is_founder = true
+current = true
+background = "The company profile describes experience leading technology companies, including executive roles at Idanit/Scitex Vision and Objet; company page also reports senior Israeli Air Force and IDF planning/intelligence roles."
+source_ids = ["official-team", "snc"]
+
+[[intelligence.people]]
+name = "Israel Levy"
+role = "CEO"
+is_founder = false
+current = true
+background = "Company biography says he joined as CEO in September 2014, previously founded and led endpoint security company ControlGuard, and held senior roles at Tecnomatix and Computer Associates."
+source_ids = ["official-team", "iaa", "pr-intel"]
+
+[[intelligence.people]]
+name = "Uriel Ginsburg"
+role = "VP R&D"
+is_founder = false
+current = true
+background = "Company biography describes 20 years in software development focused on information and network security and service at BUFFERZONE from its beginning."
+source_ids = ["official-team"]
+
+[[intelligence.people]]
+name = "Mor Miller"
+role = "VP Business Development"
+is_founder = false
+current = true
+background = "Company biography says he joined in January 2018 and previously served as COO of semiconductor startup Tangotec."
+source_ids = ["official-team"]
+
+[[intelligence.people]]
+name = "Ori Ashkenazi"
+role = "VP Engineering"
+is_founder = false
+current = true
+background = "Company biography says he joined in early 2021 after engineering leadership roles at CymbIoT and BSD Security Systems."
+source_ids = ["official-team"]
+
+[[intelligence.investors]]
+name = "Abe Peled"
+investor_type = "angel"
+relationship = "historical"
+round_ids = ["seed-2006"]
+source_ids = ["snc"]
+notes = "Named by the legacy directory as the investor for its displayed June 2006 seed round; independent primary confirmation not located."
+
+[[intelligence.traction]]
+kind = "product"
+description = "BUFFERZONE and Intel announced SafeBridge AI and Safe Data as additions to Safe Workspace, with the company stating the functions run locally on Intel Core Ultra processors. This establishes a product announcement, not independently verified customer adoption or deployment scale."
+date = "2025-01-07"
+source_ids = ["pr-intel"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Company announcement describes continued collaboration with Intel on AI PC security; it does not disclose commercial terms, sales, or customer conversion attributable to the partnership."
+date = "2025-01-07"
+source_ids = ["pr-intel"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "The company reported a 2019 partnership with Japanese technology distributor Techmatrix to provide virtual container security solutions to enterprises in Japan. Public evidence reviewed did not establish resulting customer deployments or revenue."
+date = "2019-02-20"
+source_ids = ["snc"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "The company site carries an attributed testimonial from a National Insurance Institute IT security manager. The testimonial is company-published evidence of a user endorsement; scope, date, payment, and current deployment status are not disclosed."
+source_ids = ["official-home"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "Patent US7613930B2, 'Method for protecting computer programs and data from hostile code,' has an assignment history from Trustware 101 Limited to BUFFERZONE Security Ltd. Google Patents lists lifetime expiration in May 2024; this historical patent does not establish the status of the company's broader current patent portfolio."
+date = "2009-11-03"
+source_ids = ["patent"]
+
+[intelligence.research]
+researched_at = "2026-10-04T11:41:00Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["BufferZone Security official company identity legal name headquarters founded", "BufferZone Security funding raised seed Series A investors valuation", "BufferZone Security Israel funding Abe Peled $10.5 million", "BUFFERZONE Security founder CEO team leadership", "BUFFERZONE Security acquired acquisition ownership parent company", "BUFFERZONE Security revenue ARR profitability employees", "BUFFERZONE Security customers contracts partnerships Intel Techmatrix", "BUFFERZONE Security patents Bufferzone Security Ltd", "BUFFERZONE endpoint containment competitors Bromium Menlo HP Sure Click", "BUFFERZONE defense government security deployments dual use", "BUFFERZONE מימון משקיעים גיוס", "BUFFERZONE חברה ישראלית הנהלה"]
+gaps = ["funding: public total and round detail conflict; company-announced lifetime funding and precise second-round terms unavailable.", "investors: only one historical investor is named in a legacy directory; current cap table and other participants unavailable.", "team: current roles are based on company website biographies; independent confirmation and full current roster unavailable.", "ownership: private cap table, beneficial owners, parent status, and transaction history not publicly established.", "financials: no dated public revenue, ARR, profitability, burn, or runway disclosure located.", "traction: customer counts, paid deployment numbers, renewals, contract values, and current customer status unavailable; partnerships are not evidence of paid production adoption.", "intellectual_property: located one historical patent record and company assertions of patented technology; a complete current assigned patent portfolio and legal status review unavailable.", "competition: comparison based on publicly described product categories; no independent head-to-head tests or current win/loss data located.", "dual_use: commercial endpoint applicability is documented, but current government/defense customers, contracts, certifications, and deployments were not established.", "employees: current workforce count not verified; third-party counts are dated or broad ranges.", "israel_connection: no unresolved gap; Israeli company number and location are reported by government and company sources."]
+conflicts = ["Funding: Startup Nation Finder reports $10.5 million across two rounds but exposes only one $500,000 June 2006 seed row naming Abe Peled; eWEEK quoted CEO Israel Levy in 2015 reporting approximately $10 million raised to date. These reports differ in timing and precision and are not reconciled.", "Founded: supplied baseline said 2012, while company registry-linked profiles and government company profile state 2003; corrected to 2003.", "Employee count: baseline said 30+; Israel Innovation Authority profile reports 25 and legacy SNC gives 11–50 (old snapshot). Current headcount is unknown."]
+diligence_questions = ["What are the complete financing events and investors underlying the $10.5 million third-party aggregate, and what amount was actually raised in each event?", "Who owns BUFFERZONE Security Ltd. and any US subsidiary today, and has there been any secondary sale, control change, or restructuring?", "How many paying enterprise customers and protected endpoints are active today, and what proportion of revenue is recurring subscription revenue?", "What independent security evaluation supports the containment boundary against modern kernel exploits and escape techniques?", "Which government or defense deployments, if any, are current and referenceable, and what certifications or deployment constraints apply?"]
+
+[[intelligence.research.sources]]
+id = "official-home"
+url = "https://bufferzonesecurity.com/"
+title = "Safe Browsing & Endpoint Isolation - BUFFERZONE"
+publisher = "BUFFERZONE"
+kind = "company"
+accessed_at = "2026-10-04T11:41:00Z"
+claims = ["Official site currently markets endpoint isolation, containment, integrated CDR, and NoCloud AI phishing detection.", "Official site displays an attributed National Insurance Institute IT security testimonial."]
+
+[[intelligence.research.sources]]
+id = "official-about"
+url = "https://bufferzonesecurity.com/company/about/"
+title = "Safe Workspace Solution for Endpoints - BUFFERZONE"
+publisher = "BUFFERZONE"
+kind = "company"
+accessed_at = "2026-10-04T11:41:00Z"
+claims = ["Official company description says Safe Workspace contains browser, email, and removable-storage activity and offers enterprise and standalone editions."]
+
+[[intelligence.research.sources]]
+id = "official-team"
+url = "https://bufferzonesecurity.com/company/team/"
+title = "Our Team - BUFFERZONE"
+publisher = "BUFFERZONE"
+kind = "company"
+accessed_at = "2026-10-04T11:41:00Z"
+claims = ["Company identifies Israel Levy as CEO, Israel Baharav as COO and co-founder, Uriel Ginsburg as VP R&D, Mor Miller as VP Business Development, and Ori Ashkenazi as VP Engineering.", "Company biographies describe the named executives' prior experience and roles."]
+
+[[intelligence.research.sources]]
+id = "iaa"
+url = "https://innovationisrael.org.il/en/importWinner/513398768/"
+title = "BUFFERZONE SECURITY LTD - Israel Innovation Authority"
+publisher = "Israel Innovation Authority"
+kind = "government"
+accessed_at = "2026-10-04T11:41:00Z"
+claims = ["Government profile identifies BUFFERZONE SECURITY LTD, Israeli company number 513398768, country Israel, established 2003, and Herzliya address.", "Government profile reports 25 employees and describes containment, content disarming, and anti-phishing technology.", "Government profile names Israel Levy as CEO."]
+
+[[intelligence.research.sources]]
+id = "snc"
+url = "https://finder.startupnationcentral.org/company_page/trustware"
+title = "BUFFERZONE - Startup Nation Finder legacy profile"
+publisher = "Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-04T11:41:00Z"
+published_on = "2021-11-23"
+claims = ["Legacy profile identifies company as founded in 2003, private, and headquartered in Herzliya, Israel, and lists Israeli company number 513398768.", "Legacy profile reports $10.5 million across two funding rounds but its funding table displays only a June 2006 $500,000 Seed round naming Abe Peled.", "Legacy profile lists 11-50 employees and historical team names and reports Intel, Techmatrix, and Lenovo partnership/product announcements."]
+
+[[intelligence.research.sources]]
+id = "ew-week"
+url = "https://www.eweek.com/security/bufferzone-hooks-into-windows-to-containerize-security/"
+title = "Bufferzone Hooks Into Windows to Containerize Security"
+publisher = "eWEEK"
+kind = "media"
+accessed_at = "2026-10-04T11:41:00Z"
+published_on = "2015-12-23"
+claims = ["eWEEK quotes CEO Israel Levy saying the company had raised approximately $10 million to date.", "eWEEK quotes CTO/co-founder Eyal Dotan describing a Windows-kernel-based container architecture and copy-on-write file and registry redirection.", "eWEEK reported availability for Windows 10 and described enterprise deployment context in 2015."]
+
+[[intelligence.research.sources]]
+id = "pr-intel"
+url = "https://www.prnewswire.com/news-releases/bufferzone-and-intel-release-two-new-ai-pc-security-solutions-in-ces-2025-302344742.html"
+title = "BUFFERZONE and Intel Release Two New AI PC Security Solutions in CES 2025"
+publisher = "PR Newswire (news provided by BUFFERZONE)"
+kind = "company"
+accessed_at = "2026-10-04T11:41:00Z"
+published_on = "2025-01-07"
+claims = ["BUFFERZONE announced SafeBridge AI and Safe Data as Safe Workspace products and described their local operation on Intel Core Ultra processors.", "BUFFERZONE described continued collaboration with Intel; Intel executive Carla Rodríguez is quoted commenting on the solutions.", "BUFFERZONE CEO Israel Levy is quoted describing on-device NoCloud capabilities; performance and customer benefit claims are company assertions."]
+
+[[intelligence.research.sources]]
+id = "official-privacy"
+url = "https://bufferzonesecurity.com/bufferzone-security-inc-privacy-policy/"
+title = "BUFFERZONE Security Inc Privacy Policy - BUFFERZONE"
+publisher = "BUFFERZONE"
+kind = "company"
+accessed_at = "2026-10-04T11:41:00Z"
+claims = ["Company privacy policy identifies BUFFERZONE Security Ltd as the related operating company and describes a wholly owned US subsidiary in policy terminology; it does not disclose ultimate ownership or cap table."]
+
+[[intelligence.research.sources]]
+id = "patent"
+url = "https://patents.google.com/patent/US7613930B2/en"
+title = "US7613930B2 - Method for protecting computer programs and data from hostile code"
+publisher = "Google Patents"
+kind = "other"
+accessed_at = "2026-10-04T11:41:00Z"
+claims = ["Patent record describes hostile-code protection and reports assignment history through Trustware entities to BUFFERZONE Security Ltd in 2017 and lifetime expiration in 2024."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T11:41:00Z"
+next_review_on = "2027-04-04"
+queries = ["BufferZone Security official company identity legal name headquarters founded", "BUFFERZONE SECURITY LTD 513398768"]
+source_ids = ["official-about", "iaa", "snc"]
+summary = "Matched the operating brand to BUFFERZONE Security Ltd, Israeli company number 513398768; sources report 2003 establishment and Herzliya headquarters."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-04T11:41:00Z"
+next_review_on = "2027-01-04"
+queries = ["BufferZone Security funding raised seed Series A investors valuation", "BUFFERZONE Security Israel funding Abe Peled $10.5 million", "BUFFERZONE מימון גיוס"]
+source_ids = ["snc", "ew-week"]
+summary = "Found a directory-reported $10.5 million total and $500,000 displayed seed row, and a 2015 CEO statement of approximately $10 million raised; precise round breakdown remains unresolved."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T11:41:00Z"
+next_review_on = "2027-04-04"
+queries = ["BufferZone Security investors funding round Abe Peled", "BufferZone Security Ltd investor announcement"]
+source_ids = ["snc", "ew-week"]
+summary = "Only Abe Peled is named for the directory's displayed seed entry; no primary investor announcement or current investor list found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T11:41:00Z"
+next_review_on = "2027-04-04"
+queries = ["BUFFERZONE Security founder CEO team leadership", "BUFFERZONE מייסדים הנהלה"]
+source_ids = ["official-team", "iaa", "snc"]
+summary = "Official team page provides named management biographies; completeness and independent current-role verification remain open."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T11:41:00Z"
+next_review_on = "2027-04-04"
+queries = ["BUFFERZONE Security Ltd acquired acquisition ownership parent company", "BUFFERZONE Security Ltd cap table ownership"]
+source_ids = ["official-privacy", "snc"]
+summary = "Company is described as private; no parent, acquisition, or cap table established. A US subsidiary mention does not establish ultimate ownership."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "not_found"
+checked_at = "2026-10-04T11:41:00Z"
+next_review_on = "2027-04-04"
+queries = ["BUFFERZONE Security revenue ARR profitability employees", "BUFFERZONE financial results revenue"]
+source_ids = ["iaa", "snc", "ew-week"]
+summary = "No dated revenue, ARR, profitability, cash, burn, or runway metric found; employee counts are stale or broad estimates."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T11:41:00Z"
+next_review_on = "2027-04-04"
+queries = ["BUFFERZONE Security customers contracts partnerships Intel Techmatrix", "BUFFERZONE customer deployment endpoint security"]
+source_ids = ["pr-intel", "snc", "official-home"]
+summary = "Product and partnership announcements and an attributed customer testimonial are public. Customer numbers, contract economics, and active paid production status are not disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-04T11:41:00Z"
+next_review_on = "2027-04-04"
+queries = ["BUFFERZONE Security patents Bufferzone Security Ltd", "Bufferzone Security Ltd patent hostile code"]
+source_ids = ["patent", "official-home"]
+summary = "Located a historical patent record assigned to the company and current company claims of patented containment; full current portfolio and legal status not established."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T11:41:00Z"
+next_review_on = "2027-04-04"
+queries = ["BUFFERZONE endpoint containment competitors Bromium Menlo HP Sure Click", "official endpoint isolation browser isolation products"]
+source_ids = ["ew-week", "official-about"]
+summary = "eWEEK identified Bromium as a direct competitor in 2015; current comparables include endpoint isolation, browser isolation, and integrated endpoint suites. No direct comparative testing located."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T11:41:00Z"
+next_review_on = "2027-04-04"
+queries = ["BUFFERZONE defense government security deployments dual use", "BUFFERZONE government military contract defense endpoint security"]
+source_ids = ["official-about", "official-home", "iaa"]
+summary = "Containment product has clear commercial use and plausible security-sector applicability, but no current government or defense deployment/contract was evidenced."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current official website offers enterprise contact/demo for Safe Workspace and the company published 2025 product announcements; operating status is supported by current company activity."
+verified_at = "2026-10-04T11:41:00Z"
+source_ids = ["official-home", "official-about", "pr-intel"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Israel Innovation Authority identifies Israeli company number 513398768, Israel country and Herzliya address; official company team identifies Israeli co-founder."
+verified_at = "2026-10-04T11:41:00Z"
+source_ids = ["iaa", "official-team"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Directory reports a $10.5 million cumulative total, while CEO told eWEEK in 2015 approximately $10 million had been raised; total is third-party reported, not company-announced, and its scope/detail is unclear."
+verified_at = "2026-10-04T11:41:00Z"
+source_ids = ["snc", "ew-week"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2006.amount"
+support = "direct"
+summary = "Legacy Startup Nation Finder funding table explicitly lists a June 2006 Seed round of $500,000."
+verified_at = "2026-10-04T11:41:00Z"
+source_ids = ["snc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2006.investors"
+support = "direct"
+summary = "Legacy Startup Nation Finder lists Abe Peled as investor for its displayed June 2006 seed round."
+verified_at = "2026-10-04T11:41:00Z"
+source_ids = ["snc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2006.lead_investors"
+support = "direct"
+summary = "Legacy Startup Nation Finder identifies Abe Peled as investor for its displayed June 2006 seed round."
+verified_at = "2026-10-04T11:41:00Z"
+source_ids = ["snc"]

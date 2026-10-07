@@ -1,0 +1,88 @@
+name = "Edgybees"
+description = "Edgybees develops software that aligns aerial full-motion video and satellite imagery with real-world geography in near real time, giving defense, public-safety, critical-infrastructure, and commercial geospatial users more reliable visual context."
+detailed_description = """
+Edgybees addresses a narrow but consequential geospatial-data problem: imagery from drones, aircraft, and satellites can carry location metadata that is materially offset from the objects visible in the frame. Its software uses computer vision, machine learning, and reference imagery to correct that registration and place roads, buildings, landmarks, and other points of interest in the right geographic context. The company presents two primary product paths. Edgybees MX targets full-motion video from aerial platforms, including electro-optical and infrared payloads, while Edgybees SKY co-registers electro-optical satellite imagery against a chosen foundation layer. The important product thesis is software-only correction that can fit existing imagery, analytic, and mapping workflows rather than requiring a new sensor or proprietary map stack.
+
+The technology matters because positional error compounds through downstream analysis. A video feed that is tens of meters off can mislead an operator, make an overlay appear to identify the wrong road or building, and reduce the quality of change-detection or other machine-learning outputs. Edgybees claims accuracy in the 1-3 meter range for relevant workflows, and its SKY materials also describe accuracy within two pixels; these are vendor claims that require independent testing across terrain, altitude, lighting, sensor type, and latency conditions. The official FAQ is an important calibration point: full-motion-video support includes electro-optical and infrared imagery, but satellite support is currently described as electro-optical, with SAR expansion still in development. That makes the platform promisingly broad, but not yet universally sensor-agnostic.
+
+The customer and market context is attractive but demanding. Government and defense organizations need accurate full-motion video and satellite data for intelligence, surveillance, reconnaissance, mission planning, and operational decision support. Emergency responders can use the same alignment layer for wildfire, flood, search-and-rescue, and disaster assessment workflows, while commercial satellite providers, geospatial analysts, infrastructure operators, and AI vendors can use it to improve the inputs to mapping and change-detection systems. The company emphasizes cloud or on-premises deployment and integration with existing tools, including Esri ArcGIS Pro and other third-party systems. That interoperability could lower switching costs for users with established workflows, but it also means Edgybees must prove reliable APIs, security controls, throughput, and measurable time-to-value rather than relying on a visually compelling demonstration.
+
+Commercialization signals are credible but incomplete. Edgybees closed a reported $9.5 million Series A in 2021, has continued operating as a private company, established Edgybees Inc. in the United States in 2023, and public company materials describe government, commercial, and defense-oriented use cases. Its site says the software has been awarded multiple Department of Defense contracts, but the public material reviewed here does not identify contract numbers, scopes, values, or renewal status. The company also publicized a georegistration patent application and a U.S. leadership structure with national-security and geospatial experience. These signals support a deployment-oriented stage assessment, not a conclusion about recurring revenue, customer concentration, production scale, or contract backlog.
+
+Defense and national-security relevance is direct because georegistration is a prerequisite for trusting imagery-based decisions. Correcting live aerial video can improve the common operating picture and reduce ambiguity in ISR, border monitoring, and tactical coordination; correcting satellite imagery can make change detection and AI-assisted analysis more dependable. Civilian emergency-response use gives the technology genuine dual-use breadth rather than a forced adjacency. The strategic question is whether Edgybees can become a durable infrastructure layer inside mission systems while preserving accuracy under contested, degraded, or data-sparse conditions. Diligence should focus on independently measured performance, integration and authorization timelines, recurring software economics, evidence behind government-contract claims, and the defensibility of the training data, algorithms, patents, and deployment experience.
+"""
+logo = "https://edgybees.com/wp-content/uploads/2023/06/Edgybees-w-logo-social-default.jpg"
+website = "https://edgybees.com/"
+sector = "Defense Software / Geospatial Intelligence"
+founded = "2016"
+headquarters = "Herzliya, Israel / Gaithersburg, Maryland, United States"
+employees = "11-50"
+funding_stage = "Series A / private; later financing status not publicly confirmed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "The core georegistration technology has substantive commercial and defense applicability: the same alignment of live aerial video and satellite imagery supports ISR and mission command as well as wildfire response, search-and-rescue, infrastructure monitoring, and commercial geospatial analytics. The dual-use case is strongest for imagery correction and decision support; public evidence does not establish that every advertised deployment is operational at scale."
+key_technologies = [
+  "Computer-vision and machine-learning georegistration of imagery to geographic reference data",
+  "Real-time correction of aerial full-motion video metadata and visual position",
+  "Electro-optical and infrared full-motion-video processing",
+  "Electro-optical satellite-image co-registration and sub-pixel alignment",
+  "Reference-imagery and GIS overlay fusion for roads, buildings, and points of interest",
+  "Cloud or on-premises deployment with integration into existing geospatial workflows"
+]
+use_cases = [
+  "ISR and intelligence-analyst exploitation of drone or aircraft full-motion video",
+  "Defense common-operating-picture and mission-command overlays",
+  "Satellite-image correction before change detection and AI-based analysis",
+  "Wildfire, flood, and disaster-response mapping",
+  "Search-and-rescue coordination using live aerial feeds",
+  "Border, perimeter, and critical-infrastructure monitoring",
+  "Commercial satellite and geospatial-data quality improvement",
+  "Integration of corrected imagery into mapping and FMV analysis tools"
+]
+investible = true
+investment_rationale = "Edgybees fits a dual-use deep-tech priority screen because it targets a specific data-integrity bottleneck shared by defense, public safety, and commercial Earth-imagery markets. Its software-only architecture, claimed meter-level correction, U.S. entity, and reported Series A provide credible strategic signals. This is a diligence priority signal rather than an investment recommendation: the central unanswered questions are repeatability outside demonstrations, production deployments, contract quality, recurring revenue, integration burden, and whether larger platform vendors can absorb the capability."
+strategic_value = "Accurate spatial context can increase the operational value of existing drones, aircraft, satellites, and analytic systems without requiring new collection hardware. For allied defense and emergency-response users, reducing image-to-ground ambiguity may improve speed and confidence in time-sensitive decisions. Strategic value is therefore high at the enabling-software layer, but depends on verified performance in denied, degraded, intermittent, or low-reference-data environments and on the company’s ability to satisfy government security and procurement requirements."
+public_sources = [
+  "https://edgybees.com/",
+  "https://edgybees.com/solutions/edgybees-fmv/",
+  "https://edgybees.com/solutions/edgybees-satellite/",
+  "https://edgybees.com/resources/faqs/",
+  "https://edgybees.com/customers-partners/",
+  "https://edgybees.com/company/about-us/",
+  "https://edgybees.com/news-item/edgybees-ltd-establishes-u-s-entity-to-provide-advanced-georegistration-solutions-for-government-and-commercial-sectors/",
+  "https://www.linkedin.com/company/edgybees-ltd",
+  "https://www.prnewswire.com/news-releases/edgybees-closes-9-5m-in-series-a-funding-delivers-breakthrough-geo-mapping-accuracy-and-speed-for-lifesaving-aerial-video-301229909.html"
+]
+potential_score = 82.0
+technology_score = 87.0
+market_score = 79.0
+team_score = 77.0
+dual_use_score = 91.0
+strategic_alignment_score = 89.0
+stage = "mid"
+stage_rationale = "Public evidence places Edgybees beyond an early prototype: it has named products for satellite and full-motion-video workflows, a reported 2021 Series A, a U.S. operating entity formed in 2023, and a stated government/commercial go-to-market. Mid-stage is appropriate because public evidence remains insufficient to verify scaled recurring revenue, broad production adoption, or a later priced round."
+competitors = [
+  "BAE Systems InMotion",
+  "Esri ArcGIS imagery and video workflows",
+  "Kongsberg Geospatial mission systems",
+  "Palantir geospatial and sensor-fusion workflows",
+  "Maxar Intelligence imagery and geospatial analytics",
+  "BlackSky geospatial intelligence platform",
+  "Customer-built computer-vision and photogrammetry pipelines"
+]
+competitive_edge = "Edgybees concentrates on correcting the location of imagery before operators or downstream AI act on it, rather than selling a broad imagery constellation, mapping suite, or general command platform. Its claimed combination of real-time processing, software-only deployment, support for live EO/IR video, satellite-image correction, and use of customer-selected reference data could make it a useful neutral layer across existing systems. The edge is conditional: competitors can bundle adjacent geospatial functions, and the company must demonstrate that accuracy, latency, resilience, and integration quality remain strong across sensors and operating environments."
+risk_factors = [
+  "Vendor accuracy claims need independent validation across terrain, altitude, lighting, sensor modalities, latency, and degraded reference-data conditions",
+  "Satellite support is publicly described as electro-optical today, while SAR and broader modality coverage remain a development item",
+  "Defense, intelligence, and public-sector procurement cycles can be long, budget-dependent, and difficult for a small vendor to scale",
+  "Large geospatial, defense-prime, and mapping platforms may bundle competing alignment or sensor-fusion capabilities",
+  "Deployment depends on integration with customer imagery, GIS, FMV, cloud, and security environments",
+  "Public evidence does not establish recurring revenue, customer concentration, contract values, renewals, or current financing runway",
+  "Export controls, classified-data handling, cybersecurity authorization, and cross-border operations may constrain addressable markets"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Retain as a high-priority strategic diligence record because the company addresses a concrete imagery-reliability bottleneck with direct defense relevance and credible civil applications. The score is below a top-conviction level because current public evidence leaves material uncertainty around scale, financing, independent performance validation, procurement conversion, and competitive durability; investible=true is an internal fit signal, not a recommendation."
+crawled_at = "2026-02-16T20:15:00Z"
+updated_at = "2026-07-31T18:04:01Z"

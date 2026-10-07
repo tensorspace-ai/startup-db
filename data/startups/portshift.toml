@@ -1,0 +1,82 @@
+name = "Portshift"
+description = "Portshift was a Tel Aviv cloud-native security company whose Kubernetes- and service-mesh-aware application-security technology covered development, deployment, and runtime controls. Cisco completed the acquisition in 2020; the team and technology became part of Cisco's Panoptica cloud-native security direction rather than remaining an independent company."
+detailed_description = """Portshift built a Kubernetes-native application-security platform around the idea that workload identity, deployment policy, and runtime traffic context should be managed together. Cisco's acquisition materials describe vulnerability and configuration management before deployment, verified image deployment at release time, and production protection through segmentation and encryption. The historical product scope also included Kubernetes API activity, RBAC permissions, pod-security controls, and workload identity. This was a meaningful architectural response to ephemeral microservices: the security boundary moves with the application and its declared policy instead of relying only on fixed hosts, network zones, or post-deployment scanning.
+
+The target customer problem was specific and commercially credible: cloud-native teams need controls that follow services across clusters and release stages, while security teams need visibility into east-west communication, permissions, APIs, and exploitable paths. That places the technology in container security, cloud workload protection, DevSecOps, and CNAPP. Cisco's later Panoptica materials show the product direction expanded beyond the original Portshift description into code and build protection, IaC scanning, CSPM, API and serverless security, runtime data security, and attack-path analysis across hybrid and multicloud environments. The breadth increases platform value but also makes integration quality, policy noise, and remediation workflow as important as feature count.
+
+The public record supports strategic traction and product incubation, but not a detailed standalone commercial traction claim. Cisco says the acquisition closed on October 26, 2020, that Portshift was privately held and headquartered in Tel Aviv, and that the team joined Cisco's Emerging Technologies and Incubation group. Team8 identifies Portshift as an acquired portfolio company and lists its 2018 founding. Cisco's Panoptica launch article explicitly describes the product as the next stage of the Portshift team, while current Panoptica documentation presents Cisco branding and support. There is no reliable public basis here for current Portshift revenue, customer count, retention, standalone headcount, or a continuing Portshift product line; those are diligence gaps, not implied negatives or positives.
+
+Portshift's competitive position was differentiated more by architecture and workflow than by an irreplaceable primitive. Aqua Security, Sysdig, Palo Alto Networks Prisma Cloud, Microsoft Defender for Cloud, Wiz, and open-source Kubernetes controls address overlapping parts of the problem. Its identity-centric view of workloads, API-server activity, admission policy, service-mesh context, segmentation, and runtime protection could help customers seeking one policy model from build through runtime. The counterpoint is strong: cloud providers and large security platforms can bundle adjacent controls, while specialists may offer deeper runtime detection, stronger developer ergonomics, or more mature attack-path and posture analysis. After the acquisition, Cisco distribution and integration are more relevant competitive variables than Portshift's former brand.
+
+The defense and national-security relevance is credible at the technology level, not evidence of a Portshift defense deployment. Mission and critical-infrastructure applications increasingly use containers, Kubernetes, and distributed services; identity-bound policy, least privilege, API governance, encryption, software supply-chain checks, and runtime segmentation are relevant to protecting those environments. However, public materials do not establish defense customers, security authorizations, disconnected operation, classified deployment, or government contracts. Those questions would require validation of accreditation, sovereign or air-gapped operating models, telemetry handling, supply-chain provenance, integration with identity and SIEM systems, and procurement ownership. Portshift should therefore be treated as a strategically relevant acquired Cisco asset and technology reference, not as an investible independent startup."""
+logo = "https://outshift.cisco.com/assets/shared/logos/preview-thumbnail-new.png"
+website = "https://outshift.cisco.com/panoptica"
+sector = "Cloud-Native Application Security / CNAPP"
+founded = "2018"
+headquarters = "Tel Aviv, Israel"
+employees = "11-50 at the time of Team8 portfolio listing; current standalone headcount unknown"
+funding_stage = "Acquired by Cisco in 2020; formerly Team8-backed"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "Portshift's core controls for Kubernetes workload identity, API authorization, deployment verification, encryption, and runtime segmentation have substantive commercial and security applicability. They are relevant to defense and critical-infrastructure cloud environments, but public sources do not establish a Portshift defense deployment or defense contract."
+key_technologies = [
+  "Kubernetes-native workload identity and policy enforcement",
+  "Kubernetes API-server activity visibility and protection",
+  "RBAC and pod security policy analysis",
+  "Service-mesh-aware east-west segmentation and encryption",
+  "Container image vulnerability and configuration management",
+  "Verified image deployment and runtime protection",
+  "Multi-stage cloud-native application security workflows"
+]
+use_cases = [
+  "Pre-deployment vulnerability and configuration review for container images",
+  "Admission and verified-image controls in Kubernetes release pipelines",
+  "Runtime segmentation of service-to-service traffic",
+  "Detection and enforcement for risky Kubernetes API activity and RBAC grants",
+  "Security policy management across multi-cluster enterprise applications",
+  "Protection of regulated cloud-native workloads and internal services",
+  "Security architecture for government or defense cloud modernization, subject to accreditation and deployment validation"
+]
+investible = false
+investment_rationale = "Portshift is not an independent investment candidate: Cisco completed the acquisition in 2020 and the capability was carried into Cisco's cloud-native security work. The relevant diligence question is how much durable product and engineering value Cisco retained in Panoptica, not whether Portshift remains a standalone financing opportunity."
+strategic_value = "The asset is strategically relevant as an example of workload-identity and Kubernetes-policy technology being incorporated into a major security platform. Its strongest value for this database is as a reference for zero-trust controls in cloud-native infrastructure and for understanding Cisco's application-security strategy; public evidence does not justify attributing standalone current revenue or defense adoption to Portshift."
+public_sources = [
+  "https://www.cisco.com/site/us/en/about/corporate-development/acquisitions/portshift/index.html",
+  "https://outshift.cisco.com/blog/panoptica-launch",
+  "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2023/m06/cisco-accelerates-cloud-native-application-security-strategy-with-panoptica.html",
+  "https://panoptica.readme.io/",
+  "https://team8.vc/vehicles/team8-cybersecurity/",
+  "https://medium.com/team8/cisco-acquires-portshift-celebrating-team8s-second-company-acquisition-c9ba0ac50b0e"
+]
+potential_score = 66.0
+technology_score = 82.0
+market_score = 78.0
+team_score = 76.0
+dual_use_score = 79.0
+strategic_alignment_score = 78.0
+stage = "mature"
+stage_rationale = "Portshift was founded in 2018 and Cisco completed its acquisition in 2020. The record is mature in technology and transaction history, while the current Panoptica product is a Cisco/Outshift offering. Portshift is no longer an independently operating startup, so current startup growth, financing stage, and standalone product traction cannot be assessed from public disclosures."
+competitors = [
+  "Aqua Security",
+  "Sysdig",
+  "Palo Alto Networks Prisma Cloud",
+  "Wiz",
+  "Microsoft Defender for Cloud",
+  "Open-source Kubernetes controls such as Kyverno, OPA Gatekeeper, and Falco"
+]
+competitive_edge = "Portshift's edge was the attempt to connect workload identity, Kubernetes and service-mesh context, deployment verification, API protection, segmentation, and runtime enforcement in one application-security model. That was a meaningful architectural distinction in the early Kubernetes security market, but it is not automatically durable: CNAPP vendors, cloud providers, and open-source projects cover overlapping controls, and the acquisition makes Cisco's integration and distribution—not Portshift's standalone brand—the relevant competitive question."
+risk_factors = [
+  "Cisco acquisition ended Portshift's independent operating and financing path",
+  "Current Portshift product availability, roadmap, revenue, and customer retention are not publicly established",
+  "Crowded CNAPP market with overlapping controls from platform vendors and specialists",
+  "Kubernetes, service-mesh, cloud IAM, registry, and CI/CD integrations create deployment and policy-management complexity",
+  "False positives or overly restrictive policies can slow releases and reduce security-team adoption",
+  "Defense and government use would require separate validation of accreditation, disconnected operation, supply-chain controls, and procurement fit",
+  "Strategic value may be diluted if Cisco bundles equivalent capabilities or changes Panoptica's product direction"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Retain as a low-priority strategic reference: Kubernetes and cloud-native application security have credible dual-use relevance, and Cisco's acquisition and subsequent Panoptica investment validate strategic interest. The acquired-asset status, absence of a standalone investment path, and limited public operating data keep this below independent startup priority signals."
+crawled_at = "2026-02-27T10:00:00Z"
+updated_at = "2026-07-31T19:15:02Z"

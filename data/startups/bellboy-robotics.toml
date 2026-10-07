@@ -1,0 +1,489 @@
+name = "Bellboy Robotics"
+description = "Bellboy Robotics is an Israeli physical-AI company building autonomous mobile robots with arms for room inspection, cleaning, logistics, and other repetitive work in hotels and institutional environments. Its Billie platform is designed to let robots operate alongside people in real-world buildings rather than only on structured factory floors."
+detailed_description = """
+**Product and the concrete problem it solves.** Bellboy Robotics is addressing a very specific operational gap: commercial buildings have many physical tasks that are repetitive, labor-intensive, difficult to staff, and too irregular for conventional factory automation. Housekeeping teams must inspect rooms, move through changing layouts, identify issues, and complete routine work while guests, staff, furniture, doors, and other obstacles are present. The same pattern appears in hospitals, offices, event venues, and other large facilities. Bellboy's product is Billie, a mobile service robot and the beginning of what the company describes as a robotic workforce for people-first environments. Public descriptions identify autonomous room inspections, cleaning, logistics, and maintenance-oriented work rather than a single fixed-purpose floor scrubber. That distinction matters: the commercial problem is not simply moving a robot through a mapped corridor, but giving an adaptable system enough perception and physical ability to do useful work in places where people are still the default workforce. The company's Robot-as-a-Service terms describe an autonomous cleaning-inspection robot, software components, professional support, and a Robot Management Platform, indicating a managed operational product rather than a one-time hardware sale.
+
+**Core technology and how it works.** The publicly described stack combines an autonomous mobile base, a robotic arm, 3D perception, behavior models, and high-performance onboard compute. Startup Nation Finder describes the robot as interpreting spatial geometry in real time so it can perform precise physical actions without fixed tracks or predefined paths. In practical terms, that implies a perception-and-control loop: the robot must construct enough understanding of its immediate space to localize, move around people and furniture, identify the relevant object or surface, select a behavior, and execute an arm movement without relying on an industrial cell's repeatable geometry. The company calls this physical AI and positions people, software agents, and robots as a team. Bellboy has not publicly disclosed the exact sensor suite, model architecture, training data scale, manipulation success rates, autonomy boundaries, or safety certification, so those should remain diligence questions rather than implied capabilities. The important architectural choice is nonetheless visible. Bellboy is trying to generalize a physical system across multiple everyday environments, where the value comes from adapting to variation and coordinating with human staff. The Israeli Companies Registrar-linked terms also make clear that the software platform is part of the service, allowing the company to manage robots and customer sites as an operating fleet rather than leaving each deployment as a bespoke experiment.
+
+**Market, customers, and go-to-market.** Bellboy publicly names hotels, event venues, hospitals, and office buildings as target environments, with hotels as the initial wedge. Hospitality is an understandable beachhead because housekeeping has measurable room-by-room workflows, persistent labor shortages, and a large installed base of similar but not identical properties. A hotel operator can evaluate the robot against concrete metrics such as inspection time, rooms covered, interruptions to staff, safety incidents, and the number of routine tasks completed per shift. The product can then expand from inspection into cleaning assistance, internal logistics, and physically demanding event or back-of-house work. Bellboy's legal terms use a service model in which the customer receives access to the robot, software, management platform, and support for an order term, while the equipment remains the company's property. That is consistent with a Robot-as-a-Service go-to-market motion that lowers the customer's upfront hardware commitment but leaves Bellboy responsible for deployment, maintenance, utilization, and unit economics. In August 2026, German hotel group Seminaris publicly described a pilot using Billie at the SeeHotel Potsdam for room checks, with a second robot being trained and a stated plan for all seven other Seminaris houses to have at least one Billie by the end of 2026. That is a named, operational reference, although it remains a pilot and does not establish broad commercial scale.
+
+**Traction, funding, and third-party validation.** The company was founded in July 2024, and the Israeli Innovation Authority ecosystem record identifies Bellboy Robotics Ltd. by registration number 517015848, lists its Tel Aviv-Yafo address, classifies it in hardware and industrial technology, and names a 2024 Seed-track entry. Startup Nation Finder reports an undisclosed pre-seed round in July 2024 and an undisclosed November 2025 Seed round from Philippe Suchet. IVC independently identifies Bellboy as a Tel Aviv company working on a mobile robot with arms and artificial-intelligence capabilities for cleaning and maintenance alongside humans, and records a 2025 Seed entry. The amount, valuation, full syndicate, revenue, deployed-fleet count, and contract values are not publicly disclosed. That makes the Seminaris pilot more useful than a funding headline: it shows the product crossing into a real hotel workflow with a customer that is willing to train a second unit and discuss a multi-property rollout. Additional ecosystem signals include Bellboy's appearance in the Israel Robotics Hub ecosystem and a public presence at hospitality and robotics events. These are encouraging validation points, but they do not yet prove reliable utilization, positive gross margins, or repeatable deployments.
+
+**Founders and team background.** Public records identify Sandy Hefftz as co-founder and CEO and Nathaniel Bubis as co-founder and CTO, with Bellboy's ecosystem profile also listing Elad Ben-Israel on the team. The company describes its founding group as leaders from Amazon Robotics, Apple, Microsoft, and Israel's mission to the Moon, an unusually relevant combination for a startup attempting to bridge production software, consumer-grade human interaction, and embodied systems. The official Israeli record specifically places Hefftz in the CEO and co-founder role and Bubis in the CTO role. Bellboy's public recruiting and ecosystem activity also show the team working on applied AI, computer vision, vision-language models, cloud computing, and real-world robot deployment, including a collaboration with Technion's Faculty of Data and Decision Sciences. Ben-Israel's public account of joining the company emphasizes shipping and debugging systems in the field, robotics core software, and integrating emerging embodied-AI models. The combination suggests a technically ambitious team with experience relevant to scaling software and deploying physical systems, but the public record does not establish the exact prior employer or military background of each individual, total current headcount, patent ownership, or the depth of the hardware engineering organization. Those gaps are material because service-robotics outcomes depend as much on reliability, maintenance, and site operations as on model quality.
+
+**Competitive dynamics.** Bellboy competes against both specialized robotics vendors and the incumbent human workflow. Brain Corp provides autonomy software for commercial floor-care machines and benefits from a large installed base; Pudu Robotics sells commercial cleaning, delivery, and service robots; Gaussian Robotics focuses on autonomous cleaning fleets; LionsBot builds cleaning robots for hospitality and facilities; Avidbots sells autonomous floor-cleaning systems; and Relay Robotics addresses indoor delivery and service logistics. These companies establish customer expectations for navigation, fleet management, safety, and service support, even when their systems perform narrower tasks. Traditional facility-management contractors and hotel housekeeping teams are the most important status-quo competitor because they already absorb the messy exceptions that robots struggle with. Bellboy's proposed edge is broader physical behavior in unstructured human environments: an arm-equipped platform can inspect, manipulate, and eventually handle more than a machine restricted to floor coverage or point-to-point delivery. The same breadth is also a vulnerability. A general-purpose robot must achieve dependable performance across many tasks, while a narrow incumbent can optimize one workflow, certify it, and price it clearly. Bellboy's moat will therefore need to come from deployment data, site-specific learning, fleet operations, and a growing library of reliable behaviors, not merely from having an arm attached to a mobile base.
+
+**Defense, security, and resilience dual-use relevance.** Bellboy's dual-use case is credible but prospective. The core technology is autonomy for a mobile, arm-equipped system that perceives and acts in unstructured spaces alongside people. That capability can transfer to resilience and security settings where repetitive inspection, cleanup, logistics, or maintenance exposes personnel to risk or where staffing is constrained: hospitals during an infectious-disease event, industrial sites after an accident, emergency shelters, utility facilities, warehouses supporting disaster response, and military or civil-defense installations. A robot that can interpret room geometry without fixed tracks and perform physical actions could eventually support remote inspection, supply movement, facility checks, or hazardous-area handling. The product's commercial origin is an asset for this thesis because hotels and hospitals impose human-safety, uptime, and clutter constraints that resemble some non-laboratory field conditions. The limit is equally important. Bellboy has publicly disclosed hospitality and institutional work, not a defense customer, military program, government contract, security evaluation, ruggedized variant, denied-communications mode, or hazardous-material certification. Billie is not a fielded defense system, and the company should not be credited for one. Its strategic relevance is the transferable autonomy and manipulation stack, plus the possibility of building operational reliability in demanding civilian environments before pursuing security or critical-infrastructure deployments.
+
+**Growth stage, trajectory, and key diligence risks.** Bellboy is classified as early stage: it was founded in 2024, has disclosed only pre-seed and Seed financing with amounts undisclosed, and is still demonstrating how a general-purpose service robot becomes a repeatable customer operation. At the same time, it has crossed meaningful early milestones: a named hotel pilot, a second unit being trained, a stated multi-property expansion plan, a public Robot-as-a-Service contract, and a product identity in Billie rather than only a research prototype. The trajectory to watch is whether the company can turn one hotel workflow into a reusable deployment playbook. The most important diligence points are (1) autonomy reliability across different buildings, lighting, floors, elevators, and human traffic; (2) arm manipulation success rates and the amount of remote intervention required; (3) safety validation, incident handling, privacy, and cybersecurity for a connected robot operating around guests and patients; (4) service economics, including hardware cost, maintenance, battery life, utilization, and the gross margin of a managed fleet; (5) evidence that the Seminaris pilot expands and that additional hotel groups pay for the service; (6) the defensibility of the behavior data and fleet-management layer against better-capitalized robotics companies; and (7) whether the small Israeli team can support deployments across Europe and other markets. Bellboy has an attractive strategic profile because it sits at the intersection of physical AI, robotics, labor resilience, and potential hazardous-environment autonomy. It should remain a monitored early-stage company until it publishes stronger evidence on reliability, deployment volume, customer economics, and any actual security or critical-infrastructure use.
+"""
+logo = "Unknown"
+website = "https://bellboy.co"
+sector = "Physical AI / Autonomous Service Robotics"
+founded = "2024"
+headquarters = "Tel Aviv-Yafo, Israel"
+employees = "Unknown (the Israeli Innovation Authority profile listed 5 employees, while LinkedIn later categorized the company as 11-50; current exact headcount is not publicly confirmable)"
+funding_stage = "Seed / early R&D. Startup Nation Finder reports an undisclosed pre-seed round in July 2024 and an undisclosed Seed round in November 2025 from Philippe Suchet; IVC independently records a 2025 Seed entry. Total capital, valuation, and current financing runway are undisclosed."
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Bellboy's dual-use relevance is credible at the technology-transfer level and unproven at the deployment level. (1) Its core system is a mobile, arm-equipped robot using 3D perception and behavior models to act in unstructured spaces alongside people, which is directly relevant to remote inspection, logistics, cleanup, and maintenance where human exposure or staffing is constrained. (2) Civilian environments such as hotels and hospitals force the company to solve practical autonomy problems that also matter in resilience settings: changing layouts, clutter, elevators, bystanders, privacy, safe physical interaction, and recovery from unexpected events. (3) Potential security and resilience applications include post-incident facility inspection, hospital or shelter support during emergencies, utility and industrial-site checks, military-base logistics, and hazardous-area handling. The calibration is decisive: Bellboy discloses no defense customer, military program, government contract, security evaluation, ruggedized platform, denied-communications operation, or hazardous-material certification. Billie is a commercial service robot, not a fielded defense capability. The dual-use score therefore reflects a short and technically credible adjacency path, not current defense traction."
+key_technologies = [
+  "Autonomous mobile robot navigation in unstructured institutional environments without fixed tracks or predefined paths",
+  "Arm-equipped mobile manipulation for room inspection, cleaning, logistics, and maintenance workflows",
+  "3D spatial perception and real-time geometric interpretation for precise physical actions around people and obstacles",
+  "Physical-AI behavior models for coordinating perception, navigation, and task execution in changing buildings",
+  "High-performance onboard compute for real-time autonomy and embodied-AI inference",
+  "Robot-as-a-Service management platform combining robot software, fleet operations, and customer-site support"
+]
+use_cases = [
+  "Hotel room inspection and housekeeping quality checks across guest rooms and shared facilities",
+  "Assistance with physically demanding housekeeping tasks in hotels, resorts, and conference venues",
+  "Hospital and care-facility logistics or inspection in corridors and rooms shared with staff and patients",
+  "Office-building and event-venue maintenance support in changing, people-filled environments",
+  "Internal movement of supplies, equipment, and consumables across institutional buildings",
+  "Post-incident or emergency facility inspection where repetitive checks reduce human exposure",
+  "Critical-infrastructure and industrial-site inspection or maintenance support in controlled deployments",
+  "Military, civil-defense, or disaster-response facility logistics and cleanup as an undemonstrated future adjacency"
+]
+investible = true
+investment_rationale = "Bellboy is a high-upside, high-execution-risk physical-AI company with more evidence of product deployment than of commercial scale. (1) The problem is concrete: hotels and institutions have persistent labor shortages and repetitive physical workflows that are hard to automate with factory-style robots. (2) The product is technically differentiated from simple delivery or floor-cleaning machines by combining a mobile base, an arm, 3D perception, and behavior models for unstructured spaces. (3) Early validation is unusually tangible for a 2024-founded company: the Israeli Innovation Authority identifies the Israeli entity and founders, Startup Nation Finder reports a 2025 Seed round, and Seminaris has publicly described a Billie pilot, second-unit training, and a multi-property rollout plan. (4) The Robot-as-a-Service structure aligns the company's incentives with uptime and task completion and can reduce customer capex, but it also puts hardware, maintenance, deployment, and utilization risk on Bellboy. (5) The team claims experience across Amazon Robotics, Apple, Microsoft, and Israel's lunar program, while public recruiting shows active work on computer vision, vision-language models, and field deployment. Counterweights are material: funding amounts, revenue, margins, fleet size, unit economics, patents, exact headcount, and autonomy metrics are undisclosed; service robotics is crowded; and the difference between a successful pilot and a repeatable multi-site operation is substantial. The record is a strategic priority signal, not an investment recommendation."
+strategic_value = "Bellboy's strategic value is the possibility of turning Israeli physical-AI talent into a deployable autonomy stack for civilian resilience and, later, security applications. (1) The company is working on an embodied system that must perceive, navigate, and manipulate in human environments, a harder and more transferable capability than a robot limited to a fixed industrial cell. (2) Its hotel and institutional wedge creates a commercially legible path to collect deployment data and improve fleet behaviors while addressing labor resilience. (3) The same autonomy primitives could support inspection, logistics, cleanup, and maintenance in hospitals, utilities, emergency facilities, military bases, and disaster zones where sending a person is costly or unsafe. (4) A Robot-as-a-Service model can produce operational knowledge about uptime, intervention, safety, and fleet support, which are often the real bottlenecks in fielded autonomy. The ceiling is set by the evidence: no defense or critical-infrastructure engagement is disclosed, no ruggedization or contested-environment capability is public, and the current product is aimed at commercial buildings. Strategic value is therefore meaningful as a technology and ecosystem option, not as an existing national-security asset."
+potential_score = 72.0
+technology_score = 79.0
+market_score = 72.0
+team_score = 75.0
+dual_use_score = 68.0
+strategic_alignment_score = 76.0
+stage = "early"
+stage_rationale = "Bellboy is early stage because its operating history, financing history, and commercial evidence are still narrow even though the technology has reached a real pilot. (1) The company was founded in 2024 and public records identify only an undisclosed pre-seed and an undisclosed 2025 Seed round. (2) Seminaris provides meaningful product validation, but one named hotel pilot, a second robot being trained, and a planned expansion do not yet establish repeatable deployment across multiple paying customers. (3) The public record does not disclose revenue, recurring contract value, gross margin, fleet size, intervention rates, safety incidents, autonomy benchmarks, or current headcount. (4) Bellboy has credible maturity markers for its age: a named product, a Robot-as-a-Service contract framework, a customer pilot with a second unit, ecosystem visibility, and recruitment in applied AI and robotics. Progression toward mid stage would require several paying deployments, disclosed utilization and intervention data, repeatable installation and support economics, and evidence that the platform generalizes beyond hotel room inspection."
+competitors = [
+  "Brain Corp (commercial autonomy software and fleet intelligence for cleaning machines, with a large installed-base advantage)",
+  "Pudu Robotics (commercial cleaning, delivery, and service robots sold into hospitality and institutional environments)",
+  "Gaussian Robotics (autonomous commercial-cleaning robots and fleet operations for facilities)",
+  "LionsBot (hospitality and facility-cleaning robots focused on operational deployment and service support)",
+  "Avidbots (autonomous floor-cleaning robots for large commercial and industrial facilities)",
+  "Relay Robotics (indoor service and delivery robots competing for hotel and institutional automation budgets)",
+  "Human facility-management contractors and hotel housekeeping teams (the incumbent workforce that handles exceptions, guest interaction, and unstructured tasks without robot deployment risk)"
+]
+competitive_edge = "Bellboy's potential edge is the combination of physical breadth and deployment context, but it is not yet a proven moat. (1) The arm-equipped mobile platform can address inspection, cleaning, logistics, and maintenance rather than only one floor-care or delivery workflow. (2) 3D perception and behavior models aimed at spaces without fixed tracks are better aligned with hotels, hospitals, and offices than factory automation designed for repeatable geometry. (3) The Robot-as-a-Service model lets Bellboy retain the equipment, software, and operational data, creating a possible improvement loop across sites while lowering customer capex. (4) The Seminaris pilot gives the company a real hotel environment in which to learn room inspection, human interaction, training, and multi-property rollout. (5) The team's stated mix of Amazon Robotics, Apple, Microsoft, and Israeli lunar-program experience may help bridge embodied systems and product engineering. The vulnerabilities are equally concrete: Pudu, Brain Corp, Gaussian, LionsBot, and Avidbots have category experience and installed fleets; narrow robots can be easier to certify and operate; general-purpose behavior may require frequent remote intervention; and Bellboy has not disclosed benchmark results, deployment counts, patents, or customer economics. The durable edge will depend on reliable behavior data, uptime, safety, and repeatable site operations rather than on the robot form factor alone."
+risk_factors = [
+  "Generalization and reliability risk across different buildings, lighting, layouts, elevators, furniture, floor surfaces, and human traffic",
+  "Manipulation and intervention risk: the amount of remote assistance required for arm tasks may undermine labor savings and fleet economics",
+  "Safety, privacy, and cybersecurity exposure from connected autonomous robots operating around hotel guests, patients, staff, and sensitive facilities",
+  "Capital and service intensity of manufacturing, maintaining, deploying, charging, and supporting a physical fleet under a Robot-as-a-Service model",
+  "Crowded market with better-capitalized cleaning, delivery, and robotics-platform competitors plus the existing human facility-management workforce",
+  "Commercial concentration and pilot-conversion risk: the public record names a Seminaris pilot and planned expansion but not revenue, contract values, or additional customers",
+  "Dual-use execution gap: no public defense, government, critical-infrastructure, ruggedization, or hazardous-environment deployment has been disclosed"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "Bellboy merits monitoring because it is a rare Israeli entry where physical AI, robotics deployment, labor resilience, and potential security transfer are all visible in one young company. (1) The technology is strategically relevant: a mobile robot with an arm, 3D perception, and behavior models must operate in the messy human environments that defeat purely scripted automation. (2) The initial hotel wedge is commercially concrete and creates a data and operations path through room inspection, housekeeping assistance, logistics, and maintenance. (3) The named Seminaris pilot, second-unit training, and planned multi-property rollout are stronger signals than a demonstration alone, while the public Robot-as-a-Service terms show an intended operating model. (4) The Israeli entity, Tel Aviv base, 2024 founding, and founders Sandy Hefftz and Nathaniel Bubis are corroborated by the Israeli Innovation Authority; Startup Nation Finder and IVC add independent funding and technical context. (5) The defense and resilience thesis is credible through transfer of autonomy, inspection, logistics, and hazardous-work capabilities, but it remains adjacency rather than fielded capability. Priority should rise with disclosed multi-site paying customers, intervention and uptime metrics, positive service economics, security hardening, and any actual critical-infrastructure or defense evaluation. It should remain capped while funding amounts, revenue, fleet size, patents, and customer concentration are unknown."
+crawled_at = "2026-09-08T02:59:21Z"
+updated_at = "2026-10-04T07:04:28Z"
+
+[[public_sources]]
+label = "Potsdamer Hotel testet Roboter für Qualitätskontrolle"
+url = "https://www.rbb24.de/wirtschaft/beitrag/2026/08/hotel-potsdam-reinigung-roboter-kontrolle-seminaris-test-qualitaetskontrolle.html"
+description = "Research evidence: Billie has been tested at Seminaris SeeHotel Potsdam since January 2026; Billie checks rooms and reports missing items; at reporting time it could inspect about 10% of rooms"
+
+[[public_sources]]
+label = "Bellboy Robotics - Israel Innovation Authority ecosystem record"
+url = "https://innovationisrael.org.il/en/importWinner/517015848/"
+description = "Research evidence: Israeli company registration number 517015848 and established 2024; Tel Aviv, Israel contact country"
+
+[[public_sources]]
+label = "Bellboy Robotics - Industrial Technologies"
+url = "https://finder.startupnationcentral.org/company_page/bellboy-robotics"
+description = "Research evidence: July 2024 founding by Sandy Hefftz and Nathaniel Bubis; Two rounds listed: July 2024 pre-seed and November 2025 seed, both amounts undisclosed"
+
+[[public_sources]]
+label = "Wenn der Kollege auf Rädern kommt: Seminaris setzt auf KI-Roboter"
+url = "https://www.seminaris.de/presse/wenn-der-kollege-auf-raedern-kommt-seminaris-setzt-auf-ki-roboter-fuer-mehr-zeit-am-menschen-3461121/"
+description = "Research evidence: Seminaris identifies Billie as a Bellboy Robotics mobile service robot and a pilot at SeeHotel Potsdam; A second Billie was being trained"
+
+[[public_sources]]
+label = "Meet Billie the Robot by Bellboy"
+url = "https://atechx.de/2026/04/29/meet-billie-the-robot-by-bellboy/"
+description = "Research evidence: ATechX says it supported Bellboy pilot projects through its accelerator ecosystem; ATechX claims Billie had been deployed across several hotels as of April 2026"
+
+[[public_sources]]
+label = "Bellboy Robotics Ltd company record"
+url = "https://www.checkid.co.il/company/%D7%91%D7%9C%D7%91%D7%95%D7%99-%D7%A8%D7%95%D7%91%D7%95%D7%98%D7%99%D7%A7%D7%A1-%D7%91%D7%A2~%D7%9E-517015848"
+description = "Research evidence: Israeli private company Bellboy Robotics Ltd, registration 517015848, listed active and established 22 July 2024 at Tel Aviv-Yafo address; CheckID page lists Bellboy Robotics Inc. as shareholder, but gives no ownership percentage and is not an official extract"
+
+[[public_sources]]
+label = "Elad Ben-Israel post on Bellboy hiring and customers"
+url = "https://www.linkedin.com/posts/hackingonstuff_were-growing-faster-than-we-planned-and-activity-7347990111529177088-Nxbk"
+description = "Research evidence: Elad Ben-Israel stated Bellboy was hiring applied AI and software roles and working with paying customers; Post states company had raised funding with strategic partners but gives no amounts or identities"
+
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "il-bellboy-robotics"
+legal_name = "Bellboy Robotics Ltd"
+aliases = ["Bellboy Robotics", "Bellboy Robotics Inc.", "בלבוי רובוטיקס בע״מ", "Billie"]
+operating_status = "active"
+business_model = "Business-to-business robotics-as-a-service: company-owned mobile robots, software and fleet management, with deployment and service support; exact commercial terms remain undisclosed."
+products = ["Billie mobile service robot with robotic arm for hotel room inspection and future facilities tasks"]
+locations = ["Tel Aviv-Yafo, Israel"]
+country_of_incorporation = "Israel"
+founded_on = "2024-07"
+source_ids = ["iaa", "checkid", "rbb-2026", "finder"]
+
+[[intelligence.company.registry_identifiers]]
+jurisdiction = "Israel"
+scheme = "Israeli company number"
+identifier = "517015848"
+source_ids = ["iaa", "checkid"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public trackers list two equity rounds, a July 2024 pre-seed and November 2025 Seed, both undisclosed. Company representative later stated funding with strategic partners without names or amounts. No new 2026 financing located; no lifetime total disclosed by the company."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "pre-seed-2024"
+round_type = "pre-seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2024-07"
+amount_status = "undisclosed"
+amount_scope = "round"
+lead_investors = []
+participating_investors = []
+source_ids = ["finder"]
+notes = "Round is listed by Startup Nation Finder; no amount, close date, or investor name is publicly disclosed there."
+
+[[intelligence.funding.rounds]]
+id = "seed-2025"
+round_type = "seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2025-11"
+amount_status = "undisclosed"
+amount_scope = "round"
+lead_investors = []
+participating_investors = ["Philippe Suchet"]
+source_ids = ["finder"]
+notes = "Finder lists Philippe Suchet as investor, without specifying lead status. No amount, valuation, or close date found. Elad Ben-Israel separately said the company had funding from strategic partners, but did not identify them or assign them to a specific round."
+
+[[intelligence.people]]
+name = "Sandy Hefftz"
+role = "CEO and co-founder"
+is_founder = true
+current = true
+background = "Listed by the Israel Innovation Authority as CEO and co-founder; identified in customer and company ecosystem coverage."
+source_ids = ["iaa", "seminaris"]
+
+[[intelligence.people]]
+name = "Nathaniel Bubis"
+role = "CTO and co-founder"
+is_founder = true
+current = true
+background = "Listed by the Israel Innovation Authority as CTO and identified as co-founder by Startup Nation Finder."
+source_ids = ["iaa", "finder"]
+
+[[intelligence.people]]
+name = "Elad Ben-Israel"
+role = "Co-founder; role title not confirmed in primary sources reviewed"
+is_founder = true
+current = true
+background = "Publicly posted Bellboy hiring and operating updates; third-party leadership directory labels him co-founder and CTO, but not treated as definitive role evidence here."
+source_ids = ["linkedin-post", "finder"]
+
+[[intelligence.people]]
+name = "Oded Polack"
+role = "Robotics trainer / company representative"
+is_founder = false
+current = true
+background = "Quoted by rbb discussing robot training and security work; executive title not disclosed."
+source_ids = ["rbb-2026"]
+
+[[intelligence.investors]]
+name = "Philippe Suchet"
+investor_type = "unknown"
+relationship = "historical"
+round_ids = ["seed-2025"]
+source_ids = ["finder"]
+notes = "Listed as Seed investor; investor type and lead status are not independently disclosed, so type remains unknown."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private cap table and percentages not disclosed. CheckID, a third-party aggregator, lists Bellboy Robotics Inc. as a shareholder but supplies no percentage; this does not establish a parent relationship. Its event feed shows a director addition in February 2026 and lien discharge in September 2026, but official extracts were not obtained."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["checkid"]
+deals = []
+holdings = []
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Seminaris SeeHotel Potsdam pilot: Billie inspects rooms after housekeeping; rbb reported about 10% of rooms covered at the time of its August report. It relays issues to staff through an app. This is a pilot; contract payment and revenue are undisclosed."
+date = "2026-08-02"
+source_ids = ["rbb-2026", "seminaris"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Seminaris said a second Billie was being trained at Potsdam; all seven other properties having at least one Billie by end-2026 was a stated plan, not completed deployment."
+date = "2026-08-19"
+source_ids = ["seminaris"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "rbb reported room inspection, checking bathroom supplies and bed setup, autonomous door opening, and company-reported security testing. Future conference-room setup remained a target."
+date = "2026-08-02"
+source_ids = ["rbb-2026"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "ATechX accelerator post claimed Billie was already deployed across several hotels by April 2026, without naming the properties; treat as accelerator claim, not independently verified customer roster."
+date = "2026-04-29"
+source_ids = ["atechx"]
+
+[[intelligence.comparables]]
+name = "Pudu Robotics"
+website = "https://www.pudurobotics.com/"
+rationale = "Commercial indoor service and cleaning robot alternative."
+differentiation = "Broader established service robot catalog; Bellboy emphasizes arm-enabled room inspection in hotel settings."
+source_ids = ["rbb-2026"]
+
+[[intelligence.comparables]]
+name = "Gaussian Robotics"
+website = "https://www.gs-robot.com/"
+rationale = "Autonomous commercial cleaning robotics alternative."
+differentiation = "Cleaning-focused fleet and product line; Bellboy targets manipulation plus inspection."
+source_ids = ["rbb-2026"]
+
+[[intelligence.comparables]]
+name = "LionsBot"
+website = "https://www.lionsbot.com/"
+rationale = "Commercial cleaning robots for facilities."
+differentiation = "Specialized autonomous cleaning emphasis versus Bellboy’s arm-enabled inspection use case."
+source_ids = ["rbb-2026"]
+
+[[intelligence.comparables]]
+name = "Relay Robotics"
+website = "https://relayrobotics.com/"
+rationale = "Indoor hotel service and delivery robot alternative."
+differentiation = "Delivery and guest-service use cases versus back-of-house room quality control."
+source_ids = ["rbb-2026"]
+
+[intelligence.research]
+researched_at = "2026-10-04T07:04:28Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Bellboy Robotics identity official site legal name headquarters founders", "Bellboy Robotics funding raised seed pre-seed investor valuation 2026", "Bellboy Robotics investors Philippe Suchet Meron portfolio", "Bellboy Robotics founder leadership CEO CTO 2026", "Bellboy Robotics ownership acquired parent company Israel registrar 2026", "Bellboy Robotics revenue ARR financials employees headcount 2026", "Bellboy Robotics customers contracts Seminaris Billie hotels deployment", "Bellboy Robotics patents WIPO USPTO patent", "Bellboy Robotics competitors service robot hotel cleaning manipulation", "Bellboy Robotics defense security dual use government contract", "בלבוי רובוטיקס גיוס משקיעים רובוט מלון"]
+gaps = ["investors: Full investor roster, investor types, and round participation beyond Philippe Suchet are not public.", "financials: No revenue, ARR, profitability, burn, cash, runway or current verified headcount found.", "traction: Seminaris pilot payment status, fleet size, uptime, intervention rate, service economics and completed rollouts are not disclosed.", "intellectual_property: No patent family attributable to Bellboy found in accessible indexed searches; verify directly with patent registries.", "competition: No independently benchmarked competitor comparison or customer win/loss data located.", "ownership: Official current cap table, parent status of Bellboy Robotics Inc., and percentages unavailable.", "dual_use: No defense/security customer, contract, evaluation, certification or deployment disclosed."]
+conflicts = ["ATechX said in April 2026 that Billie was deployed across several hotels, while the customer-side and rbb August reporting specifically detail one named operational pilot at Seminaris Potsdam. The multi-hotel claim is retained as an accelerator claim and does not establish the identities or payment status of additional customers.", "The IIA ecosystem record lists five employees, while the evidence is historical and third-party hiring material indicates later hiring; current employee count remains unknown."]
+diligence_questions = ["What are the paid status, contract term, robot count, annual recurring revenue and renewal conditions for each named hotel deployment?", "At steady state, what room coverage, task completion, intervention rate, uptime and safety incident rate does Billie achieve, with hotel validation?", "What is the per-robot hardware and service cost, gross margin, maintenance burden and payback period under the RaaS model?", "What is the exact current cap table, and what does the Bellboy Robotics Inc. shareholder entry represent?", "What patents, trade secrets, data rights and cybersecurity controls protect the perception, manipulation and fleet-management stack?"]
+
+[[intelligence.research.sources]]
+id = "rbb-2026"
+url = "https://www.rbb24.de/wirtschaft/beitrag/2026/08/hotel-potsdam-reinigung-roboter-kontrolle-seminaris-test-qualitaetskontrolle.html"
+title = "Potsdamer Hotel testet Roboter für Qualitätskontrolle"
+publisher = "rbb24"
+kind = "media"
+accessed_at = "2026-10-04T07:04:28Z"
+published_on = "2026-08-02"
+claims = ["Billie has been tested at Seminaris SeeHotel Potsdam since January 2026", "Billie checks rooms and reports missing items; at reporting time it could inspect about 10% of rooms", "The hotel described future operation up to 21 hours daily after training", "The hotel said guest-facing service is not planned; conference-room setup is a future goal", "Bellboy representative Oded Polack discussed security testing"]
+
+[[intelligence.research.sources]]
+id = "iaa"
+url = "https://innovationisrael.org.il/en/importWinner/517015848/"
+title = "Bellboy Robotics - Israel Innovation Authority ecosystem record"
+publisher = "Israel Innovation Authority"
+kind = "government"
+accessed_at = "2026-10-04T07:04:28Z"
+claims = ["Israeli company registration number 517015848 and established 2024", "Tel Aviv, Israel contact country", "Sandy Hefftz is CEO and co-founder; Nathaniel Bubis is CTO", "Historical ecosystem listing gives five employees and R&D stage"]
+
+[[intelligence.research.sources]]
+id = "finder"
+url = "https://finder.startupnationcentral.org/company_page/bellboy-robotics"
+title = "Bellboy Robotics - Industrial Technologies"
+publisher = "Startup Nation Finder"
+kind = "directory"
+accessed_at = "2026-10-04T07:04:28Z"
+published_on = "2025-05-07"
+claims = ["July 2024 founding by Sandy Hefftz and Nathaniel Bubis", "Two rounds listed: July 2024 pre-seed and November 2025 seed, both amounts undisclosed", "Philippe Suchet listed as Seed investor", "Company develops AMRs with robotic arms and physical AI"]
+
+[[intelligence.research.sources]]
+id = "seminaris"
+url = "https://www.seminaris.de/presse/wenn-der-kollege-auf-raedern-kommt-seminaris-setzt-auf-ki-roboter-fuer-mehr-zeit-am-menschen-3461121/"
+title = "Wenn der Kollege auf Rädern kommt: Seminaris setzt auf KI-Roboter"
+publisher = "Seminaris Hotels"
+kind = "customer"
+accessed_at = "2026-10-04T07:04:28Z"
+published_on = "2026-08-19"
+claims = ["Seminaris identifies Billie as a Bellboy Robotics mobile service robot and a pilot at SeeHotel Potsdam", "A second Billie was being trained", "Seminaris stated its intention for each of seven further hotels to have at least one Billie by end-2026", "Seminaris describes room quality checks as the initial use and meeting setup as future development"]
+
+[[intelligence.research.sources]]
+id = "atechx"
+url = "https://atechx.de/2026/04/29/meet-billie-the-robot-by-bellboy/"
+title = "Meet Billie the Robot by Bellboy"
+publisher = "ATechX"
+kind = "investor"
+accessed_at = "2026-10-04T07:04:28Z"
+published_on = "2026-04-29"
+claims = ["ATechX says it supported Bellboy pilot projects through its accelerator ecosystem", "ATechX claims Billie had been deployed across several hotels as of April 2026", "Sandy Hefftz showcased Billie at Cardo Brussels"]
+
+[[intelligence.research.sources]]
+id = "checkid"
+url = "https://www.checkid.co.il/company/%D7%91%D7%9C%D7%91%D7%95%D7%99-%D7%A8%D7%95%D7%91%D7%95%D7%98%D7%99%D7%A7%D7%A1-%D7%91%D7%A2~%D7%9E-517015848"
+title = "Bellboy Robotics Ltd company record"
+publisher = "CheckID"
+kind = "directory"
+accessed_at = "2026-10-04T07:04:28Z"
+claims = ["Israeli private company Bellboy Robotics Ltd, registration 517015848, listed active and established 22 July 2024 at Tel Aviv-Yafo address", "CheckID page lists Bellboy Robotics Inc. as shareholder, but gives no ownership percentage and is not an official extract", "Page lists a director addition on 2026-02-03 and lien discharge on 2026-09-17"]
+
+[[intelligence.research.sources]]
+id = "linkedin-post"
+url = "https://www.linkedin.com/posts/hackingonstuff_were-growing-faster-than-we-planned-and-activity-7347990111529177088-Nxbk"
+title = "Elad Ben-Israel post on Bellboy hiring and customers"
+publisher = "LinkedIn"
+kind = "other"
+accessed_at = "2026-10-04T07:04:28Z"
+claims = ["Elad Ben-Israel stated Bellboy was hiring applied AI and software roles and working with paying customers", "Post states company had raised funding with strategic partners but gives no amounts or identities", "Post describes in-person work in Tel Aviv"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T07:04:28Z"
+next_review_on = "2027-01-04"
+queries = ["Bellboy Robotics identity official site legal name headquarters founders"]
+source_ids = ["iaa", "checkid", "rbb-2026"]
+summary = "Legal entity is Bellboy Robotics Ltd, Israeli private company 517015848, active per CheckID and based in Tel Aviv-Yafo; company product is Billie mobile robot with arm."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T07:04:28Z"
+next_review_on = "2027-01-04"
+queries = ["Bellboy Robotics funding raised seed pre-seed investor valuation 2026", "בלבוי רובוטיקס גיוס משקיעים רובוט מלון"]
+source_ids = ["finder", "linkedin-post"]
+summary = "Two publicly catalogued undisclosed equity rounds: July 2024 pre-seed and November 2025 Seed; no public amounts or valuation. No new 2026 round found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T07:04:28Z"
+next_review_on = "2027-01-04"
+queries = ["Bellboy Robotics investors Philippe Suchet Meron portfolio", "Bellboy Robotics funding raised seed pre-seed investor valuation 2026"]
+source_ids = ["finder", "linkedin-post", "atechx"]
+summary = "Philippe Suchet is listed in the 2025 Seed entry. A company hiring post references strategic partners without naming them."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T07:04:28Z"
+next_review_on = "2027-01-04"
+queries = ["Bellboy Robotics founder leadership CEO CTO 2026"]
+source_ids = ["iaa", "finder", "linkedin-post", "rbb-2026"]
+summary = "Government ecosystem record lists Sandy Hefftz CEO/co-founder and Nathaniel Bubis CTO; public evidence also identifies Elad Ben-Israel with company hiring communications, while exact current title is uncertain."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T07:04:28Z"
+next_review_on = "2027-01-04"
+queries = ["Bellboy Robotics ownership acquired parent company Israel registrar 2026"]
+source_ids = ["checkid"]
+summary = "Private cap table is not publicly disclosed. Third-party registry aggregator names Bellboy Robotics Inc. as shareholder without percentage; not enough to establish parent ownership."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T07:04:28Z"
+next_review_on = "2027-01-04"
+queries = ["Bellboy Robotics revenue ARR financials employees headcount 2026"]
+source_ids = ["iaa", "linkedin-post"]
+summary = "No dated revenue, ARR, margin, cash, burn or runway disclosure found. Historical IIA headcount of five is stale and not treated as current."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T07:04:28Z"
+next_review_on = "2027-01-04"
+queries = ["Bellboy Robotics customers contracts Seminaris Billie hotels deployment"]
+source_ids = ["rbb-2026", "seminaris", "atechx"]
+summary = "Seminaris pilot provides direct customer evidence; rbb reports room-check capability on roughly 10% of rooms at publication time. Seminaris expansion is a stated plan, not confirmed deployment. ATechX reports several hotel deployments but provides no customer names."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T07:04:28Z"
+next_review_on = "2027-01-04"
+queries = ["Bellboy Robotics patents WIPO USPTO patent"]
+source_ids = ["finder", "iaa"]
+summary = "No attributable patent or granted IP record found in searches; absence is not proof no filings exist."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T07:04:28Z"
+next_review_on = "2027-01-04"
+queries = ["Bellboy Robotics competitors service robot hotel cleaning manipulation"]
+source_ids = ["rbb-2026", "finder"]
+summary = "Relevant alternatives include Pudu, Gaussian Robotics, LionsBot, Avidbots, Brain Corp and Relay Robotics; differentiation claims require comparative field data."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-04T07:04:28Z"
+next_review_on = "2027-01-04"
+queries = ["Bellboy Robotics defense security dual use government contract"]
+source_ids = ["rbb-2026"]
+summary = "No defense, government, or critical-infrastructure customer or deployment found. Commercial indoor mobility/manipulation has only a possible future security adjacency."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Israeli Innovation Authority lists the entity and ongoing R&D record; current customer deployment reporting further supports active operation."
+verified_at = "2026-10-04T07:04:28Z"
+source_ids = ["iaa", "rbb-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Israel Innovation Authority record gives Israeli registration number and Israel contact country, with Tel Aviv base."
+verified_at = "2026-10-04T07:04:28Z"
+source_ids = ["iaa"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2024.amount"
+support = "direct"
+summary = "Finder lists a July 2024 pre-seed but reports no amount."
+verified_at = "2026-10-04T07:04:28Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.amount"
+support = "direct"
+summary = "Finder lists November 2025 Seed and Philippe Suchet but reports no amount."
+verified_at = "2026-10-04T07:04:28Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.participating_investors"
+support = "direct"
+summary = "Finder identifies Philippe Suchet as an investor in the November 2025 Seed entry; lead status is not stated."
+verified_at = "2026-10-04T07:04:28Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "investors"
+support = "direct"
+summary = "Finder names Philippe Suchet in the Seed round entry; this is the only individual investor identified in the sources reviewed."
+verified_at = "2026-10-04T07:04:28Z"
+source_ids = ["finder"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "Israeli private legal entity 517015848 with Tel Aviv-Yafo address; government record names Israeli founders Sandy Hefftz and Nathaniel Bubis."
+as_of = "2026-10-04"
+source_ids = ["iaa", "checkid", "finder"]

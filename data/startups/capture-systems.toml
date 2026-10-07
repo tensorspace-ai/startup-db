@@ -1,0 +1,426 @@
+name = "Capture Systems"
+description = "Capture Systems is an Israeli defense technology manufacturer developing modular pan-tilt and remote weapon station components, electro-optical surveillance systems, and counter-UAS platforms for land, maritime, airborne, border, and critical-infrastructure deployments. Its ATID and CapGuard systems combine precision positioning, day/thermal imaging, optional radar, command-and-control software, and configurable effectors in compact fieldable packages."
+detailed_description = """
+**Product and the operational problem.** Capture Systems addresses a practical gap between a sensor or weapon payload and the platform that must point, stabilize, control, and use it. A camera, radar, antenna, jammer, or weapon is only useful in a perimeter or vehicle mission if it can be positioned accurately, kept on target while the platform moves, and operated through a reliable control interface. Capture sells that motion-and-integration layer as modular multi-axial pan-tilt units, remote weapon station components, and complete counter-UAS and surveillance systems. Its public portfolio includes Caracal and the Cheetah family of positioners, the ATID Anti-Threat Intelligent Detector, the CapGuard counter-drone platform, and Oncilla and related pan-tilt products. This is a systems-engineering business rather than a single algorithm: the company adapts mechanics, drive electronics, stabilization, payload interfaces, and software to customer platforms. Israel’s Ministry of Defense describes Capture as founded in 2008 and says more than 3,000 systems have been deployed worldwide, a substantial installed-base claim for a private supplier even though customer names and contract values are generally undisclosed.
+
+**Core technology and how it works.** The technical foundation is precision mechatronics. Capture’s Caracal specification describes an L-shaped positioner with continuous or near-continuous azimuth movement, elevation movement up to 360 degrees, Ethernet and serial communications, IP65 environmental protection, payload options for antennas, cameras, radar, and satellite equipment, and configurable speed, acceleration, payload, and encoder packages. High-performance variants advertise position accuracy down to approximately 0.01 degrees and stabilization options using inertial measurement units or fiber-optic gyros. That positioning layer lets an integrator point an electro-optic or radio-frequency payload while compensating for vehicle or vessel motion. The company’s software side includes a control panel and a published command-and-control API, allowing a system integrator to send position and tracking commands rather than treating the hardware as a closed box. Capture’s engineering claim is not that one universal configuration is optimal; it is that an in-house team can change torque, speed, stabilization, payload balance, communications, and enclosure choices to fit a mission while preserving a compact, rugged package.
+**Counter-UAS and sensing architecture.** ATID packages a Caracal positioner with high-definition daylight and sensitive night or thermal cameras, a control panel, optional GPS and stabilization, and optional radar, jammer, or weapon payloads. The official product page says the system can detect and track up to five threats simultaneously in real time, including UAVs, people, vehicles, aircraft, and maritime vessels. CapGuard extends the concept into a more complete counter-UAS package: its public material describes a compact 360-degree tracker with a K-band micro-Doppler radar, optical day/night and thermal tracking, automatic object tracking, a moving-map interface, and an upgrade path to a weapon installation kit branded SnapGuard. A Capture brochure lists detection of small UAVs at ranges up to two kilometres for one CapGuard configuration and uses AI analytics in the command-and-control interface. These specifications are product literature, not an independent test report; the diligence question is how detection range, bird-versus-drone classification, tracking continuity, and operator workload perform in clutter, weather, electronic interference, and multi-target attacks.
+
+**Market, customers, and route to market.** Capture sells business-to-government and business-to-business equipment through defense integrators, platform manufacturers, security contractors, and direct tenders. Its target environments are airports, prisons, military bases, border crossings, ports, strategic sites, armored and tactical vehicles, unmanned ground and aerial systems, maritime vessels, and satellite or communications installations. The company’s modularity creates several sales motions. An OEM can embed a positioner beneath its camera, radar, antenna, or payload; a prime can integrate ATID or CapGuard into a larger perimeter-defense architecture; and an end customer can procure a self-contained observation or counter-drone unit. This breadth is commercially useful because it reduces dependence on a single mission, but it also means every deployment can involve customization, integration engineering, export approvals, and after-sales support. Capture’s 2024 AUSA and 2025 DEFEA listings show continued participation in the international defense-export ecosystem. Public material does not identify recurring-revenue mix, backlog, named end users, or the proportion of sales from complete systems versus component units.
+
+**Traction, quality, and third-party validation.** The strongest public validation is operational rather than venture-financial. Israel’s SIBAT DEFEA 2025 catalog describes Capture as an Israeli company founded in 2008, specializing in anti-threat intelligent detectors, gunnery stations, surveillance systems, and anti-drone platforms, with more than 3,000 systems deployed worldwide. The Ministry of Defense’s AUSA 2024 catalog separately lists Capture as a provider of advanced modular multi-axial gimbals for homeland-security, commercial, and military applications. Capture’s own news archive records participation at Eurosatory, AUSA, and ISDEF, including the 2019 launch of ATID. The official site currently publishes product specifications, 3D models, software revisions, firmware information, and certificates rather than a marketing-only overview. About-us material states that the company holds ISO 9001 and AS9100D quality certificates and that products meet MIL-STD-810G requirements. Those claims support qualification discipline and continuing operations, while the absence of audited revenue, customer references, independent range testing, and public financing disclosures limits how far traction can be extrapolated.
+
+**Founders and team background.** Capture does not publish a detailed founder biography or a full executive roster in the sources reviewed, so founder identity, ownership, and leadership succession should remain Unknown in diligence rather than be inferred from trade-show contacts. The company does state that it operates in-house R&D departments staffed by experienced engineers from multiple specializations. That team is expected to cover mechanical design, electromechanical actuation, control electronics, embedded software, stabilization, electro-optical integration, manufacturing, and field support. This breadth is material because a reliable gimbal or counter-UAS product is difficult to build by assembling commodity parts alone: backlash, vibration, thermal drift, cable management, ingress protection, electromagnetic compatibility, and payload balance all affect field performance. The long operating history and product-family continuity imply accumulated engineering and manufacturing know-how, but headcount, retention, patent ownership, military-program credentials, and the split between internal production and subcontracting are not publicly disclosed. A buyer or strategic partner should request those details together with quality-audit scope and export-control procedures.
+
+**Competitive dynamics and defensibility.** Capture competes with large defense primes and specialist subsystem vendors at several layers. Elbit Systems, Rafael, and Israel Aerospace Industries can bundle stabilized electro-optics, remote weapon stations, radars, and counter-UAS command systems into major programs with established procurement relationships. Kongsberg and Rheinmetall offer mature remote weapon stations and vehicle integration, while Teledyne FLIR and Trillium Engineering compete in stabilized imaging and gimbal subsystems. Dedicated counter-UAS vendors such as D-Fend Solutions, DroneShield, and Rafael’s counter-drone businesses compete for the same site-protection budgets through radio-frequency, cyber, kinetic, or layered approaches. Capture’s plausible edge is the combination of precision mechanics, payload agnosticism, short-run customization, and a compact all-in-one counter-UAS architecture that can be fitted to vehicles, vessels, fixed sites, or unmanned platforms. The moat is not automatically durable: larger primes can internalize similar functions, and commodity sensors and motors can lower barriers for new entrants. Evidence of repeat orders, qualification on named platforms, mean-time-between-failure data, and integration speed would determine whether the installed base translates into defensible share.
+
+**Defense, security, and resilience relevance.** Capture is directly dual-use because its core motion-control and sensing products serve both military and civilian security missions. In defense, a stabilized gimbal can support reconnaissance, perimeter observation, target tracking, communications relay, or payload pointing on a vehicle, vessel, UAV, or UGV. ATID and CapGuard can help protect bases, airports, prisons, ports, energy facilities, and public events from small drones and other intrusions. In resilience settings, the same architecture can maintain surveillance during disasters, secure temporary logistics hubs, protect water and power sites, and provide remote inspection when sending personnel is unsafe. The strategic value is concentrated in the last metre between a sensor and an actionable track: reliable pointing, tracking, and operator control make existing cameras and radars more useful without requiring a completely new platform. The company does not publicly claim autonomous weapons decision-making, and the optional jammer or weapon interfaces create legal, safety, and rules-of-engagement obligations. Any defense deployment should therefore assess human authorization, audit logs, cyber-hardening, identification confidence, collateral-risk controls, and operation under degraded communications.
+
+**Growth stage, trajectory, and diligence risks.** Capture is best classified as mature within the database’s stage vocabulary because it has operated since 2008, reports thousands of deployed systems, maintains a broad catalog, publishes revision-controlled software and mechanical documentation, and holds aerospace-quality credentials. Mature does not mean low risk or publicly scaled: the company is private, financial information is sparse, and its current employee count and geographic revenue mix are not verified. The likely trajectory is continued expansion from component sales into integrated counter-UAS and remote-sensing solutions, where system-level contracts can increase value per deployment but also increase certification and support burdens. Key diligence risks are: (1) customer and program concentration hidden by confidentiality; (2) long defense procurement cycles and export-control friction; (3) detection and classification performance in contested electromagnetic and cluttered environments; (4) cyber exposure in networked control panels and APIs; (5) manufacturing repeatability and service economics for customized hardware; (6) competition from primes and lower-cost Asian motion-control suppliers; and (7) liability and policy risk when optional jammers or weapon payloads are integrated. The most useful next evidence would be independently verifiable customer references, repeat-order data, AS9100D scope, field-failure statistics, cyber-assurance documentation, and proof that CapGuard or ATID can track coordinated drone attacks rather than isolated demonstrations.
+"""
+logo = "Unknown"
+website = "https://www.capture-sys.com"
+sector = "Defense Mechatronics, Counter-UAS, Electro-Optical Surveillance, and Remote Weapon Station Components"
+founded = "2008"
+headquarters = "Petah Tikva, Israel"
+employees = "Unknown (Crunchbase lists 1-10, but the company does not publish an independently verified headcount)"
+funding_stage = "Undisclosed private financing; $936,000 Michigan performance grant announced for U.S. expansion in 2026 (not equity funding)"
+entity_type = "defense_prime"
+dual_use = true
+dual_use_description = "Capture Systems has direct dual-use relevance because the same precision positioners, stabilization, optical tracking, and command-and-control interfaces can serve military platforms and civilian security or infrastructure missions. ATID and CapGuard are marketed for airports, prisons, ports, military bases, borders, public events, and critical sites, while the modular pan-tilt products can carry cameras, radar, antennas, and other commercial or government payloads. The public record supports defense and homeland-security deployments, but it does not establish a specific civilian customer mix or autonomous engagement capability. Its resilience value is strongest in persistent perimeter sensing, remote inspection, and protection of sites where communications, weather, or personnel access are constrained."
+key_technologies = [
+  "Multi-axial pan-tilt positioners with high-speed, high-accuracy encoder control",
+  "Inertial and fiber-optic-gyro stabilization for moving land and maritime platforms",
+  "Daylight, night, and thermal electro-optical tracking payload integration",
+  "K-band micro-Doppler radar for small-UAS detection and bird/drone differentiation",
+  "Onboard command-and-control panel, moving-map interface, and published control API",
+  "Modular counter-UAS architecture with radar, jammer, and optional effector integration",
+  "Ruggedized mechanical and electronic assemblies qualified to AS9100D and MIL-STD-810G requirements"
+]
+use_cases = [
+  "Counter-UAS protection for airports, prisons, military bases, ports, and critical infrastructure",
+  "Border and perimeter surveillance with simultaneous tracking of drones, people, vehicles, aircraft, and vessels",
+  "Stabilized electro-optical payloads on armored and tactical vehicles for reconnaissance and force protection",
+  "Unmanned aerial, ground, and maritime platforms requiring precise camera or radar pointing",
+  "Remote weapon station and gunnery-station integration with human-controlled target tracking",
+  "Maritime surveillance and stabilized sensor or communications-antenna pointing",
+  "Satellite, communications, and RF payload positioning where precise azimuth and elevation control is required",
+  "Emergency and resilience monitoring of power, water, transport, and logistics sites when personnel access is limited"
+]
+investible = false
+investment_rationale = "Capture Systems is a strategically relevant private defense supplier rather than a conventional venture-backed startup. (1) The company reports a long operating history from 2008 and more than 3,000 deployed systems, which is meaningful evidence of productization and customer acceptance. (2) Its portfolio spans reusable mechatronics, surveillance, and counter-UAS systems, creating multiple routes to defense and critical-infrastructure programs. (3) AS9100D, ISO 9001, MIL-STD-810G claims, published specifications, and revision-controlled software documentation indicate an engineering and quality process suitable for serious integrators. Counterweights are material: ownership, revenue, backlog, margins, customer concentration, and financing are not public; named end users are largely absent; and larger primes can bundle similar capabilities. Investible is set false because the public record does not establish an accessible financing opportunity; this is a strategic diligence signal, not an investment recommendation."
+strategic_value = "Capture Systems contributes to sovereign and allied defense capacity at the subsystem layer that turns sensors and effectors into usable field equipment. (1) Local design and manufacturing of precision positioners can reduce dependence on foreign gimbal suppliers for sensitive platforms. (2) ATID and CapGuard address the low-cost-drone threat to bases, ports, prisons, airports, and infrastructure, while remaining adaptable to layered systems supplied by larger primes. (3) The same hardware can support surveillance, communications, and inspection during emergencies, giving the company resilience relevance beyond kinetic missions. (4) A reported installed base of more than 3,000 systems and current participation in SIBAT export programs create a channel into international partners. Strategic value is capped by limited public evidence on operational performance, cyber assurance, production scale, and named government contracts."
+potential_score = 64.0
+technology_score = 74.0
+market_score = 62.0
+team_score = 58.0
+dual_use_score = 88.0
+strategic_alignment_score = 84.0
+stage = "mature"
+stage_rationale = "Capture Systems fits the mature category because the Israeli Ministry of Defense identifies it as founded in 2008, the company reports more than 3,000 systems deployed worldwide, and its current site provides a multi-product catalog, product drawings, software revisions, and an API. It also states that its quality system includes ISO 9001 and AS9100D and that products meet MIL-STD-810G requirements. The classification describes operating history and productization, not public-company scale: headcount, revenue, backlog, customer concentration, and profitability remain Unknown. The company may be small relative to defense primes, but the evidence is inconsistent with an unvalidated early prototype."
+competitors = [
+  "Elbit Systems (Israeli defense prime bundling stabilized electro-optics, remote weapon stations, and C-UAS architectures)",
+  "Rafael Advanced Defense Systems (Israeli prime with layered counter-UAS, remote weapon, and force-protection systems)",
+  "Israel Aerospace Industries / ELTA (Israeli prime supplying radars, C-UAS, and unmanned-platform mission systems)",
+  "Kongsberg Defence & Aerospace (remote weapon stations and vehicle integration at allied-program scale)",
+  "Rheinmetall (European defense prime with Skyranger, remote turrets, sensors, and counter-drone systems)",
+  "Teledyne FLIR and Trillium Engineering (electro-optical sensors and stabilized gimbals competing at the payload layer)",
+  "D-Fend Solutions and DroneShield (counter-UAS competitors using cyber or RF detection and mitigation approaches)"
+]
+competitive_edge = "Capture Systems’ edge is an integrated, configurable mechatronics stack rather than a single proprietary sensor. (1) Its positioners support cameras, radar, antennas, satellite payloads, and optional effectors, allowing an OEM or prime to reuse a control and stabilization base across missions. (2) In-house R&D can tune payload, torque, speed, stabilization, enclosure, and communications for customer platforms instead of forcing a standard catalog fit. (3) ATID and CapGuard combine motion control, day/thermal optics, radar options, tracking software, and a compact form factor, shortening the path from detection to an operator-usable track. (4) AS9100D, MIL-STD-810G claims, published API and firmware revisions, and a reported 3,000-system installed base are practical trust signals. The edge remains vulnerable to prime-contractor bundling, commodity motor and sensor competition, customization costs, and the need to prove performance against coordinated drone swarms."
+risk_factors = [
+  "Limited financial disclosure: revenue, backlog, margins, valuation, ownership, and customer concentration are not publicly verifiable",
+  "Prime-contractor competition: Elbit Systems, Rafael, IAI, Rheinmetall, and Kongsberg can bundle comparable motion, sensing, and C-UAS functions into larger programs",
+  "Operational-performance uncertainty: public brochures do not independently verify detection range, classification accuracy, tracking continuity, or multi-target performance",
+  "Integration and customization burden: bespoke payloads and platform interfaces can increase engineering cost, schedule risk, and support obligations",
+  "Cyber and electronic-warfare exposure in networked control panels, APIs, radios, and counter-UAS command links",
+  "Export-control, safety, and rules-of-engagement liability when jammer or weapon payloads are integrated",
+  "Supply-chain and manufacturing risk for precision mechanics, encoders, gyros, thermal cameras, radar modules, and rugged electronics"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Capture Systems merits monitoring as an under-documented Israeli defense supplier with a concrete counter-UAS and precision-motion portfolio. (1) The company is identified in current Israeli Ministry of Defense export material, reports more than 3,000 deployed systems, and maintains a live catalog with product specifications and software revisions. (2) ATID and CapGuard map directly to the strategic need to detect, track, and respond to low-cost drones around military and critical sites. (3) The underlying positioners also support sensors, antennas, and unmanned platforms, creating resilience and allied-interoperability value beyond one counter-drone product. Priority should rise with named customer references, repeat-order disclosures, independent test data, cyber-assurance evidence, or proof of deployment against coordinated drone attacks. Priority should remain moderate until public evidence clarifies scale, ownership, financial durability, and the boundary between component supply and complete-system prime contracting."
+public_sources = [
+  { label = "Capture Systems official website", url = "https://www.capture-sys.com/", description = "Current product families, company address, contact information, and operating website." },
+  { label = "Israel Ministry of Defense: Capture Systems at DEFEA 2025", url = "https://www.gov.il/BlobFolder/generalpage/israel-showcases-advanced-defense-technologies-at-defea-2025-6-may-2025/en/English_Documents/Israel_at_DEFEA_2025.pdf", description = "Israeli company, founded 2008, product focus, and company-reported installed base exceeding 3,000 systems." },
+  { label = "Michigan Governor: Capture Group expansion", url = "https://www.michigan.gov/whitmer/news/press-releases/2026/09/02/whitmer-announces-125-new-defense-industry-jobs-in-sterling-heights", description = "September 2026 U.S. subsidiary, Michigan facility plan, $5 million planned capex, 125-job commitment, $936,000 state performance grant, and Capture Group COO quote." },
+  { label = "TheMarker: Capture Systems company interview (Hebrew)", url = "https://www.themarker.com/labels/israelsecurity/2024-07-01/ty-article-labels/00000190-547f-dac0-a798-777f8a660000", description = "Founder and deputy CEO background, historical demand and market mix assertions, CapGuard evaluation status, hiring plans, and exploratory financing remarks; sponsored content attributed to the company." },
+  { label = "SIBAT Capture Systems company profile", url = "https://www.sibat.mod.gov.il/Exhibitions/Eurosatory/Documents/CAPTURE_SYSTEMS.pdf", description = "Israeli defense export profile describing applications, modular positioners, engineering capabilities, standards claims, and Petah Tikva address." },
+  { label = "Israel Ministry of Defense: AUSA 2024", url = "https://mod.gov.il/en/press-releases/press-room/israeli-defense-technologies-showcased-at-ausa-2024-exhibition", description = "Capture Systems listed as a gimbal supplier among Israeli defense companies at AUSA 2024." },
+  { label = "Capture Systems official CapGuard page", url = "https://www.capture-sys.com/capguard", description = "Company product claims and CapGuard description." },
+  { label = "Capture Systems official About Us page", url = "https://www.capture-sys.com/about-us", description = "Company history, operations, and quality-system claims." },
+  { label = "Israel company information: Capture Systems Ltd", url = "https://www.kycisrael.com/companies/514406297/capture-systems-ltd/", description = "Secondary company-registry lookup listing Israeli company number 514406297 and incorporation date 2010-02-10." },
+  { label = "Elbit Systems: remote controlled weapon stations", url = "https://www.elbitsystems.com/land/combat-vehicle-systems/weapon-stations-turrets/rcws", description = "Official product information supporting Elbit as a competitor at the remote weapon station layer." },
+  { label = "IAI: counter-UAS", url = "https://www.iai.co.il/solution/c-uas-critical-facilities-protection/", description = "Official product information supporting IAI as a competitor in counter-UAS systems." },
+  { label = "Rafael: Drone Dome", url = "https://www.rafael.co.il/wp-content/uploads/2024/09/drone-dome-counter-unmanned-aerial-system.pdf", description = "Official product information supporting Rafael as a competitor in counter-UAS systems." }
+]
+crawled_at = "2026-09-20T03:55:50Z"
+updated_at = "2026-10-04T13:33:14Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Shay Geva", role = "Founder", is_founder = true, current = true, background = "TheMarker's 2024 company-sponsored interview identifies him as founder, a mechanical engineer, and a veteran entrepreneur in the defense industry; it says his control-engineering background informed the company's motion-control systems. Current title is not publicly established.", source_ids = ["themarker24"] },
+  { name = "Avi Braun", role = "Chief Operating Officer, Capture Systems Group; previously deputy CEO of Capture Systems", is_founder = false, current = true, background = "In 2024 he was identified as deputy CEO, with prior service as a Commtact vice president (2014–2018) and as founder/manager of an AST SpaceMobile subsidiary. Michigan's September 2026 announcement quotes him as COO of Capture Systems Group.", source_ids = ["themarker24", "michigan26"] }
+]
+investors = []
+financials = []
+traction = [
+  { kind = "other", date = "2024-07-01", description = "In a company-sponsored interview, deputy CEO Avi Braun said demand for company products had risen about 40% annually in recent years and was expected to triple by 2025. This is a company assertion and forecast; the source gives no revenue base or audited measure and does not verify that the forecast was achieved.", source_ids = ["themarker24"] },
+  { kind = "product", date = "2024-07-01", description = "The company-sponsored interview said CapGuard was being evaluated by Israel's security establishment and customers in Israel and abroad. It did not identify the evaluators or establish paid production deployments.", source_ids = ["themarker24"] },
+  { kind = "hiring", date = "2024-07-01", description = "Avi Braun said Capture was recruiting engineers and operations staff and considering expansion of its European sales office; this was a reported hiring plan, not a verified headcount increase.", source_ids = ["themarker24"] },
+  { kind = "contract", date = "2026-09-02", description = "Michigan announced a performance-based $936,000 Michigan Business Development Program grant to Capture Group Inc., the U.S. entity formed by Capture Systems Ltd. in 2026. The company committed to at least $5 million in capital investment and at least 125 qualified jobs over five years for a Sterling Heights manufacturing and engineering hub. The state says funding is milestone-based and can be amended or cancelled; these are commitments/plans, not completed expenditure or current jobs.", source_ids = ["michigan26"] },
+  { kind = "other", date = "2025", description = "Israel's Ministry of Defense SIBAT catalog says Capture Systems reported more than 3,000 systems deployed worldwide. This is a company claim reproduced in government export material; customer identities and independent verification are not provided.", source_ids = ["defea25"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Elbit Systems", website = "https://www.elbitsystems.com/land/combat-vehicle-systems/weapon-stations-turrets/rcws", rationale = "Israeli defense prime with remote weapon station offerings and vehicle integration capabilities in overlapping missions.", differentiation = "Elbit markets full weapon stations and broad combat-vehicle integration at prime scale; Capture emphasizes modular positioners and customizable subsystems as well as compact counter-UAS products.", source_ids = ["elbit"] },
+  { name = "Israel Aerospace Industries", website = "https://www.iai.co.il/solution/c-uas-critical-facilities-protection/", rationale = "Israeli prime with counter-UAS products for critical-facility protection.", differentiation = "IAI describes a broad detect-classify-neutralize stack using radar, electro-optics, jamming, and interception; Capture's public positioning centers on modular gimbals, ATID, and CapGuard.", source_ids = ["iai"] },
+  { name = "Rafael Advanced Defense Systems", website = "https://www.rafael.co.il/wp-content/uploads/2024/09/drone-dome-counter-unmanned-aerial-system.pdf", rationale = "Israeli defense prime with Drone Dome counter-UAS system.", differentiation = "Rafael markets a comprehensive operational system; Capture is smaller and focuses on configurable positioner and sensor/effector integration products. Public performance comparisons are unavailable.", source_ids = ["rafael"] }
+]
+
+[intelligence.company]
+company_id = "il-capture-systems"
+legal_name = "Capture Systems Ltd."
+aliases = ["CAPTURE SYSTEMS LTD.", "קפצ'ר מערכות בע\"מ", "Capture Systems"]
+operating_status = "active"
+business_model = "Private Israeli defense and security equipment manufacturer selling configurable precision motion-control components and integrated surveillance/counter-UAS systems to defense organizations, integrators, and commercial security customers. Public sources do not disclose the customer-level revenue model or contract mix."
+products = ["ATID Anti-Threat Intelligent Detector", "CapGuard counter-UAS platform", "Caracal, Cheetah and other modular pan-tilt positioners", "Remote-controlled weapon station components", "Surveillance and tracking systems"]
+locations = ["Petah Tikva, Israel", "Sterling Heights, Michigan, United States (planned Capture Group production and engineering hub)"]
+founded_on = "2008"
+country_of_incorporation = "Israel"
+registry_identifiers = [ { jurisdiction = "Israel", scheme = "Israeli company number", identifier = "514406297", source_ids = ["kyc"] } ]
+source_ids = ["official", "defea25", "michigan26", "themarker24", "kyc"]
+notes = "The Ministry of Defense and 2024 company-sponsored interview describe the business as founded in 2008. A secondary Israeli company-information lookup gives legal incorporation date 2010-02-10, and some business directories incorrectly or inconsistently show 2017. Operating/founding history and legal incorporation date are distinct; use 2008 as the reported business founding year and the company number lookup for legal identity."
+
+[intelligence.funding]
+status = "reported"
+summary = "No publicly announced equity, convertible, debt, or venture financing round was found in targeted searches through 2026-10-04. In July 2024 deputy CEO Avi Braun said there were serious feelers regarding an IPO or capital raise, but no transaction was announced in that interview. In September 2026 Michigan announced a separate $936,000 performance-based state grant for Capture Group's planned U.S. expansion; this is government support, not equity. The associated $5 million project figure is planned company capital expenditure, not financing proceeds. Private financing may exist without public disclosure."
+rounds = [
+  { id = "michigan-mbdp-2026", round_type = "Michigan Business Development Program performance grant", instrument = "grant", status = "announced", announced_on = "2026-09-02", amount_status = "reported", amount = 936000, currency = "USD", amount_scope = "unknown", lead_investors = [], participating_investors = [], source_ids = ["michigan26"], notes = "State performance-based economic development grant awarded for subsidiary Capture Group Inc.'s Sterling Heights expansion. Disbursement depends on milestones and may be amended or cancelled. The separate at-least-$5 million figure is planned company capital investment, not the grant amount or equity funding." }
+]
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "The company is identified as private. A Michigan state announcement says Capture Systems Ltd. formed Capture Group Inc. in 2026 as its U.S. entity, establishing a subsidiary relationship, but no ownership percentage or cap table is disclosed. No acquisition, sale, IPO, or other ownership transaction was found in the reviewed sources."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["michigan26", "defea25", "themarker24"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Israel's Ministry of Defense describes Capture as an Israeli company and lists its Petah Tikva address; its official site gives the same Israeli address. TheMarker's 2024 company-sponsored interview identifies Israeli founder Shay Geva."
+as_of = "2026-10-04"
+source_ids = ["defea25", "official", "themarker24"]
+
+[intelligence.research]
+researched_at = "2026-10-04T13:33:14Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Capture Systems official company identity products address Capture Systems Ltd",
+  "Capture Systems Petah Tikva funding raised investors seed Series A valuation acquisition",
+  "Capture Systems Israel founder CEO leadership team Shay Geva Avi Braun",
+  "Capture Systems ownership shareholders subsidiary Capture Group",
+  "Capture Systems revenue financials headcount employees 2026",
+  "Capture Systems customers deployments contracts CapGuard evaluation 3000 systems",
+  "Capture Systems patents gimbal positioner Israel WIPO USPTO",
+  "Capture Systems competitors counter UAS remote weapon station gimbal Elbit IAI Rafael",
+  "Capture Systems dual use civilian critical infrastructure defense applications",
+  "קפצ'ר מערכות השקעה גיוס משקיעים הכנסות לקוחות",
+  "Capture Group Michigan Sterling Heights 936000 grant Capture Systems September 2026"
+]
+gaps = [
+  "team: only founder Shay Geva and deputy CEO/Group COO Avi Braun have sourced biographical information; full current leadership roster and headcount are not disclosed.",
+  "investors: no equity investors or financing participants were identified; no public cap table is available.",
+  "financials: no audited revenue, profitability, burn, or runway disclosure was found; third-party directory estimates were excluded as unverified.",
+  "traction: named paying customers, contract values, repeat orders, backlog, and independent verification of the reported 3,000-system installed base are unavailable; Michigan commitments remain prospective.",
+  "intellectual_property: targeted patent searches did not establish patents assigned to this Israeli Capture Systems entity; absence of a verified result does not prove no IP exists.",
+  "competition: competitors are identified from overlapping official product portfolios; no independently comparable performance, pricing, or market-share data were found.",
+  "ownership: private cap table, shareholder percentages, and full corporate structure beyond the announced Capture Group U.S. entity are not public.",
+  "funding: no public equity financing was found; the 2024 interview only mentioned exploratory IPO/fundraising discussions, and private financing may be undisclosed.",
+  "identity: directory sources conflict on founding year; primary Israeli government and company-attributed reporting say 2008, while secondary directories show 2017 and registry lookup reports legal incorporation in 2010."
+]
+conflicts = ["Founding year differs across sources: Israel Ministry of Defense SIBAT and TheMarker's 2024 company-sponsored interview state 2008; Crunchbase and Craft list 2017; secondary registry aggregator gives legal incorporation date 2010-02-10. The business founding date and legal incorporation date may differ; use 2008 for the reported operating history and avoid treating directory entries as stronger primary evidence."]
+diligence_questions = [
+  "What are the full terms, milestones, disbursement schedule, and current status of the $936,000 Michigan grant and $5 million Capture Group project, and when will the U.S. facility begin production?",
+  "Who are Capture Systems Ltd.'s beneficial owners and shareholders, and what is the precise ownership/control relationship between the Israeli company and Capture Group Inc.?",
+  "What were audited 2024–2025 revenue, gross margin, backlog, customer concentration, and the actual measured basis behind management's 2024 claim of approximately 40% annual product-demand growth?",
+  "Which CapGuard and ATID evaluations converted into paid deployments, and what independently measured detection/classification performance is available for clutter, weather, electronic interference, and multiple simultaneous UAS?",
+  "What patents, designs, software rights, export licenses, cyber certifications, and quality certifications are held by the Israeli company versus the U.S. subsidiary?"
+]
+
+[[intelligence.research.sources]]
+id = "official"
+url = "https://www.capture-sys.com/"
+title = "Capture Systems official website"
+publisher = "Capture Systems"
+kind = "company"
+accessed_at = "2026-10-04T13:33:14Z"
+claims = ["Official site is active and identifies Capture Systems Ltd.; it advertises counter-drone/C-UAS, remote-controlled weapon station and pan-tilt positioner products.", "Official site lists Ravnitzki St 6, Petah Tikva, Israel and current contact information."]
+
+[[intelligence.research.sources]]
+id = "defea25"
+url = "https://www.gov.il/BlobFolder/generalpage/israel-showcases-advanced-defense-technologies-at-defea-2025-6-may-2025/en/English_Documents/Israel_at_DEFEA_2025.pdf"
+title = "Israel at DEFEA 2025"
+publisher = "Israel Ministry of Defense, SIBAT"
+kind = "government"
+accessed_at = "2026-10-04T13:33:14Z"
+published_on = "2025-05-06"
+claims = ["SIBAT identifies Capture Systems Ltd. as an Israeli company founded in 2008.", "The profile describes ATID, gunnery stations, surveillance systems and anti-drone platforms.", "SIBAT catalog reports the company claim of more than 3,000 systems deployed worldwide."]
+
+[[intelligence.research.sources]]
+id = "michigan26"
+url = "https://www.michigan.gov/whitmer/news/press-releases/2026/09/02/whitmer-announces-125-new-defense-industry-jobs-in-sterling-heights"
+title = "Gov. Whitmer Announces 125 New Defense Industry Jobs in Sterling Heights"
+publisher = "State of Michigan, Office of Governor Gretchen Whitmer"
+kind = "government"
+accessed_at = "2026-10-04T13:33:14Z"
+published_on = "2026-09-02"
+claims = ["Capture Systems Ltd. formed Capture Group Inc. in 2026 as its U.S. entity.", "Michigan announced a $936,000 performance-based Michigan Business Development Program grant for Capture Group's expansion.", "Project plans include at least $5 million capital investment and at least 125 jobs over five years; the site is planned as a production and operations hub.", "The announcement quotes Avi Braun as Chief Operating Officer of Capture Systems Group."]
+
+[[intelligence.research.sources]]
+id = "themarker24"
+url = "https://www.themarker.com/labels/israelsecurity/2024-07-01/ty-article-labels/00000190-547f-dac0-a798-777f8a660000"
+title = "The coming decade will be a decade of extensive military procurement (Hebrew)"
+publisher = "TheMarker, Israeli Security Book (company-sponsored content)"
+kind = "media"
+accessed_at = "2026-10-04T13:33:14Z"
+published_on = "2024-07-01"
+claims = ["The interview identifies Shay Geva as founder, mechanical engineer and defense-industry entrepreneur; says Capture was established in 2008.", "Avi Braun is identified as deputy CEO, previously at Commtact and an AST SpaceMobile subsidiary, joining Capture in 2023.", "Braun reported annual demand growth of approximately 40% in recent years, forecast growth, and that CapGuard was under evaluation by Israeli security and customers in Israel and abroad.", "The interview reports 80% of activity in Israel before the prior year, 80% military market activity, recruiting plans, and exploratory IPO or fundraising discussions."]
+
+[[intelligence.research.sources]]
+id = "sibat-profile"
+url = "https://www.sibat.mod.gov.il/Exhibitions/Eurosatory/Documents/CAPTURE_SYSTEMS.pdf"
+title = "Capture Systems Ltd. company profile"
+publisher = "Israel Ministry of Defense, SIBAT"
+kind = "government"
+accessed_at = "2026-10-04T13:33:14Z"
+claims = ["SIBAT describes Capture's modular motion-control products for civilian, security and military uses across air, land and naval applications.", "The profile gives a Petah Tikva address and describes in-house mechanical engineering, control engineering, production, QA and service functions.", "The profile states ISO 9001 and MIL-STD claims; these remain supplier/government-catalog statements, not independently audited here."]
+
+[[intelligence.research.sources]]
+id = "ausa24"
+url = "https://mod.gov.il/en/press-releases/press-room/israeli-defense-technologies-showcased-at-ausa-2024-exhibition"
+title = "Israeli Defense Technologies Showcased at AUSA 2024 Exhibition"
+publisher = "Israel Ministry of Defense"
+kind = "government"
+accessed_at = "2026-10-04T13:33:14Z"
+published_on = "2024-10-01"
+claims = ["The Ministry lists Capture Systems among Israeli companies participating at AUSA 2024 and describes it as a gimbal supplier."]
+
+[[intelligence.research.sources]]
+id = "capguard"
+url = "https://www.capture-sys.com/capguard"
+title = "CapGuard counter-drone C-UAS platform"
+publisher = "Capture Systems"
+kind = "company"
+accessed_at = "2026-10-04T13:33:14Z"
+claims = ["Official product page describes Capture's CapGuard offering and company product claims."]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://www.capture-sys.com/about-us"
+title = "About Capture Systems"
+publisher = "Capture Systems"
+kind = "company"
+accessed_at = "2026-10-04T13:33:14Z"
+claims = ["Official about page presents company engineering, manufacturing and quality-system descriptions."]
+
+[[intelligence.research.sources]]
+id = "kyc"
+url = "https://www.kycisrael.com/companies/514406297/capture-systems-ltd/"
+title = "Capture Systems Ltd. Israel company information"
+publisher = "KYC Israel"
+kind = "directory"
+accessed_at = "2026-10-04T13:33:14Z"
+claims = ["Secondary registry-information service lists Capture Systems Ltd. company number 514406297, Israeli private-company status and incorporation date 2010-02-10."]
+
+[[intelligence.research.sources]]
+id = "elbit"
+url = "https://www.elbitsystems.com/land/combat-vehicle-systems/weapon-stations-turrets/rcws"
+title = "Remote Controlled Weapon Station"
+publisher = "Elbit Systems"
+kind = "company"
+accessed_at = "2026-10-04T13:33:14Z"
+claims = ["Elbit Systems markets remote-controlled weapon stations, an overlapping product and integration category."]
+
+[[intelligence.research.sources]]
+id = "iai"
+url = "https://www.iai.co.il/solution/c-uas-critical-facilities-protection/"
+title = "Counter-Unmanned Aerial Systems"
+publisher = "Israel Aerospace Industries"
+kind = "company"
+accessed_at = "2026-10-04T13:33:14Z"
+claims = ["IAI describes counter-UAS systems combining radar, electro-optics, jamming and interception for critical facilities."]
+
+[[intelligence.research.sources]]
+id = "rafael"
+url = "https://www.rafael.co.il/wp-content/uploads/2024/09/drone-dome-counter-unmanned-aerial-system.pdf"
+title = "Drone Dome Counter-Unmanned Aerial System"
+publisher = "Rafael Advanced Defense Systems"
+kind = "company"
+accessed_at = "2026-10-04T13:33:14Z"
+claims = ["Rafael product literature describes Drone Dome as a counter-UAS detection, identification, classification, neutralization and interception system."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T13:33:14Z"
+next_review_on = "2027-04-04"
+queries = ["Capture Systems official company identity products address Capture Systems Ltd", "Capture Systems Israeli company legal name registration number founded"]
+source_ids = ["official", "defea25", "kyc", "themarker24"]
+summary = "Official site and Israeli Ministry of Defense sources establish the Israeli defense systems business and Petah Tikva base. The secondary registry lookup supplies company number 514406297; reported operating founding year 2008 differs from legal incorporation date 2010 and directory year 2017."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T13:33:14Z"
+next_review_on = "2027-01-04"
+queries = ["Capture Systems Petah Tikva funding raised investors seed Series A valuation acquisition", "קפצ'ר מערכות השקעה גיוס משקיעים", "Capture Systems fundraising IPO 2024", "Capture Group Michigan 936000 grant 2026"]
+source_ids = ["themarker24", "michigan26"]
+summary = "No equity round was located. The 2024 executive interview mentions exploratory financing/IPO feelers only. Michigan's $936,000 conditional performance grant is recorded separately as a grant round; the $5 million planned capex is not funding raised."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T13:33:14Z"
+next_review_on = "2027-04-04"
+queries = ["Capture Systems Petah Tikva investors funding shareholders", "Capture Systems Ltd investors funding raised", "קפצ'ר מערכות משקיעים"]
+source_ids = ["themarker24", "michigan26"]
+summary = "No private equity investors or round participants were disclosed in reviewed material. Michigan Strategic Fund is a grantor, not an equity investor."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T13:33:14Z"
+next_review_on = "2027-04-04"
+queries = ["Capture Systems Israel founder CEO leadership team Shay Geva Avi Braun", "Capture Systems leadership COO 2026"]
+source_ids = ["themarker24", "michigan26"]
+summary = "Founder Shay Geva and deputy CEO/Group COO Avi Braun have sourced profiles. Comprehensive current leadership and employee count were not found."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-04T13:33:14Z"
+next_review_on = "2027-04-04"
+queries = ["Capture Systems ownership shareholders subsidiary Capture Group", "Capture Systems Ltd acquired acquisition sale"]
+source_ids = ["michigan26", "kyc"]
+summary = "Michigan identifies Capture Group Inc. as the U.S. entity formed by Capture Systems Ltd. in 2026. Beneficial owners, equity percentages and full subsidiary ownership details are not disclosed; no deal announcement found."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T13:33:14Z"
+next_review_on = "2027-04-04"
+queries = ["Capture Systems revenue financials headcount employees 2026", "Capture Systems revenue annual report private company", "Capture Systems Petah Tikva revenue estimate"]
+source_ids = ["themarker24", "michigan26"]
+summary = "No audited revenue, profitability, burn or runway found. Third-party estimates were inconsistent and lacked verifiable methodology, so excluded. Michigan project investment is not company revenue or valuation."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T13:33:14Z"
+next_review_on = "2027-01-04"
+queries = ["Capture Systems customers deployments contracts CapGuard evaluation 3000 systems", "Capture Systems 3000 systems deployed", "Capture Systems Michigan jobs facility September 2026"]
+source_ids = ["defea25", "themarker24", "michigan26", "ausa24"]
+summary = "SIBAT reproduces the company's claim of more than 3,000 deployed systems; 2024 sponsored interview reports CapGuard evaluation and demand assertions; 2026 Michigan plans describe future U.S. investment/jobs. No named paying customer, contract value or independently verified deployment was identified."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T13:33:14Z"
+next_review_on = "2027-04-04"
+queries = ["Capture Systems patents gimbal positioner Israel WIPO USPTO", "site:patents.google.com Capture Systems Ltd gimbal", "site:patentscope.wipo.int Capture Systems Israel"]
+source_ids = ["about", "official"]
+summary = "Targeted web searches did not identify patents that could be reliably attributed to this Israeli company. The official website describes products and engineering but does not establish a patent portfolio; this is not evidence that no IP exists."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T13:33:14Z"
+next_review_on = "2027-04-04"
+queries = ["Capture Systems competitors counter UAS remote weapon station gimbal Elbit IAI Rafael", "Elbit remote controlled weapon station official", "IAI counter UAS official", "Rafael Drone Dome official"]
+source_ids = ["elbit", "iai", "rafael", "ausa24"]
+summary = "Official Elbit, IAI and Rafael product material confirms comparable remote weapon station or counter-UAS offerings. Exact overlap varies by system layer and no independent market-share or price comparison was found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T13:33:14Z"
+next_review_on = "2027-04-04"
+queries = ["Capture Systems dual use civilian critical infrastructure defense applications", "Capture Systems civilian military positioners SIBAT"]
+source_ids = ["sibat-profile", "themarker24", "official"]
+summary = "SIBAT describes civilian, industrial, security and military applications. The 2024 interview says the company focuses primarily on defense but also serves civilian protection of energy and mining facilities. This supports dual-use relevance, not evidence of specific civil contracts."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The official website is live with current product pages and contact details and the September 2026 Michigan government announcement describes an active expansion by Capture Systems Ltd."
+verified_at = "2026-10-04T13:33:14Z"
+source_ids = ["official", "michigan26"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "SIBAT calls Capture an Israeli company and lists its Petah Tikva address; the official site lists the same Israeli address, and TheMarker identifies Israeli founder Shay Geva."
+verified_at = "2026-10-04T13:33:14Z"
+source_ids = ["defea25", "official", "themarker24"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.michigan-mbdp-2026.amount"
+support = "direct"
+summary = "Michigan's September 2, 2026 governor announcement reports a $936,000 Michigan Business Development Program performance-based grant awarded for Capture Group's expansion."
+verified_at = "2026-10-04T13:33:14Z"
+source_ids = ["michigan26"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.michigan-mbdp-2026.lead_investors"
+support = "direct"
+summary = "The round is a government performance grant, not an equity financing; the Michigan announcement names the granting program but no round investors."
+verified_at = "2026-10-04T13:33:14Z"
+source_ids = ["michigan26"]

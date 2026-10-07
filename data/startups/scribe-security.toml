@@ -1,0 +1,64 @@
+name = "Scribe Security"
+description = "Software supply chain security platform providing end-to-end integrity verification and SBOM management."
+detailed_description = """
+Scribe Security is an Israeli cybersecurity company founded in 2021 that provides comprehensive software supply chain security through end-to-end code integrity verification and Software Bill of Materials (SBOM) management. The platform creates cryptographic attestations for every stage of the software development lifecycle, generates and manages SBOMs, and verifies software integrity from code to production. Core capabilities include integration with CI/CD pipelines, container image verification, artifact provenance tracking using SLSA framework adoption, and policy-driven enforcement of supply chain security requirements.
+
+The core technology addresses a critical gap in modern software development: traditional security tools focus on known vulnerabilities but lack mechanisms to verify that software has not been tampered with or compromised during the build, packaging, or distribution phases. Supply chain attacks targeting build infrastructure—such as compromised build nodes, malicious dependencies, or unauthorized artifact modifications—represent a sophisticated attack vector that cannot be detected by conventional vulnerability scanning. Scribe's attestation-based approach provides cryptographic proof of software provenance and integrity, enabling organizations to detect when software has been modified or built outside expected parameters. This capability is essential for regulated industries, defense procurement, and mission-critical infrastructure where software integrity is non-negotiable.
+
+Competitive dynamics position Scribe as a full-stack supply chain security provider competing with point solutions like Sigstore (provenance verification), Anchore (container scanning), and Chainguard (container security). Scribe differentiates through integrated SBOM generation, policy enforcement, and out-of-the-box integration with major CI/CD platforms. The market is nascent but rapidly expanding: CISA, NIST, and the White House have issued executive orders and guidelines making supply chain security attestation a compliance requirement for federal software procurement. This creates strong tailwinds for companies offering operationalized solutions rather than manual processes or point tools.
+
+Traction signals include Series A funding, enterprise deployments in regulated sectors, and participation in open-source standardization efforts (SLSA, SBOM standards). The company targets software development organizations, container platforms, and defense contractors requiring verifiable software provenance. Commercialization focuses on SaaS licensing, enterprise support, and managed attestation services, with pricing models tied to pipeline volume and artifact complexity."""
+logo = "https://www.scribesecurity.com/wp-content/uploads/scribe-logo.svg"
+website = "https://www.resilience-sec.com/scribe"
+sector = "Cybersecurity"
+founded = "2021"
+headquarters = "Tel Aviv, Israel"
+employees = "40+"
+funding_stage = "Series A"
+dual_use = true
+dual_use_description = "Scribe's core technology has substantive and specific dual-use applications. Commercial customers use attestation and SBOM management to comply with security standards and protect intellectual property in development pipelines. Defense and national security applications are direct and critical: military software development, weapon system firmware, intelligence infrastructure, and critical national infrastructure control systems all require verifiable proof that software has not been compromised through supply chain attack. A software integrity compromise in defense systems could enable adversary code insertion at build time, making traditional vulnerability scanning insufficient. U.S. and allied government software procurement increasingly mandates SLSA compliance and attestation as a prerequisite for supplier qualification. Scribe's technology directly enables compliance with executive orders on software supply chain security (EO 14028, subsequent CISA/NIST guidance) and DoD software acquisition requirements. The dual-use nature is genuine: the identical technology serves commercial SaaS customers and defense procurement, with no modification required."
+key_technologies = [
+  "SLSA (Supply-chain Levels for Software Artifacts) framework implementation",
+  "Cryptographic provenance attestation and verification",
+  "Automated SBOM (Software Bill of Materials) generation",
+  "CI/CD pipeline security integration and policy enforcement",
+  "Container image provenance tracking and verification",
+  "Build artifact integrity verification"
+]
+use_cases = [
+  "Defense contractor software procurement compliance and verification",
+  "Critical infrastructure software integrity assurance (power grids, communications)",
+  "Financial services software supply chain attestation and compliance",
+  "Enterprise container and microservices provenance tracking",
+  "Open-source software security hardening and dependency verification",
+  "Government software acquisition (federal procurement SLSA compliance)",
+  "Embedded systems and IoT firmware integrity verification",
+  "Intelligence agency and national security software development assurance"
+]
+investible = true
+investment_rationale = "Scribe operates in a high-growth, policy-driven market emerging from government mandates on software supply chain security. The addressable market spans defense procurement, critical infrastructure, financial services, and enterprise software development—all increasingly required to demonstrate SLSA compliance or equivalent software integrity verification. The company has early-stage traction with Series A funding, enterprise deployments, and participation in open-source standardization efforts. Dual-use potential is strong and direct: identical technology serves commercial SaaS customers while enabling compliance with DoD, federal, and critical infrastructure security requirements. Competitive position is solid as a full-stack provider against fragmented point solutions. Primary diligence thesis: as software procurement regulations harden (EO 14028 follow-on, DoD requirements, critical infrastructure standards), organizations will shift from aspirational to operationalized supply chain security, creating significant TAM expansion and pricing power for integrated platforms like Scribe."
+strategic_value = "Scribe offers direct strategic value for defense technology investment: (1) Core technology enables compliance with U.S. government software acquisition requirements and executive orders, creating a pathway to institutional customers (DoD, federal agencies, critical infrastructure operators). (2) Supply chain security is a national security imperative—software integrity verification is now considered essential infrastructure for defending against advanced persistent threat actors. (3) Israeli innovation in security infrastructure is strategically valuable for allied defense ecosystems. (4) The company operates in a market where regulatory tailwinds are structural and long-duration, not cyclical. Strategic acquirers include large defense contractors, cloud providers (AWS, Azure, GCP), and infrastructure security platforms seeking integrated supply chain verification capabilities."
+potential_score = 82
+technology_score = 86
+market_score = 80
+team_score = 79
+dual_use_score = 90
+strategic_alignment_score = 89
+stage = "early"
+stage_rationale = "Founded in 2021, Scribe is a Series A-stage company (approximately 5 years old) with early-stage market traction. The company is past proof-of-concept and has enterprise deployments, but has not yet achieved public market scale or late-stage revenue maturity. Market timing is favorable: supply chain security is transitioning from bleeding-edge innovation to mainstream enterprise requirement due to regulatory mandates. Early-stage classification reflects pre-Series B funding status and pre-dominant-market-position status, but within a rapidly growing TAM."
+competitors = [ "Sigstore", "Anchore", "Chainguard", "Socket", "JFrog Xray", "Snyk" ]
+competitive_edge = "Scribe differentiates through integrated full-stack supply chain security (attestation, SBOM generation, policy enforcement) rather than point solutions. Sigstore is strong on open-source provenance but lacks commercial SBOM/policy layer; Anchore focuses on container scanning; Chainguard on container hardening. Scribe positions as a platform bridging attestation standards (SLSA) with practical policy enforcement and CI/CD integration. Early participation in open-source standards (SLSA, SBOM formats) creates network effects and operational stickiness. Israeli security innovation background provides engineering depth in cryptographic systems and hardening. Out-of-the-box CI/CD integration reduces deployment friction compared to point-tool composition."
+risk_factors = [
+  "Policy/mandate execution risk: government software requirements are often aspirational; actual procurement mandate enforcement and customer budget allocation may lag regulatory timelines.",
+  "Open-source substitution risk: core provenance verification functionality (Sigstore) and SBOM generation tools are open-source; commercial defensibility depends on integration, UX, and policy layers.",
+  "Enterprise adoption cycle friction: supply chain security is not a crisis-driven purchase; sales cycles may be long and deal sizes unpredictable until mandates are institutionalized.",
+  "Standardization dynamics: SLSA, SBOM format (SPDX, CYCLONEDX) adoption is still evolving; vendor lock-in risk is low and platform portability is high, limiting switching costs.",
+  "Competitive consolidation: large security vendors (Snyk, JFrog) and cloud providers (AWS, Azure) are building competing supply chain security capabilities; margin compression and market share loss possible.",
+  "Technical complexity: supply chain security requires deep SDLC process understanding; customer education and implementation services intensity may constrain scaling and margins."
+]
+risk_level = "medium"
+signals = [ ]
+priority_rank = 0
+priority_rationale = "High priority for defense and dual-use investment evaluation. Supply chain security is a critical capability gap with direct national security implications; software integrity verification is now essential for government procurement compliance and defense infrastructure protection. Scribe's technology directly enables compliance with executive orders and DoD software acquisition requirements. Strong dual-use applicability, credible Series A traction, and favorable market tailwinds (policy-driven demand growth). Primary diligence questions: customer concentration and deal size predictability; competitive positioning as large vendors build supply chain security offerings; international expansion and export control implications (Israeli company serving U.S. defense market)."
+crawled_at = "2026-01-31T20:25:00+00:00"
+updated_at = "2026-05-05T17:13:23Z"

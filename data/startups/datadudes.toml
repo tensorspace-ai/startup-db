@@ -1,0 +1,203 @@
+name = "DataDudes"
+description = "DataDudes is an Israeli industrial-AI startup that helps process manufacturers predict product-quality and process outcomes from existing sensor, laboratory, and operational data, then recommends corrective actions before defects or inefficiencies emerge. Its PARCO platform is designed to move plants from reactive troubleshooting toward proactive and eventually autonomous process control across chemicals, energy, mining, food, refineries, cosmetics, and related batch industries."
+detailed_description = """
+**Product and the concrete problem it solves.** DataDudes addresses a costly and strategically important failure mode in process manufacturing: plants collect large volumes of sensor and laboratory data, but engineers still often discover quality deviations after a batch, production run, or shipment has already failed. The result is scrap, rework, unstable throughput, excess energy and raw-material consumption, and dependence on a small number of experienced operators who know which process variables matter. The company’s platform is intended to turn that historical and live operational data into an early-warning and intervention system. It forecasts process and product-quality outcomes, identifies likely deviations, and recommends changes before an out-of-specification result becomes unavoidable. DataDudes calls the product PARCO, short for Process Autonomous Re-Calibration and Optimization. The commercial promise is not merely another dashboard: it is a path from monitoring, to actionable recommendations, to trusted autonomous process control. The official site says the platform has served dozens of production lines and targets process and batch industries where small improvements in yield, consistency, and material use compound across every run.
+
+**Core technology and how it actually works.** Public descriptions indicate a data-fusion and predictive-modeling system built around the information a factory already produces. DataDudes combines time-series readings from production-line sensors with laboratory results, engineer know-how, and documented process best practices. Its models forecast quality or process outcomes while the platform translates those forecasts into recommended corrective actions; this allows an engineer to intervene while a run is still recoverable rather than waiting for a final quality test. The company says the system has been trained on thousands of data sensors and makes more than half a million predictions per month, figures that should be treated as company-reported operating claims rather than independently audited benchmarks. The architecture also has an explicit automation progression. A plant can initially use the software as a decision-support layer, validate recommendations against operator judgment, and then connect the recommendation loop to process-control systems when the safety and reliability case is acceptable. Public sources do not disclose the model families, control-system protocols, formal safety envelope, or independent accuracy results. That absence matters: the differentiated claim is operational deployment and an autonomous-control workflow, not a publicly reproducible algorithmic breakthrough.
+
+**Market, customers, and go-to-market.** The target market is process manufacturing rather than a single narrow vertical. DataDudes publicly names chemicals, food, energy, mining, cosmetics, and refineries, all environments where quality depends on interacting variables, laboratory feedback can arrive late, and a small reduction in variability has material economic value. The buyer is likely an operations, process-engineering, production, or quality organization that already owns historians, sensors, and laboratory systems but lacks a practical way to combine them into continuous prediction. The natural land-and-expand motion is a line or batch pilot using existing plant data, followed by additional lines, products, sites, and eventually an autonomous-control module. That model reduces initial hardware friction but raises integration and change-management requirements. The company’s public materials do not name customers, contract values, annual recurring revenue, or channel partners, so commercial scale cannot be inferred from the sector list. Its current public base is the Gav-Yam Negev Advanced Technologies Park in Beersheba, a location that places the team near Israel’s engineering, cybersecurity, and industrial-technology ecosystem. The combination of a horizontal process-industry product and a focused Israeli base gives DataDudes a plausible route into export markets, but enterprise plant sales are slow and reference-dependent.
+
+**Traction, funding, and third-party validation.** Several independent or ecosystem sources corroborate that DataDudes is more than an idea-stage profile. Startup Nation Finder records the company as founded in September 2019, identifies its founders, describes the process-manufacturing optimization platform, and lists completion of the Drive TLV FastLane 11th cohort in May 2026. The Gav-Yam Negev technology-park profile describes an Industry 4.0 startup whose AI platform uses production-line sensor data to predict output quality and recommend changes. The founders have publicly described what they call the first autonomous process-control deployment for a chemical plant in Israel; that is a founder/company claim and should not be read as an independently certified industry first. The official site reports service across dozens of production lines and more than half a million monthly predictions. A specialist plastics-industry publication relays company-reported outcomes of 2.4% lower production costs, 43% less out-of-specification product, and a three-to-seven-month return-on-investment period, but does not provide an audited customer study. IVC describes PARCO and lists Seebo and Imubit as competitors. No public institutional funding round, amount, lead investor, revenue figure, patent portfolio, or formal certification was located, making validation promising but still disclosure-limited.
+
+**Founders and team background.** DataDudes was founded by Erez Ben-Moshe and Nathaniel Shimoni, also referred to publicly as Nati Shimoni. The Gav-Yam Negev profile describes the founders and team as data scientists and developers, which is directionally consistent with a company whose product depends on statistical learning, industrial data engineering, and process-domain translation. LinkedIn publicly associates additional team members including Ksenia Drokov and Priel Kaizman, while Startup Nation Finder presents a machine-readable employee count of eight and LinkedIn’s company page places the organization in a broader 11–50 employee band. Those figures conflict, so the record uses a small-team characterization rather than treating either as a precise current headcount. The public record does not establish the founders’ prior employers, academic credentials, previous exits, named industrial customers, patents, or the division of responsibilities between product, engineering, sales, and process science. That is a meaningful diligence gap because successful autonomous process control requires more than model-building: it requires industrial controls expertise, rigorous validation, plant commissioning, and the ability to earn trust from operators. The founders’ continuing public involvement and the product’s progression from predictive analytics toward autonomous control are positive signals, but the depth of the current implementation and commercial team remains difficult to verify.
+
+**Competitive dynamics.** DataDudes competes in a layered market. Imubit, explicitly named by IVC, offers AI-driven process optimization and control for industrial plants. Seebo, also named by IVC, represents the industrial process-modeling and predictive-analytics approach against which DataDudes must differentiate. Seeq competes through industrial time-series analytics and workflow tools that help engineers investigate and improve process performance. AspenTech, AVEVA, and Honeywell bring established process simulation, historian, operations, and control ecosystems with deep incumbent relationships. Cognite competes for the industrial data-contextualization and operations-analytics budget, even where its product is not a direct closed-loop controller. DataDudes’ plausible edge is the tight linkage between forecast, recommended intervention, and an eventual autonomous-control loop, combined with explicit use of laboratory data and engineer knowledge rather than reliance on sensor dashboards alone. Its focus on process and batch manufacturers may also make the product easier to explain than a general industrial-data platform. The moat is not yet proven. Large incumbents can bundle adjacent functionality, specialist competitors may have stronger plant references, and every deployment creates site-specific integration and validation knowledge that can either compound into defensibility or remain expensive services work. Independent accuracy, uptime, and payback benchmarks are the missing evidence.
+
+**Defense, security, and resilience dual-use relevance.** DataDudes’ core technology credibly serves commercial and strategic-resilience contexts, but the defense connection is an application pathway rather than a demonstrated military capability. Chemical plants, refineries, energy facilities, food producers, and mining operations are part of the industrial base and critical infrastructure; maintaining quality and throughput when supply chains, staffing, utilities, or logistics are disrupted has direct resilience value. A model that detects process drift early can reduce waste, preserve scarce inputs, and help a smaller operations team keep a plant within specification. The same architecture could support defense-industrial production, munitions-adjacent materials, water-treatment operations, or distributed energy assets if it were validated for the relevant safety, cybersecurity, and control requirements. Recommendations based on existing sensors and lab data could also provide a practical bridge for older plants that cannot replace their entire control stack. However, no public source reviewed discloses a defense customer, government contract, military program, classified deployment, or security certification. There is no evidence of a hardened OT-security product, operation under disconnected conditions, formal safety case, or MIL-STD qualification. The correct assessment is therefore genuine dual-use potential anchored in industrial resilience and critical infrastructure, with defense transferability still unproven.
+
+**Growth stage, trajectory, and key diligence risks.** DataDudes is best classified as early: it was founded in 2019 and reports live production-line use, but it remains a small company with no publicly disclosed institutional financing, named customer references, revenue, or independently verified performance data. Its trajectory is attractive if it can convert predictive recommendations into repeatable deployments and then into safe autonomous process control across multiple sites. The main risks are: (1) sensor quality, missing lab data, and site-specific process changes can undermine model reliability; (2) model drift and false positives can cause operator fatigue or unsafe interventions; (3) connecting software recommendations to operational technology creates cybersecurity, governance, liability, and certification burdens; (4) industrial procurement cycles are long and require references, integration support, and measurable payback; (5) large automation vendors and better-funded specialists can bundle competing functions; (6) the company’s small and inconsistently reported team may be stretched across data science, controls engineering, commissioning, and enterprise sales; and (7) the published savings and ROI figures are company-reported and need customer-level validation. The most important diligence milestones are named reference plants, audited before-and-after outcomes, disclosed control-system integrations, repeatable deployment timelines, funding and revenue transparency, and evidence that autonomous operation remains safe under sensor failure or communications loss.
+"""
+logo = "Unknown"
+website = "https://datadudes.ai/"
+sector = "Industrial AI and Process Manufacturing Optimization"
+founded = "2019"
+headquarters = "Beersheba, Israel"
+employees = "1-10 (Startup Nation Finder lists 8; LinkedIn company profile currently shows 11-50)"
+funding_stage = "No public institutional round identified; total funding undisclosed in Startup Nation Finder"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "DataDudes is dual-use through industrial resilience and critical-infrastructure operations, not through a disclosed battlefield product. Its predictive process-control loop can help chemical, energy, refinery, mining, and food facilities reduce waste, maintain specification, and continue operating with fewer expert interventions during supply, staffing, or utility disruptions. The same capabilities could transfer to defense-industrial production or government-operated infrastructure, but no public source reviewed identifies a military customer, government contract, security certification, hardened OT deployment, or MIL-STD qualification. The score therefore reflects credible transferability from a strategic industrial base, while keeping the distinction between resilience adjacency and fielded defense capability explicit."
+key_technologies = [
+  "Multivariate time-series prediction of process and product-quality outcomes",
+  "Fusion of production-line sensor readings, laboratory results, and operational context",
+  "Process Autonomous Re-Calibration and Optimization (PARCO)",
+  "Encoding of engineer know-how and process best practices into recommendations",
+  "Proactive process-control recommendation engine for early intervention",
+  "Autonomous process-control integration after operator validation"
+]
+use_cases = [
+  "Chemical-batch quality prediction and early corrective intervention",
+  "Refinery process-deviation detection, yield improvement, and product consistency",
+  "Energy-facility process optimization and operational-stability monitoring",
+  "Mining and mineral-processing variability reduction",
+  "Food-production quality control, waste reduction, and batch consistency",
+  "Cosmetics manufacturing process and quality optimization",
+  "Defense-industrial or critical-infrastructure production resilience using existing plant data"
+]
+investible = true
+investment_rationale = "DataDudes merits an internal priority signal because it combines a concrete industrial pain point with a potentially scalable software layer for process and batch manufacturers. The positive case rests on reported production-line deployments, a named PARCO platform, a path from prediction to autonomous control, and exposure to sectors with strategic energy, chemical, food, and mining relevance. The case is not yet investment-grade on public evidence alone: funding, revenue, customer names, headcount, independent performance studies, patents, and control-system certifications are undisclosed. The appropriate next diligence is to verify one or more reference plants, quantify recurring software revenue and deployment effort, test model performance against operator baselines, and establish the safety and cybersecurity boundary before treating the company as a mature commercial platform. This is a legacy database priority flag, not an investment recommendation."
+strategic_value = "DataDudes has strategic value at the intersection of Israeli industrial AI, critical-infrastructure resilience, and the industrial base. A system that predicts process quality from existing sensors and laboratory data can improve output and reduce scarce-material consumption without requiring a full plant rebuild, which is relevant to distributed manufacturing and continuity planning. Its Beersheba base and Industry 4.0 positioning also fit Israel’s engineering and deep-tech ecosystem. The value is presently prospective rather than defense-proven: public evidence supports commercial process optimization and reported autonomous-control activity, but not military adoption, government procurement, hardened deployment, or assurance under degraded conditions. Strategic diligence should focus on whether the models generalize across plants, whether recommendations are safe and auditable, and whether the platform can operate securely inside legacy OT environments."
+public_sources = [
+  { label = "DataDudes official site", url = "https://datadudes.ai/", description = "Current product, operating claims, sectors, and Beersheba contact address." },
+  { label = "Startup Nation Finder DataDudes profile", url = "https://finder.startupnationcentral.org/company_page/datadudes?section=news", description = "Israeli startup profile, founders, registration identifier, team band, funding disclosure, and Drive TLV FastLane participation." },
+  { label = "IVC DataDudes company profile", url = "https://www.ivc-online.com/Google-Card?id=b3b46a5b-eace-ed11-b811-00505695cd29", description = "PARCO description, business model, founders, address, and named competitors." },
+  { label = "DataDudes LinkedIn company profile", url = "https://www.linkedin.com/company/datadudes-ai/", description = "Current company description, location, size band, employees, and Drive TLV cohort announcement." },
+  { label = "DataDudes ICL deployment announcement", url = "https://www.linkedin.com/posts/datadudes-ai_ai-autonomously-manufacturing-activity-7196986774768746497-Dkv5", description = "Company-reported autonomous control at a second ICL Group plant and operational outcomes." },
+  { label = "CheckID Israeli company record", url = "https://en.checkid.co.il/company/DATADUDES%2B%2BLTD-XO3jyW9-516076106", description = "Secondary company registry mirror for legal name, Israeli company number, active status, and incorporation date." },
+]
+potential_score = 76.0
+technology_score = 79.0
+market_score = 78.0
+team_score = 62.0
+dual_use_score = 75.0
+strategic_alignment_score = 82.0
+stage = "early"
+stage_rationale = "DataDudes has progressed beyond a concept: public company, ecosystem, and founder materials describe a working platform used on dozens of production lines, and the company has a specific PARCO product concept plus an autonomous-process-control claim. It remains early in diligence terms because the public record does not disclose a named customer, recurring revenue, institutional financing, audited outcomes, broad headcount, or independent safety and accuracy validation. A 2019 founding date with a small reported team suggests meaningful product-development time, but not proof of scaled commercial maturity. The next stage-defining evidence would be repeatable multi-site deployments, referenceable customers, transparent revenue and funding data, and verified closed-loop control performance."
+competitors = [
+  "Imubit (AI-driven industrial process optimization and autonomous control)",
+  "Seebo (industrial process modeling and predictive optimization; named by IVC)",
+  "Seeq (industrial time-series analytics and process-performance workflows)",
+  "AspenTech (incumbent process simulation, optimization, and industrial software suite)",
+  "AVEVA (industrial historian, engineering, operations, and control software ecosystem)",
+  "Honeywell Forge (incumbent industrial performance and control platform)"
+]
+competitive_edge = "DataDudes’ strongest claimed edge is the end-to-end operational loop: it links sensor and laboratory observations to a forecast, then to a recommended intervention and eventually autonomous process control. That is more concrete than a generic industrial dashboard and should be valuable where a late laboratory result turns into scrap. The inclusion of engineer know-how and process best practices may also help bridge the gap between statistical prediction and plant adoption. Its horizontal focus across process and batch industries can create a reusable product while preserving a clear buyer problem. These advantages are not yet demonstrated as a durable moat. Incumbent automation suites have distribution and control-system integration, specialist competitors may have deeper reference plants, and the public record lacks independent model benchmarks, customer retention data, patent evidence, or the deployment economics needed to distinguish product software from bespoke services."
+risk_factors = [
+  "Sensor quality, missing laboratory data, and site-specific process changes may reduce model reliability",
+  "Model drift, false positives, or opaque recommendations could create operator fatigue or unsafe interventions",
+  "OT integration creates material cybersecurity, governance, liability, and process-safety obligations",
+  "Long industrial procurement and commissioning cycles can delay revenue and make customer concentration significant",
+  "AspenTech, AVEVA, Honeywell, and specialist AI competitors bring stronger incumbent relationships or capital",
+  "Small and inconsistently reported team size may constrain controls engineering, deployment, and enterprise sales",
+  "Public savings, accuracy, and ROI metrics are company-reported and lack audited customer-level validation"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "DataDudes should receive a positive internal tracking signal because it fits the database thesis unusually well: Israeli-founded industrial AI, measurable process-efficiency potential, and a credible route into energy, chemicals, food, mining, and other critical production systems. The strongest signals are the specific PARCO product, reported production-line use, and a founder-described chemical-plant autonomous-control deployment. The signal is deliberately not a ranking or investment recommendation. Public disclosure gaps around customers, financing, revenue, safety assurance, cybersecurity, and independent outcomes keep the priority at watchlist level until referenceable deployments and repeatable economics can be verified."
+crawled_at = "2026-09-08T04:51:07Z"
+updated_at = "2026-10-05T04:24:38Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Erez Ben-Moshe", role = "Co-CEO and co-founder", is_founder = true, current = true, background = "Public company and ecosystem profiles identify him as co-founder; the LinkedIn company page continues to list him among employees.", source_ids = ["ivc", "finder", "linkedin"] },
+  { name = "Nathaniel (Nati) Shimoni", role = "Co-CEO and co-founder", is_founder = true, current = true, background = "Public company and ecosystem profiles identify him as co-founder; he has publicly described autonomous process-control milestones.", source_ids = ["ivc", "finder", "linkedin", "icl_post"] },
+]
+investors = []
+financials = []
+traction = [
+  { kind = "product", date = "2026-10-05", description = "Official site currently says the platform has served dozens of production lines, combines sensor and laboratory data with engineering knowledge, and makes over half a million predictions monthly; these are company-reported operating claims.", source_ids = ["official"] },
+  { kind = "partnership", date = "2024", description = "DataDudes announced that its platform was autonomously controlling a production process at a second ICL Group plant after an earlier implementation at another ICL site; the claimed savings and water reduction have not been independently quantified in the announcement.", source_ids = ["icl_post"] },
+  { kind = "product", date = "2026-05", description = "Company LinkedIn announced selection for Drive TLV FastLane Batch 11; Startup Nation Finder reports the cohort completed in May 2026. Accelerator participation is not financing or a customer contract.", source_ids = ["linkedin", "finder"] },
+]
+intellectual_property = []
+comparables = [
+  { name = "Imubit", website = "https://imubit.com/", rationale = "Industrial AI optimization and control for process plants; IVC names it as a DataDudes competitor.", differentiation = "Imubit is an established process optimization specialist; public evidence does not establish a directly comparable product scope or relative performance.", source_ids = ["ivc"] },
+  { name = "Seebo", website = "https://www.seebo.com/", rationale = "Industrial process analytics and modeling; IVC names it as a DataDudes competitor.", differentiation = "Seebo has focused on process-based industrial analytics; direct current product and ownership comparisons require fresh diligence.", source_ids = ["ivc"] },
+  { name = "Seeq", website = "https://www.seeq.com/", rationale = "Industrial time-series analytics used by process engineers, competing for related operational analytics budgets.", differentiation = "Positioned primarily around analytics and workflows rather than the specific autonomous-control claims made by DataDudes.", source_ids = ["official"] },
+]
+
+[intelligence.company]
+company_id = "il-datadudes"
+legal_name = "DATADUDES LTD"
+aliases = ["DataDudes", "DataDudes-AI", "DataDudes.ai", "דאטאדודס בע״מ"]
+operating_status = "active"
+business_model = "B2B industrial AI software and tailored deployment/optimization solutions for process and batch manufacturers."
+products = ["PARCO (Process Autonomous Re-Calibration and Optimization)"]
+locations = ["Beersheba, Israel", "Sde Hemed, Israel (registered address reported by IVC and company-record mirror)"]
+linkedin_url = "https://www.linkedin.com/company/datadudes-ai/"
+country_of_incorporation = "Israel"
+founded_on = "2019-08-26"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "516076106", source_ids = ["finder", "checkid"] }]
+source_ids = ["official", "finder", "ivc", "linkedin", "checkid"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "Israeli private company DATADUDES LTD (company number 516076106), founded by Erez Ben-Moshe and Nathaniel Shimoni, with public company and ecosystem profiles locating operations in Beersheba. The company also reports a Sde Hemed registered address."
+as_of = "2026-10-05"
+source_ids = ["finder", "checkid", "official", "ivc"]
+
+[intelligence.funding]
+status = "undisclosed"
+summary = "No publicly announced financing round was found in the sources reviewed. Startup Nation Finder displays zero rounds and total funding as undisclosed; that is not evidence of zero capital raised. GetLatka displays an unsupported $0 funding figure alongside estimated revenue and valuation, which is excluded from reported fields. No company-announced lifetime total was located."
+rounds = []
+history_status = "partial"
+coverage_through = "2026-10-05"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "The company is described as a privately held Israeli limited company. A registry mirror lists directors/officeholders but does not disclose a complete cap table in the freely visible record. No parent, public ticker, acquisition, exit, or disclosed ownership percentages were identified."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["finder", "linkedin", "checkid"]
+deals = []
+holdings = []
+
+[intelligence.research]
+researched_at = "2026-10-05T04:24:38Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "DataDudes AI PARCO funding investors DataDudes Israel",
+  "DataDudes AI founders customers revenue PARCO autonomous process control",
+  "DataDudes Israel patents DataDudes.ai",
+  "DataDudes Beersheba startup funding Hebrew DataDudes",
+  "site:calcalistech.com DataDudes FastLane May 2026",
+  "DataDudes AI Nathaniel Shimoni Erez Ben Moshe customer deployment",
+  "DataDudes raised OR funding OR investors",
+  "DataDudes Ltd 516076106 Israeli Companies Registrar",
+]
+gaps = [
+  "funding: no verified round amounts, instruments, investors, or company-announced lifetime total found; profile reports total undisclosed and zero listed rounds.",
+  "investors: no named financing investors found; Drive TLV accelerator participation is not treated as investment.",
+  "team: public sources identify the two founders and a few current employees, but no full leadership roster, independently verified headcount, or sourced executive biographies were found.",
+  "financials: no company-reported dated revenue, ARR, profit, burn, or runway disclosure found; third-party modeled figures are excluded.",
+  "traction: no public named customer contract, pricing, customer count, independently measured ROI, or audited deployment outcomes found; ICL process deployment remains company-announced.",
+  "intellectual_property: no company-assigned patent or registered IP record was located in searched public sources; absence is not proof none exists.",
+  "competition: limited company-specific direct competitor disclosures; IVC names Seebo and Imubit, while broader substitutes need deeper product comparison.",
+  "ownership: no public cap table, shareholder percentages, parent, or disclosed transaction found.",
+  "dual_use: no public defense customer, government contract, security certification, or military deployment found.",
+]
+conflicts = ["Headcount sources disagree in their reporting bands: Startup Nation Finder lists 1-10 and an exact profile count of 8 (profile last updated 2024-04-18), while LinkedIn currently shows 11-50. Exact current employee count is not established.", "Registered-address sources list Sde Hemed, while the current company site and LinkedIn identify Beersheba as the operating location; this may distinguish registered and operating addresses."]
+diligence_questions = [
+  "Can management provide a dated financing history, including any founder capital, grants, convertibles, or non-dilutive support, and confirm whether there has been any external equity round?",
+  "Can ICL or another reference plant validate deployment scope, production-control boundaries, duration, baseline, measurable savings, and whether control is continuously autonomous or operator-approved?",
+  "What are current recurring revenue, gross margin, customer concentration, renewal rates, and deployment/commissioning effort per production line?",
+  "What safety interlocks, human override, cybersecurity controls, audit logs, model drift monitoring, and fail-safe behavior apply when sensor data or connectivity degrades?",
+  "What is the current full-time team size and who leads controls engineering, industrial cybersecurity, enterprise sales, and product delivery?",
+]
+sources = [
+  { id = "official", url = "https://datadudes.ai/", title = "Home - DataDudes", publisher = "DataDudes", kind = "company", accessed_at = "2026-10-05T04:24:38Z", claims = ["PARCO platform proposition, sensor and laboratory inputs, predictions and recommendations, company-reported monthly prediction volume, dozens of production lines, served sectors, and Beersheba address."] },
+  { id = "finder", url = "https://finder.startupnationcentral.org/company_page/datadudes?section=news", title = "DataDudes — Industrial Technologies | Finder", publisher = "Startup Nation Finder", kind = "directory", accessed_at = "2026-10-05T04:24:38Z", published_on = "2026-05-07", claims = ["Founders, 2019 founding, company number 516076106, Beersheba location, employee band and exact count, zero listed funding rounds and undisclosed total, and FastLane cohort completion."] },
+  { id = "ivc", url = "https://www.ivc-online.com/Google-Card?id=b3b46a5b-eace-ed11-b811-00505695cd29", title = "DataDudes Ltd. - IVC Data & Insights", publisher = "IVC", kind = "directory", accessed_at = "2026-10-05T04:24:38Z", claims = ["PARCO description, B2B model, founders, Sde Hemed address, and IVC-listed competitors Seebo and Imubit."] },
+  { id = "linkedin", url = "https://www.linkedin.com/company/datadudes-ai/", title = "DataDudes-AI | LinkedIn", publisher = "LinkedIn", kind = "other", accessed_at = "2026-10-05T04:24:38Z", claims = ["Privately held company profile, Beersheba location, current company size band, current listed employees, and company announcement of Drive TLV FastLane Batch 11 selection."] },
+  { id = "icl_post", url = "https://www.linkedin.com/posts/datadudes-ai_ai-autonomously-manufacturing-activity-7196986774768746497-Dkv5", title = "DataDudes-AI: autonomous production process at a second ICL plant", publisher = "DataDudes-AI on LinkedIn", kind = "company", accessed_at = "2026-10-05T04:24:38Z", claims = ["Company announcement says AI autonomously controlled a process at a second ICL Group plant after a successful implementation at another site and claims cost and water-consumption improvement."] },
+  { id = "checkid", url = "https://en.checkid.co.il/company/DATADUDES%2B%2BLTD-XO3jyW9-516076106", title = "DATADUDES LTD - 516076106", publisher = "CheckID", kind = "directory", accessed_at = "2026-10-05T04:24:38Z", claims = ["Registry mirror reports legal name, Israeli private-company status, active status, incorporation date 2019-08-26, company number, and registered Sde Hemed address; visible extract does not establish ownership percentages."] },
+]
+topic_checks = [
+  { topic = "identity", status = "reported", checked_at = "2026-10-05T04:24:38Z", next_review_on = "2027-04-05", queries = ["DataDudes Ltd company identity legal name aliases headquarters Israel 516076106", "DataDudes AI Beersheba founders 2019"], source_ids = ["official", "finder", "ivc", "checkid"], summary = "Official website and Israeli company profile confirm industrial AI identity; company-record mirror supplies legal name and registration number." },
+  { topic = "funding", status = "no_public_disclosure", checked_at = "2026-10-05T04:24:38Z", next_review_on = "2027-01-05", queries = ["DataDudes AI PARCO funding investors DataDudes Israel", "DataDudes raised OR funding OR investors", "DataDudes Beersheba startup funding Hebrew DataDudes"], source_ids = ["finder"], summary = "Finder shows zero listed rounds but total funding undisclosed; no primary financing announcement found. No funding amount is asserted." },
+  { topic = "investors", status = "not_found", checked_at = "2026-10-05T04:24:38Z", next_review_on = "2027-04-05", queries = ["DataDudes investors funding", "DataDudes AI investors portfolio"], source_ids = ["finder", "linkedin"], summary = "No named equity investors identified. FastLane is an accelerator program, not evidence of investment." },
+  { topic = "team", status = "reported", checked_at = "2026-10-05T04:24:38Z", next_review_on = "2027-04-05", queries = ["DataDudes AI founders customers revenue PARCO autonomous process control", "DataDudes founders Erez Ben Moshe Nathaniel Shimoni"], source_ids = ["finder", "ivc", "linkedin"], summary = "Two co-founders verified by ecosystem/company profiles; headcount bands conflict and leadership coverage is incomplete." },
+  { topic = "ownership", status = "no_public_disclosure", checked_at = "2026-10-05T04:24:38Z", next_review_on = "2027-04-05", queries = ["DataDudes Ltd 516076106 Israeli Companies Registrar", "DataDudes acquired ownership parent company"], source_ids = ["checkid", "linkedin"], summary = "Private Israeli company; no parent, deal, cap table, or ownership percentages publicly verified." },
+  { topic = "financials", status = "not_found", checked_at = "2026-10-05T04:24:38Z", next_review_on = "2027-04-05", queries = ["DataDudes revenue ARR financials", "DataDudes 2025 revenue valuation"], source_ids = ["official", "finder"], summary = "No company-reported financial metrics found. Third-party modeled figures were not used." },
+  { topic = "traction", status = "reported", checked_at = "2026-10-05T04:24:38Z", next_review_on = "2027-01-05", queries = ["DataDudes AI founders customers revenue PARCO autonomous process control", "DataDudes ICL second plant autonomous process control", "DataDudes FastLane Batch 11 May 2026"], source_ids = ["official", "icl_post", "linkedin", "finder"], summary = "Company claims dozens of lines and describes autonomous ICL deployments; no independently verified customer economics or contract values." },
+  { topic = "intellectual_property", status = "not_found", checked_at = "2026-10-05T04:24:38Z", next_review_on = "2027-04-05", queries = ["DataDudes Israel patents DataDudes.ai", "DataDudes patent PARCO manufacturing AI"], source_ids = ["official"], summary = "No company-assigned patent or registered IP evidence located in public search; direct registry-level assignee search remains incomplete." },
+  { topic = "competition", status = "reported", checked_at = "2026-10-05T04:24:38Z", next_review_on = "2027-04-05", queries = ["DataDudes competitors industrial AI PARCO", "DataDudes AI Seebo Imubit competitors"], source_ids = ["ivc", "official"], summary = "IVC names Seebo and Imubit. Seeq is included as an adjacent analytics substitute; comparative performance is not established." },
+  { topic = "dual_use", status = "no_public_disclosure", checked_at = "2026-10-05T04:24:38Z", next_review_on = "2027-04-05", queries = ["DataDudes defense government contract military industrial AI", "DataDudes security certification OT"], source_ids = ["official", "icl_post"], summary = "Industrial resilience creates plausible transferability, but no public defense customer, government contract, or security qualification was found." },
+]
+claim_checks = [
+  { field_path = "company.operating_status", support = "direct", summary = "Company continues to publish an active product website and LinkedIn profile; a company-record mirror reports the Israeli legal entity as active.", verified_at = "2026-10-05T04:24:38Z", source_ids = ["official", "linkedin", "checkid"] },
+  { field_path = "israel_connection", support = "direct", summary = "Israeli company number, Beersheba address, and founders are reported in Israeli company ecosystem profiles, alongside the legal record mirror.", verified_at = "2026-10-05T04:24:38Z", source_ids = ["finder", "checkid", "official", "ivc"] },
+]

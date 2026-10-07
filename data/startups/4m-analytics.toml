@@ -1,0 +1,697 @@
+name = "4M Analytics"
+description = "4M Analytics is an Israeli-founded geospatial-AI company building a nationwide 'Google Maps of the subsurface' -- an automated software platform that fuses public utility records, satellite and aerial imagery, and computer vision to map buried pipes, cables, and infrastructure for civil engineers and departments of transportation, replacing slow, dangerous manual utility investigation."
+detailed_description = """
+**Product and the concrete problem it solves.** 4M Analytics attacks one of the most expensive and dangerous blind spots in physical construction: nobody has a reliable map of what is buried underground. Every road widening, pipeline, transmission line, rail project, or data-center site sits atop a tangle of unmapped water mains, gas lines, fiber, power cables, and legacy utilities whose records are scattered across hundreds of municipal archives, utility owners, and as-built drawings -- if they exist at all. When a crew hits an unmapped line, the result is service outages, injuries, fatalities, litigation, and multi-week schedule slips; industry estimates put the cost of subsurface uncertainty in the tens of millions of dollars per day across US infrastructure. The legacy answer -- physically sending survey and "potholing" crews to locate utilities one dig at a time (the classic Subsurface Utility Engineering / 811 "call before you dig" workflow) -- is slow, partial, hazardous, and only covers the small footprint someone thought to check. 4M's answer is a software-first **Utility AI Platform** (marketed around its "4Map" product) that assembles a continuous, queryable, geospatially accurate map of the subsurface for an entire corridor or region *before* a shovel touches the ground, letting engineers see conflicts, quantify risk, and de-risk design during planning rather than discovering surprises during construction.
+
+**Core technology and how it actually works.** The hard problem 4M solves is not a single sensor reading but data fusion at national scale. The platform ingests enormous volumes of heterogeneous, messy public and private evidence -- utility owner records, permits, as-built drawings, GIS layers, and high-resolution satellite and aerial imagery -- and reconciles them into a single coherent map. Computer-vision models detect above-ground utility "tells" (poles, manholes, valve covers, pedestals, meters, cabinets) from imagery; machine-learning and increasingly generative-AI pipelines then correlate those surface signatures with records and known network topology to infer the likely location, type, and confidence of buried assets. The output is not a raw document dump but a structured, risk-scored, CAD/GIS-ready deliverable that plugs into the engineer's existing design tools. In effect 4M is doing large-scale geospatial intelligence -- multi-source evidence fusion, feature extraction from imagery, and probabilistic reasoning about a hidden network -- which is precisely the discipline its technical founders practiced in uniform. The company frames coverage as nationwide across the US, a scale that manual field locating fundamentally cannot match, and its differentiator versus physical-scanning approaches is that software can map long linear corridors and whole regions remotely rather than one excavated pit at a time.
+
+**Market, customers, and go-to-market.** 4M sells into the US infrastructure, engineering, and construction (AEC) market: state departments of transportation (DOTs), large engineering and design firms, utilities, and heavy-civil contractors. Its go-to-market leans on named, credibility-establishing customers -- public reporting and the company's own materials cite work with departments of transportation including **Georgia DOT (GDOT)**, plus major engineering and construction firms such as Stantec, HNTB, Halff, Westwood, MasTec, DPR Construction, Woolpert, and WSB. The value proposition to a DOT or design lead is concrete: fewer utility strikes, fewer change orders, faster permitting, and safer, more predictable schedules on projects where a single conflict can cost weeks. Reported operating scale is meaningful for a company of its size: 4M has said it supported more than 1,600 projects in a single year, mapping on the order of 400,000 miles of utilities across roughly 1.3 million acres. The strategic logic of relocating its headquarters to Austin, Texas in 2022 while keeping R&D in Tel Aviv is straightforward -- the buyer, the budget, and the regulatory context (US federal and state infrastructure spending) are American, so the company put its commercial center of gravity next to its customers.
+
+**Traction, funding, and third-party validation.** 4M Analytics was founded in 2019 and is backed by a credible investor syndicate. Public reporting documents an $11 million early/Series A round, followed by a $30 million Series A extension in 2022 that brought the Series A to roughly $45 million and total disclosed funding to about $48 million. The extension was led by **Insight Partners** and **ITI Venture Capital Partners**, with participation from **Viola Ventures** and **F2 Venture Capital**. Notably, the cap table includes marquee Israeli mobility-mapping operators as angels -- **Noam Bardin**, former CEO of Waze (acquired by Google), and **Nir Erez**, founder and CEO of Moovit (acquired by Intel/Mobileye) -- a strong signal given that both built exactly the kind of large-scale, real-world mapping products 4M is attempting underground. The company reports roughly 100 employees. A calibrated reading: the traction (DOT customers, project volume) and investor quality are real and verifiable, but the most recent disclosed equity round is the 2022 Series A extension, so the current financing position, growth rate, and revenue are not publicly documented and are a central diligence question.
+
+**Founders and team background.** The founding team is the company's sharpest asset and the root of its dual-use character. CEO and co-founder **Itzik Malka** served for years as an officer in the IDF's combat engineering corps -- the discipline whose job is literally to understand, breach, and build in complex terrain. CTO and co-founder **Yoav Cohen** is a former head of **Unit 9900**, the Israeli military's elite geospatial-intelligence unit responsible for satellite/aerial imagery exploitation, mapping, and visual intelligence -- one of the most sophisticated geospatial organizations in the world. COO and co-founder **Nir Cohen** brings combat-engineering and entrepreneurial experience. That pairing -- combat engineering (what is under and around the ground, operationally) plus 9900-grade geospatial intelligence (how to turn imagery and disparate data into a map) -- is an unusually precise fit for the problem of remotely mapping the subsurface, and it is what lends credibility to the claim that this is a defensible technology company rather than a records-aggregation service.
+
+**Competitive dynamics.** 4M sits between two competitive fronts. (1) Against the entrenched manual status quo -- the traditional SUE / 811 field-locating and potholing workflow -- its edge is speed, corridor-scale coverage, and de-risking during design rather than during digging; the countervailing reality is that physical locating is the legally recognized, insurance-backed standard, and software inference must earn trust as a complement to, not yet a replacement for, boots-on-the-ground verification. (2) Against technology-first peers, the most direct comparison is fellow Israeli, IDF-alumni-founded **Exodigo**, which attacks the same "map the underground" mission but with a physical multi-sensor scanning platform (fusing ground-penetrating and other geophysical sensors with AI) and has raised dramatically more capital (well over $200 million). 4M's approach is asset-light and software-first -- mapping from existing records and imagery rather than deploying sensing hardware on site -- which is cheaper and more scalable across wide areas but is inference-based rather than direct measurement. The strategic question is whether the market rewards broad, fast, software-derived maps (4M) or high-fidelity, sensor-measured scans (Exodigo), or whether the two converge; 4M's capital disadvantage against a better-funded, adjacent competitor is a real risk.
+
+**Defense, security, and resilience dual-use relevance.** 4M's dual-use case is a credible adjacency rooted in founder DNA and the fungibility of subsurface geospatial intelligence -- not a fielded defense product, and it should be read with that calibration. The fielded platform today is unambiguously commercial: civil engineering, DOTs, and construction. But the underlying capability -- turning multi-source imagery and records into an accurate map of hidden below-ground infrastructure -- is directly relevant to military engineering and homeland resilience: route and terrain analysis for maneuver, force-protection and base/FOB construction, protection of buried critical infrastructure (pipelines, power, water, telecom) that adversaries target, disaster-response and reconstruction after strikes or natural events, and the broader counter-tunnel/subsurface-awareness problem set that Israel in particular treats as a strategic priority. The founders' Unit 9900 and combat-engineering heritage means the team already thinks in these terms, and its Israeli peer Exodigo is explicitly discussed for tunnel-detection and defense adjacency. The honest framing: subsurface geospatial intelligence is inherently dual-capable, and 4M holds latent defense/resilience relevance, but the company has publicly productized only the commercial mission.
+
+**Growth stage, trajectory, and key diligence risks.** 4M is a mid-stage company: founded 2019, roughly $48 million raised, about 100 employees, real DOT and enterprise customers, and demonstrated project volume -- clearly past seed/early, but not yet a mature, late-stage or public business. Its trajectory bet is that AI-driven, software-first subsurface mapping becomes a standard planning-phase layer for US infrastructure, riding sustained federal/state infrastructure spending. Key diligence risks: (1) **capital risk** -- no disclosed equity round since the 2022 Series A extension, so runway, revenue, and growth are undocumented and a well-funded competitor (Exodigo) is spending far more; (2) **accuracy/liability risk** -- inference from records and imagery carries confidence limits, and a miss on a live utility carries safety and legal exposure, so the product must be positioned carefully relative to legally-required physical locating; (3) **competitive/positioning risk** -- software-inference vs. sensor-measurement is an unresolved market question; (4) **concentration/procurement risk** -- DOT and large-firm sales are slow, reference-driven, and budget-cyclical; (5) **dual-use risk** -- the defense/resilience relevance is adjacency and founder-signal, not a demonstrated fielded capability, so any strategic-value case must not overstate it. The bull case is a capital-efficient, founder-strong geospatial-AI company owning a real infrastructure pain point with latent strategic relevance; the bear case is a records-and-imagery aggregator squeezed between the trusted manual standard and a better-capitalized sensing rival.
+"""
+logo = "Unknown"
+website = "https://www.4manalytics.com"
+sector = "Geospatial AI & Subsurface Infrastructure Mapping"
+founded = "2019"
+headquarters = "Austin, Texas, USA (headquarters, established Oct 2022) with R&D in Tel Aviv, Israel"
+employees = "105 in 2024; company reported 12% team growth in 2025 but no absolute 2025 headcount"
+funding_stage = "Series A extension (last primary-announced financing September 2022; no subsequent round verified)"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "4M's dual-use character is a credible adjacency grounded in founder pedigree and the inherent fungibility of subsurface geospatial intelligence -- deliberately not overstated as a fielded defense capability. (1) Founder DNA: CTO Yoav Cohen is a former head of Unit 9900, the IDF's elite geospatial-intelligence unit, and CEO Itzik Malka is an IDF combat-engineering officer -- the exact disciplines (imagery exploitation, mapping, and understanding/building in complex terrain) that the commercial product operationalizes. (2) Capability fungibility: turning multi-source imagery and records into an accurate map of hidden below-ground infrastructure is directly relevant to military engineering (route/terrain analysis, maneuver, force-protection and base construction), protection of buried critical infrastructure (pipelines, power, water, telecom) that adversaries target, and post-strike or disaster reconstruction. (3) Adjacent-mission proof point: fellow Israeli, IDF-alumni-founded peer Exodigo is explicitly discussed for tunnel-detection and defense relevance in the same 'map the underground' problem space. (4) Honest calibration: the fielded 4M platform is commercial (civil engineering, DOTs, construction); the defense/resilience relevance is latent and adjacency-based rather than a demonstrated, contracted military deployment, which is why the dual-use score is moderate rather than high."
+key_technologies = [
+  "Large-scale geospatial data fusion of public/private utility records, permits, as-builts, and GIS layers into a single coherent subsurface map",
+  "Computer-vision detection of above-ground utility signatures (manholes, poles, valves, cabinets) from satellite and aerial imagery",
+  "Machine-learning and generative-AI inference correlating surface features with records to predict buried-asset location, type, and confidence",
+  "Automated, confidence/risk-scored deliverables integrated into CAD/GIS design environments",
+  "Nationwide (US) corridor- and region-scale remote subsurface mapping rather than pit-by-pit physical locating",
+  "Utility-conflict and risk analytics for pre-construction planning and design de-risking"
+]
+use_cases = [
+  "Pre-construction subsurface utility mapping for state department-of-transportation (DOT) road and rail projects",
+  "Utility-conflict identification and risk assessment during infrastructure design to avoid strikes and change orders",
+  "Corridor mapping for pipelines, power transmission, fiber/telecom, and renewable-energy site development",
+  "Permitting and planning acceleration for engineering and heavy-civil construction firms",
+  "Critical-infrastructure inventory and resilience planning for buried water, gas, power, and telecom networks",
+  "Data-center and large-site development due diligence on buried infrastructure",
+  "Military-engineering / force-protection terrain and subsurface awareness (adjacency, founder-heritage capability)",
+  "Disaster-response and post-event reconstruction mapping of damaged underground infrastructure"
+]
+investible = true
+investment_rationale = "4M is a founder-strong, capital-efficient geospatial-AI company owning a real and expensive infrastructure pain point, with latent strategic relevance -- a priority-signal case built on team and technology, tempered by capital and dual-use-calibration questions. (1) Exceptional founder-problem fit: a former head of IDF geospatial-intelligence Unit 9900 (CTO Yoav Cohen) plus an IDF combat-engineering officer (CEO Itzik Malka) map almost perfectly onto the task of remotely mapping the subsurface. (2) Real traction: named DOT and engineering-firm customers (e.g., Georgia DOT, Stantec, HNTB, Halff) and reported scale of 1,600+ projects and ~400,000 miles mapped in a year. (3) Credible backing: Insight Partners and ITI led a ~$45M Series A (with Viola and F2), and Waze's Noam Bardin and Moovit's Nir Erez -- both large-scale real-world mapping operators -- invested as angels. (4) Thesis fit: geospatial intelligence, critical-infrastructure resilience, and a genuine (if adjacency) dual-use profile align with Claw & Talon's mandate. Counterweights: no disclosed equity round since the 2022 Series A extension (undocumented runway/revenue); a much better-funded Israeli peer (Exodigo, $200M+) pursuing the same mission via physical sensing; accuracy/liability limits of inference versus legally-required physical locating; and dual-use that is latent rather than fielded. This is a strategic-fit and technical-credibility assessment, not an investment recommendation."
+strategic_value = "4M's strategic value sits at the intersection of geospatial intelligence, critical-infrastructure resilience, and capital-efficient AI, with a calibrated (not overstated) defense adjacency. (1) Sovereign-relevant capability: a software-first engine that fuses imagery and records into an accurate subsurface map is a horizontal geospatial-intelligence primitive, not a single-use tool, and its Unit 9900 / combat-engineering lineage ties it to a genuinely strategic discipline. (2) Critical-infrastructure protection: buried pipelines, power, water, and telecom are prime targets in modern conflict and prime failure points in disasters; knowing precisely where they are underpins both protection and rapid reconstruction. (3) Resilience and reconstruction: the same map accelerates disaster response and rebuild -- directly relevant to homeland resilience. (4) US infrastructure alignment: headquartered in Austin and selling to DOTs, 4M is positioned against sustained US federal/state infrastructure spending. (5) Calibration: the fielded product is commercial civil-engineering software; the defense/resilience weight is latent and would require an actual government/defense engagement to be more than adjacency -- the honest boundary of the strategic case."
+potential_score = 70.0
+technology_score = 72.0
+market_score = 70.0
+team_score = 81.0
+dual_use_score = 60.0
+strategic_alignment_score = 66.0
+stage = "mid"
+stage_rationale = "4M is classified 'mid' on a calibrated basis. Arguments for maturity: founded in 2019, roughly $48M raised across multiple rounds, about 100 employees, and demonstrated commercial traction with named DOT and engineering-firm customers plus reported project volume (1,600+ projects, ~400,000 miles mapped in a year) -- clearly past seed/early prototype stage. Arguments against a higher classification: the most recent disclosed equity round is the 2022 Series A extension, so current revenue, growth rate, and financing position are undocumented, and the company has not evidenced late-stage scale, profitability, or a growth/Series B round. 'Mid' therefore reflects a company with real product, customers, and team that is still proving durable scale; progression to 'mature' would require a disclosed growth round or revenue milestones, expansion beyond DOT/AEC beachheads, and evidence of defensible share against both the manual SUE standard and better-funded sensing rivals."
+competitors = [
+  "Exodigo (fellow Israeli, IDF-alumni-founded 'map the underground' peer; physical multi-sensor geophysical scanning + AI, far larger funding -- the most direct technology competitor)",
+  "Traditional Subsurface Utility Engineering (SUE) / 811 field-locating and potholing workflow (the legally-recognized, insurance-backed manual status quo 4M seeks to complement/displace)",
+  "GPRS, Inc. (large US ground-penetrating-radar and utility-locating service provider; boots-on-the-ground detection)",
+  "Esri / GIS platform incumbents (own the geospatial data layer utilities already use; could extend into subsurface)",
+  "Bentley Systems / Autodesk (infrastructure design software that could integrate or acquire subsurface-data capabilities)",
+  "In-house DOT and engineering-firm GIS/records teams (internal manual aggregation of utility records as the default alternative)"
+]
+competitive_edge = "4M's edge rests on founder-grade geospatial intelligence and an asset-light, software-first model. (1) Founder-problem fit: a former head of IDF Unit 9900 (geospatial intelligence) and an IDF combat-engineering officer are an unusually precise team for remotely mapping the subsurface. (2) Scale and speed: mapping from existing records and imagery lets 4M cover long corridors and whole regions remotely -- something pit-by-pit physical locating cannot match on cost or timeline. (3) Workflow integration: risk-scored, CAD/GIS-ready deliverables slot into engineers' design tools, targeting the planning phase where conflicts are cheapest to fix. (4) Capital efficiency: a software approach is cheaper to scale geographically than a hardware-sensing fleet. Principal vulnerabilities: inference carries confidence/liability limits versus legally-required physical verification; a better-capitalized Israeli peer (Exodigo) pursues the same mission with direct sensor measurement; and incumbent GIS/design platforms and locating-service providers hold trust, data, and distribution advantages."
+risk_factors = [
+  "Capital risk: no disclosed equity round since the 2022 Series A extension, so runway, revenue, and growth are undocumented and a rival (Exodigo) has raised far more",
+  "Accuracy/liability risk: records-and-imagery inference has confidence limits, and missing a live buried utility carries safety and legal exposure versus legally-required physical locating",
+  "Competitive/positioning risk: software-inference vs. sensor-measurement is an unresolved market question, and a better-funded peer attacks the same mission",
+  "Incumbency risk: GIS platforms (Esri), design-software leaders (Bentley/Autodesk), and locating-service providers (GPRS) hold data, trust, and distribution advantages",
+  "Procurement/concentration risk: DOT and large-firm sales cycles are slow, reference-driven, and budget-cyclical",
+  "Dual-use overreach risk: the defense/resilience relevance is founder-heritage adjacency, not a fielded/contracted capability, and must not be overstated",
+  "Disclosure risk: current headcount, revenue, and customer economics are only partially public"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "4M merits monitoring as a founder-strong, capital-efficient geospatial-AI company on a real infrastructure pain point with credible (adjacency) dual-use, tempered by capital and competitive uncertainty. Strengths supporting attention: (1) an exceptional founder-problem fit -- a former head of IDF geospatial-intelligence Unit 9900 (CTO) and an IDF combat-engineering officer (CEO); (2) verifiable commercial traction with named DOT and engineering customers and reported project scale (1,600+ projects, ~400,000 miles in a year); (3) quality backing (Insight Partners, ITI, Viola, F2) plus marquee mapping-operator angels (Waze's Noam Bardin, Moovit's Nir Erez); (4) alignment with the geospatial-intelligence, critical-infrastructure-resilience, and dual-use thesis. Offsetting factors that cap priority: no disclosed round since the 2022 Series A extension (undocumented financials), a far-better-funded direct competitor (Exodigo), inference-vs.-liability limits against the manual locating standard, and dual-use that is latent rather than fielded. Milestones to track: a disclosed growth round or revenue metrics, expansion beyond DOT/AEC beachheads, any government/defense or resilience engagement that would convert adjacency into a fielded capability, and continued customer wins against sensing-based rivals."
+public_sources = [{ label = "About Us and Team | 4M", url = "https://www.4manalytics.com/about-us", description = "Source cited in the structured research dossier." }, { label = "Product | 4M", url = "https://www.4manalytics.com/product", description = "Source cited in the structured research dossier." }, { label = "2025 Year in Review: Building Better Together", url = "https://www.4manalytics.com/blog/2025-year-in-review-building-better-together-2", description = "Source cited in the structured research dossier." }, { label = "2024: 4M Analytics Year in Review", url = "https://www.4manalytics.com/blog/2024-year-in-review", description = "Source cited in the structured research dossier." }, { label = "4M Analytics raises $11M Series A", url = "https://www.viola-group.com/wp-content/uploads/2021/08/4M-A-round-PR1.pdf", description = "Source cited in the structured research dossier." }, { label = "“Underground Google Maps” co 4M Analytics raises $11m", url = "https://en.globes.co.il/en/article-underground-google-maps-co-4m-analytics-raises-11m-1001381132", description = "Source cited in the structured research dossier." }, { label = "4M Analytics — Industrial Technologies | Finder", url = "https://finder.startupnationcentral.org/company_page/4m-analytics", description = "Source cited in the structured research dossier." }, { label = "4M Analytics Secures $30 Million in Series A Extension", url = "https://www.4manalytics.com/blog/4m-analytics-secures-30-million-in-series-a-extension-to-become-the-google-maps-of-the-subsurface", description = "Source cited in the structured research dossier." }, { label = "4M Analytics Secures $30 Million in Series A Extension", url = "https://www.prnewswire.com/news-releases/4m-analytics-secures-30-million-in-series-a-extension-to-become-the-google-maps-of-the-subsurface-301628430.html", description = "Source cited in the structured research dossier." }, { label = "4M Analytics | Investment | Insight Partners", url = "https://www.insightpartners.com/portfolio/4m-analytics/", description = "Source cited in the structured research dossier." }, { label = "4M Analytics and WSB Engineering Announce Reseller Partnership", url = "https://www.4manalytics.com/blog/4m-analytics-and-wsb-engineering-announce-reseller-partnership-to-increase-access-to-utility-ai-data", description = "Source cited in the structured research dossier." }, { label = "4M Analytics Supports Project Development and Utility Coordination by ALDOT", url = "https://rss.globenewswire.com/news-release/2026/05/27/3302127/0/en/4m-analytics-supports-project-development-and-utility-coordination-by-the-alabama-department-of-transportation.html", description = "Source cited in the structured research dossier." }, { label = "GDOT Scales 4M Utility AI Mapping Statewide", url = "https://www.4manalytics.com/blog/gdot-scales-4m-utility-ai-mapping-statewide", description = "Source cited in the structured research dossier." }, { label = "Here’s What’s New in 4M: April 2026", url = "https://www.4manalytics.com/blog/heres-whats-new-in-4m-april-2026", description = "Source cited in the structured research dossier." }, { label = "IL275945B - System and method of subsurface mapping", url = "https://patents.google.com/patent/IL275945B/en", description = "Source cited in the structured research dossier." }, { label = "Caltrans Cuts Records Research Time by 95% with 4M", url = "https://www.4manalytics.com/blog/caltrans-customer-story", description = "Source cited in the structured research dossier." }, { label = "Exodigo — Derisking the Underground", url = "https://www.exodigo.com/", description = "Source cited in the structured research dossier." }]
+crawled_at = "2026-07-13T22:48:23Z"
+updated_at = "2026-10-03T07:34:50Z"
+
+[intelligence]
+financials = []
+schema_version = 2
+
+[[intelligence.people]]
+name = "Itzik Malka"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Co-founded the company; previously served in IDF engineering unit Yahalom, according to contemporaneous Globes reporting."
+source_ids = ["globes21", "team26"]
+
+[[intelligence.people]]
+name = "Yoav Cohen"
+role = "Co-founder and geospatial data expert"
+is_founder = true
+current = true
+background = "Co-founder; company currently lists him as Geo Data Expert. The 2021 investor release described him as a colonel in the IDF 9900 Visual Intelligence unit."
+source_ids = ["team26", "viola21"]
+
+[[intelligence.people]]
+name = "Nir Cohen"
+role = "Co-founder; former COO / Chief Delivery Officer"
+is_founder = true
+current = false
+background = "Named as a co-founder by 2021 Globes reporting and the current patent record lists him as an inventor. Not listed on the current leadership page."
+source_ids = ["globes21", "patent"]
+
+[[intelligence.people]]
+name = "David Kirkland"
+role = "Chief Revenue Officer"
+is_founder = false
+current = true
+background = "Joined leadership during 2024, according to company year-in-review."
+source_ids = ["review24", "team26"]
+
+[[intelligence.people]]
+name = "Omry Hochberg"
+role = "COO and General Manager, Israel"
+is_founder = false
+current = true
+background = "Current company leadership page; company 2025 review identifies addition as VP Operations."
+source_ids = ["review25", "team26"]
+
+[[intelligence.people]]
+name = "Aran Pauker"
+role = "VP R&D"
+is_founder = false
+current = true
+background = "Added to leadership in 2025 according to company year-in-review."
+source_ids = ["review25", "team26"]
+
+[[intelligence.people]]
+name = "Tomer Levy"
+role = "CFO"
+is_founder = false
+current = true
+background = "Listed as CFO on current company leadership page."
+source_ids = ["team26"]
+
+[[intelligence.investors]]
+name = "F2 Venture Capital"
+investor_type = "vc"
+website = "https://www.f2vc.com"
+round_ids = ["seed-2020", "series-a-2021", "series-a-extension-2022"]
+relationship = "historical"
+source_ids = ["viola21", "extension22"]
+
+[[intelligence.investors]]
+name = "Viola Ventures"
+investor_type = "vc"
+website = "https://www.viola-group.com"
+round_ids = ["series-a-2021", "series-a-extension-2022"]
+relationship = "historical"
+source_ids = ["viola21", "extension22"]
+
+[[intelligence.investors]]
+name = "Insight Partners"
+investor_type = "vc"
+website = "https://www.insightpartners.com"
+round_ids = ["series-a-extension-2022"]
+relationship = "current"
+source_ids = ["extension22", "insight"]
+
+[[intelligence.investors]]
+name = "ITI Venture Capital Partners"
+investor_type = "vc"
+round_ids = ["series-a-extension-2022"]
+relationship = "historical"
+source_ids = ["extension22"]
+
+[[intelligence.investors]]
+name = "Rami Beracha"
+investor_type = "angel"
+round_ids = ["seed-2020", "series-a-2021"]
+relationship = "historical"
+source_ids = ["viola21", "globes21"]
+
+[[intelligence.investors]]
+name = "Eyal Gabbai"
+investor_type = "angel"
+round_ids = ["series-a-2021"]
+relationship = "historical"
+source_ids = ["viola21", "globes21"]
+
+[[intelligence.investors]]
+name = "Noam Bardin"
+investor_type = "angel"
+round_ids = ["series-a-extension-2022"]
+relationship = "historical"
+source_ids = ["extension22"]
+
+[[intelligence.investors]]
+name = "Nir Erez"
+investor_type = "angel"
+round_ids = ["series-a-extension-2022"]
+relationship = "historical"
+source_ids = ["extension22"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Company reports Georgia DOT moved from pilot to statewide deployment after a pilot; 150+ users and planned training across districts. Company-reported pilot results included 100% utility capture and line depictions within three feet of SUE deliverables in the State Route 166 test corridor; these are company/customer-story claims, not independently audited measurements."
+date = "2025-10-30"
+source_ids = ["gdot"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "WSB became a reseller of 4M platform, after prior project collaboration, giving an engineering provider a direct commercial distribution role."
+date = "2025-10-29"
+source_ids = ["wsb"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "4M announced Alabama DOT use during pilots and expected continued application to around 200 transportation projects statewide during 2026. Announcement is company-issued; not evidence of contract value or paid deployment at scale."
+date = "2026-05-27"
+source_ids = ["aldot"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Site Connect integration with Trimble Connect, TerraFlex, and SiteVision became available in limited early access in April 2026. Product update describes workflow, not general availability or adoption numbers."
+date = "2026-04-29"
+source_ids = ["april26"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "Company 2025 year-in-review names 8 of the top 20 ENR design firms, 15+ ENR regional recognized firms, and 5 state DOTs among its customers; company-reported customer mix."
+date = "2026-01-02"
+source_ids = ["review25"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "For 2024, company reported over 1,000 civil engineers served, 93% satisfaction, 1,600 projects over 1.3 million acres, eight states with mapped coverage, and 105 employees (25 US, 80 Israel). These are company-reported annual figures."
+date = "2025-01-02"
+source_ids = ["review24"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Company customer story says Caltrans teams reported reduced records research time on a Middle-Mile Broadband project; 4M estimates 500 miles of research would take 6,667 labor hours using its service versus 40,000 traditional hours. Treat as case-study estimate, not independently validated savings."
+date = "2024-04-09"
+source_ids = ["caltrans"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "Patent family anchored by IL275945B, “System and method of subsurface mapping,” lists 4M Analytics Ltd and founders/inventors Itzik Malka, Nir Cohen, and Yoav Cohen. Google Patents lists related PCT, Canadian, European and US applications; status varies by jurisdiction (some ceased/withdrawn, Canadian applications pending)."
+date = "2022-02-01"
+source_ids = ["patent"]
+
+[[intelligence.comparables]]
+name = "Exodigo"
+website = "https://www.exodigo.com"
+rationale = "Direct subsurface mapping competitor combining public-record intelligence, AI and on-site multi-sensor reality capture."
+differentiation = "4M emphasizes remote records, imagery and software data workflows, while Exodigo also sells sensor-based field capture and geophysics; there is overlap in records-plus-AI mapping."
+source_ids = ["exodigo", "product"]
+
+[[intelligence.comparables]]
+name = "Traditional Subsurface Utility Engineering (SUE) providers"
+rationale = "Established field investigation and records interpretation alternative commonly used for design-grade confirmation."
+differentiation = "4M can accelerate early planning with remote record synthesis; physical locating remains important for validation and higher-certainty engineering decisions."
+source_ids = ["caltrans", "product"]
+
+[[intelligence.comparables]]
+name = "Esri"
+website = "https://www.esri.com"
+rationale = "GIS incumbent and common utility asset-management platform category."
+differentiation = "4M provides assembled utility evidence and project-specific subsurface intelligence; GIS systems typically host/manage customer layers. No direct competitive win/loss evidence found."
+source_ids = ["product"]
+
+[[intelligence.comparables]]
+name = "Bentley Systems"
+website = "https://www.bentley.com"
+rationale = "Infrastructure design software incumbent and integration ecosystem."
+differentiation = "4M supplies utility data for planning and design workflows; the company reports integration work into Bentley OpenRoads via GDOT, illustrating complementarity as well as potential platform competition."
+source_ids = ["gdot", "product"]
+
+[intelligence.ownership]
+shareholders = []
+deals = []
+holdings = []
+status = "undisclosed"
+summary = "Privately held startup; no disclosed parent, acquisition, IPO, or public cap table found. Private ownership percentages and full capitalization are not publicly disclosed."
+cap_table_status = "undisclosed"
+source_ids = ["insight", "team26"]
+
+[intelligence.company]
+company_id = "il-4m-analytics"
+legal_name = "4M Analytics Ltd"
+operating_status = "active"
+business_model = "B2B software and utility-data services sold to engineering firms, contractors, utilities, and public agencies for project planning, design, and pre-construction; product materials describe Foundation and Validated data levels and a Utility AI platform. Pricing mechanics were not publicly verified."
+aliases = ["4M", "4M Analytics"]
+products = ["Utility AI Platform / 4Map", "Foundation Data", "Validated Data", "Utility Insights Dashboard", "Site Connect (Trimble early access)"]
+locations = ["Austin, Texas, United States", "Tel Aviv, Israel"]
+source_ids = ["team26", "product", "aldot", "insight"]
+
+[intelligence.funding]
+status = "conflicting"
+summary = "Three public financing events are identifiable: a seed reported as $3m by the 2021 lead investor but $7m in Startup Nation Finder; an $11m Series A in 2021; and an additional $30m Series A extension in 2022, which company announcement says brought the Series A cumulative amount to $45m. The company has not publicly confirmed a lifetime total in the sources reviewed. Do not add repeated cumulative round totals. No newer primary-announced equity financing was found through 2026-10-03."
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[[intelligence.funding.rounds]]
+id = "seed-2020"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2020"
+amount_status = "conflicting"
+amount_observations = [{ id = "lead-investor-release", amount = 3000000, currency = "USD", source_ids = ["viola21"], notes = "Viola Ventures says the prior seed round was $3 million; USD precision as stated." }, { id = "startup-nation-finder-record", amount = 7000000, currency = "USD", source_ids = ["snc"], as_of = "2020-11", notes = "Startup Nation Finder lists a November 2020 Seed of $7 million. This conflicts with the lead investor announcement and the round scope may differ." }]
+amount_scope = "unknown"
+lead_investors = ["F2 Venture Capital"]
+participating_investors = ["Rami Beracha", "Eyal Gabbai"]
+source_ids = ["viola21", "snc"]
+
+[[intelligence.funding.rounds]]
+id = "series-a-2021"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2021-07-20"
+amount_status = "reported"
+amount = 11000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Viola Ventures"]
+participating_investors = ["F2 Venture Capital", "Rami Beracha", "Eyal Gabbai"]
+source_ids = ["viola21", "globes21"]
+
+[[intelligence.funding.rounds]]
+id = "series-a-extension-2022"
+round_type = "Series A extension"
+instrument = "equity"
+status = "closed"
+announced_on = "2022-09-19"
+amount_status = "reported"
+amount = 30000000
+amount_scope = "incremental_extension"
+currency = "USD"
+lead_investors = ["Insight Partners", "ITI Venture Capital Partners"]
+participating_investors = ["Viola Ventures", "F2 Venture Capital", "Noam Bardin", "Nir Erez"]
+is_extension_of = "series-a-2021"
+source_ids = ["extension22", "pr22"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+summary = "Israeli-founded and Israeli-operated company. Contemporaneous reporting identifies Israeli founders and Tel Aviv R&D/operations; current company materials list a Tel Aviv office and Israel general manager, while Austin is the US headquarters. Legal incorporation jurisdiction was not confirmed."
+as_of = "2026-10-03"
+basis = ["israeli_founders", "israeli_rd"]
+source_ids = ["globes21", "team26", "review25"]
+
+[intelligence.research]
+researched_at = "2026-10-03T07:34:50Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["4M Analytics official company identity legal name offices 2026", "4M Analytics funding raised seed Series A extension investors valuation acquisition", "4M Analytics investors portfolio Insight Viola ITI F2", "4M Analytics founder CEO CTO leadership team current 2026", "4M Analytics ownership parent company acquired cap table", "4M Analytics revenue ARR profitability financials", "4M Analytics customers DOT traction projects 2025 2026", "4M Analytics patents subsurface mapping USPTO WIPO", "4M Analytics competitors Exodigo SUE utility mapping", "4M Analytics defense security minefield dual use subsurface mapping"]
+gaps = ["financials: no public revenue, ARR, profitability, burn, runway, or audited accounts found; company-reported customer ROI is not a substitute for financial statements.", "ownership: private cap table and ownership percentages are undisclosed; no controlling owner or parent identified.", "intellectual_property: patent family evidence is available, but a full current-status and freedom-to-operate review across jurisdictions was not conducted.", "competition: public evidence does not establish market share, customer win/loss rates, relative accuracy at scale, or a complete competitor set.", "dual_use: no public defense, intelligence, or security customer contract or deployed government defense use was found; assess this as latent applicability only.", "funding: seed amount varies between $3m and $7m public sources, and no primary source found for a company-announced lifetime total; newer private financings cannot be ruled out."]
+conflicts = ["Seed financing is described as $3m in the July 2021 lead investor announcement and listed as $7m in Startup Nation Finder (November 2020); amounts may reflect differing scope or database records.", "2022 company announcement says $30m additional funding brought the Series A to $45m; this cumulative round wording should not be treated as lifetime funding or added to the $30m again."]
+diligence_questions = ["What are current ARR, gross margin, net retention, renewal rates, customer concentration, and paid deployment volumes by customer type?", "What validation protocol, confidence calibration, and liability allocation apply when inferred utility locations are used in design, and how do results compare against independent SUE surveys across representative soil and utility conditions?", "What is the fully diluted ownership and option pool, and has the company raised any undisclosed financing after September 2022?", "Are the Trimble integration and reseller partnerships generating paid deployments, recurring usage, and measurable expansion, or are they still limited pilots/channel tests?", "Which patent family claims remain active in relevant jurisdictions, and what rights or licenses support the underlying records, imagery, and derived map data?", "Has the company had any defense or critical-infrastructure security deployment, procurement review, or export-control assessment?"]
+
+[[intelligence.research.sources]]
+id = "team26"
+url = "https://www.4manalytics.com/about-us"
+title = "About Us and Team | 4M"
+publisher = "4M Analytics"
+kind = "company"
+accessed_at = "2026-10-03T07:34:50Z"
+claims = ["Current leadership names and roles", "Austin and Tel Aviv operating presence", "Company-reported scale: 1.3 million acres, 400K+ utility miles, 1,000+ engineers, and 100+ civil engineering teams"]
+
+[[intelligence.research.sources]]
+id = "product"
+url = "https://www.4manalytics.com/product"
+title = "Product | 4M"
+publisher = "4M Analytics"
+kind = "company"
+accessed_at = "2026-10-03T07:34:50Z"
+claims = ["Utility AI platform supports planning, design and pre-construction", "Product positioning and GIS/CAD export formats"]
+
+[[intelligence.research.sources]]
+id = "review25"
+url = "https://www.4manalytics.com/blog/2025-year-in-review-building-better-together-2"
+title = "2025 Year in Review: Building Better Together"
+publisher = "4M Analytics"
+kind = "company"
+accessed_at = "2026-10-03T07:34:50Z"
+published_on = "2026-01-02"
+claims = ["2025 customer mix includes 8 of top 20 ENR design firms, 15+ regional firms, and five state DOTs", "Team grew 12% in 2025; leadership additions and Israel office expansion", "WSB reseller partnership and Trimble integration progress"]
+
+[[intelligence.research.sources]]
+id = "review24"
+url = "https://www.4manalytics.com/blog/2024-year-in-review"
+title = "2024: 4M Analytics Year in Review"
+publisher = "4M Analytics"
+kind = "company"
+accessed_at = "2026-10-03T07:34:50Z"
+published_on = "2025-01-02"
+claims = ["Company reports 1,600 projects over 1.3 million acres and eight states in 2024", "Company reports 105 employees, 25 US and 80 Israel", "Company reports over 1,000 civil engineers and 93% customer satisfaction"]
+
+[[intelligence.research.sources]]
+id = "viola21"
+url = "https://www.viola-group.com/wp-content/uploads/2021/08/4M-A-round-PR1.pdf"
+title = "4M Analytics raises $11M Series A"
+publisher = "Viola Ventures"
+kind = "investor"
+accessed_at = "2026-10-03T07:34:50Z"
+published_on = "2021-07-20"
+claims = ["2021 Series A amount is $11 million and led by Viola Ventures", "Named participants F2 Venture Capital, Rami Beracha, Eyal and Tamar Gabbai", "Release describes prior seed financing as $3 million"]
+
+[[intelligence.research.sources]]
+id = "globes21"
+url = "https://en.globes.co.il/en/article-underground-google-maps-co-4m-analytics-raises-11m-1001381132"
+title = "“Underground Google Maps” co 4M Analytics raises $11m"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-03T07:34:50Z"
+published_on = "2021-08-09"
+claims = ["Independent report of $11 million financing led by Viola and $18 million raised by that date", "2021 company had 50 employees", "Company founded in 2019 by Itzik Malka, Nir Cohen and Yoav Cohen and pivoted from mine detection to utility mapping"]
+
+[[intelligence.research.sources]]
+id = "snc"
+url = "https://finder.startupnationcentral.org/company_page/4m-analytics"
+title = "4M Analytics — Industrial Technologies | Finder"
+publisher = "Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-03T07:34:50Z"
+claims = ["Directory lists a November 2020 $7 million seed financing and investors F2, Rami Beracha, and Eyal Gabbai", "Company is Israeli-founded and operates in industrial/geospatial technologies"]
+
+[[intelligence.research.sources]]
+id = "extension22"
+url = "https://www.4manalytics.com/blog/4m-analytics-secures-30-million-in-series-a-extension-to-become-the-google-maps-of-the-subsurface"
+title = "4M Analytics Secures $30 Million in Series A Extension"
+publisher = "4M Analytics"
+kind = "company"
+accessed_at = "2026-10-03T07:34:50Z"
+published_on = "2022-09-19"
+claims = ["Company announced additional $30 million and says Series A total became $45 million", "Leads were Insight Partners and ITI Venture Capital Partners; Viola and F2 participated", "Noam Bardin and Nir Erez also participated"]
+
+[[intelligence.research.sources]]
+id = "pr22"
+url = "https://www.prnewswire.com/news-releases/4m-analytics-secures-30-million-in-series-a-extension-to-become-the-google-maps-of-the-subsurface-301628430.html"
+title = "4M Analytics Secures $30 Million in Series A Extension"
+publisher = "PR Newswire / 4M Analytics"
+kind = "company"
+accessed_at = "2026-10-03T07:34:50Z"
+published_on = "2022-09-20"
+claims = ["Company-issued duplicate announcement confirms $30 million extension, cumulative Series A $45 million, and named participants"]
+
+[[intelligence.research.sources]]
+id = "insight"
+url = "https://www.insightpartners.com/portfolio/4m-analytics/"
+title = "4M Analytics | Investment | Insight Partners"
+publisher = "Insight Partners"
+kind = "investor"
+accessed_at = "2026-10-03T07:34:50Z"
+claims = ["Insight Partners lists 4M as a current portfolio investment with initial investment in September 2022"]
+
+[[intelligence.research.sources]]
+id = "wsb"
+url = "https://www.4manalytics.com/blog/4m-analytics-and-wsb-engineering-announce-reseller-partnership-to-increase-access-to-utility-ai-data"
+title = "4M Analytics and WSB Engineering Announce Reseller Partnership"
+publisher = "4M Analytics"
+kind = "company"
+accessed_at = "2026-10-03T07:34:50Z"
+published_on = "2025-10-29"
+claims = ["WSB became a reseller and distributor of 4M platform to infrastructure stakeholders"]
+
+[[intelligence.research.sources]]
+id = "aldot"
+url = "https://rss.globenewswire.com/news-release/2026/05/27/3302127/0/en/4m-analytics-supports-project-development-and-utility-coordination-by-the-alabama-department-of-transportation.html"
+title = "4M Analytics Supports Project Development and Utility Coordination by ALDOT"
+publisher = "GlobeNewswire (release by 4M Analytics)"
+kind = "company"
+accessed_at = "2026-10-03T07:34:50Z"
+published_on = "2026-05-27"
+claims = ["Company says ALDOT used 4M services during pilots and expected use on around 200 projects statewide in 2026"]
+
+[[intelligence.research.sources]]
+id = "gdot"
+url = "https://www.4manalytics.com/blog/gdot-scales-4m-utility-ai-mapping-statewide"
+title = "GDOT Scales 4M Utility AI Mapping Statewide"
+publisher = "4M Analytics"
+kind = "company"
+accessed_at = "2026-10-03T07:34:50Z"
+published_on = "2025-10-30"
+claims = ["Company story says successful pilot led GDOT to statewide rollout and 150+ users", "Company-reported pilot results include 100% capture and three-foot accuracy in State Route 166 corridor"]
+
+[[intelligence.research.sources]]
+id = "april26"
+url = "https://www.4manalytics.com/blog/heres-whats-new-in-4m-april-2026"
+title = "Here’s What’s New in 4M: April 2026"
+publisher = "4M Analytics"
+kind = "company"
+accessed_at = "2026-10-03T07:34:50Z"
+published_on = "2026-04-29"
+claims = ["Site Connect integration with Trimble Connect, TerraFlex, and SiteVision is in limited early access", "Company describes data ordering controls and pole attachment intelligence"]
+
+[[intelligence.research.sources]]
+id = "patent"
+url = "https://patents.google.com/patent/IL275945B/en"
+title = "IL275945B - System and method of subsurface mapping"
+publisher = "Google Patents"
+kind = "other"
+accessed_at = "2026-10-03T07:34:50Z"
+claims = ["Patent lists 4M Analytics Ltd and Itzik Malka, Nir Cohen, Yoav Cohen as assignees/inventors", "Patent family describes subsurface mapping and related international applications", "Patent record lists some family applications ceased, withdrawn, or pending"]
+
+[[intelligence.research.sources]]
+id = "caltrans"
+url = "https://www.4manalytics.com/blog/caltrans-customer-story"
+title = "Caltrans Cuts Records Research Time by 95% with 4M"
+publisher = "4M Analytics"
+kind = "company"
+accessed_at = "2026-10-03T07:34:50Z"
+published_on = "2024-04-09"
+claims = ["Customer story describes use on Caltrans Middle-Mile Broadband project", "4M estimates 500-mile research would take 6,667 labor hours with its service versus 40,000 traditionally"]
+
+[[intelligence.research.sources]]
+id = "exodigo"
+url = "https://www.exodigo.com/"
+title = "Exodigo — Derisking the Underground"
+publisher = "Exodigo"
+kind = "company"
+accessed_at = "2026-10-03T07:34:50Z"
+claims = ["Exodigo describes records-based remote intelligence, on-site reality capture, sensors, AI engineering, and utility relocation services"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T07:34:50Z"
+next_review_on = "2027-04-03"
+queries = ["4M Analytics official company identity legal name offices 2026"]
+source_ids = ["team26", "globes21"]
+summary = "Official company leadership/contact material and contemporaneous reporting support 2019 founding, current active operations, Austin and Tel Aviv footprint, and Israeli founders."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-03T07:34:50Z"
+next_review_on = "2027-04-03"
+queries = ["4M Analytics funding raised seed Series A extension investors valuation acquisition", "4M Analytics $7 million seed $3 million seed 2020"]
+source_ids = ["viola21", "globes21", "extension22", "snc"]
+summary = "Seed value conflicts between investor release and directory; later rounds and amounts supported by dated announcements. No post-2022 primary round found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T07:34:50Z"
+next_review_on = "2027-04-03"
+queries = ["4M Analytics investors portfolio Insight Viola ITI F2"]
+source_ids = ["viola21", "extension22", "insight"]
+summary = "Named institutional and angel investors appear in round announcements; no complete cap table is public."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T07:34:50Z"
+next_review_on = "2027-04-03"
+queries = ["4M Analytics founder CEO CTO leadership team current 2026"]
+source_ids = ["team26", "review25", "globes21"]
+summary = "Current company leadership page and 2025 review checked; historical founders corroborated by contemporaneous news."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T07:34:50Z"
+next_review_on = "2027-04-03"
+queries = ["4M Analytics ownership parent company acquired cap table"]
+source_ids = ["insight", "team26"]
+summary = "Private company; no disclosed parent, acquisition, IPO, or ownership percentages found."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T07:34:50Z"
+next_review_on = "2027-04-03"
+queries = ["4M Analytics revenue ARR profitability financials"]
+source_ids = ["review24", "review25"]
+summary = "No public revenue, ARR, profit, burn, runway, audited accounts, or valuation located; qualitative commercial measures are not financial statements."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T07:34:50Z"
+next_review_on = "2027-04-03"
+queries = ["4M Analytics customers DOT traction projects 2025 2026"]
+source_ids = ["gdot", "wsb", "aldot", "review25", "april26"]
+summary = "Customer stories, DOT announcements, reseller agreement, and product release show continued activity; several are company reports and do not establish contract value."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-03T07:34:50Z"
+next_review_on = "2027-04-03"
+queries = ["4M Analytics patents subsurface mapping USPTO WIPO"]
+source_ids = ["patent"]
+summary = "At least one subsurface mapping patent family identified; full legal portfolio/status review remains open."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T07:34:50Z"
+next_review_on = "2027-04-03"
+queries = ["4M Analytics competitors Exodigo SUE utility mapping"]
+source_ids = ["exodigo", "product", "caltrans"]
+summary = "Exodigo and conventional SUE workflows are relevant substitutes; no market share or win/loss evidence found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-03T07:34:50Z"
+next_review_on = "2027-04-03"
+queries = ["4M Analytics defense security minefield dual use subsurface mapping"]
+source_ids = ["globes21", "patent"]
+summary = "Company originated in minefield mapping before pivoting to civil utility mapping, but no current defense/security deployment or contract found; retain only latent technical adjacency."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Company maintains active leadership, product materials and 2026 public agency announcements."
+verified_at = "2026-10-03T07:34:50Z"
+source_ids = ["team26", "aldot"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Israeli founders and ongoing Tel Aviv operation are directly evidenced by contemporaneous reporting and company materials."
+verified_at = "2026-10-03T07:34:50Z"
+source_ids = ["globes21", "team26", "review25"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.amount_observations.lead-investor-release.amount"
+support = "direct"
+summary = "Viola announcement explicitly states the preceding seed round was $3 million."
+verified_at = "2026-10-03T07:34:50Z"
+source_ids = ["viola21"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.amount_observations.startup-nation-finder-record.amount"
+support = "direct"
+summary = "Startup Nation Finder lists November 2020 Seed at $7 million; conflicts with investor release."
+verified_at = "2026-10-03T07:34:50Z"
+source_ids = ["snc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.lead_investors"
+support = "direct"
+summary = "Viola describes the preceding seed as led by F2 Venture Capital."
+verified_at = "2026-10-03T07:34:50Z"
+source_ids = ["viola21"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.participating_investors"
+support = "direct"
+summary = "Viola release identifies Rami Beracha and Eyal Gabbai among the prior backers."
+verified_at = "2026-10-03T07:34:50Z"
+source_ids = ["viola21"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.amount"
+support = "direct"
+summary = "Lead investor release explicitly states $11 million Series A."
+verified_at = "2026-10-03T07:34:50Z"
+source_ids = ["viola21"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.lead_investors"
+support = "direct"
+summary = "Viola announcement identifies Viola Ventures as lead investor."
+verified_at = "2026-10-03T07:34:50Z"
+source_ids = ["viola21"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.participating_investors"
+support = "direct"
+summary = "Announcement names F2 Venture Capital, Rami Beracha, and Eyal and Tamar Gabbai; structured list includes named participants Rami and Eyal."
+verified_at = "2026-10-03T07:34:50Z"
+source_ids = ["viola21"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-extension-2022.amount"
+support = "direct"
+summary = "Company announcement explicitly states additional $30 million."
+verified_at = "2026-10-03T07:34:50Z"
+source_ids = ["extension22"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-extension-2022.lead_investors"
+support = "direct"
+summary = "Company announcement names Insight Partners and ITI Venture Capital Partners as leads."
+verified_at = "2026-10-03T07:34:50Z"
+source_ids = ["extension22"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-extension-2022.participating_investors"
+support = "direct"
+summary = "Company announcement names Viola Ventures, F2 Venture Capital, Noam Bardin and Nir Erez as participants."
+verified_at = "2026-10-03T07:34:50Z"
+source_ids = ["extension22"]

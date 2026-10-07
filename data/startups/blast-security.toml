@@ -1,0 +1,418 @@
+name = "Blast Security"
+description = "Blast Security is an Israeli-founded cloud security startup building a preemptive defense platform that converts security intent into preventive guardrails across AWS, Azure, GCP, and Kubernetes. Its assess-plan-simulate-enforce workflow is designed to stop risky cloud changes and permissions before they become production exposure."
+detailed_description = """Blast Security is building a control and enforcement layer for cloud security rather than another visibility-only dashboard. The platform assesses cloud posture and attack-path context, helps teams plan which guardrails matter, simulates the operational impact of proposed controls, and then enforces them through native cloud mechanisms. Its public materials describe an agentless, API-based design that reads metadata, coordinates AWS Organizations SCPs and RCPs, Azure Policies, Google Cloud Organization Policies, and Kubernetes controls, and maintains a unified catalog of ownership, coverage, and change history. The company also describes an internal compiler-like capability that translates higher-level security principles into environment-specific preventive guardrails. These are meaningful architectural claims, but a diligence process should distinguish documented product capabilities from independently measured prevention outcomes.
+
+The target customer is an enterprise security or cloud platform team operating multiple accounts, subscriptions, projects, clusters, and fast-moving infrastructure-as-code pipelines. Blast positions itself as complementary to CNAPP and CSPM products: detection and exposure-management tools continue to find issues, while Blast attempts to reduce the number of issues that can be created or repeatedly reintroduced. The commercial problem is credible. Security teams face alert backlogs, overprivileged identities, configuration drift, and a growing volume of human- and AI-driven cloud change. Simulation before rollout is intended to make enforcement safer, while staged deployment, exclusions, and accept-risk controls are intended to reduce the chance that a security policy breaks a production workload. Blast publicly presents customer testimonials and references to enterprise environments, but the database should not infer customer count, recurring revenue, retention, or deployment scale from those materials.
+
+The competitive field is crowded and well capitalized. Wiz, Orca Security, Palo Alto Networks Prisma Cloud, Microsoft Defender for Cloud, and other CNAPP or cloud-governance vendors already cover posture, identity, workload, and remediation workflows. Policy-as-code and infrastructure security substitutes include native cloud controls, Terraform or Kubernetes policy engines, OPA-based tooling, and internal platform-engineering controls. Blast’s proposed edge is the operational bridge between policy intent and safe continuous enforcement: it aims to optimize existing native controls, model policy impact before activation, and prioritize guardrails by risk, effort, scope, and attack-path context. That differentiation will only be durable if the product demonstrates high policy coverage, low false-block rates, fast integrations, and measurable reduction in exposure without creating a new control-management bottleneck.
+
+Blast emerged from stealth in November 2025 with a reported $10 million seed round co-led by 10D and MizMaa Ventures. The three named founders—Boris Vaynberg, Ido Bukra, and Roi Panai—describe prior Solebit and Mimecast experience, and the company says the product was informed by work on a national-level cloud security project during reserve duty. Those backgrounds are relevant signals for technical and national-security context, not proof of government procurement or classified deployment. The public record supports an active early-stage company with a released product and a reported 11–50 employees; it does not establish revenue, renewal rates, independent efficacy testing, or a government customer.
+
+The defense and national-security relevance is credible but indirect. Military, intelligence, public-sector, and critical-infrastructure organizations increasingly use hybrid or multi-cloud systems and face the same configuration, identity, and change-control risks as regulated enterprises. A platform that safely enforces least-privilege and segmentation guardrails can reduce attack surface and lateral-movement opportunities in those environments. The strongest thesis is cyber resilience for mission cloud and sensitive enterprise infrastructure, not offensive cyber capability. Important diligence questions include deployment in disconnected or sovereign environments, support for agency-specific policy baselines, evidentiary audit trails, privilege requirements, supply-chain assurance, and whether automated enforcement remains safe under degraded connectivity or emergency operational changes."""
+logo = "https://blast.security/favicon.ico"
+website = "https://blast.security"
+sector = "Cloud Security"
+founded = "2024"
+headquarters = "Tel Aviv, Israel / New York, United States"
+employees = "11-50"
+funding_stage = "Seed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Blast's core capability—translating security policy into continuously tested and enforced cloud guardrails—has substantive commercial and national-security applicability. Enterprises can use it to reduce misconfiguration, identity, and change-management risk across multi-cloud systems; public-sector, defense, and critical-infrastructure operators face similar risks in more constrained and higher-consequence environments. The defense case is for cyber resilience and secure cloud operations, not a dedicated military product, and should be validated through deployment, compliance, and sovereign-environment diligence."
+key_technologies = ["Cloud security policy compiler translating security intent into environment-specific guardrails", "Native-control orchestration for AWS SCPs and RCPs, Azure Policies, Google Cloud Organization Policies, and Kubernetes controls", "Pre-enforcement simulation of policy impact and workload disruption", "Continuous multi-cloud posture, coverage, and defense-degradation monitoring", "Attack-path and violation-context prioritization for guardrail planning", "Agentless API-based cloud metadata collection and staged enforcement", "Identity, workload, network, data, and AI-agent guardrail management"]
+use_cases = ["Preventing risky infrastructure-as-code and cloud configuration changes before production", "Reducing recurring CSPM alert backlogs by enforcing controls at the source", "Applying least-privilege and non-human identity guardrails to AI agents and automation", "Coordinating security baselines across AWS, Azure, GCP, and Kubernetes estates", "Simulating and staging policy changes to avoid breaking production workloads", "Maintaining auditable cloud control coverage for regulated financial, healthcare, and technology environments", "Hardening government, defense, and critical-infrastructure mission-cloud environments", "Containing lateral movement and reducing blast radius through preventive network and identity controls"]
+investible = true
+investment_rationale = "Blast has a credible strategic fit with a dual-use cybersecurity thesis: it addresses a concrete cloud operating problem, has a differentiated prevention-and-enforcement positioning, and was founded by experienced cyber operators with prior company-building and security-product backgrounds. The reported $10M seed round and released platform provide stronger validation than the prior stealth-era record. This remains an early-stage diligence signal rather than an investment recommendation. The main proof points still missing are repeatable enterprise revenue, customer retention, independently verified risk reduction, policy coverage across real environments, and evidence that enforcement can scale without operational disruption."
+strategic_value = "Blast could improve cyber resilience by moving selected cloud controls from reactive finding and ticket remediation toward continuous prevention at the change and authorization layers. Its value is highest where organizations operate complex multi-cloud estates, need consistent auditability, and cannot afford either uncontrolled developer velocity or manual security review. For national-security and critical-infrastructure users, the relevant benefit is secure-by-design cloud governance, reduced blast radius, and faster control adaptation; applicability depends on sovereign deployment, integration with mission systems, and operational evidence."
+public_sources = [
+  { label = "Blast Security company site", url = "https://blast.security/", description = "Current product positioning and company operating presence" },
+  { label = "Blast Security leadership", url = "https://blast.security/about-us/", description = "Company leadership biographies and Israel operating context" },
+  { label = "Blast Security platform", url = "https://blast.security/platform/", description = "Product workflow, integrations, and platform claims" },
+  { label = "Calcalist funding report", url = "https://www.calcalist.co.il/calcalistech/article/b16k76bbbe", description = "November 2025 seed round, founders, team size, and launch" },
+  { label = "10D announcement index", url = "https://www.10d.vc/news/", description = "Lead investor's dated announcement of the seed financing" },
+  { label = "MizMaa portfolio", url = "https://www.mizmaa.com/portfolio", description = "Lead investor portfolio listing confirming Blast identity and 2024 founding" },
+  { label = "Qino Cyber Capital portfolio", url = "https://www.qinocyber.com/portfolio/blast-security-inc", description = "Investor portfolio listing; does not establish round participation" },
+  { label = "Blast Security demo and testimonial", url = "https://blast.security/demo/", description = "Company-published customer testimonial, not evidence of paid status" }
+]
+potential_score = 82.0
+technology_score = 85.0
+market_score = 82.0
+team_score = 84.0
+dual_use_score = 83.0
+strategic_alignment_score = 84.0
+stage = "early"
+stage_rationale = "Blast was founded in 2024, emerged from stealth in November 2025, and is publicly described as having raised a $10M seed round. Its product is released and the company reports an 11–50 employee range, placing it beyond pure research but still in early commercialization. Public customer testimonials and enterprise-facing controls indicate go-to-market activity, while the absence of disclosed revenue, retention, deployment counts, or independently verified efficacy keeps the classification firmly early rather than mid-stage."
+competitors = ["Wiz", "Orca Security", "Palo Alto Networks Prisma Cloud", "Microsoft Defender for Cloud", "Sysdig", "Native cloud policy engines and OPA-based policy-as-code tooling"]
+competitive_edge = "Blast's proposed edge is a simulation-first enforcement workflow that coordinates native controls across clouds instead of asking security teams to manage another isolated finding catalog. The combination of guardrail prioritization, policy translation, impact simulation, staged rollout, and continuous coverage measurement could reduce the operational friction that prevents organizations from turning CSPM findings into durable controls. The edge is not yet proven: incumbents can add prevention and remediation features, while native cloud policy engines and internal platform teams can provide narrower substitutes. Diligence should test policy breadth, integration depth, time to value, false-block rates, and measurable exposure reduction against existing controls."
+risk_factors = ["Crowded CNAPP and CSPM market includes well-funded vendors with broader telemetry, identity, workload, and remediation portfolios.", "Native AWS, Azure, GCP, and Kubernetes controls plus OPA, Terraform, and internal platform engineering are credible substitutes and may limit willingness to buy a separate enforcement layer.", "Automated preventive controls create a high reliability burden: false positives, policy conflicts, or incorrect simulations could interrupt production or cause teams to disable enforcement.", "Deep integrations across cloud accounts, subscriptions, projects, clusters, CI/CD systems, and identity providers may make implementation and support expensive for a small seed-stage vendor.", "Public evidence does not yet establish recurring revenue, customer concentration, retention, independent efficacy measurements, or the basis for the company's stated risk-reduction claims.", "Government and defense adoption may require sovereign or disconnected deployment, stringent supply-chain assurance, specialized compliance evidence, and long procurement cycles.", "The prevention category may converge quickly as CNAPP vendors and cloud providers expand native policy orchestration, agentic security, and remediation capabilities."]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Blast is a high-priority early-stage record because its prevention-oriented cloud control layer aligns with the database's dual-use cyber-resilience thesis, and the reported seed financing and experienced founding team provide credible early validation. The score is moderated by crowded competition, unproven commercial scale, and the operational risk of automated enforcement. The strategic case is strongest for secure multi-cloud governance in regulated, public-sector, defense, and critical-infrastructure environments; it is not based on an asserted government contract or confirmed military deployment."
+crawled_at = "2026-02-15T18:24:00Z"
+updated_at = "2026-10-04T08:52:25Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "il-blast-security"
+legal_name = "Blast Security"
+aliases = ["Blast Security, Inc."]
+operating_status = "active"
+business_model = "Enterprise cloud-security software sold as a platform; Blast describes an agentless, API-based product that assesses environments and plans, simulates, and enforces native cloud security controls. Pricing, contract terms, and recurring revenue are not publicly disclosed in the reviewed sources."
+products = ["Preemptive Cloud Defense Platform", "Assess, Plan, Simulate, Enforce workflow"]
+locations = ["Tel Aviv, Israel", "New York, United States"]
+source_ids = ["blast-home", "blast-about", "calcalist-he", "mizmaa-portfolio"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One publicly reported $10 million Seed equity financing was announced on 2025-11-24. Calcalist and the 10D announcement index identify 10D and MizMaa Ventures as co-leads. No separate extension or later round was found in the reviewed public record through 2026-10-04. The $10 million reported lifetime total reflects that company financing announcement; it is not an independently audited cumulative figure."
+reported_total_raised = 10000000
+reported_total_currency = "USD"
+total_source_ids = ["calcalist-he", "10d-news"]
+total_as_of = "2025-11-24"
+total_scope = "company-reported single disclosed seed round; no other public rounds identified in reviewed sources"
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "seed-2025"
+round_type = "Seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2025-11-24"
+amount_status = "reported"
+amount = 10000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["10D", "MizMaa Ventures"]
+participating_investors = []
+valuation_basis = "undisclosed"
+source_ids = ["calcalist-he", "10d-news"]
+notes = "Both named funds are described as co-leads. Other databases list additional investors, but no primary announcement reviewed here substantiates their participation; they are not included. No valuation was disclosed in the cited announcement."
+
+[[intelligence.people]]
+name = "Boris Vaynberg"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Blast says he was co-founder and CEO of Solebit, later GM of Mimecast Israel and VP of Advanced Threat Detection; the company biography reports more than 20 years in cybersecurity leadership."
+source_ids = ["blast-about"]
+
+[[intelligence.people]]
+name = "Ido Bukra"
+role = "Co-founder and CPO"
+is_founder = true
+current = true
+background = "Blast reports product leadership experience at SentinelOne, Mimecast, and Solebit, and prior service as an officer in an IDF cyber unit."
+source_ids = ["blast-about", "calcalist-he"]
+
+[[intelligence.people]]
+name = "Roi Panai"
+role = "Co-founder and CTO"
+is_founder = true
+current = true
+background = "Blast reports 15 years in cybersecurity R&D leadership, security technology work in an IDF unit, leadership of Solebit malware-prevention engines, and subsequent R&D director work at Mimecast."
+source_ids = ["blast-about", "calcalist-he"]
+
+[[intelligence.people]]
+name = "Dayana Nevo"
+role = "VP Marketing"
+is_founder = false
+current = true
+background = "Blast reports more than 15 years in cybersecurity marketing and prior work at Seraphic Security and WalkMe."
+source_ids = ["blast-about"]
+
+[[intelligence.investors]]
+name = "10D"
+investor_type = "vc"
+website = "https://www.10d.vc/"
+round_ids = ["seed-2025"]
+relationship = "current"
+source_ids = ["10d-news", "calcalist-he"]
+
+[[intelligence.investors]]
+name = "MizMaa Ventures"
+investor_type = "vc"
+website = "https://www.mizmaa.com/"
+round_ids = ["seed-2025"]
+relationship = "current"
+source_ids = ["mizmaa-portfolio", "calcalist-he"]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Blast is presented as an active independent startup. Public sources reviewed identify no parent company, acquisition, exit, or disclosed cap table. Private ownership percentages and other shareholders are unavailable; no percentages are inferred."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["blast-about", "calcalist-he"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "The company is reported as Tel Aviv-based, with three Israeli cyber-sector founders; its own leadership page describes the founders' prior Israeli service and a national cloud-security effort during reserve duty. No legal incorporation jurisdiction is asserted."
+as_of = "2026-10-04"
+source_ids = ["calcalist-he", "blast-about", "mizmaa-portfolio"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Blast publicly markets an operating platform with assessment, guardrail planning, pre-enforcement simulation, and continuous enforcement across AWS, Azure, and GCP. These are company-described capabilities, not independently measured outcomes."
+date = "2026-10-04"
+source_ids = ["blast-platform"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Blast's demo page carries a testimonial attributed to Nir Rothenberg and displays Rapyd branding, describing use of preventive guardrails without operational disruption. This is company-published testimonial evidence only; it does not establish a paid contract, production scope, duration, or customer count."
+date = "2026-10-04"
+source_ids = ["blast-demo"]
+
+[[intelligence.traction]]
+kind = "hiring"
+description = "Calcalist reported approximately 20 employees in Tel Aviv on the November 2025 launch date and planned expansion in Israel and the United States. This is a dated media-reported approximate headcount and hiring plan, not a current employee count."
+date = "2025-11-24"
+source_ids = ["calcalist-he"]
+
+[[intelligence.comparables]]
+name = "Wiz"
+website = "https://www.wiz.io/"
+rationale = "Cloud-native application protection and cloud-risk visibility compete for enterprise cloud-security budgets."
+differentiation = "Wiz is positioned around broad cloud exposure visibility and prioritization; Blast emphasizes continuous preventive guardrails applied through native controls."
+source_ids = ["blast-platform"]
+
+[[intelligence.comparables]]
+name = "Orca Security"
+website = "https://orca.security/"
+rationale = "Cloud security posture and workload protection are overlapping enterprise buyer categories."
+differentiation = "Orca's broad cloud security platform is a substitute for some risk workflows; Blast's claimed wedge is safe, simulated enforcement rather than primarily finding and triage."
+source_ids = ["blast-platform"]
+
+[[intelligence.comparables]]
+name = "Palo Alto Networks Prisma Cloud"
+website = "https://www.paloaltonetworks.com/prisma/cloud"
+rationale = "An established cloud-security platform with posture and remediation capabilities competes for the same security-team attention and budgets."
+differentiation = "Prisma Cloud is a broad incumbent suite; Blast focuses its positioning on policy-to-guardrail translation and staged preventive enforcement."
+source_ids = ["blast-platform"]
+
+[[intelligence.comparables]]
+name = "Native cloud policy controls and OPA-based policy-as-code"
+website = "https://www.openpolicyagent.org/"
+rationale = "Native organization policies, infrastructure policy engines, and internal platform tooling can substitute for parts of Blast's proposed control layer."
+differentiation = "Blast claims cross-cloud assessment, impact simulation, and centralized safe enforcement; native tools may offer lower cost and deeper provider-specific control."
+source_ids = ["blast-platform"]
+
+[[intelligence.research.sources]]
+id = "blast-home"
+url = "https://blast.security/"
+title = "Blast Security: Preemptive Cloud Defense Platform"
+publisher = "Blast Security"
+kind = "company"
+accessed_at = "2026-10-04T08:52:25Z"
+claims = ["Current active company website and cloud-defense product positioning"]
+
+[[intelligence.research.sources]]
+id = "blast-about"
+url = "https://blast.security/about-us/"
+title = "About Blast Security: Pioneering Preemptive Cloud Defense"
+publisher = "Blast Security"
+kind = "company"
+accessed_at = "2026-10-04T08:52:25Z"
+claims = ["Leadership roles and biographies", "Founders' Solebit and Mimecast backgrounds", "Israeli cyber-service context"]
+
+[[intelligence.research.sources]]
+id = "blast-platform"
+url = "https://blast.security/platform/"
+title = "Cloud Security Enforcement & Prevention"
+publisher = "Blast Security"
+kind = "company"
+accessed_at = "2026-10-04T08:52:25Z"
+claims = ["Assess-plan-simulate-enforce product workflow", "Company-described cloud integrations and agentless API-based operation", "Company-described SOC 2 Type II compliance"]
+
+[[intelligence.research.sources]]
+id = "calcalist-he"
+url = "https://www.calcalist.co.il/calcalistech/article/b16k76bbbe"
+title = "סטארט-אפ הסייבר Blast Security של יוצאי סולביט גייס 10 מיליון דולר"
+publisher = "Calcalist"
+kind = "media"
+published_on = "2025-11-24"
+accessed_at = "2026-10-04T08:52:25Z"
+claims = ["$10 million Seed financing and the two co-lead investors", "Founders' names and executive roles", "Approximately 20 Tel Aviv employees at announcement", "Company's cloud-prevention product positioning"]
+
+[[intelligence.research.sources]]
+id = "10d-news"
+url = "https://www.10d.vc/news/"
+title = "News – 10D"
+publisher = "10D"
+kind = "investor"
+accessed_at = "2026-10-04T08:52:25Z"
+claims = ["10D's dated listing for the Blast Security $10 million Seed announcement on 2025-11-24"]
+
+[[intelligence.research.sources]]
+id = "mizmaa-portfolio"
+url = "https://www.mizmaa.com/portfolio"
+title = "Portfolio"
+publisher = "MizMaa Ventures"
+kind = "investor"
+accessed_at = "2026-10-04T08:52:25Z"
+claims = ["MizMaa portfolio includes Blast Security", "MizMaa lists Blast as founded in 2024"]
+
+[[intelligence.research.sources]]
+id = "qino-portfolio"
+url = "https://www.qinocyber.com/portfolio/blast-security-inc"
+title = "Blast Security, Inc | Qino Cyber Capital"
+publisher = "Qino Cyber Capital"
+kind = "investor"
+accessed_at = "2026-10-04T08:52:25Z"
+claims = ["Qino portfolio page lists Blast Security as an active portfolio company; source does not disclose round participation"]
+
+[[intelligence.research.sources]]
+id = "blast-demo"
+url = "https://blast.security/demo/"
+title = "Demo - Blast Security Preemptive Cloud Defense"
+publisher = "Blast Security"
+kind = "company"
+accessed_at = "2026-10-04T08:52:25Z"
+claims = ["Company-published testimonial attributed to Nir Rothenberg and Rapyd logo; does not establish paid customer status"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T08:52:25Z"
+next_review_on = "2027-01-04"
+queries = ["Blast Security official site company identity legal name aliases headquarters", "Blast Security Tel Aviv founded 2024 company profile"]
+source_ids = ["blast-home", "blast-about", "calcalist-he", "mizmaa-portfolio"]
+summary = "Identified Blast Security as the active Israeli-founded cloud-security startup at blast.security. Public material supports Tel Aviv operations and 2024 founding; exact registered legal entity and incorporation jurisdiction remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T08:52:25Z"
+next_review_on = "2027-01-04"
+queries = ["Blast Security funding raised seed Series A 10D MizMaa November 2025", "Blast Security investors funding extension 2026", "Blast Security valuation seed funding"]
+source_ids = ["calcalist-he", "10d-news"]
+summary = "Found one announced $10 million Seed round. No extension, valuation, or later financing was substantiated in reviewed primary and reputable sources."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T08:52:25Z"
+next_review_on = "2027-01-04"
+queries = ["Blast Security investors 10D MizMaa portfolio", "site:mizmaa.com Blast Security", "site:10d.vc Blast Security"]
+source_ids = ["calcalist-he", "10d-news", "mizmaa-portfolio", "qino-portfolio"]
+summary = "The two named co-leads are 10D and MizMaa. Qino also lists Blast in its portfolio but no reviewed announcement ties it to this round; additional database-only investor names were not treated as verified."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T08:52:25Z"
+next_review_on = "2027-01-04"
+queries = ["Blast Security founders Boris Vaynberg Ido Bukra Roi Panai leadership", "site:blast.security/about-us Blast Security team", "Blast Security leadership hires 2026"]
+source_ids = ["blast-about", "calcalist-he"]
+summary = "Verified current public biographies for CEO Boris Vaynberg, CPO Ido Bukra, CTO Roi Panai, and VP Marketing Dayana Nevo. Broader employee roster and board composition were not established."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T08:52:25Z"
+next_review_on = "2027-01-04"
+queries = ["Blast Security acquired acquisition ownership parent company", "Blast Security cap table ownership shareholders", "Blast Security acquisition exit"]
+source_ids = ["blast-about", "calcalist-he", "qino-portfolio"]
+summary = "No acquisition, parent, exit, or private shareholding disclosure located. Cap table and ownership percentages remain private."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T08:52:25Z"
+next_review_on = "2027-01-04"
+queries = ["Blast Security revenue ARR customers financials", "Blast Security revenue burn runway profitability", "Blast Security employees headcount 2025 2026"]
+source_ids = ["calcalist-he", "blast-home"]
+summary = "No revenue, ARR, profitability, burn, or runway figure was found. Calcalist's approximately 20 employees is a dated media report, not financial disclosure or a current headcount."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T08:52:25Z"
+next_review_on = "2027-01-04"
+queries = ["Blast Security customers contracts deployments partnerships", "Blast Security Rapyd customer testimonial", "Blast Security product launch enterprise customers"]
+source_ids = ["blast-platform", "blast-demo", "calcalist-he"]
+summary = "A publicly marketed product and a company-published customer testimonial indicate product and commercial activity. No verified paid customer count, signed contract amount, deployment scale, or retention data was found."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T08:52:25Z"
+next_review_on = "2027-01-04"
+queries = ["Blast Security patents WIPO USPTO Israel patent", "Blast Security patent applications Blast Security Inc", "Blast Security intellectual property compiler patent"]
+source_ids = ["blast-platform", "blast-about"]
+summary = "No attributable patent, application, or public IP portfolio disclosure was located. Product descriptions do not establish patent protection."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T08:52:25Z"
+next_review_on = "2027-01-04"
+queries = ["Blast Security cloud security competitors Wiz Orca Prisma Cloud", "cloud native guardrail policy enforcement competitors Blast Security", "Blast Security prevention cloud guardrails alternatives"]
+source_ids = ["blast-platform"]
+summary = "Relevant substitutes include broad CNAPP platforms, hyperscaler-native organization policies, and policy-as-code/internal platform tooling. Blast's differentiator is company-claimed policy planning, impact simulation, and unified preventive enforcement; comparative performance is unverified."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T08:52:25Z"
+next_review_on = "2027-01-04"
+queries = ["Blast Security national cloud security reserve duty", "Blast Security defense government security customers contracts", "Blast Security dual use cloud security national security"]
+source_ids = ["blast-about", "calcalist-he"]
+summary = "Cloud security guardrails have plausible commercial and public-sector/critical-infrastructure applicability. Founders describe a national cloud-security project in reserve-duty context, but no government contract, defense customer, or dedicated military product is disclosed."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Blast maintains a current product, leadership, and careers website, and Calcalist reported the company launching with its product in November 2025; these sources support active operating status."
+verified_at = "2026-10-04T08:52:25Z"
+source_ids = ["blast-home", "blast-about", "calcalist-he"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Calcalist identifies the company as operating in Tel Aviv and reports its Tel Aviv office; company biographies describe the founders' Israeli cyber-unit service."
+verified_at = "2026-10-04T08:52:25Z"
+source_ids = ["calcalist-he", "blast-about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Calcalist reports a $10 million Seed raise and 10D's announcement index dates its Blast Security Seed announcement to November 24, 2025."
+verified_at = "2026-10-04T08:52:25Z"
+source_ids = ["calcalist-he", "10d-news"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.amount"
+support = "direct"
+summary = "Calcalist directly reports the $10 million Seed round announced on November 24, 2025."
+verified_at = "2026-10-04T08:52:25Z"
+source_ids = ["calcalist-he"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.lead_investors"
+support = "direct"
+summary = "Calcalist identifies 10D and MizMaa Ventures as the Seed round's co-leads."
+verified_at = "2026-10-04T08:52:25Z"
+source_ids = ["calcalist-he"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Blast's own corporate presentation and the financing report describe Blast as an independent startup and identify no parent or acquirer; this is a limited public-record check, not proof of private ownership structure."
+verified_at = "2026-10-04T08:52:25Z"
+source_ids = ["blast-about", "calcalist-he"]
+
+[intelligence.research]
+researched_at = "2026-10-04T08:52:25Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Blast Security official site company identity legal name aliases headquarters", "Blast Security Tel Aviv founded 2024 company profile", "Blast Security funding raised seed Series A 10D MizMaa November 2025", "Blast Security investors funding extension 2026", "Blast Security valuation seed funding", "Blast Security investors 10D MizMaa portfolio", "Blast Security founders Boris Vaynberg Ido Bukra Roi Panai leadership", "Blast Security leadership hires 2026", "Blast Security acquired acquisition ownership parent company", "Blast Security cap table ownership shareholders", "Blast Security revenue ARR customers financials", "Blast Security revenue burn runway profitability", "Blast Security employees headcount 2025 2026", "Blast Security customers contracts deployments partnerships", "Blast Security Rapyd customer testimonial", "Blast Security patents WIPO USPTO Israel patent", "Blast Security cloud security competitors Wiz Orca Prisma Cloud", "Blast Security national cloud security reserve duty", "Blast Security defense government security customers contracts"]
+gaps = ["company registry legal entity and incorporation country are not established by available public sources", "team: board members, complete staff roster, and verified employee count after November 2025 were not established", "investors: only the two co-leads are confirmed as round investors; no cap table or additional participants verified", "ownership: cap table and beneficial ownership percentages are private; no parent or transaction located", "financials: no public revenue, ARR, profitability, burn, or runway metrics found", "traction: no independently verified paid customer count, contract values, deployment scale, or retention data found; testimonial does not establish payment", "intellectual_property: no attributable patents or applications located", "competition: no independent product benchmark or comparative efficacy data found", "dual_use: no public government/defense customer, contract, or dedicated military deployment found", "reported round amount and lifetime total rely on contemporaneous press reporting and investor listing; audited filing was not found"]
+conflicts = []
+diligence_questions = ["What percentage of evaluated cloud misconfigurations and identity risks can Blast enforce across a real multi-cloud estate, and how are false blocks and simulation accuracy measured?", "How many customers are in paid production, what are ARR, gross retention, expansion, and customer concentration, and which public testimonials represent contracted deployments?", "Which cloud permissions and organization-wide privileges does Blast require, how are credentials secured, and can it support sovereign or disconnected environments with auditable rollback?", "What are the round's full investor syndicate, terms, valuation, and current cap table, and has any financing occurred since the November 2025 seed?"]

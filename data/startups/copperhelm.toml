@@ -1,0 +1,548 @@
+name = "Copperhelm"
+description = "Copperhelm is an Israeli cloud security startup building an agentic platform that uses autonomous AI agents to discover, prioritize, and remediate exploitable cloud threats at runtime."
+detailed_description = """Copperhelm’s product thesis is straightforward but consequential: enterprises still lose speed in cloud security because most workflows remain dominated by alert triage, manual risk interpretation, and delayed remediation, while cloud environments evolve continuously across multiple accounts, cloud providers, and runtime layers. The company positions itself as an agentic defender for this gap. Its platform combines continuous cloud telemetry ingestion with an execution layer designed to prioritize what is actually dangerous in a specific environment, not just what appears risky in generic vulnerability scanners. By combining environment graphing and autonomous workflow orchestration, Copperhelm aims to close the gap between detection, validation, and remediation within cloud-native infrastructure where each minute of delay can materially increase exposure.
+
+The company’s architecture centers on a proprietary Context Lake that normalizes and links cloud control-plane and workload observations into a coherent representation of operational risk. In public messaging, Copperhelm emphasizes mapping of VPC-level connectivity, security group rules, and WAF policy surfaces, then tracing latent attack paths and evaluating exploitability against runtime context. Its agents are described as actively inspecting processes and in-memory code, then proposing or executing controlled responses such as targeted WAF protections and prioritization guidance. That combination addresses an enduring pain point in cloud security: context fragmentation across networking, identity, and workload state often produces too many low-confidence findings and too few actionable remediations. Copperhelm’s approach is strongest when this context compression works reliably in production scale, because it directly affects analyst efficiency, downtime risk, and incident-response quality.
+
+The company was founded as a Tel Aviv startup and has entered the market as an emerging security entrant with a $7M seed round raised in April 2026, led by TLV Partners with participation from toDay Ventures, ICON, SaaS Ventures Israel, and a small set of angel investors. Its leadership includes Shimon Tolts, Eyar Zilberman, and Roman Labunsky, whose backgrounds include engineering and security roles in large technology companies and who are presented publicly as the core builder team. Its website and investor communications stress an enterprise-first orientation and a practical deployment model for large cloud estates rather than a narrow point product. Company and portfolio materials also frame the product as a potential category move for cloud defense—an explicit claim that matters for strategic tracking because it implies sustained productized demand beyond small- and medium-team pilots. This profile is best read as a deepening market test of whether autonomous security operations can retain trust in high-stakes production environments.
+
+In the customer and ecosystem context, Copperhelm’s public case material includes multiple references to enterprise validation through references and testimonials from security leadership, with messaging centered on reducing noise and enabling teams to focus on high-confidence, context-rich risk items. This is commercially meaningful if verified deployment data continues to scale, because cloud security budgets are increasingly weighted toward outcomes (reduced mean time to detect/respond and reduced false-positive burden) rather than tool count. The strategic relevance to Claw & Talon’s dual-use lens is that reliable cloud security infrastructure is a shared dependency across critical civilian and sovereign contexts: commercial cloud workloads for finance, logistics, and communications, plus defense-adjacent environments that require resilient security operations and bounded autonomy. If Copperhelm can maintain robust control, auditability, and response safety, its use cases intersect with national-critical sectors where cloud compromise risk has cross-domain consequences.
+
+The startup is now in an early-stage window where proof-of-operations quality matters as much as the core model. Competitive pressures are intense, with established and fast-scaling vendors moving toward integrated cloud security platforms that can absorb risk-prioritization and remediation loops internally. Copperhelm appears to be differentiating through autonomous execution design and infrastructure-centric context modeling. The biggest risks are not only execution and go-to-market speed, but safety governance and trust: autonomous remediation requires stronger policy guardrails, transparent decision artifacts, and reliable rollback semantics in live environments. For defense and critical infrastructure relevance, governance rigor is especially important; dual-use value rises when the tool supports command-and-control style oversight, audit evidence, and deterministic behavior under abnormal conditions.
+
+Open diligence questions therefore include: how the Context Lake normalizes cross-cloud semantics under heterogeneous enterprise footprints, how policy controls limit unintended automated action, how low-confidence findings are handled when model certainty is low, and how the team proves resilience under hostile traffic and sustained pressure across peak attack windows. A related question is whether the architecture supports deployment topologies in highly regulated organizations where segmentation, sovereignty requirements, and strict identity boundaries constrain automation depth. If these controls are shown to be resilient and measurable, the startup could move from a compelling prototype to a durable utility in enterprise and strategic cloud defense pipelines. If not, adoption may remain pilot-level even with strong technical promise."""
+logo = "https://copperhelm.com/favicon.ico"
+website = "https://copperhelm.com"
+sector = "Cloud Security / AI Security Automation"
+founded = "2024"
+headquarters = "Tel Aviv, Israel"
+employees = "1-10"
+funding_stage = "Seed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Cloud security capabilities are reusable across civilian and defense-adjacent domains because they harden cloud control planes, reduce systemic exposure, and support resilient operations under high-speed threat pressure. Copperhelm’s automation-first model is directly relevant where security response latency and context quality affect continuity of critical services; the dual-use relevance is strongest when deployment controls are verifiable and auditable in sovereign or high-assurance environments."
+key_technologies = ["Context Lake environment graphing","Autonomous cloud security agents","Runtime vulnerability relevance validation","Cloud topology and reachability analysis","WAF-based adaptive mitigation","Process and in-memory threat inspection"]
+use_cases = ["Cloud-native security operations for enterprises","Zero-noise triage pipelines for multi-cloud fleets","Runtime remediation of active misconfigurations","Critical infrastructure operational resilience support","SOC automation with human approval controls","Security workflow modernization for regulated environments","High-volume exposure mapping and attack-path tracing"]
+investible = true
+investment_rationale = "The company addresses a real, expensive operational bottleneck: most cloud security stacks still struggle to convert broad detection into verified, prioritized, and action-ready remediation. Copperhelm’s autonomous model is technically relevant and strategically coherent with current enterprise pressure for smaller response loops and lower analyst burden. Validation is strengthened by a 2026 seed financing event with recognized early-stage investors and by public positioning around proprietary context handling rather than a simple alert-noise product. Key diligence risk is execution depth in safety and deployment governance, but the opportunity profile is strong for firms prioritizing infrastructure reliability in high-assurance cloud environments."
+strategic_value = "Copperhelm contributes to strategic infrastructure resilience by targeting the operational layer where vulnerability knowledge becomes actionable defense. This matters for both commercial modernization and sovereign/defense-relevant workloads because it can reduce unmitigated exposure windows and operational overhead. The strategic value is not simply category novelty, but the potential to operationalize secure-by-default response loops where manual SOC capacity is constrained and cloud scale is rapidly increasing."
+potential_score = 83.2
+technology_score = 89.0
+market_score = 81.5
+team_score = 78.0
+dual_use_score = 82.0
+strategic_alignment_score = 85.0
+stage = "early"
+stage_rationale = "Copperhelm is in early-stage private development and market entry, supported by a single seed round and a founder-led team still building production proof, customer breadth, and defensive-operational maturity. The company remains pre-scale relative to larger cloud security incumbents, but the category motion toward autonomous operations suggests a credible path from pilot to broader commercialization."
+competitors = ["Palo Alto Networks Prisma Cloud","Wiz","Snyk","Lacework","Check Point Harmony"]
+competitive_edge = "Copperhelm’s strongest edge is the integration of context-rich runtime intelligence with autonomous investigation and remediation loops intended to reduce false-positive overload and accelerate true-incident response. If the Context Lake and execution model perform reliably at scale, this can create differentiation against vendors that remain primarily visibility-first or manual in remediation handoff. The edge is therefore execution-dependent: technical quality and safety discipline must hold under real enterprise complexity for defensibility to persist."
+risk_factors = ["Product-market execution risk in scaling autonomous remediation safely across diverse cloud environments", "Need for strong governance and auditability to satisfy regulated enterprises", "Competitive pressure from established cloud security suites with larger distribution networks", "Potentially high model/agent error costs if safety controls are weak in production environments", "Limited public operating data due recent launch makes traction trend inference uncertain", "Small reported team size could constrain simultaneous execution across engineering, sales, and threat-research functions", "Operational maturity and integration depth still heavily dependent on customer ecosystem fit"]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "Priority is high for dual-use infrastructure resilience tracking because Copperhelm is explicitly building an AI-native cloud defense control approach in a strategic category, and has reached funded early-stage commercialization. Score is tempered by limited long-horizon production signal depth and high execution requirements typical of autonomous remediation platforms."
+crawled_at = "2026-05-25T14:16:18Z"
+updated_at = "2026-10-04T21:45:00Z"
+
+[[public_sources]]
+label = "Copperhelm official product site"
+url = "https://copperhelm.com/"
+description = "Product claims, policy controls, remediation model, and customer testimonials published by Copperhelm."
+
+[[public_sources]]
+label = "Copperhelm about and leadership"
+url = "https://copperhelm.com/about"
+description = "Company description, founders, roles, investor backing, and board members."
+
+[[public_sources]]
+label = "TLV Partners investment announcement"
+url = "https://www.tlv.partners/bringing-autonomous-ai-to-cloud-defense-our-investment-in-copperhelm/"
+description = "Lead investor's announcement of the $7 million seed and named participating funds."
+
+[[public_sources]]
+label = "Calcalist funding and company report"
+url = "https://www.calcalist.co.il/calcalistech/article/skm6l8dpbe"
+description = "Israeli business reporting on seed financing, founders, team size, product and board appointment."
+
+[[public_sources]]
+label = "Startup Nation Finder CopperHelm profile"
+url = "https://finder.startupnationcentral.org/company_page/copperhelm"
+description = "Directory profile with founding date, location, headcount, Israeli registrar number, team and round details; treated as secondary evidence."
+
+[[public_sources]]
+label = "FinTech Global funding coverage"
+url = "https://fintech.global/2026/04/24/copperhelm-exits-stealth-with-7m-seed-round/"
+description = "Independent coverage of the seed and named angel participants."
+
+[[public_sources]]
+label = "Wiz platform"
+url = "https://www.wiz.io/platform"
+description = "Official competitor product information on cloud context, runtime protection, and automated remediation workflows."
+
+[[public_sources]]
+label = "Palo Alto Networks Prisma Cloud"
+url = "https://www.paloaltonetworks.com/prisma/cloud"
+description = "Official competitor information on code-to-cloud risk prioritization, runtime protection and remediation."
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "il-copperhelm"
+source_ids = ["company_about", "calcalist", "finder"]
+legal_name = "COPPERHELM LTD"
+aliases = ["Copperhelm", "CopperHelm"]
+operating_status = "active"
+business_model = "Private B2B cybersecurity software company selling an agentic cloud security platform to enterprise security teams; pricing and commercial terms are not publicly disclosed."
+products = ["Agentic cloud security platform", "Context Lake", "AI agents for workload investigation, risk validation and remediation"]
+locations = ["Tel Aviv-Yafo, Israel"]
+linkedin_url = "https://www.linkedin.com/company/copperhelm/"
+country_of_incorporation = "Israel"
+founded_on = "2024"
+
+[[intelligence.company.registry_identifiers]]
+jurisdiction = "Israel"
+scheme = "Israeli company number"
+identifier = "517056750"
+source_ids = ["finder"]
+notes = "Startup Nation Finder displays this registrar identifier; no official company extract was retrieved in this review."
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "incorporated_in_israel", "israeli_founders"]
+summary = "Copperhelm is described as based in Tel Aviv, the company lists Tel Aviv and its founders, and the Startup Nation Finder profile records Israeli legal entity COPPERHELM LTD (company number 517056750)."
+as_of = "2026-10-04"
+source_ids = ["calcalist", "finder", "company_about"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One publicly reported $7 million USD Seed equity round announced in April 2026. TLV Partners says it led the round alongside ICON, toDay Ventures and SaaS Ventures Israel. Calcalist and directory records add angel investors. No public valuation, detailed terms, or later financing found in this search."
+reported_total_raised = 7000000
+reported_total_currency = "USD"
+total_source_ids = ["tlv", "calcalist"]
+total_as_of = "2026-04"
+total_scope = "Company-announced lifetime funding represented by the sole publicly identified equity Seed round; no grants, debt, or secondary proceeds included."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "seed-2026"
+round_type = "Seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2026-04-23"
+amount_status = "reported"
+amount = 7000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["TLV Partners"]
+participating_investors = ["ICON", "toDay Ventures", "SaaS Ventures Israel", "Kfir Tishbi", "Or Hiltch", "Guy Zipori", "Ephraim Yarmak"]
+source_ids = ["tlv", "calcalist", "finder"]
+notes = "Calcalist dates the announcement 23 April 2026. TLV Partners' original post says it led the $7 million Seed with ICON, toDay Ventures and SaaS Ventures Israel. Calcalist names the three funds and does not list individual angels; Startup Nation Finder names several angels. No valuation disclosed."
+
+[[intelligence.investors]]
+name = "TLV Partners"
+investor_type = "vc"
+website = "https://www.tlv.partners/"
+relationship = "current"
+round_ids = ["seed-2026"]
+source_ids = ["tlv", "company_about"]
+notes = "Lead investor per its own investment announcement. Rona Segev and Brian Sack appear on Copperhelm's board page as TLV Partners representatives."
+
+[[intelligence.investors]]
+name = "ICON (Israel Collaboration Network)"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["seed-2026"]
+source_ids = ["tlv", "calcalist"]
+
+[[intelligence.investors]]
+name = "toDay Ventures"
+investor_type = "vc"
+website = "https://today-ventures.com/"
+relationship = "current"
+round_ids = ["seed-2026"]
+source_ids = ["tlv", "calcalist"]
+
+[[intelligence.investors]]
+name = "SaaS Ventures Israel"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["seed-2026"]
+source_ids = ["tlv", "calcalist"]
+
+[[intelligence.investors]]
+name = "Kfir Tishbi"
+investor_type = "angel"
+relationship = "current"
+round_ids = ["seed-2026"]
+source_ids = ["finder", "fintechglobal"]
+
+[[intelligence.investors]]
+name = "Or Hiltch"
+investor_type = "angel"
+relationship = "current"
+round_ids = ["seed-2026"]
+source_ids = ["finder", "fintechglobal"]
+
+[[intelligence.investors]]
+name = "Guy Zipori"
+investor_type = "angel"
+relationship = "current"
+round_ids = ["seed-2026"]
+source_ids = ["finder", "fintechglobal"]
+
+[[intelligence.investors]]
+name = "Ephraim Yarmak"
+investor_type = "angel"
+relationship = "current"
+round_ids = ["seed-2026"]
+source_ids = ["fintechglobal"]
+
+[[intelligence.people]]
+name = "Shimon Tolts"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Copperhelm's company page identifies him as CEO and describes the founding team as cloud and security veterans from Unity, McAfee and RSA. Calcalist reports he was recognized as an AWS Hero."
+source_ids = ["company_about", "calcalist"]
+
+[[intelligence.people]]
+name = "Roman Labunsky"
+role = "Co-founder and CTO"
+is_founder = true
+current = true
+background = "Copperhelm's company page identifies him as CTO. Company and Calcalist describe the founding team as experienced in cloud and security, including work at Unity, McAfee and RSA."
+source_ids = ["company_about", "calcalist"]
+
+[[intelligence.people]]
+name = "Eyar Zilberman"
+role = "Co-founder and CPO"
+is_founder = true
+current = true
+background = "Copperhelm's company page identifies him as CPO. Calcalist reports he was recognized as a GitHub Star; company and media describe the founders as cloud and security veterans."
+source_ids = ["company_about", "calcalist"]
+
+[[intelligence.people]]
+name = "Rona Segev"
+role = "Board member; Co-founder and Managing Partner at TLV Partners"
+is_founder = false
+current = true
+background = "Copperhelm's leadership page lists her on the board."
+source_ids = ["company_about"]
+
+[[intelligence.people]]
+name = "Brian Sack"
+role = "Board member; Partner at TLV Partners"
+is_founder = false
+current = true
+background = "Copperhelm's leadership page lists him on the board."
+source_ids = ["company_about"]
+
+[[intelligence.people]]
+name = "Shay Michel"
+role = "Board member; Managing Partner at Merlin Ventures"
+is_founder = false
+current = true
+background = "Copperhelm's leadership page lists him on the board; Calcalist says he joined the board after the Seed round. This does not establish Merlin Ventures as a round investor."
+source_ids = ["company_about", "calcalist"]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Copperhelm is privately held. No cap table, founder ownership percentages, or subsequent control transaction was found in reviewed public sources. The announced Seed investors have no disclosed ownership percentages."
+cap_table_status = "undisclosed"
+shareholders = ["Founders", "Seed investors; individual holdings undisclosed"]
+deals = []
+holdings = []
+source_ids = ["tlv", "calcalist"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Copperhelm publicly launched from stealth with an agentic cloud security platform. The company describes workload investigation, risk validation, policy-bounded responses, approval modes, blast-radius analysis and reversible actions. These are company product claims, not independently measured outcomes."
+date = "2026-04"
+source_ids = ["company_home", "calcalist"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "The company website displays testimonials attributed to Sean Mullins, CISO at Cass Information Systems, and John Barrow, CISO at JB Poindexter & Co, among others. The page does not specify whether these are paid customers, pilots, production deployments, or endorsements; treat them as testimonial evidence only, not verified contracts or revenue."
+date = "2026-10-04"
+source_ids = ["company_home"]
+
+[[intelligence.traction]]
+kind = "hiring"
+description = "Headcount evidence conflicts: Calcalist reported 15 employees in April 2026; Startup Nation Finder lists 1–10 employees and an exact count of 10 on its current profile. These are snapshots from secondary sources and do not establish present staffing."
+date = "2026-04"
+source_ids = ["calcalist", "finder"]
+
+[[intelligence.comparables]]
+name = "Wiz"
+website = "https://www.wiz.io/"
+rationale = "Directly overlaps in cloud-security graph context, runtime threat protection, attack-path prioritization, investigation and remediation workflows."
+differentiation = "Wiz publicly describes a broad, scaled cloud and AI security platform with integrated visibility, runtime and workflow products. Copperhelm's asserted distinction is a narrower agentic execution model centered on actively investigating running workloads and carrying out policy-bounded remediation; relative performance and feature depth are not independently benchmarked."
+source_ids = ["wiz", "company_home"]
+
+[[intelligence.comparables]]
+name = "Palo Alto Networks Prisma Cloud"
+website = "https://www.paloaltonetworks.com/prisma/cloud"
+rationale = "Substitute platform across cloud posture, workload protection, code-to-cloud risk prioritization and remediation."
+differentiation = "Prisma Cloud is a broad incumbent platform spanning code, infrastructure and runtime. Copperhelm asserts a purpose-built autonomous cloud-security teammate and Context Lake; differentiated customer outcomes, technical performance and integration breadth remain unverified."
+source_ids = ["paloalto", "company_about"]
+
+[intelligence.research]
+researched_at = "2026-10-04T21:45:00Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Copperhelm official Copperhelm cloud security", "Copperhelm $7 million seed TLV Partners April 2026", "Copperhelm founders Shimon Tolts Eyar Zilberman Roman Labunsky", "Copperhelm cloud security customers revenue patents", "site:copperhelm.com Copperhelm customers deployment 2026", "Copperhelm patent OR patent application", "Copperhelm Kfir Tishbi Or Hiltch investors seed", "Wiz official cloud security platform runtime threat detection remediation", "Palo Alto Prisma Cloud official cloud security code to cloud remediation", "Copperhelm Israel company registry 517056750"]
+gaps = ["team: no independently verified biographies or comprehensive current employee roster; available titles come from company and media pages.", "investors: exact round syndicate and fund relationships are reported, but investor check sizes and ownership stakes are not public.", "financials: no public revenue, ARR, profitability, burn, cash, or runway disclosure located; seed proceeds do not establish operating runway.", "traction: no independently confirmed customer contracts, paid deployments, usage, renewal, or performance metrics; testimonials lack commercial status.", "intellectual_property: no Copperhelm-assigned patent or application was located in targeted web searches; this is not proof that none exist.", "competition: comparison is based on product descriptions, not a controlled feature evaluation or customer win/loss data.", "ownership: private cap table and founder/investor percentages are not disclosed; no ownership transaction found.", "Financial metrics and unit economics remain undisclosed; headcount estimates conflict and are not current verified payroll figures.", "Company founding date conflicts between Finder's October 2024 and Calcalist's late-2025 report; legal formation date versus operational founding may differ.", "No public defense, intelligence, or government customer or contract evidence was identified; defense applicability remains an analytical dual-use assessment only."]
+conflicts = ["Founding date: Startup Nation Finder states October 2024 (profile also gives year 2024), while Calcalist's 23 April 2026 report says the company was established in late 2025. No company statement or corporate filing resolving the discrepancy was found. Root record is updated to 2024 based on the more specific historical profile, but the date is disputed.", "Headcount: Calcalist reported 15 employees in April 2026; Startup Nation Finder lists a 1–10 range and an exact count of 10. Both are snapshots and could reflect timing or methodology differences; no authoritative current count is available."]
+diligence_questions = ["What is the legal incorporation date and how does it reconcile the October 2024 directory date with Calcalist's late-2025 founding report?", "How many organizations are paying customers versus pilots or testimonial references, and what are deployment, retention and measurable remediation outcomes?", "What controls, audit records, approval thresholds and rollback guarantees govern agent actions in production, and what incident/error rates have been observed?", "What are the round's post-money valuation, investor allocations and current fully diluted ownership, if shareable under diligence?", "Which cloud providers, workload types and deployment models are supported today, and what least-privilege permissions are needed?", "Has Copperhelm filed patents or built other protectable IP, and how is Context Lake differentiated from incumbent security graphs?", "What commercial evidence, if any, supports deployment in regulated or sovereign environments, and is there any public or private defense use?", "What are current ARR, gross margin, burn, cash and hiring levels following the seed financing?"]
+
+[[intelligence.research.sources]]
+id = "company_home"
+url = "https://copperhelm.com/"
+title = "Copperhelm | Agentic Cloud Security"
+publisher = "Copperhelm"
+kind = "company"
+accessed_at = "2026-10-04T21:45:00Z"
+claims = ["company.products", "company.business_model", "traction", "company.traction.testimonials", "company.dual_use_relevance"]
+
+[[intelligence.research.sources]]
+id = "company_about"
+url = "https://copperhelm.com/about"
+title = "About us"
+publisher = "Copperhelm"
+kind = "company"
+accessed_at = "2026-10-04T21:45:00Z"
+claims = ["company.founders", "company.operating_status", "company.products", "company.board"]
+
+[[intelligence.research.sources]]
+id = "tlv"
+url = "https://www.tlv.partners/bringing-autonomous-ai-to-cloud-defense-our-investment-in-copperhelm/"
+title = "Bringing Autonomous AI to Cloud Defense – Our Investment in Copperhelm"
+publisher = "TLV Partners"
+kind = "investor"
+accessed_at = "2026-10-04T21:45:00Z"
+published_on = "2026-04-26"
+claims = ["funding.rounds.seed-2026.amount", "funding.rounds.seed-2026.lead_investors", "funding.rounds.seed-2026.participating_investors", "funding.reported_total_raised", "ownership.cap_table_status"]
+
+[[intelligence.research.sources]]
+id = "calcalist"
+url = "https://www.calcalist.co.il/calcalistech/article/skm6l8dpbe"
+title = "גיוס ראשון לחברת קופרהלם שמפתחת סוכני AI לאבטחת ענן"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-04T21:45:00Z"
+published_on = "2026-04-23"
+claims = ["funding.rounds.seed-2026.amount", "funding.rounds.seed-2026.lead_investors", "funding.rounds.seed-2026.participating_investors", "company.people", "company.founded_on.conflict", "company.employees.conflict", "company.board", "ownership.cap_table_status"]
+
+[[intelligence.research.sources]]
+id = "finder"
+url = "https://finder.startupnationcentral.org/company_page/copperhelm"
+title = "CopperHelm — Cyber Security | Finder"
+publisher = "Startup Nation Finder"
+kind = "directory"
+accessed_at = "2026-10-04T21:45:00Z"
+claims = ["company.legal_name", "company.registry_identifiers", "company.locations", "company.founded_on", "company.employees", "company.people", "funding.rounds.seed-2026.amount", "funding.rounds.seed-2026.participating_investors"]
+
+[[intelligence.research.sources]]
+id = "fintechglobal"
+url = "https://fintech.global/2026/04/24/copperhelm-exits-stealth-with-7m-seed-round/"
+title = "Copperhelm exits stealth with $7m seed round"
+publisher = "FinTech Global"
+kind = "media"
+accessed_at = "2026-10-04T21:45:00Z"
+published_on = "2026-04-24"
+claims = ["funding.rounds.seed-2026.amount", "funding.rounds.seed-2026.participating_investors"]
+
+[[intelligence.research.sources]]
+id = "wiz"
+url = "https://www.wiz.io/platform"
+title = "Wiz Cloud and AI Security Platform"
+publisher = "Wiz"
+kind = "other"
+accessed_at = "2026-10-04T21:45:00Z"
+claims = ["comparables.Wiz.product_scope", "competition"]
+
+[[intelligence.research.sources]]
+id = "paloalto"
+url = "https://www.paloaltonetworks.com/prisma/cloud"
+title = "Prisma Cloud | Comprehensive Cloud Security"
+publisher = "Palo Alto Networks"
+kind = "other"
+accessed_at = "2026-10-04T21:45:00Z"
+claims = ["comparables.Prisma_Cloud.product_scope", "competition"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T21:45:00Z"
+next_review_on = "2027-01-04"
+queries = ["Copperhelm official Copperhelm cloud security", "Copperhelm Israel company registry 517056750"]
+source_ids = ["company_home", "company_about", "calcalist", "finder"]
+summary = "Confirmed Copperhelm is an active Israeli private B2B cloud-security startup, with legal-name and registrar details in the Finder profile; profile is secondary evidence."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T21:45:00Z"
+next_review_on = "2027-01-04"
+queries = ["Copperhelm $7 million seed TLV Partners April 2026", "Copperhelm funding raised seed investors"]
+source_ids = ["tlv", "calcalist", "finder", "fintechglobal"]
+summary = "One $7 million USD Seed round announced April 2026; no later round found. Round history remains partial because private financing disclosures may be incomplete."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T21:45:00Z"
+next_review_on = "2027-01-04"
+queries = ["Copperhelm investors TLV Partners ICON toDay SaaS Ventures angel investors", "Copperhelm Kfir Tishbi Or Hiltch investors seed"]
+source_ids = ["tlv", "calcalist", "finder", "fintechglobal"]
+summary = "TLV Partners confirms lead and three participating funds; press and Finder also identify angel participants. Check sizes and ownership are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T21:45:00Z"
+next_review_on = "2027-01-04"
+queries = ["Copperhelm founders Shimon Tolts Eyar Zilberman Roman Labunsky"]
+source_ids = ["company_about", "calcalist", "finder"]
+summary = "Company page confirms CEO, CTO and CPO founders and displays board members; Calcalist adds founder background and reports headcount, which conflicts with directory range."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T21:45:00Z"
+next_review_on = "2027-04-04"
+queries = ["Copperhelm ownership acquisition acquired cap table shareholders", "Copperhelm funding valuation seed"]
+source_ids = ["tlv", "calcalist", "company_about"]
+summary = "Private company; no cap table, equity percentages, valuation or ownership-change announcement located. Board appointments do not establish ownership."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T21:45:00Z"
+next_review_on = "2027-04-04"
+queries = ["Copperhelm revenue ARR profitability burn runway", "Copperhelm financials customers contracts"]
+source_ids = ["company_home", "calcalist", "tlv"]
+summary = "No dated revenue, ARR, profit, cash, burn or runway figure found. Seed proceeds are financing, not a financial operating metric."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T21:45:00Z"
+next_review_on = "2027-01-04"
+queries = ["site:copperhelm.com Copperhelm customers deployment 2026", "Copperhelm customers contracts pilots enterprise"]
+source_ids = ["company_home", "calcalist"]
+summary = "Company site presents customer-attributed testimonials and product functionality; neither it nor the reviewed media establishes paid status, contracts, usage or deployment outcomes."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T21:45:00Z"
+next_review_on = "2027-04-04"
+queries = ["Copperhelm patent OR patent application", "Copperhelm assignee patent Context Lake"]
+source_ids = ["company_home", "company_about"]
+summary = "No company-specific patent result or IP disclosure was located in targeted searches; absence of located evidence does not show absence of IP."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T21:45:00Z"
+next_review_on = "2027-01-04"
+queries = ["Wiz official cloud security platform runtime threat detection remediation", "Palo Alto Prisma Cloud official cloud security code to cloud remediation"]
+source_ids = ["wiz", "paloalto"]
+summary = "Official product pages show substantial overlap from Wiz and Prisma Cloud in contextual cloud-risk prioritization, runtime detection and response/remediation, making them credible platform competitors and substitutes."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T21:45:00Z"
+next_review_on = "2027-04-04"
+queries = ["Copperhelm defense government military security contracts", "Copperhelm public sector sovereign cloud defense"]
+source_ids = ["company_home", "company_about", "calcalist"]
+summary = "No public defense, intelligence or government customer evidence found. Cloud security has plausible commercial and defense/security applicability, but company-specific defense use is unverified."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The company maintains an active official product and about site, identifies current executive roles and offers a demo; current operation is directly supported by these company-controlled pages."
+verified_at = "2026-10-04T21:45:00Z"
+source_ids = ["company_home", "company_about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Calcalist locates the company and its reported 15-person team in Tel Aviv; Finder lists Tel Aviv-Yafo and Israeli legal entity COPPERHELM LTD."
+verified_at = "2026-10-04T21:45:00Z"
+source_ids = ["calcalist", "finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "TLV Partners says it led Copperhelm's $7 million Seed round; Calcalist reports the same amount and round date. This is the sole publicly identified round, not a sum inferred from third-party databases."
+verified_at = "2026-10-04T21:45:00Z"
+source_ids = ["tlv", "calcalist"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.amount"
+support = "direct"
+summary = "The lead investor announcement and Calcalist both report $7 million for the April 2026 Seed round."
+verified_at = "2026-10-04T21:45:00Z"
+source_ids = ["tlv", "calcalist"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.lead_investors"
+support = "direct"
+summary = "TLV Partners identifies itself as lead investor in the $7 million Seed."
+verified_at = "2026-10-04T21:45:00Z"
+source_ids = ["tlv"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.participating_investors"
+support = "direct"
+summary = "TLV Partners names ICON, toDay Ventures and SaaS Ventures Israel; Finder lists Kfir Tishbi and other angels; FinTech Global names Kfir Tishbi, Or Hiltch, Guy Zipori and Ephraim Yarmak. The sources do not provide a single reconciled complete participant roster."
+verified_at = "2026-10-04T21:45:00Z"
+source_ids = ["tlv", "finder", "fintechglobal"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.cap_table_status"
+support = "direct"
+summary = "Reviewed public round announcement and company coverage disclose financing participants but not the cap table or ownership percentages; private ownership remains undisclosed."
+verified_at = "2026-10-04T21:45:00Z"
+source_ids = ["tlv", "calcalist"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.legal_name"
+support = "direct"
+summary = "Startup Nation Finder lists COPPERHELM LTD and Israeli company number 517056750."
+verified_at = "2026-10-04T21:45:00Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.founded_on"
+support = "conflicting"
+summary = "Finder gives October 2024 while Calcalist states late 2025; exact legal or operational founding date is unresolved."
+verified_at = "2026-10-04T21:45:00Z"
+source_ids = ["finder", "calcalist"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.locations"
+support = "direct"
+summary = "Calcalist says the company operates from Tel Aviv; Finder lists Tel Aviv-Yafo, Israel."
+verified_at = "2026-10-04T21:45:00Z"
+source_ids = ["calcalist", "finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.board"
+support = "direct"
+summary = "Copperhelm's about page lists Rona Segev, Brian Sack and Shay Michel as board members; Calcalist reports Michel joined following the round."
+verified_at = "2026-10-04T21:45:00Z"
+source_ids = ["company_about", "calcalist"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.employees"
+support = "conflicting"
+summary = "Calcalist reported 15 employees in April 2026, while Finder lists 1–10 and exact count 10; neither verifies the October 2026 headcount."
+verified_at = "2026-10-04T21:45:00Z"
+source_ids = ["calcalist", "finder"]

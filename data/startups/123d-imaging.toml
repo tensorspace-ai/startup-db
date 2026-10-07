@@ -1,0 +1,209 @@
+name = "123D Imaging"
+description = "123D Imaging is a Haifa computational-imaging startup commercializing Technion-originated optics and reconstruction software that adds passive 3D, depth, volumetric-flow, and inspection capabilities to existing imaging systems. Its core proposition is to recover more spatial information from fewer cameras and simpler optical hardware, creating a potentially important sensing layer for microscopy, industrial inspection, robotics, and defense-adjacent perception."
+detailed_description = """
+**Product and the concrete problem it solves.** 123D Imaging is building a computational-imaging and optical-design business around a practical problem in sensing: many systems need depth, three-dimensional structure, or volumetric motion data, but the conventional answer is to add cameras, active illumination, radar, LiDAR, or a more complex optical train. Those additions increase bill of materials, alignment effort, calibration burden, power consumption, and failure points. The company’s public profile describes a compact optical add-on paired with proprietary decoding and reconstruction software that can upgrade an existing imaging system rather than requiring a complete redesign. The target capabilities include passive monocular depth, full volumetric flow measurements, extended depth of field, microscopy, surface measurement, and 3D defect detection. That makes 123D Imaging an enabling-sensing company rather than a finished vertical application vendor. The immediate customer problem is not that cameras cannot produce pictures; it is that a two-dimensional image often leaves the operator without reliable distance, shape, motion, or internal spatial information needed to make a measurement or an autonomous decision.
+
+**Core technology and how it actually works.**  The technical approach comes from point-spread-function engineering, diffractive optical elements, phase masks, and algorithmic reconstruction. Instead of obtaining depth by triangulating between two separated cameras or actively transmitting a ranging signal, a shaped optical element deliberately changes how different depths appear on the image sensor. The resulting depth-dependent blur or point-spread pattern contains a code that software can decode into distance or three-dimensional structure. 123D’s public description says it combines PSF engineering, DOE or phase-mask optical elements, and proprietary decoding software; the Technion technology record explains the same general architecture as passive wavefront shaping followed by algorithmic distance decoding. The company also describes a 3D particle-image-velocimetry path in which a thin phase mask is inserted into an otherwise conventional setup and a neural network reconstructs volumetric flow from a single camera. This is technically meaningful because it moves complexity from multiple synchronized cameras and calibration-heavy geometry into a co-designed optic-plus-algorithm package. It does not make physics disappear: performance still depends on optical design, calibration, signal quality, reconstruction robustness, and the scene class.
+
+**Market, customers, and go-to-market.**  The clearest initial markets are organizations that already own cameras or microscopes but need a new measurement mode. In microscopy and biomedical research, the product could add depth or volumetric information to instruments used for cells, particles, and microfluidics. In industrial and semiconductor inspection, the same stack could support extended-depth imaging, surface metrology, autofocus, and three-dimensional defect detection. In fluid mechanics, a single-camera 3D PIV workflow could reduce the cost and physical footprint of experiments in constrained optical environments. The company’s public materials do not disclose paying customers, revenue, pricing, distribution agreements, or a repeatable sales funnel. The likely route to market is technical co-development with instrument makers, imaging OEMs, research-equipment suppliers, and industrial inspection integrators, followed by licensing or sale of an optical module and reconstruction software. A component-level strategy would be more scalable than selling bespoke imaging services, but it would also expose 123D to long qualification cycles and to the integration requirements of customers whose products must remain stable across temperature, vibration, manufacturing tolerances, and changing scenes.
+
+**Traction, funding, and third-party validation.**  The public record places 123D Imaging in the earliest commercialization phase. LinkedIn identifies the company as founded in 2026, headquartered in Haifa, privately held, and employing 2-10 people; it names Yotam Zohar as a company employee and lists the company website as 123dimaging.com. Technion’s T3 commercialization program presents 123D Imaging as an early-stage venture with Zohar as co-founder and CEO, and the 10D Israeli Physical AI map includes 123D in the sensors-and-perception infrastructure category. No reviewed source discloses an equity round, grant amount, valuation, named customer, production shipment, regulatory approval, or company-level patent portfolio. There is nevertheless a meaningful research-validation layer behind the venture. Technion records describe a macroscopic single-camera 3D optic for far-object distance measurement, and peer-reviewed work by Yoav Shechtman and collaborators established the information-theoretic design of depth-encoding point-spread functions. A 2026 preprint on high-density monocular 3D PIV reports correlation coefficients above 0.97 against ground-truth references and an order-of-magnitude computational-speed improvement in its experimental setting. Those results validate the underlying research direction, not a finished 123D product or commercial performance claim.
+
+**Founders and team background.**  The most publicly confirmable operating leader is Yotam Zohar, identified by Technion’s T3 program as 123D Imaging’s co-founder and CEO. The company profile also attributes its technology to Professor Yoav Shechtman’s laboratory at the Technion, making the venture’s academic provenance unusually legible for such a young company. Shechtman is an associate professor in biomedical engineering whose research spans optical super-resolution microscopy, three-dimensional and multicolor tracking, optical design, machine learning for imaging, inverse problems, and wavefront shaping. His published work and Technion technology portfolio cover both microscopic 3D imaging and macroscopic distance measurement, which provides a credible technical bridge from laboratory methods to sensing products. The team appears very small, and the public sources do not establish a larger executive bench, manufacturing organization, sales team, or advisory board. That is both an advantage and a diligence constraint: a compact founding group can iterate quickly around a difficult optical core, but commercializing optics requires expertise beyond the original research, including packaging, calibration, manufacturing yield, embedded inference, application engineering, and customer support. The company’s ability to recruit or partner across those disciplines will determine whether the lab-originated capability becomes a reliable product.
+
+**Competitive dynamics and potential edge.**  123D Imaging competes against several different approaches rather than one direct substitute. Intel RealSense and Stereolabs represent stereo and depth-camera systems that use multiple viewpoints; Ouster and Hesai represent LiDAR architectures that actively measure range; structured-light and time-of-flight systems add illumination and specialized sensors; and Teledyne FLIR, Cognex, and instrument vendors combine mature cameras with application-specific processing for industrial and defense markets. In microscopy and flow measurement, established multi-camera tomographic PIV systems are the incumbent approach. 123D’s plausible edge is a compact, passive, co-designed optical and computational layer that can preserve existing cameras while adding depth or volumetric information. A single-camera design can be valuable where camera placement is difficult, where synchronization is undesirable, or where active emissions are operationally undesirable. The edge remains unproven as a business moat. Competitors can improve stereo algorithms, integrate smaller active sensors, or copy the application-level workflow; customers may prefer a complete instrument from an incumbent even if the underlying physics is less elegant. Defensibility therefore depends on optical IP, reconstruction quality, calibration simplicity, manufacturing repeatability, and demonstrated performance in difficult scenes rather than on the existence of a phase mask alone.
+
+**Defense, security, and resilience dual-use relevance.**  123D Imaging qualifies as dual-use at the enabling-technology level, with no public evidence of fielded defense capability. The Technion’s macroscopic technology record describes passive distance measurement for far objects, including light sources such as headlights, landing-strip lights, and rockets, and notes operation in low-visibility conditions such as dust that can overwhelm active systems like LiDAR. Those properties create credible pathways into electro-optical sensing for unmanned systems, perimeter and border observation, search and rescue, range estimation, and industrial or energy infrastructure inspection. A smaller optical payload that delivers depth without an active emitter could also help constrained UAVs, ground robots, or maritime platforms where power, size, signature, and sensor alignment matter. The same technology can support civilian resilience through inspection of semiconductor production equipment, utilities, hazardous industrial spaces, and fluid systems. Calibration is important: no source reviewed here confirms an IDF, Ministry of Defense, intelligence, aerospace-prime, or security customer; no ruggedization, export-control classification, cyber accreditation, or contested-environment test is public; and the company’s stated commercialization evidence is research and early ecosystem validation. Strategic value is therefore potential sensing leverage, not a claimed defense contract.
+
+**Growth stage, trajectory, and key diligence risks.**  123D Imaging should be classified as early: a 2026 company with a 2-10-person public profile, an academic technology base, and no disclosed financing or commercial metrics. Its attractive trajectory would be a staged productization path: first demonstrate repeatable depth and volumetric-measurement performance with a compact module; then convert one or more research or industrial pilots into paid design-ins; then prove that calibration, manufacturing, and inference costs remain acceptable when deployed outside a controlled laboratory. The main risks are substantial. (1) Optical-to-software co-design may work in experiments but degrade with temperature, vibration, lens variation, contamination, or production tolerances. (2) Customers may demand application-specific accuracy, latency, certification, and support that a tiny team cannot yet provide. (3) The company’s patent ownership, freedom to operate, licensing arrangements with Technion, and protection of reconstruction software are not publicly established. (4) Stereo, LiDAR, time-of-flight, and incumbent instrument vendors already have installed bases and mature channels. (5) The 2026 preprint evidence is promising but does not establish commercial reliability, recurring revenue, or defense readiness. (6) If defense or space markets become the primary path, export controls and long qualification cycles could delay revenue. The opportunity is technically distinctive; the next proof points must be product, customer, and manufacturing evidence.
+"""
+logo = "Unknown"
+website = "https://www.123dimaging.com"
+sector = "Computational Imaging and 3D Optical Sensing"
+founded = "2026"
+headquarters = "Haifa, Israel"
+employees = "2-10"
+funding_stage = "Unknown (early-stage company; no funding amount publicly disclosed in the reviewed sources)"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "123D Imaging has credible dual-use relevance through its core sensing technology, not through a disclosed defense product. Passive single-camera 3D imaging, compact diffractive optics, and algorithmic distance decoding can support commercial microscopy, industrial inspection, semiconductor measurement, and fluid analysis while also offering pathways into electro-optical perception for unmanned systems, perimeter observation, search and rescue, and critical-infrastructure inspection. The Technion technology portfolio specifically describes far-object distance measurement and potential performance in dust, which strengthens the defense and resilience adjacency. The public record does not establish an IDF or Ministry of Defense customer, a defense contract, ruggedized hardware, export-control posture, or field testing in contested conditions. The appropriate assessment is a strong enabling-technology pathway with early evidence, not a claim of operational military capability."
+key_technologies = [
+  "Point-spread-function engineering that encodes scene depth into a camera image through designed optical blur",
+  "Diffractive optical elements and phase masks fabricated as compact optical add-ons",
+  "Proprietary decoding and computational reconstruction software for passive monocular 3D and distance estimation",
+  "Single-camera volumetric particle-image velocimetry using phase-mask encoding and neural-network reconstruction",
+  "Computational microscopy, extended-depth-of-field imaging, single-shot autofocus, and 2.5D or surface measurement",
+  "3D defect detection and optical inspection workflows for semiconductor and industrial equipment"
+]
+use_cases = [
+  "Passive range and 3D perception for constrained electro-optical payloads on unmanned aerial or ground systems",
+  "Long-distance observation of vehicles, lights, landing zones, and other objects where adding a second camera is impractical",
+  "Industrial and semiconductor inspection requiring depth, surface profile, extended depth of field, or three-dimensional defect detection",
+  "Single-camera 3D particle-image velocimetry for microfluidic, laboratory, and industrial flow measurement",
+  "Research microscopy that needs volumetric or high-throughput spatial information without a large multi-camera optical train",
+  "Search-and-rescue, perimeter, and critical-site monitoring where passive depth complements existing camera infrastructure",
+  "Calibration-light optical upgrades for imaging OEMs and scientific instruments",
+  "Fluid, biomedical, and materials research in optically constrained spaces where camera placement or active illumination is limited"
+]
+investible = true
+investment_rationale = "123D Imaging is a high-uncertainty strategic priority signal, not an investment recommendation. (1) The technical thesis is differentiated: engineered optics plus reconstruction can add depth and volumetric measurement to existing cameras while avoiding some of the hardware, alignment, and power burden of stereo, LiDAR, or multi-camera systems. (2) The academic foundation is credible, with Technion commercialization support, a named co-founder and CEO, and research by Yoav Shechtman’s lab spanning phase-mask 3D imaging, microscopy, and distance measurement. (3) The most relevant commercial proof point would be a repeatable product module, but that evidence is not public. Counterweights are therefore decisive: no disclosed funding, revenue, customers, production shipment, company patent posture, or defense contract; a very small team; long instrument and industrial-qualification cycles; and strong incumbent alternatives. The priority signal is the quality and strategic transferability of the underlying sensing approach, not present commercial maturity."
+strategic_value = "123D Imaging’s strategic value is the possibility of improving perception density per camera, watt, and cubic centimeter. That matters in three ways. (1) Sovereign sensing: an Israeli computational-optics capability could become an enabling component for local and allied robotics, electro-optics, industrial inspection, or aerospace supply chains. (2) Resilience: passive depth and compact optical retrofits may help operators continue measuring objects and infrastructure when camera placement, power, emissions, or communications are constrained. (3) System-level AI: the company sits at the physical-AI interface where optical information must be converted into reliable geometry before a robot or operator can act. The limitation is maturity. Strategic value is not yet demonstrated by procurement or field deployment, and the company must prove calibration stability, manufacturability, low-latency reconstruction, and secure integration before its technology can be treated as a dependable national-capability supplier."
+potential_score = 67.0
+technology_score = 82.0
+market_score = 53.0
+team_score = 72.0
+dual_use_score = 73.0
+strategic_alignment_score = 76.0
+stage = "early"
+stage_rationale = "123D Imaging is classified as early because LinkedIn identifies it as founded in 2026 with 2-10 employees, while Technion T3 describes it as an early-stage venture commercializing lab-originated imaging technology. The company has credible research validation and a public commercialization identity, but the reviewed sources do not establish a priced product, recurring revenue, production shipment, institutional financing, or scaled customer base. The underlying technology appears to be at the transition from research and technology-transfer activity toward product definition. Progress toward mid-stage would require disclosed customer design-ins, repeatable hardware and software performance outside laboratory demonstrations, a manufacturing and support plan, and evidence that the optical add-on creates economic value for an instrument or platform buyer."
+competitors = [
+  "Intel RealSense (stereo and active depth-camera modules with a large developer ecosystem)",
+  "Stereolabs (stereo-camera depth and perception systems for robotics and spatial computing)",
+  "Ouster and Hesai (LiDAR-based active range sensing for robotics, vehicles, and industrial perception)",
+  "Teledyne FLIR (mature visible, thermal, and industrial/defense electro-optical sensing portfolios)",
+  "Cognex (incumbent industrial machine-vision inspection and measurement systems)",
+  "Multi-camera tomographic PIV vendors (established volumetric-flow measurement approach competing with 123D’s monocular workflow)"
+]
+competitive_edge = "123D Imaging’s prospective edge is a co-designed optical-computational architecture rather than a single novel software feature. (1) A thin phase mask or diffractive optical element can add depth encoding to an existing camera or microscope, potentially avoiding the mechanical spacing and synchronization required by stereo. (2) Passive operation can be attractive where active illumination or ranging emissions are undesirable, and the compact form factor may suit payloads or instruments with severe space and power limits. (3) The company’s technology lineage spans macroscopic distance measurement, 3D microscopy, and volumetric flow, giving it several technical beachheads rather than one narrow demonstration. (4) Technion-originated research and early commercialization support provide credibility in a difficult optics domain. The edge is not yet a moat: incumbents can improve software, customers may prefer complete integrated systems, and the decisive evidence will be calibration simplicity, accuracy across varied scenes, manufacturing yield, latency, and design-in conversion."
+risk_factors = [
+  "Early commercialization: no publicly disclosed revenue, production shipment, named paying customer, or institutional funding round",
+  "Laboratory-to-field gap: optical and reconstruction performance may degrade with lens variation, temperature, vibration, contamination, changing illumination, or real-world scene complexity",
+  "Small-team execution risk: a 2-10-person company must cover optics, algorithms, embedded systems, manufacturing, applications engineering, sales, and support",
+  "IP and freedom-to-operate uncertainty: company-level patent ownership, Technion licensing terms, and protection of reconstruction software are not publicly confirmed",
+  "Incumbent competition: stereo, LiDAR, time-of-flight, structured-light, and mature machine-vision vendors have installed bases and established channels",
+  "Long qualification cycles: scientific instruments, semiconductor inspection, aerospace, and defense customers may require extensive validation before design-in",
+  "Dual-use realization risk: no public defense customer, ruggedization evidence, security accreditation, export-control posture, or contested-environment test is disclosed"
+]
+risk_level = "high"
+signals = ["deep_tech", "strategic_sensing", "technion_origin", "dual_use_adjacency"]
+priority_rank = 0
+priority_rationale = "123D Imaging merits monitoring because it is a genuinely new, uncaptured Israeli deep-tech entry at the intersection of computational optics, 3D sensing, and physical AI. The strongest signals are a concrete optical mechanism, a Technion research lineage with commercialization support, a named early-stage company and CEO, and a technically credible pathway from microscopy and industrial measurement into constrained robotic or electro-optical sensing. The priority ceiling is set by the same facts that make it early: public evidence does not yet show funding, customers, production hardware, recurring revenue, company-level IP posture, or defense adoption. The next milestones to watch are a public prototype or benchmark, a paid industrial or instrument design-in, patent or licensing clarity, manufacturing repeatability, and any security or aerospace evaluation. This is a strategic diligence flag, not an investment recommendation."
+public_sources = [
+  { label = "123D Imaging company profile", url = "https://il.linkedin.com/company/123d-imaging", description = "Current company description, stated technology areas, Haifa location, 2-10 employee band, founding year, and Yotam Zohar affiliation." },
+  { label = "Technion T3 Vector Club: 123D Imaging", url = "https://t3.technion.ac.il/vector-club/", description = "Technion identifies Yotam Zohar as 123D Imaging co-founder and CEO and the venture as early stage." },
+  { label = "Technion T3: Detecting far objects using a 3D optic system", url = "https://t3.technion.ac.il/technology/detecting-far-objects-using-a-3d-optic-system/", description = "Technical description and stated performance of a Technion passive 3D optic system; university technology record, not company product validation." },
+  { label = "Technion T3: Super-resolution microscopy for 3D imaging", url = "https://t3.technion.ac.il/technology/super-resolution-microscopy-for-3d-imaging/", description = "Technion describes its patented flow-cytometry 3D imaging technology; does not establish company ownership." },
+  { label = "Technion: Prof. Yoav Shechtman", url = "https://t3.technion.ac.il/researcher/shechtman-yoav/", description = "Researcher biography, research areas, and technologies available for commercialization." },
+  { label = "Technion research record: Optimal point spread function design for 3D imaging", url = "https://cris.technion.ac.il/en/publications/optimal-point-spread-function-design-for-3d-imaging-2/", description = "Peer-reviewed paper record on optimized pupil-plane modulation for 3D localization." },
+  { label = "arXiv: High-Density Monocular 3D Particle Image Velocimetry", url = "https://arxiv.org/abs/2607.29163", description = "2026 research preprint describing PET-PIV experiments; research evidence rather than proof of a 123D commercial deployment." },
+  { label = "10D: Israeli Physical AI Map", url = "https://www.10d.vc/2026/07/15/israeli-physical-ai-map/", description = "Independent Israeli venture ecosystem map listing 123D among sensing and perception ventures." }
+  ,{ label = "Yotam Zohar profile", url = "https://il.linkedin.com/in/yotam-zohar-123d", description = "Public professional profile associates Zohar with 123D Imaging and lists Technion education." }
+]
+crawled_at = "2026-09-20T02:55:49Z"
+updated_at = "2026-10-03T07:20:23Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Yotam Zohar", role = "Co-Founder and CEO", is_founder = true, current = true, background = "Technion's Vector Club identifies him as 123D Imaging co-founder and CEO. His LinkedIn profile associates him with the company and lists Technion education; further operating history is not independently established here.", source_ids = ["vector", "linkedin_person"] }
+]
+investors = []
+financials = []
+traction = [
+  { kind = "product", description = "The company profile describes monocular depth/3D imaging, single-camera volumetric PIV, microscopy and inspection, and custom DOE/phase-mask manufacturing. These are company-described areas and do not establish released products or customer deployment.", date = "2026-10-03", source_ids = ["linkedin"] },
+  { kind = "product", description = "Technion T3 lists a far-object 3D optic technology under Yoav Shechtman's commercialization portfolio, reporting distance measurement to 3 km at ±30 m and identifying low visibility and compactness as potential advantages. This is a university technology statement, not a verified 123D product test.", date = "2026-10-03", source_ids = ["t3_far"] },
+  { kind = "other", description = "A research team including Yoav Shechtman published a July 2026 preprint on PET-PIV, reporting correlation coefficients above 0.97 and an order-of-magnitude computational speed improvement in experimental comparisons. The results support the research approach but do not demonstrate company revenue, customer adoption, or production readiness.", date = "2026-07-31", source_ids = ["arxiv_piv"] }
+]
+intellectual_property = [
+  { kind = "patent", description = "Technion describes its high-throughput 3D flow-cytometry imaging technology as patented. Public evidence reviewed does not establish assignment, license scope, or ownership by 123D Imaging; company-specific patent numbers and portfolio remain unverified.", date = "2026-10-03", source_ids = ["t3_micro", "linkedin"] }
+]
+comparables = [
+  { name = "Intel RealSense", website = "https://www.intelrealsense.com/", rationale = "Depth cameras provide a practical alternative for robotics and machine vision.", differentiation = "RealSense uses integrated depth-camera approaches; 123D proposes a passive phase-mask and reconstruction layer for existing optical systems.", source_ids = ["linkedin"] },
+  { name = "Stereolabs", website = "https://www.stereolabs.com/", rationale = "Stereo depth cameras target spatial perception and robotics.", differentiation = "Stereo relies on multiple viewpoints, whereas 123D's stated approach encodes depth using engineered optics and one camera.", source_ids = ["t3_far"] },
+  { name = "Cognex", website = "https://www.cognex.com/", rationale = "Established machine-vision products compete in inspection and measurement workflows.", differentiation = "Cognex offers integrated industrial vision systems; 123D describes an enabling optical and software add-on, with no public comparative benchmark.", source_ids = ["linkedin"] },
+  { name = "Teledyne FLIR", website = "https://www.teledyneflir.com/", rationale = "Large electro-optical and machine-vision supplier with commercial and defense offerings.", differentiation = "The company describes passive depth encoding as a potential addition to existing cameras; relative field performance is unknown.", source_ids = ["t3_far"] }
+]
+
+[intelligence.company]
+company_id = "il-123d-imaging"
+legal_name = "123D Imaging (legal entity name not verified)"
+aliases = ["123D Imaging"]
+operating_status = "active"
+business_model = "Early-stage optical technology commercialization; the company describes compact optical add-ons and matched decoding/reconstruction software for imaging OEMs and R&D teams. Pricing, licensing structure, and current sales are undisclosed."
+products = ["Passive monocular depth and 3D imaging", "Single-camera volumetric particle image velocimetry", "Computational microscopy and industrial inspection", "Custom DOE and phase-mask optical elements and advanced optical manufacturing (company-described)"]
+locations = ["Haifa, Israel"]
+source_ids = ["linkedin", "vector"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders", "israeli_rd"]
+summary = "The company profile lists its headquarters in Haifa, Israel; Technion identifies Yotam Zohar as co-founder and CEO and describes the venture within the Technion commercialization ecosystem."
+as_of = "2026-10-03"
+source_ids = ["linkedin", "vector"]
+
+[intelligence.funding]
+status = "not_found"
+summary = "No public equity, convertible, debt, or grant announcement attributable to this company was identified in searches of the company name with funding, raised, seed, investor, valuation, and acquisition terms. This means no public round was found, not that the company has raised zero. No company-reported lifetime total was located."
+rounds = []
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[intelligence.ownership]
+status = "not_found"
+summary = "No acquisition, parent company, public listing, or disclosed ownership change was found. Private capitalization and shareholder percentages are not public in the reviewed sources."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["linkedin", "vector"]
+deals = []
+holdings = []
+
+[intelligence.research]
+researched_at = "2026-10-03T07:20:23Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "123D Imaging official website company computational imaging",
+  "123D Imaging Yotam Zohar Technion",
+  "123D Imaging funding investors raised seed Series A valuation acquired",
+  "123D Imaging revenue customers contracts partnerships employees",
+  "123D Imaging patents intellectual property",
+  "123D Imaging competitors 3D optical sensing",
+  "123D Imaging defense security dual use",
+  "123D Imaging השקעה מימון",
+  "123D Imaging CTech Calcalist Globes Geektime funding"
+]
+gaps = [
+  "investors: no named investors or financing participants were found in public sources; no public financing is not proof of no private capital.",
+  "financials: no dated revenue, ARR, profitability, cash, burn, or runway disclosure was found.",
+  "traction: no named paying customer, signed contract, production design-in, shipment, or revenue evidence was found; company-described capability statements are not verified customer adoption.",
+  "intellectual_property: no company-assigned patent list or documented Technion license terms were found; the Technion patent claim cannot establish company ownership.",
+  "competition: named peers are substitutes and adjacent incumbents; no independent apples-to-apples performance benchmark was located.",
+  "team: only Yotam Zohar was confirmed as a current company executive; the full founding and operating team, prior roles, and headcount beyond the LinkedIn band are unverified.",
+  "ownership: private cap table, shareholders, incorporation record, and any undisclosed licensing or ownership agreements were not established.",
+  "funding: searches found no attributable public round or company-reported lifetime funding total; private, non-public, grant, or bootstrapped financing may exist.",
+  "dual_use: no defense or government customer, contract, field deployment, certification, or export-control classification was found."
+]
+conflicts = []
+diligence_questions = [
+  "Which specific optics/software products are available today, and what repeatable benchmark supports depth accuracy, range, latency, calibration burden, and performance across lighting, temperature, vibration, and lens variation?",
+  "What legal entity owns or licenses the Technion-originated inventions, what are the field-of-use and royalty terms, and which patent applications or granted patents are assigned to the company?",
+  "Has 123D converted any evaluations into paid pilots, OEM design-ins, purchase orders, or recurring software revenue; what are the customer use cases and qualification timelines?",
+  "What equity, grant, convertible, or founder financing has the company received, who participated, and what is the current runway and cap-table status?",
+  "For the claimed near-index-matched optical manufacturing approach, what independent evidence shows manufacturing yield, optical tolerances, stability, unit cost, and scalability?"
+]
+sources = [
+  { id = "linkedin", url = "https://il.linkedin.com/company/123d-imaging", title = "123D Imaging company profile", publisher = "LinkedIn", kind = "company", accessed_at = "2026-10-03T07:20:23Z", claims = ["Company profile describes its computational imaging business and stated product areas, including passive 3D, PIV, microscopy, inspection, and custom DOE/phase-mask manufacturing.", "Profile lists Haifa headquarters, 2-10 employee band, private ownership, 2026 founding year, and Yotam Zohar association."] },
+  { id = "vector", url = "https://t3.technion.ac.il/vector-club/", title = "Vector Club", publisher = "Technion T3", kind = "government", accessed_at = "2026-10-03T07:20:23Z", claims = ["Technion identifies Yotam Zohar as 123D Imaging co-founder and CEO and classifies the venture as early stage."] },
+  { id = "t3_far", url = "https://t3.technion.ac.il/technology/detecting-far-objects-using-a-3d-optic-system/", title = "Detecting far objects using a 3D optic system", publisher = "Technion T3", kind = "government", accessed_at = "2026-10-03T07:20:23Z", claims = ["Describes a Technion passive PSF-based distance measurement approach and states performance to 3 km at ±30 m, compactness, and potential use in dust.", "Identifies automotive, aerospace, electro-optics, and security/defense categories and measurement of distant light sources as possible applications."] },
+  { id = "t3_micro", url = "https://t3.technion.ac.il/technology/super-resolution-microscopy-for-3d-imaging/", title = "Super-resolution microscopy for 3D imaging", publisher = "Technion T3", kind = "government", accessed_at = "2026-10-03T07:20:23Z", claims = ["Technion describes a patented 3D imaging apparatus for high-throughput systems such as imaging flow cytometry and potential integration into existing systems."] },
+  { id = "shechtman", url = "https://t3.technion.ac.il/researcher/shechtman-yoav/", title = "Prof. Yoav Shechtman", publisher = "Technion T3", kind = "government", accessed_at = "2026-10-03T07:20:23Z", claims = ["Identifies Shechtman as a Technion associate professor and describes his optical imaging, 3D tracking, machine-learning, and optical-design research and commercialization technologies."] },
+  { id = "prl", url = "https://cris.technion.ac.il/en/publications/optimal-point-spread-function-design-for-3d-imaging-2/", title = "Optimal point spread function design for 3D imaging", publisher = "Technion Research Information System", kind = "other", published_on = "2014-09-26", accessed_at = "2026-10-03T07:20:23Z", claims = ["Peer-reviewed Physical Review Letters paper describes optimized pupil-plane modulation and experimentally demonstrated 3D localization point-spread functions."] },
+  { id = "arxiv_piv", url = "https://arxiv.org/abs/2607.29163", title = "High-Density Monocular 3D Particle Image Velocimetry by Wavefront Shaping and Deep Learning", publisher = "arXiv", kind = "other", published_on = "2026-07-31", accessed_at = "2026-10-03T07:20:23Z", claims = ["Preprint reports PET-PIV using one phase mask and a monocular camera; reports correlation above 0.97 and an order-of-magnitude computational speed improvement in its stated experimental validations."] },
+  { id = "10d", url = "https://www.10d.vc/2026/07/15/israeli-physical-ai-map/", title = "Israeli Physical AI Map", publisher = "10D", kind = "investor", published_on = "2026-07-15", accessed_at = "2026-10-03T07:20:23Z", claims = ["Independent Israeli venture capital ecosystem map includes 123D Imaging among the country's physical AI sensing/perception companies."] },
+  { id = "linkedin_person", url = "https://il.linkedin.com/in/yotam-zohar-123d", title = "Yotam Zohar profile", publisher = "LinkedIn", kind = "other", accessed_at = "2026-10-03T07:20:23Z", claims = ["Public professional profile associates Yotam Zohar with 123D Imaging and lists Technion education."] }
+]
+topic_checks = [
+  { topic = "identity", status = "reported", checked_at = "2026-10-03T07:20:23Z", next_review_on = "2027-01-03", queries = ["123D Imaging official website company computational imaging", "123D Imaging Yotam Zohar Technion"], source_ids = ["linkedin", "vector", "10d"], summary = "Identified the Haifa Technion-linked computational imaging startup. The similarly named 123D ecommerce site is a different business and was excluded." },
+  { topic = "funding", status = "not_found", checked_at = "2026-10-03T07:20:23Z", next_review_on = "2027-01-03", queries = ["123D Imaging funding investors raised seed Series A valuation acquired", "123D Imaging השקעה מימון", "123D Imaging CTech Calcalist Globes Geektime funding"], source_ids = ["linkedin", "vector", "10d"], summary = "No publicly announced funding round or company-reported lifetime funding total found; this does not mean zero funding." },
+  { topic = "investors", status = "not_found", checked_at = "2026-10-03T07:20:23Z", next_review_on = "2027-01-03", queries = ["123D Imaging investors seed funding", "123D Imaging raised venture investor"], source_ids = ["linkedin", "vector", "10d"], summary = "No named financial investor located." },
+  { topic = "team", status = "reported", checked_at = "2026-10-03T07:20:23Z", next_review_on = "2027-01-03", queries = ["123D Imaging Yotam Zohar Technion founder CEO"], source_ids = ["vector", "linkedin", "linkedin_person"], summary = "Yotam Zohar is identified as co-founder and CEO; complete team and verified historical employment remain unclear." },
+  { topic = "ownership", status = "no_public_disclosure", checked_at = "2026-10-03T07:20:23Z", next_review_on = "2027-01-03", queries = ["123D Imaging acquired ownership parent company", "123D Imaging company registration shareholders"], source_ids = ["linkedin", "vector"], summary = "No disclosed parent, acquisition, listing, or shareholder information found; private cap table remains undisclosed." },
+  { topic = "financials", status = "no_public_disclosure", checked_at = "2026-10-03T07:20:23Z", next_review_on = "2027-01-03", queries = ["123D Imaging revenue ARR financials customers contracts"], source_ids = ["linkedin", "vector"], summary = "No company financial metrics or revenue disclosure found." },
+  { topic = "traction", status = "no_public_disclosure", checked_at = "2026-10-03T07:20:23Z", next_review_on = "2027-01-03", queries = ["123D Imaging customers pilots partnership contract product shipment"], source_ids = ["linkedin", "vector", "arxiv_piv"], summary = "Company capability descriptions and underlying research are public; no named paying customer, contract, or deployment found." },
+  { topic = "intellectual_property", status = "reported", checked_at = "2026-10-03T07:20:23Z", next_review_on = "2027-01-03", queries = ["123D Imaging patents intellectual property", "Technion 123D Imaging patent license"], source_ids = ["linkedin", "t3_micro", "shechtman"], summary = "Technion describes related research and a patented microscopy technology; company assignment or license is not established." },
+  { topic = "competition", status = "reported", checked_at = "2026-10-03T07:20:23Z", next_review_on = "2027-01-03", queries = ["passive monocular depth phase mask competitors stereo lidar machine vision"], source_ids = ["t3_far", "linkedin"], summary = "Relevant substitutes include stereo/depth cameras, LiDAR, and industrial machine vision; direct performance comparison is unavailable." },
+  { topic = "dual_use", status = "reported", checked_at = "2026-10-03T07:20:23Z", next_review_on = "2027-01-03", queries = ["123D Imaging defense security applications Technion distance optic"], source_ids = ["t3_far", "linkedin", "vector"], summary = "Passive distant-object measurement has plausible aerospace/security applications in a Technion technology record, but no company defense customer or deployment is disclosed." }
+]
+claim_checks = [
+  { field_path = "company.operating_status", support = "direct", summary = "Current LinkedIn company profile presents an operating company and its current product/business description; T3 currently lists it as an early-stage venture.", verified_at = "2026-10-03T07:20:23Z", source_ids = ["linkedin", "vector"] },
+  { field_path = "israel_connection", support = "direct", summary = "LinkedIn lists Haifa headquarters and T3 identifies the venture and its co-founder in the Technion ecosystem.", verified_at = "2026-10-03T07:20:23Z", source_ids = ["linkedin", "vector"] }
+]

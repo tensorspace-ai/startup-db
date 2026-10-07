@@ -1,0 +1,580 @@
+name = "Deci"
+description = "Deci developed AI software that used automated neural architecture search and hardware-aware optimization to make deep-learning models faster and cheaper to deploy across cloud, edge, and mobile environments. NVIDIA acquired Deci in May 2024 and dissolved it as an independent entity, so this record now tracks an acquired Israeli technology asset rather than a live startup."
+detailed_description = """
+Deci was an Israeli deep-learning software company founded in 2019. Its central proposition was that model design and deployment optimization should be automated against a target hardware profile rather than handled as a long sequence of manual experiments. Its AutoNAC technology searched model architectures and evaluated the resulting accuracy/efficiency trade-offs, while the broader platform covered optimization and deployment. Deci also published model work, including DeciLM and DeciCoder, which made the architecture-search thesis more tangible but should not be confused with a continuing standalone model business.
+
+The underlying customer problem is persistent. A model that is accurate in a research environment may still be too slow, expensive, power-hungry, or memory-intensive for production. Deci targeted the interaction between architecture choices and hardware constraints, including latency, throughput, memory, precision, and accuracy. That creates value for cloud inference, enterprise computer vision, industrial systems, robotics, and mobile or edge deployments where utilization and response time affect unit economics. LinkedIn preserved Deci's historical claims of 3x-15x inference improvements and up to 80% lower compute cost; these are vendor claims, not universal benchmarks, so diligence should require workload-specific baselines, hardware details, precision settings, and reproducible measurements.
+
+The competitive field includes NVIDIA TensorRT and TensorRT-LLM, ONNX Runtime, Intel OpenVINO, Apache TVM, Qualcomm AI Engine, and commercial optimization platforms such as OctoML. These substitutes attack different parts of the same budget problem: compiler lowering, kernel selection, quantization, pruning, runtime serving, or automated search. Deci's historical edge was the combination of architecture-level search with hardware-aware optimization, but that edge was exposed to rapid platform convergence. Accelerator vendors have strong incentives to bundle optimization into SDKs and runtimes, while open-source tooling lowers switching costs and makes a separate optimization layer harder to defend.
+
+Deci had credible pre-transaction commercialization signals: it published technical and product material, marketed an enterprise deep-learning development platform, and appeared in Israeli venture and accelerator coverage. LinkedIn currently preserves a 51-200 employee historical range, a Tel Aviv location, and a description of the platform, but also states that the company was acquired and dissolved as an independent corporate entity. NVIDIA's site provides the decisive current status and points users to legacy Deci documentation. Accordingly, this record should not imply current Deci revenue, product availability, headcount, customer traction, or an independent financing path. The relevant current diligence question is how NVIDIA incorporated the engineering and intellectual property into its software stack.
+
+The dual-use case is real but enabling. Efficient inference can support edge perception, autonomous systems, sensor processing, and analytics in bandwidth-constrained or power-limited environments, including defense and critical infrastructure. The same techniques can improve civilian inspection, robotics, medical imaging, and enterprise inference economics. Nothing in the reviewed public material establishes a Deci-specific defense contract, accreditation, classified deployment, or weapons application. The strategic relevance therefore comes from reducing compute and latency barriers to AI adoption, especially within an accelerator ecosystem, while the principal diligence questions are portability, reproducibility, supply-chain assurance, model behavior after compression, export-control implications, and whether NVIDIA preserves open deployment options for non-NVIDIA fleets.
+"""
+logo = "https://iprsoftwaremedia.com/219/files/202512/nvidia-logo-vert-blk.png?download=true"
+website = "https://docs.deci.ai/"
+sector = "AI Infrastructure"
+founded = "2019"
+headquarters = "Tel Aviv, Israel"
+employees = "51-200 historically; current standalone headcount not applicable after acquisition"
+funding_stage = "Acquired"
+entity_type = "acquired_asset"
+dual_use = true
+dual_use_description = "Efficient model inference has substantive commercial and security applicability where compute, power, bandwidth, or latency are constrained. The defense case is enabling infrastructure for edge perception, robotics, and sensor analytics; public sources reviewed here do not establish a Deci-specific defense contract, classified deployment, or weapons application."
+key_technologies = ["Automated neural architecture construction and neural architecture search", "Hardware-aware model design and optimization", "Inference latency, throughput, and memory profiling", "Model compression, quantization, and distillation workflows", "Cloud, edge, and mobile deployment optimization", "Deep-learning evaluation and benchmarking automation"]
+use_cases = ["Reducing inference cost for enterprise AI services", "Lower-latency computer vision for industrial inspection and operations", "Deploying speech, language, or vision models on memory-limited edge devices", "On-device perception for robotics and autonomous platforms", "Sensor analytics where bandwidth or power limits prohibit continuous cloud offload", "Defense and security edge analytics as an enabling layer, subject to accreditation and workload validation"]
+investible = false
+investment_rationale = "Deci is not an independent venture opportunity: NVIDIA acquired it in May 2024 and the standalone entity was dissolved. Its historical technology is relevant for strategic capability mapping and acquisition analysis, but current ownership, product access, team continuity, revenue, and roadmap should be diligenced through NVIDIA rather than treated as startup metrics."
+strategic_value = "The capability has high strategic relevance to AI infrastructure because architecture and inference optimization can increase accelerator utilization and make edge deployments feasible. That value is primarily captured within NVIDIA's broader software and hardware stack; its independent strategic value is reduced by the acquisition and by competition from vendor-native and open-source tooling."
+public_sources = [
+  { label = "Deci is Now a Part of NVIDIA", url = "https://www.nvidia.com/en-us/", description = "NVIDIA confirms May 2024 acquisition, dissolution of Deci as a separate entity, and legacy documentation." },
+  { label = "Deci seed funding and founders", url = "https://techcrunch.com/2020/10/27/deci-raises-9-1m-to-use-ai-to-optimize-ai/", description = "Contemporaneous reporting on seed round, founders, and historical product." },
+  { label = "Deci Series A announcement", url = "https://www.prnewswire.com/il/news-releases/deci-raises-21m-to-enable-the-world-to-benefit-from-the-full-potential-of-ai-301404331.html", description = "Company announcement with Series A terms, participating investors, and cumulative funding at that date." },
+  { label = "Deci Series B announcement", url = "https://www.prnewswire.com/news-releases/deci-raises-25m-series-b-to-accelerate-the-productization-of-real-world-ai-applications-301585578.html", description = "Company announcement with Series B terms, participants, and $55.1M reported lifetime funding." },
+  { label = "Calcalist Israeli Series A report", url = "https://www.calcalist.co.il/calcalistech/article/r1wutlpbk", description = "Israeli reporting corroborates founders, roles, local operations, and historical headcount." },
+  { label = "Israeli Series B report", url = "https://www.pc.co.il/news/367099/", description = "Israeli report corroborating Series B, cumulative funds raised, founder roles, and historical staffing." },
+  { label = "CTech acquisition report", url = "https://www.calcalistech.com/ctechnews/article/bkj6phggr", description = "Reports NVIDIA confirmation of the agreement and clearly attributes estimated deal and round valuations." },
+  { label = "Square Peg portfolio: Deci", url = "https://www.squarepeg.vc/portfolio/deci", description = "Investor portfolio confirms Deci's founders, 2019 founding and 2024 acquisition by NVIDIA." },
+  { label = "NVIDIA TensorRT documentation", url = "https://docs.nvidia.com/deeplearning/tensorrt/latest/index.html", description = "Official substitute product evidence for inference SDK optimization." },
+  { label = "ONNX Runtime quantization documentation", url = "https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html", description = "Official open runtime optimization and quantization capabilities." },
+  { label = "OpenVINO Model Optimization Guide", url = "https://docs.openvino.ai/2023.3/openvino_docs_model_optimization_guide.html", description = "Official Intel model compression and inference optimization capabilities." },
+  { label = "Apache TVM documentation", url = "https://tvm.apache.org/docs/", description = "Official open machine learning compiler and hardware optimization substitute." }
+]
+potential_score = 76.0
+technology_score = 86.0
+market_score = 78.0
+team_score = 78.0
+dual_use_score = 78.0
+strategic_alignment_score = 84.0
+stage = "mature"
+stage_rationale = "Deci reached product and commercialization maturity before NVIDIA acquired it in May 2024. The acquisition and dissolution of the standalone entity make mature acquired_asset the accurate classification; there is no current independent startup financing, headcount, revenue, or operating-stage signal to score."
+competitors = ["NVIDIA TensorRT and TensorRT-LLM", "ONNX Runtime", "Intel OpenVINO", "Apache TVM", "OctoML", "AWS SageMaker Neo"]
+competitive_edge = "Deci's historical differentiation was the combination of automated architecture-level search and hardware-aware optimization, aiming to improve a model before deployment rather than relying only on post-training compression or runtime compilation. Its published model work provided a visible technical demonstration of the approach. The edge was strategically useful but difficult to sustain against NVIDIA's native stack, accelerator-specific SDKs, and open-source substitutes, and current ownership means any advantage is now principally an NVIDIA integration question."
+risk_factors = ["Entity and roadmap risk: Deci was dissolved as a standalone company, so product access, branding, and team continuity depend on NVIDIA", "Platform substitution risk: accelerator vendors can bundle comparable optimization into SDKs, compilers, and inference runtimes", "Benchmark reproducibility risk: claimed speedups can vary materially by model, hardware, batch size, precision, and baseline", "Portability risk: optimization gains may not transfer across mixed accelerator fleets or constrained procurement environments", "Deployment assurance risk: defense and critical-infrastructure use requires security review, supply-chain assurance, deterministic behavior, and often accreditation", "Open-source pressure: ONNX Runtime, TVM, and related tooling can reduce willingness to pay for a separate optimization layer", "Post-acquisition diligence gap: current revenue, customers, staffing, support commitments, and intellectual-property boundaries are not transparent from the reviewed public sources"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Retain as a strategic reference for AI inference efficiency, Israeli deep-tech acquisition activity, and defense-edge compute constraints. The strong technology and strategic-alignment scores do not translate into a current startup priority signal because Deci is an acquired, dissolved entity with no independent investible status."
+crawled_at = "2026-01-30T14:18:00+00:00"
+updated_at = "2026-07-31T19:13:27Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Yonatan Geifman", role = "Co-founder and historical CEO", is_founder = true, current = false, background = "Deep-learning scientist; reported as CEO and co-founder in 2020; later Israeli reports identified him as CEO.", source_ids = ["tc-seed", "calcalist-series-a"] },
+  { name = "Jonathan (Joe) Elial", role = "Co-founder and historical COO", is_founder = true, current = false, background = "Technology entrepreneur; identified as co-founder and COO in contemporaneous Israeli reporting.", source_ids = ["tc-seed", "calcalist-series-a", "squarepeg-portfolio"] },
+  { name = "Ran El-Yaniv", role = "Co-founder and historical CTO", is_founder = true, current = false, background = "Technion professor and computer scientist specializing in machine learning; contemporaneous reports identify him as Deci CTO.", source_ids = ["tc-seed", "calcalist-series-a", "squarepeg-portfolio"] }
+]
+investors = [
+  { name = "Emerge", investor_type = "vc", website = "https://www.emerge.co.il/", round_ids = ["seed-2020", "series-a-2021", "series-b-2022"], relationship = "historical", source_ids = ["tc-seed", "deci-series-a", "deci-series-b"] },
+  { name = "Square Peg", investor_type = "vc", website = "https://www.squarepeg.vc/", round_ids = ["seed-2020", "series-a-2021", "series-b-2022"], relationship = "historical", source_ids = ["tc-seed", "deci-series-a", "deci-series-b"] },
+  { name = "Insight Partners", investor_type = "vc", website = "https://www.insightpartners.com/", round_ids = ["series-a-2021", "series-b-2022"], relationship = "historical", source_ids = ["deci-series-a", "deci-series-b"] },
+  { name = "Jibe Ventures", investor_type = "vc", round_ids = ["series-a-2021", "series-b-2022"], relationship = "historical", source_ids = ["deci-series-a", "deci-series-b"] },
+  { name = "Samsung Next", investor_type = "corporate", website = "https://www.samsungnext.com/", round_ids = ["series-a-2021"], relationship = "historical", source_ids = ["deci-series-a"] },
+  { name = "Vintage Investment Partners", investor_type = "vc", website = "https://www.vintage-ip.com/", round_ids = ["series-a-2021"], relationship = "historical", source_ids = ["deci-series-a"] },
+  { name = "Fort Ross Ventures", investor_type = "vc", website = "https://www.fortross.vc/", round_ids = ["series-a-2021", "series-b-2022"], relationship = "historical", source_ids = ["deci-series-a", "deci-series-b"] },
+  { name = "ICON", investor_type = "vc", website = "https://www.iconsv.org/", round_ids = ["series-b-2022"], relationship = "historical", source_ids = ["deci-series-b"] }
+]
+financials = [
+  { name = "Historical employees", value = "more than 30 employees", as_of = "2021-10-20", basis = "reported", metric = "employees", numeric_value = 30, value_relation = "more_than", unit = "people", source_ids = ["calcalist-series-a"] }
+]
+traction = [
+  { kind = "hiring", description = "Calcalist reported Deci had more than 30 employees after its Series A and described local Israeli development operations; this is historical staffing evidence, not a current post-acquisition headcount.", date = "2021-10-20", source_ids = ["calcalist-series-a"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "NVIDIA TensorRT / TensorRT-LLM", website = "https://docs.nvidia.com/deeplearning/tensorrt/latest/index.html", rationale = "NVIDIA SDKs compile and optimize trained models for NVIDIA GPU inference and cover deployment workloads that overlap Deci's historical performance objective.", differentiation = "TensorRT is runtime and hardware specific; Deci's stated differentiator was automated architecture construction and model-level search, though the acquisition brings both within NVIDIA's ecosystem.", source_ids = ["deci-series-a", "nvidia-tensorrt"] },
+  { name = "ONNX Runtime", website = "https://onnxruntime.ai/", rationale = "Open inference runtime with graph rewrite and quantization workflows for improving execution efficiency.", differentiation = "Broad runtime and execution-provider approach versus Deci's historical architecture search and hardware-aware model generation.", source_ids = ["deci-series-a", "onnx-runtime"] },
+  { name = "Intel OpenVINO", website = "https://docs.openvino.ai/", rationale = "Toolkit for model optimization and inference on Intel hardware, including compression workflows.", differentiation = "Intel-centric deployment and model compression toolkit; Deci marketed architecture search across target hardware.", source_ids = ["deci-series-a", "openvino"] },
+  { name = "Apache TVM", website = "https://tvm.apache.org/", rationale = "Open compiler stack targeting machine learning workloads across hardware backends.", differentiation = "Compiler, code generation, and schedule optimization focus versus Deci's combined architecture search and lifecycle platform.", source_ids = ["deci-series-a", "apache-tvm"] }
+]
+
+[intelligence.company]
+company_id = "il-deci"
+legal_name = "Deci AI Ltd."
+aliases = ["Deci", "Deci AI"]
+operating_status = "acquired"
+business_model = "Historically sold enterprise deep-learning development and optimization software for building, benchmarking, optimizing, and deploying models; Deci is now a dissolved NVIDIA subsidiary/asset rather than an independent seller."
+products = ["Deci deep-learning development platform", "AutoNAC (Automated Neural Architecture Construction)", "DeciNets", "DeciLM-7B", "DeciCoder"]
+locations = ["Tel Aviv, Israel"]
+linkedin_url = "https://www.linkedin.com/company/deciai/"
+founded_on = "2019"
+source_ids = ["nvidia-status", "tc-seed", "deci-series-a", "deci-series-b", "squarepeg-portfolio"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders", "israeli_rd"]
+summary = "Deci was founded in 2019 by Israeli researchers and entrepreneurs and operated from Tel Aviv; contemporary Israeli reporting placed its development center and staff in Israel."
+as_of = "2024-05"
+source_ids = ["tc-seed", "calcalist-series-a", "pc-series-b", "squarepeg-portfolio"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Three publicly announced venture rounds were located: a $9.1M seed in October 2020, $21M Series A in October 2021, and $25M Series B in July 2022. Deci's own Series B announcement states cumulative funding of $55.1M. Acquisition price and round valuations are not funding and are treated separately. Coverage is based on announcements and reporting through the May 2024 acquisition; no later independent financing is possible after dissolution."
+reported_total_raised = 55100000
+reported_total_currency = "USD"
+total_source_ids = ["deci-series-b"]
+total_as_of = "2022-07-13"
+total_scope = "Company-announced cumulative venture funding through Series B; excludes acquisition consideration."
+history_status = "partial"
+coverage_through = "2024-05"
+
+[[intelligence.funding.rounds]]
+id = "seed-2020"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2020-10-27"
+amount_status = "reported"
+amount = 9100000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["Emerge", "Square Peg"]
+participating_investors = ["Emerge", "Square Peg"]
+valuation_basis = "undisclosed"
+source_ids = ["tc-seed"]
+notes = "TechCrunch reports the company announcement of a $9.1M seed led by Emerge and Square Peg."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2021"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2021-10-20"
+amount_status = "reported"
+amount = 21000000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["Insight Partners"]
+participating_investors = ["Square Peg", "Emerge", "Jibe Ventures", "Samsung Next", "Vintage Investment Partners", "Fort Ross Ventures"]
+valuation_basis = "undisclosed"
+source_ids = ["deci-series-a"]
+notes = "Deci's announcement names Insight Partners as lead; existing and new participants are listed as reported."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2022"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2022-07-13"
+amount_status = "reported"
+amount = 25000000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["Insight Partners"]
+participating_investors = ["Square Peg", "Emerge", "Jibe Ventures", "Fort Ross Ventures", "ICON"]
+post_money_valuation = 200000000
+valuation_currency = "USD"
+valuation_basis = "estimated"
+source_ids = ["deci-series-b", "ctech-acquisition"]
+notes = "The $25M round is directly stated in Deci's announcement. Calcalist later reported an estimated $200M valuation for the last round; this is a press estimate, not company-disclosed financing terms."
+
+[intelligence.ownership]
+status = "reported"
+summary = "NVIDIA acquired Deci in May 2024 and NVIDIA states Deci was dissolved as a separate corporate entity. No public source reviewed discloses the cap table or verified transaction consideration. Calcalist reported an estimated $300M deal value, which remains an attributed media estimate rather than a confirmed price."
+parent_company = "NVIDIA Corporation"
+stock_ticker = "NASDAQ: NVDA"
+cap_table_status = "undisclosed"
+shareholders = ["NVIDIA Corporation (post-acquisition parent; percentage undisclosed)"]
+source_ids = ["nvidia-status", "ctech-acquisition"]
+
+[[intelligence.ownership.deals]]
+id = "nvidia-acquisition-2024"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2024-05-02"
+completed_on = "2024-05"
+status = "completed"
+counterparty = "NVIDIA Corporation"
+amount = 300000000
+currency = "USD"
+amount_status = "reported"
+source_ids = ["nvidia-status", "ctech-acquisition"]
+notes = "Calcalist reported on May 2 that NVIDIA confirmed its agreement to acquire Deci, and attributed a $300M value to estimates it obtained; at announcement it said regulatory approval and Q2 close were expected. NVIDIA's current corporate page states acquisition in May 2024 and dissolution of Deci as a separate entity, confirming completion and month, but does not confirm consideration. The numeric price is therefore only an attributed media estimate."
+
+[intelligence.research]
+researched_at = "2026-10-05T05:35:29Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Deci AI official NVIDIA acquired May 2024 dissolved Deci",
+  "Deci AI seed funding raised investors October 2020 $9.1 million",
+  "Deci AI Series A October 2021 $21 million Insight investors total raised",
+  "Deci AI Series B July 2022 $25 million investors $55.1 million total",
+  "Deci AI NVIDIA acquisition May 2024 founders valuation $300 million",
+  "Deci AI Yonatan Geifman Ran El-Yaniv Jonathan Elial founders team",
+  "Deci AI revenue customers traction contracts partnerships",
+  "Deci AI patents AutoNAC patent intellectual property",
+  "Deci AI competitors TensorRT ONNX Runtime OpenVINO TVM",
+  "Deci AI defense security military dual use applications"
+]
+gaps = [
+  "team: founder identities and historical roles were verified, but current NVIDIA employment, team transfers, and post-acquisition leadership are not publicly established.",
+  "investors: disclosed round participants are recorded; complete private cap table, exact security allocations, and individual ownership percentages remain undisclosed.",
+  "financials: no reliable public revenue, ARR, profitability, cash, burn, or runway figures located; the $300M acquisition value is a press estimate, not an audited financial metric.",
+  "traction: product claims and dated accelerator participation are visible, but no adequately sourced named paying customer list, contract values, renewal data, or production deployment metrics were established.",
+  "intellectual_property: AutoNAC and Deci model artifacts are publicly documented; no Deci-assigned patent family or post-acquisition IP schedule was verified from the searched public patent records.",
+  "competition: product substitutes are identifiable, but no current post-acquisition comparative benchmarks or customer win/loss data were located.",
+  "dual_use: efficiency capabilities have plausible commercial and edge-security relevance; no Deci-specific defense contract, classified use, accreditation, or weapons deployment was found.",
+  "ownership: NVIDIA confirms acquisition and dissolution, but transaction consideration and private cap table are not disclosed in a primary filing or announcement reviewed."
+]
+conflicts = [
+  "Calcalist's May 2024 article reports estimated $300M acquisition consideration and estimates the July 2022 round valuation at $200M; these are attributed estimates and not company-disclosed terms. NVIDIA confirms acquisition and timing but publishes no price. The $300M is retained only as a clearly qualified press estimate."
+]
+diligence_questions = [
+  "Which Deci engineering teams, AutoNAC methods, patents, and model artifacts transferred to NVIDIA, and which remain supported through the legacy documentation path?",
+  "Can NVIDIA or former Deci customers provide reproducible before-and-after benchmarks with hardware, batch size, precision, accuracy, energy, and baseline details for the advertised efficiency gains?",
+  "What was the actual acquisition consideration and structure, and can an authoritative transaction document reconcile the $300M media estimate?",
+  "Were Deci's historical enterprise users paying production customers, pilots, or evaluation users, and what customer retention and deployment evidence can be disclosed?",
+  "How portable are the acquired optimization methods across non-NVIDIA accelerators, and what assurance, export-control, and model-integrity controls apply in sensitive deployments?"
+]
+
+[[intelligence.research.sources]]
+id = "nvidia-status"
+url = "https://www.nvidia.com/en-us/"
+title = "Deci is Now a Part of NVIDIA"
+publisher = "NVIDIA"
+kind = "company"
+accessed_at = "2026-10-05T05:35:29Z"
+claims = ["NVIDIA says Deci was acquired in May 2024", "NVIDIA says Deci was dissolved as a separate corporate entity", "NVIDIA links legacy Deci AI documentation"]
+
+[[intelligence.research.sources]]
+id = "tc-seed"
+url = "https://techcrunch.com/2020/10/27/deci-raises-9-1m-to-use-ai-to-optimize-ai/"
+title = "Deci raises $9.1M to optimize AI models with AI"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-05T05:35:29Z"
+published_on = "2020-10-27"
+claims = ["Deci announced $9.1M seed led by Emerge and Square Peg", "Deci founders were Yonatan Geifman, Jonathan Elial and Ran El-Yaniv", "Geifman was CEO and co-founder", "Deci offered a model optimization and deployment platform"]
+
+[[intelligence.research.sources]]
+id = "deci-series-a"
+url = "https://www.prnewswire.com/il/news-releases/deci-raises-21m-to-enable-the-world-to-benefit-from-the-full-potential-of-ai-301404331.html"
+title = "Deci Raises $21M to Enable the World to Benefit from the Full Potential of AI"
+publisher = "Deci via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-05T05:35:29Z"
+published_on = "2021-10-20"
+claims = ["Deci raised $21M Series A led by Insight Partners", "Square Peg, Emerge and Jibe participated; Samsung Next, Vintage Investment Partners and Fort Ross Ventures joined", "Deci reported more than $9M in seed funding and $30.1M cumulative total at Series A", "Deci described its cloud, edge and mobile platform and AutoNAC technology"]
+
+[[intelligence.research.sources]]
+id = "deci-series-b"
+url = "https://www.prnewswire.com/news-releases/deci-raises-25m-series-b-to-accelerate-the-productization-of-real-world-ai-applications-301585578.html"
+title = "Deci Raises $25M Series B to Accelerate the Productization of Real-World AI Applications"
+publisher = "Deci via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-05T05:35:29Z"
+published_on = "2022-07-13"
+claims = ["Deci raised $25M Series B led by Insight Partners", "Square Peg, Emerge, Jibe Ventures, Fort Ross Ventures and ICON participated", "Deci reported lifetime total funding of $55.1M", "Deci described hardware-aware Neural Architecture Search"]
+
+[[intelligence.research.sources]]
+id = "calcalist-series-a"
+url = "https://www.calcalist.co.il/calcalistech/article/r1wutlpbk"
+title = "הסטארט-אפ Deci שמפתח פלטפורמה מבוססת AI למפתחים גייס 21 מיליון דולר"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-05T05:35:29Z"
+published_on = "2021-10-20"
+claims = ["Contemporary Israeli report corroborates $21M Series A and round participants", "Founders held CEO, CTO and COO roles", "Deci was founded in late 2019 and had more than 30 employees in October 2021", "Deci operated a development center in Israel"]
+
+[[intelligence.research.sources]]
+id = "pc-series-b"
+url = "https://www.pc.co.il/news/367099/"
+title = "סטארט-אפ ה-AI דסי גייס 25 מיליון דולר"
+publisher = "People and Computers"
+kind = "media"
+accessed_at = "2026-10-05T05:35:29Z"
+published_on = "2022-07-14"
+claims = ["Israeli media corroborates $25M Series B and $55.1M reported cumulative funding", "Israeli report names Geifman, El-Yaniv and Elial with CEO, CTO and COO roles", "The company had about 50 employees historically"]
+
+[[intelligence.research.sources]]
+id = "ctech-acquisition"
+url = "https://www.calcalistech.com/ctechnews/article/bkj6phggr"
+title = "Nvidia to acquire AI startup Deci for $300 million"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-05T05:35:29Z"
+published_on = "2024-05-02"
+claims = ["Calcalist reported NVIDIA confirmed an agreement to acquire Deci", "Calcalist attributed a $300M estimated deal value to sources it obtained", "Calcalist described the $200M last-round valuation as an estimate", "At announcement the deal awaited regulatory approvals and was expected to close in Q2 2024"]
+
+[[intelligence.research.sources]]
+id = "squarepeg-portfolio"
+url = "https://www.squarepeg.vc/portfolio/deci"
+title = "Deci (Acquired)"
+publisher = "Square Peg"
+kind = "investor"
+accessed_at = "2026-10-05T05:35:29Z"
+claims = ["Investor portfolio identifies Deci as acquired by Nvidia in 2024", "Square Peg identifies 2019 founding and founders Jonathan Elial, Yonatan Geifman and Ran El-Yaniv", "Portfolio describes Deci's deep-learning platform"]
+
+[[intelligence.research.sources]]
+id = "nvidia-tensorrt"
+url = "https://docs.nvidia.com/deeplearning/tensorrt/latest/index.html"
+title = "NVIDIA TensorRT Documentation"
+publisher = "NVIDIA"
+kind = "other"
+accessed_at = "2026-10-05T05:35:29Z"
+claims = ["TensorRT is an SDK for optimizing deep-learning inference on NVIDIA GPUs", "TensorRT compiles trained models for GPU deployment"]
+
+[[intelligence.research.sources]]
+id = "onnx-runtime"
+url = "https://onnxruntime.ai/docs/performance/model-optimizations/quantization.html"
+title = "Quantize ONNX models"
+publisher = "ONNX Runtime"
+kind = "other"
+accessed_at = "2026-10-05T05:35:29Z"
+claims = ["ONNX Runtime graph optimization and quantization are available for inference efficiency"]
+
+[[intelligence.research.sources]]
+id = "openvino"
+url = "https://docs.openvino.ai/2023.3/openvino_docs_model_optimization_guide.html"
+title = "Model Optimization Guide"
+publisher = "Intel OpenVINO"
+kind = "other"
+accessed_at = "2026-10-05T05:35:29Z"
+claims = ["OpenVINO supports model compression paths including quantization and optimized inference"]
+
+[[intelligence.research.sources]]
+id = "apache-tvm"
+url = "https://tvm.apache.org/docs/"
+title = "Apache TVM Documentation"
+publisher = "Apache TVM"
+kind = "other"
+accessed_at = "2026-10-05T05:35:29Z"
+claims = ["Apache TVM is a machine learning compiler for high-performance deployment across hardware"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-05T05:35:29Z"
+next_review_on = "2027-04-05"
+queries = ["Deci AI official NVIDIA acquired May 2024 dissolved Deci", "Deci founders location legal name identity"]
+source_ids = ["nvidia-status", "tc-seed", "squarepeg-portfolio"]
+summary = "Identity resolved as Deci, also styled Deci AI, the Israeli deep-learning optimization startup acquired and dissolved by NVIDIA in May 2024. Official legal suffix and incorporation jurisdiction were not established, so no registry ID or incorporation country is asserted."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-05T05:35:29Z"
+next_review_on = "2027-04-05"
+queries = ["Deci AI seed funding raised investors October 2020 $9.1 million", "Deci AI Series A October 2021 $21 million Insight investors", "Deci AI Series B July 2022 $25 million investors $55.1 million total"]
+source_ids = ["tc-seed", "deci-series-a", "deci-series-b"]
+summary = "Three priced venture announcements found, totaling the company-reported $55.1M. Round-by-round announcement evidence records the published amounts and named participants."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-05T05:35:29Z"
+next_review_on = "2027-04-05"
+queries = ["Deci AI investors seed Series A Series B Emerge Square Peg Insight Partners", "Deci investor portfolio Square Peg Deci acquired"]
+source_ids = ["tc-seed", "deci-series-a", "deci-series-b", "squarepeg-portfolio"]
+summary = "Public round announcements identify Emerge, Square Peg, Insight Partners, Jibe Ventures, Samsung Next, Vintage Investment Partners, Fort Ross Ventures and ICON. Private share ownership percentages are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-05T05:35:29Z"
+next_review_on = "2027-04-05"
+queries = ["Deci AI Yonatan Geifman Ran El-Yaniv Jonathan Elial founders team", "Deci AI NVIDIA acquisition engineering team transfer"]
+source_ids = ["tc-seed", "calcalist-series-a", "squarepeg-portfolio", "ctech-acquisition"]
+summary = "The three co-founders and historical CEO/CTO/COO roles are corroborated by reporting and investor material. Post-acquisition team status is not established."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-05T05:35:29Z"
+next_review_on = "2027-04-05"
+queries = ["Deci AI NVIDIA acquisition May 2024 founders valuation $300 million", "NVIDIA Deci acquired dissolved separate corporate entity"]
+source_ids = ["nvidia-status", "ctech-acquisition"]
+summary = "NVIDIA confirms May 2024 acquisition and corporate dissolution. Calcalist's price is an estimate; no authoritative consideration or cap-table disclosure located."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T05:35:29Z"
+next_review_on = "2027-04-05"
+queries = ["Deci AI revenue ARR profitability financials", "Deci AI NVIDIA acquisition revenue financial statements"]
+source_ids = ["deci-series-b", "ctech-acquisition", "nvidia-status"]
+summary = "No reliable dated revenue, ARR, profit, cash, burn or runway disclosed in sources reviewed. Funding and press-estimated acquisition value are not operating financial metrics."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T05:35:29Z"
+next_review_on = "2027-04-05"
+queries = ["Deci AI revenue customers traction contracts partnerships", "Deci AI Intel partnership customers deployment production"]
+source_ids = ["deci-series-a", "deci-series-b", "tc-seed"]
+summary = "Product and market claims plus historical platform releases are documented, but the search did not establish named paying customers, contract values, recurring revenue, or audited deployment outcomes."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-05T05:35:29Z"
+next_review_on = "2027-04-05"
+queries = ["Deci AI patents AutoNAC intellectual property", "Deci AI patent neural architecture search assignee", "USPTO Deci AI patent"]
+source_ids = ["deci-series-a"]
+summary = "AutoNAC is directly described as proprietary technology, but no Deci-assigned patent record or post-acquisition IP schedule was verified in public patent searches; patent absence is not asserted."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-05T05:35:29Z"
+next_review_on = "2027-04-05"
+queries = ["Deci AI competitors TensorRT ONNX Runtime OpenVINO TVM", "NVIDIA TensorRT official inference optimization", "Apache TVM official machine learning compiler"]
+source_ids = ["deci-series-a", "deci-series-b"]
+summary = "Relevant substitutes include accelerator vendor toolchains and open compilers/runtimes. No current third-party head-to-head evidence or switching data found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T05:35:29Z"
+next_review_on = "2027-04-05"
+queries = ["Deci AI defense security military dual use applications", "Deci AI government defense contracts edge AI"]
+source_ids = ["tc-seed", "deci-series-a", "deci-series-b", "nvidia-status"]
+summary = "Efficient inference has plausible commercial and constrained-edge security uses, but no Deci-specific government contract, classified deployment, accreditation, or weapons use was located."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "NVIDIA's company page states Deci was acquired in May 2024 and dissolved as a separate corporate entity."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["nvidia-status"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "TechCrunch identifies Deci as Tel Aviv-based and names its Israeli founders and Technion-linked co-founder; Israeli reporting confirms Israeli development operations."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["tc-seed", "calcalist-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Deci's July 2022 Series B announcement explicitly states total funding of $55.1M."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["deci-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.amount"
+support = "direct"
+summary = "TechCrunch reports the October 2020 $9.1M seed round announcement."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["tc-seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.investors"
+support = "direct"
+summary = "TechCrunch names Emerge and Square Peg as seed leads."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["tc-seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.lead_investors"
+support = "direct"
+summary = "TechCrunch names Emerge and Square Peg as seed leads."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["tc-seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.participating_investors"
+support = "direct"
+summary = "TechCrunch identifies the seed round's participating lead investors as Emerge and Square Peg."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["tc-seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.amount"
+support = "direct"
+summary = "Deci's Series A announcement reports the $21M round."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["deci-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.investors"
+support = "direct"
+summary = "Deci's announcement names Insight Partners as lead and lists participating existing and new investors."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["deci-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.lead_investors"
+support = "direct"
+summary = "Deci's announcement names Insight Partners as Series A lead."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["deci-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.participating_investors"
+support = "direct"
+summary = "Deci's announcement lists the existing and new Series A participants."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["deci-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.amount"
+support = "direct"
+summary = "Deci's July 2022 announcement reports $25M for Series B."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["deci-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.investors"
+support = "direct"
+summary = "Deci's announcement names Insight Partners as lead and identifies Square Peg, Emerge, Jibe Ventures, Fort Ross Ventures and ICON as participants."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["deci-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.lead_investors"
+support = "direct"
+summary = "Deci's announcement names Insight Partners as Series B lead."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["deci-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.participating_investors"
+support = "direct"
+summary = "Deci's announcement names the Series B participating investors."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["deci-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.post_money_valuation"
+support = "direct"
+summary = "Calcalist later attributed an estimated $200M valuation to Deci's last funding round; it is recorded as a media estimate, not disclosed financing terms."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["ctech-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Historical employees@2021-10-20.numeric_value"
+support = "direct"
+summary = "Calcalist reported that Deci employed more than 30 people on October 20, 2021; the numeric bound is recorded as 30 with value_relation more_than."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["calcalist-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "NVIDIA states Deci was acquired by NVIDIA Corporation in May 2024 and dissolved as a separate corporate entity."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["nvidia-status"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.nvidia-acquisition-2024.status"
+support = "direct"
+summary = "NVIDIA's current statement that Deci was acquired in May 2024 directly confirms completed status and month."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["nvidia-status"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.nvidia-acquisition-2024.company_role"
+support = "direct"
+summary = "NVIDIA states it acquired Deci; Calcalist likewise reports NVIDIA as buyer, establishing Deci as target."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["nvidia-status", "ctech-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.nvidia-acquisition-2024.amount"
+support = "direct"
+summary = "Calcalist reported an estimated $300M deal value based on estimates it obtained; this check verifies the attributed press estimate only, not a confirmed transaction price."
+verified_at = "2026-10-05T05:35:29Z"
+source_ids = ["ctech-acquisition"]

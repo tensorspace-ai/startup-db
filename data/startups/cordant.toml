@@ -1,0 +1,480 @@
+name = "Cordant"
+description = "Cordant is an Israeli-founded financial-infrastructure startup building a real-time command center for banks, payment companies, and fintechs. Its platform creates a shared operational view across payment rails, ledgers, compliance, risk, and counterparties so teams can understand and coordinate money movement without replacing existing systems or moving funds."
+detailed_description = """
+**Product and the concrete problem it solves.** Cordant is addressing the operational blind spot that appears after a financial institution connects many otherwise functional systems. A single payment may pass through a processor, an acquiring or issuing bank, a ledger, a compliance service, a fraud or risk engine, a treasury workflow, and one or more local partners. Each system can report its own state while no team has an authoritative account of what happened end to end. When a transaction is delayed, rejected, duplicated, held for review, or settled differently from expectation, operations staff often have to assemble the explanation manually from separate consoles and counterparties. Cordant positions itself as a command center above that infrastructure: a neutral context and coordination layer that shows what is happening across the operating environment, why it is happening, and whether the outcome matches the institution's intent. The product does not claim to be a new payment rail, core ledger, custodian, or movement-of-funds service. Its value is in reducing the cost and latency of understanding and acting on the systems an institution already operates.
+
+**Core technology and how it works.** The public technical description centers on an event-normalization and shared-context architecture. Cordant says it ingests signals from payment rails, bank accounts, ledgers, compliance systems, and risk-management tools, then organizes them into a shared event model and timeline. That model is intended to preserve the relationships between an instruction, its state transitions, the systems that handled it, the parties involved, and the controls that were applied. The result is closer to an operational graph and audit trail than to a static dashboard: users can investigate a transaction or workflow across system boundaries, identify where context was lost, and coordinate a response from a common factual base. The company's home page describes a shared context layer above existing systems, while its launch material emphasizes an audit-grade record for compliance and risk teams. Cordant has not publicly disclosed its connector protocols, storage architecture, reconciliation logic, latency targets, access-control design, or whether it uses machine learning beyond analytics and future automation workflows. Those omissions matter because financial data is heterogeneous, stateful, permission-sensitive, and often corrected after the original event.
+
+**Market, customers, and go-to-market.** Cordant is selling to the operators of modern financial infrastructure rather than to individual consumers. The target buyer set includes banks, payment service providers, issuers, processors, embedded-finance platforms, cross-border payment companies, stablecoin and digital-asset infrastructure providers, and teams spanning operations, compliance, risk, treasury, and audit. The initial go-to-market is design-partner-led: CTech reports that the company was developing the platform with 11 design partners across banking, payments, embedded finance, cross-border transactions, stablecoins, and digital assets. Bitso and Paxos were named as both investors and design partners, which gives the company relevant early feedback from a cross-border digital-asset platform and a regulated blockchain and stablecoin infrastructure provider. The commercial motion is plausibly an enterprise software sale with integration and workflow expansion, beginning with transaction visibility and exception management and potentially extending into risk coordination, compliance evidence, and controlled AI-assisted operations. The main adoption advantage is that Cordant can sit above existing rails without asking a customer to migrate its ledger, move funds through a new intermediary, or surrender custody. The main sales challenge is proving that an additional context plane produces measurable savings rather than another console to maintain.
+
+**Traction, funding, and third-party validation.** Cordant emerged from stealth in New York on July 21, 2026, announcing an $8 million Seed round co-led by Motive Partners and Oak HC/FT. The official announcement says the round also included Bankless VC, FJ Labs, SignalFire, Quona Capital, Next Stage, Selah Ventures, Flatironx, Nascent Ventures, Silvercircle Ventures, and Generative Ventures, with Bitso and Paxos participating. This is meaningful validation for a company at the product-formation stage because the lead investors specialize in financial technology and the named strategic participants operate close to the payment and digital-asset rails Cordant wants to observe. Motive's portfolio page independently lists Cordant as a venture investment dated April 2026, and Quona publicly describes the company as a neutral operations control plane that does not hold keys or sit in the flow of funds. The evidence still has clear limits. No public source reviewed here discloses revenue, paid-customer count, production deployment count, retention, transaction volume, security certification, or measured reduction in investigation time. The official newsroom says the funding will be used to bring the system into production and activate private-beta clients, so the round is best read as validation of the team and problem selection rather than proof of scaled product-market fit.
+
+**Founders and team background.** Cordant was founded by Eric Rosenthal, Lior Levit, Juan Jose Huezo, and Sagi Ittah, four former leaders at Israeli fintech unicorn Rapyd. CTech reports that the group encountered the problem while helping scale Rapyd's infrastructure across more than 50 countries and more than 100 partner integrations as that company grew beyond $1 billion in revenue. That prior operating experience is unusually relevant: the founders are not approaching payment fragmentation only as a theoretical data problem, but from direct exposure to coordination across banks, processors, compliance systems, local partners, and internal teams. Public reporting identifies Rosenthal as CEO and co-founder and names the other three co-founders; the reviewed sources do not provide a complete breakdown of their titles, individual engineering responsibilities, or Cordant's total headcount. The team therefore has strong founder-market fit and a credible network for recruiting design partners, but it must still demonstrate that experience scaling payment operations translates into a product organization capable of building durable connectors, security controls, customer success, and enterprise sales. Founder provenance also creates a diligence boundary: Cordant benefits from Rapyd experience, but its legal entity, intellectual-property ownership, cap table, and any continuing commercial relationship with Rapyd should be verified directly.
+
+**Competitive dynamics.** Cordant competes across several overlapping budgets rather than against one identical product. Stripe, Adyen, and Airwallex offer broad payment infrastructure and increasingly sophisticated operational tooling inside their own ecosystems; their advantage is distribution, transaction data, and control of core payment workflows. Modern Treasury, Formance, and related ledger or payment-operations platforms compete for the job of making complex money movement observable and manageable, although their product boundaries differ. Data observability vendors such as Datadog and Splunk can correlate system events but do not necessarily understand the semantics of a payment state machine, counterparty responsibility, or compliance decision. Large institutions can also build internal reconciliation, exception-management, and event-correlation systems, often using Kafka, data warehouses, workflow engines, and bespoke dashboards. Cordant's proposed edge is neutrality: it can model a customer's whole operating environment without requiring that customer to replace the systems whose interaction creates the problem. Its potential data and workflow advantage will compound only if the shared event model handles many rails and counterparties accurately, produces trusted audit evidence, and becomes embedded in daily decisions. Incumbents can copy timeline views, while in-house teams retain control and domain specificity, so interoperability, implementation speed, permissioning, and measurable operational outcomes are central competitive tests.
+
+**Defense, security, and resilience relevance.** Cordant's strategic relevance is strongest as financial-infrastructure resilience, not as a direct defense capability. Payment continuity is a component of economic security: banks, payroll providers, remittance networks, digital-asset platforms, and critical suppliers need to understand where money is held up when dependencies fail, counterparties behave unexpectedly, sanctions or compliance controls intervene, or a new rail introduces reconciliation gaps. A shared, audit-grade operational picture could help an institution isolate a failure domain, coordinate a response, preserve evidence, and continue lawful processing through available channels. The same design pattern has a cautious adjacency to government disbursement, defense-contractor payment chains, humanitarian finance, and emergency procurement, where fragmented counterparties and high consequences make explainability valuable. However, no public source reviewed here identifies a defense customer, government contract, classified deployment, military payment system, or security accreditation. Cordant's core product serves commercial financial operations and should be scored as resilience infrastructure with defense-adjacent optionality. `dual_use` is therefore false: the technology can support security-conscious environments, but the public evidence does not establish a core capability being sold into both commercial and defense contexts.
+
+**Growth stage, trajectory, and key diligence risks.** Cordant is early: it emerged from stealth in July 2026, has raised a Seed round, is working with named design partners, and is preparing private-beta clients for production, but it has not disclosed revenue or scaled deployments. Its plausible trajectory is to become the system of operational context for a payment institution, first by shortening exception investigation and then by coordinating risk, compliance, treasury, audit, and AI-assisted workflows across the same event model. The milestones that would materially improve the assessment are production references, independently measured reductions in time-to-resolution, connector coverage across major rails, strong access-control and data-residency evidence, and conversion of design partners into repeatable paid contracts. Key risks are substantial: payment-state normalization may become bespoke services work; customers may resist granting a new vendor broad access to sensitive financial telemetry; a neutral overlay may be squeezed between payment platforms and observability vendors; implementation and liability expectations may be high in regulated institutions; digital-asset exposure can add sanctions, custody, and regulatory complexity; and financial-infrastructure outages create a demanding standard for uptime and correctness. The company also needs to clarify its legal headquarters, headcount, security posture, and relationship to Rapyd. The $8 million round gives runway to prove the thesis, not a substitute for operational evidence.
+"""
+logo = "Unknown"
+website = "https://cordant.ai"
+sector = "Financial infrastructure observability and operations coordination"
+founded = "2026 (company launch July 2026; Israeli corporate record reports incorporation April 27, 2026, not independently verified from the registry)"
+headquarters = "Miami/South Florida, United States and Tel Aviv, Israel (reported operating locations; registered office not independently confirmed)"
+employees = "Unknown (no reliable public headcount found)"
+funding_stage = "Seed — $8 million announced July 21, 2026, co-led by Motive Partners and Oak HC/FT"
+entity_type = "startup"
+dual_use = false
+dual_use_description = "Cordant has credible resilience relevance because financial institutions and payment networks need a shared operational picture when fragmented rails, counterparties, compliance controls, or infrastructure failures interrupt money movement. Its event model and audit-grade context could extend to government disbursement, defense-contractor supply chains, humanitarian finance, or emergency procurement, but those are adjacent use cases rather than disclosed deployments. No public source reviewed here establishes a defense customer, government contract, classified work, military payment system, or security accreditation. The core product is commercial financial-operations infrastructure, so dual-use is set to false while resilience and economic-security relevance remain material."
+key_technologies = [
+  "Cross-system event normalization for payment rails, bank accounts, ledgers, compliance, and risk systems",
+  "Shared transaction timelines linking state transitions, systems, counterparties, and control decisions",
+  "Operational context layer that sits above existing financial infrastructure without moving funds",
+  "Audit-grade activity records for compliance, risk, operations, treasury, and investigation workflows",
+  "Real-time exception investigation and coordination across fragmented payment environments",
+  "Connector and data-integration architecture for banks, processors, PSPs, issuers, and digital-asset infrastructure",
+  "Context foundation for controlled analytics and future AI-assisted financial operations"
+]
+use_cases = [
+  "Tracing a delayed or failed cross-border payment across processors, banks, ledgers, and local partners",
+  "Coordinating operations, compliance, risk, treasury, and audit teams around a shared transaction record",
+  "Monitoring stablecoin and digital-asset payment workflows alongside fiat rails and regulated controls",
+  "Managing exception queues and reconciliation gaps across embedded-finance and payment-service-provider integrations",
+  "Producing defensible operational evidence for investigations, audits, sanctions reviews, and control testing",
+  "Supporting continuity of lawful financial processing when a rail, counterparty, or infrastructure dependency degrades",
+  "Providing shared context before deploying AI into regulated payment and back-office workflows",
+  "Adjacent government, humanitarian, or defense-supply-chain disbursement monitoring where fragmented payment visibility is a constraint"
+]
+investible = true
+investment_rationale = "Cordant is a high-signal early-stage infrastructure company with unusually direct founder-market fit and a credible resilience thesis, but its public evidence is still pre-scale. (1) The team experienced the exact coordination problem while operating Rapyd's multi-country, multi-partner financial infrastructure, which reduces the risk of a purely invented pain point. (2) The $8 million Seed round was co-led by Motive Partners and Oak HC/FT, and the investor and design-partner set includes organizations close to banking, payments, and digital assets. (3) The neutral overlay can be commercially attractive because it does not require replacing a ledger, moving funds, or adopting a new rail. Counterweights are decisive: private-beta status, no disclosed revenue or paid-customer count, no public security certification, unclear headcount and legal domicile, potentially heavy integration work, and competition from payment platforms, observability vendors, and internal engineering teams. This is a legacy priority signal and strategic diligence assessment, not an investment recommendation."
+strategic_value = "Cordant's strategic value is the possibility of making fragmented financial infrastructure legible at the moment it fails or requires intervention. (1) A shared operational timeline can reduce dependency on manual reconciliation and help institutions identify whether an issue belongs to a rail, bank, processor, ledger, compliance control, or internal workflow. (2) That visibility supports economic resilience by improving fault isolation, lawful continuity, and auditability across critical payment operations. (3) The platform could become a prerequisite context layer for responsible AI in regulated finance, because institutions cannot automate decisions they cannot explain. (4) Its founder network and design partners create a bridge into global payments and digital-asset infrastructure. The strategic ceiling is limited until Cordant proves uptime, data governance, production conversion, and measurable operational outcomes; the company is not currently a defense system."
+public_sources = [
+  { label = "Cordant newsroom: $8M Seed launch", url = "https://cordant.ai/newsroom", description = "Company announcement of the July 21, 2026 launch, $8 million Seed, syndicate, 11 design partners, founders, product scope, and private-beta plans." },
+  { label = "CTech/Calcalist: Cordant raises $8 million", url = "https://www.calcalistech.com/ctechnews/article/rklbo03vzl", description = "Independent reporting on founders, roles, Rapyd experience, funding and design-partner context." },
+  { label = "Oak HC/FT: Why we invested in Cordant", url = "https://www.oakhcft.com/blog-post/mission-control-for-money-why-we-invested-in-cordant", description = "Lead investor announcement confirming its co-lead, seed amount, partners and design-partner set." },
+  { label = "Motive Partners: Why we invested in Cordant", url = "https://motivepartners.com/content/why-we-invested-in-cordant", description = "Lead investor perspective on product design, founders, and operational use cases." },
+  { label = "Quona Capital: Why we invested in Cordant", url = "https://quona-capital.medium.com/why-we-invested-in-cordant-9c702ad16217", description = "Investor analysis confirming founder roles and the cross-system operational control-plane positioning." },
+  { label = "Refresh Miami: Cordant emerges from stealth", url = "https://refreshmiami.com/news/cordant-emerges-from-stealth-with-8m-to-build-the-next-layer-of-financial-infrastructure/", description = "Independent local reporting on Miami and Tel Aviv locations, team expansion, funding and partners." },
+  { label = "Israeli Corporations Authority company information service", url = "https://www.gov.il/en/service/company_extract", description = "Official registry service description; a paid/basic extract for Cordant was not retrieved during this review." },
+  { label = "KYC Israel: CORDANT LTD", url = "https://www.kycisrael.com/companies/517334397/cordant-ltd/", description = "Secondary Israeli registry-data index reporting legal name, number 517334397, active status and incorporation date; verify against an official extract." },
+  { label = "USPTO Patent Public Search", url = "https://www.uspto.gov/patents/search", description = "Official search portal consulted for patent research; no Cordant-specific patent record was verified." },
+  { label = "Cordant official website", url = "https://www.cordant.ai/", description = "Company product positioning and intended customers." },
+  { label = "Modern Treasury products", url = "https://www.moderntreasury.com/products", description = "Official competitor product information used for comparison." },
+  { label = "Datadog financial services monitoring", url = "https://www.datadoghq.com/solutions/financial-services/", description = "Official adjacent observability product information used for comparison." }
+]
+potential_score = 66.0
+technology_score = 78.0
+market_score = 77.0
+team_score = 87.0
+dual_use_score = 20.0
+strategic_alignment_score = 62.0
+stage = "early"
+stage_rationale = "Cordant is classified as early because it emerged from stealth in July 2026, has announced a Seed round, and is preparing private-beta clients for production. The company has meaningful validation through four founders with direct Rapyd operating experience, 11 reported design partners, named Bitso and Paxos participation, and specialist fintech investors. It remains below mid-stage maturity because public sources do not disclose revenue, paid-customer conversion, production deployment count, retention, headcount, security certifications, or independently measured operational outcomes. The stage label reflects commercialization evidence, not the size or quality of the investor syndicate."
+competitors = [
+  "Stripe and Adyen (global payment platforms with deep transaction data, integrated operations, and expanding financial-infrastructure tooling)",
+  "Modern Treasury and Formance (payment-operations, ledger, and money-movement orchestration approaches)",
+  "Airwallex and dLocal (cross-border financial infrastructure providers that can bundle visibility into their own payment networks)",
+  "Datadog and Splunk (broad observability and event-correlation platforms competing for operational-monitoring budgets)",
+  "In-house reconciliation and exception-management systems (institution-specific data warehouses, workflow engines, and dashboards)",
+  "Fenergo and Alloy (regulated-finance onboarding, compliance, and risk workflow platforms that overlap with parts of the context layer)"
+]
+competitive_edge = "Cordant's proposed edge is its position as a neutral context and coordination layer across systems that a bank or payment company already uses. (1) It can model the full transaction lifecycle without requiring the customer to replace a ledger, change a processor, custody funds, or route activity through a new intermediary. (2) A shared event model and timeline can connect operational, compliance, risk, treasury, and audit teams that otherwise investigate the same event from different partial views. (3) The founders' experience operating Rapyd's multi-country infrastructure should improve access to design partners and provide realistic knowledge of payment failure modes. The edge is not yet proven or necessarily proprietary: payment platforms can add similar views, observability vendors can improve domain semantics, and institutions can build internal systems. Defensibility will depend on connector breadth, normalization accuracy, trusted audit evidence, permissioning, deployment speed, and measurable reductions in investigation and exception-resolution time."
+risk_factors = [
+  "Pre-scale evidence: no public revenue, paid-customer count, production deployment count, retention, transaction volume, or independently measured time-to-resolution improvement",
+  "Integration burden: every payment rail, ledger, bank, compliance system, and counterparty can introduce bespoke schemas, state transitions, permissions, and support requirements",
+  "Data-security and privacy exposure: the platform may need broad access to highly sensitive financial, identity, transaction, sanctions, and operational telemetry",
+  "Incumbent bundling: Stripe, Adyen, Airwallex, observability vendors, and core-finance providers can add transaction timelines or exception tooling to existing relationships",
+  "Reliability and correctness: an incomplete or stale operational timeline could misdirect a compliance, treasury, or incident decision during a high-consequence outage",
+  "Regulatory complexity: digital-asset, stablecoin, sanctions, custody, data-residency, and cross-border processing requirements may expand the product and sales burden",
+  "Corporate disclosure gaps: legal headquarters, headcount, incorporation date, security posture, IP ownership, and the precise continuing relationship with Rapyd are not publicly resolved"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Cordant deserves monitoring as a rare new Israeli-founded entry focused on the resilience of financial infrastructure rather than a consumer fintech feature. (1) Four former Rapyd leaders have firsthand experience with the coordination failures created by multi-country payment systems and more than 100 partner integrations. (2) The $8 million Seed round was co-led by specialist fintech investors and accompanied by named design partners Bitso and Paxos. (3) A neutral, audit-oriented context layer could become valuable as real-time payments, stablecoins, embedded finance, and AI-assisted workflows increase system complexity. The priority ceiling is set by limited public operating evidence, private-beta maturity, integration and data-governance risk, strong incumbent competition, and no disclosed defense deployment. Milestones for raising priority are production conversions, measurable exception-resolution improvement, major-rail connector coverage, security certifications, and evidence of use in critical or government-adjacent financial infrastructure."
+crawled_at = "2026-09-08T00:25:15Z"
+updated_at = "2026-10-04T22:14:23Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Eric Rosenthal", role = "CEO and co-founder", is_founder = true, current = true, background = "Former Rapyd leader; investor and company materials describe experience scaling global payments infrastructure.", source_ids = ["company_launch", "ctech", "oak_investment"] },
+  { name = "Lior Levit", role = "CTO and co-founder", is_founder = true, current = true, background = "Former Rapyd product and technology leader, as reported by CTech.", source_ids = ["ctech", "quona_investment"] },
+  { name = "Juan Jose Huezo", role = "CPO and co-founder", is_founder = true, current = true, background = "Former Rapyd executive; CTech reports product leadership and investor materials identify him as CPO.", source_ids = ["ctech", "quona_investment"] },
+  { name = "Sagi Ittah", role = "VP Engineering and co-founder", is_founder = true, current = true, background = "Former Rapyd engineering leader, as reported by CTech.", source_ids = ["ctech"] }
+]
+investors = [
+  { name = "Motive Partners", investor_type = "vc", website = "https://motivepartners.com", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch", "motive_investment"] },
+  { name = "Oak HC/FT", investor_type = "vc", website = "https://www.oakhcft.com", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch", "oak_investment"] },
+  { name = "Bankless VC", investor_type = "vc", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch"] },
+  { name = "FJ Labs", investor_type = "vc", website = "https://fjlabs.com", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch"] },
+  { name = "SignalFire", investor_type = "vc", website = "https://signalfire.com", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch"] },
+  { name = "Quona Capital", investor_type = "vc", website = "https://quona.com", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch", "quona_investment"] },
+  { name = "Next Stage", investor_type = "vc", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch"] },
+  { name = "Selah Ventures", investor_type = "vc", website = "https://selahvc.com", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch"] },
+  { name = "Flatironx", investor_type = "vc", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch"] },
+  { name = "Nascent Ventures", investor_type = "vc", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch"] },
+  { name = "Silvercircle Ventures", investor_type = "vc", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch"] },
+  { name = "Generative Ventures", investor_type = "vc", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch"] },
+  { name = "Bitso", investor_type = "corporate", website = "https://bitso.com", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch"] },
+  { name = "Paxos", investor_type = "corporate", website = "https://paxos.com", relationship = "current", round_ids = ["seed-2026-07"], source_ids = ["company_launch"] }
+]
+financials = []
+traction = [
+  { kind = "product", date = "2026-07-21", description = "Company emerged from stealth and described a platform that ingests payment, bank, ledger, compliance and risk signals into a shared event model; company says it does not hold or move funds.", source_ids = ["company_launch"] },
+  { kind = "partnership", date = "2026-07-21", description = "Company and lead investor announced 11 design partners across banking, payments, embedded finance, cross-border transactions, stablecoins and digital assets. Design-partner status is not evidence of paid production use.", source_ids = ["company_launch", "oak_investment"] },
+  { kind = "partnership", date = "2026-07-21", description = "Bitso and Paxos were named as both investors and design partners; the announcement also quotes OpenReserve and Transcard representatives describing collaboration, but does not call all named organizations paying customers.", source_ids = ["company_launch"] },
+  { kind = "product", date = "2026-07-21", description = "Company said funding would support production readiness and activation of private-beta clients; no later verified production conversion or deployment metrics found.", source_ids = ["company_launch"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Modern Treasury", website = "https://www.moderntreasury.com", rationale = "Payment operations and money-movement workflow software overlaps with parts of Cordant's operating context layer.", differentiation = "Cordant publicly positions itself as a cross-system context and exception-coordination layer; Modern Treasury's public product pages describe payment operations and ledger capabilities." , source_ids = ["modern_treasury"] },
+  { name = "Datadog", website = "https://www.datadoghq.com", rationale = "Infrastructure and application observability compete for monitoring and event-correlation budgets at financial institutions.", differentiation = "Datadog offers broad technical telemetry observability; Cordant claims payment-domain event semantics and cross-organization transaction context.", source_ids = ["datadog"] },
+  { name = "Stripe", website = "https://stripe.com", rationale = "Payment platform with operational tooling and visibility within its own ecosystem; a potential bundled substitute rather than a direct neutral overlay.", differentiation = "Cordant targets visibility across multiple third-party rails and systems, while Stripe's primary platform controls its own payment ecosystem.", source_ids = ["company_launch"] }
+]
+
+[intelligence.company]
+company_id = "cordant"
+legal_name = "CORDANT LTD"
+aliases = ["Cordant", "Cordant Ltd", "CORDANT LTD"]
+operating_status = "active"
+business_model = "Enterprise software platform sold to banks, payment companies and fintechs for operational visibility, exception coordination and audit context across fragmented financial systems. Pricing and commercial terms are undisclosed."
+products = ["Real-time financial infrastructure command center", "Shared event model and transaction timeline", "Cross-system exception and control-gap workflows"]
+locations = ["Miami/South Florida, United States", "Tel Aviv, Israel"]
+country_of_incorporation = "Israel (secondary registry index reports an Israeli private limited company; official company extract not obtained)"
+founded_on = "2026-04-27"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "517334397", source_ids = ["kycisrael"] }]
+source_ids = ["company_launch", "ctech", "refresh_miami", "kycisrael"]
+
+[intelligence.funding]
+status = "reported"
+summary = "One publicly announced $8 million Seed equity round dated July 21, 2026, co-led by Motive Partners and Oak HC/FT, with the other participants listed below. No valuation or terms were disclosed. This is a company-announced lifetime total, not independently audited."
+reported_total_raised = 8000000
+reported_total_currency = "USD"
+total_source_ids = ["company_launch", "oak_investment", "ctech"]
+total_as_of = "2026-07-21"
+total_scope = "Company-announced lifetime equity funding; no separately disclosed debt, grant, secondary or prior financing identified."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "seed-2026-07"
+round_type = "Seed"
+instrument = "equity"
+status = "announced"
+announced_on = "2026-07-21"
+amount_status = "reported"
+amount = 8000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Motive Partners", "Oak HC/FT"]
+participating_investors = ["Bankless VC", "FJ Labs", "SignalFire", "Quona Capital", "Next Stage", "Selah Ventures", "Flatironx", "Nascent Ventures", "Silvercircle Ventures", "Generative Ventures", "Bitso", "Paxos"]
+valuation_basis = "undisclosed"
+source_ids = ["company_launch", "oak_investment", "ctech"]
+notes = "The announcement says $8 million Seed and co-leads; no separate close date, pre-money or post-money valuation disclosed. Investor names are taken from the company announcement; no investor check sizes disclosed."
+
+[intelligence.ownership]
+status = "not_found"
+summary = "The company is privately held; public sources reviewed identify investors but disclose no cap table, ownership percentages, parent company, acquisition, or change-of-control transaction. Israeli registry-data indexing suggests a separately registered Israeli company, but a paid official extract was not obtained."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["company_launch", "kycisrael", "ica_service"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "israeli_rd"]
+summary = "A secondary Israeli registry-data index identifies CORDANT LTD as an active Israeli private company incorporated April 27, 2026, and local reporting describes company operations/team expansion in Tel Aviv. The official Corporations Authority service is available, but the company-specific extract was not retrieved, so registry particulars should be confirmed from the primary register."
+as_of = "2026-10-04"
+source_ids = ["kycisrael", "refresh_miami", "ica_service"]
+
+[intelligence.research]
+researched_at = "2026-10-04T22:14:23Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Cordant official site about products legal company",
+  "Cordant funding raised seed investors valuation acquired 2026",
+  "Cordant team founder CEO CTO CPO VP Engineering Rapyd",
+  "Cordant revenue ARR financials customers deployments headcount",
+  "Cordant ownership parent company acquisition cap table",
+  "Cordant patents USPTO WIPO PATENTSCOPE",
+  "Cordant competitors payment observability operations control plane",
+  "Cordant defense government security dual use contracts",
+  "Cordant Israel Tel Aviv Israeli company registry 517334397",
+  "Cordant Miami Tel Aviv startup $8 million seed Refresh Miami",
+  "קורדאנט גייסה 8 מיליון דולר מייסדים Rapyd"
+]
+gaps = [
+  "team: no complete employee roster, reliable headcount, or independently verified individual biographies beyond four founders and reported executive roles.",
+  "investors: check sizes, fund entities, ownership stakes, and full legal identities for some smaller syndicate names are undisclosed.",
+  "financials: no revenue, ARR, profitability, burn, runway, or audited accounts disclosed.",
+  "traction: 11 design partners and named collaboration are disclosed, but paid status, production customers, volume, retention and outcomes are unknown.",
+  "intellectual_property: no company-assigned patent or published application was verified in this search; this is not proof none exist.",
+  "competition: no independent head-to-head product or win/loss evidence; public information supports adjacent substitutes only.",
+  "ownership: private cap table, founder holdings, investor percentages, and official current registry extract unavailable.",
+  "identity: official registered address and legal entity relationship between US operations and Israeli CORDANT LTD remain unverified.",
+  "dual_use: no public government, defense, military, classified, or security-accredited customer or contract found."
+]
+conflicts = ["Headquarters descriptions vary: the July company launch is datelined New York; TechTimes describes the startup as New York-based, while Refresh Miami reports Miami/South Florida and Tel Aviv and team expansion there. No official legal headquarters or registered office was confirmed; top-level headquarters records reported operating locations with this limitation.", "A secondary registry-index source reports an Israeli company number and April 27, 2026 incorporation, but the official company extract was not retrieved; treat identity and registry details as provisional until primary verification."]
+diligence_questions = [
+  "Which legal entities contract with customers, employ staff, own the product IP, and control the Cordant.ai domain, and how are the Israeli and US entities related?",
+  "How many of the 11 design partners have entered paid production, what is the conversion timeline, and what measured reduction in exception-resolution time has been achieved?",
+  "What connector coverage, event completeness/latency guarantees, data-residency controls, access model, independent security certifications, and incident liability terms are available?",
+  "Who owns the underlying software and any patent applications, and were Rapyd systems, code, data, or contractual obligations involved in creating Cordant?",
+  "What are current headcount, runway, burn, round close details, and any undisclosed debt or grant financing?"
+]
+
+[[intelligence.research.sources]]
+id = "company_launch"
+url = "https://cordant.ai/newsroom"
+title = "Cordant Emerges From Stealth With $8 Million Seed Round as the Command Center for Financial Infrastructure"
+publisher = "Cordant"
+kind = "company"
+accessed_at = "2026-10-04T22:14:23Z"
+published_on = "2026-07-21"
+claims = ["$8 million Seed financing co-led by Motive Partners and Oak HC/FT", "named additional investors including Bitso and Paxos", "11 design partners and private-beta-to-production plan", "company product description, operating model and non-custodial/non-funds-flow claim", "four named co-founders", "company says platform is being developed for banks, fintechs and payment companies"]
+
+[[intelligence.research.sources]]
+id = "ctech"
+url = "https://www.calcalistech.com/ctechnews/article/rklbo03vzl"
+title = "Former Rapyd executives raise $8 million Seed to solve a hidden problem in global payments"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-04T22:14:23Z"
+published_on = "2026-07-21"
+claims = ["independent coverage of $8 million Seed and co-leads", "founder identities and reported roles", "founders' prior Rapyd experience and scale context", "design-partner and cross-system transaction problem context"]
+
+[[intelligence.research.sources]]
+id = "oak_investment"
+url = "https://www.oakhcft.com/blog-post/mission-control-for-money-why-we-invested-in-cordant"
+title = "Mission Control for Money: Why We Invested in Cordant"
+publisher = "Oak HC/FT"
+kind = "investor"
+accessed_at = "2026-10-04T22:14:23Z"
+published_on = "2026-07-21"
+claims = ["Oak HC/FT co-led the $8 million Seed round", "11 design partners including Bitso and Paxos", "additional design partner names", "investor account of Cordant's product and founder background"]
+
+[[intelligence.research.sources]]
+id = "motive_investment"
+url = "https://motivepartners.com/content/why-we-invested-in-cordant"
+title = "Why we invested in Cordant"
+publisher = "Motive Partners"
+kind = "investor"
+accessed_at = "2026-10-04T22:14:23Z"
+published_on = "2026-07-21"
+claims = ["Motive Partners' investment thesis and product-positioning description", "Cordant design-partner use cases", "founder team experience"]
+
+[[intelligence.research.sources]]
+id = "quona_investment"
+url = "https://quona-capital.medium.com/why-we-invested-in-cordant-9c702ad16217"
+title = "Why we invested in Cordant"
+publisher = "Quona Capital"
+kind = "investor"
+accessed_at = "2026-10-04T22:14:23Z"
+published_on = "2026-07-21"
+claims = ["Quona's investment in Cordant", "CEO, CPO and CTO identities/roles", "cross-system operations control-plane positioning", "company does not hold keys or sit in flow of funds"]
+
+[[intelligence.research.sources]]
+id = "refresh_miami"
+url = "https://refreshmiami.com/news/cordant-emerges-from-stealth-with-8m-to-build-the-next-layer-of-financial-infrastructure/"
+title = "Cordant emerges from stealth with $8M to build the next layer of financial infrastructure"
+publisher = "Refresh Miami"
+kind = "media"
+accessed_at = "2026-10-04T22:14:23Z"
+published_on = "2026-07-21"
+claims = ["Miami/South Florida and Tel Aviv operating locations", "planned team expansion in South Florida and Tel Aviv", "funding, founders and design-partner context"]
+
+[[intelligence.research.sources]]
+id = "ica_service"
+url = "https://www.gov.il/en/service/company_extract"
+title = "Get a full extract or basic information on a company or partnership"
+publisher = "Israeli Corporations Authority, Ministry of Justice"
+kind = "government"
+accessed_at = "2026-10-04T22:14:23Z"
+claims = ["official route for obtaining basic Israeli company information or a full registry extract"]
+
+[[intelligence.research.sources]]
+id = "kycisrael"
+url = "https://www.kycisrael.com/companies/517334397/cordant-ltd/"
+title = "CORDANT LTD - Israel Company Information"
+publisher = "KYC Israel"
+kind = "directory"
+accessed_at = "2026-10-04T22:14:23Z"
+claims = ["secondary registry-data index reports CORDANT LTD registration number 517334397, active status, Israeli private-company type, Netanya address and April 27, 2026 incorporation date"]
+
+[[intelligence.research.sources]]
+id = "uspto_search"
+url = "https://www.uspto.gov/patents/search"
+title = "Search for patents"
+publisher = "United States Patent and Trademark Office"
+kind = "government"
+accessed_at = "2026-10-04T22:14:23Z"
+claims = ["official USPTO search portal consulted; Cordant-specific IP was not verified by this review"]
+
+[[intelligence.research.sources]]
+id = "cordant_site"
+url = "https://www.cordant.ai/"
+title = "Cordant"
+publisher = "Cordant"
+kind = "company"
+accessed_at = "2026-10-04T22:14:23Z"
+claims = ["official product positioning and intended financial-institution customers"]
+
+[[intelligence.research.sources]]
+id = "modern_treasury"
+url = "https://www.moderntreasury.com/products"
+title = "Modern Treasury Products"
+publisher = "Modern Treasury"
+kind = "other"
+accessed_at = "2026-10-04T22:14:23Z"
+claims = ["official product description for an adjacent payment-operations and ledger provider"]
+
+[[intelligence.research.sources]]
+id = "datadog"
+url = "https://www.datadoghq.com/solutions/financial-services/"
+title = "Financial Services Monitoring"
+publisher = "Datadog"
+kind = "other"
+accessed_at = "2026-10-04T22:14:23Z"
+claims = ["official observability offering for financial services as an adjacent substitute"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T22:14:23Z"
+next_review_on = "2027-01-04"
+queries = ["Cordant official site about products legal company", "Cordant Israel Tel Aviv Israeli company registry 517334397"]
+source_ids = ["company_launch", "ctech", "refresh_miami", "kycisrael", "ica_service"]
+summary = "Verified commercial identity and product from company announcement and local reporting; secondary registry listing requires official extract confirmation."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T22:14:23Z"
+next_review_on = "2027-01-04"
+queries = ["Cordant funding raised seed investors valuation acquired 2026"]
+source_ids = ["company_launch", "ctech", "oak_investment"]
+summary = "One announced $8 million Seed round; no valuation disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T22:14:23Z"
+next_review_on = "2027-01-04"
+queries = ["Cordant startup investor Motive Oak HC/FT Quona investment"]
+source_ids = ["company_launch", "oak_investment", "motive_investment", "quona_investment"]
+summary = "Company and investor announcements identify the syndicate; individual check sizes and ownership are private."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T22:14:23Z"
+next_review_on = "2027-01-04"
+queries = ["Cordant team founder CEO CTO CPO VP Engineering Rapyd"]
+source_ids = ["ctech", "company_launch", "quona_investment"]
+summary = "Four founders identified; CTech reports role assignments and prior Rapyd work. Full staff roster and headcount not found."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T22:14:23Z"
+next_review_on = "2027-01-04"
+queries = ["Cordant ownership parent company acquisition cap table", "Cordant Israeli company registry 517334397"]
+source_ids = ["company_launch", "kycisrael", "ica_service"]
+summary = "No public cap table, holdings, parent, or ownership transaction found; obtain official registry extract and company disclosure."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T22:14:23Z"
+next_review_on = "2027-01-04"
+queries = ["Cordant revenue ARR financials customers deployments headcount"]
+source_ids = ["company_launch", "oak_investment", "ctech"]
+summary = "No revenue, ARR, profitability, burn, runway, or audited accounts disclosed; seed amount is recorded separately as financing."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T22:14:23Z"
+next_review_on = "2027-01-04"
+queries = ["Cordant revenue customers design partners deployments 2026"]
+source_ids = ["company_launch", "oak_investment", "refresh_miami"]
+summary = "11 design partners and private beta plans reported; no paid-customer conversion, live production count, or measured outcomes verified."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T22:14:23Z"
+next_review_on = "2027-01-04"
+queries = ["Cordant patents USPTO WIPO PATENTSCOPE"]
+source_ids = ["uspto_search"]
+summary = "No Cordant-specific patent publication or granted patent verified in public search; no conclusion that none exists."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T22:14:23Z"
+next_review_on = "2027-01-04"
+queries = ["Cordant competitors payment observability operations control plane", "Modern Treasury products", "Datadog financial services monitoring"]
+source_ids = ["modern_treasury", "datadog", "company_launch"]
+summary = "Compared official product descriptions for adjacent payment-operations and broad observability offerings; no independent competitive win/loss evidence found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-04T22:14:23Z"
+next_review_on = "2027-01-04"
+queries = ["Cordant defense government security dual use contracts"]
+source_ids = ["company_launch", "refresh_miami"]
+summary = "Commercial financial operations is evidenced; no public government, defense, military or classified customer or contract found, so do not assert a defense deployment."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Company's launch announcement states it emerged from stealth and describes an active product effort, design partners and planned production rollout."
+verified_at = "2026-10-04T22:14:23Z"
+source_ids = ["company_launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Secondary registry index identifies CORDANT LTD as an Israeli private company; local reporting identifies Tel Aviv operating/team expansion. Registry facts await primary extract confirmation."
+verified_at = "2026-10-04T22:14:23Z"
+source_ids = ["kycisrael", "refresh_miami"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Company announcement states $8 million Seed financing; Oak co-lead article independently confirms that round."
+verified_at = "2026-10-04T22:14:23Z"
+source_ids = ["company_launch", "oak_investment"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026-07.amount"
+support = "direct"
+summary = "The July 21, 2026 company announcement and Oak HC/FT announcement both state an $8 million Seed round."
+verified_at = "2026-10-04T22:14:23Z"
+source_ids = ["company_launch", "oak_investment"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026-07.lead_investors"
+support = "direct"
+summary = "Company announcement names Motive Partners and Oak HC/FT as co-leads."
+verified_at = "2026-10-04T22:14:23Z"
+source_ids = ["company_launch", "oak_investment"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026-07.participating_investors"
+support = "direct"
+summary = "Company announcement lists all additional investors and says Bitso and Paxos joined as investors and design partners."
+verified_at = "2026-10-04T22:14:23Z"
+source_ids = ["company_launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.founded_on"
+support = "direct"
+summary = "Secondary registry-data index reports an April 27, 2026 incorporation date; this date refers to the listed Israeli entity and needs official registry confirmation."
+verified_at = "2026-10-04T22:14:23Z"
+source_ids = ["kycisrael"]

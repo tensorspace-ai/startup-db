@@ -1,0 +1,598 @@
+name = "aiOla"
+description = "aiOla develops enterprise voice agents for field teams that capture spoken work, map it to business schemas, and trigger actions in Salesforce and other operational systems. Its current commercial wedge is hands-free field-sales productivity, with adjacent applications in inspections, maintenance, compliance, and frontline reporting."
+detailed_description = """
+aiOla is a privately held Israeli voice-AI company targeting the first mile of enterprise operational data: the moment a field worker has information but no practical time or interface for entering it. Its current product is a field-agent platform in which a rep speaks naturally after a meeting or while moving between visits, and an agent turns that conversation into structured records, queries, and actions. The clearest initial workflow is voice-to-Salesforce for field sales, including updates to standard and custom objects, field and picklist population, validation rules, and bidirectional synchronization. This is materially different from a transcription-only tool because the commercial outcome depends on trustworthy structured actions inside an existing system of record.
+
+The technical proposition combines domain-adapted automatic speech recognition, conversational agent orchestration, schema-aware extraction, workflow execution, and monitoring. aiOla publicly describes a builder for configuring agents and business logic, a learning layer that uses usage and outcome feedback, and observability for accuracy, adoption, resolution, and data completeness. Its public LinkedIn materials also describe QUASAR, an ASR dynamic router that can select among recognition engines based on context, accuracy, latency, and cost. These are potentially meaningful capabilities for noisy, multilingual, jargon-heavy environments, but they should be treated as company claims until supported by customer-level benchmarks, error analyses, and independent testing. The likely moat is accumulated workflow configuration, domain vocabulary, evaluation data, and integration know-how rather than an assumption that the underlying speech models are permanently proprietary.
+
+The customer problem is credible: distributed sales, retail, pharmaceutical, aviation, logistics, and industrial teams often lose information between a site visit and a later administrative session. aiOla’s site reports large improvements in reporting speed, data capture, and CRM completeness, and its about page names field-sales, retail/CPG, and pharmaceutical contexts. Those figures and customer testimonials are self-reported marketing evidence, not audited cohort data; diligence should request retention, deployment counts, baseline comparisons, false-action rates, and the proportion of workflows that remain active after the initial rollout. The July 2025 company announcement disclosed a $25 million Series A2 round, total funding of $58 million, and strategic participation from United Airlines Ventures alongside New Era and Hamilton Lane. That financing and the company’s current investor-facing round language are useful commercialization signals, but do not by themselves establish product-market fit or current runway.
+
+Competition comes from several directions rather than one direct peer set. Salesforce, Microsoft, ServiceNow, SAP, and other system-of-record vendors can bundle voice and agents into installed workflows. Speech platforms such as Nuance/Microsoft, Google Cloud, AWS, and specialized ASR providers can be assembled with a systems integrator. Revenue-intelligence and sales-engagement products can also capture adjacent meeting data, while field-service and mobile-workflow vendors own the user relationship. aiOla’s best defensibility case is therefore end-to-end reliability in a customer’s specific schema: fast deployment, resilient recognition in motion and noise, correct extraction, safe action execution, auditability, and measurable adoption. The company must prove that this integration-led value survives platform bundling and does not require excessive services work.
+
+From a defense and national-security perspective, aiOla is not defense-native and there is no public evidence here of defense contracts, classified deployments, or mission certification. Nevertheless, the core capability has credible but bounded dual-use potential in non-kinetic workflows: maintenance debriefs, logistics status reporting, inspection checklists, safety observations, and supply or asset handoffs. Those uses could reduce reporting latency and improve data completeness for organizations operating across sites or under time pressure. The thesis weakens substantially where intermittent connectivity, strict information controls, offline operation, multilingual edge cases, or zero-tolerance action errors are required. A strategic review should therefore test deployment architecture, data residency, retention and deletion, access controls, human approval gates, degraded-mode behavior, and integration with systems beyond Salesforce before treating the product as mission-critical infrastructure."""
+logo = "https://aiola.ai/wp-content/uploads/2026/03/favicon-300x300.png"
+website = "https://aiola.ai"
+sector = "Enterprise Voice AI / Field Operations Automation"
+founded = "2019"
+headquarters = "Herzliya, Israel"
+employees = "51-200 (latest public range; company currently does not publish a precise headcount)"
+funding_stage = "Series A2; later strategic investment"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "aiOla has credible, bounded dual-use potential because hands-free speech-to-structured-action workflows can support logistics, maintenance, inspections, safety reporting, and other non-kinetic operations. The company is publicly commercial and Salesforce-led, with no verified defense contract or mission deployment in this record. Dual-use value therefore depends on proving secure data handling, human approval controls, multilingual and noisy-environment accuracy, and resilience when connectivity or enterprise systems are degraded."
+key_technologies = [
+  "Domain-adapted automatic speech recognition for noisy, mobile field environments",
+  "Dynamic ASR routing across recognition engines for accuracy, latency, and cost tradeoffs",
+  "Conversational agent orchestration for multi-step field workflows",
+  "Schema-aware entity extraction and structured action generation",
+  "Bidirectional Salesforce integration with custom objects, picklists, and validation rules",
+  "No-code agent and workflow configuration with performance observability",
+  "Continuous-learning, drift detection, and human-feedback loops"
+]
+use_cases = [
+  "Field-sales visit debriefs, opportunity updates, and next-step capture in Salesforce",
+  "Voice queries for account history, pipeline context, and pre-visit preparation",
+  "Retail and CPG store-visit reporting with structured compliance observations",
+  "Pharmaceutical territory and field-activity documentation",
+  "Quality inspections, safety checks, and compliance checklist completion",
+  "Hands-free maintenance and service documentation in aviation or industrial settings",
+  "Defense logistics, equipment maintenance, and readiness reporting in non-combat contexts",
+  "Audit-oriented operational reporting where delayed or incomplete data creates risk"
+]
+investible = true
+investment_rationale = "aiOla is a credible strategic-priority signal for an operational-AI thesis, not a recommendation. The case rests on a concrete enterprise wedge, a disclosed $58 million cumulative funding position, strategic aviation investor participation, and a product that connects voice capture to structured system actions rather than stopping at transcription. The main diligence question is whether the company has repeatable, high-retention deployments with economics that remain attractive after integration and support costs. Analysts should request cohort retention, gross margin by deployment, implementation time, action-error rates, security documentation, and evidence that the platform can expand beyond Salesforce without becoming a bespoke services business."
+strategic_value = "aiOla could provide software leverage in field-heavy organizations by reducing the delay and loss between real-world activity and operational systems. The strongest strategic relevance is in logistics, maintenance, inspections, and readiness reporting, where better data timeliness can improve planning without putting the product in a weapons-control role. That value remains conditional: public materials establish commercial capability and investor interest, not defense adoption. Strategic fit should be reassessed after diligence on secure deployment, data residency, offline or degraded-connectivity behavior, human review, integration breadth, and the ability to operate within restrictive government procurement environments."
+potential_score = 76.0
+technology_score = 82.0
+market_score = 78.0
+team_score = 75.0
+dual_use_score = 60.0
+strategic_alignment_score = 66.0
+stage = "mid"
+stage_rationale = "The 2019 founding year, private-company status, disclosed Series A2 financing, investor-facing commercial expansion, and current enterprise platform positioning place aiOla in the mid stage. It appears beyond initial product discovery and early technical validation, but still needs to prove repeatable scale, durable retention, and category leadership while larger platform vendors add native agent capabilities."
+competitors = [
+  "Salesforce Agentforce and native Salesforce voice/workflow features",
+  "Microsoft Nuance and Copilot-based enterprise speech workflows",
+  "Gong and other revenue-intelligence platforms for sales activity capture",
+  "ServiceNow, SAP, and other system-of-record agent platforms",
+  "Google Cloud or AWS speech services combined with custom integrations",
+  "Systems integrators building bespoke voice-to-ERP, WMS, or QMS workflows"
+]
+competitive_edge = "aiOla’s potential edge is the end-to-end field loop: resilient speech capture, domain vocabulary, schema mapping, validation, safe workflow execution, and measurable feedback inside a customer’s operational system. This is more valuable than a generic transcription API when it produces trusted records with little user training. The edge is not yet proven as a durable moat; Salesforce, Microsoft, ServiceNow, hyperscalers, and integrators can replicate portions of the stack. Sustained advantage would require demonstrably better field accuracy, faster deployment, lower implementation cost, stronger observability, and workflow data that compounds without creating unacceptable privacy or lock-in concerns."
+risk_factors = [
+  "Platform displacement if Salesforce, Microsoft, ServiceNow, or hyperscalers bundle comparable voice agents and integrations",
+  "Structured-action errors caused by accents, jargon, code-switching, noise, ambiguous instructions, or changing schemas",
+  "Long enterprise security, procurement, and integration cycles that defer revenue and consume services capacity",
+  "Retention and ROI risk if adoption is limited to a narrow post-meeting workflow or depends on executive sponsorship",
+  "Privacy, consent, data-residency, and retention obligations for recordings, transcripts, and sensitive operational data",
+  "Gross-margin pressure from inference, multi-provider ASR, support, and customer-specific configuration costs",
+  "Mission-readiness gap if the platform lacks offline operation, degraded-mode behavior, or strong human approval controls"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Medium-high tracking priority: aiOla has a specific enterprise wedge, current commercial momentum signals, and credible non-kinetic dual-use adjacency in logistics and maintenance reporting. The score is moderated by the absence of verified defense adoption, the early maturity of the disclosed scale evidence, and strong platform competition. Its strategic relevance depends on proving durable workflow accuracy, repeatable unit economics, secure deployment, and expansion beyond Salesforce without excessive customization."
+public_sources = [
+  {label="aiOla Series A2 announcement", url="https://aiola.ai/blog/aiola-united-airlines-ventures/", description="Company announcement of July 2025 $25m Series A2 and $58m cumulative funding"},
+  {label="UST strategic investment announcement", url="https://aiola.ai/blog/ust-invests-in-aiola/", description="Company announcement of UST investment and partnership, November 2025"},
+  {label="aiOla About", url="https://aiola.ai/about", description="Current product, leadership, sectors and investor roster"},
+  {label="aiOla homepage", url="https://aiola.ai/", description="Current product positioning and company-published customer outcome claims"},
+  {label="2023 Series A release", url="https://www.prnewswire.com/news-releases/aiola-raises-25-million-to-interface-natural-language-to-ai-solutions-in-traditional-manufacturing-301725772.html", description="Company-provided 2023 Series A announcement with amount, lead and cumulative funding"},
+  {label="aiOla founder profile", url="https://aiola.ai/author/amir-haramaty/", description="Founder background and executive role"},
+  {label="United Airlines Ventures portfolio", url="https://www.unitedairlinesventures.com/portfolio", description="Investor portfolio listing aiOla and describing its technology"},
+  {label="Israeli Corporations Authority service", url="https://www.gov.il/en/service/company_extract", description="Official registry lookup service; AIOLA LTD identifier corroborated by directory record"},
+  {label="AIOLA LTD registry profile", url="https://en.checkid.co.il/company/AIOLA%2B%2BLTD-W9b5VVB-515575181", description="Registry-derived company number and active status; third-party registry mirror"},
+  {label="Calcalist 2023 funding coverage", url="https://www.calcalist.co.il/calcalistech/article/sjpssbbii", description="Israeli media coverage of 2023 funding, founding, and historical product"},
+  {label="Salesforce Agentforce", url="https://www.salesforce.com/ap/news/press-releases/2026/09/14/ph-salesforce-expands-agentforce-with-a-new-portfolio-of-ai-agents-built-for-high-value-work/", description="Recent native agent expansion relevant to competition"}
+]
+crawled_at = "2026-02-24T05:52:00+00:00"
+updated_at = "2026-10-03T14:14:00+00:00"
+
+[intelligence]
+schema_version = 2
+financials = []
+
+[intelligence.company]
+source_ids = ["about", "ust", "registry"]
+company_id = "il-aiola"
+legal_name = "AIOLA LTD"
+aliases = ["aiOla", "aiola"]
+operating_status = "active"
+business_model = "Private Israeli B2B enterprise software company. Sells voice AI and field-agent software to enterprises, with workflow automation and integrations into systems such as Salesforce; strategic partnerships can also support deployment. Public materials emphasize enterprise subscriptions and API availability, but pricing and revenue model details are not disclosed."
+products = ["aiola Field Agent Platform", "Jargonic speech AI ecosystem", "AdaKWS jargon keyword spotting model", "Voice AI API"]
+locations = ["Herzliya, Israel"]
+linkedin_url = "https://www.linkedin.com/company/aiola/"
+country_of_incorporation = "Israel"
+founded_on = "2019"
+
+[[intelligence.company.registry_identifiers]]
+jurisdiction = "Israel"
+scheme = "Israeli Corporations Authority company number"
+identifier = "515575181"
+source_ids = ["registry", "registry-gov"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "AIOLA LTD is identified as an active Israeli private company in Herzliya; the company and its investor UST also identify aiOla as Israel-based. Current company materials identify Israeli founders and Herzliya operations."
+as_of = "2026-10-03"
+source_ids = ["registry", "ust", "about", "founder"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Company announcements document a $25 million Series A in January 2023 and a $25 million Series A2 in July 2025. aiOla stated after the A2 that cumulative funding was $58 million. In November 2025 UST separately announced a strategic investment without disclosing its amount; the company continued to describe $58 million as its backed funding, so the later contribution cannot be added or quantified. Older databases disagree on seed/pre-seed timing and amounts; those historical entries are not included as numeric rounds without primary confirmation."
+reported_total_raised = 58000000
+reported_total_currency = "USD"
+total_source_ids = ["a2", "ust"]
+total_as_of = "2025-11-04"
+total_scope = "Company-reported cumulative funding after the July 2025 A2; not independently reconciled to underlying round records and excludes no separately quantified UST amount because none was disclosed."
+history_status = "partial"
+coverage_through = "2025-11-04"
+
+[[intelligence.funding.rounds]]
+id = "series-a-2023"
+round_type = "Series A"
+instrument = "equity"
+status = "announced"
+announced_on = "2023-01-19"
+amount_status = "reported"
+amount = 25000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["New Era Capital Partners"]
+participating_investors = ["Hamilton Lane", "Other investors (not named in announcement)"]
+source_ids = ["series-a"]
+notes = "Company-provided PR Newswire release gives $25m round and says cumulative funding was $33m. No valuation terms disclosed."
+
+[[intelligence.funding.rounds]]
+id = "series-a2-2025"
+round_type = "Series A2"
+instrument = "equity"
+status = "announced"
+announced_on = "2025-07-09"
+amount_status = "reported"
+amount = 25000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["United Airlines Ventures"]
+participating_investors = ["New Era Capital Partners", "Hamilton Lane"]
+source_ids = ["a2"]
+notes = "The company calls this Series A2 and states that it brought cumulative funding to $58m. No valuation terms disclosed."
+
+[[intelligence.funding.rounds]]
+id = "ust-strategic-2025"
+round_type = "Strategic investment"
+instrument = "unknown"
+status = "announced"
+announced_on = "2025-11-04"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+lead_investors = ["UST"]
+participating_investors = []
+source_ids = ["ust"]
+notes = "UST and aiOla announced a strategic investment following a collaboration. Neither public announcement discloses amount, instrument or valuation. Kept separate from the July priced round."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "aiOla remains a privately held operating company based on current company and investor materials. Public announcements identify investors but do not disclose the cap table, ownership percentages, board rights, or control. No acquisition, IPO, merger or exit by aiOla was found in reviewed public sources. UST's investment amount and instrument are undisclosed."
+cap_table_status = "undisclosed"
+shareholders = ["New Era Capital Partners", "Hamilton Lane", "United Airlines Ventures", "UST", "Marc Rowan", "Mitch Garber"]
+source_ids = ["a2", "ust", "about"]
+deals = []
+holdings = []
+
+[[intelligence.people]]
+name = "Amir Haramaty"
+role = "Co-founder and President"
+is_founder = true
+current = true
+background = "Company founder profile says he previously served as COO of Adallom, acquired by Microsoft, and SVP at Amobee, acquired by SingTel."
+source_ids = ["founder", "about"]
+
+[[intelligence.people]]
+name = "Omri Shai"
+role = "Founder and Executive GM"
+is_founder = true
+current = true
+source_ids = ["about"]
+
+[[intelligence.people]]
+name = "Mitch Garber"
+role = "CEO and Executive Chairman"
+is_founder = false
+current = true
+source_ids = ["about"]
+notes = "Current company About page lists this role; this supersedes older third-party references describing Amir Haramaty as CEO."
+
+[[intelligence.people]]
+name = "Ofir Goren Bar"
+role = "Chief Technology Officer"
+is_founder = false
+current = true
+source_ids = ["about"]
+
+[[intelligence.people]]
+name = "Shira Milshtein"
+role = "Chief People Officer"
+is_founder = false
+current = true
+source_ids = ["about"]
+
+[[intelligence.people]]
+name = "Roy Levi Erez"
+role = "Chief Revenue Officer"
+is_founder = false
+current = true
+source_ids = ["about"]
+
+[[intelligence.investors]]
+name = "United Airlines Ventures"
+investor_type = "corporate"
+website = "https://www.unitedairlinesventures.com/"
+round_ids = ["series-a2-2025"]
+relationship = "current"
+source_ids = ["a2", "uav"]
+
+[[intelligence.investors]]
+name = "New Era Capital Partners"
+investor_type = "vc"
+website = "https://neweracap.com/"
+round_ids = ["series-a-2023", "series-a2-2025"]
+relationship = "current"
+source_ids = ["series-a", "a2"]
+
+[[intelligence.investors]]
+name = "Hamilton Lane"
+investor_type = "other"
+website = "https://www.hamiltonlane.com/"
+round_ids = ["series-a-2023", "series-a2-2025"]
+relationship = "current"
+source_ids = ["series-a", "a2"]
+notes = "Alternative asset manager; participated in both announced financing rounds."
+
+[[intelligence.investors]]
+name = "UST"
+investor_type = "corporate"
+website = "https://www.ust.com/"
+round_ids = ["ust-strategic-2025"]
+relationship = "current"
+source_ids = ["ust"]
+
+[[intelligence.investors]]
+name = "Marc Rowan"
+investor_type = "angel"
+round_ids = []
+relationship = "current"
+source_ids = ["about"]
+notes = "Named among backers on current company site; individual round and instrument not disclosed."
+
+[[intelligence.investors]]
+name = "Mitch Garber"
+investor_type = "angel"
+round_ids = []
+relationship = "current"
+source_ids = ["about"]
+notes = "Named among backers on current company site; individual round and instrument not disclosed. Also current CEO and Executive Chairman."
+
+[[intelligence.traction]]
+kind = "product"
+description = "Current company site positions aiOla around the Field Agent Platform, a set of voice-led agents for field-sales users that can update Salesforce, retrieve account context and prepare for visits. Company materials say use can occur without recording; technical and privacy details require diligence."
+date = "2026-10-03"
+source_ids = ["home", "about"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Company site publishes attributed, anonymized customer testimonials from a Fortune 500 pharmaceutical company and Fortune 50 CPG, plus United Airlines personnel. Testimonials report improvements in CRM completeness, customer-facing time and field data capture; these are company-selected claims, not independently audited results, and contract values or customer identities are not disclosed."
+date = "2026-10-03"
+source_ids = ["home"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "UST described a successful collaboration incubated by UST Spark before its November 2025 strategic investment, and said the partnership targets frontline-intensive sectors including healthcare, retail, manufacturing and automotive. The announcement does not identify named deployments or contract economics."
+date = "2025-11-04"
+source_ids = ["ust"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "United Airlines Ventures invested in July 2025 as aiOla and United explored potential use cases. The original announcement describes exploration and a potentially broader collaboration, not a confirmed paid production contract."
+date = "2025-07-09"
+source_ids = ["a2"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "The company calls its AdaKWS jargon keyword spotting model patented and claims 95% accuracy for detecting industry-specific jargon. This research did not identify a patent number or independently verify the patent family, claims, ownership, legal status or benchmark methodology; treat patent and accuracy as company-reported pending patent-office review."
+date = "2025-07-09"
+source_ids = ["a2"]
+
+[[intelligence.comparables]]
+name = "Salesforce Agentforce"
+website = "https://www.salesforce.com/agentforce/"
+rationale = "Installed CRM and agent platform capable of taking actions in Salesforce workflows, directly adjacent to aiOla's Salesforce-led field-sales use case."
+differentiation = "Salesforce owns the CRM environment and offers native agent tooling; aiOla focuses on voice capture and field-specific workflow configuration."
+source_ids = ["salesforce", "about"]
+
+[[intelligence.comparables]]
+name = "Microsoft Nuance"
+website = "https://www.microsoft.com/en-us/industry/health/microsoft-cloud-for-healthcare"
+rationale = "Large enterprise speech and conversational AI provider, a substitute or component supplier for voice workflows."
+differentiation = "Nuance has broad speech infrastructure and distribution; aiOla packages speech with schema-aware field agents and operational integrations."
+source_ids = ["a2"]
+
+[[intelligence.comparables]]
+name = "Google Cloud Speech-to-Text"
+website = "https://cloud.google.com/speech-to-text"
+rationale = "Cloud speech recognition is a build-it-yourself substitute for enterprise transcription and voice workflows."
+differentiation = "Google supplies general-purpose speech APIs; aiOla claims jargon adaptation, multilingual field performance and workflow action execution."
+source_ids = ["a2"]
+
+[[intelligence.research.sources]]
+id = "a2"
+url = "https://aiola.ai/blog/aiola-united-airlines-ventures/"
+title = "aiola Secures $25M, including Strategic Investment from United Airlines Ventures to Bring Voice AI to Aviation and Beyond"
+publisher = "aiOla"
+kind = "company"
+accessed_at = "2026-10-03T14:11:27+00:00"
+published_on = "2025-07-10"
+claims = ["$25m Series A2 announced July 9 2025", "United Airlines Ventures joined alongside New Era and Hamilton Lane", "company-reported cumulative funding of $58m", "United use cases under exploration", "company patent and AdaKWS accuracy assertions"]
+
+[[intelligence.research.sources]]
+id = "ust"
+url = "https://aiola.ai/blog/ust-invests-in-aiola/"
+title = "UST Invests in aiola to Scale Voice-agentic Automation for Frontline Operations"
+publisher = "aiOla / PR Newswire"
+kind = "company"
+accessed_at = "2026-10-03T14:11:27+00:00"
+published_on = "2025-11-04"
+claims = ["UST made a strategic investment in aiOla; amount and instrument undisclosed", "UST and aiOla had prior collaboration incubated by UST Spark", "aiOla identified as Israel-based", "aiOla described as backed by $58m"]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://aiola.ai/about"
+title = "About aiola: Field Voice Agents for Teams Using Salesforce"
+publisher = "aiOla"
+kind = "company"
+accessed_at = "2026-10-03T14:11:27+00:00"
+claims = ["Current Field Agent positioning and target sectors", "Current published leadership titles", "Named backers include UAV, Hamilton Lane, New Era, Marc Rowan and Mitch Garber", "Company-reported workflow and adoption claims"]
+
+[[intelligence.research.sources]]
+id = "home"
+url = "https://aiola.ai/"
+title = "Voice AI Agents for Field Teams using Salesforce"
+publisher = "aiOla"
+kind = "company"
+accessed_at = "2026-10-03T14:11:27+00:00"
+claims = ["Current field-agent product positioning", "Company-published customer testimonial claims", "Company's current public compliance badges"]
+
+[[intelligence.research.sources]]
+id = "series-a"
+url = "https://www.prnewswire.com/news-releases/aiola-raises-25-million-to-interface-natural-language-to-ai-solutions-in-traditional-manufacturing-301725772.html"
+title = "aiOla raises $25 million to interface natural language to AI solutions in traditional manufacturing"
+publisher = "PR Newswire (release provided by aiOla)"
+kind = "company"
+accessed_at = "2026-10-03T14:11:27+00:00"
+published_on = "2023-01-19"
+claims = ["$25m Series A led by New Era with Hamilton Lane and other investors", "company-reported cumulative funding of $33m", "founders Amir Haramaty and Guy Ernst as reported in 2023", "55 employees mostly in Herzliya in 2023"]
+
+[[intelligence.research.sources]]
+id = "founder"
+url = "https://aiola.ai/author/amir-haramaty/"
+title = "Amir Haramaty - Co-Founder and President at aiola"
+publisher = "aiOla"
+kind = "company"
+accessed_at = "2026-10-03T14:11:27+00:00"
+claims = ["Amir Haramaty is current co-founder and President", "Haramaty previously served as COO of Adallom and SVP at Amobee"]
+
+[[intelligence.research.sources]]
+id = "uav"
+url = "https://www.unitedairlinesventures.com/portfolio"
+title = "Portfolio"
+publisher = "United Airlines Ventures"
+kind = "investor"
+accessed_at = "2026-10-03T14:11:27+00:00"
+claims = ["United Airlines Ventures lists aiOla as a portfolio company", "UAV characterizes aiOla as speech-to-text AI that converts speech into organized searchable data"]
+
+[[intelligence.research.sources]]
+id = "registry-gov"
+url = "https://www.gov.il/en/service/company_extract"
+title = "Get a full extract or basic information on a company or partnership"
+publisher = "Israeli Corporations Authority"
+kind = "government"
+accessed_at = "2026-10-03T14:11:27+00:00"
+claims = ["Official company registry provides public basic company lookup"]
+
+[[intelligence.research.sources]]
+id = "registry"
+url = "https://en.checkid.co.il/company/AIOLA%2B%2BLTD-W9b5VVB-515575181"
+title = "AIOLA LTD - company profile"
+publisher = "CheckID"
+kind = "directory"
+accessed_at = "2026-10-03T14:11:27+00:00"
+claims = ["AIOLA LTD is an active Israeli private company", "Company number 515575181", "Herzliya registered address"]
+
+[[intelligence.research.sources]]
+id = "calcalist"
+url = "https://www.calcalist.co.il/calcalistech/article/sjpssbbii"
+title = "פתרונות AI לתעשייה בכל שפה: aiOla גייסה 25 מיליון דולר"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-03T14:11:27+00:00"
+published_on = "2023-01-19"
+claims = ["Israeli coverage of $25m 2023 raise", "Company was founded in 2019 and employed about 55 in 2023", "Historical product focused on industrial process management"]
+
+[[intelligence.research.sources]]
+id = "salesforce"
+url = "https://www.salesforce.com/ap/news/press-releases/2026/09/14/ph-salesforce-expands-agentforce-with-a-new-portfolio-of-ai-agents-built-for-high-value-work/"
+title = "Salesforce Expands Agentforce With a New Portfolio of AI Agents Built for High-Value Work"
+publisher = "Salesforce"
+kind = "other"
+accessed_at = "2026-10-03T14:11:27+00:00"
+published_on = "2026-09-14"
+claims = ["Salesforce continues to expand native AI agents connected to Customer 360 workflows"]
+
+[intelligence.research]
+researched_at = "2026-10-03T14:11:27+00:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["aiOla company identity legal name headquarters founders", "aiOla funding raised seed Series A Series A2 investors valuation", "aiOla UST investment November 2025 amount", "aiOla team leadership founder CEO current", "aiOla ownership acquisition IPO cap table", "aiOla revenue ARR profitability employees", "aiOla customers deployments traction United Airlines Salesforce", "aiOla patents AdaKWS patent", "aiOla competitors voice AI field sales", "aiOla defense government military security use cases", "aiOla גיוס השקעה משקיעים", "aiOla הכנסות לקוחות פטנטים"]
+gaps = ["financials: no audited revenue, ARR, profit, burn or runway disclosure located", "team: public leadership roster lacks complete named biographies for the broader executive and technical team", "investors: private cap table, investment sizes by investor, and UST terms undisclosed", "funding: older pre-seed and seed databases report inconsistent events and amounts; no complete primary-source round ledger found", "traction: customer names, contract values, renewal/retention data, and independent outcome validation are not publicly disclosed", "intellectual_property: AdaKWS is described as patented but no patent publication number or verified ownership/status was established", "competition: comparable category alternatives identified, but no independent head-to-head benchmark against aiOla was found", "dual_use: no public defense/security customer, government contract, classified deployment, or mission certification found"]
+conflicts = ["Company's July 2025 release says $58m cumulative funding after two disclosed $25m rounds, implying earlier financing of about $8m; secondary databases variously report $8m seed, $3m pre-seed, other seed tranches, and differing dates. Those unverified entries are excluded from numeric round history.", "Older sources call Amir Haramaty CEO; aiOla's current About page lists Mitch Garber as CEO and Executive Chairman and Haramaty as President. Current company page used for present role; historical leadership transition date was not found."]
+diligence_questions = ["What are ARR, gross retention, net revenue retention, gross margin, deployment duration and services hours by cohort, and what portion of customer outcomes is independently measurable?", "What legal entity owns AdaKWS and related patents, what are the publication numbers and jurisdictions, and what exact evaluation protocol underlies the claimed 95% jargon accuracy?", "What are the amount, security/instrument, governance rights and use-of-proceeds terms of UST's 2025 strategic investment, and did it result in paid deployments or remain a partnership?", "Which named customers are in production and paying, and what human review, rollback and audit controls govern Salesforce write actions?", "What are the data retention, residency, model-training, offline/degraded-network and security certification details for regulated or government-adjacent customers?"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T14:11:27+00:00"
+next_review_on = "2027-01-03"
+queries = ["aiOla company identity legal name headquarters founders", "AIOLA LTD 515575181 Israel registry"]
+source_ids = ["about", "ust", "registry", "calcalist"]
+summary = "Company identity is corroborated by company, Israeli media and registry-mirror materials; registry lookup service itself is official."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T14:11:27+00:00"
+next_review_on = "2027-01-03"
+queries = ["aiOla funding raised seed Series A Series A2 investors valuation", "aiOla UST investment November 2025 amount", "aiOla גיוס השקעה משקיעים"]
+source_ids = ["a2", "ust", "series-a", "calcalist"]
+summary = "Two $25m company-announced equity rounds and an unpriced UST strategic investment located; company-reported cumulative total $58m; earlier round chronology remains unresolved."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T14:11:27+00:00"
+next_review_on = "2027-01-03"
+queries = ["aiOla investors New Era Hamilton Lane United Airlines Ventures UST Marc Rowan Mitch Garber"]
+source_ids = ["a2", "ust", "about", "uav"]
+summary = "Round announcements substantiate New Era, Hamilton Lane, UAV and UST relationships; company About page names Marc Rowan and Mitch Garber as investors without assigning their round or terms."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T14:11:27+00:00"
+next_review_on = "2027-01-03"
+queries = ["aiOla team leadership founder CEO current", "aiOla Amir Haramaty Omri Shai Mitch Garber leadership"]
+source_ids = ["about", "founder", "series-a"]
+summary = "Current company roster identifies six senior leaders; older 2023 announcement describes different CEO/CTO roles, indicating leadership changes."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T14:11:27+00:00"
+next_review_on = "2027-01-03"
+queries = ["aiOla ownership acquisition IPO cap table", "AIOLA LTD allotment shares 2025"]
+source_ids = ["registry", "about", "ust"]
+summary = "Private company and investors disclosed; cap table and percentages unavailable. Registry mirror records share-allotment activity but not public beneficial ownership details in reviewed extract."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T14:11:27+00:00"
+next_review_on = "2027-01-03"
+queries = ["aiOla revenue ARR profitability burn runway", "aiOla employees headcount 2026"]
+source_ids = ["about", "home", "series-a"]
+summary = "No company financial statements or dated revenue, ARR, profitability or runway figures found; company publishes operational ROI assertions only."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T14:11:27+00:00"
+next_review_on = "2027-01-03"
+queries = ["aiOla customers deployments traction United Airlines Salesforce", "aiOla UST partnership deployment customer"]
+source_ids = ["home", "a2", "ust"]
+summary = "Company publishes anonymized customer outcome testimonials and United/UST relationship announcements. Contract status, customer names and independent outcome verification remain unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T14:11:27+00:00"
+next_review_on = "2027-01-03"
+queries = ["aiOla patents AdaKWS patent", "aiOla patent keyword spotting WIPO USPTO"]
+source_ids = ["a2", "series-a"]
+summary = "Company describes proprietary/patented speech technology, but searched public material yielded no verified patent publication identifier or ownership chain."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T14:11:27+00:00"
+next_review_on = "2027-01-03"
+queries = ["aiOla competitors voice AI field sales", "Salesforce Agentforce field agents 2026"]
+source_ids = ["salesforce", "about", "a2"]
+summary = "Direct comparisons include native CRM agents, speech APIs and enterprise speech vendors; independent performance benchmarks were not found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T14:11:27+00:00"
+next_review_on = "2027-01-03"
+queries = ["aiOla defense government military security use cases", "aiOla government contract defense logistics"]
+source_ids = ["a2", "ust", "about"]
+summary = "Technology plausibly supports non-kinetic logistics, inspection and maintenance reporting, but public evidence reviewed does not establish a defense or government customer or contract."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current active company site, investor list and Israeli company registry mirror support ongoing operations as a private operating company."
+verified_at = "2026-10-03T14:11:27+00:00"
+source_ids = ["about", "registry"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "The registry mirror identifies an active Israeli private company in Herzliya; UST calls aiOla Israel-based and the company locates its leadership and operations in Israel."
+verified_at = "2026-10-03T14:11:27+00:00"
+source_ids = ["registry", "ust", "about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "aiOla's July 2025 announcement explicitly states that the $25m A2 brought total funding to $58m; November 2025 materials still cite $58m."
+verified_at = "2026-10-03T14:11:27+00:00"
+source_ids = ["a2", "ust"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2023.amount"
+support = "direct"
+summary = "Company-provided January 19, 2023 release reports $25m funding led by New Era with Hamilton Lane participating."
+verified_at = "2026-10-03T14:11:27+00:00"
+source_ids = ["series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2023.lead_investors"
+support = "direct"
+summary = "The January 2023 company release identifies New Era as lead and Hamilton Lane as participant."
+verified_at = "2026-10-03T14:11:27+00:00"
+source_ids = ["series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a2-2025.amount"
+support = "direct"
+summary = "Company announcement dated July 9, 2025 reports a $25m Series A2."
+verified_at = "2026-10-03T14:11:27+00:00"
+source_ids = ["a2"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a2-2025.lead_investors"
+support = "direct"
+summary = "Company announcement says the round included United Airlines Ventures as strategic investor, with existing investors New Era and Hamilton Lane."
+verified_at = "2026-10-03T14:11:27+00:00"
+source_ids = ["a2"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2023.participating_investors"
+support = "direct"
+summary = "The January 2023 release identifies Hamilton Lane and says other investors participated, without naming them."
+verified_at = "2026-10-03T14:11:27+00:00"
+source_ids = ["series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a2-2025.participating_investors"
+support = "direct"
+summary = "The July 2025 announcement names New Era and Hamilton Lane as existing participants in the A2 alongside UAV."
+verified_at = "2026-10-03T14:11:27+00:00"
+source_ids = ["a2"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.ust-strategic-2025.lead_investors"
+support = "direct"
+summary = "UST and aiOla announced that UST made a strategic investment; the announcement does not disclose instrument or amount."
+verified_at = "2026-10-03T14:11:27+00:00"
+source_ids = ["ust"]

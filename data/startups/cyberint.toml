@@ -1,0 +1,431 @@
+name = 'Cyberint'
+description = "Cyberint is an Israeli cyber-defense company providing external threat intelligence and attack surface reconnaissance to detect credential exposure, brand abuse, and emerging threats on exposed infrastructure."
+detailed_description = """Cyberint provides an external threat intelligence and attack surface reconnaissance platform that identifies exposed assets, leaked credentials, brand impersonation, and malicious domain registrations before attackers leverage them. The core product monitors threat actor infrastructure, data leak sources, darknet marketplaces, and underground forums to surface actionable intelligence that security teams can integrate into incident response workflows and breach prevention operations. By aggregating signals from multiple external data ecosystems—credential dumps, phishing sites, C2 infrastructure, and fraud indicators—Cyberint enables proactive risk prioritization rather than reactive incident response.
+
+Founded in 2010 in Tel Aviv during the early growth phase of Israeli cybersecurity innovation, Cyberint built product-market fit in the external threat intelligence segment over more than a decade of operations. The company served mid-market and enterprise security operations centers (SOCs) with automated monitoring and workflow integrations that reduced analyst triage time. This operational focus on signal quality and integration into existing SIEM/XDR platforms differentiated Cyberint from broader threat intelligence aggregators and pure feed providers. The company achieved multiple series of venture funding and expanded internationally while maintaining a distributed team across Israel, Europe, and North America.
+
+In 2023–2024, Cyberint was acquired by Check Point Software Technologies as part of Check Point's broader exposure management strategy, rebranding the product line as "Check Point Exposure Management." This acquisition reflected strategic consolidation in the external threat intelligence market: large incumbent security platform vendors sought to deepen their external attack surface visibility capabilities by acquiring proven external risk detection systems. Under Check Point's ownership, Cyberint's technology became integrated into Check Point's broader cloud security and threat prevention suite, extending its reach to the thousands of organizations already deployed on Check Point infrastructure.
+
+The technology stack emphasizes real-time data aggregation, machine learning–based signal prioritization, and API-first integration patterns. Cyberint's approach competes with vendors like Recorded Future (which focuses on threat intel aggregation and fusion), Sixgill (which emphasizes underground forum and darknet monitoring), and digital risk protection (DRP) platforms from vendors such as Flashpoint and Flashpoint-like entrants. The core competitive advantage lies not in raw data volume but in actionability: the ability to distinguish material external risks from noise and to integrate findings into existing incident response and compliance workflows. The product's success relies on continuous tuning of detection models to reduce false positives while maintaining sensitivity to emerging threats.
+
+Dual-use significance is material and well-established. External threat intelligence and attack surface reconnaissance are foundational disciplines for both commercial SOCs and government/defense cybersecurity operations. Organizations defending critical infrastructure, government networks, or high-value targets rely on understanding attacker infrastructure and tactics to preempt campaigns. The same technology that helps a financial services firm detect credential exposure in darknet marketplaces also enables a defense ministry to monitor threats to national assets. However, this application is defensive and reactive rather than enabling offensive operations: Cyberint's tools enable rapid detection and response, not attack capability. As an acquired subsidiary of Check Point, the company now operates within a larger vendor security governance framework, which reduces but does not eliminate dual-use risk considerations."""
+logo = 'https://cyberint.com/wp-content/uploads/2022/11/cyberint-1.svg'
+website = 'https://cyberint.com/'
+sector = 'Cyber Defense / External Threat Intelligence'
+founded = '2010'
+headquarters = "Petah Tikva, Israel"
+employees = "Unknown"
+funding_stage = "Acquired by Check Point (2024)"
+dual_use = true
+dual_use_description = "External threat intelligence and attack surface reconnaissance are dual-use technologies with both commercial and government applications. Enterprise SOCs use this to detect compromised credentials and malicious campaigns targeting their assets; defense and critical infrastructure operators use the same techniques to preempt threats to national systems. Cyberint's product is defensive (detection and response), not offensive, and now operates within Check Point's vendor security governance framework. Dual-use risk is moderate: the capability to monitor threat actor infrastructure is inherently dual-use but non-proliferating to attackers themselves."
+key_technologies = ["Attack surface reconnaissance and exposure monitoring", "Credential and data-leak detection from darknet and underground sources", "Domain and brand impersonation detection", "Threat actor infrastructure and C2 tracking", "Machine learning-based signal prioritization and false-positive reduction", "API-first SIEM/XDR workflow integration", "Continuous threat surface monitoring and enrichment"]
+use_cases = ["Early detection of leaked employee and customer credentials to enable proactive notification and breach prevention", "Identifying brand impersonation and phishing domains before mass-scale attacks launch", "Monitoring attacker infrastructure changes to support incident response and threat hunting", "Detecting exposed data in breach databases and underground forums", "Supporting fraud prevention and anti-counterfeiting operations for financial and consumer-facing companies", "Enabling critical infrastructure and government operators to monitor threats to national assets", "Reducing SOC analyst triage overhead by prioritizing material external risks over noise"]
+investible = false
+investment_rationale = "Cyberint was acquired by Check Point in 2023–2024 and is no longer an independent direct-diligence target. However, the historical significance of the acquisition underscores the strategic value of external threat intelligence capabilities in the consolidating cybersecurity market. For purposes of this startup database, Cyberint demonstrates how purpose-built external risk detection technology built over 13 years of R&D became a valuable strategic acquisition. The company achieved product-market fit by focusing on actionability and workflow integration rather than raw data volume, a lesson relevant to evaluating similar external risk and threat intel companies."
+strategic_value = "Cyberint's acquisition by Check Point demonstrates the strategic consolidation value of external threat intelligence and attack surface reconnaissance capabilities. The technology strengthens Check Point's ability to provide continuous exposure management across its installed base of cloud and network security customers. For government and critical infrastructure operators, external threat intelligence capabilities are foundational to understanding attack surface risks and preempting threats before they mature into campaigns. The product's integration into Check Point's suite expands its reach and governance within a major security vendor ecosystem."
+potential_score = 80.0
+technology_score = 81.0
+market_score = 80.0
+team_score = 78.0
+dual_use_score = 89.0
+strategic_alignment_score = 89.0
+stage = 'mid'
+stage_rationale = "Cyberint operated as a mid-stage private company (founded 2010, 51–200 employees, multiple venture rounds) until its 2023–2024 acquisition by Check Point. The company achieved product-market fit, multi-year customer retention, and international scale while remaining independent. Post-acquisition, it now functions as an integrated product line within Check Point's broader suite rather than as a standalone venture entity."
+competitors = ["Recorded Future (threat intelligence aggregation and fusion)", "Sixgill (underground forum and darknet monitoring)", "Flashpoint (digital risk protection and threat intelligence)", "Rapid7 (exposure management and vulnerability intelligence)", "CrowdStrike (threat intel and endpoint detection)", "Shodan / passive DNS aggregators (exposed asset enumeration)"]
+competitive_edge = """Cyberint differentiated on actionability and workflow integration rather than raw data volume. By focusing on signal quality, false-positive reduction through machine learning, and deep SIEM/XDR workflow integration, the company reduced analyst triage overhead—a material pain point in SOCs. The 2023–2024 acquisition by Check Point amplified this advantage by integrating external risk detection into a major vendor platform with installed security infrastructure, making it faster to deploy for existing Check Point customers. This distinction matters commercially: customers buy an operational risk-reduction workflow, not a raw feed alone. Following the acquisition, Check Point can bundle the capability into a broader security portfolio, while the same integration creates execution questions around product consolidation, data governance, and retention of specialist analysts. Buyers should assess independently measured precision, time-to-remediation, coverage of assets missed by customer inventories, and the practical portability of findings into existing SOC tools. These diligence points remain relevant to peers even though Cyberint itself is no longer an independent vendor."""
+risk_factors = ["Intense competition from large incumbent platforms adding external threat intel modules organically", "Difficulty maintaining signal quality and low false-positive rates as data ecosystems evolve", "Dependence on continued access to darknet, forum, and data-leak ecosystems that are actively obfuscated and monitored by law enforcement", "Risk of market consolidation reducing standalone external threat intel vendors (as seen with Cyberint's acquisition)", "Potential regulatory restrictions on monitoring and crawling activities in certain jurisdictions"]
+risk_level = 'medium'
+signals = []
+priority_rank = 0
+priority_rationale = "Cyberint is archived as an independent startup but remains strategically significant as a case study in external threat intelligence consolidation and acquisition value. Its 13-year independent history and subsequent acquisition by Check Point demonstrate the durability of actionable external risk detection as a market category. The company's focus on workflow integration and signal quality provides lessons for evaluating related external threat intelligence and attack surface monitoring startups still in the market."
+crawled_at = '2026-02-20T00:00:00Z'
+updated_at = "2026-10-05T00:48:52Z"
+entity_type = "acquired_asset"
+public_sources = [
+  { label = "Check Point acquisition completion", url = "https://www.checkpoint.com/press-releases/check-point-software-completes-cyberint-acquisition/", description = "Completion and current product capabilities." },
+  { label = "Check Point 2024 SEC annual filing", url = "https://www.sec.gov/Archives/edgar/data/1015922/000117891325000867/zk2532836.htm", description = "Acquisition date, outstanding shares, consideration, and Israeli status." },
+  { label = "Cyberint 2022 Series C reporting", url = "https://www.calcalistech.com/ctechnews/article/bjxc2ey5q", description = "Equity, credit, investors, and historical traction." },
+  { label = "Cyberint 2018 financing announcement", url = "https://www.prnewswire.com/news-releases/cyberint-completes-18m-funding-round-684192401.html", description = "Company announcement of the $18 million round." },
+  { label = "Globes funding history", url = "https://en.globes.co.il/en/article-israeli-cybersecurity-co-cyberint-raises-18m-1001239103", description = "2018 round and reported 2014 round and investors." },
+  { label = "Viola portfolio profile", url = "https://www.viola-group.com/portfolio/CyberInt", description = "Founders and company history." },
+  { label = "Check Point leadership", url = "https://www.checkpoint.com/about-us/leadership/", description = "Yochai Corem's current role and Cyberint CEO history." },
+  { label = "Cyberint / Check Point current product", url = "https://cyberint.com/", description = "Current product identity and capability set." },
+  { label = "Patent record", url = "https://patents.google.com/patent/WO2018011785A1/en", description = "Patent publication assigned to Cyberint Technologies Ltd." },
+  { label = "Globes acquisition estimate", url = "https://en.globes.co.il/en/article-check-point-acquires-israeli-co-cyberint-for-200m-1001487708", description = "Contemporaneous estimate before the terms were filed." }
+]
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Itay Yanovski", role = "Co-founder; former SVP Strategy", is_founder = true, current = false, background = "Identified as a Cyberint co-founder by investor Viola's portfolio profile.", source_ids = ["viola_profile"] },
+  { name = "Raz Alon", role = "Co-founder", is_founder = true, current = false, background = "Identified as a Cyberint co-founder by investor Viola's portfolio profile.", source_ids = ["viola_profile"] },
+  { name = "Shai Priel", role = "Co-founder", is_founder = true, current = false, background = "Identified as a Cyberint co-founder by investor Viola's portfolio profile.", source_ids = ["viola_profile"] },
+  { name = "Yochai Corem", role = "Former Cyberint CEO; Check Point Exposure Management leader", is_founder = false, current = true, background = "Check Point says Corem joined through its Cyberint acquisition, where he served as CEO, and now leads the Exposure Management organization. Check Point lists prior senior roles at CYE, Cyberbit, 3i-MIND, and Verint.", source_ids = ["checkpoint_leadership"] }
+]
+investors = [
+  { name = "Viola Growth", investor_type = "vc", website = "https://www.viola-group.com/", round_ids = ["series-b-2018", "series-c-2022"], relationship = "historical", source_ids = ["funding_2018", "funding_2022"] },
+  { name = "StageOne Ventures (Late Stage Arm)", investor_type = "vc", website = "https://stageonevc.com/", round_ids = ["series-c-2022"], relationship = "historical", source_ids = ["funding_2022"] },
+  { name = "Neva SGR", investor_type = "vc", website = "https://www.nevasgr.com/", round_ids = ["series-c-2022"], relationship = "historical", source_ids = ["funding_2022"] },
+  { name = "Dov Baharav", investor_type = "angel", round_ids = ["series-a-2014"], relationship = "historical", source_ids = ["funding_2018_globes"] },
+  { name = "Avi Naor", investor_type = "angel", round_ids = ["series-a-2014"], relationship = "historical", source_ids = ["funding_2018_globes"] },
+  { name = "Mario Segal", investor_type = "angel", round_ids = ["series-a-2014"], relationship = "historical", source_ids = ["funding_2018_globes"] },
+  { name = "Zohar Zisapel", investor_type = "angel", round_ids = ["series-a-2014"], relationship = "historical", source_ids = ["funding_2018_globes"] }
+]
+financials = []
+traction = [
+  { kind = "product", description = "Check Point completed the acquisition and said Cyberint capabilities were included in the Infinity Platform and managed services, covering impersonation/phishing detection and takedown, stolen credentials, leaked data, internet-facing vulnerabilities, and prioritized mitigation.", date = "2024-10-01", source_ids = ["checkpoint_close"] },
+  { kind = "other", description = "Calcalist reported that during 2021 Cyberint more than doubled ARR and tripled its customer base after shifting to a product-led approach; this is historical press-reported company performance, not a current audited metric.", date = "2022-06", source_ids = ["funding_2022"] },
+  { kind = "hiring", description = "Globes reported approximately 170 employees at the time Check Point announced the acquisition; this is a dated media estimate, not a current headcount.", date = "2024-08-27", source_ids = ["acquisition_estimate"] }
+]
+intellectual_property = [
+  { kind = "patent", description = "WO2018011785A1, 'Online assets continuous monitoring and protection,' lists Cyberint Technologies Ltd. as original assignee. The linked patent record reports a US continuation/grant family member; the PCT publication's displayed legal status is ceased, so current enforceable rights and portfolio breadth require official register review.", date = "2018-01-18", source_ids = ["patent_record"] }
+]
+comparables = [
+  { name = "Recorded Future", website = "https://www.recordedfuture.com/", rationale = "Threat intelligence platform overlapping in adversary and external threat intelligence.", differentiation = "Cyberint's public positioning emphasized brand/credential protection and external asset discovery with managed response; overlap is substantial in intelligence workflows.", source_ids = ["checkpoint_close", "product_current"] },
+  { name = "Flashpoint", website = "https://flashpoint.io/", rationale = "Threat intelligence and digital risk protection provider with deep/dark-web monitoring.", differentiation = "Cyberint combines risk discovery and remediation workflows with Check Point distribution; relative collection coverage and efficacy are not established by comparable public evidence.", source_ids = ["checkpoint_close", "product_current"] },
+  { name = "Censys", website = "https://censys.com/", rationale = "Internet asset discovery and attack surface management substitute.", differentiation = "Censys focuses strongly on internet-wide asset intelligence, while Cyberint's proposition also includes threat actor, leak, and brand-abuse intelligence.", source_ids = ["checkpoint_close", "product_current"] }
+]
+
+[intelligence.company]
+company_id = "il-cyberint"
+legal_name = "Cyberint Technologies Ltd."
+aliases = ["CyberInt", "Cyberint Technologies Ltd.", "Argos"]
+operating_status = "acquired"
+business_model = "Enterprise cybersecurity software and managed external risk intelligence services, now integrated into Check Point's commercial product portfolio."
+products = ["Argos", "External Risk Management", "Attack Surface Management", "Digital Risk Protection", "Cyber Threat Intelligence", "Deep and Dark Web Monitoring", "Supply Chain Intelligence"]
+locations = ["Petah Tikva, Israel"]
+country_of_incorporation = "Israel"
+founded_on = "2010"
+source_ids = ["checkpoint_sec", "product_current", "viola_profile"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public reporting identifies $10 million Series A equity in 2014, $18 million Series B equity in May 2018, and $28 million Series C equity in June 2022. Calcalist separately reported $12 million in credit alongside the 2022 equity round; this is recorded separately as debt. No company-announced lifetime total was found, and third-party total estimates vary, so reported_total_raised is omitted. Public round history is partial."
+history_status = "partial"
+coverage_through = "2022-06"
+rounds = [
+  { id = "series-a-2014", round_type = "Series A", instrument = "equity", status = "closed", announced_on = "2014", amount_status = "reported", amount = 10000000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["Dov Baharav", "Avi Naor", "Mario Segal", "Zohar Zisapel"], source_ids = ["funding_2018_globes"], notes = "The 2018 Globes retrospective reports $10m raised in a 2014 Series A and names participating private investors; it does not identify a lead." },
+  { id = "series-b-2018", round_type = "Series B", instrument = "equity", status = "closed", announced_on = "2018-05-31", amount_status = "reported", amount = 18000000, amount_scope = "round", currency = "USD", lead_investors = ["Viola Growth"], participating_investors = ["Existing investors (not all individually named in announcement)"], source_ids = ["funding_2018", "funding_2018_globes"], notes = "Company announcement describes an $18m financing led by Viola Growth and existing investors; Globes reports Viola's share as approximately $12m." },
+  { id = "series-c-2022", round_type = "Series C", instrument = "equity", status = "closed", announced_on = "2022-06", amount_status = "reported", amount = 28000000, amount_scope = "round", currency = "USD", lead_investors = ["StageOne Late Stage Arm", "Neva SGR", "Viola Growth"], participating_investors = ["Existing investors (not individually named in the report)"], source_ids = ["funding_2022"], notes = "Calcalist reports $28m in Series C equity, led jointly by StageOne Late Stage Arm, Neva SGR, and Viola Growth." },
+  { id = "credit-facility-2022", round_type = "Credit facility", instrument = "debt", status = "closed", announced_on = "2022-06", amount_status = "reported", amount = 12000000, amount_scope = "unknown", currency = "USD", lead_investors = [], participating_investors = [], source_ids = ["funding_2022"], notes = "Reported separately from equity as $12m in credit; drawdown, lender, and repayment terms were not disclosed in the reviewed report." }
+]
+
+[intelligence.ownership]
+status = "reported"
+summary = "Check Point Software Technologies Ltd. acquired all outstanding shares of Cyberint Ltd. The transaction is complete. Private pre-acquisition cap table percentages were not publicly disclosed in the sources reviewed."
+parent_company = "Check Point Software Technologies Ltd."
+stock_ticker = "NASDAQ: CHKP"
+cap_table_status = "undisclosed"
+shareholders = ["Check Point Software Technologies Ltd."]
+source_ids = ["checkpoint_sec", "checkpoint_close"]
+deals = [
+  { id = "checkpoint-acquisition-2024", deal_type = "acquisition", company_role = "target", announced_on = "2024-08-27", completed_on = "2024-09-30", status = "completed", counterparty = "Check Point Software Technologies Ltd.", amount = 188600000, amount_status = "reported", currency = "USD", source_ids = ["checkpoint_sec", "checkpoint_close"], notes = "SEC annual filing states approximately $188.6m total consideration and completion on September 30, 2024, for all outstanding shares. Contemporaneous Globes coverage reported approximately $200m as a market-source estimate before terms were disclosed; it is not treated as the filed consideration amount." }
+]
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "incorporated_in_israel"]
+summary = "Check Point's SEC filing identifies Cyberint as a privately held Israeli-based company and names Cyberint Ltd.; the company's investment portfolio profile places its offices and Israeli R&D presence in Israel."
+as_of = "2026-10-05"
+source_ids = ["checkpoint_sec", "viola_profile"]
+
+[intelligence.research]
+researched_at = "2026-10-05T00:48:52Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Cyberint Check Point acquisition completion consideration SEC", "Cyberint 2022 Series C $28 million credit $12 million investors", "Cyberint 2018 $18m Series B 2014 Series A investors", "Cyberint founders CEO Yochai Corem leadership", "Cyberint revenue ARR customers 2021 2022", "Cyberint patent Cyberint Technologies Ltd", "Cyberint external risk management competitors product", "Cyberint government defense customers dual use"]
+gaps = ["financials: No public post-acquisition Cyberint-specific revenue, profitability, burn, or runway figures found; historical ARR growth is only a dated press report.", "traction: No independently verified current customer count, production deployments, contract values, or customer concentration data found; historic customer growth was reported in 2022.", "team: Founder and former CEO names were found, but current Cyberint-specific organizational roster and post-acquisition team size are not separately disclosed.", "intellectual_property: One patent family record was located; a comprehensive patent portfolio, current jurisdiction-by-jurisdiction status, and ownership transfer record were not established.", "competition: Peer set is based on product overlap; no comparable independent benchmark or market-share evidence was found.", "dual_use: No specific government or defense customer, contract, or certification was substantiated in reviewed sources.", "Funding total: No authoritative company-announced lifetime total found. Secondary databases report inconsistent totals; reported_total_raised is therefore omitted.", "Ownership cap table: Pre-acquisition shareholder percentages and allocation of consideration among holders were not publicly disclosed."]
+conflicts = ["Acquisition: Globes reported a roughly $200m cash deal estimate on announcement, while Check Point's later SEC filing reports approximately $188.6m total consideration. The filed figure is used for the completed transaction; the earlier estimate is preserved as a distinct market estimate, not an alternative reported transaction amount.", "Funding totals: Secondary databases provide differing cumulative totals and classifications. No cumulative figure is asserted; round-level sourced events are recorded and debt is kept separate from equity."]
+diligence_questions = ["What proportion of the reported acquisition consideration was paid at closing versus contingent, retention, or other consideration, and how was it allocated among shareholders?", "How has Check Point integrated Argos/Cyberint collection, alert quality, takedown operations, and analyst services into Exposure Management, and what post-acquisition customer retention or product adoption metrics are available?", "Which Cyberint patent-family members remain enforceable in each jurisdiction, and were all relevant IP assignments recorded after the acquisition?", "What were Cyberint's ARR, gross margin, customer concentration, and renewal performance immediately before acquisition and after integration?", "Which government or critical-infrastructure deployments, if any, are authorized for public disclosure, and what jurisdictional controls govern dark-web collection and credential handling?"]
+
+[[intelligence.research.sources]]
+id = "checkpoint_close"
+url = "https://www.checkpoint.com/press-releases/check-point-software-completes-cyberint-acquisition/"
+title = "Check Point Software Completes Cyberint Acquisition"
+publisher = "Check Point Software"
+kind = "company"
+accessed_at = "2026-10-05T00:48:52Z"
+published_on = "2024-10-01"
+claims = ["Check Point announced completion of the Cyberint Technologies Ltd. acquisition on October 1, 2024.", "Cyberint capabilities were included in Check Point Infinity Platform and managed services.", "The offering detects and supports takedown of impersonation, phishing, stolen credentials, leaked data, and internet-facing vulnerabilities."]
+
+[[intelligence.research.sources]]
+id = "checkpoint_sec"
+url = "https://www.sec.gov/Archives/edgar/data/1015922/000117891325000867/zk2532836.htm"
+title = "Check Point Software Technologies Ltd. 2024 Annual Report"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-05T00:48:52Z"
+published_on = "2025"
+claims = ["Check Point completed acquisition of all outstanding shares of Cyberint Ltd. on September 30, 2024.", "Cyberint was a privately held Israeli-based company specializing in threat intelligence, digital risk protection, and attack surface management.", "Total consideration was approximately $188.6 million."]
+
+[[intelligence.research.sources]]
+id = "funding_2022"
+url = "https://www.calcalistech.com/ctechnews/article/bjxc2ey5q"
+title = "Cyberint raises $28 million to help organizations gain visibility into external risk"
+publisher = "Calcalist Tech"
+kind = "media"
+accessed_at = "2026-10-05T00:48:52Z"
+published_on = "2022-06"
+claims = ["Cyberint raised $28 million in Series C equity and separately $12 million in credit.", "The Series C was led by StageOne Late Stage Arm, Neva SGR, and Viola Growth, with existing investors also participating.", "Cyberint employed around 100 people at the time, with an Israeli R&D center.", "The report says 2021 ARR more than doubled and customer base tripled after a product-led shift."]
+
+[[intelligence.research.sources]]
+id = "funding_2018"
+url = "https://www.prnewswire.com/news-releases/cyberint-completes-18m-funding-round-684192401.html"
+title = "CyberInt Completes $18m Funding Round"
+publisher = "PR Newswire / CyberInt"
+kind = "company"
+accessed_at = "2026-10-05T00:48:52Z"
+published_on = "2018-05-31"
+claims = ["Cyberint announced completion of an $18 million financing round led by Viola Growth with existing investors participating."]
+
+[[intelligence.research.sources]]
+id = "funding_2018_globes"
+url = "https://en.globes.co.il/en/article-israeli-cybersecurity-co-cyberint-raises-18m-1001239103"
+title = "Israeli cybersecurity co Cyberint raises $18m"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-05T00:48:52Z"
+published_on = "2018-05-31"
+claims = ["The 2018 Series B was $18 million, led by Viola Growth, which invested $12 million.", "Cyberint raised $10 million in Series A equity in 2014.", "The 2014 round included private investors Dov Baharav, Avi Naor, Mario Segal, and Zohar Zisapel."]
+
+[[intelligence.research.sources]]
+id = "viola_profile"
+url = "https://www.viola-group.com/portfolio/CyberInt"
+title = "CyberInt portfolio profile"
+publisher = "Viola Group"
+kind = "investor"
+accessed_at = "2026-10-05T00:48:52Z"
+claims = ["Cyberint was founded in 2010 by Itay Yanovski, Raz Alon, and Shai Priel.", "Viola's profile describes Cyberint's Israeli operations and CEO Yochai Corem."]
+
+[[intelligence.research.sources]]
+id = "checkpoint_leadership"
+url = "https://www.checkpoint.com/about-us/leadership/"
+title = "Executive Management and Board of Directors"
+publisher = "Check Point Software"
+kind = "company"
+accessed_at = "2026-10-05T00:48:52Z"
+claims = ["Yochai Corem leads Check Point's Exposure Management organization.", "Corem joined Check Point through the Cyberint acquisition, where he served as CEO.", "Corem held previous senior leadership roles at CYE, Cyberbit, 3i-MIND, and Verint."]
+
+[[intelligence.research.sources]]
+id = "product_current"
+url = "https://cyberint.com/"
+title = "Check Point Exposure Management (Formerly Cyberint)"
+publisher = "Check Point / Cyberint"
+kind = "company"
+accessed_at = "2026-10-05T00:48:52Z"
+claims = ["The current Cyberint website brands the offering as Check Point Exposure Management, formerly Cyberint.", "The product covers attack surface management, deep and dark web monitoring, cyber threat intelligence, digital risk protection, supply-chain intelligence, and continuous threat exposure management."]
+
+[[intelligence.research.sources]]
+id = "patent_record"
+url = "https://patents.google.com/patent/WO2018011785A1/en"
+title = "WO2018011785A1 Online assets continuous monitoring and protection"
+publisher = "WIPO / Google Patents"
+kind = "other"
+accessed_at = "2026-10-05T00:48:52Z"
+published_on = "2018-01-18"
+claims = ["WO2018011785A1 lists Cyberint Technologies Ltd. as original assignee and concerns online assets continuous monitoring and protection.", "The linked patent page displays ceased status for the PCT publication and identifies a US family member."]
+
+[[intelligence.research.sources]]
+id = "acquisition_estimate"
+url = "https://en.globes.co.il/en/article-check-point-acquires-israeli-co-cyberint-for-200m-1001487708"
+title = "Check Point acquires Israeli co Cyberint for $200m"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-05T00:48:52Z"
+published_on = "2024-08-27"
+claims = ["At announcement, Globes reported that market sources estimated a roughly $200 million cash acquisition price; the article stated Check Point had disclosed no financial terms.", "Globes reported an estimated 170 employees and named Viola Growth, StageOne, Dov Baharav, and Avi Naor among Cyberint investors."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-05T00:48:52Z"
+next_review_on = "2027-04-05"
+queries = ["Cyberint legal name official site Check Point SEC", "Cyberint founders headquarters Israeli company"]
+source_ids = ["checkpoint_sec", "product_current", "viola_profile"]
+summary = "Legal name and Israeli private-company status are confirmed by the SEC filing; the current product website identifies the continuing commercial offering."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-05T00:48:52Z"
+next_review_on = "2027-04-05"
+queries = ["Cyberint funding raised Series A B C investors", "Cyberint 2022 Series C $28 million credit $12 million"]
+source_ids = ["funding_2018", "funding_2018_globes", "funding_2022"]
+summary = "Found disclosed 2014 Series A, 2018 Series B, 2022 Series C, and separate 2022 debt credit. Lifetime totals vary in secondary databases and are omitted."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-05T00:48:52Z"
+next_review_on = "2027-04-05"
+queries = ["Cyberint investors Viola StageOne Neva SGR", "Cyberint Series A investors Baharav Naor Segal Zisapel"]
+source_ids = ["funding_2018_globes", "funding_2022"]
+summary = "Round participants were identified where public reports named them; remaining existing investors in 2018 and 2022 were not all individually disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-05T00:48:52Z"
+next_review_on = "2027-04-05"
+queries = ["Cyberint founders CEO Yochai Corem", "Yochai Corem Check Point Exposure Management leadership"]
+source_ids = ["viola_profile", "checkpoint_leadership"]
+summary = "Founders and former CEO/current Check Point leader verified; no current standalone Cyberint roster found."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-05T00:48:52Z"
+next_review_on = "2027-04-05"
+queries = ["Cyberint Check Point acquisition all outstanding shares completion price SEC", "Cyberint acquisition 200 million estimate Globes"]
+source_ids = ["checkpoint_sec", "checkpoint_close", "acquisition_estimate"]
+summary = "SEC filing documents completion, 100% share acquisition, and consideration; contemporaneous press estimate differs and is explicitly qualified as estimated. Private pre-deal cap table remains undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T00:48:52Z"
+next_review_on = "2027-04-05"
+queries = ["Cyberint revenue ARR profitability financials", "Cyberint post-acquisition revenue Check Point annual report"]
+source_ids = ["funding_2022", "checkpoint_sec"]
+summary = "No company-specific current revenue, profit, burn, or runway disclosure found; only dated 2021 ARR growth statement in the 2022 report."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-05T00:48:52Z"
+next_review_on = "2027-04-05"
+queries = ["Cyberint customer base ARR 2021 growth", "Cyberint Check Point customer case study deployments"]
+source_ids = ["funding_2022", "checkpoint_close", "acquisition_estimate"]
+summary = "Historical reported customer growth and Check Point's product integration are evidenced, but current standalone customer, renewal, and contract metrics are not disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-05T00:48:52Z"
+next_review_on = "2027-04-05"
+queries = ["Cyberint Technologies Ltd patent WIPO online assets monitoring", "Cyberint patents patent portfolio"]
+source_ids = ["patent_record"]
+summary = "Located one patent-family record assigned to Cyberint Technologies Ltd.; a complete portfolio and present legal status across jurisdictions were not established."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-05T00:48:52Z"
+next_review_on = "2027-04-05"
+queries = ["Cyberint external risk management product capabilities", "Recorded Future Flashpoint Censys attack surface threat intelligence products"]
+source_ids = ["product_current", "checkpoint_close"]
+summary = "Mapped public product overlap with threat intelligence, digital risk protection, and attack surface vendors; no comparable independent performance benchmark was located."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T00:48:52Z"
+next_review_on = "2027-04-05"
+queries = ["Cyberint government defense customers contracts", "Cyberint critical infrastructure public sector security deployments"]
+source_ids = ["checkpoint_close", "product_current"]
+summary = "Capabilities have defensive commercial and potential public-sector applicability, but no specific government/defense customer, contract, or certification was substantiated."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Check Point's SEC filing states it acquired all outstanding shares of Cyberint Ltd. and gives the September 30, 2024 completion date."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["checkpoint_sec"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "SEC filing calls Cyberint a privately held Israeli-based company; Viola portfolio profile documents its Israeli operations."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["checkpoint_sec", "viola_profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2014.amount"
+support = "direct"
+summary = "Globes reports that Cyberint raised $10 million in a 2014 Series A."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["funding_2018_globes"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2014.participating_investors"
+support = "direct"
+summary = "Globes identifies Baharav, Naor, Segal, and Zisapel as private investors in the 2014 Series A."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["funding_2018_globes"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2018.amount"
+support = "direct"
+summary = "Cyberint's financing announcement and Globes report state the round was $18 million."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["funding_2018", "funding_2018_globes"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2018.lead_investors"
+support = "direct"
+summary = "The company financing announcement and Globes identify Viola Growth as lead investor."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["funding_2018", "funding_2018_globes"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2022.amount"
+support = "direct"
+summary = "Calcalist reports $28 million in Series C equity."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["funding_2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2022.lead_investors"
+support = "direct"
+summary = "Calcalist names StageOne Late Stage Arm, Neva SGR, and Viola Growth as round leads."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["funding_2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.credit-facility-2022.amount"
+support = "direct"
+summary = "Calcalist separately reports $12 million in credit alongside the equity round."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["funding_2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "SEC filing documents Check Point's acquisition of all outstanding Cyberint shares; Check Point press release confirms completion."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["checkpoint_sec", "checkpoint_close"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.checkpoint-acquisition-2024.status"
+support = "direct"
+summary = "SEC filing states acquisition completed September 30, 2024; Check Point announced completion October 1, 2024."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["checkpoint_sec", "checkpoint_close"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.checkpoint-acquisition-2024.amount"
+support = "direct"
+summary = "SEC annual filing states total consideration was approximately $188.6 million."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["checkpoint_sec"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2018.participating_investors"
+support = "direct"
+summary = "Company announcement states existing investors participated in the Series B; it does not enumerate them, so the structured value records this limitation rather than adding names."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["funding_2018"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2022.participating_investors"
+support = "direct"
+summary = "Calcalist reports participation by all existing investors without individually naming them."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["funding_2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.checkpoint-acquisition-2024.company_role"
+support = "direct"
+summary = "Check Point acquired all outstanding shares of Cyberint, establishing Cyberint as the target company."
+verified_at = "2026-10-05T00:48:52Z"
+source_ids = ["checkpoint_sec"]

@@ -1,0 +1,409 @@
+name = "Certora"
+description = "Certora develops formal-verification and smart-contract security tools that check whether code satisfies explicitly written behavioral rules. Its primary market is blockchain and DeFi security, while the underlying specification and solver-based assurance approach has credible but not yet demonstrated applicability to other mission-critical software."
+detailed_description = """
+Certora's core product is the Certora Prover, a specification-driven verification system for smart contracts and related programs. Customers write rules in the Certora Verification Language (CVL), a Solidity-like specification language, and the Prover translates those rules and the program under analysis into verification conditions for solver-based reasoning. A successful result gives evidence that a stated property holds across the modeled states and execution paths; a failed result can produce a concrete counterexample. This is materially different from ordinary unit tests or fuzzing, which sample behavior, and from a conventional manual audit, which depends heavily on reviewer coverage and judgment. The system is therefore most useful when a customer can state the security or business invariants that must never be violated.
+
+The commercial center of gravity is crypto-native software security. Certora markets Prover access for free, premium, and enterprise tiers, alongside a dedicated audit team, specification review, training, and incident-response support. The company says its tools can run on every commit and reports more than $100 billion in protected total value locked on its homepage; those are company claims rather than independently audited operating metrics, but they are meaningful evidence of product positioning and customer-facing traction. The official Prover page cites use by Aave, Compound, and Balancer, and the company has published work spanning Solidity, Solana programs, and other smart-contract environments. The 2022 Series B announcement reported a $36 million round led by Jump Crypto, with participation from a group of existing and strategic investors. Public databases also show later grant activity, which should be treated as ecosystem support rather than as a new equity stage.
+
+Certora competes in a layered market. Static analyzers, symbolic-execution tools, fuzzers, audit firms, bug-bounty platforms, and internal security teams are all substitutes for part of the workflow. Its differentiation is not simply that it uses formal methods; it is that the product packages rule authoring, verification, counterexamples, dashboards, and development-pipeline integration for software whose failures can be financially irreversible. The main moat is a combination of formal-methods expertise, accumulated rule-writing knowledge, solver engineering, integrations, and trust earned from technically sophisticated protocols. The same strengths also create adoption friction: customers need engineers who can formulate meaningful properties, maintain specifications as code changes, and understand the distinction between a proof of a stated property and a proof that the system is secure in every practical sense.
+
+The defense and national-security case is plausible at the technology level, not established as a current customer market. Machine-checked invariants, exhaustive reasoning over modeled behavior, and reproducible counterexamples are relevant to safety- and security-critical components in avionics, embedded systems, cryptographic infrastructure, identity systems, and critical infrastructure. However, Certora's public product, customer references, and commercial messaging remain concentrated on smart contracts and blockchain security. There is no basis in the available sources to claim defense contracts, certifications, classified work, or operational deployment in military systems. The appropriate strategic interpretation is transferable assurance capability and optionality, not proven defense revenue.
+
+For diligence, the central questions are whether Certora is converting expert-led verification into repeatable software revenue, how much current demand is correlated with crypto cycles, and whether it can expand to additional languages and critical-software buyers without weakening its focus. The product has a credible technical problem, visible ecosystem adoption signals, and a meaningful security rationale. The investment and strategic case remains dependent on customer concentration, recurring usage, specification-maintenance burden, solver performance and coverage limits, and the cost and length of selling into regulated or safety-critical markets.
+"""
+logo = "https://www.certora.com/gradientlogo.png"
+website = "https://www.certora.com"
+sector = "Software Security / Formal Verification"
+founded = "2018"
+headquarters = "Tel Aviv, Israel"
+employees = "51-200"
+funding_stage = "Series B; subsequent ecosystem grants disclosed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Certora's core formal-verification capabilities have substantive dual-use potential because machine-checked software invariants, exhaustive modeled-path analysis, and reproducible counterexamples can support security- and safety-critical systems as well as smart contracts. The potential is strongest in embedded, cryptographic, identity, aerospace, and critical-infrastructure software, but public evidence currently shows a crypto-centered business and does not establish defense customers or defense revenue."
+key_technologies = ["Certora Prover formal verification", "Certora Verification Language (CVL)", "SMT-solver-based verification conditions", "Symbolic execution and state-space reasoning", "Smart-contract bytecode and source analysis", "Counterexample generation", "CI/CD and verification-dashboard workflows"]
+use_cases = ["Pre-deployment verification of DeFi lending, exchange, and governance contracts", "Invariant and access-control checking for token, treasury, and custody logic", "Continuous regression verification on every code change", "Verification of cross-chain, bridge, and wallet-related smart-contract behavior", "Security audits combining expert rule authoring with formal proofs", "Verification of Solana and other non-EVM program implementations", "Assurance of cryptographic, identity, embedded, aerospace, or critical-infrastructure software where properties can be specified"]
+investible = true
+investment_rationale = "Certora is a credible strategic-priority signal for a dual-use software-assurance thesis because it combines difficult formal-methods engineering with a high-loss commercial security problem and an observable base of sophisticated protocol users. The $36 million Series B and ongoing product packaging support a mid-stage company rather than a research project. The case is not a recommendation: diligence should establish recurring product revenue, customer concentration, renewal and usage patterns, gross margin between software and services, and whether the company can broaden beyond crypto without losing technical focus."
+strategic_value = "Certora's strategic value is a reusable method for turning explicit software requirements into machine-checked evidence and actionable counterexamples. That can matter where failure creates irreversible financial loss, safety exposure, supply-chain compromise, or loss of trust. For national-security purposes, the capability is best viewed as an enabling assurance layer that could complement testing, review, fuzzing, and certification workflows; its present public evidence supports technical adjacency and future optionality, not a demonstrated defense business."
+public_sources = [
+  { label = "Certora team and investors", url = "https://www.certora.com/team", description = "Current leadership, technical staff and investor identities" },
+  { label = "Certora Prover open source announcement", url = "https://www.certora.com/blog/certora-goes-open-source", description = "Open source release, supported platforms, company reported TVL and rules written" },
+  { label = "Certora Canton Development Fund grant", url = "https://www.certora.com/blog/certora-wins-canton-foundation-grant", description = "2026 grant-funded Canton Daml analysis project" },
+  { label = "Certora announcements", url = "https://www.certora.com/blog?format=announcement", description = "2025-2026 product and ecosystem milestones" },
+  { label = "The Block Series B report", url = "https://www.theblock.co/news/defi/2022-05-17-certora-announces-36-million-series-b-funding-round-led-by-jump-crypto-147066", description = "Series B amount, lead and participating investors" },
+  { label = "Certora Uniswap v4 case study", url = "https://www.certora.com/blog/how-certora-is-securing-uniswap-v4s-multi-billion-ecosystem", description = "Company reported Uniswap v4 verification engagement" },
+  { label = "Certora Cork and Hypernative partnership", url = "https://www.certora.com/blog/certora-cork-hypernative", description = "2025 partnership announcement" },
+  { label = "ICO Drops Certora profile", url = "https://icodrops.com/certora/", description = "Historical Series A round and investor cross-check; secondary source" }
+]
+potential_score = 81.0
+technology_score = 91.0
+market_score = 76.0
+team_score = 83.0
+dual_use_score = 78.0
+strategic_alignment_score = 82.0
+stage = "mid"
+stage_rationale = "Certora is a privately held, post-Series-B startup with a released product, paid and enterprise-oriented packaging, public protocol references, and a substantial technical and ecosystem footprint. It is beyond early experimentation, but its public market remains concentrated in crypto security and its broader critical-software expansion is not yet proven; mid-stage is therefore more defensible than mature."
+competitors = ["Runtime Verification", "Trail of Bits", "OpenZeppelin", "ConsenSys Diligence", "CertiK", "Halmos", "Manual audits, fuzzing, and internal application-security teams"]
+competitive_edge = "Certora's edge is the combination of specification-driven formal proofs, a domain-specific language, counterexample-driven debugging, and a workflow designed for continuous use by smart-contract teams. Its association with demanding DeFi protocols provides credibility in a market where a missed edge case can cause irreversible loss. The edge is narrower than a general application-security platform because proof quality depends on the properties customers specify, the supported execution model, and the expertise needed to maintain rules."
+risk_factors = ["Crypto and DeFi budget cycles can create sharp volatility in demand and customer spending", "Formal verification requires specialist rule authoring and disciplined specification maintenance, limiting adoption and increasing services dependence", "Public traction and product messaging remain concentrated in blockchain security rather than diversified critical-software markets", "A proof establishes the stated property under the modeled assumptions and does not by itself prove complete system security", "Solver complexity, unsupported language features, abstraction choices, and verification time can constrain coverage and developer experience", "Audit firms, open-source tools, fuzzers, and internal security teams can bundle competing assurance workflows with lower switching friction", "Defense, aerospace, and critical-infrastructure expansion would require long sales cycles, procurement evidence, compliance, integrations, and domain-specific validation"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "High-priority watchlist candidate: Certora combines unusually strong formal-verification depth, meaningful commercial security exposure, and a credible path to broader software assurance. The score is moderated by crypto concentration, expert adoption requirements, proof-scope limitations, and the absence of public evidence for defense customers or diversified critical-software revenue."
+crawled_at = "2026-02-26T07:00:00Z"
+updated_at = "2026-10-04T15:45:04Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Mooly Sagiv", role = "CEO and co-founder", is_founder = true, current = true, background = "Formal verification researcher and Tel Aviv University professor; company biography identifies him as a leading researcher and co-founder.", source_ids = ["team"] },
+  { name = "Shelly Grossman", role = "Head of Product and CTO", is_founder = false, current = true, background = "Formal verification specialist and software engineer; previously spent five years at Check Point, according to company biography.", source_ids = ["team"] },
+  { name = "Idit Kronzon", role = "VP People", is_founder = false, current = true, background = "People leader with prior roles at Freescale and Arm, per company biography.", source_ids = ["team"] },
+  { name = "Tigran Piliposyan", role = "Head of Security Labs", is_founder = false, current = true, background = "Leads security research and verification; previously spent more than ten years in portfolio and financial risk management at the Central Bank of Armenia, per company biography.", source_ids = ["team"] },
+  { name = "Amit Sassi", role = "VP Finance", is_founder = false, current = true, background = "Finance leader with experience at an LSE-listed company and a Big Four firm, per company biography.", source_ids = ["team"] }
+]
+investors = [
+  { name = "Jump Crypto", investor_type = "vc", relationship = "historical", round_ids = ["series-b-2022"], source_ids = ["b-round"] },
+  { name = "Tiger Global", investor_type = "vc", relationship = "historical", round_ids = ["series-b-2022"], source_ids = ["b-round"] },
+  { name = "Galaxy Digital", investor_type = "vc", relationship = "historical", round_ids = ["series-b-2022"], source_ids = ["b-round"] },
+  { name = "Electric Capital", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2021", "series-b-2022"], source_ids = ["b-round", "funding-history"] },
+  { name = "Framework Ventures", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2021", "series-b-2022"], source_ids = ["b-round", "funding-history"] },
+  { name = "ACapital", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2021", "series-b-2022"], source_ids = ["b-round", "funding-history"] },
+  { name = "CoinFund", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2021", "series-b-2022"], source_ids = ["b-round", "funding-history"] },
+  { name = "Lemniscap", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2021", "series-b-2022"], source_ids = ["b-round", "funding-history"] },
+  { name = "Coinbase Ventures", investor_type = "corporate", relationship = "historical", round_ids = ["series-a-2021", "series-b-2022"], source_ids = ["b-round", "funding-history"] },
+  { name = "VMware", investor_type = "corporate", relationship = "historical", round_ids = ["series-a-2021", "series-b-2022"], source_ids = ["b-round", "funding-history"] },
+  { name = "Balaji Srinivasan", investor_type = "angel", relationship = "historical", round_ids = ["series-a-2021"], source_ids = ["funding-history"] },
+  { name = "Elad Gil", investor_type = "angel", relationship = "historical", round_ids = ["series-a-2021"], source_ids = ["team", "funding-history"] },
+  { name = "Eli Ben-Sasson", investor_type = "angel", relationship = "historical", round_ids = ["series-a-2021"], source_ids = ["team", "funding-history"] },
+  { name = "Stani Kulechov", investor_type = "angel", relationship = "historical", round_ids = ["series-a-2021"], source_ids = ["team", "funding-history"] },
+  { name = "Scott Shenker", investor_type = "angel", relationship = "historical", round_ids = ["series-a-2021"], source_ids = ["funding-history"] },
+  { name = "Uri Kolodny", investor_type = "angel", relationship = "historical", round_ids = ["series-a-2021"], source_ids = ["funding-history"] }
+]
+financials = []
+traction = [
+  { kind = "product", date = "2025-02-24", description = "Certora announced the Prover became open source for EVM, Solana sBPF and Stellar WASM. Company says it has been developed for over seven years, used across projects representing over $100 billion TVL and supported more than 70,000 developer-authored rules; these are company-reported cumulative figures, not audited revenue or unique customer counts.", source_ids = ["opensource"] },
+  { kind = "customer", date = "2025-01-31", description = "Certora published a case study describing smart-contract audit and formal verification work for Uniswap v4, alongside Spearbit and Cantina. This documents an engagement, not disclosed contract value or recurring revenue.", source_ids = ["uniswap"] },
+  { kind = "partnership", date = "2025-11-14", description = "Certora announced a security partnership with Cork and Hypernative spanning specification and verification through deployment monitoring. Public announcement does not disclose payment or production adoption metrics.", source_ids = ["partners"] },
+  { kind = "partnership", date = "2026-02-16", description = "Certora announced a partnership with the Sui Foundation to strengthen security in the Sui ecosystem; commercial terms and deployment scale were not disclosed.", source_ids = ["announcements"] },
+  { kind = "contract", date = "2026-05-21", description = "Certora announced a Canton Development Fund grant to build open-source static analysis for Daml packages, integrated into Canton dpm. Grant value was not disclosed; this is ecosystem grant support, not equity financing or evidence of paid customer revenue.", source_ids = ["canton"] },
+  { kind = "partnership", date = "2026-03-26", description = "Certora and Aave published an announcement about their security framework for Aave V4. It evidences collaboration but does not disclose fees or customer revenue.", source_ids = ["announcements"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Runtime Verification", website = "https://runtimeverification.com", rationale = "Formal methods and verification services/tools for high-assurance systems, including blockchain programs.", differentiation = "Adjacent formal verification provider; assess language coverage, productization and target vertical overlap.", source_ids = ["opensource"] },
+  { name = "Trail of Bits", website = "https://www.trailofbits.com", rationale = "Security research, smart-contract audits and analysis tools compete for protocol security budgets.", differentiation = "Broader security consultancy/tool portfolio; Certora emphasizes specification-driven proof workflows.", source_ids = ["uniswap"] },
+  { name = "OpenZeppelin", website = "https://www.openzeppelin.com", rationale = "Smart-contract development and security tooling, audits and monitoring are substitutes for portions of Certora's offering.", differentiation = "Broader developer/security platform and audit presence; Certora's formal prover is more specialized.", source_ids = ["uniswap"] },
+  { name = "CertiK", website = "https://www.certik.com", rationale = "Large blockchain security provider with audits and monitoring that competes for blockchain security spend.", differentiation = "Service and monitoring breadth versus Certora's formal verification specialization.", source_ids = ["opensource"] }
+]
+
+[intelligence.company]
+company_id = "il-certora"
+legal_name = "Certora Ltd."
+aliases = ["Certora", "Certora Inc."]
+operating_status = "active"
+business_model = "Open-source formal-verification tooling combined with paid enterprise software, expert verification/security services, specification review and training; precise revenue mix is not public."
+products = ["Certora Prover", "Certora Verification Language (CVL)", "Certora AI Composer", "Safeguard", "Canton Daml static analysis tooling"]
+locations = ["Tel Aviv, Israel", "United States"]
+source_ids = ["team", "opensource"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Publicly reported equity rounds include a $7.2 million Series A in 2021 and a $36 million Series B in May 2022. Certora has announced subsequent grants from ecosystem funds, kept separate from equity. Company-announced lifetime equity total was not located; reported round amounts sum to $43.2 million, but this is an observed-round subtotal, not a company-reported lifetime total."
+history_status = "partial"
+coverage_through = "2026-10-04"
+rounds = [
+  { id = "series-a-2021", round_type = "Series A", instrument = "equity", status = "announced", announced_on = "2021-05-21", amount_status = "reported", amount = 7200000, currency = "USD", amount_scope = "round", lead_investors = [], participating_investors = ["Electric Capital", "Framework Ventures", "ACapital", "CoinFund", "Lemniscap", "Balaji Srinivasan", "Elad Gil", "Eli Ben-Sasson", "Stani Kulechov", "Scott Shenker", "Uri Kolodny"], source_ids = ["funding-history"], notes = "Historical round and amount reported by secondary funding tracker referencing Certora's announcement; independent contemporaneous reporting for this round was not located." },
+  { id = "series-b-2022", round_type = "Series B", instrument = "equity", status = "announced", announced_on = "2022-05-17", amount_status = "reported", amount = 36000000, currency = "USD", amount_scope = "round", lead_investors = ["Jump Crypto"], participating_investors = ["Tiger Global", "Galaxy Digital", "Electric Capital", "ACapital", "Framework Ventures", "CoinFund", "Lemniscap", "Coinbase Ventures", "VMware"], source_ids = ["b-round"], notes = "The Block says $36 million, led by Jump Crypto, with the listed participants. No valuation was reported." },
+  { id = "canton-grant-2026", round_type = "Canton Development Fund grant", instrument = "grant", status = "announced", announced_on = "2026-05-21", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = [], participating_investors = ["Canton Development Fund"], source_ids = ["canton"], notes = "Non-dilutive ecosystem grant; amount not disclosed." },
+  { id = "ethereum-foundation-grant-2026", round_type = "Ethereum Foundation research grant", instrument = "grant", status = "announced", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = [], participating_investors = ["Ethereum Foundation"], source_ids = ["announcements"], notes = "Announcement index identifies grant support for zkEVM formal verification; amount and award terms not disclosed." }
+]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Certora remains privately held in public sources reviewed. No acquisition, parent company, public listing or disclosed cap table was found. Investor names are disclosed, but percentages and current holdings are not public."
+cap_table_status = "undisclosed"
+shareholders = ["Investor participants listed in the disclosed Series A and Series B rounds; current ownership percentages unavailable"]
+source_ids = ["b-round", "team"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Certora is described as Israel-based by contemporaneous funding coverage and lists Tel Aviv leadership/team presence; co-founder and CEO Mooly Sagiv is based at Tel Aviv University."
+as_of = "2026-10-04"
+source_ids = ["b-round", "team"]
+
+[intelligence.research]
+researched_at = "2026-10-04T15:45:04Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Certora company official team founders headquarters Israel products",
+  "Certora funding raised Series A 2021 amount investors",
+  "Certora Series B $36 million Jump Crypto May 2022 investors",
+  "Certora 2025 2026 grant funding investors valuation acquired",
+  "Certora revenue ARR employees customers traction contracts",
+  "Certora patents intellectual property USPTO WIPO",
+  "Certora competitors formal verification smart contract tools",
+  "Certora defense government military customers formal verification",
+  "Certora leadership CEO founders current team",
+  "Certora acquisition ownership parent company"
+]
+gaps = [
+  "team: Current company team page identifies leadership and selected staff, but complete historical founder roster and independently verified headcount are unavailable.",
+  "investors: Round participants and selected investor identities are public; current fund positions, follow-on amounts and private cap table are unavailable.",
+  "financials: No dated revenue, ARR, profitability, burn, cash or runway disclosure found; disclosed financing is not operating financial performance.",
+  "traction: Company publishes TVL, rule-count and engagement claims, but audited revenue, paying customer counts, renewal, concentration and contract values are unavailable.",
+  "intellectual_property: No reliably attributable patent-family or patent-ownership record was identified in this pass; product and open-source code are visible, but patent status is not established.",
+  "competition: Peer set is qualitative; comparable market share, win/loss data, pricing and relative technical benchmarks are unavailable.",
+  "ownership: No public cap table, ownership percentages, parent, or acquisition transaction found.",
+  "Funding lifetime total: company-announced aggregate was not located; observed round subtotal is not represented as a company-reported total.",
+  "Dual-use: No public defense/security customer, contract, certification or operational military deployment evidence found; applicability outside blockchain remains prospective."
+]
+conflicts = ["The 2022 article cites approximately $50 billion TVL at that time, while the 2025 company open-source announcement says over $100 billion cumulative TVL secured. These are differently dated company-reported measures and are not treated as directly comparable financial metrics."]
+diligence_questions = [
+  "What share of revenue is recurring software versus audits, consulting and training, and how did open-sourcing the Prover change conversion to paid enterprise tiers?",
+  "What are current ARR, gross margin, renewal rates, top-customer concentration and usage retention across crypto market cycles?",
+  "For the reported over-$100-billion TVL and 70,000 rules, what definitions, time windows, unique deployments and independent validations support the totals?",
+  "What capabilities and buyer evidence support expansion from blockchain into regulated financial infrastructure or safety-critical non-blockchain software?",
+  "What are the size and milestones of the Canton and Ethereum Foundation grants, and do they create durable maintainership obligations or follow-on commercial demand?"
+]
+
+[[intelligence.research.sources]]
+id = "team"
+url = "https://www.certora.com/team"
+title = "Team"
+publisher = "Certora"
+kind = "company"
+accessed_at = "2026-10-04T15:45:04Z"
+claims = ["Mooly Sagiv is CEO and co-founder; Shelly Grossman is Head of Product and CTO; biographies describe relevant formal verification and security backgrounds.", "Certora lists selected investors and investor biographies.", "Company says 20 percent of employees hold PhDs in formal verification methods."]
+
+[[intelligence.research.sources]]
+id = "opensource"
+url = "https://www.certora.com/blog/certora-goes-open-source"
+title = "Certora Goes Open Source"
+publisher = "Certora"
+kind = "company"
+published_on = "2025-02-24"
+accessed_at = "2026-10-04T15:45:04Z"
+claims = ["Certora announced the Prover is open source for EVM, Solana sBPF and Stellar WASM.", "Certora reports over $100 billion TVL secured across listed projects and over 70,000 developer-written rules; these are company claims."]
+
+[[intelligence.research.sources]]
+id = "canton"
+url = "https://www.certora.com/blog/certora-wins-canton-foundation-grant"
+title = "Certora Wins Canton Foundation Grant to Advance Smart Contract Assurance for Multi-Party Systems"
+publisher = "Certora"
+kind = "company"
+published_on = "2026-05-21"
+accessed_at = "2026-10-04T15:45:04Z"
+claims = ["Certora reports receiving a Canton Development Fund grant for open-source Daml package static analysis; the amount is undisclosed.", "Planned tooling analyzes cross-package calls and integrates into Canton dpm under Apache 2.0."]
+
+[[intelligence.research.sources]]
+id = "announcements"
+url = "https://www.certora.com/blog?format=announcement"
+title = "Certora Blog: Announcements"
+publisher = "Certora"
+kind = "company"
+accessed_at = "2026-10-04T15:45:04Z"
+claims = ["Certora lists 2025-2026 announcements including Sui Foundation partnership, Aave V4 security framework, and Ethereum Foundation zkEVM formal verification grant."]
+
+[[intelligence.research.sources]]
+id = "b-round"
+url = "https://www.theblock.co/news/defi/2022-05-17-certora-announces-36-million-series-b-funding-round-led-by-jump-crypto-147066"
+title = "Certora Announces $36 million Series B funding round led by Jump Crypto"
+publisher = "The Block"
+kind = "media"
+published_on = "2022-05-17"
+accessed_at = "2026-10-04T15:45:04Z"
+claims = ["Certora announced a $36 million Series B led by Jump Crypto, with Tiger Global, Galaxy Digital and named prior investors participating.", "The Block describes Certora as Israel-based and reports protocol use at Aave, Balancer, Compound, MakerDAO and Sushi.", "The article reported approximately $50 billion DeFi TVL at that time, a historical company statement, not current financial revenue."]
+
+[[intelligence.research.sources]]
+id = "funding-history"
+url = "https://icodrops.com/certora/"
+title = "Certora funding and investor profile"
+publisher = "ICO Drops"
+kind = "directory"
+accessed_at = "2026-10-04T15:45:04Z"
+claims = ["Secondary tracker reports a $7.2 million Series A dated May 21, 2021 and names investors; its linked original announcement was on Certora social media."]
+
+[[intelligence.research.sources]]
+id = "uniswap"
+url = "https://www.certora.com/blog/how-certora-is-securing-uniswap-v4s-multi-billion-ecosystem"
+title = "How Certora is Securing Uniswap v4's Multi-Billion Ecosystem"
+publisher = "Certora"
+kind = "company"
+published_on = "2025-01-31"
+accessed_at = "2026-10-04T15:45:04Z"
+claims = ["Certora describes formal verification and audit work for Uniswap v4 with Spearbit and Cantina."]
+
+[[intelligence.research.sources]]
+id = "partners"
+url = "https://www.certora.com/blog/certora-cork-hypernative"
+title = "Building Continuous, Full-Stack Security for DeFi: Certora partners with Cork and Hypernative"
+publisher = "Certora"
+kind = "company"
+published_on = "2025-11-14"
+accessed_at = "2026-10-04T15:45:04Z"
+claims = ["Certora announced a partnership with Cork and Hypernative combining verification and monitoring; commercial terms were not disclosed."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T15:45:04Z"
+next_review_on = "2027-04-04"
+queries = ["Certora company official team founders headquarters Israel products"]
+source_ids = ["team", "opensource", "b-round"]
+summary = "Official team page and funding coverage support an active, Israel-connected smart contract formal verification company. No legal registry number or authoritative exact legal entity suffix located."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T15:45:04Z"
+next_review_on = "2027-04-04"
+queries = ["Certora funding raised Series A 2021 amount investors", "Certora Series B $36 million Jump Crypto May 2022 investors", "Certora 2025 2026 grant funding investors valuation acquired"]
+source_ids = ["b-round", "funding-history", "canton", "announcements"]
+summary = "Two reported equity rounds identified and later grants separately identified. No valuation or company-stated lifetime equity aggregate found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T15:45:04Z"
+next_review_on = "2027-04-04"
+queries = ["Certora Series A investors", "Certora Series B investors", "Certora ownership investors portfolio"]
+source_ids = ["team", "b-round", "funding-history"]
+summary = "Named historical round participants and selected investors are supported by company and media sources; current holdings and cap table remain private."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T15:45:04Z"
+next_review_on = "2027-04-04"
+queries = ["Certora leadership CEO founders current team"]
+source_ids = ["team"]
+summary = "Official team page identifies CEO/co-founder, CTO and selected current executives."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T15:45:04Z"
+next_review_on = "2027-04-04"
+queries = ["Certora acquisition ownership parent company", "Certora private cap table ownership acquired"]
+source_ids = ["team", "b-round"]
+summary = "No parent, acquisition or public cap-table disclosure located; company appears privately held based on available company and round information."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T15:45:04Z"
+next_review_on = "2027-04-04"
+queries = ["Certora revenue ARR employees customers traction contracts"]
+source_ids = ["opensource", "b-round"]
+summary = "No dated revenue, ARR, profitability, cash, burn or runway disclosures located. TVL/rules are operating claims, not revenue metrics."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T15:45:04Z"
+next_review_on = "2027-04-04"
+queries = ["Certora customers Uniswap Aave 2025 2026 partnership contract"]
+source_ids = ["opensource", "uniswap", "partners", "canton", "announcements"]
+summary = "Documented protocol engagements, open-source launch and grant/partnership activity. Public evidence does not disclose payment status or revenue for most engagements."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T15:45:04Z"
+next_review_on = "2027-04-04"
+queries = ["Certora patents intellectual property USPTO WIPO"]
+source_ids = ["opensource"]
+summary = "No reliably attributable patent family was identified; open-source product release and code are documented, patent position not established."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T15:45:04Z"
+next_review_on = "2027-04-04"
+queries = ["Certora competitors formal verification smart contract tools"]
+source_ids = ["opensource", "uniswap"]
+summary = "Competitive landscape assessed from product positioning and public peer offerings; no comparable market-share or win/loss data located."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T15:45:04Z"
+next_review_on = "2027-04-04"
+queries = ["Certora defense government military customers formal verification"]
+source_ids = ["opensource", "uniswap"]
+summary = "Formal verification has transferable security and safety applications, but sources reviewed support blockchain use; no defense customer or deployment located."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current official team and product announcements document active leadership, product and ongoing 2026 work."
+verified_at = "2026-10-04T15:45:04Z"
+source_ids = ["team", "announcements"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "The Block identifies Certora as Israel-based; official team page identifies its Tel Aviv academic founder and Israeli leadership biographies."
+verified_at = "2026-10-04T15:45:04Z"
+source_ids = ["b-round", "team"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.amount"
+support = "direct"
+summary = "ICO Drops reports the $7.2 million Series A and links the original company social announcement; amount remains secondary-source supported."
+verified_at = "2026-10-04T15:45:04Z"
+source_ids = ["funding-history"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.participating_investors"
+support = "direct"
+summary = "ICO Drops investor listing and official company investor biographies support named participants; list is limited to names exposed in reviewed sources."
+verified_at = "2026-10-04T15:45:04Z"
+source_ids = ["funding-history", "team"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.amount"
+support = "direct"
+summary = "The Block reports the $36 million Series B on May 17, 2022."
+verified_at = "2026-10-04T15:45:04Z"
+source_ids = ["b-round"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.lead_investors"
+support = "direct"
+summary = "The Block names Jump Crypto as the round lead."
+verified_at = "2026-10-04T15:45:04Z"
+source_ids = ["b-round"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.participating_investors"
+support = "direct"
+summary = "The Block names Tiger Global, Galaxy Digital and the listed existing Series A investors as participants."
+verified_at = "2026-10-04T15:45:04Z"
+source_ids = ["b-round"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.canton-grant-2026.participating_investors"
+support = "direct"
+summary = "Certora's announcement names Canton Development Fund as grant source."
+verified_at = "2026-10-04T15:45:04Z"
+source_ids = ["canton"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.ethereum-foundation-grant-2026.participating_investors"
+support = "direct"
+summary = "Certora's announcement index identifies an Ethereum Foundation research grant."
+verified_at = "2026-10-04T15:45:04Z"
+source_ids = ["announcements"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Reviewed company and financing sources identify private investors but no parent company or acquisition; company remains described as operating independently."
+verified_at = "2026-10-04T15:45:04Z"
+source_ids = ["team", "b-round"]

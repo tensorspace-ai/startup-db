@@ -1,0 +1,314 @@
+name = "CardioScale"
+description = "CardioScale Ltd. was an Israeli medical-device startup developing the DTR8 portable monitor and CVRI hemodynamic-reserve index for trauma and deterioration triage. Israeli company-register data now lists the legal entity as voluntarily liquidated, with accelerated voluntary dissolution dated 2025-11-25; its legacy website remains online."
+detailed_description = """
+**Product and the concrete problem it solves.** CardioScale attacks one of the oldest and deadliest blind spots in emergency and battlefield medicine: a bleeding or deteriorating patient can look stable right up until they crash. Standard vital signs — heart rate, blood pressure, oxygen saturation — are lagging indicators; a young, fit casualty compensates for significant blood loss and holds "normal" numbers until compensation fails, at which point the window for intervention has often closed. In a mass-casualty or terror-attack scene with many wounded and few responders, the practical question is brutally concrete, as CEO Maoz Ben-Ari frames it: "Who do you treat first? Who will die without intervention?" Getting that prioritization wrong costs lives. CardioScale's answer is the CVRI (Cardio Vascular Reserve Index), a patented, non-invasive index derived from a simple arm-cuff measurement that produces an objective picture of a patient's hemodynamic *reserve* and its trend — surfacing occult shock and impending collapse earlier than the numbers a medic would otherwise read off a monitor. The measurement takes seconds, requires no special training, and can be performed in the field, which is exactly what a triage tool needs to be.
+
+**Core technology and how it actually works.** CVRI is fundamentally a signal-processing and control-systems story dressed in a medical-device form factor. Rather than reporting a single physiological parameter, it treats the cardiovascular system as a dynamic control loop and fuses multiple vital-sign signals captured during a non-invasive arm-cuff cycle into one integrated index that reflects how much hemodynamic "reserve" the body still has before decompensation. The intellectual lineage matters here: the algorithmic core reflects the collaboration between clinical medicine and hard engineering — a physician-researcher who identified the diagnostic gap working alongside a Tel Aviv University control-systems expert to model the system mathematically. The company reports the index has been exercised across more than 1,000 cases, and its most rigorous public validation is a controlled hemorrhage study conducted with the Israel Defense Forces Medical Corps (a swine hemorrhage model, later published in *Annals of Medicine and Surgery* in 2017), in which CVRI reportedly predicted hemorrhage-related hemodynamic deterioration in every animal tested. The company also states it received CE Mark approval for its CVRI calculator. These are meaningful validation points, though the swine-study sample was small and broad multi-center human clinical evidence is not established in the public record.
+
+**Market, customers, and go-to-market.** CardioScale sits at the intersection of two large markets — patient monitoring and emergency/trauma care — while deliberately entering through the narrower, higher-urgency door of triage and military medicine. The addressable clinical settings the company names span emergency trauma and hemorrhage management, sepsis and shock detection, ICU surveillance, pre- and post-operative deterioration monitoring, and chronic heart-failure management; the beachhead, per the CEO, is the military field, where the value of early occult-shock detection is most acute and the buyer (a defense medical corps) is concentrated. That go-to-market choice is coherent: rather than fight incumbents head-on in crowded hospital monitoring, CardioScale leads with combat-casualty-care and mass-casualty triage, where its differentiator — predicting decline before vitals change — is most decisive and where an Israeli company can leverage direct collaboration with the IDF Medical Corps as both development partner and reference customer. The counterweight is that a device-plus-algorithm sold into defense medicine faces long procurement cycles and must eventually cross into regulated civilian hospital channels to reach real scale.
+
+**Traction, funding, and third-party validation.** CardioScale's strongest external validation is a defense-and-counterterror one: it won first place and a US$100,000 prize at the Combating Terrorism Technology Startup Challenge (reported as the CTTSC3 cycle, 2018), a competition jointly run by the U.S. Department of Defense's Combating Terrorism Technical Support Office (CTTSO), Israel's Ministry of Defense Directorate of Defense Research & Development (MAFAT/DDR&D), and the MIT Enterprise Forum of Israel. Winning a challenge explicitly co-judged by both the U.S. and Israeli defense establishments is a credible signal that serious counter-terror medical evaluators saw operational merit in the technology. Alongside that, the company points to CE marking of the CVRI calculator and the IDF Medical Corps hemorrhage study as third-party validation. What is conspicuously *absent* from the public record is disclosed venture funding, revenue, headcount, fielded-deployment numbers, or recent milestone news — the visible footprint clusters around 2017–2018. That opacity, and the possibility of low recent activity, is the single most important thing to verify in diligence; the technology's validation is real but dated, and current operational status should be confirmed directly.
+
+**Founders and team background.** CardioScale was established in 2012 and is based in Ganei Tikva, Israel. Its origin is a classic clinician-plus-engineer pairing: Dr. Uri Gabbay, a family physician and disease researcher, identified the clinical diagnostic gap and recruited Prof. Ben-Zion Bobrovsky, a Tel Aviv University professor emeritus specializing in control systems, to build the mathematical model behind CVRI; Maoz Ben-Ari serves as CEO and co-founder and is the company's public voice. That combination — a physician who understands the bedside failure mode and a control-theory academic who can formalize it — is precisely the right DNA for a signal-derived physiological index, and it lends the core IP genuine technical credibility. The evident gap is commercial and regulatory scale: there is little public evidence of a deep executive bench in regulatory affairs, defense-medical sales, or manufacturing scale-up, and current headcount is not publicly confirmable. The team's strength is the invention; the open question is the organization's capacity (and current resourcing) to field and scale it.
+
+**Competitive dynamics.** CardioScale competes less against a single rival than against the entire status quo of triage and monitoring. (1) Against **manual triage protocols** (START, shock index, clinician gestalt), CVRI's pitch is objectivity and earlier warning — removing guesswork from prioritization when responders are overwhelmed. (2) Against **advanced hemodynamic-monitoring incumbents** such as Edwards Lifesciences (whose predictive-hypotension analytics target a similar "detect decline early" thesis) and Masimo (noninvasive multi-parameter monitoring), CardioScale trades depth and installed base for a lightweight, training-free, field-deployable form factor. (3) Against **Israeli battlefield-medicine peers** — Biobeat's wearable cuffless vitals, the IDF's own BladeShield digital casualty-care system, and various continuous-monitoring wearables — CVRI differentiates on the specific claim of predicting occult deterioration before vitals move, rather than simply streaming more numbers. Its plausible edges are: (i) a genuinely predictive, reserve-oriented index rather than a lagging vital sign; (ii) a seconds-long, non-invasive, non-expert-usable measurement suited to austere environments; and (iii) dual US–Israeli counter-terror validation. Its vulnerabilities are equally clear: far better-capitalized incumbents, a small and possibly under-resourced organization, and the enormous regulatory and evidence burden required to displace entrenched clinical workflows.
+
+**Defense, security, and resilience dual-use relevance.** This is where CardioScale's strategic profile is strongest and where dual-use is not a stretch but the core of the story. The same CVRI capability that helps a civilian ED prioritize a deteriorating trauma patient maps directly onto combat-casualty care and homeland-security mass-casualty response: detecting hemorrhage-driven occult shock at the point of injury, guiding evacuation priority, and extending the survivable window for the wounded. The validation pathway itself is defense-native — a hemorrhage study run with the IDF Medical Corps and a top prize in a US DoD / Israeli MoD counter-terror challenge — and the CEO has stated the initial product focus is the military field. In resilience terms, a rugged, cheap, training-free triage aid is exactly the kind of capability that scales in disasters, terror attacks, and battlefield conditions where trained clinicians are scarce and time is decisive. The honest calibration: the dual-use *relevance* is unusually direct, but the dual-use *deployment* — fielded, at scale, with a defense customer of record — is not documented publicly, so this should be read as a strategically well-aligned, defense-validated technology rather than a proven fielded system.
+
+**Growth stage, trajectory, and key diligence risks.** CardioScale reads as an **early-stage**, invention-rich but commercially under-proven company: a 2012 founding, a patented and CE-marked core, credible academic-clinical validation, and a marquee defense/counter-terror award — but no disclosed venture rounds, revenue, headcount, or recent traction, with the visible public record concentrated around 2017–2018. The trajectory question is therefore existential rather than incremental: the technology cleared meaningful validation hurdles years ago, and the decisive unknown is whether the organization has continued to advance toward fielded deployment and regulatory scale or has gone largely dormant. The key diligence risks are: (1) **activity/continuity risk** — confirm the company is operationally active, funded, and staffed today; (2) **evidence-depth risk** — the strongest validation (a 17-animal swine study) needs large-scale human clinical confirmation to drive adoption; (3) **regulatory-and-reimbursement risk** — CE marking is a start, but broad clinical and (for U.S. markets) FDA pathways and reimbursement are unproven; (4) **commercial-scale risk** — a small team faces well-capitalized monitoring incumbents and long defense-procurement cycles; and (5) **disclosure opacity** — funding, customers, and deployments are not publicly verifiable. Progress from here would be evidenced by fresh funding, a defense customer of record, expanded human clinical data, and regulatory clearances beyond CE.
+"""
+logo = "Unknown"
+website = "https://www.cardioscale.com/"
+sector = "Medical Devices / Combat-Casualty & Emergency Triage (Non-Invasive Hemodynamic Monitoring)"
+founded = "2012"
+headquarters = "Ganei Tikva, Israel"
+employees = "Unknown (small private company; founding team and CEO documented, exact current headcount not publicly confirmed)"
+funding_stage = "Defunct / wound down — one disclosed $100,000 CTTSC3 competition prize in 2018 (non-equity award); no venture rounds or company-announced lifetime equity funding found."
+entity_type = "defunct_or_wound_down"
+dual_use = true
+dual_use_description = "CardioScale's dual-use relevance is direct and defense-validated, not adjacency-grade. (1) The CVRI index detects occult, hemorrhage-driven hemodynamic deterioration before standard vital signs change — a capability whose highest-value application is combat-casualty care and mass-casualty/terror-attack triage, where prioritizing hidden-shock patients determines survival. (2) The validation pathway is defense-native: a controlled hemorrhage study conducted with the Israel Defense Forces Medical Corps (swine model, published in Annals of Medicine and Surgery, 2017) and a first-place win at the Combating Terrorism Technology Startup Challenge, a competition jointly judged by the U.S. DoD Combating Terrorism Technical Support Office (CTTSO) and Israel's Ministry of Defense DDR&D/MAFAT. (3) The CEO has stated the initial product focus is the military field. (4) As a rugged, cheap, seconds-long, training-free triage aid, it fits austere, disaster, and battlefield settings where trained clinicians are scarce — a resilience capability by design. Calibration: the dual-use relevance is unusually direct, but a fielded, at-scale defense deployment with a customer of record is not documented publicly, so this is a defense-validated technology rather than a proven fielded system."
+key_technologies = [
+  "Patented CVRI (Cardio Vascular Reserve Index) — an integrated hemodynamic-reserve index computed from a non-invasive arm-cuff measurement",
+  "Control-systems / signal-processing modeling of the cardiovascular system to infer hidden decompensation before standard vital signs change",
+  "Multi-vital-sign fusion into a single objective indicator of hemodynamic state and its trend/trajectory",
+  "Seconds-long, non-invasive, training-free measurement usable by non-clinicians at the point of injury",
+  "Portable arm-cuff form factor suited to field, austere, and mass-casualty environments",
+  "Predictive early-warning capability validated in a controlled hemorrhage (swine) model and CE-marked for the CVRI calculator"
+]
+use_cases = [
+  "Mass-casualty and terror-attack triage — objectively prioritizing patients with hidden, compensated shock",
+  "Battlefield / combat-casualty-care hemorrhage detection at the point of injury and during evacuation",
+  "Emergency-department and pre-hospital ambulance trauma assessment",
+  "Early sepsis and shock detection on hospital wards before overt deterioration",
+  "ICU hemodynamic surveillance and trend monitoring",
+  "Pre- and post-operative deterioration monitoring",
+  "Chronic heart-failure decompensation monitoring",
+  "Humanitarian, disaster-response, and austere-setting triage where trained clinicians are scarce"
+]
+investible = false
+investment_rationale = "CardioScale is a technically credible but commercially unproven early-stage medtech whose appeal is a genuinely predictive dual-use triage capability, offset by material continuity and evidence risk. (1) Real differentiated IP: CVRI is a patented, control-systems-derived index that claims to detect occult hemodynamic deterioration before standard vitals move — a meaningfully different value proposition from lagging vital-sign monitors, and exactly the capability triage most needs. (2) Strong defense validation: a first-place win in a US DoD (CTTSO) / Israeli MoD (DDR&D/MAFAT) counter-terror challenge with a $100,000 prize, an IDF Medical Corps hemorrhage study, and CE marking are credible third-party signals. (3) Coherent beachhead: leading with military/mass-casualty medicine plays to the technology's sharpest edge and a concentrated, motivated buyer. Counterweights that should dominate assessment: (a) the public footprint clusters around 2017-2018 with no disclosed funding, revenue, headcount, or recent milestones, raising real questions about current activity and resourcing; (b) the strongest clinical validation is a 17-animal swine study that needs large-scale human confirmation; (c) regulatory (beyond CE) and reimbursement pathways are unproven; and (d) far better-capitalized incumbents (Edwards, Masimo) pursue similar early-warning theses. On balance this is a monitor-and-verify item, not a priority signal, until current operational status and fresh traction are confirmed. This is a strategic diligence assessment, not an investment recommendation."
+strategic_value = "CardioScale's strategic value sits squarely in combat-casualty-care and homeland-security resilience. (1) Capability fit: an objective, field-deployable index that flags occult shock before vitals change addresses a documented, lethal gap in triage — the compensated-then-crashing casualty — and directly supports battlefield medicine, mass-casualty terror response, and disaster triage. (2) Sovereign/allied relevance: an indigenous Israeli technology developed with the IDF Medical Corps and validated in a joint US-Israel counter-terror challenge contributes to allied combat-medicine capability, and its cheap, rugged, training-free form factor scales in exactly the scarce-clinician conditions that define crises. (3) Leverage: the same core serves civilian trauma, sepsis, and ICU markets, giving the dual-use technology a broad commercial base if fielded. The realized strategic weight, however, depends on confirming the company is active and on converting dated validation into fielded deployments with a defense customer of record; absent that, the strategic relevance is high and defense-validated but not yet a proven, fielded capability."
+potential_score = 47.0
+technology_score = 62.0
+market_score = 45.0
+team_score = 50.0
+dual_use_score = 68.0
+strategic_alignment_score = 58.0
+stage = "early"
+stage_rationale = "CardioScale is classified 'early' on the strength of an invention-rich but commercially unproven profile. (1) Product maturity: a patented CVRI algorithm, a CE-marked calculator, and validation across 1,000+ cases plus an IDF Medical Corps hemorrhage study indicate a technology past pure concept. (2) External validation: a first-place, $100,000 win in a US DoD / Israeli MoD counter-terror challenge is a credible diligence signal. (3) Commercial immaturity keeps it early: no disclosed venture funding, revenue, headcount, regulatory clearance beyond CE, or fielded-deployment references, with the visible public record concentrated around 2017-2018. (4) Continuity is the decisive unknown: it is not publicly confirmable whether the company has continued to advance toward fielded scale or gone largely dormant. Progression would be evidenced by fresh funding, a defense customer of record, expanded human clinical data, and regulatory clearances beyond CE."
+competitors = [
+  "Edwards Lifesciences (advanced hemodynamic-monitoring incumbent; predictive-hypotension analytics pursue a similar detect-decline-early thesis)",
+  "Masimo (noninvasive multi-parameter patient-monitoring incumbent with large installed base)",
+  "Biobeat (Israeli wearable, cuffless continuous vital-sign and blood-pressure monitoring for hospital and field use)",
+  "Conventional triage protocols and scores (START triage, shock index, clinician gestalt — the incumbent low-tech approach CVRI aims to make objective)",
+  "Baxter / Hillrom (spot-check and continuous vital-signs monitors across pre-hospital and hospital settings)",
+  "Hospital early-warning-score and sepsis-prediction analytics vendors (software-based deterioration prediction from streamed vitals and EHR data)"
+]
+competitive_edge = "CardioScale's edge rests on a predictive, reserve-oriented index rather than a lagging vital sign. (1) Earlier warning: CVRI claims to surface occult hemodynamic deterioration before heart rate, blood pressure, or SpO2 move — the exact failure mode (compensated-then-crashing casualties) that kills in triage. (2) Field-fit form factor: a seconds-long, non-invasive, training-free arm-cuff measurement usable by non-clinicians suits austere, mass-casualty, and battlefield settings where advanced monitors and trained staff are absent. (3) Objectivity: it replaces subjective prioritization with a single trend indicator when responders are overwhelmed. (4) Defense validation: an IDF Medical Corps hemorrhage study and a US DoD / Israeli MoD counter-terror-challenge win differentiate it from purely civilian entrants. Vulnerabilities: far better-capitalized incumbents (Edwards, Masimo) chase overlapping early-warning theses; the strongest validation is a small animal study needing human confirmation; regulatory/reimbursement scale-up is unproven; and the company appears small and possibly under-resourced, with little recent public activity."
+risk_factors = [
+  "Continuity/activity risk: no disclosed funding, revenue, headcount, or milestones since ~2017-2018, raising questions about whether the company is currently active and resourced",
+  "Evidence-depth risk: strongest validation is a 17-animal swine hemorrhage study; large-scale multi-center human clinical evidence is not established publicly",
+  "Regulatory and reimbursement risk: CE marking is a start, but broader clinical clearance (e.g. FDA for U.S. markets) and reimbursement pathways are unproven",
+  "Commercial-scale risk: a small team faces well-capitalized monitoring incumbents (Edwards, Masimo) and long defense-procurement cycles",
+  "Disclosure opacity: funding, customers, deployments, and current headcount are not publicly verifiable",
+  "Adoption/workflow risk: displacing entrenched triage protocols and monitoring workflows requires substantial clinical evidence and behavior change",
+  "Single-index dependency: commercial value concentrates in one algorithmic capability (CVRI), heightening technical and IP-defensibility exposure"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "CardioScale merits monitoring as a technically credible, defense-validated dual-use triage technology whose priority is capped by continuity and evidence risk. Strengths supporting attention: (1) CVRI is a patented, control-systems-derived index that targets occult hemodynamic deterioration before vitals change — a direct answer to a lethal triage gap; (2) validation is defense-native and credible: an IDF Medical Corps hemorrhage study (published 2017), CE marking of the CVRI calculator, and a first-place, $100,000 win in a joint US DoD (CTTSO) / Israeli MoD (DDR&D/MAFAT) counter-terror challenge; (3) the combat-casualty-care and mass-casualty-triage use case is strategically well-aligned and resilience-relevant; and (4) a coherent military-first beachhead plays to the technology's sharpest edge. Offsetting factors that cap priority: the public footprint clusters around 2017-2018 with no disclosed funding, revenue, headcount, or recent traction, raising real questions about current activity; the strongest clinical evidence is a small animal study; and regulatory/reimbursement scale-up is unproven. Key milestones to track: confirmation of current operational status, fresh funding, a defense customer of record, expanded human clinical data, and regulatory clearances beyond CE. Priority reflects strong dual-use alignment and genuine IP, discounted heavily for opacity and possible dormancy."
+public_sources = [
+  { label = "CardioScale official site", url = "https://www.cardioscale.com/", description = "Legacy company product, technology, award and research claims; site remains online." },
+  { label = "CardioScale team", url = "https://www.cardioscale.com/team", description = "Legacy management and founders biographies." },
+  { label = "CardioScale contact", url = "https://www.cardioscale.com/contact", description = "Legacy Ganei Tikva contact listing." },
+  { label = "CardioScale publications", url = "https://www.cardioscale.com/publications", description = "Company-listed CVRI publications." },
+  { label = "CTTSC3 official challenge", url = "https://cttsc-x.com/", description = "Official competition organizer confirms CardioScale received the $100,000 first prize, distinct from venture financing." },
+  { label = "Startup Nation Finder profile", url = "https://finder.startupnationcentral.org/company_page/cardioscale", description = "Israeli startup directory record reports non-active status and ceased operations in November 2025; also records the 2018 non-equity prize, product, and CE milestone." },
+  { label = "Israeli company-register data via CheckID", url = "https://en.checkid.co.il/company/CARDIO%2BSCALE%2BLTD-Q21Bao6-514741701", description = "Company number 514741701; lists voluntarily liquidated status and dated voluntary dissolution filing on 2025-11-25." },
+  { label = "CardioScale CVRI patent", url = "https://patents.google.com/patent/EP2814385B1/en", description = "European patent record for method and system estimating momentary cardiovascular performance reserve; identifies Cardio Scale Ltd. as assignee and grant publication in 2022." },
+  { label = "Tel Aviv University award notice", url = "https://emergexint.tau.ac.il/node/6843", description = "University notice confirms co-founder Uri Gabbay and the 2018 $100,000 CTTSC3 award." },
+  { label = "CTech competition coverage", url = "https://www.calcalistech.com/ctech/articles/0%2C7340%2CL-3740492%2C00.html", description = "Independent contemporary reporting confirms the $100,000 competition prize and organizers." },
+  { label = "Israeli Patent Journal", url = "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/jurnal-jul-2021/he/patents-journal_jul-2021-no-16A.pdf", description = "Government patent journal records the CVRI application with Cardio Scale Ltd. as applicant and inventors Uri Gabbay and Ben Zion Bobrovsky." },
+  { label = "Edwards Acumen HPI", url = "https://www.edwards.com/healthcare-professionals/products-services/predictive-monitoring/hpi", description = "Official product information for predictive hemodynamic instability monitoring; notes the critical-care product group is now part of BD." },
+  { label = "Masimo Monitoring Solutions", url = "https://www.masimo.com/monitoring-solutions/", description = "Official overview of non-invasive and continuous patient-monitoring solutions." },
+]
+crawled_at = "2026-07-22T08:22:38Z"
+updated_at = "2026-10-04T14:09:58Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Maoz Ben-Ari", role = "Historical CEO and co-founder", is_founder = true, current = false, background = "The legacy company team page describes an MBA graduate of Jiao Tong University in Shanghai and former Israeli special-forces major with business and entrepreneurial experience. Current status is unknown after dissolution.", source_ids = ["company_team"] },
+  { name = "Uri Gabbay", role = "Co-founder", is_founder = true, current = false, background = "Company and Tel Aviv University sources identify him as co-founder; the legacy company page describes a physician, Tel Aviv University senior lecturer, and former senior healthcare executive. Finder says he is no longer with the company.", source_ids = ["company_team", "tau_award", "snc"] },
+  { name = "Ben-Zion Bobrovsky", role = "Co-founder", is_founder = true, current = false, background = "The company team page describes him as a professor emeritus of electrical engineering at Tel Aviv University and a control-systems consultant. The patent record names him as an inventor.", source_ids = ["company_team", "patent_ep"] },
+]
+investors = []
+financials = []
+comparables = [
+  { name = "BD (Edwards Lifesciences Critical Care products)", website = "https://www.edwards.com/healthcare-professionals/products-services/predictive-monitoring/hpi", rationale = "Predictive hemodynamic instability monitoring with Acumen HPI and non-invasive finger cuff; Edwards states its Critical Care product group is now part of BD.", differentiation = "Continuous intraoperative monitoring platform versus CardioScale's proposed rapid DTR8 measurement and CVRI index for point-of-care triage.", source_ids = ["edwards_hpi"] },
+  { name = "Masimo", website = "https://www.masimo.com/monitoring-solutions/", rationale = "Non-invasive and continuous monitoring platform supplying patient vital-sign measurements across care settings.", differentiation = "Broad multiparameter monitoring platform versus CardioScale's single integrated CVRI index and DTR8 field-use device.", source_ids = ["masimo_monitoring"] },
+]
+traction = [
+  { kind = "other", description = "Awarded the $100,000 first prize in the CTTSC3 General Technologies track in June 2018. This was a competition prize and is recorded separately from equity funding.", date = "2018-06", source_ids = ["cttsc", "tau_award"] },
+  { kind = "regulatory", description = "Company and Israeli ecosystem directory report CE Mark approval for the CVRI calculator in October 2019; no current certificate, scope, or continuing validity evidence found.", date = "2019-10", source_ids = ["company_home", "snc"] },
+  { kind = "other", description = "Israeli register-derived company data reports accelerated voluntary dissolution on 2025-11-25 and automatic expedited voluntary elimination on 2026-03-05. Finder states the business ceased operations in November 2025.", date = "2025-11-25", source_ids = ["registry", "snc"] },
+]
+intellectual_property = [
+  { kind = "patent", description = "European patent EP2814385B1, 'A method and system for estimating momentary cardiovascular performance reserve,' identifies Cardio Scale Ltd. as assignee, names Uri Gabbay and Ben-Zion Bobrovsky as inventors, and was granted/published 2022-11-09. Patent-family status and maintenance across jurisdictions should be checked in authoritative registers.", date = "2022-11-09", source_ids = ["patent_ep", "il_patent_journal"] },
+]
+
+[intelligence.company]
+source_ids = ["company_home", "company_contact", "snc", "registry"]
+company_id = "il-cardioscale"
+legal_name = "Cardio Scale Ltd."
+aliases = ["CardioScale", "CARDIO SCALE LTD", "CardioScale Ltd."]
+operating_status = "closed"
+business_model = "Historical B2B/B2G medical-device developer of the DTR8 portable monitor and CVRI algorithm for clinical and defense/trauma triage. No active trading or post-dissolution business has been established."
+products = ["DTR8 portable multi-vital-sign monitor", "CVRI (Cardio Vascular Reserve Index) calculator/index"]
+locations = ["Ganei Tikva, Israel (legacy company website); Yavne, Israel (register-listed address)"]
+founded_on = "2012-02-26"
+country_of_incorporation = "Israel"
+
+[intelligence.funding]
+status = "reported"
+summary = "No publicly disclosed venture equity, convertible, or debt financing round was found. The $100,000 CTTSC3 first prize in June 2018 is a non-equity competition award and is represented below as a grant/prize event; it is not treated as company-announced lifetime funding raised. Reported total raised is therefore omitted."
+rounds = [
+  { id = "cttsc3-prize-2018", round_type = "CTTSC3 competition prize", instrument = "grant", status = "announced", announced_on = "2018-06-18", amount_status = "reported", amount = 100000, currency = "USD", amount_scope = "unknown", lead_investors = [], participating_investors = [], source_ids = ["cttsc", "ctech", "tau_award"], notes = "One-time competition prize; not an equity financing round. CTTSC organizer and contemporary coverage confirm the $100,000 first prize." },
+]
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "No parent company, acquisition, buyout, or disclosed investor/shareholder ownership was found. Company-register data lists the entity's voluntary dissolution, not a transfer of the business. Cap table and beneficial holdings remain unavailable in the consulted public material."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["registry", "snc"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "Israeli private company CARDIO SCALE LTD., company number 514741701, incorporated 2012-02-26. Its legacy site lists Ganei Tikva; company register-derived data records an Israeli entity and address. University and company sources identify Israeli co-founders Uri Gabbay and Ben-Zion Bobrovsky."
+as_of = "2026-10-04"
+source_ids = ["registry", "company_contact", "tau_award", "il_patent_journal"]
+
+[intelligence.research]
+researched_at = "2026-10-04T14:09:58Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "CardioScale company funding investors CardioScale CVRI",
+  "CardioScale Maoz Ben-Ari CardioScale site:cardioscale.com",
+  "CardioScale Cardio Vascular Reserve Index patent",
+  "CardioScale startup acquired closed 2024 2025",
+  "CardioScale ceased to operate November 2025",
+  "Cardio Scale Ltd 514741701 voluntary dissolution Israeli company register",
+  "CardioScale DTR8 CE Mark 2019",
+  "CardioScale Cardio Vascular Reserve Index hemorrhage study swine",
+]
+gaps = [
+  "team: the legacy team page describes prior leadership but current employment and post-dissolution disposition are unknown.",
+  "investors: no private cap table, investor list, or equity participants were found; CTTSC is a prize-awarding competition, not a named investor.",
+  "financials: no reported revenue, ARR, profitability, burn, runway, or audited accounts were found.",
+  "traction: no verified paying customers, production deployments, sales, or current product availability were found; historical award and CE-mark assertions do not establish commercialization.",
+  "intellectual_property: family records show patent grants, but post-dissolution ownership, maintenance, and live jurisdiction-by-jurisdiction status remain unverified.",
+  "competition: competitor comparison is based on public product positioning, not a current head-to-head clinical or procurement study.",
+  "funding: no venture funding round or company-announced lifetime total found; the known competition prize is non-equity and kept separate.",
+  "ownership: beneficial owners, cap table, and any disposition of the assets/IP after dissolution are not publicly established in sources reviewed.",
+  "dual_use: no verified fielded defense customer, procurement contract, or operational deployment was found.",
+]
+conflicts = ["The company website remains accessible and still presents CardioScale as an operating company, while later register-derived records list voluntary dissolution and Finder states operations ceased in November 2025. The later dated registry events take precedence for legal status; the site is treated as a legacy presence."]
+diligence_questions = [
+  "Who currently owns and controls the CVRI/DTR8 patent family and technical assets following the 2025 dissolution, and are maintenance fees current in each jurisdiction?",
+  "Was the $100,000 CTTSC3 prize fully disbursed, and were there any equity financings or grants not captured in public records?",
+  "Were any DTR8 units deployed commercially or operationally, and what human clinical validation, regulatory certificates, and customer evidence survive?",
+  "What was the legal closeout status after the reported March 2026 elimination event, and were liabilities or IP transferred to another entity?",
+]
+sources = [
+  { id = "company_home", url = "https://www.cardioscale.com/", title = "CardioScale — Predicting Deterioration - Saving Lives", publisher = "CardioScale", kind = "company", accessed_at = "2026-10-04T14:09:58Z", claims = ["The legacy company describes its CVRI technology, intended use, DTR8, company founding in 2012, CE mark and IDF hemorrhage-study claims."] },
+  { id = "company_team", url = "https://www.cardioscale.com/team", title = "Team | CardioScale Ltd.", publisher = "CardioScale", kind = "company", accessed_at = "2026-10-04T14:09:58Z", claims = ["The legacy team page identifies Maoz Ben-Ari as CEO, Uri Gabbay and Ben-Zion Bobrovsky as co-founders, and provides their historical backgrounds."] },
+  { id = "company_contact", url = "https://www.cardioscale.com/contact", title = "Contact | CardioScale Ltd.", publisher = "CardioScale", kind = "company", accessed_at = "2026-10-04T14:09:58Z", claims = ["The legacy contact page lists CardioScale Ltd. in Ganei Tikva, Israel."] },
+  { id = "company_publications", url = "https://www.cardioscale.com/publications", title = "Publications | CardioScale Ltd.", publisher = "CardioScale", kind = "company", accessed_at = "2026-10-04T14:09:58Z", claims = ["Company publications page lists CVRI-related scientific publications."] },
+  { id = "cttsc", url = "https://cttsc-x.com/", title = "CTTSC3 | Combating Terrorism Technology Startup Challenge", publisher = "CTTSC", kind = "other", accessed_at = "2026-10-04T14:09:58Z", published_on = "2018-06", claims = ["CTTSC3 confirms CardioScale won the $100,000 first prize in the General Technologies track for its automatic triage device; the initiative was organized by US DoD CTTSO, Israel MoD MAFAT, and MIT Enterprise Forum of Israel."] },
+  { id = "snc", url = "https://finder.startupnationcentral.org/company_page/cardioscale", title = "CardioScale — Health Tech & Life Sciences | Finder", publisher = "Startup Nation Finder", kind = "directory", accessed_at = "2026-10-04T14:09:58Z", claims = ["Finder reports CardioScale non-active and ceased to operate in November 2025.", "Finder lists the 2018 $100,000 award as nonequity, and reports the DTR8, October 2019 CE-mark milestone, February 2012 founding, and historical team details."] },
+  { id = "registry", url = "https://en.checkid.co.il/company/CARDIO%2BSCALE%2BLTD-Q21Bao6-514741701", title = "CARDIO SCALE LTD — 514741701", publisher = "CheckID (Israeli Companies Registrar-derived company data)", kind = "filing", accessed_at = "2026-10-04T14:09:58Z", claims = ["CARDIO SCALE LTD is an Israeli private company with company number 514741701, incorporated 2012-02-26.", "The record lists company status as voluntarily liquidated, accelerated voluntary dissolution on 2025-11-25, and automatic expedited voluntary elimination on 2026-03-05."] },
+  { id = "patent_ep", url = "https://patents.google.com/patent/EP2814385B1/en", title = "EP2814385B1 — A method and system for estimating momentary cardiovascular performance reserve", publisher = "Google Patents / European Patent Office", kind = "filing", accessed_at = "2026-10-04T14:09:58Z", published_on = "2022-11-09", claims = ["European patent EP2814385B1 identifies Cardio Scale Ltd. as assignee and Uri Gabbay and Ben Zion Bobrovsky as inventors; grant publication date is 2022-11-09."] },
+  { id = "il_patent_journal", url = "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/jurnal-jul-2021/he/patents-journal_jul-2021-no-16A.pdf", title = "Patents Journal July 2021 No. 16A", publisher = "Israel Patent Office, Ministry of Justice", kind = "government", accessed_at = "2026-10-04T14:09:58Z", published_on = "2021-07-29", claims = ["Israeli patent journal records a patent application for a method and system for estimating momentary cardiovascular performance reserve, naming Cardio Scale Ltd. as applicant and Uri Gabbay and Ben Zion Bobrovsky as inventors."] },
+  { id = "ctech", url = "https://www.calcalistech.com/ctech/articles/0%2C7340%2CL-3740492%2C00.html", title = "Winners Announced in Counter-Terrorism Startup Competition", publisher = "CTech", kind = "media", accessed_at = "2026-10-04T14:09:58Z", published_on = "2018-06-18", claims = ["Contemporary reporting says CardioScale won a $100,000 prize in the counter-terrorism startup competition, supported by US and Israeli government bodies."] },
+  { id = "tau_award", url = "https://emergexint.tau.ac.il/node/6843", title = "Congratulations to Dr. Uri Gabbay, winner of first prize in Competition for Counter-Terrorism Technologies", publisher = "Tel Aviv University", kind = "other", accessed_at = "2026-10-04T14:09:58Z", claims = ["Tel Aviv University identifies Uri Gabbay as a CardioScale co-founder and reports CardioScale won the $100,000 2018 CTTSC3 grand prize."] },
+  { id = "edwards_hpi", url = "https://www.edwards.com/healthcare-professionals/products-services/predictive-monitoring/hpi", title = "Acumen Hypotension Prediction Index software", publisher = "Edwards Lifesciences", kind = "company", accessed_at = "2026-10-04T14:09:58Z", claims = ["Edwards describes Acumen HPI as predictive software for hemodynamic instability, compatible with a noninvasive finger cuff, and notes its Critical Care product group is now part of BD."] },
+  { id = "masimo_monitoring", url = "https://www.masimo.com/monitoring-solutions/", title = "Monitoring Solutions", publisher = "Masimo", kind = "company", accessed_at = "2026-10-04T14:09:58Z", claims = ["Masimo describes non-invasive and continuous monitoring technologies, including physiologic measurements and pulse oximetry-derived measures."] },
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T14:09:58Z"
+next_review_on = "2027-04-04"
+queries = ["Cardio Scale Ltd 514741701 Israeli company register", "CardioScale official company site contact"]
+source_ids = ["registry", "company_home", "company_contact", "snc"]
+summary = "Canonical legal entity is CARDIO SCALE LTD., an Israeli private company founded in 2012, company number 514741701; the current record indicates liquidation/dissolution."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T14:09:58Z"
+next_review_on = "2027-04-04"
+queries = ["CardioScale funding raised seed Series A investors", "CardioScale CTTSC3 $100,000 prize", "CardioScale total funding investors"]
+source_ids = ["cttsc", "ctech", "snc"]
+summary = "Found one non-equity $100,000 prize in June 2018. No equity financing or reported lifetime funding total found; the historical award is kept separate from venture funding."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T14:09:58Z"
+next_review_on = "2027-04-04"
+queries = ["CardioScale investors backers shareholders", "CardioScale funding round lead investors"]
+source_ids = ["snc", "registry"]
+summary = "No named equity investor disclosed in reviewed sources. CTTSC was a prize-awarding competition, not an investor."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T14:09:58Z"
+next_review_on = "2027-04-04"
+queries = ["CardioScale team Maoz Ben-Ari Uri Gabbay", "CardioScale founders current CEO"]
+source_ids = ["company_team", "tau_award", "snc"]
+summary = "Historical founders and CEO identified, but current roles/employment cannot be inferred from the legacy website and post-dissolution status is unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T14:09:58Z"
+next_review_on = "2027-04-04"
+queries = ["CardioScale acquisition acquired parent company", "Cardio Scale Ltd 514741701 dissolution owners"]
+source_ids = ["registry", "snc"]
+summary = "No acquisition or parent company identified. The cap table and beneficial ownership are not disclosed; dissolution is not treated as an asset sale."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "not_found"
+checked_at = "2026-10-04T14:09:58Z"
+next_review_on = "2027-04-04"
+queries = ["CardioScale revenue ARR financials", "CardioScale revenue employees burn runway"]
+source_ids = ["snc", "registry"]
+summary = "No reported revenue, ARR, profitability, cash, burn, runway, or filed accounts were identified in reviewed material."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T14:09:58Z"
+next_review_on = "2027-04-04"
+queries = ["CardioScale customers deployments contracts DTR8", "CardioScale CE mark CVRI 2019", "CardioScale ceased operations November 2025"]
+source_ids = ["company_home", "snc", "registry", "cttsc"]
+summary = "Historical product, CE-mark report, and competition prize are documented, but no paying customer, deployment, or current sales were verified; operations reportedly ceased in November 2025."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-04T14:09:58Z"
+next_review_on = "2027-04-04"
+queries = ["CardioScale patents CVRI Cardio Scale Ltd", "CardioScale patent EP2814385B1", "CardioScale patents USPTO WIPO"]
+source_ids = ["patent_ep", "il_patent_journal"]
+summary = "Patent records identify a CVRI method/system family, Israeli applicant, European grant, and named inventors. Current post-dissolution ownership and maintenance are unresolved."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T14:09:58Z"
+next_review_on = "2027-04-04"
+queries = ["noninvasive hemodynamic monitoring predictive deterioration Edwards Masimo", "Biobeat wearable vital signs monitoring official"]
+source_ids = ["company_home"]
+summary = "Relevant substitutes include installed patient-monitoring systems and wearable vital-sign platforms; no direct head-to-head performance comparison was found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T14:09:58Z"
+next_review_on = "2027-04-04"
+queries = ["CardioScale defense military battlefield triage IDF", "CardioScale CTTSC3 military applications"]
+source_ids = ["company_home", "cttsc", "tau_award"]
+summary = "The intended triage capability and counter-terrorism competition establish historical defense/security relevance; no fielded military customer or contract is documented."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Register-derived record lists CARDIO SCALE LTD. as voluntarily liquidated and dates accelerated voluntary dissolution to 2025-11-25; Finder separately states ceased operations November 2025."
+verified_at = "2026-10-04T14:09:58Z"
+source_ids = ["registry", "snc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Israeli company record identifies CARDIO SCALE LTD., Israeli company number 514741701, Israel jurisdiction and 2012 incorporation; the legacy company contact page lists Ganei Tikva, Israel."
+verified_at = "2026-10-04T14:09:58Z"
+source_ids = ["registry", "company_contact"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.cttsc3-prize-2018.amount"
+support = "direct"
+summary = "CTTSC3 organizer confirms CardioScale received its $100,000 first prize; contemporaneous CTech and TAU reports corroborate."
+verified_at = "2026-10-04T14:09:58Z"
+source_ids = ["cttsc", "ctech", "tau_award"]

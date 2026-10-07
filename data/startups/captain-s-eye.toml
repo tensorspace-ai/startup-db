@@ -1,0 +1,612 @@
+name = "Captain's Eye"
+description = "Captain's Eye is an Israeli maritime-AI startup that turns existing vessel and infrastructure cameras into a real-time safety, security, and operational-risk detection layer. Its software is designed to alert crews and remote fleet managers to smoke, leaks, unsafe behavior, unauthorized access, equipment failures, and other events before they become costly incidents."
+detailed_description = "**Product and the concrete problem it solves.** Captain's Eye addresses a specific operational gap in shipping and maritime infrastructure: vessels, terminals, and industrial sites already generate enormous volumes of camera footage, but crews and remote managers cannot watch hundreds of feeds continuously or reliably recognize every precursor to an accident. The company sells a software platform that monitors those existing cameras and surfaces actionable events rather than asking an operator to review video after damage has occurred. Its public product materials describe detection of smoke, leaks, fire, unauthorized personnel, personal-protective-equipment violations, unsafe crew behavior, security violations, and equipment failures. This is a prevention and continuity proposition. A missed leak can become pollution, cargo damage, or an engine-room emergency; an unsafe maneuver can become an injury; an unobserved intrusion can become theft or sabotage; and a delayed response to a machinery problem can take a vessel or port asset out of service. Captain's Eye's intended outcome is earlier intervention, with onboard crews and off-board fleet managers receiving a prioritized alert, associated evidence, and a way to coordinate action. The product is therefore more than generic video surveillance and less than autonomous control of a ship: it is an AI-assisted risk-management and operational-awareness layer.\n\n**Core technology and how it works.** The technical architecture described by the company combines custom neural networks and commercial AI models fine-tuned for maritime environments. Live feeds are processed onboard, with only the necessary information transmitted to the cloud, a design that reduces bandwidth demand and supports remote monitoring over constrained ship-to-shore links. The platform can use a customer's existing CCTV estate and, in the company's broader product description, can incorporate radar and thermal sensors rather than requiring a completely new sensor installation. Captain's Eye says its software continuously analyzes video, detects events in real time, creates alerts, supports remote management, stores documentation, and harvests data for later analysis. The workflow includes customizable alert rules so that the right information reaches the right person, digital inspections with automated reports, policy-execution tools for assigning and documenting safety drills, and predictive analytics based on historical data and environmental conditions. The engineering value is in assembling these pieces into a maritime workflow: low-latency inference close to the camera or vessel, bandwidth-aware event transmission, a fleet-level dashboard, and a feedback loop in which site-specific conditions can be tuned. The public record does not disclose model architectures, training-set size, precision and recall by event class, inference hardware, cybersecurity controls, or formal safety-case methodology. Those omissions matter because glare, spray, darkness, vibration, occlusion, camera placement, and unusual ship layouts can all change the reliability of visual detection.\n\n**Market, customers, and go-to-market.** Captain's Eye began in maritime operations and now also markets an onshore offering for industrial plants and critical infrastructure. The company's own materials identify merchant vessels, yachts, cruise ships, maritime industrial plants, ports, petrochemical facilities, and gas platforms as relevant environments. The likely buyer is a fleet owner, ship manager, terminal operator, offshore operator, or industrial safety organization that already owns cameras and wants to improve the value of that installed infrastructure without a large hardware retrofit. Captain's Eye's proposition is particularly suited to a partner-led enterprise sale: prove the system on one vessel or at one port, tune alerts against real operating conditions, then expand across a fleet or facility group. Public reporting confirms a strategic partnership with XT Shipping and a pilot at Ashdod Port. The company's current site includes a testimonial from an executive at EPS saying Captain's Eye is integrated across almost the entire fleet, but it does not identify the fleet size or publish a contract value, so that should remain a company-reported reference rather than an independently verified customer metric. The Ashdod Port relationship is strategically useful because the port has an innovation program that tests technologies in live operational conditions and connects selected companies to international port networks. International expansion is plausible, but ports and shipping companies have conservative procurement cycles, complex connectivity constraints, and high requirements for evidence that alerts reduce incidents without adding operator burden.\n\n**Traction, funding, and third-party validation.** Captain’s Eye has two publicly documented strategic financing events. CTech reported a $4 million strategic investment from SixAI in June 2022. In September 2025, Captain’s Eye announced completion of a Series A with strategic investors Eastern Pacific Shipping (EPS), MOL PLUS (Mitsui O.S.K. Lines group), and The Caravel Group; Splash247 independently reported that the round terms were not disclosed. The company has not published a lifetime funding total, so the 2022 amount should not be treated as total capital raised. The 2025 investor group represents commercial shipping relationships as well as financing: the company says those groups own or manage more than 1,700 vessels, but does not disclose their ownership percentages or board arrangements. Captain’s Eye’s October 2025 release marked a 100th system installation across EPS’s fleet. In May 2026, Digital Ship reported Pacific Basin selected the platform for deployment across more than 100 Handysize and Supramax vessels; that report establishes a rollout decision, not independently audited completion, contract value, or recognized revenue. Earlier evidence includes a reported XT Shipping partnership and Ashdod Port pilot, while Ashdod Port’s 2024 CSR report continued to describe the product as an AI system for real-time detection of safety incidents and environmental threats. The official site reports more than 5,000 cameras monitored around the clock, more than 100,000 events detected, a 40% improvement in response time, and a 15% increase in operational efficiency. These figures remain company-published and lack a disclosed methodology, baseline, time window, and independent audit. Current revenue, customer count, retention, valuation, precise Series A proceeds, patent portfolio, and formal certification remain unconfirmed in the public sources reviewed. The record therefore supports a stronger commercial adoption signal than the earlier pilot-only account, while keeping the scale and performance claims qualified.\n\n**Founders and team background.** The founders' backgrounds fit the problem unusually well. Uri Ben Dor is described by the company as a former missile-ship captain and former head of business operations in the Israeli Navy, giving him first-hand familiarity with shipboard procedures, watchkeeping, crew coordination, and the consequences of delayed decisions in high-stakes environments. Doron Oizerovich is described as a veteran with more than 23 years of research-and-development experience who developed operational systems in the defense sector and later focused on AI-vision technologies that are in use today. Their pairing joins domain understanding with the technical experience required to translate a visual model into an operating product. Rotem Battat, the company's VP of Business Development, is described as having 14 years of startup experience, including work from inception through successful exits, and a background in algorithms and systems engineering. The founding story is not just a marketing detail: maritime safety products fail when they generate alerts that do not map to crew procedures, while computer-vision products fail when they do not account for how a camera moves, what a watch officer can see, or which events are actionable. A former naval operator can help specify those workflows, and a long-tenured defense R&D leader can help with complex systems engineering. The public sources do not establish current headcount beyond Startup Nation Finder's 11-50 employee band and a historical profile reporting approximately 33 employees, so the present organizational depth, field-support capacity, and engineering distribution remain diligence questions.\n\n**Competitive dynamics.** Captain's Eye competes across overlapping categories rather than against one identical product. SEA.AI applies computer vision and sensor fusion to maritime perception and collision avoidance; Orca AI provides autonomous-navigation and situational-awareness systems for commercial shipping; Windward sells maritime intelligence and vessel-risk analytics built around large-scale data and behavioral analysis; ShipIn offers fleet visibility and video-oriented maritime operations tooling; and established industrial-video providers such as Axis Communications and Motorola Solutions' Avigilon can supply cameras, analytics, and security integrations to ports and facilities. Port and vessel operators can also rely on traditional watch teams, periodic inspections, radar, AIS, engine alarms, and bespoke systems integration as substitutes. Captain's Eye's plausible edge is the combination of retrofit deployment, maritime-specific event models, onboard processing, low-bandwidth operation, remote fleet management, and a workflow that spans safety, security, inspections, and operational continuity. The company's own product page emphasizes that no new equipment is required and that data is processed onboard before necessary information is sent to the cloud. That can lower deployment friction relative to a full sensor replacement. The edge is not automatically a durable moat: larger competitors may have more labeled data, more integrations, stronger procurement channels, and better support economics. Durability will depend on measured alert quality, fleet-level learning, customer-specific tuning, evidence of reduced incidents and downtime, and switching costs created by historical event data and embedded procedures.\n\n**Defense, security, and resilience dual-use relevance.** Captain's Eye qualifies as a credible dual-use company because the same core platform serves commercial maritime safety and security as well as protection of strategically important maritime and industrial infrastructure. In civilian operations it can identify fire, leaks, unsafe work, pollution, equipment failures, and unauthorized access; in security-sensitive operations those same capabilities can support port perimeter awareness, restricted-area monitoring, vessel security, offshore energy protection, and early triage of incidents around naval or coast-guard support infrastructure. The system's ability to process data onboard and transmit only necessary information is relevant to vessels and remote sites with constrained or intermittent communications. The Israeli Naval Forces and IDF background of the founders, the Ashdod Port pilot, and the company's stated onshore focus make the security translation more credible than a generic consumer computer-vision claim. The calibration is important: no source reviewed here proves a defense contract, military fielding, classified deployment, weapon-system integration, or certification for a defense program. The strongest defensible claim is that Captain's Eye is a maritime resilience and critical-infrastructure platform with a real path into security missions. Diligence for that path should cover cyber hardening of cameras and edge devices, tamper resistance, data residency, human authorization, degraded-network behavior, audit logs, false-negative consequences, privacy and labor requirements, and interoperability with port, coast-guard, naval, or emergency-management command systems.\n\n**Growth stage, trajectory, and key diligence risks.** Captain's Eye is classified as mid-stage commercialization rather than mature scale-up. It has operated since 2020, raised a meaningful strategic round, participated in pilots and technology programs with Ashdod Port, established a shipping partnership, and now presents an active product with thousands of cameras and a large event history. It is not mature because public disclosures do not establish recurring revenue, fleet-wide customer counts, retention, international scale, or independently measured safety outcomes, and because the current funding history visible in reliable sources is several years old. The growth trajectory is attractive if the company can convert vessel deployments into standardized fleet rollouts and extend the same event-detection layer into ports, offshore energy, petrochemical sites, and other critical infrastructure. The key diligence points are: (1) independent precision, recall, latency, and false-alarm rates by event class and operating condition; (2) evidence that the reported response-time and efficiency improvements are causal and repeatable; (3) current cash position, revenue mix, customer concentration, and support costs; (4) cybersecurity and resilience of onboard inference, cloud services, and camera integrations; (5) the product's behavior during connectivity loss, sensor failure, and adversarial or abnormal conditions; (6) regulatory, privacy, maritime-insurance, and liability exposure; and (7) the ability of a relatively small team to sell and support a geographically distributed fleet. The opportunity is strategically relevant and operationally grounded, but its durable value depends on proving that early warning improves real-world outcomes without creating alert fatigue or a new critical failure surface.\n"
+logo = "Unknown"
+website = "https://www.captain-eye.com"
+sector = "Maritime AI / Safety, Security, and Operational Video Analytics"
+founded = "2020"
+headquarters = "Haifa, Israel"
+employees = "Unknown (current headcount not disclosed; the 2023 Israel Innovation Authority profile lists 10 employees and is not current staffing evidence)"
+funding_stage = "Series A completed September 2025; disclosed $4M strategic investment from SixAI in 2022; Series A proceeds and company-reported lifetime total undisclosed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Captain's Eye has a substantive dual-use profile built around the same maritime video-analytics and risk-management platform. Commercial shipping, ports, offshore operators, and industrial facilities can use it to detect fires, leaks, unsafe behavior, equipment failures, pollution events, and unauthorized access; security and resilience users can apply the same capabilities to port protection, restricted-area monitoring, offshore energy, emergency response, and other critical infrastructure. The Israeli Navy and IDF founder background, Ashdod Port pilot, and onshore expansion make the security path credible. No public source reviewed here proves a defense contract, military fielding, classified deployment, or weapon integration, so the defense case remains a well-supported resilience and security adjacency rather than a claimed military program."
+key_technologies = ["Maritime-specific neural networks and fine-tuned commercial AI models", "Onboard edge video inference with low-bandwidth cloud synchronization", "Real-time CCTV analytics for smoke, fire, leaks, behavior, access, PPE, and equipment events", "Multi-camera fleet monitoring and remote operations dashboard", "Customizable alert routing, event documentation, and evidence harvesting", "Digital inspections, policy-execution workflows, and historical predictive-risk analytics", "Integration with existing CCTV plus optional radar and thermal-sensor inputs"]
+use_cases = ["Early detection of smoke, fire, leaks, and hazardous-material incidents aboard commercial vessels", "Remote monitoring of safety behavior, PPE compliance, and operational rule violations across a fleet", "Port and terminal perimeter monitoring for unauthorized access, pollution, and hazardous events", "Offshore oil, gas, and energy-facility safety and security monitoring", "Critical-infrastructure incident triage when human watch teams cannot monitor every camera continuously", "Automated remote inspections and video evidence for safety-compliance workflows", "Coast-guard, naval-support, and emergency-response situational awareness as a security-adjacent deployment"]
+investible = true
+investment_rationale = "Captain's Eye merits a positive legacy priority signal because it addresses a concrete, expensive operational problem with a product that can retrofit existing camera infrastructure into an early-warning layer. (1) The company has domain-fit founders from the Israeli Navy and defense R&D, a $4M strategic investment from SixAI, a reported XT Shipping partnership, and an Ashdod Port pilot that progressed into the port's technology-acquisition and royalty framework. (2) Its current product claims cover more than detection: onboard processing, low-bandwidth operation, remote fleet management, digital inspections, and policy execution can create workflow depth beyond a point camera model. (3) The same software can support commercial shipping, ports, offshore energy, and security-sensitive infrastructure, giving the company a credible dual-use market path. Counterweights are material: public evidence is thin on current financial performance, customer concentration, contract duration, retention, and independent model metrics; the latest clearly disclosed financing is from 2022; and maritime AI faces stronger-capitalized incumbents and long procurement cycles. The investible flag is an internal strategic-priority signal, not an investment recommendation."
+strategic_value = "Captain's Eye's strategic value lies in maritime and critical-infrastructure resilience rather than in a weapons capability. (1) Ports, ships, offshore facilities, and industrial plants are difficult to monitor because camera volumes are high, crews are distributed, and incidents can escalate before a human sees the relevant frame. (2) A maritime-specific edge-analytics layer can improve detection latency while preserving useful operation over constrained vessel-to-shore links. (3) The retrofit model matters for allied operators that already have heterogeneous camera estates and cannot replace every sensor or centralize every video stream. (4) Ashdod Port's live operational environment and the founders' naval experience provide a credible route from commercial safety into security and emergency-response missions. The ceiling on strategic value is set by proof: cybersecure deployment, auditable alerts, robust behavior under connectivity loss, independently measured false-alarm and miss rates, and evidence that the system integrates into rather than distracts from command workflows."
+potential_score = 76.0
+technology_score = 78.0
+market_score = 77.0
+team_score = 82.0
+dual_use_score = 82.0
+strategic_alignment_score = 84.0
+stage = "mid"
+stage_rationale = "Captain's Eye is classified as mid-stage because it has moved beyond a laboratory concept: the company was founded in 2020, received a disclosed $4M strategic investment from SixAI, reported a shipping partnership and Ashdod Port pilot, participated in the port's technology program, and now presents an active commercial platform with a company-reported base of more than 5,000 cameras and 100,000-plus detected events. It is not mature because public sources do not establish recurring revenue, current customer count, retention, international scale, current capitalization, or independently audited performance. The latest clearly disclosed financing is from 2022, and public employee data remains a small-company range. The appropriate interpretation is an operating maritime-AI startup with meaningful field and ecosystem validation that still needs to prove repeatable fleet-scale commercialization and support economics."
+competitors = [
+  "SEA.AI (maritime computer vision and sensor-fusion systems for collision avoidance and situational awareness)",
+  "Orca AI (autonomous-navigation and visual-perception platform for commercial shipping)",
+  "Windward (maritime intelligence and vessel-risk analytics built around large-scale behavioral data)",
+  "ShipIn (fleet visibility, vessel video, and remote maritime operations tooling)",
+  "Axis Communications and Avigilon (incumbent camera and enterprise video-analytics platforms used in ports and industrial sites)",
+  "Azimut.ai (Israeli camera-based maritime awareness and vessel-tracking startup competing for port and coastal-security workflows)",
+  "Traditional watch teams, radar/AIS, and bespoke port-security integrators (installed operational substitute and integration approach)"
+]
+competitive_edge = "Captain's Eye's potential edge is operational and architectural rather than a publicly proven proprietary moat. (1) It can use existing vessel and facility cameras, reducing the capital and downtime burden of a new sensor installation. (2) Its models are tuned to maritime events such as smoke, leaks, unsafe behavior, access violations, and equipment failures rather than only generic object detection. (3) Onboard processing and low-bandwidth transmission are well matched to ships and remote infrastructure, where sending continuous raw video to a cloud can be expensive or impossible. (4) The product connects detection to remote fleet management, digital inspections, policy execution, and historical risk analysis, creating more workflow depth than an isolated alert. (5) Naval and maritime operating experience in the founding team can improve alert design and customer integration. The counter-case is strong: SEA.AI, Orca AI, Windward, shipping software providers, camera vendors, and systems integrators have more capital or distribution, and the company's public record does not yet show independent accuracy benchmarks, proprietary-data scale, or switching costs."
+risk_factors = [
+  "Limited public disclosure of current revenue, customer count, contract duration, retention, margins, valuation, and financing runway",
+  "Company-reported performance metrics lack independent methodology, baseline definitions, event-class breakdowns, and third-party audit",
+  "Computer-vision generalization risk across darkness, glare, fog, spray, vibration, occlusion, camera quality, vessel layouts, and rare incidents",
+  "False negatives can create safety, pollution, security, and liability exposure while false positives can overwhelm crews and cause alert fatigue",
+  "Cybersecurity and resilience risk across onboard edge devices, cameras, cloud services, remote dashboards, and third-party integrations",
+  "Long maritime, port, industrial, government, and security procurement cycles can make pilot-to-rollout conversion slow and uneven",
+  "Competition from better-capitalized maritime-AI firms, enterprise video vendors, traditional watch teams, and bespoke systems integrators",
+  "Defense and critical-infrastructure expansion may face privacy, labor, data-residency, certification, export-control, and liability constraints"
+]
+risk_level = "medium"
+signals = [
+  "Israeli Navy and IDF-founded team with direct maritime and defense R&D experience",
+  "$4M strategic investment from SixAI reported in 2022",
+  "Reported XT Shipping partnership and Ashdod Port pilot",
+  "Ashdod Port technology acquisition and royalty framework participation",
+  "Official site reports more than 5,000 cameras and 100,000-plus detected events"
+]
+priority_rank = 0
+priority_rationale = "Captain's Eye warrants active monitoring because it combines a specific critical-infrastructure problem, an operating product, Israeli maritime and defense expertise, and a credible path from commercial safety into security and resilience. (1) The company has public evidence of strategic funding, an Ashdod Port pilot, a shipping partnership, and participation in a port program that tests technologies in live conditions. (2) Its edge and low-bandwidth design are relevant to remote vessels and infrastructure where connectivity and human attention are constrained. (3) The same software can support shipping, ports, offshore energy, industrial safety, emergency response, and security-sensitive maritime operations. Factors capping priority are equally important: no public defense contract or military deployment, limited current financial disclosure, company-reported rather than independently audited performance metrics, a small disclosed organization, and strong competition from maritime-AI and incumbent video platforms. Priority should rise with independently measured alert quality, repeatable fleet rollouts, disclosed recurring revenue, cyber and safety assurance, and evidence of critical-infrastructure or government adoption. This is an internal diligence signal, not an investment recommendation."
+crawled_at = "2026-09-01T04:26:42Z"
+updated_at = "2026-09-01T04:26:42Z"
+
+[[public_sources]]
+label = "Captain’s Eye"
+url = "https://www.captain-eye.com/"
+description = "Official company homepage; active status, executive roles, product positioning, customer testimonial and company-reported product metrics."
+
+[[public_sources]]
+label = "Captain’s Eye — About"
+url = "https://www.captain-eye.com/about"
+description = "Company history, 2020 founding, maritime and onshore scope, founder identities and background."
+
+[[public_sources]]
+label = "Captain’s Eye — Resources"
+url = "https://www.captain-eye.com/resources"
+description = "Newsroom index confirming 2025 investment and deployment announcements and 2026 product activity."
+
+[[public_sources]]
+label = "Captain’s Eye Secures Strategic Investment from Global Maritime Leaders"
+url = "https://www.einpresswire.com/article/844962658/captain-s-eye-secures-strategic-investment-from-global-maritime-leaders"
+description = "2025 Series A completion, named strategic investors, company claims on deployment across hundreds of vessels and investor fleet scale; terms omitted."
+
+[[public_sources]]
+label = "Shipping heavyweights invest in AI safety firm Captain’s Eye"
+url = "https://splash247.com/shipping-heavyweights-invest-in-ai-safety-firm-captains-eye/"
+description = "Independent confirmation of Series A, named investors, undisclosed terms, founded date and deployment across hundreds of vessels."
+
+[[public_sources]]
+label = "Maritime startup Captain’s Eye receives $4 million investment from SixAI"
+url = "https://www.calcalistech.com/ctechnews/article/rkdxrrdq9"
+description = "2022 $4m strategic investment from SixAI, Haifa connection, founders, XT Shipping partnership and Ashdod Port pilot."
+
+[[public_sources]]
+label = "Captain’s Eye and Eastern Pacific Shipping Mark 100th System Installation Across Global Fleet"
+url = "https://www.einpresswire.com/article/855486852/captain-s-eye-and-eastern-pacific-shipping-mark-100th-system-installation-across-global-fleet-advancing-maritime-safety"
+description = "Company-announced 100th installation across EPS fleet in October 2025 and product scope."
+
+[[public_sources]]
+label = "Pacific Basin deploys Captain’s Eye AI monitoring across more than 100 bulk vessels"
+url = "https://thedigitalship.com/news/maritime-software/pacific-basin-deploys-captains-eye-ai-monitoring-across-more-than-100-bulk-vessels/"
+description = "May 2026 report that Pacific Basin selected the system for rollout across more than 100 dry-bulk vessels."
+
+[[public_sources]]
+label = "Ashdod Port CSR Report 2024"
+url = "https://www.ashdodport.co.il/about/csr/Documents/apc-csr-report-2024-eng.pdf"
+description = "Port-reported ongoing evaluation of Captain’s Eye AI for safety incidents and environmental threats; no proof of recurring paid deployment."
+
+[[public_sources]]
+label = "CAPTAINS EYE LTD — Israel Innovation Authority profile"
+url = "https://innovationisrael.org.il/en/importWinner/516242096/"
+description = "Company registration number 516242096, Israel location, 2020 establishment, listed management/founders, product category; employee count is an older agency record."
+
+[[public_sources]]
+label = "MOL PLUS additional investment and MOU with Captain’s Eye"
+url = "https://en.molplus.net/newsabout/KxwsouFt"
+description = "Additional investment and MOU reported 2025-09-04; MOL PLUS dispatching directors for management involvement; does not disclose amount or equity percentage."
+
+[[public_sources]]
+label = "Captain’s Eye — Product"
+url = "https://www.captain-eye.com/product"
+description = "Existing CCTV and sensors, real-time event detection, installation and product capabilities; claims remain company assertions."
+
+[[public_sources]]
+label = "SEA.AI — Maritime Vision"
+url = "https://sea.ai/"
+description = "Primary product evidence supporting comparable: onboard optical situational awareness and hazard detection."
+
+[[public_sources]]
+label = "Orca AI — Maritime AI"
+url = "https://www.orca-ai.io/"
+description = "Primary product evidence supporting comparable: maritime computer vision and fleet situational awareness/navigation."
+
+[[public_sources]]
+label = "ShipIn — FleetVision"
+url = "https://shipin.ai/"
+description = "Primary product evidence supporting comparable: video-based fleet safety and operational intelligence."
+
+signals = ["Israeli Navy and IDF-founded team with direct maritime and defense R&D experience", "$4M strategic investment from SixAI reported in 2022", "Reported XT Shipping partnership and Ashdod Port pilot", "Ashdod Port technology acquisition and royalty framework participation", "Official site reports more than 5,000 cameras and 100,000-plus detected events", "September 2025 Series A with EPS, MOL PLUS, and The Caravel Group; terms undisclosed", "October 2025 company-announced 100th EPS installation", "May 2026 media-reported Pacific Basin rollout decision for 100+ vessels"]
+updated_at = "2026-10-04T13:26:02Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[[intelligence.people]]
+name = "Uri Ben Dor"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Former Israeli Navy missile-ship captain and head of Navy business operations, according to company biography."
+source_ids = ["company_home", "company_about", "series_a_release"]
+
+[[intelligence.people]]
+name = "Doron Oizerovich"
+role = "Co-founder and CTO"
+is_founder = true
+current = true
+background = "Company identifies him as co-founder and CTO; prior defense-sector R&D and AI-vision experience is described in the retained company profile."
+source_ids = ["company_home", "company_about"]
+
+[[intelligence.people]]
+name = "Rotem Battat"
+role = "VP of Business Development"
+is_founder = false
+current = true
+background = "Named as VP of Business Development in company materials and the 2025 release."
+source_ids = ["company_home", "series_a_release"]
+
+[[intelligence.investors]]
+name = "SixAI"
+investor_type = "corporate"
+relationship = "historical"
+round_ids = ["strategic-2022"]
+website = "https://sixai.tech/"
+source_ids = ["sixai_round"]
+
+[[intelligence.investors]]
+name = "Eastern Pacific Shipping (EPS)"
+investor_type = "corporate"
+relationship = "current"
+round_ids = ["series-a-2025"]
+website = "https://www.epshipping.com.sg/"
+source_ids = ["series_a_release", "series_a_media"]
+
+[[intelligence.investors]]
+name = "MOL PLUS (Mitsui O.S.K. Lines group)"
+investor_type = "corporate"
+relationship = "current"
+round_ids = ["series-a-2025"]
+website = "https://en.molplus.net/"
+source_ids = ["series_a_release", "series_a_media", "molplus_release"]
+notes = "Investor announcement states additional investment and planned dispatch of directors; precise timing and stake undisclosed."
+
+[[intelligence.investors]]
+name = "The Caravel Group"
+investor_type = "corporate"
+relationship = "current"
+round_ids = ["series-a-2025"]
+website = "https://www.caravel-group.com/"
+source_ids = ["series_a_release", "series_a_media"]
+
+[[intelligence.traction]]
+kind = "product"
+date = "2025-10-08"
+description = "Captain’s Eye announced installation of its 100th system across Eastern Pacific Shipping’s fleet. Company-issued claim; install base and operational results not independently audited."
+source_ids = ["eps_installations"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2026-05-26"
+description = "Digital Ship reported that Pacific Basin selected Captain’s Eye for deployment across more than 100 Handysize and Supramax vessels. This is a reported rollout decision, not proof of completed installation, revenue recognition, or contract value."
+source_ids = ["pacific_basin_rollout"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2026-10-04"
+description = "Company homepage currently carries a testimonial attributed to EPS COO Capt. Anil Singh, stating Captain’s Eye is integrated across almost the entire EPS fleet; no denominator, contract value, or independently verified customer metric provided."
+source_ids = ["company_home"]
+
+[[intelligence.traction]]
+kind = "product"
+date = "2026-10-04"
+description = "Company homepage reports 5,000+ cameras monitored, 100,000+ events detected, 40% response-time improvement and 15% operational-efficiency increase; methodology, periods, baselines and independent audit are not disclosed."
+source_ids = ["company_home"]
+
+[[intelligence.traction]]
+kind = "partnership"
+date = "2025-09-04"
+description = "MOL PLUS reports additional investment and a new MOU to develop advanced monitoring capabilities, and says it will dispatch directors to support management."
+source_ids = ["molplus_release"]
+
+[[intelligence.traction]]
+kind = "other"
+date = "2024"
+description = "Ashdod Port’s 2024 CSR report names Captain’s Eye among AI systems for real-time detection of safety incidents and environmental threats; it does not report a paid contract or production scale."
+source_ids = ["ashdod_2024"]
+
+[[intelligence.comparables]]
+name = "SEA.AI"
+website = "https://sea.ai/"
+rationale = "Maritime optical situational awareness and hazard-detection products compete for vessel safety and visual monitoring budgets."
+differentiation = "SEA.AI emphasizes perception and hazard awareness using optical and sensor inputs; Captain’s Eye emphasizes fleet risk workflows, unsafe behavior and operational monitoring across existing cameras."
+source_ids = ["seaai_product", "company_home"]
+
+[[intelligence.comparables]]
+name = "Orca AI"
+website = "https://www.orca-ai.io/"
+rationale = "Maritime AI and computer-vision systems target commercial fleets and shore-side operational awareness."
+differentiation = "Orca AI is more navigation and situational-awareness focused; Captain’s Eye is positioned around safety/security events and fleet operational risk."
+source_ids = ["orca_product", "company_home"]
+
+[[intelligence.comparables]]
+name = "ShipIn"
+website = "https://shipin.ai/"
+rationale = "Video-based ship fleet operations and safety intelligence is a close product substitute."
+differentiation = "Both work with shipboard video; customer evidence, alert classes, system integration, deployment economics and independently measured outcomes determine practical differentiation."
+source_ids = ["shipin_product", "company_home"]
+
+[intelligence.company]
+company_id = "il-captains-eye"
+legal_name = "CAPTAINS EYE LTD"
+aliases = ["Captain’s Eye", "Captain Eye", "Captains Eye Ltd"]
+operating_status = "active"
+business_model = "Enterprise SaaS / licensing for AI video analytics and risk management, using customers’ onboard and facility camera infrastructure."
+products = ["AI-powered maritime and onshore video analytics platform", "Remote fleet and facility monitoring", "Digital safety inspections and alerts"]
+locations = ["Haifa, Israel"]
+founded_on = "2020"
+country_of_incorporation = "Israel"
+source_ids = ["company_home", "company_about", "iaa_profile"]
+
+[[intelligence.company.registry_identifiers]]
+jurisdiction = "Israel"
+scheme = "Israeli company number"
+identifier = "516242096"
+source_ids = ["iaa_profile"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "The Israel Innovation Authority lists CAPTAINS EYE LTD, registration number 516242096, as an Israeli company established in 2020; company and contemporaneous funding materials identify the Haifa/Israeli maritime venture and founders with Israeli Navy backgrounds."
+as_of = "2026-10-04"
+source_ids = ["iaa_profile", "company_about", "sixai_round"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Two public events found: $4 million strategic investment from SixAI reported by CTech in June 2022, and an undisclosed Series A announced as completed on 2025-09-04 with EPS, MOL PLUS, and The Caravel Group. No company-announced lifetime total or amount for the Series A was found. Do not add a lifetime total from the only quantified round."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "strategic-2022"
+round_type = "Strategic investment"
+instrument = "equity"
+status = "closed"
+announced_on = "2022-06"
+amount_status = "reported"
+amount = 4000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["SixAI"]
+participating_investors = ["SixAI"]
+source_ids = ["sixai_round"]
+notes = "CTech describes a strategic investment; no public valuation or security terms were found."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2025"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2025-09-04"
+amount_status = "undisclosed"
+amount_scope = "round"
+lead_investors = []
+participating_investors = ["Eastern Pacific Shipping (EPS)", "MOL PLUS (Mitsui O.S.K. Lines group)", "The Caravel Group"]
+source_ids = ["series_a_release", "series_a_media", "molplus_release"]
+notes = "Terms and amount undisclosed. Company announcement states completion on September 4, 2025; Splash247 confirms undisclosed terms. MOL PLUS’s own report says it made an additional investment and would dispatch directors, without disclosing stake or whether its investment was made solely in this financing."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private Israeli company. Public cap table and investor percentages are not disclosed. MOL PLUS says it will dispatch directors following additional investment; no public filing supports a parent-company relationship or any specific ownership percentage."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["series_a_release", "series_a_media", "molplus_release"]
+deals = []
+holdings = []
+
+[intelligence.research]
+researched_at = "2026-10-04T13:26:02Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Captain’s Eye official company about product resources current team", "Captain’s Eye funding raised seed Series A investors valuation acquired", "Captain’s Eye 2025 Series A EPS MOL PLUS Caravel investment announcement", "Captain’s Eye SixAI $4 million June 2022 CTech", "Captain’s Eye MOL PLUS additional investment MOU dispatch directors", "Captain’s Eye revenue ARR financials employees customers 2025 2026", "Captain’s Eye Pacific Basin 100 vessels EPS 100th installation", "Captain’s Eye patents WIPO USPTO maritime video analytics", "Captain’s Eye competitors SEA.AI Orca AI ShipIn maritime video", "Captain’s Eye Israeli company 516242096 Haifa founders", "Captain’s Eye Ashdod Port CSR 2024 pilot safety pollution", "Captain’s Eye defense military security dual use government contracts"]
+gaps = ["team: current named leadership verified from official pages, but wider team roster, current headcount and organizational depth are not publicly established; IIA employee count is an older 10-person record and not treated as current.", "investors: Series A participants are disclosed, but private cap table, ownership percentages, board rights and exact investment timing/amounts are unavailable.", "financials: no public revenue, ARR, profitability, burn, runway, contract values, valuation, or company-announced lifetime funding total found.", "traction: EPS installation count and company homepage operating metrics are company statements; Pacific Basin rollout is a media-reported selection/decision without verified completion, revenue or audited impact.", "intellectual_property: no company-assigned patent or published patent family was identified from targeted public web searches; search coverage is not a legal freedom-to-operate opinion.", "competition: peers are identified by product positioning; comparative win/loss, performance, pricing, market share and customer overlap are not disclosed.", "ownership: exact shareholders and percentages are private; no parent company or acquisition found in sources reviewed.", "dual_use: no public defense contract, military deployment, classified use, certification or weapon-system integration found; security and resilience applicability is inferred from commercial technical capabilities.", "funding: 2025 Series A amount is undisclosed and no reported company total was located; historic $4m from 2022 is not a lifetime total."]
+conflicts = ["MOL PLUS describes an additional investment and director dispatch in its own announcement, while the September 2025 Series A release groups MOL PLUS with EPS and The Caravel Group; the exact investment date, amount, stake, governance rights, and whether the additional investment is coterminous with that Series A are not specified."]
+diligence_questions = ["What is the Series A amount and cap table impact for EPS, MOL PLUS, and The Caravel Group, and what director or governance rights did MOL PLUS receive?", "What are the paid and active vessel counts, recurring revenue, contract duration, renewal/retention rates, implementation costs, and rollout status for EPS and Pacific Basin?", "What independently validated precision, recall, false-alert rate, event-class coverage, cyber controls, and safety assurance evidence exists across varied vessels and operating conditions?", "How much of the claimed 5,000+ cameras and 100,000+ events overlaps EPS and Pacific Basin deployments, and what is the metric period and calculation method?"]
+
+[[intelligence.research.sources]]
+id = "company_home"
+url = "https://www.captain-eye.com/"
+title = "Captain’s Eye"
+publisher = "Captain’s Eye"
+kind = "company"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["Official company homepage", "active status, executive roles, product positioning, customer testimonial and company-reported product metrics."]
+
+[[intelligence.research.sources]]
+id = "company_about"
+url = "https://www.captain-eye.com/about"
+title = "Captain’s Eye — About"
+publisher = "Company"
+kind = "company"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["Company history, 2020 founding, maritime and onshore scope, founder identities and background."]
+
+[[intelligence.research.sources]]
+id = "company_resources"
+url = "https://www.captain-eye.com/resources"
+title = "Captain’s Eye — Resources"
+publisher = "Company"
+kind = "company"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["Newsroom index confirming 2025 investment and deployment announcements and 2026 product activity."]
+
+[[intelligence.research.sources]]
+id = "series_a_release"
+url = "https://www.einpresswire.com/article/844962658/captain-s-eye-secures-strategic-investment-from-global-maritime-leaders"
+title = "Captain’s Eye Secures Strategic Investment from Global Maritime Leaders"
+publisher = "Company press release distributed by EIN Presswire"
+kind = "company"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["2025 Series A completion, named strategic investors, company claims on deployment across hundreds of vessels and investor fleet scale", "terms omitted."]
+published_on = "2025-09-04"
+
+[[intelligence.research.sources]]
+id = "series_a_media"
+url = "https://splash247.com/shipping-heavyweights-invest-in-ai-safety-firm-captains-eye/"
+title = "Shipping heavyweights invest in AI safety firm Captain’s Eye"
+publisher = "Splash247"
+kind = "media"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["Independent confirmation of Series A, named investors, undisclosed terms, founded date and deployment across hundreds of vessels."]
+published_on = "2025-09-05"
+
+[[intelligence.research.sources]]
+id = "sixai_round"
+url = "https://www.calcalistech.com/ctechnews/article/rkdxrrdq9"
+title = "Maritime startup Captain’s Eye receives $4 million investment from SixAI"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["2022 $4m strategic investment from SixAI, Haifa connection, founders, XT Shipping partnership and Ashdod Port pilot."]
+published_on = "2022-06"
+
+[[intelligence.research.sources]]
+id = "eps_installations"
+url = "https://www.einpresswire.com/article/855486852/captain-s-eye-and-eastern-pacific-shipping-mark-100th-system-installation-across-global-fleet-advancing-maritime-safety"
+title = "Captain’s Eye and Eastern Pacific Shipping Mark 100th System Installation Across Global Fleet"
+publisher = "Company press release distributed by EIN Presswire"
+kind = "company"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["Company-announced 100th installation across EPS fleet in October 2025 and product scope."]
+published_on = "2025-10-08"
+
+[[intelligence.research.sources]]
+id = "pacific_basin_rollout"
+url = "https://thedigitalship.com/news/maritime-software/pacific-basin-deploys-captains-eye-ai-monitoring-across-more-than-100-bulk-vessels/"
+title = "Pacific Basin deploys Captain’s Eye AI monitoring across more than 100 bulk vessels"
+publisher = "Digital Ship"
+kind = "media"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["May 2026 report that Pacific Basin selected the system for rollout across more than 100 dry-bulk vessels."]
+published_on = "2026-05-26"
+
+[[intelligence.research.sources]]
+id = "ashdod_2024"
+url = "https://www.ashdodport.co.il/about/csr/Documents/apc-csr-report-2024-eng.pdf"
+title = "Ashdod Port CSR Report 2024"
+publisher = "Ashdod Port Company"
+kind = "customer"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["Port-reported ongoing evaluation of Captain’s Eye AI for safety incidents and environmental threats", "no proof of recurring paid deployment."]
+published_on = "2025"
+
+[[intelligence.research.sources]]
+id = "iaa_profile"
+url = "https://innovationisrael.org.il/en/importWinner/516242096/"
+title = "CAPTAINS EYE LTD — Israel Innovation Authority profile"
+publisher = "Israel Innovation Authority"
+kind = "government"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["Company registration number 516242096, Israel location, 2020 establishment, listed management/founders, product category", "employee count is an older agency record."]
+
+[[intelligence.research.sources]]
+id = "molplus_release"
+url = "https://en.molplus.net/newsabout/KxwsouFt"
+title = "MOL PLUS additional investment and MOU with Captain’s Eye"
+publisher = "MOL PLUS"
+kind = "investor"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["Additional investment and MOU reported 2025-09-04", "MOL PLUS dispatching directors for management involvement", "does not disclose amount or equity percentage."]
+published_on = "2025-09-04"
+
+[[intelligence.research.sources]]
+id = "product_page"
+url = "https://www.captain-eye.com/product"
+title = "Captain’s Eye — Product"
+publisher = "Company"
+kind = "company"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["Existing CCTV and sensors, real-time event detection, installation and product capabilities", "claims remain company assertions."]
+
+[[intelligence.research.sources]]
+id = "seaai_product"
+url = "https://sea.ai/"
+title = "SEA.AI — Maritime Vision"
+publisher = "SEA.AI"
+kind = "other"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["Primary product evidence supporting comparable: onboard optical situational awareness and hazard detection."]
+
+[[intelligence.research.sources]]
+id = "orca_product"
+url = "https://www.orca-ai.io/"
+title = "Orca AI — Maritime AI"
+publisher = "Orca AI"
+kind = "other"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["Primary product evidence supporting comparable: maritime computer vision and fleet situational awareness/navigation."]
+
+[[intelligence.research.sources]]
+id = "shipin_product"
+url = "https://shipin.ai/"
+title = "ShipIn — FleetVision"
+publisher = "ShipIn"
+kind = "other"
+accessed_at = "2026-10-04T13:26:02Z"
+claims = ["Primary product evidence supporting comparable: video-based fleet safety and operational intelligence."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T13:26:02Z"
+next_review_on = "2027-01-04"
+queries = ["Captain’s Eye official company about product resources current team", "Captain’s Eye Israeli company 516242096 Haifa founders"]
+source_ids = ["company_home", "company_about", "iaa_profile"]
+summary = "Official company pages and IIA profile establish the product, founder identities, Israeli legal company identifier, and active web presence."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T13:26:02Z"
+next_review_on = "2027-01-04"
+queries = ["Captain’s Eye funding raised seed Series A investors valuation acquired", "Captain’s Eye 2025 Series A EPS MOL PLUS Caravel investment announcement", "Captain’s Eye SixAI $4 million June 2022 CTech", "Captain’s Eye MOL PLUS additional investment MOU dispatch directors"]
+source_ids = ["sixai_round", "series_a_release", "series_a_media", "molplus_release"]
+summary = "Two events found: $4m SixAI investment (2022) and undisclosed 2025 Series A; no public company total or valuation."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T13:26:02Z"
+next_review_on = "2027-01-04"
+queries = ["Captain’s Eye 2025 Series A EPS MOL PLUS Caravel investment announcement", "Captain’s Eye MOL PLUS additional investment MOU dispatch directors"]
+source_ids = ["sixai_round", "series_a_release", "series_a_media", "molplus_release"]
+summary = "SixAI, EPS, MOL PLUS and The Caravel Group are named; exact stakes and cap table remain private."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T13:26:02Z"
+next_review_on = "2027-01-04"
+queries = ["Captain’s Eye official company about product resources current team"]
+source_ids = ["company_home", "company_about", "series_a_release"]
+summary = "Official pages verify three current executives; no complete current roster or current headcount published."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T13:26:02Z"
+next_review_on = "2027-01-04"
+queries = ["Captain’s Eye MOL PLUS additional investment MOU dispatch directors", "Captain’s Eye funding raised seed Series A investors valuation acquired"]
+source_ids = ["molplus_release", "series_a_release", "series_a_media"]
+summary = "No ownership percentages or complete shareholder register found; MOL PLUS publicly states it will dispatch directors."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T13:26:02Z"
+next_review_on = "2027-01-04"
+queries = ["Captain’s Eye revenue ARR financials employees customers 2025 2026"]
+source_ids = ["series_a_media", "sixai_round", "iaa_profile"]
+summary = "No current revenue, ARR, profitability, burn, runway, valuation or lifetime funding total disclosed. IIA profile’s employee figure is dated and not current."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T13:26:02Z"
+next_review_on = "2027-01-04"
+queries = ["Captain’s Eye Pacific Basin 100 vessels EPS 100th installation", "Captain’s Eye Ashdod Port CSR 2024 pilot safety pollution"]
+source_ids = ["eps_installations", "pacific_basin_rollout", "ashdod_2024", "company_home"]
+summary = "Evidence includes 100th EPS installation (company-announced), Pacific Basin rollout selection across 100+ vessels (media-reported), Ashdod Port 2024 mention, and company-reported operating metrics."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T13:26:02Z"
+next_review_on = "2027-01-04"
+queries = ["Captain’s Eye patents WIPO USPTO maritime video analytics"]
+source_ids = ["product_page"]
+summary = "Targeted company-name and maritime video analytics patent searches surfaced no verifiable assigned patent family; absence is not proof none exists."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T13:26:02Z"
+next_review_on = "2027-01-04"
+queries = ["Captain’s Eye competitors SEA.AI Orca AI ShipIn maritime video"]
+source_ids = ["seaai_product", "orca_product", "shipin_product", "company_home"]
+summary = "Product-source comparison identifies SEA.AI, Orca AI and ShipIn as adjacent competitors; comparative performance and market data are not public."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T13:26:02Z"
+next_review_on = "2027-01-04"
+queries = ["Captain’s Eye defense military security dual use government contracts"]
+source_ids = ["company_home", "company_about", "ashdod_2024"]
+summary = "Technical fit for commercial maritime safety and infrastructure security is plausible, but no public defense contract or fielding evidence was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The official site remains live, advertises the active product, publishes 2026 material, and invites commercial inquiries."
+verified_at = "2026-10-04T13:26:02Z"
+source_ids = ["company_home", "company_resources"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Israel Innovation Authority identifies the Israeli company, gives Israel as country, and connects it to the Haifa-founded maritime venture; company material confirms Israeli Navy founder backgrounds."
+verified_at = "2026-10-04T13:26:02Z"
+source_ids = ["iaa_profile", "company_about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.strategic-2022.amount"
+support = "direct"
+summary = "CTech reports that SixAI made a $4 million strategic investment in Captain’s Eye in June 2022."
+verified_at = "2026-10-04T13:26:02Z"
+source_ids = ["sixai_round"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.strategic-2022.participating_investors"
+support = "direct"
+summary = "CTech names SixAI as the 2022 strategic investor."
+verified_at = "2026-10-04T13:26:02Z"
+source_ids = ["sixai_round"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.strategic-2022.lead_investors"
+support = "direct"
+summary = "CTech identifies SixAI as the only named strategic investor for the 2022 investment."
+verified_at = "2026-10-04T13:26:02Z"
+source_ids = ["sixai_round"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2025.participating_investors"
+support = "direct"
+summary = "The company announcement and independent maritime trade press name EPS, MOL PLUS, and The Caravel Group as Series A strategic investors."
+verified_at = "2026-10-04T13:26:02Z"
+source_ids = ["series_a_release", "series_a_media"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2025.lead_investors"
+support = "direct"
+summary = "Neither the company nor the independent coverage designates a lead investor; list is empty by design and no lead is inferred."
+verified_at = "2026-10-04T13:26:02Z"
+source_ids = ["series_a_release", "series_a_media"]

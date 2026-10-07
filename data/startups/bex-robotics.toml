@@ -1,0 +1,410 @@
+name = "BEX Robotics"
+description = "BEX Robotics is an Israeli early-stage robotics company developing controller hardware and operating-system software that connects AI inference with real-time motor control for robots and drones. Founded in January 2026, it is still in R&D and has publicly disclosed two undisclosed SAFE financings from VentureIsrael."
+detailed_description = """
+**Product and the concrete problem it solves.** BEX Robotics is developing the control layer between an intelligent model and the physical machine that model is supposed to move. Startup Nation Finder describes the company as building controller boards and operating-system software for physical-AI systems, with the specific purpose of connecting AI inference to real-time motor control across robotic and drone applications. That is a consequential integration problem. A perception or planning model can decide that a vehicle should turn, a gripper should close, or an aircraft should change attitude, but the decision still has to pass through deterministic timing, actuator interfaces, feedback loops, safety limits, and hardware-specific drivers before anything moves. Teams often solve this boundary with a mixture of commercial compute modules, bespoke embedded code, flight-control or industrial-control software, and repeated platform-specific integration. BEX is trying to package more of that boundary into a reusable product. The public record does not yet show a shipped product, a named deployment, or an independently measured reduction in development time, so the company should be understood as a technically focused R&D venture with a clear problem definition rather than as a proven robotics platform.
+
+**Core technology and how it actually works.** The disclosed architecture has two linked parts. First, specialized controller boards provide the physical compute and I/O interface close to motors, sensors, and other actuators. Second, an operating-system software layer is intended to make those boards usable as a common runtime for AI-enabled machines. In practical terms, BEX’s proposed value is to accept decisions or control outputs produced by an AI workload, translate them into time-sensitive control operations, and coordinate the resulting motion while hiding some of the differences between robot and drone platforms. This is the level of specificity supported by the public material; details such as processor selection, real-time kernel, bus protocols, middleware compatibility, sensor-fusion implementation, safety architecture, latency budget, redundancy, cybersecurity controls, and supported robot operating systems are not publicly described. Those omissions are material rather than cosmetic. A controller that works in a laboratory demonstrator is not automatically suitable for a safety-critical arm, a rapidly moving aircraft, or a defense vehicle operating under vibration and intermittent communications. The technology thesis is credible because the AI-to-actuator boundary is genuinely difficult, but the engineering proof remains to be demonstrated through benchmarks, reference designs, and independent testing.
+
+**Market, customers, and go-to-market.** Finder classifies BEX across industrial technologies, process automation and intelligence systems, aerospace, defense and homeland security, defense solutions, and unmanned systems. It identifies B2B and B2G business models and lists defense and safety/security among the target customer groups. The most plausible initial buyers are therefore robotics and drone OEMs, autonomy developers, defense-system integrators, and advanced engineering teams that need to move a model from a research computer into a repeatable physical platform. An embedded control product can also be sold through design partnerships, reference platforms, and component-level adoption before a company has a broad software subscription business. BEX’s official website currently presents only a minimal prelaunch page, so there is no public product catalog, pricing, SDK documentation, support policy, customer list, or announced distribution partner. That limits confidence in the go-to-market thesis. A successful commercial path would require BEX to prove that its board and OS shorten integration cycles enough to outweigh the switching cost of established compute and control stacks, while also supporting the certification, lifecycle, and supply-chain obligations of customers in industrial and defense markets.
+
+**Traction, funding, and third-party validation.** BEX was incorporated in Israel on January 8, 2026 as BEX Robotics Ltd., with a registered address in Yehud-Monosson; the company is listed as active in the public corporate-information record reviewed. Startup Nation Finder reports a founding date of January 2026, a 1–10 employee range, an R&D product stage, and two undisclosed SAFE rounds backed by VentureIsrael in February and April 2026. VentureIsrael’s own portfolio page independently shows BEX Robotics in both transactions, while its fund website describes an early-stage Israeli deep-tech mandate spanning AI infrastructure, robotics, cybersecurity, quantum, space, synthetic biology, and semiconductors. This is meaningful ecosystem validation: a specialist deep-tech investor made an initial commitment and a follow-on commitment shortly after formation. It is not the same as customer traction. No funding amounts, valuation, revenue, purchase orders, pilots, production deployments, certifications, awards, patents, or public technical benchmark have been disclosed in the sources reviewed. A public recruiting listing in Israel provides a modest operating signal by seeking software, embedded, and hardware talent, but it does not establish headcount or product readiness. The record should therefore give credit for early financing and company formation while keeping commercial proof scores restrained.
+
+**Founders and team background.** The publicly available Finder record identifies Yuval Dimri as CEO and co-founder and Pavel Radzivilovsky as CTO and co-founder. The Israeli corporate record also lists Dimri and Radzivilovsky among the company’s directors and shareholders, supporting the basic founder and legal-entity linkage. Beyond those roles, the reviewed sources do not provide reliable biographies that establish prior exits, military units, university research, patents, robotics deployments, or senior engineering roles. That absence is important in a company whose execution depends on both embedded systems and physical-AI integration. The job listing’s emphasis on highly capable software, embedded, and hardware developers indicates the kind of technical hiring BEX considers necessary, but it does not identify hires or prove the team’s depth. VentureIsrael’s backing gives the founders access to a fund whose stated thesis is early Israeli deep tech, yet investor network should not be substituted for operating evidence. Team diligence should focus on the founders’ experience with real-time systems, motor-control safety, hardware manufacturing, field reliability, and defense procurement; the current public record supports the identities and roles but not a stronger pedigree claim.
+
+**Competitive dynamics.** BEX is entering a layered market rather than a blank space. NVIDIA’s Jetson and Isaac ecosystem combines edge AI compute, robotics middleware, simulation, and reference software, giving OEMs a broad incumbent stack. Qualcomm’s Robotics RB5 platform packages robotics compute, cameras, connectivity, and development tools for commercial and mobile machines. ModalAI’s VOXL platform targets autonomous drones and robots with integrated compute, perception, and flight-control capabilities. Auterion provides an established operating-system and autonomy ecosystem for drones, while PX4 and ArduPilot remain powerful open-source substitutes for flight control. Industrial automation vendors such as Beckhoff and Siemens also compete indirectly wherever customers prefer proven deterministic controllers and proprietary engineering environments over a new AI-oriented layer. BEX’s potential edge is narrow system-level specialization: a purpose-built controller-plus-OS boundary designed around AI inference and real-time actuation, potentially reducing the glue code between autonomy software and hardware. That edge will only become defensible if BEX demonstrates lower latency, faster porting across platforms, better tooling, robust safety behavior, and a support model that small robotics teams cannot reproduce internally. Its small size may enable rapid iteration, but incumbents have much deeper ecosystems, qualification histories, purchasing relationships, and component leverage.
+
+**Defense, security, and resilience dual-use relevance.** BEX’s dual-use case is credible at the architecture level because the same controller hardware and real-time operating layer can support commercial robots, industrial drones, unmanned ground vehicles, inspection systems, and defense platforms. Industrial customers could use it for warehouse mobility, machine tending, inspection, or agricultural automation; defense and homeland-security users could use comparable control infrastructure in reconnaissance drones, perimeter systems, logistics robots, or other unmanned platforms. A reusable control boundary can improve resilience by reducing dependence on one vehicle vendor, allowing faster replacement or adaptation of platforms, and making it easier to maintain autonomous capability when a system is operating at the edge rather than in a stable cloud environment. However, there is no public evidence that BEX has a defense customer, IDF program, government contract, field trial, secure deployment, or military certification. The Finder classification shows that defense and unmanned systems are intended markets, not proof of adoption. Nor is there public evidence on encryption, trusted boot, anti-tamper design, degraded-navigation behavior, human authorization, export controls, or safety certification. BEX should therefore receive meaningful dual-use and strategic-alignment credit for a platform that can sit underneath many robotic missions, but not the higher score reserved for combat-proven or government-integrated systems.
+
+**Growth stage, trajectory, and key diligence risks.** BEX is classified as early: it was legally formed in January 2026, remains in R&D, has a 1–10 employee public estimate, and maintains a prelaunch website despite receiving two early SAFE investments. Its near-term trajectory is straightforward but unproven: complete the controller and OS, recruit embedded and robotics engineers, publish development tools and technical specifications, secure design partners, and convert prototypes into repeatable deployments. The main diligence risks are (1) **technical integration risk**, because real-time control, AI inference, sensors, and motor hardware must work together under tight timing and fault conditions; (2) **safety and liability risk**, particularly if the same platform is used in mobile robots, aircraft, or industrial machinery; (3) **manufacturing and supply-chain risk**, since controller-board availability, component qualification, and lifecycle support can determine whether an elegant design ships; (4) **ecosystem risk**, because NVIDIA, Qualcomm, Auterion, open-source flight stacks, and industrial incumbents can bundle adjacent capability; (5) **commercial-evidence risk**, with no named customer, revenue, benchmark, or disclosed contract; (6) **team-concentration risk**, given the company’s very early age and small public footprint; and (7) **defense-procurement risk**, because B2G sales, security review, certification, and export controls can extend timelines. The milestones that would materially change the assessment are a public SDK or hardware specification, quantified latency and porting results, named design partners, a production reference, disclosed certification or patent activity, and evidence that BEX’s platform is used in both a commercial and a defense-relevant environment.
+"""
+logo = "Unknown"
+website = "https://bexrobotics.com"
+sector = "Robotics Control Hardware and Operating Systems for Physical AI"
+founded = "2026"
+headquarters = "Yehud-Monosson, Israel"
+employees = "1-10 (public Startup Nation Finder range; exact headcount not disclosed)"
+funding_stage = "Pre-seed / R&D; two undisclosed SAFE rounds from VentureIsrael in February and April 2026"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "BEX’s controller-board and operating-system thesis is credibly dual-use because it is designed for robots and drones across industrial, aerospace, defense, and homeland-security contexts. The same AI-to-motor-control interface could support warehouse robots, inspection machines, unmanned aircraft, logistics vehicles, and security platforms. The defense connection is currently prospective rather than fielded: public sources identify defense and unmanned systems as target sectors, but disclose no government customer, military program, operational deployment, certification, or security architecture. The score reflects credible technology transfer potential with limited deployment evidence."
+key_technologies = [
+  "Controller boards for bridging AI inference workloads to real-time motor and actuator control",
+  "Operating-system software intended to provide a reusable runtime for AI-enabled robots and drones",
+  "Real-time embedded control interfaces between autonomy software, sensors, and physical actuators",
+  "Hardware-software co-design for physical-AI and unmanned-system platforms",
+  "Platform abstraction intended to reduce robot- and drone-specific integration work",
+  "Embedded development infrastructure for robotics teams moving models from research into machines"
+]
+use_cases = [
+  "Controller integration for industrial mobile robots and machine-tending platforms",
+  "Real-time autonomy control for small unmanned aircraft and inspection drones",
+  "Embedded control infrastructure for defense and homeland-security unmanned systems",
+  "Rapid prototyping of physical-AI robots by OEM engineering teams",
+  "Autonomous warehouse, logistics, and facility-inspection machines",
+  "Research and development platforms that need a common AI-to-actuator software boundary",
+  "Agricultural and outdoor robots operating at the edge with limited connectivity"
+]
+investible = true
+investment_rationale = "BEX is a high-upside, high-uncertainty strategic priority signal rather than a commercially validated company. (1) The problem is real: robotics teams need a dependable boundary between AI inference and deterministic motor control, and reusable control infrastructure can reduce repeated integration work. (2) The early signal is unusually relevant to the thesis: BEX is an Israeli deep-tech company, has two disclosed but undisclosed-size SAFE financings from VentureIsrael, and is classified for industrial, unmanned, aerospace, defense, and homeland-security applications. (3) The technical opportunity is potentially foundational because a successful controller-plus-OS layer could sit underneath multiple robot and drone form factors. Counterweights are substantial: the official site remains a prelaunch page; there are no named customers, revenue, benchmarks, patents, certifications, or disclosed funding amounts; the public headcount is only 1-10; and powerful incumbents already control adjacent compute, middleware, and flight-control ecosystems. The appropriate internal interpretation is to monitor technical proof and design-partner conversion, not to treat the financing as evidence of product-market fit or as an investment recommendation."
+strategic_value = "BEX has strategic value as a possible sovereign and interoperable control layer for physical AI. If its hardware and OS can decouple autonomy software from individual robot and drone platforms, Israeli and allied developers could iterate across heterogeneous fleets with less dependence on a single foreign stack. That could matter for defense logistics, inspection, perimeter security, and other missions where low-latency edge control, supply-chain continuity, and rapid platform adaptation are important. The strategic case is bounded by the company’s current maturity. No defense deployment, secure-boot design, certification, or public-sector contract is disclosed, and the product itself is not yet publicly documented. BEX is therefore best tracked as an early infrastructure option with meaningful dual-use potential, not as an established national-capability provider."
+potential_score = 66.0
+technology_score = 70.0
+market_score = 60.0
+team_score = 55.0
+dual_use_score = 73.0
+strategic_alignment_score = 78.0
+stage = "early"
+stage_rationale = "BEX is early by every operating indicator available in public sources: incorporation occurred in January 2026, Startup Nation Finder lists the company in R&D with 1-10 employees, and the official website has not yet moved beyond a prelaunch presentation. Two SAFE investments from VentureIsrael in February and April 2026 provide early financing validation and suggest active company formation, but their amounts and milestones are undisclosed. There is no public evidence of commercial revenue, named customers, production deployments, or a released SDK. The company should move toward mid-stage only after it shows working hardware, repeatable customer pilots, disclosed technical performance, and an expanding team or partner ecosystem."
+competitors = [
+  "NVIDIA Jetson and Isaac (edge AI compute, robotics middleware, simulation, and reference-stack incumbent)",
+  "Qualcomm Robotics RB5 (integrated robotics compute, sensing, connectivity, and development platform)",
+  "ModalAI VOXL (autonomy compute and software platform for drones and mobile robots)",
+  "Auterion (commercial drone operating system and autonomy ecosystem)",
+  "PX4 and ArduPilot (open-source flight-control approaches that can substitute for parts of a drone control layer)",
+  "Beckhoff and Siemens (deterministic industrial-control ecosystems competing for machine-control budgets)"
+]
+competitive_edge = "BEX’s potential edge is a focused controller-plus-operating-system boundary designed specifically for the transition from AI decision-making to real-time physical action. A successful implementation could give robotics teams a reusable hardware and software foundation across multiple robot and drone form factors, reducing bespoke driver and integration work. Its Israeli deep-tech focus and early backing from VentureIsrael may help it recruit and partner within a strong robotics and defense ecosystem. The edge is not yet proven. Incumbents offer larger toolchains, installed bases, component relationships, and qualification records; open-source stacks offer low-cost alternatives; and the public record contains no benchmark showing BEX is faster, safer, easier to port, or more reliable than those substitutes. Defensibility will depend on real-time performance, developer tooling, reference designs, safety engineering, hardware availability, and customer integrations."
+risk_factors = [
+  "Early technical risk in coordinating AI inference, sensor feedback, deterministic timing, and motor control across heterogeneous machines",
+  "Safety and liability exposure if the controller layer is used in aircraft, industrial equipment, or defense platforms without mature safeguards",
+  "Manufacturing, component qualification, and lifecycle-support risk for a hardware-dependent product",
+  "Competition from NVIDIA, Qualcomm, ModalAI, Auterion, open-source flight stacks, and industrial-control incumbents",
+  "Limited commercial evidence: no named customers, revenue, production deployment, public benchmark, or disclosed contract",
+  "Small-team and key-person concentration risk at a company incorporated in January 2026",
+  "Defense procurement, certification, cybersecurity, export-control, and long sales-cycle risk"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "BEX merits monitoring because it targets a strategically important but underexposed layer of physical-AI infrastructure: the interface between intelligent software and real-time actuation. Supporting signals are (1) Israeli incorporation and a January 2026 founding date; (2) two early SAFE financings from VentureIsrael, including a follow-on; (3) a product thesis spanning robots, drones, industrial technologies, aerospace, defense, and homeland security; and (4) early hiring aimed at software, embedded, and hardware talent. Priority is capped by the company’s stealth-like public posture, minimal prelaunch website, very small public employee range, undisclosed financing, and absence of named customers, technical benchmarks, patents, certifications, or defense deployments. The next evidence that would justify a higher priority is a public SDK or controller specification, quantified real-time performance, a production design partner, and proof of use across both commercial robotics and a security- or resilience-relevant deployment."
+public_sources = [{ "label" = "Official website", "url" = "https://bexrobotics.com/", "description" = "Official company site; current coming-soon landing page." }, { "label" = "Startup Nation Finder profile", "url" = "https://finder.startupnationcentral.org/company_page/bex-robotics?section=team", "description" = "Company profile, product description, founders, two SAFE dates and named investor." }, { "label" = "Israeli corporate record (CheckID)", "url" = "https://en.checkid.co.il/company/BEX%2BROBOTICS%2BLTD-dGvb4gK-517275244", "description" = "Secondary view of company registry data: entity, status, incorporation, address, directors and liens." }, { "label" = "VentureIsrael portfolio", "url" = "https://ventureisrael.com/portfolio", "description" = "Investor portfolio confirms BEX portfolio presence and investor mandate." }, { "label" = "StartupIM company profile", "url" = "https://slimpages.startupim.com/company/bex-robotics", "description" = "Secondary company profile and hiring/headcount snapshots." }, { "label" = "NVIDIA robotics platform", "url" = "https://www.nvidia.com/en-us/industries/robotics/.com/", "description" = "Official competitor product scope." }, { "label" = "ModalAI VOXL platform", "url" = "https://www.modalai.com/pages/voxl", "description" = "Official integrated compute, autonomy and flight-control alternative." }, { "label" = "AuterionOS", "url" = "https://auterion.com/product/auterion-os/", "description" = "Official onboard robotics operating-system competitor and deployment claims." }]
+crawled_at = "2026-09-02T09:45:37Z"
+updated_at = "2026-10-04T07:14:35Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+traction = []
+intellectual_property = []
+comparables = []
+
+[[intelligence.people]]
+name = "Yuval Dimri"
+role = "CEO and co-founder"
+is_founder = true
+current = true
+source_ids = ["finder", "registry"]
+
+[[intelligence.people]]
+name = "Pavel Radzivilovsky"
+role = "CTO and co-founder"
+is_founder = true
+current = true
+source_ids = ["finder", "registry"]
+
+[[intelligence.investors]]
+name = "VentureIsrael"
+investor_type = "vc"
+website = "https://ventureisrael.com/"
+round_ids = ["safe-2026-02", "safe-2026-04"]
+relationship = "current"
+source_ids = ["finder", "venture"]
+
+[intelligence.company]
+company_id = "il-bex-robotics"
+legal_name = "BEX Robotics Ltd."
+aliases = ["BEX Robotics"]
+operating_status = "active"
+business_model = "B2B hardware and software for robotics and drone OEMs/developers; profile classifications also identify B2G as a target model, not confirmed sales."
+products = ["Controller boards", "Operating-system software connecting AI inference with real-time motor control"]
+locations = ["Yehud-Monosson, Israel"]
+founded_on = "2026-01-08"
+source_ids = ["finder", "registry", "official"]
+
+[[intelligence.company.registry_identifiers]]
+jurisdiction = "Israel"
+scheme = "IL-ROC"
+identifier = "517275244"
+source_ids = ["registry"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel"]
+summary = "Israeli private company incorporated in January 2026 with a registered address in Yehud-Monosson; Finder likewise lists Israel location."
+as_of = "2026-10-04"
+source_ids = ["registry", "finder"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Startup Nation Finder records two undisclosed SAFE rounds, an initial February 2026 financing and April 2026 follow-on, both naming VentureIsrael. No amount, valuation, or company-announced lifetime total is publicly disclosed in the reviewed sources. Do not sum undisclosed rounds or infer a total."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "safe-2026-02"
+round_type = "SAFE"
+instrument = "convertible"
+status = "closed"
+announced_on = "2026-02"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+lead_investors = ["VentureIsrael"]
+participating_investors = ["VentureIsrael"]
+valuation_basis = "undisclosed"
+source_ids = ["finder"]
+
+[[intelligence.funding.rounds]]
+id = "safe-2026-04"
+round_type = "SAFE follow-on"
+instrument = "convertible"
+status = "closed"
+announced_on = "2026-04"
+amount_status = "undisclosed"
+amount_scope = "incremental_extension"
+is_extension_of = "safe-2026-02"
+lead_investors = ["VentureIsrael"]
+participating_investors = ["VentureIsrael"]
+valuation_basis = "undisclosed"
+source_ids = ["finder"]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "BEX is an active Israeli private company. Public registry aggregation lists directors and option holders but does not disclose verified cap-table percentages; shareholder detail requires a paid extract. No parent, acquisition, or ownership transaction was found."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["registry", "startupim"]
+deals = []
+holdings = []
+
+[intelligence.research]
+researched_at = "2026-10-04T07:14:35Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["BEX Robotics official company products", "BEX Robotics VentureIsrael February 2026 SAFE funding", "BEX Robotics April 2026 follow-on SAFE investor", "BEX Robotics founders CEO CTO team", "BEX Robotics Ltd 517275244 Israeli corporate record ownership liens", "BEX Robotics revenue customers contracts pilots deployments hiring", "BEX Robotics patents WIPO USPTO 517275244", "BEX Robotics competition robotics control hardware operating system NVIDIA ModalAI Auterion", "BEX Robotics defense security dual use customers contracts", "BEX Robotics former names acquisition valuation raised"]
+gaps = ["people: public sources identify Yuval Dimri and Pavel Radzivilovsky as CEO/CTO; a secondary StartupIM profile additionally names Adi Gur as co-founder, which is not corroborated by Finder. No independently verified biographies were located.", "investors: only VentureIsrael is named in the available profile; SAFE amounts, terms, and any other participants are undisclosed.", "financials: no dated revenue, ARR, profitability, cash, burn, or runway disclosure found.", "traction: no named customer, paid contract, pilot, production deployment, or product release found; a hiring/profile footprint is not customer traction.", "intellectual_property: no company-linked patent or public filing identified in the searches; absence is not proof that none exists.", "competition: competitor set is based on adjacent product overlap; BEX has not published enough specifications for apples-to-apples performance comparison.", "ownership: registry aggregation does not provide public cap-table percentages or verified shareholder names; directors/options listings do not establish beneficial ownership shares.", "No public funding amounts, valuation, or company-announced lifetime total found.", "No primary VentureIsrael transaction announcement located; round detail relies on Startup Nation Finder profile.", "No public government, defense, or security customer, deployment, contract, or certification found."]
+conflicts = ["Team composition differs between Startup Nation Finder (Yuval Dimri and Pavel Radzivilovsky as co-founders) and StartupIM (also lists Adi Gur as a founder/co-founder). Adi Gur is omitted from structured people pending corroboration; registry aggregation lists a person with that name as director/option holder but does not establish founder role."]
+diligence_questions = ["What are the controller board compute, actuator interfaces, RTOS/kernel, supported middleware, and measured end-to-end latency under load?", "Who are the active founders and engineering leads, and what relevant shipped embedded-control systems have they built?", "Are any design partners, paid pilots, or field deployments active, and what measurable integration-time or reliability outcomes have been achieved?", "What are the SAFE amounts, caps/discounts, full investor syndicate, and current runway?", "What safety, cybersecurity, export-control, and component-lifecycle plans apply to industrial and defense use?"]
+
+[[intelligence.research.sources]]
+id = "official"
+url = "https://bexrobotics.com/"
+title = "BEX | Autonomy. Vision. Speed."
+publisher = "BEX Robotics"
+kind = "company"
+accessed_at = "2026-10-04T07:14:35Z"
+claims = ["Official BEX domain and current coming-soon public landing page."]
+
+[[intelligence.research.sources]]
+id = "finder"
+url = "https://finder.startupnationcentral.org/company_page/bex-robotics?section=team"
+title = "BEX Robotics — Industrial Technologies | Finder"
+publisher = "Startup Nation Finder"
+kind = "directory"
+accessed_at = "2026-10-04T07:14:35Z"
+claims = ["Describes controller boards and operating-system software connecting AI inference with real-time motor control for robots and drones.", "Reports January 2026 founding, 1–10 employees, R&D stage and Israel location.", "Names Yuval Dimri as CEO/co-founder and Pavel Radzivilovsky as CTO/co-founder.", "Reports two undisclosed SAFE rounds: February 2026 initial and April 2026 follow-on; names VentureIsrael.", "Lists industrial, aerospace, defense, homeland security and unmanned-system target sectors and B2B/B2G models."]
+
+[[intelligence.research.sources]]
+id = "registry"
+url = "https://en.checkid.co.il/company/BEX%2BROBOTICS%2BLTD-dGvb4gK-517275244"
+title = "BEX ROBOTICS LTD — Company record"
+publisher = "CheckID / Guideline Group"
+kind = "other"
+accessed_at = "2026-10-04T07:14:35Z"
+claims = ["Lists BEX Robotics Ltd. as active Israeli private company number 517275244, incorporated 2026-01-08, with address in Yehud-Monosson.", "Lists Yuval Dimri and Pavel Radzivilovsky among directors and option holders, and Adi Gur as director and option holder; page cautions translated names may be inaccurate.", "Lists lien registrations dated 2026-02-05 and 2026-02-26; it does not disclose ownership percentages on the free profile."]
+
+[[intelligence.research.sources]]
+id = "venture"
+url = "https://ventureisrael.com/portfolio"
+title = "Portfolio — VentureIsrael"
+publisher = "VentureIsrael"
+kind = "investor"
+accessed_at = "2026-10-04T07:14:35Z"
+claims = ["Lists Bex Robotics in its portfolio under physical AI and robotics.", "Describes VentureIsrael as an Israeli early-stage deep-tech VC investing from pre-seed to Series A, including robotics."]
+
+[[intelligence.research.sources]]
+id = "startupim"
+url = "https://slimpages.startupim.com/company/bex-robotics"
+title = "BEX Robotics company profile"
+publisher = "StartupIM"
+kind = "directory"
+accessed_at = "2026-10-04T07:14:35Z"
+claims = ["Secondary profile reports BEX Robotics Ltd., Israeli registry number 517275244, 2026 founding, five headcount snapshot and April 2026 latest undisclosed round.", "Lists Yuval Dimri, Adi Gur, and Pavel Radzivilovsky as team members and identifies Adi Gur as co-founder."]
+
+[[intelligence.research.sources]]
+id = "nvidia"
+url = "https://www.nvidia.com/en-us/industries/robotics/.com/"
+title = "AI Robotics Platform, Tools & Simulation | NVIDIA"
+publisher = "NVIDIA"
+kind = "other"
+accessed_at = "2026-10-04T07:14:35Z"
+claims = ["NVIDIA describes Isaac robotics development platform, simulation and learning frameworks, libraries, and Jetson real-time inference/control as an established adjacent stack."]
+
+[[intelligence.research.sources]]
+id = "modalai"
+url = "https://www.modalai.com/pages/voxl"
+title = "VOXL — U.S.-Built Video and Autonomy for UAS"
+publisher = "ModalAI"
+kind = "company"
+accessed_at = "2026-10-04T07:14:35Z"
+claims = ["ModalAI describes VOXL as integrated AI companion compute and flight-control hardware, SDK and autonomy software for drones and robots, a direct adjacent alternative."]
+
+[[intelligence.research.sources]]
+id = "auterion"
+url = "https://auterion.com/product/auterion-os/"
+title = "AuterionOS"
+publisher = "Auterion"
+kind = "company"
+accessed_at = "2026-10-04T07:14:35Z"
+claims = ["Auterion describes an onboard operating system for connected robotic fleets with autonomy, real-time communications, sensors and deployment features."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T07:14:35Z"
+next_review_on = "2027-04-04"
+queries = ["BEX Robotics official company products", "BEX Robotics Ltd 517275244 Israeli corporate record"]
+source_ids = ["official", "finder", "registry"]
+summary = "Official domain, legal name, Israeli number, operating status, location, business and products cross-checked."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T07:14:35Z"
+next_review_on = "2027-01-04"
+queries = ["BEX Robotics VentureIsrael February 2026 SAFE funding", "BEX Robotics April 2026 follow-on SAFE investor"]
+source_ids = ["finder", "venture", "startupim"]
+summary = "Two undisclosed SAFE financings reported in Feb and Apr 2026; no primary round announcement or numeric total found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T07:14:35Z"
+next_review_on = "2027-01-04"
+queries = ["BEX Robotics investors VentureIsrael", "BEX Robotics SAFE participants"]
+source_ids = ["finder", "venture"]
+summary = "VentureIsrael is named for both rounds and includes BEX in portfolio; no other named investor found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "conflicting"
+checked_at = "2026-10-04T07:14:35Z"
+next_review_on = "2027-01-04"
+queries = ["BEX Robotics founders CEO CTO team", "BEX Robotics Adi Gur co-founder"]
+source_ids = ["finder", "startupim", "registry"]
+summary = "Finder names two co-founders; StartupIM adds Adi Gur as co-founder. Registry aggregation lists Adi Gur as director/option holder but does not prove founder status."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T07:14:35Z"
+next_review_on = "2027-04-04"
+queries = ["BEX Robotics Ltd 517275244 Israeli corporate record ownership liens"]
+source_ids = ["registry"]
+summary = "Private company with directors/options and two liens shown in a secondary registry profile; public percentages and full cap table unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T07:14:35Z"
+next_review_on = "2027-04-04"
+queries = ["BEX Robotics revenue ARR financials burn runway"]
+source_ids = ["finder", "startupim"]
+summary = "No company financial metrics or filed accounts identified."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T07:14:35Z"
+next_review_on = "2027-01-04"
+queries = ["BEX Robotics customers contracts pilots deployments hiring"]
+source_ids = ["official", "finder", "startupim"]
+summary = "Company remains in R&D/stealth profile and official site says coming soon; no named deployments or customer evidence found."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T07:14:35Z"
+next_review_on = "2027-04-04"
+queries = ["BEX Robotics patents WIPO USPTO 517275244"]
+source_ids = ["finder", "registry"]
+summary = "No company-linked patent located in indexed searches; national and international patent coverage may be incomplete."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T07:14:35Z"
+next_review_on = "2027-04-04"
+queries = ["BEX Robotics competition robotics control hardware operating system NVIDIA ModalAI Auterion"]
+source_ids = ["nvidia", "modalai", "auterion"]
+summary = "Adjacent incumbent product documentation establishes substantial alternatives in compute, autonomy, flight control and onboard OS; direct BEX specs remain unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T07:14:35Z"
+next_review_on = "2027-04-04"
+queries = ["BEX Robotics defense security dual use customers contracts"]
+source_ids = ["finder", "official"]
+summary = "Finder lists defense, HLS and unmanned systems as target sectors, but no government customer or defense deployment is disclosed."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "CheckID profile marks the Israeli company active."
+verified_at = "2026-10-04T07:14:35Z"
+source_ids = ["registry"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Israeli private company record gives Yehud-Monosson address; Finder separately lists Israel."
+verified_at = "2026-10-04T07:14:35Z"
+source_ids = ["registry", "finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-2026-02.amount_status"
+support = "direct"
+summary = "Finder lists Feb 2026 SAFE with undisclosed amount."
+verified_at = "2026-10-04T07:14:35Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-2026-02.participating_investors"
+support = "direct"
+summary = "Finder names VentureIsrael as participant in Feb SAFE."
+verified_at = "2026-10-04T07:14:35Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-2026-02.lead_investors"
+support = "direct"
+summary = "Finder names VentureIsrael as investor in Feb SAFE."
+verified_at = "2026-10-04T07:14:35Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-2026-04.amount_status"
+support = "direct"
+summary = "Finder lists Apr 2026 follow-on SAFE with undisclosed amount."
+verified_at = "2026-10-04T07:14:35Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-2026-04.participating_investors"
+support = "direct"
+summary = "Finder names VentureIsrael as participant in Apr SAFE follow-on."
+verified_at = "2026-10-04T07:14:35Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-2026-04.lead_investors"
+support = "direct"
+summary = "Finder names VentureIsrael as investor in Apr SAFE follow-on."
+verified_at = "2026-10-04T07:14:35Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "No parent identified in company registry profile or reviewed sources; recorded as no disclosed parent."
+verified_at = "2026-10-04T07:14:35Z"
+source_ids = ["registry"]

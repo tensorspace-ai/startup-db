@@ -1,0 +1,542 @@
+name = "Artemis Security"
+description = "Artemis Security is an AI-native cybersecurity startup building a protection platform for detection, investigation, threat intelligence, and response across identity, cloud, endpoint, network, and SaaS telemetry. Its public materials position the product as an augmentation or alternative to ingestion-heavy SIEM workflows, with environment-specific detections and agentic investigation."
+detailed_description = """
+Artemis Security is building an AI-native security operations platform for organizations that have abundant telemetry but cannot turn it into timely, contextual decisions. The company says its system continuously models users, AI agents, machines, cloud workloads, applications, business context, and behavioral patterns across integrated sources. It then uses that model to generate and tune detections for a particular environment, investigate signals across domains, and produce an attack narrative with evidence and recommended response actions. The product scope therefore spans detection engineering, threat hunting, investigation, environment intelligence, threat-intelligence coverage, and response support rather than a narrow point solution.
+
+The technical thesis is that large language models and other agents are more useful when they operate over a structured representation of the customer environment instead of isolated log rows. Artemis describes a proprietary dynamic data model and federated queries that can retrieve information from existing data stores when it is needed, reducing the need to copy every event into a central platform. Its public product material also describes natural-language investigation, automatic mapping of threat reports to MITRE ATT&CK, adaptive detection generation, and correlation across identity, cloud, endpoint, network, and SaaS systems. These are credible engineering directions, but they create demanding requirements around data normalization, authorization boundaries, latency, evaluation, explainability, and safe action controls.
+
+The target market is enterprise security operations, especially teams managing complex hybrid environments and expensive SIEM, data-lake, SOAR, and detection-engineering workflows. Artemis can be deployed alongside incumbent tooling or positioned as a broader protection layer. The commercial value proposition is lower operational friction: faster time to useful coverage, less manual query and rule writing, more context per alert, and potentially lower telemetry-ingestion cost. The category is attractive because security teams face a structural shortage of experienced analysts and because AI-assisted attacks may increase event volume and compress response windows. It is also crowded. CrowdStrike, Palo Alto Networks, Microsoft, Splunk, Google, Exabeam, Securonix, and a growing set of AI-native security vendors can bundle overlapping detection, analytics, and response capabilities into existing customer relationships.
+
+The strongest current traction evidence is public rather than independently audited. Artemis announced its public launch on April 15, 2026, reporting $70 million in combined seed and Series A financing, with the Series A led by Felicis and the seed round co-led by First Round Capital and Brightmind. The company says it was already in production with large companies and processing more than 15,000 TB daily and billions of events hourly; its website also publishes customer and security-leader testimonials. These claims indicate meaningful early validation and a well-capitalized go-to-market effort, but they should be treated as company-reported until diligence confirms the number of paying customers, contract duration, renewal, gross retention, deployment cost, and the denominator behind performance claims such as a 94% reduction in mean time to detect and respond.
+
+Artemis has credible dual-use adjacency because the core capability is enterprise cyber defense, not a consumer-only application. Contextual detection and investigation across identity, cloud, endpoints, networks, and applications can support critical infrastructure, defense industrial base suppliers, financial institutions, and public-sector environments. The strategic relevance is strongest at the software and cyber-resilience layer: faster triage and controlled response can improve the resilience of systems that support national-security missions. There is no reliable public evidence in the reviewed sources of defense contracts or operational deployment in military environments, so the defense case should remain an applicability assessment rather than a claimed customer or program relationship.
+
+The company is unusually early for the size of its financing and ambition. The founding team combines security-operations, cloud detection, and machine-learning experience, while current hiring materials describe engineers and researchers from major technology and cybersecurity companies. That background may help with enterprise trust and difficult systems engineering. The central diligence question is whether Artemis can convert an impressive technical narrative and early production deployments into repeatable, explainable, low-noise outcomes across customers with different data quality and control requirements. Buyers will also test whether autonomous agents are safe enough for consequential response actions, whether federated access works at predictable latency and cost, and whether incumbent platforms can copy enough of the feature set to compress differentiation. Artemis merits close strategic tracking, but its valuation, revenue quality, model economics, and safety evidence remain unverified in the public record.
+"""
+logo = "Unknown"
+website = "https://artemissecurity.com/"
+sector = "AI Security"
+founded = "July 2025"
+headquarters = "New York, United States"
+employees = "Unknown"
+funding_stage = "Seed and Series A; $70 million reported"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Artemis's core enterprise cyber-defense technology has substantive applicability to critical infrastructure, defense industrial base suppliers, regulated public-sector environments, and other high-consequence networks. The dual-use case is based on capability transfer across environments; no reviewed public source establishes a defense contract or military deployment."
+key_technologies = [
+  "Customer-specific dynamic environment modeling",
+  "Federated queries over existing telemetry and data lakes",
+  "Cross-domain behavioral correlation across identity, cloud, endpoint, network, and SaaS",
+  "LLM and agent-based detection classification and reasoning",
+  "Adaptive detection engineering mapped to MITRE ATT&CK",
+  "Autonomous threat hunting and evidence-chain investigation",
+  "Natural-language security analytics and controlled response recommendations"
+]
+use_cases = [
+  "Correlating identity, cloud, endpoint, network, and SaaS signals into multi-stage attack narratives",
+  "Generating and tuning environment-specific detections from threat reports",
+  "Reducing manual triage and investigation workload in enterprise SOCs",
+  "Finding telemetry coverage gaps, risky configuration patterns, and shadow AI usage",
+  "Augmenting or replacing parts of ingestion-heavy SIEM and SOAR workflows",
+  "Supporting security operations in financial services, insurance, and technology companies",
+  "Improving cyber-resilience monitoring for critical infrastructure and defense suppliers"
+]
+investible = true
+investment_rationale = "Artemis is a credible strategic-priority signal for a dual-use technology database because it combines a technically consequential security problem, a large enterprise market, experienced founders, and substantial early financing. The public record also indicates production deployments, but does not establish revenue scale, retention, unit economics, or independent validation of advertised performance. The flag reflects strategic fit and diligence priority, not an investment recommendation."
+strategic_value = "Artemis is strategically relevant at the AI-era security-operations layer. A reliable system that builds an environment model, detects cross-domain attack behavior, and shortens investigation cycles could improve resilience for enterprises and critical infrastructure without requiring every organization to staff a large expert SOC. Its value to national-security analysis is the transferability of the cyber-defense capability, while the absence of disclosed defense customers means the strategic case should not be overstated."
+public_sources = [
+  { label = "Official launch announcement", url = "https://artemissecurity.com/company-news/announcing-artemis-security-that-understands-what-it-protects/", description = "Funding structure, investors, launch, and company-reported production metrics." },
+  { label = "Fortune funding report", url = "https://fortune.com/2026/04/15/exclusive-artemis-raises-70m-to-help-fight-ai-powered-attacks-with-ai/", description = "Funding, founder backgrounds, named customer claims, and undisclosed valuation." },
+  { label = "Globes funding and company profile", url = "https://en.globes.co.il/en/article-ai-protection-co-artemis-security-raises-70m-1001540194", description = "Israeli-founded status, founder histories, production deployment, and financing." },
+  { label = "Official founders page", url = "https://artemissecurity.com/about/", description = "Founder roles and biographies." },
+  { label = "Cursor customer case study", url = "https://artemissecurity.com/customers/cursor-case-study/", description = "Company-published customer deployment description and operational metrics." },
+  { label = "Startup Nation Finder profile", url = "https://finder.startupnationcentral.org/company_page/artemis-security?section=news", description = "Israeli-founded identity and reported round breakdown; directory record used as corroboration." },
+  { label = "Official platform site", url = "https://artemissecurity.com/", description = "Product scope and company assertions." },
+  { label = "Official integrations catalog", url = "https://artemissecurity.com/connectors/", description = "Current advertised integration breadth across security data sources." },
+  { label = "Hebrew Mako funding report", url = "https://www.mako.co.il/nexter-news/Article-36fd42bbec09d91026.htm", description = "Local reporting on founders, Israeli connection, and $70 million financing." }
+]
+potential_score = 86.0
+technology_score = 91.0
+market_score = 86.0
+team_score = 88.0
+dual_use_score = 80.0
+strategic_alignment_score = 85.0
+stage = "early"
+stage_rationale = "Artemis was formed in 2025 and publicly emerged from stealth in April 2026, making it early-stage despite a large combined seed and Series A financing and reported production deployments. The company appears beyond prototype validation, but customer concentration, recurring revenue, retention, deployment economics, safety evidence, and repeatable enterprise sales are not publicly established."
+competitors = [
+  "Palo Alto Networks Cortex XSIAM",
+  "CrowdStrike Falcon Next-Gen SIEM",
+  "Microsoft Sentinel and Security Copilot",
+  "Splunk Enterprise Security",
+  "Google Security Operations",
+  "Exabeam Fusion SIEM",
+  "Securonix Unified Defense SIEM"
+]
+competitive_edge = "Artemis differentiates itself by combining a customer-specific living environment model, federated access to existing telemetry, agentic investigation, adaptive detection generation, and business-context enrichment in one workflow. If those components deliver reliable outcomes without forcing full data centralization, the company could compete on analyst productivity, time to value, and telemetry economics. The edge is not yet durable: incumbents have distribution, data, integrations, and capital to add comparable AI features, and Artemis must prove that its agents are more accurate and controllable than AI layers attached to existing platforms."
+risk_factors = [
+  "Crowded SIEM, XDR, security analytics, and AI-SOC market with powerful incumbent distribution",
+  "Company-reported performance and production-scale claims require customer, methodology, and retention validation",
+  "LLM or agent errors, prompt injection, data leakage, and non-deterministic reasoning could create operational or safety issues",
+  "Federated querying across heterogeneous sources may produce unpredictable latency, coverage, permissions, and cloud costs",
+  "Security teams may resist automated response actions unless evidence, approvals, rollback, and auditability are strong",
+  "Early enterprise sales may depend on a small number of design partners and unusually supportive deployments",
+  "Sensitive telemetry and cross-border processing create privacy, compliance, procurement, and data-residency friction"
+]
+risk_level = "medium"
+signals = [
+  "Official launch materials report $70M in combined seed and Series A financing in April 2026.",
+  "The company says it was founded in 2025 and entered production within months of formation.",
+  "Official and independent materials describe billions of events per hour and more than 15,000 TB analyzed daily as company-reported scale claims.",
+  "The product emphasizes a dynamic environment model, federated queries, agentic investigation, adaptive detections, and natural-language analytics.",
+  "The official site lists an 11-role hiring slate, but no reliable public total employee count was found."
+]
+priority_rank = 0
+priority_rationale = "Artemis merits a high-priority watch position because it combines AI-native cyber infrastructure, credible cross-domain dual-use applicability, experienced founders, and unusually strong early financing. Its score is tempered by the lack of public revenue, retention, independent efficacy testing, disclosed defense adoption, and durable proof against incumbent platform convergence."
+crawled_at = "2026-05-31T08:04:07Z"
+updated_at = "2026-07-31T19:42:28Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+
+[intelligence.company]
+company_id = "artemis-security"
+legal_name = "Artemis Security"
+aliases = ["Artemis"]
+operating_status = "active"
+business_model = "B2B enterprise cybersecurity software sold to security operations teams; pricing and contract terms are not publicly disclosed."
+products = ["Artemis AI-native security operations and protection platform"]
+locations = ["New York, United States"]
+source_ids = ["official_launch", "about", "globes"]
+
+[intelligence.funding]
+status = "reported"
+summary = "The company announced $70 million in combined seed and Series A financing on 2026-04-15. Secondary reporting breaks this into a $15 million seed in July 2025 and a $55 million Series A in April 2026. Artemis has not publicly disclosed round valuations."
+reported_total_raised = 70000000
+reported_total_currency = "USD"
+total_source_ids = ["official_launch", "fortune", "finder"]
+total_as_of = "2026-04-15"
+total_scope = "Company-announced aggregate of seed and Series A equity financing; no debt/grant component reported."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "seed-2025"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2025-07"
+amount_status = "reported"
+amount = 15000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["First Round Capital", "Brightmind Partners"]
+participating_investors = []
+valuation_basis = "undisclosed"
+source_ids = ["finder", "official_launch"]
+notes = "The $15 million amount and July 2025 timing are reported in Startup Nation Finder; the company confirms the seed round and co-leads but did not publish the amount in its launch announcement."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2026"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2026-04-15"
+amount_status = "reported"
+amount = 55000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Felicis Ventures"]
+participating_investors = ["First Round Capital", "Brightmind Partners", "Theory VC", "Lockstep", "Two Sigma Ventures"]
+valuation_basis = "undisclosed"
+source_ids = ["finder", "official_launch", "fortune"]
+notes = "The $55 million split is reported by Startup Nation Finder. Artemis confirms Felicis led the Series A and identifies Theory and Lockstep; Fortune confirms Theory and returning investors. Finder additionally lists Two Sigma Ventures. No valuation disclosed."
+
+[[intelligence.investors]]
+name = "First Round Capital"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["seed-2025", "series-a-2026"]
+source_ids = ["official_launch", "finder"]
+
+[[intelligence.investors]]
+name = "Brightmind Partners"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["seed-2025", "series-a-2026"]
+source_ids = ["official_launch", "finder"]
+
+[[intelligence.investors]]
+name = "Felicis Ventures"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["series-a-2026"]
+source_ids = ["official_launch", "fortune"]
+
+[[intelligence.investors]]
+name = "Theory VC"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["series-a-2026"]
+source_ids = ["official_launch", "fortune"]
+
+[[intelligence.investors]]
+name = "Lockstep"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["series-a-2026"]
+source_ids = ["official_launch"]
+
+[[intelligence.investors]]
+name = "Two Sigma Ventures"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["series-a-2026"]
+source_ids = ["finder"]
+notes = "Named by Startup Nation Finder as a Series A participant."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Artemis remains privately held based on available reporting. No cap table, ownership percentages, parent company, or ownership transaction was found in the reviewed public sources."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["fortune", "official_launch"]
+deals = []
+holdings = []
+
+[[intelligence.people]]
+name = "Shachar Hirshberg"
+role = "Co-founder and Chief Executive Officer"
+is_founder = true
+current = true
+background = "Led product for Amazon GuardDuty; early employee at Demisto and engineering leader at Palo Alto Networks; served in the IDF Intelligence Corps."
+source_ids = ["about", "fortune"]
+
+[[intelligence.people]]
+name = "Dan Shiebler"
+role = "Co-founder and Chief Technology Officer"
+is_founder = true
+current = true
+background = "Previously led AI/ML at Abnormal AI, spent five years building machine-learning systems at Twitter, and holds an Oxford PhD in AI/ML."
+source_ids = ["about", "fortune"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Artemis published a Cursor case study describing a production deployment correlating more than 20 log sources, analyzing over 500 TB monthly, investigating all alerts, and resolving 96% of investigations autonomously. These are company/customer case-study claims, not independently audited metrics."
+date = "2026-07-28"
+source_ids = ["cursor_case"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Fortune reported that Artemis named Mercury, Wix, Lemonade, and Abnormal AI as clients; the story does not establish contract values or deployment scope for each."
+date = "2026-04-15"
+source_ids = ["fortune"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "At launch, Artemis said it was in production and processing over 15,000 TB daily and billions of events hourly. This is company-reported throughput, not a revenue or customer-count metric."
+date = "2026-04-15"
+source_ids = ["official_launch", "globes"]
+
+[[intelligence.intellectual_property]]
+kind = "other"
+description = "Artemis describes a proprietary dynamic data model and federated telemetry-query architecture. No patent publication or granted patent attributable to this Artemis Security entity was identified in the searched public material; do not confuse it with unrelated Artemis companies."
+date = "2026-10-04"
+source_ids = ["official_launch", "official_site"]
+
+[[intelligence.comparables]]
+name = "Palo Alto Networks Cortex XSIAM"
+website = "https://www.paloaltonetworks.com/cortex/cortex-xsiam"
+rationale = "Enterprise security operations platform competing for SIEM, detection, investigation and response workflows."
+differentiation = "Established broad platform and distribution; Artemis claims a customer-specific environment model with federated rather than ingestion-first telemetry access."
+source_ids = ["fortune"]
+
+[[intelligence.comparables]]
+name = "CrowdStrike Falcon Next-Gen SIEM"
+website = "https://www.crowdstrike.com/platform/next-gen-siem/"
+rationale = "Endpoint-rooted security vendor extending into SIEM and AI-assisted SOC operations."
+differentiation = "Large installed base and endpoint telemetry; Artemis positions cross-vendor context and environment-specific investigations as a differentiator."
+source_ids = ["fortune"]
+
+[[intelligence.comparables]]
+name = "Vega Security"
+website = "https://www.vegasecurity.com/"
+rationale = "Israeli-founded AI security operations startup reported as a direct strategic peer."
+differentiation = "Both address AI-enabled SOC workflows; comparative efficacy and product boundaries require hands-on evaluation."
+source_ids = ["finder", "mako"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders"]
+summary = "Israeli business press describes Artemis as Israeli-founded; co-founder Shachar Hirshberg served in the IDF Intelligence Corps. The company is headquartered in New York, and no evidence reviewed establishes Israeli incorporation or an Israeli R&D site."
+as_of = "2026-10-04"
+source_ids = ["globes", "about", "mako"]
+
+[intelligence.research]
+researched_at = "2026-10-04T00:00:00+03:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Artemis Security funding raised seed Series A investors valuation acquired",
+  "Artemis Security founders CEO CTO team background",
+  "Artemis Security customers revenue ARR production deployment Cursor Mercury Wix Lemonade",
+  "Artemis Security patent intellectual property USPTO",
+  "Artemis Security Israeli-founded Hebrew גיוס 70 מיליון",
+  "Artemis Security competitors Vega Security SIEM AI security operations"
+]
+gaps = [
+  "team: Only founders and top executive roles were reliably verified; complete current leadership and headcount are not publicly established.",
+  "investors: Certain industry angels are described by category but not individually named; full investor syndicate and terms unavailable.",
+  "financials: No disclosed revenue, ARR, profitability, burn, runway, or audited accounts found; expected ARR in 2026 is a forecast, not a realized metric.",
+  "traction: Named customers and operating scale are reported, but contracts, paid status per customer, retention, deployment scope, and independent validation are absent.",
+  "intellectual_property: No attributable patent filing or grant was identified; proprietary architecture assertions are company-reported.",
+  "competition: Competitive set is clear at category level; independent comparative performance evidence is unavailable.",
+  "ownership: Private cap table and ownership percentages are not disclosed; no parent or ownership transaction identified.",
+  "dual_use: Commercial cybersecurity applicability is substantive; no defense contract, military deployment, or government award was found."
+]
+conflicts = ["The company announced $70 million combined but did not allocate amounts by round. Startup Nation Finder reports $15 million seed plus $55 million Series A; the split is secondary reporting and not separately confirmed by the company."]
+diligence_questions = [
+  "Can Artemis provide customer-verified paid deployment, retention, and expansion data for Cursor and other named accounts, with contract dates and scope?",
+  "What are detection precision/recall, investigation correctness, and autonomous resolution rates on independently adjudicated incidents, including false-positive and rollback rates?",
+  "What are per-customer telemetry cost, query latency, model inference cost, and gross margin under representative event volumes?",
+  "How are tenant authorization, prompt injection, data residency, model-provider access, and human approval for response actions enforced and audited?",
+  "What is the complete financing history and cap table, and did any disclosed industry angels invest through entities or secondary transactions?"
+]
+
+[[intelligence.research.sources]]
+id = "official_launch"
+url = "https://artemissecurity.com/company-news/announcing-artemis-security-that-understands-what-it-protects/"
+title = "Announcing Artemis: Security That Understands What It Protects"
+publisher = "Artemis Security"
+kind = "company"
+accessed_at = "2026-10-04T00:00:00+03:00"
+published_on = "2026-04-15"
+claims = ["Artemis announced $70 million total seed and Series A funding; Felicis led Series A and First Round Capital and Brightmind co-led seed.", "Theory VC and Lockstep participated; unnamed cybersecurity executives and founders also participated.", "Company says it was founded seven months before announcement and was in production.", "Company reports over 15,000 TB analyzed daily and billions of events hourly."]
+
+[[intelligence.research.sources]]
+id = "fortune"
+url = "https://fortune.com/2026/04/15/exclusive-artemis-raises-70m-to-help-fight-ai-powered-attacks-with-ai/"
+title = "Exclusive: Artemis raises $70M to help fight AI-powered attacks with AI"
+publisher = "Fortune"
+kind = "media"
+accessed_at = "2026-10-04T00:00:00+03:00"
+published_on = "2026-04-15"
+claims = ["Reports $70 million venture funding; Felicis led Series A with returning First Round Capital and Brightmind; Theory VC participated.", "Reports company named Mercury, Wix, Lemonade, and Abnormal AI clients.", "Company spokesperson forecast multimillion-dollar ARR before 2026 year-end and said several seven-figure deals had closed; forecast is not realized financial performance.", "Company did not disclose valuation.", "Identifies Shachar Hirshberg and Dan Shiebler as co-founders and summarizes backgrounds."]
+
+[[intelligence.research.sources]]
+id = "globes"
+url = "https://en.globes.co.il/en/article-ai-protection-co-artemis-security-raises-70m-1001540194"
+title = "AI protection co Artemis Security raises $70m"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-04T00:00:00+03:00"
+published_on = "2026-04-15"
+claims = ["Describes Artemis as Israeli company founded by Hirshberg and Shiebler.", "Reports production deployment within six months and billions of events processed hourly.", "Summarizes founder experience at GuardDuty, Demisto, Palo Alto Networks, Abnormal AI, and Twitter."]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://artemissecurity.com/about/"
+title = "About Artemis | Reinventing Defense in the AI Era"
+publisher = "Artemis Security"
+kind = "company"
+accessed_at = "2026-10-04T00:00:00+03:00"
+claims = ["Names Shachar Hirshberg as co-founder and CEO and describes his GuardDuty, Demisto, Palo Alto Networks, Harvard and IDF Intelligence Corps background.", "Names Dan Shiebler as co-founder and CTO and describes his Abnormal AI, Twitter and Oxford background."]
+
+[[intelligence.research.sources]]
+id = "cursor_case"
+url = "https://artemissecurity.com/customers/cursor-case-study/"
+title = "How Cursor Built AI-Native Security Operations"
+publisher = "Artemis Security"
+kind = "customer"
+accessed_at = "2026-10-04T00:00:00+03:00"
+published_on = "2026-07-28"
+claims = ["Artemis publishes a Cursor case study describing production security operations, more than 20 integrated log sources, 500TB+ monthly analysis, 100% alerts investigated and 96% autonomous resolution; claims are not independently audited."]
+
+[[intelligence.research.sources]]
+id = "finder"
+url = "https://finder.startupnationcentral.org/company_page/artemis-security?section=news"
+title = "Artemis Security — Cyber Security"
+publisher = "Startup Nation Finder"
+kind = "directory"
+accessed_at = "2026-10-04T00:00:00+03:00"
+claims = ["Lists July 2025 $15 million seed led by First Round Capital and Brightmind Partners.", "Lists April 2026 $55 million Series A led by Felicis with First Round Capital, Brightmind Partners, and Two Sigma Ventures.", "Lists founders Shachar Hirshberg and Dan Shiebler and July 2025 founding."]
+
+[[intelligence.research.sources]]
+id = "mako"
+url = "https://www.mako.co.il/nexter-news/Article-36fd42bbec09d91026.htm"
+title = "חצי שנה בלבד אחרי הקמתה: חברת הסייבר ארטמיס מגייסת 70 מיליון דולר"
+publisher = "Mako"
+kind = "media"
+accessed_at = "2026-10-04T00:00:00+03:00"
+published_on = "2026-04-15"
+claims = ["Hebrew report identifies the company as Israeli and reports $70 million across seed and Series A.", "Names Shachar Hirshberg as CEO and Dan Shiebler as CTO."]
+
+[[intelligence.research.sources]]
+id = "official_site"
+url = "https://artemissecurity.com/"
+title = "Artemis Security | AI-Native Protection Platform for Modern SecOps"
+publisher = "Artemis Security"
+kind = "company"
+accessed_at = "2026-10-04T00:00:00+03:00"
+claims = ["Describes product as an AI-native security operations platform for detecting, investigating and responding across enterprise telemetry."]
+
+[[intelligence.research.sources]]
+id = "official_connectors"
+url = "https://artemissecurity.com/connectors/"
+title = "Connectors - Artemis Security"
+publisher = "Artemis Security"
+kind = "company"
+accessed_at = "2026-10-04T00:00:00+03:00"
+claims = ["Lists integrations across cloud, endpoint, identity, SaaS, SIEM, SOAR, threat intelligence, and security operations data sources."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T00:00:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Artemis Security official company identity headquarters legal name aliases", "Artemis Security Israeli-founded company founders"]
+source_ids = ["official_site", "globes", "about", "mako"]
+summary = "Identified the New York-based Artemis Security cybersecurity startup; Israeli-founded connection corroborated by Israeli media. No legal registry name or jurisdiction found."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T00:00:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Artemis Security funding raised seed Series A investors valuation acquired", "Artemis Security raised $15 million seed $55 million series A"]
+source_ids = ["official_launch", "fortune", "finder", "globes"]
+summary = "Found $70 million reported total and secondary-source split of $15 million seed and $55 million Series A. No valuation disclosed; no later financing identified."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-04T00:00:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Artemis Security investors Felicis First Round Brightmind Theory Lockstep Two Sigma"]
+source_ids = ["official_launch", "fortune", "finder"]
+summary = "Verified named institutional participants from announcement and directory reporting; other individual angels remain unnamed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T00:00:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Artemis Security founders CEO CTO team background", "site:artemissecurity.com/about Shachar Hirshberg Dan Shiebler"]
+source_ids = ["about", "fortune"]
+summary = "Verified founder and CEO/CTO bios; no complete current leadership roster or reliable employee total found."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T00:00:00+03:00"
+next_review_on = "2027-04-04"
+queries = ["Artemis Security ownership acquired parent company cap table", "Artemis Security valuation ownership investors"]
+source_ids = ["fortune", "official_launch"]
+summary = "No ownership percentages, parent, acquisition, or exit disclosed; valuation explicitly not disclosed in Fortune."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T00:00:00+03:00"
+next_review_on = "2027-04-04"
+queries = ["Artemis Security revenue ARR profitability burn runway", "Artemis Security multimillion ARR 2026 forecast"]
+source_ids = ["fortune"]
+summary = "No realized dated financial metrics found. Fortune reports an executive forecast for year-end ARR and several seven-figure deals, which are not booked revenue evidence."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T00:00:00+03:00"
+next_review_on = "2027-01-04"
+queries = ["Artemis Security customers production deployments Cursor Mercury Wix Lemonade", "site:artemissecurity.com/customers Artemis Security case study"]
+source_ids = ["cursor_case", "fortune", "official_launch", "globes"]
+summary = "Found named customers and one detailed company case study plus company-reported data throughput; contract values and independent validation are absent."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T00:00:00+03:00"
+next_review_on = "2027-04-04"
+queries = ["Artemis Security patents USPTO WIPO", "Artemis Security proprietary dynamic data model patent"]
+source_ids = ["official_launch", "official_site"]
+summary = "Company describes proprietary architecture; no patent filing or grant attributable to this company was found in reviewed results."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T00:00:00+03:00"
+next_review_on = "2027-04-04"
+queries = ["Artemis Security competitors Vega Security AI SOC", "Artemis Security SIEM alternatives Cortex XSIAM CrowdStrike"]
+source_ids = ["fortune", "finder"]
+summary = "Established incumbent SIEM/XDR platforms and Vega Security as named peer; no independent comparative efficacy studies identified."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T00:00:00+03:00"
+next_review_on = "2027-04-04"
+queries = ["Artemis Security defense government military contract", "Artemis Security public sector defense deployment"]
+source_ids = ["official_site", "globes"]
+summary = "Cyber defense capabilities transfer plausibly to critical infrastructure and government settings, but no defense contract or military customer evidence found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Company's April 2026 launch and current live company site demonstrate an operating business and active product presence."
+verified_at = "2026-10-04T00:00:00+03:00"
+source_ids = ["official_launch", "official_site"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Globes and Mako explicitly characterize Artemis as Israeli-founded; official founder biography notes Hirshberg's IDF Intelligence Corps service."
+verified_at = "2026-10-04T00:00:00+03:00"
+source_ids = ["globes", "mako", "about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Company announcement states $70 million combined seed and Series A; Fortune independently reports the same aggregate."
+verified_at = "2026-10-04T00:00:00+03:00"
+source_ids = ["official_launch", "fortune"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.amount"
+support = "direct"
+summary = "Startup Nation Finder reports $15 million seed in July 2025; company confirms the seed round but not its separate amount."
+verified_at = "2026-10-04T00:00:00+03:00"
+source_ids = ["finder", "official_launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.amount"
+support = "direct"
+summary = "Startup Nation Finder reports $55 million Series A in April 2026; company confirms Series A and lead investor but not amount allocation."
+verified_at = "2026-10-04T00:00:00+03:00"
+source_ids = ["finder", "official_launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.lead_investors"
+support = "direct"
+summary = "Startup Nation Finder attributes seed co-lead roles to First Round Capital and Brightmind Partners; Artemis confirms both co-led seed."
+verified_at = "2026-10-04T00:00:00+03:00"
+source_ids = ["finder", "official_launch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.lead_investors"
+support = "direct"
+summary = "Artemis and Fortune both report Felicis led the Series A."
+verified_at = "2026-10-04T00:00:00+03:00"
+source_ids = ["official_launch", "fortune"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.participating_investors"
+support = "direct"
+summary = "Artemis names Theory and Lockstep; Fortune names Theory; Startup Nation Finder lists First Round, Brightmind and Two Sigma as participants."
+verified_at = "2026-10-04T00:00:00+03:00"
+source_ids = ["official_launch", "fortune", "finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Reviewed company announcement and reporting discuss Artemis as the standalone startup; they disclose no parent company. Private ownership structure remains undisclosed."
+verified_at = "2026-10-04T00:00:00+03:00"
+source_ids = ["official_launch", "fortune"]

@@ -1,0 +1,102 @@
+name = "IronBlocks"
+description = "IronBlocks develops a modular Web3 security layer centered on an on-chain smart-contract Firewall, a collaborative Venn Security Network, and Rollup Guard. Its core commercial proposition is to evaluate and, where configured, block unsafe transaction behavior in DeFi protocols, bridges, rollups, and other EVM-based applications rather than relying only on post-incident alerts."
+
+detailed_description = """
+IronBlocks' core product is a smart-contract Firewall implemented as an execution-layer control point. Integrating projects route protected functions through pre-execution and post-execution hooks: policies inspect an incoming call before it reaches the protocol and can reject it, then check whether the resulting state change violates an invariant. Official documentation describes support for immutable and upgradeable contracts and a relatively low-friction integration path. The policy catalogue covers allowlists and blocklists, method blocking, balance-change limits, administrative notaries, external-owned-account restrictions, approved call patterns, custom invariants, compliance gates, and off-chain signature verification. This differs materially from an audit or monitoring dashboard because it is intended to constrain live behavior at the point where a transaction can change state; it cannot eliminate vulnerabilities outside the protected contract or guarantee correct policy configuration.
+
+The target customer is a developer, protocol owner, chain operator, or security team operating a DeFi protocol, bridge, rollup, market maker, real-world-asset application, smart wallet, or other blockchain service. The current site presents a free tier, a paid plan, and custom enterprise services, while Rollup Guard emphasizes operator-based transaction validation, configurable fee models, and non-custodial operation. The 2024 launch material describes an open-source, on-chain, self-service Firewall with initial policies and named ecosystem backing. These are useful commercialization signals, but public materials do not establish recurring revenue, retention, production transaction volume, customer concentration, or independently audited loss-prevention outcomes. Website claims that the technology has prevented hacks or safeguarded millions should therefore remain company-reported claims.
+
+The competitive field includes pre-deployment auditors, bug-bounty and incident-response providers, transaction-monitoring and alerting platforms, and security-policy products embedded in protocol infrastructure. IronBlocks' differentiator is the combination of programmable enforcement with an on-chain execution path, complemented by an off-chain operator network, rather than detection alone. That positioning creates a demanding product tradeoff: policies must be expressive enough to catch novel attack sequences without blocking legitimate composable activity. Gas overhead, latency, upgrade governance, chain-specific behavior, smart-contract audit quality, operator independence, and reliable off-chain signals all affect the value delivered. Open-source components may lower adoption friction, but they can also make differentiation and monetization harder if comparable controls become standard protocol engineering practice.
+
+The company has credible early commercialization signals: a public 2023 seed announcement, a current product site, documentation, pricing, a named leadership team, a 2024 open-source Firewall launch, and public descriptions of ecosystem relationships. These signals establish an operating product direction but do not establish scale, mature enterprise distribution, or government adoption. IronBlocks remains an early-stage private startup in this record. Its national-security relevance is best described as cybersecurity adjacency rather than demonstrated defense traction. The same policy-enforcement concepts could protect permissioned or hybrid ledgers used for regulated assets, identity, logistics, or secure audit trails, but no public evidence here confirms defense customers, government contracts, classified use, or deployment outside EVM/Web3 environments. Strategic diligence should test whether the controls can meet assurance, availability, governance, and procurement requirements beyond crypto-native deployments.
+"""
+
+logo = "https://www.ironblocks.com/assets/logo.png"
+website = "https://www.ironblocks.com"
+sector = "Blockchain Security / Cybersecurity"
+founded = "2022"
+headquarters = "Tel Aviv, Israel"
+employees = "11-50"
+funding_stage = "Seed; publicly reported US$7M round in 2023"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "IronBlocks' core control—policy-based prevention of unauthorized or unsafe state changes—has substantive commercial cybersecurity value and a plausible security use beyond Web3, including permissioned or hybrid ledgers used for regulated records, logistics, identity, or critical-infrastructure workflows. The dual-use case is credible at the control-plane level, but it is not evidence of defense deployment: the public product is EVM-centric and public sources do not establish government customers, classified use, or mission-system integration."
+
+key_technologies = [
+  "On-chain smart-contract Firewall with pre-execution and post-execution hooks",
+  "Programmable invariant enforcement and custom policy contracts",
+  "Allowlist, blocklist, method-blocking, balance-guard, and admin-notary controls",
+  "Off-chain signature verification and operator-assisted transaction validation",
+  "EVM-compatible deployment for immutable and upgradeable contracts",
+  "Venn Security Network for distributed security operators and policy services",
+  "Rollup Guard detectors and SDK-based custom security integrations"
+]
+
+use_cases = [
+  "Blocking unauthorized administrative or privileged smart-contract calls",
+  "Constraining abnormal balance changes and suspicious DeFi transaction sequences",
+  "Screening bridge transactions that require off-chain or cross-chain validation",
+  "Protecting rollups, DeFi protocols, digital-asset custodians, and market makers",
+  "Applying on-chain compliance or eligibility gates to tokenized real-world assets",
+  "Validating sequencer or operator transactions for rollup ecosystems",
+  "Maintaining invariants in permissioned or hybrid ledgers for regulated records",
+  "Providing a runtime integrity layer for blockchain-based identity or logistics systems"
+]
+
+investible = true
+investment_rationale = "IronBlocks has a credible but bounded fit for a dual-use cybersecurity thesis because it turns blockchain security policy into an enforceable runtime control rather than an alert-only workflow. The 2023 seed financing, current product, documentation, pricing, 2024 open-source Firewall launch, and Venn/Rollup Guard positioning support the existence of an operating company and a plausible path to software revenue. The case remains diligence-sensitive: public information does not verify revenue, retention, production transaction volume, customer concentration, or the independence of reported prevention outcomes. Priority should depend on reproducible technical testing and commercial evidence, not on the funding announcement or the size of the crypto-security market."
+strategic_value = "IronBlocks could serve as an integrity and availability control for live EVM systems, reducing the time between identifying suspicious behavior and stopping a state change. Its strategic value is strongest for digital-asset infrastructure, bridges, and rollups, where an exploit can propagate quickly and automated policy enforcement may reduce blast radius. A secondary opportunity exists in permissioned or hybrid ledgers where transaction policies can reduce operator error and support governance. The defense relevance is an adaptation opportunity, not a demonstrated program: portability, assurance, failure-mode testing, operator governance, supply-chain security, and procurement evidence would be required before treating it as mission-ready technology."
+
+potential_score = 71.0
+technology_score = 83.0
+market_score = 68.0
+team_score = 70.0
+dual_use_score = 62.0
+strategic_alignment_score = 66.0
+
+stage = "early"
+stage_rationale = "IronBlocks was founded in 2022, raised a publicly reported US$7 million seed round in 2023, launched an open-source/self-service Firewall in 2024, and currently presents live Firewall, Rollup Guard, and Venn-related products with documentation and pricing. Those are stronger signals than a concept-stage record, but available public evidence does not demonstrate scale, mature enterprise distribution, independently verified revenue, or government adoption. Early is therefore the most defensible classification."
+
+competitors = [
+  "Forta Network",
+  "BlockSec Phalcon",
+  "Hexagate",
+  "OpenZeppelin Defender and Monitor",
+  "CertiK",
+  "Halborn",
+  "Immunefi and security-response providers"
+]
+
+competitive_edge = "IronBlocks combines programmable smart-contract enforcement with pre- and post-execution checks, allowing a protected function to reject a transaction or resulting state transition instead of merely alerting an operator. Its policy library addresses access control, balance limits, admin approvals, method restrictions, compliance, and custom invariants, while Rollup Guard and Venn extend the proposition toward operator-assisted transaction validation. The edge is conditional: it depends on low integration friction, acceptable gas and latency overhead, policy correctness, audited contracts, reliable operators, and sufficient ecosystem coverage to outperform established monitoring, audit, and response substitutes."
+
+risk_factors = [
+  "Incorrect or overly broad policies can block legitimate composable transactions, impair availability, or create governance disputes.",
+  "EVM-specific hooks and chain differences may limit portability and increase integration, testing, and maintenance costs.",
+  "Attackers can adapt transaction sequences faster than policy authors, leaving residual detection and evasion risk.",
+  "A small Web3 security market, crypto-cycle volatility, and open-source alternatives can constrain pricing power and recurring revenue.",
+  "Runtime controls do not replace secure contract design, audits, key management, oracle security, or off-chain operational controls.",
+  "Public evidence is insufficient to verify customer concentration, production coverage, prevention claims, retention, or financial runway.",
+  "Permissioned-ledger and defense expansion would require assurance, governance, compliance, procurement, and integration work not demonstrated publicly.",
+  "The security value may be difficult to prove when customers cannot disclose incidents, while false positives can make operators bypass or disable controls."
+]
+
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "Retain as a diligence priority signal because the company offers a concrete runtime security capability in a strategically relevant but volatile blockchain-security category, with a plausible extension to permissioned ledgers. The moderate overall score and high risk level reflect unverified commercial scale, EVM concentration, policy-failure exposure, uncertain operator economics, and the absence of public defense adoption."
+
+public_sources = [
+  "https://www.ironblocks.com/",
+  "https://www.ironblocks.com/about",
+  "https://www.ironblocks.com/firewall",
+  "https://docs.ironblocks.com/firewall",
+  "https://docs.ironblocks.com/firewall/policies/approved-calls",
+  "https://www.ironblocks.com/rollup-guard",
+  "https://www.venn.build/",
+  "https://www.ironblocks.com/blog/ironblocks-firewall-unveiling-the-first-batch-of-security-policies-in-defi",
+  "https://www.prnewswire.com/news-releases/blockchain-security-platform-ironblocks-announces-7-million-fundraise-301747373.html",
+  "https://www.linkedin.com/company/ironblocks/"
+]
+
+crawled_at = "2026-02-28T17:00:00Z"
+updated_at = "2026-07-31T20:00:34Z"

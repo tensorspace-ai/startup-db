@@ -1,0 +1,524 @@
+name = "Acsense"
+description = "Acsense is an Israeli-founded IAM resilience company that protects, validates, and recovers identity-provider tenants after ransomware, misconfiguration, insider abuse, or operational failure. Its platform adds independent backup, granular rollback, hot-standby recovery, and compliance evidence above Okta, Microsoft Entra ID, and other identity systems."
+detailed_description = """**Product and problem.** Acsense addresses a failure mode that conventional disaster-recovery programs often underweight: an organization may keep its applications and databases available while losing the identity configuration that grants access to them. A corrupted Okta or Entra tenant can affect workforce logins, customer authentication, service accounts, application assignments, policies, groups, tokens, and privileged roles at once. Acsense positions itself as an Identity Control Plane above the identity provider, with continuous backup, point-in-time comparison, granular restoration, configuration governance, and tested failover. The product is therefore more specific than a generic SaaS backup service and more operational than an identity-governance dashboard. It is designed to keep an enterprise operational during the aftermath of ransomware, destructive administrator actions, accidental changes, identity-provider outages, or a compromised automation workflow.
+
+**Core technology and operation.** The public product materials describe continuous capture of IAM objects, relationships, configuration, and tenant posture into immutable, encrypted, air-gapped storage. Acsense preserves the context needed to restore a working identity environment rather than merely exporting a list of users: administrators can investigate changes between points in time, identify drift, roll back selected configuration, or recover an entire tenant. Its architecture also includes a secondary or hot-standby tenant, continuous replication, automated failover, least-privilege controls, audit logs, and recovery-health checks. The company advertises roughly ten-minute RPO and RTO targets and drift detection in ten minutes or less; these are product claims, not independently measured benchmarks in the public record. The platform brief also describes relationship-aware rollback, sandbox seeding, configuration promotion across preview, development, and production, and automated recovery testing. Current messaging extends the model to non-human identities such as service accounts, API tokens, OAuth grants, and AI-agent credentials.
+
+**Market, customers, and go-to-market.** Acsense sells into the intersection of identity security, IT disaster recovery, SaaS data protection, compliance, and business continuity. The likely economic buyer is a CISO, CIO, identity administrator, infrastructure-resilience owner, or regulated-enterprise compliance team that cannot accept identity as a single point of failure. The platform begins with Okta and Microsoft Entra ID coverage and is presented as extensible to additional identity providers, allowing a land-and-expand motion inside organizations with hybrid identity estates. Acsense’s public website displays customer or trust logos including Elevance, Delta Dental, Fiverr, monday.com, Aristocrat, Varonis, and Coralogix, although the public material does not disclose contract scope, revenue, deployment size, or whether every logo represents a current production customer. AWS Marketplace availability and a demo-led sales motion can reduce procurement friction for enterprises with existing cloud commitments, while U.S. sales and services, Romanian operations, and Israeli product management support an international enterprise route to market.
+
+**Traction, funding, and validation.** Acsense announced a $5 million seed round in January 2023 led by Joule Ventures, with participation from Gefen Capital, Fusion, and independent investors. That announcement said the capital would support additional IAM-vendor integrations, market expansion, and hiring, and described the company as founded in 2020 by Dell EMC veterans. Startup Nation Finder’s public Fresh Fund portfolio page lists Acsense as an Israeli B2B company with an 11-50 employee range, seed stage, and $5 million raised. Acsense’s current website reports sub-ten-minute drift detection, approximately ten-minute RTO/RPO indicators, SOC 2 and ISO 27001 credentials, and FedRAMP High authorization in June 2026. Those compliance and public-sector signals are meaningful third-party procurement enablers, but the public record does not expose an audit report, authorization boundary, customer renewal data, annual recurring revenue, or independent performance test. The evidence supports real commercialization and validation while leaving scale economics open.
+
+**Founders and team.** The official company page identifies Muli Motola as co-founder and CEO, Daniel Naftchi as co-founder and CTO, and Itzik Hanan as co-founder and COO. The company describes the founding team as former EMC veterans with experience implementing IAM systems and handling identity disasters, a background that fits the product’s emphasis on recovery mechanics rather than only detection. The public team page also names Ido Niv as head of R&D, Robert Tuohey as VP Sales Americas, and Brendon Rod as head of marketing. Its advisory board includes Sara Zohn, presented with EMC software-engineering operations experience; Ran Nahmias, associated with Check Point, IONIX, and Tamnoon; Tamir Harduf, associated with Kenna, Axis, Check Point, and Juniper; and Gabby Nizri, whose prior company Ayehu was acquired by Resolve. This is a relevant enterprise-security network, although biographies do not substitute for diligence on retention, engineering depth, and the founders’ ownership or prior exit outcomes.
+
+**Competitive dynamics and edge.** Acsense competes with identity-threat-detection and directory-recovery vendors such as Semperis, broad cyber-recovery platforms such as Rubrik and Veeam, identity-governance suites such as Saviynt, and native backup or export features from Okta and Microsoft. Its strongest potential edge is the combination of provider-aware dependency preservation, independent air-gapped copies, precise tenant-level rollback, hot-standby failover, and continuous proof that recovery actually works. That package targets the gap between “the identity provider is highly available” and “the customer can restore its own tenant’s policies, relationships, secrets, and access graph after compromise.” The edge is not automatically durable: major identity providers can expand native recovery, large backup vendors can add IAM modules, and regulated buyers may prefer a consolidated platform. Acsense must also prove that recovery is safe when privileged credentials, federation trust, encryption keys, and downstream application dependencies are themselves damaged.
+
+**Defense, security, and resilience relevance.** Acsense has credible dual-use value because identity infrastructure is a control layer for commercial enterprises, government systems, defense contractors, and critical infrastructure alike. A military logistics application, emergency-communications service, hospital network, or energy operator can remain technically online yet become operationally inaccessible if its identity tenant is altered or unavailable. Immutable recovery, independent separation from the primary provider, auditable change history, least-privilege administration, and rehearsed failover can reduce downtime from ransomware, insider action, supply-chain compromise, destructive automation, or a cloud-control-plane incident. The platform’s support for machine identities and AI-agent credentials is particularly relevant as autonomous workflows gain access to operational systems, though Acsense is not itself an AI model, weapons system, or fielded defense platform. Public evidence supports defensive cyber resilience and continuity for mission-support environments; it does not establish classified deployments, Israeli Ministry of Defense contracts, or military operational use. That distinction keeps the strategic case strong without overstating it.
+
+**Stage, trajectory, and diligence risks.** Acsense should be classified as mid-stage: it has a named product, international sales footprint, a public seed round, listed enterprise references, compliance signals, and a current AWS Marketplace route, but no disclosed scale metrics that would justify mature status. The trajectory is attractive if the company can turn IAM recovery from an exceptional incident-control purchase into a recurring resilience standard for every human and machine identity. Key diligence questions are: 1) validate the FedRAMP High scope and whether it materially shortens federal procurement; 2) test recovery fidelity across complex Okta and Entra relationships, federation, privileged roles, tokens, and downstream applications; 3) verify RTO/RPO and drift claims under destructive scenarios; 4) separate logo-level references from paying production deployments and quantify net retention; and 5) understand pricing, gross margins, provider API dependence, storage isolation, key management, and competitive response. The main risks are long enterprise cycles, trust-sensitive access to identity systems, platform concentration, rapidly changing AI-agent controls, and the possibility that native identity vendors or broad backup suites absorb the category. The public record supports a strategically relevant Israeli cybersecurity startup, while current financial scale remains Unknown."""
+logo = "Unknown"
+website = "https://acsense.com/"
+sector = "Cybersecurity / Identity Resilience"
+founded = "2021"
+headquarters = "Ra'anana, Israel; company lists offices in Tel Aviv and New Jersey"
+employees = "11-50 (LinkedIn lists 33 employees)"
+funding_stage = "Seed; $5 million seed announced January 2023, with additional undisclosed rounds reported through November 2024"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Acsense’s core product is defensive identity-resilience infrastructure with clear commercial and public-sector applicability. Enterprises, government agencies, defense contractors, hospitals, and critical-infrastructure operators all depend on identity-provider configuration for access to mission-support systems. Independent immutable recovery, granular rollback, tested failover, audit evidence, and non-human identity governance can limit operational disruption after ransomware, insider abuse, destructive automation, or identity-provider compromise. Public sources support cyber-resilience and compliance relevance, including FedRAMP High messaging, but do not establish a fielded military deployment or offensive capability."
+key_technologies = ["Continuous tenant-level backup of Okta and Microsoft Entra ID objects, policies, and relationships", "Immutable encrypted and air-gapped IAM storage with independent retention", "Relationship-aware point-in-time comparison, granular rollback, and full-tenant recovery", "Hot-standby identity tenant replication with automated failover and approximately ten-minute RTO/RPO claims", "Configuration drift detection, governed promotion, and ITSM-integrated change history", "Automated recovery drills, recoverability health checks, and audit-ready compliance evidence", "Non-human identity inventory and recovery for service accounts, API tokens, OAuth grants, and AI-agent credentials"]
+use_cases = ["Restoring an Okta or Entra tenant after ransomware or destructive administrator activity", "Maintaining continuity of workforce and customer authentication during an identity-provider outage", "Rolling back malicious or accidental changes to groups, policies, applications, roles, and federation configuration", "Testing identity recovery before a cyber incident and producing evidence for auditors or regulators", "Protecting service accounts, API tokens, OAuth grants, and AI-agent credentials from configuration drift", "Safely promoting identity configuration between development, staging, and production tenants", "Providing resilient access infrastructure for government, defense contractors, healthcare, financial services, and critical-infrastructure operators"]
+investible = true
+investment_rationale = "Acsense is a credible strategic-priority signal rather than an investment recommendation. The company has a focused category thesis, a $5 million seed round led by Joule Ventures, named founders with Dell EMC experience, a public enterprise product, listed customer references, AWS Marketplace availability, and current SOC 2, ISO 27001, and FedRAMP High positioning. The diligence case depends on whether the company can prove recovery fidelity and convert identity resilience into repeatable enterprise budgets. Before assigning stronger commercial conviction, verify paid production deployments, recurring revenue, retention, gross margins, security-boundary details, and the exact scope of its public-sector authorization."
+strategic_value = "Acsense has strategic value because identity is a dependency shared by nearly every cloud, SaaS, and operational system, while customer-controlled recovery remains separate from identity-provider availability. Its independent air-gapped copies and recovery testing can strengthen continuity for Israeli and allied enterprises, public agencies, defense suppliers, healthcare networks, and other operators whose mission support depends on cloud authentication. The company also addresses the growing risk surface of machine identities and AI-agent credentials. The strategic value is defensive and infrastructural, not a claim of weapons relevance, and it remains contingent on proving that restores preserve real-world federation, privilege, token, and application relationships under attack conditions."
+potential_score = 82.0
+technology_score = 86.0
+market_score = 84.0
+team_score = 78.0
+dual_use_score = 86.0
+strategic_alignment_score = 89.0
+stage = "mid"
+stage_rationale = "Acsense is beyond an idea-stage company: it has operated since 2020, announced a $5 million seed round, named an enterprise product, an international operating footprint, public customer references, compliance credentials, and AWS Marketplace distribution. It is not classified as mature because the public record does not disclose revenue, deployment scale, retention, or a later institutional round, and its current product and team metrics are not independently reported. Mid-stage best captures a commercial cybersecurity startup with meaningful validation and material scaling risk."
+competitors = ["Semperis (identity threat detection and Active Directory recovery for enterprise environments)", "Rubrik (cyber-recovery and backup platform expanding into SaaS and identity protection)", "Veeam (broad data-protection suite with SaaS backup and recovery capabilities)", "Saviynt (identity governance, administration, and non-human identity controls)", "Okta and Microsoft Entra native capabilities (identity-provider availability, export, governance, and emerging recovery features)", "Cohesity (enterprise data security and recovery platform with potential IAM adjacency)"]
+competitive_edge = "Acsense’s differentiated thesis is that identity-provider recovery needs its own control plane rather than a generic export or a dashboard layered onto IAM. Its combination of provider-aware relationship preservation, immutable air-gapped storage, granular point-in-time rollback, hot-standby failover, drift detection, and continuously tested RTO/RPO can address both incident recovery and pre-incident proof of recoverability. The company’s edge is strongest where an enterprise runs complex human and machine identity dependencies and must demonstrate resilience to auditors. It is less secure where Okta or Microsoft add native recovery, where a large backup suite bundles comparable functionality, or where customers cannot grant a specialist privileged access to their identity environment."
+risk_factors = ["Identity-provider dependency: Okta, Microsoft Entra, API, schema, authentication, or pricing changes could reduce coverage or raise operating cost", "Recovery-integrity risk: a restore must preserve federation, privilege, tokens, application assignments, relationships, and encryption dependencies, not just user records", "Security concentration risk: a breach of Acsense’s own privileged access, storage, keys, or standby tenant could expose or disrupt a customer’s recovery plane", "Enterprise go-to-market risk: identity resilience is a high-trust category with long security reviews, procurement cycles, and demanding proof-of-value requirements", "Competitive bundling risk: identity providers and broad backup platforms can add native recovery, reducing differentiation or pricing power", "Traction opacity: public logos, compliance claims, and employee counts do not reveal recurring revenue, paid deployment volume, renewal, or gross margin", "Agentic-identity risk: rapidly changing AI-agent and non-human identity patterns may increase demand but also create hard-to-model recovery dependencies"]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Acsense merits a strong strategic-priority signal because it protects the identity control plane that underpins cloud operations, public-sector access, and critical-infrastructure continuity. The Israeli origin, former EMC technical background, seed financing, enterprise references, AWS Marketplace route, and reported FedRAMP High authorization create a substantive evidence base. The score is tempered by undisclosed revenue and retention, dependence on Okta and Entra APIs, competition from native and platform vendors, and the absence of public proof of military deployment. This is a diligence priority and ecosystem-relevance flag, not an investment recommendation."
+crawled_at = "2026-09-04T13:33:25Z"
+updated_at = "2026-10-03T10:21:07Z"
+public_sources = [
+  { label = "Acsense About", url = "https://acsense.com/about/", description = "Company history, current leadership, operating locations, product milestones, and FedRAMP milestone." },
+  { label = "Acsense platform", url = "https://acsense.com/", description = "Current product scope, customer logo references, marketplace availability, and product performance claims." },
+  { label = "Acsense 2023 seed announcement", url = "https://www.prweb.com/releases/acsense_Secures_5_Million_in_Funding_for_Innovative_IAM_Resilience_Platform/prweb19114904.htm", description = "January 2023 $5 million seed round and named participating investors." },
+  { label = "Startup Nation Finder Acsense profile", url = "https://finder.startupnationcentral.org/company_page/acsense", description = "Israeli startup profile, registry identifier, historic funding entries, and company overview; profile data is dated and secondary." },
+  { label = "Israel Innovation Authority winner profile", url = "https://innovationisrael.org.il/en/importWinner/516179306/", description = "Empyrean Technologies Ltd. legal identity, Israeli registration number, establishment year, company focus, and management." },
+  { label = "Acsense Identity Assurance launch", url = "https://www.prnewswire.com/news-releases/acsense-launches-identity-assurance-to-deliver-real-time-iam-configuration-visibility-and-audit-readiness-302747769.html", description = "April 2026 product launch and company-reported continuous configuration validation claims." },
+  { label = "Acsense Entra ID launch", url = "https://www.prnewswire.com/il/news-releases/acsense-expands-its-identity-control-plane-with-microsoft-entra-id-support-302801465.html", description = "June 2026 general availability of Microsoft Entra ID product support." },
+  { label = "Acsense FedRAMP High announcement", url = "https://acsense.com/blog/fedramp-high-iam-resilience-federal-agencies/", description = "Company announcement that Acsense is authorized through Knox Systems; federal availability channels and product scope." },
+  { label = "Semperis Active Directory recovery", url = "https://www.semperis.com/active-directory-forest-recovery/", description = "Competitor product scope in Active Directory recovery." },
+  { label = "Rubrik identity recovery", url = "https://www.rubrik.com/solutions/identity-resilience", description = "Adjacent competitor positioning in identity resilience." },
+  { label = "CB Insights Acsense funding profile", url = "https://www.cbinsights.com/company/acsense/financials", description = "Secondary database with conflicting January 2024 round date and investor attribution; retained as a research conflict only." },
+  { label = "Acsense terms of service", url = "https://acsense.com/wp-content/uploads/TERMS-OF-SERVICE-2026.pdf", description = "Company legal terms identify Acsense Inc. as the contracting company." }
+]
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "il-acsense"
+legal_name = "Empyrean Technologies Ltd."
+aliases = ["accSenSe", "Acsense", "Empyrean Technologies Ltd."]
+operating_status = "active"
+business_model = "B2B SaaS platform sold to enterprise identity and security teams for IAM backup, recovery, change governance, disaster recovery, and compliance assurance."
+products = ["IAM Resilience Platform", "Backup & Recovery", "Configuration Management", "Disaster Recovery", "Identity Assurance / Compliance & Assurance"]
+locations = ["Ra'anana, Israel", "Tel Aviv, Israel", "New Jersey, United States"]
+country_of_incorporation = "Israel"
+founded_on = "2021"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "516179306", source_ids = ["s_snc", "s_iia"] }]
+source_ids = ["s_about", "s_snc", "s_iia", "s_terms"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Publicly reported funding history includes an undisclosed 2021 pre-seed, the $5 million January 2023 seed round, and an undisclosed November 2024 round attributed to Tachles VC. Only the 2023 round amount is verified in a company/round announcement. The later and earlier entries are reported by Startup Nation Finder's dated profile, which has since ceased operation; no primary round announcement or disclosed amounts were located for them. No company-announced lifetime total was found, so reported_total_raised is omitted."
+rounds = [
+  { id = "preseed-2021", round_type = "Pre-seed", instrument = "equity", status = "announced", announced_on = "2021-06", amount_status = "undisclosed", amount_scope = "round", lead_investors = [], participating_investors = ["GoAhead Ventures", "Fresh Fund", "Joule Ventures", "Amiad Solomon"], notes = "Startup Nation Finder's historic profile reports a June 2021 pre-seed and these participants; no primary announcement or amount was found.", source_ids = ["s_snc"] },
+  { id = "seed-2023", round_type = "Seed", instrument = "equity", status = "announced", announced_on = "2023-01", amount_status = "reported", amount = 5000000, amount_scope = "round", currency = "USD", lead_investors = ["Joule Ventures"], participating_investors = ["Gefen Capital", "Fusion", "independent investors"], valuation_basis = "undisclosed", notes = "Company announcement described $5 million raised in seed funding; announcement did not disclose valuation or exact close date.", source_ids = ["s_seed", "s_snc"] },
+  { id = "seed-2024", round_type = "Undisclosed round", instrument = "unknown", status = "announced", announced_on = "2024-11", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = [], participating_investors = ["Tachles VC"], notes = "Startup Nation Finder reports an undisclosed November 2024 round involving Tachles VC. Secondary database entries disagree on timing and participants; no primary company or investor announcement was located. This is kept separate and its amount is not inferred.", source_ids = ["s_snc", "s_cbinsights"] }
+]
+history_status = "partial"
+coverage_through = "2026-10"
+
+[[intelligence.people]]
+name = "Muli Motola"
+role = "Co-founder & CEO"
+is_founder = true
+current = true
+background = "Company identifies him as an EMC veteran; detailed employment history was not independently verified."
+source_ids = ["s_about", "s_iia", "s_snc"]
+
+[[intelligence.people]]
+name = "Daniel Naftchi"
+role = "Co-founder & CTO"
+is_founder = true
+current = true
+background = "Company identifies the founding team as EMC veterans; detailed employment history was not independently verified."
+source_ids = ["s_about", "s_iia", "s_snc"]
+
+[[intelligence.people]]
+name = "Itzik Hanan"
+role = "Co-founder & COO"
+is_founder = true
+current = true
+background = "Company identifies the founding team as EMC veterans; detailed employment history was not independently verified."
+source_ids = ["s_about", "s_snc"]
+
+[[intelligence.people]]
+name = "Matt Handler"
+role = "Chief Revenue Officer"
+is_founder = false
+current = true
+source_ids = ["s_about"]
+
+[[intelligence.people]]
+name = "Tom Blinder"
+role = "Head of Customer Success"
+is_founder = false
+current = true
+source_ids = ["s_about"]
+
+[[intelligence.people]]
+name = "Ryan Basyane"
+role = "VP Sales"
+is_founder = false
+current = true
+source_ids = ["s_about"]
+
+[[intelligence.people]]
+name = "Brendon Rod"
+role = "Head of Marketing"
+is_founder = false
+current = true
+source_ids = ["s_about"]
+
+[[intelligence.people]]
+name = "Anne-Marie Collins"
+role = "Channel Director EMEA & APAC"
+is_founder = false
+current = true
+source_ids = ["s_about"]
+
+[[intelligence.investors]]
+name = "Joule Ventures"
+investor_type = "vc"
+round_ids = ["preseed-2021", "seed-2023"]
+relationship = "historical"
+source_ids = ["s_seed", "s_snc"]
+
+[[intelligence.investors]]
+name = "Gefen Capital"
+investor_type = "vc"
+website = "https://gefencapital.com/"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["s_seed"]
+
+[[intelligence.investors]]
+name = "Fusion"
+investor_type = "accelerator"
+round_ids = ["seed-2023"]
+relationship = "historical"
+source_ids = ["s_seed"]
+
+[[intelligence.investors]]
+name = "GoAhead Ventures"
+investor_type = "vc"
+round_ids = ["preseed-2021"]
+relationship = "historical"
+source_ids = ["s_snc"]
+
+[[intelligence.investors]]
+name = "Fresh Fund"
+investor_type = "vc"
+round_ids = ["preseed-2021"]
+relationship = "historical"
+source_ids = ["s_snc"]
+
+[[intelligence.investors]]
+name = "Amiad Solomon"
+investor_type = "angel"
+round_ids = ["preseed-2021"]
+relationship = "historical"
+source_ids = ["s_snc"]
+
+[[intelligence.investors]]
+name = "Tachles VC"
+investor_type = "vc"
+website = "https://tachlesvc.com/"
+round_ids = ["seed-2024"]
+relationship = "historical"
+source_ids = ["s_snc"]
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private company. Public sources identify the Israeli legal entity and Acsense Inc. as a contracting company but do not disclose a parent-subsidiary structure, cap table, or ownership percentages. No acquisition, IPO, or other ownership transaction was found."
+parent_company = "Empyrean Technologies Ltd. (Israeli company; Acsense Inc. also appears in current legal terms; relationship not disclosed)"
+cap_table_status = "undisclosed"
+shareholders = []
+deals = []
+holdings = []
+source_ids = ["s_iia", "s_terms"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Company's about page dates marketplace listings on Okta Integration Network and AWS Marketplace and says first enterprise tenants entered continuous protection in 2023; customer counts and revenue are not disclosed."
+date = "2023"
+source_ids = ["s_about"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Acsense announced general availability of Microsoft Entra ID support, covering backup, configuration management, disaster recovery, and compliance assurance alongside Okta. This is a company product claim, not evidence of customer adoption."
+date = "2026-06-16"
+source_ids = ["s_entra"]
+
+[[intelligence.traction]]
+kind = "regulatory"
+description = "Acsense announced FedRAMP High authorization through Knox Systems and availability through federal procurement channels. This establishes an authorization route, not a government customer or contract."
+date = "2026-06-10"
+source_ids = ["s_fedramp"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Acsense announced Identity Assurance general availability with continuous IAM configuration validation and regulatory-control mapping; detection timing claims are company-reported."
+date = "2026-04-21"
+source_ids = ["s_assurance"]
+
+[[intelligence.comparables]]
+name = "Semperis"
+website = "https://www.semperis.com/"
+rationale = "Identity security and recovery vendor, with strong Active Directory disaster recovery overlap."
+differentiation = "Semperis centers on Active Directory and hybrid identity attack response/recovery; Acsense positions around SaaS IdP tenant backup and recovery for Okta and Entra."
+source_ids = ["s_semperis"]
+
+[[intelligence.comparables]]
+name = "Rubrik"
+website = "https://www.rubrik.com/"
+rationale = "Large data security and recovery platform with identity resilience positioning, potentially an adjacent competitor or bundling threat."
+differentiation = "Rubrik has a broad cyber-recovery portfolio; Acsense focuses on identity provider configuration and tenant recoverability."
+source_ids = ["s_rubrik"]
+
+[[intelligence.research.sources]]
+id = "s_about"
+url = "https://acsense.com/about/"
+title = "About - acsense"
+publisher = "Acsense"
+kind = "company"
+accessed_at = "2026-10-03T10:21:07Z"
+claims = ["Company says it was founded in 2021 and lists Tel Aviv and New Jersey offices.", "Current leadership names and roles.", "Company-reported 2023 marketplace and customer milestones, 2025 Entra milestone, and 2026 FedRAMP milestone.", "Company describes its founders as EMC veterans."]
+
+[[intelligence.research.sources]]
+id = "s_home"
+url = "https://acsense.com/"
+title = "Acsense IAM Resilience Platform"
+publisher = "Acsense"
+kind = "company"
+accessed_at = "2026-10-03T10:21:07Z"
+claims = ["Current positioning, product scope, customer logo references, AWS Marketplace availability, and company-reported product performance claims."]
+
+[[intelligence.research.sources]]
+id = "s_seed"
+url = "https://www.prweb.com/releases/acsense_Secures_5_Million_in_Funding_for_Innovative_IAM_Resilience_Platform/prweb19114904.htm"
+title = "accSenSe Raises $5 Million For Continuous Access and Business Continuity Platform"
+publisher = "PRWeb / Acsense"
+kind = "company"
+published_on = "2023-01"
+accessed_at = "2026-10-03T10:21:07Z"
+claims = ["Acsense announced a $5 million seed round in January 2023 led by Joule Ventures with participation from Gefen Capital, Fusion, and independent investors.", "Announcement said company was founded in 2020 by Dell EMC veterans; this differs from the current company page's 2021 founding date."]
+
+[[intelligence.research.sources]]
+id = "s_snc"
+url = "https://finder.startupnationcentral.org/company_page/acsense"
+title = "Acsense - Cyber Security | Finder"
+publisher = "Startup Nation Central"
+kind = "directory"
+published_on = "2023-09-15"
+accessed_at = "2026-10-03T10:21:07Z"
+claims = ["Profile lists Israeli company number 516179306, founders, 2021 founding, Ra'anana location, and 11-50 employees.", "Historic profile reports $5.35 million total and three rounds; round table lists June 2021 pre-seed, January 2023 $5 million seed, and November 2024 undisclosed round with Tachles VC.", "Profile states Finder operation ended August 31, 2026; historic funding data is not a current audited or company-announced total."]
+
+[[intelligence.research.sources]]
+id = "s_iia"
+url = "https://innovationisrael.org.il/en/importWinner/516179306/"
+title = "Winners authority investment - EMPYREAN TECHNOLOGIES LTD"
+publisher = "Israel Innovation Authority"
+kind = "government"
+accessed_at = "2026-10-03T10:21:07Z"
+claims = ["Israeli Innovation Authority profile identifies Empyrean Technologies Ltd., registration number 516179306, established 2020, and describes Acsense's cloud IAM protection business and named management."]
+
+[[intelligence.research.sources]]
+id = "s_assurance"
+url = "https://www.prnewswire.com/news-releases/acsense-launches-identity-assurance-to-deliver-real-time-iam-configuration-visibility-and-audit-readiness-302747769.html"
+title = "Acsense Launches Identity Assurance to Deliver Real-Time IAM Configuration Visibility and Audit Readiness"
+publisher = "PR Newswire / Acsense"
+kind = "company"
+published_on = "2026-04-21"
+accessed_at = "2026-10-03T10:21:07Z"
+claims = ["Acsense announced general availability of Identity Assurance and describes its continuous validation, Okta and Entra coverage, and drift detection claims."]
+
+[[intelligence.research.sources]]
+id = "s_entra"
+url = "https://www.prnewswire.com/il/news-releases/acsense-expands-its-identity-control-plane-with-microsoft-entra-id-support-302801465.html"
+title = "Acsense Expands Its Identity Control Plane with Microsoft Entra ID Support"
+publisher = "PR Newswire / Acsense"
+kind = "company"
+published_on = "2026-06-16"
+accessed_at = "2026-10-03T10:21:07Z"
+claims = ["Acsense announced general availability of Microsoft Entra ID support on June 16, 2026, and states the feature set and federal/commercial availability channels."]
+
+[[intelligence.research.sources]]
+id = "s_fedramp"
+url = "https://acsense.com/blog/fedramp-high-iam-resilience-federal-agencies/"
+title = "FedRAMP High IAM Resilience for Federal Agencies"
+publisher = "Acsense"
+kind = "company"
+published_on = "2026-06-10"
+accessed_at = "2026-10-03T10:21:07Z"
+claims = ["Acsense says its platform achieved FedRAMP High authorization through Knox Systems and is accessible through federal procurement channels; company statement is not independent customer evidence."]
+
+[[intelligence.research.sources]]
+id = "s_terms"
+url = "https://acsense.com/wp-content/uploads/TERMS-OF-SERVICE-2026.pdf"
+title = "Acsense Terms of Service 2026"
+publisher = "Acsense"
+kind = "company"
+accessed_at = "2026-10-03T10:21:07Z"
+claims = ["Current terms identify Acsense Inc. as the contracting company; they do not disclose its ownership relationship with Empyrean Technologies Ltd."]
+
+[[intelligence.research.sources]]
+id = "s_cbinsights"
+url = "https://www.cbinsights.com/company/acsense/financials"
+title = "Acsense Stock Price, Funding, Valuation, Revenue & Financial Statements"
+publisher = "CB Insights"
+kind = "directory"
+accessed_at = "2026-10-03T10:21:07Z"
+claims = ["CB Insights separately lists a Seed VC-II round dated January 2024 with Skywell Capital Partners and Tachles VC, but gives no amount and conflicts with Startup Nation Finder's November 2024 round entry."]
+
+[[intelligence.research.sources]]
+id = "s_semperis"
+url = "https://www.semperis.com/active-directory-forest-recovery/"
+title = "Active Directory Forest Recovery"
+publisher = "Semperis"
+kind = "other"
+accessed_at = "2026-10-03T10:21:07Z"
+claims = ["Semperis offers Active Directory forest recovery, establishing adjacent identity recovery competition."]
+
+[[intelligence.research.sources]]
+id = "s_rubrik"
+url = "https://www.rubrik.com/solutions/identity-resilience"
+title = "Identity Resilience"
+publisher = "Rubrik"
+kind = "other"
+accessed_at = "2026-10-03T10:21:07Z"
+claims = ["Rubrik markets identity resilience as part of its broader cyber recovery suite, an adjacent competitor and potential bundling threat."]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders", "headquarters_in_israel"]
+summary = "Israeli-founded and headquartered company: Startup Nation Finder lists its founders and Ra'anana, Israel location; the company's own site lists Tel Aviv as an office."
+as_of = "2026-10-03"
+source_ids = ["s_snc", "s_about"]
+
+[intelligence.research]
+researched_at = "2026-10-03T10:21:07Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Acsense official company about leadership 2026", "Acsense funding raised seed investors Joule Gefen Fusion", "Acsense 2024 funding Tachles VC", "Acsense revenue ARR customers employees 2026", "Acsense ownership acquisition parent company Empyrean Technologies", "Acsense patents Empyrean Technologies WIPO Google Patents", "Acsense competitors IAM resilience Semperis Rubrik identity recovery", "Acsense FedRAMP High government defense use dual use", "Acsense Entra ID Identity Assurance product launch 2026", "Acsense Israeli company registration 516179306"]
+gaps = ["financials: no dated public revenue, ARR, profitability, burn, or runway figures were found; third-party website estimates are not sufficiently transparent to report as company financials.", "traction: logos and product/authorization announcements are public, but paying customer counts, production deployment scope, contract values, retention, and revenue remain undisclosed; no government contract or deployment is independently established.", "intellectual_property: no attributable patent publication or registered IP record was located in searches for Acsense, accSenSe, Empyrean Technologies Ltd., and company number 516179306; absence from search results does not prove no filings.", "team: current leadership titles are listed by the company, but detailed executive biographies and independently verified prior employment are limited.", "ownership: private cap table, ownership percentages, and relationship between Empyrean Technologies Ltd. and Acsense Inc. are not publicly disclosed.", "funding: 2021 and 2024 funding entries and investor attribution rely on a legacy directory and conflict with secondary database timing; primary announcements and amounts were not found.", "dual_use: defensive commercial and federal applicability is supported by product scope and company-reported FedRAMP High path; no specific defense customer or military deployment was located."]
+conflicts = ["Company's current About page dates founding to 2021; its January 2023 seed announcement says founded in 2020, and Israel Innovation Authority profile says established 2020. Prefer the newer company page and Startup Nation profile for founded_on=2021 while retaining this inconsistency for diligence.", "Startup Nation Finder reports a November 2024 undisclosed Tachles VC round; CB Insights lists a Seed VC-II on January 1, 2024 with Skywell Capital Partners and Tachles VC. The round timing and participation are not reconciled; amount remains undisclosed and the CB Insights investor attribution is not adopted.", "Startup Nation Finder reports $5.35M total across three rounds but does not supply a derivation or company announcement; no reported_total_raised is asserted."]
+diligence_questions = ["Can the company provide audited or board-approved ARR, gross margin, burn, runway, bookings, and renewal cohorts through the latest quarter?", "How many customer logo references are paying production customers, what is deployment scale, and what measured recovery outcomes have customers validated in exercises?", "What is the exact relationship and ownership chain between Israeli Empyrean Technologies Ltd. and US Acsense Inc., and who owns the private cap table?", "Can Acsense provide a primary closing announcement or investor confirmation for the reported 2021 pre-seed and 2024 Tachles round, including exact dates, instruments, participants, and cumulative-versus-incremental scope?", "What FedRAMP High boundary is authorized through Knox, and does the authorization cover Acsense's own service boundary or availability as a service hosted within Knox?"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T10:21:07Z"
+next_review_on = "2027-01-03"
+queries = ["Acsense official company about leadership 2026", "Acsense Israeli company registration 516179306"]
+source_ids = ["s_about", "s_snc", "s_iia", "s_terms"]
+summary = "Identity reconciled across the company's current website, Israel Innovation Authority, and historic Startup Nation Central profile; company page now uses Acsense and lists Empyrean Technologies Ltd. in government records."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-03T10:21:07Z"
+next_review_on = "2027-01-03"
+queries = ["Acsense funding raised seed investors Joule Gefen Fusion", "Acsense 2024 funding Tachles VC"]
+source_ids = ["s_seed", "s_snc", "s_cbinsights"]
+summary = "Verified $5M 2023 seed announcement; legacy directory identifies undisclosed June 2021 and November 2024 rounds, while CB Insights has a conflicting January 2024 entry."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T10:21:07Z"
+next_review_on = "2027-01-03"
+queries = ["Acsense funding raised seed investors Joule Gefen Fusion", "Acsense 2024 funding Tachles VC"]
+source_ids = ["s_seed", "s_snc"]
+summary = "Named 2023 seed participants are supported by the round announcement. Earlier and later investor names appear only in the historic directory record."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T10:21:07Z"
+next_review_on = "2027-01-03"
+queries = ["Acsense official company about leadership 2026", "Acsense Israeli company registration 516179306"]
+source_ids = ["s_about", "s_iia", "s_snc"]
+summary = "Current company leadership page names three founders and five other current leaders; government profile corroborates CEO and CTO, while detailed biographies remain limited."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T10:21:07Z"
+next_review_on = "2027-04-03"
+queries = ["Acsense ownership acquisition parent company Empyrean Technologies", "Acsense legal terms Acsense Inc Empyrean Technologies Ltd"]
+source_ids = ["s_terms", "s_iia", "s_snc"]
+summary = "No acquisition or public ownership transaction located; private cap table and Israeli-US entity relationship are not disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T10:21:07Z"
+next_review_on = "2027-04-03"
+queries = ["Acsense revenue ARR customers employees 2026"]
+source_ids = ["s_snc", "s_home"]
+summary = "No reliable dated revenue, profitability, cash, burn, or runway disclosure found. Directory and prospecting estimates were excluded."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T10:21:07Z"
+next_review_on = "2027-01-03"
+queries = ["Acsense revenue ARR customers employees 2026", "Acsense Entra ID Identity Assurance product launch 2026", "Acsense FedRAMP High government defense use dual use"]
+source_ids = ["s_about", "s_home", "s_assurance", "s_entra", "s_fedramp"]
+summary = "Product expansion and federal authorization path are reported; customer logos are not treated as proof of paid deployment, and no disclosed customer metrics or government contract were found."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T10:21:07Z"
+next_review_on = "2027-04-03"
+queries = ["Acsense patents Empyrean Technologies WIPO Google Patents", "Acsense accSenSe patent 516179306"]
+source_ids = ["s_iia", "s_snc"]
+summary = "No attributable patent was located in the available searches; verify with direct Israel Patent Office, WIPO, and USPTO assignee searches during diligence."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T10:21:07Z"
+next_review_on = "2027-01-03"
+queries = ["Acsense competitors IAM resilience Semperis Rubrik identity recovery"]
+source_ids = ["s_semperis", "s_rubrik"]
+summary = "Semperis overlaps in identity recovery, especially Active Directory; Rubrik is a broader cyber-recovery provider with identity resilience positioning. Native Okta and Microsoft capabilities remain strategic substitutes."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-03T10:21:07Z"
+next_review_on = "2027-01-03"
+queries = ["Acsense FedRAMP High government defense use dual use", "Acsense Entra ID Identity Assurance product launch 2026"]
+source_ids = ["s_fedramp", "s_entra", "s_about"]
+summary = "IAM recovery and configuration assurance apply commercially and to public-sector/federal continuity; FedRAMP path is company-reported. No specific defense deployment, contract, or offensive capability was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current company website shows 2026 product, hiring/contact and leadership materials and states the firm is active."
+verified_at = "2026-10-03T10:21:07Z"
+source_ids = ["s_home", "s_about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Startup Nation profile lists Israeli founders and Ra'anana headquarters; company site lists Tel Aviv office."
+verified_at = "2026-10-03T10:21:07Z"
+source_ids = ["s_snc", "s_about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2023.amount"
+support = "direct"
+summary = "January 2023 announcement reports $5 million in seed funding."
+verified_at = "2026-10-03T10:21:07Z"
+source_ids = ["s_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2023.lead_investors"
+support = "direct"
+summary = "The announcement names Joule Ventures as lead."
+verified_at = "2026-10-03T10:21:07Z"
+source_ids = ["s_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2023.participating_investors"
+support = "direct"
+summary = "The announcement names Gefen Capital, Fusion, and independent investors as participants."
+verified_at = "2026-10-03T10:21:07Z"
+source_ids = ["s_seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.preseed-2021.participating_investors"
+support = "direct"
+summary = "Startup Nation historic funding table names GoAhead Ventures, Fresh Fund, Joule Ventures, and Amiad Solomon for the June 2021 pre-seed; no primary announcement was found."
+verified_at = "2026-10-03T10:21:07Z"
+source_ids = ["s_snc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.participating_investors"
+support = "direct"
+summary = "Startup Nation historic funding table attributes the November 2024 undisclosed round to Tachles VC."
+verified_at = "2026-10-03T10:21:07Z"
+source_ids = ["s_snc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Israel Innovation Authority identifies Empyrean Technologies Ltd. as the Israeli company; Acsense terms separately identify Acsense Inc. as contracting company. No source states the relationship between the entities, so the stated uncertainty is preserved."
+verified_at = "2026-10-03T10:21:07Z"
+source_ids = ["s_iia", "s_terms"]

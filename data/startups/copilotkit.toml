@@ -1,0 +1,581 @@
+name = "CopilotKit"
+description = "CopilotKit is a U.S.-Israeli AI-infrastructure startup building the application layer that lets developers embed agents into software with streaming interaction, shared state, tool calls, human approvals, and generative UI. It also stewards AG-UI, an open event-based protocol for connecting agent backends to user-facing applications, with reported adoption across Google, Microsoft, Amazon, Oracle, and major agent frameworks."
+detailed_description = """
+**Product and the concrete problem it solves.** CopilotKit addresses a practical bottleneck in agent deployment: a language model can plan and call tools, but production software still needs a dependable way to show work, stream intermediate events, preserve application context, request approval, and let a person correct or redirect the agent. Without that layer, each product team builds bespoke plumbing between a frontend, an agent runtime, a tool registry, and a human reviewer. CopilotKit packages those concerns into an open-source SDK and an enterprise platform for agent-native applications. Its documented capabilities include React and Angular chat interfaces, streaming messages, frontend and backend tool calls, dynamic component rendering, synchronized agent/UI state, and human-in-the-loop pauses for confirmation or edits. The product is aimed at moving an agent from a compelling demo into a real application where a user can see what it is doing and remain accountable for consequential actions. That makes it infrastructure rather than a single vertical copilot: the same primitives can sit inside an enterprise dashboard, a developer tool, a collaborative workspace, a customer portal, or a regulated operational system.
+
+**Core technology and how it actually works.** The technical center of gravity is AG-UI, described in CopilotKit's documentation as an open, lightweight, event-based, bidirectional protocol between an agentic backend and a user-facing application. The protocol standardizes the flow of agent state, UI intents, streamed responses, tool activity, user input, and approval events instead of forcing every frontend/backend pair to invent a private contract. CopilotKit's SDK then exposes that stream through application-facing abstractions such as the `useAgent` hook, which can read and update agent state while the UI renders the results. The architecture is deliberately protocol- and model-agnostic: documentation describes compatibility with LangGraph, CrewAI, Google ADK, Microsoft Agent Framework, AWS Strands and Bedrock AgentCore, Mastra, Pydantic AI, Agno, LlamaIndex, and AG2, while the product materials say it can work with different agent backends and protocols. Its generative-UI approach spans controlled components governed by AG-UI, declarative interfaces such as Google's A2UI, and more open-ended MCP Apps. The enterprise layer adds persistent threads, cross-device synchronization, an inspector, and a self-hosting path on Kubernetes; the company says observability and self-improvement features are being developed on top of those interaction signals.
+
+**Market, customers, and go-to-market.** CopilotKit sells into the developer-infrastructure budget created by enterprises that want agents embedded in their own products rather than isolated in a chatbot window. The immediate buyers are platform engineering teams, product engineers, and AI application teams that need a reusable frontend/runtime layer across many agent experiences. The open-source MIT-licensed repository is the distribution wedge: developers can install the SDK through the CLI, inspect examples, contribute to the protocol, and build adoption before a procurement conversation. The commercial expansion path is support, enterprise controls, self-hosted deployment, data residency, persistent state, and operational tooling for companies that cannot rely on a hosted black box. Independent coverage calls CopilotKit Seattle-based and reports that its founders see agents living inside applications, understanding current context, taking actions, and presenting useful interfaces rather than returning long blocks of text. CTech describes it as a U.S.-Israeli company with a U.S. headquarters and an Israeli development center. The company has publicly named DocuSign, S&P Global, Cisco, Deutsche Telekom, and Function Health as production users or customers, while acknowledging that its broader Fortune 500 usage claim is company-reported and not accompanied by a customer list, contract values, or recurring-revenue disclosure.
+
+**Traction, funding, and third-party validation.** CopilotKit announced a $27 million financing package in May 2026, described by CTech as $20.5 million Series A and $6.5 million Seed funding, with Glilot Capital, NFX, and SignalFire among the lead investors and additional participation from Discovery Ventures, Vermilion Cliffs Ventures, DVC, Abstraction Capital, 97212 Ventures, Deep Acre, J-Ventures, Gurtin Ventures, and Fresh Fund. The official announcement reports more than 4 million weekly library downloads and millions of agent-user interactions in production every day; those are company metrics, but they are directionally supported by a public GitHub repository with a large visible contributor and release footprint. AG-UI is the stronger ecosystem signal. CopilotKit's announcement says Google, Microsoft, Amazon, and Oracle adopted the protocol, and its documentation lists integrations across major agent frameworks. Microsoft's own integration documentation explains how CopilotKit clients connect to an AG-UI backend and specifically references streaming, state management, tool calling, generative UI, and human-in-the-loop workflows. Glilot's investment note adds an investor-side validation that the company converted open-source adoption into an enterprise offering and meaningful revenue quickly, but it does not publish revenue, retention, gross margin, or customer concentration. No patent portfolio, independent security certification, or audited commercial metric is identified in the reviewed public sources.
+
+**Founders and team background.** CopilotKit was founded by Israeli brothers Atai Barkai and Uli Barkai. Atai is identified as founder and CEO, while Uli leads growth, partnerships, and ecosystem efforts. CTech reports that Atai previously led media infrastructure at Meta and worked on flagship applications at Doximity, a background directly relevant to building high-scale developer and application infrastructure rather than only a model wrapper. Uli's public role is centered on distribution and ecosystem formation, which is important for a protocol company whose value depends on adoption by both application developers and agent-framework maintainers. The company has been publishing technical material since at least the 2023-2024 period, launched CopilotKit v1.0 in July 2024, and has assembled a visible open-source engineering surface around React, Angular, runtime packages, protocol clients, examples, documentation, and integrations. CTech reports 25 people in the Israeli development center after the 2026 raise, but total headcount, exact U.S. staffing, and the full leadership bench are not publicly established. The founders' Israeli identity and the Tel Aviv engineering presence make CopilotKit a relevant Israeli ecosystem entry even though the company is legally and operationally U.S.-Israeli rather than an Israel-only corporation.
+
+**Competitive dynamics.** CopilotKit competes in a fast-moving layer where open standards can create distribution but can also be absorbed by platforms. (1) Vercel AI SDK and assistant-ui offer developer-facing primitives for streaming conversations and agent interfaces, often with strong alignment to the Next.js ecosystem. (2) LangChain/LangGraph Platform, CrewAI, Microsoft Agent Framework, Google ADK, and AWS Bedrock provide agent runtimes and increasingly ship their own UI or protocol integrations, making them both partners and potential substitutes. (3) Retool, Salesforce, Microsoft Copilot Studio, and ServiceNow package agent experiences inside larger enterprise application suites, competing for the budget through vertical workflow ownership. (4) Gradio, Streamlit, and custom internal component systems remain credible alternatives for teams willing to assemble their own interface layer. CopilotKit's claimed edge is its neutral position between agent backends and frontends: AG-UI gives multiple frameworks a common event contract, while the SDK gives application teams controlled rendering, shared state, and approval workflows. The adoption flywheel is plausible because every framework integration increases the number of backends a CopilotKit client can use, and every application built on the protocol makes the standard more useful. The risk is that the same openness reduces switching costs and lets a larger cloud or model vendor implement equivalent compatibility without paying for CopilotKit's commercial layer.
+
+**Defense, security, and resilience dual-use relevance.** CopilotKit has credible but indirect dual-use relevance. Its core technology is a general interface and orchestration layer, not a targeting system, sensor, cyber weapon, or defense-specific AI model. Nevertheless, defense and critical-infrastructure organizations increasingly need sovereign or self-hosted AI applications in which an analyst, operator, or supervisor can inspect model actions, approve sensitive tool calls, preserve an audit trail, and keep mission data inside a controlled environment. AG-UI's typed event flow, human-in-the-loop controls, explicit state synchronization, and compatibility with different agent runtimes are directly applicable to intelligence-analysis workbenches, cyber incident response consoles, maintenance and logistics systems, emergency-management dashboards, and secure decision-support applications. CopilotKit documents self-hosting on Kubernetes and support for VPC, on-premises, and data-residency deployments, which shortens the architectural path into restricted environments. The calibration is important: no public source reviewed here identifies an Israeli Ministry of Defense, U.S. government, military, or critical-infrastructure customer, and the company has not published a defense accreditation, deployment authorization, or mission-specific evaluation. The dual-use score therefore reflects enabling infrastructure with a credible resilience use case, not demonstrated defense traction.
+
+**Growth stage, trajectory, and key diligence risks.** CopilotKit is classified as mid-stage because it has progressed beyond an experiment: it has a public SDK, an MIT-licensed codebase, a named protocol, a Series A financing, a reported Israeli engineering center, production references, and adoption claims spanning major technology ecosystems. It is still early in business maturity relative to the infrastructure markets it targets. The central trajectory question is whether AG-UI becomes a durable neutral standard or merely a useful feature absorbed into the frameworks that currently adopt it. Priority diligence should test (1) the difference between weekly package downloads, free developers, active production applications, and paying enterprise accounts; (2) the scope and renewal quality of the named customer relationships; (3) the revenue contribution and margin profile of self-hosted enterprise plans; (4) protocol governance, trademark, licensing, and the independence of AG-UI from CopilotKit; (5) security hardening for tool calls, state synchronization, prompt injection, and untrusted generated UI; (6) the operational cost of storing interaction events and supporting regulated deployments; and (7) the ability of a roughly 25-person Israeli development center to support a global enterprise product. The upside is a control point in the agent application stack. The downside is that protocol adoption can increase ecosystem value while leaving the company with weak monetization and powerful platform competitors.
+"""
+logo = "Unknown"
+website = "https://www.copilotkit.ai/"
+sector = "AI Application Infrastructure / Agent-User Interaction Protocols and Generative UI"
+founded = "2022 (Startup Nation Finder lists December 2022; the company publicly launched CopilotKit v1.0 in July 2024, while CTech reports 2024 founding)"
+headquarters = "United States (city not consistently disclosed; CTech describes a U.S. headquarters and a development center in Tel Aviv-Yafo, Israel; TechCrunch describes the company as Seattle-based)"
+employees = "At least 25 in the Israeli development center; total company headcount Unknown"
+funding_stage = "Series A / venture-backed growth. CTech reports $20.5M Series A and $6.5M Seed funding announced in May 2026, for $27M total; the official announcement describes the $27M Series A as led by Glilot Capital, NFX, and SignalFire."
+entity_type = "startup"
+dual_use = true
+dual_use_description = "CopilotKit's dual-use relevance is enabling infrastructure rather than a fielded defense capability. (1) Its AG-UI protocol standardizes agent-to-user events, state, tool activity, and approvals, which can support analyst workbenches, cyber-response consoles, maintenance systems, logistics applications, and emergency-management software where human review and auditability matter. (2) Its self-hosted Kubernetes, VPC, on-premises, and data-residency options provide an architectural route for sovereign or restricted deployments that cannot send operational context to a public SaaS service. (3) The model- and backend-agnostic design can reduce dependence on a single AI vendor in critical applications. The limiting evidence is equally important: no public defense, intelligence, or critical-infrastructure customer is identified in the reviewed sources; there is no disclosed government accreditation or mission evaluation; and CopilotKit is not itself a sensor, autonomy stack, cyber-defense engine, or weapons system. The score reflects credible commercial-to-resilience transferability and Israeli AI-infrastructure relevance, not realized defense procurement."
+key_technologies = [
+  "AG-UI open, event-based, bidirectional protocol for agent-to-application communication",
+  "React and Angular SDKs for streaming chat, agent state, tool calls, and interactive agent interfaces",
+  "Generative UI rendering across controlled AG-UI components, declarative A2UI, and MCP Apps patterns",
+  "Synchronized shared-state and persistent-thread infrastructure for multi-step, cross-device agent workflows",
+  "Human-in-the-loop controls for approvals, edits, interruption, cancellation, and resumed agent execution",
+  "Self-hosted enterprise deployment on Kubernetes with VPC, on-premises, and data-residency options",
+  "Open-source integration layer spanning LangGraph, CrewAI, Google ADK, Microsoft Agent Framework, AWS, and other runtimes"
+]
+use_cases = [
+  "Enterprise dashboards where agents stream analysis, render structured controls, and request approval before changing records",
+  "Developer tools and internal software platforms that embed agent actions, tool results, and contextual UI into existing workflows",
+  "Customer-service and operations applications that combine agent reasoning with human review, escalation, and persistent case state",
+  "Secure intelligence or cyber-response workbenches requiring auditable agent actions and analyst confirmation before execution",
+  "Defense logistics, maintenance, and mission-support applications deployed in sovereign or on-premises Kubernetes environments",
+  "Emergency-management and critical-infrastructure control rooms where operators need live agent context without surrendering authority",
+  "Multi-agent applications connecting different backends while keeping one frontend interaction model across web and future channels",
+  "Regulated enterprise AI deployments requiring self-hosting, data residency, observability, and controlled tool invocation"
+]
+investible = true
+investment_rationale = "CopilotKit merits a positive legacy priority signal because it is positioned at an important protocol boundary and has evidence beyond a funding headline. (1) Product-market signal: the company reports millions of production agent-user interactions, more than 4M weekly library downloads, and named enterprise users including DocuSign, S&P Global, Cisco, Deutsche Telekom, and Function Health. These remain company-reported metrics and should be separated from audited revenue or retention. (2) Ecosystem leverage: AG-UI adoption or integration by Google, Microsoft, Amazon, Oracle, LangChain, and other frameworks can make CopilotKit a default entry point for a growing class of applications. (3) Team fit: Atai Barkai's media-infrastructure background and the brothers' open-source distribution strategy match the problem's developer-platform character. (4) Strategic relevance: self-hosted, human-supervised agent infrastructure is a useful substrate for sovereign AI and resilient enterprise systems. Counterweights are substantial: protocol commoditization, platform bundling, unclear conversion from downloads to paid accounts, limited public information on revenue and retention, security risks around tools and generated UI, and no disclosed defense customer. This is a strategic diligence assessment, not an investment recommendation."
+strategic_value = "CopilotKit's strategic value sits in the human-control layer of the emerging agent stack. (1) Standards position: AG-UI attempts to define the contract through which agents expose state, actions, and approval requests to people, analogous to how other protocols address tools or agent-to-agent communication. (2) Sovereignty option: self-hosted deployment and backend neutrality can help Israeli, allied, regulated, and critical-infrastructure operators keep sensitive context within an approved environment while changing models or runtimes underneath. (3) Safety and accountability: explicit event streams, shared state, and human-in-the-loop workflows create a better foundation for inspection and approval than opaque chatbot integrations, though implementation quality still determines real assurance. (4) Ecosystem influence: a successful Israeli-founded open standard adopted by major global platforms would give the local ecosystem leverage in a foundational AI-infrastructure layer. The realized strategic value remains conditional on protocol durability, secure enterprise operation, and conversion of broad developer adoption into durable commercial deployments; public evidence does not yet establish defense or national-security procurement."
+potential_score = 75.0
+technology_score = 78.0
+market_score = 82.0
+team_score = 80.0
+dual_use_score = 55.0
+strategic_alignment_score = 68.0
+stage = "mid"
+stage_rationale = "CopilotKit is classified as mid-stage because it has moved from an early open-source experiment into a funded product company with a visible developer ecosystem, production references, a named protocol, and enterprise deployment capabilities. (1) The company publicly launched CopilotKit v1.0 in July 2024 and has since built an SDK, documentation, examples, CLI, protocol community, and enterprise platform. (2) The May 2026 financing package totals $27M across reported Seed and Series A tranches, and CTech reports 25 employees in the Israeli development center. (3) The official company announcement names production users and reports millions of interactions, while Microsoft documentation independently demonstrates an AG-UI integration path. (4) It is not mature: revenue, customer count, retention, margins, total headcount, security certifications, and government deployments are not public; the protocol's long-term governance and monetization are still being established. Progression toward mature status would require durable paid adoption, published enterprise metrics, sustained independent protocol adoption, and evidence that self-hosted deployments operate securely at scale."
+competitors = [
+  "Vercel AI SDK and assistant-ui (developer-first streaming and AI interface primitives with strong web-framework distribution)",
+  "LangChain / LangGraph Platform (agent runtime and orchestration ecosystem that can provide its own application-facing integrations)",
+  "Microsoft Agent Framework and Copilot Studio (large-platform agent runtime and enterprise application bundle)",
+  "Google ADK and Vertex AI Agent Builder (cloud-native agent development and generative-UI ecosystem)",
+  "AWS Bedrock AgentCore (managed agent runtime and enterprise cloud integration, including AG-UI compatibility)",
+  "Retool, Salesforce, and ServiceNow (enterprise workflow suites that embed agents inside applications they control)",
+  "Custom internal frontend and protocol layers (bespoke engineering alternative for organizations unwilling to adopt an external standard)"
+]
+competitive_edge = "CopilotKit's edge is a combination of protocol neutrality, open-source distribution, and an application-level implementation surface. (1) AG-UI gives multiple backends a shared event contract for streaming, state, tools, and human approvals, potentially reducing the repeated integration work that blocks production agent adoption. (2) The SDK turns that contract into concrete React and Angular components, hooks, examples, and a CLI, which can shorten developer time to a usable interface. (3) The company is early enough to be associated with the protocol while remaining compatible with major frameworks rather than requiring customers to adopt one model vendor. (4) Named production users, reported download scale, and integrations documented by Microsoft support the adoption story. The edge is not a proprietary model or an irreversible data moat. Larger framework and cloud vendors can implement compatible clients, and open standards make switching easier. CopilotKit must therefore defend itself through implementation quality, security, observability, enterprise support, governance credibility, and the accumulated preference of developers and framework maintainers."
+risk_factors = [
+  "Protocol commoditization and platform capture: cloud, model, and agent-framework vendors can absorb AG-UI-like features into products with greater distribution",
+  "Adoption-to-revenue uncertainty: public downloads and interaction claims do not establish paid customer count, recurring revenue, retention, or margins",
+  "Security and control risk: tool calls, prompt injection, shared state, generated components, and agent approvals create failure modes in sensitive deployments",
+  "Open-source monetization and support burden: broad free adoption may not convert into enough self-hosted enterprise revenue to fund global support",
+  "Customer concentration and claim verification: named references and Fortune 500 usage are not accompanied by contract scope, spend, or renewal evidence",
+  "Operational maturity: total headcount, security certifications, incident response, service-level performance, and production-scale telemetry practices are not disclosed",
+  "Dual-use remains unrealized: no public defense, intelligence, or critical-infrastructure deployment or government accreditation was identified"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "CopilotKit is a strong ecosystem-monitoring addition because it combines Israeli founders and engineering presence with a potentially foundational AI-infrastructure position. (1) AG-UI addresses a real integration gap between autonomous software agents and the human-facing applications that must supervise them. (2) Adoption claims and public documentation show movement from open-source experimentation toward production and enterprise deployment, while Microsoft documentation provides independent evidence that the protocol is usable in a major agent framework. (3) Self-hosted deployment, data-residency options, and human-in-the-loop primitives give the company a credible path into sovereign AI, cyber-response, logistics, and critical-infrastructure software even though no such defense customer is publicly disclosed. Priority is capped below the strongest defense and cyber records because the company has no demonstrated national-security deployment, its commercial metrics are not transparent, and the protocol could be bundled by Microsoft, Google, AWS, or agent-runtime vendors. Track AG-UI governance, paid enterprise conversion, security certifications, customer retention, and any deployment in an Israeli or allied restricted environment."
+public_sources = [
+  { label = "CopilotKit official Series A announcement", url = "https://www.copilotkit.ai/blog/series-a", description = "Company statement on May 2026 funding, named investors, customers, usage, AG-UI adoption, and Enterprise Intelligence." },
+  { label = "CTech funding report", url = "https://www.calcalistech.com/ctechnews/article/bkbjddprbx", description = "Independent reporting on the $20.5M Series A, $6.5M seed package, investors, founders, and Israeli development center." },
+  { label = "TechCrunch funding report", url = "https://techcrunch.com/2026/05/05/copilotkit-raises-27m-to-help-devs-deploy-app-native-ai-agents/", description = "Independent report on round, product, founders, and enterprise toolkit." },
+  { label = "Startup Nation Finder company profile", url = "https://finder.startupnationcentral.org/company_page/copilotkit?section=similar-companies", description = "Directory history for earlier funding rounds and founding identity; figures are treated as directory-reported and not reconciled with company-announced total." },
+  { label = "CopilotKit official product news", url = "https://www.copilotkit.ai/blog", description = "Company announcements of AG-UI 1.0, OpenDots, Channels SDK, and protocol developments." },
+  { label = "Microsoft Learn AG-UI integration", url = "https://learn.microsoft.com/en-us/agent-framework/integrations/by-component/ui/ag-ui/", description = "Independent documentation of AG-UI integration with Microsoft Agent Framework." },
+  { label = "AG-UI protocol documentation", url = "https://docs.ag-ui.com/introduction", description = "Protocol overview and technical scope." },
+  { label = "Glilot Capital investment thesis", url = "https://glilotcapital.com/cyberhubs/why-we-led-copilotkits-27m-series-a-building-the-user-interface-layer-for-the-agentic-era/", description = "Lead investor perspective on AG-UI and the investment." }
+]
+crawled_at = "2026-09-03T19:58:34Z"
+updated_at = "2026-10-05T00:41:00+03:00"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "copilotkit"
+aliases = ["CopilotKit, Inc."]
+operating_status = "active"
+business_model = "Open-source developer framework and protocol distribution, with paid enterprise/self-hosted tooling and managed services; public revenue mix is undisclosed."
+products = ["CopilotKit frontend SDKs and agent application framework", "AG-UI open agent-to-application protocol", "CopilotKit Enterprise Intelligence", "Channels SDK", "OpenDots"]
+locations = ["Seattle, Washington, United States", "Tel Aviv-Yafo, Israel (development center reported by CTech)"]
+linkedin_url = "https://www.linkedin.com/company/100723818"
+founded_on = "2022-12"
+notes = "Company materials identify Tawkit, Inc. in the website footer. Public founding dates conflict: Startup Nation Finder reports December 2022, while CTech describes a 2024 founding and the company says it publicly launched CopilotKit about two years before May 2026. No legal registry identifier is included because the directory's displayed registrar number appears generic and could not be verified."
+source_ids = ["company-blog", "ctech", "finder", "techcrunch"]
+
+[intelligence.funding]
+status = "reported"
+summary = "CopilotKit and CTech reported a May 2026 $27M financing package, broken out by CTech into a $20.5M Series A and $6.5M Seed. The company calls the event a $27M Series A, so tranche labeling/scope is inconsistent. Startup Nation Finder lists earlier September 2023 $120K pre-seed and May 2024 $450K seed, making its listed lifetime total $27.57M; this does not reconcile with the company/CTech statement that total raised was $27M. Preserve the announced package and separately flag the directory mismatch; do not add earlier amounts into the company-reported total."
+reported_total_raised = 27000000
+reported_total_currency = "USD"
+total_source_ids = ["company-blog", "ctech"]
+total_as_of = "2026-05-05"
+total_scope = "company-announced lifetime total reported by CTech; May 2026 package; earlier directory-listed rounds not reconciled"
+history_status = "partial"
+coverage_through = "2026-10-05"
+
+[[intelligence.funding.rounds]]
+id = "pre-seed-2023"
+round_type = "Pre-seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2023-09"
+amount_status = "reported"
+amount = 120000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["Techstars"]
+participating_investors = ["Techstars"]
+source_ids = ["finder"]
+notes = "Historical amount and date are listed in Startup Nation Finder; no primary announcement was located in this pass."
+
+[[intelligence.funding.rounds]]
+id = "seed-2024"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2024-05"
+amount_status = "reported"
+amount = 450000
+currency = "USD"
+amount_scope = "round"
+lead_investors = []
+participating_investors = ["97212 Ventures", "Fresh Fund", "Techstars", "Abstraction Capital", "SignalFire"]
+source_ids = ["finder"]
+notes = "Historical directory-listed transaction; no primary announcement located. This listing contributes to the $27.57M directory total, which conflicts with the company/CTech reported $27M lifetime total."
+
+[[intelligence.funding.rounds]]
+id = "seed-2026"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2026-05-05"
+amount_status = "reported"
+amount = 6500000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["Glilot Capital Partners"]
+participating_investors = ["NFX", "SignalFire", "97212 Ventures"]
+source_ids = ["ctech", "finder"]
+notes = "CTech reports this as a $6.5M Seed tranche in the May package; the company groups the entire $27M under its Series A announcement."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2026"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2026-05-05"
+amount_status = "reported"
+amount = 20500000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["Glilot Capital Partners"]
+participating_investors = ["NFX", "SignalFire", "97212 Ventures"]
+source_ids = ["ctech", "company-blog", "techcrunch"]
+notes = "CTech reports $20.5M for Series A. Company blog and TechCrunch describe $27M as the Series A; treat as a package/round-label conflict, not a second $27M transaction. CTech does not allocate the remaining named participants across each tranche."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Private company. The May 2026 financing is disclosed, but cap table, investor ownership percentages, and founder holdings were not found in reviewed public sources. No acquisition, IPO, or parent-company relationship was identified."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["company-blog", "ctech", "techcrunch"]
+deals = []
+holdings = []
+
+[[intelligence.traction]]
+kind = "product"
+description = "CopilotKit announced AG-UI 1.0 as a stable protocol specification, with JSON Schema generating TypeScript, Python, and .NET SDKs; release notes cite support for subagents, multimodal tool results, interrupts, and token usage."
+date = "2026-09-30"
+source_ids = ["agui-blog"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "CopilotKit announced OpenDots, an open-source, self-hostable AI coworker product that uses AG-UI and supports web and mobile access."
+date = "2026-10-01"
+source_ids = ["agui-blog"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "CopilotKit introduced Channels SDK for connecting AG-UI agents to Slack, Microsoft Teams, and other chat platforms from one codebase."
+date = "2026-08-04"
+source_ids = ["agui-blog"]
+
+[[intelligence.people]]
+name = "Atai Barkai"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "CTech reports that before CopilotKit he led media infrastructure development at Meta and flagship application development at Doximity."
+source_ids = ["ctech", "company-blog", "techcrunch"]
+
+[[intelligence.people]]
+name = "Uli Barkai"
+role = "Co-founder; growth, partnerships, and ecosystem"
+is_founder = true
+current = true
+background = "CTech identifies him as leading growth, partnerships, and ecosystem efforts."
+source_ids = ["ctech", "company-blog", "techcrunch"]
+
+[[intelligence.investors]]
+name = "Glilot Capital Partners"
+investor_type = "vc"
+website = "https://glilotcapital.com/"
+round_ids = ["seed-2026", "series-a-2026"]
+relationship = "current"
+source_ids = ["company-blog", "ctech", "glilot"]
+
+[[intelligence.investors]]
+name = "NFX"
+investor_type = "vc"
+website = "https://www.nfx.com/"
+round_ids = ["seed-2026", "series-a-2026"]
+relationship = "current"
+source_ids = ["company-blog", "ctech"]
+
+[[intelligence.investors]]
+name = "SignalFire"
+investor_type = "vc"
+website = "https://www.signalfire.com/"
+round_ids = ["seed-2026", "series-a-2026"]
+relationship = "current"
+source_ids = ["company-blog", "ctech"]
+
+[[intelligence.investors]]
+name = "97212 Ventures"
+investor_type = "vc"
+website = "https://97212.vc/"
+round_ids = ["seed-2026", "series-a-2026"]
+relationship = "current"
+source_ids = ["ctech", "finder"]
+
+[[intelligence.investors]]
+name = "Techstars"
+investor_type = "accelerator"
+round_ids = ["pre-seed-2023", "seed-2024"]
+relationship = "historical"
+source_ids = ["finder"]
+
+[[intelligence.investors]]
+name = "Fresh Fund"
+investor_type = "vc"
+round_ids = ["seed-2024"]
+relationship = "historical"
+source_ids = ["finder"]
+
+[[intelligence.investors]]
+name = "Abstraction Capital"
+investor_type = "vc"
+round_ids = ["seed-2024"]
+relationship = "historical"
+source_ids = ["finder"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders", "israeli_rd"]
+summary = "Israeli brothers Atai and Uli Barkai founded CopilotKit; CTech reports a Tel Aviv development center with 25 employees. The company is headquartered in the United States."
+as_of = "2026-05-05"
+source_ids = ["ctech", "techcrunch"]
+
+[intelligence.research]
+researched_at = "2026-10-05T00:41:00+03:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "CopilotKit official company identity products AG-UI October 2026",
+  "CopilotKit 2026 $27M Series A official announcement Glilot NFX SignalFire",
+  "CopilotKit 2026 CTech 20.5 million 6.5 seed Tel Aviv founders",
+  "CopilotKit investors portfolio 2026 funding AG-UI",
+  "CopilotKit founders Atai Uli Barkai company about team",
+  "CopilotKit patent patents Atai Barkai AG-UI",
+  "CopilotKit revenue ARR customers 2026 enterprise pricing",
+  "CopilotKit September 30 2026 AG-UI 1.0 official OpenDots October 1",
+  "CopilotKit defense government customer deployment security certification",
+  "CopilotKit acquisition ownership company registry"
+]
+gaps = [
+  "team: beyond co-founders and reported Tel Aviv center size, complete current leadership and staff roster was not verified from primary sources",
+  "investors: historical round investors are directory-reported; tranche-by-tranche allocations and ownership percentages are unavailable",
+  "financials: no public revenue, ARR, profitability, burn, runway, or audited financial statements located",
+  "traction: customer list and usage figures are company assertions; paid status, contract values, retention, and deployment scope are undisclosed",
+  "intellectual_property: no company-assigned patent record was identified in this search; open protocol/software may be protected through copyright and trademarks",
+  "competition: comparable alternatives were assessed from product positioning but no customer win/loss data or market share is public",
+  "ownership: private cap table and founder/investor holdings are undisclosed",
+  "dual_use: no defense, intelligence, government contract, or security accreditation evidence found; applicability is technical inference only",
+  "funding: prior directory-listed rounds and lifetime totals do not reconcile with the company-announced $27M; earlier events lack primary confirmations",
+  "identity: founding date differs across company, press, and directory sources; no verified legal registration identifier"
+]
+conflicts = ["Funding scope/labels: CopilotKit's May 5, 2026 blog calls $27M a Series A; CTech describes $20.5M Series A plus $6.5M Seed and calls $27M total. The Seed and A package amounts sum to $27M.", "Funding lifetime total: Startup Nation Finder displays $27.57M across four rounds and lists $120K in 2023 and $450K in 2024 in addition to the 2026 package; its total and individual entries do not reconcile with the company and CTech $27M total.", "Founding date: Startup Nation Finder says December 2022; CTech says founded in 2024; official May 2026 announcement says CopilotKit was publicly launched about two years earlier."]
+diligence_questions = ["What ARR, paid enterprise customer count, renewal rate, and gross margin were achieved after the May 2026 financing?", "Does the company-reported $27M lifetime total include or supersede the earlier directory-listed $120K and $450K rounds, and what exactly was the $6.5M Seed tranche's closing date and investor allocation?", "What security controls, independent audits, incident response, and self-hosted deployment certifications are available for customers handling sensitive workloads?", "How is AG-UI governed and versioned now that version 1.0 is released, and what rights or obligations attach to the protocol and implementations?", "What share of Tel Aviv engineering supports the open-source protocol versus paid products, and how does the company fund open-source maintenance?"]
+
+[[intelligence.research.sources]]
+id = "company-blog"
+url = "https://www.copilotkit.ai/blog/series-a"
+title = "CopilotKit raises $27M Series A"
+publisher = "CopilotKit"
+kind = "company"
+accessed_at = "2026-10-05T00:41:00+03:00"
+published_on = "2026-05-05"
+claims = ["Company describes $27M financing as Series A led by Glilot Capital, NFX, and SignalFire", "Company names participating investors", "Company reports production use, customer names, 4 million weekly downloads, 40,000 GitHub stars, and 150 contributors", "Enterprise Intelligence self-hosted on Kubernetes", "AG-UI adoption assertions"]
+
+[[intelligence.research.sources]]
+id = "ctech"
+url = "https://www.calcalistech.com/ctechnews/article/bkbjddprbx"
+title = "CopilotKit raises $27 million to build infrastructure for AI agents"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-05T00:41:00+03:00"
+published_on = "2026-05-05"
+claims = ["Reports $20.5M Series A and $6.5M Seed", "Names Glilot Capital, NFX, SignalFire, and 97212 Ventures", "Identifies Israeli founders and US headquarters", "Reports 25-person Israeli development center", "Reports Atai Barkai prior Meta and Doximity experience and Uli Barkai responsibilities"]
+
+[[intelligence.research.sources]]
+id = "techcrunch"
+url = "https://techcrunch.com/2026/05/05/copilotkit-raises-27m-to-help-devs-deploy-app-native-ai-agents/"
+title = "CopilotKit raises $27M to help devs deploy app-native AI agents"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-05T00:41:00+03:00"
+published_on = "2026-05-05"
+claims = ["Reports $27M Series A led by Glilot Capital, NFX, and SignalFire", "Identifies Atai and Uli Barkai as co-founders", "Describes AG-UI and enterprise self-hosting strategy"]
+
+[[intelligence.research.sources]]
+id = "finder"
+url = "https://finder.startupnationcentral.org/company_page/copilotkit?section=similar-companies"
+title = "CopilotKit — Business Software"
+publisher = "Startup Nation Finder"
+kind = "directory"
+accessed_at = "2026-10-05T00:41:00+03:00"
+published_on = "2026-05-06"
+claims = ["Lists December 2022 founding and founders", "Lists September 2023 $120K pre-seed and May 2024 $450K seed with investors", "Lists May 2026 $20.5M Series A and $6.5M Seed", "Displays $27.57M aggregate total, which conflicts with company/press reports", "Lists a registrar number that was not treated as verified"]
+
+[[intelligence.research.sources]]
+id = "agui-blog"
+url = "https://www.copilotkit.ai/blog"
+title = "CopilotKit Blog"
+publisher = "CopilotKit"
+kind = "company"
+accessed_at = "2026-10-05T00:41:00+03:00"
+published_on = "2026-10-01"
+claims = ["Company announced AG-UI 1.0 on 2026-09-30 with stable specification and generated SDK schemas", "Company announced OpenDots on 2026-10-01", "Company announced Channels SDK in August 2026", "Company reports Microsoft contributed first-class .NET SDK"]
+
+[[intelligence.research.sources]]
+id = "microsoft"
+url = "https://learn.microsoft.com/en-us/agent-framework/integrations/by-component/ui/ag-ui/"
+title = "AG-UI Integration with Agent Framework"
+publisher = "Microsoft Learn"
+kind = "other"
+accessed_at = "2026-10-05T00:41:00+03:00"
+claims = ["Microsoft documents AG-UI integration with Microsoft Agent Framework"]
+
+[[intelligence.research.sources]]
+id = "agui-docs"
+url = "https://docs.ag-ui.com/introduction"
+title = "AG-UI Overview"
+publisher = "AG-UI documentation"
+kind = "other"
+accessed_at = "2026-10-05T00:41:00+03:00"
+claims = ["Describes AG-UI as an agent-to-user-interface protocol"]
+
+[[intelligence.research.sources]]
+id = "glilot"
+url = "https://glilotcapital.com/cyberhubs/why-we-led-copilotkits-27m-series-a-building-the-user-interface-layer-for-the-agentic-era/"
+title = "Why We Led CopilotKit's $27M Series A"
+publisher = "Glilot Capital"
+kind = "investor"
+accessed_at = "2026-10-05T00:41:00+03:00"
+claims = ["Lead investor's rationale for the 2026 investment and AG-UI application layer thesis"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-05T00:41:00+03:00"
+next_review_on = "2027-01-05"
+queries = ["CopilotKit official company identity products AG-UI October 2026", "CopilotKit founders legal entity headquarters founded"]
+source_ids = ["company-blog", "ctech", "finder", "techcrunch"]
+summary = "Active U.S.-headquartered startup founded by Israeli brothers; public record shows differing founding dates and no verified legal registry identifier."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-05T00:41:00+03:00"
+next_review_on = "2026-11-05"
+queries = ["CopilotKit 2026 $27M Series A official announcement Glilot NFX SignalFire", "CopilotKit funding raised seed pre-seed investors"]
+source_ids = ["company-blog", "ctech", "techcrunch", "finder"]
+summary = "May 2026 package is reported; label and lifetime total conflict with historical directory entries."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-05T00:41:00+03:00"
+next_review_on = "2027-01-05"
+queries = ["CopilotKit investors portfolio 2026 funding AG-UI", "CopilotKit seed investors 2024"]
+source_ids = ["company-blog", "ctech", "finder", "glilot"]
+summary = "Lead and participation names were identified for May 2026; earlier names are directory-reported and allocations/terms are not public."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-05T00:41:00+03:00"
+next_review_on = "2027-01-05"
+queries = ["CopilotKit founders Atai Uli Barkai company about team", "CopilotKit leadership executives 2026"]
+source_ids = ["ctech", "techcrunch", "company-blog"]
+summary = "Founders and limited background verified; comprehensive team roster not verified."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T00:41:00+03:00"
+next_review_on = "2027-04-05"
+queries = ["CopilotKit acquisition ownership company registry", "CopilotKit cap table holdings investors"]
+source_ids = ["company-blog", "ctech", "techcrunch"]
+summary = "Private cap table and holdings not disclosed; no acquisition or parent identified."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-05T00:41:00+03:00"
+next_review_on = "2027-04-05"
+queries = ["CopilotKit revenue ARR customers 2026 enterprise pricing", "CopilotKit profitability burn runway"]
+source_ids = ["company-blog", "techcrunch"]
+summary = "No dated revenue, ARR, profitability, burn, or runway disclosures located."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-05T00:41:00+03:00"
+next_review_on = "2027-01-05"
+queries = ["CopilotKit customers production downloads AG-UI adoption", "CopilotKit September 30 2026 AG-UI 1.0 official OpenDots October 1"]
+source_ids = ["company-blog", "ctech", "agui-blog", "microsoft"]
+summary = "Company reports major production users and usage; independent documentation verifies Microsoft integration, but payment and usage methodology remain undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-05T00:41:00+03:00"
+next_review_on = "2027-04-05"
+queries = ["CopilotKit patent patents Atai Barkai AG-UI", "CopilotKit USPTO WIPO patents"]
+source_ids = ["company-blog", "agui-docs"]
+summary = "No assigned patent record identified in the search; software and protocol remain documented, with licensing and trademark diligence outstanding."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-05T00:41:00+03:00"
+next_review_on = "2027-01-05"
+queries = ["CopilotKit alternatives Vercel AI SDK LangChain agent UI", "Microsoft Google AWS agent UI protocols"]
+source_ids = ["company-blog", "microsoft", "agui-docs"]
+summary = "Relevant substitutes include Vercel AI SDK, LangChain/LangGraph interfaces, cloud vendor agent tooling, and custom UI integrations; no comparative win/loss evidence."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-05T00:41:00+03:00"
+next_review_on = "2027-04-05"
+queries = ["CopilotKit defense government customer deployment security certification", "CopilotKit public sector contract military"]
+source_ids = ["company-blog", "ctech", "techcrunch"]
+summary = "The UI, tool, state, and approval layer could technically serve sensitive workflows, but no government or defense deployment, certification, or contract was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Official site remained active with product news through October 1, 2026, and the May 2026 company financing announcement confirms ongoing operation."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["company-blog", "agui-blog"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "CTech reports Israeli founders Atai and Uli Barkai and a Tel Aviv development center."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["ctech"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "CopilotKit and CTech report a $27M total for the May 2026 funding package; scope conflicts with directory-listed prior rounds."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["company-blog", "ctech"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2023.amount"
+support = "direct"
+summary = "Startup Nation Finder lists a September 2023 $120K Pre-Seed round."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.amount"
+support = "direct"
+summary = "Startup Nation Finder lists a May 2024 $450K Seed round."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.amount"
+support = "direct"
+summary = "CTech reports $6.5M Seed funding in the May 2026 package."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["ctech"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.amount"
+support = "direct"
+summary = "CTech reports a $20.5M Series A tranche in the May 2026 package."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["ctech"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2023.lead_investors"
+support = "direct"
+summary = "Startup Nation Finder attributes the pre-seed to Techstars."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2023.participating_investors"
+support = "direct"
+summary = "Startup Nation Finder lists Techstars as the pre-seed investor."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2024.participating_investors"
+support = "direct"
+summary = "Startup Nation Finder lists five participants for the May 2024 Seed round."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.lead_investors"
+support = "direct"
+summary = "CTech names Glilot Capital as lead of the May 2026 seed tranche."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["ctech"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.participating_investors"
+support = "direct"
+summary = "CTech reports NFX, SignalFire, and 97212 Ventures alongside Glilot in the financing package."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["ctech"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.lead_investors"
+support = "direct"
+summary = "CTech names Glilot Capital as lead of the Series A tranche."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["ctech"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2026.participating_investors"
+support = "direct"
+summary = "CTech reports NFX, SignalFire, and 97212 Ventures alongside Glilot in the financing package."
+verified_at = "2026-10-05T00:41:00+03:00"
+source_ids = ["ctech"]

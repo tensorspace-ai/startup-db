@@ -1,0 +1,531 @@
+name = "Code Blue"
+description = "Code Blue is an Israeli cyber-resilience company that combines crisis-management expertise, incident-response services, and Blue Castle, an AI-driven command platform for preparing for and coordinating high-impact cyber incidents. Its focus is the operational layer between technical containment and business continuity: aligning executives, security, legal, communications, regulators, and recovery teams when a cyber event becomes an enterprise crisis."
+detailed_description = """
+**Product and the concrete problem it solves.** Code Blue addresses a failure mode that sits outside the detection problem: organizations may have security telemetry and incident-response vendors, yet still lose control when a breach, ransomware event, operational outage, or third-party compromise forces many decision-makers to act at once. The company argues that cyber crises are business, legal, regulatory, communications, and continuity events rather than CISO-only incidents. Its product is Blue Castle, an AI-driven cyber crisis command platform, alongside Code Blue's human-led incident response and resilience services. The platform is designed to replace fragmented email threads, chat rooms, spreadsheets, conference calls, static playbooks, and disconnected notebooks with a shared operational environment. It lets a crisis management team prioritize decisions, assign ownership, track actions and timelines, coordinate technical and non-technical workstreams, and give senior leadership a current view of business impact and recovery status. The problem is especially acute for hospitals, energy operators, manufacturers, financial institutions, and government-linked organizations where a technical disruption can quickly become a safety, public-trust, or essential-services incident.
+
+**Core technology and how it actually works.** Blue Castle is not presented as an autonomous malware detector or a replacement for EDR, SIEM, or forensic tooling. Its technical proposition is a structured decision and workflow layer grounded in Code Blue's accumulated crisis methodology. The company describes AI agents trained on crisis expertise that support fast, structured decision-making at scale, while the product pages describe a live operational picture, prioritized dilemmas, decision records, escalation paths, secure collaboration, and a full incident timeline. The architecture is organized into role-specific but connected war rooms: Crisis Management Team for executive command, Incident Response for containment and remediation, Public Relations for internal and external messaging, Business Continuity Planning for critical services and dependencies, Legal for regulatory exposure, and Negotiations for stakeholder or ransom discussions. Its R.E.D., or Resilience Every Day, workflow adds a readiness-assessment layer with more than 200 expert-designed questions. Tabletop exercise findings can update an organizational playbook; continuous threat-intelligence monitoring can raise an alert level; and a response room can then activate the prepared workflows. Public materials do not disclose model architecture, training datasets, hosting design, or independent performance testing, so the defensible technical claim is workflow intelligence and operational context, not frontier-model novelty.
+
+**Market, customers, and go-to-market.** Code Blue sells into organizations whose cyber exposure has consequences beyond data loss and whose executives need a repeatable command process. The official site names healthcare, financial services, manufacturing and industrial organizations, energy, enterprises, and SMBs as target segments, while the company describes work with clients in Israel, Germany, Italy, Canada, and other jurisdictions. The go-to-market motion has two linked parts. Blue Castle can enter as a readiness and crisis-management software platform, with assessments, tabletop exercises, playbook preparation, and ongoing monitoring creating a recurring operational relationship. Code Blue's DFIR, strategic consulting, crisis-management-team, and tailored resilience services provide an implementation wedge and can supply the expert context that makes a software deployment useful during a real incident. The 2023 Dussmann announcement established a German joint venture for cyber-crisis and disaster-management services, extending distribution into a large facilities, technical-services, and food-services group. The 2026 CyberTech Tel Aviv catalog positions the company for global markets and describes an end-to-end approach combining technical mitigation, regulatory strategy, legal coordination, and crisis communications. Named customer identities, annual recurring revenue, contract values, and platform seat counts are not publicly disclosed.
+
+**Traction, funding, and third-party validation.** Code Blue has more operating evidence than a typical pre-product startup, but less financing and product telemetry than an investor-grade software company would normally disclose. The company was represented in the official CyberTech Tel Aviv 2024 catalog as a cyber-crisis preparedness and management provider with a track record of managing hundreds of cyber crises. Its current website claims more than 1,500 hours per month of real-world crisis response across sectors including critical infrastructure, and lists case studies covering technology, aviation, and healthcare; these are company claims and should not be treated as independently audited outcomes. The German Dussmann partnership is a concrete third-party commercial validation of the service model: the partners announced a Code Blue by Dussmann joint venture in 2023, with coverage spanning cyber-risk management, incident response, network restoration, IT/OT, privacy, negotiations, and business continuity. Blue Castle was publicly launched as an AI-driven system for real-time cyber-crisis management in 2025, and the current product site remains active with demo and emergency-contact pathways. No publicly disclosed seed, venture, grant, revenue, valuation, or profitability data was located in the reviewed sources. This makes the company a credible operating ecosystem entry, but a financially opaque one.
+
+**Founders and team background.** Refael Franco is the central team signal and the reason Code Blue has unusual credibility in a market where generic incident-response software is easy to describe but difficult to operationalize. The company's leadership page identifies Franco as founder and CEO, with more than 25 years in operations, security, cyber, and technology. It says he served as deputy head of Israel's National Cyber Directorate, led its defense arm and cyber-regulation division, held executive positions in Israel's General Security Service, and received the Israel Security Award with the national cyber system. The Dussmann announcement provides the more specific historical framing that he helped found the Israel National Cyber Directorate and led Israeli cyber-defense and special operations before building a multidisciplinary preparedness and intervention model at Code Blue. The Blue Castle team page identifies Rachel Stern as director of product and a business-continuity specialist, Itai Tomer as chief product officer, and Eitan Platok as chief technology officer. LinkedIn lists the company at 51-200 employees, though the public profile also exposes roughly 40 employee profiles, so the exact headcount is not independently reconciled. The combination of national cyber command experience and product leadership is strong; the key question is how deeply that expertise has been codified into repeatable software rather than remaining expert services.
+
+**Competitive dynamics.** Code Blue competes across three overlapping budgets. First are cyber-crisis and incident-response specialists such as Mandiant and CrowdStrike Services, which bring deep technical investigation, containment, and recovery capacity but are not primarily neutral command systems for executive, legal, communications, and continuity coordination. Second are operational-resilience and business-continuity platforms such as Fusion Risk Management and Noggin, which provide continuity planning, exercises, and critical-event workflows but do not appear to be built around Israeli national cyber-crisis operations or a dedicated cyber war-room model. Third are broad enterprise-workflow incumbents such as ServiceNow and Everbridge, which can absorb incident-management and executive-notification use cases through installed platforms, integrations, and procurement relationships. Cytactic is the closest Israeli conceptual peer, with cyber-crisis management and intelligence positioning that overlaps Code Blue's readiness and response thesis. Code Blue's potential edge is not a novel detection algorithm; it is the combination of field-derived playbooks, multidisciplinary crisis coordination, a dedicated decision environment, and a founder who has operated national-level cyber response. Its vulnerability is equally clear: the value can be difficult to quantify before an incident, and large incumbents can reproduce workflow features.
+
+**Defense, security, and resilience dual-use relevance.** Code Blue qualifies as dual-use because the core capability is designed for continuity and command under hostile disruption, and the company has documented proximity to national cyber defense and critical infrastructure. The transfer path is direct in four ways. (1) Government agencies, defense suppliers, utilities, transport operators, hospitals, and emergency organizations all need a common operating picture when technical incidents cross into operational or public-safety consequences. (2) The platform's separation into crisis command, incident response, continuity, legal, communications, and negotiation rooms maps onto the multi-stakeholder structure of national and defense cyber incidents, where authority and escalation are as important as indicators of compromise. (3) The company's stated experience includes IT/OT, critical assets, network restoration, and cyber crises affecting essential services, which is more relevant to resilience than a generic enterprise-security adjacency. (4) Franco's former role in Israel's National Cyber Directorate and his reported leadership during national cyber operations are credible routes into government and regulated infrastructure ecosystems. The calibration matters: there is no public evidence of a defense contract, military deployment, classified accreditation, or operational use by an armed force. The record supports resilience and national-security relevance, not a claim that Blue Castle is fielded defense technology.
+
+**Growth stage, trajectory, and key diligence risks.** Code Blue is classified as early because the company is young, privately held, and still presenting a founder-led platform-plus-services model even though it reports an international footprint and a substantial LinkedIn employee range. The legal entity was incorporated in Tel Aviv in January 2022, while LinkedIn lists 2021 as the company founding year; this is a normal distinction between operating launch and incorporation rather than a reason to discard either date. Its trajectory is to turn crisis-response expertise into an always-on resilience system: readiness assessment and tabletop exercises create structured organizational memory, threat intelligence can trigger prepared escalation, and the War Room can preserve a documented chain of decisions through recovery and lessons learned. Key diligence questions are: (1) how many paying Blue Castle deployments exist separately from consulting engagements; (2) whether the stated 1,500 monthly response hours are Code Blue-operated cases or broader ecosystem activity; (3) what AI models, data-governance controls, and tenant isolation protect sensitive incident information; (4) whether customers can operate the platform without Code Blue personnel during a prolonged crisis; (5) what measurable reduction in recovery time, decision latency, regulatory exposure, or downtime is demonstrated; (6) how the company competes against bundled ServiceNow, EDR-service, and continuity platforms; and (7) whether government, defense-industrial, healthcare, and energy customers require certifications or sovereign hosting that are not publicly documented. The opportunity is strategically strong, but commercial scale and software defensibility remain to be proven.
+"""
+logo = "Unknown"
+website = "https://codebluecyber.com"
+sector = "Cyber Resilience / AI-Guided Cyber Crisis Management and Business Continuity"
+founded = "2021 (LinkedIn); Code Blue Ltd. incorporated in Tel Aviv on 2022-01-16"
+headquarters = "Tel Aviv, Israel"
+employees = "IVC lists 35 employees (32 in Israel); LinkedIn's company profile shows a 51–200 range, so public headcount estimates conflict."
+funding_stage = "Unknown; no publicly disclosed venture financing, valuation, revenue, or profitability data was located in the reviewed sources"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Code Blue's dual-use relevance is strong in cyber resilience and operational continuity, although no public evidence shows a defense contract or military deployment. (1) Its core problem, coordinating technical response, executive decisions, legal obligations, communications, and recovery during hostile disruption, is shared by civilian critical infrastructure, defense suppliers, government agencies, and military organizations. (2) Its Blue Castle war-room structure and R.E.D. readiness workflow are transferable to environments where cyber incidents can affect physical operations, essential services, safety, or public trust. (3) The company explicitly references critical assets, IT/OT, network restoration, business continuity, and clients across multiple countries, while its founder's former leadership in Israel's National Cyber Directorate provides credible national-security proximity. (4) This is a resilience and command-and-control adjacency rather than an offensive or battlefield capability: no classified accreditation, military customer, government program of record, sovereign-hosting deployment, or independent efficacy evaluation is publicly disclosed."
+key_technologies = [
+  "AI-guided cyber-crisis command with agents grounded in Code Blue's crisis-management expertise",
+  "Role-specific connected war rooms for crisis management, incident response, public relations, business continuity, legal, and negotiations",
+  "Shared operational picture with structured decision management, ownership, priorities, approvals, and incident timelines",
+  "R.E.D. Resilience Every Day readiness assessment using more than 200 expert-designed questions",
+  "Tabletop-exercise feedback loop that updates organizational playbooks and response procedures",
+  "Threat-intelligence monitoring and alert-level escalation linked to prepared crisis workflows",
+  "Secure collaboration, executive dashboards, audit-ready action records, and crisis communications coordination"
+]
+use_cases = [
+  "Ransomware response coordinating containment, executive decisions, legal review, communications, and recovery",
+  "Healthcare cyber incidents where hospital operations, patient safety, privacy, and public trust must be managed together",
+  "Energy and utility disruption requiring IT/OT response, continuity planning, regulator coordination, and restoration priorities",
+  "Financial-services data breaches or third-party incidents requiring documented decisions and regulatory response",
+  "Manufacturing and industrial cyber events involving production downtime, plant dependencies, and supplier communications",
+  "Government and defense-industrial crisis management for cyber disruption across multiple agencies or contractors",
+  "Pre-incident readiness programs using assessments, tabletop exercises, playbook development, and continuous improvement",
+  "Post-incident lessons learned, timeline review, audit documentation, and recovery-plan refinement"
+]
+investible = false
+investment_rationale = "Code Blue merits strategic monitoring, but the public record does not support a positive legacy investible flag at this time. (1) The strongest asset is founder-market fit: Refael Franco combines national cyber-defense leadership, operational crisis experience, and emergency-management training with a platform designed around the actual coordination failures of cyber incidents. (2) The product has a credible services-to-software path: DFIR and consulting can create trusted access, while Blue Castle's readiness, war-room, and audit workflows could convert bespoke expertise into recurring software value. (3) Third-party validation exists through the 2023 Dussmann joint venture, CyberTech Tel Aviv participation, an international footprint, and public case-study activity. (4) The strategic market is real because cyber incidents increasingly produce operational, legal, and continuity consequences. The reasons for restraint are substantial: no disclosed funding, revenue, customer count, retention, valuation, independent performance data, or platform deployment metrics; company-reported crisis-hour and case-volume claims are not audited; ServiceNow, Everbridge, Fusion Risk, Mandiant, CrowdStrike Services, and Cytactic all occupy parts of the same buying process; and AI handling of sensitive incident data creates high security and liability requirements. This is a strategic diligence assessment, not an investment recommendation."
+strategic_value = "Code Blue's strategic value is concentrated in resilience infrastructure rather than in a novel cyber-detection primitive. (1) It targets the command layer that often fails when a cyber event crosses organizational boundaries, giving executives and responders a shared record of priorities, ownership, decisions, and recovery status. (2) Its focus on IT/OT, critical assets, network restoration, business continuity, legal exposure, and communications fits the needs of essential-service operators more closely than a narrow alerting product. (3) An Israeli company led by a former deputy head of the National Cyber Directorate can serve as a bridge between national cyber-defense practice and international regulated enterprises, while the Dussmann partnership demonstrates a route into European critical-facilities customers. (4) If Blue Castle can codify expert playbooks into a dependable platform that customers can operate under pressure, it could become an institutional memory and coordination layer for cyber resilience. The limiting evidence is commercial opacity: public materials do not identify customer names, deployments, revenue, certifications, or government use, and no sovereign or defense-hosting posture is disclosed."
+public_sources = [
+  { label = "Code Blue official website", url = "https://codebluecyber.com/", description = "Current company positioning, global presence and current public activity." },
+  { label = "Code Blue privacy policy", url = "https://codebluecyber.com/privacy-policy/", description = "Identifies Code Blue Ltd. as an Israeli private company and describes services and jurisdictions." },
+  { label = "Blue Castle platform", url = "https://bluecastle.ai/", description = "Product positioning, platform workflows and listed leadership." },
+  { label = "Refael Franco biography", url = "https://codebluecyber.com/team/refael-franco/", description = "Founder and CEO role and professional background." },
+  { label = "Dussmann joint venture announcement", url = "https://en.dussmanngroup.com/news/2023/pdf/20230907_PR_Dussmann_CodeBlue_eng.pdf", description = "Primary announcement of the 2023 Code Blue by Dussmann joint venture and equal participation." },
+  { label = "CyberTech Tel Aviv 2026 catalog", url = "https://www.cybertechisrael.com/sites/cybertlv2022/files/2026-01/Catalog_Cybertech%20Tel%20Aviv%202026.pdf", description = "Third-party company profile confirming Israeli headquarters, European subsidiary and service positioning." },
+  { label = "Israeli energy sector cyber exercise", url = "https://codebluecyber.com/energy-sector-cyber-exercise/", description = "Company report of collaboration with the Energy Ministry unit and sector-wide exercise in September 2026." },
+  { label = "Calcalist Tech on Dussmann JV", url = "https://www.calcalistech.com/ctechnews/article/b1zsfgpch", description = "Independent report on JV expansion; its investment figure concerns the venture and is not treated as Code Blue financing." },
+  { label = "IVC Code Blue profile", url = "https://www.ivc-online.com/Google-Card?id=e0d57b9e-59da-f011-b81b-00505695cd29", description = "Third-party Israeli technology directory profile, including business description and its own employee estimate." },
+  { label = "Code Blue 2026 customer event", url = "https://codebluecyber.com/sunset-and-cyber-event-israel/", description = "Current company event agenda naming Diplomat Holdings' information-security leader for a customer story; not proof of a paid software deployment." },
+  { label = "Code Blue Germany team", url = "https://codebluecyber.de/das-team/", description = "Current German operation team information, including Nir Yaniv's CRO and managing-director roles." },
+  { label = "Code Blue Italy activity", url = "https://codebluecyber.it/blog", description = "Current Italian operation activity and its resilience and supply-chain-risk positioning." }
+  ,{ label = "Code Blue newsroom archive", url = "https://codebluecyber.com/cb-news-room/", description = "Accessible company newsroom archive dating the 2026 energy exercise and reporting participation." }
+  ,{ label = "Cytactic CIRM platform", url = "https://www.cytactic.com/", description = "Official comparable-company product description for cross-functional cyber incident response." }
+  ,{ label = "Fusion operational resilience", url = "https://www.fusionrm.com/solutions/operational-resilience/", description = "Official comparable-company description of operational resilience and business continuity workflows." }
+  ,{ label = "Everbridge crisis management", url = "https://www.everbridge.com/use-cases/crisis-management/", description = "Official comparable-company description of crisis coordination and critical event management." }
+  ,{ label = "ServiceNow security incident response", url = "https://www.servicenow.com/docs/r/security-management/security-incident-response/view-wf-templates.html", description = "Official comparable-company documentation for security incident workflow and response orchestration." }
+]
+potential_score = 75.0
+technology_score = 67.0
+market_score = 68.0
+team_score = 87.0
+dual_use_score = 88.0
+strategic_alignment_score = 91.0
+stage = "early"
+stage_rationale = "Code Blue is classified as early because its operating history and international footprint are ahead of its publicly disclosed software and financial maturity. (1) LinkedIn lists the company as founded in 2021, while Israeli company records report Code Blue Ltd.'s incorporation on 2022-01-16. (2) The company has a live platform, a named executive team, international locations, public case-study activity, and a 2023 German joint venture, so it is beyond an idea or unvalidated prototype. (3) At the same time, the reviewed sources disclose no recurring-revenue figure, customer count, seat count, retention data, financing round, valuation, or audited outcome metric. (4) The business still combines software with high-touch DFIR, consulting, and crisis-management services, and the public evidence does not establish how much activity is delivered through Blue Castle versus expert engagement. Progression to mid-stage would be supported by named reference customers, repeatable platform deployments independent of consultants, quantified recovery or decision-latency outcomes, disclosed commercial metrics, and security or sovereign-hosting credentials appropriate to regulated and government buyers."
+competitors = [
+  "Cytactic (Israeli cyber-crisis management and intelligence platform with overlapping preparedness and response positioning)",
+  "Fusion Risk Management (operational resilience and business-continuity software for enterprise disruptions)",
+  "Noggin (critical-event management and operational resilience platform for coordinated response)",
+  "Mandiant / Google Cloud (incident-response and threat-intelligence incumbent competing for cyber-crisis services)",
+  "CrowdStrike Services (EDR-led incident response and recovery services with installed enterprise access)",
+  "ServiceNow Security Incident Response (enterprise workflow incumbent that can absorb case, task, and executive-coordination functions)",
+  "Everbridge (critical-event management, mass notification, and stakeholder-communications platform)"
+]
+competitive_edge = "Code Blue's strongest edge is the combination of national-level cyber-crisis experience and a product designed around the full operational lifecycle rather than one technical control. (1) Founder credibility: Refael Franco brings former Israeli National Cyber Directorate leadership and emergency-management expertise that is unusually close to the problem being productized. (2) Multidisciplinary coverage: Blue Castle connects incident response, executive command, business continuity, legal, communications, and negotiations in one operating model, reducing the handoffs that create delay during high-impact incidents. (3) Codification loop: R.E.D. assessments and tabletop exercises can turn organizational weaknesses into updated playbooks, while crisis timelines and decisions create reusable operational memory. (4) Critical-infrastructure fit: the company's stated IT/OT, network-restoration, essential-services, and international crisis experience gives it a more credible resilience wedge than a generic project-management tool. The edge is not a secret AI model and may be copied by ServiceNow, continuity vendors, or incident-response firms. Its durability depends on proprietary crisis data, trusted customer relationships, measurable outcomes, and whether customers can run the system effectively without continuous expert intervention."
+risk_factors = [
+  "Commercial opacity: no public revenue, recurring-revenue, customer-count, retention, valuation, financing, or platform-deployment metrics",
+  "Services-to-software conversion risk: the product's value may remain dependent on Code Blue experts rather than repeatable customer-operated workflows",
+  "Incumbent bundling: ServiceNow, EDR vendors, continuity platforms, and incident-response firms can cover portions of the same budget through existing contracts",
+  "Sensitive-data exposure: crisis timelines, legal advice, incident evidence, executive communications, and operational dependencies require strong isolation, governance, and sovereign-hosting answers",
+  "Unverified efficacy: response-hour, crisis-volume, and platform-benefit claims are primarily company-stated and lack independent benchmarking",
+  "Founder concentration: national cyber-defense credibility is a major asset, but a founder-led model may create succession, hiring, and institutionalization risk",
+  "Dual-use realization gap: no public defense customer, government program of record, classified accreditation, or military deployment is disclosed"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Code Blue deserves high strategic monitoring priority as an Israeli resilience company operating at the point where cyber incidents become continuity, leadership, and public-trust crises. (1) Founder provenance is unusually relevant: Refael Franco's former leadership in Israel's National Cyber Directorate and reported national cyber-defense operations provide a credible basis for the company's crisis methodology. (2) The product is aligned with a hard strategic problem: critical infrastructure and defense-industrial organizations need a shared command process that coordinates technical response with legal, regulatory, communications, and operational recovery decisions. (3) Blue Castle is more than a static playbook repository, with readiness assessment, tabletop-exercise feedback, threat-intelligence escalation, connected role-based war rooms, structured decisions, and audit-ready timelines. (4) The 2023 Dussmann partnership, international service footprint, CyberTech Tel Aviv representation, and public industry case studies are meaningful ecosystem signals. Priority is capped because funding, revenue, customer identity, platform adoption, independent outcomes, certifications, and government or military deployment are not publicly established. The milestones to watch are repeatable software-only deployments, named critical-infrastructure or defense-industrial customers, sovereign or regulated hosting, measured reduction in decision and recovery time, and independently validated resilience outcomes."
+crawled_at = "2026-08-31T23:15:50Z"
+updated_at = "2026-10-04T19:28:45Z"
+
+[intelligence]
+schema_version = 2
+investors = []
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "il-code-blue"
+legal_name = "Code Blue Ltd."
+aliases = ["Code Blue Cyber", "קוד בלו בע\"מ"]
+operating_status = "active"
+business_model = "Israeli private B2B cyber-crisis management provider combining readiness and advisory services, incident response and recovery, with Blue Castle positioned as an AI-guided SaaS/workflow platform. The public record does not establish the software-versus-services revenue mix."
+products = ["Blue Castle cyber-crisis management platform", "R.E.D. (Resilience Every Day) readiness workflow", "Cyber incident response and digital forensics", "Cyber resilience, continuity and crisis-management advisory"]
+locations = ["Tel Aviv, Israel (headquarters)", "Germany (Code Blue by Dussmann joint venture)", "Italy (local operation)", "North America (stated presence)"]
+linkedin_url = "https://www.linkedin.com/company/code-blue-cyber"
+founded_on = "2021"
+source_ids = ["company_privacy", "company_home", "cybertech_2026", "ivc_profile"]
+
+[intelligence.funding]
+status = "not_found"
+summary = "No primary-source announcement of an equity, convertible, debt, grant, secondary, or IPO financing raised by Code Blue Ltd. was found in the searches reviewed through 2026-10-04. A September 2023 media report described tens of millions of dollars being invested in the Code Blue by Dussmann joint venture; the official Dussmann release confirms the JV and equal participation but does not state a capital amount. That reported JV investment is not attributed to Code Blue Ltd. as a funding round or included in any company total. Private-company financing may therefore exist without public disclosure."
+rounds = []
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Code Blue Ltd.'s shareholder register and cap table were not established from the reviewed public evidence; no ownership percentages in Code Blue Ltd. are reported. The 2023 announcement says Code Blue Ltd. and Dussmann were equal partners in the separate Code Blue by Dussmann joint venture. That JV split does not disclose ownership of Code Blue Ltd."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["dussmann_jv", "ctech_jv"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel"]
+summary = "Code Blue Ltd. identifies itself as an Israeli private company; its privacy policy gives its address as 8 Raoul Wallenberg, Tel Aviv, and the 2026 CyberTech Tel Aviv catalog also describes its headquarters as being in Israel."
+as_of = "2026-10-04"
+source_ids = ["company_privacy", "cybertech_2026"]
+
+[intelligence.research]
+researched_at = "2026-10-04T19:28:45Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Code Blue codebluecyber funding raised investors Refael Franco",
+  "Code Blue Cyber Israel company funding investors acquisition revenue customers",
+  "Code Blue Ltd Israel Refael Franco Dussmann 2023 joint venture",
+  "קוד בלו רפאל פרנקו גיוס משקיעים Code Blue",
+  "site:codebluecyber.com Code Blue team leadership Refael Franco Blue Castle launch 2025",
+  "site:bluecastle.ai Code Blue customers case study Blue Castle",
+  "Code Blue cyber crisis management patents Refael Franco patent",
+  "Code Blue Ltd revenue customers employees investors cyber Israel",
+  "site:codebluecyber.com/about-code-blue Code Blue Israel headquarters offices",
+  "site:codebluecyber.com/team Rachel Stern Itai Tomer Code Blue",
+  "Code Blue by Dussmann status 2025 2026",
+  "Code Blue cyber crisis competitors Cytactic Fusion Risk Noggin cyber incident command"
+]
+gaps = [
+  "team: public leadership information is incomplete; founder and selected Blue Castle leaders are named, but no comprehensive current employee roster or verified headcount is available.",
+  "investors: no publicly disclosed investors in Code Blue Ltd. or sourced round participation were identified; private cap table not available.",
+  "financials: no dated revenue, ARR, profitability, burn, runway, audited accounts, or verified financing total was found.",
+  "traction: the company reports deployments, crisis activity and customer stories, but public sources do not disclose paying-customer counts, contract values, renewals, platform seat counts, or software-specific outcomes.",
+  "intellectual_property: no company-assigned patent, application number, or verifiable proprietary model disclosure was located; trade-secret and playbook ownership remain unknown.",
+  "competition: no primary comparative evaluation or independent win/loss evidence against named alternatives was found.",
+  "ownership: Code Blue Ltd. cap table, shareholder percentages and any investor rights were not publicly established.",
+  "dual_use: commercial and public-sector applicability is plausible from the product and exercise evidence, but no military, classified, defense-program, or defense-customer deployment was disclosed.",
+  "identity: current legal incorporation record and corporate registry extract were not directly obtained; company self-identification and third-party profile were used, and founding year differs from the stated legal incorporation date in older analysis.",
+  "funding: media-reported capital for the 2023 joint venture is not primary-confirmed and does not establish funding received by Code Blue Ltd."
+]
+conflicts = ["A September 2023 Calcalist Tech report said tens of millions of dollars would be invested in Code Blue by Dussmann; the official Dussmann announcement confirms equal participation in the separate JV but does not corroborate that amount. It is excluded from Code Blue Ltd. funding fields.", "IVC's directory profile reports 35 employees (32 in Israel), while the existing company record carries LinkedIn's broad 51–200 range. These sources use different, unverified counting methods; no exact current employee count is asserted."]
+diligence_questions = [
+  "What share of revenue is recurring Blue Castle subscription revenue versus incident-response and consulting services, and what were ARR, gross margin, retention, and net revenue retention at the last fiscal year-end?",
+  "Which named customers use Blue Castle in production, how many seats and incidents does it support, and what independently measured change in decision latency or recovery time has deployment produced?",
+  "What is the ownership and capitalization of Code Blue Ltd., and what capital was committed to the Dussmann JV by each partner, on what terms, and with what operating results?",
+  "Which AI models, data boundaries, logging controls, customer isolation, deployment options, and third-party assurance attestations govern sensitive incident and legal data?",
+  "Which patents, registered marks, proprietary playbooks, and rights to historic crisis data are owned by Code Blue Ltd. versus personnel, partners, or JV entities?"
+]
+
+[[intelligence.research.sources]]
+id = "company_home"
+url = "https://codebluecyber.com/"
+title = "Code Blue Cyber official website"
+publisher = "Code Blue"
+kind = "company"
+accessed_at = "2026-10-04T19:28:45Z"
+claims = ["Code Blue presents itself as a cyber-crisis management company powered by Blue Castle.", "The company states headquarters in Israel and presence in Germany, Italy and North America.", "The current website contains active product and company materials."]
+
+[[intelligence.research.sources]]
+id = "company_privacy"
+url = "https://codebluecyber.com/privacy-policy/"
+title = "Code Blue Ltd. Privacy Policy"
+publisher = "Code Blue"
+kind = "company"
+accessed_at = "2026-10-04T19:28:45Z"
+published_on = "2026-04-15"
+claims = ["The operating entity names itself Code Blue Ltd. and describes itself as an Israeli private company.", "The policy identifies the Blue Castle platform and service activity in Israel, Germany, Italy, Canada and other jurisdictions.", "The company gives an address at 8 Raoul Wallenberg, Tel Aviv."]
+
+[[intelligence.research.sources]]
+id = "bluecastle_platform"
+url = "https://bluecastle.ai/"
+title = "Blue Castle platform overview"
+publisher = "Blue Castle"
+kind = "company"
+accessed_at = "2026-10-04T19:28:45Z"
+claims = ["Blue Castle is marketed as an AI-powered cyber-crisis management platform with AI-guided war rooms and a readiness workflow.", "The site describes crisis-management, incident-response, public-relations, negotiation, business-continuity and legal workflows.", "The product site lists Refael Franco, Rachel Stern, Itai Tomer and Eitan Platok in leadership roles.", "Blue Castle product capabilities and benefit statements are company claims; no independent efficacy study is cited on the page."]
+
+[[intelligence.research.sources]]
+id = "franco_bio"
+url = "https://codebluecyber.com/team/refael-franco/"
+title = "Refael Franco biography"
+publisher = "Code Blue"
+kind = "company"
+accessed_at = "2026-10-04T19:28:45Z"
+claims = ["Code Blue identifies Refael Franco as founder and CEO.", "The company biography states Franco held senior roles in Israel's National Cyber Directorate and the General Security Service and has a master's degree in emergency and disaster management."]
+
+[[intelligence.research.sources]]
+id = "dussmann_jv"
+url = "https://en.dussmanngroup.com/news/2023/pdf/20230907_PR_Dussmann_CodeBlue_eng.pdf"
+title = "Dussmann and Code Blue launch cybersecurity joint venture"
+publisher = "Dussmann Group"
+kind = "other"
+accessed_at = "2026-10-04T19:28:45Z"
+published_on = "2023-09-07"
+claims = ["Dussmann and Tel Aviv-based Code Blue Ltd. announced Code Blue by Dussmann as a cybersecurity joint venture on 2023-09-07.", "The announcement states that both partners hold equal participation in the JV.", "The JV was to provide cybersecurity services before, during and after cyberattacks from Frankfurt.", "The announcement does not state an investment amount or Code Blue Ltd. financing round."]
+
+[[intelligence.research.sources]]
+id = "cybertech_2026"
+url = "https://www.cybertechisrael.com/sites/cybertlv2022/files/2026-01/Catalog_Cybertech%20Tel%20Aviv%202026.pdf"
+title = "CyberTech Tel Aviv 2026 catalog"
+publisher = "CyberTech Global"
+kind = "other"
+accessed_at = "2026-10-04T19:28:45Z"
+published_on = "2026-01"
+claims = ["The catalog describes Code Blue as specializing in real-time cyber-crisis management.", "The catalog states Code Blue has headquarters in Israel and a subsidiary in Europe.", "The catalog names Refael Franco as leader and describes technical mitigation, regulatory strategy, legal coordination and crisis communications."]
+
+[[intelligence.research.sources]]
+id = "energy_exercise"
+url = "https://codebluecyber.com/energy-sector-cyber-exercise/"
+title = "Large-Scale Cyber Exercise Strengthens Resilience Across Israel's Energy Sector"
+publisher = "Code Blue"
+kind = "company"
+accessed_at = "2026-10-04T19:28:45Z"
+published_on = "2026-09-14"
+claims = ["Code Blue reports that it collaborated with the Israeli Ministry of Energy and Infrastructure's sectoral cyber unit on a large-scale energy-sector cyber crisis exercise.", "The company reports approximately 100 participating representatives and executives, including representatives of the Israel National Cyber Directorate, Israel Electric Corporation, Israel Natural Gas Lines, Noga and the Ministry.", "This exercise collaboration demonstrates public-sector activity but does not establish a paid contract or Blue Castle production deployment."]
+
+[[intelligence.research.sources]]
+id = "ctech_jv"
+url = "https://www.calcalistech.com/ctechnews/article/b1zsfgpch"
+title = "Code Blue launching cyber venture in Germany with Dussmann"
+publisher = "Calcalist Tech"
+kind = "media"
+accessed_at = "2026-10-04T19:28:45Z"
+published_on = "2023-09-07"
+claims = ["Calcalist Tech reported the 2023 Code Blue by Dussmann joint venture and stated that tens of millions of dollars would be invested in the venture.", "The report describes investment into the JV, not a financing round raised by Code Blue Ltd.; the amount is not confirmed by the primary Dussmann announcement."]
+
+[[intelligence.research.sources]]
+id = "ivc_profile"
+url = "https://www.ivc-online.com/Google-Card?id=e0d57b9e-59da-f011-b81b-00505695cd29"
+title = "Code Blue Ltd. company profile"
+publisher = "IVC Data & Insights"
+kind = "directory"
+accessed_at = "2026-10-04T19:28:45Z"
+claims = ["IVC lists Code Blue as established in 2021, with 35 employees and 32 employees in Israel; these are directory estimates, not audited headcount.", "IVC describes a B2B cyber crisis and disaster management service and Blue Castle AI platform.", "IVC profile lists Tel Aviv as the main address and Germany and Italy branches."]
+
+[[intelligence.research.sources]]
+id = "codeblue_event"
+url = "https://codebluecyber.com/sunset-and-cyber-event-israel/"
+title = "Sunset and Cyber Event - Israel"
+publisher = "Code Blue"
+kind = "company"
+accessed_at = "2026-10-04T19:28:45Z"
+published_on = "2026-06"
+claims = ["The company agenda includes a customer story by Diplomat Holdings' Head of Information Security.", "The event listing does not establish that Diplomat is a paying Blue Castle customer or that the platform is in production there."]
+
+[[intelligence.research.sources]]
+id = "germany_team"
+url = "https://codebluecyber.de/das-team/"
+title = "Code Blue Germany team"
+publisher = "Code Blue Germany"
+kind = "company"
+accessed_at = "2026-10-04T19:28:45Z"
+claims = ["Code Blue Germany identifies Nir Yaniv as Chief Revenue Officer of Code Blue Ltd. and managing director of Code Blue by Dussmann GmbH."]
+
+[[intelligence.research.sources]]
+id = "italy_activity"
+url = "https://codebluecyber.it/blog"
+title = "Code Blue Italy blog and company activity"
+publisher = "Code Blue Italy"
+kind = "company"
+accessed_at = "2026-10-04T19:28:45Z"
+claims = ["The Italian company site describes cyber crisis preparation, response and recovery and publishes 2026 activity concerning operational resilience and third-party cyber risk."]
+
+[[intelligence.research.sources]]
+id = "newsroom_archive"
+url = "https://codebluecyber.com/cb-news-room/"
+title = "Code Blue newsroom archive"
+publisher = "Code Blue"
+kind = "company"
+accessed_at = "2026-10-04T19:28:45Z"
+claims = ["The archive dates the Israeli energy-sector cyber crisis exercise to September 14, 2026 and reports nearly 100 executive and cybersecurity participants."]
+
+[[intelligence.research.sources]]
+id = "comp_cytactic"
+url = "https://www.cytactic.com/"
+title = "Cytactic cyber incident response management platform"
+publisher = "Cytactic"
+kind = "company"
+accessed_at = "2026-10-04T19:28:45Z"
+claims = ["Cytactic describes an AI-driven cross-functional cyber incident response platform with readiness plans and stakeholder coordination."]
+
+[[intelligence.research.sources]]
+id = "comp_fusion"
+url = "https://www.fusionrm.com/solutions/operational-resilience/"
+title = "Fusion operational resilience software"
+publisher = "Fusion Risk Management"
+kind = "company"
+accessed_at = "2026-10-04T19:28:45Z"
+claims = ["Fusion describes software for operational resilience, business continuity, crisis management, dependency mapping and coordinated response."]
+
+[[intelligence.research.sources]]
+id = "comp_everbridge"
+url = "https://www.everbridge.com/use-cases/crisis-management/"
+title = "Everbridge crisis management software"
+publisher = "Everbridge"
+kind = "company"
+accessed_at = "2026-10-04T19:28:45Z"
+claims = ["Everbridge describes crisis-management software for coordinating response teams, resources, continuity, disaster recovery and emergency communications."]
+
+[[intelligence.research.sources]]
+id = "comp_servicenow"
+url = "https://www.servicenow.com/docs/r/security-management/security-incident-response/view-wf-templates.html"
+title = "ServiceNow Security Incident Response workflows"
+publisher = "ServiceNow"
+kind = "other"
+accessed_at = "2026-10-04T19:28:45Z"
+claims = ["ServiceNow documentation describes configurable security incident response workflows and templates for security incident records."]
+
+[[intelligence.people]]
+name = "Refael Franco"
+role = "Founder and CEO, Code Blue Ltd."
+is_founder = true
+current = true
+background = "Code Blue states that Franco served as deputy head of Israel's National Cyber Directorate, led its defense arm and cyber regulation division, held executive roles in the General Security Service, and has over 25 years of operations, security, cyber and technology experience."
+source_ids = ["franco_bio", "cybertech_2026"]
+
+[[intelligence.people]]
+name = "Rachel Stern"
+role = "Director of Product and Business Continuity Specialist"
+is_founder = false
+current = true
+background = "Listed on Blue Castle's current team page; no further public career history was verified in the reviewed sources."
+source_ids = ["bluecastle_platform"]
+
+[[intelligence.people]]
+name = "Itai Tomer"
+role = "Chief Product Officer, Blue Castle"
+is_founder = false
+current = true
+background = "Listed on Blue Castle's current team page; no further public career history was verified in the reviewed sources."
+source_ids = ["bluecastle_platform"]
+
+[[intelligence.people]]
+name = "Eitan Platok"
+role = "Chief Technology Officer"
+is_founder = false
+current = true
+background = "Listed on Blue Castle's current team page; no further public career history was verified in the reviewed sources."
+source_ids = ["bluecastle_platform"]
+
+[[intelligence.people]]
+name = "Nir Yaniv"
+role = "Chief Revenue Officer, Code Blue Ltd.; Managing Director, Code Blue by Dussmann GmbH"
+is_founder = false
+current = true
+background = "Role is listed by Code Blue Germany."
+source_ids = ["germany_team"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Dussmann Group and Code Blue Ltd. launched Code Blue by Dussmann, a German cybersecurity joint venture. The official announcement says the partners held equal participation and planned to provide prevention, readiness, response and restoration services. This is strategic expansion evidence, not a disclosed funding round for Code Blue Ltd.; no customer conversion, JV revenue, or deployment metric was published in that release."
+date = "2023-09-07"
+source_ids = ["dussmann_jv"]
+
+[[intelligence.traction]]
+kind = "contract"
+description = "Code Blue reported collaboration with the Israeli Ministry of Energy and Infrastructure's sectoral cyber unit on a large-scale tabletop exercise for the energy sector, involving approximately 100 representatives and executives. Named participating organizations included Israel Electric Corporation, Israel Natural Gas Lines, Noga, the Israel National Cyber Directorate and the ministry. This is evidence of a public-sector exercise engagement; the source does not say it was paid, a government contract, or a Blue Castle production deployment."
+date = "2026-09-14"
+source_ids = ["energy_exercise"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "A June 2026 Code Blue event agenda scheduled a customer story by Diplomat Holdings' Head of Information Security. This is a named customer-reference signal only; neither a paid relationship, scope, Blue Castle deployment nor measurable outcome is specified."
+date = "2026-06"
+source_ids = ["codeblue_event"]
+
+[[intelligence.comparables]]
+name = "Cytactic"
+website = "https://cytactic.com/"
+rationale = "Israeli cyber-crisis management software with overlapping preparedness, response coordination and executive crisis workflows."
+differentiation = "A close category peer; public materials alone do not establish comparative win rates or product efficacy. Code Blue pairs platform positioning with an established incident-response and crisis-services practice."
+source_ids = ["comp_cytactic"]
+
+[[intelligence.comparables]]
+name = "Fusion Risk Management"
+website = "https://www.fusionrm.com/"
+rationale = "Enterprise operational resilience and business-continuity platform competing for preparedness and disruption-management budgets."
+differentiation = "Broad operational resilience scope versus Code Blue's cyber-crisis specialization and integrated technical response expertise."
+source_ids = ["comp_fusion"]
+
+[[intelligence.comparables]]
+name = "Everbridge"
+website = "https://www.everbridge.com/"
+rationale = "Critical-event management and communications platform that can coordinate stakeholders during enterprise disruption."
+differentiation = "Strong emergency communications and event coordination incumbent; Code Blue's positioning centers on cyber incident command connected to forensics, IT/OT recovery, regulatory and legal response."
+source_ids = ["comp_everbridge"]
+
+[[intelligence.comparables]]
+name = "ServiceNow Security Incident Response"
+website = "https://www.servicenow.com/products/security-incident-response.html"
+rationale = "Enterprise workflow and security incident response tooling that may already be installed in target accounts."
+differentiation = "ServiceNow offers broad configurable workflow and ecosystem integration; Code Blue specializes in crisis methodology and expert-led cyber response. The degree of direct competition depends on buyer needs and implementation."
+source_ids = ["comp_servicenow"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T19:28:45Z"
+next_review_on = "2027-01-04"
+queries = ["Code Blue codebluecyber Israeli private company legal name headquarters", "Code Blue Ltd Israel Refael Franco Dussmann 2023 joint venture", "site:codebluecyber.com/about-code-blue Code Blue Israel headquarters offices"]
+source_ids = ["company_privacy", "company_home", "cybertech_2026", "ivc_profile"]
+summary = "Official policy identifies Code Blue Ltd. as an Israeli private company; company website and the 2026 conference catalog identify Israel as headquarters. IVC lists commercial establishment as 2021; the legal registry date cited in older analysis was not directly reverified."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "not_found"
+checked_at = "2026-10-04T19:28:45Z"
+next_review_on = "2027-01-04"
+queries = ["Code Blue codebluecyber funding raised investors Refael Franco", "Code Blue Cyber Israel company funding investors acquisition revenue customers", "קוד בלו רפאל פרנקו גיוס משקיעים Code Blue", "Code Blue by Dussmann investment amount funding"]
+source_ids = ["dussmann_jv", "ctech_jv", "company_home", "ivc_profile"]
+summary = "No public financing announcement for Code Blue Ltd. found. The media-reported tens-of-millions investment concerns the separate Dussmann JV, is not stated in the official Dussmann release, and is excluded from round and lifetime funding values."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T19:28:45Z"
+next_review_on = "2027-01-04"
+queries = ["Code Blue investors Refael Franco", "Code Blue Cyber investors funding raised", "קוד בלו משקיעים רפאל פרנקו"]
+source_ids = ["company_privacy", "dussmann_jv", "ctech_jv", "ivc_profile"]
+summary = "Searches and company profile review identified a strategic JV partner but no investors in Code Blue Ltd. or funding-round participants. Public cap table is unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T19:28:45Z"
+next_review_on = "2027-01-04"
+queries = ["site:codebluecyber.com Code Blue team leadership Refael Franco Blue Castle launch 2025", "site:codebluecyber.com/team Rachel Stern Itai Tomer Code Blue", "Code Blue Germany team CRO COO"]
+source_ids = ["franco_bio", "bluecastle_platform", "germany_team"]
+summary = "Founder/CEO and selected Blue Castle and German JV team members are publicly named. Full roster, precise total staffing and several biographies remain unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T19:28:45Z"
+next_review_on = "2027-01-04"
+queries = ["Code Blue Ltd shareholders ownership Israel", "Code Blue ownership acquired acquisition", "Code Blue Dussmann equal partnership joint venture ownership"]
+source_ids = ["company_privacy", "dussmann_jv", "ctech_jv"]
+summary = "No public Code Blue Ltd. cap table, ownership percentages or change-of-control event identified. Dussmann primary release documents equal participation in the separate JV only."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T19:28:45Z"
+next_review_on = "2027-01-04"
+queries = ["Code Blue Ltd revenue ARR profitability employees", "Code Blue Cyber financials revenue", "Code Blue Israel company headcount IVC"]
+source_ids = ["ivc_profile", "company_privacy", "ctech_jv"]
+summary = "No dated revenue, ARR, profit, burn, runway or audited figures found. IVC provides a directory headcount estimate of 35, which conflicts with the existing LinkedIn range and is not an audited financial metric."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T19:28:45Z"
+next_review_on = "2027-01-04"
+queries = ["Code Blue customer contracts partnerships deployments case studies", "Code Blue Israel energy ministry cyber exercise September 2026", "Code Blue Dussmann partnership customers", "Code Blue Diplomat customer story Blue Castle"]
+source_ids = ["energy_exercise", "dussmann_jv", "codeblue_event", "cybertech_2026"]
+summary = "Evidence includes a 2023 German JV, a 2026 Ministry of Energy sector exercise collaboration involving about 100 participants, and a company event agenda with a Diplomat Holdings customer story. Sources do not quantify contracts, paid users, deployments, or outcomes."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T19:28:45Z"
+next_review_on = "2027-01-04"
+queries = ["Code Blue Ltd patent cyber crisis management", "Code Blue Refael Franco patent", "Blue Castle AI patent cybersecurity Israel"]
+source_ids = ["bluecastle_platform", "company_home"]
+summary = "Searches of public company materials for patents and technical architecture found no company-assigned patent or application information. No IP filing is inferred from the AI product description."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-04T19:28:45Z"
+next_review_on = "2027-01-04"
+queries = ["Code Blue cyber crisis management competitors Cytactic Fusion Risk Noggin cyber incident command", "Blue Castle cyber crisis management alternatives ServiceNow Everbridge"]
+source_ids = ["bluecastle_platform", "company_home", "cybertech_2026"]
+summary = "Comparable companies were mapped by overlapping workflow, cyber response or operational resilience budgets. No independent comparative benchmark or win/loss evidence was located."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T19:28:45Z"
+next_review_on = "2027-01-04"
+queries = ["Code Blue cyber crisis government defense customer military", "Code Blue Israel critical infrastructure energy cyber exercise", "Blue Castle cyber crisis government national security"]
+source_ids = ["energy_exercise", "dussmann_jv", "cybertech_2026", "bluecastle_platform"]
+summary = "The commercial platform targets enterprise and critical-infrastructure crisis coordination, and Code Blue reports an energy-sector exercise with Israeli public-sector participation. This supports plausible civil-security use; no defense, military, classified or program-of-record deployment is publicly disclosed."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Official company pages remain active and publish current 2026 company/product and exercise material; the September 2026 report describes current collaboration with the Israeli energy ministry's sectoral cyber unit."
+verified_at = "2026-10-04T19:28:45Z"
+source_ids = ["company_home", "energy_exercise"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "The company privacy policy explicitly calls Code Blue Ltd. an Israeli private company and supplies a Tel Aviv address; the 2026 CyberTech catalog independently describes its headquarters as in Israel."
+verified_at = "2026-10-04T19:28:45Z"
+source_ids = ["company_privacy", "cybertech_2026"]

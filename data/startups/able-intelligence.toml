@@ -1,0 +1,462 @@
+name = "Able Intelligence"
+description = "Able Intelligence is a Beer Sheva startup building an on-premise physical-AI manufacturing brain that connects factory data, operator expertise, and AI agents to improve real-time decisions on brownfield production lines. Its initial wedge is preserving skilled-operator knowledge and turning it into context-aware guidance and progressively autonomous workflows for industrial customers."
+detailed_description = """
+**Product and the concrete problem it solves.** Able Intelligence is addressing a specific manufacturing failure mode: plants have accumulated machines, sensors, SCADA and MES data, but the most consequential process knowledge still lives in the judgment of a small number of experienced operators. When those operators retire or leave, factories lose the tacit logic behind changeovers, adjustments, quality decisions, and recovery from abnormal conditions. Able describes its product as an AI factory brain rather than another dashboard. The platform is intended to connect shop-floor data, the actions taken by operators, and the resulting production outcomes so that the plant can preserve practical expertise, guide less-experienced staff, and eventually automate decisions where confidence is sufficient. The company’s official positioning separates it from a narrow predictive-maintenance tool: it wants to orchestrate data, operators, and agents into real-time decisions and actions, including process optimization, knowledge retention, decision support, and reduced waste. This is a meaningful problem in older plants where machinery remains productive but the labor market cannot reliably replace veteran technicians.
+
+**Core technology and how it actually works.** Public descriptions indicate a full-stack, plant-specific system rather than a cloud-only analytics layer. Able says it connects to machines, sensors, and sometimes cameras, observes what experienced operators adjust, and relates those adjustments to process output. Its founder describes the initial workflow as a co-pilot that guides junior operators using patterns learned from senior operators; higher-confidence actions can later be automated while humans remain in the loop. The company’s current website adds concrete integration points — PLC and SCADA connectivity, MES and ERP integration, an edge-device deployment, line-specific model calibration, and a continuous learning loop. A recent company update says a server was installed directly on a customer’s factory floor and that the system runs 100% on-premise, with production data remaining inside the facility. That architecture matters because manufacturing data can contain trade secrets, process recipes, and safety-sensitive operational detail. It also avoids assuming reliable internet connectivity or permission to export operational data to a third-party cloud. The technical moat is not yet publicly demonstrated through independent benchmarks; at this stage it is the combination of heterogeneous industrial integration, human-behavior data capture, process context, and a path from recommendations to controlled action.
+
+**Market, customers, and go-to-market.** Able is targeting B2B manufacturers with existing equipment and a shortage of skilled operators, rather than requiring a new fully automated greenfield factory. Startup Nation Finder identifies food-related production and energy, utilities, and waste management as initial industry categories. The founder’s public interview says the company is starting with older production lines, where automation alone does not remove the dependence on human expertise, and uses small pilots so customers can measure revenue or performance improvements before committing to a wider rollout. The official website presents a 90-day deployment sequence: install and connect the edge device, integrate PLC/SCADA and enterprise systems, calibrate agents to the line, onboard operators, and reach live production with a handover to the plant team. It also advertises a 4x target ROI and 24/7 autonomous agents; these are company marketing targets, not independently verified outcomes. A dedicated forward-deployment engineer working alongside the customer could accelerate adoption, but it also creates a services burden. The likely expansion motion is from one production line to more lines, plants, and process families after the system has captured enough local context to show measurable improvements in overall equipment effectiveness, setup time, downtime, material waste, or operator ramp time.
+
+**Traction, funding, and third-party validation.** Able was founded in January 2026 and Startup Nation Finder reports a $250,000 pre-seed round from Secret Chord Ventures in May 2026. The same profile lists a three-person company, a 1–10 employee range, an alpha product stage, and Beer Sheva headquarters; LinkedIn describes the company as privately held and currently in stealth with a 2–10 employee range. Public proof of commercial activity is early but not purely conceptual. Able has stated that it completed a small-scale pilot in Israel with a solid return on investment and is seeking additional U.S. pilot partners. The company has also publicly shown a new on-premise factory installation, although it has not named the customer, disclosed contract terms, published before-and-after KPI measurements, or identified the plant’s industry. Able separately open-sourced CapAble-Core, an internal multi-agent engineering system built around Google’s Agent Development Kit, with role-based agents for architecture, implementation, QA, mutation testing, isolated execution, and parallel work. That release demonstrates engineering ambition and a preference for local or portable execution, but it is not evidence that the manufacturing product has achieved production-scale reliability. The current evidence supports an active, funded early startup with pilot and installation signals; it does not yet support claims of recurring revenue, repeatable deployment economics, or independently audited manufacturing gains.
+
+**Founders and team background.** The founding team combines industrial-AI, semiconductor, data-platform, and machine-learning experience. CEO and co-founder Iftah Levy’s official biography says he spent 15 years in industrial AI leadership, served as General Manager and VP Product at Augury, scaled to an exit as VP Data at Seebo, led semiconductor technology initiatives at Applied Materials, and earned a summa cum laude BSc in information technology from Ben-Gurion University. A public founder interview adds useful context: Levy started in advanced semiconductor manufacturing, later moved toward traditional manufacturing and process optimization, and became focused on the expertise crisis on the factory floor. CTO and co-founder Kiril Smilansky is described by the company as having more than a decade in AI and data science, including work at Google, SimilarWeb, and Prosus/Naspers, and as a former co-founder of Texperience Food Tech AI. The team’s size is a strength and a risk. The founders appear unusually close to the manufacturing problem and the data infrastructure needed to attack it, but an early team of roughly three to ten people must still cover industrial integration, safety, product, sales, field deployment, and model reliability. The company’s public materials do not establish the depth of its controls-engineering, OT-security, or regulated-industry bench.
+
+**Competitive dynamics.** Able competes with several overlapping approaches rather than one direct category incumbent. Augury combines machine-health sensing and industrial AI, making it a particularly relevant comparison because Levy previously worked there; Augury’s center of gravity is equipment health and predictive maintenance, while Able is claiming a broader process-context and operator-knowledge layer. Siemens Industrial Edge and Industrial Copilot bring deep PLC, automation, and installed-base relationships, giving Siemens a formidable distribution and integration advantage even if its product is less startup-like. Litmus Automation provides industrial edge connectivity and contextualization that can serve as an enabling layer or substitute. SymphonyAI Industrial offers AI applications for manufacturing, asset performance, and operations. Tulip competes for the frontline-operations and worker-guidance budget with a low-code, connected-worker approach. C3 AI and other industrial analytics vendors can also attack plant optimization from a model-and-data platform position. Able’s potential edge is not a novel model architecture disclosed in public materials; it is the combination of brownfield deployment, a local data boundary, explicit capture of operator intuition, and a workflow that promises actions rather than alerts. That edge will only become durable if Able proves that its plant-specific context compounds across lines, shortens deployments, improves KPIs without unsafe automation, and remains valuable after the first implementation team leaves.
+
+**Defense, security, and resilience dual-use relevance.** Able’s dual-use case is credible but presently an adjacency, not a fielded defense capability. Commercially, a local AI layer that helps food, energy, utilities, and industrial plants retain expertise and operate through labor shortages supports continuity of essential production. The same pattern applies to defense-industrial manufacturing, ammunition and component production, semiconductor fabs, water-treatment plants, and distributed energy facilities where process know-how, uptime, and data sovereignty can be operationally decisive. On-premise execution also reduces the need to export sensitive manufacturing telemetry to an external cloud, although the public record does not establish Able’s OT-security controls, threat model, certification posture, or ability to operate safely in a segmented or degraded network. A defense customer could use the technology to train less-experienced operators, preserve the judgment of scarce specialists, detect process drift, and support resilient production across brownfield facilities; none of those defense deployments is publicly disclosed. This record therefore scores Able as dual-use because the core technology is a general industrial decision and control layer with a direct resilience path, while explicitly avoiding the stronger claim that the company has military contracts, classified work, or autonomous weapons relevance.
+
+**Growth stage, trajectory, and key diligence risks.** Able is early: it was founded in 2026, has disclosed only a $250,000 pre-seed, remains described as stealth or alpha-stage, and has not published revenue, customer names, retention, deployment count, safety results, or independently verified ROI. The upside trajectory is that an on-premise context layer becomes the system of record for operator knowledge in factories that cannot replace experienced staff, then expands from guidance into bounded autonomous actions and multi-site production intelligence. The main diligence questions are concrete. First, can Able integrate reliably with old PLC, SCADA, MES, ERP, and camera systems without turning every installation into bespoke consulting? Second, does learning from operator behavior distinguish expert causal judgment from unsafe workarounds, temporary exceptions, or correlated but non-causal actions? Third, can the company demonstrate measurable improvements in OEE, changeover time, scrap, safety, or training speed under production conditions rather than in a pilot narrative? Fourth, can local inference meet latency, maintenance, patching, and model-update requirements without creating a new OT attack surface? Fifth, can a very small team support forward deployment while productizing enough of the work to achieve venture-scale economics? Finally, industrial sales cycles, customer confidentiality, and safety approvals may slow reference creation. Able is a strategically aligned early entry with unusually relevant founders, but its priority should rise only after named deployments, reproducible KPI evidence, security documentation, and repeatable expansion beyond a single plant.
+"""
+logo = "Unknown"
+website = "https://www.ableintelligence.ai/"
+sector = "Industrial Physical AI and On-Premise Manufacturing Intelligence"
+founded = "2025 (IVC); January 2026 (Startup Nation Finder); conflicting public profiles"
+headquarters = "Be'er Sheva, Israel"
+employees = "3 exact (Finder, last updated 2026-03-23); LinkedIn 2-10; IVC 5"
+funding_stage = "Pre-seed; $250,000 reported May 2026; separate R&D grant listed August 2026 with amount undisclosed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Able's core technology is a general industrial decision and control layer that can support commercial production and resilience-sensitive manufacturing. (1) Its on-premise deployment and local data boundary are relevant to defense-industrial, semiconductor, food, water, and energy facilities where operational telemetry and recipes may be sensitive or connectivity may be constrained. (2) Its operator-knowledge capture can help preserve scarce expertise, train replacement workers, and reduce dependence on a single specialist across brownfield plants. (3) Its process-monitoring and bounded-automation direction could support continuity of production and maintenance in critical infrastructure. The calibration is important: no defense customer, government contract, classified deployment, OT-security certification, or military application is publicly disclosed. The dual-use score reflects credible technology adjacency and resilience value, not demonstrated defense traction."
+key_technologies = [
+  "Plant-specific physical-AI engine that learns from operator behavior and process outcomes",
+  "On-premise edge deployment that keeps factory data inside the customer facility",
+  "PLC and SCADA connectivity with MES and ERP integration",
+  "Cognitive process mining that captures tacit operator knowledge as enterprise context",
+  "Context-aware AI-agent orchestration for real-time recommendations and workflows",
+  "Human-in-the-loop progression from operator co-pilot to bounded autonomous control",
+  "Local multi-agent engineering automation via the open-source CapAble-Core system"
+]
+use_cases = [
+  "Brownfield production-line optimization where experienced operators are retiring",
+  "Food manufacturing and packaging operations with recurring changeovers and waste",
+  "Energy, utilities, and waste-processing facilities requiring local operational intelligence",
+  "Semiconductor and electronics manufacturing process support with strict data-boundary requirements",
+  "Defense-industrial production lines preserving specialist knowledge and process continuity",
+  "Operator co-pilots that guide junior workers during abnormal conditions or setup tasks",
+  "On-premise plant monitoring and bounded autonomous workflows in connectivity-constrained facilities",
+  "Multi-site knowledge retention and transfer across similar production lines"
+]
+investible = true
+investment_rationale = "Able is a high-upside, high-uncertainty early-stage entry whose strategic value currently exceeds its commercial proof. (1) The problem is durable: industrial operators retire, brownfield equipment persists, and factories need to convert tacit knowledge into repeatable operations. (2) The founders are unusually relevant for the thesis, combining industrial AI leadership, semiconductor manufacturing, data platforms, and machine learning. (3) The product architecture is well matched to sensitive industrial environments because the company emphasizes plant-specific context and on-premise execution. (4) Early signals include a $250,000 pre-seed, a reported Israeli pilot, a current factory installation, and a stated path from guidance to automation. The constraints are substantial: the company is only months old, has a very small team, has not named customers or published KPI evidence, and faces deep competition from automation incumbents with installed bases. This flag is a legacy internal priority signal, not an investment recommendation."
+strategic_value = "Able's strategic value is concentrated in manufacturing resilience and the preservation of operational know-how. (1) A system that keeps factory context and operator expertise on site can reduce dependence on cloud connectivity and on individual employees, both of which are failure points in critical production. (2) The same capability can support food, energy, utilities, semiconductor, and defense-industrial facilities, giving it a broad resilience surface without requiring a military-only product. (3) Brownfield compatibility is strategically useful because essential capacity cannot be replaced quickly with greenfield autonomous factories. (4) The founders' industrial-AI and semiconductor background gives the Israeli ecosystem a credible route into operational intelligence rather than another generic enterprise AI layer. The present ceiling is evidence: there is no public defense deployment, accreditation, or independent measurement showing that Able's platform can safely control a critical process."
+potential_score = 67.0
+technology_score = 72.0
+market_score = 67.0
+team_score = 78.0
+dual_use_score = 58.0
+strategic_alignment_score = 77.0
+stage = "early"
+stage_rationale = "Able is classified as early because it was founded in January 2026, has reported only a $250,000 pre-seed round, is described as alpha-stage or stealth, and has a 1-10 employee profile. The company has moved beyond an idea: it reports a small Israeli pilot, has shown an installation at an unnamed factory, and publishes a concrete 90-day deployment sequence integrating edge hardware with PLC/SCADA, MES, and ERP systems. Those signals support an active product effort rather than a paper concept. They do not establish mid-stage maturity because customer names, contract values, revenue, repeat deployments, retention, safety evidence, and independently audited KPI gains remain undisclosed."
+competitors = [
+  "Augury (industrial AI and machine-health platform; relevant overlap in plant intelligence and predictive operations)",
+  "Siemens Industrial Edge and Industrial Copilot (automation incumbent with deep PLC and installed-base distribution)",
+  "Litmus Automation (industrial edge connectivity and contextualization layer for factory data)",
+  "SymphonyAI Industrial (AI applications for manufacturing operations, asset performance, and process optimization)",
+  "Tulip (connected-worker and frontline manufacturing guidance platform)",
+  "C3 AI (enterprise industrial AI platform used for predictive maintenance and operations optimization)"
+]
+competitive_edge = "Able's prospective edge is a combination of brownfield focus, local deployment, and operator-knowledge capture rather than a publicly disclosed proprietary model architecture. (1) Its product is framed around building a plant-specific context layer that reads both machines and the people operating them, which can address the knowledge-retention problem left outside many predictive-maintenance systems. (2) On-premise execution can lower data-sovereignty and connectivity objections for sensitive manufacturers. (3) The deployment sequence and forward-deployment-engineer model may let Able demonstrate value on one line before expanding across a facility. (4) The founders' direct experience in industrial AI and semiconductor manufacturing should improve the quality of its initial integrations. These advantages remain provisional: Siemens and other incumbents own channels and controls infrastructure, industrial AI competitors have more capital and references, and services-heavy deployment could prevent software-like margins. A durable moat requires measured KPI improvement, reusable connectors, accumulated plant-context data, safe automation, and repeatable multi-site expansion."
+risk_factors = [
+  "Very early financing, small team, and limited public evidence on revenue, runway, customer count, and repeat deployments",
+  "Industrial integration complexity across legacy PLC, SCADA, MES, ERP, camera, and historian environments",
+  "Risk that expert operator behavior captures unsafe workarounds, local exceptions, or correlations rather than transferable causal process knowledge",
+  "Safety and reliability burden when recommendations evolve into autonomous actions on production equipment",
+  "OT cybersecurity, model-update, patching, and local-inference risks created by placing an AI server inside a factory network",
+  "Incumbent competition from Siemens, industrial automation vendors, Augury, and established plant-data platforms",
+  "Services and forward-deployment dependence may make each customer installation bespoke and limit scalable economics",
+  "Unverified traction: pilot ROI, 90-day deployment, 4x target ROI, and unnamed customer installation are not independent proof of repeatable value"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "Able merits monitoring because it sits at the intersection of physical AI, Israeli industrial engineering, and manufacturing resilience. (1) The founders bring unusually direct experience from Augury, Seebo, Applied Materials, Google, SimilarWeb, and industrial process optimization. (2) The product addresses a concrete bottleneck — disappearing operator knowledge on brownfield lines — rather than treating AI as a generic dashboard feature. (3) On-premise deployment, local context, and a path from co-pilot guidance to bounded automation could matter to defense-industrial, semiconductor, food, water, and energy operators. (4) A reported Israeli pilot and an unnamed live factory installation are useful early signals. Priority remains capped by the $250,000 pre-seed scale, alpha/stealth status, very small team, no named customers, no independent KPI evidence, and no disclosed defense or critical-infrastructure deployment. Milestones for a higher priority are named production references, reproducible OEE or waste improvements, security documentation, repeatable deployments across more than one plant, and evidence that local AI actions are safe and economically scalable."
+public_sources = [
+  { label = "Able Intelligence official website", url = "https://www.ableintelligence.ai/", description = "Official product, deployment model, stated outcomes, and current leadership biographies." },
+  { label = "Startup Nation Finder archived profile", url = "https://finder.startupnationcentral.org/company_page/able-intelligence", description = "Archived profile with founding date, founders, $250,000 pre-seed, investor, legal registry number, headcount and Alpha stage; Finder ended operation August 31, 2026." },
+  { label = "IVC Able Intelligence profile", url = "https://www.ivc-online.com/Google-Card?ID=7a5954ac-112c-f111-b81d-00505695cd29&type=1", description = "Independent company profile listing May 2026 pre-seed and a separate August 2026 R&D grant; amounts and some counterparty details are redacted." },
+  { label = "Able Intelligence on LinkedIn", url = "https://www.linkedin.com/company/ableintelligence", description = "Company status and employee range; company updates describe an unnamed factory installation and open-sourcing CapAble-Core." },
+  { label = "Iftah Levy interview preview", url = "https://www.linkedin.com/posts/naftalidratman_optimization-of-manufacturing-plants-is-difficult-activity-7442827717273837568-2r2X", description = "Founder discussion of preserving operator knowledge and manufacturing process expertise." },
+  { label = "Secret Chord Ventures", url = "https://www.secretchord.vc/", description = "Investor firm information; does not publicly name Able on the accessible portfolio page." },
+  { label = "Augury", url = "https://www.augury.com/", description = "Official competitor product positioning in industrial machine health and operations." },
+  { label = "Siemens Industrial Edge", url = "https://www.siemens.com/global/en/products/automation/topic-areas/industrial-edge.html", description = "Official edge computing and industrial application platform information for competitor comparison." },
+  { label = "Tulip", url = "https://tulip.co/platform/", description = "Official frontline operations and connected-worker platform information for competitor comparison." },
+  { label = "CapAble-Core release update", url = "https://www.linkedin.com/company/ableintelligence", description = "Company LinkedIn reports open-sourcing CapAble-Core, a multi-agent engineering tool used internally." }
+]
+crawled_at = "2026-09-20T02:24:47Z"
+updated_at = "2026-10-03T09:41:29Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "il-able-intelligence"
+legal_name = "Able Intelligence Ltd."
+aliases = ["Able Intelligence", "ABLE INTELLIGENCE LTD", "אייבל אינטליגנס בע\"מ"]
+operating_status = "active"
+business_model = "B2B industrial AI platform deployed on premises at manufacturing sites; vendor describes a forward-deployment-engineer-led installation and line-specific agent calibration. Commercial pricing and contract model are not publicly disclosed."
+products = ["Able Brain / Factory Brain: plant-specific manufacturing intelligence and AI-agent orchestration", "CapAble-Core: open-source multi-agent software engineering tool used internally by the team"]
+locations = ["Be'er Sheva, Israel"]
+founded_on = "2026-01"
+country_of_incorporation = "Israel"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli Companies Registrar number", identifier = "517310892", source_ids = ["finder"] }]
+source_ids = ["finder", "ivc", "official", "linkedin"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public company-profile reporting identifies one May 2026 pre-seed equity round of $250,000 from Secret Chord Ventures. IVC also lists a separate August 2026 R&D grant, but its amount and named government agency are redacted in the accessible record. The grant is not included in reported equity raised. Company-level total raised is stated as $250,000 by the archived Startup Nation Finder profile, as of its last update on 2026-03-23; the chronology is internally inconsistent because that stated total predates its May round description, so the total is treated as profile-reported and not as an independently reconciled lifetime total."
+rounds = [
+  { id = "pre-seed-2026-05", round_type = "Pre-seed", instrument = "equity", status = "announced", announced_on = "2026-05", amount_status = "reported", amount = 250000, amount_scope = "round", currency = "USD", lead_investors = ["Secret Chord Ventures"], participating_investors = ["Secret Chord Ventures"], source_ids = ["finder", "ivc"], notes = "Finder reports May 2026, $250K and Secret Chord; IVC separately lists a May 1 Seed/Pre-Seed record with amount and investor name obscured. No valuation disclosed." },
+  { id = "rd-grant-2026-08", round_type = "R&D grant", instrument = "grant", status = "announced", announced_on = "2026-08", amount_status = "undisclosed", amount_scope = "unknown", source_ids = ["ivc"], notes = "IVC profile shows an August 1, 2026 R&D Grant and an obscured government-agency investor. Value and agency are not recoverable in the accessible record; excluded from equity totals." }
+]
+reported_total_raised = 250000
+reported_total_currency = "USD"
+total_source_ids = ["finder"]
+total_as_of = "2026-03-23"
+total_scope = "profile-reported total; chronology conflicts with profile's May 2026 round date and requires company confirmation"
+history_status = "partial"
+coverage_through = "2026-10-03"
+
+[intelligence.ownership]
+status = "not_found"
+summary = "The entity is presented as a privately held Israeli limited company. No public cap table, ownership percentages, parent, or equity transaction beyond the disclosed pre-seed financing was located. The R&D grant record is not an ownership transaction."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["finder", "linkedin", "ivc"]
+deals = []
+holdings = []
+
+[[intelligence.people]]
+name = "Iftah Levy"
+role = "CEO and co-founder"
+is_founder = true
+current = true
+background = "Official biography describes 15 years in industrial AI leadership, including GM and VP Product at Augury, VP Data at Seebo through its exit, and semiconductor technology initiatives at Applied Materials; BSc IT summa cum laude from Ben-Gurion University."
+source_ids = ["official", "finder", "ivc"]
+
+[[intelligence.people]]
+name = "Kiril Smilansky"
+role = "CTO and co-founder"
+is_founder = true
+current = true
+background = "Official biography describes 10+ years in AI and data science, prior work at Google, SimilarWeb and Prosus/Naspers, global data-platform work, co-founding TeXperience Food Tech AI, and an MSc in Industrial Engineering and Machine Learning."
+source_ids = ["official", "finder"]
+
+[[intelligence.people]]
+name = "Idan Asis"
+role = "Software engineer; led an on-site factory server installation"
+is_founder = false
+current = true
+background = "Able's LinkedIn update credits Asis with managing the described on-premise installation from start to finish."
+source_ids = ["linkedin"]
+
+[[intelligence.investors]]
+name = "Secret Chord Ventures"
+investor_type = "vc"
+website = "https://www.secretchord.vc/"
+round_ids = ["pre-seed-2026-05"]
+relationship = "historical"
+source_ids = ["finder", "ivc", "scv"]
+notes = "Named by the archived Finder funding profile as pre-seed investor. IVC's accessible entry masks the name. No disclosed check size beyond round amount or ownership percentage."
+
+[[intelligence.traction]]
+kind = "product"
+description = "Official product site describes an edge-hosted manufacturing brain integrating PLC/SCADA with MES/ERP, calibrated to a production line by a forward deployment engineer; advertised 90-day live-production sequence and 4x target ROI are company targets, not verified outcomes."
+date = "2026"
+source_ids = ["official"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Company LinkedIn post reports an Able server installed on an unnamed customer's factory floor, running locally/on-premise. This establishes a company-reported installation, not a named paying customer, paid contract, production KPI, or independently validated deployment."
+date = "2026-08"
+source_ids = ["linkedin"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "The company reports releasing CapAble-Core, an open-source multi-agent software development system built with Google ADK and used internally to accelerate development. This is a tooling release, not evidence of factory product performance."
+date = "2026-05"
+source_ids = ["linkedin"]
+
+[[intelligence.comparables]]
+name = "Augury"
+website = "https://www.augury.com/"
+rationale = "Industrial AI, machine-health and operations platform with overlapping plant-floor decision context."
+differentiation = "Augury is the founder's prior company and publicly emphasizes machine health; Able's stated wedge emphasizes operator knowledge capture and a plant-wide context/agent layer."
+source_ids = ["official", "augury"]
+
+[[intelligence.comparables]]
+name = "Siemens Industrial Edge"
+website = "https://www.siemens.com/global/en/products/automation/topic-areas/industrial-edge.html"
+rationale = "Automation incumbent offering industrial edge infrastructure and applications that can overlap in local analytics and operational integration."
+differentiation = "Siemens benefits from automation installed base and broad industrial portfolio; Able positions as vendor-neutral plant context and operator-learning layer."
+source_ids = ["official", "siemens"]
+
+[[intelligence.comparables]]
+name = "Tulip"
+website = "https://tulip.co/platform/"
+rationale = "Connected-worker and frontline operations platform overlapping in operator guidance and digitized workflows."
+differentiation = "Tulip foregrounds configurable frontline apps and workflows; Able claims learned process context and autonomous agents deployed on premises."
+source_ids = ["official", "tulip"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
+summary = "Israeli limited company with registrar number 517310892 and a Be'er Sheva headquarters; the archived company profile identifies co-founders Iftah Levy and Kiril Smilansky."
+as_of = "2026-10-03"
+source_ids = ["finder", "ivc"]
+
+[intelligence.research]
+researched_at = "2026-10-03T09:41:29Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Able Intelligence official site", "Able Intelligence funding raised seed pre-seed Series A investors valuation acquired", "Able Intelligence Secret Chord Ventures $250,000", "Able Intelligence founder team leadership", "ABLE INTELLIGENCE LTD 517310892 Israel registrar", "Able Intelligence revenue customers contracts installation", "Able Intelligence patents", "Able Intelligence competitors manufacturing AI on-premise", "Able Intelligence dual use defense security manufacturing", "Able Intelligence grant R&D IVC August 2026"]
+gaps = [
+  "financials: no public revenue, ARR, profitability, burn, runway, or cash disclosure found.",
+  "traction: customer is unnamed; no contract value, paying status, production KPI, retention, or independently verified outcomes disclosed.",
+  "intellectual_property: no company-assigned patents or patent applications were located; absence of a surfaced record does not prove none exist. CapAble-Core is publicly released software, but ownership/licensing review is outside available profile evidence.",
+  "ownership: no public cap table, shareholder percentages, or beneficial ownership found.",
+  "investors: full grant agency and grant size are redacted in IVC; no valuation or ownership terms disclosed.",
+  "team: current complete employee roster and hiring trend are unavailable; LinkedIn exposes only a partial employee set.",
+  "competition: peer comparison is based on vendors' public positioning, not customer bake-offs or measured performance.",
+  "dual_use: no defense, government, classified, or critical-infrastructure customer/contract or certification disclosed.",
+  "funding: Finder's $250K cumulative total is labeled last updated 2026-03-23 yet its round is dated May 2026; clarify whether total is a stale snapshot, later refreshed profile data, or a date error."
+]
+conflicts = ["Startup Nation Finder states founded January 2026 and last-updated 2026-03-23 while also listing a May 2026 round and $250K total; treat the round and total as profile-reported and confirm exact timing directly. IVC lists established 2025, conflicting with Finder's January 2026 start date, and lists the round on May 1, 2026 while classifying it Seed and remarking Pre-Seed. IVC's August 2026 grant amount and government agency are redacted."]
+diligence_questions = [
+  "Is the May 2026 $250,000 pre-seed amount the complete closed equity round, and what is the correct announcement/closing date given Finder's displayed update chronology?",
+  "What amount, agency, grant conditions, and royalty/repayment obligations apply to the August 2026 R&D grant?",
+  "Who is the factory installation customer, is it paid, and what baseline and post-installation OEE, waste, downtime, and labor metrics can be independently reviewed?",
+  "What safeguards, human approval gates, rollback behavior, OT cybersecurity controls, and liability terms govern any agent action that changes machine settings?",
+  "How much of each deployment is reusable software versus custom forward-deployment engineering, and what are implementation time, gross margin, renewal, and expansion rates?"
+]
+
+[[intelligence.research.sources]]
+id = "official"
+url = "https://www.ableintelligence.ai/"
+title = "Able Intelligence — AI Factory Brain for Manufacturing"
+publisher = "Able Intelligence"
+kind = "company"
+accessed_at = "2026-10-03T09:41:29Z"
+claims = ["company.products", "company.business_model", "people.Iftah Levy", "people.Kiril Smilansky", "traction"]
+
+[[intelligence.research.sources]]
+id = "finder"
+url = "https://finder.startupnationcentral.org/company_page/able-intelligence"
+title = "Able Intelligence — Industrial Technologies | Finder"
+publisher = "Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-03T09:41:29Z"
+published_on = "2026-03-23"
+claims = ["company identity, founding, HQ, registry, and employee snapshot", "funding.pre-seed-2026-05", "funding.reported_total_raised", "investors.Secret Chord Ventures", "people founders", "israel_connection"]
+
+[[intelligence.research.sources]]
+id = "ivc"
+url = "https://www.ivc-online.com/Google-Card?ID=7a5954ac-112c-f111-b81d-00505695cd29&type=1"
+title = "Able Intelligence Ltd. - IVC Data & Insights"
+publisher = "IVC Research Center"
+kind = "directory"
+accessed_at = "2026-10-03T09:41:29Z"
+claims = ["company legal name and Be'er Sheva address", "IVC lists established 2025, conflicting with Finder January 2026 founding", "funding.pre-seed-2026-05", "funding.rd-grant-2026-08", "people Iftah Levy", "ownership private status"]
+
+[[intelligence.research.sources]]
+id = "linkedin"
+url = "https://www.linkedin.com/company/ableintelligence"
+title = "Able Intelligence | LinkedIn"
+publisher = "LinkedIn / Able Intelligence"
+kind = "company"
+accessed_at = "2026-10-03T09:41:29Z"
+claims = ["company operating status and employee range", "traction unnamed factory installation", "traction CapAble-Core release", "people Idan Asis"]
+
+[[intelligence.research.sources]]
+id = "interview"
+url = "https://www.linkedin.com/posts/naftalidratman_optimization-of-manufacturing-plants-is-difficult-activity-7442827717273837568-2r2X"
+title = "Optimization of manufacturing plants is difficult when factories are losing the expertise that helps keep the factory line going"
+publisher = "Naftali Dratman / LinkedIn"
+kind = "media"
+accessed_at = "2026-10-03T09:41:29Z"
+claims = ["company problem framing and founder interview context"]
+
+[[intelligence.research.sources]]
+id = "scv"
+url = "https://www.secretchord.vc/"
+title = "Secret Chord Ventures"
+publisher = "Secret Chord Ventures"
+kind = "investor"
+accessed_at = "2026-10-03T09:41:29Z"
+claims = ["investor firm identity and early-stage investment profile"]
+
+[[intelligence.research.sources]]
+id = "augury"
+url = "https://www.augury.com/"
+title = "Augury — Industrial AI"
+publisher = "Augury"
+kind = "other"
+accessed_at = "2026-10-03T09:41:29Z"
+claims = ["comparables.Augury"]
+
+[[intelligence.research.sources]]
+id = "siemens"
+url = "https://www.siemens.com/global/en/products/automation/topic-areas/industrial-edge.html"
+title = "Industrial Edge — Siemens"
+publisher = "Siemens"
+kind = "other"
+accessed_at = "2026-10-03T09:41:29Z"
+claims = ["comparables.Siemens Industrial Edge"]
+
+[[intelligence.research.sources]]
+id = "tulip"
+url = "https://tulip.co/platform/"
+title = "Tulip Platform"
+publisher = "Tulip Interfaces"
+kind = "other"
+accessed_at = "2026-10-03T09:41:29Z"
+claims = ["comparables.Tulip"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-03T09:41:29Z"
+next_review_on = "2027-01-03"
+queries = ["Able Intelligence official site", "ABLE INTELLIGENCE LTD 517310892 Israel registrar"]
+source_ids = ["official", "finder", "ivc"]
+summary = "Confirmed the industrial manufacturing AI company, Israeli registered entity number 517310892, Be'er Sheva location, official domain, and active public product website."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-03T09:41:29Z"
+next_review_on = "2027-01-03"
+queries = ["Able Intelligence funding raised seed pre-seed Series A investors valuation acquired", "Able Intelligence Secret Chord Ventures $250,000", "Able Intelligence grant R&D IVC August 2026"]
+source_ids = ["finder", "ivc"]
+summary = "Found one reported May 2026 $250K pre-seed and a separate August 2026 grant listing with redacted terms; dated lifetime total has a chronology inconsistency."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-03T09:41:29Z"
+next_review_on = "2027-01-03"
+queries = ["Able Intelligence Secret Chord Ventures investors", "Secret Chord Ventures Able Intelligence portfolio"]
+source_ids = ["finder", "ivc", "scv"]
+summary = "Finder names Secret Chord Ventures; IVC's record redacts its investor field. No other equity investor or disclosed ownership percentage located."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T09:41:29Z"
+next_review_on = "2027-01-03"
+queries = ["Able Intelligence founder team leadership", "Iftah Levy Able Intelligence", "Kiril Smilansky Able Intelligence"]
+source_ids = ["official", "finder", "ivc", "linkedin"]
+summary = "Verified co-founders Iftah Levy (CEO) and Kiril Smilansky (CTO); public sources show a small team but not a full roster or hiring trend."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T09:41:29Z"
+next_review_on = "2027-01-03"
+queries = ["Able Intelligence acquired ownership parent company shareholders", "ABLE INTELLIGENCE LTD 517310892 ownership"]
+source_ids = ["finder", "ivc", "linkedin"]
+summary = "Private company profile found; no parent, acquisition, cap-table percentages, or ownership deal publicly identified."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T09:41:29Z"
+next_review_on = "2027-01-03"
+queries = ["Able Intelligence revenue ARR profitability burn runway customers", "Able Intelligence valuation funding"]
+source_ids = ["finder", "ivc"]
+summary = "No dated revenue, ARR, cash, profitability, burn, runway, or valuation disclosure; only financing and grant entries surfaced."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T09:41:29Z"
+next_review_on = "2027-01-03"
+queries = ["Able Intelligence customers contracts installation factory", "Able Intelligence revenue customers pilot", "Able Intelligence product launch factory brain"]
+source_ids = ["official", "linkedin", "interview"]
+summary = "Company reports an unnamed factory server installation and publishes a 90-day deployment plan; customer identity, paid status, contract economics, and KPIs remain unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T09:41:29Z"
+next_review_on = "2027-01-03"
+queries = ["Able Intelligence patents", "Able Intelligence Ltd patent WIPO USPTO", "Able Intelligence CapAble-Core open source release"]
+source_ids = ["linkedin"]
+summary = "No company patent record located in targeted public searches; CapAble-Core is a public software release, not evidence of patent protection."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T09:41:29Z"
+next_review_on = "2027-01-03"
+queries = ["Able Intelligence competitors manufacturing AI on-premise", "industrial AI machine health official Augury", "Siemens Industrial Edge", "Tulip connected worker manufacturing platform"]
+source_ids = ["augury", "siemens", "tulip", "official"]
+summary = "Compared public product positioning against Augury, Siemens Industrial Edge, and Tulip; no verified head-to-head or customer selection evidence found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T09:41:29Z"
+next_review_on = "2027-01-03"
+queries = ["Able Intelligence dual use defense security manufacturing", "Able Intelligence government defense contract"]
+source_ids = ["official", "linkedin", "interview"]
+summary = "On-premise industrial tooling has a plausible resilience/critical-manufacturing application, but no defense/security customer, government contract, certification, or military use was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Official product site remains live and LinkedIn describes the company as privately held with an active factory-brain product and recent installation update."
+verified_at = "2026-10-03T09:41:29Z"
+source_ids = ["official", "linkedin"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Finder records Israeli Registrar number 517310892 and Be'er Sheva HQ; IVC separately gives the Beer Sheva address."
+verified_at = "2026-10-03T09:41:29Z"
+source_ids = ["finder", "ivc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Finder profile explicitly displays total funding $250K, last updated 2026-03-23; retained as source-reported with chronology caveat, not independently reconciled."
+verified_at = "2026-10-03T09:41:29Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2026-05.amount"
+support = "direct"
+summary = "Finder full profile gives May 2026 Pre-Seed amount $250K and names Secret Chord Ventures; IVC corroborates existence/date of round but obscures amount."
+verified_at = "2026-10-03T09:41:29Z"
+source_ids = ["finder", "ivc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2026-05.named_investors"
+support = "direct"
+summary = "Finder full profile names Secret Chord Ventures as investor in the May 2026 pre-seed; IVC redacts the name."
+verified_at = "2026-10-03T09:41:29Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2026-05.lead_investors"
+support = "direct"
+summary = "Finder lists Secret Chord Ventures as the sole named investor in the May 2026 pre-seed."
+verified_at = "2026-10-03T09:41:29Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.pre-seed-2026-05.participating_investors"
+support = "direct"
+summary = "Finder lists Secret Chord Ventures as the investor in the single reported pre-seed round."
+verified_at = "2026-10-03T09:41:29Z"
+source_ids = ["finder"]

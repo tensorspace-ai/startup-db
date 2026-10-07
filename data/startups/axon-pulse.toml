@@ -1,0 +1,435 @@
+name = "Axon Pulse"
+description = "Axon Pulse is an Israeli software company developing AI and algorithmic systems that turn radar, acoustic, optical, and other sensor signals into decision-ready intelligence. Its stated focus is defense and intelligence, with a credible adjacent path into automotive, autonomy, drones, and other safety-critical sensing applications."
+
+detailed_description = """Axon Pulse develops software for extracting more usable information from difficult sensor data, rather than manufacturing a new radar as its primary product. The company's public materials describe a perception and signal-processing stack that detects targets in noise and clutter, classifies them, maintains tracks through motion and occlusion, and exposes confidence and provenance to operators. Earlier public descriptions centered on DeePulse, a neural-network radar signal-processing engine that could accept inputs ranging from raw IQ data and range-Doppler or time-Doppler representations to point clouds. The current site presents a broader architecture spanning perception, super resolution, sensor fusion, and an in-house command-and-control layer. These are technically meaningful capabilities, but the public record does not establish how much of the stack is productized, repeatedly deployed, or sold as a standard product versus co-developed for individual programs.
+
+The commercial value proposition is a software improvement to existing sensing infrastructure. Higher detection quality at a fixed false-alarm rate, better separation of nearby objects, and more stable tracks can improve the performance of a radar or multi-sensor system without forcing an immediate hardware replacement. Potential customers include defense integrators, security and critical-infrastructure operators, drone and counter-drone programs, and automotive or industrial autonomy developers. The automotive positioning is supported by older ecosystem profiles, while the current company site is more explicitly defense- and intelligence-oriented. That shift may reflect market focus rather than abandonment of civilian applications. A buyer would still need to validate input compatibility, latency, compute requirements, calibration burden, and whether improvements hold on its own sensor data rather than on a curated demonstration set.
+
+Axon Pulse appears to be an early commercial company rather than a mature platform vendor. Public ecosystem records report a 2019 founding, Tel Aviv headquarters, an 11–50 employee range, and approximately $4.6 million of seed funding, but those funding and headcount figures are third-party snapshots rather than audited company disclosures. The Israel Innovation Authority identifies Axon Pulse Ltd. as established in 2019 with 20 employees and records 2023 and 2024 R&D support routes involving the Ministry of Defense and DDR&D/MAFAT; this is a stronger public signal of technical and strategic relevance than a generic startup directory, but it is not proof of recurring revenue or a fielded defense contract. The company's own site names a small senior technical team and emphasizes air-gapped deployment, reusable evaluation pipelines, and mission-oriented co-development. No public source reviewed here establishes major customers, production volumes, contract value, or independent benchmark validation.
+
+The competitive environment includes radar-chip and radar-sensor companies, autonomy perception vendors, defense primes, and internal algorithms teams at vehicle, aerospace, and security-system manufacturers. Axon Pulse's potential differentiation is the ability to work across sensor modalities and retrofit or integrate with existing systems, especially where a customer needs a mission-specific software layer rather than another complete sensor. That advantage is also a constraint: bespoke integration can consume a small company's engineering capacity, lengthen sales cycles, and make revenue less repeatable. Larger alternatives may offer deeper certification, support, and procurement infrastructure even when their algorithms are less specialized.
+
+The defense and national-security case is substantive because the core capabilities—robust detection, classification, tracking, super resolution, sensor fusion, confidence calibration, and operation in disconnected environments—map directly to surveillance, counter-UAS, perimeter security, and other time-sensitive missions. The same capabilities can support civilian transport or industrial safety, so the dual-use classification is justified. It should nevertheless be treated as potential rather than proven mission impact. The most important diligence is independent testing across clutter, weather, interference, sensor dropouts, adversarial conditions, and changing target distributions; evidence of secure model-update and audit processes; integration with command-and-control systems; and customer references that distinguish a research demonstration from sustained operational use. Axon Pulse merits a monitored strategic signal, but its public evidence does not yet justify treating it as a validated, broadly investible platform."""
+
+logo = "Unknown"
+website = "https://axon-pulse.com/"
+sector = "Dual-use Radar AI and Autonomous Sensing"
+founded = "2019"
+headquarters = "Tel Aviv, Israel"
+employees = "11-50"
+funding_stage = "Seed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "The core technology has substantive applicability in both defense/intelligence sensing and civilian autonomy or safety systems. Public evidence supports the adjacency through radar perception, multi-sensor fusion, drone-related applications, and automotive positioning, but does not independently prove broad operational deployment in either market."
+
+key_technologies = [
+  "Neural-network radar signal processing for raw IQ, range-Doppler, time-Doppler, and point-cloud inputs",
+  "Low-latency target detection and classification in noise and clutter",
+  "Radar super resolution for range and azimuth separation of nearby targets",
+  "Multi-sensor fusion across radar, optical, and acoustic measurements",
+  "Track management with confidence, provenance, dropout handling, and deduplication",
+  "AI evaluation, training, and deployment pipelines for sensitive or air-gapped environments"
+]
+
+use_cases = [
+  "Counter-UAS and drone-detection systems",
+  "Defense and intelligence surveillance with radar-based target classification and tracking",
+  "Critical-infrastructure and perimeter monitoring",
+  "Autonomous-vehicle and ADAS perception using radar alongside other sensors",
+  "Industrial or transport safety systems operating in low visibility or clutter",
+  "Unmanned ground, maritime, or aerial systems requiring compact sensor fusion",
+  "Software upgrades for installed radar systems where hardware replacement is impractical"
+]
+
+investible = false
+investment_rationale = "Axon Pulse has credible strategic fit with a dual-use sensing thesis, but the public evidence is not sufficient to treat it as a current priority investment signal. The company appears technically focused and supported by Israeli R&D ecosystem signals, yet public information remains limited on recurring revenue, named customers, production deployments, independent benchmarks, and financing history beyond third-party seed databases. Diligence should focus on deployability, repeatability of customer work, secure lifecycle support, and conversion of research or pilot activity into durable programs."
+strategic_value = "Axon Pulse could increase the value and operational life of existing radar and multi-sensor installations by improving detection, classification, tracking, and operator confidence in software. This is strategically relevant where procurement cycles are long, sensor replacement is expensive, and decisions must be made under clutter, low visibility, or intermittent connectivity. The value is highest if the company can deliver measurable gains on customer data, integrate with established command-and-control and vehicle systems, and maintain auditable models in secure environments. Current public evidence supports strategic relevance, not yet proven scale or mission indispensability."
+
+public_sources = [
+  { label = "Axon Pulse official company and technology pages", url = "https://axon-pulse.com/", description = "Current positioning, products, named current leadership, office, and self-reported capability claims." },
+  { label = "Israel Innovation Authority company record", url = "https://innovationisrael.org.il/en/importWinner/516023934/", description = "Legal name and number, Israeli base, establishment year, employee count, management, and MAFAT-linked support routes." },
+  { label = "Startup Nation Central Finder profile", url = "https://finder.startupnationcentral.org/company_page/axonpulse", description = "Historical startup profile with 2020 seed amount/date, business overview, employee estimates, and registry number; secondary directory evidence." },
+  { label = "Sensors paper on Doppler radar recognition", url = "https://www.mdpi.com/1424-8220/22/9/3456", description = "Peer-reviewed technical context for radar human/animal classification and the MAFAT challenge; does not validate current commercial deployment." },
+  { label = "Axon Pulse and IAI accelerator announcement", url = "https://www.linkedin.com/posts/axon-pulse_ai-radar-rf-activity-7013448978268631040-4qK4", description = "Company and IAI posts identify an accelerator cohort and MVP/demo activity, not a contract or paid deployment." },
+  { label = "Historical Axon Pulse CEO announcement", url = "https://www.linkedin.com/posts/tali-rosenwaks-2237848_ai-autonomous-deeplearning-activity-6906856710712229888-sWqL", description = "Axon Pulse identified Tali Rosenwaks as CEO in an earlier mobility-focused public post; current site lists Yaniv Vintrob." }
+]
+
+potential_score = 80.0
+technology_score = 86.0
+market_score = 73.0
+team_score = 70.0
+dual_use_score = 88.0
+strategic_alignment_score = 85.0
+stage = "early"
+stage_rationale = "The company is a 2019-founded seed-stage startup with a small reported team and public R&D ecosystem support, but limited disclosed evidence of repeatable production deployments, revenue scale, or mature procurement penetration."
+
+competitors = [
+  "Arbe Robotics",
+  "Vayyar Imaging",
+  "Uhnder",
+  "Echodyne",
+  "Mobileye perception and radar software teams",
+  "ELTA Systems and other defense-prime radar integrators"
+]
+
+competitive_edge = "Axon Pulse's possible edge is a software-first, sensor-agnostic layer that combines radar processing with broader multi-sensor fusion and can be co-developed around existing mission constraints. That could reduce hardware replacement pressure and support air-gapped or sensitive deployments. The edge is not yet proven as a durable moat: larger radar vendors, defense primes, automotive OEMs, and internal customer teams can replicate or bundle overlapping capabilities, while customer-specific integration may limit repeatability."
+
+risk_factors = [
+  "Public evidence is thin on named customers, recurring revenue, production deployments, and independently verified performance.",
+  "Self-reported metrics such as ROC AUC and detection improvements may not transfer across sensors, environments, weather, clutter, or target distributions.",
+  "Integration with legacy radar, command-and-control, vehicle, and secure compute systems may create long sales cycles and high services intensity.",
+  "Defense and automotive procurement, certification, export-control, and data-sovereignty requirements can delay commercialization.",
+  "Model drift, adversarial interference, sensor failure, and false positives create safety and mission risks that require rigorous lifecycle governance.",
+  "A small team may face concentration risk in specialist radar, AI, program-management, and secure-deployment talent.",
+  "Well-funded radar suppliers, defense primes, OEMs, and internal engineering groups can bundle competing perception or fusion functionality."
+]
+risk_level = "medium"
+
+signals = []
+priority_rank = 0
+priority_rationale = "Axon Pulse remains a strategically relevant but conditional research signal: dual-use radar and sensor-fusion capabilities align strongly with the database thesis, while limited public proof of commercial scale and operational validation argues for monitoring and targeted diligence rather than priority treatment."
+
+crawled_at = "2026-05-26T20:31:55Z"
+updated_at = "2026-10-04T01:30:37Z"
+
+[intelligence]
+schema_version = 2
+investors = []
+financials = []
+intellectual_property = []
+comparables = []
+
+[intelligence.company]
+company_id = "il-axon-pulse"
+source_ids = ["official", "iia", "snc"]
+legal_name = "Axon Pulse Ltd."
+aliases = ["AxonPulse", "Axon Pulse"]
+operating_status = "active"
+business_model = "B2B software and mission-specific co-development for AI radar processing, sensor fusion, and decision-support integration; public materials do not disclose a standard licensing or services mix."
+products = ["DeePulse radar signal-processing engine (historical profile)", "Multi-sensor perception, super-resolution, fusion, and command-and-control capabilities (current company presentation)"]
+locations = ["Tel Aviv, Israel"]
+linkedin_url = "https://www.linkedin.com/company/axon-pulse/"
+country_of_incorporation = "Israel"
+founded_on = "2019"
+
+[[intelligence.company.registry_identifiers]]
+source_ids = ["iia"]
+jurisdiction = "Israel"
+scheme = "Israeli company number"
+identifier = "516023934"
+
+[intelligence.funding]
+status = "reported"
+summary = "Startup Nation Central Finder reports one Seed round of USD 4.6 million dated January 2020 and reports the same figure as total funding. No company or investor announcement corroborating the amount, closing date, instrument, or participants was found. Treat as a secondary-source reported amount rather than audited proceeds; no other round is established."
+reported_total_raised = 4600000
+reported_total_currency = "USD"
+total_source_ids = ["snc"]
+total_as_of = "2024-05-07"
+total_scope = "Finder-reported cumulative funding total; not independently verified and not derived by summing funding events."
+history_status = "partial"
+coverage_through = "2026-10-04"
+
+[[intelligence.funding.rounds]]
+id = "seed-2020"
+round_type = "Seed"
+instrument = "unknown"
+status = "closed"
+announced_on = "2020-01"
+amount_status = "reported"
+amount = 4600000
+amount_scope = "round"
+currency = "USD"
+lead_investors = []
+participating_investors = []
+valuation_basis = "undisclosed"
+source_ids = ["snc"]
+notes = "SNC Finder lists Jan 2020 / Seed / $4.6M / no investor names. The profile says one round and $4.6M total. The exact day, original announcement, instrument, closing date, investor identities, and valuation remain undisclosed in the available evidence."
+
+[[intelligence.people]]
+source_ids = ["official", "iia"]
+name = "Yaniv Vintrob"
+role = "Chief Executive Officer"
+is_founder = false
+current = true
+background = "The IIA record names him CEO and the current company site lists him as CEO. Publicly reviewed sources do not establish founder status or detailed prior career claims."
+
+[[intelligence.people]]
+source_ids = ["official", "iia"]
+name = "Gil Goldman"
+role = "Chief Technology Officer"
+is_founder = false
+current = true
+background = "Current company site and IIA record identify him as CTO."
+
+[[intelligence.people]]
+source_ids = ["official"]
+name = "Itzik Nanikashvili"
+role = "Director of R&D"
+is_founder = false
+current = true
+background = "Current company site identifies him in this role."
+
+[[intelligence.people]]
+source_ids = ["official"]
+name = "Alon Rosenbaum"
+role = "Director of Products and Projects"
+is_founder = false
+current = true
+background = "Current company site identifies him in this role."
+
+[[intelligence.people]]
+source_ids = ["tali"]
+name = "Tali Rosenwaks"
+role = "Chief Executive Officer (historical)"
+is_founder = false
+current = false
+background = "Axon Pulse's earlier public post identified her as CEO during its mobility-focused period. Current company materials list Yaniv Vintrob; the timing and circumstances of the leadership change were not located."
+
+[intelligence.ownership]
+status = "not_found"
+summary = "The company is presented as a private Israeli limited company. No parent, acquisition, ownership percentages, or complete cap table disclosure was found in reviewed public materials."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["iia", "snc"]
+deals = []
+holdings = []
+
+[[intelligence.traction]]
+source_ids = ["iai_linkedin"]
+kind = "product"
+description = "Axon Pulse said it developed a product through an Israel Aerospace Industries accelerator cohort; IAI reported cohort projects reached MVP and presented at demo day. This demonstrates an accelerator milestone only, not a paid contract or operational deployment."
+notes = "The post is approximately three years old and does not name commercial terms or a customer deployment."
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel"]
+summary = "The Israel Innovation Authority record identifies Axon Pulse Ltd. with Israeli company number 516023934 and Israel as its country; the company lists a Tel Aviv office."
+as_of = "2026-10-04"
+source_ids = ["iia", "official"]
+
+[intelligence.research]
+researched_at = "2026-10-04T01:30:37Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Axon Pulse company funding raised investors 2025 2026",
+  "Axon Pulse Ltd Israel Innovation Authority team founders revenue customers",
+  "site:axon-pulse.com Axon Pulse news team investors",
+  "Axon Pulse patents radar AI",
+  "AxonPulse 4.6 funding",
+  "Axon Pulse Yaniv Vintrob investors seed radar",
+  "AxonPulse radar company Israel news",
+  "Axon Pulse Ltd patent radar"
+]
+gaps = [
+  "team: Founder status, full biographies, board composition, and the date/reason for transition from historical CEO Tali Rosenwaks to current CEO Yaniv Vintrob are not publicly established.",
+  "investors: The only located round listing omits investors; no public investor names or portfolio confirmation found.",
+  "financials: No public revenue, ARR, profitability, burn, or runway data found. IIA lists 20 employees while older Finder data gives a 11-50 range and a machine-readable exact count of 37; these are snapshots, not current audited headcount.",
+  "traction: Public materials show product claims and an IAI accelerator MVP/demo cohort, but no named paying customer, contract value, production deployment, or independently verified deployment evidence.",
+  "intellectual_property: No attributable patent filing or grant verified in this pass; this does not establish that the company has no IP.",
+  "competition: No like-for-like independent comparison or customer selection evidence established; existing top-level peer list remains a hypothesis set.",
+  "Funding disclosure gap: No company or investor primary announcement was found for the directory-reported 2020 seed financing; amount, instrument, and investors need confirmation.",
+  "Leadership conflict: An older company post named Tali Rosenwaks CEO; current official site and IIA record name Yaniv Vintrob. No dated transition notice located."
+]
+conflicts = ["Historical CEO attribution differs from current leadership listings: Axon Pulse's older LinkedIn post names Tali Rosenwaks, while the current company site and IIA profile name Yaniv Vintrob. These are consistent with a leadership change, but its date is not verified.", "SNC Finder reports USD 4.6 million raised while IIA's record displays Additional Funding 0. These fields likely represent different program/profile concepts and do not resolve private equity proceeds; the seed amount is retained only as a secondary-source report."]
+diligence_questions = [
+  "Can management provide the closing documents and cap table for the reported January 2020 USD 4.6 million Seed round, including investor names, instrument, and any later extensions?",
+  "Which named customers have moved from evaluation or accelerator demonstration into paid pilot and sustained production use, and what are the contract duration, recurring software share, and renewal terms?",
+  "Can a customer-controlled benchmark reproduce the company's claimed detection and classification performance across sensors, SNR, weather, clutter, and held-out sites at a disclosed false-alarm rate and latency?",
+  "What changed in leadership between Tali Rosenwaks and Yaniv Vintrob, and who currently owns product, engineering, security, and export-control decisions?",
+  "What patents, trade secrets, training data rights, and third-party model dependencies underpin the current product, and can it be maintained in air-gapped environments?"
+]
+
+[[intelligence.research.sources]]
+id = "official"
+url = "https://axon-pulse.com/"
+title = "AxonPulse - AI that turns complexity into clarity"
+publisher = "Axon Pulse"
+kind = "company"
+accessed_at = "2026-10-04T01:30:37Z"
+claims = ["Current defense and intelligence focus; multi-sensor perception, decision and integration, super-resolution, fusion, air-gapped positioning; named current leaders; Tel Aviv address; self-reported ROC AUC approximately 0.98 example."]
+
+[[intelligence.research.sources]]
+id = "iia"
+url = "https://innovationisrael.org.il/en/importWinner/516023934/"
+title = "AXON PULSE LTD - Winners authority investment"
+publisher = "Israel Innovation Authority"
+kind = "government"
+accessed_at = "2026-10-04T01:30:37Z"
+claims = ["Legal name, Israeli company number 516023934, established 2019, Israel country, 20 employees, R&D stage, CEO Yaniv Vintrob, CTO Gil Goldman, radar AI description, and 2023-2024 MAFAT-linked applied research funding routes."]
+
+[[intelligence.research.sources]]
+id = "snc"
+url = "https://finder.startupnationcentral.org/company_page/axonpulse"
+title = "AxonPulse - Automotive & Mobility Technologies"
+publisher = "Startup Nation Central Finder"
+kind = "directory"
+accessed_at = "2026-10-04T01:30:37Z"
+published_on = "2024-05-07"
+claims = ["Finder reports founding in May 2019, one Seed round dated January 2020 with USD 4.6 million, total raised USD 4.6 million, no investor names in its funding table, historical 11-50 employee range, registry number 516023934, DeePulse description, and historical team entries."]
+
+[[intelligence.research.sources]]
+id = "paper"
+url = "https://www.mdpi.com/1424-8220/22/9/3456"
+title = "Pedestrian and Animal Recognition Using Doppler Radar Signature and Deep Learning"
+publisher = "Sensors / MDPI"
+kind = "media"
+accessed_at = "2026-10-04T01:30:37Z"
+published_on = "2022-05-05"
+claims = ["Peer-reviewed radar human/animal classification research evaluated on the MAFAT Radar Challenge; reports AUC 0.95 on public test and over 0.85 on final private test; it provides technical context and is not treated as direct commercial deployment proof for Axon Pulse."]
+
+[[intelligence.research.sources]]
+id = "iai_linkedin"
+url = "https://www.linkedin.com/posts/axon-pulse_ai-radar-rf-activity-7013448978268631040-4qK4"
+title = "Axon Pulse and IAI accelerator cohort post"
+publisher = "Axon Pulse and Israel Aerospace Industries"
+kind = "customer"
+accessed_at = "2026-10-04T01:30:37Z"
+claims = ["Axon Pulse thanked the IAI accelerator team; IAI's post says cohort projects reached MVP and presented results at demo day. This is accelerator/product milestone evidence, not a paid customer contract or production deployment."]
+
+[[intelligence.research.sources]]
+id = "tali"
+url = "https://www.linkedin.com/posts/tali-rosenwaks-2237848_ai-autonomous-deeplearning-activity-6906856710712229888-sWqL"
+title = "Axon Pulse post identifying Tali Rosenwaks as CEO"
+publisher = "Axon Pulse on LinkedIn"
+kind = "company"
+accessed_at = "2026-10-04T01:30:37Z"
+claims = ["An earlier company post identifies Tali Rosenwaks as CEO during its mobility-focused period."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-04T01:30:37Z"
+next_review_on = "2027-04-04"
+queries = ["Axon Pulse Ltd Israel Innovation Authority", "AxonPulse company identity site:axon-pulse.com"]
+source_ids = ["official", "iia", "snc"]
+summary = "Government record and current site agree on Israeli company identity, Tel Aviv base, 2019 establishment, and active current presentation."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-04T01:30:37Z"
+next_review_on = "2027-01-04"
+queries = ["Axon Pulse funding raised investors 2025 2026", "AxonPulse 4.6 funding", "Axon Pulse seed 2020 investors"]
+source_ids = ["snc", "iia"]
+summary = "One directory-reported USD 4.6M Seed round in Jan 2020 found. No primary round announcement, investor list, terms, or subsequent round corroboration located."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "not_found"
+checked_at = "2026-10-04T01:30:37Z"
+next_review_on = "2027-04-04"
+queries = ["Axon Pulse investors seed funding", "AxonPulse 4.6M investors", "Axon Pulse investor portfolio"]
+source_ids = ["snc"]
+summary = "The available round entry leaves its investor column blank; no publicly attributable investor was found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-04T01:30:37Z"
+next_review_on = "2027-01-04"
+queries = ["Axon Pulse team founders Yaniv Vintrob", "site:axon-pulse.com Axon Pulse team", "Axon Pulse Tali Rosenwaks CEO"]
+source_ids = ["official", "iia", "tali"]
+summary = "Current official and government listings identify four current leaders; older company post names a former CEO. Founders and transition details are unclear."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T01:30:37Z"
+next_review_on = "2027-04-04"
+queries = ["Axon Pulse acquisition ownership parent company", "Axon Pulse Ltd shareholders Israeli company 516023934"]
+source_ids = ["iia", "snc"]
+summary = "Private company status and legal identity are visible, but no cap table, parent, ownership percentage, or transaction was disclosed in reviewed sources."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "not_found"
+checked_at = "2026-10-04T01:30:37Z"
+next_review_on = "2027-04-04"
+queries = ["Axon Pulse revenue ARR financials", "Axon Pulse employees headcount"]
+source_ids = ["iia", "snc"]
+summary = "No financial performance metrics found. Employee counts are inconsistent snapshots and not treated as a dated financial metric."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-04T01:30:37Z"
+next_review_on = "2027-01-04"
+queries = ["Axon Pulse customers deployments contracts", "Axon Pulse IAI accelerator MVP", "Axon Pulse product impact case study"]
+source_ids = ["official", "iai_linkedin"]
+summary = "Company describes current product capabilities and an IAI accelerator-related MVP/demo milestone. No named paid customer or production contract found."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-04T01:30:37Z"
+next_review_on = "2027-04-04"
+queries = ["Axon Pulse patents radar AI", "Axon Pulse Ltd patent 516023934", "AxonPulse patent radar processing"]
+source_ids = ["official", "iia"]
+summary = "No attributable patent was verified in searched public materials; ownership or filings may not be indexed under the company name."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "no_public_disclosure"
+checked_at = "2026-10-04T01:30:37Z"
+next_review_on = "2027-04-04"
+queries = ["Axon Pulse competitors radar perception AI", "radar AI sensor fusion defense official products"]
+source_ids = ["official", "snc"]
+summary = "The market spans radar suppliers, defense integrators, and automotive perception teams. No public customer evaluation or independent competitor comparison found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-04T01:30:37Z"
+next_review_on = "2027-04-04"
+queries = ["Axon Pulse defense intelligence automotive drones", "Axon Pulse target customers defense autonomous cars"]
+source_ids = ["official", "iia", "snc"]
+summary = "Current company focus is defense/intelligence; government and historical company materials also identify automotive and drones. Civilian deployment evidence remains limited."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The current company website presents current products, current leadership, contact information, and hiring, supporting an active operating presentation."
+verified_at = "2026-10-04T01:30:37Z"
+source_ids = ["official"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "IIA identifies Axon Pulse Ltd. with Israeli company number 516023934 and Israel as country; official site lists a Tel Aviv office."
+verified_at = "2026-10-04T01:30:37Z"
+source_ids = ["iia", "official"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "SNC Finder explicitly reports total funding of USD 4.6 million; this verifies the directory's report, not underlying proceeds."
+verified_at = "2026-10-04T01:30:37Z"
+source_ids = ["snc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.amount"
+support = "direct"
+summary = "SNC Finder's funding table lists January 2020 Seed amount USD 4.6 million. The check is for what Finder reports; no primary announcement was found."
+verified_at = "2026-10-04T01:30:37Z"
+source_ids = ["snc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.lead_investors"
+support = "direct"
+summary = "The Finder funding table provides no investor names; the empty list records absence of disclosed names in this source, not proof that no investors participated."
+verified_at = "2026-10-04T01:30:37Z"
+source_ids = ["snc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.participating_investors"
+support = "direct"
+summary = "The Finder funding table provides no participant names; the empty list records absence of disclosed names in this source, not proof that no investors participated."
+verified_at = "2026-10-04T01:30:37Z"
+source_ids = ["snc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Reviewed company, IIA, and Finder profiles identify Axon Pulse Ltd. as the company but disclose no parent company; no parent is recorded."
+verified_at = "2026-10-04T01:30:37Z"
+source_ids = ["iia", "snc"]

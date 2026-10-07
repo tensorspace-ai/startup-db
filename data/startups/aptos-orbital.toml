@@ -1,0 +1,433 @@
+name = "Aptos Orbital"
+description = "Aptos Orbital is an Israeli ecosystem-listed, Israeli-founded space-technology startup developing a compact terminal that combines radiation-tolerant onboard compute, persistent satellite communications, and cloud connectivity. Its platform is intended to let spacecraft process AI and sensor data in orbit and move actionable information to Earth without relying solely on intermittent ground-station passes."
+detailed_description = """
+**Product and the concrete problem it solves.** Aptos Orbital is addressing a bottleneck created by the rapid growth of small satellites: spacecraft are becoming cheaper and more numerous, but their computing, communications, and ground-integration layers remain fragmented. A satellite may carry one subsystem for radiation-tolerant processing, another terminal for communications, and a separate ground architecture for cloud access. That split creates integration work, increases validation burden, and forces operators to wait for ground-station visibility before they can move large raw datasets or make time-sensitive decisions. Aptos's product, the Aptos Terminal, is presented as a single low-size, weight, and power (SWaP) device combining onboard processing, persistent communications, and cloud services. The commercial promise is to analyze imagery, sensor feeds, or spacecraft telemetry at the source, send useful results rather than every raw bit, and make the satellite behave more like a connected computing node. Startup Nation Finder categorizes the company in Aerospace, Defense, and HLS and describes a product intended for satellites and spacecraft, while the company's launch material says the terminal is designed to make orbital data available to cloud-connected applications.
+
+**Core technology and how it works.** The technical stack has three linked layers. First, Aptos uses space-hardened computing resources with proprietary protection against single-event upsets and single-event latchups, the radiation effects that can corrupt computation, crash a processor, or damage a chip in orbit. Second, it adds a persistent communications layer intended to reduce coverage gaps between spacecraft and terrestrial ground stations. Third, it links those orbital resources to cloud services, with Amazon Web Services identified as its first cloud-services partner for the hardware. The architecture matters because it moves the integration boundary: a spacecraft builder can adopt a combined terminal rather than separately qualify compute, data links, and cloud connectivity. Aptos offers Mini and Max versions in public launch coverage for different small-spacecraft classes. The company also reports more than five cumulative years of terminal operation in orbit, but this is company-supplied evidence rather than a publicly audited fleet record. Independent academic work involving founder Yonatan Winetraub describes Radshield, a software approach for detecting latchups and efficiently protecting commodity hardware from radiation-induced silent data corruption. That paper reports an idle-latchup detector with a 0.02% false-positive rate in ground testing and an efficient modular-redundancy method, while noting that the work was deployed or tested on missions in low Earth orbit and deep space. The research is a meaningful technical signal, but it should not automatically be treated as proof that every Aptos commercial terminal uses the full Radshield system.
+
+**Market, customers, and go-to-market.** Aptos sells into the space-infrastructure layer where satellite operators, spacecraft manufacturers, mission integrators, and data companies need more useful computing closer to the sensor. The first beachhead is likely small satellites and constellations that cannot justify large custom avionics programs but still need AI inference, telemetry processing, resilient links, or cloud-connected operations. Public materials identify space-domain awareness, satellite data analytics, on-orbit servicing, and communications as relevant contexts. The company has named ThinkOrbital as a customer or partner, and third-party ecosystem material associates it with Astroscale, Lumen Orbit, Rebel Space, Synmax, EnduroSat, and Spire; the exact commercial status of each relationship is not disclosed consistently, so these should be treated as reported commitments or ecosystem references rather than equivalent production contracts. The go-to-market model combines hardware and service economics: the terminal is described as a product available through a subscription approach, with engineering models and flight hardware offered to spacecraft builders. That can shorten initial procurement friction, but it also means Aptos must carry qualification, integration support, and on-orbit reliability obligations across many mission profiles.
+
+**Traction, funding, and third-party validation.** Startup Nation Finder reports that Aptos was founded in June 2020, raised $3 million in one seed round in October 2022, and has 11-50 employees. The listed investors include GoAhead Ventures, Follow[The]Seed, Protocol Labs, and at.inc. Public company profiles are not fully consistent: LinkedIn describes Aptos Orbital as Palo Alto-based, privately held, founded in 2024, with 2-10 employees, while the Israeli ecosystem record identifies Aptos as an Israeli startup with a released product and a larger employee band. The most useful resolution is not to choose one number arbitrarily: Aptos is an Israeli-founded and Israel-ecosystem-listed company with a US operating presence, and its exact legal, employment, and R&D split requires diligence. In October 2024, the company announced its platform through a company-distributed release, naming AWS as a cloud partner, reporting more than five cumulative years of orbital operation, eight customer commitments representing more than $100 million, and ThinkOrbital as a reference. SpaceNews independently covered the product launch and described the terminal's combined compute, persistent communications, and cloud-service architecture. Those sources establish a real product and serious commercial claims; they do not independently validate the full value of the reported commitments, customer conversion, or future constellation ambitions.
+
+**Founders and team background.** Yonatan Winetraub is the clearest publicly verified founder and the principal technical face of Aptos Orbital. Stanford's Silicon Valley Space Week profile describes him as the founder of Aptos and identifies prior work leading system engineering for sensing and perception within Waymo's weather program. The same profile says he previously founded SpaceIL, the Israeli organization associated with the Beresheet lunar mission, and holds a PhD in biophysics from Stanford. Aptos's public ecosystem records additionally list Yan Michalevsky and Gil Shotan as co-founders, while IVC lists Efrat Peer in business operations and names other technical personnel; because public sources disagree on corporate chronology and titles, the full founder and employee roster should be verified against company records. The available background is strategically relevant: Winetraub combines Israeli space entrepreneurship, spacecraft exposure, perception and sensing experience, and academic systems research. The team appears small, which may help it iterate quickly on a difficult product, but it also creates key-person and execution risk. Radiation effects, RF certification, embedded systems, cloud operations, spacecraft integration, and customer support require different expertise; the public record does not establish how deeply Aptos covers each discipline internally.
+
+**Competitive dynamics and defensibility.** Aptos competes across several layers rather than against one identical product. Ramon.Space supplies radiation-hardened space computing and software-defined processing, making it the closest Israeli reference for onboard compute. Unibap's SpaceCloud platform combines space computing and in-orbit data processing, while EnduroSat offers configurable satellite platforms and mission hardware that can absorb similar functions through an integrator stack. CesiumAstro competes for software-defined space communications and phased-array infrastructure, and Skyloom represents an alternative path for high-throughput optical space networking. Operators can also assemble a bespoke architecture from radiation-tolerant processors, commercial computers with software mitigation, separate radios, and AWS or other ground-station services. Aptos's plausible edge is integration density: one compact terminal, a simpler spacecraft interface, persistent data movement, and a service model that may reduce years of qualification and custom integration. Its defensibility will depend on more than a broad product bundle. It must demonstrate radiation tolerance, link availability, thermal and power performance, cybersecurity, latency, data-rate economics, and repeatable flight heritage across multiple mission types. A large prime or satellite-platform provider could replicate the bundle, while specialized competitors may remain stronger in one layer.
+
+**Defense, security, and resilience dual-use relevance.** Aptos's dual-use relevance is substantive because reliable orbital compute and communications support both commercial space services and defense or national-security missions. Civilian customers can use onboard processing for Earth observation, space-domain awareness, environmental monitoring, and satellite servicing. Defense and security operators can use the same architecture for persistent surveillance, tactical communications, resilient command and control, rapid processing of remote-sensing data, and satellite operations where ground-station dependence creates delay or coverage gaps. The Silicon Valley Space Week profile explicitly frames Aptos as enabling warfighters to command and control satellites and deploy AI for decisions at the speed of battle. That is a credible strategic use-case description, but it is not proof of a military contract or classified deployment. The strongest resilience contribution is architectural: local processing reduces the amount of raw data that must cross a constrained link, while persistent inter-satellite or satellite-to-cloud connectivity can make a constellation less dependent on a small number of terrestrial gateways. The company must still show secure key management, anti-jam behavior, supply-chain assurance, export-control compliance, fault recovery, and human authorization for mission-critical actions before its defense relevance can be scored as fielded capability.
+
+**Growth stage, trajectory, and key diligence risks.** Aptos is best classified as early: it has a released product, reported flight heritage, a seed round, and customer commitments, but it remains a small private company with inconsistent public headcount and location data and no independently reported revenue or backlog. The trajectory is attractive if the terminal becomes a standard building block for proliferated LEO constellations. A subscription model could create recurring revenue while the installed hardware expands a network effect in orbital communications and compute, but the company also faces long spacecraft qualification cycles, launch dependence, component obsolescence, and the high cost of supporting hardware in orbit. The principal diligence questions are: (1) which eight customer commitments converted into paid hardware or service contracts; (2) what flight missions generated the reported five cumulative years; (3) whether the radiation-protection claims are hardware-based, software-based, or mission-specific; (4) actual link availability, throughput, latency, and power draw; (5) legal-entity and R&D allocation between Israel and the United States; (6) cybersecurity and export-control posture; and (7) the financing required to support production and a proposed 1,000-satellite infrastructure vision. Aptos is strategically promising, but the evidence supports focused monitoring and technical diligence rather than assuming commercial scale or defense adoption.
+"""
+logo = "Unknown"
+website = "https://www.aptosorbital.com/"
+sector = "Space Technology / Radiation-Tolerant Onboard Compute, Persistent Satellite Communications, and Orbital Cloud Infrastructure"
+founded = "2020"
+headquarters = "Palo Alto, California, United States; Israeli ecosystem and founder connection reported, with legal entity and Israel operating footprint not independently reconciled"
+employees = "11-50 (Startup Nation Finder snapshot dated 2024; current headcount not independently verified)"
+funding_stage = "Seed; $3M across one round reported in October 2022"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "Aptos's core technology is credibly dual-use because the same radiation-tolerant compute, persistent communications, and cloud-connected satellite architecture serves commercial spacecraft operations and defense or national-security missions. Civilian uses include Earth observation, space-domain awareness, satellite servicing, environmental monitoring, and constellation analytics; defense uses include resilient satellite command and control, onboard ISR data processing, tactical communications, and reduced dependence on vulnerable or intermittent ground-station passes. The defense connection is supported by public company and conference material that explicitly discusses warfighter satellite control, but no public source reviewed here establishes a military contract, classified deployment, or security accreditation. The record should therefore treat Aptos as a dual-use space infrastructure startup with strong strategic adjacency, not as a proven defense supplier."
+key_technologies = [
+  "Radiation-tolerant onboard compute with proprietary single-event upset and single-event latchup protection",
+  "Aptos Terminal integrated low-SWaP compute, communications, and cloud-services hardware",
+  "Persistent satellite-to-satellite and satellite-to-ground data connectivity intended to reduce coverage gaps",
+  "On-orbit AI inference and edge processing for satellite sensor and telemetry data",
+  "Software radiation protection using idle-latchup detection and efficient modular redundancy research",
+  "Cloud integration with Amazon Web Services for orbital compute and data workflows",
+  "Modular Mini and Max terminal configurations for CubeSat and larger small-satellite missions"
+]
+use_cases = [
+  "Onboard Earth-observation image filtering and AI inference before downlink",
+  "Space-domain awareness and satellite-analytics processing with low-latency cloud access",
+  "Resilient defense satellite command and control when ground-station coverage is intermittent",
+  "Tactical communications and ISR data processing for proliferated low-Earth-orbit constellations",
+  "On-orbit servicing and spacecraft inspection supported by persistent terminal connectivity",
+  "Environmental, maritime, agricultural, or disaster-monitoring constellations that need actionable data rather than raw imagery",
+  "Satellite telemetry, health monitoring, and mission autonomy using radiation-protected edge compute",
+  "Developer and integrator access to standardized orbital compute and communications without a bespoke avionics stack"
+]
+investible = true
+investment_rationale = "Aptos is a high-potential strategic-priority signal, not an investment recommendation. (1) The product addresses a concrete bottleneck in proliferated space systems: integrating radiation-tolerant compute, communications, and cloud access under severe mass, power, and coverage constraints. (2) Technical validation is stronger than a concept-only record: SpaceNews covered a launched product, the company reports cumulative orbital operation, and an ASPLOS 2026 paper involving founder Yonatan Winetraub describes a radiation-protection system with spacecraft deployment or testing and quantified ground-test results. (3) Commercial evidence is promising but not fully independently verifiable: Aptos reports eight customer commitments worth more than $100M and names ThinkOrbital, while third-party profiles associate it with additional space companies; contract conversion, revenue, renewal, and unit economics remain unknown. (4) The team has unusually relevant space and systems background through Winetraub's SpaceIL and Waymo history. (5) The main counterweights are a small and inconsistently reported team, conflicting legal-location data, long qualification cycles, capital intensity, and direct competition from better-established space-compute and communications vendors. The record merits technical and commercial diligence because the platform could become an enabling layer for allied orbital infrastructure, but public evidence does not justify assuming scale, valuation attractiveness, or defense procurement."
+strategic_value = "Aptos's strategic value is concentrated in orbital resilience and the compute-communications layer beneath future satellite constellations. (1) Data sovereignty and latency: processing sensor data in orbit can reduce dependence on terrestrial downlink windows and limit the volume of sensitive raw data that must traverse ground infrastructure. (2) Communications resilience: persistent links and reduced ground-station dependence can improve availability for civil and defense missions when geography, weather, congestion, or adversarial action disrupts gateways. (3) Allied supply-chain relevance: a compact, commercially deployable terminal could give satellite builders another source for radiation protection, edge compute, and cloud integration rather than forcing every program into a bespoke prime-contractor stack. (4) Defense force multiplication: the same hardware that turns remote sensing into near-real-time information can support satellite command and control, ISR, and tactical connectivity, although public evidence does not prove fielded military use. (5) Israeli ecosystem value: Startup Nation Finder classifies Aptos in Israel's Aerospace, Defense, and HLS ecosystem, while the company's US presence provides access to commercial space and allied customers. The ceiling on strategic value depends on flight heritage, cybersecurity, exportability, component sourcing, and whether the reported commitments convert into a durable installed base."
+potential_score = 76.0
+technology_score = 80.0
+market_score = 68.0
+team_score = 76.0
+dual_use_score = 76.0
+strategic_alignment_score = 84.0
+stage = "early"
+stage_rationale = "Aptos is early despite meaningful product and flight signals. (1) Startup Nation Finder places the company at a 2020 founding, one $3M seed round, and 11-50 employees, while LinkedIn reports a smaller 2-10 employee band and a 2024 founding date; the discrepancies themselves require diligence. (2) The company has moved beyond an idea: it publicly launched the Aptos Terminal, reports more than five cumulative years of terminal operation in orbit, and is associated with a peer-reviewed ASPLOS paper on radiation protection and spacecraft deployment. (3) The commercial record remains immature in public view: the company reports eight commitments exceeding $100M and names ThinkOrbital, but independent sources do not establish recognized revenue, backlog conversion, renewal, or a broad production fleet. (4) Space hardware sales and service agreements carry long qualification and launch cycles, so a released product does not imply mid-stage scale. Progression to mid stage would require independently verifiable paid deployments across multiple missions, consistent employee and legal-entity records, disclosed recurring service revenue, and repeatable production or integration capacity."
+competitors = [
+  "Ramon.Space (Israeli radiation-hardened onboard computing and software-defined satellite supercomputers)",
+  "Unibap (SpaceCloud edge-computing platforms for onboard satellite data processing)",
+  "EnduroSat (configurable small-satellite platforms and mission-integration stack that can absorb similar functions)",
+  "CesiumAstro (software-defined phased-array communications and space networking hardware)",
+  "Skyloom (high-throughput optical inter-satellite and space-to-ground communications alternative)",
+  "Bespoke prime-contractor avionics and AWS ground-station architectures (incumbent approach using separate compute, radio, and cloud components)"
+]
+competitive_edge = "Aptos's potential edge is integration density and deployment simplicity rather than a single disclosed hardware breakthrough. (1) Its terminal combines space-hardened compute, persistent communications, and cloud connectivity in one low-SWaP package, potentially removing interfaces between separately qualified subsystems. (2) Onboard AI processing can reduce downlink volume and latency by converting raw sensor streams into actionable outputs before they reach Earth. (3) The service-oriented model may let smaller spacecraft teams access orbital compute and cloud workflows without building a full ground and avionics program. (4) Reported flight heritage and the ASPLOS radiation-protection work add technical credibility beyond a slideware concept. (5) Winetraub's SpaceIL background and the company's Israeli ecosystem placement support access to space and defense engineering talent. The moat is not established: Ramon.Space, Unibap, satellite-platform vendors, and primes can compete at individual layers or bundle their own alternatives. Aptos must prove radiation performance, coverage, cybersecurity, throughput, power draw, customer conversion, and lifecycle support across repeat missions before its integration thesis becomes durable defensibility."
+risk_factors = [
+  "Conflicting public identity data on founding year, headquarters, employee count, legal entity, and Israel versus US operating structure",
+  "Company-reported customer commitments and future constellation plans are not independently reconciled to paid revenue, delivered units, backlog, or renewals",
+  "Long spacecraft qualification, launch, and on-orbit validation cycles can delay revenue and expose the company to financing and schedule risk",
+  "Radiation protection, link availability, throughput, latency, power draw, thermal behavior, and fault recovery require mission-level independent testing",
+  "Competition from Ramon.Space, Unibap, EnduroSat, CesiumAstro, primes, and bespoke architectures creates pressure at every product layer",
+  "Space cybersecurity, export controls, component provenance, cloud dependency, and allied data-sharing rules may constrain defense and international deployments",
+  "Small-team and founder concentration risk across RF engineering, radiation tolerance, embedded software, spacecraft integration, cloud operations, and customer support"
+]
+risk_level = "medium"
+signals = []
+priority_rank = 0
+priority_rationale = "Aptos merits active monitoring as a strategically aligned orbital-infrastructure company that is absent from the local database and unusually relevant to resilience at the compute-communications layer. Reasons to track: (1) the product addresses a specific integration and coverage problem by combining radiation-tolerant processing, persistent communications, and cloud services; (2) independent SpaceNews coverage and the ASPLOS 2026 research paper provide stronger technical evidence than company marketing alone; (3) the company reports flight heritage, eight customer commitments, AWS partnership, and a ThinkOrbital reference; and (4) the architecture has direct relevance to allied satellite resilience, ISR processing, and warfighter command and control. Priority is capped because the largest traction figures remain company-reported, public sources disagree on location and headcount, and no defense contract or accreditation is established. The next diligence milestones are paid customer and flight verification, mission-level radiation and link-performance data, cybersecurity and export-control documentation, a clear Israel-US legal and R&D structure, and evidence that the service model supports repeatable production economics."
+public_sources = [
+  { label = "Aptos Orbital official website", url = "https://www.aptosorbital.com/", description = "Current company product, claimed 5.5 years in space, 99% data coverage and TRL 9 for LEO; identifies AWS and Azure cloud integrations and development, engineering and flight models." },
+  { label = "Startup Nation Finder: Aptos", url = "https://finder.startupnationcentral.org/company_page/aptos", description = "Archived Israel ecosystem snapshot (last updated 2024-12-04): founded 2020, Israeli location, one $3M October 2022 seed, reported investors and 11-50 staff. Directory claims require caution; a listed company-registry identifier is a dummy value and is not repeated." },
+  { label = "Aptos Orbital platform launch announcement", url = "https://www.prnewswire.com/news-releases/aptos-orbital-announces-official-launch-of-powerful-ai-satellite-platform-302282645.html", description = "Company-distributed October 22, 2024 announcement of Aptos Terminal, AWS partnership, cumulative orbital operating claim, eight customer commitments exceeding $100M, ThinkOrbital relationship and a 1,000-satellite ambition." },
+  { label = "SpaceNews: Aptos Orbital unveils device", url = "https://spacenews.com/aptos-orbital-unveils-device-for-onboard-processing-communications-and-cloud-services/", description = "Independent reporting on the terminal launch, its compute/communications/cloud architecture and company-reported flight history." },
+  { label = "NASA/JPL Flight Software Workshop 2025 presentation", url = "https://ai.jpl.nasa.gov/public/documents/presentations/zilberstein-fswws-2025.pdf", description = "Government research presentation includes Crypto-2 with Aptos Orbital as a planned spacecraft/provider in a broader onboard-AI deployment program; it does not state the Aptos mission had flown." },
+  { label = "SATELLITE 2026 Startup Pavilion", url = "https://2026.satshow.com/startup-pavilion/", description = "Independent event exhibitor listing places Aptos Orbital in the 2026 Startup Pavilion, supporting continued public operating activity and early-stage positioning." },
+  { label = "Silicon Valley Space Week: Yonatan Winetraub", url = "https://svsw.events/speakers/yonatan-winetraub/", description = "Conference biography for founder Yonatan Winetraub and his SpaceIL, Waymo and Stanford background; defense-use framing is not evidence of a defense contract." },
+  { label = "Crypto Fundraising: Cryptosat funding roundup", url = "https://crypto-fundraising.info/blog/dates-24-30-oct-2022/", description = "Contemporaneous secondary report of a $3M Cryptosat seed and participants; its investor list conflicts with Startup Nation Finder." },
+  { label = "Protocol Labs Network: Aptos Orbital (Cryptosat)", url = "https://directory.plnetwork.io/teams/cldvnvpyd00vju21kxxekmcb7", description = "Investor/network portfolio page connecting Aptos Orbital with the Cryptosat name and listing Yan Michalevsky as a co-founder." }
+]
+crawled_at = "2026-09-02T09:21:51Z"
+updated_at = "2026-10-03T18:50:00Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "aptos-orbital"
+legal_name = "Aptos Orbital (legal entity name not confirmed)"
+aliases = ["Aptos", "CryptoSat", "Cryptosat"]
+operating_status = "active"
+business_model = "B2B space hardware and services: the company presents a satellite terminal combining onboard compute, persistent communications and cloud connectivity, with development licenses, engineering models and flight models offered. Sales/subscription mix and realized unit economics are not publicly disclosed."
+products = ["Aptos Terminal", "Aptos Mini", "Aptos Max"]
+locations = ["Palo Alto, California, United States", "Israeli ecosystem presence reported; current office and R&D footprint unverified"]
+source_ids = ["aptos_site", "aptos_launch", "snc_finder", "satshow_2026"]
+notes = "The company appears publicly related to the earlier CryptoSat/Cryptosat identity: Protocol Labs' portfolio page labels Aptos Orbital (Cryptosat). Exact corporate continuity, current legal name, incorporation jurisdiction and Israel subsidiary status need documentary confirmation. Do not use Startup Nation Finder's displayed 999999001 as a registry identifier: it appears to be a placeholder."
+
+[intelligence.funding]
+status = "reported"
+summary = "One October 2022 seed round of $3 million is reported by Startup Nation Finder and corroborating ecosystem/funding directory records. Round participant listings vary across databases and no company or lead-investor transaction announcement was located in this review. Secondary databases also show a possible 2024 Techstars-related $0.12M entry and inconsistent additional entries; these are not treated as a confirmed financing event absent a primary transaction source. No valuation or company-announced lifetime funding total was verified."
+history_status = "partial"
+coverage_through = "2026-10-03"
+rounds = [{ id = "seed-2022", round_type = "Seed", instrument = "equity", status = "announced", announced_on = "2022-10", amount_status = "reported", amount = 3000000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = ["GoAhead Ventures", "Follow[The]Seed", "Protocol Labs", "at.inc"], source_ids = ["snc_finder", "crypto_fundraising_2022"], notes = "Directory reports a single $3M Seed in October 2022. Investor lists conflict across records: Startup Nation Finder gives GoAhead, Follow[The]Seed, Protocol Labs and at.inc; Crypto Fundraising lists Inflection, GoAhead, DoraHacks and Protocol Labs; Dealroom lists GoAhead, Protocol Labs, DoraHacks and Inflection Point Ventures. Participants are kept to the archived Finder roster here; resolve with company/lead investor documents. No amount duplication or valuation inferred." }]
+total_source_ids = []
+
+[[intelligence.investors]]
+name = "GoAhead Ventures"
+investor_type = "vc"
+round_ids = ["seed-2022"]
+relationship = "historical"
+source_ids = ["snc_finder", "crypto_fundraising_2022"]
+notes = "Listed as a seed participant by the 2024 Finder snapshot and a contemporaneous crypto-funding roundup; no first-party fund portfolio confirmation found in this pass."
+
+[[intelligence.investors]]
+name = "Follow[The]Seed"
+investor_type = "vc"
+round_ids = ["seed-2022"]
+relationship = "historical"
+source_ids = ["snc_finder"]
+notes = "Reported as a seed participant by Startup Nation Finder; transaction participation not independently confirmed."
+
+[[intelligence.investors]]
+name = "Protocol Labs"
+investor_type = "other"
+website = "https://protocol.ai/"
+round_ids = ["seed-2022"]
+relationship = "historical"
+source_ids = ["snc_finder", "protocol_labs_profile", "crypto_fundraising_2022"]
+notes = "Finder and contemporaneous funding roundup report participation; Protocol Labs' directory labels Aptos Orbital (Cryptosat) as a portfolio/community team, adding evidence of relationship but not round terms."
+
+[[intelligence.investors]]
+name = "at.inc"
+investor_type = "vc"
+round_ids = ["seed-2022"]
+relationship = "historical"
+source_ids = ["snc_finder"]
+notes = "Reported by Startup Nation Finder; its precise legal identity and transaction participation remain unverified."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Aptos Orbital is presented publicly as a private, independent startup. No disclosed cap table, controlling shareholder, corporate parent, acquisition, merger, IPO, or secondary transaction was found. The relationship between Aptos Orbital and the former CryptoSat/Cryptosat name is identity/brand continuity evidence, not a disclosed ownership transaction."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["aptos_site", "snc_finder", "protocol_labs_profile"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders"]
+summary = "Startup Nation Finder identifies Aptos as an Israeli ecosystem company and lists Yonatan Winetraub as its founder; his independent conference biography documents Israeli space venture SpaceIL. The company has a Palo Alto operating presence. Available public evidence confirms Israeli founder/ecosystem ties, but does not establish Israeli incorporation, a current Israel office or the size of an Israeli R&D team."
+as_of = "2026-10-03"
+source_ids = ["snc_finder", "svsw_winetraub"]
+
+[[intelligence.people]]
+name = "Yonatan Winetraub"
+role = "Founder; public spokesperson"
+is_founder = true
+current = true
+background = "Silicon Valley Space Week's profile describes him as an Aptos founder, SpaceIL co-founder and former Waymo sensing/perception systems engineering lead; it also reports a Stanford PhD in biophysics. Current executive title and employment status should be checked directly with the company."
+source_ids = ["svsw_winetraub", "aptos_launch", "snc_finder"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Aptos publicly launched the Aptos Terminal in October 2024, describing a compact system that integrates space-hardened processing, connectivity and cloud services and naming AWS as its first cloud-services partner. This is the company's product announcement, not third-party product qualification."
+date = "2024-10-22"
+source_ids = ["aptos_launch", "spacenews_terminal"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "The company named ThinkOrbital as a customer/partner and its CEO described the collaboration in Aptos' launch release. The release does not disclose contract value, delivery count, payment, operational acceptance or a deployment date; do not treat this as verified recurring production revenue."
+date = "2024-10-22"
+source_ids = ["aptos_launch"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "NASA/JPL's March 2025 workshop presentation listed Crypto-2 with Aptos Orbital as provider and marked it planned. This is evidence of inclusion in a planned multi-spacecraft flight-software effort, not proof the Aptos terminal flew or that NASA contracted with Aptos."
+date = "2025-03-25"
+source_ids = ["jpl_fsw_2025"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "Aptos Orbital appeared in SATELLITE 2026's Startup Pavilion exhibitor list, indicating a current public industry presence; exhibition is not customer traction."
+date = "2026"
+source_ids = ["satshow_2026"]
+
+[[intelligence.comparables]]
+name = "Ramon.Space"
+website = "https://ramon.space/"
+rationale = "Israeli space-computing company and relevant competitor/substitute for onboard high-performance and radiation-resilient compute."
+differentiation = "Aptos positions itself as a bundled terminal that adds persistent communications and cloud integration to compute; both companies' exact performance should be compared through mission qualification data."
+source_ids = ["aptos_site"]
+
+[[intelligence.comparables]]
+name = "Unibap"
+website = "https://unibap.com/"
+rationale = "SpaceCloud platform competes in onboard processing and satellite edge computing."
+differentiation = "Aptos emphasizes a compact combined compute, communications and cloud product; Unibap is a compute-centric platform alternative."
+source_ids = ["aptos_site"]
+
+[[intelligence.comparables]]
+name = "EnduroSat"
+website = "https://endurosat.com/"
+rationale = "Satellite-platform supplier and integrator that can provide spacecraft subsystems or absorb integration functionality."
+differentiation = "EnduroSat's broader spacecraft and mission integration offering can be a substitute route; Aptos claims a specialized combined terminal."
+source_ids = ["aptos_site"]
+
+[intelligence.research]
+researched_at = "2026-10-03T18:50:00Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Aptos Orbital official company Aptos Terminal current", "Aptos Orbital funding raised seed investors October 2022", "Aptos Orbital GoAhead Follow The Seed Protocol Labs", "Aptos Orbital founder Yonatan Winetraub leadership", "Aptos Orbital ownership acquired parent company", "Aptos Orbital revenue ARR financials customer commitments", "Aptos Orbital customers contracts flight heritage Crypto-2 NASA JPL", "Aptos Orbital patents USPTO WIPO SEU SEL", "Aptos Orbital competitors Ramon Space Unibap EnduroSat", "Aptos Orbital defense security dual use contracts", "Aptos Orbital Hebrew funding גיוס משקיעים", "Aptos Orbital Techstars funding 2024"]
+gaps = ["people: only founder Yonatan Winetraub was supported by sources reviewed; no complete current leadership roster was verified.", "investors: seed-round participant lists conflict between historical directories and no transaction announcement by the company or all named investors was located; no ownership percentages disclosed.", "financials: no dated revenue, ARR, profitability, burn or runway disclosure located; third-party databases show estimates or anomalous fields that are not usable as reported metrics.", "traction: $100M+ commitments and five-plus years in orbit are company claims without customer-by-customer contracts or an independent mission list; NASA/JPL names Crypto-2 as planned, not flown.", "intellectual_property: no company-assignee patent family was verified in the searched public pages; proprietary claims are not patent evidence.", "competition: peer products were identified but no normalized independent performance, pricing, qualification or win/loss data was found.", "ownership: private cap table, exact legal entity, incorporation location and Aptos/CryptoSat corporate continuity documentation are unavailable.", "identity: listed Israeli registry number in Finder is a placeholder (999999001), so no registry identifier or Israeli incorporation is asserted.", "funding: possible 2024 Techstars entry in secondary funding databases was not confirmed by a primary financing announcement; no verified company-announced lifetime total or valuation.", "dual_use: no public defense award, operational military deployment, certification or classified customer evidence located; relevant defense/security application remains capability-based."]
+conflicts = ["Founding year varies across directory and profile records (2020 vs 2024/other); Startup Nation Finder's dated page says June 2020, consistent with reported October 2022 seed, while later aggregator values are unreliable.", "Investor listings for the October 2022 seed disagree: Finder says GoAhead Ventures, Follow[The]Seed, Protocol Labs and at.inc; contemporaneous crypto roundup says Inflection, GoAhead, DoraHacks and Protocol Labs; Dealroom says GoAhead, Protocol Labs, DoraHacks and Inflection Point Ventures.", "Company says terminals have over five cumulative years in orbit and current website says 5.5 years; NASA/JPL material lists Crypto-2/Aptos as planned in March 2025, so public mission-level attribution remains unresolved.", "Headquarters and employee count vary across databases. Company and SpaceNews material identify Palo Alto; Finder (2024) lists Israel/11-50; current headcount and distribution are unverified."]
+diligence_questions = ["What legal entity owns Aptos Orbital's products and IP, where is it incorporated, and what is the current operational/R&D footprint in Israel versus California?", "Can the company provide closing documents and a definitive cap table for the October 2022 seed, resolve the named participant discrepancies, and confirm whether any separate Techstars financing closed in 2024?", "Which spacecraft account for the claimed cumulative 5.5 years of terminal operation, and can operators independently confirm dates, hardware configuration, failures, link availability and compute workload?", "How many of the eight reported customer commitments converted to paid purchase/service contracts, delivered hardware, backlog and recurring revenue, and what contractual basis supports the stated $100M+ figure?", "What are terminal mass, power, throughput, latency, radiation tolerance, coverage methodology, cyber controls, unit gross margin and qualification/export-control status?", "What patents or other protectable IP are assigned to the legal operating company, and which parts of the software radiation-protection research are actually deployed in Aptos products?"]
+
+[[intelligence.research.sources]]
+id = "aptos_site"
+url = "https://www.aptosorbital.com/"
+title = "Aptos Orbital official website"
+publisher = "Aptos Orbital"
+kind = "company"
+accessed_at = "2026-10-03T18:47:30Z"
+claims = ["company presents a terminal integrating space-hardened compute, persistent communications and cloud services", "current website advertises AWS and Azure cloud integration, 5.5 years in space, 99% data coverage and TRL 9 for LEO", "development licenses, engineering models and flight models are offered"]
+
+[[intelligence.research.sources]]
+id = "aptos_launch"
+url = "https://www.prnewswire.com/news-releases/aptos-orbital-announces-official-launch-of-powerful-ai-satellite-platform-302282645.html"
+title = "Aptos Orbital Announces Official Launch of Powerful AI Satellite Platform"
+publisher = "Aptos Orbital via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-03T18:47:30Z"
+published_on = "2024-10-22"
+claims = ["Aptos announced the Aptos Terminal combining space-hardened processing, connectivity and cloud services", "AWS named as first cloud-services partner", "company claimed more than five cumulative years on orbit", "company reported eight customers representing more than $100 million in commitments", "company named ThinkOrbital as current customer and quoted its CEO", "company described a future goal of more than 1000 satellites by 2030"]
+
+[[intelligence.research.sources]]
+id = "spacenews_terminal"
+url = "https://spacenews.com/aptos-orbital-unveils-device-for-onboard-processing-communications-and-cloud-services/"
+title = "Aptos Orbital unveils device for onboard processing, communications and cloud services"
+publisher = "SpaceNews"
+kind = "media"
+accessed_at = "2026-10-03T18:47:30Z"
+published_on = "2024-10-22"
+claims = ["independent report describes Aptos Terminal product and integrated architecture", "independent report gives Palo Alto context and attributes flight-history statements to Aptos"]
+
+[[intelligence.research.sources]]
+id = "snc_finder"
+url = "https://finder.startupnationcentral.org/company_page/aptos"
+title = "Aptos — Aerospace, Defense & HLS | Finder"
+publisher = "Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-03T18:47:30Z"
+published_on = "2024-12-04"
+claims = ["Finder identifies Aptos as Israeli ecosystem company and says founded June 2020 by Yonatan Winetraub", "Finder reports one October 2022 seed round of $3M and lists GoAhead Ventures, Follow[The]Seed, Protocol Labs and at.inc", "Finder reports employee band 11-50 and Israeli location", "Finder's supplied registry number 999999001 appears placeholder and is excluded"]
+
+[[intelligence.research.sources]]
+id = "jpl_fsw_2025"
+url = "https://ai.jpl.nasa.gov/public/documents/presentations/zilberstein-fswws-2025.pdf"
+title = "Rapid Multi-Mission Deployment of Convolutional Neural Network and Spectral Algorithm Flight Software"
+publisher = "NASA Jet Propulsion Laboratory"
+kind = "government"
+accessed_at = "2026-10-03T18:47:30Z"
+published_on = "2025-03-25"
+claims = ["JPL presentation lists Aptos Orbital as provider for Crypto-2 and marks it planned", "the document does not establish that Crypto-2 launched or that NASA purchased an Aptos terminal"]
+
+[[intelligence.research.sources]]
+id = "satshow_2026"
+url = "https://2026.satshow.com/startup-pavilion/"
+title = "Startup Pavilion | Early-Stage Space Innovation, Front and Center"
+publisher = "SATELLITE / Access Intelligence"
+kind = "other"
+accessed_at = "2026-10-03T18:47:30Z"
+published_on = "2026"
+claims = ["Aptos Orbital listed as a 2026 Startup Pavilion exhibitor", "pavilion startup eligibility is for early-stage Seed/Startup or Series A firms under 100 employees; eligibility is not a verified employee count"]
+
+[[intelligence.research.sources]]
+id = "svsw_winetraub"
+url = "https://svsw.events/speakers/yonatan-winetraub/"
+title = "Dr. Yonatan Winetraub, Silicon Valley Space Week speaker profile"
+publisher = "Silicon Valley Space Week"
+kind = "other"
+accessed_at = "2026-10-03T18:47:30Z"
+claims = ["conference biography identifies Winetraub as Aptos founder and records SpaceIL and Waymo background and Stanford PhD", "defense-oriented use framing is potential relevance rather than evidence of defense procurement"]
+
+[[intelligence.research.sources]]
+id = "crypto_fundraising_2022"
+url = "https://crypto-fundraising.info/blog/dates-24-30-oct-2022/"
+title = "Crypto Fundraisings on Week 24–30, Oct 2022"
+publisher = "Crypto Fundraising"
+kind = "media"
+accessed_at = "2026-10-03T18:47:30Z"
+published_on = "2022-10"
+claims = ["contemporaneous roundup reports Cryptosat raised $3M seed from Inflection, GoAhead Ventures, DoraHacks and Protocol Labs"]
+
+[[intelligence.research.sources]]
+id = "protocol_labs_profile"
+url = "https://directory.plnetwork.io/teams/cldvnvpyd00vju21kxxekmcb7"
+title = "Aptos Orbital (Cryptosat)"
+publisher = "Protocol Labs Network"
+kind = "investor"
+accessed_at = "2026-10-03T18:47:30Z"
+claims = ["Protocol Labs network directory calls the team Aptos Orbital (Cryptosat), labels it Seed and portfolio/community affiliated", "directory lists Yan Michalevsky as co-founder, but does not establish the complete current leadership roster"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "conflicting"
+checked_at = "2026-10-03T18:50:00Z"
+next_review_on = "2027-01-03"
+queries = ["Aptos Orbital official company Aptos Terminal current", "Aptos Orbital founded headquarters legal entity Israeli connection"]
+source_ids = ["aptos_site", "snc_finder", "spacenews_terminal", "protocol_labs_profile"]
+summary = "Active product company with Palo Alto presence; Israel ecosystem/founder link supported. Legal entity, exact Israel operation and founding-date disagreements unresolved."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-03T18:50:00Z"
+next_review_on = "2027-01-03"
+queries = ["Aptos Orbital funding raised seed investors October 2022", "Aptos Orbital Techstars funding 2024", "Aptos Orbital גיוס seed משקיעים"]
+source_ids = ["snc_finder", "crypto_fundraising_2022"]
+summary = "One $3M seed is documented in multiple secondary/historical sources, but investor rosters conflict and possible later funding entries lack primary confirmation."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "conflicting"
+checked_at = "2026-10-03T18:50:00Z"
+next_review_on = "2027-01-03"
+queries = ["Aptos Orbital GoAhead Follow The Seed Protocol Labs", "Cryptosat October 2022 investors seed"]
+source_ids = ["snc_finder", "crypto_fundraising_2022", "protocol_labs_profile"]
+summary = "Historical seed participants reported; listings disagree. Private cap table and percentages unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-03T18:50:00Z"
+next_review_on = "2027-01-03"
+queries = ["Aptos Orbital founder Yonatan Winetraub leadership", "Aptos Orbital CryptoSat team Yan Michalevsky"]
+source_ids = ["svsw_winetraub", "snc_finder", "protocol_labs_profile"]
+summary = "Founder Yonatan Winetraub is independently profiled; Protocol Labs lists Yan Michalevsky as a co-founder of the related CryptoSat team. Complete and current leadership remains unclear."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T18:50:00Z"
+next_review_on = "2027-01-03"
+queries = ["Aptos Orbital ownership acquired parent company", "Aptos Orbital legal entity corporate registry"]
+source_ids = ["aptos_site", "snc_finder", "protocol_labs_profile"]
+summary = "No public cap table, parent, acquisition, or disclosed stake found; Aptos/CryptoSat brand/entity continuity needs corporate documents."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T18:50:00Z"
+next_review_on = "2027-01-03"
+queries = ["Aptos Orbital revenue ARR financials", "Aptos Orbital revenue burn runway"]
+source_ids = ["aptos_launch", "aptos_site"]
+summary = "No dated reported revenue, ARR, profitability, burn or runway found. Customer commitment value is not recognized revenue."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-03T18:50:00Z"
+next_review_on = "2027-01-03"
+queries = ["Aptos Orbital customers contracts flight heritage Crypto-2 NASA JPL", "Aptos Orbital 2025 2026 milestones"]
+source_ids = ["aptos_launch", "aptos_site", "spacenews_terminal", "jpl_fsw_2025", "satshow_2026"]
+summary = "Product and ThinkOrbital relationship announced; customer commitments and long orbital history are company assertions. JPL Crypto-2 listing is planned. SATELLITE 2026 confirms continued event presence."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-03T18:50:00Z"
+next_review_on = "2027-01-03"
+queries = ["Aptos Orbital patents USPTO WIPO SEU SEL", "Cryptosat Aptos Orbital patent assignee"]
+source_ids = ["aptos_site", "aptos_launch"]
+summary = "Public product pages describe proprietary SEU/SEL protection, but this pass found no verifiable company-assignee patent record. Empty list reflects no verified patent/IP asset."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-03T18:50:00Z"
+next_review_on = "2027-01-03"
+queries = ["Aptos Orbital competitors Ramon Space Unibap EnduroSat", "space hardened compute persistent satellite communications products"]
+source_ids = ["aptos_site"]
+summary = "Relevant compute and satellite-platform alternatives identified; public performance, pricing, qualification and win/loss comparisons remain unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-03T18:50:00Z"
+next_review_on = "2027-01-03"
+queries = ["Aptos Orbital defense security dual use contracts", "Aptos Orbital warfighter satellite command control"]
+source_ids = ["aptos_launch", "svsw_winetraub", "snc_finder"]
+summary = "Space compute and resilient communication have civilian and defense applicability. Public evidence reviewed does not establish a defense contract, military deployment, certification or security accreditation."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current company site offers product materials and development/flight models, and Aptos Orbital is listed at SATELLITE 2026; evidence supports active public operations."
+verified_at = "2026-10-03T18:50:00Z"
+source_ids = ["aptos_site", "satshow_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Finder identifies the company as Israel ecosystem based and founder Yonatan Winetraub; conference biography documents his SpaceIL background."
+verified_at = "2026-10-03T18:50:00Z"
+source_ids = ["snc_finder", "svsw_winetraub"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2022.amount"
+support = "direct"
+summary = "Startup Nation Finder machine-readable history reports one October 2022 Seed of $3M; contemporaneous Cryptosat roundup independently also reports $3M."
+verified_at = "2026-10-03T18:50:00Z"
+source_ids = ["snc_finder", "crypto_fundraising_2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2022.participating_investors"
+support = "direct"
+summary = "Startup Nation Finder's machine-readable profile directly lists GoAhead Ventures, Follow[The]Seed, Protocol Labs and at.inc for the October 2022 seed. Other historical databases report a different roster, captured as a conflict requiring transaction evidence."
+verified_at = "2026-10-03T18:50:00Z"
+source_ids = ["snc_finder", "crypto_fundraising_2022"]

@@ -1,0 +1,327 @@
+name = "DailyRobotics"
+description = "DailyRobotics is an Israeli agricultural-robotics startup developing Q2, a battery-powered field robot that uses two robotic arms, soft grippers, computer vision, and on-board grading to harvest and pack strawberries. Its stated objective is to reduce growers' dependence on scarce seasonal labor while making open-field fruit production more predictable and productive."
+detailed_description = """
+**Product and the concrete problem it solves.** DailyRobotics is building Q2 around a specific food-production bottleneck: open-field strawberries are valuable but fragile, difficult to locate under foliage, expensive to pick, and dependent on seasonal workers who are increasingly difficult to recruit and retain. The company describes Q2 as a field-ready harvesting robot that can move through existing beds, find fruit, remove it gently, evaluate it, and place it directly into the appropriate clamshell or container. That closed loop matters because picking alone does not solve the farm's labor problem if a second manual crew must inspect, grade, and repack the crop. AgFunder News reported that California growers can spend about $43,000 per acre each year on picking and that some fruit is left on the ground; those figures are reported market context rather than a DailyRobotics financial result, but they illustrate why a robot can have value even before it reaches full human-equivalent throughput. The company is consequently addressing labor availability, crop loss, pack-house handling, and harvest consistency together rather than selling a generic autonomous vehicle.
+
+**Core technology and how it works.** Q2 combines a battery-powered mobile platform with two robotic arms, soft end-effectors, machine vision, and a perception pipeline that evaluates each berry for size, surface defects, color maturity, and over-ripeness. The arms enter the plant canopy, where fruit is partly hidden and illumination changes with foliage, and the system must distinguish ripe strawberries from leaves, stems, shadows, damaged fruit, and fruit that should remain on the plant. DailyRobotics says its soft gripper is designed to hug the berry without squeezing it, and that the machine's camera sees the fruit before the manipulator performs the harvest and pack action. The company has also described dynamic perception that searches through the canopy rather than assuming a fixed fruit location. AgFunder reported approximately 30 kilograms per hour in current field performance, with hardware intended to reach 50 kilograms per hour as software and cycle time improve, plus a design in which one operator can supervise up to eight robots. Those are company-reported operating figures, not independently certified benchmarks. The engineering challenge is the interaction of perception, reach planning, compliant grasping, battery endurance, navigation, and crop handling under wind, dust, rain, variable bed geometry, and inconsistent fruit presentation.
+
+**Market, customers, and go-to-market.** The initial market is commercial strawberry production, especially open-field farms in California and other regions where labor is costly and harvest windows move across geography. The official site presents Q2 as a robotic harvesting service that includes setup and maintenance without upfront customer purchase, while also inviting sales conversations; this points to a robotics-as-a-service model intended to lower adoption friction for growers who do not want to own and maintain a specialized fleet. AgFunder reported that DailyRobotics planned to deploy its first robots with a California customer from April 2026 and that the company was keeping open the option of selling machines. The field design is meant to fit existing operations rather than requiring farms to rebuild their production system: the robot harvests directly into retail packaging, performs quality grading at the point of picking, and can be moved between regions as harvest seasons shift. The route to market is therefore likely reference farms, seasonal deployments, and service economics, followed by fleet expansion and possibly hardware sales. The key commercial proof will be cost per marketable kilogram, uptime, bruising rate, labor saved per acre, and whether growers renew the service after a complete season.
+
+**Traction, funding, and third-party validation.** DailyRobotics has moved beyond a laboratory concept but remains early in commercialization. The official website shows an identified product, Q2, and a direct commercial contact path. The Israel Innovation Authority lists DailyRobotics as an Israeli agritech company established in 2022, with an R&D stage, five employees, two R&D-fund awards, and a technology description covering artificial intelligence, robotics, machine vision, and autonomous systems. Startupim reports a 2023 founding date, a six-person team, non-dilutive Innovation Authority grants in 2023 and 2024, and a pre-funding status; this date variation likely reflects legal incorporation versus operating-company history and should be resolved with the company. AgFunder's November 2025 report provides the most useful independent product and market detail: it identifies the founders, describes field performance, names the planned California deployment, and says the company had not taken venture capital, relying instead on founders, a non-dilutive grant, and angel investors. LinkedIn posts from the company reinforce that Q2 has been tested in real fields and that its closed-loop workflow includes both picking and quality grading. No public revenue, paid-customer contract, patent list, independent benchmark, or financing amount was identified, so these signals establish credible development and customer discovery rather than scale.
+
+**Founders and team background.** Public sources identify Adham Ghazali as co-founder and CEO, with Majed Jubeh and Farah Jubran also named as co-founders in AgFunder's company reporting. Ghazali previously co-founded and led Imagry, a vision-based autonomous-driving company, giving DailyRobotics relevant experience in computer vision, machine learning, robotics deployment, and the gap between controlled demonstrations and messy real-world operation. Public professional profiles associate Jubeh with operations and engineering work and identify technical experience among the broader founding group, while the Innovation Authority independently lists Ghazali as CEO and co-founder. The team is small, which can be an advantage for rapid iteration but creates concentration risk: the public record does not show a large agricultural-sales organization, manufacturing group, field-service network, or specialist crop-science department. Harvesting robots require all of those capabilities eventually, because a working prototype is only one part of the product. Diligence should map who owns manipulation, perception, agronomy, fleet operations, safety, manufacturing, and customer success; confirm the status of each named founder; and determine whether the company's self-reported field data is collected under repeatable protocols across varieties, farms, weather conditions, and harvest stages.
+
+**Competitive dynamics.** DailyRobotics competes with a mixture of direct strawberry-robotics startups, greenhouse automation providers, manual labor, and broader agricultural equipment. Harvest CROO Robotics is a close open-field comparator pursuing automated strawberry harvesting at commercial scale. Agrobot and Fieldwork Robotics develop robotic fruit-picking systems using different combinations of machine vision, manipulators, and crop-specific tooling. Organifarms and Oishii's acquired Tortuga AgTech represent greenhouse or controlled-environment approaches that may achieve easier perception and more predictable plant geometry, even when they are not direct substitutes for open-field growers. Dogtooth Technologies and L5 also compete for the budget allocated to automated fruit harvesting. The incumbent alternative remains human pickers supported by conventional carts, supervisors, and packing workflows. DailyRobotics' potential edge is the integration of two-arm harvesting, soft handling, per-berry quality classification, and direct field packing in a mobile service model designed for existing beds. That edge is conditional: a slower robot, a high bruising rate, frequent charging, or expensive field support can erase the value of automation. The decisive metrics are marketable yield per hour, total cost per acre, uptime, and repeatability, not the presence of AI in the product description.
+
+**Defense, security, and resilience dual-use relevance.** DailyRobotics is not a defense contractor, and no public source reviewed here establishes a military customer, security contract, or defense deployment. Its strategic relevance comes through food security, agricultural continuity, and transferable autonomy capabilities. A system that can perceive irregular objects under foliage, plan manipulation in clutter, handle fragile biological material, and operate for long periods in a field is a useful civilian resilience capability in its own right. The same technology family can inform autonomous logistics, remote inspection, disaster-response handling, or supply-chain operations where labor is scarce and human supervision must cover multiple machines. Food production is also a resilience concern: farms exposed to labor shocks, border restrictions, disease events, conflict, or climate volatility benefit from harvesting capacity that is less dependent on a large seasonal workforce. This is a bounded dual-use assessment. The core product credibly serves commercial agriculture and resilience, but it should not be described as tactical autonomy or defense robotics without new evidence. Strategic value would increase if DailyRobotics proves secure fleet management, degraded-connectivity operation, reliable remote supervision, and transferable manipulation across crops or emergency logistics tasks.
+
+**Growth stage, trajectory, and key diligence risks.** DailyRobotics is best classified as early. It has an identifiable product, a real field-robotics problem, public demonstrations, government R&D support, independent sector coverage, and a stated path to a California customer deployment, but it has not publicly demonstrated scaled production, repeat orders, material revenue, or a completed venture round. The upside is a serviceable wedge in a high-value crop: if Q2 can pick quickly without bruising, grade accurately, run a full shift, and be supervised efficiently, the company could expand to additional strawberry regions and eventually other delicate crops. The risks are substantial: perception and grasping may degrade across varieties and farms; weather and dust can reduce uptime; labor economics may change; battery and maintenance logistics may make a fleet expensive; California field access and food-handling requirements add operational complexity; and larger agricultural or robotics companies can copy successful workflows or outspend a small team. Diligence should request season-long field data, customer references, crop-loss and bruising measurements, robot utilization, maintenance hours, per-unit gross margin, battery replacement economics, safety procedures, software update controls, ownership of patents and training data, and evidence that the April 2026 deployment became a paid, repeatable operation. The record merits strategic attention because food-security relevance and hard robotics execution are both meaningful, but the evidence supports a promising early company rather than a proven scaled platform.
+"""
+logo = "Unknown"
+website = "https://www.dailyrobotics.com/"
+sector = "Agricultural Robotics and Autonomous Harvesting"
+founded = "2022"
+headquarters = "Haifa, Israel"
+employees = "5 (Israel Innovation Authority profile; older public profile)"
+funding_stage = "Grant- and angel-backed; no venture capital disclosed as of November 2025; grant and angel amounts undisclosed"
+entity_type = "startup"
+dual_use = true
+dual_use_description = "DailyRobotics' core capabilities have credible commercial and resilience relevance through autonomous food production. Computer vision, field navigation, soft manipulation, fleet supervision, and machine health monitoring can reduce dependence on seasonal labor and improve continuity of fresh-food supply, while the same autonomy and remote-operation building blocks could support emergency logistics, remote inspection, and other labor-constrained resilience missions. No defense customer, military deployment, or security contract is publicly verified, so this is food-security and transferable-robotics dual use rather than defense-first positioning."
+key_technologies = [
+  "Two-arm mobile manipulation for open-field strawberry harvesting",
+  "Dynamic computer vision for detecting fruit under plant canopies",
+  "Soft-gripper end effectors designed to reduce bruising during picking",
+  "Per-berry quality grading for size, maturity, surface defects, and over-ripeness",
+  "Direct field packing into clamshells and crop-specific containers",
+  "Battery-powered autonomous navigation across existing agricultural beds",
+  "Remote fleet supervision, diagnostics, and robotics-as-a-service operations"
+]
+use_cases = [
+  "Open-field strawberry harvesting during labor-constrained peak seasons",
+  "In-field grading and direct clamshell packing for consistent market quality",
+  "Seasonal fleet deployment across California strawberry-growing regions",
+  "Harvesting operations where labor cost, availability, or crop loss threatens margins",
+  "Autonomous farm operations with one operator supervising multiple robots",
+  "Future adaptation to other delicate fruit crops with similar perception and manipulation needs",
+  "Resilient food production during seasonal workforce, logistics, or supply-chain disruptions",
+  "Remote agricultural and emergency logistics tasks requiring mobile perception and gentle manipulation"
+]
+investible = true
+investment_rationale = "DailyRobotics is a strategic diligence candidate, not an investment recommendation. (1) It addresses a concrete and expensive labor bottleneck in a high-value crop with a product that combines harvesting, grading, and packing rather than automating only one step. (2) The team brings relevant computer-vision and autonomous-driving experience, while Innovation Authority support, field testing, and independent AgFunder coverage provide external validation beyond a concept page. (3) A robotics-as-a-service model could lower adoption friction and let the company prove unit economics before asking growers to purchase specialized hardware. (4) Food-security and labor-resilience relevance adds strategic value to the commercial case. The counterweights are material: no disclosed venture financing, revenue, repeat customer, patent portfolio, or independently audited benchmark; difficult field conditions; hardware and service complexity; and strong competition from specialized harvesting robots, greenhouse automation, and manual labor. The legacy priority flag reflects strategic fit and evidence of real development, not a recommendation to invest."
+strategic_value = "DailyRobotics has strategic value as an Israeli food-security and autonomy company. (1) Fresh-food production remains vulnerable to seasonal labor shortages, wage inflation, crop loss, and disruptions that make manual harvesting capacity unreliable. (2) Q2's integrated perception, manipulation, grading, and packing workflow targets continuity of output rather than a laboratory autonomy metric. (3) A successful fleet would build capabilities in rugged mobile robotics, soft manipulation, edge perception, remote supervision, and field service that could transfer to other resilience applications. (4) The company could contribute to allied agricultural autonomy and reduce dependence on fragile labor and logistics chains. The current value should be discounted because no defense deployment or scaled commercial fleet is publicly confirmed; the next proof points are paid seasonal deployments, repeatable economics, and crop or geography expansion."
+public_sources = [
+  { label = "DailyRobotics official website", url = "https://www.dailyrobotics.com/", description = "Official Q2 product and robotics-as-a-service description." },
+  { label = "Israel Innovation Authority company record", url = "https://innovationisrael.org.il/en/importWinner/516648532/", description = "Government company profile, registration number, Haifa/Israel connection, 2022 establishment, five employees, and R&D fund awards in 2023 and 2024." },
+  { label = "AgFunderNews interview, November 17, 2025", url = "https://agfundernews.com/dailyrobotics-gears-up-for-commercial-launch-in-california-in-2026-with-robotic-strawberry-harvester", description = "Interview reporting product architecture, company-reported field metrics, founders, funding posture, deployment plan, and competitors." },
+  { label = "DailyRobotics Ltd. — IVC Data & Insights", url = "https://www.ivc-online.com/Google-Card?ID=eec15a5a-a9e9-ed11-b811-00505695cd29&type=1", description = "Israeli startup profile with Haifa address, B2B model, management, and grant record." },
+  { label = "DailyRobotics — Israel Company Information", url = "https://www.kycisrael.com/companies/516648532/dailyrobotics-ltd/", description = "Company registry data aggregation identifying legal name, company number, active status, incorporation date, and Haifa address." },
+  { label = "DailyRobotics prepares to launch strawberry harvesting robot in California — Fertilizer Daily", url = "https://www.fertilizerdaily.com/20251121-dailyrobotics-prepares-to-launch-strawberry-harvesting-robot-in-california/", description = "Independent sector report corroborating Q2 features, planned California use, reported productivity, funding sources, and peer set." },
+  { label = "DailyRobotics company LinkedIn post on Q2 field milestone", url = "https://www.linkedin.com/posts/dailyrobotics_farmingthefuture-robotics-ai-activity-7307047473775042561-1JRk", description = "Company-reported Q2 development milestone and real-world farmer testing plan." },
+  { label = "Radio Me report on the California deployment", url = "https://radiome.gr/dailyrobotics-q2-robot-fraoules-california/", description = "Secondary August 2026 report asserting April 2026 deployment; not independently confirmed by company or customer primary evidence." },
+  { label = "DailyRobotics — Startupim company profile", url = "https://startupim.com/company/dailyrobotics", description = "Secondary profile with grant years and reported small team; used as a lead only where noted." },
+]
+potential_score = 69.0
+technology_score = 74.0
+market_score = 72.0
+team_score = 70.0
+dual_use_score = 62.0
+strategic_alignment_score = 78.0
+stage = "early"
+stage_rationale = "DailyRobotics is early because public evidence shows a working field prototype, grant and angel support, product-market testing, and a planned California customer deployment, but not scaled production or repeatable commercial revenue. The company is beyond ideation: Q2 has a defined mechanical architecture, reported field throughput, real crop trials, and a service-oriented go-to-market model. The unresolved transition is from promising field performance to season-long paid deployment, manufacturing repeatability, fleet economics, and expansion beyond a first crop and geography."
+competitors = [
+  "Harvest CROO Robotics (open-field strawberry harvesting automation and fleet-scale farm robotics)",
+  "Agrobot (computer-vision-guided robotic strawberry harvesting with crop-specific manipulation)",
+  "Fieldwork Robotics (autonomous soft-fruit harvesting robots and machine-vision systems)",
+  "Organifarms (greenhouse strawberry harvesting and controlled-environment robotics)",
+  "Dogtooth Technologies (autonomous soft-fruit picking robots for commercial farms)",
+  "Manual seasonal farm labor (incumbent harvesting and grading workflow with established flexibility)"
+]
+competitive_edge = "DailyRobotics' potential edge is a tightly integrated field workflow: two-arm harvesting, soft handling, per-berry grading, direct packing, and a service model intended to fit existing farm operations. The company is targeting open-field strawberries, where hidden fruit and irregular canopy geometry make perception and manipulation harder than in controlled greenhouse environments. Its previous computer-vision and autonomous-driving experience may help with real-world perception and deployment discipline. The edge remains unproven and is not yet a durable moat. Competitors have deeper agricultural field experience, larger capital bases, or more controlled environments, while manual labor remains a highly flexible substitute. DailyRobotics must demonstrate lower cost per marketable kilogram, acceptable bruising, high uptime, long battery endurance, and reliable fleet service across multiple farms and seasons."
+risk_factors = [
+  "Field perception and grasping may degrade across strawberry varieties, canopy density, weather, lighting, and farm layouts",
+  "Reported throughput, bruising, and future California deployment metrics are company-reported and not independently audited",
+  "Battery endurance, charging, cleaning, maintenance, and remote-support costs may undermine robotics-as-a-service margins",
+  "The small team may lack sufficient manufacturing, agronomy, field-service, sales, and customer-success capacity for scale",
+  "Manual labor remains flexible and familiar, while larger robotics companies can copy successful crop workflows",
+  "No public recurring revenue, repeat customer, venture round, patent portfolio, or scaled production evidence was identified",
+  "Food-safety, worker-safety, import, and farm-operating requirements may complicate international deployment"
+]
+risk_level = "high"
+signals = []
+priority_rank = 0
+priority_rationale = "DailyRobotics merits a priority-monitoring signal because it combines Israeli robotics depth with a concrete food-security problem and publicly described field deployment. (1) The product integrates perception, soft manipulation, quality grading, and packing in a workflow that can directly affect farm economics. (2) Innovation Authority support, independent AgFunder coverage, real-field testing, and a planned California customer deployment provide more evidence than a stealth concept. (3) The robotics-as-a-service model could reduce grower adoption friction and generate operational data for expansion. Priority is capped by the early stage, limited disclosed financing, small team, lack of independently audited performance, and strong competition from other harvest-robotics companies and manual labor. The next milestones are a documented paid season, repeat customer economics, fleet uptime, bruising and marketable-yield data, scalable manufacturing, and adaptation to additional crops or geographies. This is a legacy priority signal, not an investment recommendation."
+crawled_at = "2026-09-20T02:40:08Z"
+updated_at = "2026-10-05T04:15:49Z"
+
+[intelligence]
+"schema_version" = 2
+"investors" = []
+"financials" = []
+"intellectual_property" = []
+"people" = [
+  { name = "Adham Ghazali", role = "CEO and co-founder", is_founder = true, current = true, background = "Previously led vision-based autonomous-driving company Imagry, according to AgFunderNews.", source_ids = ["agfunder", "iia"] },
+  { name = "Majed Jubeh", role = "Co-founder; COO in IVC profile", is_founder = true, current = true, source_ids = ["agfunder", "ivc"] },
+  { name = "Farah Jubran", role = "Co-founder", is_founder = true, current = true, source_ids = ["agfunder"] },
+  { name = "Waseem Ghrayeb", role = "Co-founder (listed in IVC profile)", is_founder = true, current = false, notes = "Current status not verified; not named among the 2025 founding team in AgFunderNews.", source_ids = ["ivc"] },
+  { name = "Amir Ounallah", role = "Co-founder (listed in IVC profile)", is_founder = true, current = false, notes = "Current status not verified; not named among the 2025 founding team in AgFunderNews.", source_ids = ["ivc"] },
+]
+"traction" = [
+  { kind = "product", description = "Official company site describes Q2 as an autonomous harvesting product for strawberries and other crops, with setup and maintenance included in its robots-as-a-service offer.", date = "2026-10-05", source_ids = ["official"] },
+  { kind = "product", description = "Adham Ghazali told AgFunderNews Q2 had two robotic arms, soft grippers, dynamic canopy perception, berry grading and direct clamshell packing; he reported field performance around 30 kg/hour and hardware capability toward 50 kg/hour. These are company-reported, not independently audited metrics.", date = "2025-11-17", source_ids = ["agfunder"] },
+  { kind = "customer", description = "In November 2025 the CEO said first robots were planned with a California customer starting April 2026. A later August 2026 Greek-language report asserted commercial deployment had begun, but no company or customer primary announcement confirming completion was located; treat deployment status and payment as unverified.", date = "2026-04", source_ids = ["agfunder", "radiome"] },
+  { kind = "other", description = "Company LinkedIn post announced a Q2 milestone and forthcoming real-world farmer testing; this supports field testing, not a paid deployment.", date = "2025-03", source_ids = ["linkedin"] },
+]
+"comparables" = [
+  { name = "Harvest CROO Robotics", website = "https://www.harvestcroorobotics.com/", rationale = "Closest named comparator for open-field strawberry harvesting.", differentiation = "AgFunderNews positions both companies in open-field strawberry production; comparative field economics and performance remain unverified.", source_ids = ["agfunder"] },
+  { name = "Agrobot", website = "https://www.agrobot.com/", rationale = "Robotic strawberry harvesting peer named in sector coverage.", differentiation = "Different crop-specific robot approach; public evidence reviewed does not establish a like-for-like commercial comparison.", source_ids = ["agfunder"] },
+  { name = "Dogtooth Technologies", website = "https://dogtooth.tech/", rationale = "Soft-fruit picking robotics competitor named in sector coverage.", differentiation = "Broader soft-fruit positioning; DailyRobotics emphasizes field strawberry harvesting with in-field grading and packing.", source_ids = ["agfunder"] },
+]
+
+[intelligence.company]
+"source_ids" = ["iia", "registry", "official"]
+"company_id" = "il-dailyrobotics"
+"legal_name" = "DAILYROBOTICS LTD"
+"aliases" = ["DailyRobotics", "Daily Robotics", "Spacetink"]
+"operating_status" = "active"
+"business_model" = "Business-to-business agricultural robotics; official site offers robots as a service including setup and maintenance, while the CEO said hardware sales also remain possible."
+"products" = ["Q2 autonomous open-field strawberry harvester with two robotic arms, soft grippers, computer vision, grading, and direct packing"]
+"locations" = ["Haifa, Israel"]
+"linkedin_url" = "https://www.linkedin.com/company/dailyrobotics"
+"country_of_incorporation" = "Israel"
+"founded_on" = "2022-07-18"
+"registry_identifiers" = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "516648532", source_ids = ["iia", "registry"] }]
+
+[intelligence.funding]
+"status" = "reported"
+"summary" = "Public evidence reviewed identifies Israel Innovation Authority R&D-fund awards in 2023 and 2024 and founder and angel funding, but discloses no grant or angel amounts. In November 2025 CEO Adham Ghazali said the company had not taken VC money. No disclosed equity round amount or company-announced lifetime total was found; do not interpret missing amounts as zero."
+"history_status" = "partial"
+"coverage_through" = "2026-10-05"
+"rounds" = [
+  { id = "grant-2023", round_type = "R&D grant", instrument = "grant", status = "closed", announced_on = "2023", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = [], participating_investors = ["Israel Innovation Authority"], notes = "Government award is shown for 2023; public record reviewed provides no amount or award date precision. This is non-dilutive support, not equity.", source_ids = ["iia"] },
+  { id = "grant-2024", round_type = "R&D grant", instrument = "grant", status = "closed", announced_on = "2024", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = [], participating_investors = ["Israel Innovation Authority"], notes = "Government award is shown for 2024; public record reviewed provides no amount or award date precision. This is non-dilutive support, not equity.", source_ids = ["iia"] },
+]
+
+[intelligence.ownership]
+"status" = "not_found"
+"summary" = "No public acquisition, parent company, or change-of-control event found. Private cap table and founder/angel ownership percentages are not publicly disclosed. The company is identified as an active Israeli private limited company in registry data aggregation."
+"cap_table_status" = "undisclosed"
+"shareholders" = []
+"source_ids" = ["registry", "agfunder"]
+"deals" = []
+"holdings" = []
+
+[intelligence.israel_connection]
+"status" = "confirmed"
+"basis" = ["incorporated_in_israel", "headquarters_in_israel"]
+"summary" = "Israeli private limited company 516648532, established in 2022, with a registered Haifa address; Israel Innovation Authority lists its country as Israel and Haifa location."
+"as_of" = "2026-10-05"
+"source_ids" = ["iia", "registry"]
+
+[intelligence.research]
+"researched_at" = "2026-10-05T04:15:49Z"
+"topics_checked" = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+"search_queries" = [
+  "DailyRobotics identity company legal name aliases headquarters website",
+  "DailyRobotics funding raised seed Series A investors valuation acquired",
+  "DailyRobotics investors angel Israel Innovation Authority grants 2023 2024",
+  "DailyRobotics founder CEO team leadership Adham Ghazali Majed Jubeh Farah Jubran",
+  "DailyRobotics ownership parent company acquisition cap table",
+  "DailyRobotics revenue ARR profitability burn runway financials",
+  "DailyRobotics customers contracts partnerships deployment California April 2026 Q2",
+  "DailyRobotics patents intellectual property Q2 strawberry harvesting",
+  "DailyRobotics competitors strawberry harvesting robotics Harvest CROO Agrobot Dogtooth",
+  "DailyRobotics dual use defense security food security robotics",
+  "DailyRobotics מימון משקיעים גיוס רובוט קציר תותים",
+]
+"gaps" = [
+  "investors: angel investors are reported but not individually identified; no VC investors disclosed.",
+  "team: public records conflict on additional co-founders and do not establish current roles for Waseem Ghrayeb or Amir Ounallah; founder technical backgrounds beyond Ghazali remain thin.",
+  "financials: no dated revenue, ARR, profitability, burn, runway, or quantified grant amounts found.",
+  "traction: California customer deployment was planned for April 2026, with an August 2026 secondary claim that it began; no company/customer primary confirmation, paid status, deployment scale, or repeat use found.",
+  "intellectual_property: no DailyRobotics-assigned patent or public patent portfolio located in exact-name web searches; assignment and application status need registry-level verification.",
+  "competition: no independently comparable unit economics or audited performance for DailyRobotics and peers found.",
+  "funding: grant and angel amounts and company-reported total funding remain undisclosed; no VC round was reported by the CEO in November 2025.",
+  "ownership: private cap table, beneficial owners, and ownership percentages are unavailable; no parent or transaction found.",
+  "dual_use: no defense, security customer, military contract, or security deployment located; relevance is civilian food-system resilience and transferable autonomy only.",
+]
+"conflicts" = [
+  "Founding-date reporting varies: Israel Innovation Authority and registry aggregation indicate 2022 (registry incorporation dated 2022-07-18), while AgFunderNews describes the 2023 founding. Likely legal incorporation versus operating/founding history; retain 2022 legal/founded baseline and note the discrepancy.",
+  "Team listings conflict: IVC names Waseem Ghrayeb and Amir Ounallah as co-founders and Majed Jubeh as COO; AgFunderNews names Farah Jubran among the three founders in 2025. Current status for earlier names is unresolved.",
+  "The April 2026 deployment remains unresolved: the November 2025 plan is a prospective company statement; an August 2026 secondary article says deployment began, but primary confirmation and commercial terms were not found.",
+]
+"diligence_questions" = [
+  "Did the California customer deployment begin in April 2026, and is it paid, seasonal, or still a field trial? Obtain customer reference, dates, acreage, active robot count, utilization, renewal, and service terms.",
+  "Provide season-long, independently witnessed results for marketable kilograms per hour, uptime, bruising/rejection, labor hours displaced, maintenance, and cost per marketable kilogram across varieties and farm conditions.",
+  "What are the amount, dates, restrictions, and repayment/equity terms (if any) of the 2023 and 2024 Innovation Authority support, founder funding, and angel capital; what is current runway and financing need?",
+  "Who are current founders and executives, and how are perception, manipulation, agronomy, food safety, manufacturing, field service, and sales responsibilities staffed?",
+  "What IP is assigned to the company, including gripper designs, perception software, patents or applications, and freedom-to-operate analysis?",
+]
+"sources" = [
+  { id = "official", url = "https://www.dailyrobotics.com/", title = "DailyRobotics — official website", publisher = "DailyRobotics", kind = "company", accessed_at = "2026-10-05T04:15:49Z", claims = ["Q2 is the company's autonomous harvesting product for strawberries and other crops.", "The company markets its robots as a service with setup and maintenance and no upfront cost."] },
+  { id = "iia", url = "https://innovationisrael.org.il/en/importWinner/516648532/", title = "DailyRobotics ltd", publisher = "Israel Innovation Authority", kind = "government", accessed_at = "2026-10-05T04:15:49Z", claims = ["DailyRobotics ltd has Israeli registration number 516648532, is established 2022, is located in Israel/Haifa, has five employees listed, and is in R&D.", "The profile lists Adham Ghazali as CEO and co-founder and lists R&D Fund winning years 2023 and 2024."] },
+  { id = "agfunder", url = "https://agfundernews.com/dailyrobotics-gears-up-for-commercial-launch-in-california-in-2026-with-robotic-strawberry-harvester", title = "DailyRobotics enters strawberry harvesting race with robot that can pick 2–3x faster than humans", publisher = "AgFunderNews", kind = "media", published_on = "2025-11-17", accessed_at = "2026-10-05T04:15:49Z", claims = ["Adham Ghazali, Majed Jubeh, and Farah Jubran were identified as founders; Ghazali said the company had not taken VC money and had founder, angel, and non-dilutive grant funding.", "The CEO reported approximately 30 kg/hour field performance, hardware potential toward 50 kg/hour, a 4% bruising rate in recent field tests, and one operator supervising up to eight robots.", "The company planned its first California customer robot deployments starting April 2026.", "Q2 uses two robotic arms, soft grippers, perception-based grading, and direct packing; named competitors include Harvest CROO, Agrobot, Fieldwork, Dogtooth, Organifarms, L5, and Tortuga.", "Ghazali previously led vision-based autonomous-driving startup Imagry."] },
+  { id = "ivc", url = "https://www.ivc-online.com/Google-Card?ID=eec15a5a-a9e9-ed11-b811-00505695cd29&type=1", title = "DailyRobotics Ltd. — IVC Data & Insights", publisher = "IVC Research Center", kind = "directory", accessed_at = "2026-10-05T04:15:49Z", claims = ["IVC profile lists DailyRobotics as a B2B Haifa agritech/AI/robotics company.", "IVC management list includes Adham Ghazali, Majed Jubeh, Waseem Ghrayeb, and Amir Ounallah."] },
+  { id = "registry", url = "https://www.kycisrael.com/companies/516648532/dailyrobotics-ltd/", title = "DAILYROBOTICS LTD — Israel Company Information", publisher = "KYC Israel", kind = "directory", accessed_at = "2026-10-05T04:15:49Z", claims = ["Registry aggregation reports legal name DAILYROBOTICS LTD, company number 516648532, active status, incorporation date 2022-07-18, and Haifa address."] },
+  { id = "fertilizer", url = "https://www.fertilizerdaily.com/20251121-dailyrobotics-prepares-to-launch-strawberry-harvesting-robot-in-california/", title = "DailyRobotics prepares to launch strawberry harvesting robot in California", publisher = "Fertilizer Daily", kind = "media", published_on = "2025-11-21", accessed_at = "2026-10-05T04:15:49Z", claims = ["Independent report repeats Q2 architecture and CEO-reported 30 kg/hour field performance and 50 kg/hour target capability.", "The report says funding came from founders, angel investors, and a non-dilutive grant and names open-field and greenhouse harvesting peers."] },
+  { id = "linkedin", url = "https://www.linkedin.com/posts/dailyrobotics_farmingthefuture-robotics-ai-activity-7307047473775042561-1JRk", title = "Q2 strawberry-harvesting robot milestone", publisher = "DailyRobotics on LinkedIn", kind = "company", accessed_at = "2026-10-05T04:15:49Z", claims = ["The company announced a Q2 milestone after months of development and said it would share real-world tests with farmers."] },
+  { id = "radiome", url = "https://radiome.gr/dailyrobotics-q2-robot-fraoules-california/", title = "Το ισραηλινό DailyRobotics ξεκινά εμπορική χρήση ρομπότ συγκομιδής φραουλών στην Καλιφόρνια", publisher = "Radio Me", kind = "media", published_on = "2026-08-30", accessed_at = "2026-10-05T04:15:49Z", claims = ["Secondary Greek-language report asserts that Q2 commercial deployment in California began in April 2026; no primary company/customer confirmation identified."] },
+  { id = "startupim", url = "https://startupim.com/company/dailyrobotics", title = "DailyRobotics", publisher = "Startupim", kind = "directory", accessed_at = "2026-10-05T04:15:49Z", claims = ["Secondary profile reports two undisclosed IIA grant events in 2023 and 2024 and small team; treated as a discovery lead alongside IIA record."] },
+]
+
+[[intelligence.research.topic_checks]]
+"topic" = "identity"
+"status" = "reported"
+"checked_at" = "2026-10-05T04:15:49Z"
+"next_review_on" = "2027-01-05"
+"queries" = ["DailyRobotics identity company legal name aliases headquarters website"]
+"source_ids" = ["official", "iia", "registry", "ivc"]
+"summary" = "Matched official Q2 company to Israeli private company DAILYROBOTICS LTD, number 516648532; registry aggregation records 2022-07-18 incorporation and active status. IIA and IVC place it in Haifa."
+
+[[intelligence.research.topic_checks]]
+"topic" = "funding"
+"status" = "reported"
+"checked_at" = "2026-10-05T04:15:49Z"
+"next_review_on" = "2027-01-05"
+"queries" = ["DailyRobotics funding raised seed Series A investors valuation acquired", "DailyRobotics investors angel Israel Innovation Authority grants 2023 2024", "DailyRobotics מימון משקיעים גיוס רובוט קציר תותים"]
+"source_ids" = ["iia", "agfunder", "fertilizer", "startupim"]
+"summary" = "Found two year-dated IIA grant awards and CEO-reported founder/angel/non-dilutive support; no amounts, valuation, VC round, or announced cumulative total disclosed."
+
+[[intelligence.research.topic_checks]]
+"topic" = "investors"
+"status" = "no_public_disclosure"
+"checked_at" = "2026-10-05T04:15:49Z"
+"next_review_on" = "2027-01-05"
+"queries" = ["DailyRobotics investors angel Israel Innovation Authority grants 2023 2024", "DailyRobotics funding raised seed Series A investors valuation acquired"]
+"source_ids" = ["agfunder", "iia"]
+"summary" = "No private investor names disclosed. IIA is a government grantor; AgFunderNews says angels participated but does not identify them and says no VC money had been taken as of its November 2025 report."
+
+[[intelligence.research.topic_checks]]
+"topic" = "team"
+"status" = "conflicting"
+"checked_at" = "2026-10-05T04:15:49Z"
+"next_review_on" = "2027-01-05"
+"queries" = ["DailyRobotics founder CEO team leadership Adham Ghazali Majed Jubeh Farah Jubran"]
+"source_ids" = ["agfunder", "ivc", "iia"]
+"summary" = "CEO Ghazali is listed by IIA; AgFunderNews names founders Ghazali, Jubeh, Jubran, while IVC lists Jubeh, Ghrayeb, and Ounallah. Current roles of the latter two are unresolved."
+
+[[intelligence.research.topic_checks]]
+"topic" = "ownership"
+"status" = "no_public_disclosure"
+"checked_at" = "2026-10-05T04:15:49Z"
+"next_review_on" = "2027-01-05"
+"queries" = ["DailyRobotics ownership parent company acquisition cap table"]
+"source_ids" = ["registry", "agfunder"]
+"summary" = "No parent, acquisition, or disclosed cap table located; private ownership percentages unavailable."
+
+[[intelligence.research.topic_checks]]
+"topic" = "financials"
+"status" = "no_public_disclosure"
+"checked_at" = "2026-10-05T04:15:49Z"
+"next_review_on" = "2027-01-05"
+"queries" = ["DailyRobotics revenue ARR profitability burn runway financials"]
+"source_ids" = ["agfunder", "iia"]
+"summary" = "No dated company revenue, ARR, profitability, burn, runway, or quantified grant amount found."
+
+[[intelligence.research.topic_checks]]
+"topic" = "traction"
+"status" = "conflicting"
+"checked_at" = "2026-10-05T04:15:49Z"
+"next_review_on" = "2027-01-05"
+"queries" = ["DailyRobotics customers contracts partnerships deployment California April 2026 Q2"]
+"source_ids" = ["agfunder", "radiome", "official", "linkedin"]
+"summary" = "Q2 field testing and reported throughput are evidenced by company/CEO statements. A 2025 plan named a California customer deployment for April 2026; an August 2026 secondary article says deployment began, but no primary confirmation or paid status found."
+
+[[intelligence.research.topic_checks]]
+"topic" = "intellectual_property"
+"status" = "not_found"
+"checked_at" = "2026-10-05T04:15:49Z"
+"next_review_on" = "2027-01-05"
+"queries" = ["DailyRobotics patents intellectual property Q2 strawberry harvesting"]
+"source_ids" = ["official", "agfunder"]
+"summary" = "No company-specific patent portfolio or patent publication located in exact-name web search; requires assignee and inventor search in patent registries."
+
+[[intelligence.research.topic_checks]]
+"topic" = "competition"
+"status" = "reported"
+"checked_at" = "2026-10-05T04:15:49Z"
+"next_review_on" = "2027-01-05"
+"queries" = ["DailyRobotics competitors strawberry harvesting robotics Harvest CROO Agrobot Dogtooth"]
+"source_ids" = ["agfunder", "fertilizer"]
+"summary" = "Sector reporting names open-field peers Harvest CROO, Agrobot and others; it distinguishes field from greenhouse/tabletop approaches. No audited head-to-head data found."
+
+[[intelligence.research.topic_checks]]
+"topic" = "dual_use"
+"status" = "not_found"
+"checked_at" = "2026-10-05T04:15:49Z"
+"next_review_on" = "2027-01-05"
+"queries" = ["DailyRobotics dual use defense security food security robotics"]
+"source_ids" = ["official", "agfunder"]
+"summary" = "No defense or security contract/customer evidence found. Applicable resilience is civilian food production and transferable autonomy, perception, and manipulation technology."
+
+[[intelligence.research.claim_checks]]
+"field_path" = "company.operating_status"
+"support" = "direct"
+"summary" = "Active Israeli company record is reported for DAILYROBOTICS LTD; company continues to present Q2 on its official site."
+"verified_at" = "2026-10-05T04:15:49Z"
+"source_ids" = ["registry", "official"]
+
+[[intelligence.research.claim_checks]]
+"field_path" = "israel_connection"
+"support" = "direct"
+"summary" = "IIA lists country Israel and Haifa location; company registry aggregation lists Israeli company number and Haifa registered address."
+"verified_at" = "2026-10-05T04:15:49Z"
+"source_ids" = ["iia", "registry"]
+
+[[intelligence.research.claim_checks]]
+"field_path" = "funding.rounds.grant-2023.participating_investors"
+"support" = "direct"
+"summary" = "IIA record lists R&D Fund winning year 2023 for DailyRobotics; grantor is identified as Israel Innovation Authority."
+"verified_at" = "2026-10-05T04:15:49Z"
+"source_ids" = ["iia"]
+
+[[intelligence.research.claim_checks]]
+"field_path" = "funding.rounds.grant-2024.participating_investors"
+"support" = "direct"
+"summary" = "IIA record lists R&D Fund winning year 2024 for DailyRobotics; grantor is identified as Israel Innovation Authority."
+"verified_at" = "2026-10-05T04:15:49Z"
+"source_ids" = ["iia"]
