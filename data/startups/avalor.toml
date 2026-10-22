@@ -1,94 +1,185 @@
 name = "Avalor"
-description = "Avalor developed a security data fabric that ingests, normalizes, and correlates security and business data for continuous risk management. Its technology is now commercialized within Zscaler's Unified Vulnerability Management offering following Zscaler's acquisition of Avalor in March 2024."
-detailed_description = """
-Avalor's core product was a security-specific data fabric rather than another standalone scanner. It was designed to ingest data from vulnerability tools, asset inventories, identity systems, security controls, and other enterprise sources; normalize the records into a common model; and correlate them so that security teams could reason about exposure in context. Zscaler describes the resulting capabilities as dynamic and customizable prioritization, zero-copy analytics, streamlined reporting, and workflow support. The first application on the fabric was Unified Vulnerability Management (UVM), intended to help customers identify which findings represent the greatest practical risk instead of treating every scanner result as equally urgent. Zscaler and Avalor publicly referenced more than 150 pre-built integrations, but the current product page should be treated as the authoritative description of the surviving commercial offer.
+description = "Avalor was an Israeli-founded security data-fabric startup acquired by Zscaler in 2024. Its data normalization and vulnerability prioritization technology is integrated into Zscaler's Unified Vulnerability Management (UVM) offering."
+detailed_description = """Avalor Technologies Ltd. was founded in Israel in 2022 by Raanan Raz and Kfir Tishbi to address the fragmentation created by enterprise security teams using many scanners, identity systems, cloud services, asset inventories, and ticketing platforms. Rather than position itself as another scanner, Avalor built a security-specific data fabric: connectors ingest heterogeneous security and business records; normalization, deduplication, and relationship mapping make the records usable together; and applications then turn that shared context into risk rankings, reporting, and remediation workflows. Its first application was Unified Vulnerability Management (UVM). This design targets a real operational bottleneck: teams can have large finding inventories but still lack a reliable way to connect a finding to an affected asset, its business importance, mitigating controls, responsible owner, and open remediation task.
 
-The customer problem is persistent and commercially credible: large enterprises accumulate overlapping scanners and security platforms, while remediation teams lack a shared view of asset criticality, identity context, exposure, and control coverage. A normalization and correlation layer can reduce manual data joining and make ticketing, ownership, and executive reporting more consistent. The market is nevertheless crowded. Tenable, Qualys, Rapid7, ServiceNow, Palo Alto Networks, CrowdStrike, and security-data vendors all address portions of exposure management, attack-surface visibility, analytics, or remediation. Avalor's differentiation therefore depends less on the existence of connectors than on measurable improvement in prioritization quality, remediation speed, integration cost, and retention within Zscaler's broader platform.
+The current Zscaler UVM product page describes the surviving commercial offer as built on Data Fabric for Security. It says the system correlates vulnerability and exploitability feeds with identity, asset, user-behavior, control, business-process, and organizational data, using more than 150 prebuilt connectors. Administrators can customize risk factors and weights, add data sources, create reports, and automate remediation through ticket assignment, two-way ticket reconciliation, and exception management. Zscaler also presents AnySource and AnyTarget connectors and a continuous threat exposure management (CTEM) accelerator. These are vendor descriptions; the public sources reviewed do not independently measure connector coverage, normalization accuracy, or the effort required to maintain integrations as upstream APIs and schemas change.
 
-Commercial traction is difficult to evaluate on a standalone basis after the transaction. Zscaler's acquisition announcement identified the product, the integration footprint, and the strategic rationale, while Avalor's own post-acquisition commentary said the team would continue inside Zscaler. Those are meaningful validation signals, but they are not equivalent to current standalone revenue, customer counts, renewal rates, or independent financial performance. The asset's roadmap, packaging, and operating identity may have changed as it was incorporated into Zscaler's Zero Trust Exchange and Risk360-related portfolio. Diligence should therefore focus on current availability, customer adoption, attach and expansion rates, data residency, integration reliability, and whether the product creates incremental value beyond existing Zscaler licenses.
+The practical value proposition is to reduce alert overload and move from vulnerability discovery to an owned, contextualized remediation action. That can matter where multiple scanners report duplicate issues or where the same vulnerability has different operational significance depending on asset criticality, identity context, business role, exploitability, and compensating controls. It may also improve reporting consistency across security, IT, and business teams. The product’s architecture creates an integration burden as well as an advantage: an incorrect entity match, stale feed, or incomplete relationship can mis-rank risk, obscure an exposed asset, or send a ticket to the wrong owner. Diligence should test data freshness, deduplication quality, explainability of risk scores, ingestion failure handling, connector maintenance, and the rate at which recommendations result in verified fixes.
 
-The defense and national-security case is credible at the defensive cyber-operations layer. Government and defense SOCs also need to correlate heterogeneous vulnerability, asset, identity, and control data, prioritize exploitable exposure, and document remediation across complex environments. That does not establish a defense deployment or government contract: the public evidence reviewed describes a commercial Zscaler product and does not demonstrate classified, disconnected, sovereign, or edge deployment. The strongest strategic relevance is consequently as an enabling exposure-management and security-data capability, with additional diligence required on tenant isolation, auditability, offline or constrained operation, compliance authorizations, data handling, and the ability to integrate with non-Zscaler systems.
-"""
+Acquisition changed the distribution and data context. Zscaler acquired all outstanding equity of Avalor Technologies Ltd. in March 2024 and states in its FY2026 filing that Avalor's technology has been integrated into its cloud platform. The acquisition announcement described Zscaler telemetry being combined with Avalor's third-party sources. Zscaler's current product materials continue to market UVM under the Zscaler brand. This gives the product access to an established security platform, sales channel, and proprietary telemetry, but the public material does not establish how much of the UVM code, team, or roadmap remains distinct, whether all historical connectors remain maintained, or how much customer value depends on Zscaler-only data. Avalor should therefore be evaluated as an acquired capability inside a public platform, not as a presently independent venture-backed vendor.
+
+There is evidence of commercial use, but it is not a standalone financial series. In its September 2024 Q4 earnings call, Zscaler said UVM acquired through Avalor was seeing strong traction. It also attributed nearly three percentage points of Q4 new and upsell business growth and two points for fiscal 2024 to its broader AI-Analytics group, which included UVM; those figures are not UVM-only revenue or contract value. The current UVM page presents customer stories and testimonials from Cushman & Wakefield, AdventHealth, and LifeLabs. These support the existence of product-level customer references, but do not disclose deal dates, prices, usage levels, renewals, or which parts of the deployment came specifically from Avalor technology. Before acquisition, TechCrunch reported 35 employees in April 2023 and said the CEO declined to disclose revenue or customer count. Ynet reported roughly 80 employees in March 2024. A Globes estimate placed end-2023 ARR near $3 million, but no company report or filing reviewed corroborates it.
+
+The competitive set spans both specialist vulnerability products and broader exposure-management suites. Tenable One combines visibility across IT, cloud, identity, OT, and other assets with risk analytics and third-party connectors. Qualys VMDR couples vulnerability detection and threat intelligence with risk ranking, patching, and remediation. ServiceNow Vulnerability Response imports third-party findings, reconciles them with its configuration-management data, and routes remediation work. Avalor's historical distinction was the security-oriented normalization layer and cross-source context across multiple vendors, not exclusive ownership of vulnerability scanning. That advantage could be less compelling when customers already have an exposure platform, a mature service-management workflow, or the engineering capacity to unify data themselves. Zscaler distribution and first-party telemetry strengthen the integrated offer, while increasing the importance of proving portability, interoperability, and incremental outcomes for customers whose security estate is not centered on Zscaler.
+
+The founding team brought enterprise data-platform experience into cyber security. TechCrunch described Tishbi as having led engineering at Datorama, after work at Citi and Playtika; Israeli reporting describes Raz as a former Datorama engineering leader and names both as Avalor co-founders, with Raz CEO and Tishbi CTO. That background maps directly to the data integration and analytics problem the company selected. It does not by itself establish deep vulnerability research or government cyber-operations experience. Their current roles, the retained engineering team, and ownership of the post-acquisition roadmap are not established by the reviewed public sources. Avalor's patent record includes granted claims around vulnerability-ticket grouping and multi-tenant language-model training, plus later data-fabric and exposure-management applications; patent listing metadata is not a substitute for a complete verified portfolio or legal opinion on present ownership.
+
+Strategically, the asset adds a contextual exposure-management layer to Zscaler's broader cloud security platform. It is relevant to commercial organizations seeking to triage and remediate cyber risk across fragmented tools, and the same defensive workflow has plausible use in public-sector and defense security operations. Public evidence reviewed does not identify an Avalor-derived UVM contract with a government or defense customer, a classified or disconnected deployment, or a sovereign-hosting authorization. Zscaler's broader federal business cannot be attributed to Avalor UVM without product-specific evidence. The strongest current conclusion is that Avalor supplied a technically relevant capability that Zscaler continues to commercialize, while independent adoption, financial contribution, and defense suitability remain diligence questions."""
 logo = "https://www.zscaler.com/assets/images/logo_blue.svg"
 website = "https://avalor.io"
 sector = "Cybersecurity"
 founded = "2022"
-headquarters = "Ramat Gan, Israel (pre-acquisition); integrated into Zscaler"
-employees = "Unknown following acquisition; reported at approximately 80 in March 2024"
-funding_stage = "Acquired by Zscaler (closed March 2024); last disclosed independent funding was Series A in 2023"
+headquarters = "Ramat Gan, Israel (pre-acquisition headquarters; current operations are part of Zscaler)"
+employees = "Unknown following acquisition; Ynet reported approximately 80 employees in March 2024"
+funding_stage = "Acquired by Zscaler in March 2024; last disclosed independent financing was a $25 million Series A in April 2023"
 entity_type = "acquired_asset"
 dual_use = true
-dual_use_description = "Avalor's security-data correlation and vulnerability-prioritization technology has substantive dual-use potential because enterprise and government SOCs face the same basic problem of fragmented exposure data. The defense case is defensive and operational, not evidence of offensive capability or a confirmed government deployment; it depends on deployment controls, auditability, data sovereignty, and support for heterogeneous or constrained environments."
-key_technologies = ["Security-specific data fabric and common data model", "Normalization, deduplication, and correlation of heterogeneous security telemetry", "150-plus pre-built integrations for security and business systems", "Contextual and customizable vulnerability prioritization", "Zero-copy analytics across enterprise security data", "Entity and relationship mapping across assets, identities, findings, and controls", "Remediation workflow, reporting, and ticketing integration"]
-use_cases = ["Prioritize vulnerability remediation using asset, identity, exposure, and control context", "Unify outputs from vulnerability scanners, asset inventories, identity systems, and security controls", "Correlate findings to reduce duplicate work and improve ownership assignment", "Generate risk and remediation reporting for security leadership and auditors", "Automate ticket creation, status synchronization, and remediation workflows", "Support continuous threat-exposure management across cloud and on-premises environments", "Help government or defense SOCs correlate exposure data across heterogeneous defensive toolchains"]
+dual_use_description = "Avalor's technology has a concrete commercial defensive use in correlating enterprise security and business data, ranking vulnerability exposure, and assigning remediation. The same functions are relevant to government and defense SOCs protecting mission networks and critical infrastructure, where analysts must prioritize findings across diverse tools and document remediation. This supports a defensive cyber dual-use assessment, not a claim of military deployment or a defense contract. No Avalor-derived UVM government, classified, disconnected, or sovereign-cloud deployment was identified in the reviewed public sources; fit for those environments depends on data residency, access controls, authorization, auditability, and integration with non-Zscaler systems."
+key_technologies = [
+  "Security-specific data fabric and common semantic model",
+  "Connectors for heterogeneous vulnerability, identity, asset, cloud, control, and business data",
+  "Normalization, deduplication, entity correlation, and security knowledge-graph methods",
+  "Contextual risk scoring with configurable factors and mitigating-control weights",
+  "AnySource ingestion and AnyTarget workflow integrations",
+  "Two-way ticketing, remediation assignment, exception handling, and reporting",
+  "Data lineage and zero-copy analytics as described in Zscaler materials"
+]
+use_cases = [
+  "Correlate and de-duplicate vulnerability findings across scanners and security feeds",
+  "Prioritize exposures using asset, identity, business, exploitability, and control context",
+  "Assign, reconcile, and track remediation tickets across security and IT teams",
+  "Report exposure posture, remediation progress, KPIs, and service-level performance",
+  "Support continuous threat exposure management across heterogeneous enterprise environments",
+  "Apply defensive exposure triage workflows in government or defense SOCs, subject to deployment and compliance validation"
+]
 investible = false
-investment_rationale = "Avalor has credible technology and strategic validation through Zscaler's acquisition, but it is no longer an independent startup investment opportunity. This record is best used as a strategic market and capability reference; current diligence should examine how the asset is packaged, adopted, and integrated within Zscaler rather than treating historical startup signals as an investible standalone company."
-strategic_value = "The asset is strategically relevant because a normalized security-data layer can improve the quality and speed of exposure-management decisions across a fragmented tool environment. Its value to national-security users is conditional: the capability is relevant to defensive cyber operations, but public evidence does not establish government adoption, classified handling, sovereign hosting, or operation in disconnected environments."
-potential_score = 73.0
+investment_rationale = "Avalor is not an independent investment opportunity following Zscaler's acquisition of all outstanding equity in 2024. Its historical financing, product design, and integration into a large security platform make it useful as a strategic capability reference. The key investment-style questions now concern Zscaler's product adoption and incremental economics, not a private Avalor cap table. Public evidence does not isolate UVM revenue, contract value, margin, renewal rates, or customer-acquisition costs. The approximately $3 million end-2023 ARR figure is a Globes estimate rather than a company-reported metric. The filed acquisition consideration and media transaction values also use unclear or differing definitions, so none should be treated as a disclosed return to individual investors."
+strategic_value = "The strategic value is a security-specific data integration layer that can make vulnerability prioritization more contextual and remediation more accountable. Zscaler has integrated the technology into its cloud platform and combines the data fabric with its own telemetry, which may improve distribution and the information available to UVM. That value depends on product outcomes: better asset matching, fewer duplicate tickets, faster remediation, and useful risk explanations. For national-security users, these capabilities map to defensive cyber readiness, but there is no public Avalor-specific government deployment evidence. The product's cloud delivery, data handling, authorization, sovereign hosting, and disconnected-operation constraints need to be established for sensitive environments."
+potential_score = 61.0
 technology_score = 84.0
-market_score = 78.0
-team_score = 61.0
-dual_use_score = 74.0
-strategic_alignment_score = 76.0
+market_score = 76.0
+team_score = 64.0
+dual_use_score = 63.0
+strategic_alignment_score = 72.0
 stage = "unknown"
-stage_rationale = "Avalor was founded in 2022 and acquired by Zscaler in March 2024. The current product is embedded in a public-company platform, so early, mid, or mature startup-stage labels would imply a standalone operating and financing context that the available evidence no longer supports."
-competitors = ["Tenable One", "Qualys VMDR", "Rapid7 InsightVM", "ServiceNow Vulnerability Response", "Palo Alto Networks Cortex XSIAM and exposure-management offerings", "CrowdStrike Falcon exposure-management offerings", "Cribl and other security-data pipeline platforms"]
-competitive_edge = "Avalor's defensible proposition was the combination of a security-specific data model, broad integrations, contextual correlation, and remediation-oriented workflows. Zscaler adds a large security-cloud data source and distribution platform, but that advantage also raises the bar: the product must demonstrate better prioritization and operational outcomes than vulnerability-management suites, SIEM/XDR platforms, and general-purpose data pipelines that customers may already own."
-risk_factors = ["Acquisition-integration risk, including loss of key personnel, roadmap disruption, or reduced standalone product visibility", "Crowded and converging market in which vulnerability management, CNAPP, XDR, SIEM, and exposure-management vendors overlap", "Bundling and platform-pricing pressure from Zscaler and larger security vendors", "Connector and schema-maintenance burden across changing scanners, cloud services, identity systems, and ticketing tools", "Data-quality risk if normalization, deduplication, asset identity, or contextual scoring is incomplete or wrong", "Deployment, privacy, residency, and compliance constraints for regulated, sovereign, or disconnected environments", "Limited public evidence on current standalone revenue, customer retention, product packaging, and government adoption"]
+stage_rationale = "Avalor was acquired in 2024 and its technology is integrated into Zscaler; a standalone startup stage no longer describes its current operating context."
+competitors = ["Tenable One", "Qualys VMDR", "ServiceNow Vulnerability Response"]
+competitive_edge = "Avalor's historical edge was a security-specific data fabric connecting multi-vendor findings with identity, asset, business, and control context, then using that model for prioritization and remediation workflow. Zscaler adds platform distribution and proprietary telemetry. Tenable and Qualys bring extensive vulnerability and exposure products; ServiceNow brings installed workflow and configuration-management context. Avalor's connector count alone is not a moat. Defensibility depends on reliable normalization, explainable risk scoring, integrations customers cannot maintain cheaply themselves, and measurable remediation improvements. The integrated offer must also remain useful in mixed-vendor environments rather than requiring customers to center their security stack on Zscaler."
+risk_factors = [
+  "Avalor is no longer an independent company; post-acquisition product scope, packaging, roadmap ownership, and retained team are not publicly detailed.",
+  "Standalone revenue, recurring revenue, customer count, renewal, retention, and margin are unavailable; the approximately $3 million end-2023 ARR figure is a third-party estimate.",
+  "A crowded exposure-management market includes Tenable One, Qualys VMDR, ServiceNow Vulnerability Response, and other platform vendors.",
+  "More than 150 connectors create ongoing schema, API, authentication, data-quality, and upstream-change maintenance requirements.",
+  "Incorrect entity resolution, incomplete context, or opaque risk scores could mis-prioritize remediation or conceal important exposures.",
+  "Zscaler platform integration may improve distribution but may limit neutrality, portability, or value for customers centered on competing platforms.",
+  "Security data aggregation creates privacy, residency, access-control, retention, and regulatory obligations, especially for public-sector and critical-infrastructure users.",
+  "Public evidence does not establish Avalor-derived UVM authorization for classified, disconnected, or sovereign-cloud deployments.",
+  "Patent search results identify relevant records, but the complete portfolio, current legal status, and assignment chain have not been independently verified in official registers."
+]
 risk_level = "medium"
 signals = []
 priority_rank = 0
-priority_rationale = "A high-relevance reference for security-data fabrics and defensive exposure management, with credible but conditional dual-use value. It remains outside the site's standalone startup priority set because Zscaler completed the acquisition and current independent traction, ownership, and deployment evidence are limited."
+priority_rationale = "A strategically relevant example of security-data integration and defensive exposure management, with a current Zscaler UVM product and historical product traction signals. The 2024 acquisition removes standalone startup investibility; independent revenue, current team, customer economics, and Avalor-specific public-sector use remain unknown."
 crawled_at = '2026-01-31T18:10:00+00:00'
-updated_at = "2026-10-04T00:49:47Z"
+updated_at = "2026-10-22T00:42:12Z"
 public_sources = [
-  { label = "Zscaler acquisition announcement", url = "https://www.zscaler.com/press/zscaler-expands-its-zero-trust-exchange-ai-powered-cloud", description = "Acquisition close date, product, integrations and transaction terms." },
-  { label = "Zscaler FY2024 Form 10-K", url = "https://ir.zscaler.com/static-files/9416124f-e428-4765-8a0a-0940c48d2bae", description = "Acquisition accounting and purchase price consideration." },
-  { label = "TechCrunch funding report", url = "https://techcrunch.com/2023/04/18/avalor-wants-to-unify-cybersecurity-tools-by-aggregating-data/", description = "Seed and Series A funding, investors, employee count, product and undisclosed revenue/customer counts." },
-  { label = "Globes acquisition report", url = "https://en.globes.co.il/en/article-zscaler-buys-israeli-cybersecurity-co-avalor-for-350m-1001473752", description = "Israeli reporting on sale price, company history, founders, investors and estimated ARR." },
-  { label = "Zscaler Unified Vulnerability Management", url = "https://www.zscaler.com/products-and-solutions/vulnerability-management", description = "Current product positioning and integrations." },
-  { label = "Ynetnews acquisition report", url = "https://www.ynetnews.com/business/article/sjapmefaa", description = "Israeli reporting on acquisition, team, headquarters and historical staffing." },
-  { label = "Cyberstarts portfolio: Avalor", url = "https://www.cyberstarts.com/companies/avalor", description = "Investor portfolio confirms acquisition by Zscaler and founders." },
-  { label = "Avalor patent assignment listings", url = "https://patents.justia.com/assignee/avalor-technologies-ltd", description = "Patent listings assigned to Avalor Technologies Ltd." },
-  { label = "Avalor customer case study", url = "https://info.avalor.io/rs/888-FAR-996/images/Avalor_Case_Study-Consumer_Goods.pdf", description = "Historical company-hosted case study supports Avalor's use of the avalor.io domain and post-acquisition product context." },
-  { label = "Salvador Technologies official site (identity disambiguation)", url = "https://salvador-tech.com/", description = "Used only to resolve the fuzzy name match; identifies a separate OT/ICS recovery offering on salvador-tech.com." }
+  { label = "Zscaler acquisition announcement", url = "https://www.zscaler.com/press/zscaler-expands-its-zero-trust-exchange-ai-powered-cloud", description = "Avalor acquisition announcement, product architecture, integrations, UVM launch use case, transaction payment description, and public close date." },
+  { label = "Zscaler FY2024 Form 10-K", url = "https://ir.zscaler.com/static-files/9416124f-e428-4765-8a0a-0940c48d2bae", description = "Israeli incorporation, March 8 acquisition completion, exact purchase-price consideration, and award accounting." },
+  { label = "Zscaler FY2026 Form 10-K", url = "https://ir.zscaler.com/static-files/9c6b5564-b169-4f39-bff3-6281212488fe", description = "Confirms acquisition of all Avalor equity and integration of its technology into Zscaler's cloud platform." },
+  { label = "TechCrunch funding and company profile", url = "https://techcrunch.com/2023/04/18/avalor-wants-to-unify-cybersecurity-tools-by-aggregating-data/", description = "Funding rounds, named lead and Series A participants, 2023 employee count, founder background, product description, and undisclosed revenue/customer metrics." },
+  { label = "Cyberstarts portfolio: Avalor", url = "https://www.cyberstarts.com/companies/avalor", description = "Investor profile, 2022 founding, founders, product description, and 2024 acquisition by Zscaler." },
+  { label = "TCV portfolio: Avalor", url = "https://www.tcv.com/partnerships/avalor", description = "Lead investor's Avalor profile, security data-fabric description, Tel Aviv location, and conflicting 2021 founding year." },
+  { label = "Globes acquisition report", url = "https://en.globes.co.il/en/article-zscaler-buys-israeli-cybersecurity-co-avalor-for-350m-1001473752", description = "Israeli reporting on sale value, founders, early investors, and the approximately $3 million end-2023 ARR estimate." },
+  { label = "Ynetnews acquisition report", url = "https://www.ynetnews.com/business/article/sjapmefaa", description = "Ramat Gan headquarters, approximately 80 employees in March 2024, co-founders, investor names, and reported transaction value." },
+  { label = "Zscaler Unified Vulnerability Management", url = "https://www.zscaler.com/products-and-solutions/vulnerability-management", description = "Current official UVM offer, Data Fabric features, 150-plus integrations, workflows, vendor-stated outcomes, and customer stories." },
+  { label = "Zscaler Q4 FY2024 earnings call", url = "https://ir.zscaler.com/static-files/fcc804e5-d2ec-474e-a8f1-bfdbc394f082", description = "Zscaler's reported UVM traction and aggregate AI-Analytics contribution, which includes but is not isolated to UVM." },
+  { label = "Avalor legacy domain redirect", url = "https://avalor.io/", description = "The historical official Avalor domain redirects to Zscaler's current UVM product page." },
+  { label = "Salvador Technologies official site (identity disambiguation)", url = "https://salvador-tech.com/", description = "Confirms a similarly named but separate OT/ICS recovery company, distinct from Avalor Technologies Ltd. and its avalor.io domain." },
+  { label = "US Patent 12,111,936", url = "https://patents.google.com/patent/US12111936B2/en", description = "Patent record for cybersecurity vulnerability ticket grouping; lists Avalor Technologies Ltd. and Zscaler, Inc. as assignees." },
+  { label = "US Patent 12,353,457", url = "https://patents.google.com/patent/US12353457B2/en", description = "Patent record for multi-tenant language-model training; lists Avalor Technologies Ltd. and Zscaler, Inc. as assignees." },
+  { label = "US Patent Application 2025/0233884", url = "https://patents.google.com/patent/US20250233884A1/en", description = "Published Avalor data-fabric application for exposure and attack-surface management; listed as pending." },
+  { label = "US Patent Application 2025/0274469", url = "https://patents.google.com/patent/US20250274469A1/en", description = "Published Avalor application on automated mapping of raw data into a data fabric; listed as pending." },
+  { label = "Tenable One", url = "https://www.tenable.com/products/tenable-one", description = "Official competitor description of broad exposure visibility, analytics, risk scoring, and third-party connectors." },
+  { label = "Qualys VMDR", url = "https://www.qualys.com/apps/vulnerability-management-detection-response", description = "Official competitor description of threat-informed prioritization, vulnerability management, integrations, and remediation." },
+  { label = "ServiceNow Vulnerability Response", url = "https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html", description = "Official documentation for third-party finding ingestion, configuration-data reconciliation, remediation tasks, and workflow management." }
 ]
 
 [intelligence]
 schema_version = 2
-people = [
-  { name = "Raanan Raz", role = "Co-founder and former CEO", is_founder = true, current = false, background = "Previously held engineering roles at Datorama before co-founding Avalor.", source_ids = ["zscaler_release", "globes_sale", "ynet_sale"] },
-  { name = "Kfir Tishbi", role = "Co-founder and former CTO", is_founder = true, current = false, background = "Previously worked on data and high-performance computing at Datorama and other technology companies, according to Israeli reporting.", source_ids = ["globes_sale", "ynet_sale", "cyberstarts_avalor"] }
-]
-investors = [
-  { name = "Cyberstarts", investor_type = "vc", website = "https://www.cyberstarts.com", round_ids = ["seed-2022"], relationship = "historical", source_ids = ["tc_funding", "cyberstarts_avalor"] },
-  { name = "Jibe Ventures", investor_type = "vc", round_ids = ["seed-2022"], relationship = "historical", source_ids = ["tc_funding", "ynet_sale"] },
-  { name = "TCV", investor_type = "vc", website = "https://www.tcv.com", round_ids = ["series-a-2023"], relationship = "historical", source_ids = ["tc_funding"] },
-  { name = "Salesforce Ventures", investor_type = "corporate", website = "https://ventures.salesforce.com", round_ids = ["series-a-2023"], relationship = "historical", source_ids = ["tc_funding"] }
-]
-financials = []
-traction = []
-intellectual_property = []
-comparables = []
+
+[[intelligence.people]]
+name = "Raanan Raz"
+role = "Co-founder and former CEO"
+is_founder = true
+current = false
+background = "Israeli reporting identifies Raz as an engineering leader at Datorama before co-founding Avalor. TechCrunch quotes him as CEO in 2023 and Zscaler identifies him as Avalor co-founder and CEO in its 2024 announcement. His post-acquisition role is not established by the reviewed sources."
+source_ids = ["tc_funding", "zscaler_release", "ynet_sale", "globes_sale"]
+
+[[intelligence.people]]
+name = "Kfir Tishbi"
+role = "Co-founder and former CTO"
+is_founder = true
+current = false
+background = "TechCrunch reports that Tishbi led engineering at Datorama after roles at Citi and Playtika; Israeli reporting describes him as an Avalor co-founder and CTO. Current responsibilities after the Zscaler acquisition are not publicly established in the sources reviewed."
+source_ids = ["tc_funding", "ynet_sale", "globes_sale"]
+
+[[intelligence.investors]]
+name = "Cyberstarts"
+investor_type = "vc"
+website = "https://www.cyberstarts.com"
+round_ids = ["seed-2022"]
+relationship = "historical"
+source_ids = ["tc_funding", "cyberstarts_avalor", "ynet_sale"]
+
+[[intelligence.investors]]
+name = "Jibe Ventures"
+investor_type = "vc"
+round_ids = ["seed-2022"]
+relationship = "historical"
+source_ids = ["ynet_sale", "globes_sale"]
+notes = "Reported as a participant in the seed financing; individual investment amount and terms were not disclosed."
+
+[[intelligence.investors]]
+name = "TCV"
+investor_type = "vc"
+website = "https://www.tcv.com"
+round_ids = ["series-a-2023"]
+relationship = "historical"
+source_ids = ["tc_funding", "tcv_avalor"]
+
+[[intelligence.investors]]
+name = "Salesforce Ventures"
+investor_type = "corporate"
+round_ids = ["series-a-2023"]
+relationship = "historical"
+source_ids = ["tc_funding"]
+
+[[intelligence.investors]]
+name = "Ran Sarig"
+investor_type = "angel"
+round_ids = []
+relationship = "historical"
+source_ids = ["globes_sale"]
+notes = "Globes identifies Sarig as an initial investor; the source does not specify a round, amount, or terms."
+
+[[intelligence.investors]]
+name = "Efi Cohen"
+investor_type = "angel"
+round_ids = []
+relationship = "historical"
+source_ids = ["globes_sale"]
+notes = "Globes identifies Cohen as an initial investor; the source does not specify a round, amount, or terms."
 
 [intelligence.company]
 company_id = "il-avalor"
 aliases = ["Avalor"]
 operating_status = "acquired"
-business_model = "Enterprise cybersecurity software platform sold as a data fabric for security and vulnerability management; now offered within Zscaler's cloud security portfolio."
-products = ["Data Fabric for Security", "Unified Vulnerability Management (UVM)"]
-locations = ["Ramat Gan, Israel", "United States"]
+business_model = "Enterprise cybersecurity software historically offered as a security data fabric; its technology is now integrated and commercialized in Zscaler's UVM product."
+products = ["Data Fabric for Security", "Unified Vulnerability Management (UVM)", "Continuous Threat Exposure Management accelerator"]
+locations = ["Ramat Gan, Israel (pre-acquisition headquarters)"]
 country_of_incorporation = "Israel"
-source_ids = ["zscaler_release", "zscaler_10k", "tc_funding", "globes_sale"]
+founded_on = "2022"
+source_ids = ["zscaler_10k_2024", "zscaler_10k_2026", "cyberstarts_avalor", "tcv_avalor", "zscaler_uvm", "tc_funding", "ynet_sale", "salvador_official"]
+notes = "The legal name is Avalor Technologies Ltd. per Zscaler's filing. TCV's portfolio lists 2021 as the founding year, while Cyberstarts and other company-era reporting use 2022; the difference may reflect formation versus public launch and remains unresolved. Avalor is distinct from similarly named Salvador Technologies, an OT/ICS recovery company on a different domain."
 
 [intelligence.funding]
 status = "reported"
-summary = "Company-announced public funding totals $30 million through the April 2023 Series A: a $5 million seed round in 2022 followed by a $25 million Series A led by TCV. No separate later financing was found before acquisition. The 2024 sale consideration is an ownership transaction, not funding."
+summary = "The disclosed independent financing comprises a $5 million seed round in 2022 and a $25 million Series A in April 2023. TechCrunch reports the company's cumulative raised total at $30 million as of the Series A. No separate financing after that round and before Zscaler's acquisition was identified. The acquisition consideration is an ownership transaction, not startup funding."
 reported_total_raised = 30000000
 reported_total_currency = "USD"
 total_source_ids = ["tc_funding"]
 total_as_of = "2023-04"
-total_scope = "Company-announced cumulative equity funding through Series A; excludes acquisition consideration."
+total_scope = "Company-announced cumulative equity funding reported at the April 2023 Series A; excludes acquisition consideration and no separately identified grant or debt amount."
 history_status = "partial"
 coverage_through = "2024-03"
 
@@ -103,9 +194,10 @@ amount = 5000000
 amount_scope = "round"
 currency = "USD"
 lead_investors = ["Cyberstarts"]
-participating_investors = ["Jibe Ventures", "industry angels"]
-source_ids = ["tc_funding"]
-notes = "TechCrunch reports a $5 million seed round led by Cyberstarts in 2022 and names Jibe Ventures and industry angels as participants."
+participating_investors = ["Jibe Ventures", "unnamed industry angels"]
+valuation_basis = "undisclosed"
+source_ids = ["tc_funding", "ynet_sale", "globes_sale"]
+notes = "TechCrunch reports the $5 million seed led by Cyberstarts. Ynet reports Jibe Ventures and unnamed industry angels as participants. Globes names Datorama founders Ran Sarig and Efi Cohen among initial investors but does not tie their individual investments to a specific round, so they are not added to this participant list."
 
 [[intelligence.funding.rounds]]
 id = "series-a-2023"
@@ -119,95 +211,231 @@ amount_scope = "round"
 currency = "USD"
 lead_investors = ["TCV"]
 participating_investors = ["Salesforce Ventures"]
+valuation_basis = "undisclosed"
 source_ids = ["tc_funding"]
-notes = "TechCrunch reports the $25 million round led by TCV with Salesforce Ventures participating; its $30 million lifetime total includes the earlier seed."
+notes = "TechCrunch reports the $25 million Series A announced in April 2023, led by TCV with Salesforce Ventures participating. No round valuation is stated in the cited funding announcement."
 
 [intelligence.ownership]
 status = "reported"
-summary = "Zscaler, Inc. acquired Avalor Technologies Ltd. The acquisition closed March 13, 2024 per Zscaler's release (the 10-K states March 8). Zscaler's 10-K reports $256.7 million total purchase price consideration; employee restricted stock awards are separately described. Israeli media reported a $350 million deal value. Private pre-close cap table and individual ownership percentages are not publicly established by the sources reviewed."
+summary = "Zscaler acquired all outstanding equity of Avalor Technologies Ltd. The FY2024 Form 10-K records $256.687 million total purchase-price consideration; the FY2026 Form 10-K continues to describe the technology as integrated into Zscaler's cloud platform. Zscaler's press release gives a March 13, 2024 close date while the filed acquisition note states March 8. Globes and Ynet report $350 million as a transaction value, a different measure from the filed purchase-price consideration; seller proceeds and the private pre-acquisition cap table are not disclosed. Parent-company ticker: NASDAQ: ZS."
 parent_company = "Zscaler, Inc."
-stock_ticker = "NASDAQ: ZS"
 cap_table_status = "undisclosed"
 shareholders = ["Zscaler, Inc."]
-source_ids = ["zscaler_release", "zscaler_10k", "globes_sale", "ynet_sale"]
+source_ids = ["zscaler_10k_2024", "zscaler_10k_2026", "zscaler_release", "globes_sale", "ynet_sale"]
+holdings = []
 
 [[intelligence.ownership.deals]]
 id = "zscaler-acquisition-2024"
 deal_type = "acquisition"
 company_role = "target"
 announced_on = "2024-03-14"
-completed_on = "2024-03-13"
+completed_on = "2024-03-08"
 status = "completed"
 counterparty = "Zscaler, Inc."
-amount = 256700000
+amount = 256687000
 amount_status = "reported"
 currency = "USD"
-source_ids = ["zscaler_release", "zscaler_10k", "globes_sale", "ynet_sale"]
-notes = "Zscaler's FY2024 10-K states purchase price consideration of $256.7 million ($256.687 million in allocation table), plus $46.5 million fair value of deferred merger consideration awards and $14.4 million replacement awards, of which $2.4 million pre-combination vesting was allocated to purchase price. The awards are not added to the numeric purchase-price field. Zscaler's release says closing March 13; the 10-K says March 8. Globes and Ynet reported $350 million as the transaction value. The different dates and media valuation are retained as conflicts; the filed accounting figure is used for the reported purchase-price field."
+source_ids = ["zscaler_10k_2024", "zscaler_10k_2026", "zscaler_release", "globes_sale", "ynet_sale"]
+notes = "The amount is Zscaler's filed $256.687 million purchase-price consideration, not a claim about cash distributed to sellers. The acquisition release states it closed March 13, whereas the Form 10-K records completion on March 8. Globes and Ynet report $350 million transaction values; those reports are preserved as a different measure rather than substituted into the filing-based field."
+
+[[intelligence.financials]]
+name = "arr"
+value = "Approximately USD 3 million ARR, estimated by Globes"
+as_of = "2023-12"
+basis = "estimated"
+metric = "arr"
+numeric_value = 3000000
+value_relation = "approximate"
+unit = "currency"
+currency = "USD"
+period_end = "2023-12-31"
+source_ids = ["globes_sale"]
+notes = "Third-party estimate only. TechCrunch reported that the CEO declined to disclose revenue and customer count, and no filing or company metric corroborates the estimate."
+
+[[intelligence.financials]]
+name = "employees"
+value = "35 employees reported by TechCrunch"
+as_of = "2023-04"
+basis = "reported"
+metric = "employees"
+numeric_value = 35
+value_relation = "exact"
+unit = "people"
+source_ids = ["tc_funding"]
+
+[[intelligence.financials]]
+name = "employees"
+value = "Approximately 80 employees reported by Ynetnews"
+as_of = "2024-03"
+basis = "reported"
+metric = "employees"
+numeric_value = 80
+value_relation = "approximate"
+unit = "people"
+source_ids = ["ynet_sale"]
+notes = "Historical press-reported headcount before acquisition; current Avalor-specific headcount is not disclosed."
+
+[[intelligence.traction]]
+kind = "product"
+description = "Zscaler currently markets Unified Vulnerability Management on Data Fabric for Security, with 150-plus prebuilt integrations, configurable contextual risk scoring, reporting, CTEM support, and automated two-way ticket workflows. Product features and claimed efficiency metrics are vendor statements."
+source_ids = ["zscaler_uvm", "zscaler_release"]
+
+[[intelligence.traction]]
+kind = "product"
+date = "2024-09-03"
+description = "Zscaler's Q4 FY2024 earnings call said the acquired UVM solution was seeing strong traction. The same call attributed nearly three percentage points of Q4 new and upsell business growth and two points for FY2024 to the broader AI-Analytics group including UVM; it did not disclose UVM-only revenue or bookings."
+source_ids = ["zscaler_q4_fy24"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Zscaler's current UVM page presents a customer success story and CISO testimonial from Cushman & Wakefield. The page does not disclose deal value, deployment date, renewal, or standalone Avalor-derived product economics."
+source_ids = ["zscaler_uvm"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Zscaler's current UVM page presents a customer success story and CISO testimonial from AdventHealth. The cited page does not establish contract value, paid deployment details, or a financial contribution attributable solely to Avalor technology."
+source_ids = ["zscaler_uvm"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Zscaler's current UVM page presents a customer success story and CISO testimonial from LifeLabs. The page does not provide contract amount, timing, retention, or standalone Avalor revenue data."
+source_ids = ["zscaler_uvm"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+date = "2024-10-08"
+description = "US Patent 12,111,936, Cybersecurity Vulnerability Management System and Method Thereof, was granted for grouping overlapping security alerts into unified tickets. Google Patents lists Avalor Technologies Ltd. and Zscaler, Inc. as assignees and describes the status as active; the listing cautions that legal status and assignee metadata are not a legal conclusion."
+source_ids = ["google_patent_us12111936"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+date = "2025-07-08"
+description = "US Patent 12,353,457, System and Method for Training a Multi-Tenant Language Model, was granted with Avalor Technologies Ltd. and Zscaler, Inc. listed as assignees. Google Patents identifies a system connecting semantic data fields, tenant-specific model training, and database-backed responses; legal status and ownership should be checked against official records."
+source_ids = ["google_patent_us12353457"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+date = "2025-07-17"
+description = "Published US application 2025/0233884, Exposure and Attack Surface Management Using a Data Fabric, lists Avalor Technologies Ltd. as applicant and is described as pending in Google Patents. Its claims concern ingesting heterogeneous security data, correlating it in a security knowledge graph, calculating exposure posture, and triggering remediation workflows."
+source_ids = ["google_patent_us20250233884"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+date = "2025-08-28"
+description = "Published US application 2025/0274469, Automated Mapping of Raw Data into a Data Fabric, lists Avalor Technologies Ltd. as applicant and is described as pending in Google Patents. It concerns mapping raw data into a target semantic model for the data fabric."
+source_ids = ["google_patent_us20250274469"]
+
+[[intelligence.comparables]]
+name = "Tenable One"
+website = "https://www.tenable.com/products/tenable-one"
+rationale = "Direct exposure-management competitor that aggregates visibility across IT, cloud, identity, OT, and other assets and uses analytics to prioritize remediation."
+differentiation = "Tenable's platform is built around its vulnerability and exposure-management suite, with third-party connectors; Avalor's historical proposition was a vendor-neutral security data fabric, now integrated into Zscaler UVM."
+source_ids = ["tenable_one", "zscaler_uvm"]
+
+[[intelligence.comparables]]
+name = "Qualys VMDR"
+website = "https://www.qualys.com/apps/vulnerability-management-detection-response"
+rationale = "Competes on vulnerability discovery, threat-informed risk prioritization, and remediation across assets."
+differentiation = "Qualys combines its assessment platform, threat intelligence, and patch/remediation functions; Avalor-derived UVM emphasizes normalization and contextual correlation of third-party findings with business and control data."
+source_ids = ["qualys_vmdr", "zscaler_uvm"]
+
+[[intelligence.comparables]]
+name = "ServiceNow Vulnerability Response"
+website = "https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+rationale = "Overlaps in ingesting vulnerability scanner findings, reconciling them to enterprise configuration data, and coordinating remediation tasks."
+differentiation = "ServiceNow centers response on its IT service-management and configuration-management workflows; Avalor's fabric was purpose-built to correlate multi-vendor security and business data and is now distributed through Zscaler."
+source_ids = ["servicenow_vr", "zscaler_uvm"]
 
 [intelligence.israel_connection]
 status = "confirmed"
 basis = ["incorporated_in_israel", "headquarters_in_israel", "israeli_founders"]
-summary = "Zscaler's 2024 Form 10-K identifies Avalor Technologies Ltd. as incorporated in Israel; Israeli business reporting places the company in Ramat Gan and identifies its Israeli founders."
-as_of = "2026-10-04"
-source_ids = ["zscaler_10k", "ynet_sale", "globes_sale"]
+summary = "Zscaler's FY2024 Form 10-K identifies Avalor Technologies Ltd. as incorporated in Israel; Ynet reports the company was based in Ramat Gan; Cyberstarts identifies its founders and 2022 founding."
+as_of = "2026-10-22"
+source_ids = ["zscaler_10k_2024", "ynet_sale", "cyberstarts_avalor"]
 
 [intelligence.research]
-researched_at = "2026-10-04T00:49:47Z"
+researched_at = "2026-10-22T00:42:12Z"
 topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
 search_queries = [
-  "Avalor Zscaler acquisition March 2024 acquisition terms founders funding investors",
-  "Avalor startup funding 2022 Series A investors valuation Israel Zscaler",
-  "site:zscaler.com Avalor acquisition March 2024",
-  "Avalor Zscaler founders CEO Israeli cybersecurity 2023",
-  "Avalor official raised $30 million Cyberstarts Jibe Ventures investor announcement April 2023",
-  "Avalor patent security data fabric patent Avalor Technologies",
-  "Avalor Kfir Tishbi Raanan Raz leadership Zscaler current",
-  "Avalor competitors security data fabric vulnerability management official Tenable exposure management"
+  "Avalor Zscaler acquisition official announcement 2024 Avalor Data Fabric UVM",
+  "site:ir.zscaler.com Avalor acquisition 2024 Form 10-K Avalor Technologies Ltd",
+  "Avalor $25 million Series A TCV Salesforce Ventures $5 million seed 2023",
+  "Avalor startup patents USPTO Avalor Technologies Ltd security data fabric patent",
+  "site:globes.co.il Avalor Zscaler 350m Raanan Raz Kfir Tishbi revenue ARR",
+  "site:ynetnews.com Avalor Zscaler acquisition Raanan Raz Kfir Tishbi employees",
+  "Avalor cybersecurity government defense contract customer deployment Zscaler UVM federal",
+  "Avalor Technologies Ltd patent assignee USPTO patent application Zscaler",
+  "Avalor announces $25 million Series A TCV Avalor April 2023 official company press release",
+  "TCV Avalor Series A 25m 2023 Avalor Data Fabric",
+  "Avalor raised seed Cyberstarts Jibe Ventures official investor Avalor 2022",
+  "Avalor Israel Innovation Authority grant Avalor Technologies funding",
+  "site:tenable.com/products/tenable-one exposure management vulnerabilities asset official",
+  "site:qualys.com/apps/vulnerability-management-detection-response VMDR official risk prioritization",
+  "site:servicenow.com/products/vulnerability-response security vulnerability response official",
+  "site:avalor.io Avalor data fabric security Zscaler official 2026",
+  "\"12111936\" USPTO patent",
+  "\"12353457\" patent USPTO Avalor",
+  "\"20250233884\" USPTO",
+  "\"20250274469\" USPTO",
+  "site:patents.google.com/patent/US12111936B2 Avalor Technologies cybersecurity vulnerability management system",
+  "site:patents.google.com/patent/US20250233884A1 Avalor Technologies",
+  "site:patents.google.com/patent/US20250274469A1 Avalor Technologies",
+  "site:patents.google.com/patent/US12353457B2 Avalor Technologies"
 ]
 gaps = [
-  "team: founders are identified, but current post-acquisition executive roles and complete leadership roster were not established from reviewed sources.",
-  "investors: seed participants include unnamed industry angels; private cap table, ownership percentages and investor exit proceeds are not disclosed.",
-  "financials: current standalone revenue, profitability, burn and runway are unavailable; Globes' approximately $3 million 2023 ARR figure is a third-party estimate, not a company-reported metric.",
-  "traction: current customer counts, paid deployment status, renewals and post-acquisition adoption are not publicly quantified in reviewed sources.",
-  "intellectual_property: public patent assignment search results exist, but a verified complete patent family, status and present assignee portfolio were not established from primary patent office records.",
-  "competition: this record identifies relevant product competitors, but no independent comparative performance or win/loss evidence was found.",
-  "dual_use: public materials reviewed establish commercial defensive cybersecurity applicability, not government, military, classified, sovereign-cloud or disconnected-environment deployments.",
-  "ownership: private pre-acquisition ownership percentages and exact consideration allocation among sellers are not disclosed; media deal value differs from SEC purchase-price accounting.",
-  "financials: acquisition consideration and employee awards are disclosed separately by Zscaler; reporting does not establish cash proceeds distributed to Avalor shareholders."
+  "team: the founders and historical roles are identified, but the current post-acquisition leadership roster, retained engineering team, and roadmap ownership are not public in the sources reviewed.",
+  "investors: disclosed fund participants and two named initial angel investors are listed, but private cap-table percentages, individual investment sizes, and exit proceeds are unavailable; the precise round allocation of the named initial angels is not stated.",
+  "financials: there are no standalone company-reported revenue, profitability, burn, or runway figures. Globes estimated approximately USD 3 million ARR at end-2023, while the CEO declined to provide revenue/customer counts in 2023; current UVM-specific economics are not disclosed.",
+  "traction: Zscaler reports UVM traction and its current page lists product customer stories, but UVM-only bookings, paying-customer count, deployment dates, retention, usage, and outcomes attributable specifically to Avalor are not quantified.",
+  "intellectual_property: four US records were reviewed, but the complete global patent family, current assignments, prosecution outcomes, and legal status have not been verified in USPTO or Israeli Patent Office registers.",
+  "competition: product-level comparables are identified from official vendor materials, but no independent benchmark, customer win/loss data, or head-to-head performance evidence was found.",
+  "dual_use: defensive cyber operations are a plausible application of the product, but no Avalor-derived UVM government or defense contract, named deployment, classified authorization, disconnected deployment, or sovereign-hosting approval was identified.",
+  "ownership: Zscaler acquired all outstanding equity, but the private pre-acquisition cap table, seller allocation, and proceeds by shareholder are undisclosed; public media transaction values differ from filed purchase-price consideration."
 ]
 conflicts = [
-  "Acquisition price: Globes and Ynet report $350 million; Zscaler's FY2024 10-K reports $256.687 million purchase price consideration and separately describes employee awards. These measures may use different transaction-value definitions; $350 million is not substituted into the filed consideration field.",
-  "Acquisition completion date: Zscaler's acquisition press release states March 13, 2024; its FY2024 10-K states March 8, 2024. Both are preserved; the public release is used for completed_on and 10-K inconsistency noted.",
-  "Globes estimates Avalor's end-2023 ARR at about $3 million; no company or filing source corroborated it, so it is not represented as a reported company metric."
+  "Acquisition consideration: Zscaler's FY2024 filing reports USD 256.687 million purchase-price consideration. Globes and Ynet report USD 350 million transaction values. The definitions are not reconciled; the filed purchase-price amount is retained in the deal field and media values are not treated as seller proceeds.",
+  "Acquisition completion date: Zscaler's March 14, 2024 press release says the acquisition closed March 13, while its FY2024 Form 10-K records completion on March 8. The filing date is used for completed_on and the press-release date remains noted.",
+  "ARR: Globes estimated approximately USD 3 million ARR at end-2023; the CEO declined to disclose revenue to TechCrunch in April 2023 and no company or filing metric corroborates the later estimate. It is stored only as estimated.",
+  "Founding year: Cyberstarts lists Avalor as founded in 2022, while TCV lists 2021. The difference may reflect formation versus public launch; 2022 is retained from the company-facing investor profile and the discrepancy remains unresolved."
 ]
 diligence_questions = [
-  "What is the current product name, packaging, standalone availability, and relationship between Avalor UVM and Zscaler Risk360?",
-  "How many customers actively use Avalor-derived UVM capabilities, and what are paid adoption, retention, attach-rate, and remediation-outcome metrics?",
-  "Which Avalor founders and technical leaders remain at Zscaler, and who owns the roadmap and integration reliability today?",
-  "What patent families and assignments remain in force, and are any key data-model or connector assets licensed from third parties?",
-  "Can the product support non-Zscaler and sovereign or disconnected environments, with what audit, residency, and authorization controls?"
+  "What UVM-specific revenue, paid-customer count, renewal, attach rate, and measurable remediation outcomes has Zscaler achieved since acquiring Avalor, separate from the broader AI-Analytics portfolio?",
+  "Which Avalor connectors remain maintained, how are schema changes and ingestion failures monitored, and what independent evidence validates entity resolution and risk-score accuracy?",
+  "What proportion of UVM functionality and customer value depends on Zscaler telemetry, and can the product deliver equivalent value in mixed-vendor environments?",
+  "Which Avalor founders and engineers remain with Zscaler, and who owns the current product roadmap and customer escalations?",
+  "Has Avalor-derived UVM been deployed in a named public-sector or defense environment, and what authorizations, data-residency controls, and disconnected-operation options are available?",
+  "What is the complete patent-family and assignment position following the acquisition, including the pending data-fabric applications and any non-US filings?"
 ]
 
 [[intelligence.research.sources]]
 id = "zscaler_release"
 url = "https://www.zscaler.com/press/zscaler-expands-its-zero-trust-exchange-ai-powered-cloud"
-title = "Zscaler Announces Another Major Leap Forward in AI"
+title = "The Future of Security Risk Management and Operations is Data and AI"
 publisher = "Zscaler"
 kind = "company"
-accessed_at = "2026-10-04T00:42:44Z"
+accessed_at = "2026-10-22T00:42:12Z"
 published_on = "2024-03-14"
-claims = ["Zscaler announced acquisition of Avalor and says it closed March 13, 2024.", "Avalor's Data Fabric for Security ingests and normalizes security and business systems data, and supported more than 150 prebuilt integrations.", "Raanan Raz was Avalor co-founder and CEO; UVM was the first application on the data fabric.", "The purchase price was predominantly cash with a portion in equity subject to vesting conditions."]
+claims = ["Zscaler announced the acquisition and said it closed on March 13, 2024.", "Avalor's Data Fabric ingests and unifies security and business-system data and supported more than 150 prebuilt integrations.", "Avalor co-founder and CEO Raanan Raz identified UVM as the first application running on the fabric.", "The purchase price was predominantly cash with part delivered as equity subject to vesting conditions."]
 
 [[intelligence.research.sources]]
-id = "zscaler_10k"
+id = "zscaler_10k_2024"
 url = "https://ir.zscaler.com/static-files/9416124f-e428-4765-8a0a-0940c48d2bae"
 title = "Zscaler FY2024 Form 10-K"
 publisher = "Zscaler, Inc. / U.S. Securities and Exchange Commission"
 kind = "filing"
-accessed_at = "2026-10-04T00:42:44Z"
+accessed_at = "2026-10-22T00:42:12Z"
 published_on = "2024-09-12"
-claims = ["Zscaler says it completed acquisition of Avalor Technologies Ltd. on March 8, 2024, and that Avalor was incorporated in Israel.", "Zscaler records total purchase price consideration of $256.7 million ($256.687 million in its purchase price allocation).", "Certain former Avalor employees were entitled to $46.5 million fair value deferred merger consideration awards; separate replacement awards had $14.4 million fair value, $2.4 million of which was allocated to purchase price."]
+claims = ["Zscaler's filing says Avalor Technologies Ltd. was incorporated in Israel and that the acquisition was completed on March 8, 2024.", "The filing reports USD 256.687 million total purchase-price consideration.", "The filing separately describes USD 46.5 million of deferred merger awards and USD 14.4 million of replacement awards, of which USD 2.4 million was allocated to purchase price."]
+
+[[intelligence.research.sources]]
+id = "zscaler_10k_2026"
+url = "https://ir.zscaler.com/static-files/9c6b5564-b169-4f39-bff3-6281212488fe"
+title = "Zscaler FY2026 Form 10-K"
+publisher = "Zscaler, Inc. / U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-22T00:42:12Z"
+published_on = "2026-09-03"
+claims = ["Zscaler states it acquired all outstanding equity of Avalor Technologies Ltd. on March 8, 2024 for cash consideration of USD 256.7 million.", "Zscaler states Avalor's technology has been integrated into its cloud platform.", "The filing distinguishes restricted-stock and replacement equity awards from cash consideration."]
 
 [[intelligence.research.sources]]
 id = "tc_funding"
@@ -215,38 +443,9 @@ url = "https://techcrunch.com/2023/04/18/avalor-wants-to-unify-cybersecurity-too
 title = "Avalor wants to unify cybersecurity tools by aggregating data"
 publisher = "TechCrunch"
 kind = "media"
-accessed_at = "2026-10-04T00:42:44Z"
+accessed_at = "2026-10-22T00:42:12Z"
 published_on = "2023-04-18"
-claims = ["Avalor announced a $25 million Series A led by TCV with Salesforce Ventures participating.", "Avalor's $30 million total raised included a $5 million seed round led by Cyberstarts in 2022.", "The seed also included Jibe Ventures and industry angels.", "Avalor CEO Raanan Raz declined to provide revenue or customer count; TechCrunch reported 35 employees in April 2023.", "Avalor described a security data fabric, vulnerability prioritization, and broad data-source handling."]
-
-[[intelligence.research.sources]]
-id = "globes_sale"
-url = "https://en.globes.co.il/en/article-zscaler-buys-israeli-cybersecurity-co-avalor-for-350m-1001473752"
-title = "Zscaler buys Israeli cybersecurity co Avalor for $350m"
-publisher = "Globes"
-kind = "media"
-accessed_at = "2026-10-04T00:42:44Z"
-published_on = "2024-03-14"
-claims = ["Globes reports Zscaler was acquiring Avalor for $350 million and says Avalor had raised $30 million.", "Globes identifies CEO Raanan Raz and CTO Kfir Tishbi as founders and names Cyberstarts, Jibe Fund, TCV and Salesforce Ventures among investors.", "Globes estimates Avalor's end-2023 ARR at approximately $3 million.", "Globes describes the founders' prior Datorama experience."]
-
-[[intelligence.research.sources]]
-id = "ynet_sale"
-url = "https://www.ynetnews.com/business/article/sjapmefaa"
-title = "US cyber giant Zscaler acquires Israeli startup Avalor for $350 million"
-publisher = "Ynetnews"
-kind = "media"
-accessed_at = "2026-10-04T00:42:44Z"
-published_on = "2024-03-14"
-claims = ["Ynetnews reports a $350 million acquisition and describes Avalor as based in Ramat Gan with approximately 80 employees in March 2024.", "Ynetnews identifies co-founders Raanan Raz and Kfir Tishbi, and reports seed and Series A investors.", "Ynetnews reports Avalor would continue as an independent unit inside Zscaler; this was a contemporaneous plan, not proof of current operating structure.", "Ynetnews describes Avalor's product as ingesting, normalizing and harmonizing enterprise security and business data."]
-
-[[intelligence.research.sources]]
-id = "zscaler_uvm"
-url = "https://www.zscaler.com/products-and-solutions/vulnerability-management"
-title = "Unified Vulnerability Management (UVM)"
-publisher = "Zscaler"
-kind = "company"
-accessed_at = "2026-10-04T00:42:44Z"
-claims = ["Zscaler currently markets Unified Vulnerability Management powered by its Data Fabric for Security and 150-plus prebuilt integrations.", "Zscaler describes risk prioritization, reporting and remediation workflow capabilities."]
+claims = ["Avalor announced a USD 25 million Series A led by TCV with Salesforce Ventures participating and reported USD 30 million total raised including a USD 5 million Cyberstarts-led seed round in 2022.", "TechCrunch reported 35 employees in April 2023 and says the CEO declined to disclose revenue and customer count.", "The report describes Avalor's data fabric, data normalization, vulnerability prioritization, and co-founders Raanan Raz and Kfir Tishbi.", "TechCrunch describes Kfir Tishbi's Datorama engineering leadership and prior work at Citi and Playtika."]
 
 [[intelligence.research.sources]]
 id = "cyberstarts_avalor"
@@ -254,27 +453,65 @@ url = "https://www.cyberstarts.com/companies/avalor"
 title = "Avalor"
 publisher = "Cyberstarts"
 kind = "investor"
-accessed_at = "2026-10-04T00:42:44Z"
-claims = ["Cyberstarts portfolio identifies Avalor and records its 2024 acquisition by Zscaler (NASDAQ: ZS).", "Cyberstarts identifies Raanan Raz and Kfir Tishbi with Avalor."]
+accessed_at = "2026-10-22T00:42:12Z"
+claims = ["Cyberstarts identifies Avalor, its founders Raanan Raz and Kfir Tishbi, a 2022 founding, and its 2024 acquisition by Zscaler.", "Cyberstarts describes Avalor as a data fabric for security and links the historical Avalor.io domain."]
 
 [[intelligence.research.sources]]
-id = "avalor_case_study"
-url = "https://info.avalor.io/rs/888-FAR-996/images/Avalor_Case_Study-Consumer_Goods.pdf"
-title = "Avalor Case Study - Global Consumer Goods Brand"
-publisher = "Avalor"
+id = "tcv_avalor"
+url = "https://www.tcv.com/partnerships/avalor"
+title = "Avalor"
+publisher = "TCV"
+kind = "investor"
+accessed_at = "2026-10-22T00:42:12Z"
+claims = ["TCV describes Avalor's security data fabric and lists the location as Tel Aviv, Israel.", "TCV's portfolio page lists Avalor's founding year as 2021, which conflicts with Cyberstarts' 2022 date."]
+
+[[intelligence.research.sources]]
+id = "globes_sale"
+url = "https://en.globes.co.il/en/article-zscaler-buys-israeli-cybersecurity-co-avalor-for-350m-1001473752"
+title = "Zscaler buys Israeli cybersecurity co Avalor for $350m"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-22T00:42:12Z"
+published_on = "2024-03-14"
+claims = ["Globes reports a USD 350 million transaction value and USD 30 million raised.", "Globes identifies Raanan Raz and Kfir Tishbi as founders and names Cyberstarts, Jibe Fund, Datorama founders Ran Sarig and Efi Cohen, TCV, and Salesforce Ventures among investors.", "Globes estimates Avalor's end-2023 ARR at approximately USD 3 million.", "Globes describes both founders' prior Datorama experience."]
+
+[[intelligence.research.sources]]
+id = "ynet_sale"
+url = "https://www.ynetnews.com/business/article/sjapmefaa"
+title = "US cyber giant Zscaler acquires Israeli startup Avalor for $350 million"
+publisher = "Ynetnews"
+kind = "media"
+accessed_at = "2026-10-22T00:42:12Z"
+published_on = "2024-03-14"
+claims = ["Ynet reports that Avalor was based in Ramat Gan and had approximately 80 employees in March 2024.", "Ynet identifies Raanan Raz and Kfir Tishbi as co-founders and describes their Datorama, Citi, and Playtika experience.", "Ynet reports a USD 350 million transaction value and names Cyberstarts, Jibe Ventures, and unnamed industry angels in the seed financing.", "Ynet's report that Avalor would operate as an independent Zscaler unit was a contemporaneous plan, not proof of current structure."]
+
+[[intelligence.research.sources]]
+id = "zscaler_uvm"
+url = "https://www.zscaler.com/products-and-solutions/vulnerability-management"
+title = "Unified Vulnerability Management (UVM)"
+publisher = "Zscaler"
 kind = "company"
-accessed_at = "2026-10-04T00:46:42Z"
-published_on = "2024"
-claims = ["Avalor-branded customer case study is hosted on avalor.io, supporting use of that historical company domain; the document does not establish a currently maintained standalone website.", "The case study describes Avalor as a Zscaler company providing continuous risk management and automated workflows to reduce cyber risk."]
+accessed_at = "2026-10-22T00:42:12Z"
+claims = ["Zscaler currently markets UVM built on Data Fabric for Security with 150-plus prebuilt integrations.", "The product page describes customizable risk factors, cross-source correlation, reporting, AnySource and AnyTarget connectors, two-way ticket integration, exception management, and CTEM capabilities.", "The product page presents customer stories and testimonials from Cushman & Wakefield, AdventHealth, and LifeLabs.", "UVM product efficacy and customer statements are vendor-published and do not disclose contract values or standalone Avalor economics."]
 
 [[intelligence.research.sources]]
-id = "avalor_patents"
-url = "https://patents.justia.com/assignee/avalor-technologies-ltd"
-title = "Patents Assigned to Avalor Technologies, Ltd."
-publisher = "Justia Patents"
-kind = "other"
-accessed_at = "2026-10-04T00:42:44Z"
-claims = ["A patent-search listing associates patent records, including a security data-fabric application, with Avalor Technologies Ltd.; primary-office status and complete portfolio require verification."]
+id = "zscaler_q4_fy24"
+url = "https://ir.zscaler.com/static-files/fcc804e5-d2ec-474e-a8f1-bfdbc394f082"
+title = "Zscaler Q4 2024 Earnings Call"
+publisher = "Zscaler, Inc."
+kind = "company"
+accessed_at = "2026-10-22T00:42:12Z"
+published_on = "2024-09-03"
+claims = ["Zscaler reported strong traction for Unified Vulnerability Management acquired through Avalor.", "Zscaler attributed nearly three percentage points of Q4 and two percentage points of FY2024 new and upsell business growth to the broader AI-Analytics group including UVM, without isolating UVM's own revenue or bookings."]
+
+[[intelligence.research.sources]]
+id = "avalor_redirect"
+url = "https://avalor.io/"
+title = "Avalor legacy domain redirect"
+publisher = "Zscaler"
+kind = "company"
+accessed_at = "2026-10-22T00:42:12Z"
+claims = ["The historical official Avalor.io domain redirects to Zscaler's current Unified Vulnerability Management product page."]
 
 [[intelligence.research.sources]]
 id = "salvador_official"
@@ -282,186 +519,274 @@ url = "https://salvador-tech.com/"
 title = "Salvador Technologies - OT/ICS Solutions"
 publisher = "Salvador Technologies"
 kind = "company"
-accessed_at = "2026-10-04T00:49:47Z"
-claims = ["Salvador Technologies' official site identifies its offering as operational technology and industrial control systems backup, resilience and recovery products; it uses the salvador-tech.com domain."]
+accessed_at = "2026-10-22T00:42:12Z"
+claims = ["Salvador Technologies' official site describes OT/ICS backup, resilience, and recovery products on salvador-tech.com; this is a separate company and domain from Avalor Technologies Ltd."]
+
+[[intelligence.research.sources]]
+id = "google_patent_us12111936"
+url = "https://patents.google.com/patent/US12111936B2/en"
+title = "US12111936B2 - Cybersecurity vulnerability management system and method thereof"
+publisher = "Google Patents"
+kind = "other"
+accessed_at = "2026-10-22T00:42:12Z"
+published_on = "2024-10-08"
+claims = ["The patent record identifies a grant dated October 8, 2024 for cybersecurity ticket grouping and lists Avalor Technologies Ltd. and Zscaler, Inc. as assignees.", "Google Patents labels the record active but cautions its legal status and assignee data are not a legal conclusion."]
+
+[[intelligence.research.sources]]
+id = "google_patent_us12353457"
+url = "https://patents.google.com/patent/US12353457B2/en"
+title = "US12353457B2 - System and method for training a multi-tenant language model"
+publisher = "Google Patents"
+kind = "other"
+accessed_at = "2026-10-22T00:42:12Z"
+published_on = "2025-07-08"
+claims = ["The patent record identifies a July 8, 2025 grant for a multi-tenant language-model training system and lists Avalor Technologies Ltd. and Zscaler, Inc. as assignees.", "Google Patents cautions that legal status and assignee data may be inaccurate."]
+
+[[intelligence.research.sources]]
+id = "google_patent_us20250233884"
+url = "https://patents.google.com/patent/US20250233884A1/en"
+title = "US20250233884A1 - Exposure and Attack Surface Management Using a Data Fabric"
+publisher = "Google Patents"
+kind = "other"
+accessed_at = "2026-10-22T00:42:12Z"
+published_on = "2025-07-17"
+claims = ["The published US application concerns exposure and attack-surface management using a security data fabric and knowledge graph.", "The record lists Avalor Technologies Ltd. as applicant and pending status, while warning that listed status and assignee information are not a legal conclusion."]
+
+[[intelligence.research.sources]]
+id = "google_patent_us20250274469"
+url = "https://patents.google.com/patent/US20250274469A1/en"
+title = "US20250274469A1 - Automated Mapping of Raw Data into a Data Fabric"
+publisher = "Google Patents"
+kind = "other"
+accessed_at = "2026-10-22T00:42:12Z"
+published_on = "2025-08-28"
+claims = ["The published US application concerns automated mapping of raw data into a data fabric.", "The record lists Avalor Technologies Ltd. as applicant and pending status, while warning that listed status and assignee information are not a legal conclusion."]
+
+[[intelligence.research.sources]]
+id = "tenable_one"
+url = "https://www.tenable.com/products/tenable-one"
+title = "Tenable One Exposure Management Platform"
+publisher = "Tenable"
+kind = "company"
+accessed_at = "2026-10-22T00:42:12Z"
+claims = ["Tenable markets Tenable One as an exposure-management platform spanning IT, cloud, web applications, OT, identity, and other assets.", "Tenable describes third-party connectors, normalized risk scoring, and attack-path analysis as platform features."]
+
+[[intelligence.research.sources]]
+id = "qualys_vmdr"
+url = "https://www.qualys.com/apps/vulnerability-management-detection-response"
+title = "Vulnerability Management, Detection, and Response (VMDR)"
+publisher = "Qualys"
+kind = "company"
+accessed_at = "2026-10-22T00:42:12Z"
+claims = ["Qualys markets VMDR with real-time threat intelligence, risk prioritization, asset and vulnerability management, integrations, and automated remediation or patch workflows."]
+
+[[intelligence.research.sources]]
+id = "servicenow_vr"
+url = "https://www.servicenow.com/docs/r/security-management/vulnerability-response/c_VulnerabilityResponse.html"
+title = "Exploring the Vulnerability Response application"
+publisher = "ServiceNow"
+kind = "company"
+accessed_at = "2026-10-22T00:42:12Z"
+claims = ["ServiceNow Vulnerability Response imports scanner and NVD data, groups vulnerable items, reconciles them with configuration data, and routes remediation tasks with collaboration and exception workflows."]
 
 [[intelligence.research.topic_checks]]
 topic = "identity"
 status = "reported"
-checked_at = "2026-10-04T00:49:47Z"
-next_review_on = "2027-04-04"
-queries = ["Avalor Zscaler acquisition March 2024 acquisition terms founders funding investors", "Avalor Kfir Tishbi Raanan Raz leadership Zscaler current"]
-source_ids = ["zscaler_release", "zscaler_10k", "ynet_sale", "cyberstarts_avalor", "salvador_official"]
-summary = "Identified Avalor Technologies Ltd., an Israeli enterprise cybersecurity software company acquired by Zscaler; its 10-K legal name and Zscaler security data-fabric product are distinct from the Salvador Technologies branding and OT/ICS recovery offering on salvador-tech.com."
+checked_at = "2026-10-22T00:42:12Z"
+next_review_on = "2027-04-22"
+queries = ["Avalor Zscaler acquisition official announcement 2024 Avalor Data Fabric UVM", "site:ir.zscaler.com Avalor acquisition 2024 Form 10-K Avalor Technologies Ltd", "Avalor cybersecurity government defense contract customer deployment Zscaler UVM federal"]
+source_ids = ["zscaler_release", "zscaler_10k_2024", "zscaler_10k_2026", "cyberstarts_avalor", "tcv_avalor", "ynet_sale"]
+summary = "Confirmed legal name, Israeli incorporation, Ramat Gan pre-acquisition headquarters, founders, historical product, and current official Zscaler UVM destination. Zscaler says it acquired all equity and integrated the technology."
 
 [[intelligence.research.topic_checks]]
 topic = "funding"
 status = "reported"
-checked_at = "2026-10-04T00:42:44Z"
-next_review_on = "2027-04-04"
-queries = ["Avalor startup funding 2022 Series A investors valuation Israel Zscaler", "Avalor official raised $30 million Cyberstarts Jibe Ventures investor announcement April 2023"]
-source_ids = ["tc_funding", "globes_sale"]
-summary = "Found 2022 $5 million seed and April 2023 $25 million Series A, cumulative reported funding $30 million; no later financing identified."
+checked_at = "2026-10-22T00:42:12Z"
+next_review_on = "2027-04-22"
+queries = ["Avalor $25 million Series A TCV Salesforce Ventures $5 million seed 2023", "Avalor announces $25 million Series A TCV Avalor April 2023 official company press release", "Avalor raised seed Cyberstarts Jibe Ventures official investor Avalor 2022", "Avalor Israel Innovation Authority grant Avalor Technologies funding"]
+source_ids = ["tc_funding", "ynet_sale", "globes_sale"]
+summary = "Found a $5 million seed and $25 million Series A and the reported cumulative $30 million total. No separate grant, debt, or post-Series A independent round was identified before acquisition; history is marked partial."
 
 [[intelligence.research.topic_checks]]
 topic = "investors"
 status = "reported"
-checked_at = "2026-10-04T00:42:44Z"
-next_review_on = "2027-04-04"
-queries = ["Avalor Series A TCV Salesforce Ventures Cyberstarts Jibe investors", "Avalor acquisition investors Cyberstarts Jibe TCV Salesforce Ventures"]
-source_ids = ["tc_funding", "globes_sale", "ynet_sale"]
-summary = "Named institutional investors include Cyberstarts, Jibe Ventures, TCV and Salesforce Ventures; angels are unnamed and cap table is private."
+checked_at = "2026-10-22T00:42:12Z"
+next_review_on = "2027-04-22"
+queries = ["Avalor $25 million Series A TCV Salesforce Ventures $5 million seed 2023", "Avalor raised seed Cyberstarts Jibe Ventures official investor Avalor 2022", "TCV Avalor Series A 25m 2023 Avalor Data Fabric", "site:globes.co.il Avalor Zscaler 350m Raanan Raz Kfir Tishbi revenue ARR"]
+source_ids = ["tc_funding", "cyberstarts_avalor", "tcv_avalor", "globes_sale", "ynet_sale"]
+summary = "Round participants are identified from funding reporting and investor profiles. Globes names two additional initial angel investors, but their exact round, investment sizes, and private cap-table positions are not disclosed."
 
 [[intelligence.research.topic_checks]]
 topic = "team"
 status = "reported"
-checked_at = "2026-10-04T00:42:44Z"
-next_review_on = "2027-04-04"
-queries = ["Avalor founders CEO Raanan Raz CTO Kfir Tishbi", "Avalor Kfir Tishbi Raanan Raz leadership Zscaler current"]
-source_ids = ["zscaler_release", "globes_sale", "ynet_sale", "cyberstarts_avalor"]
-summary = "Raanan Raz and Kfir Tishbi are repeatedly identified as co-founders; public current role details after integration remain incomplete."
+checked_at = "2026-10-22T00:42:12Z"
+next_review_on = "2027-04-22"
+queries = ["Avalor Zscaler acquisition official announcement 2024 Avalor Data Fabric UVM", "site:ynetnews.com Avalor Zscaler acquisition Raanan Raz Kfir Tishbi employees", "site:globes.co.il Avalor Zscaler 350m Raanan Raz Kfir Tishbi revenue ARR", "Avalor $25 million Series A TCV Salesforce Ventures $5 million seed 2023"]
+source_ids = ["tc_funding", "zscaler_release", "globes_sale", "ynet_sale"]
+summary = "The two co-founders and historical CEO/CTO roles and prior data-platform backgrounds are supported. Current post-acquisition leadership and retained team were not found."
 
 [[intelligence.research.topic_checks]]
 topic = "ownership"
 status = "conflicting"
-checked_at = "2026-10-04T00:42:44Z"
-next_review_on = "2027-04-04"
-queries = ["Avalor Zscaler acquisition March 2024 acquisition terms", "Zscaler Avalor acquisition $350 million SEC 10-K purchase price"]
-source_ids = ["zscaler_release", "zscaler_10k", "globes_sale", "ynet_sale"]
-summary = "Acquisition and parent are established. Media reported $350 million, while filed purchase price consideration is $256.7 million; close-date reporting also differs."
+checked_at = "2026-10-22T00:42:12Z"
+next_review_on = "2027-04-22"
+queries = ["Avalor Zscaler acquisition official announcement 2024 Avalor Data Fabric UVM", "site:ir.zscaler.com Avalor acquisition 2024 Form 10-K Avalor Technologies Ltd", "site:globes.co.il Avalor Zscaler 350m Raanan Raz Kfir Tishbi revenue ARR", "site:ynetnews.com Avalor Zscaler acquisition Raanan Raz Kfir Tishbi employees"]
+source_ids = ["zscaler_release", "zscaler_10k_2024", "zscaler_10k_2026", "globes_sale", "ynet_sale"]
+summary = "Zscaler's acquisition and ownership are confirmed. Filed consideration, media transaction values, and reported completion dates differ; the filed purchase-price figure and date are used in structured fields with the public-release and media differences retained."
 
 [[intelligence.research.topic_checks]]
 topic = "financials"
-status = "no_public_disclosure"
-checked_at = "2026-10-04T00:42:44Z"
-next_review_on = "2027-04-04"
-queries = ["Avalor revenue ARR financials 2023", "Avalor revenue customers TechCrunch 2023"]
-source_ids = ["tc_funding", "globes_sale", "zscaler_10k"]
-summary = "TechCrunch says CEO declined revenue disclosure; Globes published an unverified third-party ARR estimate. No current standalone financials found."
+status = "reported"
+checked_at = "2026-10-22T00:42:12Z"
+next_review_on = "2027-04-22"
+queries = ["site:globes.co.il Avalor Zscaler 350m Raanan Raz Kfir Tishbi revenue ARR", "site:ynetnews.com Avalor Zscaler acquisition Raanan Raz Kfir Tishbi employees", "Avalor $25 million Series A TCV Salesforce Ventures $5 million seed 2023", "site:ir.zscaler.com Avalor acquisition 2024 Form 10-K Avalor Technologies Ltd"]
+source_ids = ["tc_funding", "globes_sale", "ynet_sale", "zscaler_10k_2024", "zscaler_10k_2026"]
+summary = "Only a third-party approximately USD 3 million end-2023 ARR estimate and historical press headcounts were found. Standalone reported revenue, profitability, burn, runway, and current UVM economics are unavailable."
 
 [[intelligence.research.topic_checks]]
 topic = "traction"
-status = "no_public_disclosure"
-checked_at = "2026-10-04T00:42:44Z"
-next_review_on = "2027-04-04"
-queries = ["Avalor customers deployment product milestones Zscaler UVM", "Avalor customer count revenue 2023"]
-source_ids = ["tc_funding", "zscaler_release", "zscaler_uvm"]
-summary = "Evidence supports product development, 150-plus integrations and current Zscaler UVM marketing, but not customer totals or paid deployment metrics."
+status = "reported"
+checked_at = "2026-10-22T00:42:12Z"
+next_review_on = "2027-04-22"
+queries = ["site:avalor.io Avalor data fabric security Zscaler official 2026", "Avalor Zscaler acquisition official announcement 2024 Avalor Data Fabric UVM", "site:ir.zscaler.com Avalor acquisition 2024 Form 10-K Avalor Technologies Ltd"]
+source_ids = ["zscaler_uvm", "zscaler_q4_fy24", "zscaler_release", "tc_funding"]
+summary = "Zscaler reports strong UVM traction and displays three product customer stories. No contract values, UVM-only revenue, customer totals, renewals, or post-acquisition deployment metrics are disclosed."
 
 [[intelligence.research.topic_checks]]
 topic = "intellectual_property"
-status = "not_found"
-checked_at = "2026-10-04T00:42:44Z"
-next_review_on = "2027-04-04"
-queries = ["Avalor patent security data fabric patent Avalor Technologies", "Avalor Technologies Ltd patents WIPO USPTO"]
-source_ids = ["avalor_patents"]
-summary = "Search located secondary patent assignment listings; full current portfolio and assignment status were not validated through primary patent registers."
+status = "reported"
+checked_at = "2026-10-22T00:42:12Z"
+next_review_on = "2027-04-22"
+queries = ["Avalor startup patents USPTO Avalor Technologies Ltd security data fabric patent", "Avalor Technologies Ltd patent assignee USPTO patent application Zscaler", "\"12111936\" USPTO patent", "\"12353457\" patent USPTO Avalor", "\"20250233884\" USPTO", "\"20250274469\" USPTO", "site:patents.google.com/patent/US12111936B2 Avalor Technologies cybersecurity vulnerability management system"]
+source_ids = ["google_patent_us12111936", "google_patent_us12353457", "google_patent_us20250233884", "google_patent_us20250274469"]
+summary = "Reviewed two granted US patent records and two later published US applications related to vulnerability ticket grouping, multi-tenant model training, exposure management, and data mapping. Complete portfolio and legal assignment verification remain gaps."
 
 [[intelligence.research.topic_checks]]
 topic = "competition"
 status = "reported"
-checked_at = "2026-10-04T00:42:44Z"
-next_review_on = "2027-04-04"
-queries = ["Avalor competitors security data fabric vulnerability management official Tenable exposure management"]
-source_ids = ["tc_funding", "zscaler_uvm"]
-summary = "Relevant substitutes include exposure-management and vulnerability platforms such as Tenable, Qualys, Rapid7, ServiceNow and Palo Alto Networks; no comparative trials found."
+checked_at = "2026-10-22T00:42:12Z"
+next_review_on = "2027-04-22"
+queries = ["site:tenable.com/products/tenable-one exposure management vulnerabilities asset official", "site:qualys.com/apps/vulnerability-management-detection-response VMDR official risk prioritization", "site:servicenow.com/products/vulnerability-response security vulnerability response official"]
+source_ids = ["tenable_one", "qualys_vmdr", "servicenow_vr", "zscaler_uvm", "tc_funding"]
+summary = "Official vendor materials establish direct overlap across exposure management, risk ranking, vulnerability ingestion, and remediation workflows. Independent benchmark and win/loss evidence was not found."
 
 [[intelligence.research.topic_checks]]
 topic = "dual_use"
-status = "no_public_disclosure"
-checked_at = "2026-10-04T00:42:44Z"
-next_review_on = "2027-04-04"
-queries = ["Avalor government defense cybersecurity deployments contract", "Avalor sovereign cloud classified defense customer"]
-source_ids = ["zscaler_release", "zscaler_uvm"]
-summary = "The technical capability is relevant to defensive government SOC workflows, but reviewed public evidence establishes no government or defense customer or deployment."
+status = "reported"
+checked_at = "2026-10-22T00:42:12Z"
+next_review_on = "2027-04-22"
+queries = ["Avalor cybersecurity government defense contract customer deployment Zscaler UVM federal"]
+source_ids = ["zscaler_release", "zscaler_uvm", "zscaler_q4_fy24", "tc_funding"]
+summary = "Product capabilities support commercial defensive exposure management and have a plausible defensive public-sector use. Searches found no Avalor-derived UVM government or defense contract or deployment; Zscaler-wide public-sector activity is not attributed to Avalor."
 
 [[intelligence.research.claim_checks]]
 field_path = "company.operating_status"
 support = "direct"
-summary = "Zscaler's acquisition release and Cyberstarts portfolio identify the 2024 acquisition; Zscaler's filing confirms completion."
-verified_at = "2026-10-04T00:42:44Z"
-source_ids = ["zscaler_release", "zscaler_10k", "cyberstarts_avalor"]
+summary = "Zscaler's filings state it acquired all outstanding Avalor equity and integrated Avalor technology into its cloud platform; the acquisition announcement confirms the transaction."
+verified_at = "2026-10-22T00:42:12Z"
+source_ids = ["zscaler_10k_2024", "zscaler_10k_2026", "zscaler_release"]
 
 [[intelligence.research.claim_checks]]
 field_path = "israel_connection"
 support = "direct"
-summary = "Zscaler's 10-K states Avalor Technologies Ltd. was incorporated in Israel; Israeli reporting identifies its Ramat Gan base and founders."
-verified_at = "2026-10-04T00:42:44Z"
-source_ids = ["zscaler_10k", "ynet_sale"]
+summary = "Zscaler's FY2024 filing identifies the Israeli-incorporated legal entity; Ynet reports its Ramat Gan base and Cyberstarts identifies the founders and founding year."
+verified_at = "2026-10-22T00:42:12Z"
+source_ids = ["zscaler_10k_2024", "ynet_sale", "cyberstarts_avalor"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.reported_total_raised"
 support = "direct"
-summary = "TechCrunch reports $30 million total raised including the $5 million seed and $25 million Series A."
-verified_at = "2026-10-04T00:42:44Z"
+summary = "TechCrunch reports the company-announced cumulative USD 30 million raised through the April 2023 Series A."
+verified_at = "2026-10-22T00:42:12Z"
 source_ids = ["tc_funding"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.seed-2022.amount"
 support = "direct"
-summary = "TechCrunch reports a $5 million 2022 seed round."
-verified_at = "2026-10-04T00:42:44Z"
+summary = "TechCrunch reports the USD 5 million 2022 seed round."
+verified_at = "2026-10-22T00:42:12Z"
 source_ids = ["tc_funding"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.seed-2022.lead_investors"
 support = "direct"
-summary = "TechCrunch names Cyberstarts as lead of the seed round."
-verified_at = "2026-10-04T00:42:44Z"
+summary = "TechCrunch names Cyberstarts as lead investor in the seed round."
+verified_at = "2026-10-22T00:42:12Z"
 source_ids = ["tc_funding"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2022.participating_investors"
+support = "direct"
+summary = "Ynet reports Jibe Ventures and unnamed industry angels participated in the seed financing."
+verified_at = "2026-10-22T00:42:12Z"
+source_ids = ["ynet_sale"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-a-2023.amount"
 support = "direct"
-summary = "TechCrunch reports the $25 million Series A announced in April 2023."
-verified_at = "2026-10-04T00:42:44Z"
+summary = "TechCrunch reports the USD 25 million Series A announced in April 2023."
+verified_at = "2026-10-22T00:42:12Z"
 source_ids = ["tc_funding"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-a-2023.lead_investors"
 support = "direct"
-summary = "TechCrunch names TCV as lead and Salesforce Ventures as participant in the Series A."
-verified_at = "2026-10-04T00:42:44Z"
-source_ids = ["tc_funding"]
-
-[[intelligence.research.claim_checks]]
-field_path = "ownership.parent_company"
-support = "direct"
-summary = "Zscaler's acquisition release and filed business-combination note identify Zscaler as acquirer and parent of the acquired asset."
-verified_at = "2026-10-04T00:42:44Z"
-source_ids = ["zscaler_release", "zscaler_10k"]
-
-[[intelligence.research.claim_checks]]
-field_path = "ownership.deals.zscaler-acquisition-2024.status"
-support = "direct"
-summary = "Zscaler's acquisition release announced the completed deal and its 10-K confirms completion."
-verified_at = "2026-10-04T00:42:44Z"
-source_ids = ["zscaler_release", "zscaler_10k"]
-
-[[intelligence.research.claim_checks]]
-field_path = "ownership.deals.zscaler-acquisition-2024.amount"
-support = "direct"
-summary = "Zscaler's FY2024 10-K reports $256.687 million purchase price consideration; media's $350 million report is retained as a different transaction-value disclosure."
-verified_at = "2026-10-04T00:42:44Z"
-source_ids = ["zscaler_10k", "globes_sale", "ynet_sale"]
-
-[[intelligence.research.claim_checks]]
-field_path = "funding.rounds.seed-2022.participating_investors"
-support = "direct"
-summary = "TechCrunch names Jibe Ventures and industry angels as seed participants."
-verified_at = "2026-10-04T00:42:44Z"
+summary = "TechCrunch names TCV as lead investor in the Series A."
+verified_at = "2026-10-22T00:42:12Z"
 source_ids = ["tc_funding"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-a-2023.participating_investors"
 support = "direct"
 summary = "TechCrunch names Salesforce Ventures as a Series A participant."
-verified_at = "2026-10-04T00:42:44Z"
+verified_at = "2026-10-22T00:42:12Z"
 source_ids = ["tc_funding"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Zscaler's filings state it acquired all outstanding Avalor equity and integrated the technology into its cloud platform."
+verified_at = "2026-10-22T00:42:12Z"
+source_ids = ["zscaler_10k_2024", "zscaler_10k_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.zscaler-acquisition-2024.status"
+support = "direct"
+summary = "Zscaler's FY2024 filing records completed acquisition of Avalor on March 8, 2024, and its later filing confirms the acquired equity and integration."
+verified_at = "2026-10-22T00:42:12Z"
+source_ids = ["zscaler_10k_2024", "zscaler_10k_2026", "zscaler_release"]
 
 [[intelligence.research.claim_checks]]
 field_path = "ownership.deals.zscaler-acquisition-2024.company_role"
 support = "direct"
-summary = "Zscaler's release and acquisition filing identify Avalor as the acquired target."
-verified_at = "2026-10-04T00:42:44Z"
-source_ids = ["zscaler_release", "zscaler_10k"]
+summary = "The filings say Zscaler acquired Avalor's outstanding equity, establishing Avalor as the acquisition target."
+verified_at = "2026-10-22T00:42:12Z"
+source_ids = ["zscaler_10k_2024", "zscaler_10k_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.zscaler-acquisition-2024.amount"
+support = "direct"
+summary = "Zscaler's FY2024 filing reports USD 256.687 million total purchase-price consideration; media-reported USD 350 million transaction values are retained separately as differing measures."
+verified_at = "2026-10-22T00:42:12Z"
+source_ids = ["zscaler_10k_2024", "globes_sale", "ynet_sale"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.arr@2023-12.numeric_value"
+support = "direct"
+summary = "Globes reports an estimate of approximately USD 3 million ARR at the end of 2023; the value remains explicitly estimated and uncorroborated."
+verified_at = "2026-10-22T00:42:12Z"
+source_ids = ["globes_sale"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.employees@2023-04.numeric_value"
+support = "direct"
+summary = "TechCrunch reports 35 Avalor employees in April 2023."
+verified_at = "2026-10-22T00:42:12Z"
+source_ids = ["tc_funding"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.employees@2024-03.numeric_value"
+support = "direct"
+summary = "Ynet reports approximately 80 Avalor employees in March 2024."
+verified_at = "2026-10-22T00:42:12Z"
+source_ids = ["ynet_sale"]

@@ -1,191 +1,405 @@
 name = "Datorama"
-description = "Datorama was an Israeli-founded marketing intelligence company whose cloud platform connected, harmonized, analyzed, and visualized fragmented advertising, CRM, web, commerce, and campaign data. Salesforce completed its acquisition in 2018, and Datorama is now the legacy product identity behind Marketing Cloud Intelligence."
-detailed_description = """Datorama built a domain-specific data integration and analytics layer for marketing organizations. Its platform ingested data from advertising platforms, web analytics, CRM, e-commerce, publishers, and other marketing systems; mapped heterogeneous fields into a common model; and exposed the result through dashboards, reports, visualizations, and analysis workflows. The important technical problem was not simply drawing charts. It was maintaining relationships between dimensions and measurements across sources so that spend, delivery, engagement, revenue, and campaign attributes could be compared without every enterprise building its own collection of connectors and transformation logic.
+description = "Datorama was an Israeli-founded enterprise marketing analytics company acquired by Salesforce in 2018. Its former standalone platform continues as Salesforce Marketing Cloud Intelligence, with current Salesforce documentation for cross-channel ingestion, harmonization, analysis, and reporting."
+detailed_description = """Datorama developed a cloud marketing analytics platform to solve a recurring enterprise problem: marketing performance was scattered across advertising networks, publishers, web analytics, CRM, commerce, offline media, and internal sales systems, each with different identifiers, metrics, currencies, and update cycles. The company built a data integration and modeling layer that collected those feeds, mapped source fields into a common marketing model, normalized values, retained relationships between dimensions and measures, and produced consolidated reports and dashboards. The product was designed for brands, advertising agencies, publishers, and marketing technology providers that needed to analyze activity across channels without building and maintaining a bespoke connector and transformation project for every client or campaign.
 
-The product was aimed at enterprises, agencies, and publishers with large, distributed marketing operations. Salesforce said at the time of acquisition that Datorama served more than 3,000 global agencies and brands and helped customers automate reporting and optimize campaigns. Current Salesforce documentation describes the successor product, Marketing Cloud Intelligence, as a system for connecting, harmonizing, visualizing, and acting on marketing data, including API connectors, custom field mapping, data fusion, granular data ingestion, KPI reporting, predictive analysis, and media-plan transparency. This provides current evidence that the core capability remains commercially supported, although product naming, packaging, and architecture now sit inside Salesforce rather than an independent Datorama roadmap.
+The specific value was the domain model and operations around ingestion, harmonization, and marketing analysis, rather than a general-purpose charting package. Datorama's historical materials describe a Marketing Integration Engine, API connectors, flat-file connections, automated mapping and cleansing, custom calculated fields, cross-channel reporting, attribution, campaign pacing, and media-plan transparency. Salesforce documentation for Marketing Cloud Intelligence still describes integration of advertising, web analytics, CRM, and e-commerce data; its help materials discuss parent-child dimensions, data fusion, workspace-level streams and reports, granular event and log data, KPIs, and analytics. Salesforce therefore continues to document and support a product carrying the legacy Datorama identity. Salesforce also offers a separately named Marketing Intelligence product in Marketing Cloud Next, built around Data 360 and Tableau Next. The overlap in product names and marketing workflows makes roadmap clarity and customer migration a material diligence issue; the available documentation does not establish that the two products share architecture or that the legacy product has been retired.
 
-The competitive position was strongest where marketing data was too fragmented for a standard BI deployment but too operationally important for spreadsheets and manual agency reporting. Its differentiation came from prebuilt source integrations, an opinionated marketing data model, domain-specific harmonization, and workflows for attribution, budget pacing, and cross-channel performance. Substitutes include Adobe, Tableau, Looker, specialist marketing ETL providers, and internal cloud data warehouses. Those alternatives can be more flexible or broader, while Datorama's advantage was faster time to a usable marketing view and less bespoke data engineering for a defined domain.
+The historical company showed commercial adoption before its sale. A contemporaneous 2013 report said four of Advertising Age's top twenty national advertisers were working with the platform within four months of its product release. Salesforce later reported more than 3,000 agency and brand customers at acquisition and named PepsiCo, Ticketmaster, Trivago, Unilever, Pernod Ricard, and Foursquare. These are dated company and media reports, not current customer counts, contract values, renewal figures, or proof that each named customer remains a Marketing Cloud Intelligence subscriber. A Salesforce customer quotation at the 2018 product integration launch described improved operational efficiency, but that statement is not an independently audited product outcome.
 
-Commercial traction is evidenced by Salesforce's acquisition and its contemporaneous customer and product claims, but those claims should not be read as current independent-company metrics. Salesforce completed the acquisition on August 20, 2018; Salesforce now identifies Datorama as the legacy name for Marketing Cloud Intelligence, and its documentation continues to reference the former name. The standalone employee count, revenue, and current customer concentration are not reliably disclosed. The historical Israeli development base is relevant to the company’s origin, but the asset should be evaluated as part of Salesforce’s mature enterprise portfolio, not as a live venture-backed startup.
+Datorama was founded in 2012 by Ran Sarig, Efi Cohen, and Katrin Ribant. Their reported backgrounds complemented one another: Sarig and Cohen held engineering leadership roles at MediaMind, while Ribant led a global big-data analytics unit at Havas Digital. The company scaled to roughly 400 employees by the 2018 sale, with about 130 in Tel Aviv, and its historical headquarters were reported in New York. Cohen later became a Salesforce Israel R&D leader and continued as a Datorama product and engineering executive under Salesforce in 2020. Current product leadership and standalone staffing are not disclosed. Salesforce's annual report records the acquisition of all outstanding Datorama, Inc. stock and about $766 million in acquisition-date fair value consideration transferred. This accounting amount includes cash, Salesforce stock, and assumed awards; press estimates above $800 million used a different transaction-value basis. It is an acquisition accounting disclosure, not Datorama's revenue or a standalone valuation multiple.
 
-There is credible but limited dual-use relevance. The underlying pattern—multi-source ingestion, schema harmonization, entity and hierarchy management, access-controlled analytics, and decision-oriented visualization—can support intelligence fusion, operational reporting, logistics analysis, and security monitoring. That is a transferable architecture pattern, not evidence that Datorama was built for defense, handled classified data, or held government contracts. Salesforce documentation also states that Marketing Cloud Intelligence does not currently support connections to Government Cloud, which reinforces the need for caution. Its strategic value is therefore as a commercial reference architecture and incumbent capability, not as a deployable national-security product or an independent investment target."""
+The core technology has a documented U.S. patent record under Datorama Technologies Ltd. Patent grants describe normalizing campaign data from advertising platforms, cross-platform analytics, processing queries over dynamically changing data models, and linking user-level data across media platforms. These patents reinforce the technical specificity of its data model and integration problem, but a patent grant alone does not establish current enforceability, maintenance, ownership chain, freedom to operate, or commercial moat. The product's historical advantage came from combining connectors, a marketing-specific data model, automated harmonization, and operational reporting in one managed service. Customers with simpler needs could use spreadsheets or standard BI. Large engineering teams could build connectors and models on a warehouse. Adobe Customer Journey Analytics has deeper ties to Adobe Experience Platform and customer experience analysis; Adverity and Funnel focus on marketing data extraction, cleaning, and harmonization, with warehouse delivery and measurement options. These alternatives make data portability, connector coverage, implementation time, field-mapping accuracy, and total cost more useful comparison points than broad claims of technical uniqueness.
+
+Commercial diligence should distinguish the acquired product from Salesforce's wider marketing business. Salesforce stated that Datorama's financial contribution was not material to consolidated results in the period after acquisition, but this does not disclose standalone revenue, ARR, profitability, retention, burn, or customer concentration. A current third-party company page lists historical 2020 revenue and staffing figures without an underlying source, so those figures are excluded from validated metrics. Salesforce's acquisition accounting assigned value to developed technology and customer relationships, but those purchase-accounting values are not recurring revenue. The record supports the conclusion that Salesforce acquired a commercially adopted product and engineering team; it does not support an independent financial profile or a current customer count.
+
+Datorama is not a live venture-backed company or a direct equity opportunity. Its strategic relevance is as a reference for building governed, domain-specific data integration and analytics inside a large software suite. The architecture has general technical transferability to operations data, but the product was marketed for commercial marketing workflows. Salesforce states that Marketing Cloud Intelligence (Datorama) does not currently support connections to Government Cloud. No defense customer, government contract, classified deployment, or security certification was verified. For that reason, the record does not treat the asset as a validated dual-use defense product; any security use would require a separate product, deployment, and authorization case."""
 logo = "https://www.salesforce.com/c2/public/app/favicon.ico"
-website = "https://www.salesforce.com/marketing/analytics/intelligence/"
+website = "https://help.salesforce.com/s/articleView?id=sf.datorama.htm&language=en_US&type=5"
 sector = "AI / Marketing Data Analytics"
 founded = "2012"
-headquarters = "Tel Aviv, Israel (historical development base)"
-employees = "Unknown (current standalone headcount not disclosed after acquisition)"
+headquarters = "New York, United States (historical headquarters); Tel Aviv, Israel (historical R&D center)"
+employees = "Current product-specific headcount not disclosed; approximately 400 employees were reported at the 2018 acquisition."
 funding_stage = "Acquired by Salesforce (completed 2018)"
 entity_type = "acquired_asset"
-dual_use = true
-dual_use_description = "Datorama's core data-ingestion, schema-harmonization, entity-resolution, and analytics pattern has substantive commercial and security relevance. It could inform intelligence fusion, operational dashboards, logistics analysis, or security monitoring, but the marketed product was built for commercial marketing data and there is no verified evidence here of classified workloads, defense contracts, or Government Cloud connectivity."
+dual_use = false
+dual_use_description = "Datorama's commercial product connects and harmonizes marketing data for analytics. The general integration pattern could be adapted to operational information, but no defense or security customer, contract, classified deployment, or authorization was verified, and Salesforce says Marketing Cloud Intelligence (Datorama) does not support Government Cloud connections. The available evidence is not sufficient to classify the product as a validated dual-use offering."
 key_technologies = ["Multi-source API and file data ingestion", "Marketing-specific schema harmonization and data fusion", "Entity, dimension, measurement, and hierarchy modeling", "Automated data mapping and calculated fields", "Cross-channel attribution and performance analytics", "Granular data pipelines for high-volume event and log data", "Role-based enterprise dashboards and reporting"]
-use_cases = ["Cross-channel advertising and campaign measurement", "Marketing spend, delivery, and budget pacing", "Automated enterprise and agency reporting", "Customer-journey and audience performance analysis", "Publisher and media-portfolio analytics", "Multi-source intelligence fusion and operational reporting concepts", "Logistics or mission-support dashboards using non-classified data"]
+use_cases = ["Cross-channel advertising and campaign measurement", "Marketing spend, delivery, and budget pacing", "Automated enterprise and agency reporting", "Customer-journey and audience performance analysis", "Publisher and media-portfolio analytics"]
 investible = false
-investment_rationale = "Datorama is not a current standalone investment opportunity: Salesforce completed the acquisition in 2018 and the product now forms part of Marketing Cloud Intelligence. The acquisition validates an enterprise need for domain-specific data integration and analytics, but ownership, product control, financial exposure, and execution optionality belong to Salesforce. The asset can inform strategic technology diligence, not a direct venture priority signal."
-strategic_value = "The asset is strategically useful as a reference architecture for turning fragmented operational data into governed, decision-ready views. Its connectors, canonical data model, harmonization workflows, and visualization layer illustrate how a commercial platform can reduce integration friction. Relevance to defense and national security is indirect and depends on clean, permitted, non-classified data and a suitable deployment boundary; current Salesforce product documentation does not establish Government Cloud support for Marketing Cloud Intelligence."
+investment_rationale = "Datorama is not a current standalone investment opportunity: Salesforce acquired all outstanding Datorama, Inc. stock in 2018, and the product now operates within Salesforce Marketing Cloud Intelligence. Its acquisition and historical customer adoption validate demand for marketing-specific data integration and analytics, but ownership, product economics, customer metrics, and roadmap control now sit within Salesforce. The acquisition accounting figure is not a current valuation or revenue proxy. Scores therefore recognize historical product and team strength while discounting direct investibility, transparency, and independent strategic optionality."
+strategic_value = "Datorama is strategically useful as a commercial reference for joining fragmented operational data through connectors, canonical fields, normalization, hierarchy preservation, and decision-oriented analytics. Salesforce's accounting assigned value to developed technology and customer relationships, while its product documentation shows the legacy Marketing Cloud Intelligence capability remains documented. The strongest strategic lesson is about domain modeling and repeatable data onboarding. Any use beyond marketing requires separate diligence on data rights, access control, residency, lineage, deployment boundary, and mission suitability; current Datorama documentation specifically excludes Government Cloud connectivity."
 public_sources = [
-  { label = "Salesforce acquisition completion", url = "https://www.salesforce.com/news/stories/datorama-has-joined-the-salesforce-family/?bc=OTH", description = "Acquisition completion, product, and company-reported customer count." },
-  { label = "Salesforce FY2019 annual report", url = "https://s205.q4cdn.com/626266368/files/doc_financials/2019/ar/Salesforce-FY-2019-Annual-Report.pdf", description = "Filed consideration and acquisition accounting." },
-  { label = "Datorama Series C announcement", url = "https://www.globenewswire.com/news-release/2016/09/12/966984/0/en/Datorama-Raises-32-Million-in-New-Funding-Led-by-Lightspeed-Venture-Partners.html", description = "Company announcement of Series C, participants and reported lifetime funding." },
-  { label = "Datorama Series B announcement", url = "https://www.globenewswire.com/news-release/2014/09/29/1268171/0/en/Datorama-Closes-15-Million-Investment-Led-by-Marker-LLC-and-Eric-Schmidt-s-Innovation-Endeavors.html", description = "Company announcement of Series B and participants." },
-  { label = "Datorama Series A and seed report", url = "https://en.globes.co.il/en/article-1000867187", description = "Contemporaneous reporting on Series A, seed amount, founders, and early customers." },
-  { label = "Salesforce marketing analytics product", url = "https://www.salesforce.com/marketing/analytics/", description = "Current marketing analytics capabilities and distinction between Marketing Cloud Intelligence (formerly Datorama) and newer Marketing Intelligence." },
-  { label = "Datorama acquisition coverage", url = "https://en.globes.co.il/en/article-what-salesforce-sees-in-datorama-1001246393", description = "Israeli press coverage and quoted founder perspective on acquisition." }
+  { label = "Globes: Datorama raises $3m", url = "https://en.globes.co.il/en/article-1000867187", description = "Contemporaneous founding, seed and Series A funding, product adoption, founders, and New York and Tel Aviv offices." },
+  { label = "MediaPost: 2013 Series A report", url = "https://www.mediapost.com/publications/article/205794/datorama-closes-funding-will-enhance-cross-channe.html?edition=62947", description = "Series A amount and lead, seed total, founder experience, and product positioning." },
+  { label = "Datorama: 2014 Series B announcement", url = "https://www.globenewswire.com/news-release/2014/09/29/1268171/0/en/Datorama-Closes-15-Million-Investment-Led-by-Marker-LLC-and-Eric-Schmidt-s-Innovation-Endeavors.html", description = "Series B amount, leads, Cedar Fund participation, and historical offices." },
+  { label = "Datorama: 2016 Series C announcement", url = "https://www.globenewswire.com/news-release/2016/09/12/966984/0/en/Datorama-Raises-32-Million-in-New-Funding-Led-by-Lightspeed-Venture-Partners.html", description = "Series C amount, named investors, reported cumulative funding, and customer/product assertions." },
+  { label = "Globes: acquisition and company profile", url = "https://en.globes.co.il/en/article-what-salesforce-sees-in-datorama-1001246393", description = "Historical headquarters and offices, team scale, product, customers, investors, acquisition estimate, and conflicting cumulative-funding report." },
+  { label = "CTech: Salesforce finalizes Datorama acquisition", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3744695,00.html", description = "Acquisition completion, New York historical headquarters, Israeli founding, and press estimate." },
+  { label = "Globes: Sarit Firon interview", url = "https://en.globes.co.il/en/article-sarit-firon-takes-her-next-risk-1001335331", description = "Sarit Firon's 2012 angel investment and seed-round participation." },
+  { label = "Globes: Efi Cohen appointed to Salesforce Israel R&D", url = "https://en.globes.co.il/en/article-1001321414", description = "Cohen's Datorama CTO background and 2020 Salesforce product and R&D leadership roles." },
+  { label = "Salesforce: agreement to acquire Datorama", url = "https://www.salesforce.com/news/stories/salesforce-signs-definitive-agreement-to-acquire-datorama/?bc=OTH", description = "Official July 2018 acquisition announcement and at-acquisition customer count." },
+  { label = "Salesforce: Datorama joins Salesforce", url = "https://www.salesforce.com/news/stories/datorama-has-joined-the-salesforce-family/?bc=OTH", description = "Official acquisition completion on August 20, 2018 and reported customers." },
+  { label = "Salesforce FY2019 Form 10-K", url = "https://www.sec.gov/Archives/edgar/data/1108524/000110852419000009/crmq4fy1910-k.htm", description = "Acquisition of all Datorama, Inc. stock, approximately $766 million fair-value consideration, its components, and immaterial consolidated results." },
+  { label = "Salesforce introduces Datorama in Marketing Cloud", url = "https://www.salesforce.com/news/news/stories/salesforce-introduces-datorama-as-part-of-marketing-cloud/?bc=OTH&ver=1778774954", description = "Datorama product integration announcement and historical customer statement." },
+  { label = "Salesforce Help: Marketing Cloud Intelligence", url = "https://help.salesforce.com/s/articleView?id=sf.datorama.htm&language=en_US&type=5", description = "Current documentation for the legacy Datorama marketing analytics product and data model." },
+  { label = "Salesforce Help: Government Cloud compatibility", url = "https://help.salesforce.com/s/articleView?id=005317292&language=en_US&type=1", description = "Salesforce's March 2026 statement that Marketing Cloud Intelligence (Datorama) does not support Government Cloud connections." },
+  { label = "Salesforce Help: new Marketing Intelligence setup", url = "https://help.salesforce.com/s/articleView?id=mktg.mc_mi_setup.htm&language=en_US&type=5", description = "Documentation for the separately named Marketing Intelligence offer built with Data 360 and Tableau Next." },
+  { label = "Google Patents: US 10,395,271", url = "https://patents.google.com/patent/US10395271B2/en", description = "Patent record for campaign-data normalization, naming Datorama Technologies Ltd as original assignee." },
+  { label = "Google Patents: US 10,515,386", url = "https://patents.google.com/patent/US10515386B2/en", description = "Patent record for cross-platform big-data analytics, naming Datorama Technologies Ltd as original assignee." },
+  { label = "Google Patents: US 10,754,877", url = "https://patents.google.com/patent/US10754877B2/en", description = "Patent record for analytics on dynamically changing data models." },
+  { label = "Google Patents: US 11,042,899", url = "https://patents.google.com/patent/US11042899B2/en", description = "Patent record for cross-media user tracking and unified user-level data." },
+  { label = "Cedar Fund: Datorama portfolio", url = "https://www.cedarfund.com/datorama", description = "Investor portfolio page identifying Datorama as acquired by Salesforce." },
+  { label = "Marker LLC: portfolio", url = "https://www.marker-llc.com/", description = "Investor portfolio page listing Datorama." },
+  { label = "Lightspeed: Datorama portfolio", url = "https://lsvp.com/company/datorama/", description = "Investor record of Series C investment and acquisition by Salesforce." },
+  { label = "Innovation Endeavors: portfolio", url = "https://www.innovationendeavors.com/companies?3fb14a70_page=2", description = "Investor portfolio page identifying Datorama as acquired." },
+  { label = "Adverity documentation", url = "https://docs.adverity.com/getting-started/adverity-introduction.html", description = "Competitor documentation for marketing-data collection, normalization, mapping, warehouse delivery, and dashboards." },
+  { label = "Adobe Customer Journey Analytics documentation", url = "https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2c-overview/cja-overview", description = "Competitor documentation for cross-channel analytics built on Adobe Experience Platform." },
+  { label = "Funnel marketing intelligence platform", url = "https://funnel.io/", description = "Competitor product description for connectors, data management, measurement, and reporting." },
+  { label = "GetLatka Datorama page", url = "https://getlatka.com/companies/datorama", description = "Unverified third-party historical financial and employee figures; no underlying source is provided, so these figures were excluded from validated metrics." }
 ]
-potential_score = 58.0
-technology_score = 84.0
-market_score = 78.0
-team_score = 63.0
-dual_use_score = 46.0
-strategic_alignment_score = 43.0
+potential_score = 33.0
+technology_score = 82.0
+market_score = 72.0
+team_score = 66.0
+dual_use_score = 18.0
+strategic_alignment_score = 25.0
 stage = "mature"
-stage_rationale = "Datorama stopped being an independent startup when Salesforce completed its acquisition in August 2018. Salesforce now describes Datorama as the legacy name for Marketing Cloud Intelligence, so the relevant operating status is a mature acquired product within a larger enterprise software portfolio."
-competitors = ["Adobe Analytics and Customer Journey Analytics", "Tableau", "Looker", "Funnel.io", "Adverity", "Supermetrics", "Enterprise cloud data warehouse plus custom BI"]
-competitive_edge = "Datorama's historical edge was a purpose-built marketing data model combined with connectors, harmonization, and reporting workflows. That specialization could deliver faster time to insight than a generic BI tool or a warehouse project for organizations with many channels and agencies. The edge is less defensible today because Salesforce distribution and platform integration are the main strategic assets, while adjacent vendors can reproduce connectors and visualization."
-risk_factors = ["No standalone company or equity exposure remains after the Salesforce acquisition", "Current product packaging and roadmap depend on Salesforce priorities and platform integration", "Standalone headcount, revenue, retention, and customer concentration are not publicly disclosed", "Marketing analytics is crowded and substitutes include broad BI, CDP, ETL, and warehouse platforms", "Data harmonization and attribution outputs can be wrong when source mappings, identities, or hierarchies are incomplete", "Commercial marketing workflows do not establish classified, sovereign, or Government Cloud suitability", "Connector maintenance, third-party API changes, privacy rules, and data residency requirements can raise operating cost"]
+stage_rationale = "Salesforce completed its acquisition of Datorama in August 2018. Datorama is an acquired product identity within Salesforce Marketing Cloud Intelligence, and Salesforce Help continues to publish product documentation. It is a mature operating product inside a public company, not an independent startup; standalone headcount and financial performance are not disclosed."
+competitors = ["Adobe Customer Journey Analytics", "Adverity", "Funnel", "Salesforce Marketing Intelligence in Marketing Cloud Next", "Improvado", "Fivetran and a cloud warehouse plus BI stack"]
+competitive_edge = "Historically, Datorama combined a marketing-specific semantic model, a broad connector and transformation layer, automated harmonization, and reporting workflows in one SaaS product. That bundle reduced the cost and delay of integrating channels compared with custom warehouse work, and helped it scale across brands and agencies. Today, Salesforce distribution and integration are part of the ownership advantage, while competing platforms offer overlapping data extraction, normalization, attribution, and dashboards. Differentiation should be tested through connector completeness, mapping accuracy, support quality, time to onboard, data portability, and the product roadmap relative to Salesforce's separate Marketing Intelligence offer."
+risk_factors = ["No standalone equity exposure remains after Salesforce acquired all outstanding Datorama, Inc. stock", "Current standalone revenue, ARR, profitability, renewal, retention, and customer concentration are not disclosed", "Salesforce's legacy Marketing Cloud Intelligence product overlaps with a separately documented Marketing Intelligence offer built on Data 360 and Tableau Next; roadmap and customer migration are unclear", "No current product-specific customer count or headcount is verified", "Cross-source mappings, identity joins, attribution rules, currency conversion, and hierarchies can produce misleading outputs when source data or definitions are incomplete", "Connector maintenance depends on third-party API availability, permissions, rate limits, and privacy requirements", "The legacy product does not support connections to Salesforce Government Cloud, and no defense or classified deployment was verified", "Patent records do not establish present enforceability, current title, maintenance, licensing, or a defensible competitive moat"]
 risk_level = "medium"
 signals = []
 priority_rank = 0
-priority_rationale = "Datorama has strong historical technology validation and meaningful adjacency to data-fusion diligence, but low direct priority as an acquired asset. The score reflects a capable commercial analytics foundation offset by weak standalone investibility, limited verified defense evidence, Salesforce dependency, and uncertainty around current independent operating metrics."
+priority_rationale = "The score reflects validated historical engineering, adoption, and product specificity, offset by the absence of standalone investment exposure, current financial metrics, independent roadmap control, and verified defense suitability. The product can inform commercial data-platform diligence, but no current standalone startup priority is warranted."
 crawled_at = "2026-02-27T14:30:00+00:00"
-updated_at = "2026-10-05T04:52:12Z"
+updated_at = "2026-10-22T02:28:25Z"
 
 [intelligence]
 schema_version = 2
-people = [
-  { name = "Ran Sarig", role = "Co-founder and chief executive officer (historical)", is_founder = true, current = false, background = "Globes identified Sarig as Datorama's CEO and co-founder in 2013; Salesforce later completed the acquisition.", source_ids = ["globes-a", "sf-acquisition"] },
-  { name = "Efi Cohen", role = "Co-founder and chief technology officer (historical)", is_founder = true, current = false, background = "Globes identified Cohen as co-founder and CTO in 2013.", source_ids = ["globes-a"] },
-  { name = "Katrin Ribant", role = "Co-founder and chief solutions officer (historical)", is_founder = true, current = false, background = "Globes identified Ribant as a Datorama co-founder and chief solutions officer in 2013.", source_ids = ["globes-a"] }
-]
-investors = [
-  { name = "Cedar Fund", investor_type = "vc", relationship = "historical", round_ids = ["seed-2012", "series-a-2013", "series-b-2014"], source_ids = ["globes-a", "series-b"] },
-  { name = "Innovation Endeavors", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2013", "series-b-2014", "series-c-2016"], source_ids = ["globes-a", "series-b", "series-c"] },
-  { name = "Marker LLC", investor_type = "vc", relationship = "historical", round_ids = ["series-b-2014", "series-c-2016"], source_ids = ["series-b", "series-c"] },
-  { name = "Lightspeed Venture Partners", investor_type = "vc", relationship = "historical", round_ids = ["series-c-2016"], source_ids = ["series-c"] }
-]
-financials = []
-traction = []
-intellectual_property = []
-comparables = []
+
+[[intelligence.people]]
+name = "Ran Sarig"
+role = "Co-founder and chief executive officer (historical)"
+is_founder = true
+current = false
+background = "Globes and Lightspeed identify Sarig as Datorama's co-founder and CEO. MediaPost reported that he had been vice president of research and development at MediaMind before founding Datorama. Current role after the Salesforce integration was not established in this review."
+source_ids = ["globes-a", "mediapost-a", "lightspeed-portfolio"]
+
+[[intelligence.people]]
+name = "Efi Cohen"
+role = "Co-founder and chief technology officer (historical); Salesforce Israel R&D and Datorama product executive in 2020"
+is_founder = true
+current = false
+background = "Globes and Lightspeed identify Cohen as Datorama's co-founder and CTO. A 2020 Globes report says he became head of Salesforce's Israel R&D center and continued as senior vice president of product and engineering for Datorama under Salesforce. The review does not establish his current role in 2026."
+source_ids = ["globes-a", "efi-globes", "lightspeed-portfolio"]
+
+[[intelligence.people]]
+name = "Katrin Ribant"
+role = "Co-founder and chief solutions officer (historical)"
+is_founder = true
+current = false
+background = "Globes and Lightspeed identify Ribant as Datorama's co-founder and chief solutions officer. MediaPost reported that she joined from Havas Digital, where she led the agency holding company's global big-data analytics unit. Current role after the acquisition was not established."
+source_ids = ["globes-a", "mediapost-a", "lightspeed-portfolio"]
+
+[[intelligence.investors]]
+name = "Sarit Firon"
+investor_type = "angel"
+round_ids = ["seed-2012"]
+relationship = "historical"
+source_ids = ["sarit-firon"]
+notes = "Globes reported that Firon invested $140,000 of personal capital in 2012 and brought other investors into the seed round. This is her individual investment, not the full $750,000 seed-round amount."
+
+[[intelligence.investors]]
+name = "Cedar Fund"
+investor_type = "vc"
+website = "https://www.cedarfund.com/"
+round_ids = ["series-a-2013", "series-b-2014"]
+relationship = "historical"
+source_ids = ["globes-a", "mediapost-a", "series-b", "cedar-portfolio"]
+
+[[intelligence.investors]]
+name = "Innovation Endeavors"
+investor_type = "vc"
+website = "https://www.innovationendeavors.com/"
+round_ids = ["series-a-2013", "series-b-2014", "series-c-2016"]
+relationship = "historical"
+source_ids = ["globes-a", "mediapost-a", "series-b", "series-c", "ie-portfolio"]
+
+[[intelligence.investors]]
+name = "Marker LLC"
+investor_type = "vc"
+website = "https://www.marker-llc.com/"
+round_ids = ["series-b-2014", "series-c-2016"]
+relationship = "historical"
+source_ids = ["series-b", "series-c", "marker-portfolio"]
+
+[[intelligence.investors]]
+name = "Lightspeed Venture Partners"
+investor_type = "vc"
+website = "https://lsvp.com/"
+round_ids = ["series-c-2016"]
+relationship = "historical"
+source_ids = ["series-c", "lightspeed-portfolio"]
+
+[[intelligence.financials]]
+name = "Employees at acquisition"
+value = "Approximately 400 employees, including about 130 in Tel Aviv"
+as_of = "2018-07"
+basis = "reported"
+metric = "employees"
+numeric_value = 400
+value_relation = "approximate"
+unit = "people"
+source_ids = ["globes-acq"]
+notes = "Historical acquisition-era staffing reported by Globes, not current standalone or Marketing Cloud Intelligence headcount."
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Globes reported that four of Advertising Age's 20 leading national advertisers were working with Datorama's cross-channel platform fewer than four months after product release. This is a historical adoption signal, not a verified paid-customer count."
+date = "2013-07"
+source_ids = ["globes-a"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Datorama's Series C announcement said it had onboarded thousands of brands and hundreds of agencies, publishers, and technology companies, and named L'Oréal, Foursquare, Yahoo! JAPAN, and GoDaddy. This was a company assertion at the 2016 announcement."
+date = "2016-09-12"
+source_ids = ["series-c"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Salesforce reported more than 3,000 agency and brand customers at the acquisition announcement and named PepsiCo, Ticketmaster, Trivago, Unilever, Pernod Ricard, and Foursquare. The figure and names are acquisition-era claims, not a current customer count or disclosed contract data."
+date = "2018-07-16"
+source_ids = ["sf-agreement", "sf-acquisition"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Salesforce announced Datorama as part of Marketing Cloud and described its integration of marketing data across channels, campaigns, and regions. A Ticketmaster marketing-operations executive reported improved operating efficiency in the Salesforce announcement; this customer quotation is not an independent performance study."
+date = "2018-09-12"
+source_ids = ["sf-intro"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Salesforce Help continues to document the legacy Marketing Cloud Intelligence product, including data connectors, harmonization, data-model relationships, analysis, dashboards, and product updates. Salesforce separately documents a newer Marketing Intelligence product in Marketing Cloud Next using Data 360 and Tableau Next."
+source_ids = ["sf-help", "sf-next-mi"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "U.S. Patent 10,395,271, granted August 27, 2019, covers methods for normalizing campaign data from multiple advertising platforms into a marketing data model. The record names Datorama Technologies Ltd as original assignee."
+date = "2019-08-27"
+source_ids = ["patent-10395271"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "U.S. Patent 10,515,386, granted December 24, 2019, covers cross-platform big-data analytics and combining information with different data formats. The record names Datorama Technologies Ltd as original assignee."
+date = "2019-12-24"
+source_ids = ["patent-10515386"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "U.S. Patent 10,754,877, granted August 25, 2020, covers analytics over dynamically changing data models, including queries across data stores and schemas. The record names Datorama Technologies Ltd as original assignee."
+date = "2020-08-25"
+source_ids = ["patent-10754877"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "U.S. Patent 11,042,899, granted June 22, 2021, covers tracking users across media platforms and creating unified user-level data. The record names Datorama Technologies Ltd as original assignee."
+date = "2021-06-22"
+source_ids = ["patent-11042899"]
+
+[[intelligence.comparables]]
+name = "Adobe Customer Journey Analytics"
+website = "https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2c-overview/cja-overview"
+rationale = "A broad cross-channel analytics and customer-journey product for combining online, offline, and other Experience Platform datasets, dimensions, and metrics. It overlaps with Datorama where large marketing and customer datasets must be joined and analyzed."
+differentiation = "Adobe's product is built on Adobe Experience Platform and emphasizes customer-experience analysis with custom schemas and workspace analytics. Datorama's historical distinction was its marketing-specific source integration, mapping, and harmonization service for operational campaign data."
+source_ids = ["adobe-cja", "globes-a"]
+
+[[intelligence.comparables]]
+name = "Adverity"
+website = "https://docs.adverity.com/getting-started/adverity-introduction.html"
+rationale = "A direct marketing-data operations substitute that collects source feeds, transforms and harmonizes metrics, and loads data to its warehouse or external BI tools."
+differentiation = "Adverity's documented flow is an ETL pipeline with explicit data-quality, mapping, and destination steps. Datorama historically bundled ingestion and harmonization with marketing dashboards and analysis inside the same application."
+source_ids = ["adverity-docs", "sf-help"]
+
+[[intelligence.comparables]]
+name = "Funnel"
+website = "https://funnel.io/"
+rationale = "A current marketing-data hub and measurement platform that advertises managed connectors, custom imports, a semantic layer, dashboards, and marketing measurement. These functions overlap with Datorama's original data-integration and reporting use cases."
+differentiation = "Funnel's current positioning emphasizes an independent marketing-data foundation and warehouse delivery, while Datorama is owned and sold within Salesforce and has a legacy Marketing Cloud Intelligence data model. Funnel's product claims are vendor-reported and were not independently benchmarked here."
+source_ids = ["funnel-home", "sf-help"]
+
+[[intelligence.comparables]]
+name = "Salesforce Marketing Intelligence in Marketing Cloud Next"
+website = "https://help.salesforce.com/s/articleView?id=mktg.mc_mi_setup.htm&language=en_US&type=5"
+rationale = "A Salesforce product with overlapping marketing-data unification, semantic modeling, campaign analysis, and dashboard workflows. It is strategically relevant to customers evaluating Salesforce's marketing analytics roadmap."
+differentiation = "Salesforce documents this as a separately configured Marketing Cloud Next offer using Data 360 and Tableau Next. Salesforce also maintains separate Help materials for Marketing Cloud Intelligence (Datorama); public documentation reviewed here does not say the two products are the same system or announce a retirement date for the legacy product."
+source_ids = ["sf-next-mi", "sf-help"]
 
 [intelligence.company]
 company_id = "il-datorama"
 legal_name = "Datorama, Inc."
-aliases = ["Datorama", "Marketing Cloud Intelligence"]
+aliases = ["Datorama", "Datorama Technologies Ltd", "Marketing Cloud Intelligence (legacy Datorama product identity)"]
 operating_status = "acquired"
-business_model = "Enterprise SaaS subscription platform for cross-channel marketing data integration, harmonization, analytics, and reporting; now a Salesforce product rather than a standalone company."
-products = ["Datorama marketing intelligence platform", "Salesforce Marketing Cloud Intelligence (legacy Datorama product)"]
-locations = ["Tel Aviv, Israel", "New York, United States"]
-source_ids = ["sf-acquisition", "sf-product", "globes-a"]
+business_model = "Historical enterprise SaaS subscription platform for marketing data integration, harmonization, analysis, and reporting; now owned and operated as a Salesforce product rather than a standalone company."
+products = ["Datorama Marketing Integration Engine", "Salesforce Marketing Cloud Intelligence (legacy Datorama product)"]
+locations = ["New York, United States (historical headquarters)", "Tel Aviv, Israel (historical office and R&D center)"]
+source_ids = ["sf-agreement", "sf-acquisition", "sf-annual-report", "ctech-acquisition", "globes-acq", "sf-help"]
+notes = "Salesforce's filing names Datorama, Inc. Patent records use the related assignee name Datorama Technologies Ltd. The sources reviewed do not establish the precise incorporation jurisdiction or a complete corporate structure; New York was the historical headquarters and Tel Aviv the Israeli R&D base."
 
 [intelligence.funding]
 status = "reported"
-summary = "Publicly verified funding includes a $750,000 seed round reported in 2013, a $3 million Series A announced in July 2013, a $15 million Series B announced in September 2014, and a $32 million Series C announced in September 2016. Datorama stated when announcing Series C that cumulative funding was $50 million; this company-reported cumulative figure is retained as reported and is not recomputed from round values. No valuation was disclosed in the Series C announcement."
-rounds = [
-  { id = "seed-2012", round_type = "Seed", instrument = "equity", status = "closed", announced_on = "2013-07-31", amount_status = "reported", amount = 750000, amount_scope = "round", currency = "USD", lead_investors = [], participating_investors = [], source_ids = ["globes-a"] },
-  { id = "series-a-2013", round_type = "Series A", instrument = "equity", status = "closed", announced_on = "2013-07-31", amount_status = "reported", amount = 3000000, amount_scope = "round", currency = "USD", lead_investors = ["Cedar Fund", "Innovation Endeavors"], participating_investors = [], source_ids = ["globes-a"] },
-  { id = "series-b-2014", round_type = "Series B", instrument = "equity", status = "closed", announced_on = "2014-09-29", amount_status = "reported", amount = 15000000, amount_scope = "round", currency = "USD", lead_investors = ["Marker LLC", "Innovation Endeavors"], participating_investors = ["Cedar Fund"], source_ids = ["series-b"] },
-  { id = "series-c-2016", round_type = "Series C", instrument = "equity", status = "closed", announced_on = "2016-09-12", amount_status = "reported", amount = 32000000, amount_scope = "round", currency = "USD", lead_investors = ["Lightspeed Venture Partners"], participating_investors = ["Marker LLC", "Innovation Endeavors"], source_ids = ["series-c"] }
-]
+summary = "Public evidence supports a $750,000 seed in 2012, a $3 million Series A in July 2013, a $15 million Series B in September 2014, and a $32 million Series C in September 2016. Datorama's Series C release explicitly reported cumulative funding of $50 million. Contemporary Series A reporting totals $3.75 million including seed; a 2018 Globes article reported $50.7 million, while the disclosed event amounts arithmetically sum to $50.75 million. Those aggregate scopes and rounding conventions are unresolved, so the company-announced $50 million remains the reported lifetime total and no alternative total is substituted."
 reported_total_raised = 50000000
 reported_total_currency = "USD"
 total_source_ids = ["series-c"]
 total_as_of = "2016-09-12"
-total_scope = "Company-announced cumulative funding total; not a recomputation of individually reported events."
+total_scope = "Company-announced cumulative funding after the Series C; not recomputed from individual round amounts."
 history_status = "partial"
 coverage_through = "2018-08"
 
+[[intelligence.funding.rounds]]
+id = "seed-2012"
+round_type = "Seed"
+instrument = "unknown"
+status = "closed"
+announced_on = "2012"
+closed_on = "2012"
+amount_status = "reported"
+amount = 750000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Sarit Firon"]
+participating_investors = []
+valuation_basis = "undisclosed"
+source_ids = ["globes-a", "mediapost-a", "sarit-firon"]
+notes = "The 2013 reports say the $750,000 seed was raised in 2012. Globes later reported Sarit Firon invested $140,000 of her own capital and introduced other seed investors; their full identities and instrument terms were not disclosed."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2013"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2013-07-31"
+closed_on = "2013-07-31"
+amount_status = "reported"
+amount = 3000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Cedar Fund"]
+participating_investors = ["Innovation Endeavors"]
+valuation_basis = "undisclosed"
+source_ids = ["globes-a", "mediapost-a"]
+notes = "Contemporaneous sources classify this as Series A and name Cedar Fund and Innovation Endeavors. A later 2018 CTech article labels the $3 million financing as seed; contemporaneous Globes and MediaPost coverage and the 2013 total funding of $3.75 million identify a prior seed plus this Series A."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2014"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2014-09-29"
+closed_on = "2014-09-29"
+amount_status = "reported"
+amount = 15000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Marker LLC", "Innovation Endeavors"]
+participating_investors = ["Cedar Fund"]
+valuation_basis = "undisclosed"
+source_ids = ["series-b"]
+
+[[intelligence.funding.rounds]]
+id = "series-c-2016"
+round_type = "Series C"
+instrument = "equity"
+status = "closed"
+announced_on = "2016-09-12"
+closed_on = "2016-09-12"
+amount_status = "reported"
+amount = 32000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Lightspeed Venture Partners"]
+participating_investors = ["Marker LLC", "Innovation Endeavors"]
+valuation_basis = "undisclosed"
+source_ids = ["series-c"]
+notes = "Datorama said valuation was not disclosed and reported cumulative funding at $50 million. The press release named Lightspeed as lead and Marker and Innovation Endeavors as participants."
+
 [intelligence.ownership]
 status = "reported"
-summary = "Salesforce acquired all outstanding stock of Datorama, Inc. in August 2018. Salesforce's FY2019 annual report records acquisition-date fair value of consideration transferred at approximately $766 million, including cash, Salesforce common stock, and assumed equity awards. Private pre-acquisition ownership percentages were not disclosed in the sources reviewed."
+summary = "Salesforce acquired all outstanding Datorama, Inc. stock in August 2018. Salesforce's FY2019 Form 10-K reports approximately $766 million of acquisition-date fair value consideration transferred: $136 million cash, $537 million in Salesforce common stock, and $93 million fair value of assumed awards. Pre-acquisition private ownership percentages were not disclosed in the reviewed sources. Parent-company ticker: NYSE: CRM."
 parent_company = "Salesforce, Inc."
-stock_ticker = "NYSE: CRM"
 cap_table_status = "undisclosed"
 shareholders = ["Salesforce, Inc."]
 source_ids = ["sf-acquisition", "sf-annual-report"]
-deals = [{ id = "salesforce-acquisition-2018", deal_type = "acquisition", company_role = "target", announced_on = "2018-07", completed_on = "2018-08-20", status = "completed", counterparty = "Salesforce, Inc.", amount = 766000000, amount_status = "reported", currency = "USD", source_ids = ["sf-acquisition", "sf-annual-report"], notes = "Annual report states acquisition-date fair value of consideration transferred was approximately $766 million. This filed amount supersedes press estimates; it comprises $136m cash, $537m stock, and $93m fair value of assumed options and restricted stock awards." }]
 holdings = []
+
+[[intelligence.ownership.deals]]
+id = "salesforce-acquisition-2018"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2018-07-16"
+completed_on = "2018-08-20"
+status = "completed"
+counterparty = "Salesforce, Inc."
+amount = 766000000
+amount_status = "reported"
+currency = "USD"
+source_ids = ["sf-agreement", "sf-acquisition", "sf-annual-report", "globes-acq", "ctech-acquisition"]
+notes = "The amount is the approximate acquisition-date fair value of consideration transferred in Salesforce's filed accounting, not a press estimate of cash price or a standalone equity valuation. Contemporary media reported estimates above $800 million, including $850 million; differing transaction-value and accounting bases remain a documented conflict."
 
 [intelligence.israel_connection]
 status = "confirmed"
-basis = ["israeli_founders", "headquarters_in_israel"]
-summary = "Datorama was founded by Israeli entrepreneurs and had an office in Tel Aviv; Salesforce described the company as Israeli in acquisition-era materials. The reviewed sources establish Israeli founding and operations, but do not establish the precise incorporation jurisdiction."
-as_of = "2026-10-05"
-source_ids = ["globes-a", "sf-acquisition"]
+basis = ["israeli_founders", "israeli_rd"]
+summary = "Datorama was founded by Israeli entrepreneurs and maintained a Tel Aviv office and later R&D center; contemporaneous reporting described New York as its historical headquarters. Salesforce acquired the company and incorporated its Israeli development team into its local operation. The precise incorporation jurisdiction of Datorama, Inc. was not established."
+as_of = "2026-10-22"
+source_ids = ["globes-a", "globes-acq", "ctech-acquisition", "efi-globes"]
 
 [intelligence.research]
-researched_at = "2026-10-05T04:52:12Z"
+researched_at = "2026-10-22T02:28:25Z"
 topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
 search_queries = [
-  "Datorama Salesforce acquisition completed August 2018 official",
+  "Datorama Salesforce acquired Marketing Cloud Intelligence company history headquarters legal name",
   "Datorama funding raised seed Series A Series B Series C investors",
-  "Datorama founder Ran Sarig Efi Cohen Katrin Ribant leadership",
-  "Datorama ownership Salesforce acquisition price annual report",
-  "Datorama revenue ARR profitability employees financials",
-  "Datorama customers contracts partnerships product milestones",
-  "Datorama patents Datorama Technologies Ltd",
-  "Datorama competitors marketing analytics platform",
-  "Datorama defense government security applications"
+  "Datorama $750,000 seed 2012 investor Sarit Firon Cedar Fund",
+  "Datorama founders Ran Sarig Efi Cohen Katrin Ribant leadership",
+  "Efi Cohen Salesforce Israel R&D Datorama executive 2020",
+  "Salesforce Datorama acquisition all outstanding stock FY2019 annual report $766 million",
+  "Datorama revenue ARR employees financials 2020 Salesforce annual report not material",
+  "Datorama customer counts 3000 agencies brands Salesforce acquisition named customers",
+  "Datorama patents Datorama Technologies Ltd USPTO Google Patents",
+  "Datorama defense government security use contract Government Cloud support Marketing Cloud Intelligence",
+  "Datorama competitors Adobe Customer Journey Analytics Adverity Funnel official product",
+  "Salesforce Marketing Cloud Intelligence Datorama retirement deprecation end of sale 2026",
+  "Salesforce Marketing Intelligence separate from Marketing Cloud Intelligence Datorama 2026 official",
+  "site:cedarfund.com Datorama",
+  "site:lsvp.com Datorama portfolio",
+  "site:marker-llc.com Datorama portfolio",
+  "site:innovationendeavors.com Datorama",
+  "Datorama Salesforce acquisition completed August 2018 official"
 ]
 gaps = [
-  "team: acquisition-era founder identities are sourced, but a complete current executive roster and individual career histories were not established; the company is now within Salesforce.",
-  "investors: pre-acquisition investors explicitly named in round announcements are listed; complete investor roster and cap table unavailable.",
-  "financials: no standalone revenue, ARR, profitability, burn, or runway figures verified; acquisition consideration is recorded separately under ownership.",
-  "traction: 2018 Salesforce announcement reports more than 3,000 agencies and brands, but current product-specific customer count, contract values, retention, and deployments are not disclosed.",
-  "intellectual_property: no company-specific patent family was verified from an authoritative patent record in this review; do not infer absence of IP.",
-  "competition: named peer set reflects product category and Salesforce positioning; no current independent market-share comparison verified.",
-  "dual_use: no verified defense customer, government contract, classified deployment, or security certification found; technical transferability is analytical only.",
-  "ownership: private pre-acquisition cap table and beneficial ownership percentages were not public in reviewed sources.",
-  "financials: filed acquisition value is consideration transferred, not Datorama revenue or an equity valuation quote; press estimates varied and were not used."
+  "team: founders and selected acquisition-era executives are documented, but current leadership for Marketing Cloud Intelligence and the post-integration engineering roster were not established.",
+  "investors: announced institutional investors and Sarit Firon's disclosed angel investment are identified; the complete seed investor list, private cap table, and beneficial ownership percentages are unavailable.",
+  "financials: no verified standalone Datorama revenue, ARR, profitability, burn, runway, current product-specific headcount, or retention metrics were found. A third-party page lists unsupported 2020 figures without source details; they were excluded. Salesforce's $766 million accounting consideration is an acquisition figure, not revenue.",
+  "traction: historical adoption and acquisition-era customer claims are available, but no current Marketing Cloud Intelligence customer count, contract value, renewal, retention, or customer-concentration data were found.",
+  "intellectual_property: four U.S. patent grants with Datorama Technologies Ltd as assignee were verified, but a complete worldwide portfolio, title chain, current maintenance, licensing, and freedom-to-operate review was not established.",
+  "competition: current official product documentation supports functional comparisons, but no independent current market-share ranking or side-by-side performance benchmark was found.",
+  "dual_use: no verified defense or security customer, government contract, classified deployment, or certification was found; Salesforce states that the legacy product does not support Government Cloud connections.",
+  "ownership: Salesforce ownership and acquisition accounting are filed, but private pre-sale cap table percentages and employee or founder proceeds are not verified from primary ownership records.",
+  "identity: the sources establish Datorama, Inc. and the historical Datorama Technologies Ltd patent assignee, but do not establish Datorama, Inc.'s country of incorporation or a current registry extract."
 ]
-conflicts = ["Press reports cited $800 million to $850 million acquisition values; Salesforce's FY2019 annual report gives approximately $766 million acquisition-date fair value consideration transferred. Numeric ownership deal amount uses the filing's accounting figure and notes that basis; the figures may differ because of transaction estimate versus accounting scope."]
+conflicts = [
+  "Funding total: Datorama's 2016 Series C release says cumulative funding was $50 million; the disclosed round amounts plus the $750,000 seed sum to $50.75 million, and Globes reported $50.7 million in 2018. These totals may use different rounding or scope. The company-announced $50 million is retained and alternatives are not entered as lifetime totals.",
+  "Series A versus seed naming: contemporaneous July 2013 Globes and MediaPost reports call the $3 million financing Series A and describe a separate $750,000 2012 seed. A later CTech acquisition article calls the $3 million financing a seed round. The contemporaneous round classification is used; the later label is recorded as a conflict.",
+  "Acquisition value: Salesforce's FY2019 Form 10-K reports approximately $766 million acquisition-date fair value consideration transferred, including cash, stock, and assumed awards. Contemporary media reported transaction estimates above $800 million, including an $850 million headline. These figures have different bases and are not treated as equivalent cash prices or valuations."
+]
 diligence_questions = [
-  "Which elements of the legacy Datorama architecture and connector library remain active in Marketing Cloud Intelligence versus having been migrated or replaced?",
-  "What current revenue, renewal, adoption, and customer concentration does Salesforce attribute specifically to Marketing Cloud Intelligence?",
-  "What deployment, data residency, and authorization boundaries apply to Marketing Cloud Intelligence, and is any government or defense use formally supported?",
-  "Can Salesforce document the acquired technology's patent portfolio and current ownership or licensing status?"
+  "What are current Marketing Cloud Intelligence revenue, ARR, gross retention, renewal rates, and customer concentration, reported separately from Salesforce Marketing Intelligence in Marketing Cloud Next?",
+  "What is Salesforce's documented product roadmap and migration policy for legacy Marketing Cloud Intelligence, and which current connectors, models, APIs, and customer workflows overlap with the newer Data 360 and Tableau Next offer?",
+  "Can Salesforce provide a current architecture and security pack covering data lineage, mapping validation, access controls, privacy, residency, tenant isolation, and supported deployment regions for Marketing Cloud Intelligence?",
+  "Which patent families and applications were transferred or retained after acquisition, what is their current title and maintenance status, and are any important product components licensed from third parties?",
+  "Does Salesforce support any formally authorized government or defense use of the legacy product outside Government Cloud, given the published statement that it cannot connect to Government Cloud?"
 ]
-
-[[intelligence.research.sources]]
-id = "sf-acquisition"
-url = "https://www.salesforce.com/news/stories/datorama-has-joined-the-salesforce-family/?bc=OTH"
-title = "Datorama Has Joined the Salesforce Family"
-publisher = "Salesforce Newsroom"
-kind = "company"
-accessed_at = "2026-10-05T04:52:12Z"
-published_on = "2018-08-20"
-claims = ["Salesforce completed its acquisition of Datorama on August 20, 2018.", "At acquisition Salesforce described Datorama as cloud-based AI-powered marketing intelligence and analytics for enterprises, agencies, and publishers.", "Salesforce reported more than 3,000 global agency and brand customers and named PepsiCo, Ticketmaster, Trivago, Unilever, Pernod Ricard, and Foursquare."]
-
-[[intelligence.research.sources]]
-id = "sf-annual-report"
-url = "https://s205.q4cdn.com/626266368/files/doc_financials/2019/ar/Salesforce-FY-2019-Annual-Report.pdf"
-title = "Salesforce FY2019 Annual Report"
-publisher = "Salesforce, Inc."
-kind = "filing"
-accessed_at = "2026-10-05T04:52:12Z"
-published_on = "2019-03"
-claims = ["Salesforce acquired all outstanding stock of Datorama, Inc. in August 2018.", "Acquisition-date fair value consideration transferred was approximately $766 million, comprising $136 million cash, $537 million common stock, and $93 million fair value of assumed options and restricted stock awards.", "Datorama financial results included from acquisition date were not material to Salesforce consolidated financial statements."]
-
-[[intelligence.research.sources]]
-id = "series-c"
-url = "https://www.globenewswire.com/news-release/2016/09/12/966984/0/en/Datorama-Raises-32-Million-in-New-Funding-Led-by-Lightspeed-Venture-Partners.html"
-title = "Datorama Raises $32 Million in New Funding, Led by Lightspeed Venture Partners"
-publisher = "Datorama via GlobeNewswire"
-kind = "company"
-accessed_at = "2026-10-05T04:52:12Z"
-published_on = "2016-09-12"
-claims = ["Datorama announced a closed $32 million Series C led by Lightspeed Venture Partners, with Marker LLC and Innovation Endeavors participating.", "Datorama reported total funding of $50 million after the Series C.", "The Series C announcement said valuation was not disclosed and funds would support AI research and development and global expansion."]
-
-[[intelligence.research.sources]]
-id = "series-b"
-url = "https://www.globenewswire.com/news-release/2014/09/29/1268171/0/en/Datorama-Closes-15-Million-Investment-Led-by-Marker-LLC-and-Eric-Schmidt-s-Innovation-Endeavors.html"
-title = "Datorama Closes $15 Million Investment Led by Marker LLC and Eric Schmidt's Innovation Endeavors"
-publisher = "Datorama via GlobeNewswire"
-kind = "company"
-accessed_at = "2026-10-05T04:52:12Z"
-published_on = "2014-09-29"
-claims = ["Datorama announced a $15 million Series B led by Marker LLC and Innovation Endeavors, with Cedar Fund also joining.", "Datorama reported offices in New York, London, Spain, Tel Aviv, and Sydney.", "Datorama said it served agencies and brands in multiple countries and described marketing data integration and reporting capabilities."]
 
 [[intelligence.research.sources]]
 id = "globes-a"
@@ -193,248 +407,508 @@ url = "https://en.globes.co.il/en/article-1000867187"
 title = "Marketing analytics co Datorama raises $3m"
 publisher = "Globes"
 kind = "media"
-accessed_at = "2026-10-05T04:52:12Z"
+accessed_at = "2026-10-22T02:24:42Z"
 published_on = "2013-07-31"
-claims = ["Datorama raised a $3 million Series A from Cedar Fund and Innovation Endeavors.", "Datorama had previously raised a $750,000 seed round and reported $3.75 million cumulative funding including Series A.", "Datorama was founded in 2012 by Ran Sarig, Efi Cohen, and Katrin Ribant and had offices in New York and Tel Aviv.", "Four of Advertising Age's top 20 national advertisers were working with its platform less than four months after product release."]
+claims = ["Datorama was founded in 2012 by Ran Sarig, Efi Cohen, and Katrin Ribant and had offices in New York and Tel Aviv.", "The company had raised a $750,000 seed in 2012 and raised a $3 million Series A from Cedar Fund and Innovation Endeavors in 2013.", "Four of Advertising Age's top 20 national advertisers were using the platform within four months of product release.", "The platform integrated cross-channel marketing data and presented normalized data in a common interface."]
 
 [[intelligence.research.sources]]
-id = "sf-product"
-url = "https://www.salesforce.com/marketing/analytics/"
-title = "Digital Marketing Analytics Tools"
-publisher = "Salesforce"
+id = "mediapost-a"
+url = "https://www.mediapost.com/publications/article/205794/datorama-closes-funding-will-enhance-cross-channe.html?edition=62947"
+title = "Datorama Closes Funding, Will Enhance Cross-Channel Attribution"
+publisher = "MediaPost"
+kind = "media"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2013-07-31"
+claims = ["Datorama closed a $3 million Series A led by Cedar Fund and supported by Innovation Endeavors.", "The $750,000 seed was raised in 2012 and Series A brought reported cumulative funding to $3.75 million.", "Ran Sarig previously led R&D at MediaMind, Efi Cohen had technology leadership experience there, and Katrin Ribant had led Havas Digital's global big-data analytics unit.", "Datorama positioned its product as cross-channel analytics that combined online, offline, and internal marketing data."]
+
+[[intelligence.research.sources]]
+id = "series-b"
+url = "https://www.globenewswire.com/news-release/2014/09/29/1268171/0/en/Datorama-Closes-15-Million-Investment-Led-by-Marker-LLC-and-Eric-Schmidt-s-Innovation-Endeavors.html"
+title = "Datorama Closes $15 Million Investment Led by Marker LLC and Eric Schmidt's Innovation Endeavors"
+publisher = "Datorama via GlobeNewswire"
 kind = "company"
-accessed_at = "2026-10-05T04:52:12Z"
-claims = ["Salesforce distinguishes Marketing Cloud Intelligence, formerly Datorama, as a separate enterprise-scale platform for complex multi-source analytics from the newer Marketing Intelligence product.", "Current Salesforce product material describes cross-channel data integration, marketing data models, data pipelines, attribution, and analytics capabilities.", "Salesforce product page describes Marketing Intelligence with 170+ pre-built API connectors; this is page-level product claim and is not necessarily a Datorama-specific connector count."]
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2014-09-29"
+claims = ["Datorama announced a closed $15 million Series B led by Marker LLC and Innovation Endeavors, with Cedar Fund also joining.", "Datorama described its transformation engine for omnichannel marketing data and reported offices in New York, London, Spain, Tel Aviv, and Sydney."]
 
 [[intelligence.research.sources]]
-id = "globes-acquisition"
+id = "series-c"
+url = "https://www.globenewswire.com/news-release/2016/09/12/966984/0/en/Datorama-Raises-32-Million-in-New-Funding-Led-by-Lightspeed-Venture-Partners.html"
+title = "Datorama Raises $32 Million in New Funding, Led by Lightspeed Venture Partners"
+publisher = "Datorama via GlobeNewswire"
+kind = "company"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2016-09-12"
+claims = ["Datorama announced a closed $32 million Series C led by Lightspeed Venture Partners, with Marker LLC and Innovation Endeavors participating.", "Datorama reported cumulative funding of $50 million and said valuation was not disclosed.", "The company said it had onboarded thousands of brands and hundreds of agencies, publishers, and technology companies and listed L'Oréal, Foursquare, Yahoo! JAPAN, and GoDaddy as customers.", "The company said Series C funds would support AI research and development and expansion."]
+
+[[intelligence.research.sources]]
+id = "globes-acq"
 url = "https://en.globes.co.il/en/article-what-salesforce-sees-in-datorama-1001246393"
 title = "What makes Datorama worth $850m to Salesforce?"
 publisher = "Globes"
 kind = "media"
-accessed_at = "2026-10-05T04:52:12Z"
+accessed_at = "2026-10-22T02:24:42Z"
 published_on = "2018-07-17"
-claims = ["Globes reported on the Salesforce acquisition and quoted Datorama CEO Ran Sarig describing its marketing-channel integration technology.", "The article headline used an $850 million transaction estimate, distinct from Salesforce's later filed acquisition-accounting consideration figure."]
+claims = ["Globes reported Datorama grew from about 80 employees at the start of 2016 to about 400 in July 2018, including about 130 in Tel Aviv.", "The article describes cross-channel data consolidation and a reported average use of 70 information sources per customer, attributed to Cedar Fund's partner.", "Globes reported thousands of customers including IBM, Ticketmaster, and Ipsos and described a Tel Aviv development center.", "The article reported $50.7 million raised and an $850 million acquisition estimate, distinct from Salesforce's later filed acquisition-accounting figure."]
+
+[[intelligence.research.sources]]
+id = "ctech-acquisition"
+url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3744695,00.html"
+title = "Salesforce Finalizes Acquisition of Marketing Analytics Company Datorama"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2018-08-21"
+claims = ["Salesforce completed the acquisition of Israel-based Datorama Ltd.", "CTech reported New York as Datorama's headquarters and identified founders Ran Sarig, Katrin Ribant, and Efi Cohen as Israeli entrepreneurs.", "The article described the deal value as over $800 million, a contemporary press estimate rather than Salesforce's filed accounting basis."]
+
+[[intelligence.research.sources]]
+id = "sarit-firon"
+url = "https://en.globes.co.il/en/article-sarit-firon-takes-her-next-risk-1001335331"
+title = "I want to be where I can give value"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2020-07-09"
+claims = ["Sarit Firon said her first personal angel investment was $140,000 in Datorama in 2012.", "Globes reported Firon brought other investors into Datorama's seed round and served as an active board member.", "The article described Datorama as having attracted $50 million by the 2018 acquisition, distinct from some other reported cumulative totals."]
+
+[[intelligence.research.sources]]
+id = "efi-globes"
+url = "https://en.globes.co.il/en/article-1001321414"
+title = "Efi Cohen to head Salesforce Israeli R&D"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2020-03-11"
+claims = ["Efi Cohen co-founded Datorama and served as its CTO before acquisition.", "Globes reported Cohen became head of Salesforce's Israel R&D center and remained SVP of product and engineering for Datorama under Salesforce in 2020.", "The article said Datorama had about 400 employees at acquisition and that its Israeli center was integrated into Salesforce marketing R&D."]
+
+[[intelligence.research.sources]]
+id = "sf-agreement"
+url = "https://www.salesforce.com/news/stories/salesforce-signs-definitive-agreement-to-acquire-datorama/?bc=OTH"
+title = "Salesforce Signs Definitive Agreement to Acquire Datorama"
+publisher = "Salesforce Newsroom"
+kind = "company"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2018-07-16"
+claims = ["Salesforce announced a definitive agreement to acquire Datorama on July 16, 2018.", "Salesforce described Datorama as a cloud AI-powered marketing analytics platform for enterprises, agencies, and publishers.", "Salesforce reported more than 3,000 global agency and brand customers and named PepsiCo, Ticketmaster, Trivago, Unilever, Pernod Ricard, and Foursquare."]
+
+[[intelligence.research.sources]]
+id = "sf-acquisition"
+url = "https://www.salesforce.com/news/stories/datorama-has-joined-the-salesforce-family/?bc=OTH"
+title = "Datorama Has Joined the Salesforce Family"
+publisher = "Salesforce Newsroom"
+kind = "company"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2018-08-20"
+claims = ["Salesforce completed its acquisition of Datorama on August 20, 2018.", "Salesforce described Datorama's enterprise marketing intelligence platform and its integration into Marketing Cloud.", "Salesforce reported more than 3,000 agency and brand customers and named PepsiCo, Ticketmaster, Trivago, Unilever, Pernod Ricard, and Foursquare."]
+
+[[intelligence.research.sources]]
+id = "sf-annual-report"
+url = "https://www.sec.gov/Archives/edgar/data/1108524/000110852419000009/crmq4fy1910-k.htm"
+title = "Salesforce FY2019 Form 10-K"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2019-03-08"
+claims = ["Salesforce acquired all outstanding stock of Datorama, Inc. in August 2018.", "The acquisition-date fair value of consideration transferred was approximately $766 million: $136 million cash, $537 million common stock, and $93 million assumed award fair value.", "Salesforce said Datorama's financial results were not material to consolidated statements from the acquisition date.", "Salesforce assigned about $159 million to developed technology, about $42 million to customer relationships, and recorded goodwill associated with workforce and market opportunities."]
+
+[[intelligence.research.sources]]
+id = "sf-intro"
+url = "https://www.salesforce.com/news/news/stories/salesforce-introduces-datorama-as-part-of-marketing-cloud/?bc=OTH&ver=1778774954"
+title = "Salesforce Introduces Datorama as Part of Marketing Cloud"
+publisher = "Salesforce Newsroom"
+kind = "company"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2018-09-12"
+claims = ["Salesforce announced Datorama as part of Marketing Cloud and described its cross-channel marketing data integration.", "Salesforce said Datorama would be delivered as a separate product at the time and anticipated future Marketing Cloud integration.", "A Ticketmaster executive quoted by Salesforce described more than 50 percent better operational efficiency; this is a customer statement in a company announcement, not an audited result."]
+
+[[intelligence.research.sources]]
+id = "sf-help"
+url = "https://help.salesforce.com/s/articleView?id=sf.datorama.htm&language=en_US&type=5"
+title = "Integrate and Analyze Marketing Data with Marketing Cloud Intelligence"
+publisher = "Salesforce Help"
+kind = "company"
+accessed_at = "2026-10-22T02:24:42Z"
+claims = ["Salesforce continues to document Marketing Cloud Intelligence with the Datorama product identity.", "The product documentation describes cross-source ingestion, data model dimensions and measures, harmonization, dashboards, KPIs, and analysis.", "The documentation distinguishes a separately named new Marketing Intelligence product built into Marketing Cloud Next."]
+
+[[intelligence.research.sources]]
+id = "sf-govcloud"
+url = "https://help.salesforce.com/s/articleView?id=005317292&language=en_US&type=1"
+title = "Data 360: Government Cloud Compatibility With Marketing Cloud Intelligence (Datorama) Data Cloud Connector"
+publisher = "Salesforce Help"
+kind = "company"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2026-03-23"
+claims = ["Salesforce states Marketing Cloud Intelligence (Datorama) does not currently support connections to Government Cloud."]
+
+[[intelligence.research.sources]]
+id = "sf-next-mi"
+url = "https://help.salesforce.com/s/articleView?id=mktg.mc_mi_setup.htm&language=en_US&type=5"
+title = "Set Up Marketing Intelligence"
+publisher = "Salesforce Help"
+kind = "company"
+accessed_at = "2026-10-22T02:24:42Z"
+claims = ["Salesforce documents Marketing Intelligence in Marketing Cloud Next as a setup requiring Data 360, Tableau Next, and a semantic data model.", "The help page documents data pipelines, field mapping, harmonization, campaign insights, attribution, and dashboards for the newer product."]
+
+[[intelligence.research.sources]]
+id = "patent-10395271"
+url = "https://patents.google.com/patent/US10395271B2/en"
+title = "US10395271B2 - System and method for normalizing campaign data gathered from a plurality of advertising platforms"
+publisher = "Google Patents"
+kind = "other"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2019-08-27"
+claims = ["The U.S. patent record identifies the original assignee as Datorama Technologies Ltd and describes mapping and normalizing campaign data from multiple advertising platforms into a marketing data model."]
+
+[[intelligence.research.sources]]
+id = "patent-10515386"
+url = "https://patents.google.com/patent/US10515386B2/en"
+title = "US10515386B2 - System and method for performing cross-platform big data analytics"
+publisher = "Google Patents"
+kind = "other"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2019-12-24"
+claims = ["The U.S. patent record identifies the original assignee as Datorama Technologies Ltd and describes cross-platform analytics of data stored in different formats."]
+
+[[intelligence.research.sources]]
+id = "patent-10754877"
+url = "https://patents.google.com/patent/US10754877B2/en"
+title = "US10754877B2 - System and method for providing big data analytics on dynamically-changing data models"
+publisher = "Google Patents"
+kind = "other"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2020-08-25"
+claims = ["The U.S. patent record identifies Datorama Technologies Ltd as original assignee and describes analytics and query processing over dynamically changing schemas and data models."]
+
+[[intelligence.research.sources]]
+id = "patent-11042899"
+url = "https://patents.google.com/patent/US11042899B2/en"
+title = "US11042899B2 - System and method for tracking users across a plurality of media platforms"
+publisher = "Google Patents"
+kind = "other"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2021-06-22"
+claims = ["The U.S. patent record identifies Datorama Technologies Ltd as original assignee and describes linking user-level data across media platforms."]
+
+[[intelligence.research.sources]]
+id = "cedar-portfolio"
+url = "https://www.cedarfund.com/datorama"
+title = "Datorama - Cedar Fund portfolio"
+publisher = "Cedar Fund"
+kind = "investor"
+accessed_at = "2026-10-22T02:24:42Z"
+claims = ["Cedar Fund's portfolio page identifies Datorama as acquired by Salesforce and describes its marketing data hub product.", "Cedar Fund links to the company's 2014, 2016 and 2018 funding or acquisition announcements."]
+
+[[intelligence.research.sources]]
+id = "marker-portfolio"
+url = "https://www.marker-llc.com/"
+title = "Marker LLC portfolio"
+publisher = "Marker LLC"
+kind = "investor"
+accessed_at = "2026-10-22T02:24:42Z"
+claims = ["Marker LLC's portfolio page lists Datorama as an AI-powered marketing intelligence company."]
+
+[[intelligence.research.sources]]
+id = "lightspeed-portfolio"
+url = "https://lsvp.com/company/datorama/"
+title = "Datorama - Lightspeed Venture Partners"
+publisher = "Lightspeed Venture Partners"
+kind = "investor"
+accessed_at = "2026-10-22T02:24:42Z"
+claims = ["Lightspeed records a 2016 Series C investment and Salesforce acquisition status for Datorama.", "Lightspeed identifies founders Ran Sarig, Efi Cohen, and Katrin Ribant and describes the SaaS marketing integration product."]
+
+[[intelligence.research.sources]]
+id = "ie-portfolio"
+url = "https://www.innovationendeavors.com/companies?3fb14a70_page=2"
+title = "Innovation Endeavors portfolio"
+publisher = "Innovation Endeavors"
+kind = "investor"
+accessed_at = "2026-10-22T02:24:42Z"
+claims = ["Innovation Endeavors lists Datorama as an acquired company and describes its cross-channel marketing data platform."]
+
+[[intelligence.research.sources]]
+id = "adverity-docs"
+url = "https://docs.adverity.com/getting-started/adverity-introduction.html"
+title = "Get to know Adverity"
+publisher = "Adverity Documentation"
+kind = "other"
+accessed_at = "2026-10-22T02:24:42Z"
+claims = ["Adverity documents source collection, transformation, harmonization, data quality, field mapping, warehouse storage, and external BI destinations for marketing data."]
+
+[[intelligence.research.sources]]
+id = "adobe-cja"
+url = "https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2c-overview/cja-overview"
+title = "Customer Journey Analytics overview"
+publisher = "Adobe Experience League"
+kind = "other"
+accessed_at = "2026-10-22T02:24:42Z"
+published_on = "2026-09-28"
+claims = ["Adobe documents Customer Journey Analytics as a cross-channel analytics product on Adobe Experience Platform with schema-based datasets, dimensions, metrics, queries, and visualization."]
+
+[[intelligence.research.sources]]
+id = "funnel-home"
+url = "https://funnel.io/"
+title = "Funnel - marketing intelligence platform"
+publisher = "Funnel"
+kind = "other"
+accessed_at = "2026-10-22T02:24:42Z"
+claims = ["Funnel describes a marketing-data platform with managed connectors, custom imports, semantic modeling, dashboards, marketing measurement, and data delivery to warehouses."]
+
+[[intelligence.research.sources]]
+id = "getlatka"
+url = "https://getlatka.com/companies/datorama"
+title = "Datorama revenue, acquisition and funding"
+publisher = "GetLatka"
+kind = "other"
+accessed_at = "2026-10-22T02:24:42Z"
+claims = ["GetLatka currently lists historical 2020 revenue and employee figures for Datorama but provides no underlying source for those numbers on the reviewed page; they are excluded from validated financial metrics."]
 
 [[intelligence.research.topic_checks]]
 topic = "identity"
 status = "reported"
-checked_at = "2026-10-05T04:52:12Z"
-next_review_on = "2027-04-05"
-queries = ["Datorama Salesforce acquisition completed August 2018 official", "Datorama founded 2012 Tel Aviv legal identity"]
-source_ids = ["sf-acquisition", "globes-a", "sf-product"]
-summary = "Confirmed Datorama, Inc. as Israeli-founded marketing analytics company; now legacy product identity within Salesforce Marketing Cloud Intelligence. Incorporation jurisdiction was not verified."
+checked_at = "2026-10-22T02:24:42Z"
+next_review_on = "2027-04-22"
+queries = ["Datorama Salesforce acquired Marketing Cloud Intelligence company history headquarters legal name", "Datorama Salesforce acquisition completed August 2018 official"]
+source_ids = ["sf-agreement", "sf-acquisition", "sf-annual-report", "ctech-acquisition", "sf-help"]
+summary = "Confirmed the Datorama, Inc. acquisition and current Marketing Cloud Intelligence product identity. The historical headquarters were New York, with an Israeli founding team and Tel Aviv R&D presence; precise incorporation jurisdiction was not established."
 
 [[intelligence.research.topic_checks]]
 topic = "funding"
-status = "reported"
-checked_at = "2026-10-05T04:52:12Z"
-next_review_on = "2027-04-05"
-queries = ["Datorama funding raised seed Series A Series B Series C investors"]
-source_ids = ["globes-a", "series-b", "series-c"]
-summary = "Found contemporaneous seed, Series A, B, and C disclosures. Company-reported total after Series C was $50 million; no round valuation disclosed."
+status = "conflicting"
+checked_at = "2026-10-22T02:24:42Z"
+next_review_on = "2027-04-22"
+queries = ["Datorama funding raised seed Series A Series B Series C investors", "Datorama $750,000 seed 2012 investor Sarit Firon Cedar Fund"]
+source_ids = ["globes-a", "mediapost-a", "series-b", "series-c", "globes-acq", "sarit-firon"]
+summary = "Four financing events are publicly documented. The 2016 company-announced cumulative $50 million conflicts with a $50.7 million later Globes report and the $50.75 million arithmetic sum of reported rounds. A 2018 article also mislabels the $3 million Series A as seed; contemporaneous 2013 sources separate the $750,000 2012 seed from Series A."
 
 [[intelligence.research.topic_checks]]
 topic = "investors"
 status = "reported"
-checked_at = "2026-10-05T04:52:12Z"
-next_review_on = "2027-04-05"
-queries = ["Datorama investors Marker Cedar Innovation Endeavors Lightspeed"]
-source_ids = ["globes-a", "series-b", "series-c"]
-summary = "Named investors reflect round announcements only. Full cap table and all early seed participants were not established."
+checked_at = "2026-10-22T02:24:42Z"
+next_review_on = "2027-04-22"
+queries = ["Datorama investors Marker Cedar Innovation Endeavors Lightspeed", "site:cedarfund.com Datorama", "site:lsvp.com Datorama portfolio", "site:marker-llc.com Datorama portfolio", "site:innovationendeavors.com Datorama"]
+source_ids = ["globes-a", "mediapost-a", "series-b", "series-c", "sarit-firon", "cedar-portfolio", "marker-portfolio", "lightspeed-portfolio", "ie-portfolio"]
+summary = "Round announcements and investor portfolio pages support Sarit Firon, Cedar Fund, Innovation Endeavors, Marker LLC, and Lightspeed Venture Partners. Full seed participation and the private cap table remain undisclosed."
 
 [[intelligence.research.topic_checks]]
 topic = "team"
 status = "reported"
-checked_at = "2026-10-05T04:52:12Z"
-next_review_on = "2027-04-05"
-queries = ["Datorama founder Ran Sarig Efi Cohen Katrin Ribant leadership"]
-source_ids = ["globes-a", "sf-acquisition"]
-summary = "Founders Ran Sarig, Efi Cohen, and Katrin Ribant reported; current leadership of legacy product is not independently detailed."
+checked_at = "2026-10-22T02:24:42Z"
+next_review_on = "2027-04-22"
+queries = ["Datorama founders Ran Sarig Efi Cohen Katrin Ribant leadership", "Efi Cohen Salesforce Israel R&D Datorama executive 2020"]
+source_ids = ["globes-a", "mediapost-a", "lightspeed-portfolio", "efi-globes"]
+summary = "The three co-founders and relevant MediaMind and Havas Digital backgrounds are reported. Efi Cohen's Salesforce product and Israel R&D roles are documented for 2020; current product leadership is unknown."
 
 [[intelligence.research.topic_checks]]
 topic = "ownership"
-status = "reported"
-checked_at = "2026-10-05T04:52:12Z"
-next_review_on = "2027-04-05"
-queries = ["Datorama ownership Salesforce acquisition price annual report"]
-source_ids = ["sf-acquisition", "sf-annual-report", "globes-acquisition"]
-summary = "Acquisition completion and filed consideration confirmed. Private pre-sale ownership percentages unavailable."
+status = "conflicting"
+checked_at = "2026-10-22T02:24:42Z"
+next_review_on = "2027-04-22"
+queries = ["Salesforce Datorama acquisition all outstanding stock FY2019 annual report $766 million", "Datorama acquisition value $800 million $850 million Salesforce"]
+source_ids = ["sf-agreement", "sf-acquisition", "sf-annual-report", "globes-acq", "ctech-acquisition"]
+summary = "Salesforce completed the acquisition and its filing records all outstanding stock and approximately $766 million of fair value consideration transferred. Press estimates exceeded $800 million; the different reported bases are preserved. Private pre-sale ownership percentages are not disclosed."
 
 [[intelligence.research.topic_checks]]
 topic = "financials"
 status = "no_public_disclosure"
-checked_at = "2026-10-05T04:52:12Z"
-next_review_on = "2027-04-05"
-queries = ["Datorama revenue ARR profitability employees financials Salesforce annual report"]
-source_ids = ["sf-annual-report"]
-summary = "No standalone company revenue, ARR, profit, burn, or runway verified. Salesforce stated acquired results were not material to consolidated statements."
+checked_at = "2026-10-22T02:24:42Z"
+next_review_on = "2027-04-22"
+queries = ["Datorama revenue ARR employees financials 2020 Salesforce annual report not material", "Datorama revenue 22.6M source 2020 revenue figures"]
+source_ids = ["sf-annual-report", "globes-acq", "efi-globes", "getlatka"]
+summary = "A historical acquisition-era employee count is reported, but standalone revenue, ARR, profitability, cash, burn, runway, and current product-specific headcount are not verified. Salesforce said post-acquisition consolidated results were not material. Third-party 2020 revenue and headcount figures have no disclosed underlying source and were not used."
 
 [[intelligence.research.topic_checks]]
 topic = "traction"
 status = "reported"
-checked_at = "2026-10-05T04:52:12Z"
-next_review_on = "2027-04-05"
-queries = ["Datorama customers contracts partnerships product milestones"]
-source_ids = ["sf-acquisition", "globes-a", "sf-product"]
-summary = "Salesforce reported over 3,000 agency and brand customers at acquisition; early 2013 report offered specific customer adoption evidence. No current product-specific count or contract disclosures found."
+checked_at = "2026-10-22T02:24:42Z"
+next_review_on = "2027-04-22"
+queries = ["Datorama customer counts 3000 agencies brands Salesforce acquisition named customers", "Datorama product milestones Ticketmaster Marketing Cloud integration"]
+source_ids = ["globes-a", "series-c", "sf-agreement", "sf-acquisition", "sf-intro", "sf-help"]
+summary = "Contemporaneous and Salesforce announcements contain early customer adoption, an acquisition-era claim of more than 3,000 agencies and brands, named examples, and continued product documentation. No post-acquisition product-specific customer or contract metrics were found."
 
 [[intelligence.research.topic_checks]]
 topic = "intellectual_property"
-status = "not_found"
-checked_at = "2026-10-05T04:52:12Z"
-next_review_on = "2027-04-05"
-queries = ["Datorama patents Datorama Technologies Ltd USPTO WIPO"]
-source_ids = []
-summary = "No authoritative company-specific patent record was verified in this review; absence of patents is not established."
+status = "reported"
+checked_at = "2026-10-22T02:24:42Z"
+next_review_on = "2027-04-22"
+queries = ["Datorama patents Datorama Technologies Ltd USPTO Google Patents", "US10395271 Datorama patent", "US10515386 Datorama patent", "US10754877 Datorama patent", "US11042899 Datorama patent"]
+source_ids = ["patent-10395271", "patent-10515386", "patent-10754877", "patent-11042899"]
+summary = "Four U.S. grants with Datorama Technologies Ltd as original assignee were verified, covering campaign normalization, cross-platform analytics, dynamic data models, and user-level data linkage. This is not a complete portfolio or legal title review."
 
 [[intelligence.research.topic_checks]]
 topic = "competition"
 status = "reported"
-checked_at = "2026-10-05T04:52:12Z"
-next_review_on = "2027-04-05"
-queries = ["Datorama competitors marketing analytics platform Salesforce Adobe Tableau"]
-source_ids = ["sf-product", "globes-acquisition"]
-summary = "Category evidence supports comparison with broad BI and marketing analytics offerings; no source-backed current market-share ranking was found."
+checked_at = "2026-10-22T02:24:42Z"
+next_review_on = "2027-04-22"
+queries = ["Datorama competitors Adobe Customer Journey Analytics Adverity Funnel official product", "Salesforce Marketing Intelligence separate from Marketing Cloud Intelligence Datorama 2026 official"]
+source_ids = ["adobe-cja", "adverity-docs", "funnel-home", "sf-help", "sf-next-mi"]
+summary = "Official competitor documentation confirms functional overlap in cross-channel analytics, marketing data extraction, normalization, and reporting. Salesforce also has a separately documented newer Marketing Intelligence offer; no independent market-share or current performance comparison was found."
 
 [[intelligence.research.topic_checks]]
 topic = "dual_use"
 status = "not_found"
-checked_at = "2026-10-05T04:52:12Z"
-next_review_on = "2027-04-05"
-queries = ["Datorama defense government security customers contracts"]
-source_ids = ["sf-acquisition", "sf-product"]
-summary = "No public defense, security, or government deployment was verified; possible relevance is limited to general data harmonization architecture."
+checked_at = "2026-10-22T02:24:42Z"
+next_review_on = "2027-04-22"
+queries = ["Datorama defense government security use contract Government Cloud support Marketing Cloud Intelligence", "Marketing Cloud Intelligence Datorama Government Cloud connection support"]
+source_ids = ["sf-help", "sf-govcloud", "sf-agreement", "sf-acquisition"]
+summary = "The commercial product's data integration pattern has general technical transferability, but no Datorama defense or security customer, government contract, classified deployment, or certification was verified. Salesforce states the legacy product does not support Government Cloud connections, so the company is not classified as a validated dual-use product."
 
 [[intelligence.research.claim_checks]]
 field_path = "company.operating_status"
 support = "direct"
-summary = "Salesforce states it completed the Datorama acquisition on 2018-08-20 and welcomed the company into Salesforce."
-verified_at = "2026-10-05T04:52:12Z"
-source_ids = ["sf-acquisition"]
+summary = "Salesforce says it completed the Datorama acquisition on August 20, 2018; its FY2019 filing confirms acquisition of all outstanding stock."
+verified_at = "2026-10-22T02:24:42Z"
+source_ids = ["sf-acquisition", "sf-annual-report"]
 
 [[intelligence.research.claim_checks]]
 field_path = "israel_connection"
 support = "direct"
-summary = "Globes reports Datorama founded in 2012 by its founders and offices in Tel Aviv; Salesforce's acquisition materials confirm the acquired company and continuing product identity."
-verified_at = "2026-10-05T04:52:12Z"
-source_ids = ["globes-a", "sf-acquisition"]
+summary = "Contemporaneous reporting identifies Israeli founders and a Tel Aviv office; acquisition-era reporting identifies a Tel Aviv R&D center and calls Datorama Israel-based while reporting New York as headquarters."
+verified_at = "2026-10-22T02:24:42Z"
+source_ids = ["globes-a", "globes-acq", "ctech-acquisition"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.reported_total_raised"
 support = "direct"
-summary = "Datorama's Series C release explicitly states the round brought total funding to $50 million."
-verified_at = "2026-10-05T04:52:12Z"
+summary = "Datorama's September 2016 Series C announcement explicitly states that cumulative funding after that round was $50 million."
+verified_at = "2026-10-22T02:24:42Z"
 source_ids = ["series-c"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.seed-2012.amount"
 support = "direct"
-summary = "Globes reports a $750,000 seed round raised the prior year."
-verified_at = "2026-10-05T04:52:12Z"
-source_ids = ["globes-a"]
+summary = "Contemporaneous 2013 reports state that Datorama had raised a $750,000 seed round in 2012."
+verified_at = "2026-10-22T02:24:42Z"
+source_ids = ["globes-a", "mediapost-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2012.investors"
+support = "direct"
+summary = "Globes reports Sarit Firon invested personal capital in Datorama in 2012 and introduced other investors to the seed round; the other participants were not named."
+verified_at = "2026-10-22T02:24:42Z"
+source_ids = ["sarit-firon"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2012.lead_investors"
+support = "direct"
+summary = "Globes describes Sarit Firon as the angel investor who brought the other seed-round participants into Datorama; the remaining investors were not named."
+verified_at = "2026-10-22T02:24:42Z"
+source_ids = ["sarit-firon"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-a-2013.amount"
 support = "direct"
-summary = "Globes reports a $3 million Series A financing."
-verified_at = "2026-10-05T04:52:12Z"
-source_ids = ["globes-a"]
+summary = "Globes and MediaPost report a $3 million Series A financing announced July 31, 2013."
+verified_at = "2026-10-22T02:24:42Z"
+source_ids = ["globes-a", "mediapost-a"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-a-2013.investors"
 support = "direct"
-summary = "Globes names Cedar Fund and Innovation Endeavors as Series A investors."
-verified_at = "2026-10-05T04:52:12Z"
-source_ids = ["globes-a"]
+summary = "Globes names Cedar Fund and Innovation Endeavors as Series A investors; MediaPost identifies Cedar Fund as lead and Innovation Endeavors as supporting investor."
+verified_at = "2026-10-22T02:24:42Z"
+source_ids = ["globes-a", "mediapost-a"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-a-2013.lead_investors"
 support = "direct"
-summary = "Globes identifies Cedar Fund and Innovation Endeavors as the Series A investors."
-verified_at = "2026-10-05T04:52:12Z"
-source_ids = ["globes-a"]
+summary = "MediaPost identifies Cedar Fund as Series A lead investor."
+verified_at = "2026-10-22T02:24:42Z"
+source_ids = ["mediapost-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2013.participating_investors"
+support = "direct"
+summary = "MediaPost identifies Innovation Endeavors as a supporting Series A investor."
+verified_at = "2026-10-22T02:24:42Z"
+source_ids = ["mediapost-a"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-b-2014.amount"
 support = "direct"
-summary = "Datorama's Series B announcement reports $15 million."
-verified_at = "2026-10-05T04:52:12Z"
+summary = "Datorama's September 29, 2014 announcement reports a $15 million Series B."
+verified_at = "2026-10-22T02:24:42Z"
 source_ids = ["series-b"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-b-2014.investors"
 support = "direct"
-summary = "Datorama's announcement names Marker LLC and Innovation Endeavors as leads and Cedar Fund as participating investor."
-verified_at = "2026-10-05T04:52:12Z"
+summary = "The company announcement names Marker LLC and Innovation Endeavors as Series B leads and says Cedar Fund also joined."
+verified_at = "2026-10-22T02:24:42Z"
 source_ids = ["series-b"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-b-2014.lead_investors"
 support = "direct"
-summary = "The Series B announcement identifies Marker LLC and Innovation Endeavors as leads."
-verified_at = "2026-10-05T04:52:12Z"
+summary = "Datorama's announcement identifies Marker LLC and Innovation Endeavors as Series B leads."
+verified_at = "2026-10-22T02:24:42Z"
 source_ids = ["series-b"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-b-2014.participating_investors"
 support = "direct"
-summary = "The Series B announcement says Cedar Fund also joined the round."
-verified_at = "2026-10-05T04:52:12Z"
+summary = "Datorama says Cedar Fund also joined the Series B."
+verified_at = "2026-10-22T02:24:42Z"
 source_ids = ["series-b"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-c-2016.amount"
 support = "direct"
-summary = "Datorama's Series C announcement reports $32 million."
-verified_at = "2026-10-05T04:52:12Z"
+summary = "Datorama's September 12, 2016 announcement reports a $32 million Series C."
+verified_at = "2026-10-22T02:24:42Z"
 source_ids = ["series-c"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-c-2016.investors"
 support = "direct"
-summary = "Datorama's announcement names Lightspeed Venture Partners as lead and Marker LLC and Innovation Endeavors as participants."
-verified_at = "2026-10-05T04:52:12Z"
+summary = "Datorama names Lightspeed Venture Partners as lead and Marker LLC and Innovation Endeavors as participants in the Series C."
+verified_at = "2026-10-22T02:24:42Z"
 source_ids = ["series-c"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-c-2016.lead_investors"
 support = "direct"
-summary = "Datorama identifies Lightspeed Venture Partners as lead investor for Series C."
-verified_at = "2026-10-05T04:52:12Z"
+summary = "Datorama identifies Lightspeed Venture Partners as Series C lead investor."
+verified_at = "2026-10-22T02:24:42Z"
 source_ids = ["series-c"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-c-2016.participating_investors"
 support = "direct"
-summary = "Datorama identifies Marker LLC and Innovation Endeavors as Series C participants."
-verified_at = "2026-10-05T04:52:12Z"
+summary = "Datorama names Marker LLC and Innovation Endeavors as Series C participants."
+verified_at = "2026-10-22T02:24:42Z"
 source_ids = ["series-c"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Employees at acquisition@2018-07.numeric_value"
+support = "direct"
+summary = "Globes reported a staff of about 400 at acquisition, including about 130 in Tel Aviv; the 400 figure is stored as approximate and historical."
+verified_at = "2026-10-22T02:24:42Z"
+source_ids = ["globes-acq"]
 
 [[intelligence.research.claim_checks]]
 field_path = "ownership.parent_company"
 support = "direct"
-summary = "Salesforce completed the acquisition and its annual report confirms acquiring all outstanding Datorama, Inc. stock."
-verified_at = "2026-10-05T04:52:12Z"
+summary = "Salesforce announced and completed the acquisition, and its filing confirms it acquired all outstanding Datorama, Inc. stock."
+verified_at = "2026-10-22T02:24:42Z"
 source_ids = ["sf-acquisition", "sf-annual-report"]
 
 [[intelligence.research.claim_checks]]
 field_path = "ownership.deals.salesforce-acquisition-2018.status"
 support = "direct"
-summary = "Salesforce announced completion on August 20, 2018; its annual report confirms acquisition of all outstanding stock."
-verified_at = "2026-10-05T04:52:12Z"
-source_ids = ["sf-acquisition", "sf-annual-report"]
+summary = "Salesforce announced the definitive agreement in July 2018 and stated that the acquisition was completed on August 20, 2018."
+verified_at = "2026-10-22T02:24:42Z"
+source_ids = ["sf-agreement", "sf-acquisition"]
 
 [[intelligence.research.claim_checks]]
 field_path = "ownership.deals.salesforce-acquisition-2018.company_role"
 support = "direct"
-summary = "Salesforce's announcement identifies its acquisition of Datorama, establishing Datorama's role as the target."
-verified_at = "2026-10-05T04:52:12Z"
-source_ids = ["sf-acquisition", "sf-annual-report"]
+summary = "Salesforce's agreement and acquisition-completion announcements identify Datorama as the target acquired by Salesforce."
+verified_at = "2026-10-22T02:24:42Z"
+source_ids = ["sf-agreement", "sf-acquisition"]
 
 [[intelligence.research.claim_checks]]
 field_path = "ownership.deals.salesforce-acquisition-2018.amount"
 support = "direct"
-summary = "Salesforce annual report reports approximately $766 million acquisition-date fair value consideration transferred, including cash, common stock, and assumed awards."
-verified_at = "2026-10-05T04:52:12Z"
+summary = "Salesforce's FY2019 Form 10-K reports approximately $766 million of acquisition-date fair value consideration transferred and itemizes cash, issued stock, and assumed awards."
+verified_at = "2026-10-22T02:24:42Z"
 source_ids = ["sf-annual-report"]

@@ -1,393 +1,1012 @@
 name = 'Cynerio'
-description = "Cynerio provides agentless cybersecurity for unmanaged IoT and OT devices in critical infrastructure environments, with deep expertise in healthcare and medical-device security."
-detailed_description = """Cynerio addresses a persistent and expanding vulnerability class in modern critical infrastructure: the proliferation of unmanaged, legacy, and proprietary connected devices that cannot run security agents or accept patches. These devices—networked medical equipment, operational technology (OT) systems, industrial sensors, HVAC controllers, and specialized purpose-built systems—often exist in isolation from inventory and vulnerability management. Cynerio's platform delivers agentless asset discovery, behavioral anomaly detection, and network-level segmentation enforcement without requiring device modifications. The company's core innovation is performing continuous device fingerprinting, vulnerability prioritization, and lateral-movement blocking at the network perimeter, enabling security teams to protect environments where traditional endpoint security cannot reach.
+description = "Cynerio is an Israeli-founded healthcare cybersecurity company whose medical-device security business was acquired by Axonius in 2025 and is now offered as Axonius for Healthcare."
+detailed_description = """Cynerio was an Israeli-founded healthcare cybersecurity company incorporated in 2017 and based in Ramat Gan, with a New York office announced as its North American headquarters in 2021. Its core problem was specific: hospitals connect infusion pumps, imaging equipment, patient monitors, lab systems and building devices to clinical networks, while many of those assets cannot accept endpoint agents, routine scans, firmware upgrades or downtime without vendor and clinical approval. Traditional IT inventories can therefore miss devices and their communication patterns. A compromised device can expose patient information or disrupt care even when the hospital's managed laptops and servers are well protected.
 
-The healthcare vertical has emerged as Cynerio's primary market focus. Hospitals operate dense ecosystems of connected medical devices, many with multi-decade lifespans, running legacy operating systems that cannot be updated. A single compromised infusion pump, imaging system, or patient monitor can propagate malware laterally, threaten patient safety, create evidence-destruction vectors, or enable data exfiltration. Regulatory pressure from FDA guidance, HHS audit requirements, and Joint Commission standards has created strong demand for continuous medical-device security visibility and containment. Cynerio's agentless approach aligns precisely with the operational constraints of hospital environments, where downtime costs are extremely high and device interruption is unacceptable.
+Cynerio built network-based visibility and controls for that gap. Its early product description combined device behavior learning with medical workflow analysis, then used device discovery, classification, risk context and anomaly detection to identify suspicious activity. Later company and investor materials described threat detection and response, clinical risk prioritization and segmentation. The patent record reviewed here concerns one specific method: comparing features of a medical device's network connections with clusters built from sample device traffic and flagging connections that diverge from expected patterns. That supports the existence of targeted R&D, but a patent claim is not proof of current product performance, a complete patent estate or a broad defensible moat. The patent page records later assignment to Axonius Solutions Ltd.
 
-The company's competitive positioning reflects both technical and operational advantages. Unlike agent-based competitors that struggle with legacy devices, Cynerio's network-centric approach scales to thousands of heterogeneous assets without installation overhead. Compared to purely passive network-monitoring platforms, Cynerio combines visibility with active enforcement (segmentation, traffic blocking), reducing reliance on manual remediation. The company has attracted institutional venture capital across multiple rounds and expanded from Israel into North American enterprise deployments. Its Series C stage and 51–200 employee range indicate active scaling: marketing and sales expansion, international partnerships, and ongoing product development in response to competitive and regulatory dynamics.
+Cynerio's commercial model was oriented to hospitals and health systems. Elron's 2023 report describes direct sales and channel sales in the United States and Europe and an annual payment model linked to the number of beds. A company announcement in 2018 said Rambam Hospital was piloting the product; the release describes a pilot and should not be read as evidence of a paid contract. In 2024, Cheshire and Merseyside selected Cynerio under an 18-month contract. Independent reporting said the phased rollout covered 14 NHS organizations, while Cynerio's release said all 17 NHS Trusts. The announcements establish selection and a customer contract, but not the contract value, completion at each site or an independently measured security outcome. In a 2025 post, co-founder Leon Lerman said Cynerio grew 150% year over year in 2024 and more than doubled ARR and customer count; no absolute ARR, customer count or audited basis was given. KLAS later listed the product under Axonius Cynerio with a 94.0 overall score from 15 organizations, a useful customer-experience signal whose small sample does not measure technical efficacy.
 
-Cynerio's broader market extends beyond healthcare into general critical infrastructure: utilities, manufacturing, transportation, and public facilities with mixed managed/unmanaged device fleets. The IoT security market is growing rapidly as enterprises recognize that traditional IT security strategies (patching, antivirus, firewalls tuned for human-scale traffic) fail when applied to industrial systems. Gartner, IoT security analysts, and regulatory frameworks increasingly emphasize the need for continuous asset inventory, risk prioritization, and network segmentation in OT environments. Cynerio is positioned as a vendor that can scale from a single healthcare customer to an enterprise-wide platform covering multiple critical-infrastructure verticals.
+The financing record is mixed and should not be reconstructed by arithmetic. Cynerio announced a $7 million seed in January 2019, with Accelmed, RDC and MTIP named as investors. In May 2021 it announced a $30 million Series B led by ALIVE and reported $40 million raised to date. Elron's 2023 report describes the April 2021 investment round as approximately $26 million, records a $3 million SAFE agreement from November 2019, and says two SAFE agreements completed in February and November 2023 totaled $15 million. Elron's August 2024 investor slide rounded the company's cumulative total to $51 million; its November 2021 presentation showed $35.4 million. These disclosures do not reconcile perfectly, so the Series B amount stays conflicted and lifetime totals remain reported observations with their sources and dates. Elron also reported about NIS 3 million in grants from the Israel Innovation Authority and a Ministry of Economy support program; these are kept separate from equity funding.
 
-The company also exhibits strategic relevance to defense and national-security applications. Similar unmanaged-device problems exist in government data centers, military hospitals, defense contractor facilities, and public-sector critical infrastructure. Although commercial healthcare demand appears to be the immediate revenue driver, the technology's applicability to sensitive government facilities, defense networks, and critical-infrastructure resilience creates a secondary but non-trivial national-security and strategic-alignment opportunity."""
+In July 2025 Axonius announced that it had acquired Cynerio for more than $100 million in cash and stock. Elron said the binding share-sale agreement covered all of Cynerio and reported that RDC held about 15% on a fully diluted basis before the transaction; RDC's consideration was Axonius equity. Elron's August 5 notice confirms that consideration was transferred and the transaction completed. A registry-data aggregator records Cynerio Israel Ltd. as liquidated due to merger on September 30, 2025. The exact company-wide consideration was not disclosed by Axonius. Calcalist reported $180 million with possible milestone-linked value up to $250 million, but those figures are not entered as verified price. The Israeli registry profile and patent records use Cynerio Israel Ltd.; Elron's translated sale report calls the target Cynerio Ltd., a naming difference retained in the record rather than silently treating the entity names as identical without qualification.
+
+Cynerio is now represented on its former web domain by Axonius for Healthcare. The current offering describes unified clinical asset visibility, more than 150 attributes per medical asset, fleet-level risk scores, clinical protocol support, response playbooks and connections to network access controls, firewalls, ticketing and clinical maintenance systems. This product positioning brings Cynerio's clinical context into Axonius's broader asset-intelligence platform. The practical integration question is whether hospitals can use that combined context to remediate more safely and with less manual effort, while preserving existing contracts, device records, integrations and support. Public materials do not disclose which Cynerio modules remain standalone, how customers were migrated, or how much of the current platform is newly built versus inherited.
+
+The competitive set is specialized and crowded. Claroty xDome combines healthcare medical-device context with a broader cyber-physical systems platform; Armis Centrix emphasizes visibility, patient-centered risk and segmentation; Ordr focuses on agentless, behavior-based device intelligence and safe enforcement; Asimily emphasizes whether vulnerabilities are exploitable in a particular clinical context and offers procurement-stage risk analysis. Forescout/CyberMDX and broad platforms such as Palo Alto Networks also compete for hospital security budgets. Cynerio's plausible distinction is its healthcare-only history and workflow context, now paired with Axonius's enterprise asset inventory, rather than a proven claim of superior detection. Hospital buyers still need evidence of inventory accuracy, safe policy actions, clinical workflow fit, response-time improvement, customer renewal and total cost. Integration, false positives, complex procurement, confidential economics, incomplete public IP coverage and uncertain post-acquisition roadmap are material diligence risks."""
 logo = 'https://cynerio.com/favicon.ico'
 website = 'https://www.cynerio.com'
-sector = 'Cyber Defense / IoT and OT Asset Security'
+sector = "Healthcare Cybersecurity / Medical Device, IoMT and Connected Clinical Asset Security"
 founded = '2017'
-headquarters = 'Tel Aviv, Israel / New York, New York, United States'
-employees = '51-200'
-funding_stage = "Acquired by Axonius (2025)"
+headquarters = "Ramat Gan, Israel; New York City, United States (North American headquarters announced in 2021)"
+employees = "Not disclosed post-acquisition; 70 employees reported in September 2022"
+funding_stage = "Acquired by Axonius (2025); prior financing disclosures include equity, SAFE agreements and grants"
 dual_use = true
-dual_use_description = "Cynerio's technology is credibly dual-use: unmanaged medical devices and operational-technology security is essential for civilian hospitals and also directly applicable to defense medical facilities, government networks with legacy systems, and critical-infrastructure resilience. Healthcare and OT security visibility and segmentation capabilities transfer directly to military hospitals, DoD networks running industrial systems, and classified environments where device modification is infeasible. The platform's agentless, network-centric approach is particularly relevant for sensitive government facilities where traditional agent deployment is prohibited or impractical."
-key_technologies = ["Agentless IoT/OT asset discovery and fingerprinting", "Device behavior baselining and anomaly detection", "Network-level micro-segmentation and traffic enforcement", "Vulnerability and exposure prioritization for unmanaged devices", "Medical device-specific threat intelligence and protocols", "Incident response and lateral-movement containment"]
-use_cases = ["Healthcare: protecting networked medical devices from ransomware and patient-safety threats", "Hospital infrastructure: securing clinical engineering, HVAC, and facility-management systems", "Industrial OT: visibility and segmentation in manufacturing and utility networks", "Supply-chain risk: detecting compromised devices entering critical environments", "Regulatory compliance: FDA, HIPAA, ICS-CERT, and critical-infrastructure security mandates", "Incident response: containing lateral movement after initial compromise", "Legacy-system hardening: security for devices that cannot be patched or updated", "Government and defense: network resilience for systems with mixed classification levels"]
+dual_use_description = "Cynerio's agentless monitoring, medical-device risk analysis, anomaly detection and network enforcement address a real security problem in civilian hospitals, where connected equipment often cannot accept endpoint agents or disruptive scans. Those same constraints exist in military hospitals, field medical facilities and other government health environments, so the core capability has a credible defense and national-resilience application. This is a technical applicability judgment, not evidence of defense sales: no public Cynerio military or government contract, defense deployment, or certification was found. A 2018 company release described a pilot at Rambam Hospital, which also serves as a referral hospital for the IDF Northern Command and US Navy Sixth Fleet; that does not establish Cynerio use on military networks or devices."
+key_technologies = ["Passive and agentless discovery of network-connected medical and IoT devices", "Medical-device fingerprinting and clinical-context risk prioritization", "Network-traffic behavior analysis and anomaly detection", "Detection of malicious medical-device connections using device and connection clusters", "Network segmentation, policy enforcement and incident-response integrations", "Clinical workflow and protocol context for healthcare asset records"]
+use_cases = ["Discover and classify medical devices, IoT and facility assets across hospital networks", "Prioritize device exposures using clinical impact and vulnerability context", "Detect unusual or malicious device communications without installing endpoint agents", "Coordinate incident response and policy enforcement through existing network controls", "Assess connected-device inventory and security risk during hospital procurement and maintenance", "Potential use in military medical and government healthcare facilities with constrained legacy equipment; no public Cynerio defense deployment is established"]
 investible = false
-investment_rationale = "Cynerio is no longer an independent startup investment opportunity: Axonius announced its acquisition in July 2025. The acquisition nonetheless supports the strategic value of healthcare IoT expertise inside a broader asset-intelligence platform."
-strategic_value = "Strengthens critical-infrastructure resilience by closing a fundamental visibility and control gap in modern operational environments. Unmanaged devices are a persistent, widening attack surface that cannot be remediated by traditional IT security tools. Cynerio's platform provides the foundation for network-level protection of systems where device modification is infeasible or high-risk. For healthcare, this directly improves patient safety and enables regulatory compliance. For defense and government, it addresses a strategic vulnerability in facilities that combine classified networks with legacy OT systems. The company's success demonstrates feasibility of advanced security in constrained environments, with applicability across multiple critical-infrastructure domains."
-potential_score = 85.0
-technology_score = 87.0
-market_score = 84.0
-team_score = 81.0
-dual_use_score = 90.0
-strategic_alignment_score = 90.0
+investment_rationale = "Cynerio is not an independent startup investment opportunity after its August 2025 acquisition by Axonius. The transaction and the continued Axonius for Healthcare offering validate the strategic value of clinical asset context, but the acquired-product case depends on integration quality, customer continuity, roadmap ownership and economics that are not publicly disclosed. The legacy investment case should therefore be treated as an acquisition and product-quality reference, not a current venture allocation."
+strategic_value = "The asset addresses a practical security gap between hospital IT and clinical engineering: ordinary endpoint tools do not reliably cover devices that cannot be modified, patched or taken offline. Its medical-device context can enrich asset inventory, risk triage and response in settings where continuity of care is part of the security requirement. Axonius can combine those specialized records with broader IT asset intelligence and operational workflows. The strategic value is strongest in healthcare and health-system resilience. Reuse in military medicine or other critical infrastructure is technically plausible, but would require suitable deployment controls, customer validation and security approvals; no such Cynerio deployment was publicly established."
+potential_score = 62.0
+technology_score = 76.0
+market_score = 74.0
+team_score = 70.0
+dual_use_score = 45.0
+strategic_alignment_score = 78.0
 stage = "mature"
-stage_rationale = "Cynerio is now an acquired asset within Axonius following the July 2025 transaction. Its former independent venture stage is no longer an accurate operating classification."
-competitors = ["Armis Security (agentless asset visibility)", "Claroty xDome (OT-focused security and risk management)", "Ordr (AI-driven IoT device classification and policy)", "Nozomi Networks (industrial OT security and threat detection)", "Medigate (healthcare IoT security, acquired by AKS)", "Fortinet and Palo Alto Networks (network-centric IoT controls)"]
-competitive_edge = "Cynerio combines three differentiating elements: (1) deep healthcare domain expertise and medical-device protocol knowledge, enabling faster deployment in highly regulated hospitals; (2) a purely agentless, network-centric architecture that eliminates device-modification risk and deployment friction in environments with strict change-control processes; and (3) active enforcement (segmentation, blocking) rather than visibility-only, reducing dependency on manual remediation. The company's Israeli origins and tech maturity position it to compete effectively with US-based agents while offering a distinct architectural approach to network-centric competitors. The healthcare focus has created a defensible beachhead against broader OT platforms."
-risk_factors = ["Intense competition from large platform vendors (Fortinet, Palo Alto, Claroty) who bundle IoT/OT controls into broader security portfolios", "Integration complexity: healthcare networks and OT systems are highly heterogeneous and fragmented, requiring substantial customization per deployment", "Long, unpredictable procurement and regulatory cycles in healthcare and government, increasing sales friction and cash-burn sensitivity", "Detection quality risk: false positives in medical-device security can trigger alert fatigue or unnecessary device shutdowns, eroding customer trust", "Dependence on continued healthcare IT investment: regulatory shifts or budget constraints could slow adoption in the primary market", "Supply-chain and geopolitical risk: Israeli tech company subject to export controls and sanctions in certain markets"]
+stage_rationale = "Cynerio was a growth-stage, healthcare-focused software company founded in Israel. Axonius acquired the business in 2025, and the company domain now leads to Axonius for Healthcare. The historical startup stage no longer describes an independent venture; the relevant stage is a mature acquired product and team inside a larger cyber-asset platform."
+competitors = ["Claroty xDome for Healthcare (including the acquired Medigate product)", "Armis Centrix for Medical Device Security", "Ordr AI Protect for Healthcare", "Asimily Medical Device Security", "Forescout and its CyberMDX healthcare capabilities", "Palo Alto Networks IoT Security"]
+competitive_edge = "Cynerio's product history is unusually concentrated on healthcare rather than adapting a general OT inventory tool after the fact. Company materials describe device behavior analysis in the context of medical workflows; the 2018 Rambam announcement emphasized discovery, classification, visibility and anomaly detection, and later releases added response and segmentation capabilities. One US patent family describes a method for comparing medical-device connection features against clusters of sample device traffic to flag unusual connections. These points support a focused clinical-security capability, not proof that the system is more accurate than competitors or that its patent portfolio creates a broad moat. KLAS's 2025 customer survey listed Axonius Cynerio at 94.0 from 15 organizations, close to Claroty at 95.4 from 34; that is useful service and product feedback, but the small survey samples do not establish independent detection efficacy."
+risk_factors = ["The independent company has been acquired and its product, contracts, employees and roadmap are managed within Axonius; post-acquisition product continuity and customer migration are not fully public.", "No absolute revenue, ARR, gross margin, profitability, burn or runway figures were located; historical growth statements are company or founder assertions without disclosed accounting bases.", "Healthcare deployments involve long procurement, vendor review and clinical change-control processes, and a contract announcement does not establish that every site is live or producing measurable outcomes.", "Cynerio and Elron disclosures differ on the 2021 financing amount and cumulative funding; the recorded round amount remains unresolved rather than being averaged or summed.", "A clinical asset inventory can be incomplete or noisy, and false positives or unsafe automated enforcement could create alert fatigue or threaten continuity of care.", "Claroty, Armis, Ordr, Asimily and larger platform vendors compete for the same hospital budgets with overlapping visibility, risk and segmentation functions.", "The disclosed patent record is narrow and was later assigned to Axonius Solutions; the complete worldwide patent family, licensing position and remaining independently owned IP are not established.", "Defense and government applicability is inferred from the technology and adjacent medical-facility requirements; no Cynerio defense customer, contract or certification was found."]
 risk_level = 'medium'
 signals = []
 priority_rank = 0
-priority_rationale = "The asset's strategic relevance remains material, but independent startup prioritization is no longer applicable after its acquisition by Axonius."
+priority_rationale = "Priority rank remains zero. The acquisition confirms strategic relevance but removes the independent startup opportunity. Research priority is limited to product integration, customer retention, intellectual-property transfer and the unresolved financing and acquisition disclosures."
 crawled_at = '2026-02-16T23:52:00Z'
-updated_at = "2026-10-05T02:59:02Z"
+updated_at = "2026-10-22T07:38:39Z"
 entity_type = "acquired_asset"
 public_sources = [
-  {label="Axonius acquisition announcement",url="https://www.axonius.com/newsroom/press-release/axonius-acquires-medical-device-security-specialist-cynerio",description="Official acquisition announcement, transaction disclosure, and executive roles"},
-  {label="Cynerio Seed announcement",url="https://www.prnewswire.com/news-releases/cynerio-secures-7-million-seed-round-funding-to-drive-us-market-development-300775467.html",description="Company announcement of January 2019 seed funding and investors"},
-  {label="Cynerio Series B announcement",url="https://www.prweb.com/releases/cynerio-raises-30-million-in-series-b-funding-to-secure-mission-critical-medical-and-iot-devices-in-hospitals-and-health-systems-869645314.html",description="Company announcement of May 2021 Series B, investors and reported 2020 revenue growth"},
-  {label="Cynerio acquisition legal advisor",url="https://herzoglaw.co.il/en/news-and-insights/herzog-acts-for-cynerio-in-major-cybersecurity-transaction-with-axonius/",description="Israeli counsel confirms transaction structure and founders' roles"},
-  {label="Cheshire and Merseyside deployment",url="https://www.prnewswire.co.uk/news-releases/cheshire-and-merseyside-health-and-care-partnership-secure-patient-care-with-cynerio-302283021.html",description="Customer announcement of selected platform implementation across 17 NHS trusts"},
-  {label="Google Patents: US12432236B2",url="https://patents.google.com/patent/US20240356940A1/en",description="Patent filing, grant, assignee and subsequent assignment history"},
-  {label="Rambam pilot announcement",url="https://www.globenewswire.com/news-release/2018/03/05/1414640/0/en/Cynerio-Delivers-Innovative-Protection-of-Medical-Devices-Their-Sensitive-Data-to-Top-Israeli-Healthcare-Organization-Rambam.html",description="Company announcement of a hospital pilot and product capabilities"},
-  {label="ALIVE portfolio page",url="https://www.alivevc.com/portfolio",description="Investor portfolio identifies Cynerio and its acquisition by Axonius"},
-  {label="ALIVE Cynerio funding news",url="https://www.alivevc.com/news",description="Lead investor corroboration of 2021 Series B and later acquisition"},
-  {label="Calcalist Tech acquisition reporting",url="https://www.calcalistech.com/ctechnews/article/hkek009mdle",description="Israeli media reports round history and conflicting acquisition valuation details"},
+  { label = "Axonius acquisition announcement", url = "https://www.axonius.com/newsroom/press-release/axonius-acquires-medical-device-security-specialist-cynerio", description = "Acquisition announcement, more-than-$100M headline, cash-and-stock form, founders' transition roles and strategic rationale" },
+  { label = "Axonius for Healthcare", url = "https://www.axonius.com/platform/healthcare", description = "Current official healthcare product, device attributes, clinical risk insights, workflows and integrations" },
+  { label = "Cynerio seed announcement", url = "https://www.prnewswire.com/news-releases/cynerio-secures-7-million-seed-round-funding-to-drive-us-market-development-300775467.html", description = "Company announcement of the January 2019 $7M seed and named investors" },
+  { label = "2019 seed coverage", url = "https://www.calcalistech.com/ctech/articles/0%2C7340%2CL-3753913%2C00.html", description = "Israeli reporting on seed investors, founding year and Ramat Gan location" },
+  { label = "Cynerio Series B announcement", url = "https://www.prweb.com/releases/cynerio-raises-30-million-in-series-b-funding-to-secure-mission-critical-medical-and-iot-devices-in-hospitals-and-health-systems-869645314.html", description = "Company announcement of the $30M Series B, ALIVE lead, participants and reported cumulative total" },
+  { label = "Globes Series B report", url = "https://en.globes.co.il/en/article-Israeli-healthcare-IOT-cybersecurity-co-Cynerio-raises-30m-1001371531", description = "Israeli business coverage of the round, named investors and reported 2020 revenue growth" },
+  { label = "Elron November 2021 investor presentation", url = "https://elronventures.com/wp-content/uploads/ELRON-investor-presentation-ENG-Nov-2021-final.pdf", description = "Investor-reported $35.4M total investment, 17% RDC holding and 2021 product launches" },
+  { label = "Elron 2023 annual report", url = "https://elronventures.com/wp-content/uploads/ELRON_ENG_2023.pdf", description = "Investor filing on 2019 SAFE, 2021 round amount, 2023 SAFE agreements, cumulative funding, grants and sales model" },
+  { label = "Elron August 2024 investor presentation", url = "https://elron.b-cdn.net/wp-content/uploads/ELRON-investor-presentation-ENG-Aug-2024.pdf", description = "Investor-reported $51M total investment, RDC holding, product and growth context" },
+  { label = "Elron agreement for sale of Cynerio", url = "https://elronventures.com/wp-content/uploads/Cynerio-acquisition-Eng.pdf", description = "Israeli public-company filing on sale of all Cynerio shares, RDC's approximate 15% holding and consideration structure" },
+  { label = "Elron completion notice", url = "https://elronventures.com/wp-content/uploads/2025_08_05-Cynerio-Closing-1.pdf", description = "Elron filing confirming transfer of consideration and completion of the sale" },
+  { label = "Cynerio company registry profile", url = "https://en.checkid.co.il/company/CYNERIO%2BISRAEL%2B%2BLTD-mwmxMOO-515746212", description = "Aggregated Israeli company-registry data for legal name, company number, incorporation date, Ramat Gan address and merger status" },
+  { label = "Startup Nation Finder Cynerio snapshot", url = "https://finder.startupnationcentral.org/company_page/cynerio", description = "Historical company identity and Israeli registry cross-reference; snapshot last updated in 2023" },
+  { label = "Leon Lerman profile", url = "https://www.techtarget.com/contributor/Leon-Lerman", description = "Co-founder background at MetaPacket and RSA, IDF Unit 8200 service and education" },
+  { label = "Daniel Brodie interview", url = "https://htn.co.uk/2023/10/03/interview-cynerios-daniel-brodie-on-healthcare-cyber-risks-improving-protections-and-the-promises-of-generative-ai/", description = "Co-founder background and explanation of Cynerio's healthcare security focus" },
+  { label = "Cynerio 2022 company profile", url = "https://www.calcalistech.com/ctechnews/article/44s1z9484", description = "Historical leadership and 70-employee figure in the September 2022 conference profile" },
+  { label = "Cheshire and Merseyside independent coverage", url = "https://www.digitalhealth.net/2024/10/cheshire-and-merseyside-ics-selects-cyber-security-platform/", description = "Independent reporting of the 18-month contract and phased 14-organization rollout" },
+  { label = "Cheshire and Merseyside company announcement", url = "https://www.prnewswire.co.uk/news-releases/cheshire-and-merseyside-health-and-care-partnership-secure-patient-care-with-cynerio-302283021.html", description = "Cynerio announcement claiming implementation across all 17 NHS Trusts and customer statement" },
+  { label = "Rambam pilot announcement", url = "https://www.globenewswire.com/news-release/2018/03/05/1414640/0/en/Cynerio-Delivers-Innovative-Protection-of-Medical-Devices-Their-Sensitive-Data-to-Top-Israeli-Healthcare-Organization-Rambam.html", description = "Company announcement of an early medical-device security pilot and product capabilities" },
+  { label = "Leon Lerman 2024 growth post", url = "https://www.linkedin.com/posts/leon-lerman-16431b54_2024-was-the-best-year-to-date-for-cynerio-activity-7279897646624899072-ddEU", description = "Founder-CEO's unaudited statement on 2024 growth, ARR and customer-count expansion" },
+  { label = "US patent US12432236B2", url = "https://patents.google.com/patent/US20240356940A1/en", description = "Patent publication, grant, original assignee, medical-device connection-detection method and later assignment history" },
+  { label = "KLAS 2025 Healthcare IoT Security", url = "https://klasresearch.com/best-in-klas-ranking/healthcare-iot-security/2025/374", description = "Independent customer survey scores and sample sizes for Axonius Cynerio and competing products" },
+  { label = "Armis medical device security", url = "https://www.armis.com/platform/armis-centrix-for-medical-device-security/", description = "Competitor's healthcare asset visibility, risk monitoring and network segmentation offering" },
+  { label = "Claroty xDome for Healthcare", url = "https://claroty.com/healthcare-cybersecurity/xdome-for-healthcare", description = "Competitor's healthcare cyber-physical asset inventory, exposure and network-protection offering" },
+  { label = "Ordr Healthcare Security", url = "https://ordr.net/solutions/healthcare", description = "Competitor's agentless medical-device discovery, behavior analysis and safe segmentation offering" },
+  { label = "Asimily Medical Device Security", url = "https://asimily.com/solutions/medical-devices/", description = "Competitor's clinical exploitability analysis, legacy device mitigation and pre-purchase risk assessment" },
+  { label = "Calcalist acquisition reporting", url = "https://www.calcalistech.com/ctechnews/article/hkek009mdle", description = "Israeli media reports of $180M consideration, possible milestone value to $250M and about $50M prior funding" }
 ]
 
 [intelligence]
 schema_version = 2
-people = []
-investors = []
-financials = []
-traction = []
-intellectual_property = []
-comparables = []
 
 [intelligence.company]
 company_id = "il-cynerio"
 legal_name = "Cynerio Israel Ltd."
-aliases = ["Cynerio", "Cynerio Israel Ltd."]
+aliases = ["Cynerio", "Cynerio Ltd. (name used in the translated sale agreement)"]
 operating_status = "acquired"
-business_model = "Healthcare cybersecurity software sold to hospitals and healthcare systems for medical-device and connected-asset visibility, risk management, threat detection, and mitigation; integrated into Axonius after acquisition."
-products = ["Cynerio Healthcare Cybersecurity Platform", "Healthcare IoT asset discovery and risk management", "Medical-device threat detection and mitigation", "Microsegmentation and policy enforcement"]
-locations = ["Israel", "New York, United States"]
-founded_on = "2017"
-source_ids = ["axonius", "seed", "seriesb", "patent"]
+business_model = "Healthcare cybersecurity software sold through direct sales and channels to hospitals and health systems, historically with annual pricing based on bed count. After the 2025 acquisition, the healthcare product is offered within Axonius for Healthcare."
+products = ["Axonius for Healthcare (current offering on the former Cynerio domain)", "Cynerio Healthcare Cybersecurity Platform", "Attack Detection and Response module (2021 launch reported by Elron)", "Cynerio Now! for Small Hospitals (2021 launch reported by Elron)"]
+locations = ["Ramat Gan, Israel", "New York City, United States (North American headquarters announced in 2021)", "Historical sales markets: United States and Europe"]
+source_ids = ["axonius-acquisition", "axonius-healthcare", "elron-2023-report", "seed-2019-release", "ctech-2022-profile", "checkid-registry", "patent-us12432236"]
+notes = "Cynerio's former website redirects to Axonius for Healthcare. The Israeli registry profile reports company 515746212 as liquidated due to merger in 2025; Elron's translated sale agreement calls the target Cynerio Ltd., while the Israeli registry and patent record use Cynerio Israel Ltd. The legal-name difference is retained as an alias pending a direct company extract."
+country_of_incorporation = "Israel"
+founded_on = "2017-11-26"
+
+[[intelligence.company.registry_identifiers]]
+jurisdiction = "Israel"
+scheme = "Israeli Companies Registry"
+identifier = "515746212"
+source_ids = ["checkid-registry", "snc-finder"]
+notes = "The identifier and incorporation date are displayed in an aggregated company-registry profile and corroborated by the historical Startup Nation Finder record; no paid official company extract was retrieved."
 
 [intelligence.funding]
-status = "reported"
-summary = "Two publicly documented equity rounds: a $7 million seed round announced January 9, 2019 and a $30 million Series B announced May 19, 2021. Company/lead-investor announcement reported $40 million total raised after Series B, while later Israeli media described approximately $50 million across two rounds. These lifetime figures conflict and are not combined with individual round amounts. Series C is not supported by the reviewed evidence."
-rounds = [
-  {id="seed-2019",round_type="Seed",instrument="equity",status="closed",announced_on="2019-01-09",amount_status="reported",amount=7000000,amount_scope="round",currency="USD",lead_investors=["Accelmed","RDC","MTIP"],participating_investors=["Accelmed","RDC","MTIP"],source_ids=["seed"]},
-  {id="series-b-2021",round_type="Series B",instrument="equity",status="closed",announced_on="2021-05-19",amount_status="reported",amount=30000000,amount_scope="round",currency="USD",lead_investors=["ALIVE Israel HealthTech Fund"],participating_investors=["Accelmed","RDC","Elron/Rafael joint venture","MTIP","Consensus Business Group","UAE-based investment group (unnamed)"],source_ids=["seriesb","alive"]},
-]
-reported_total_raised = 40000000
+status = "conflicting"
+summary = "Cynerio announced a $7 million seed in January 2019 and a $30 million Series B in May 2021. The Series B amount conflicts with Elron's 2023 annual report, which describes the April 2021 investment round as approximately $26 million, so no single numeric Series B amount is assigned. Elron's annual report also describes a $3 million November 2019 SAFE and two February/November 2023 SAFE agreements totaling $15 million. Cynerio's 2021 release reported $40 million raised to date; Elron's November 2021 deck showed $35.4 million, its 2023 report stated approximately $50.5 million since inception, and its 2024 deck rounded that total to $51 million. Do not add these cumulative snapshots to individual rounds. Elron separately reported approximately NIS 3 million of government grants, kept outside the equity total."
+reported_total_raised = 50500000
 reported_total_currency = "USD"
-total_source_ids = ["seriesb"]
-total_as_of = "2021-05-19"
-total_scope = "Company-reported lifetime total after Series B; excludes acquisition proceeds. Later press reports approximately $50 million, conflicting with this figure."
+total_source_ids = ["elron-2023-report", "elron-2024-deck"]
+total_as_of = "2023-12-31"
+total_scope = "Elron's 2023 annual report states approximately $50.5 million raised since inception through 2023; Elron's August 2024 deck rounds this to $51 million. Earlier cumulative disclosures differ: the Cynerio 2021 Series B release said $40 million and an Elron November 2021 deck said $35.4 million. The reported total is not derived by adding round amounts, grants or acquisition consideration."
 history_status = "partial"
-coverage_through = "2026-10-05"
+coverage_through = "2026-10-22"
+
+[[intelligence.funding.rounds]]
+id = "seed-2019"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2019-01-09"
+amount_status = "reported"
+amount = 7000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["RDC", "Accelmed", "MTIP"]
+participating_investors = ["RDC", "Accelmed", "MTIP"]
+source_ids = ["seed-2019-release", "calcalist-seed-2019"]
+notes = "Cynerio's release states $7 million and names Accelmed, RDC and MTIP; Calcalist describes the same investors as leading the seed round."
+
+[[intelligence.funding.rounds]]
+id = "safe-nov-2019"
+round_type = "SAFE agreement"
+instrument = "convertible"
+status = "closed"
+announced_on = "2019-11"
+amount_status = "reported"
+amount = 3000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = []
+participating_investors = []
+source_ids = ["elron-2023-report"]
+notes = "Elron's 2023 annual report says the $3 million November 2019 SAFE balance was converted into shares; RDC's portion was approximately $0.75 million. This instrument is distinct from the January 2019 seed."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2021"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2021-05-19"
+amount_status = "conflicting"
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["ALIVE Israel HealthTech Fund"]
+participating_investors = ["ALIVE Israel HealthTech Fund", "Accelmed", "RDC", "MTIP", "Consensus Business Group"]
+source_ids = ["seriesb-2021-release", "globes-seriesb", "elron-2023-report"]
+notes = "Cynerio's May 2021 release states $30 million. Elron's 2023 annual report describes the April 2021 investment round as approximately $26 million. The dates and investor overlap indicate the same financing, but the differing amounts are not reconciled. A UAE investment group was described as a potential later participant; its completed participation was not confirmed and is excluded from the participant list."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "company-release-30m"
+amount = 30000000
+currency = "USD"
+as_of = "2021-05-19"
+source_ids = ["seriesb-2021-release"]
+notes = "Cynerio's company announcement says it secured $30 million in Series B funding."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "elron-report-26m"
+amount = 26000000
+currency = "USD"
+as_of = "2021-04"
+source_ids = ["elron-2023-report"]
+notes = "Elron's annual report describes the April 2021 investment round as approximately $26 million. The source uses approximate wording; the amount is preserved as an observation, not the round's numeric amount."
+
+[[intelligence.funding.rounds]]
+id = "safe-2023-aggregate"
+round_type = "SAFE agreements (February and November closings)"
+instrument = "convertible"
+status = "closed"
+announced_on = "2023"
+amount_status = "reported"
+amount = 15000000
+amount_scope = "cumulative_round"
+currency = "USD"
+lead_investors = []
+participating_investors = []
+source_ids = ["elron-2023-report"]
+notes = "Elron reports SAFE agreements completed in February and November 2023 for a combined approximately $15 million, with existing Cynerio shareholders participating. Individual amounts and participant identities are not allocated. The combined reported amount is recorded once, not twice."
+
+[[intelligence.funding.rounds]]
+id = "government-grants-aggregate"
+round_type = "Israel Innovation Authority and Ministry of Economy grants (aggregate)"
+instrument = "grant"
+status = "closed"
+amount_status = "reported"
+amount = 3000000
+amount_scope = "unknown"
+currency = "ILS"
+lead_investors = []
+participating_investors = []
+source_ids = ["elron-2023-report"]
+notes = "Elron's annual report says Cynerio received approximately NIS 3 million in grants from the Israel Innovation Authority and a Ministry of Economy and Industry support program. Award dates and the split by agency are not disclosed; this aggregate non-equity support is separate from equity funding."
 
 [intelligence.ownership]
 status = "reported"
-summary = "Axonius announced in July 2025 that it acquired Cynerio in a cash-and-stock transaction for more than $100 million. Acquisition price was not disclosed in the official release; Calcalist reported $180 million with possible milestone-linked value up to $250 million. Do not treat the media figure as confirmed consideration. Private pre-acquisition cap table was not publicly established in reviewed primary sources."
+summary = "Axonius announced the acquisition in July 2025 and Elron confirmed completion in August 2025. RDC disclosed an approximately 17% holding in Elron's August 2024 deck and approximately 15% fully diluted at the July 2025 sale agreement. The full cap table and final company-wide consideration are not public. Axonius described the transaction as more than $100 million in cash and stock; Calcalist reported $180 million and potential milestone value up to $250 million. No exact deal amount is entered."
 parent_company = "Axonius"
 cap_table_status = "undisclosed"
-shareholders = []
-source_ids = ["axonius", "herzog", "calcalist"]
-deals = [{id="axonius-acquisition-2025",deal_type="acquisition",company_role="target",announced_on="2025-07-29",status="completed",counterparty="Axonius",amount_status="undisclosed",source_ids=["axonius","herzog"],notes="Official announcement says acquired for more than $100 million in cash and stock, with additional terms undisclosed. Calcalist separately reported $180 million plus potential milestone consideration up to $250 million; not entered as confirmed numeric amount."}]
-holdings = []
+shareholders = ["RDC"]
+source_ids = ["axonius-acquisition", "elron-sale-agreement", "elron-sale-completion", "elron-2024-deck", "calcalist-acquisition"]
+
+[[intelligence.ownership.holdings]]
+shareholder = "RDC"
+ownership_percent = 17.0
+as_of = "2024-08-07"
+source_ids = ["elron-2024-deck"]
+notes = "Elron's August 2024 investor slide states 17% by RDC; it does not specify whether this is fully diluted."
+
+[[intelligence.ownership.holdings]]
+shareholder = "RDC"
+ownership_percent = 15.0
+as_of = "2025-07-30"
+fully_diluted = true
+source_ids = ["elron-sale-agreement"]
+notes = "Elron's sale agreement describes RDC as holding approximately 15% on a fully diluted basis before the transaction. The source qualifies the figure as approximate."
+
+[[intelligence.ownership.deals]]
+id = "axonius-acquisition-2025"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2025-07-29"
+completed_on = "2025-08-05"
+status = "completed"
+counterparty = "Axonius (purchaser subsidiary: Axonius Solutions Ltd.)"
+amount_status = "undisclosed"
+source_ids = ["axonius-acquisition", "elron-sale-agreement", "elron-sale-completion", "calcalist-acquisition"]
+notes = "Axonius announced more than $100 million in cash and stock but said additional transaction terms were undisclosed. Elron said RDC received Axonius equity and that the sale was completed by its August 5, 2025 report. Calcalist reported $180 million with possible contingent value up to $250 million; this is not confirmed consideration and no numeric amount is recorded."
 
 [intelligence.israel_connection]
 status = "confirmed"
-basis = ["headquarters_in_israel", "israeli_founders"]
-summary = "Israeli-founded cybersecurity company with operations and R&D in Israel; Cynerio Israel Ltd. is identified as the patent applicant/assignee. The company also had a New York presence."
-as_of = "2026-10-05"
-source_ids = ["seed", "patent"]
+basis = ["headquarters_in_israel", "israeli_founders", "israeli_rd"]
+summary = "Cynerio Israel Ltd. was incorporated and based in Ramat Gan, Israel, with co-founders and R&D operations in Israel. It also announced a New York North American headquarters and sold internationally. The Israeli company was later acquired and merged into Axonius; the Israeli founding and R&D connection is historical and confirmed."
+as_of = "2026-10-22"
+source_ids = ["checkid-registry", "snc-finder", "seed-2019-release", "ctech-2022-profile", "patent-us12432236"]
+
+[[intelligence.people]]
+name = "Leon Lerman"
+role = "Co-founder and CEO through acquisition; joined Axonius as Senior Vice President in 2025"
+is_founder = true
+current = false
+background = "TechTarget reports more than a decade in cybersecurity enterprise and channel sales, including director of sales at MetaPacket and sales and sales engineering at RSA. He served as an expert intelligence officer in IDF Unit 8200 and holds a BSc in industrial engineering and management from the Open University of Israel. Axonius said he would join as senior vice president after the acquisition."
+source_ids = ["techtarget-leon", "axonius-acquisition"]
+
+[[intelligence.people]]
+name = "Daniel Brodie"
+role = "Co-founder and CTO through acquisition; joined Axonius's Office of the CTO in 2025"
+is_founder = true
+current = false
+background = "Brodie described prior cybersecurity work across offensive and defensive security, including mobile cybersecurity and malware detection. His research into the 2017 WannaCry impact on hospitals helped motivate the company's healthcare focus. Axonius said he would join its Office of the CTO after the acquisition."
+source_ids = ["htn-daniel", "axonius-acquisition"]
+
+[[intelligence.investors]]
+name = "Accelmed"
+investor_type = "vc"
+round_ids = ["seed-2019", "series-b-2021"]
+relationship = "historical"
+source_ids = ["seed-2019-release", "calcalist-seed-2019", "seriesb-2021-release"]
+
+[[intelligence.investors]]
+name = "RDC (Rafael Development Corporation)"
+investor_type = "corporate"
+round_ids = ["seed-2019", "series-b-2021"]
+relationship = "historical"
+source_ids = ["seed-2019-release", "calcalist-seed-2019", "seriesb-2021-release", "elron-2024-deck", "elron-sale-agreement"]
+notes = "RDC is described in Cynerio's seed release as a joint venture between Elron and Rafael. Elron disclosed its holding and sale consideration separately."
+
+[[intelligence.investors]]
+name = "MTIP"
+investor_type = "vc"
+round_ids = ["seed-2019", "series-b-2021"]
+relationship = "historical"
+source_ids = ["seed-2019-release", "calcalist-seed-2019", "seriesb-2021-release"]
+
+[[intelligence.investors]]
+name = "ALIVE Israel HealthTech Fund"
+investor_type = "vc"
+round_ids = ["series-b-2021"]
+relationship = "historical"
+source_ids = ["seriesb-2021-release", "globes-seriesb"]
+notes = "Named as the Series B lead by Cynerio and Globes."
+
+[[intelligence.investors]]
+name = "Consensus Business Group (CBG London)"
+investor_type = "other"
+round_ids = ["series-b-2021"]
+relationship = "historical"
+source_ids = ["seriesb-2021-release", "globes-seriesb"]
+notes = "The company announcement says CBG participated. A UAE-based group was described as a prospective later participant, but no completed investment was confirmed."
+
+[[intelligence.financials]]
+name = "revenue_growth_2020"
+value = "Cynerio reported a 300% year-over-year revenue increase in 2020; absolute revenue was not disclosed."
+as_of = "2020-12-31"
+basis = "reported"
+metric = "other"
+numeric_value = 300.0
+value_relation = "exact"
+unit = "percent"
+period_start = "2020-01-01"
+period_end = "2020-12-31"
+source_ids = ["globes-seriesb"]
+notes = "Company assertion reported by Globes; this is growth, not absolute revenue or audited financial performance."
+
+[[intelligence.financials]]
+name = "employee_count_2022"
+value = "70 employees reported in a September 2022 company profile."
+as_of = "2022-09-16"
+basis = "reported"
+metric = "employees"
+numeric_value = 70.0
+value_relation = "exact"
+unit = "people"
+source_ids = ["ctech-2022-profile"]
+notes = "Historical headcount only; no current post-acquisition employee count was found."
+
+[[intelligence.financials]]
+name = "rd_expense_share_2022"
+value = "R&D expenses were approximately 39% of total expenses."
+as_of = "2022-12-31"
+basis = "reported"
+metric = "other"
+numeric_value = 39.0
+value_relation = "approximate"
+unit = "percent"
+period_start = "2022-01-01"
+period_end = "2022-12-31"
+source_ids = ["elron-2023-report"]
+
+[[intelligence.financials]]
+name = "rd_expense_share_2023"
+value = "R&D expenses were approximately 37% of total expenses."
+as_of = "2023-12-31"
+basis = "reported"
+metric = "other"
+numeric_value = 37.0
+value_relation = "approximate"
+unit = "percent"
+period_start = "2023-01-01"
+period_end = "2023-12-31"
+source_ids = ["elron-2023-report"]
+
+[[intelligence.financials]]
+name = "arr_growth_2024"
+value = "Founder-CEO said ARR more than doubled in 2024; absolute ARR was not disclosed."
+as_of = "2024-12-31"
+basis = "reported"
+metric = "arr"
+numeric_value = 2.0
+value_relation = "more_than"
+unit = "other"
+period_start = "2023-01-01"
+period_end = "2024-12-31"
+source_ids = ["leon-linkedin-growth"]
+notes = "Founder-CEO social-media assertion, not audited financial information. His post also says company growth was 150% year over year, but does not state that 150% was ARR growth."
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Cynerio announced a pilot protecting Rambam Hospital's connected medical-device ecosystem. Rambam's CIO described a pilot; the notice does not disclose payment, contract value or production outcomes."
+date = "2018-03-05"
+source_ids = ["rambam-pilot"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Elron's November 2021 investor presentation lists two 2021 launches: an Attack Detection and Response module and Cynerio Now! for Small Hospitals. Current independent availability of those named modules is not documented."
+date = "2021"
+source_ids = ["elron-2021-deck"]
+
+[[intelligence.traction]]
+kind = "contract"
+description = "Cheshire and Merseyside selected Cynerio under an 18-month contract in March 2024. Independent reporting says rollout was phased across 14 NHS organizations; Cynerio's October release says the platform would be implemented at all 17 NHS Trusts. The scope difference is not reconciled, and the contract value and site-by-site completion are not public."
+date = "2024-03"
+source_ids = ["digitalhealth-cheshire", "cheshire-cynerio-release"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "In a year-end post, co-founder and CEO Leon Lerman said Cynerio grew 150% year over year in 2024 and more than doubled ARR and customer count. These are founder-reported growth claims without absolute values, accounting detail or independent verification."
+date = "2024"
+source_ids = ["leon-linkedin-growth"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "US patent US12432236B2, Detecting Compromised Medical Devices, was filed in 2023, published as US20240356940A1 and granted in September 2025. It describes monitoring medical-device network connections and comparing connection features with sample-device clusters to detect anomalous or malicious activity. The Google Patents legal history lists Cynerio Israel Ltd. as original assignee and a later assignment to Axonius Solutions Ltd. in October 2025. One patent family was reviewed; a complete global portfolio and licensing position are not established."
+date = "2025-09-30"
+source_ids = ["patent-us12432236"]
+
+[[intelligence.comparables]]
+name = "Claroty xDome for Healthcare"
+website = "https://claroty.com/healthcare-cybersecurity/xdome-for-healthcare"
+rationale = "Direct healthcare cybersecurity competitor with medical-device, facilities and broader cyber-physical-system coverage."
+differentiation = "Claroty describes passive and safe-query asset inventory, clinical-impact exposure prioritization and a broader CPS platform. That industrial and facilities breadth may appeal to hospitals seeking one vendor across healthcare and OT; Cynerio's historical distinction was deeper healthcare-only product focus, now combined with Axonius asset intelligence."
+source_ids = ["claroty-healthcare", "klas-2025"]
+
+[[intelligence.comparables]]
+name = "Armis Centrix for Medical Device Security"
+website = "https://www.armis.com/platform/armis-centrix-for-medical-device-security/"
+rationale = "Direct competitor for connected medical-device visibility, clinical risk prioritization and network segmentation."
+differentiation = "Armis positions a broader cyber-exposure platform with patient-centered risk, device behavior monitoring and automated segmentation. Cynerio's historical product differentiation was its healthcare-only workflow context; the current Axonius offering ties clinical device records into a larger enterprise asset graph."
+source_ids = ["armis-healthcare", "klas-2025"]
+
+[[intelligence.comparables]]
+name = "Ordr AI Protect for Healthcare"
+website = "https://ordr.net/solutions/healthcare"
+rationale = "Direct agentless competitor focused on medical, IoT, OT and IT device discovery, risk analysis and enforcement in hospitals."
+differentiation = "Ordr emphasizes passive behavior-based discovery and validated safe segmentation. It competes on turning inventory into actions through existing network controls; Cynerio's distinction is clinical workflow context and its integration into Axonius."
+source_ids = ["ordr-healthcare", "klas-2025"]
+
+[[intelligence.comparables]]
+name = "Asimily Medical Device Security"
+website = "https://asimily.com/solutions/medical-devices/"
+rationale = "Direct healthcare competitor for unmanaged and legacy medical-device exposure assessment and remediation."
+differentiation = "Asimily highlights device-specific exploitability analysis, compensating controls for devices that cannot be patched and pre-purchase risk assessment. That lifecycle and vulnerability focus overlaps with Cynerio's risk prioritization but differs in emphasis from Axonius's unified clinical asset visibility and workflow integration."
+source_ids = ["asimily-healthcare", "klas-2025"]
 
 [intelligence.research]
-researched_at = "2026-10-05T02:59:02Z"
-topics_checked = ["identity","funding","investors","team","ownership","financials","traction","intellectual_property","competition","dual_use"]
-search_queries = ["Cynerio official Series C funding investors $100 million 2021","Cynerio company leadership CEO founders investors acquisition 2025","Cynerio customer hospital deployment customer announcement","Cynerio patents medical device security","site:cynerio.com Series B $30 million Cynerio","Cynerio $7 million seed January 2019 press release","Axonius acquires Cynerio acquisition price official","Cynerio Cheshire Merseyside 17 NHS Trusts","Cynerio Israel Ltd patent assignee"]
-gaps = ["team: post-acquisition full team roster and current individual roles beyond co-founders were not established.","investors: full cap table, precise complete participant list, and identity of unnamed UAE participant unavailable.","financials: no audited revenue, profitability, burn, or runway data found; one 2021 announcement reports 300% year-over-year revenue growth in 2020 without absolute revenue.","traction: customer statements establish deployments/selections but do not disclose contract values, recurring revenue, or independently verified deployment outcomes.","intellectual_property: one specific US patent record was reviewed; complete global patent family and portfolio not established.","competition: independent comparative performance evidence and current post-acquisition competitor positioning not established.","ownership: private cap table unavailable; acquisition consideration has conflicting reported amounts.","dual_use: no public military, defense, or government customer/contract evidence found; applicability beyond healthcare is technical potential only."]
-conflicts = ["Lifetime fundraising: Cynerio's Series B announcement said $40 million total raised; 2025 Calcalist coverage said around $50 million across two rounds. Retain the company-reported $40 million field and document the discrepancy; individual reported round amounts total $37 million.","Acquisition price: official Axonius announcement says more than $100 million but terms undisclosed; Calcalist reported $180 million and potential $250 million contingent value. Numeric consideration remains undisclosed.","Company founded year: company record says 2017; some 2021 reporting said 2018. Earlier company and Israeli reports and patent/corporate identity corroborate 2017."]
-diligence_questions = ["What healthcare product capabilities, customer contracts, and support commitments remain available under Axonius, and which Cynerio modules have been integrated or retired?","What was the audited 2024 revenue, gross margin, retention, and customer concentration before the Axonius acquisition?","What are the complete patent families and ownership assignments after the merger, including Israeli and international filings?","What were the final consideration and milestone terms in the Axonius transaction, and how did they compare with media estimates?","Which customers were in production versus pilots at closing, and what renewal/expansion outcomes have followed integration?"]
+researched_at = "2026-10-22T07:38:39Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "site:cynerio.com Cynerio about leadership product healthcare cybersecurity",
+  "Cynerio Axonius acquisition 2025 official July 2025 acquired for more than $100 million",
+  "Cynerio funding $7 million seed 2019 $30 million Series B 2021 ALIVE Accelmed RDC MTIP",
+  "Cynerio customers Cheshire Merseyside 17 NHS trusts acquisition 2025",
+  "Cynerio 2021 $30 million Series B investors company official release 40 million raised",
+  "Cynerio Series B $30 million $50 million total Cynerio Israel 2021 Hebrew investors",
+  "Cynerio Series A 2018 investors financing Elron Cynerio $50 million funding total",
+  "Cynerio Elron immediate report acquisition Axonius 335.3 million NIS July 2025",
+  "Cynerio founders Leon Lerman Daniel Brodie background official company CEO CTO",
+  "Cynerio CEO Leon Lerman Daniel Brodie founder bios background cybersecurity",
+  "Cynerio 2018 first investment Elron RDC 2018 Series A Cynerio funding",
+  "Cynerio total raised $50.5 million Elron 2023 Cynerio financing rounds 2021 26 million",
+  "Cynerio patent \"Cynerio Israel Ltd.\" USPTO patent",
+  "site:patents.google.com/patent Cynerio Israel Ltd medical device cybersecurity patent",
+  "Cynerio medical device cybersecurity patent network segmentation threat detection patent inventor",
+  "Cynerio competitors official healthcare IoT security Armis Claroty Ordr",
+  "official Armis Centrix medical device security platform healthcare visibility segmentation",
+  "official Claroty xDome healthcare medical device cybersecurity platform",
+  "official Ordr healthcare IoT security AI Protect medical device security",
+  "official Asimily healthcare IoT security medical device cybersecurity",
+  "Cynerio acquisition completed Axonius close date August 2025 Elron Cynerio transaction completed",
+  "site:elronventures.com Cynerio completed transaction Axonius completion",
+  "site:sec.gov Axonius Cynerio acquisition 2025",
+  "Cynerio acquisition 2025 price 109 million Axios financial statements Axonius",
+  "site:elronventures.com/wp-content/uploads/ELRON_ENG_2023.pdf Cynerio 2023 SAFE 15 million grants",
+  "\"In February and November 2023\" Cynerio SAFE",
+  "\"total amount of approximately $15 million\" \"Cynerio\" Elron",
+  "Cynerio 2023 revenue ARR customers hiring financials",
+  "site:mayafiles.tase.co.il Cynerio \"SAFE\" Elron 2023",
+  "site:elronventures.com/wp-content/uploads Cynerio \"15 million\" SAFE",
+  "\"Cynerio\" \"NIS 3 million\" grants Elron",
+  "\"Cynerio\" \"$50.5 million\" Elron Venture annual",
+  "Cynerio Israel Ltd company registration number corporate registry 515746212",
+  "Cynerio government defense military hospital cybersecurity contract",
+  "Cynerio dual-use defense government cybersecurity deployments military medical devices",
+  "Cynerio financials revenue ARR profitability runway public disclosures"
+]
+gaps = [
+  "team: the full post-acquisition roster, current individual roles, retention and reporting lines are not publicly established; only co-founder transition roles were confirmed.",
+  "investors: the private cap table, security classes, SAFE conversion terms and full participant list are unavailable; a UAE group was described as a prospective investor but its completed participation was not confirmed.",
+  "financials: no absolute revenue, ARR, gross margin, profit/loss, burn or runway was found; available growth and R&D ratios are reported snapshots, not a complete audited operating model.",
+  "traction: the Cheshire and Merseyside announcements differ between 14 organizations and 17 trusts; contract value, completed deployment by site, renewals and post-acquisition customer retention are not disclosed.",
+  "intellectual_property: one US patent family was reviewed, including its later Axonius assignment; full global family coverage, additional filings, licensing and product dependence are not established.",
+  "competition: public material and a KLAS customer survey support a relevant peer set, but comparable technical detection tests, false-positive rates, pricing and independently verified efficacy are unavailable.",
+  "ownership: the full pre-sale cap table is unavailable and exact acquisition consideration is not disclosed by Axonius; media price reports remain unverified.",
+  "dual_use: no Cynerio defense or government contract, military deployment or defense certification was found; military-healthcare applicability is an inference from the product capabilities, not disclosed use."
+]
+conflicts = [
+  "2021 Series B amount: Cynerio's May 2021 announcement states $30 million; Elron's 2023 annual report describes the April 2021 investment round as approximately $26 million. The overlapping date and investors suggest the same round, but the difference is unresolved, so the round has conflicting amount observations and no numeric amount.",
+  "Cumulative funding snapshots: Cynerio's 2021 Series B announcement reported $40 million raised to date, Elron's November 2021 presentation displayed $35.4 million total investment, Elron's 2023 report said approximately $50.5 million since inception, and Elron's 2024 presentation rounded that to $51 million. The 2023 SAFE agreements add context, but do not eliminate the inconsistent earlier snapshots; totals are not derived by addition.",
+  "Acquisition consideration: Axonius said more than $100 million in cash and stock and did not disclose full terms. Calcalist reported $180 million plus possible milestone consideration up to $250 million. The exact company-wide price is unresolved and remains absent from numeric deal fields.",
+  "NHS deployment scope: Cynerio's release says its full platform would be implemented at all 17 NHS Trusts; Digital Health reports an 18-month contract with a phased rollout at 14 NHS organizations. These descriptions may refer to the broader trust network and initial rollout scope, but are not reconciled.",
+  "Founded year and legal name: company profiles variously say founded in 2017 or 2018; the registry-data profile gives a 2017-11-26 incorporation date. The Israeli company registry/patent use Cynerio Israel Ltd., while Elron's translated sale report calls the target Cynerio Ltd.; the company number is retained and the naming variation is disclosed."
+]
+diligence_questions = [
+  "Which Cynerio modules, integrations, customer commitments and support SLAs remain in the Axonius for Healthcare product, and what customer migration or retirement plan was applied after closing?",
+  "What were Cynerio's absolute 2023-2024 ARR and revenue, gross margin, renewal and expansion rates, customer concentration, and audited cash use before the acquisition?",
+  "What was the final company-wide Axonius consideration, including cash, stock, escrow and any milestone payments, and how do the reported $180M/$250M estimates compare with the signed agreement?",
+  "How many NHS organizations received production deployment under the Cheshire and Merseyside contract, and what renewal, expansion and measurable risk-remediation outcomes followed?",
+  "What is the complete patent family and assignment chain for the medical-device detection methods, and which product capabilities depend on those claims?",
+  "What was the pre-sale fully diluted cap table, including the 2019 and 2023 SAFE conversion terms, and which investors actually participated in the 2021 and 2023 financings?"
+]
 
 [[intelligence.research.sources]]
-id = "axonius"
+id = "axonius-acquisition"
 url = "https://www.axonius.com/newsroom/press-release/axonius-acquires-medical-device-security-specialist-cynerio"
 title = "Axonius Acquires Medical Device Security Specialist Cynerio for More Than $100 Million to Target Healthcare Market"
 publisher = "Axonius"
 kind = "company"
-accessed_at = "2026-10-05T02:59:02Z"
+accessed_at = "2026-10-22T07:38:39Z"
 published_on = "2025-07-29"
-claims = ["Axonius announced acquisition of Cynerio for more than $100 million in cash and stock; additional terms undisclosed.","Leon Lerman would join Axonius as senior vice president and Daniel Brodie would join the Office of the CTO.","Cynerio's platform provides medical-device visibility, microsegmentation, exposed ePHI identification, and ransomware stopping."]
+claims = ["Axonius announced that it acquired Cynerio for more than $100 million in a cash-and-stock transaction.", "Leon Lerman was to join Axonius as senior vice president and Daniel Brodie was to join the Office of the CTO.", "The Cynerio team was joining Axonius to expand its healthcare business and combine medical-device expertise with the asset-intelligence platform."]
 
 [[intelligence.research.sources]]
-id = "seed"
+id = "axonius-healthcare"
+url = "https://www.axonius.com/platform/healthcare"
+title = "Axonius for Healthcare"
+publisher = "Axonius"
+kind = "company"
+accessed_at = "2026-10-22T07:38:39Z"
+claims = ["Axonius currently markets a healthcare product for clinical asset visibility, risk insights and automated defense.", "The product describes more than 150 attributes per medical device, risk scores, clinical protocol support and playbooks.", "The product integrates with NAC, firewalls, ticketing systems and CMMS tools."]
+
+[[intelligence.research.sources]]
+id = "seed-2019-release"
 url = "https://www.prnewswire.com/news-releases/cynerio-secures-7-million-seed-round-funding-to-drive-us-market-development-300775467.html"
 title = "Cynerio Secures $7 Million Seed Round Funding to Drive US Market Development"
-publisher = "Cynerio / PR Newswire"
+publisher = "Cynerio via PR Newswire"
 kind = "company"
-accessed_at = "2026-10-05T02:59:02Z"
+accessed_at = "2026-10-22T07:38:39Z"
 published_on = "2019-01-09"
-claims = ["Cynerio announced completion of a $7 million seed round on January 9, 2019.","Investors named were Accelmed, RDC, and MTIP.","Cynerio was healthcare-focused and led by CEO Leon Lerman."]
+claims = ["Cynerio announced completion of a $7 million seed funding round.", "The company named Accelmed, RDC and MTIP as investors.", "The release describes a healthcare-focused cyber security platform and US market development plans."]
 
 [[intelligence.research.sources]]
-id = "seriesb"
+id = "calcalist-seed-2019"
+url = "https://www.calcalistech.com/ctech/articles/0%2C7340%2CL-3753913%2C00.html"
+title = "Cybersecurity Startup Cynerio Raises $7 Million"
+publisher = "Calcalist Tech"
+kind = "media"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2019-01-09"
+claims = ["Calcalist reported the $7 million seed and described RDC, Accelmed and MTIP as round leaders.", "The report described Cynerio as Israel-based and located in Ramat Gan.", "The report stated the company was founded in 2017."]
+
+[[intelligence.research.sources]]
+id = "seriesb-2021-release"
 url = "https://www.prweb.com/releases/cynerio-raises-30-million-in-series-b-funding-to-secure-mission-critical-medical-and-iot-devices-in-hospitals-and-health-systems-869645314.html"
-title = "Cynerio Raises $30 Million in Series B Funding to Secure Mission-Critical Medical and IoT Devices"
-publisher = "Cynerio / PRWeb"
+title = "Cynerio Raises $30 Million in Series B Funding to Secure Mission-Critical Medical and IoT Devices in Hospitals and Health Systems"
+publisher = "Cynerio via PRWeb/PR Newswire"
 kind = "company"
-accessed_at = "2026-10-05T02:59:02Z"
+accessed_at = "2026-10-22T07:38:39Z"
 published_on = "2021-05-19"
-claims = ["Cynerio announced a $30 million Series B on May 19, 2021, led by ALIVE Israel HealthTech Fund.","Participants included Accelmed, RDC, Elron/Rafael, MTIP, Consensus Business Group, and unnamed UAE-based investor(s).","Company stated it had raised $40 million total to date.","Company said 2020 revenue grew 300% year over year.","Company described expansion from medical devices into a broad healthcare IoT security platform."]
+claims = ["Cynerio announced a $30 million Series B led by ALIVE Israel HealthTech Fund.", "The release names Accelmed, RDC and MTIP as existing investors and CBG London as a co-investor; it mentions a UAE group as a prospective later co-investor.", "The release reports $40 million raised to date and describes expansion and platform development plans."]
 
 [[intelligence.research.sources]]
-id = "alive"
-url = "https://www.alivevc.com/news"
-title = "ALIVE portfolio company news"
-publisher = "ALIVE Israel HealthTech Fund"
+id = "globes-seriesb"
+url = "https://en.globes.co.il/en/article-Israeli-healthcare-IOT-cybersecurity-co-Cynerio-raises-30m-1001371531"
+title = "Healthcare IOT cybersecurity co Cynerio raises $30m"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2021-05-20"
+claims = ["Globes reported the $30 million Series B led by ALIVE and named Accelmed, RDC, MTIP and CBG as participants.", "Globes reported a UAE investment group was expected to join later.", "Cynerio was reported to have ended 2020 with 300% year-over-year revenue growth."]
+
+[[intelligence.research.sources]]
+id = "elron-2021-deck"
+url = "https://elronventures.com/wp-content/uploads/ELRON-investor-presentation-ENG-Nov-2021-final.pdf"
+title = "Elron Ventures Investor Presentation, November 2021"
+publisher = "Elron Ventures"
 kind = "investor"
-accessed_at = "2026-10-05T02:59:02Z"
-claims = ["ALIVE says it led Cynerio's $30 million Series B in 2021.","ALIVE identifies Cynerio as acquired by Axonius."]
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2021-11-18"
+claims = ["Elron's Cynerio portfolio slide states total investment of $35.4 million and a 17% RDC holding.", "The slide lists Attack Detection and Response and Cynerio Now! for Small Hospitals as 2021 launches.", "The slide lists ALIVE, MTIP and Accelmed as main partners."]
 
 [[intelligence.research.sources]]
-id = "herzog"
-url = "https://herzoglaw.co.il/en/news-and-insights/herzog-acts-for-cynerio-in-major-cybersecurity-transaction-with-axonius/"
-title = "Herzog Acts for Cynerio in Major Cybersecurity Transaction with Axonius"
-publisher = "Herzog Fox & Neeman"
+id = "elron-2023-report"
+url = "https://elronventures.com/wp-content/uploads/ELRON_ENG_2023.pdf"
+title = "Elron Ventures Ltd. Annual Report and Board of Directors Report for 2023"
+publisher = "Elron Ventures"
+kind = "filing"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2024-02-20"
+claims = ["Elron's report says a November 2019 SAFE of $3 million was converted into shares and records the April 2021 investment round at approximately $26 million.", "Elron reports February and November 2023 SAFE agreements with existing shareholders totaling $15 million.", "Elron reports approximately $50.5 million raised by Cynerio since inception.", "Elron reports approximately NIS 3 million in grants from the Israel Innovation Authority and Ministry of Economy support program.", "Elron describes direct and channel sales in the US and Europe, bed-count-based annual payments and R&D expense shares of approximately 39% in 2022 and 37% in 2023."]
+
+[[intelligence.research.sources]]
+id = "elron-2024-deck"
+url = "https://elron.b-cdn.net/wp-content/uploads/ELRON-investor-presentation-ENG-Aug-2024.pdf"
+title = "Elron Ventures Investor Presentation, August 2024"
+publisher = "Elron Ventures"
+kind = "investor"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2024-08-07"
+claims = ["Elron's Cynerio slide reports $51 million total investment and an 17% RDC holding.", "The investor slide says Cynerio achieved significant growth in 2023 and the first half of 2024.", "Elron describes healthcare device cybersecurity capabilities and vendor partnerships."]
+
+[[intelligence.research.sources]]
+id = "elron-sale-agreement"
+url = "https://elronventures.com/wp-content/uploads/Cynerio-acquisition-Eng.pdf"
+title = "Translation of Immediate Report Filed by Elron on July 30, 2025: Agreement for the Sale of Cynerio"
+publisher = "Elron Ventures"
+kind = "filing"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2025-07-30"
+claims = ["The binding agreement covers sale of all Cynerio share capital to Axonius and Axonius Solutions Ltd.", "Elron reports RDC held approximately 15% of Cynerio on a fully diluted basis before the transaction.", "RDC was to receive Axonius preferred shares, and Elron estimated its stake at approximately $15.2 million using Axonius's prior financing reference; that is not the company-wide acquisition price."]
+
+[[intelligence.research.sources]]
+id = "elron-sale-completion"
+url = "https://elronventures.com/wp-content/uploads/2025_08_05-Cynerio-Closing-1.pdf"
+title = "Translation of Immediate Report: Completion of Sale of Holdings in Cynerio"
+publisher = "Elron Ventures"
+kind = "filing"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2025-08-05"
+claims = ["Elron's August 5 report says consideration for the sale of its Cynerio holdings was transferred and the transaction completed."]
+
+[[intelligence.research.sources]]
+id = "checkid-registry"
+url = "https://en.checkid.co.il/company/CYNERIO%2BISRAEL%2B%2BLTD-mwmxMOO-515746212"
+title = "CYNERIO ISRAEL LTD - 515746212"
+publisher = "CheckID / Guideline Group"
+kind = "directory"
+accessed_at = "2026-10-22T07:38:39Z"
+claims = ["The aggregated registry profile lists CYNERIO ISRAEL LTD, company ID 515746212, incorporation date 26 November 2017 and address Shoham 5, Ramat Gan.", "The profile reports liquidated due to merger and lists a September 30, 2025 voluntary merger entry; this is an aggregator's rendering of registry information, not a direct company extract."]
+
+[[intelligence.research.sources]]
+id = "snc-finder"
+url = "https://finder.startupnationcentral.org/company_page/cynerio"
+title = "Cynerio - Cyber Security"
+publisher = "Startup Nation Finder"
+kind = "directory"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2023-02-09"
+claims = ["The historical Finder snapshot records Cynerio's Israeli company registry identifier as 515746212, founded year 2017 and Ramat Gan location.", "The snapshot reports the 2021 round and records the 2025 Axonius acquisition, but its profile is historical and not treated as current headcount or a complete cap table."]
+
+[[intelligence.research.sources]]
+id = "techtarget-leon"
+url = "https://www.techtarget.com/contributor/Leon-Lerman"
+title = "Leon Lerman - Cynerio, Co-Founder and CEO"
+publisher = "TechTarget"
+kind = "media"
+accessed_at = "2026-10-22T07:38:39Z"
+claims = ["TechTarget describes Lerman's cybersecurity sales background at MetaPacket and RSA, service in IDF Unit 8200, and industrial engineering degree."]
+
+[[intelligence.research.sources]]
+id = "htn-daniel"
+url = "https://htn.co.uk/2023/10/03/interview-cynerios-daniel-brodie-on-healthcare-cyber-risks-improving-protections-and-the-promises-of-generative-ai/"
+title = "Interview: Cynerio's Daniel Brodie on healthcare cyber risks, improving protections, and the promises of generative AI"
+publisher = "Health Tech News"
+kind = "media"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2023-10-03"
+claims = ["Brodie describes prior offensive and defensive cybersecurity work including mobile security and malware detection.", "Brodie describes the WannaCry hospital impact as a motivation for the healthcare focus and reports an internal study of 35,000 devices at 14 NHS Trusts; this company study is not an independent efficacy evaluation."]
+
+[[intelligence.research.sources]]
+id = "ctech-2022-profile"
+url = "https://www.calcalistech.com/ctechnews/article/44s1z9484"
+title = "Cynerio: Protecting the hospital's weakest link - the connected medical device"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2022-09-16"
+claims = ["The 2022 conference profile identifies Leon Lerman and Daniel Brodie as founders and reports 70 employees.", "The profile says $40 million raised and lists investors, but it is a dated conference card rather than a complete financing filing."]
+
+[[intelligence.research.sources]]
+id = "digitalhealth-cheshire"
+url = "https://www.digitalhealth.net/2024/10/cheshire-and-merseyside-ics-selects-cyber-security-platform/"
+title = "Cheshire and Merseyside ICS selects cyber security platform"
+publisher = "Digital Health"
+kind = "media"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2024-10-29"
+claims = ["The report says Cheshire and Merseyside selected Cynerio in March 2024 and signed an 18-month contract.", "The report describes phased rollout to 14 NHS organizations and includes a customer statement from Liverpool Women's Hospital NHS Foundation Trust."]
+
+[[intelligence.research.sources]]
+id = "cheshire-cynerio-release"
+url = "https://www.prnewswire.co.uk/news-releases/cheshire-and-merseyside-health-and-care-partnership-secure-patient-care-with-cynerio-302283021.html"
+title = "Cheshire and Merseyside Health and Care Partnership Secure Patient Care with Cynerio"
+publisher = "Cynerio via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2024-10-22"
+claims = ["Cynerio's announcement says the platform would be implemented across all 17 NHS Trusts.", "The release quotes Liverpool Women's Hospital's Chief Digital Information Officer on visibility and deployment support; it does not state contract value or independently verify completion at all sites."]
+
+[[intelligence.research.sources]]
+id = "rambam-pilot"
+url = "https://www.globenewswire.com/news-release/2018/03/05/1414640/0/en/Cynerio-Delivers-Innovative-Protection-of-Medical-Devices-Their-Sensitive-Data-to-Top-Israeli-Healthcare-Organization-Rambam.html"
+title = "Cynerio Delivers Innovative Protection of Medical Devices and Their Sensitive Data to Rambam"
+publisher = "Cynerio via GlobeNewswire"
+kind = "company"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2018-03-05"
+claims = ["Cynerio said Rambam Hospital was piloting its medical-device cybersecurity technology.", "The release describes discovery, device classification, network visibility and anomaly detection capabilities.", "The release says Rambam served as a referral hospital for IDF Northern Command and the US Navy Sixth Fleet; this does not establish Cynerio deployment for either military organization."]
+
+[[intelligence.research.sources]]
+id = "leon-linkedin-growth"
+url = "https://www.linkedin.com/posts/leon-lerman-16431b54_2024-was-the-best-year-to-date-for-cynerio-activity-7279897646624899072-ddEU"
+title = "Leon Lerman's 2024 Cynerio year-end post"
+publisher = "Leon Lerman"
 kind = "other"
-accessed_at = "2026-10-05T02:59:02Z"
-published_on = "2025-08-03"
-claims = ["Cynerio was acquired by Axonius in a cash-and-stock transaction valued over $100 million.","Herzog advised Cynerio; Piper Sandler was its financial advisor.","Founders Leon Lerman and Daniel Brodie held CEO and CTO roles and joined Axonius after closing."]
+accessed_at = "2026-10-22T07:38:39Z"
+claims = ["Lerman says Cynerio grew 150% year over year in 2024 and more than doubled ARR and customer count; no absolute figures or accounting basis are given."]
 
 [[intelligence.research.sources]]
-id = "calcalist"
+id = "patent-us12432236"
+url = "https://patents.google.com/patent/US20240356940A1/en"
+title = "US12432236B2 / US20240356940A1 - Detecting Compromised Medical Devices"
+publisher = "Google Patents (US patent record)"
+kind = "filing"
+accessed_at = "2026-10-22T07:38:39Z"
+published_on = "2024-10-24"
+claims = ["The patent application describes a method to monitor medical-device traffic and compare connection features with sample-device clusters to detect malicious connections.", "The record lists Cynerio Israel Ltd. as original assignee, US12432236B2 as granted in September 2025, and an October 2025 assignment to Axonius Solutions Ltd."]
+
+[[intelligence.research.sources]]
+id = "klas-2025"
+url = "https://klasresearch.com/best-in-klas-ranking/healthcare-iot-security/2025/374"
+title = "2025 Best in KLAS Healthcare IoT Security"
+publisher = "KLAS Research"
+kind = "other"
+accessed_at = "2026-10-22T07:38:39Z"
+claims = ["KLAS lists Axonius Cynerio at 94.0 from 15 organizations, Claroty xDome at 95.4 from 34, Armis at 89.4 from 17 and Ordr at 89.1 from 16.", "The scores summarize surveyed customer experience and do not constitute a technical detection efficacy test."]
+
+[[intelligence.research.sources]]
+id = "armis-healthcare"
+url = "https://www.armis.com/platform/armis-centrix-for-medical-device-security/"
+title = "Armis Centrix for Medical Device Security"
+publisher = "Armis"
+kind = "company"
+accessed_at = "2026-10-22T07:38:39Z"
+claims = ["Armis describes healthcare asset visibility, behavior monitoring, patient-centered risk management and network segmentation for medical devices."]
+
+[[intelligence.research.sources]]
+id = "claroty-healthcare"
+url = "https://claroty.com/healthcare-cybersecurity/xdome-for-healthcare"
+title = "Claroty xDome for Healthcare Environments"
+publisher = "Claroty"
+kind = "company"
+accessed_at = "2026-10-22T07:38:39Z"
+claims = ["Claroty describes a healthcare CPS product covering medical devices, HVAC and facilities with asset inventory, exposure management and network protection."]
+
+[[intelligence.research.sources]]
+id = "ordr-healthcare"
+url = "https://ordr.net/solutions/healthcare"
+title = "Healthcare IoT and Medical Device Security"
+publisher = "Ordr"
+kind = "company"
+accessed_at = "2026-10-22T07:38:39Z"
+claims = ["Ordr describes agentless, passive device discovery, behavior-based analysis, risk prioritization and safe network enforcement for healthcare."]
+
+[[intelligence.research.sources]]
+id = "asimily-healthcare"
+url = "https://asimily.com/solutions/medical-devices/"
+title = "Medical Device Security Solutions"
+publisher = "Asimily"
+kind = "company"
+accessed_at = "2026-10-22T07:38:39Z"
+claims = ["Asimily describes device-specific exploitability analysis, mitigation for legacy devices and pre-purchase medical-device security assessment."]
+
+[[intelligence.research.sources]]
+id = "calcalist-acquisition"
 url = "https://www.calcalistech.com/ctechnews/article/hkek009mdle"
 title = "Cyber unicorn Axonius acquires Cynerio in $180M deal to expand into healthcare security"
 publisher = "Calcalist Tech"
 kind = "media"
-accessed_at = "2026-10-05T02:59:02Z"
+accessed_at = "2026-10-22T07:38:39Z"
 published_on = "2025-07-26"
-claims = ["Calcalist reported a $180 million acquisition value with potential value up to $250 million subject to milestones.","Calcalist reported approximately $50 million raised across two rounds and named investors including ALIVE, Accelmed, RDC, Elron/Rafael, and MTIP.","Calcalist reported founders Leon Lerman and Daniel Brodie and an Israeli origin."]
-
-[[intelligence.research.sources]]
-id = "customer"
-url = "https://www.prnewswire.co.uk/news-releases/cheshire-and-merseyside-health-and-care-partnership-secure-patient-care-with-cynerio-302283021.html"
-title = "Cheshire and Merseyside Health and Care Partnership Secure Patient Care with Cynerio"
-publisher = "Cheshire and Merseyside ICS / PR Newswire"
-kind = "customer"
-accessed_at = "2026-10-05T02:59:02Z"
-published_on = "2024-10-22"
-claims = ["Cheshire and Merseyside ICS selected Cynerio's platform for implementation across all 17 NHS trusts.","Liverpool Women's Hospital CDIO described visibility into networked medical devices and responsive vendor support.","Cynerio claimed one in four UK hospitals used its platform; this is a company assertion, not independently verified."]
-
-[[intelligence.research.sources]]
-id = "patent"
-url = "https://patents.google.com/patent/US20240356940A1/en"
-title = "US20240356940A1 Detecting compromised medical devices"
-publisher = "Google Patents / USPTO record"
-kind = "filing"
-accessed_at = "2026-10-05T02:59:02Z"
-claims = ["Cynerio Israel Ltd. was original assignee of a medical-device compromise detection application filed April 18, 2023.","Patent US12432236B2 was granted September 30, 2025 and record shows assignment to Axonius Solutions Ltd. on October 28, 2025."]
-
-[[intelligence.research.sources]]
-id = "rambam"
-url = "https://www.globenewswire.com/news-release/2018/03/05/1414640/0/en/Cynerio-Delivers-Innovative-Protection-of-Medical-Devices-Their-Sensitive-Data-to-Top-Israeli-Healthcare-Organization-Rambam.html"
-title = "Cynerio Delivers Innovative Protection of Medical Devices to Rambam"
-publisher = "Cynerio / GlobeNewswire"
-kind = "company"
-accessed_at = "2026-10-05T02:59:02Z"
-published_on = "2018-03-05"
-claims = ["Cynerio announced Rambam Health Care Campus was piloting its technology.","The company described discovery, classification, network behavior visibility, anomaly detection, and threat response capabilities."]
-
-[[intelligence.research.sources]]
-id = "alive-portfolio"
-url = "https://www.alivevc.com/portfolio"
-title = "ALIVE portfolio"
-publisher = "ALIVE Israel HealthTech Fund"
-kind = "investor"
-accessed_at = "2026-10-05T02:59:02Z"
-claims = ["ALIVE portfolio describes Cynerio's healthcare IoT platform and lists Axonius as acquirer."]
+claims = ["Calcalist reported an acquisition price of $180 million with potential milestone-linked value up to $250 million.", "Calcalist reported that Cynerio had raised around $50 million from investors including ALIVE, Accelmed, RDC and MTIP."]
 
 [[intelligence.research.topic_checks]]
 topic = "identity"
 status = "reported"
-checked_at = "2026-10-05T02:59:02Z"
-next_review_on = "2027-04-05"
-queries = ["Cynerio Israel Ltd identity official", "Cynerio founders founded Ramat Gan headquarters"]
-source_ids = ["axonius", "seed", "patent"]
-summary = "Identity reconciled as Cynerio Israel Ltd., Israeli-founded healthcare cybersecurity business acquired by Axonius."
+checked_at = "2026-10-22T07:38:39Z"
+next_review_on = "2027-04-22"
+queries = ["site:cynerio.com Cynerio about leadership product healthcare cybersecurity", "Cynerio Israel Ltd company registration number corporate registry 515746212", "Cynerio founders Leon Lerman Daniel Brodie background official company CEO CTO", "Cynerio Series A 2018 investors financing Elron Cynerio $50 million funding total"]
+source_ids = ["checkid-registry", "snc-finder", "seed-2019-release", "calcalist-seed-2019", "axonius-healthcare"]
+summary = "Confirmed the Israeli legal entity and 2017 incorporation date from a registry-data aggregator, Ramat Gan base, New York commercial office and current Axonius for Healthcare product presence. Cynerio Israel Ltd. and Cynerio Ltd. naming differs across records."
 
 [[intelligence.research.topic_checks]]
 topic = "funding"
 status = "conflicting"
-checked_at = "2026-10-05T02:59:02Z"
-next_review_on = "2027-04-05"
-queries = ["Cynerio funding raised seed Series B investors", "Cynerio total funding $40 million $50 million"]
-source_ids = ["seed", "seriesb", "calcalist"]
-summary = "Verified $7m seed and $30m Series B; lifetime total differs between company-reported $40m and media-reported approximately $50m. No Series C found."
+checked_at = "2026-10-22T07:38:39Z"
+next_review_on = "2027-04-22"
+queries = ["Cynerio funding $7 million seed 2019 $30 million Series B 2021 ALIVE Accelmed RDC MTIP", "Cynerio 2021 $30 million Series B investors company official release 40 million raised", "Cynerio Series B $30 million $50 million total Cynerio Israel 2021 Hebrew investors", "Cynerio total raised $50.5 million Elron 2023 Cynerio financing rounds 2021 26 million", "site:elronventures.com/wp-content/uploads/ELRON_ENG_2023.pdf Cynerio 2023 SAFE 15 million grants", "\"In February and November 2023\" Cynerio SAFE"]
+source_ids = ["seed-2019-release", "seriesb-2021-release", "elron-2021-deck", "elron-2023-report", "elron-2024-deck", "globes-seriesb"]
+summary = "Found a reported $7 million 2019 seed, a disputed $26 million/$30 million 2021 Series B, a $3 million 2019 SAFE, two 2023 SAFE agreements totaling $15 million, and aggregate grants. Lifetime totals vary by source and date, so no arithmetic reconstruction was used."
 
 [[intelligence.research.topic_checks]]
 topic = "investors"
 status = "reported"
-checked_at = "2026-10-05T02:59:02Z"
-next_review_on = "2027-04-05"
-queries = ["Cynerio seed investors", "Cynerio Series B lead investors ALIVE Accelmed RDC MTIP"]
-source_ids = ["seed", "seriesb", "alive"]
-summary = "Named round participants recorded from company announcements; full private cap table and unnamed participants remain unavailable."
+checked_at = "2026-10-22T07:38:39Z"
+next_review_on = "2027-04-22"
+queries = ["Cynerio funding $7 million seed 2019 $30 million Series B 2021 ALIVE Accelmed RDC MTIP", "Cynerio Series B $30 million $50 million total Cynerio Israel 2021 Hebrew investors", "Cynerio total raised $50.5 million Elron 2023 Cynerio financing rounds 2021 26 million"]
+source_ids = ["seed-2019-release", "calcalist-seed-2019", "seriesb-2021-release", "globes-seriesb", "elron-2023-report", "elron-2024-deck"]
+summary = "Named investors include Accelmed, RDC, MTIP, ALIVE and Consensus Business Group. The full cap table and SAFE holders are not disclosed; a UAE group was described as a potential participant but no completed investment was verified."
 
 [[intelligence.research.topic_checks]]
 topic = "team"
 status = "reported"
-checked_at = "2026-10-05T02:59:02Z"
-next_review_on = "2027-04-05"
-queries = ["Cynerio Leon Lerman Daniel Brodie Axonius roles", "Cynerio leadership team 2025"]
-source_ids = ["axonius", "herzog"]
-summary = "Founders Leon Lerman and Daniel Brodie confirmed; their Axonius transition roles disclosed. Full current roster not established."
+checked_at = "2026-10-22T07:38:39Z"
+next_review_on = "2027-04-22"
+queries = ["Cynerio founders Leon Lerman Daniel Brodie background official company CEO CTO", "Cynerio CEO Leon Lerman Daniel Brodie founder bios background cybersecurity", "Cynerio company leadership CEO founders investors acquisition 2025"]
+source_ids = ["techtarget-leon", "htn-daniel", "axonius-acquisition", "ctech-2022-profile"]
+summary = "Confirmed co-founders Leon Lerman and Daniel Brodie, their historical CEO/CTO roles, relevant cybersecurity backgrounds and Axonius transition roles. A complete current team roster after integration was not found."
 
 [[intelligence.research.topic_checks]]
 topic = "ownership"
 status = "conflicting"
-checked_at = "2026-10-05T02:59:02Z"
-next_review_on = "2027-04-05"
-queries = ["Axonius acquisition Cynerio price terms", "Cynerio acquired Axonius $180 million"]
-source_ids = ["axonius", "herzog", "calcalist"]
-summary = "Acquisition completed/announced July 2025; consideration officially only described as more than $100m and terms undisclosed, with larger Calcalist estimate."
+checked_at = "2026-10-22T07:38:39Z"
+next_review_on = "2027-04-22"
+queries = ["Cynerio Axonius acquisition 2025 official July 2025 acquired for more than $100 million", "Cynerio acquisition completed Axonius close date August 2025 Elron Cynerio transaction completed", "Cynerio acquisition 2025 price 109 million Axios financial statements Axonius", "Cynerio Elron immediate report acquisition Axonius 335.3 million NIS July 2025"]
+source_ids = ["axonius-acquisition", "elron-sale-agreement", "elron-sale-completion", "elron-2024-deck", "calcalist-acquisition", "checkid-registry"]
+summary = "The acquisition and completion are confirmed, and RDC's historic holding is disclosed. Exact company-wide consideration and the full cap table remain unavailable; media price reports are not confirmed by the buyer."
 
 [[intelligence.research.topic_checks]]
 topic = "financials"
-status = "no_public_disclosure"
-checked_at = "2026-10-05T02:59:02Z"
-next_review_on = "2027-04-05"
-queries = ["Cynerio revenue ARR financials", "Cynerio revenue 2020 300%"]
-source_ids = ["seriesb"]
-summary = "No absolute revenue or profitability figures found; 2021 company release reports 300% 2020 revenue growth only."
+status = "reported"
+checked_at = "2026-10-22T07:38:39Z"
+next_review_on = "2027-04-22"
+queries = ["Cynerio 2023 revenue ARR customers hiring financials", "Cynerio financials revenue ARR profitability runway public disclosures", "\"Cynerio\" \"NIS 3 million\" grants Elron", "Cynerio total raised $50.5 million Elron 2023 Cynerio financing rounds 2021 26 million"]
+source_ids = ["globes-seriesb", "elron-2023-report", "ctech-2022-profile", "leon-linkedin-growth"]
+summary = "Located company-reported 2020 revenue growth, historical headcount, R&D-expense shares, 2024 ARR growth assertion and aggregate grant amount. Absolute revenue, ARR, profitability, burn and runway remain undisclosed."
 
 [[intelligence.research.topic_checks]]
 topic = "traction"
-status = "reported"
-checked_at = "2026-10-05T02:59:02Z"
-next_review_on = "2027-04-05"
-queries = ["Cynerio NHS customer deployment 17 trusts", "Cynerio Rambam pilot customer"]
-source_ids = ["customer", "rambam"]
-summary = "Company/customer releases document a Rambam pilot and Cheshire and Merseyside selection for all 17 trusts; contract economics and independent outcomes unavailable."
+status = "conflicting"
+checked_at = "2026-10-22T07:38:39Z"
+next_review_on = "2027-04-22"
+queries = ["Cynerio customers Cheshire Merseyside 17 NHS trusts acquisition 2025", "Cynerio company customer hospital deployment contract announcement", "Cynerio 2024 Cheshire Merseyside NHS contract 14 trusts", "Cynerio 2024 was the best year 150% ARR customers"]
+source_ids = ["rambam-pilot", "digitalhealth-cheshire", "cheshire-cynerio-release", "leon-linkedin-growth", "klas-2025"]
+summary = "Found an early Rambam pilot, 2024 NHS contract and founder-reported 2024 growth. Independent and company materials report different NHS rollout scopes, and contract value and deployment completion remain unknown."
 
 [[intelligence.research.topic_checks]]
 topic = "intellectual_property"
 status = "reported"
-checked_at = "2026-10-05T02:59:02Z"
-next_review_on = "2027-04-05"
-queries = ["Cynerio patents medical device security", "Cynerio Israel Ltd patent assignee"]
-source_ids = ["patent"]
-summary = "A medical-device compromise detection patent was filed in 2023, granted in 2025, and its record shows transfer to Axonius Solutions Ltd."
+checked_at = "2026-10-22T07:38:39Z"
+next_review_on = "2027-04-22"
+queries = ["Cynerio patent \"Cynerio Israel Ltd.\" USPTO patent", "site:patents.google.com/patent Cynerio Israel Ltd medical device cybersecurity patent", "Cynerio medical device cybersecurity patent network segmentation threat detection patent inventor"]
+source_ids = ["patent-us12432236", "checkid-registry"]
+summary = "Reviewed a US patent family for detection of compromised medical-device connections and its post-merger assignment to Axonius Solutions. The full global portfolio and licensing position are not established."
 
 [[intelligence.research.topic_checks]]
 topic = "competition"
 status = "reported"
-checked_at = "2026-10-05T02:59:02Z"
-next_review_on = "2027-04-05"
-queries = ["Cynerio competitors healthcare IoT security Armis Claroty Ordr Nozomi", "Cynerio Axonius healthcare cybersecurity platform"]
-source_ids = ["axonius", "seriesb"]
-summary = "Relevant peers include Armis, Claroty, Ordr, and Nozomi Networks. Comparative product performance and post-acquisition positioning require diligence."
+checked_at = "2026-10-22T07:38:39Z"
+next_review_on = "2027-04-22"
+queries = ["Cynerio competitors official healthcare IoT security Armis Claroty Ordr", "official Armis Centrix medical device security platform healthcare visibility segmentation", "official Claroty xDome healthcare medical device cybersecurity platform", "official Ordr healthcare IoT security AI Protect medical device security", "official Asimily healthcare IoT security medical device cybersecurity"]
+source_ids = ["armis-healthcare", "claroty-healthcare", "ordr-healthcare", "asimily-healthcare", "klas-2025"]
+summary = "Reviewed current product descriptions for direct healthcare device-security peers and KLAS customer survey scores. No comparable technical efficacy test or full pricing comparison was found."
 
 [[intelligence.research.topic_checks]]
 topic = "dual_use"
 status = "no_public_disclosure"
-checked_at = "2026-10-05T02:59:02Z"
-next_review_on = "2027-04-05"
-queries = ["Cynerio government defense military customers contracts", "Cynerio critical infrastructure defense use"]
-source_ids = ["axonius", "patent"]
-summary = "Network security methods could apply to sensitive facilities, but no disclosed defense/government customers or contracts were found."
+checked_at = "2026-10-22T07:38:39Z"
+next_review_on = "2027-04-22"
+queries = ["Cynerio government defense military hospital cybersecurity contract", "Cynerio dual-use defense government cybersecurity deployments military medical devices", "Cynerio Axonius acquisition 2025 healthcare medical device security"]
+source_ids = ["rambam-pilot", "axonius-acquisition", "axonius-healthcare"]
+summary = "No public defense or government contract, military network deployment or defense certification was found. Military-healthcare use is a technical applicability inference; the Rambam pilot does not establish a defense customer."
 
 [[intelligence.research.claim_checks]]
 field_path = "company.operating_status"
 support = "direct"
-summary = "Axonius states it acquired Cynerio and that the team joins Axonius; investor portfolio independently lists Axonius as acquirer."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["axonius", "alive-portfolio"]
+summary = "Axonius announced the acquisition, Elron's August 2025 filing confirms completion, and the registry-data profile records a merger status."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["axonius-acquisition", "elron-sale-completion", "checkid-registry"]
 
 [[intelligence.research.claim_checks]]
 field_path = "israel_connection"
 support = "direct"
-summary = "Seed announcement identifies Israeli-origin operation and patent record identifies Cynerio Israel Ltd.; Israeli media identifies Ramat Gan headquarters and founders."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["seed", "patent"]
+summary = "Registry data identifies Cynerio Israel Ltd. incorporated and located in Ramat Gan; historical reporting and company materials confirm its Israeli base and founders."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["checkid-registry", "snc-finder", "calcalist-seed-2019"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.reported_total_raised"
 support = "direct"
-summary = "Series B company announcement explicitly reports $40 million raised to date; later $50m media estimate is documented as conflict."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["seriesb"]
+summary = "Elron's 2023 annual report states approximately $50.5 million raised since inception; its 2024 slide rounds the total to $51 million. Earlier cumulative snapshots differ and are documented in conflicts."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["elron-2023-report", "elron-2024-deck"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.seed-2019.amount"
 support = "direct"
-summary = "Company's January 9, 2019 announcement says it completed a $7 million seed funding round."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["seed"]
+summary = "Cynerio's January 2019 announcement states that it completed a $7 million seed round."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["seed-2019-release"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.seed-2019.lead_investors"
 support = "direct"
-summary = "Company announcement names Accelmed, RDC, and MTIP as seed round investors."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["seed"]
+summary = "Cynerio's release and Calcalist coverage name Accelmed, RDC and MTIP as the seed investors and round leaders."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["seed-2019-release", "calcalist-seed-2019"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.seed-2019.participating_investors"
 support = "direct"
-summary = "Company announcement names Accelmed, RDC, and MTIP as seed round investors."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["seed"]
+summary = "Cynerio's release names Accelmed, RDC and MTIP as seed investors."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["seed-2019-release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-nov-2019.amount"
+support = "direct"
+summary = "Elron's annual report records a November 2019 SAFE amount of $3 million converted into shares."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["elron-2023-report"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-b-2021.amount"
+support = "conflicting"
+summary = "Cynerio's press release says $30 million while Elron's later annual report reports approximately $26 million for the April 2021 investment round; no single amount is set."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["seriesb-2021-release", "elron-2023-report"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2021.amount_observations.company-release-30m.amount"
 support = "direct"
-summary = "Company's May 19, 2021 announcement states it secured $30 million in Series B funding."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["seriesb"]
+summary = "Cynerio's May 2021 Series B announcement states $30 million."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["seriesb-2021-release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2021.amount_observations.elron-report-26m.amount"
+support = "direct"
+summary = "Elron's 2023 annual report describes the April 2021 financing round as approximately $26 million."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["elron-2023-report"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-b-2021.lead_investors"
 support = "direct"
-summary = "Company announcement identifies ALIVE as lead and lists participating investors, including the unnamed UAE-based participant."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["seriesb"]
+summary = "The Cynerio announcement and Globes identify ALIVE Israel HealthTech Fund as Series B lead."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["seriesb-2021-release", "globes-seriesb"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.series-b-2021.participating_investors"
 support = "direct"
-summary = "Company announcement identifies ALIVE as lead and lists participating investors, including the unnamed UAE-based participant."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["seriesb"]
+summary = "Cynerio and Globes name ALIVE, Accelmed, RDC, MTIP and CBG as participants; the UAE group is excluded because its later participation was only prospective."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["seriesb-2021-release", "globes-seriesb"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.safe-2023-aggregate.amount"
+support = "direct"
+summary = "Elron's annual report says February and November 2023 SAFE agreements totaled $15 million; the combined amount is recorded once because no split is disclosed."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["elron-2023-report"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.government-grants-aggregate.amount"
+support = "direct"
+summary = "Elron reports approximately NIS 3 million in grants from the Israel Innovation Authority and a Ministry of Economy program."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["elron-2023-report"]
 
 [[intelligence.research.claim_checks]]
 field_path = "ownership.parent_company"
 support = "direct"
-summary = "Axonius announced acquisition; ALIVE portfolio lists Cynerio as acquired by Axonius."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["axonius", "alive-portfolio"]
+summary = "Axonius announced the acquisition and Elron later confirmed the sale completed."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["axonius-acquisition", "elron-sale-completion"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.holdings.RDC@2024-08-07.ownership_percent"
+support = "direct"
+summary = "Elron's August 2024 investor slide lists RDC's holding in Cynerio as 17%; dilution basis is not stated."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["elron-2024-deck"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.holdings.RDC@2025-07-30.ownership_percent"
+support = "direct"
+summary = "Elron's sale agreement says RDC held approximately 15% of Cynerio on a fully diluted basis before the sale."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["elron-sale-agreement"]
 
 [[intelligence.research.claim_checks]]
 field_path = "ownership.deals.axonius-acquisition-2025.status"
 support = "direct"
-summary = "Axonius and Cynerio counsel state the acquisition transaction occurred in July 2025."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["axonius", "herzog"]
+summary = "Axonius announced the acquisition, and Elron's August 5 report states the transaction was completed."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["axonius-acquisition", "elron-sale-completion"]
 
 [[intelligence.research.claim_checks]]
 field_path = "ownership.deals.axonius-acquisition-2025.company_role"
 support = "direct"
-summary = "Axonius identifies Cynerio as the acquired company, confirming its target role."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["axonius"]
+summary = "Axonius and Elron identify Cynerio as the company whose shares were acquired, confirming target role."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["axonius-acquisition", "elron-sale-agreement"]
 
 [[intelligence.research.claim_checks]]
 field_path = "ownership.deals.axonius-acquisition-2025.amount"
 support = "direct"
-summary = "Official release gives only a greater-than-$100m description and says additional terms undisclosed; no exact deal amount is entered."
-verified_at = "2026-10-05T02:59:02Z"
-source_ids = ["axonius"]
+summary = "Axonius disclosed only a more-than-$100-million cash-and-stock headline and said additional terms were undisclosed; Elron's filing discloses RDC's equity consideration, not the company-wide price. No exact numeric amount is entered."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["axonius-acquisition", "elron-sale-agreement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.revenue_growth_2020@2020-12-31.numeric_value"
+support = "direct"
+summary = "Globes reports Cynerio's stated 300% year-over-year revenue growth in 2020; absolute revenue was not provided."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["globes-seriesb"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.employee_count_2022@2022-09-16.numeric_value"
+support = "direct"
+summary = "The CTech September 2022 profile lists 70 employees."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["ctech-2022-profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.rd_expense_share_2022@2022-12-31.numeric_value"
+support = "direct"
+summary = "Elron's 2023 report gives approximately 39% of total expenses for 2022 R&D."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["elron-2023-report"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.rd_expense_share_2023@2023-12-31.numeric_value"
+support = "direct"
+summary = "Elron's 2023 report gives approximately 37% of total expenses for 2023 R&D."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["elron-2023-report"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.arr_growth_2024@2024-12-31.numeric_value"
+support = "direct"
+summary = "Founder-CEO Leon Lerman's post says ARR more than doubled during 2024; no absolute ARR or audited basis is provided."
+verified_at = "2026-10-22T07:38:39Z"
+source_ids = ["leon-linkedin-growth"]

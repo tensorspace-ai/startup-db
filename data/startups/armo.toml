@@ -1,66 +1,87 @@
 name = "ARMO"
-description = "ARMO develops cloud-native security software for Kubernetes and containerized applications. Its commercial platform combines runtime behavioral detection and response with posture, vulnerability, and compliance capabilities, while Kubescape provides an open-source entry point for Kubernetes security."
-detailed_description = """ARMO is a cloud-native security company focused on the gap between static configuration or vulnerability findings and what a running application can actually do. Its platform connects cloud, Kubernetes, container, and application signals, with a behavioral Cloud Application Detection and Response (CADR) approach intended to identify suspicious runtime activity and present an explainable attack story. The company describes an eBPF sensor, runtime insights, agentless cloud scanning, Kubernetes posture management, and vulnerability reachability analysis as complementary parts of that platform. This architecture is relevant because security teams increasingly need to distinguish exploitable, active paths from the much larger volume of theoretical findings produced by scanners.
+description = "ARMO builds cloud runtime security software for Kubernetes and cloud-native applications. Its ARMO Platform combines runtime behavior, Kubernetes and cloud context, vulnerability reachability, posture management, and response; Kubescape is its open-source project and the foundation of its product-led adoption."
+detailed_description = """ARMO is the product company operated by Cyber Armor Ltd., an Israeli private company incorporated in 2017 and based in Tel Aviv. It sells cloud-native security software to organizations running Kubernetes and related workloads. The operating company has an identifiable product, leadership team, public customer references, a CNCF project, and a recently announced strategic partnership with Rapid7. The latest public equity financing located in this review is its April 2022 Series A; later capital activity, commercial scale, and ownership terms are not publicly reconciled.
 
-Kubescape is ARMO's open-source Kubernetes security project and a CNCF project. The project supports command-line and operator-based scanning, IDE and CI/CD integrations, Kubernetes hardening, compliance checks, misconfiguration detection, and remediation guidance. That open-source distribution can reduce adoption friction with developers and platform teams, while the paid platform adds enterprise workflow, runtime context, cloud coverage, and deployment options. ARMO's public materials cite more than 10,000 Kubescape stars and more than 80,000 users on its product page; these are company-reported indicators rather than independently audited customer or revenue metrics.
+The product thesis is to connect static cloud and Kubernetes findings to observed application behavior. ARMO Platform uses eBPF runtime sensing to record application activity and enriches that profile with Kubernetes events, cloud configuration, container, and CI/CD context. It applies the context to behavioral detection and response, runtime vulnerability prioritization, posture management, policy hardening, and remediation workflows. The technical proposition is useful where security teams need to know whether a vulnerable package is loaded, whether a risky identity or configuration is exposed, and what a running workload actually did. The important proof question is whether this correlation makes incidents and remediation measurably better at acceptable sensor overhead, coverage, and false-positive rates.
 
-The commercial market is crowded. ARMO competes with cloud security and CNAPP suites such as Palo Alto Networks Prisma Cloud, Wiz, Aqua Security, and Sysdig, as well as cloud-provider-native controls, open-source scanners, and observability or endpoint products that are expanding into runtime security. Its differentiation depends on whether runtime context, behavioral analysis, and reachability prioritization materially improve analyst productivity and remediation outcomes, rather than merely adding another dashboard. The company also has to convert developer-oriented open-source usage into repeatable enterprise contracts without weakening the trust, neutrality, and community contribution model that makes Kubescape useful.
+Kubescape is ARMO's open-source Kubernetes security project. The CNCF identifies its coverage across clusters, manifests, repositories, registries, and images, and records that it moved to Incubating in January 2025. That neutral foundation supports developer discovery and community contribution, while the commercial ARMO Platform adds a managed interface, broader runtime and cloud context, workflows, and deployment choices. The division creates a plausible adoption funnel, but open-source use is not evidence of paid conversion, retention, or expansion. ARMO's current homepage advertises more than 40,000 companies, 100,000 deployments, and 15 million monthly scans; these are company-published usage figures with no independent methodology or paid-user split located here.
 
-ARMO's dual-use relevance is credible but should be stated as technology adjacency, not evidence of defense procurement. Containerized mission applications, government cloud environments, software factories, and disconnected or sovereign deployments face the same needs for runtime visibility, Kubernetes hardening, vulnerability prioritization, and explainable incident response as commercial cloud operators. ARMO's stated SaaS, on-premises, and air-gapped deployment options improve fit for sensitive environments. Material diligence questions remain: independently verify current employee and funding data, assess product efficacy against modern evasions, examine government authorization and integration requirements, and determine how much commercial traction is recurring enterprise revenue versus open-source usage."""
+The commercial evidence is more concrete than usage counts but remains qualitative. ARMO announced that Orange Business selected its platform for an on-premises Managed Kubernetes Service and its own managed clusters. ARMO's case study says Orange offers it as the default security option to service customers, a potentially useful channel route whose downstream deployment count and contract terms are undisclosed. A 2026 ARMO case study for Alter Domus reports fewer daily alerts and a large reduction in vulnerability backlog, but those performance figures are vendor-published and should be validated with the customer and deployment data. In January 2026, Rapid7 announced a strategic partnership to place ARMO-derived cloud runtime security in the Rapid7 Command Platform; Rapid7 described the offering as beta at announcement. This creates a credible enterprise distribution path, but the release does not disclose revenue share, production availability, customer adoption, or contract economics.
+
+ARMO now positions runtime behavioral detection as Cloud Application Detection and Response and has begun applying the same workload telemetry thesis to AI and agent workloads. The extension is technically coherent: Kubernetes-hosted agents inherit identities, permissions, network access, and software dependencies, and runtime observation can help distinguish expected behavior from suspicious sequences. The claims remain product positioning rather than independently verified AI-specific efficacy. Buyers should test coverage across supported kernels and distributions, the stability of baselines during deployment changes, response safety, and the quality of evidence preserved for investigation.
+
+Competition is direct and substantial. Palo Alto Networks Prisma Cloud, Wiz, Aqua Security, and Sysdig sell overlapping combinations of Kubernetes posture, workload vulnerability, runtime detection, and cloud risk context. Falco and cloud-provider controls are lower-cost substitutes for parts of the feature set. ARMO's strongest differentiation is focus: a Kubernetes-native workflow, an open-source entry point through Kubescape, runtime reachability and behavioral context, and self-hosted or air-gapped deployment options. Its narrower footprint can help a buyer that needs Kubernetes depth or sovereign deployment; it can also be a disadvantage against vendors that bundle security across code, cloud, identity, data, and incident response. ARMO's own materials and customer stories do not establish independent competitive win rates or detection benchmarks.
+
+The founding group combines commercial and security experience. Current company materials identify Shauli Rozen as CEO and Ben Hirschberg as CTO; the original company financing release also names Leonid Sandler as a co-founder, and the current company page lists him on the board. Rozen's documented background spans engineering, a Wharton MBA, consulting, product strategy at Amdocs, and senior roles at Optimove. Hirschberg and Sandler previously worked on security and video technology at NDS, while the company credits Hirschberg with technical leadership of Kubescape. The company's current public team page names its operating leaders and board, but no reliable current headcount or detailed track record for every executive was found.
+
+Two US patent grants assigned to Cyber Armor Ltd. were identified: one for verifying runtime integrity and one for generating disposable software modules to protect cryptographic material. These filings show prior technical work in software and runtime protection, but the available evidence does not map either patent to the present Kubescape-based platform or establish a broad proprietary moat. The more visible current defensibility is the combination of product execution, integrations, deployment experience, and community trust.
+
+The investment case therefore rests on proof of conversion and distribution, not on an assumed category winner. ARMO announced a Seed and a Series A; SecurityWeek reported $34.5 million raised to date after the Series A, but the company announcements reviewed do not state a lifetime total. No later round, dated revenue or ARR, profitability, burn, runway, paid-customer count, or customer concentration was located. A commercial directory lists share-allotment filings in late 2025 and 2026 but does not establish whether they brought in capital. This leaves a meaningful gap between a Series A-era funding snapshot and the current business. The product category has real demand, yet the company must show that Kubescape adoption converts into recurring enterprise revenue and that Rapid7 and service-provider routes produce scalable deployments.
+
+ARMO has substantive defensive dual-use applicability because containerized government, critical-infrastructure, and mission-support applications face the same runtime, configuration, vulnerability, and identity risks as commercial workloads. On-premises and air-gapped deployment support is relevant to isolated or sovereignty-constrained environments. Public evidence reviewed here does not identify a defense or government contract, authorization, accreditation, or operational military deployment, so the dual-use case is a technical fit hypothesis rather than proof of procurement."""
 logo = "https://www.armosec.io/wp-content/uploads/2025/08/armo-logo.png"
 website = "https://www.armosec.io"
 sector = "Cloud Security / Kubernetes Runtime Security"
 founded = "2017"
 headquarters = "Tel Aviv, Israel (registered address)"
 employees = "Unknown"
-funding_stage = "Series A (last publicly announced; 2022)"
+funding_stage = "Series A (last publicly announced equity round located; April 2022)"
 entity_type = "startup"
 dual_use = true
-dual_use_description = "ARMO's core technology has substantive commercial and security-sector applicability: eBPF-based runtime visibility, Kubernetes hardening, vulnerability reachability, and agentless posture scanning can protect both enterprise cloud applications and government or defense workloads. The air-gapped and on-premises deployment options are relevant to sensitive environments, but public materials reviewed here do not establish defense contracts, government accreditation, or operational military deployments."
-key_technologies = ["eBPF-based runtime behavioral sensing", "Cloud Application Detection and Response (CADR)", "Kubernetes posture, misconfiguration, and compliance scanning", "Runtime vulnerability reachability analysis", "Agentless cloud security posture scanning", "Container and registry security across CI/CD", "Air-gapped and on-premises deployment architecture"]
-use_cases = ["Detecting anomalous process, network, and workload behavior in Kubernetes", "Prioritizing vulnerabilities that are reachable in running applications", "Hardening Kubernetes clusters against CIS, NSA-CISA, and MITRE ATT&CK-aligned controls", "Scanning infrastructure, registries, images, and cloud assets without deploying agents everywhere", "Adding security gates and remediation guidance to IDE and CI/CD workflows", "Threat hunting and explainable incident triage for multi-cloud workloads", "Protecting sovereign, disconnected, or government cloud environments", "Monitoring containerized mission-support applications during cloud modernization"]
+dual_use_description = "ARMO's commercial cloud and Kubernetes runtime-security capabilities can also protect government, critical-infrastructure, and mission-support software, where workload behavior, identity, vulnerability reachability, and hardening matter. Its on-premises and air-gapped deployment options strengthen fit for isolated or sovereign environments. This is substantive defensive security applicability; public evidence reviewed does not establish defense customers, government contracts, certifications, or military deployments."
+key_technologies = ["eBPF-based workload behavior sensing", "Application Profile DNA behavioral baselines", "Cloud Application Detection and Response (CADR)", "Kubernetes posture, compliance, and configuration analysis", "Runtime vulnerability reachability and prioritization", "Cloud and Kubernetes context correlation", "Runtime-derived workload hardening and remediation", "Managed, on-premises, and air-gapped deployment"]
+use_cases = ["Detecting anomalous process, syscall, file, and network activity in Kubernetes workloads", "Prioritizing vulnerabilities based on runtime reachability and active workload context", "Correlating cloud exposure, Kubernetes permissions, configuration, and runtime events for investigation", "Hardening clusters and generating policy recommendations from observed application behavior", "Scanning manifests, registries, images, and clusters through Kubescape workflows", "Adding runtime detection and response to a broader security platform through the Rapid7 partnership", "Protecting sovereign or disconnected Kubernetes environments with self-hosted deployment", "Monitoring identity use and behavioral deviation in Kubernetes-hosted AI agents"]
 investible = true
-investment_rationale = "ARMO is a credible strategic-screening signal because it combines a focused cloud-runtime security thesis, an established open-source distribution channel through Kubescape, and a product category with clear enterprise demand. The positive case depends on conversion and retention: public usage metrics are company-reported, the employee range is not independently reconciled across sources, and the current funding-stage record is not supported by a primary financing announcement in the reviewed materials. Diligence should therefore prioritize recurring revenue, open-source-to-paid conversion, deployment scale, gross retention, sensor efficacy, and the durability of differentiation against CNAPP suites. This is a strategic diligence assessment, not an investment recommendation."
-strategic_value = "ARMO can contribute to allied cyber resilience by protecting containerized applications and Kubernetes control planes that increasingly underpin cloud and software-delivery environments. Runtime context can help operators focus on exploitable behavior and shorten investigation paths, while on-premises and air-gapped options may fit organizations with sovereignty or isolation requirements. The strategic value is strongest as an enabling defensive layer for cloud modernization and mission software; it should not be overstated as proof of defense adoption without independently verified government customers, authorizations, or contracts."
-potential_score = 80.0
-technology_score = 85.0
-market_score = 82.0
-team_score = 74.0
-dual_use_score = 84.0
-strategic_alignment_score = 85.0
+investment_rationale = "ARMO merits continued strategic screening because it combines a Kubernetes-focused commercial platform, a CNCF-incubating open-source project, enterprise case-study references, and a January 2026 Rapid7 runtime-security partnership. Those assets offer developer-led reach and a possible enterprise distribution channel. The case depends on evidence that users convert to paid deployments, customers renew and expand, and runtime signals improve outcomes against incumbent CNAPP and dedicated runtime products. Public sources do not disclose revenue, paid-customer count, retention, contract economics, current headcount, or financing after April 2022. Treat the existing investible flag as an internal prioritization signal, not a recommendation or a substitute for financial diligence."
+strategic_value = "ARMO can support cloud modernization by helping teams protect the behavior and configuration of containerized applications, including environments that cannot use a public SaaS control plane. Its on-premises and air-gapped options, Kubescape integrations, and runtime response capabilities may suit sovereign infrastructure and sensitive workloads. The Rapid7 partnership also offers a route to embed Israeli-developed runtime technology in an established security platform. These are strategic capabilities, while defense adoption remains unverified: diligence should require customer evidence, operational deployment details, and applicable government security approvals before assigning procurement value."
+potential_score = 72.0
+technology_score = 78.0
+market_score = 73.0
+team_score = 72.0
+dual_use_score = 68.0
+strategic_alignment_score = 73.0
 stage = "mid"
-stage_rationale = "The record identifies ARMO as a Series C private startup, and the company presents a commercial platform alongside an established open-source project. That supports a mid-stage classification beyond initial product formation but short of a mature public-company or clearly verified late-growth profile. Current financing history, revenue scale, and headcount should be confirmed during diligence because the public sources reviewed do not provide a complete, primary-source capitalization or operating snapshot."
-competitors = ["Palo Alto Networks Prisma Cloud", "Wiz", "Aqua Security", "Sysdig", "Orca Security", "Cloud-provider-native Kubernetes security controls"]
-competitive_edge = "ARMO's clearest edge is the combination of Kubescape's open-source developer distribution with a commercial runtime-security layer. Its platform narrative links Kubernetes posture, cloud posture, vulnerability reachability, and behavioral detection instead of treating them as isolated scanners. The claimed benefits are strategically meaningful if runtime context reduces false prioritization and improves remediation, but they remain subject to proof against incumbent CNAPP breadth, cloud-native alternatives, and the challenge of maintaining community trust while monetizing an open-source foundation."
-risk_factors = ["Crowded CNAPP and cloud-runtime market with large platform incumbents", "Open-source features and eBPF instrumentation may be replicated or commoditized", "Open-source adoption may not convert proportionally into recurring enterprise revenue", "Runtime sensors can create performance, compatibility, and kernel-version support burdens", "Enterprise and sensitive-environment deployments may require lengthy security reviews and integrations", "Public metrics and employee or financing data require independent verification", "Detection quality must remain robust against evasive workloads and rapidly changing Kubernetes stacks"]
+stage_rationale = "Mid-stage is supported by a commercial product with named enterprise references, a Kubernetes security project accepted into CNCF Incubating, and an announced platform partnership with Rapid7. The public record remains short of a verified late-growth profile: the latest disclosed equity round is from 2022 and current revenue, paid deployment scale, retention, headcount, and follow-on funding are unavailable. The stage classification reflects product and channel maturity, not a claim about current financial scale."
+competitors = ["Palo Alto Networks Prisma Cloud", "Wiz", "Aqua Security", "Sysdig Secure and Falco", "Cloud-provider-native Kubernetes controls", "Open-source Kubernetes security and runtime tools"]
+competitive_edge = "ARMO's most defensible angle is a Kubernetes-first workflow that combines Kubescape's open-source discovery with eBPF runtime observations, vulnerability reachability, and self-hosted deployment. The CNCF project offers community visibility and a credible neutral home for open-source collaboration; the paid platform can connect those findings to enterprise context and response. Orange Business provides a plausible managed-service channel example, and the Rapid7 partnership is a broader route to market. However, competitors now combine runtime telemetry with agentless visibility, attack-path context, posture, and response. ARMO must demonstrate measurable detection quality, low operational overhead, open-source-to-paid conversion, and a durable advantage that does not depend on marketing claims or a single distribution partner."
+risk_factors = ["No public revenue, ARR, burn, runway, paid-customer count, or retention metrics were located.", "No public equity round after April 2022 was found; directory-listed share allotments in 2025 and 2026 do not establish financing.", "The 40,000 companies, 100,000 deployments, and 15 million monthly scans figures are company website claims without a public methodology or paid-user split.", "Rapid7 described its January 2026 runtime-security offering as beta; commercial launch, adoption, and revenue contribution are not disclosed.", "CNAPP and runtime-security incumbents offer overlapping detection, posture, vulnerability, and response capabilities with broader product portfolios.", "eBPF sensor coverage, performance overhead, kernel compatibility, detection fidelity, and false-positive behavior require independent production testing.", "CNCF community adoption does not establish that Kubescape usage converts to ARMO contracts; commercial extensions must preserve community trust.", "The identified patents are assigned to Cyber Armor but have not been mapped to the current platform or shown to block competing products.", "No public government contract, security accreditation, defense deployment, or defense-specific integration evidence was found.", "The private cap table is unavailable; public directory listings name some shareholders but disclose no ownership percentages or complete terms."]
 risk_level = "medium"
 signals = []
 priority_rank = 0
-priority_rationale = "ARMO merits continued strategic screening as an Israeli-founded cloud-security startup with credible dual-use applicability, a meaningful open-source distribution asset, and a product focus aligned with cloud modernization. The score is moderated by crowded competition, the need to validate commercial conversion and runtime efficacy, and the absence of independently verified defense adoption in the reviewed evidence."
+priority_rationale = "Keep ARMO on the strategic-screening list for its open-source Kubernetes reach, runtime-centered product, sovereign deployment choices, and Rapid7 partnership. Weight that potential against a four-year gap since the last disclosed equity round, absent operating metrics, intense competition, unverified conversion, and no public defense procurement evidence. The priority score is provisional and is not an investment recommendation."
 crawled_at = "2026-02-16T20:10:00Z"
-updated_at = "2026-10-03T20:40:08Z"
+updated_at = "2026-10-22T02:31:34Z"
 public_sources = [
-  { label = "ARMO About Us", url = "https://www.armosec.io/about-us/", description = "Current company overview, product, leadership, and board." },
-  { label = "ARMO Terms of Use", url = "https://cloud.armosec.io/assets/docs/terms-of-use-armo.pdf", description = "Legal operating entity and platform description." },
-  { label = "ARMO Series A announcement", url = "https://www.armosec.io/blog/armo-raises-30m/", description = "Company announcement of its $30 million Series A and participating investors." },
-  { label = "VentureBeat seed report", url = "https://venturebeat.com/ai/armo-comes-out-of-stealth-to-secure-cloud-native-computing", description = "Contemporaneous report of ARMO's seed financing and Israeli origin." },
-  { label = "CTech seed announcement", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3889919,00.html", description = "Israeli business coverage of ARMO's $4.5 million seed and Pitango First." },
-  { label = "CNCF Kubescape announcement", url = "https://www.cncf.io/blog/2025/02/26/kubescape-becomes-a-cncf-incubating-project/", description = "Independent confirmation of Kubescape's CNCF incubation and project role." },
-  { label = "CNCF Kubescape project", url = "https://www.cncf.io/projects/kubescape/", description = "Current project status and technical scope." },
-  { label = "ARMO Orange Business announcement", url = "https://www.armosec.io/blog/armo-selected-by-orange-business-secure-managed-kubernetes-services/", description = "Company-reported managed Kubernetes service selection and deployment." },
-  { label = "ARMO Orange Business case study", url = "https://www.armosec.io/orange-business-on-prem-case-study/", description = "Deployment detail and customer use case; company-published case study." },
-  { label = "Kubescape GitHub", url = "https://github.com/kubescape/kubescape", description = "Current open-source project description, governance status, and ARMO contribution." },
-  { label = "SANS profile: Shauli Rozen", url = "https://www.sans.org/profiles/shauli-roze", description = "Independent biographical background for ARMO's CEO and co-founder." },
-  { label = "SecurityWeek Series A report", url = "https://www.securityweek.com/armo-raises-30-million-open-source-kubernetes-security-platform/", description = "Independent financing report, total-to-date figure, and investor list." },
-  { label = "ARMO customer stories", url = "https://www.armosec.io/customer-stories/", description = "Company-published customer roster including Alter Domus and other named deployments." },
-  { label = "CheckID company record", url = "https://en.checkid.co.il/company/CYBER%2BARMOR%2BLTD-ZW0k25b-515721538", description = "Commercial directory record showing the Israeli company number, status, address, incorporation date, and reported share-allotment filing dates; underlying official extract is paywalled." },
-  { label = "ARMO privacy policy", url = "https://www.armosec.io/privacy-policy/", description = "Company legal notice identifying Cyber Armor Ltd as registered in Israel." }
+  { label = "ARMO company and leadership", url = "https://www.armosec.io/about-us/", description = "Company description, product positioning, current leaders, and board." },
+  { label = "ARMO Platform homepage", url = "https://www.armosec.io/", description = "Current product positioning and company-reported Kubescape usage figures." },
+  { label = "ARMO privacy policy", url = "https://www.armosec.io/privacy-policy/", description = "Legal operator Cyber Armor Ltd. and its Israeli registration." },
+  { label = "ARMO Platform documentation", url = "https://hub.armosec.io/docs/armo-platform", description = "Runtime architecture, eBPF context, Kubescape foundation, and deployment modes." },
+  { label = "ARMO 2021 seed announcement", url = "https://www.prnewswire.com/news-releases/armo-emerges-from-stealth-with-4-5-million-to-infuse-visibility-control-and-security-into-every-cloud-native-workload-301216137.html", description = "Seed amount, investor, founding team, and Tel Aviv dateline." },
+  { label = "ARMO 2022 Series A announcement", url = "https://www.armosec.io/blog/armo-raises-30m/", description = "Series A amount, lead and participating investors, founders, and Kubescape." },
+  { label = "SecurityWeek funding report", url = "https://www.securityweek.com/armo-raises-30-million-open-source-kubernetes-security-platform/", description = "Media report of a $34.5 million total raised after the Series A." },
+  { label = "CheckID Cyber Armor company record", url = "https://en.checkid.co.il/company/CYBER%2BARMOR%2BLTD-ZW0k25b-515721538", description = "Israeli company identifier, status, registered address, partial shareholder listings, and filing events; secondary directory." },
+  { label = "CNCF Kubescape project", url = "https://www.cncf.io/projects/kubescape/", description = "Project function, current CNCF maturity level, and community metrics." },
+  { label = "CNCF incubation announcement", url = "https://www.cncf.io/blog/2025/02/26/kubescape-becomes-a-cncf-incubating-project/", description = "Kubescape features, ARMO origin, community and incubation milestone." },
+  { label = "Rapid7 and ARMO partnership announcement", url = "https://www.rapid7.com/about/press-releases/rapid7-and-armo-enable-organizations-to-stop-cloud-attacks-earlier-with-runtime-security/", description = "Strategic partnership and runtime capabilities on Rapid7 Command Platform." },
+  { label = "Rapid7 beta product description", url = "https://www.rapid7.com/blog/post/cds-reducing-cloud-chaos-rapid7-partners-with-armo-delivering-cloud-runtime-security/", description = "Rapid7 described the new runtime offering as beta and outlined its functions." },
+  { label = "ARMO Orange Business partnership", url = "https://www.armosec.io/blog/armo-selected-by-orange-business-secure-managed-kubernetes-services/", description = "ARMO announcement of Orange Business service selection in November 2024." },
+  { label = "Orange Business case study", url = "https://www.armosec.io/orange-business-on-prem-case-study/", description = "ARMO-published account of Orange's on-premises deployment and managed-service offer." },
+  { label = "ARMO customer stories", url = "https://www.armosec.io/customer-stories/", description = "Company index of named customer references and case studies." },
+  { label = "Alter Domus case study", url = "https://www.armosec.io/alter-domus/", description = "ARMO-published customer account with runtime-security outcomes and customer quotation." },
+  { label = "ARMO runtime-security article archive", url = "https://www.armosec.io/blog/topic/runtime-security/", description = "Dates the Alter Domus case study to May 19, 2026." },
+  { label = "US Patent 11,139,983 B2", url = "https://patents.google.com/patent/US11139983B2/en", description = "Patent record for runtime-integrity verification, listed Cyber Armor assignee and inventors." },
+  { label = "US Patent 11,595,201 B2", url = "https://patents.google.com/patent/US11595201B2/en", description = "Patent record for a disposable cryptographic software module, listed Cyber Armor assignee and inventors." },
+  { label = "CTech interview with Shauli Rozen", url = "https://www.calcalistech.com/ctechnews/article/ryhtzy3sc", description = "CEO background and product-led, open-source business approach." },
+  { label = "ARMO 2026 AI agent security article", url = "https://www.armosec.io/blog/ai-agent-security/", description = "Recent product-positioning content by CTO Ben Hirschberg; also confirms current company activity." },
+  { label = "Prisma Cloud Kubernetes security", url = "https://www.paloaltonetworks.com/prisma/environments/kubernetes", description = "Official Palo Alto Networks source for overlapping Kubernetes runtime and code-to-cloud capabilities." },
+  { label = "Wiz cloud and AI security platform", url = "https://www.wiz.io/platform", description = "Official Wiz source for overlapping cloud, AI, runtime, and security-graph capabilities." },
+  { label = "Aqua Kubernetes security", url = "https://www.aquasec.com/products/kubernetes-security/", description = "Official Aqua source for overlapping Kubernetes posture, compliance, and runtime protection." },
+  { label = "Sysdig Kubernetes Shield documentation", url = "https://docs.sysdig.com/en/sysdig-secure/install-shield-kubernetes", description = "Official Sysdig source for Kubernetes runtime detection and policy enforcement using Falco." }
 ]
 
 [intelligence]
 schema_version = 2
 financials = []
-intellectual_property = []
 
 [intelligence.company]
 company_id = "il-armo"
@@ -68,23 +89,24 @@ legal_name = "Cyber Armor Ltd."
 founded_on = "2017-09-26"
 aliases = ["ARMO", "ARMO Security", "Cyber Armor Ltd."]
 operating_status = "active"
-business_model = "B2B cybersecurity software: commercial cloud/Kubernetes security platform sold to enterprises and service providers, with Kubescape as an open-source adoption and product foundation."
+business_model = "B2B cybersecurity software: commercial ARMO Platform offered as a hosted and self-managed runtime-security service, alongside the open-source Kubescape project; customer and partner economics are undisclosed."
 products = ["ARMO Platform", "Kubescape"]
-source_ids = ["about", "legal-terms"]
-locations = ["Tel Aviv, Israel"]
+source_ids = ["about", "privacy", "hub-docs", "checkid-record", "seed-2021", "rapid7-release", "latest-blog"]
+locations = ["Tel Aviv-Yafo, Israel"]
+country_of_incorporation = "Israel"
 
 [[intelligence.company.registry_identifiers]]
 jurisdiction = "Israel"
 scheme = "Israeli company number"
 identifier = "515721538"
-source_ids = ["legal-notice"]
-notes = "Commercial directory record states this as the company ID and lists the entity as an active Israeli private company; confirm against an official extract."
+source_ids = ["checkid-record"]
+notes = "CheckID lists this number and an incorporation date of 2017-09-26. It is a secondary company directory; an official Israeli Corporations Authority extract was not obtained."
 
 [intelligence.funding]
 status = "reported"
-summary = "Two publicly announced equity rounds are verified: a $4.5 million seed announced 2021-01-27 and a $30 million Series A announced 2022-04-27. No later financing announcement was found through 2026-10-03. SecurityWeek reported $34.5 million raised to date after the Series A, but ARMO's company announcements reviewed here do not state a lifetime total; therefore reported_total_raised is omitted. The record's prior Series C label is unsupported and corrected to Series A as the last publicly announced round."
+summary = "Two company-announced equity rounds were verified: a $4.5 million Seed announced on 2021-01-27 and a $30 million Series A announced on 2022-04-27. No later financing announcement was located through 2026-10-22. CheckID lists share-allotment filing events on 2025-12-14 and 2026-05-07 but does not show whether they involved new cash, so they are not classified as financing rounds. SecurityWeek reported $34.5 million raised to date after the Series A; ARMO's releases give the two round amounts but do not state a company-announced lifetime total, so reported_total_raised is omitted."
 history_status = "partial"
-coverage_through = "2026-10-03"
+coverage_through = "2026-10-22"
 
 [[intelligence.funding.rounds]]
 id = "seed-2021"
@@ -98,8 +120,8 @@ amount_scope = "round"
 currency = "USD"
 lead_investors = ["Pitango First"]
 participating_investors = ["Pitango First"]
-source_ids = ["seed-venturebeat", "seed-ctech"]
-notes = "Amount and lead investor reported by the company and contemporaneous Israeli and international press."
+source_ids = ["seed-2021"]
+notes = "The ARMO-provided PRNewswire release says the company had secured $4.5 million in Seed funding from Pitango First. Announcement date is known; a separate closing date is not disclosed."
 
 [[intelligence.funding.rounds]]
 id = "series-a-2022"
@@ -113,224 +135,41 @@ amount_scope = "round"
 currency = "USD"
 lead_investors = ["Tiger Global"]
 participating_investors = ["Hyperwise Ventures", "Pitango First", "Peled Ventures"]
-source_ids = ["series-a-company", "series-a-securityweek"]
-notes = "Company announcement calls this Series A and names Tiger Global as lead, with Hyperwise, Pitango First, and Peled Ventures participating."
+source_ids = ["series-a-2022"]
+notes = "ARMO's announcement names Tiger Global as lead and Hyperwise Ventures, Pitango First, and Peled Ventures as participants. No valuation or separate closing date was disclosed."
 
 [intelligence.ownership]
-status = "undisclosed"
-summary = "ARMO is presented as an active private company. A commercial Israeli company-information directory lists share-allotment filing events dated 2025-12-14 and 2026-05-07 and option holders, but the official underlying extracts and ownership percentages are not public on that page. These entries do not establish a financing round or current cap table. No parent company, acquisition, or exit disclosure was found."
+status = "reported"
+summary = "A public CheckID company page, last updated 2026-07-06, lists several individuals and investment entities as shareholders, but it is a secondary directory with translated names and no ownership percentages or complete official extract. Its visible entries include founders Ben Hirschberg and Leonid Sandler, Abraham Peled, Yuval Cohen, Altshuler Trusts Ltd., Pitango-related funds, a Hyperwise fund, and Internet Fund VII Pte Ltd. The page also lists share-allotment filing events dated 2025-12-14 and 2026-05-07 without transaction terms. No parent company, acquisition, or exit announcement was found; current fully diluted ownership and the meaning of the allotments remain unresolved."
 cap_table_status = "undisclosed"
-shareholders = []
-source_ids = ["about", "legal-terms", "checkid-record"]
+shareholders = ["Altshuler Trusts Ltd.", "Yuval Cohen", "Ben Hirschberg", "Pitango Venture Capital VII Israel LP", "Leonid Sandler", "Abraham Peled", "Pitango Venture Capital Principal Fund VII L.P.", "Pitango Venture Capital Fund VII LP", "Hyperwise Ventures Fund L.P.", "Internet Fund VII Pte Ltd."]
+source_ids = ["checkid-record", "about", "privacy"]
 deals = []
-
-[intelligence.research]
-researched_at = "2026-10-03T20:40:08Z"
-topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
-search_queries = [
-  "ARMO Security funding Series C investors raised 2025 2026 ARMO Security",
-  "site:armosec.io ARMO funding Kubescape founders leadership",
-  "ARMO company revenue customers employees acquisition funding Geektime CTech",
-  "ARMO Security patent USPTO Kubescape CNCF project",
-  "ARMO 4.5 million funding Kubernetes",
-  "ARMO Security seed funding 2021",
-  "ARMO 34.5M funding rounds",
-  "ARMO raises funding 2020 Pitango cybersecurity Tel Aviv",
-  "Cyber Armor Ltd 515721538 company status incorporation allotment shares Israel registry",
-  "site:armosec.io ARMO customer Orange Business Alter Domus",
-  "ARMO Kubescape patent patent US ARMO cybersecurity",
-  "ARMO cybersecurity founded 2019 Shauli Rozen official",
-  "ARMO revenue ARR employees funding 2025 cybersecurity",
-  "ARMO runtime security competitors Wiz Aqua Sysdig Prisma Cloud official",
-  "ARMO defense government customers air-gapped deployment"
-]
-gaps = [
-  "team: current named leadership and board are listed by ARMO, but no comprehensive historical team roster or independently verified employee count was found.",
-  "investors: publicly named seed and Series A participants are recorded; private cap table, present shareholdings, and any undisclosed later investor activity remain unavailable.",
-  "financials: no dated public revenue, ARR, profitability, burn, or runway metrics were found; no lifetime total is entered because the $34.5 million total was stated by media rather than in a company announcement located during this review.",
-  "traction: customer stories and Orange Business service selection are documented, but contract values, paid deployment counts, retention, and revenue contribution are not publicly quantified.",
-  "intellectual_property: searches did not identify a verifiable patent assigned to Cyber Armor Ltd or ARMO; this is not evidence that no patent filings exist.",
-  "competition: peer set is based on documented product-category overlap; no independent head-to-head efficacy or market-share study was found.",
-  "dual_use: air-gapped and on-premises capabilities are documented, but no public defense contract, government accreditation, or military operational deployment was identified.",
-  "ownership: a commercial registry directory lists share-allotment filing dates in 2025 and 2026 and option holders, but the underlying extract is paywalled; no ownership percentages or clear transaction terms are publicly established."
-]
-conflicts = ["SecurityWeek reported $34.5 million total raised after the 2022 Series A; the official ARMO round announcements establish $4.5 million seed plus $30 million Series A but do not explicitly state a lifetime total. The numeric lifetime-total field is therefore omitted rather than treating a media aggregation as company-reported.", "The supplied record labeled the company Series C, but no primary Series C announcement was found; the latest verified announcement is a Series A dated 2022-04-27."]
-diligence_questions = [
-  "What are current ARR, gross and net retention, paid customer count, ACV, and the share of revenue attributable to Orange Business and other channel partners?",
-  "What do the Israeli company file entries labeled share allotment on 2025-12-14 and 2026-05-07 represent, who received the shares, and did any event include new capital?",
-  "Has ARMO raised any equity, convertible, debt, or grant financing after April 2022, and what are the current cash, runway, and fully diluted ownership details?",
-  "What independent benchmarks demonstrate detection fidelity, false-positive reduction, sensor overhead, kernel coverage, and resistance to evasions across supported Kubernetes distributions?",
-  "What are the current employee count and leadership responsibilities, and which executives remain with the company?",
-  "Does ARMO hold patent applications or granted patents under Cyber Armor Ltd or another assignee, and what code or IP licenses govern commercial and CNCF Kubescape components?",
-  "Has ARMO obtained government security authorizations or signed government/defense contracts, beyond offering on-premises and air-gapped deployments?"
-]
-
-[[intelligence.research.sources]]
-id = "about"
-url = "https://www.armosec.io/about-us/"
-title = "About Us | ARMO"
-publisher = "ARMO"
-kind = "company"
-accessed_at = "2026-10-03T20:40:08Z"
-claims = ["ARMO describes its cloud and Kubernetes runtime security platform and Kubescape role.", "ARMO lists Shauli Rozen and Ben Hirschberg as CEO and CTO co-founders and names its current leadership and board.", "ARMO states that it supports managed, on-premises, and air-gapped deployments."]
-
-[[intelligence.research.sources]]
-id = "legal-terms"
-url = "https://cloud.armosec.io/assets/docs/terms-of-use-armo.pdf"
-title = "ARMO Terms of Use"
-publisher = "ARMO"
-kind = "company"
-accessed_at = "2026-10-03T20:40:08Z"
-published_on = "2024-01-10"
-claims = ["ARMO Platform is operated by Cyber Armor Ltd., doing business as ARMO.", "The commercial platform combines SaaS management with in-cluster software components."]
-
-[[intelligence.research.sources]]
-id = "legal-notice"
-url = "https://www.armosec.io/privacy-policy/"
-title = "Privacy Policy | ARMO"
-publisher = "ARMO"
-kind = "company"
-accessed_at = "2026-10-03T20:40:08Z"
-claims = ["ARMO identifies Cyber Armor Ltd as a company registered in Israel."]
-
-[[intelligence.research.sources]]
-id = "seed-venturebeat"
-url = "https://venturebeat.com/ai/armo-comes-out-of-stealth-to-secure-cloud-native-computing"
-title = "Armo comes out of stealth to secure cloud-native computing"
-publisher = "VentureBeat"
-kind = "media"
-accessed_at = "2026-10-03T20:40:08Z"
-published_on = "2021-01-27"
-claims = ["ARMO announced a $4.5 million seed round from Pitango First on 2021-01-27.", "VentureBeat described ARMO as an Israel-based security startup."]
-
-[[intelligence.research.sources]]
-id = "seed-ctech"
-url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3889919,00.html"
-title = "ARMO emerges from stealth with $4.5 million seed for cloud-native workloads solution"
-publisher = "CTech / Calcalist"
-kind = "media"
-accessed_at = "2026-10-03T20:40:08Z"
-published_on = "2021-01-27"
-claims = ["ARMO announced a $4.5 million seed round led by Pitango First.", "Pitango partner Yair Cassuto joined ARMO's board at the time."]
-
-[[intelligence.research.sources]]
-id = "series-a-company"
-url = "https://www.armosec.io/blog/armo-raises-30m/"
-title = "ARMO raises $30M for the first OS Kubernetes security platform"
-publisher = "ARMO"
-kind = "company"
-accessed_at = "2026-10-03T20:40:08Z"
-published_on = "2022-04-27"
-claims = ["ARMO announced a $30 million Series A on 2022-04-27.", "Tiger Global led the Series A; Hyperwise Ventures, Pitango First, and Peled Ventures participated.", "ARMO reported tens of thousands of Kubescape users and more than 2,500 registered Kubescape SaaS users at announcement time."]
-
-[[intelligence.research.sources]]
-id = "series-a-securityweek"
-url = "https://www.securityweek.com/armo-raises-30-million-open-source-kubernetes-security-platform/"
-title = "ARMO Raises $30 Million for Open-Source Kubernetes Security Platform"
-publisher = "SecurityWeek"
-kind = "media"
-accessed_at = "2026-10-03T20:40:08Z"
-published_on = "2022-04-27"
-claims = ["SecurityWeek reported the $30 million Series A and named Tiger Global and Hyperwise as co-leads, with Pitango First and Peled Ventures participating.", "SecurityWeek reported $34.5 million raised to date after the Series A."]
-
-[[intelligence.research.sources]]
-id = "cncf-incubation"
-url = "https://www.cncf.io/blog/2025/02/26/kubescape-becomes-a-cncf-incubating-project/"
-title = "Kubescape becomes a CNCF incubating project"
-publisher = "Cloud Native Computing Foundation"
-kind = "other"
-accessed_at = "2026-10-03T20:40:08Z"
-published_on = "2025-02-26"
-claims = ["CNCF TOC accepted Kubescape as an incubating project on 2025-02-26.", "Kubescape provides Kubernetes security and includes eBPF-based threat detection capabilities.", "ARMO CTO Ben Hirschberg is identified as a core maintainer."]
-
-[[intelligence.research.sources]]
-id = "cncf-project"
-url = "https://www.cncf.io/projects/kubescape/"
-title = "Kubescape | CNCF"
-publisher = "Cloud Native Computing Foundation"
-kind = "other"
-accessed_at = "2026-10-03T20:40:08Z"
-claims = ["CNCF lists Kubescape as an incubating project, accepted in 2022 and promoted to incubation in January 2025.", "CNCF describes Kubescape scanning clusters, manifests, repositories, registries, and images for misconfiguration and vulnerabilities."]
-
-[[intelligence.research.sources]]
-id = "orange-announcement"
-url = "https://www.armosec.io/blog/armo-selected-by-orange-business-secure-managed-kubernetes-services/"
-title = "ARMO Selected by Orange Business to Secure its Kubernetes"
-publisher = "ARMO"
-kind = "company"
-accessed_at = "2026-10-03T20:40:08Z"
-published_on = "2024-11-12"
-claims = ["ARMO announced selection by Orange Business for its Managed Kubernetes Service.", "The company said Orange Business uses ARMO to secure Kubernetes clusters managed for its customers and offers protection on worker nodes.", "The announcement describes on-premises and air-gapped deployment support."]
-
-[[intelligence.research.sources]]
-id = "orange-case"
-url = "https://www.armosec.io/orange-business-on-prem-case-study/"
-title = "Orange Business - Case Study | ARMO"
-publisher = "ARMO"
-kind = "company"
-accessed_at = "2026-10-03T20:40:08Z"
-claims = ["ARMO's case study says Orange Business implemented the platform on-premises and offers it as the default security solution for its Managed Kubernetes Service customers.", "The case study describes Kubernetes image, configuration, permissions, and attack-path analysis."]
-
-[[intelligence.research.sources]]
-id = "kubescape-github"
-url = "https://github.com/kubescape/kubescape"
-title = "GitHub - kubescape/kubescape"
-publisher = "Kubescape project / GitHub"
-kind = "other"
-accessed_at = "2026-10-03T20:40:08Z"
-claims = ["Kubescape is a CNCF incubating open-source project contributed by ARMO.", "Kubescape supports security, compliance, risk, and misconfiguration scanning for IDE, CI/CD, and clusters."]
-
-[[intelligence.research.sources]]
-id = "sans-shauli"
-url = "https://www.sans.org/profiles/shauli-roze"
-title = "Shauli Rozen | SANS Institute"
-publisher = "SANS Institute"
-kind = "other"
-accessed_at = "2026-10-03T20:40:08Z"
-claims = ["SANS identifies Shauli Rozen as ARMO CEO and co-founder and reports his previous role as GM and Chief Strategy Officer at Optimove."]
-
-[[intelligence.research.sources]]
-id = "customer-stories"
-url = "https://www.armosec.io/customer-stories/"
-title = "Case Studies & Customer Stories | ARMO"
-publisher = "ARMO"
-kind = "company"
-accessed_at = "2026-10-03T20:40:08Z"
-claims = ["ARMO lists customer stories for Orange Business, Vandebron, InfoTrax Systems, Akinox, Gitpod, Energi Danmark Business Support, Actian, and Alter Domus.", "ARMO lists a May 2026 Alter Domus runtime-security story; the page does not disclose contract size or revenue."]
-
-[[intelligence.research.sources]]
-id = "checkid-record"
-url = "https://en.checkid.co.il/company/CYBER%2BARMOR%2BLTD-ZW0k25b-515721538"
-title = "Cyber Armor Ltd. / CYBER ARMOR LTD - 515721538"
-publisher = "CheckID / Guideline Group"
-kind = "directory"
-accessed_at = "2026-10-03T20:40:08Z"
-claims = ["CheckID lists Cyber Armor Ltd as an active Israeli private company, number 515721538, with registered Tel Aviv address and incorporation date 2017-09-26.", "CheckID lists the information as updated 2026-07-06 and shows share-allotment filing entries dated 2025-12-14 and 2026-05-07; the underlying official extracts and transaction details are not included on the public page.", "The public CheckID page names directors and option holders but does not disclose ownership percentages."]
-
-[[intelligence.research.sources]]
-id = "company-copyright"
-url = "https://www.armosec.io/customer-stories/"
-title = "ARMO customer stories footer"
-publisher = "ARMO"
-kind = "company"
-accessed_at = "2026-10-03T20:40:08Z"
-claims = ["ARMO's site footer carries a 2026 copyright notice, consistent with ongoing website operation."]
+holdings = []
 
 [[intelligence.people]]
 name = "Shauli Rozen"
 role = "CEO and co-founder"
 is_founder = true
 current = true
-background = "SANS reports more than 15 years of technology and B2B management experience and a prior GM/Chief Strategy Officer role at Optimove."
-source_ids = ["about", "sans-shauli"]
+background = "CTech describes his path through engineering, a Wharton MBA, Boston Consulting Group, product strategy at Amdocs, and chief strategy and general management roles at Optimove before founding ARMO."
+source_ids = ["about", "ctech-founder", "seed-2021"]
 
 [[intelligence.people]]
 name = "Ben Hirschberg"
 role = "CTO and co-founder"
 is_founder = true
 current = true
-background = "ARMO lists him as CTO and co-founder; CNCF identifies him as a Kubescape core maintainer."
-source_ids = ["about", "cncf-incubation"]
+background = "Current company materials identify him as CTO; CNCF names him as ARMO CTO and Kubescape core maintainer, linking his technical leadership to the open-source project."
+source_ids = ["about", "cncf-incubation", "seed-2021"]
+
+[[intelligence.people]]
+name = "Leonid Sandler"
+role = "Co-founder and board member"
+is_founder = true
+current = true
+background = "The 2021 company financing release names him as a co-founder and notes prior security and video technology work at NDS; ARMO's current page lists him on the board."
+source_ids = ["seed-2021", "about"]
 
 [[intelligence.people]]
 name = "Merav Zviran"
@@ -379,18 +218,11 @@ name = "Yair Cassuto"
 role = "Board member, Pitango"
 is_founder = false
 current = true
-source_ids = ["about", "seed-ctech"]
+source_ids = ["about", "seed-2021"]
 
 [[intelligence.people]]
 name = "Nathan Shuchami"
 role = "Board member, Hyperwise Ventures"
-is_founder = false
-current = true
-source_ids = ["about"]
-
-[[intelligence.people]]
-name = "Leonid Sandler"
-role = "Board member"
 is_founder = false
 current = true
 source_ids = ["about"]
@@ -408,7 +240,7 @@ investor_type = "vc"
 website = "https://www.pitango.com/"
 round_ids = ["seed-2021", "series-a-2022"]
 relationship = "historical"
-source_ids = ["seed-ctech", "series-a-company"]
+source_ids = ["seed-2021", "series-a-2022"]
 
 [[intelligence.investors]]
 name = "Tiger Global"
@@ -416,7 +248,7 @@ investor_type = "vc"
 website = "https://www.tigerglobal.com/"
 round_ids = ["series-a-2022"]
 relationship = "historical"
-source_ids = ["series-a-company"]
+source_ids = ["series-a-2022"]
 
 [[intelligence.investors]]
 name = "Hyperwise Ventures"
@@ -424,215 +256,536 @@ investor_type = "vc"
 website = "https://hyperwise.vc/"
 round_ids = ["series-a-2022"]
 relationship = "historical"
-source_ids = ["series-a-company"]
+source_ids = ["series-a-2022"]
 
 [[intelligence.investors]]
 name = "Peled Ventures"
 investor_type = "vc"
 round_ids = ["series-a-2022"]
 relationship = "historical"
-source_ids = ["series-a-company"]
+source_ids = ["series-a-2022"]
+
+[[intelligence.traction]]
+kind = "other"
+description = "ARMO's current homepage advertises more than 40,000 companies, 100,000 deployments, and 15 million Kubescape scans per month. These are company-published adoption indicators; definitions, independent validation, and the paying-user share are not disclosed."
+source_ids = ["homepage"]
 
 [[intelligence.traction]]
 kind = "partnership"
-description = "ARMO announced that Orange Business selected ARMO Platform for its Managed Kubernetes Service, including securing customer clusters and worker nodes. The public material documents a service inclusion and deployment, not a contract value or customer count."
+description = "ARMO announced on 2024-11-12 that Orange Business selected ARMO Platform for its Managed Kubernetes Service and its managed customer clusters. ARMO's case study says the platform runs on-premises and is offered as the default security solution for MKS customers; the announcement and case study do not disclose contract value or downstream deployment counts."
 date = "2024-11-12"
 source_ids = ["orange-announcement", "orange-case"]
 
 [[intelligence.traction]]
-kind = "customer"
-description = "ARMO's customer story says Orange Business deployed the platform on-premises and offers it as the default security solution for its Managed Kubernetes Service customers. This is company-published evidence; commercial terms and number of downstream deployments are undisclosed."
-source_ids = ["orange-case"]
-
-[[intelligence.traction]]
 kind = "product"
-description = "CNCF accepted Kubescape as an incubating project; CNCF documents its scope across cluster, manifest, repository, registry, and image scanning for Kubernetes security and compliance."
+description = "CNCF records that Kubescape was accepted in December 2022 and moved to Incubating on 2025-01-13. It is an open-source security and compliance platform for Kubernetes clusters, manifests, repositories, registries, and images."
 date = "2025-01-13"
 source_ids = ["cncf-project", "cncf-incubation"]
 
 [[intelligence.traction]]
+kind = "partnership"
+description = "Rapid7 announced a strategic partnership on 2026-01-14 to add ARMO-derived cloud runtime security to the Rapid7 Command Platform. Rapid7 described the new offering as beta in its product blog; the release does not establish customer deployment volume, commercial terms, or revenue to ARMO."
+date = "2026-01-14"
+source_ids = ["rapid7-release", "rapid7-beta"]
+
+[[intelligence.traction]]
 kind = "customer"
-description = "ARMO published an Alter Domus runtime-security customer story in May 2026. The company's case-study listing is evidence of a named customer reference, but does not establish contract value or independently audited impact."
+description = "ARMO published an Alter Domus case study dated 2026-05-19. It reports runtime monitoring in an AWS and Azure Kubernetes environment and customer-reported reductions from about 200 to 20 daily alerts and roughly 90% in vulnerability backlog. These are vendor-published case-study figures and require independent customer validation; contract value is undisclosed."
 date = "2026-05-19"
+source_ids = ["alter-domus", "runtime-archive"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "ARMO's customer-story index also lists Vandebron, InfoTrax Systems, Akinox, Gitpod, Energi Danmark Business Support, and Actian. The index demonstrates named customer references but does not disclose contract terms, deployment size, or whether each reference is a current paid customer."
 source_ids = ["customer-stories"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "US Patent 11,139,983 B2, System and method of verifying runtime integrity, was granted and published on 2021-10-05. Google Patents lists Cyber Armor Ltd. as original assignee and Leonid Sandler and Benyamin Hirschberg as inventors; the database labels the status active but cautions that its legal-status assessment is not a legal conclusion. Relevance to the present Kubescape-based platform has not been established."
+date = "2021-10-05"
+source_ids = ["patent-runtime"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "US Patent 11,595,201 B2, System and method for generation of a disposable software module for cryptographic material protection, was granted and published on 2023-02-28. Google Patents lists Cyber Armor Ltd. as original assignee and Benyamin Hirschberg and Leonid Sandler as inventors, with the same caveat that listed legal status is not a legal opinion. Product relevance and the full international patent family require further diligence."
+date = "2023-02-28"
+source_ids = ["patent-crypto"]
 
 [[intelligence.comparables]]
 name = "Palo Alto Networks Prisma Cloud"
-website = "https://www.paloaltonetworks.com/prisma/cloud"
-rationale = "Broad cloud-native application protection and CNAPP suite overlaps with ARMO's cloud and Kubernetes security buyer needs."
-differentiation = "Large platform breadth and enterprise distribution; ARMO focuses its positioning on Kubernetes runtime context and Kubescape's open-source path."
-source_ids = ["about"]
+website = "https://www.paloaltonetworks.com/prisma/environments/kubernetes"
+rationale = "Offers Kubernetes code-to-cloud security, application context, runtime protection, threat detection, and compliance, competing for the same cloud-security budget."
+differentiation = "A broader security portfolio and enterprise distribution compete with ARMO's Kubernetes focus, Kubescape foundation, and runtime reachability positioning."
+source_ids = ["paloalto"]
 
 [[intelligence.comparables]]
 name = "Wiz"
-website = "https://www.wiz.io/"
-rationale = "Cloud security platform competing for cloud posture and workload risk prioritization budgets."
-differentiation = "Wiz emphasizes agentless cloud graph visibility; ARMO emphasizes Kubernetes runtime telemetry and open-source Kubescape."
-source_ids = ["about"]
+website = "https://www.wiz.io/platform"
+rationale = "Sells cloud and AI security spanning code, infrastructure, runtime, threat detection, and contextual risk analysis."
+differentiation = "Wiz emphasizes broad agentless cloud visibility and its security graph; ARMO emphasizes Kubernetes-native runtime observation and Kubescape."
+source_ids = ["wiz"]
 
 [[intelligence.comparables]]
 name = "Aqua Security"
-website = "https://www.aquasec.com/"
-rationale = "Cloud-native security vendor with container, Kubernetes, and runtime capabilities."
-differentiation = "Aqua offers broad container security lifecycle coverage; ARMO centers its offering on runtime behavioral security and Kubescape."
-source_ids = ["about"]
+website = "https://www.aquasec.com/products/kubernetes-security/"
+rationale = "Provides Kubernetes posture, compliance, workload admission policies, vulnerability analysis, and runtime protection."
+differentiation = "Aqua offers lifecycle container controls and a long-standing Kubernetes security portfolio; ARMO differentiates through Kubescape and behavior-based runtime context."
+source_ids = ["aqua"]
 
 [[intelligence.comparables]]
-name = "Sysdig"
-website = "https://sysdig.com/"
-rationale = "Cloud detection and response and Kubernetes runtime security overlap directly with ARMO's threat-detection use cases."
-differentiation = "Sysdig has an established commercial platform and Falco ecosystem; ARMO's differentiation is Kubescape and its combined posture/reachability narrative."
-source_ids = ["about"]
+name = "Sysdig Secure and Falco"
+website = "https://docs.sysdig.com/en/sysdig-secure/install-shield-kubernetes"
+rationale = "Sysdig Secure and the Falco ecosystem provide Kubernetes runtime detection and policy enforcement that overlap directly with ARMO's core runtime use cases."
+differentiation = "Sysdig builds on the Falco rules ecosystem and runtime observability; ARMO's product combines Kubescape, application profiling, vulnerability reachability, and posture workflows."
+source_ids = ["sysdig"]
 
 [intelligence.israel_connection]
 status = "confirmed"
-basis = ["incorporated_in_israel", "headquarters_in_israel"]
-summary = "ARMO operates through Cyber Armor Ltd, which its current legal notice identifies as registered in Israel. ARMO's company and contemporaneous reporting identify it as Israel-based, with Tel Aviv included among its locations."
-as_of = "2026-10-03"
-source_ids = ["legal-notice", "checkid-record", "seed-venturebeat", "about"]
+basis = ["incorporated_in_israel"]
+summary = "ARMO operates as Cyber Armor Ltd., which its privacy policy says is registered in Israel. The 2021 company financing release uses a Tel Aviv, Israel dateline, and CheckID lists an Israeli private company registered at Krmenitsky 10, Tel Aviv-Yafo. The company identifier and current address are supported by a secondary directory rather than an official registry extract."
+as_of = "2026-10-22"
+source_ids = ["privacy", "seed-2021", "checkid-record"]
+
+[intelligence.research]
+researched_at = "2026-10-22T02:31:34Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "ARMO Security official about Kubescape company founders 2026 site:armosec.io",
+  "ARMO Security funding raised seed 2021 Series A 2022 Pitango Tiger Global official announcement",
+  "ARMO Security 2025 2026 funding investors acquisition valuation revenue",
+  "ARMO Cyber Armor Ltd Israeli company 515721538 legal notice",
+  "site:armosec.io/about-us Shauli Rozen Ben Hirschberg team leadership ARMO",
+  "site:armosec.io Orange Business ARMO Managed Kubernetes Service case study",
+  "site:cncf.io Kubescape CNCF incubation ARMO 2025",
+  "ARMO Kubescape users companies cloud environments 2025 report ARMO official",
+  "ARMO funding rounds $4.5 million $30 million Series A total raised valuation acquisition 2025 2026",
+  "ARMO Security revenue ARR financials employees 2025 2026 interview",
+  "ARMO Security Shauli Rozen Ben Hirschberg founders team interview prior company",
+  "Cyber Armor Ltd 515721538 shareholder allotment 2026 ARMO shares",
+  "site:patents.google.com Cyber Armor Ltd ARMO Kubernetes security patent",
+  "site:patentscope.wipo.int Cyber Armor ARMO Kubernetes security",
+  "site:uspto.gov Cyber Armor ARMO patent Kubernetes",
+  "ARMO Kubernetes security government defense contract federal contract CAGE",
+  "Wiz cloud AI runtime security platform official Kubernetes",
+  "Palo Alto Prisma Cloud Kubernetes runtime security official",
+  "Aqua Kubernetes runtime security official platform",
+  "Sysdig Secure Kubernetes runtime security official",
+  "Rapid7 ARMO platform technology powers Rapid7 Command Platform January 2026 announcement",
+  "site:rapid7.com ARMO Kubernetes runtime security partner 2026",
+  "site:armosec.io Rapid7 ARMO technology powers Rapid7 Command Platform 2026",
+  "Rapid7 acquires ARMO Cyber Armor acquisition 2026"
+]
+gaps = [
+  "funding: no later financing announcement was located through 2026-10-22; the company does not state a lifetime total, and share-allotment directory entries do not establish cash raised.",
+  "team: the company publishes current executive and board names, but no reliable current headcount or complete historical leadership chronology was found.",
+  "investors: public round participants and some directory-listed shareholders are known; private cap table, ownership percentages, current fund positions, and any undisclosed later investors remain unavailable.",
+  "financials: no dated public revenue, ARR, profitability, burn, runway, or paid-customer count was identified; public company-published usage counts are not financial metrics.",
+  "traction: named customer stories and Rapid7 and Orange announcements are documented, but paid customer counts, production deployment volumes, renewal, contract values, and channel economics remain undisclosed.",
+  "intellectual_property: two US patent grants assigned to Cyber Armor were identified; completeness of the portfolio, current legal status through official registers, international family, licenses, and relevance to the current product require confirmation.",
+  "competition: product overlap is documented from vendor pages, but no independent head-to-head efficacy, win-rate, or market-share study was found.",
+  "dual_use: on-premises and air-gapped capabilities have sensitive-environment relevance, but no public defense or government contract, accreditation, or military deployment was identified.",
+  "ownership: a secondary directory lists named shareholders and share-allotment events but does not disclose percentages, current fully diluted ownership, official supporting extracts, or the terms of the 2025 and 2026 events."
+]
+conflicts = [
+  "Funding total: SecurityWeek reported $34.5 million raised to date after the Series A. The company announcements reviewed disclose a $4.5 million Seed and $30 million Series A but do not call $34.5 million a company-announced lifetime total; the total field is therefore omitted and the media report retained as a separate claim.",
+  "Kubescape maturity: ARMO Platform documentation still calls Kubescape a CNCF Sandbox project, while CNCF's current project page says it moved to Incubating on 2025-01-13. The current CNCF directory is used for present maturity and the company documentation is treated as stale."
+]
+diligence_questions = [
+  "What are current ARR, gross and net retention, paid customer count, ACV, gross margin, and customer concentration, and how much revenue is attributable to Orange Business and Rapid7?",
+  "What is the current launch status of Rapid7 Cloud Runtime Security after its January 2026 beta announcement, and what are the live customer count, revenue share, and support obligations?",
+  "Did the December 2025 and May 2026 Israeli share-allotment filings involve new capital, options, conversions, or another corporate action, and what official registry extracts document them?",
+  "Has ARMO raised equity, convertible, debt, or grant financing after April 2022, and what are cash, burn, and runway today?",
+  "What benchmark results establish detection fidelity, false-positive rates, kernel coverage, sensor overhead, and response safety across supported Kubernetes distributions?",
+  "What share of Kubescape use is active production deployment, how is it measured, and what funnel converts those users into paid ARMO Platform contracts?",
+  "Do the two Cyber Armor patents cover code in the current platform, what other patent families or trade secrets exist, and what licenses govern the commercial and CNCF Kubescape components?",
+  "What government security authorizations, data-handling controls, and customer references would be required before using ARMO in sovereign, regulated, or defense environments?"
+]
+
+[[intelligence.research.sources]]
+id = "about"
+url = "https://www.armosec.io/about-us/"
+title = "About Us | ARMO"
+publisher = "ARMO"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["ARMO connects cloud, Kubernetes, container, and application security with runtime insights and positions its product as behavioral CADR.", "The company page identifies Shauli Rozen, Ben Hirschberg, Merav Zviran, Rotem Refael, Jonathan Kaftzan, Yossi Ben Naim, and current board members including Leonid Sandler.", "ARMO says its platform supports managed, on-premises, and air-gapped cloud and Kubernetes deployments."]
+
+[[intelligence.research.sources]]
+id = "homepage"
+url = "https://www.armosec.io/"
+title = "ARMO: Runtime Behavioral Cloud Application Detection & Response (CADR)"
+publisher = "ARMO"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["ARMO currently markets the ARMO Platform across CADR, vulnerability management, Kubernetes posture management, and cloud posture management.", "The company homepage advertises more than 11,000 GitHub stars, 40,000 companies, 100,000 deployments, and 15 million scans per month for Kubescape; these are company-reported figures without an independent methodology on the page."]
+
+[[intelligence.research.sources]]
+id = "privacy"
+url = "https://www.armosec.io/privacy-policy/"
+title = "Our Privacy Policy | ARMO"
+publisher = "ARMO"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["ARMO's privacy policy identifies the website operator as Cyber Armor Ltd. doing business as ARMO and says the company is registered in Israel."]
+
+[[intelligence.research.sources]]
+id = "hub-docs"
+url = "https://hub.armosec.io/docs/armo-platform"
+title = "Welcome to ARMO Platform"
+publisher = "ARMO documentation"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["ARMO Platform uses eBPF to record application behavior and enriches the baseline with Kubernetes events, CI/CD, cloud, and container context.", "The platform applies its application profile to posture management, hardening, and runtime threat detection and response.", "The documentation says the platform supports managed, on-premises, and air-gapped deployments and uses Kubescape as an open-source engine."]
+
+[[intelligence.research.sources]]
+id = "seed-2021"
+url = "https://www.prnewswire.com/news-releases/armo-emerges-from-stealth-with-4-5-million-to-infuse-visibility-control-and-security-into-every-cloud-native-workload-301216137.html"
+title = "ARMO Emerges from Stealth with $4.5 Million to Infuse Visibility, Control and Security into Every Cloud-Native Workload"
+publisher = "PR Newswire, news provided by ARMO"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+published_on = "2021-01-27"
+claims = ["ARMO announced that it had secured $4.5 million in Seed funding from Pitango First on 2021-01-27.", "The release lists Shauli Rozen, Leonid Sandler, and Benjamin Hirschberg as ARMO founders and gives a Tel Aviv, Israel dateline.", "The release describes ARMO's early cloud-native workload security product and Intel Ignite selection."]
+
+[[intelligence.research.sources]]
+id = "series-a-2022"
+url = "https://www.armosec.io/blog/armo-raises-30m/"
+title = "ARMO raises $30M for the first open-source Kubernetes security platform"
+publisher = "ARMO"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+published_on = "2022-04-27"
+claims = ["ARMO announced a $30 million Series A on 2022-04-27.", "The release names Tiger Global as lead investor and Hyperwise Ventures, Pitango First, and Peled Ventures as participating investors.", "The announcement describes Kubescape's scanning, compliance, and RBAC capabilities and names Shauli Rozen, Leonid Sandler, and Ben Hirschberg as founders."]
+
+[[intelligence.research.sources]]
+id = "securityweek-total"
+url = "https://www.securityweek.com/armo-raises-30-million-open-source-kubernetes-security-platform/"
+title = "ARMO Raises $30 Million for Open Source Kubernetes Security Platform"
+publisher = "SecurityWeek"
+kind = "media"
+accessed_at = "2026-10-22T02:31:34Z"
+published_on = "2022-04-27"
+claims = ["SecurityWeek reports that the $30 million Series A brought ARMO's total funding to date to $34.5 million.", "The report names Tiger Global, Hyperwise Ventures, Pitango First, and Peled Ventures and describes Kubescape as ARMO's open-source Kubernetes platform."]
+
+[[intelligence.research.sources]]
+id = "checkid-record"
+url = "https://en.checkid.co.il/company/CYBER%2BARMOR%2BLTD-ZW0k25b-515721538"
+title = "Cyber Armor Ltd. / CYBER ARMOR LTD - 515721538"
+publisher = "CheckID / Guideline Group"
+kind = "directory"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["CheckID lists Cyber Armor Ltd. as Israeli private company number 515721538, active, incorporated 2017-09-26, with a Tel Aviv-Yafo address and a 2025 annual report.", "The page, with information updated 2026-07-06, lists some people and funds with shareholder roles but provides no ownership percentages or complete official company extract; its translated names carry an explicit accuracy disclaimer.", "The page lists share-allotment filing events dated 2025-12-14 and 2026-05-07 without transaction terms or evidence that the filings represent new financing."]
+
+[[intelligence.research.sources]]
+id = "cncf-project"
+url = "https://www.cncf.io/projects/kubescape/"
+title = "Kubescape | CNCF"
+publisher = "Cloud Native Computing Foundation"
+kind = "other"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["CNCF describes Kubescape as an open-source security and compliance platform scanning Kubernetes clusters, manifests, repositories, registries, and images.", "CNCF says Kubescape joined the foundation in December 2022 and moved to Incubating on 2025-01-13.", "CNCF's current project page reports contributor, contributing-organization, and repository metrics for Kubescape."]
+
+[[intelligence.research.sources]]
+id = "cncf-incubation"
+url = "https://www.cncf.io/blog/2025/02/26/kubescape-becomes-a-cncf-incubating-project/"
+title = "Kubescape becomes a CNCF incubating project"
+publisher = "Cloud Native Computing Foundation"
+kind = "other"
+accessed_at = "2026-10-22T02:31:34Z"
+published_on = "2025-02-26"
+claims = ["CNCF announced its TOC vote to move Kubescape to Incubating and describes posture, vulnerability, hardening, eBPF threat detection, and CI/CD features.", "CNCF states ARMO created Kubescape in 2021 and quotes ARMO CTO Ben Hirschberg as a core maintainer.", "The CNCF article documents community growth and named examples of use by Intel, AWS educational material, Bitnami, and Energi Danmark."]
+
+[[intelligence.research.sources]]
+id = "rapid7-release"
+url = "https://www.rapid7.com/about/press-releases/rapid7-and-armo-enable-organizations-to-stop-cloud-attacks-earlier-with-runtime-security/"
+title = "Press Release: Rapid7 and ARMO Enable Organizations to Stop Cloud Attacks Earlier with Runtime Security"
+publisher = "Rapid7"
+kind = "other"
+accessed_at = "2026-10-22T02:31:34Z"
+published_on = "2026-01-14"
+claims = ["Rapid7 announced a strategic partnership with ARMO to add cloud and application runtime security to the Rapid7 Command Platform.", "The partnership release describes real-time detection, risk correlation, containment, and integration with AWS, Azure, and multicloud environments.", "The announcement does not disclose ARMO revenue share, partner fees, deployment counts, or customer economics."]
+
+[[intelligence.research.sources]]
+id = "rapid7-beta"
+url = "https://www.rapid7.com/blog/post/cds-reducing-cloud-chaos-rapid7-partners-with-armo-delivering-cloud-runtime-security/"
+title = "Reducing Cloud Chaos: Rapid7 Partners with ARMO to Deliver Cloud Runtime Security"
+publisher = "Rapid7"
+kind = "other"
+accessed_at = "2026-10-22T02:31:34Z"
+published_on = "2026-01-14"
+claims = ["Rapid7 described Cloud Runtime Security, built with ARMO, as currently in beta on 2026-01-14.", "Rapid7 says the offering combines kernel-level observability with behavioral baselines, runtime threat investigation, and automated workload response."]
+
+[[intelligence.research.sources]]
+id = "orange-announcement"
+url = "https://www.armosec.io/blog/armo-selected-by-orange-business-secure-managed-kubernetes-services/"
+title = "ARMO selected by Orange Business to Secure its Managed Kubernetes Services"
+publisher = "ARMO"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+published_on = "2024-11-12"
+claims = ["ARMO announced that Orange Business selected its platform for the Managed Kubernetes Service and to secure the clusters it manages for customers.", "ARMO says the implementation is intended for on-premises and air-gapped Kubernetes environments."]
+
+[[intelligence.research.sources]]
+id = "orange-case"
+url = "https://www.armosec.io/orange-business-on-prem-case-study/"
+title = "Orange Business - Case Study | ARMO"
+publisher = "ARMO"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["ARMO's case study says Orange Business implemented the platform on premises and offers it as the default security solution for Managed Kubernetes Service customers.", "The case study describes scans for container vulnerabilities, configuration, permissions, resource limits, and secrets, plus GitOps remediation through ArgoCD.", "The customer story does not disclose contract value or the number of downstream customer deployments."]
+
+[[intelligence.research.sources]]
+id = "alter-domus"
+url = "https://www.armosec.io/alter-domus/"
+title = "Alter Domus - Case Study | ARMO"
+publisher = "ARMO"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["ARMO's case study describes Alter Domus using the product for Kubernetes runtime security across AWS and Azure.", "The case study reports approximately 90 percent reduction in vulnerability backlog and a reduction from 200 to 20 daily alerts, with a quotation attributed to Alter Domus Global Head of Security.", "The customer outcome figures are presented in a vendor-hosted case study and were not independently audited in this review."]
+
+[[intelligence.research.sources]]
+id = "runtime-archive"
+url = "https://www.armosec.io/blog/topic/runtime-security/"
+title = "Runtime security Archives - ARMO"
+publisher = "ARMO"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["ARMO's runtime-security archive dates the Alter Domus customer story to 2026-05-19."]
+
+[[intelligence.research.sources]]
+id = "customer-stories"
+url = "https://www.armosec.io/customer-stories/"
+title = "Case Studies & Customer Stories | ARMO"
+publisher = "ARMO"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["ARMO lists Orange Business, Vandebron, InfoTrax Systems, Akinox, Gitpod, Energi Danmark Business Support, Actian, and Alter Domus as customer-story references.", "The index does not disclose customer contract status, contract values, or deployment volumes."]
+
+[[intelligence.research.sources]]
+id = "patent-runtime"
+url = "https://patents.google.com/patent/US11139983B2/en"
+title = "US11139983B2 - System and method of verifying runtime integrity"
+publisher = "Google Patents / USPTO patent record"
+kind = "filing"
+accessed_at = "2026-10-22T02:31:34Z"
+published_on = "2021-10-05"
+claims = ["US Patent 11,139,983 B2 was granted and published on 2021-10-05 for runtime-integrity verification.", "The record lists Cyber Armor Ltd. as original assignee and Leonid Sandler and Benyamin Hirschberg as inventors.", "Google Patents lists an active status but expressly says that its status is an assumption and not a legal conclusion."]
+
+[[intelligence.research.sources]]
+id = "patent-crypto"
+url = "https://patents.google.com/patent/US11595201B2/en"
+title = "US11595201B2 - System and method for generation of a disposable software module for cryptographic material protection"
+publisher = "Google Patents / USPTO patent record"
+kind = "filing"
+accessed_at = "2026-10-22T02:31:34Z"
+published_on = "2023-02-28"
+claims = ["US Patent 11,595,201 B2 was granted and published on 2023-02-28 for a disposable software module for cryptographic material protection.", "The record lists Cyber Armor Ltd. as original assignee and Benyamin Hirschberg and Leonid Sandler as inventors.", "Google Patents lists an active status but cautions that it is not a legal conclusion."]
+
+[[intelligence.research.sources]]
+id = "ctech-founder"
+url = "https://www.calcalistech.com/ctechnews/article/ryhtzy3sc"
+title = "I have always been looking to diversify and do and learn new things."
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-22T02:31:34Z"
+published_on = "2022-07-13"
+claims = ["CTech identifies Shauli Rozen as ARMO co-founder and CEO and records his background through engineering, Wharton, BCG, Amdocs, and Optimove.", "Rozen describes ARMO's developer-focused Kubernetes security strategy and use of open source as a product-led entry point."]
+
+[[intelligence.research.sources]]
+id = "latest-blog"
+url = "https://www.armosec.io/blog/ai-agent-security/"
+title = "AI Agent Security: The Two Ways an Agent Fails, and the One Your Stack Misses"
+publisher = "ARMO"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+published_on = "2026-09-26"
+claims = ["ARMO CTO and co-founder Ben Hirschberg published a current article about runtime security for AI agents on 2026-09-26.", "The article describes ARMO's use of workload runtime behavior to establish behavioral references for agent workloads; these are company product claims rather than independent efficacy results."]
+
+[[intelligence.research.sources]]
+id = "paloalto"
+url = "https://www.paloaltonetworks.com/prisma/environments/kubernetes"
+title = "Kubernetes Security | Cloud Native Security for Cloud Native Environments - Palo Alto Networks"
+publisher = "Palo Alto Networks"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["Palo Alto Networks markets Prisma Cloud for Kubernetes code-to-cloud security, runtime protection, threat detection, and compliance."]
+
+[[intelligence.research.sources]]
+id = "wiz"
+url = "https://www.wiz.io/platform"
+title = "Wiz Cloud and AI Security Platform | Wiz"
+publisher = "Wiz"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["Wiz markets a cloud and AI security platform that covers code, infrastructure, runtime protection, threat detection, and security-graph context."]
+
+[[intelligence.research.sources]]
+id = "aqua"
+url = "https://www.aquasec.com/products/kubernetes-security/"
+title = "Holistic Kubernetes Security for the Enterprise - Aqua"
+publisher = "Aqua Security"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["Aqua markets Kubernetes posture management, compliance, policy-based workload admission, vulnerability, and runtime protection capabilities."]
+
+[[intelligence.research.sources]]
+id = "sysdig"
+url = "https://docs.sysdig.com/en/sysdig-secure/install-shield-kubernetes"
+title = "Install Shield on Kubernetes | Sysdig Docs"
+publisher = "Sysdig"
+kind = "company"
+accessed_at = "2026-10-22T02:31:34Z"
+claims = ["Sysdig says Shield provides runtime detection and policy enforcement for Kubernetes workloads using Falco.", "The documentation lists supported Kubernetes platforms, Linux distributions, and container runtimes for Sysdig Shield."]
 
 [[intelligence.research.topic_checks]]
 topic = "identity"
 status = "reported"
-checked_at = "2026-10-03T20:40:08Z"
-next_review_on = "2027-01-03"
-queries = ["ARMO Security funding Series C investors raised 2025 2026 ARMO Security", "ARMO cybersecurity founded 2019 Shauli Rozen official", "Cyber Armor Ltd ARMO Israel company"]
-source_ids = ["about", "legal-terms", "legal-notice", "seed-venturebeat"]
-summary = "Confirmed ARMO is the cloud security startup operating as Cyber Armor Ltd, registered in Israel, with an active current website and platform."
+checked_at = "2026-10-22T02:31:34Z"
+next_review_on = "2027-01-22"
+queries = ["ARMO Security official about Kubescape company founders 2026 site:armosec.io", "ARMO Cyber Armor Ltd Israeli company 515721538 legal notice"]
+source_ids = ["about", "privacy", "checkid-record", "seed-2021"]
+summary = "Confirmed the canonical company is ARMO, operated by Cyber Armor Ltd., an active Israeli private software company with an official product and current leadership page. The registered Tel Aviv address and identifier are from a secondary registry directory."
 
 [[intelligence.research.topic_checks]]
 topic = "funding"
 status = "reported"
-checked_at = "2026-10-03T20:40:08Z"
-next_review_on = "2027-01-03"
-queries = ["ARMO funding Series C investors raised 2025 2026", "ARMO 4.5 million funding Kubernetes", "ARMO 34.5M funding rounds"]
-source_ids = ["seed-venturebeat", "seed-ctech", "series-a-company", "series-a-securityweek"]
-summary = "Verified 2021 seed and 2022 Series A; no later round located. Media stated $34.5 million total after Series A, but company-announced lifetime total is unverified."
+checked_at = "2026-10-22T02:31:34Z"
+next_review_on = "2027-04-22"
+queries = ["ARMO Security funding raised seed 2021 Series A 2022 Pitango Tiger Global official announcement", "ARMO Security 2025 2026 funding investors acquisition valuation revenue", "ARMO funding rounds $4.5 million $30 million Series A total raised valuation acquisition 2025 2026"]
+source_ids = ["seed-2021", "series-a-2022", "securityweek-total", "checkid-record"]
+summary = "Verified a $4.5 million 2021 Seed and $30 million 2022 Series A. No later round was found. Media reports a $34.5 million company total, but ARMO did not state a lifetime total in the announcements reviewed; 2025 and 2026 share-allotment listings remain unexplained."
 
 [[intelligence.research.topic_checks]]
 topic = "investors"
 status = "reported"
-checked_at = "2026-10-03T20:40:08Z"
-next_review_on = "2027-01-03"
-queries = ["ARMO investors Tiger Global Hyperwise Pitango Peled Ventures", "ARMO seed funding Pitango First investors"]
-source_ids = ["seed-ctech", "series-a-company", "series-a-securityweek", "about"]
-summary = "Round announcements identify Pitango First, Tiger Global, Hyperwise Ventures, and Peled Ventures; current cap-table relationships remain private."
+checked_at = "2026-10-22T02:31:34Z"
+next_review_on = "2027-04-22"
+queries = ["ARMO Security funding raised seed 2021 Series A 2022 Pitango Tiger Global official announcement", "ARMO funding rounds $4.5 million $30 million Series A total raised valuation acquisition 2025 2026"]
+source_ids = ["seed-2021", "series-a-2022", "checkid-record"]
+summary = "Round announcements name Pitango First, Tiger Global, Hyperwise Ventures, and Peled Ventures. A commercial directory lists some additional shareholder associations, but current fund positions and percentage ownership are unavailable."
 
 [[intelligence.research.topic_checks]]
 topic = "team"
 status = "reported"
-checked_at = "2026-10-03T20:40:08Z"
-next_review_on = "2027-01-03"
-queries = ["site:armosec.io ARMO founders leadership", "Shauli Rozen ARMO company Israeli founder bio"]
-source_ids = ["about", "sans-shauli", "cncf-incubation"]
-summary = "Current company page lists executive leaders and board; SANS provides CEO background. No verified current headcount or complete historical team roster found."
+checked_at = "2026-10-22T02:31:34Z"
+next_review_on = "2027-01-22"
+queries = ["site:armosec.io/about-us Shauli Rozen Ben Hirschberg team leadership ARMO", "ARMO Security Shauli Rozen Ben Hirschberg founders team interview prior company"]
+source_ids = ["about", "ctech-founder", "cncf-incubation", "seed-2021", "latest-blog"]
+summary = "The company lists its current leaders and board; company announcements identify three founders. CTech documents Rozen's business and product background and CNCF identifies Hirschberg as Kubescape core maintainer. No reliable employee count was found."
 
 [[intelligence.research.topic_checks]]
 topic = "ownership"
-status = "no_public_disclosure"
-checked_at = "2026-10-03T20:40:08Z"
-next_review_on = "2027-04-03"
-queries = ["ARMO acquisition ownership parent company", "Cyber Armor Ltd ownership ARMO cap table", "Cyber Armor Ltd 515721538 company status incorporation allotment shares Israel registry"]
-source_ids = ["about", "legal-terms", "legal-notice", "checkid-record"]
-summary = "No public acquisition or parent was found. A commercial directory reports share-allotment filings in 2025 and 2026, but its paid official extract is needed to identify terms and holders; cap table remains undisclosed."
+status = "reported"
+checked_at = "2026-10-22T02:31:34Z"
+next_review_on = "2027-04-22"
+queries = ["Cyber Armor Ltd 515721538 shareholder allotment 2026 ARMO shares", "ARMO Security 2025 2026 funding investors acquisition valuation revenue", "Rapid7 acquires ARMO Cyber Armor acquisition 2026"]
+source_ids = ["checkid-record", "about", "privacy"]
+summary = "Some shareholders are listed on CheckID, but there is no complete public cap table, ownership percentages, or official extract in the reviewed material. No parent company or acquisition announcement was found. The 2025 and 2026 allotment entries lack transaction terms."
 
 [[intelligence.research.topic_checks]]
 topic = "financials"
 status = "no_public_disclosure"
-checked_at = "2026-10-03T20:40:08Z"
-next_review_on = "2027-04-03"
-queries = ["ARMO revenue ARR employees funding 2025 cybersecurity", "ARMO financials revenue runway"]
-source_ids = ["series-a-securityweek", "series-a-company"]
-summary = "No dated revenue, ARR, profitability, burn, runway, or current workforce figure was identified in the reviewed public sources."
+checked_at = "2026-10-22T02:31:34Z"
+next_review_on = "2027-04-22"
+queries = ["ARMO Security 2025 2026 funding investors acquisition valuation revenue", "ARMO Security revenue ARR financials employees 2025 2026 interview"]
+source_ids = ["about", "homepage", "rapid7-release", "securityweek-total"]
+summary = "No dated ARMO revenue, ARR, profit, burn, runway, or paid-customer count was found. Dealroom and other directories display estimates without a transparent, company-verified basis, so no financial metric is entered."
 
 [[intelligence.research.topic_checks]]
 topic = "traction"
 status = "reported"
-checked_at = "2026-10-03T20:40:08Z"
-next_review_on = "2027-01-03"
-queries = ["ARMO customer Orange Business announcement", "ARMO customer Alter Domus case study", "ARMO Kubescape GitHub CNCF project"]
-source_ids = ["orange-announcement", "orange-case", "customer-stories", "cncf-project"]
-summary = "Orange Business service selection/deployment and named customer stories including Alter Domus provide commercial evidence, but no financial or deployment volume is disclosed."
+checked_at = "2026-10-22T02:31:34Z"
+next_review_on = "2027-01-22"
+queries = ["site:armosec.io Orange Business ARMO Managed Kubernetes Service case study", "ARMO Kubescape users companies cloud environments 2025 report ARMO official", "Rapid7 ARMO platform technology powers Rapid7 Command Platform January 2026 announcement"]
+source_ids = ["homepage", "orange-announcement", "orange-case", "rapid7-release", "rapid7-beta", "alter-domus", "customer-stories"]
+summary = "Named customer references include Orange Business and Alter Domus, and Rapid7 announced an integration partnership whose offering was beta at announcement. ARMO's homepage reports large usage counts, but paid usage, volumes, and commercial outcomes are not independently verified."
 
 [[intelligence.research.topic_checks]]
 topic = "intellectual_property"
-status = "not_found"
-checked_at = "2026-10-03T20:40:08Z"
-next_review_on = "2027-04-03"
-queries = ["ARMO Security patent USPTO Kubescape", "Cyber Armor Ltd patent WIPO", "ARMO Kubernetes runtime security patent"]
-source_ids = ["about", "legal-terms"]
-summary = "No verifiable patent record assigned to ARMO or Cyber Armor Ltd was found in the searched public web results; absence is not established."
+status = "reported"
+checked_at = "2026-10-22T02:31:34Z"
+next_review_on = "2027-04-22"
+queries = ["site:patents.google.com Cyber Armor Ltd ARMO Kubernetes security patent", "site:patentscope.wipo.int Cyber Armor ARMO Kubernetes security", "site:uspto.gov Cyber Armor ARMO patent Kubernetes"]
+source_ids = ["patent-runtime", "patent-crypto"]
+summary = "Identified two US grants assigned to Cyber Armor Ltd. concerning runtime integrity and cryptographic material protection. No complete portfolio or direct mapping to current Kubescape-based features was established; official registry status should be checked."
 
 [[intelligence.research.topic_checks]]
 topic = "competition"
 status = "reported"
-checked_at = "2026-10-03T20:40:08Z"
-next_review_on = "2027-04-03"
-queries = ["ARMO runtime security competitors Wiz Aqua Sysdig Prisma Cloud official"]
-source_ids = ["about", "cncf-project"]
-summary = "Compared category overlap against Prisma Cloud, Wiz, Aqua Security, and Sysdig; independent efficacy and market-share comparisons remain unavailable."
+checked_at = "2026-10-22T02:31:34Z"
+next_review_on = "2027-04-22"
+queries = ["Wiz cloud AI runtime security platform official Kubernetes", "Palo Alto Prisma Cloud Kubernetes runtime security official", "Aqua Kubernetes runtime security official platform", "Sysdig Secure Kubernetes runtime security official"]
+source_ids = ["about", "paloalto", "wiz", "aqua", "sysdig"]
+summary = "Official product sources confirm overlapping posture, workload vulnerability, runtime detection, and response capabilities at Prisma Cloud, Wiz, Aqua, and Sysdig. No independent head-to-head benchmark or share data was found."
 
 [[intelligence.research.topic_checks]]
 topic = "dual_use"
 status = "reported"
-checked_at = "2026-10-03T20:40:08Z"
-next_review_on = "2027-04-03"
-queries = ["ARMO defense government customers air-gapped deployment", "ARMO on premises air gapped Kubernetes security"]
-source_ids = ["about", "orange-announcement", "orange-case"]
-summary = "On-premises and air-gapped Kubernetes protection is documented and has sovereign-cloud relevance; no defense customer, government contract, or accreditation is established."
+checked_at = "2026-10-22T02:31:34Z"
+next_review_on = "2027-04-22"
+queries = ["ARMO Kubernetes security government defense contract federal contract CAGE", "ARMO on premises air gapped Kubernetes security", "Rapid7 ARMO platform technology powers Rapid7 Command Platform January 2026 announcement"]
+source_ids = ["hub-docs", "about", "orange-case", "rapid7-release", "rapid7-beta"]
+summary = "Runtime protection for Kubernetes plus on-premises and air-gapped deployment creates a credible defensive fit for sensitive environments. No public defense or government contract, authorization, accreditation, or military deployment was identified."
 
 [[intelligence.research.claim_checks]]
 field_path = "company.operating_status"
 support = "direct"
-summary = "ARMO's current site lists active products, leadership, careers, and current customer content; its site carries a 2026 copyright notice."
-verified_at = "2026-10-03T20:40:08Z"
-source_ids = ["about", "customer-stories"]
+summary = "ARMO's current company site lists active product offerings, leadership, and a current careers/contact path; a CTO article dated 2026-09-26 and the platform homepage show ongoing company activity."
+verified_at = "2026-10-22T02:31:34Z"
+source_ids = ["about", "latest-blog", "homepage"]
 
 [[intelligence.research.claim_checks]]
 field_path = "israel_connection"
 support = "direct"
-summary = "ARMO legal notice identifies Cyber Armor Ltd as registered in Israel; CheckID lists company number 515721538 and a Tel Aviv address; contemporaneous reporting identifies ARMO as Israel-based."
-verified_at = "2026-10-03T20:40:08Z"
-source_ids = ["legal-notice", "checkid-record", "seed-venturebeat"]
+summary = "ARMO's privacy policy says Cyber Armor Ltd. is registered in Israel; the 2021 company financing release is datelined Tel Aviv, Israel, and CheckID lists the Israeli company number and Tel Aviv-Yafo address."
+verified_at = "2026-10-22T02:31:34Z"
+source_ids = ["privacy", "seed-2021", "checkid-record"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.seed-2021.amount"
 support = "direct"
-summary = "Contemporaneous reporting states the 2021 seed was $4.5 million."
-verified_at = "2026-10-03T20:40:08Z"
-source_ids = ["seed-venturebeat", "seed-ctech"]
+summary = "The ARMO-provided release states that the company secured $4.5 million in Seed funding on its January 27, 2021 announcement."
+verified_at = "2026-10-22T02:31:34Z"
+source_ids = ["seed-2021"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.seed-2021.lead_investors"
 support = "direct"
-summary = "Contemporaneous reports name Pitango First as the seed investor/lead."
-verified_at = "2026-10-03T20:40:08Z"
-source_ids = ["seed-venturebeat", "seed-ctech"]
-
-[[intelligence.research.claim_checks]]
-field_path = "funding.rounds.series-a-2022.amount"
-support = "direct"
-summary = "ARMO's announcement states it raised $30 million in its Series A."
-verified_at = "2026-10-03T20:40:08Z"
-source_ids = ["series-a-company"]
-
-[[intelligence.research.claim_checks]]
-field_path = "funding.rounds.series-a-2022.lead_investors"
-support = "direct"
-summary = "ARMO's announcement explicitly names Tiger Global as Series A lead."
-verified_at = "2026-10-03T20:40:08Z"
-source_ids = ["series-a-company"]
-
-[[intelligence.research.claim_checks]]
-field_path = "funding.rounds.series-a-2022.participating_investors"
-support = "direct"
-summary = "ARMO names Hyperwise Ventures, Pitango First, and Peled Ventures as participants in the Series A."
-verified_at = "2026-10-03T20:40:08Z"
-source_ids = ["series-a-company"]
+summary = "The Seed financing announcement names Pitango First as the funding source."
+verified_at = "2026-10-22T02:31:34Z"
+source_ids = ["seed-2021"]
 
 [[intelligence.research.claim_checks]]
 field_path = "funding.rounds.seed-2021.participating_investors"
 support = "direct"
-summary = "The seed round announcement reports Pitango First as the funding source."
-verified_at = "2026-10-03T20:40:08Z"
-source_ids = ["seed-venturebeat", "seed-ctech"]
+summary = "The Seed financing announcement names Pitango First as the investor."
+verified_at = "2026-10-22T02:31:34Z"
+source_ids = ["seed-2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2022.amount"
+support = "direct"
+summary = "ARMO's April 27, 2022 announcement states that it raised $30 million in a Series A."
+verified_at = "2026-10-22T02:31:34Z"
+source_ids = ["series-a-2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2022.lead_investors"
+support = "direct"
+summary = "ARMO's Series A release explicitly names Tiger Global as the lead investor."
+verified_at = "2026-10-22T02:31:34Z"
+source_ids = ["series-a-2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2022.participating_investors"
+support = "direct"
+summary = "ARMO names Hyperwise Ventures, Pitango First, and Peled Ventures as participating in the Series A."
+verified_at = "2026-10-22T02:31:34Z"
+source_ids = ["series-a-2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.shareholders"
+support = "direct"
+summary = "CheckID's page lists these individuals and investment entities with shareholder roles as of a page updated on 2026-07-06, but it supplies no percentages, and its English translations are expressly qualified."
+verified_at = "2026-10-22T02:31:34Z"
+source_ids = ["checkid-record"]
