@@ -1,0 +1,656 @@
+name = "Nym"
+description = "Autonomous medical coding software that turns clinical documentation into explainable billing codes and sends eligible encounters directly into provider billing workflows."
+detailed_description = """Nym, legally identified on its current website as Nym Health Ltd., sells autonomous medical coding software to U.S. hospitals, health systems, physician groups and revenue-cycle operators. Founded in 2018 by Amihai Neiderman and Adam Rimon, the company grew from a Tel Aviv-originated clinical-language project into a New York-headquartered healthcare software business with research and development operations in Tel Aviv. It remained privately held and active in 2026, when it appointed Lori Jones as CEO and continued publishing product material.
+
+The product reads clinical notes in electronic health records, reconstructs the meaning and context of an encounter, maps the encounter to supported code sets, and routes successfully coded encounters to billing. Nym calls its approach Clinical Language Understanding (CLU). Its current product description says CLU combines machine-learning models with rules-based clinical ontologies; the company emphasizes traceable code-level rationales and customer-configurable coding guidelines. This differs from tools that only suggest codes for a coder to validate. Nym says encounters with missing information or insufficient confidence are sent to human coders, so it automates a defined portion of a workflow rather than removing the need for coding, compliance, audit and revenue-integrity staff.
+
+The public product scope spans emergency medicine, radiology, outpatient surgery, outpatient visits, inpatient professional coding and urgent care. Nym reports that the engine supports Epic integration and received Epic Showroom Toolbox designation in the Fully Autonomous Coding category in August 2024. KLAS’s 2023 Nym profile describes per-chart pricing for successfully coded charts, with pricing varying by specialty, facility versus professional coding and customer volume. That makes deployment success, eligible-encounter coverage and chart volume central to customer economics.
+
+The commercial record has advanced beyond pilots: Nym’s 2021 funding release said the product was deployed in more than 40 hospitals; a 2024 announcement reported more than six million charts processed annually; and a 2025 NYC Health + Hospitals board record authorized a three-year contract with two renewal options after a competitive RFP. Nym also publishes customer case studies for Inova and Genesis HealthCare System. These are useful implementation evidence, but company-reported performance figures should be validated against customer-side denominators, case mix and audit outcomes. In 2026 Nym described processing millions of charts annually for hundreds of healthcare facilities, a different scale measure from a count of distinct contracting customers.
+
+One U.S. patent application published in 2020 describes generating standardized codes from electronic records using computational-linguistic analysis, narrative context, insight extraction and an audit trail. The available record establishes an application, not a granted patent or the status of a complete international portfolio. Nym’s product page states that the service is SOC 2 Type II and ISO/IEC 27001:2022 certified and HIPAA compliant; these are company disclosures and should be checked against current audit reports during diligence."""
+logo = "Unknown"
+website = "https://nym.health"
+sector = "Healthcare AI; revenue-cycle management software"
+founded = "2018"
+headquarters = "New York City, New York, United States"
+employees = "84 reported in October 2024; current headcount not established"
+funding_stage = "Growth investment (2024)"
+entity_type = "startup"
+dual_use = false
+dual_use_description = "The public product is designed for healthcare revenue-cycle operations. The reviewed sources disclose no defense or security customers, contracts, or military use. Clinical-language processing could be adapted to other coded-record workflows in theory, but no defense application is evidenced; this record treats Nym as commercial healthcare technology."
+key_technologies = ["Clinical Language Understanding", "Computational linguistics", "Clinical ontologies", "Machine learning", "Autonomous medical coding", "EHR and revenue-cycle integration", "Audit-trail generation"]
+use_cases = ["Emergency department coding", "Radiology coding", "Outpatient surgery coding", "Outpatient and urgent-care coding", "Inpatient professional coding", "Revenue-cycle workflow automation", "Code-level audit and denial support"]
+investible = false
+investment_rationale = "Nym addresses a specific, recurring cost center in provider operations: translating clinical records into billing codes quickly enough to support accurate claims and cash collection. A per-successfully-coded-chart model can align fees with customer volume and measurable workflow outcomes, while its published support for six service lines gives existing health-system deployments room to expand. The strongest evidence of commercial maturity is the combination of repeated growth financing, customer-side operational use, Epic Showroom designation, and a New York City public-health-system contract authorization following an RFP. Its claimed explainability is valuable where a billing decision may be challenged and a black-box output is hard for coders and compliance teams to defend. The opportunity is balanced by limited financial transparency: no current revenue, ARR, margin, burn, runway, customer concentration or valuation was found. Headline accuracy and savings figures are company-reported and vary by use case, while the NYC contract ceiling includes contingency and renewal options and must not be treated as recognized revenue. The disclosed round totals also do not reconcile cleanly. These limits keep this legacy internal investible flag at false despite evidence of an operating, funded product."
+strategic_value = "Nym is strategically relevant to the U.S. healthcare technology stack because coding sits between clinical documentation, EHR workflow, payer rules and provider reimbursement. If it can safely automate a larger share of routine cases, providers may bill sooner, reduce manual backlogs and reassign scarce certified coders to complex cases, audits and documentation improvement. Its code-linked rationale may help customers explain claims during payer review, although a generated rationale does not itself guarantee coding compliance or reimbursement. Epic interoperability is commercially meaningful because integration friction and procurement cycles can determine whether an otherwise strong engine reaches production. The NYC Health + Hospitals procurement record provides unusually concrete public evidence: after a competitive process the board authorized execution of a three-year contract, with a not-to-exceed value including contingency and optional renewals. Strategic value depends on proving sustained production rates and defensible results across specialties, not just favorable ED case studies. For Israel, Nym represents an Israeli-founded company that retains Tel Aviv R&D while selling primarily into the U.S. provider market; no defense or national-security strategic role was identified."
+potential_score = 62
+technology_score = 78
+market_score = 72
+team_score = 74
+dual_use_score = 4
+strategic_alignment_score = 56
+stage = "mid"
+stage_rationale = "Nym has disclosed Seed, Series A and follow-on financings, a $47 million 2024 growth investment, multiple production deployments, six supported specialties and a public health-system contract authorization. This is beyond early product validation. A mid-stage classification is more defensible than mature because private financials, customer concentration, retention, margin profile and execution at broad scale remain undisclosed, and the most recent funding event located is from 2024."
+competitors = ["CodaMetrix", "Fathom", "Optum Computer-Assisted Coding", "Maverick Medical AI"]
+competitive_edge = "Nym’s clearest claimed distinction is its combination of direct-to-billing automation and a traceable rationale for each code, built around clinical-language interpretation plus rules-based ontologies. The U.S. application assigned to Nym Health Ltd. describes analyzing sentences, constructing narrative context, extracting insights and selecting standardized codes, a technical path consistent with that product story. Nym also says its engine routes low-confidence or incomplete encounters to coders, supports organization-specific guidelines, and integrates with Epic; this exception path matters because coding rules, documentation quality and service-line workflows vary by provider. CodaMetrix publicly emphasizes a longitudinal patient story assembled across notes, orders, charges and schedules, plus its own Coding Quality Framework and Epic integration. Fathom markets broader coding operations across health systems, physician groups, outpatient clinics, health plans and RCM vendors. Optum is an incumbent with computer-assisted coding and a large installed coding-data footprint, even where its product retains a human review step. These feature descriptions establish credible competition, not a verified winner. Nym’s edge should be tested with customer-level automation and audit outcomes on the same specialties, code sets and chart mix; public accuracy claims are not directly comparable."
+risk_factors = ["No current revenue, ARR, profitability, cash, burn or runway disclosure was located.", "No public cap table, ownership percentages, shareholder concentration or transaction terms were found.", "The July 2021 company-stated cumulative funding of $47.5 million and later $47 million round conflict with 2024 media reports of $92 million lifetime funding; the disclosed round amounts add to $94.5 million.", "2021 reporting labels the $25 million follow-on inconsistently: Nym described additional funding, KLAS called it Series A-1, and CTech called it Series B.", "Published accuracy, automation, savings and denial-reduction figures are company-reported and require customer-side, specialty-specific validation.", "Eligible-case coverage leaves exceptions and high-judgment cases with human coders; low automation in a customer’s case mix could weaken the economics.", "Clinical coding errors can create denials, recoupments, compliance exposure and reputational harm; software certification alone does not establish coding correctness.", "Health-system sales and EHR integrations can involve long security, governance, procurement and implementation cycles; the NYC board record says further review remained part of contracting.", "Large incumbents and autonomous-coding peers can bundle adjacent revenue-cycle functions or compete for the same enterprise relationships.", "The founders moved out of day-to-day executive roles, and the CEO changed again in April 2026; diligence should assess continuity under the new leadership.", "The reviewed public patent record identifies an application but does not establish granted rights, freedom to operate or the full IP portfolio."]
+risk_level = "medium"
+signals = ["Founded in 2018 by Israeli founders; current company disclosure confirms Tel Aviv R&D", "Four disclosed funding events through October 2024", "$47 million 2024 growth investment led by PSG", "Product designated in Epic Showroom Toolbox for Fully Autonomous Coding", "NYC Health + Hospitals board authorized a multi-year autonomous coding contract after competitive RFP", "Company reports millions of charts annually and deployments across hundreds of healthcare facilities", "Publicly reported total funding amounts do not reconcile"]
+priority_rank = 50
+priority_rationale = "Keep Nym at a moderate internal research priority. It combines credible technical differentiation, named production customers, a public contract record and an experienced healthcare operating team. The lack of current financials, the mismatch in reported lifetime funding, unverified customer outcome denominators and the April 2026 CEO transition prevent a higher priority until revenue quality, retention, production automation rates and contract execution are verified. This is a catalog triage signal, not an investment recommendation."
+crawled_at = "2026-10-22T01:33:00Z"
+updated_at = "2026-10-22T01:33:00Z"
+public_sources = [
+  { label = "Nym official website", url = "https://nym.health/", description = "Current product, features and customer references." },
+  { label = "Nym About and leadership", url = "https://nym.health/about/", description = "Current leadership bios and company technology overview." },
+  { label = "Nym terms and legal name", url = "https://nym.health/terms-conditions/", description = "Identifies Nym Health Ltd. as site operator and describes proprietary rights." },
+  { label = "Nym seed announcement", url = "https://www.prnewswire.com/il/news-releases/nym-creator-of-autonomous-medical-coding-technology-closes-6-million-seed-round-led-by-bessemer-venture-partners-300866225.html", description = "Company announcement of 2019 seed financing." },
+  { label = "Nym Series A announcement", url = "https://nym.health/press-release/nym-health-announces-16-5m-series-a/", description = "Company announcement of 2020 Series A and participants." },
+  { label = "Nym 2021 follow-on announcement", url = "https://nym.health/press-release/nym-health-raises-additional-25-million-in-funding-led-by-addition/", description = "Company announcement of follow-on financing and cumulative total as of July 2021." },
+  { label = "Nym 2024 growth investment", url = "https://nym.health/press-release/autonomous-medical-coding-engine-nym-announces-47-million-growth-investment-led-by-psg/", description = "Company announcement of $47 million growth investment and 2024 operating claims." },
+  { label = "CTech 2024 Nym funding and operations", url = "https://www.calcalistech.com/ctechnews/article/bk36lbtrc", description = "Independent Israeli business reporting on 2024 funding, reported total, employees and leadership." },
+  { label = "Nym CEO transition 2023", url = "https://nym.health/press-release/nym-appoints-or-peles-as-next-chief-executive-officer/", description = "Company announcement documenting the founder-to-CEO transition and Or Peles’s background." },
+  { label = "Nym CEO appointment 2026", url = "https://nym.health/press-release/nym-welcomes-lori-jones-as-chief-executive-officer/", description = "Current CEO appointment, company headquarters, Tel Aviv R&D, investors and operating claims." },
+  { label = "Nym autonomous coding engine", url = "https://nym.health/autonomous-medical-coding/nym-engine/", description = "Product scope, security and compliance statements, and claimed provider footprint." },
+  { label = "Nym Epic Toolbox announcement", url = "https://nym.health/press-release/nyms-autonomous-medical-coding-engine-listed-in-epic-toolbox/", description = "Company announcement of Epic Showroom Toolbox designation." },
+  { label = "NYC Health + Hospitals board record", url = "https://hhinternet.blob.core.windows.net/uploads/2025/09/202509-board.pdf", description = "Government board record authorizing execution of a Nym contract after a competitive RFP." },
+  { label = "Genesis HealthCare System case study", url = "https://go.nym.health/genesis-case-study", description = "Company-published named customer deployment and reported operational outcomes." },
+  { label = "Nym patent application record", url = "https://patents.justia.com/patent/20200395110", description = "Published U.S. patent application assigned to NYM Health Ltd.; not represented as a granted patent." },
+  { label = "KLAS Nym profile 2023", url = "https://4106700.fs1.hubspotusercontent-na1.net/hubfs/4106700/Collateral/Industry%20Reports%2C%20Whitepapers%20%28e.g.%20KLAS%2C%20NPS%2C%20Engine%20Overview%29/Nym%20Report%20%7C%20KLAS%20Emerging%20Solutions%20Spotlight.pdf?hsCtaAttrib=194617588854", description = "KLAS profile of historical customers, employees, per-chart pricing and 2021 round label." },
+  { label = "Nasdaq Private Market Nym profile", url = "https://www.nasdaqprivatemarket.com/company/nym-health/", description = "Independent private-security profile; no public ticker or IPO is indicated." },
+  { label = "TechCrunch founder background", url = "https://techcrunch.com/2020/10/13/nym-health-raises-14-million-for-its-auditable-machine-learning-tools-for-automating-hospital-billing/", description = "Founder background and company origin; not used as the controlling source for Series A amount." },
+  { label = "CodaMetrix product", url = "https://www.codametrix.com/", description = "Official competitor description of autonomous coding, longitudinal clinical context and its quality framework." },
+  { label = "Fathom product", url = "https://fathomhealth.com/", description = "Official competitor description of coding automation across provider and payer settings." },
+  { label = "Optum computer-assisted coding", url = "https://campaign.optum.com/content/dam/optum3/optum/en/resources/PDFs/optumserve-computer-assisted-coding-professional.pdf", description = "Official Optum description of incumbent computer-assisted coding capabilities." }
+]
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Amihai Neiderman", role = "Co-founder; CEO from 2018 until the 2023 transition; board member announced in 2023", is_founder = true, current = false, background = "Israeli Unit 8200 alumnus who co-founded Nym with Adam Rimon. He led the company as CEO from inception and continued as a board member when Or Peles was appointed CEO in May 2023. Current operating role was not found.", source_ids = ["official-ceo-transition-2023", "techcrunch-founders"] },
+  { name = "Adam Rimon", role = "Co-founder; historical technology leader", is_founder = true, current = false, background = "Israeli Unit 8200 alumnus with doctoral training in computational linguistics, a relevant base for Nym’s clinical-language approach. His current operating role was not found in current company leadership materials.", source_ids = ["press-series-a-2020", "techcrunch-founders"] },
+  { name = "Or Peles", role = "Former CEO and CTO; appointed CEO in 2023", is_founder = false, current = false, background = "Joined as SVP of R&D in 2022 and had more than 20 years of software-industry experience. Before Nym he was COO of Tasq.ai and CTO of NICE Actimize, where he helped scale the organization. He was replaced as CEO by Lori Jones in April 2026.", source_ids = ["official-ceo-transition-2023", "official-ceo-2026"] },
+  { name = "Lori M. Jones", role = "Chief Executive Officer", is_founder = false, current = true, background = "Healthcare technology operator with more than two decades of experience; previously President of Olive AI, Chief Commercial Officer at Agiliti Health and Connance, and Chief Growth Officer at Aptarro.", source_ids = ["official-ceo-2026", "official-about"] },
+  { name = "Lorri Sides", role = "Chief Product Officer", is_founder = false, current = true, background = "More than 25 years in healthcare, including two decades at Optum in product leadership, followed by product strategy work at Innovaccer and earlier emergency-services operations at Community Health Systems.", source_ids = ["official-about"] },
+  { name = "Yaniv Shachar", role = "SVP of Research and Development", is_founder = false, current = true, background = "More than 20 years building engineering organizations; previously SVP of R&D at Verbit.ai and co-founder of Upscale.guru, with experience across AI, cloud infrastructure, cybersecurity and data platforms.", source_ids = ["official-about"] },
+  { name = "Yuval Yezersky", role = "Chief Financial Officer", is_founder = false, current = true, background = "Nearly two decades in finance and operations across technology companies; previously held finance leadership roles at OpenWeb, AnyVision, WalkMe and Kornit Digital.", source_ids = ["official-about"] }
+]
+investors = [
+  { name = "Bessemer Venture Partners", investor_type = "vc", website = "https://www.bvp.com/", round_ids = ["seed-2019", "series-a-2020", "followon-2021"], relationship = "current", source_ids = ["press-seed-2019", "press-series-a-2020", "press-followon-2021", "official-ceo-2026"] },
+  { name = "GV (formerly Google Ventures)", investor_type = "corporate", website = "https://www.gv.com/", round_ids = ["series-a-2020", "followon-2021", "growth-2024"], relationship = "current", source_ids = ["press-series-a-2020", "press-followon-2021", "press-growth-2024", "official-ceo-2026"] },
+  { name = "Lightspeed Venture Partners", investor_type = "vc", website = "https://lsvp.com/", round_ids = ["series-a-2020", "followon-2021"], relationship = "historical", source_ids = ["press-series-a-2020", "press-followon-2021"] },
+  { name = "Tiger Global Management", investor_type = "pe", website = "https://www.tigerglobal.com/", round_ids = ["series-a-2020", "followon-2021"], relationship = "current", source_ids = ["press-series-a-2020", "press-followon-2021", "official-ceo-2026"] },
+  { name = "Addition", investor_type = "vc", website = "https://addition.com/", round_ids = ["followon-2021", "growth-2024"], relationship = "current", source_ids = ["press-followon-2021", "press-growth-2024", "official-ceo-2026"] },
+  { name = "Dynamic Loop Capital", investor_type = "other", round_ids = ["series-a-2020", "followon-2021", "growth-2024"], relationship = "current", source_ids = ["press-series-a-2020", "press-followon-2021", "press-growth-2024", "official-ceo-2026"] },
+  { name = "PSG (Providence Strategic Growth)", investor_type = "pe", website = "https://www.psgequity.com/", round_ids = ["growth-2024"], relationship = "current", source_ids = ["press-growth-2024", "official-ceo-2026"] },
+  { name = "Samsung Next", investor_type = "corporate", website = "https://samsungnext.com/", round_ids = ["growth-2024"], relationship = "historical", source_ids = ["press-growth-2024"] },
+  { name = "Zach Weinberg", investor_type = "angel", round_ids = ["series-a-2020", "followon-2021"], relationship = "current", source_ids = ["press-series-a-2020", "press-followon-2021", "official-ceo-2026"] },
+  { name = "Nat Turner", investor_type = "angel", round_ids = ["series-a-2020", "followon-2021"], relationship = "current", source_ids = ["press-series-a-2020", "press-followon-2021", "official-ceo-2026"] }
+]
+financials = [
+  { name = "Employees reported", value = "84 employees", as_of = "2024-10-01", basis = "reported", metric = "employees", numeric_value = 84, value_relation = "exact", unit = "people", notes = "CTech reported 84 employees in Tel Aviv and New York in October 2024; this is historical, not a current headcount.", source_ids = ["media-ctech-2024"] }
+]
+traction = [
+  { kind = "customer", description = "Nym’s 2021 company funding announcement said the product was deployed in more than 40 U.S. hospitals, including Geisinger. This is a company-reported historical deployment count.", date = "2021-07-27", source_ids = ["press-followon-2021"] },
+  { kind = "product", description = "Nym announced Epic Showroom Toolbox designation in the Fully Autonomous Coding category. The company said this indicated its integration met Epic's recommended connection practices; it is not evidence of an Epic endorsement of coding outcomes.", date = "2024-08-19", source_ids = ["official-epic"] },
+  { kind = "product", description = "Nym reported processing more than six million charts annually as of September 2024 across U.S. health systems, hospitals and physician groups, with six supported specialties. This is a company announcement and does not disclose chart mix or paying-customer count.", date = "2024-09", source_ids = ["press-growth-2024"] },
+  { kind = "contract", description = "NYC Health + Hospitals selected Nym as the highest-scoring vendor in a competitive RFP. Its board unanimously approved authorization to execute a three-year autonomous-coding contract with two optional renewals and a not-to-exceed ceiling of $8,110,800 including 20% contingency. The ceiling is not reported revenue, and the board record says contracting review remained part of rollout.", date = "2025-09-25", source_ids = ["govt-nyc-contract"] },
+  { kind = "customer", description = "A company case study says Genesis HealthCare System initially automated about 50% of eligible ED facility coding encounters, rising to about 70%, with reported coding accuracy of 96% or higher; it later expanded deployment to outpatient visits. Treat these outcomes as company-published customer evidence pending customer-side validation.", source_ids = ["official-genesis-case"] },
+  { kind = "product", description = "In its April 2026 CEO announcement, Nym said it processed millions of charts annually for hundreds of U.S. healthcare facilities and supported six specialties across inpatient and outpatient care. Facilities are not the same unit as distinct customers.", date = "2026-04-21", source_ids = ["official-ceo-2026"] }
+]
+intellectual_property = [
+  { kind = "patent", description = "U.S. application 16/677,217, publication US20200395110A1, assigned to NYM Health Ltd. and listing Adam Rimon as inventor, describes generating standardized codes from electronic records through computational-linguistic analysis, narrative construction, insight extraction and code selection. The reviewed record establishes a published application only; grant status and the broader portfolio were not verified.", date = "2020-12-17", source_ids = ["patent-justia"] }
+]
+comparables = [
+  { name = "CodaMetrix", website = "https://www.codametrix.com/", rationale = "Direct autonomous medical coding competitor targeting health systems and multiple coding workflows.", differentiation = "CodaMetrix publicly describes combining clinical notes, orders, charges and schedules into a longitudinal patient story and offers its Rosetta coding-quality framework. Nym emphasizes CLU, customer-specific guidelines and traceable code rationales. These are vendor descriptions, not independently benchmarked results.", source_ids = ["competitor-codametrix", "official-product"] },
+  { name = "Fathom", website = "https://fathomhealth.com/", rationale = "Direct AI medical coding competitor serving health systems, physician groups, outpatient clinics, health plans and RCM vendors.", differentiation = "Fathom markets automation across a broad healthcare-provider and payer ecosystem and large chart-processing scale. Nym’s published material emphasizes code-level traceability, customer-configured rules and a distinct Tel Aviv R&D base. Comparative automation and accuracy figures require matched case-mix testing.", source_ids = ["competitor-fathom", "official-product"] },
+  { name = "Optum Computer-Assisted Coding", website = "https://www.optum.com/", rationale = "Incumbent coding and NLP platform that can be bundled into broader provider and revenue-cycle relationships.", differentiation = "Optum's official CAC Professional material describes NLP-assisted code assignment and customizable coder workflows; it is a substitute for parts of Nym’s workflow even when human validation remains involved. Nym positions its engine as direct-to-billing for eligible cases.", source_ids = ["competitor-optum", "official-product"] }
+]
+
+[intelligence.company]
+company_id = "il-nym"
+legal_name = "Nym Health Ltd."
+aliases = ["Nym Health", "Nym Health Ltd."]
+operating_status = "active"
+business_model = "B2B software for healthcare providers and revenue-cycle organizations; KLAS describes a per-chart fee for charts successfully coded, with price varying by specialty, facility or professional coding and customer volume."
+products = ["Nym autonomous medical coding engine", "Clinical Language Understanding technology"]
+locations = ["New York City, United States (headquarters)", "Tel Aviv, Israel (R&D)"]
+founded_on = "2018"
+source_ids = ["official-terms", "official-home", "press-seed-2019", "official-ceo-2026"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Four publicly disclosed financing events were identified: a $6.0M 2019 seed, $16.5M 2020 Series A, $25.0M 2021 follow-on, and $47.0M 2024 growth investment. Nym stated $47.5M cumulative funding as of July 2021. CTech and Globes reported $92M cumulative after the 2024 investment, while the four disclosed event amounts sum to $94.5M; Nym has not published a reconciled current lifetime total in the reviewed sources. The 2021 round name is also inconsistent across sources. No valuation terms were disclosed."
+reported_total_raised = 47500000
+reported_total_currency = "USD"
+total_source_ids = ["press-followon-2021"]
+total_as_of = "2021-07-27"
+total_scope = "Company-announced cumulative funding as of 2021-07-27; later 2024 growth investment excluded."
+history_status = "partial"
+coverage_through = "2026-10-22"
+
+[[intelligence.funding.rounds]]
+id = "seed-2019"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2019-06-12"
+amount_status = "reported"
+amount = 6000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Bessemer Venture Partners"]
+participating_investors = []
+valuation_basis = "undisclosed"
+source_ids = ["press-seed-2019"]
+notes = "Nym's announcement said the seed financing had been secured and named Bessemer as lead; it did not disclose other seed participants or valuation."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2020"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2020-10-13"
+amount_status = "reported"
+amount = 16500000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["GV"]
+participating_investors = ["Bessemer Venture Partners", "Lightspeed Venture Partners", "Tiger Global Management", "Zach Weinberg", "Nat Turner"]
+valuation_basis = "undisclosed"
+source_ids = ["press-series-a-2020"]
+notes = "Nym's announcement identifies GV as lead and names the participants; no valuation was disclosed."
+
+[[intelligence.funding.rounds]]
+id = "followon-2021"
+round_type = "Follow-on funding"
+instrument = "equity"
+status = "closed"
+announced_on = "2021-07-27"
+amount_status = "reported"
+amount = 25000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Addition"]
+participating_investors = ["GV", "Dynamic Loop Capital", "Tiger Global Management", "Bessemer Venture Partners", "Lightspeed Venture Partners", "Zach Weinberg", "Nat Turner"]
+valuation_basis = "undisclosed"
+source_ids = ["press-followon-2021", "klas-profile-2023", "media-ctech-2024"]
+notes = "The company calls this additional $25M funding; KLAS's 2023 profile labels it Series A-1 while CTech later calls it Series B. The neutral follow-on label avoids resolving that naming conflict by inference."
+
+[[intelligence.funding.rounds]]
+id = "growth-2024"
+round_type = "Growth investment"
+instrument = "unknown"
+status = "closed"
+announced_on = "2024-10-01"
+amount_status = "reported"
+amount = 47000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["PSG"]
+participating_investors = ["GV", "Addition", "Samsung Next", "Dynamic Loop Capital"]
+valuation_basis = "undisclosed"
+source_ids = ["press-growth-2024", "media-ctech-2024"]
+notes = "Nym described this as a growth investment; CTech described the round as completed. Terms, equity instrument details and valuation were not disclosed."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Nym Health Ltd. is privately held. No public cap table, beneficial ownership percentages, parent company, acquisition or secondary-sale transaction was found in the reviewed sources. Nasdaq Private Market describes Nym Health stock as a private security with no public ticker or IPO; its public profile does not disclose private holdings or full cap-table terms."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["official-terms", "nasdaq-private-market", "official-ceo-2026"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders", "israeli_rd"]
+summary = "Nym was founded by Israeli entrepreneurs Amihai Neiderman and Adam Rimon, both reported as Unit 8200 alumni. Nym's 2026 company announcement states that the company is headquartered in New York City and has R&D operations in Tel Aviv, Israel. The Israeli connection is therefore founder and R&D based, not a claim that the current headquarters is in Israel."
+as_of = "2026-10-22"
+source_ids = ["official-ceo-2026", "official-ceo-transition-2023", "techcrunch-founders"]
+
+[intelligence.research]
+researched_at = "2026-10-22T01:33:00Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Nym health AI medical coding company founders headquarters funding $25 million official",
+  "site:nym.health company/about founders investors funding Nym healthcare coding",
+  "Nym Health company Israel founded healthcare automation funding founders 2024",
+  "site:nym.health/press-release Nym Series C 47 million October 2024",
+  "Nym Health 2019 seed $6 million seed round Bessemer",
+  "Nym Health funding 2025 2026 raised acquisition new investors",
+  "Nym autonomous medical coding product specialties customers health system 2025",
+  "Nym Health revenue ARR financials profitability burn runway valuation",
+  "Nym Health acquisition acquired merger ownership parent company valuation",
+  "Nym Health founder CEO 2026 team history Amihai Neiderman Adam Rimon Or Peles",
+  "Nym Health medical coding defense military government defense customers dual use",
+  "Nym Health patents clinical language understanding patent Nym Health Ltd",
+  "site:patents.google.com Nym Health medical coding",
+  "CodaMetrix autonomous coding AI technology official medical coding",
+  "Fathom autonomous medical coding official healthcare AI coder",
+  "Optum autonomous medical coding software official",
+  "Nym Health competitors autonomous coding CodaMetrix Fathom 2024",
+  "Autonomous Medical Coding Engine Nym Announces $47 Million Growth Investment Led by PSG",
+  "Nym health logo favicon official site metadata"
+]
+gaps = [
+  "identity: Nym Health Ltd. is the current website operator, but a current government registry extract, incorporation jurisdiction and registration identifier were not verified; historical spellings and legal entities beyond the Nym/Nym Health variants were not located.",
+  "funding: no round valuations or fully reconciled current lifetime total were found; the reported cumulative totals and 2021 round label conflict as described in funding.summary and conflicts.",
+  "investors: round announcements name investors but do not disclose check sizes, fund ownership percentages or investor rights; seed participants beyond the named lead were not established.",
+  "team: current public leadership is identified, but a full employee roster, current exact headcount, founder ownership and all board members were not established.",
+  "ownership: public cap table and holdings were not found; parent-company status, secondary transactions and the complete acquisition history remain unverified.",
+  "financials: no current revenue, ARR, profitability, cash, burn, runway or audited financial statements were found. The 84-person count is a dated October 2024 media report, not a current headcount.",
+  "traction: public evidence gives different units and dates for hospitals, customers, charts and facilities; no current distinct paying-customer count, renewal rate, retention, contract revenue or independent outcome dataset was found.",
+  "intellectual_property: one published U.S. patent application was identified; a complete global patent, trademark, licensing, litigation and grant-status review was not established.",
+  "competition: the competitor set is established from official product descriptions, but no independent same-specialty, same-case-mix accuracy, automation-rate, pricing or retention comparison was found.",
+  "dual_use: no defense, intelligence, military or security customer, contract or use case was found; public materials focus on commercial healthcare coding."
+]
+conflicts = [
+  "Cumulative funding does not reconcile: Nym stated $47.5M as of 2021-07-27; the 2024 $47M growth investment would bring the listed round amounts to $94.5M, while CTech and Globes reported $92M total after the new investment. The current total field is kept at the company-announced $47.5M as of 2021, and the $92M media figure remains in source context rather than a numeric total field.",
+  "The July 2021 $25M financing is described by Nym as additional funding, labeled Series A-1 in the 2023 KLAS profile, and called Series B by CTech. It is represented as a separate follow-on event without asserting one disputed series name."
+]
+diligence_questions = [
+  "For each supported specialty, what share of eligible charts is coded autonomously, what is the denominator, and how are accuracy, audit findings, payer denials and later recoupments measured by an independent customer auditor?",
+  "What is the implementation and contract status of the NYC Health + Hospitals award, and what contracted, invoiced and recognized revenue is associated with it versus the $8.11M not-to-exceed ceiling and optional renewals?",
+  "What are current ARR, gross margin, customer concentration, retention and per-chart economics after implementation and exception handling costs?",
+  "How much production automation is delivered through the Epic integration, and what are deployment time, customer-specific configuration effort and ongoing code-guideline update costs versus CodaMetrix, Fathom and Optum?",
+  "What is the current status and geographic scope of the Nym Health patent application portfolio, and how does management assess freedom to operate around clinical coding and audit-trail generation?",
+  "How are founder and board roles structured after the 2023 and 2026 CEO transitions, and what are the operating priorities for the incoming CEO?"
+]
+
+[[intelligence.research.sources]]
+id = "official-home"
+url = "https://nym.health/"
+title = "Nym | AI Medical Coding Solutions - Medical Coding Automation"
+publisher = "Nym"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+claims = ["Nym's current product translates clinical documentation to billing codes, sends eligible encounters directly to billing and supplies a code-level audit trail.", "Nym publicly identifies production customer organizations including Genesis, Ochsner, Inova and Henry Ford.", "The website published current product and market material in October 2026."]
+
+[[intelligence.research.sources]]
+id = "official-about"
+url = "https://nym.health/about/"
+title = "About Nym | The Best AI Medical Coding Automation Company"
+publisher = "Nym"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+claims = ["Nym describes Clinical Language Understanding as combining AI with clinical ontologies for medical coding.", "The current leadership page identifies Lori Jones, Lorri Sides, Yuval Yezersky and Yaniv Shachar in executive roles and publishes their professional backgrounds.", "Nym says its CLU technology processes millions of encounters annually."]
+
+[[intelligence.research.sources]]
+id = "official-terms"
+url = "https://nym.health/terms-conditions/"
+title = "Terms & Conditions"
+publisher = "Nym Health"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+claims = ["The 2026 website terms identify Nym Health Ltd. as the owner and operator of the site.", "The terms state that the site, services and related intellectual property are proprietary to Nym Health or licensors."]
+
+[[intelligence.research.sources]]
+id = "press-seed-2019"
+url = "https://www.prnewswire.com/il/news-releases/nym-creator-of-autonomous-medical-coding-technology-closes-6-million-seed-round-led-by-bessemer-venture-partners-300866225.html"
+title = "Nym, Creator of Autonomous Medical Coding Technology, Closes $6 Million Seed Round, Led by Bessemer Venture Partners"
+publisher = "PR Newswire (news provided by Nym)"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+published_on = "2019-06-12"
+claims = ["Nym announced a $6 million seed financing on 2019-06-12 led by Bessemer Venture Partners.", "The company said it was founded in 2018 by Amihai Neiderman and Adam Rimon and described its medical coding and audit-trail product."]
+
+[[intelligence.research.sources]]
+id = "press-series-a-2020"
+url = "https://nym.health/press-release/nym-health-announces-16-5m-series-a/"
+title = "Nym Health Announces $16.5M Series A"
+publisher = "Nym Health"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+published_on = "2020-10-13"
+claims = ["Nym announced a $16.5 million Series A led by GV with Bessemer Venture Partners, Lightspeed, Tiger Global and angels Zach Weinberg and Nat Turner participating.", "Nym states that it was founded in 2018 by Amihai Neiderman and Adam Rimon, both graduates of Israel's Unit 8200.", "The company described its Clinical Language Understanding approach and audit-ready medical coding."]
+
+[[intelligence.research.sources]]
+id = "press-followon-2021"
+url = "https://nym.health/press-release/nym-health-raises-additional-25-million-in-funding-led-by-addition/"
+title = "Nym Health Raises Additional $25 Million in Funding Led by Addition"
+publisher = "Nym Health"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+published_on = "2021-07-27"
+claims = ["Nym announced $25 million in additional funding led by Addition on 2021-07-27 and reported $47.5 million cumulative funding as of that date.", "The company named GV, Dynamic Loop Capital, Tiger Global, Bessemer, Lightspeed, Zach Weinberg and Nat Turner among existing investors.", "Nym said its service was deployed in more than 40 U.S. hospitals, including Geisinger."]
+
+[[intelligence.research.sources]]
+id = "press-growth-2024"
+url = "https://nym.health/press-release/autonomous-medical-coding-engine-nym-announces-47-million-growth-investment-led-by-psg/"
+title = "Autonomous Medical Coding Engine Nym Announces $47 Million Growth Investment Led by PSG"
+publisher = "Nym"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+published_on = "2024-10-01"
+claims = ["Nym announced a $47 million growth investment led by PSG with participation from GV, Addition, Samsung Next and Dynamic Loop Capital.", "Nym reported more than six million charts processed annually as of September 2024 and support for six specialties.", "Nym stated it was based in New York City with R&D capabilities in Tel Aviv."]
+
+[[intelligence.research.sources]]
+id = "media-ctech-2024"
+url = "https://www.calcalistech.com/ctechnews/article/bk36lbtrc"
+title = "Nym raises $47 million for autonomous medical coding platform"
+publisher = "Calcalist CTech"
+kind = "media"
+accessed_at = "2026-10-22T01:33:00Z"
+published_on = "2024-10-01"
+claims = ["CTech reported that the $47 million October 2024 round brought reported lifetime funding to $92 million.", "CTech reported 84 employees in Tel Aviv and New York in October 2024.", "CTech reported that founders were no longer in day-to-day management, Neiderman remained on the board, and Or Peles had been CEO since 2022.", "CTech reported six specialties and more than six million medical records processed in the prior year."]
+
+[[intelligence.research.sources]]
+id = "official-ceo-transition-2023"
+url = "https://nym.health/press-release/nym-appoints-or-peles-as-next-chief-executive-officer/"
+title = "Nym Appoints Or Peles as Next Chief Executive Officer"
+publisher = "Nym Health"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+published_on = "2023-05-01"
+claims = ["Nym appointed Or Peles CEO and board member in 2023; co-founder Amihai Neiderman was to remain on the board.", "Nym reported Peles joined in 2022 and previously served as COO of Tasq.ai and CTO of NICE Actimize.", "Nym stated that its headquarters were in New York City with R&D capabilities in Tel Aviv."]
+
+[[intelligence.research.sources]]
+id = "official-ceo-2026"
+url = "https://nym.health/press-release/nym-welcomes-lori-jones-as-chief-executive-officer/"
+title = "Nym Welcomes Lori Jones as Chief Executive Officer"
+publisher = "Nym (Business Wire release)"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+published_on = "2026-04-21"
+claims = ["Nym appointed Lori M. Jones CEO on 2026-04-21 and described her prior roles at Aptarro, Agiliti Health, Connance and Olive AI.", "Nym states it is headquartered in New York City with R&D operations in Tel Aviv.", "Nym says its engine has over 95% accuracy, supports six specialties and processes millions of charts annually for hundreds of healthcare facilities nationwide.", "Nym lists PSG, Addition, GV, Bessemer, Dynamic Loop Capital, Tiger Global, Zach Weinberg and Nat Turner among its investors."]
+
+[[intelligence.research.sources]]
+id = "official-product"
+url = "https://nym.health/autonomous-medical-coding/nym-engine/"
+title = "Autonomous Medical Coding Engine | How It Works - Nym Health"
+publisher = "Nym"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+claims = ["Nym describes the engine as routing successfully coded encounters directly to billing and sending missing-information or judgment-intensive cases to human coders.", "Nym lists six specialties and says it is trusted by more than 30 health systems and physician groups.", "Nym says it maintains SOC 2 Type II and ISO/IEC 27001:2022 certifications and HIPAA compliance."]
+
+[[intelligence.research.sources]]
+id = "official-epic"
+url = "https://nym.health/press-release/nyms-autonomous-medical-coding-engine-listed-in-epic-toolbox/"
+title = "Nym’s Autonomous Medical Coding Engine Listed in Epic Toolbox"
+publisher = "Nym"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+published_on = "2024-08-19"
+claims = ["Nym announced Epic Showroom Toolbox designation in the Fully Autonomous Coding category in August 2024.", "The company said the Toolbox designation indicates the product meets Epic's recommended connection practices for that category."]
+
+[[intelligence.research.sources]]
+id = "govt-nyc-contract"
+url = "https://hhinternet.blob.core.windows.net/uploads/2025/09/202509-board.pdf"
+title = "NYC Health + Hospitals Board of Directors September 2025 materials"
+publisher = "NYC Health + Hospitals"
+kind = "government"
+accessed_at = "2026-10-22T01:33:00Z"
+published_on = "2025-09-25"
+claims = ["The board unanimously approved authorization to execute a contract with Nym Health Inc. for autonomous coding after a competitive RFP in which Nym was the highest-scoring vendor.", "The proposed three-year term included two optional renewals and a not-to-exceed amount of $8,110,800 including 20% contingency.", "The meeting record says the software had been vetted through security and AI governance reviews, with further review during contracting and QA planned for rollout."]
+
+[[intelligence.research.sources]]
+id = "official-genesis-case"
+url = "https://go.nym.health/genesis-case-study"
+title = "Genesis HealthCare System Case Study | Autonomous Medical Coding"
+publisher = "Nym"
+kind = "customer"
+accessed_at = "2026-10-22T01:33:00Z"
+claims = ["Nym's case study names Genesis HealthCare System and describes deployment of ED facility coding followed by outpatient visits.", "The company reports automation increasing from about 50% to about 70% of Genesis ED encounters and coding accuracy of at least 96%.", "The case study says Genesis redeployed coders into higher-complexity work; outcomes are company-published and not independently audited in this source."]
+
+[[intelligence.research.sources]]
+id = "patent-justia"
+url = "https://patents.justia.com/patent/20200395110"
+title = "U.S. Patent Application for METHOD AND SYSTEM FOR GENERATING STANDARDIZED CODES FROM ELECTRONIC RECORDS"
+publisher = "Justia Patents Search"
+kind = "other"
+accessed_at = "2026-10-22T01:33:00Z"
+published_on = "2020-12-17"
+claims = ["Publication US20200395110A1 corresponds to U.S. application 16/677,217 filed 2019-11-07 and identifies NYM Health Ltd. as applicant and Adam Rimon as inventor.", "The application describes computational-linguistic analysis of electronic records, constructing narrative context, extracting insights, selecting standard codes and generating audit trails.", "The page reports an application publication; it does not establish a granted patent."]
+
+[[intelligence.research.sources]]
+id = "klas-profile-2023"
+url = "https://4106700.fs1.hubspotusercontent-na1.net/hubfs/4106700/Collateral/Industry%20Reports%2C%20Whitepapers%20%28e.g.%20KLAS%2C%20NPS%2C%20Engine%20Overview%29/Nym%20Report%20%7C%20KLAS%20Emerging%20Solutions%20Spotlight.pdf?hsCtaAttrib=194617588854"
+title = "Nym Medical Coding Engine - KLAS Emerging Solutions Spotlight"
+publisher = "KLAS Research"
+kind = "other"
+accessed_at = "2026-10-22T01:33:00Z"
+published_on = "2023"
+claims = ["The KLAS profile reports 7 unique live customers, 14 IDN-level customers and 90+ employees at the time of its profile.", "The profile describes pay-per-successfully-coded-chart pricing varying by specialty, coding type and volume.", "The profile labels the July 2021 $25 million event Series A-1; the source identifies solution technical specifications as company-provided."]
+
+[[intelligence.research.sources]]
+id = "nasdaq-private-market"
+url = "https://www.nasdaqprivatemarket.com/company/nym-health/"
+title = "Nym Health - Nasdaq Private Market"
+publisher = "Nasdaq Private Market"
+kind = "other"
+accessed_at = "2026-10-22T01:33:00Z"
+claims = ["Nasdaq Private Market describes Nym Health securities as private, with no public ticker and no IPO.", "The public profile lists several major investors but does not expose a full public cap table or specific ownership percentages."]
+
+[[intelligence.research.sources]]
+id = "techcrunch-founders"
+url = "https://techcrunch.com/2020/10/13/nym-health-raises-14-million-for-its-auditable-machine-learning-tools-for-automating-hospital-billing/"
+title = "Nym Health raises $16.5 million for its auditable machine learning tools for automating hospital billing"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-22T01:33:00Z"
+published_on = "2020-10-13"
+claims = ["TechCrunch describes Nym's founders as former Israeli Unit 8200 members and reports Adam Rimon's computational-linguistics doctorate.", "TechCrunch describes the company's use of clinical language and medical taxonomies to automate coding with audit trails."]
+
+[[intelligence.research.sources]]
+id = "competitor-codametrix"
+url = "https://www.codametrix.com/"
+title = "CodaMetrix - Code For Better, Autonomous Medical Coding"
+publisher = "CodaMetrix"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+claims = ["CodaMetrix markets autonomous coding across patient encounters and describes unifying clinical notes, orders, charges and schedules.", "CodaMetrix describes its Rosetta Coding Quality Framework and Epic Toolbox integration."]
+
+[[intelligence.research.sources]]
+id = "competitor-fathom"
+url = "https://fathomhealth.com/"
+title = "Fathom - Medical coding automation powered by AI"
+publisher = "Fathom"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+claims = ["Fathom markets medical coding automation for health systems, physician groups, outpatient clinics, health plans, value-based care providers and RCM vendors.", "Fathom advertises processing scale and automation benefits; these are company claims and were not compared directly with Nym's figures."]
+
+[[intelligence.research.sources]]
+id = "competitor-optum"
+url = "https://campaign.optum.com/content/dam/optum3/optum/en/resources/PDFs/optumserve-computer-assisted-coding-professional.pdf"
+title = "Optum Computer-Assisted Coding Professional"
+publisher = "Optum"
+kind = "company"
+accessed_at = "2026-10-22T01:33:00Z"
+claims = ["Optum describes its CAC Professional product as NLP-based computer-assisted coding with customizable coder workflows for providers, billing companies and medical centers."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-22T01:33:00Z"
+next_review_on = "2027-01-22"
+queries = ["Nym health AI medical coding company founders headquarters funding $25 million official", "site:nym.health company/about founders investors funding Nym healthcare coding", "Nym Health company Israel founded healthcare automation funding founders 2024", "Nym Health acquisition acquired merger ownership parent company valuation"]
+source_ids = ["official-home", "official-terms", "official-ceo-2026", "official-ceo-transition-2023", "techcrunch-founders", "media-ctech-2024"]
+summary = "Current brand is Nym; current terms identify Nym Health Ltd. as site operator. Current CEO release says New York City headquarters and Tel Aviv R&D. Company and independent sources identify Israeli founders and an active private operating company; no alias or acquisition evidence indicated that this is another catalog identity."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-22T01:33:00Z"
+next_review_on = "2027-01-22"
+queries = ["Nym Health 2019 seed $6 million seed round Bessemer", "site:nym.health/press-release Nym Series C 47 million October 2024", "Nym Health funding 2025 2026 raised acquisition new investors", "Autonomous Medical Coding Engine Nym Announces $47 Million Growth Investment Led by PSG", "Nym Health funding valuation investors Series A Series B Series C raised total"]
+source_ids = ["press-seed-2019", "press-series-a-2020", "press-followon-2021", "press-growth-2024", "media-ctech-2024", "klas-profile-2023"]
+summary = "Four financing events have dated source support. Nym's 2021 company-reported cumulative total and the later CTech/Globes $92M total do not reconcile with disclosed event amounts; 2021 series naming also varies. No valuation was found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T01:33:00Z"
+next_review_on = "2027-01-22"
+queries = ["site:nym.health company/about founders investors funding Nym healthcare coding", "Nym Health funding investors 2024 PSG Addition GV Samsung Next Bessemer", "Nym Health investors portfolio Bessemer Lightspeed GV PSG"]
+source_ids = ["press-seed-2019", "press-series-a-2020", "press-followon-2021", "press-growth-2024", "official-ceo-2026", "nasdaq-private-market"]
+summary = "Round releases and a 2026 company statement identify named investors and round leads. Private ticket sizes, ownership percentages, rights and full cap-table positions are not public."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-22T01:33:00Z"
+next_review_on = "2027-01-22"
+queries = ["Nym Health founder CEO 2026 team history Amihai Neiderman Adam Rimon Or Peles", "Nym company about current leadership Lori Jones Yaniv Shachar Lorri Sides", "Nym Health company Israel founded healthcare automation funding founders 2024"]
+source_ids = ["official-about", "official-ceo-transition-2023", "official-ceo-2026", "techcrunch-founders", "media-ctech-2024"]
+summary = "Founder identities, founder-to-CEO succession, current CEO and selected current operating executives are supported by company releases and bios. A complete employee roster and current exact headcount were not found."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T01:33:00Z"
+next_review_on = "2027-01-22"
+queries = ["Nym Health acquisition acquired merger ownership parent company valuation", "Nym Health Ltd ownership cap table shareholders parent company public company ticker", "Nym Health private company acquisition exit 2026"]
+source_ids = ["official-terms", "nasdaq-private-market", "official-ceo-2026"]
+summary = "Nym remains described as private, with no public ticker or IPO. No public cap table, parent, acquisition or ownership transaction was found; absence of evidence is not a verified complete ownership history."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T01:33:00Z"
+next_review_on = "2027-01-22"
+queries = ["Nym Health revenue ARR financials profitability burn runway valuation", "Nym Health 2026 financial performance revenue ARR profit", "Nym Health current employee count October 2026"]
+source_ids = ["media-ctech-2024", "klas-profile-2023", "nasdaq-private-market", "official-ceo-2026"]
+summary = "No dated revenue, ARR, profitability, cash, burn or runway disclosures were found. A 2024 CTech employee count is historical; KLAS's 2023 profile contains an older 90+ headcount, not a current count."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-22T01:33:00Z"
+next_review_on = "2027-01-22"
+queries = ["Nym autonomous medical coding product specialties customers health system 2025", "Nym Health customer case study hospital Inova Genesis Ochsner", "Nym Health public contract NYC Health Hospitals autonomous coding 2025", "Nym Health Epic Showroom Toolbox autonomous coding"]
+source_ids = ["press-followon-2021", "press-growth-2024", "official-epic", "govt-nyc-contract", "official-genesis-case", "official-ceo-2026"]
+summary = "Evidence includes company-described deployments, named provider case studies, Epic Toolbox status, a government board-authorized NYC Health + Hospitals contract, and current company-reported chart and facility scale. Contract ceiling and company case-study metrics are not treated as recognized revenue or independent outcome verification."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-22T01:33:00Z"
+next_review_on = "2027-01-22"
+queries = ["Nym Health patents clinical language understanding patent Nym Health Ltd", "site:patents.google.com Nym Health medical coding", "Nym Health patent applications medical coding founders", "Nym Health Ltd patents"]
+source_ids = ["patent-justia", "official-terms"]
+summary = "A U.S. published patent application assigned to NYM Health Ltd. and listing Adam Rimon as inventor was identified. It is recorded as an application publication; a full portfolio search and grant-status verification were not established."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T01:33:00Z"
+next_review_on = "2027-01-22"
+queries = ["CodaMetrix autonomous coding AI technology official medical coding", "Fathom autonomous medical coding official healthcare AI coder", "Optum autonomous medical coding software official", "Nym Health competitors autonomous coding CodaMetrix Fathom 2024"]
+source_ids = ["competitor-codametrix", "competitor-fathom", "competitor-optum", "official-product"]
+summary = "Direct product descriptions support CodaMetrix and Fathom as autonomous-coding peers and Optum CAC as an incumbent substitute. No matched independent performance, customer-retention or pricing comparison was found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T01:33:00Z"
+next_review_on = "2027-01-22"
+queries = ["Nym Health medical coding defense military government defense customers dual use", "Nym autonomous coding government defense military contract", "Nym health cybersecurity military use"]
+source_ids = ["official-home", "official-product", "govt-nyc-contract"]
+summary = "Reviewed products and customer disclosures concern healthcare revenue-cycle coding. No defense, military or security use was disclosed; dual_use is therefore false and no defense thesis is assigned."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Nym announced a new CEO in April 2026 and current site content is active, directly evidencing an operating company at the verification date."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["official-ceo-2026", "official-home"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Company announcement confirms Tel Aviv R&D; company and independent sources identify Israeli founders and Unit 8200 backgrounds."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["official-ceo-2026", "official-ceo-transition-2023", "techcrunch-founders"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Nym's July 2021 announcement expressly states $47.5 million total funding after its additional $25 million event; the field is dated to that announcement and excludes later rounds."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["press-followon-2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2019.amount"
+support = "direct"
+summary = "Nym's June 2019 release states it secured a $6 million seed round."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["press-seed-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2019.lead_investors"
+support = "direct"
+summary = "Nym's seed announcement identifies Bessemer Venture Partners as lead investor."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["press-seed-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2020.amount"
+support = "direct"
+summary = "Nym's October 2020 release states $16.5 million in Series A funding."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["press-series-a-2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2020.lead_investors"
+support = "direct"
+summary = "Nym names GV as lead investor for the Series A."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["press-series-a-2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2020.participating_investors"
+support = "direct"
+summary = "Nym's Series A release names Bessemer, Lightspeed, Tiger Global, Zach Weinberg and Nat Turner as participants."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["press-series-a-2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.followon-2021.amount"
+support = "direct"
+summary = "Nym's July 2021 announcement states $25 million in additional funding."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["press-followon-2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.followon-2021.lead_investors"
+support = "direct"
+summary = "Nym's 2021 announcement identifies Addition as lead investor."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["press-followon-2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.followon-2021.participating_investors"
+support = "direct"
+summary = "Nym's 2021 announcement lists GV, Dynamic Loop Capital, Tiger Global, Bessemer, Lightspeed, Zach Weinberg and Nat Turner among continuing investors."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["press-followon-2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.growth-2024.amount"
+support = "direct"
+summary = "Nym's October 2024 announcement states a $47 million growth investment."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["press-growth-2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.growth-2024.lead_investors"
+support = "direct"
+summary = "Nym's growth-investment release identifies PSG as lead."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["press-growth-2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.growth-2024.participating_investors"
+support = "direct"
+summary = "Nym's growth-investment release names GV, Addition, Samsung Next and Dynamic Loop Capital as participants."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["press-growth-2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Employees reported@2024-10-01.numeric_value"
+support = "direct"
+summary = "CTech reported 84 employees across Tel Aviv and New York in October 2024; this is historical, not current headcount."
+verified_at = "2026-10-22T01:33:00Z"
+source_ids = ["media-ctech-2024"]
