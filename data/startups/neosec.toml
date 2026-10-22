@@ -1,42 +1,543 @@
 name = "Neosec"
-description = "Neosec was a 2020-founded API security company whose behavioral analytics and API detection technology was acquired by Akamai in 2023. It is now best tracked as an acquired asset represented by Akamai API Security, not as an independent startup."
-detailed_description = """Neosec developed a SaaS API security platform centered on API discovery, behavioral analytics, and threat detection. Its important distinction was looking across API traffic and historical behavior to establish context, rather than treating each request as an isolated signature or gateway-policy event. That model supported discovery of unmanaged or shadow APIs, identification of unusual sequences and business-logic abuse, and investigation of data exposure, credential misuse, scraping, and other forms of API abuse. The product thesis addressed a practical enterprise problem: engineering teams can deploy APIs across clouds, gateways, partner channels, and internal services faster than security teams can inventory and govern them.
+description = "Neosec was a 2020-founded B2B API-security company with its corporate base in Palo Alto and R&D in Tel Aviv. It built cloud-hosted API discovery, behavioral analytics, and threat-hunting software. Akamai acquired all outstanding equity in May 2023; Neosec is now an acquired asset whose technology is represented within Akamai API Security, not an independent startup."
+detailed_description = """Neosec, Inc. built a cloud-hosted API detection and response platform for enterprise security and development teams. Its historical product combined API inventory and risk review with behavioral analytics, investigation, and threat hunting. The company described its data-centric approach as learning normal API usage and using historical activity to detect misuse, fraud, data theft, and business-logic abuse that can look legitimate to a gateway or a signature-based rule. Its product could use activity data from a customer's API estate and integrations rather than requiring a separate sensor in every application. This made broad coverage of shadow, undocumented, partner, and changing APIs central to its product proposition.
 
-Akamai announced a definitive agreement to acquire Neosec on April 19, 2023, describing it as an API detection-and-response platform based on data and behavioral analytics. Akamai’s current API Security product page is therefore the appropriate canonical website for this record. The current offering describes continuous inventory of shadow, zombie, and AI-related APIs; OWASP API Top 10 assessment; machine-learning-assisted attack detection; sensitive-data and traffic analysis; CI/CD testing; and integrations into WAF, SIEM, and IT service workflows. Akamai materials also describe the product as platform-agnostic, covering APIs outside Akamai’s own CDN, which is strategically important for heterogeneous enterprise estates.
+The buyer problem was concrete. Large organizations often distribute API ownership across development groups, gateways, clouds, and partner systems. A gateway can enforce access and traffic policy where it is deployed, while an API security team also needs an inventory of exposed endpoints, context on who uses them and what data they move, and visibility into abnormal but valid-looking sequences. Neosec's intended workflow was to identify APIs and their risks, establish behavioral context, investigate suspicious activity, then connect findings to existing security response processes. Its cloud-native SaaS model and stated privacy design, including field tokenization, were relevant to enterprises wary of sending detailed request data to a security vendor. That advantage depended on reliable and sufficiently broad input data, effective normalization across environments, and acceptable privacy controls; the public material does not provide independent detection-rate or false-positive benchmarks.
 
-The commercial market is attractive but highly competitive. API security buyers increasingly need a combined control plane spanning code, pre-production testing, inventory, posture management, runtime analytics, and response. Neosec’s original behavioral-analytics approach was differentiated enough to attract a major security-platform acquirer, but the standalone company no longer has an independent roadmap or separate commercial upside. Akamai has subsequently positioned API Security alongside broader application protection and has continued adding posture and code-to-runtime capabilities. That is evidence of product-line investment, but it also means that current Neosec-specific traction, customer retention, pricing, and feature attribution require diligence inside Akamai rather than public startup metrics.
+The company was founded in 2020 by Giora Engel and Ziv Sivan. At launch in September 2021, Neosec said it already had paying enterprise customers and notable technology and channel partners; the contemporaneous report did not name customers, disclose contract values, or quantify the customer base. A later company announcement described completion of a SOC 2 Type II audit, and Neosec announced a Google Cloud Apigee integration in September 2022. These are useful evidence of productization and integration work, but neither a compliance audit nor an integration announcement establishes recurring revenue or a paid deployment. Akamai's August 2023 launch announcement quoted Earnin's CISO discussing API discovery and monitoring, and an Akamai customer story published the following month described an unnamed financial-services and insurance company that completed a four-week proof of concept and detected API posture and runtime issues. Those are stronger usage signals, although the customer story is vendor-published and anonymized and neither source gives commercial terms.
 
-The national-security relevance is credible but indirect. Government, defense, financial, healthcare, and critical-infrastructure systems increasingly expose APIs for mobile applications, cloud services, partner integrations, and machine-to-machine workflows. API inventory, anomalous-behavior detection, data-flow visibility, and abuse response can strengthen zero-trust and incident-response programs in those environments. There is no reliable public evidence here of defense-specific deployment, classified use, or a purpose-built military product, so the dual-use case should remain a cybersecurity adjacency rather than a defense claim."""
+Akamai announced a definitive agreement to acquire Neosec on April 19, 2023. Akamai's second-quarter filing says it acquired all outstanding equity in May 2023 for cash and recognized identifiable intangible assets, primarily completed technologies, as part of purchase-price accounting. The filing did not report Neosec's revenue separately because the acquired results were not material to Akamai's consolidated results. The deal validates that a large security platform valued Neosec's technology and team as a strategic complement; it is not evidence by itself of product-market scale, standalone profitability, or an independent venture opportunity. The announced purchase price differs slightly between the filing and an older ecosystem record, so the dossier preserves that discrepancy instead of presenting false precision.
+
+Neosec's product lineage is now difficult to separate from Akamai's broader offering. Akamai made a standalone API Security product available in August 2023 and explicitly tied it to the Neosec acquisition. A 2024 PCI compliance document later said the additional API Security solution formerly known as Neosec was no longer for sale. Akamai's current product page describes a wider product spanning discovery, governance, active testing, runtime analytics, response, and AI-related endpoints; a current Akamai license identifies Neosec and Noname components in the ecosystem. Akamai's 2024 acquisition of Noname further changed the combined portfolio. The public record therefore supports continued use of Neosec-originated capabilities within Akamai's product family, but it does not map every current feature or customer to Neosec code. For diligence, the current product page is a reliable description of Akamai's offer, not a feature-by-feature history of Neosec.
+
+The competitive set includes Salt Security, Traceable AI, Wallarm, and Imperva. Salt is a close analogue in API discovery and behavioral threat detection. Traceable overlaps in inventory, posture, runtime detection, threat hunting, and testing, while emphasizing contextual links among API activity, users, data flows, and code. Wallarm stresses inline blocking, broad protocol support, and real-time protection. Imperva connects API discovery and OWASP risk management to its broader application-security and bot-protection platform. These vendors show how difficult it is to sustain a standalone differentiation based on discovery plus analytics alone: buyers can compare code-to-runtime coverage, deployment choices, response enforcement, integration depth, and bundle economics. Neosec's historical distinction was its XDR-like, data-lake and behavioral-analysis orientation with a managed threat-hunting workflow. Akamai supplied distribution, security infrastructure, and an existing application-security portfolio, while acquisition into a combined suite also made Neosec's individual feature advantage less attributable.
+
+The technical thesis remains relevant where an organization has incomplete API inventories and needs to detect abuse that uses valid identities, normal endpoints, or ordinary-looking requests. However, behavior analytics depend on representative telemetry and context: missing gateways or logs, schema drift, changes in user behavior, and sensitive payload handling can all affect coverage and operations. A mature buyer would need evidence on ingestion cost, time to coverage, data minimization, analyst workload, precision and recall, response latency, and whether findings lead to practical remediation. The public record gives product descriptions and a few customer examples, but not those performance measures, post-acquisition retention, contract economics, or a current Neosec-specific roadmap.
+
+The defense and security application is indirect but real. Government, defense, financial, and critical-infrastructure organizations use APIs for internal services, mobile applications, cloud systems, and partner workflows; discovery, behavioral anomaly detection, and data-exposure analysis can help secure those environments. Neosec's public evidence supports a general defensive cybersecurity capability, not a purpose-built military product, classified deployment, government contract, or defense customer. Its record should therefore be treated as a commercial API-security asset with public-sector applicability rather than as proof of defense adoption. Because Akamai owns the asset and the former Neosec standalone solution was later marked no longer for sale, the useful present-day questions concern product lineage, customer migration, surviving expertise, and how Akamai's combined API Security is sold and supported."""
 logo = "https://www.akamai.com/content/dam/site/en/images/logo/akamai-logo-og-default.png"
-website = "https://www.akamai.com/products/api-security"
+website = "https://neosec.com"
 sector = 'Cybersecurity / API Security'
 founded = '2020'
-headquarters = "Tel Aviv, Israel; Palo Alto, California, United States"
-employees = "11-50 (pre-acquisition)"
-funding_stage = "Acquired by Akamai; transaction announced April 2023"
+headquarters = "Palo Alto, California, United States (corporate base); Tel Aviv, Israel (R&D office)"
+employees = "Around 40 at the April 2023 acquisition announcement; historical figure, with no independent workforce after acquisition"
+funding_stage = "Acquired by Akamai in May 2023; $20.7M cumulative funding reported, with conflicting round-level amounts"
 entity_type = "acquired_asset"
 dual_use = true
-dual_use_description = "API discovery, behavioral anomaly detection, and data-exposure analysis have direct commercial and public-sector security applications, including government and defense environments dependent on cloud APIs and partner integrations. The dual-use case is substantive but indirect: public evidence supports cybersecurity applicability, not defense-specific deployment or military capability."
-key_technologies = ["Continuous API discovery and inventory across shadow, zombie, and unmanaged endpoints", "Historical traffic analysis and behavioral baselining", "Machine-learning-assisted anomaly and API attack detection", "Business-logic abuse and suspicious-sequence analysis", "Sensitive-data classification and API data-flow visibility", "OWASP API Top 10 assessment and automated dynamic testing", "CI/CD, SIEM, WAF, and ITSM remediation integrations"]
-use_cases = ["Enterprise-wide inventory of undocumented and changing APIs", "Runtime detection of data scraping, credential abuse, and account-takeover behavior", "Investigation of business-logic abuse and unauthorized data access", "Pre-production testing for OWASP API vulnerabilities", "Monitoring sensitive API responses and data-exposure paths", "Governance of APIs connected to GenAI, LLM, and MCP services", "Zero-trust and incident-response visibility for government or critical-infrastructure API estates"]
+dual_use_description = "Neosec's API discovery and behavioral threat detection address commercial cybersecurity needs and can apply to government, defense, and critical-infrastructure API estates. This is a credible defensive security use case, but public sources do not identify a military product, government contract, classified deployment, or defense customer."
+key_technologies = [
+  "API inventory and discovery from traffic and API activity data",
+  "Historical API event analysis and behavioral baselining",
+  "Anomaly detection for suspicious usage, fraud, scraping, and business-logic abuse",
+  "API posture and risk assessment, including shadow and undocumented APIs",
+  "Threat investigation, hunting, and response workflows",
+  "Cloud-hosted SaaS architecture with customer-configurable tokenization",
+  "Connectors to API management, SIEM, WAF, and security workflows"
+]
+use_cases = [
+  "Build a changing inventory of managed, shadow, partner, and undocumented APIs",
+  "Investigate API abuse involving valid credentials or ordinary-looking request sequences",
+  "Detect anomalous API behavior associated with data theft, scraping, fraud, or business-logic manipulation",
+  "Prioritize APIs by exposure, data sensitivity, and observed risk",
+  "Threat hunting and incident response using historical API activity",
+  "Integrate API monitoring into an enterprise security operations workflow",
+  "Apply API discovery and behavioral monitoring to public-sector or critical-infrastructure systems as a general defensive use case"
+]
 investible = false
-investment_rationale = "Neosec is not an independent diligence or venture opportunity because Akamai acquired the company and absorbed its technology. The acquisition is useful evidence of strategic validation and category demand, but current diligence should focus on Akamai’s integration, product investment, customer outcomes, and the extent to which Neosec-originated capabilities remain identifiable."
-strategic_value = "API security is strategically important because sensitive business, public-service, and machine-to-machine activity increasingly flows through APIs. Neosec’s discovery and behavioral-analytics approach remains relevant as a reference architecture for protecting distributed API estates, but its present value is primarily as part of Akamai’s security platform and as an acquisition benchmark."
-potential_score = 68.0
-technology_score = 84.0
-market_score = 82.0
-team_score = 72.0
-dual_use_score = 76.0
-strategic_alignment_score = 70.0
+investment_rationale = "Neosec is not an independent venture investment: Akamai acquired the company, and the former standalone Neosec solution was later described as no longer for sale. Its $20.7M reported cumulative funding and acquisition are useful market and strategic signals, but do not provide a current standalone equity, valuation, or return opportunity. Any current diligence belongs at the Akamai product and portfolio level."
+strategic_value = "Neosec brought API-wide discovery, historical behavioral analysis, and threat-hunting workflows to an acquirer with a large application-security portfolio and enterprise distribution. The strategic fit is plausible because gateway and WAF controls do not by themselves provide a complete inventory or explain all valid-looking API behavior. The technology remains a reference point for security analytics, while its current value is inseparable from Akamai's wider API Security offering."
+potential_score = 18.0
+technology_score = 78.0
+market_score = 78.0
+team_score = 70.0
+dual_use_score = 50.0
+strategic_alignment_score = 76.0
 stage = "mature"
-stage_rationale = "Neosec reached commercial maturity as a venture-backed API security company and ceased operating independently after Akamai announced its acquisition in April 2023. The technology is now assessed through Akamai’s product line, so standalone startup growth and team metrics are no longer directly observable."
-competitors = ["Salt Security", "Traceable AI", "Wallarm", "Imperva API Security", "Cloudflare API Shield", "F5 Distributed Cloud API Security"]
-competitive_edge = "Neosec’s original edge was the combination of broad API discovery, historical and behavioral analytics, and threat-hunting context across more than individual requests. That was strategically complementary to Akamai’s edge and application-security controls and helped explain the acquisition, but it is no longer a defensible standalone moat because the capabilities are now embedded in a larger vendor platform."
-risk_factors = ["Akamai integration can change product scope, branding, packaging, and access to Neosec-specific capabilities", "There is no current standalone revenue, retention, valuation, or independent roadmap to underwrite", "API security is crowded, consolidated, and exposed to bundling by larger security platforms", "Behavioral detection depends on representative telemetry and can produce false positives or miss novel abuse", "Platform-agnostic deployments still require complex data connectors, privacy controls, and operational integration", "GenAI, LLM, and MCP API patterns are changing faster than established detection baselines"]
-risk_level = "medium"
-public_sources = ["https://www.akamai.com/products/api-security", "https://www.ir.akamai.com/news-releases/news-release-details/akamai-technologies-acquire-api-security-company-neosec", "https://www.akamai.com/newsroom/press-release/protecting-apis-at-scale-akamai-introduces-security-posture-center-and-code-to-runtime-mapping", "https://finder.startupnationcentral.org/company_page/neosec"]
+stage_rationale = "Neosec moved from a 2020 founding to a commercial SaaS product with reported enterprise customers, integrations, and an acquisition in 2023. It no longer operates as an independent startup; mature describes its pre-acquisition commercialization, not a current independent growth stage."
+competitors = ["Salt Security", "Traceable AI", "Wallarm", "Imperva API Security"]
+competitive_edge = "Neosec's historical edge was combining broad API discovery with data-centric, XDR-style analysis of activity over time, behavioral detection of misuse, and a threat-hunting workflow. It aimed to find business abuse that signature-focused gateways or controls centered on individual requests could miss, while drawing on existing API data instead of requiring per-application sensors. This is a credible technical differentiation, but public evidence does not establish comparative detection rates, false-positive performance, or an enduring standalone moat. Competitors now offer overlapping discovery, posture, behavior, and runtime coverage; Wallarm emphasizes inline blocking, Imperva emphasizes suite integration, and Traceable emphasizes code and data-flow context."
+risk_factors = [
+  "Neosec is acquired and no longer offers an independent company, team, roadmap, or equity opportunity.",
+  "Akamai stated in its 2024 PCI compliance document that the additional API Security solution formerly known as Neosec was no longer for sale; current combined-product scope and migration paths are not fully mapped publicly.",
+  "Akamai's present API Security includes both Neosec and Noname components, so feature, customer, and revenue attribution to Neosec is unclear.",
+  "Neosec revenue, ARR, profitability, burn, customer count, retention, and contract values are not publicly disclosed in the reviewed sources.",
+  "Funding-round amounts conflict across company, media, and directory records; the cumulative reported total is not safely reconstructed by adding those observations.",
+  "Behavioral detection quality depends on representative telemetry, sound baselines, data normalization, and controls for sensitive API payloads.",
+  "Salt Security, Traceable AI, Wallarm, Imperva, and platform vendors compete with overlapping discovery, posture, analytics, testing, or inline protection.",
+  "No public source reviewed identifies a defense deployment, government contract, classified use, or defense-specific certification."
+]
+risk_level = "high"
+public_sources = [
+  { label = "Neosec launch and funding announcement", url = "https://www.prnewswire.com/news-releases/cybersecurity-pioneer-launches-neosec-with-20-7-million-series-a-to-protect-apis-from-business-abuse-and-data-theft-301376205.html", description = "Company announcement on product, cumulative investment, investors, Palo Alto base, and Tel Aviv R&D." },
+  { label = "Calcalist: Neosec Series A and seed reporting", url = "https://www.calcalist.co.il/calcalistech/article/hjwtvfhzk", description = "Contemporaneous Israeli report on the $15M Series A, separate $5M seed, investors, and founders." },
+  { label = "Startup Nation Finder legacy profile", url = "https://finder.startupnationcentral.org/company_page/neosec", description = "Legacy directory profile used for founder, historical headcount, funding, and registry cross-checks; its last data update was 2023 and Finder ended operations in August 2026." },
+  { label = "IVC Neosec profile", url = "https://www.ivc-online.com/Google-Card?id=2d84b5df-eada-ea11-810a-0050569a1018", description = "Israeli ecosystem profile listing the former name Apiseq, Palo Alto and Tel Aviv locations, and company background." },
+  { label = "TLV Partners on Neosec's acquisition", url = "https://www.tlv.partners/neosec-acquired-by-akamai-technologies/", description = "Investor account identifying Neosec's founders, acquisition, and TLV Partners' Series A co-lead role." },
+  { label = "Akamai acquisition announcement", url = "https://www.ir.akamai.com/news-releases/news-release-details/akamai-technologies-acquire-api-security-company-neosec", description = "Akamai's April 19, 2023 definitive acquisition announcement and description of Neosec's product." },
+  { label = "Akamai Form 10-Q, second quarter 2023", url = "https://www.ir.akamai.com/static-files/5c43a907-d55b-4596-aa8c-580e8b37e6b1", description = "Akamai filing that confirms completion, cash consideration, purchase-price allocation, and non-material separately reported acquired results." },
+  { label = "CTech: Akamai acquiring Neosec", url = "https://www.calcalistech.com/ctechnews/article/bksqds6f3", description = "Israeli reporting on the acquisition, cumulative funding, founders, product, and historical team size." },
+  { label = "Neosec SOC 2 Type II announcement", url = "https://www.prnewswire.com/news-releases/neosec-achieves-soc-2-type-ii-compliance-leveraging-its-own-security-platform-for-application-api-level-controls-301549317.html", description = "Company announcement of its SOC 2 Type II audit and privacy-by-design and tokenization statements." },
+  { label = "Neosec Apigee integration announcement", url = "https://www.prnewswire.com/news-releases/neosec-integrates-with-google-cloud-apigee-api-management-to-prevent-business-api-fraud-and-abuse-301619562.html", description = "Company announcement describing its Google Cloud Apigee integration and intended API discovery and behavior analysis." },
+  { label = "Neosec official website", url = "https://neosec.com", description = "Official Neosec domain redirects to Akamai's API Security product page." },
+  { label = "VentureBeat: Neosec emerges from stealth", url = "https://venturebeat.com/ai/neosec-an-api-security-startup-emerges-from-stealth-with-20-7m", description = "Contemporaneous interview-based report that Neosec said it had paying enterprise customers, plus a 20-person team and channel and technology partners." },
+  { label = "Akamai API Security product launch", url = "https://www.akamai.com/newsroom/press-release/akamai-announces-api-security-product-to-protect-api-from-business-abuse-and-data-theft", description = "Akamai's August 2023 API Security launch, stated Neosec origin, product functionality, and Earnin CISO quote." },
+  { label = "Akamai PCI DSS attestation, August 2024", url = "https://www.akamai.com/site/en/documents/corporate/2024/pci-dss-attestation-of-compliance.pdf", description = "Akamai compliance document stating that its additional API Security solution formerly known as Neosec was no longer for sale." },
+  { label = "Akamai API Security current product page", url = "https://www.akamai.com/products/api-security", description = "Current Akamai description of the combined API Security offer, including discovery, risk, testing, runtime monitoring, and response." },
+  { label = "Akamai API Security license", url = "https://www.akamai.com/site/en/documents/akamai/api-security-license.pdf", description = "Akamai license identifying Neosec and Noname components in its API Security ecosystem." },
+  { label = "Akamai financial-services customer story", url = "https://www.akamai.com/site/en/documents/customer-story/2023/financial-services-and-insurance-company.pdf", description = "Akamai-published anonymous customer story about an API Security proof of concept and detected API posture and runtime risks." },
+  { label = "USPTO Patent Public Search", url = "https://www.uspto.gov/patents/search/patent-public-search", description = "Official portal description for searching U.S. patents and published applications; included as the patent-search reference, not as evidence of a Neosec patent." },
+  { label = "Salt Security API platform", url = "https://salt.security/platform?0db7cd29_page=11", description = "Salt's product description for API discovery, posture, and behavioral threat detection." },
+  { label = "Traceable API Security platform", url = "https://www.traceable.ai/api-security-platform", description = "Traceable's product description for API inventory, posture, behavioral analytics, runtime protection, and testing." },
+  { label = "Wallarm API Security", url = "https://www.wallarm.com/product/api-security", description = "Wallarm's product description emphasizing inline protection, broad protocol support, discovery, and abuse detection." },
+  { label = "Imperva API Security datasheet", url = "https://www.imperva.com/resources/datasheets/API-Security.pdf", description = "Imperva's official product datasheet on API discovery, OWASP risks, bot protection, and suite integration." }
+]
 signals = []
 priority_rank = 0
-priority_rationale = "Retain as a strategic reference rather than a current priority signal. The record documents a credible dual-use cybersecurity capability and an acquisition outcome, while the acquired-asset classification, lack of standalone metrics, and non-investible status appropriately reduce its priority for current startup screening."
+priority_rationale = "Keep Neosec at priority rank 0 as a strategic acquisition reference, not an active startup lead. Its API-security analytics, Israeli R&D link, and Akamai acquisition are relevant to market mapping. Acquired ownership, discontinued standalone sales, disputed financing details, and no independent current metrics make it unsuitable for present startup prioritization."
 crawled_at = '2026-02-27T14:30:00+00:00'
-updated_at = "2026-07-31T18:39:19Z"
+updated_at = "2026-10-21T20:48:07+00:00"
+
+[intelligence]
+schema_version = 2
+people = [
+  { source_ids = ["calcalist_funding_2021", "tlv_acquisition_2023"], name = "Giora Engel", role = "Co-founder and CEO", is_founder = true, current = false, background = "Calcalist identifies Engel as Neosec's co-founder and CEO and reports that he previously co-founded LightCyber, acquired by Palo Alto Networks in 2017. The same report describes the founders as graduates of IDF intelligence technology units 8200 and 81 but does not assign a unit to each person.", notes = "Historical Neosec role; later Akamai employment or current role was not independently verified." },
+  { source_ids = ["calcalist_funding_2021", "tlv_acquisition_2023"], name = "Ziv Sivan", role = "Co-founder and CTO", is_founder = true, current = false, background = "Calcalist identifies Sivan as Neosec's co-founder and CTO and reports that the founders were graduates of IDF intelligence technology units 8200 and 81; its report does not attribute a particular unit to Sivan.", notes = "Historical Neosec role; later Akamai employment or current role was not independently verified." }
+]
+investors = [
+  { source_ids = ["neosec_launch_2021", "calcalist_funding_2021", "finder_neosec_2023"], name = "True Ventures", investor_type = "vc", round_ids = ["series-a-2021"], relationship = "historical" },
+  { source_ids = ["neosec_launch_2021", "calcalist_funding_2021"], name = "New Era Capital Partners", investor_type = "vc", round_ids = ["series-a-2021"], relationship = "historical" },
+  { source_ids = ["neosec_launch_2021", "calcalist_funding_2021", "tlv_acquisition_2023"], name = "TLV Partners", investor_type = "vc", round_ids = ["series-a-2021"], relationship = "historical", notes = "TLV Partners' account says it co-led the Series A; it does not identify the co-lead in that account." },
+  { source_ids = ["neosec_launch_2021", "calcalist_funding_2021", "finder_neosec_2023"], name = "SixThirty", investor_type = "vc", round_ids = ["seed-2020", "series-a-2021"], relationship = "historical", notes = "Finder lists SixThirty as seed lead; Neosec also named it among Series A participants." },
+  { source_ids = ["neosec_launch_2021", "calcalist_funding_2021"], name = "Mark Anderson", investor_type = "unknown", round_ids = ["series-a-2021"], relationship = "historical", notes = "Named as an individual investor; public sources reviewed do not disclose individual investment amounts or a more precise investor classification." },
+  { source_ids = ["neosec_launch_2021", "calcalist_funding_2021"], name = "Gary Fish", investor_type = "unknown", round_ids = ["series-a-2021"], relationship = "historical", notes = "Named as an individual investor; public sources reviewed do not disclose individual investment amounts or a more precise investor classification." },
+  { source_ids = ["neosec_launch_2021", "calcalist_funding_2021"], name = "Mickey Boodaei", investor_type = "unknown", round_ids = ["series-a-2021"], relationship = "historical", notes = "Named as an individual investor; public sources reviewed do not disclose individual investment amounts or a more precise investor classification." },
+  { source_ids = ["neosec_launch_2021", "calcalist_funding_2021"], name = "Rakesh Loonkar", investor_type = "unknown", round_ids = ["series-a-2021"], relationship = "historical", notes = "Named as an individual investor; public sources reviewed do not disclose individual investment amounts or a more precise investor classification." },
+  { source_ids = ["neosec_launch_2021", "calcalist_funding_2021"], name = "Shailesh Rao", investor_type = "unknown", round_ids = ["series-a-2021"], relationship = "historical", notes = "Named as an individual investor; public sources reviewed do not disclose individual investment amounts or a more precise investor classification." }
+]
+financials = []
+traction = [
+  { source_ids = ["venturebeat_launch_2021"], kind = "customer", date = "2021-09-14", description = "At launch, Neosec said it already had paying enterprise customers and notable channel and technology partners. The contemporaneous report did not name customers or state customer count, contract value, or recurring revenue; treat this as a company-reported early traction claim." },
+  { source_ids = ["neosec_soc2_2022"], kind = "regulatory", date = "2022-05-17", description = "Neosec announced completion of a SOC 2 Type II audit and described customer-configurable tokenization and privacy controls. This is a company announcement about an audit report, not a government security certification or proof of customer scale." },
+  { source_ids = ["neosec_apigee_2022"], kind = "product", date = "2022-09-07", description = "Neosec announced an integration with Google Cloud Apigee to use API activity data for discovery, risk assessment, and behavioral threat detection. The integration announcement does not establish a paid Google partnership or customer deployment." },
+  { source_ids = ["akamai_api_security_launch_2023"], kind = "customer", date = "2023-08-02", description = "Akamai's API Security launch quoted Earnin CISO Stan Lee describing use of the product to discover and monitor critical APIs. This is a named customer statement about use, not a disclosed contract value or measure of Neosec-only revenue." },
+  { source_ids = ["akamai_api_security_launch_2023"], kind = "product", date = "2023-08-02", description = "Akamai announced availability of API Security, explicitly describing the standalone product as a result of the Neosec acquisition and citing discovery, behavioral analytics, historical data, response, and threat hunting." },
+  { source_ids = ["akamai_customer_story_2023"], kind = "customer", date = "2023-09", description = "Akamai's anonymized financial-services and insurance customer story reports a four-week proof of concept across four environments, SIEM integration, and detection of API posture and runtime risks. It is vendor-published, gives no contract value, and does not identify the customer." }
+]
+intellectual_property = [
+  { source_ids = ["akamai_10q_2023"], kind = "other", date = "2023-05", description = "Akamai's acquisition accounting allocated $19.9 million of the Neosec purchase price to identifiable intangible assets, primarily completed technologies. The filing does not itemize patents, patent families, or individual Neosec product components." }
+]
+comparables = [
+  { source_ids = ["salt_platform"], name = "Salt Security", website = "https://salt.security", rationale = "A close API-security peer with discovery, posture, and API threat detection based on behavioral analysis.", differentiation = "Salt's current product describes continuous discovery and patented behavioral analysis. Neosec's historical emphasis was SaaS-based historical analytics and an XDR-like threat-hunting workflow; public independent benchmarks do not establish which detected more threats." },
+  { source_ids = ["traceable_platform"], name = "Traceable AI", website = "https://www.traceable.ai", rationale = "Competes across API discovery, posture, behavioral threat hunting, runtime protection, and testing.", differentiation = "Traceable describes contextual links among API and user activity, data flows, and code execution, with several deployment models. This gives it a broader stated application and code-to-runtime context than Neosec's publicly described API-activity-centered product." },
+  { source_ids = ["wallarm_api_security"], name = "Wallarm", website = "https://www.wallarm.com", rationale = "Competes in API discovery, abuse detection, and runtime API protection.", differentiation = "Wallarm emphasizes inline blocking, broad protocol support, and real-time detection and response. Neosec's historical differentiator was analytics and investigation across accumulated API activity rather than a primarily inline enforcement position." },
+  { source_ids = ["imperva_api_security"], name = "Imperva API Security", website = "https://www.imperva.com", rationale = "Competes for enterprise API inventory, API risk management, and API protection budgets.", differentiation = "Imperva positions API discovery with its wider application-security and bot-protection suite. Neosec was a stand-alone cloud analytics product before Akamai's acquisition and emphasized behavioral context and threat hunting." }
+]
+israel_connection = { source_ids = ["neosec_launch_2021", "calcalist_funding_2021"], status = "confirmed", basis = ["israeli_rd", "israeli_founders"], summary = "Neosec stated that it was based in Palo Alto with R&D in Tel Aviv. Israeli reporting identifies its founders as graduates of Israeli intelligence technology units 8200 and 81. This confirms an Israeli R&D and founder connection, not Israeli incorporation of the U.S. target.", as_of = "2026-10-21" }
+
+[intelligence.company]
+source_ids = ["akamai_10q_2023", "neosec_launch_2021", "calcalist_funding_2021", "finder_neosec_2023", "ivc_neosec_profile", "neosec_official_site"]
+notes = "Akamai's filing identifies the acquired U.S. target as Neosec, Inc. IVC's Israeli ecosystem page labels an entity Neosec Ltd. and says formerly Apiseq; the relationship between the names and legal entities was not independently confirmed. The Israeli registrar lookup linked from Finder returned an error, so no incorporation country is inferred."
+company_id = "il-neosec"
+legal_name = "Neosec, Inc."
+aliases = ["Apiseq"]
+operating_status = "acquired"
+business_model = "Historical business-to-business SaaS for enterprise API discovery, risk assessment, behavioral security analytics, and threat hunting; public pricing and customer contract terms were not found."
+products = ["Neosec API Security Platform", "API discovery and risk audit", "API behavioral analytics and threat hunting", "API detection and response"]
+locations = ["Palo Alto, California, United States (corporate base)", "Tel Aviv, Israel (R&D office)"]
+founded_on = "2020-06"
+registry_identifiers = [
+  { source_ids = ["finder_neosec_2023"], jurisdiction = "Israel", scheme = "Israeli Companies Registrar (ח.פ.)", identifier = "516202041", notes = "The legacy Startup Nation Finder profile links this identifier to the Neosec record. Its linked official lookup failed during this review, so the identifier and its legal-entity linkage are not independently confirmed." }
+]
+
+[intelligence.funding]
+status = "conflicting"
+summary = "Public sources report a $20.7 million cumulative funding total by the Series A period, but do not agree on how it splits by round. Neosec's September 2021 announcement headlines and describes $20.7 million in the Series A fundraise; Calcalist reports a separate $15 million Series A and $5 million seed, while Startup Nation Finder reports $15 million and $5.7 million. Numeric round amounts are therefore withheld and the observations are preserved. The $20.7 million total is reported separately and is not reconstructed from those observations. No debt, grant, or later financing was identified before acquisition. The Akamai acquisition consideration is an ownership transaction, not startup funding."
+reported_total_raised = 20700000
+reported_total_currency = "USD"
+total_source_ids = ["neosec_launch_2021", "calcalist_acquisition_2023"]
+total_as_of = "2023-04-19"
+total_scope = "Company-announced and contemporaneously reported cumulative venture funding through the Series A period; not derived by summing disputed round observations and excludes acquisition consideration."
+history_status = "partial"
+coverage_through = "2023-05"
+
+[[intelligence.funding.rounds]]
+source_ids = ["calcalist_funding_2021", "finder_neosec_2023", "ivc_neosec_profile"]
+notes = "Calcalist reports a $5 million seed; the legacy Finder profile reports $5.7 million and SixThirty as lead. Finder dates the seed June 2020, while IVC lists July 1, 2020; no contemporaneous seed announcement with an exact date or amount was found."
+id = "seed-2020"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2020-06"
+amount_status = "conflicting"
+amount_scope = "unknown"
+currency = "USD"
+lead_investors = ["SixThirty"]
+participating_investors = ["SixThirty"]
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "ctech-seed-5m"
+amount = 5000000
+currency = "USD"
+source_ids = ["calcalist_funding_2021"]
+as_of = "2021-09-14"
+notes = "Calcalist reports that Neosec had raised $5 million in a seed round before its Series A."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "finder-seed-5-7m"
+amount = 5700000
+currency = "USD"
+source_ids = ["finder_neosec_2023"]
+as_of = "2023-09-11"
+notes = "Startup Nation Finder's last-updated profile lists a $5.7 million June 2020 seed round led by SixThirty."
+
+[[intelligence.funding.rounds]]
+source_ids = ["neosec_launch_2021", "calcalist_funding_2021", "tlv_acquisition_2023", "finder_neosec_2023"]
+notes = "Neosec's company release describes $20.7 million as the total investment in its Series A fundraise; Calcalist and Finder identify a $15 million Series A separate from the seed. The round amount is withheld as conflicting. TLV Partners says it co-led the Series A but does not name its co-lead."
+id = "series-a-2021"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2021-09-14"
+amount_status = "conflicting"
+amount_scope = "unknown"
+currency = "USD"
+lead_investors = ["TLV Partners"]
+participating_investors = ["True Ventures", "New Era Capital Partners", "TLV Partners", "SixThirty", "Mark Anderson", "Gary Fish", "Mickey Boodaei", "Rakesh Loonkar", "Shailesh Rao"]
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "ctech-series-a-15m"
+amount = 15000000
+currency = "USD"
+source_ids = ["calcalist_funding_2021"]
+as_of = "2021-09-14"
+notes = "Calcalist reports a $15 million Series A."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "neosec-series-a-fundraise-20-7m"
+amount = 20700000
+currency = "USD"
+source_ids = ["neosec_launch_2021"]
+as_of = "2021-09-14"
+notes = "Neosec's announcement title calls this a $20.7 million Series A; its body says the Series A fundraise had a total investment of $20.7 million."
+
+[intelligence.ownership]
+status = "reported"
+summary = "Akamai acquired all outstanding equity of Neosec, Inc. in May 2023. Akamai is the reported parent/acquirer. Neosec's pre-acquisition cap table and investor ownership percentages are not public. The deal amount is omitted as conflicting: Akamai's filing reports $91.5 million in cash, while the legacy Finder profile lists a $91.4 million exit. Parent-company ticker: NASDAQ: AKAM."
+parent_company = "Akamai Technologies, Inc."
+cap_table_status = "undisclosed"
+shareholders = ["Akamai Technologies, Inc."]
+source_ids = ["akamai_10q_2023", "akamai_acquisition_2023", "finder_neosec_2023"]
+holdings = []
+
+[[intelligence.ownership.deals]]
+source_ids = ["akamai_acquisition_2023", "akamai_10q_2023", "finder_neosec_2023"]
+notes = "Akamai's filing reports $91.5 million in cash for all outstanding equity; the legacy Finder profile records a $91.4 million exit. The numeric transaction amount is omitted because the public reports differ; the discrepancy may reflect rounding or accounting scope but was not resolved. Acquisition consideration is not included in funding totals."
+id = "akamai-acquisition-2023"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2023-04-19"
+completed_on = "2023-05"
+status = "completed"
+counterparty = "Akamai Technologies, Inc."
+amount_status = "conflicting"
+currency = "USD"
+
+[intelligence.research]
+researched_at = "2026-10-21T20:48:07+00:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Neosec Akamai acquisition April 2023 official announcement",
+  "Neosec funding raised investors Series A 2021 2022",
+  "Neosec founders CEO CTO team Tel Aviv API security",
+  "Neosec acquisition price Akamai financial filing",
+  "Neosec $5.7 million seed funding June 2020 SixThirty",
+  "Neosec raises $15 million July 2021 Series A True Ventures TLV Partners",
+  "Neosec founders Giora Engel Ziv Sivan official interview",
+  "Neosec patent Google patents Neosec Inc API security",
+  "site:sixthirty.com Neosec API security investment",
+  "Neosec Apiseq company formerly",
+  "Neosec API security patents Neosec Inc",
+  "site:akamai.com/products/api-security Neosec API Security product platform agnostic",
+  "Neosec paying enterprise customers channel technology partners September 2021 customers",
+  "Neosec revenue ARR customers headcount revenue 2022",
+  "Neosec patents USPTO assignee API behavioral analytics",
+  "site:patents.google.com/patent Neosec Inc API",
+  "site:patentsview.org Neosec Inc",
+  "Neosec API Security enterprise customer Earnin quote Akamai 2023",
+  "Neosec API security customer revenue ARR employee growth financials acquired",
+  "site:salt.security API security platform API discovery behavioral threat detection",
+  "site:traceable.ai API security platform API discovery runtime security",
+  "site:wallarm.com API security platform runtime protection",
+  "site:imperva.com API security discovery protection"
+]
+gaps = [
+  "team: founders and historical executive roles are public, but no verified current Neosec team exists after acquisition and later Akamai roles were not confirmed.",
+  "investors: named participants are available, but pre-acquisition cap-table percentages, individual check sizes, and full allocation by round were not disclosed.",
+  "financials: no Neosec revenue, ARR, profitability, burn, runway, or customer-count metric was found. Akamai said acquired revenue and earnings were not material enough to report separately; this does not establish zero revenue.",
+  "traction: public sources give a launch-stage paying-customer claim, an integration, a named customer quote, and an anonymized case study, but no customer count, ACV, retention, renewal, or post-acquisition Neosec-only sales data.",
+  "intellectual_property: no clearly attributable patent family was identified in exact-name public patent searches. Akamai's filing reports $19.9 million of identifiable intangible assets, primarily completed technologies, but does not itemize patents or product components.",
+  "competition: no independent comparative benchmark, market share, win/loss data, pricing comparison, or current feature-to-Neosec lineage map was found.",
+  "dual_use: no defense, military, classified, or named government deployment, contract, or defense-specific certification was found; defense applicability is inferred from defensive API security functionality.",
+  "identity: a legacy Finder record links Israeli registrar number 516202041, but the linked official lookup returned an error, so the number and legal-entity linkage remain unverified.",
+  "ownership: the pre-acquisition cap table and investor percentages remain undisclosed; the acquisition amount differs between Akamai's filing and the legacy Finder profile."
+]
+conflicts = [
+  "Funding round amounts conflict. Neosec's September 2021 release presents $20.7 million as the Series A fundraise total; Calcalist reports a $15 million Series A and a separate $5 million seed; Startup Nation Finder lists $15 million and $5.7 million. Round amounts are omitted and each reported observation is retained.",
+  "The seed timing is not consistent across legacy ecosystem records: Finder says June 2020 and IVC lists July 1, 2020. The round date is recorded at June 2020 precision with the discrepancy noted.",
+  "Akamai's 2023 Form 10-Q reports $91.5 million cash consideration for all outstanding equity, while Startup Nation Finder lists a $91.4 million exit. The deal amount is omitted as conflicting; the amount is not counted as startup funding.",
+  "The IVC profile labels an Israeli record Neosec Ltd. and says formerly Apiseq, while Akamai's filing identifies the acquired U.S. target as Neosec, Inc. Their precise legal-entity relationship was not verified; the target's legal name follows the filing.",
+  "Some legacy ecosystem data describes Tel Aviv as Neosec's headquarters; Neosec's launch announcement says it was based in Palo Alto with R&D in Tel Aviv, and IVC lists Palo Alto as the main address and Tel Aviv as a branch. This record uses Palo Alto as the corporate base and Tel Aviv as the R&D location."
+]
+diligence_questions = [
+  "Which Neosec-originated components, customers, and entitlements remain in Akamai API Security after the Noname acquisition, and what migration or support commitments apply to former Neosec customers?",
+  "What were Neosec's pre-acquisition revenue, ARR, paid-customer count, ACV, gross retention, and renewal rates, and how much of the acquisition value reflected customers versus technology and talent?",
+  "Which patents, applications, code, data rights, and trade secrets transferred to Akamai, and how are those assets assigned across the current combined API Security product?",
+  "Which members of Neosec's product, threat-hunting, and engineering team remained at Akamai after integration, and who owns the present roadmap?",
+  "Has Akamai deployed the Neosec-derived capabilities for government, defense, or critical-infrastructure customers, and what public-sector procurement or security attestations support such use?",
+  "How do the current combined product's detection precision, ingestion coverage, privacy controls, and response latency compare with Salt Security, Traceable AI, Wallarm, and Imperva in customer evaluations?"
+]
+topic_checks = [
+  { topic = "identity", status = "reported", checked_at = "2026-10-21T20:45:22+00:00", next_review_on = "2027-04-21", queries = ["Neosec canonical identity legal name Neosec Inc founded aliases Apiseq headquarters Palo Alto Tel Aviv", "Neosec Apiseq company formerly", "Neosec founders Giora Engel Ziv Sivan Israeli connection"], source_ids = ["akamai_10q_2023", "neosec_launch_2021", "calcalist_funding_2021", "finder_neosec_2023", "ivc_neosec_profile"], summary = "Akamai identifies the acquired target as Neosec, Inc.; company and Israeli ecosystem sources support its 2020 founding, Palo Alto base, Tel Aviv R&D, and former name Apiseq. The Israeli registry link could not be independently resolved." },
+  { topic = "funding", status = "conflicting", checked_at = "2026-10-21T20:45:22+00:00", next_review_on = "2027-04-21", queries = ["Neosec funding raised investors Series A 2021 2022", "Neosec $5.7 million seed funding June 2020 SixThirty", "Neosec raises $15 million July 2021 Series A True Ventures TLV Partners", "Neosec funding revenue valuation Series A/B/C investors"], source_ids = ["neosec_launch_2021", "calcalist_funding_2021", "finder_neosec_2023", "calcalist_acquisition_2023", "ivc_neosec_profile"], summary = "Company and media sources report $20.7 million cumulative funding, but seed and Series A observations disagree. No post-Series-A financing before acquisition was identified." },
+  { topic = "investors", status = "reported", checked_at = "2026-10-21T20:45:22+00:00", next_review_on = "2027-04-21", queries = ["Neosec investors True Ventures New Era Capital Partners TLV Partners SixThirty Mark Anderson", "site:tlv.partners Neosec Series A acquisition"], source_ids = ["neosec_launch_2021", "calcalist_funding_2021", "tlv_acquisition_2023", "finder_neosec_2023"], summary = "Neosec and Calcalist name four funds and five individual Series A participants; TLV Partners says it co-led. Finder lists SixThirty as seed lead. Check sizes and ownership percentages are not disclosed." },
+  { topic = "team", status = "reported", checked_at = "2026-10-21T20:45:22+00:00", next_review_on = "2027-04-21", queries = ["Neosec founders CEO CTO team Tel Aviv API security", "Neosec co-founders Giora Engel Ziv Sivan 8200 81 LightCyber", "Neosec management team Akamai acquisition"], source_ids = ["calcalist_funding_2021", "calcalist_acquisition_2023", "tlv_acquisition_2023", "finder_neosec_2023"], summary = "Giora Engel and Ziv Sivan are documented as co-founders and CEO/CTO. Public sources report historical security backgrounds and about 40 employees at acquisition announcement; the post-acquisition roster is unknown." },
+  { topic = "ownership", status = "conflicting", checked_at = "2026-10-21T20:45:22+00:00", next_review_on = "2027-04-21", queries = ["Neosec acquisition Akamai April 2023 SEC Form 10-Q purchase price", "Neosec acquisition price 91.5 million 2023", "Neosec subsidiary Akamai current ownership"], source_ids = ["akamai_acquisition_2023", "akamai_10q_2023", "finder_neosec_2023"], summary = "Akamai completed the acquisition of all outstanding Neosec equity in May 2023. Akamai's filing and the legacy directory differ slightly on consideration; current parent is reported, but private pre-acquisition ownership percentages remain unavailable." },
+  { topic = "financials", status = "no_public_disclosure", checked_at = "2026-10-21T20:45:22+00:00", next_review_on = "2027-04-21", queries = ["Neosec revenue ARR financials revenue 2022", "Neosec customer count revenue ARR after Akamai acquisition", "Form 10-Q Akamai Neosec acquisition revenue not material separately"], source_ids = ["akamai_10q_2023", "calcalist_acquisition_2023", "venturebeat_launch_2021"], summary = "No Neosec revenue, ARR, profitability, burn, or runway figure was found. Akamai says acquired-company revenue and earnings were not separately presented because they were not material to Akamai; historical headcount/customer claims are not financial results." },
+  { topic = "traction", status = "reported", checked_at = "2026-10-21T20:45:22+00:00", next_review_on = "2027-04-21", queries = ["Neosec paying enterprise customers channel technology partners September 2021 customers", "Neosec API security Apigee integration Sep 2022", "Neosec SOC 2 Type II May 2022", "Akamai API Security Earnin customer Neosec", "Akamai customer story Neosec now Akamai API Security Sep 2023"], source_ids = ["venturebeat_launch_2021", "neosec_soc2_2022", "neosec_apigee_2022", "akamai_api_security_launch_2023", "akamai_customer_story_2023"], summary = "Public evidence includes a launch-stage company claim of paying customers, SOC 2 Type II audit, Apigee integration, an Earnin CISO quote, and an anonymized Akamai customer story. Counts, contract values, retention, and product-specific revenue are undisclosed." },
+  { topic = "intellectual_property", status = "not_found", checked_at = "2026-10-21T20:45:22+00:00", next_review_on = "2027-04-21", queries = ["Neosec patents USPTO patents Google Patents assignee", "Neosec Inc patent API behavioral analytics", "Neosec patents intellectual property purchased Akamai 19.9 million intangibles"], source_ids = ["akamai_10q_2023", "uspto_patent_search"], summary = "Exact-name patent searches did not identify a clearly attributable Neosec patent family. Akamai's acquisition filing records $19.9 million of identifiable intangible assets, primarily completed technologies, but does not itemize the IP or patents." },
+  { topic = "competition", status = "reported", checked_at = "2026-10-21T20:45:22+00:00", next_review_on = "2027-04-21", queries = ["site:salt.security API security platform API discovery behavioral threat detection", "site:traceable.ai API security platform API discovery runtime security", "site:wallarm.com API security platform runtime protection", "site:imperva.com API security discovery protection"], source_ids = ["salt_platform", "traceable_platform", "wallarm_api_security", "imperva_api_security"], summary = "Current competitor product pages establish substantial overlap in API discovery, risk management, behavior analytics, runtime protection, and suite integrations. No independent benchmark or Neosec-specific win/loss data was found." },
+  { topic = "dual_use", status = "reported", checked_at = "2026-10-21T20:45:22+00:00", next_review_on = "2027-04-21", queries = ["Neosec defense military government customer API security", "Neosec public sector defense government contracts API security", "Neosec API detection and response behavioral analytics government defense applicability"], source_ids = ["neosec_launch_2021", "calcalist_funding_2021", "akamai_api_security_launch_2023", "akamai_api_security_current"], summary = "API inventory and defensive behavioral monitoring have commercial and plausible public-sector security applicability. The reviewed public evidence does not identify a defense or government deployment, contract, or purpose-built military capability." }
+]
+claim_checks = [
+  { field_path = "company.operating_status", support = "direct", summary = "Akamai's Form 10-Q says it acquired all outstanding equity of Neosec, Inc. in May 2023; the company is an acquired asset, not an independent active startup.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["akamai_10q_2023"] },
+  { field_path = "israel_connection", support = "direct", summary = "Neosec's own launch release states that it was based in Palo Alto with R&D in Tel Aviv; Calcalist also identifies the founders' Israeli intelligence-technology-unit backgrounds.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["neosec_launch_2021", "calcalist_funding_2021"] },
+  { field_path = "funding.reported_total_raised", support = "direct", summary = "Neosec's September 2021 release reports a $20.7 million total investment in the Series A fundraise, and Calcalist later reports $20.7 million raised to date.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["neosec_launch_2021", "calcalist_acquisition_2023"] },
+  { field_path = "funding.rounds.seed-2020.amount", support = "conflicting", summary = "No numeric seed amount is published in the field because Calcalist reports $5 million and Startup Nation Finder reports $5.7 million; both amounts are retained as source observations.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["calcalist_funding_2021", "finder_neosec_2023"] },
+  { field_path = "funding.rounds.seed-2020.amount_observations.ctech-seed-5m.amount", support = "direct", summary = "Calcalist reports a $5 million seed round before the Series A.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["calcalist_funding_2021"] },
+  { field_path = "funding.rounds.seed-2020.amount_observations.finder-seed-5-7m.amount", support = "direct", summary = "Startup Nation Finder lists a $5.7 million seed round in June 2020.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["finder_neosec_2023"] },
+  { field_path = "funding.rounds.seed-2020.participating_investors", support = "direct", summary = "Startup Nation Finder lists SixThirty as lead investor in the seed round.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["finder_neosec_2023"] },
+  { field_path = "funding.rounds.seed-2020.lead_investors", support = "direct", summary = "Startup Nation Finder identifies SixThirty as the seed-round lead investor.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["finder_neosec_2023"] },
+  { field_path = "funding.rounds.series-a-2021.amount", support = "conflicting", summary = "The numeric Series A amount is omitted because Neosec's announcement presents $20.7 million for its fundraise while Calcalist and Finder identify a separate $15 million Series A.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["neosec_launch_2021", "calcalist_funding_2021", "finder_neosec_2023"] },
+  { field_path = "funding.rounds.series-a-2021.amount_observations.ctech-series-a-15m.amount", support = "direct", summary = "Calcalist reports a $15 million Series A announced in September 2021.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["calcalist_funding_2021"] },
+  { field_path = "funding.rounds.series-a-2021.amount_observations.neosec-series-a-fundraise-20-7m.amount", support = "direct", summary = "Neosec's release title and body describe $20.7 million in the Series A fundraise, with body wording referring to total investment.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["neosec_launch_2021"] },
+  { field_path = "funding.rounds.series-a-2021.participating_investors", support = "direct", summary = "Neosec's announcement names True Ventures, New Era Capital Partners, TLV, SixThirty, Mark Anderson, Gary Fish, Mickey Boodaei, Rakesh Loonkar, and Shailesh Rao as Series A participants.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["neosec_launch_2021"] },
+  { field_path = "funding.rounds.series-a-2021.lead_investors", support = "direct", summary = "TLV Partners says it co-led the Series A; only TLV is entered as a named lead because its source does not identify the co-lead.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["tlv_acquisition_2023"] },
+  { field_path = "ownership.parent_company", support = "direct", summary = "Akamai's filing reports that it acquired all outstanding equity of Neosec, Inc.; Akamai is the parent after the completed transaction.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["akamai_10q_2023"] },
+  { field_path = "ownership.deals.akamai-acquisition-2023.status", support = "direct", summary = "Akamai's Form 10-Q says it acquired all outstanding Neosec equity in May 2023, confirming completion.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["akamai_10q_2023"] },
+  { field_path = "ownership.deals.akamai-acquisition-2023.company_role", support = "direct", summary = "Akamai's filing states that it acquired all outstanding equity interests of Neosec, Inc., establishing Neosec as the target.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["akamai_10q_2023"] },
+  { field_path = "ownership.deals.akamai-acquisition-2023.amount", support = "conflicting", summary = "Akamai's Form 10-Q reports $91.5 million in cash, while the legacy Finder profile lists a $91.4 million exit; the amount is omitted as unresolved.", verified_at = "2026-10-21T20:45:22+00:00", source_ids = ["akamai_10q_2023", "finder_neosec_2023"] }
+]
+
+[[intelligence.research.sources]]
+id = "neosec_launch_2021"
+url = "https://www.prnewswire.com/news-releases/cybersecurity-pioneer-launches-neosec-with-20-7-million-series-a-to-protect-apis-from-business-abuse-and-data-theft-301376205.html"
+title = "Cybersecurity Pioneer Launches Neosec With $20.7 Million Series A to Protect APIs From Business Abuse and Data Theft"
+publisher = "Neosec via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2021-09-14"
+claims = ["The company announced $20.7 million in total investment in its Series A fundraise.", "The announcement names four funds and five individual investors.", "Neosec described itself as based in Palo Alto with R&D in Tel Aviv.", "The announcement describes a SaaS API-security platform using behavioral analytics and threat hunting."]
+
+[[intelligence.research.sources]]
+id = "calcalist_funding_2021"
+url = "https://www.calcalist.co.il/calcalistech/article/hjwtvfhzk"
+title = "יוצאי לייטסייבר גייסו 15 מיליון דולר ממיקי בודאי"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2021-09-14"
+claims = ["Calcalist reports a $15 million Series A and a separate $5 million seed round.", "The story names institutional and individual investors.", "It identifies Giora Engel as co-founder and CEO and Ziv Sivan as co-founder and CTO.", "It reports that the founders graduated from Israeli intelligence technology units 8200 and 81 and that Engel previously co-founded LightCyber."]
+
+[[intelligence.research.sources]]
+id = "finder_neosec_2023"
+url = "https://finder.startupnationcentral.org/company_page/neosec"
+title = "Neosec — Cyber Security"
+publisher = "Startup Nation Central Finder (legacy profile)"
+kind = "directory"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2023-09-11"
+claims = ["The legacy profile lists Neosec as founded in June 2020 by Giora Engel and Ziv Sivan and acquired/inactive in April 2023.", "The profile lists $5.7 million seed and $15 million Series A rounds, with SixThirty leading the seed.", "The profile lists historical headcount of 11-50 and exact headcount 22, Tel Aviv as a location, and registrar number 516202041.", "The page states that Startup Nation Central ended operation of Finder on August 31, 2026."]
+
+[[intelligence.research.sources]]
+id = "ivc_neosec_profile"
+url = "https://www.ivc-online.com/Google-Card?id=2d84b5df-eada-ea11-810a-0050569a1018"
+title = "Neosec Ltd. — IVC Data & Insights"
+publisher = "IVC"
+kind = "directory"
+accessed_at = "2026-10-21T20:45:22+00:00"
+claims = ["The profile says formerly Apiseq and now Akamai Israel.", "It lists an establishment year of 2020, Palo Alto as the main address, and Tel Aviv as a branch address.", "Its round history lists a seed on July 1, 2020 and a first round on September 14, 2021, while investor amount fields are obscured."]
+
+[[intelligence.research.sources]]
+id = "tlv_acquisition_2023"
+url = "https://www.tlv.partners/neosec-acquired-by-akamai-technologies/"
+title = "Neosec, Cloud-Native API Security Startup, Acquired by Akamai Technologies"
+publisher = "TLV Partners"
+kind = "investor"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2023-04-19"
+claims = ["TLV Partners says its portfolio company Neosec was acquired by Akamai.", "The article identifies Giora Engel as CEO and Ziv Sivan as CTO.", "The author says TLV Partners co-led the Series A and describes Neosec's cloud-native behavioral analytics approach."]
+
+[[intelligence.research.sources]]
+id = "akamai_acquisition_2023"
+url = "https://www.ir.akamai.com/news-releases/news-release-details/akamai-technologies-acquire-api-security-company-neosec"
+title = "Akamai Technologies To Acquire API Security Company Neosec"
+publisher = "Akamai Technologies"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2023-04-19"
+claims = ["Akamai announced a definitive agreement to acquire Neosec on April 19, 2023.", "Akamai describes Neosec as an API detection and response platform based on data and behavioral analytics.", "The announcement says the acquisition was expected to close in the second quarter of 2023."]
+
+[[intelligence.research.sources]]
+id = "akamai_10q_2023"
+url = "https://www.ir.akamai.com/static-files/5c43a907-d55b-4596-aa8c-580e8b37e6b1"
+title = "Form 10-Q for Akamai Technologies Inc. filed August 8, 2023"
+publisher = "Akamai Technologies (quarterly filing)"
+kind = "filing"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2023-08-08"
+claims = ["Akamai says it acquired all outstanding equity interests of Neosec, Inc. in May 2023 for $91.5 million cash.", "Akamai allocated $19.9 million to identifiable intangible assets, primarily completed technologies, and $67.0 million to goodwill.", "Akamai says acquired revenue and earnings were not presented separately because they were not material to consolidated results."]
+
+[[intelligence.research.sources]]
+id = "calcalist_acquisition_2023"
+url = "https://www.calcalistech.com/ctechnews/article/bksqds6f3"
+title = "Akamai acquiring API security startup Neosec"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2023-04-19"
+claims = ["Calcalist reports that Neosec completed a $15 million Series A in September 2021 and had raised $20.7 million total to date.", "The article identifies the founders and describes Neosec's API behavioral-analytics product.", "It reports around 40 employees at the announcement and says they were expected to join Akamai."]
+
+[[intelligence.research.sources]]
+id = "neosec_soc2_2022"
+url = "https://www.prnewswire.com/news-releases/neosec-achieves-soc-2-type-ii-compliance-leveraging-its-own-security-platform-for-application-api-level-controls-301549317.html"
+title = "Neosec Achieves SOC 2 Type II Compliance Leveraging its Own Security Platform for Application API Level Controls"
+publisher = "Neosec via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2022-05-17"
+claims = ["Neosec announced completion of a SOC 2 Type II audit.", "The company described customer-configurable API field tokenization and privacy-by-design controls."]
+
+[[intelligence.research.sources]]
+id = "neosec_apigee_2022"
+url = "https://www.prnewswire.com/news-releases/neosec-integrates-with-google-cloud-apigee-api-management-to-prevent-business-api-fraud-and-abuse-301619562.html"
+title = "Neosec Integrates with Google Cloud Apigee API Management to Prevent Business API Fraud and Abuse"
+publisher = "Neosec via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2022-09-07"
+claims = ["Neosec announced an integration with Google Cloud Apigee.", "The company describes using API activity data for inventory, risk review, and behavioral detection of fraud and abuse."]
+
+[[intelligence.research.sources]]
+id = "venturebeat_launch_2021"
+url = "https://venturebeat.com/ai/neosec-an-api-security-startup-emerges-from-stealth-with-20-7m"
+title = "Neosec, an API security startup, emerges from stealth with $20.7M"
+publisher = "VentureBeat"
+kind = "media"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2021-09-14"
+claims = ["VentureBeat reports that Neosec said it had paying enterprise customers and notable channel and technology partners at launch.", "The report describes a 20-person team and Neosec's intended use of funding.", "The article describes behavioral analytics and historical data for API threat hunting."]
+
+[[intelligence.research.sources]]
+id = "akamai_api_security_launch_2023"
+url = "https://www.akamai.com/newsroom/press-release/akamai-announces-api-security-product-to-protect-api-from-business-abuse-and-data-theft"
+title = "Akamai Announces API Security Product to Protect APIs From Business Abuse and Data Theft"
+publisher = "Akamai Technologies"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2023-08-02"
+claims = ["Akamai announced availability of API Security and says the stand-alone product resulted from its acquisition of Neosec.", "The product announcement describes discovery, behavioral analytics, historical-data analysis, response, and threat hunting.", "Akamai quotes Earnin CISO Stan Lee discussing API discovery and monitoring."]
+
+[[intelligence.research.sources]]
+id = "akamai_pci_aoc_2024"
+url = "https://www.akamai.com/site/en/documents/corporate/2024/pci-dss-attestation-of-compliance.pdf"
+title = "PCI DSS v4.0.1 Attestation of Compliance for Report on Compliance — Service Providers"
+publisher = "Akamai Technologies / PCI Security Standards Council report"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2024-08"
+claims = ["The August 2024 document says Akamai's additional API Security solution formerly known as Neosec was no longer for sale.", "The report separately describes the API Security solution formerly known as Noname Security."]
+
+[[intelligence.research.sources]]
+id = "akamai_api_security_current"
+url = "https://www.akamai.com/products/api-security"
+title = "API Security | Akamai"
+publisher = "Akamai Technologies"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+claims = ["Akamai currently describes API Security as covering discovery, governance, testing, runtime analytics, and response.", "The current product page describes platform-agnostic deployment and coverage of shadow, zombie, and AI-related APIs."]
+
+[[intelligence.research.sources]]
+id = "akamai_api_security_license_2025"
+url = "https://www.akamai.com/site/en/documents/akamai/api-security-license.pdf"
+title = "API Security License"
+publisher = "Akamai Technologies"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2025-01"
+claims = ["Akamai's API Security license defines the product ecosystem to include Neosec and Noname Security components.", "The license describes access to the Akamai product and customer-specific instances."]
+
+[[intelligence.research.sources]]
+id = "akamai_customer_story_2023"
+url = "https://www.akamai.com/site/en/documents/customer-story/2023/financial-services-and-insurance-company.pdf"
+title = "Customer Story: Financial Services and Insurance Company"
+publisher = "Akamai Technologies"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2023-09"
+claims = ["Akamai's anonymous customer story describes a financial-services and insurance company with approximately 4,500 employees.", "The story says a four-week proof of concept covered four environments and found API posture and runtime risks.", "The customer identity and commercial terms are not disclosed."]
+
+[[intelligence.research.sources]]
+id = "uspto_patent_search"
+url = "https://www.uspto.gov/patents/search/patent-public-search"
+title = "Patent Public Search"
+publisher = "United States Patent and Trademark Office"
+kind = "government"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2024-06-06"
+claims = ["USPTO describes its portal as providing public access to search U.S. patents and published applications using keywords or common fields."]
+
+[[intelligence.research.sources]]
+id = "neosec_official_site"
+url = "https://neosec.com"
+title = "Neosec official website redirects to Akamai API Security"
+publisher = "Neosec / Akamai Technologies"
+kind = "company"
+accessed_at = "2026-10-21T20:48:07+00:00"
+claims = ["The official neosec.com domain redirects to Akamai's API Security product page."]
+
+[[intelligence.research.sources]]
+id = "salt_platform"
+url = "https://salt.security/platform?0db7cd29_page=11"
+title = "API Security Platform — Complete API Protection Platform"
+publisher = "Salt Security"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+claims = ["Salt describes API discovery, posture and compliance, and behavioral threat detection and protection capabilities."]
+
+[[intelligence.research.sources]]
+id = "traceable_platform"
+url = "https://www.traceable.ai/api-security-platform"
+title = "Traceable Application & API Security Platform"
+publisher = "Traceable AI"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+claims = ["Traceable describes API inventory, posture management, behavioral threat hunting, runtime protection, and contextual API security testing."]
+
+[[intelligence.research.sources]]
+id = "wallarm_api_security"
+url = "https://www.wallarm.com/product/api-security"
+title = "API Security — Wallarm"
+publisher = "Wallarm"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+claims = ["Wallarm describes API discovery, real-time inline blocking, abuse and account-takeover protection, and multi-protocol support."]
+
+[[intelligence.research.sources]]
+id = "imperva_api_security"
+url = "https://www.imperva.com/resources/datasheets/API-Security.pdf"
+title = "Imperva API Security — Key Capabilities"
+publisher = "Imperva / Thales"
+kind = "company"
+accessed_at = "2026-10-21T20:45:22+00:00"
+published_on = "2025-06"
+claims = ["Imperva's product datasheet describes API discovery, OWASP API risk identification, and integration with its application-security and bot-protection offerings."]

@@ -1,42 +1,725 @@
 name = "Scanovate"
-description = "Scanovate develops B-Trust, an enterprise identity and compliance platform for regulated organizations. It combines workflow automation, individual and corporate onboarding, KYC/KYB checks, screening, identity lifecycle management, monitoring, and audit evidence rather than offering only a standalone verification API."
-detailed_description = """Scanovate is an Israeli RegTech company whose B-Trust platform is designed to digitize compliance controls and identity management across a financial-services business value chain. The official product description spans product and marketing approvals, customer onboarding, ongoing business relationships, payments, claims, and post-contract activity. Its central proposition is a configurable workflow layer that connects internal reviewers, rules, dashboards, reporting, and external data providers. That is a meaningful problem in regulated institutions because identity, AML, fraud, and ownership decisions are often distributed across teams and point products, leaving manual handoffs and weak evidence trails.
+description = "Scanovate develops B-Trust, an enterprise identity and compliance platform covering individual and corporate onboarding, KYC/KYB, screening, ongoing monitoring, and audit workflows. Prytek announced an acquisition of Scanovate's business and two subsidiaries in September 2026; Scanovate continues operating as Prytek's customer-lifecycle-management business."
+detailed_description = """Scanovate is an Israeli identity and RegTech business based in Ramat Gan. Its current offering, B-Trust, is a client lifecycle and identity management platform for regulated financial institutions and other enterprises. Company materials describe workflows that begin with product and marketing approvals, extend through individual and corporate onboarding, and continue into business relationships, payments, claims, and post-contract monitoring. Scanovate dates its fintech company to 2014. An Israel Innovation Authority interview with CEO Amir Fishman says the business began image-processing work earlier and shifted into fintech in 2014; a 2015 company press release uses 2012 as its founding year. I use 2014 for the current identity and compliance business while retaining the older roots as a date discrepancy.
 
-The technical bundle is broader than simple document verification. B-Trust describes individual onboarding with document capture/OCR, identity verification and facial-recognition integrations, customer-risk classification, and customer-due-diligence checks. For corporate onboarding it describes obtaining corporate structures and beneficial-owner information, then applying risk classification, adverse-media, sanctions, PEP, ICIJ, and OFAC 50% rule checks. The platform also describes configurable rulesets, API-first connections to third-party data and systems of record, continuous re-checking, event-triggered workflows, and an audit trail for regulatory reporting and incident response. These are credible product capabilities based on the company’s own public materials, although the underlying data quality, model performance, and automation rate require customer-level diligence.
+B-Trust is broader than a document capture API. The company describes document OCR and authenticity checks, facial verification and liveness integrations, risk classification, customer due diligence, beneficial-owner and corporate-structure checks, sanctions, PEP and adverse-media screening, and rules for complex ownership such as the US OFAC 50% rule. It also offers configurable workflows, third-party data and system integrations, event-triggered refreshes, dashboards, and audit trails. Current Scanovate materials present the platform as an orchestration layer across compliance teams and external providers. An AWS Marketplace listing for Scanovate IDV separately advertises SaaS, private-cloud and on-premise deployments, document verification, OCR, biometric face matching, liveness, and optional voice-statement checks. Those are vendor-described functions; public evidence does not disclose independent error rates, model performance by document or population, or the share of each workflow completed without human review.
 
-The clearest market is banks, asset managers, lenders, insurers, and digital-wallet providers that must onboard customers and legal entities while maintaining compliance after account opening. Scanovate’s site presents the product as suitable for both individual and corporate compliance, which broadens the addressable workflow but also increases implementation complexity. Its displayed enterprise customer references provide a commercialization signal, yet public materials do not establish current contract values, recurring revenue, retention, geographic mix, or deployment scale. A diligence process should therefore test whether B-Trust is a repeatable software product or remains services-intensive in each jurisdiction, and should examine integration time, false-positive reduction, review throughput, and dependence on particular data suppliers.
+Commercial evidence spans a long operating history, but its strength varies. A 2015 Scanovate release says its imaging technology was used in Bank Leumi's mobile bill-payment service. In 2019 Geektime reported the company worked with large Israeli banks and credit-card companies and quoted a company claim of more than 85 million users or customers; the wording does not define unique, active, or paying users. In September 2026 CTech reported more than 250 customers, including about 120 financial institutions, across North America, South America, Western Europe, and Israel. This is the clearest recent scale signal, though contract values, customer concentration, renewal rates, and product-by-product attribution are not public. The AWS listing advertises a 12-month, 50,000-session package at $25,000 for one IDV offering. That is a marketplace price, not a realized booking or company revenue metric.
 
-The competitive set includes identity-proofing specialists, AML and adverse-media data vendors, KYB/entity platforms, fraud providers, and large financial-crime technology suites. Scanovate’s potential edge is lifecycle breadth and a single workflow/control plane: institutions may reduce integration and audit fragmentation by coordinating onboarding, ownership checks, screening, monitoring, and post-contract actions in one environment. The trade-off is that broad coverage can create product sprawl, regulatory maintenance burden, and harder proof of superiority against focused vendors. The technology has genuine dual-use adjacency: identity assurance, entity-risk analysis, sanctions screening, and auditable case workflows are relevant to procurement integrity, sensitive-access onboarding, and public-sector screening. There is no reliable public evidence here of material defense contracts or government-program penetration, so national-security relevance should be treated as capability-led optionality, not demonstrated defense traction."""
+Two additional signals need careful treatment. In 2023 the Israeli Ministry for Social Equality published an intention to contract Scanovate as a sole supplier for biometric identity checks in a digital senior-citizen credential process. The public notice estimated a NIS 150,000 contract for up to one year; its attached opinion says that, at that time, Scanovate had met the ministry's stated cyber requirements while other candidates were still being assessed. This is evidence of a civilian public-sector procurement process and project-specific security review, not a defense contract, a general certification, or proof that the full estimated value was paid. In 2024 the Israeli trade mission to Peru said Scanovate/ADO Technologies won an ASBANC identity-verification tender and described an initial estimate of $20 million per year. ASBANC's own 2023 annual report lists ADO Technologies among partners in its security and digital-transformation suite, but it does not corroborate that contract value or a Scanovate revenue stream. The $20 million figure therefore remains an unverified announcement claim. A separate 2024 Anonybit release says ADO Technologies, described there as a Scanovate company, delivered an identity-verification service backed by Anonybit infrastructure to an unnamed Latin American banking group serving 14 million retail customers. That supports a real partner deployment while also showing a third-party biometric dependency.
+
+Prytek announced in September 2026 that it was acquiring Scanovate's business and the Cellosign and ADO Technologies businesses. CTech reported an approximately $50 million first phase with potential shareholder value of up to $100 million; Prytek's counsel APM described a transaction worth more than $50 million with potential to reach $100 million. The contingent value, precise consideration, closing mechanics, and legal allocation between assets and entities are not disclosed consistently, so no exact deal amount or company valuation is recorded. Prytek says Scanovate will lead its customer lifecycle management segment and continue product development with group companies. Fishman told CTech that selling to large banks and entering new markets had been difficult and expensive for a company of Scanovate's size. The acquisition can address distribution and institutional access, but introduces execution risk around customer consent, product integration, data boundaries, and whether the business retains operating independence. Publicly reported customer counts should not be treated as recurring revenue or proof of post-acquisition cross-selling.
+
+Competition is layered. Fenergo is a close enterprise client-lifecycle and compliance alternative with policy and workflow coverage across more than 120 jurisdictions. Jumio and Entrust Identity Verification (formerly Onfido) overlap in document, biometric, liveness, and fraud checks, with broad identity assurance portfolios. Sumsub combines user verification, biometrics, screening, AML monitoring, and business verification. Trulioo emphasizes global data-backed person and business verification through APIs and hosted onboarding. Scanovate's plausible distinction is the combination of identity capture, configurable process orchestration, entity and beneficial-owner review, and continued monitoring in one environment, with deployment options that include isolated or on-premise environments. This may appeal to banks that want to coordinate local rules and legacy integrations. The weakness is that each layer also has established specialists and large suites; a broad feature list does not establish better matching accuracy, data coverage, regulator acceptance, or lower total cost. Scanovate itself describes a marketplace and third-party integrations, and the ADO deployment cited above relies on an external biometric backend, so supplier economics and attribution of differentiated technology need examination.
+
+The founder group combines product, image-processing, biometric, and financial-services experience. Scanovate's current leadership page lists Amir Fishman as CEO, Irad Gilboa as CTO, Roi Fishman as CPO, and Alon Ofir as a biometric subject-matter expert, plus COO Amir Laufer and product director Inbal Zarski. CTech describes Roi Fishman as a CTO in its acquisition coverage, while the company page calls him CPO; his exact post-transaction remit should be confirmed. Ofir's biography cites a face-surveillance patent, but the public US application record names Rafael as assignee and Alon Ofir as inventor, not Scanovate, so it is not evidence of company-owned IP. The public record reviewed here does not establish a Scanovate-assigned patent portfolio, current employee count, or audited financial performance. The team has credible domain depth, while the founder's comments about the difficulty of bank sales underline the importance of Prytek's distribution channel and the need to verify implementation cost and post-sale support capacity.
+
+The security and dual-use case is concrete but bounded. Commercially, the platform supports remote onboarding, identity lifecycle management, KYC/KYB, sanctions controls, fraud screening, and regulated customer workflows. On the public-sector side, the Israeli ministry procurement notice documents a proposed citizen-credential verification use and a project-specific cyber review. Identity proofing, liveness and auditable case management also have plausible security applications for controlled access, vendor due diligence, or high-assurance workforce onboarding. The sources reviewed do not demonstrate defense customers, military systems, classified deployments, or defense-specific productization. The company should therefore be assessed on its commercial and civilian-government evidence, with security-market adjacency treated as a possible extension rather than defense traction.
+
+The most important diligence is to reconcile the 2018 A-round entry, Geektime's approximate $2 million cumulative funding report, and CTech's later description of Scanovate as bootstrapped; none supplies a reconciled financing ledger. Confirm the Prytek transaction's closing and legal structure, consideration and contingent terms, and whether Scanovate remains a separately contracting entity. Request ARR and recognized revenue by product and geography, gross margins, retention, customer concentration, implementation hours, data-provider costs, and the proportion of paid customers among the reported 250. Verify the ASBANC agreement directly with the association and determine whether the trade mission's $20 million annual estimate was a contract ceiling, network throughput, or expected transaction volume. Finally, test ID document coverage, false-accept and false-reject rates, liveness and injection-attack resistance, model performance across demographic groups, retention and residency controls, supplier rights, and ownership of code and biometric models."""
 logo = "https://scanovate.com/wp-content/uploads/2020/04/btrust.png"
 website = "https://scanovate.com"
 sector = "RegTech / Identity and Compliance"
-founded = "2013"
+founded = "2014"
 headquarters = "Ramat-Gan, Israel"
-employees = "11-50"
+employees = "Unknown"
 funding_stage = "Unknown"
-entity_type = "startup"
+entity_type = "acquired_asset"
 dual_use = true
-dual_use_description = "Scanovate’s identity proofing, corporate-structure analysis, sanctions/entity screening, and auditable workflow capabilities have substantive security and public-sector adjacency where organizations must verify people or legal entities. The technology-level dual-use case is credible, but the reviewed public evidence does not demonstrate material defense contracts, government-program penetration, or defense-specific productization; this is optionality rather than confirmed defense traction."
-key_technologies = ["Configurable compliance workflow and rules engine", "Identity document capture and OCR", "Facial-recognition and remote identity-verification integrations", "KYC/KYB, sanctions, PEP, adverse-media, and ICIJ screening", "Corporate-structure and beneficial-owner analysis", "Continuous identity and compliance monitoring with event-triggered workflows", "API-first integrations with data providers and systems of record"]
-use_cases = ["Individual customer onboarding for banks, lenders, and digital wallets", "Corporate onboarding with beneficial-owner and entity-structure checks", "Ongoing KYC/KYB refresh and exception management", "Sanctions, PEP, and adverse-media screening for regulated operations", "Identity-fraud and remote-account-opening risk reduction", "Insurance claims, payments, and post-contract compliance workflows", "Sensitive vendor or procurement due diligence", "High-assurance identity and entity screening in public-sector-adjacent environments"]
-investible = true
-investment_rationale = "Scanovate addresses a persistent enterprise pain point: coordinating identity, KYC/KYB, screening, monitoring, and evidence in a configurable workflow. That creates credible strategic fit with a dual-use technology thesis, but the public record is not sufficient to underwrite growth-stage scale, funding momentum, or defense revenue. Priority diligence should validate recurring revenue quality, customer retention and expansion, implementation effort, gross margins, data-provider economics, privacy controls, and the proportion of proprietary software versus integration and services work."
-strategic_value = "Scanovate can provide strategically useful infrastructure for trusted identity and entity decisioning in regulated or sensitive environments. Its policy-driven rules, continuous monitoring, and audit trail could support sanctions enforcement, procurement integrity, and high-assurance onboarding, but those applications remain adjacent use cases until public-sector deployments and operating performance are verified."
-potential_score = 72.0
-technology_score = 78.0
-market_score = 73.0
-team_score = 64.0
-dual_use_score = 70.0
-strategic_alignment_score = 75.0
-stage = "mid"
-stage_rationale = "The company presents a released, multi-module enterprise platform with a broad compliance workflow scope and public enterprise positioning, placing it beyond early product discovery. Public evidence is insufficient to establish mature scale, later-stage financing, or durable market leadership, so mid is the cautious operating-stage classification."
-competitors = ["Jumio", "Entrust/Onfido", "Trulioo", "Sumsub", "ComplyAdvantage", "NICE Actimize"]
-competitive_edge = "Scanovate’s plausible edge is integrated lifecycle coverage: onboarding identity tooling, corporate/entity checks, screening, continuous monitoring, and audit workflows are coordinated in one operating layer. That can reduce integration and evidence fragmentation for institutions managing multiple compliance stages, but the advantage must be proven against focused vendors with deeper data, geographic coverage, or identity-model performance."
-risk_factors = ["Crowded RegTech market includes identity specialists, screening networks, fraud vendors, and large financial-crime suites", "Enterprise sales and jurisdiction-specific implementation can lengthen time to revenue and increase services intensity", "Regulatory variation across countries creates continuing legal, product, and certification maintenance burden", "Dependence on third-party identity, corporate, sanctions, and adverse-media data creates quality, cost, and uptime exposure", "Biometric, privacy, and automated-decision regulation can constrain product deployment or raise compliance costs", "Broad platform scope may make differentiation and repeatable implementation harder to prove", "No verified public evidence of material defense or government revenue despite credible capability adjacency"]
+dual_use_description = "Commercial use is directly evidenced in financial identity verification, onboarding, monitoring, and an Israeli Ministry for Social Equality procurement process for biometric proofing of senior-citizen digital credentials. The ministry's 2023 notice records project-specific cybersecurity review of Scanovate; the platform's marketed liveness, document authenticity, private-deployment, and auditable workflow capabilities also fit sensitive access and vendor-verification needs. The reviewed sources show no defense customers, military contracts, classified deployment, or defense-specific productization, so the security adjacency is capability-based and civilian-government evidence is the strongest public signal."
+key_technologies = ["Configurable compliance workflow and rules engine", "Identity document capture, authenticity checks, and OCR", "Facial comparison and liveness integrations", "KYC/KYB and customer due-diligence flows", "Corporate-structure and beneficial-owner review", "Sanctions, PEP, adverse-media, and watchlist integrations", "Continuous monitoring and event-triggered case workflows", "API-based connections to external data providers and systems of record", "SaaS, private-cloud, VPC-isolated, and on-premise deployment options"]
+use_cases = ["Individual onboarding for banks, lenders, asset managers, and digital wallets", "Corporate onboarding with ownership and beneficial-owner checks", "Ongoing KYC/KYB refresh and exception management", "Sanctions, PEP, adverse-media, and fraud screening", "Remote identity proofing for citizen-facing public services", "Identity checks in payments, insurance claims, and post-contract service workflows", "Potential high-assurance workforce and vendor identity verification, subject to customer and deployment validation"]
+investible = false
+investment_rationale = "The product addresses recurring bank and regulated-enterprise needs, with reported scale above 250 customers and a current route into Prytek's financial-services network. However, Prytek announced acquisition of Scanovate's business in September 2026, so the available evidence does not indicate an independent equity opportunity. Revenue quality, retention, margins, customer concentration, service intensity, and acquisition terms are not public; evaluate the asset through its parent and product performance rather than applying standalone growth assumptions."
+strategic_value = "Scanovate combines identity proofing, KYC/KYB, entity screening, workflow control, monitoring, and audit evidence for financial and regulated workflows. The 2023 Israeli ministry notice shows public-sector interest in a biometric citizen-credential process and a project-specific cybersecurity review. Prytek's announced purchase and CLM assignment can connect the product to a larger institutional customer base, while increasing the importance of confirming integration plans, contractual continuity, and how customer data and biometric processing are governed across group companies."
+potential_score = 63.0
+technology_score = 76.0
+market_score = 81.0
+team_score = 70.0
+dual_use_score = 73.0
+strategic_alignment_score = 78.0
+stage = "mature"
+stage_rationale = "The company has operated in digital identity since the early 2010s, describes a released lifecycle platform, and was reported in 2026 to serve more than 250 customers including about 120 financial institutions. A government procurement notice and partner-backed banking deployment add evidence beyond product marketing. Mature operating evidence does not establish financial scale: recurring revenue, margins, retention, employee count, and the final status of some announced deals remain unverified."
+competitors = ["Fenergo", "Jumio", "Entrust Identity Verification (formerly Onfido)", "Sumsub", "Trulioo"]
+competitive_edge = "Scanovate's strongest public differentiation is breadth across identity capture, individual and corporate compliance, configurable workflows, ongoing monitoring, and audit evidence, supported by both SaaS and isolated deployment options. Fenergo offers especially close lifecycle orchestration and broad jurisdictional rules; Jumio and Entrust have strong identity-verification and biometric portfolios; Sumsub combines verification, screening, and ongoing AML; Trulioo emphasizes global identity and business data. Scanovate may fit institutions seeking one process layer across local tools, but public evidence does not establish superior accuracy, coverage, conversion, or implementation economics. Its reported third-party integrations and ADO's partner-backed deployment make supplier dependence part of the comparison."
+risk_factors = [
+  "No public revenue, ARR, margin, retention, cash, burn, or customer concentration metrics; reported customer counts do not establish recurring software revenue.",
+  "The 2018 funding entry, 2019 cumulative funding report, and 2026 bootstrapped characterization are not reconciled; exact historical capital raised and financing instruments remain uncertain.",
+  "Prytek's acquisition disclosures describe an approximate first phase and contingent value but do not disclose exact consideration, closing mechanics, or the legal allocation among businesses and subsidiaries.",
+  "The reported ASBANC estimate of $20 million per year comes from the Israeli trade mission and is not corroborated as recognized revenue or an annual contract by ASBANC's public report.",
+  "Selling, integrating, and supporting identity and compliance products in large financial institutions can require long procurement cycles, jurisdiction-specific work, and material services effort; the CEO has described institutional sales as slow and costly.",
+  "Reliance on third-party data, screening and biometric services creates supplier cost, coverage, uptime, privacy, and product-attribution risks; an ADO deployment used Anonybit infrastructure.",
+  "Competition spans focused IDV vendors and broad client-lifecycle suites; broad product scope may make differentiation and repeatable deployment harder to demonstrate.",
+  "Biometric and identity workflows face privacy, data-residency, bias, spoofing, and evolving compliance risks; product-level accuracy, security testing, and certification evidence require diligence.",
+  "No Scanovate-assigned patent family was verified in the reviewed public records; confirm ownership of software, OCR/biometric models, training data, and founder contributions.",
+  "Current headcount and post-acquisition executive responsibilities are unclear, including inconsistent public titles for Roi Fishman and outdated employee ranges."
+]
 risk_level = "medium"
 signals = []
 priority_rank = 0
 priority_rationale = "Scanovate merits continued monitoring because its identity, entity-risk, screening, and workflow capabilities fit the database’s strategic and dual-use thesis. The score is moderated by uncertain current scale and funding status, intense competition, data-provider dependence, and the absence of verified defense traction; the record is a diligence target, not an investment recommendation."
 crawled_at = "2026-02-28T18:30:00Z"
-public_sources = ["https://scanovate.com/", "https://www.linkedin.com/company/scanovate/", "https://finder.startupnationcentral.org/company_page/scanovate"]
-updated_at = "2026-07-31T18:56:50Z"
+public_sources = [
+  { label = "Scanovate official platform", url = "https://scanovate.com/", description = "B-Trust product scope, workflows, compliance features, integrations, and customer segments." },
+  { label = "Scanovate company and leadership", url = "https://scanovate.com/company/", description = "Company history, offices, leadership biographies, and B-Trust positioning." },
+  { label = "CTech: Prytek acquires Scanovate", url = "https://www.calcalistech.com/ctechnews/article/h1yq0r0ofx", description = "September 2026 acquisition reporting, customer counts, business scope, founders, and Prytek integration plans." },
+  { label = "APM acquisition announcement", url = "https://www.apm.law/apm-advised-prytek-group-on-its-50-million-acquisition-of-scanovate/", description = "Buyer counsel's description of the transaction value and potential contingent value." },
+  { label = "Geektime Scanovate profile (Hebrew)", url = "https://www.geektime.co.il/scanovate-startup/", description = "2019 company and customer claims, reported funding, founders, and ADO Technologies acquisition." },
+  { label = "Israel Innovation Authority profile", url = "https://innovationisrael.org.il/en/article/who-moved-my-identity/", description = "CEO interview on company roots, technology, B-Trust development, and Israeli financial-sector work." },
+  { label = "Scanovate and Bank Leumi press release", url = "https://www.prnewswire.com/news-releases/scanovate-is-rethinking-the-way-we-pay-our-bills-517776901.html", description = "Scanovate's 2015 release about mobile bill payment using its imaging platform in Bank Leumi's app." },
+  { label = "Startup Nation Finder profile", url = "https://finder.startupnationcentral.org/company_page/scanovate?section=business", description = "Historical company record, founders, April 2018 round entry, and investor name; profile last updated in 2020." },
+  { label = "AWS Marketplace Scanovate IDV listing", url = "https://aws.amazon.com/marketplace/pp/prodview-hfwbwmk6rtdvs?applicationId=AWSMPContessa", description = "Current IDV product modes, advertised capabilities, and one 50,000-session annual list-price package." },
+  { label = "Israeli Government Procurement notice 4000573581", url = "https://mr.gov.il/ilgstorefront/he/p/4000573581", description = "2023 Ministry for Social Equality intention to contract Scanovate for digital senior-citizen credential identity verification." },
+  { label = "Israeli Government procurement professional opinion", url = "https://mr.gov.il/ilgstorefront/he/p/attachment/005056BF4F1A1EEE8D89714FB89212DA/%D7%97%D7%95%D7%95%D7%AA%20%D7%93%D7%A2%D7%AA%20%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99%D7%AA", description = "Technical rationale, project-specific cybersecurity review, proposed term, and estimated service value for the 2023 procurement." },
+  { label = "Israeli Economic and Trade Mission to Peru", url = "https://www.linkedin.com/posts/israel-economic-and-trade-office-to-peru_innovation-fintech-banks-activity-7174060266467282945-au7N", description = "Official trade mission post about Scanovate/ADO and an ASBANC IDV tender; its $20 million annual estimate is uncorroborated." },
+  { label = "ASBANC 2023 annual report", url = "https://www.asbanc.com.pe/sites/default/files/annual_reports/file/memoria-anual-2023.pdf", description = "Customer-side annual report listing ADO Technologies among firms participating in ASBANC's security and digital-transformation suite." },
+  { label = "Anonybit and ADO Technologies deployment", url = "https://www.anonybit.io/press-releases/anonybit-deploys-upgraded-decentralized-biometrics-cloud-capabilities-with-tier-1-latin-america-banking-group/", description = "Partner announcement of a deployed identity-verification service delivered by ADO Technologies using Anonybit backend infrastructure." },
+  { label = "US patent application US20100157040A1", url = "https://patents.google.com/patent/US20100157040A1/en", description = "Public patent bibliographic record for an Alon Ofir invention; Rafael is listed as assignee, not Scanovate." },
+  { label = "Israel Patent Office search portal", url = "https://israelpatents.justice.gov.il/", description = "Official public search portal used to check for Scanovate-assigned patent records." },
+  { label = "Fenergo client lifecycle management", url = "https://www.fenergo.com/client-lifecycle-management", description = "Official product description for a close financial-institution CLM and compliance competitor." },
+  { label = "Jumio identity verification", url = "https://www.jumio.com/products/identity-verification/", description = "Official identity, document, biometric, liveness, and ongoing assurance product information." },
+  { label = "Trulioo global verification solutions", url = "https://www.trulioo.com/solutions", description = "Official description of person and business verification, global data partners, and API onboarding." },
+  { label = "Entrust Identity Verification", url = "https://www.entrust.com/products/identity-verification", description = "Official IDV product information covering identity proofing, biometrics, fraud detection, and compliance." },
+  { label = "Sumsub user verification", url = "https://docs.sumsub.com/docs/user-verification", description = "Official documentation for biometric, screening, risk, and identity verification workflows." }
+]
+updated_at = "2026-10-21T22:02:55Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "il-scanovate"
+legal_name = "Scanovate Ltd"
+aliases = ["Scanovate Ltd.", "Scanovate"]
+operating_status = "active"
+business_model = "Enterprise B2B identity and compliance software sold through customer-specific arrangements. Scanovate markets B-Trust and IDV in SaaS and dedicated private or on-premise deployments; the AWS listing displays one annual 50,000-session IDV package at $25,000, which is offered pricing and not realized revenue."
+products = ["B-Trust client lifecycle and identity management platform", "Scanovate IDV Digital Platform"]
+locations = ["Ramat Gan, Israel", "Philadelphia, United States", "Bogotá, Colombia"]
+country_of_incorporation = "Israel"
+founded_on = "2014"
+source_ids = ["scanovate-home", "scanovate-company", "ctech-2026", "snc-finder", "mr-gov-notice-2023", "aws-marketplace"]
+notes = "The company uses 2014 as its founding year and current identity-business start. The Israel Innovation Authority interview describes image-processing roots from 2011 and a fintech pivot in 2014; a 2015 press release says founded in 2012. Use 2014 for the current fintech startup record and retain the date discrepancy."
+
+[[intelligence.company.registry_identifiers]]
+jurisdiction = "Israel"
+scheme = "Israeli company number (ח.פ.)"
+identifier = "514423029"
+source_ids = ["mr-gov-notice-2023"]
+notes = "Listed as the supplier's Israeli company number in the Ministry for Social Equality procurement notice."
+
+[intelligence.funding]
+status = "conflicting"
+summary = "Startup Nation Finder's historical profile lists an April 2018 Series A/A round with Prytek Ventures and no disclosed amount. Geektime reported about $2 million raised to date in December 2019 from Israel Innovation Authority, Prytek, and IOV42 without separating instruments or rounds; CTech called Scanovate bootstrapped in its 2026 acquisition coverage. No contemporaneous company or lead-investor release reconciles those descriptions, so no lifetime total or numeric round amount is populated. The available public history is partial."
+history_status = "partial"
+coverage_through = "2026-09-16"
+
+[[intelligence.funding.rounds]]
+id = "series-a-2018"
+round_type = "Series A"
+instrument = "unknown"
+status = "closed"
+announced_on = "2018-04"
+amount_status = "undisclosed"
+amount_scope = "round"
+lead_investors = []
+participating_investors = ["Prytek Ventures"]
+valuation_basis = "undisclosed"
+source_ids = ["snc-finder"]
+notes = "Startup Nation Finder's profile, last updated 2020-12-15, lists an April 2018 A round and Prytek Ventures but leaves the amount undisclosed. No event-specific company or lead-investor announcement, instrument, or valuation was located. A 2019 press report describes an approximate cumulative figure across several sources of capital and does not establish a separate round."
+
+[[intelligence.investors]]
+name = "Prytek Ventures / Prytek Group"
+investor_type = "corporate"
+round_ids = ["series-a-2018"]
+relationship = "current"
+source_ids = ["snc-finder", "geektime-2019", "ctech-2026"]
+notes = "Named in the historical 2018 funding entry and 2019 funding report; Prytek announced acquisition of Scanovate's business in 2026. Its relationship as parent/buyer is distinct from the undisclosed 2018 investment terms."
+
+[[intelligence.investors]]
+name = "Israel Innovation Authority"
+investor_type = "government"
+round_ids = []
+relationship = "historical"
+source_ids = ["geektime-2019", "innovationisrael-2023"]
+notes = "Geektime included the Authority among sources behind its approximate cumulative funding report. No grant amount, program award, instrument, or funding round could be assigned from the reviewed company-specific records."
+
+[[intelligence.investors]]
+name = "IOV42"
+investor_type = "other"
+round_ids = []
+relationship = "historical"
+source_ids = ["geektime-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.prytek-business-acquisition.company_role"
+support = "direct"
+summary = "CTech and Prytek's buyer counsel describe Prytek as acquiring the Scanovate business; Scanovate is therefore the target in this transaction record."
+verified_at = "2026-10-21T21:59:52Z"
+source_ids = ["ctech-2026", "apm-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.ado-tech-acquisition.company_role"
+support = "direct"
+summary = "Geektime reports Scanovate acquired ADO-Tech, making Scanovate the buyer in the 2019-reported acquisition."
+verified_at = "2026-10-21T21:59:52Z"
+source_ids = ["geektime-2019"]
+notes = "Named by Geektime as one source in an approximate cumulative funding report; no round, instrument, or separate amount was disclosed there."
+
+[[intelligence.ownership.deals]]
+id = "prytek-business-acquisition"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2026-09-09"
+status = "announced"
+counterparty = "Prytek Group"
+amount_status = "undisclosed"
+source_ids = ["ctech-2026", "apm-2026"]
+notes = "CTech reports an approximately $50 million first phase and contingent shareholder value up to $100 million. Buyer counsel APM describes a transaction over $50 million with potential to reach $100 million. Exact base consideration, contingent mechanics, and public closing date are not disclosed; the announced scope is Scanovate's business plus Cellosign and ADO Technologies."
+
+[[intelligence.ownership.deals]]
+id = "ado-tech-acquisition"
+deal_type = "acquisition"
+company_role = "buyer"
+status = "completed"
+counterparty = "ADO Technologies"
+amount_status = "not_found"
+source_ids = ["geektime-2019", "ctech-2026"]
+notes = "Geektime reported by 2019 that Scanovate had acquired the Colombian ADO-Tech business; CTech identifies ADO Technologies among the businesses brought into Prytek in 2026. No acquisition announcement date, close date, or consideration was found."
+
+[intelligence.ownership]
+status = "reported"
+summary = "Prytek announced the acquisition of Scanovate's business and subsidiaries in September 2026 and plans to place Scanovate at the head of its customer lifecycle management segment. Public reporting does not establish the exact close date, share-versus-asset transfer structure, acquisition consideration, or whether Scanovate Ltd's legal cap table changed."
+parent_company = "Prytek Group (reported acquirer and operating group; precise legal transfer structure not publicly disclosed)"
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["ctech-2026", "apm-2026", "geektime-2019"]
+holdings = []
+
+[[intelligence.people]]
+name = "Amir Fishman"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Scanovate's company biography says he has led the company since 2014, previously founded a holdings company and a business-development company, and holds a BA in Computer Science from Bar-Ilan University and an LLB in Law and Accounting from Tel Aviv University. CTech quoted him as CEO during the 2026 transaction announcement."
+source_ids = ["scanovate-company", "ctech-2026", "innovationisrael-2023"]
+
+[[intelligence.people]]
+name = "Irad Gilboa"
+role = "Co-founder and CTO"
+is_founder = true
+current = true
+background = "The company describes expertise in video and image processing, machine learning, and OCR, and says he previously managed technology projects for the Israeli Air Force and founded an OCR company in 2010. These are company-reported credentials."
+source_ids = ["scanovate-company", "ctech-2026"]
+
+[[intelligence.people]]
+name = "Roi Fishman"
+role = "Co-founder and CPO"
+is_founder = true
+current = true
+background = "Scanovate's leadership page credits him with product design work on SAP Business One and distributed web systems in the MAMRAM technical unit. A 2026 CTech acquisition story calls him a CTO, while the current company page lists CPO; confirm his post-transaction title."
+source_ids = ["scanovate-company", "ctech-2026"]
+notes = "Public titles differ between the current company page and CTech's transaction article."
+
+[[intelligence.people]]
+name = "Alon Ofir"
+role = "Co-founder and biometric subject-matter expert"
+is_founder = true
+current = true
+background = "Scanovate describes him as a senior advisor to the Prime Minister's Office biometric committee and as a long-time biometrics specialist. The company biography mentions a facial-surveillance patent; public US application US20100157040A1 names Ofir as inventor but lists Rafael as assignee, not Scanovate."
+source_ids = ["scanovate-company", "patent-us-2010"]
+
+[[intelligence.people]]
+name = "Amir Laufer"
+role = "Chief Operating Officer"
+is_founder = false
+current = true
+background = "Scanovate's company biography describes prior COO and director roles in product and project businesses, more than 15 years managing retail and service companies, and an Executive MBA."
+source_ids = ["scanovate-company"]
+
+[[intelligence.people]]
+name = "Inbal Zarski"
+role = "Director of Product"
+is_founder = false
+current = true
+background = "Scanovate's company biography describes global business and product responsibilities, M&A due diligence and integration experience, and two decades in global business development and relationship management."
+source_ids = ["scanovate-company"]
+
+[[intelligence.traction]]
+kind = "product"
+date = "2015-07-21"
+description = "Scanovate announced that its image-processing platform powered a mobile bill-payment service in Bank Leumi's app. The release described an addressable base of more than 800,000 mobile banking users; that is the bank's user base, not a Scanovate usage or revenue figure."
+source_ids = ["prnewswire-2015"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2019-12-28"
+description = "Geektime reported Scanovate's claim that it served more than 85 million users or customers across markets and worked with major Israeli banks and card companies including MAX and CAL. The wording does not define unique, active, or paying users, and this is a historical company claim rather than a current customer count."
+source_ids = ["geektime-2019"]
+
+[[intelligence.traction]]
+kind = "contract"
+date = "2023-08-06"
+description = "The Ministry for Social Equality published an intention to contract Scanovate as a sole supplier for biometric selfie-to-document verification in a digital senior-citizen credential project. The notice listed an estimated NIS 150,000 value and a proposed term from 2023-08-01 to 2024-07-31. The attached opinion says Scanovate then met the ministry's stated cyber requirements while other providers were still under assessment. This is procurement intent and a project-specific review, not proof that the full amount was paid or a general certification."
+source_ids = ["mr-gov-notice-2023", "mr-gov-opinion-2023"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Israel's Economic and Trade Mission to Peru reported that Scanovate/ADO Technologies won an ASBANC identity-verification tender and that an agreement was signed, estimating an initial deal at $20 million per year. ASBANC's 2023 report lists ADO Technologies among partners in its security and digital-transformation suite, but does not corroborate the reported contract value or identify Scanovate as a revenue recipient."
+source_ids = ["tradeil-peru", "asbanc-report-2023"]
+notes = "Treat the $20 million annual figure as an unverified trade-mission claim; do not treat it as revenue, ARR, or a confirmed contract amount."
+
+[[intelligence.traction]]
+kind = "partnership"
+date = "2024-03-04"
+description = "Anonybit reported that ADO Technologies, described as a Scanovate company, delivered an identity-verification service backed by Anonybit's biometric infrastructure to an unnamed top-tier Latin American banking group serving 14 million retail customers. The deployment supports partner-led production use, but does not identify the bank or Scanovate's own share of the workflow."
+source_ids = ["anonybit-2024", "ctech-2026"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2026-09-09"
+description = "CTech reported more than 250 customers, including about 120 financial institutions, across North America, South America, Western Europe, and Israel. Customer counts are reported scale, not audited paid-customer, revenue, or retention data."
+source_ids = ["ctech-2026"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "AWS Marketplace currently lists Scanovate IDV as a SaaS or private-deployment product with OCR, document authenticity, biometric face matching, liveness, and optional voice-statement checks. One listing offers a 12-month 50,000-session package for $25,000; listing availability and price do not establish sales."
+source_ids = ["aws-marketplace"]
+
+[[intelligence.comparables]]
+name = "Fenergo"
+website = "https://www.fenergo.com/client-lifecycle-management"
+rationale = "Close enterprise alternative for financial-institution client lifecycle management, onboarding, KYC, ongoing due diligence, data reuse, and workflow orchestration."
+differentiation = "Fenergo describes a global policy rules engine spanning more than 120 jurisdictions and established enterprise CLM modules; Scanovate emphasizes integrated identity capture, configurable workflow, and entity checks, with public performance and scale evidence less complete."
+source_ids = ["fenergo-clm", "scanovate-home"]
+
+[[intelligence.comparables]]
+name = "Jumio"
+website = "https://www.jumio.com/products/identity-verification/"
+rationale = "Direct overlap in digital identity verification, document checks, biometrics, liveness, KYC/AML, and ongoing identity assurance."
+differentiation = "Jumio's public portfolio is identity-verification-led with risk and ongoing assurance; Scanovate positions B-Trust as an enterprise workflow and compliance layer spanning onboarding, corporate checks, and post-onboarding operations."
+source_ids = ["jumio-idv", "scanovate-home"]
+
+[[intelligence.comparables]]
+name = "Entrust Identity Verification (formerly Onfido)"
+website = "https://www.entrust.com/products/identity-verification"
+rationale = "Overlaps in document verification, biometric matching, liveness, fraud detection, KYC/AML compliance, and digital onboarding."
+differentiation = "Entrust brings identity verification into a broader security and trust portfolio with global identity assurance; Scanovate's public distinction is its B-Trust workflow orchestration and corporate-entity compliance scope."
+source_ids = ["entrust-idv", "scanovate-home"]
+
+[[intelligence.comparables]]
+name = "Sumsub"
+website = "https://sumsub.com/"
+rationale = "Combines identity verification, biometrics, AML/sanctions screening, business verification, and ongoing monitoring in configurable workflows."
+differentiation = "Sumsub's documentation presents a broad verification and screening platform; Scanovate focuses its positioning on institutional client-lifecycle workflows, configurable governance, and enterprise integration."
+source_ids = ["sumsub-verification", "scanovate-home"]
+
+[[intelligence.comparables]]
+name = "Trulioo"
+website = "https://www.trulioo.com/solutions"
+rationale = "Competes in global person and business verification, KYC/KYB onboarding, beneficial-owner review, and fraud signals."
+differentiation = "Trulioo emphasizes global data partners and API or hosted onboarding; Scanovate's proposition is a broader process layer that coordinates identity capture, compliance workflows, monitoring, and audit evidence."
+source_ids = ["trulioo-solutions", "scanovate-home"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel"]
+summary = "Scanovate is identified as an Israeli company headquartered in Ramat Gan. The Israeli Ministry for Social Equality procurement record names Scanovate Ltd and its Israeli company number 514423029; Scanovate's own contact page lists its Ramat Gan EMEA office."
+as_of = "2026-10-21"
+source_ids = ["scanovate-company", "ctech-2026", "mr-gov-notice-2023"]
+
+[intelligence.research]
+researched_at = "2026-10-21T22:02:55Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Scanovate official company B-Trust about customers leadership",
+  "Scanovate funding raised investors Series funding Scanovate Israel",
+  "Scanovate founder CEO team funding raised acquisition",
+  "Scanovate revenue customers employees 2025",
+  "Scanovate acquired by Prytek September 2026 50 million official announcement",
+  "Scanovate raised $2 million 2019 funding NadiFin Bankia Fintech Viola",
+  "Scanovate revenue ARR annual accounts profitability burn runway financials",
+  "Scanovate defense government contract tender security public sector procurement Israel",
+  "Scanovate funding raised seed Series A investors valuation acquired founder patents revenue",
+  "Scanovate patents patent identity verification OCR",
+  "Scanovate Ltd patents Google Patents",
+  "Scanovate identity verification KYC KYB competitors alternatives official providers",
+  "ASBANC Peru Scanovate ADO Technologies identity verification center $20 million official",
+  "site:mr.gov.il Scanovate digital senior citizen biometric identity verification",
+  "site:scanovate.com B-Trust KYC KYB identity lifecycle platform"
+]
+gaps = [
+  "funding: No primary round announcements, grant awards, debt documents, or settled company-announced lifetime total were found. Reconcile the 2018 round entry, 2019 approximate cumulative press report, and 2026 bootstrapped description; identify instruments, recipients, amounts, and any prior support by IIA.",
+  "team: Current employee count is not disclosed and public ranges are inconsistent. Confirm current headcount, post-acquisition reporting lines, and Roi Fishman's role after the transaction.",
+  "ownership: Prytek's acquisition close date, consideration structure, contingent terms, legal asset/share transfer, and Scanovate Ltd cap table are not public. Private shareholder percentages and seller proceeds remain undisclosed.",
+  "financials: No dated company revenue, ARR, profitability, burn, runway, or cash metrics were located. The AWS price is a product list price, the government notice is procurement intent, and the $20 million ASBANC figure is an unverified trade-mission estimate rather than reported revenue.",
+  "traction: Verify the reported 250 customers and 120 financial institutions, paid-customer definition, retention, product attribution, and whether the 2023 ministry procurement progressed to a signed and paid contract. Confirm the ASBANC agreement and reported annual estimate directly with ASBANC.",
+  "intellectual_property: Targeted Israel Patent Office and public patent searches did not identify a Scanovate-assigned patent family. The company biography mentions an Alon Ofir patent, but the located US application lists Rafael as assignee; verify patent assignments, source-code and model ownership, trademarks, and founder IP agreements.",
+  "competition: Compare live customer references, document-country coverage, accuracy, false acceptance/rejection, implementation time, and total cost against Fenergo, Jumio, Entrust, Sumsub, and Trulioo; public feature pages do not provide like-for-like results.",
+  "dual_use: No defense, military, classified, or defense-specific customer evidence was found. Validate the continuing scope of the 2023 civilian ministry cyber review and do not treat it as a broad certification or defense approval."
+]
+conflicts = [
+  "Funding profile: Startup Nation Finder lists an undisclosed April 2018 A round; Geektime reported approximately $2 million cumulative funding from IIA, Prytek, and IOV42 by December 2019; CTech described Scanovate as bootstrapped in September 2026. No primary financing documents reconcile round, grant, self-funding, or total amounts, so the dossier omits a numeric total.",
+  "Founding date: Scanovate's current company page and 2026 CTech coverage use 2014; the Israel Innovation Authority interview describes company roots in 2011 with a 2014 fintech pivot, and Scanovate's 2015 press release says 2012. The record uses 2014 for the current fintech identity business.",
+  "Prytek deal value: CTech describes about $50 million in the first phase and potential shareholder value up to $100 million; APM says more than $50 million with potential to reach $100 million. Exact consideration, contingent structure, and completion date are not disclosed.",
+  "ASBANC: Israel's Economic and Trade Mission to Peru reported a signed IDV agreement initially estimated at $20 million per year. ASBANC's 2023 annual report confirms ADO Technologies among suite partners but does not report this contract or value; the estimate is not treated as revenue.",
+  "Leadership: Scanovate's current leadership page calls Roi Fishman CPO, while CTech's 2026 transaction article calls him a CTO. Current post-transaction title is unverified.",
+  "Headcount: Public sources show old 11-50 ranges, a LinkedIn 51-200 range, and a third-party 20-FTE estimate. No company-reported current employee figure was found, so top-level employees is set to Unknown."
+]
+diligence_questions = [
+  "Has Prytek completed the acquisition, which legal entities and assets transferred, what consideration was paid at close, and what contingent payments remain? Is Scanovate Ltd still a separately contracting company?",
+  "What are current ARR, recognized revenue, gross margin, net retention, churn, customer concentration, and implementation hours by B-Trust, Scanovate IDV, ADO Technologies, and Cellosign? How many of the reported 250 customers are paying active customers?",
+  "Can ASBANC confirm the identity-verification tender, agreement scope, current operating status, and the trade mission's $20 million annual estimate? Is that number contract value, projected transaction volume, or another measure?",
+  "Did the 2023 Ministry for Social Equality procurement proceed to a signed contract and payment? What cybersecurity assessment did Scanovate pass, who issued it, and what systems and data were in scope?",
+  "What document-country coverage, false-accept and false-reject rates, liveness/injection-attack results, and demographic performance does Scanovate report from independent evaluations?",
+  "Which identity, screening, registry, and biometric partners are embedded in production workflows, what are their costs and data rights, and which algorithms or models are owned by Scanovate or ADO?",
+  "What is the registered IP and code ownership chain for Scanovate, ADO Technologies, and Cellosign, including founder contributions and any license or assignment involving Alon Ofir's earlier work?",
+  "Which features and customer contracts will Prytek cross-sell or integrate with Delta Capita and other group firms, and what protections govern customer consent, biometric data access, retention, and residency across the group?"
+]
+
+[[intelligence.research.sources]]
+id = "scanovate-home"
+url = "https://scanovate.com/"
+title = "Scanovate – Enterprise Identity and Compliance Platform"
+publisher = "Scanovate"
+kind = "company"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Company describes B-Trust as a workflow, identity, entity, KYC/KYB, monitoring, and compliance platform.", "Company describes integration, audit-trail, and ongoing-monitoring features and its financial-services customer segments."]
+
+[[intelligence.research.sources]]
+id = "scanovate-company"
+url = "https://scanovate.com/company/"
+title = "Company – Scanovate"
+publisher = "Scanovate"
+kind = "company"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Scanovate states it was founded in 2014 and lists its Ramat Gan EMEA office.", "Company page lists Amir Fishman, Irad Gilboa, Roi Fishman, Alon Ofir, Amir Laufer, and Inbal Zarski with roles and backgrounds.", "Company page describes B-Trust lifecycle and identity management and reports that Alon Ofir holds a biometric-surveillance patent."]
+
+[[intelligence.research.sources]]
+id = "ctech-2026"
+url = "https://www.calcalistech.com/ctechnews/article/h1yq0r0ofx"
+title = "Prytek acquires Scanovate for $50 million as it expands its financial infrastructure business"
+publisher = "CTech"
+kind = "media"
+published_on = "2026-09-09"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Reports Prytek acquisition of Scanovate's business and Cellosign and ADO Technologies, with an approximately $50 million first phase and potential value up to $100 million.", "Reports more than 250 customers, including about 120 financial institutions, and operations across several regions.", "Reports the founder's explanation that selling to financial institutions and entering new markets had been difficult for a company of Scanovate's size.", "Reports Scanovate will lead Prytek's customer lifecycle management segment and continue product development.", "Describes Scanovate as bootstrapped and identifies Amir Fishman, Roi Fishman, and Irad Gilboa as founders and executives."]
+
+[[intelligence.research.sources]]
+id = "apm-2026"
+url = "https://www.apm.law/apm-advised-prytek-group-on-its-50-million-acquisition-of-scanovate/"
+title = "APM advised Prytek Group on its $50 million acquisition of Scanovate"
+publisher = "Amit, Pollak, Matalon"
+kind = "other"
+published_on = "2026-09-16"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Buyer counsel says Prytek is acquiring Scanovate's business in a transaction valued at more than $50 million with potential to reach $100 million.", "Says Scanovate will join Prytek and lead customer lifecycle management."]
+
+[[intelligence.research.sources]]
+id = "geektime-2019"
+url = "https://www.geektime.co.il/scanovate-startup/"
+title = "הסטארטאפ הישראלי Scanovate מאפשר להזדהות מול הרשויות בשניות"
+publisher = "Geektime"
+kind = "media"
+published_on = "2019-12-28"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Reports that Scanovate had acquired Colombian ADO-Tech by December 2019.", "Reports company claims of more than 85 million users or customers and work with major Israeli banks and credit-card companies including MAX and CAL.", "Reports approximately $2 million raised to date from the Israel Innovation Authority, Prytek, and IOV42 without round-by-round or instrument allocation.", "Reports a 2014 founding date and historic company claims about customers and workforce."]
+
+[[intelligence.research.sources]]
+id = "innovationisrael-2023"
+url = "https://innovationisrael.org.il/en/article/who-moved-my-identity/"
+title = "Who Moved My Identity?"
+publisher = "Israel Innovation Authority"
+kind = "government"
+published_on = "2023-06-24"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["CEO interview says Scanovate began image-processing activity in 2011 and shifted into fintech in 2014.", "Describes in-house OCR, facial verification, fingerprint reading, one-time passwords, biometric signatures, and B-Trust development beginning in 2019.", "Describes work with Altshuler-Shaham and the Israeli fintech pilot program; interview does not disclose Scanovate grant amount."]
+
+[[intelligence.research.sources]]
+id = "prnewswire-2015"
+url = "https://www.prnewswire.com/news-releases/scanovate-is-rethinking-the-way-we-pay-our-bills-517776901.html"
+title = "Scanovate is Rethinking the Way We Pay Our Bills"
+publisher = "PR Newswire (release provided by Scanovate)"
+kind = "company"
+published_on = "2015-07-21"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Scanovate announced its imaging platform powered a mobile bill-payment service in Bank Leumi's app.", "The release states the bank app had more than 800,000 mobile-banking users; this is not a Scanovate usage or revenue measure."]
+
+[[intelligence.research.sources]]
+id = "snc-finder"
+url = "https://finder.startupnationcentral.org/company_page/scanovate?section=business"
+title = "Scanovate – Fintech & Insurtech"
+publisher = "Startup Nation Finder"
+kind = "directory"
+published_on = "2020-12-15"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Historical profile lists an April 2018 A round with Prytek Ventures and leaves its amount undisclosed.", "Lists Scanovate founders, Ramat Gan headquarters, 2014 founding year, and Israeli company number 514423029.", "Profile states it was last updated in December 2020; use it only as historical evidence."]
+
+[[intelligence.research.sources]]
+id = "aws-marketplace"
+url = "https://aws.amazon.com/marketplace/pp/prodview-hfwbwmk6rtdvs?applicationId=AWSMPContessa"
+title = "AI-Powered Identity Verification (ID&V)"
+publisher = "Amazon Web Services Marketplace"
+kind = "other"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Scanovate listing advertises SaaS, private-cloud, VPC-isolated, and on-premise identity-verification deployments with OCR, face matching, liveness, and optional voice checks.", "Listing displays a 12-month 50,000-session package at $25,000; the price is offered marketplace pricing and is not evidence of realized sales.", "The listing describes security and compliance capabilities as vendor claims; AWS disclaims warranty of vendor content."]
+
+[[intelligence.research.sources]]
+id = "mr-gov-notice-2023"
+url = "https://mr.gov.il/ilgstorefront/he/p/4000573581"
+title = "כוונה להתקשר עם ספק יחיד- התקשרות עם חברת סקונבייט בע״מ"
+publisher = "Israeli Government Procurement Administration"
+kind = "government"
+published_on = "2023-08-06"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Ministry for Social Equality notice identifies Scanovate Ltd by Israeli company number 514423029.", "Notice gives proposed service period 2023-08-01 through 2024-07-31 and an estimated NIS 150,000 value under a sole-supplier intention.", "Notice describes proposed identity verification service for digital senior-citizen credentials."]
+
+[[intelligence.research.sources]]
+id = "mr-gov-opinion-2023"
+url = "https://mr.gov.il/ilgstorefront/he/p/attachment/005056BF4F1A1EEE8D89714FB89212DA/%D7%97%D7%95%D7%95%D7%AA%20%D7%93%D7%A2%D7%AA%20%D7%9E%D7%A7%D7%A6%D7%95%D7%A2%D7%99%D7%AA"
+title = "Professional opinion on intended sole-supplier contract with Scanovate"
+publisher = "Israeli Government Procurement Administration"
+kind = "government"
+published_on = "2023-08-06"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Ministry technical opinion says the project involved selfie capture and biometric comparison with official identity documents for digital senior-citizen cards.", "Opinion says that, at that time, Scanovate had met the ministry's stated cyber requirements while other providers were being assessed.", "Opinion lists an estimated NIS 150,000, up-to-one-year procurement and NIS 3 per process plus VAT; it is an intended procurement document, not proof of realized revenue or a general certification."]
+
+[[intelligence.research.sources]]
+id = "tradeil-peru"
+url = "https://www.linkedin.com/posts/israel-economic-and-trade-office-to-peru_innovation-fintech-banks-activity-7174060266467282945-au7N"
+title = "TradeIL Peru reports Scanovate/ADO Technologies ASBANC IDV tender"
+publisher = "Israeli Economic and Trade Mission to Peru"
+kind = "government"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Official trade-mission post says Scanovate/ADO Technologies won an international tender to establish an identity-verification center for ASBANC and that an agreement was signed.", "The post estimates an initial amount of $20 million per year; this value is not corroborated by the customer annual report and is not treated as revenue."]
+
+[[intelligence.research.sources]]
+id = "asbanc-report-2023"
+url = "https://www.asbanc.com.pe/sites/default/files/annual_reports/file/memoria-anual-2023.pdf"
+title = "Memoria Anual 2023"
+publisher = "ASBANC – Asociación de Bancos del Perú"
+kind = "customer"
+published_on = "2023"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["ASBANC's 2023 annual report says its ASBANCTEC security and digital-transformation suite launched in August 2023 with specialized partners including ADO Technologies.", "Report describes a digital identity assurance service but does not disclose the $20 million annual Scanovate/ASBANC value stated in the trade mission post."]
+
+[[intelligence.research.sources]]
+id = "anonybit-2024"
+url = "https://www.anonybit.io/press-releases/anonybit-deploys-upgraded-decentralized-biometrics-cloud-capabilities-with-tier-1-latin-america-banking-group/"
+title = "Anonybit Deploys Upgraded Decentralized Biometrics Cloud Capabilities With Tier 1 Latin America Banking Group"
+publisher = "Anonybit"
+kind = "company"
+published_on = "2024-03-04"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Anonybit reports its biometric infrastructure was deployed as backend for an identity-verification service delivered by ADO Technologies to an unnamed top-tier Latin American banking group serving 14 million retail customers.", "ADO Technologies' general manager is quoted describing Anonybit as the backend used in ADO deployments; the release identifies ADO as a Scanovate company."]
+
+[[intelligence.research.sources]]
+id = "patent-us-2010"
+url = "https://patents.google.com/patent/US20100157040A1/en"
+title = "US20100157040A1 – Biometric facial surveillance system"
+publisher = "Google Patents"
+kind = "other"
+published_on = "2010-06-24"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["The public record names Alon Ofir as inventor and Rafael Advanced Defense Systems as original assignee of US application US20100157040A1.", "The record lists the application as abandoned and does not identify Scanovate as assignee."]
+
+[[intelligence.research.sources]]
+id = "ilpo-search"
+url = "https://israelpatents.justice.gov.il/"
+title = "Israel Patents Online"
+publisher = "Israel Patent Office"
+kind = "government"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Official Israeli patent search portal used in targeted searches for a Scanovate-assigned patent record."]
+
+[[intelligence.research.sources]]
+id = "fenergo-clm"
+url = "https://www.fenergo.com/client-lifecycle-management"
+title = "Client Lifecycle Management (CLM) Software"
+publisher = "Fenergo"
+kind = "company"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Fenergo markets end-to-end client lifecycle management from onboarding and KYC through ongoing reviews and offboarding.", "Fenergo describes policy and regulatory rules across more than 120 jurisdictions and enterprise data/workflow modules."]
+
+[[intelligence.research.sources]]
+id = "jumio-idv"
+url = "https://www.jumio.com/products/identity-verification/"
+title = "Identity Verification Software to Confirm Your Customers"
+publisher = "Jumio"
+kind = "company"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Jumio markets ID document verification, selfie and liveness checks, risk-based decisions, and ongoing identity assurance for KYC/AML workflows."]
+
+[[intelligence.research.sources]]
+id = "trulioo-solutions"
+url = "https://www.trulioo.com/solutions"
+title = "Global Identity Verification Solutions"
+publisher = "Trulioo"
+kind = "company"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Trulioo markets person and business verification for KYC/KYB and AML through APIs and hosted onboarding.", "Trulioo states it uses more than 450 independent data partners for individual verification and supports beneficial-owner checks for businesses."]
+
+[[intelligence.research.sources]]
+id = "entrust-idv"
+url = "https://www.entrust.com/products/identity-verification"
+title = "Identity Verification (IDV) Solutions"
+publisher = "Entrust"
+kind = "company"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Entrust markets document, biometric, and data verification, fraud detection, KYC/AML support, and ongoing identity assurance; its current product page describes Onfido as part of Entrust."]
+
+[[intelligence.research.sources]]
+id = "sumsub-verification"
+url = "https://docs.sumsub.com/docs/user-verification"
+title = "About User Verification"
+publisher = "Sumsub"
+kind = "company"
+accessed_at = "2026-10-21T21:59:52Z"
+claims = ["Sumsub documentation describes configurable identity, biometric, database, screening, risk, and AML verification workflows, including ongoing screening and monitoring."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-21T21:59:52Z"
+next_review_on = "2027-04-21"
+queries = ["Scanovate official company B-Trust about customers leadership", "Scanovate founder CEO team funding raised acquisition", "site:scanovate.com B-Trust KYC KYB identity lifecycle platform"]
+source_ids = ["scanovate-home", "scanovate-company", "ctech-2026", "mr-gov-notice-2023"]
+summary = "Official company material, a current transaction report, and Israeli procurement records identify Scanovate Ltd as a Ramat Gan identity and compliance business with B-Trust and Scanovate IDV."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-21T21:59:52Z"
+next_review_on = "2027-04-21"
+queries = ["Scanovate funding raised investors Series funding Scanovate Israel", "Scanovate raised $2 million 2019 funding NadiFin Bankia Fintech Viola", "Scanovate funding raised seed Series A investors valuation acquired founder patents revenue"]
+source_ids = ["snc-finder", "geektime-2019", "ctech-2026"]
+summary = "A stale 2020 profile lists an undisclosed April 2018 A round; Geektime later reports about $2 million cumulatively without allocation; CTech calls the company bootstrapped. No primary financing documents reconcile these statements, so the funding history is partial and no total is populated."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-21T21:59:52Z"
+next_review_on = "2027-04-21"
+queries = ["Scanovate funding raised investors Series funding Scanovate Israel", "Scanovate raised $2 million 2019 funding NadiFin Bankia Fintech Viola", "site:scanovate.com Prytek Scanovate acquisition"]
+source_ids = ["snc-finder", "geektime-2019", "ctech-2026"]
+summary = "Prytek Ventures is named in a historical round entry; Geektime names Prytek, IOV42, and the Israel Innovation Authority as sources of reported cumulative capital. Individual instruments, round assignments, and amounts remain unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-21T21:59:52Z"
+next_review_on = "2027-04-21"
+queries = ["Scanovate founder CEO team funding raised acquisition", "Scanovate official company B-Trust about customers leadership", "Scanovate revenue customers employees 2025"]
+source_ids = ["scanovate-company", "ctech-2026", "geektime-2019"]
+summary = "Scanovate's leadership page and 2026 transaction coverage identify the founder group and several operating leaders. Current headcount is unclear and Roi Fishman's title differs between the company page and CTech."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "conflicting"
+checked_at = "2026-10-21T21:59:52Z"
+next_review_on = "2027-04-21"
+queries = ["Scanovate acquired by Prytek September 2026 50 million official announcement", "Scanovate Prytek acquisition completed status September 2026", "Scanovate company acquired Colombia ADO Technologies"]
+source_ids = ["ctech-2026", "apm-2026", "geektime-2019"]
+summary = "Public sources confirm the announced acquisition of Scanovate's business by Prytek and the earlier ADO Technologies acquisition, but do not publish a close date, exact transaction consideration, legal transfer structure, or private cap table."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-21T21:59:52Z"
+next_review_on = "2027-04-21"
+queries = ["Scanovate revenue ARR annual accounts profitability burn runway financials", "Scanovate revenue customers employees 2025", "ASBANC Peru Scanovate ADO Technologies identity verification center $20 million official"]
+source_ids = ["ctech-2026", "aws-marketplace", "tradeil-peru", "asbanc-report-2023"]
+summary = "No dated revenue, ARR, margins, cash, burn, or runway were disclosed in reviewed company and media sources. Product list pricing, a government procurement estimate, and an uncorroborated ASBANC deal estimate are not company financials."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-21T21:59:52Z"
+next_review_on = "2027-04-21"
+queries = ["Scanovate revenue customers employees 2025", "Scanovate customer Bank Leumi MAX CAL 85 million users", "site:mr.gov.il Scanovate digital senior citizen biometric identity verification", "ASBANC Peru Scanovate ADO Technologies identity verification center $20 million official"]
+source_ids = ["ctech-2026", "prnewswire-2015", "mr-gov-notice-2023", "mr-gov-opinion-2023", "tradeil-peru", "asbanc-report-2023", "anonybit-2024", "aws-marketplace"]
+summary = "Evidence includes a 2015 Bank Leumi app release, a 2023 civilian ministry procurement intention, an ADO/Anonybit banking deployment, a reported ASBANC agreement requiring customer-side confirmation, current marketplace availability, and 2026 reported customer counts."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-21T21:59:52Z"
+next_review_on = "2027-04-21"
+queries = ["Scanovate patents patent identity verification OCR", "Scanovate Ltd patents Google Patents", "Scanovate identity verification patent assignee Israel Patent Office"]
+source_ids = ["scanovate-company", "patent-us-2010", "ilpo-search"]
+summary = "Targeted public patent searches did not locate a Scanovate-assigned family. A company biography cites Alon Ofir's earlier patent, but the located US application identifies Rafael as assignee. This does not establish that Scanovate has no trade secrets, trademarks, or unindexed filings."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-21T21:59:52Z"
+next_review_on = "2027-04-21"
+queries = ["Scanovate identity verification KYC KYB competitors alternatives official providers", "site:fenergo.com client lifecycle management KYC AML platform", "site:trulioo.com products global identity verification KYC KYB platform", "site:sumsub.com/products identity verification KYC AML KYB customer lifecycle"]
+source_ids = ["fenergo-clm", "jumio-idv", "entrust-idv", "sumsub-verification", "trulioo-solutions", "scanovate-home"]
+summary = "Official product materials show direct overlap with financial CLM platforms and identity-verification providers. Like-for-like performance and customer comparisons remain a diligence task."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-21T21:59:52Z"
+next_review_on = "2027-04-21"
+queries = ["Scanovate defense government contract tender security public sector procurement Israel", "site:mr.gov.il Scanovate digital senior citizen biometric identity verification", "Scanovate public sector defense military security contracts", "Scanovate identity verification liveness private deployment AWS Marketplace"]
+source_ids = ["scanovate-home", "aws-marketplace", "mr-gov-notice-2023", "mr-gov-opinion-2023", "anonybit-2024"]
+summary = "Commercial financial identity and compliance use is clear, and an Israeli ministry notice documents a civilian biometric credential project with a project-specific cyber review. No defense, military, classified, or defense-specific deployment evidence was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Company remains an operating identity and customer-lifecycle business: CTech says it will continue developing products and lead Prytek's CLM segment after the announced transaction; the company maintains current product materials."
+verified_at = "2026-10-21T21:59:52Z"
+source_ids = ["ctech-2026", "scanovate-home"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "The ministry procurement notice identifies Scanovate Ltd with an Israeli company number; Scanovate's company page lists its Ramat Gan office, and CTech describes it as an Israeli company."
+verified_at = "2026-10-21T21:59:52Z"
+source_ids = ["mr-gov-notice-2023", "scanovate-company", "ctech-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2018.participating_investors"
+support = "direct"
+summary = "The historical Startup Nation Finder funding table lists Prytek Ventures as investor in its April 2018 A-round entry."
+verified_at = "2026-10-21T21:59:52Z"
+source_ids = ["snc-finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "CTech reports Prytek's acquisition of Scanovate's business and says Scanovate will lead Prytek's customer lifecycle management segment; APM describes the same transaction. The legal transfer structure remains undisclosed."
+verified_at = "2026-10-21T21:59:52Z"
+source_ids = ["ctech-2026", "apm-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.prytek-business-acquisition.status"
+support = "direct"
+summary = "CTech and buyer counsel APM announced Prytek's acquisition of Scanovate's business in September 2026. APM still described Prytek as acquiring the business on September 16; no public closing date was located, so the deal is recorded as announced."
+verified_at = "2026-10-21T21:59:52Z"
+source_ids = ["ctech-2026", "apm-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.prytek-business-acquisition.amount"
+support = "direct"
+summary = "CTech reports about $50 million for the first phase and potential value up to $100 million; APM says over $50 million with potential to reach $100 million. The sources do not disclose exact consideration or contingent-payment mechanics, so no numeric amount is set."
+verified_at = "2026-10-21T21:59:52Z"
+source_ids = ["ctech-2026", "apm-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.ado-tech-acquisition.status"
+support = "direct"
+summary = "Geektime reported that Scanovate had acquired Colombian ADO-Tech by December 2019; CTech later identifies ADO Technologies as part of the acquired Scanovate business."
+verified_at = "2026-10-21T21:59:52Z"
+source_ids = ["geektime-2019", "ctech-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.ado-tech-acquisition.amount"
+support = "direct"
+summary = "The cited 2019 report states that Scanovate acquired ADO-Tech but gives no consideration; no transaction price was found in the reviewed acquisition reporting."
+verified_at = "2026-10-21T21:59:52Z"
+source_ids = ["geektime-2019"]

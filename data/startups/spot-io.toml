@@ -1,46 +1,889 @@
 name = "Spot (formerly Spotinst)"
-description = "Spot is a cloud infrastructure optimization business founded in Israel that automates the use of spot, reserved, savings-plan, and on-demand capacity across public clouds. The business was acquired by Flexera from NetApp in March 2025 and is now being integrated into Flexera's broader FinOps and technology-spend platform."
+description = "Spot, founded in Tel Aviv as Spotinst in 2015, built cloud compute and FinOps automation for allocating workloads across discounted, reserved, and on-demand capacity. NetApp acquired the company in 2020; Flexera completed its purchase of the Spot by NetApp FinOps business on March 3, 2025. The technology continues within Flexera, including Virtual Machine Optimization (formerly Spot Elastigroup) and Cloud Commitment Management (Spot Eco transitioned in September 2025). Globes reported that Flexera closed Spot's Israeli operation in November 2025; current global product-team size and standalone financials are not disclosed."
 detailed_description = """
-Spot, originally known as Spotinst, built an automation layer between cloud workloads and volatile infrastructure pricing. Its Elastigroup technology continuously selects and provisions compute across spot and on-demand instance types, monitors interruption risk, and can replace or rebalance capacity to preserve application availability. Ocean applies related optimization to Kubernetes and container infrastructure, while Eco addressed commitment and reservation management. Flexera's current product pages position the former Elastigroup capability as Flexera One Virtual Machine Optimization and describe it as using historical interruption data, predictive rebalancing, and workload-aware placement to balance cost, capacity, and resilience.
+Spot began in Tel Aviv in 2015 as Spotinst, building software to make discounted, interruptible cloud compute usable for production operations. Cloud providers sell spare capacity at lower prices, but they can reclaim it as demand changes. Spot's original Elastigroup product automated instance selection and provisioning, watched for interruption risk, and shifted workloads to replacement or on-demand capacity. The commercial proposition was to convert a difficult infrastructure trade-off into a policy-driven operating workflow: lower compute cost while preserving the availability targets that the application team sets. This is infrastructure software, not a cloud provider or a general-purpose finance dashboard.
 
-The customer problem is concrete: cloud teams often pay full on-demand prices because discounted capacity is operationally difficult to manage, while FinOps teams lack the authority or technical context to change running workloads safely. Spot's value was to connect cost policy with provisioning and runtime operations across AWS, Azure, and Google Cloud. That makes the product relevant to platform engineering, SRE, cloud-finance, managed-service, and data-platform teams. The market is attractive because cloud and AI workloads increase the value of utilization and commitment optimization, but it is also crowded with hyperscaler controls, cloud-management suites, Kubernetes cost tools, and automation vendors.
+The product family expanded into adjacent operating problems. Ocean managed Kubernetes and container infrastructure, aiming to balance cost, performance, and availability. Eco analyzed reserved instances, savings plans, and committed-use discounts, and automated commitment selection and lifecycle management. CloudCheckr supplied cloud cost visibility, governance, billing, and optimization capabilities that NetApp had assembled into the Spot portfolio. Flexera's March 2025 release listed Eco, Ocean, Elastigroup, and CloudCheckr as acquired product lines. By September 2025, Flexera documentation said Spot Eco had transitioned into Flexera One Cloud Commitment Management; Flexera currently markets the Elastigroup lineage as Flexera One Virtual Machine Optimization. These are concrete continuity signals: the products and functions survived the ownership change, but the former startup no longer has a standalone product roadmap or corporate boundary.
 
-Commercial traction is best evidenced by the strategic transactions around the asset rather than by current standalone metrics. NetApp acquired Spot in 2020, and Flexera announced the acquisition of the Spot FinOps business in January 2025 and completion on March 3, 2025. Flexera said the transaction added Kubernetes cost management, commitment management, spot-instance optimization, and a stronger FinOps partner ecosystem. Subsequent migration documentation says Eco customers move to Flexera One Cloud Commitment Management while existing backend APIs and data-location arrangements remain substantially continuous. These are useful continuity signals, but they do not establish current standalone revenue, headcount, retention, or product-level margins.
+Spot solved a persistent operational problem for companies with variable compute demand. Teams must choose among cheaper but reclaimable capacity, reserved commitments that can be underused, and more expensive on-demand instances that are easier to procure quickly. Spot connected cost policy to provisioning and workload operations across major public clouds. That pairing of compute orchestration, Kubernetes optimization, and commitment management gave the former company a broader workflow than a tool that only reports cloud bills. The product was most relevant to platform engineering, SRE, DevOps, cloud-finance teams, and managed-service providers handling large or fluctuating estates. It could also help batch processing, data engineering, development environments, and some AI workloads when jobs tolerate interruption or can fall back safely.
 
-For defense and national-security users, the technology has credible but indirect dual-use relevance. Defense organizations operating approved commercial or hybrid clouds could use workload-aware placement, interruption handling, autoscaling, and commitment governance to stretch finite infrastructure budgets and preserve availability for analytics, simulation, logistics, or mission-support applications. The same controls can help manage surge capacity and reduce dependence on manual cloud operations. However, Spot does not provide a defense mission system, cyber weapon, sensor, or specialized assurance technology. Applicability depends on the hosting environment, accreditation boundary, data-residency requirements, procurement channel, and whether automated capacity changes are acceptable for a particular mission.
+Historical commercial evidence is credible but should be read at the precision the sources support. Highland Europe, Spot's Series B lead, said in August 2018 that the company had more than a thousand customers, including Sony, Samsung, Unilever, Qualcomm, and Ticketmaster, and employed 100 people. Intel Capital's 2021 founder interview said more than 1,500 organizations were using the service. These are investor-published or company-attributed adoption statements, not audited counts of active paying customers. NetApp's June 2020 acquisition announcement described more than 180 staff across five offices. A 2020 Globes interview described turnover as tens of millions of dollars without specifying a period or publishing accounts. No standalone Spot revenue, ARR, retention, gross margin, or customer concentration has been identified after acquisition.
 
-The central diligence issue is now ownership and integration, not whether the original product category exists. Buyers should determine which Spot capabilities remain distinct, how much engineering and support capacity is dedicated to them, what migration commitments Flexera has made, and whether customers can preserve portability across clouds. They should also compare realized savings and availability outcomes against native AWS, Azure, and Google Cloud features, Kubernetes-native tooling, and newer FinOps automation providers. The asset is strategically useful as proven cloud-operations automation, but its standalone identity and future roadmap are less visible after two acquisitions.
+The corporate history changes how this record should be evaluated. NetApp announced an agreement to acquire Spot in June 2020 and later reported in its SEC filing that it acquired all outstanding Spot, Inc. shares for $340 million cash on July 9, 2020. Globes reported a figure near $450 million, including in an interview with Spot's CEO; because those sources do not reconcile their consideration or valuation bases with NetApp's filing, the acquisition amount is recorded as conflicting rather than silently choosing one. In January 2025 NetApp agreed to sell the Spot FinOps business to Flexera, and Flexera announced completion on March 3. NetApp's SEC disclosure says the consideration was $70 million upfront plus up to $49 million contingent on 2025 performance, and that $20 million of contingent consideration was recognized at closing. That recognition is not proof of the final payout. The two acquisitions are separate from the company's venture rounds and are not funding.
+
+Spot's competitive advantage was strongest where automation had to bridge cost analysis and live workload operations. Flexera's current Virtual Machine Optimization page describes proactive replacement and selection across Spot, on-demand, and reserved capacity, while its product documentation continues Eco commitment workflows. Competition is stronger than it was in the startup's early years. AWS offers native Spot capacity signals and fleet controls; Azure sells its own interruptible VMs; Google provides native cost recommendations; and CAST AI automates Kubernetes right-sizing and spot placement across clouds. These first-party and specialist alternatives narrow the value of a separate control plane for simpler estates. Spot's historical portfolio breadth remains useful for customers seeking a common policy layer across compute, containers, and commitments, but no recent independent benchmark establishes superior savings, reliability, or total cost of ownership.
+
+Technical fit depends on workload behavior and guardrails. Spot can reduce cost only when replacement capacity is available, applications can tolerate or recover from interruption, and policies do not violate latency, data locality, licensing, or availability requirements. Predictive signals reduce response time but cannot eliminate cloud-provider capacity shortages or guarantee uninterrupted operation. Stateful workloads need testing of checkpointing, storage reattachment, network identity, and rollback paths. Commitment management also trades unit prices against duration and utilization risk. Those are engineering and governance questions, not just a forecast-quality problem. Product claims such as savings percentages and availability guarantees should be validated against each customer's own baseline, workload mix, failure history, and cloud bill.
+
+The original founding team had relevant infrastructure experience, and the business achieved institutional funding and an acquisition by a large cloud and storage vendor. Amiram Shachar described operating military data centers before building cloud optimization software; Liran Polak and Aharon Twizer were also named as founders in later company and investor-era reporting. A 2016 contemporaneous article instead named Yakir Daniel in the founding group, so the early public record is not fully consistent. The Israeli operation was a meaningful part of Spot's history: NetApp described it as based in Israel, and its founding and headquarters were reported in Tel Aviv. Globes reported in November 2025 that Flexera closed the local Spot operation and laid off the local team, including around 100 Spot-origin employees who had joined Flexera. The remaining product business operates inside Flexera, but its current global engineering capacity, leadership, and roadmap ownership are not public.
+
+The strategic case today is therefore asset-level. Flexera gained proven cloud compute automation, Kubernetes capabilities, commitment management, customer workflows, and a FinOps partner ecosystem that complements its broader IT-spend platform. For a buyer or strategic reviewer, the decisive questions are product investment after integration, customer retention through migration, the degree of multi-cloud portability, and whether the acquired automation continues to deliver measurable outcomes. The past funding and exit validate product relevance but do not make Spot an independent venture opportunity. With product continuity visible but local-team closure and standalone economics unresolved, Spot is best treated as a mature acquired software portfolio with real technical utility and elevated execution uncertainty.
 """
 logo = "https://www.flexera.com/sites/default/files/2025-02/logo-flexera-spot-lockup-color.svg"
 website = "https://www.flexera.com/more/spot"
 sector = "Cloud Infrastructure / FinOps"
 founded = "2015"
-headquarters = "Tel Aviv, Israel"
-employees = "Unknown; 180 reported at the 2020 NetApp acquisition, with current standalone headcount not disclosed"
-funding_stage = "Acquired by Flexera (completed March 2025)"
+headquarters = "Former HQ: Tel Aviv, Israel; Globes reported the Israeli Spot operation closed in November 2025. The product business is now within U.S.-based Flexera; its current product-team location is not disclosed."
+employees = "Standalone headcount unknown. Spot reported 100 employees in 2018 and more than 180 in its June 2020 acquisition announcement. Globes reported that about 100 Spot-origin employees joined Flexera in Israel and that Flexera later closed the local Spot operation and laid off the local team in November 2025; current global product-line headcount is undisclosed."
+funding_stage = "Acquired by NetApp in 2020; Spot FinOps business acquired by Flexera on March 3, 2025"
 entity_type = "acquired_asset"
 dual_use = true
-dual_use_description = "Spot's core automation has substantive commercial and government applicability because it manages cloud capacity, availability, and utilization for production workloads. The defense case is indirect and conditional on approved cloud environments, accreditation, data handling, and mission risk tolerance; the product is not defense-specific technology."
-key_technologies = ["Predictive spot and preemptible-capacity interruption management", "Automated workload replacement and multi-instance-type provisioning", "Kubernetes cluster bin-packing, autoscaling, and capacity optimization", "Multi-cloud commitment, reservation, and savings-plan management", "Workload-aware policy controls for cost, availability, and risk", "Cloud utilization telemetry, cost attribution, and optimization analytics"]
-use_cases = ["Running stateless production services on spot capacity with automated fallback", "Protecting stateful workloads through predictive capacity replacement", "Optimizing AWS, Azure, and Google Cloud Kubernetes clusters", "Reallocating reservations and savings plans as demand changes", "Reducing infrastructure cost for data processing, batch, and AI workloads", "Cloud-finance governance for enterprise and managed-service providers", "Budget and availability management for approved government analytics or simulation clouds"]
+dual_use_description = "The commercial application is direct: cloud compute selection, interruption handling, Kubernetes capacity management, and commitment planning can lower costs and support availability for enterprise workloads. The defense and security application is enabling and conditional. In an approved government or defense cloud, similar controls could help manage compute for logistics analysis, simulation, data processing, and other support workloads, including surge demand. This is an inference from the documented commercial product capabilities, not evidence of a Spot defense deployment. No Spot-specific defense contract, government customer, security certification, or FedRAMP authorization was found. Any use would depend on the customer cloud's authorization, data residency, access controls, service-level needs, and tolerance for automated workload movement. Spot is not a defense mission system or a security product."
+key_technologies = ["Predictive detection and replacement of interruptible cloud compute", "Automated provisioning and workload rebalancing across spot, on-demand, and reserved capacity", "Kubernetes and container infrastructure optimization", "Cloud commitment analytics and lifecycle automation for reservations, savings plans, and committed-use discounts", "Cloud cost visibility, allocation, billing, and governance"]
+use_cases = ["Run eligible production workloads on discounted capacity with automated fallback", "Optimize Kubernetes clusters for cost, performance, and availability", "Rebalance workloads among instance types and cloud capacity pools", "Plan and manage reserved instances, savings plans, and committed-use discounts", "Reduce compute waste for batch, analytics, data engineering, and interruptible AI workloads", "Give enterprises and FinOps managed-service providers shared infrastructure and commitment workflows", "Potentially manage approved government or defense support workloads, subject to authorization, data, and availability controls"]
 investible = false
-investment_rationale = "Spot is no longer an independent startup: Flexera completed its acquisition of the Spot FinOps business from NetApp in March 2025. That removes standalone venture-investment relevance for this database, although the underlying technology remains strategically validated and may matter when assessing Flexera's broader platform, cloud-operations capabilities, or integration execution."
-strategic_value = "The asset provides mature automation for turning cloud-cost policy into operational action: selecting cheaper capacity, managing interruptions, scaling containers, and using commitments more efficiently. Its strategic value is strongest for organizations with large, variable, multi-cloud workloads and disciplined cloud governance. For defense readers, it is an enabling infrastructure capability rather than a mission system, and its utility depends on deployment, accreditation, data-residency, and procurement constraints."
-potential_score = 72.0
-technology_score = 82.0
-market_score = 80.0
-team_score = 74.0
-dual_use_score = 63.0
-strategic_alignment_score = 61.0
+investment_rationale = "Spot is an acquired product portfolio, not an independent startup or presently documented equity opportunity. Flexera completed its purchase of the Spot by NetApp FinOps business in March 2025. No standalone Spot cap table, current financials, or independent corporate operating boundary is available. Its historical rounds and acquisitions are relevant to company history, while current product value and execution should be assessed within Flexera. Do not treat the legacy investible flag as an investment recommendation."
+strategic_value = "Spot supplied a mature bridge between cloud-finance decisions and runtime infrastructure actions: choosing cheaper compute, managing interruptions, optimizing Kubernetes capacity, and adjusting commitments. Flexera's product pages and documentation show that parts of this portfolio remain in active product form. Strategic value rests on the acquired customer workflows, predictive automation, and broadening of Flexera's FinOps offer. It is strongest for multi-cloud organizations and MSPs with variable compute use; it is weaker where first-party tools already meet the workload's needs. For government users, any value is contingent on approved environments and mission-specific reliability controls."
+potential_score = 56.0
+technology_score = 80.0
+market_score = 74.0
+team_score = 38.0
+dual_use_score = 39.0
+strategic_alignment_score = 57.0
 stage = "mature"
-stage_rationale = "Spot had a commercial product portfolio and an acquisition history before Flexera acquired the FinOps business in 2025. It should now be analyzed as a mature acquired product line: its technology and customer workflows have operational history, but standalone growth, team continuity, and roadmap autonomy are not publicly clear."
-competitors = ["AWS Cost Optimization Hub and Compute Optimizer", "Microsoft Azure Advisor and Azure Kubernetes Service autoscaling", "Google Cloud cost and infrastructure optimization tools", "CAST AI", "Kubecost", "Harness Cloud Cost Management", "Apptio Cloudability"]
-competitive_edge = "Spot's historical differentiation was the combination of discounted-capacity orchestration, interruption-aware workload automation, Kubernetes optimization, and commitment management in one operating layer. That is more actionable than cost reporting alone. The edge is weakened by increasingly capable hyperscaler controls, open Kubernetes tooling, and competing FinOps suites; after the Flexera acquisition, product integration and execution are as important as algorithmic differentiation."
-risk_factors = ["Flexera integration may change product naming, roadmap ownership, support processes, or engineering focus", "Current standalone headcount, retention, revenue, and customer concentration are not publicly disclosed", "Hyperscaler-native optimization and billing features can reduce the need for an external control plane", "Spot-market availability and pricing vary by region, instance family, cloud, and demand conditions", "Automated rebalancing can create availability, performance, or operational risk when policies are poorly configured", "Government and regulated workloads may face SaaS, accreditation, data-residency, or procurement constraints", "Cloud-provider APIs and pricing terms can change and increase switching or maintenance costs"]
-risk_level = "medium"
+stage_rationale = "Spot had commercial products, enterprise references, institutional rounds, and two ownership transitions. It is now a mature acquired product portfolio inside Flexera, with some product lines renamed and integrated. The former Israeli organization reportedly closed in 2025; standalone leadership, global staffing, and roadmap autonomy are not public."
+competitors = ["AWS EC2 Spot and native compute optimization", "Microsoft Azure Spot Virtual Machines and Azure cost recommendations", "Google Cloud Spot VMs and Active Assist cost recommendations", "CAST AI Kubernetes automation and optimization"]
+competitive_edge = "Spot's historical edge combined predictive spot-capacity handling with workload provisioning, Kubernetes optimization, and cloud-commitment management. Flexera's current pages continue to describe proactive replacement and multi-cloud commitment workflows. This is more actionable than cost reporting alone, but AWS, Azure, and Google provide native controls, and CAST AI competes directly on multi-cloud Kubernetes automation. No current independent comparison demonstrates that Spot's inherited portfolio beats those alternatives on realized savings, availability, or total cost. The edge now depends on Flexera's integration, support, and product investment."
+risk_factors = ["Flexera reportedly closed Spot's Israeli operation and laid off the local Spot team in November 2025, creating uncertainty about product knowledge continuity and engineering capacity", "Standalone Spot revenue, ARR, retention, margins, current team size, and product-level profitability are not disclosed", "Flexera's integration can change product names, APIs, billing, support, roadmap, or portability", "AWS, Azure, and Google have native spot capacity and cost optimization controls; CAST AI competes directly in Kubernetes automation", "Cloud spot capacity remains variable and can be reclaimed; prediction and fallback reduce but cannot eliminate interruption risk", "Stateful and latency-sensitive workloads require customer-specific resilience testing and may not realize advertised savings", "Government and regulated environments may require approvals, data-residency controls, or procurement routes not evidenced for Spot", "The identified patent family is listed as assigned to NetApp; transfer of title to Flexera was not verified"]
+risk_level = "high"
 signals = []
 priority_rank = 0
-priority_rationale = "A useful strategic reference for proven cloud-operations and FinOps automation, but not a current independent startup priority. The acquired-asset status, indirect dual-use profile, and uncertain standalone roadmap justify moderate technology and market scores without treating the record as an investment recommendation."
-public_sources = ["https://www.flexera.com/more/spot", "https://www.flexera.com/about-us/press-center/flexera-to-acquire-finops-business-from-netapp-to-strengthen-portfolio", "https://www.flexera.com/products/flexera-one/virtual-machine-optimization", "https://docs.flexera.com/spot/ocean/", "https://docs.flexera.com/spot/elastigroup/", "https://docs-spot.flexera.com/faqs/faqs-finops", "https://www.netapp.com/de/newsroom/press-releases/news-rel-20200619-998125/"]
+priority_rationale = "Keep priority_rank 0: Spot is an acquired product line rather than an independent startup target. Its technical record remains useful for strategic comparison, but local-team closure, uncertain global staffing, unreconciled exit consideration, and missing standalone operating metrics argue against elevating it as a current Israeli startup priority."
+public_sources = [
+  {label = "Spotinst 2016 financing announcement", url = "https://www.prnewswire.com/news-releases/spotinst-raises-series-a-funding-round-to-optimize-cloud-spot-market-utilization-571420891.html", description = "Issuer announcement of its Series A close and PICO Venture Partners lead; contemporary reporting supplies the $2 million amount."},
+  {label = "TechCrunch on Spotinst's 2016 round", url = "https://techcrunch.com/2016/03/08/spotinst-which-helps-you-buy-aws-spot-instances-raises-2m-series-a/", description = "Reports the $2 million size of the 2016 Series A."},
+  {label = "NoCamels on Spotinst's 2016 founding and round", url = "https://nocamels.com/2016/03/spotinst-pico-partners/", description = "Contemporaneous report on the funding and an early founder attribution that differs from later sources."},
+  {label = "Globes on Spotinst's 2017 Series A", url = "https://en.globes.co.il/en/article-israeli-cloud-cost-management-co-spotinst-raises-15m-1001195111", description = "Reports the $15 million round, Intel Capital and Vertex participation, and the earlier PICO financing."},
+  {label = "Highland Europe on Spotinst's Series B", url = "https://www.highlandeurope.com/spotinst-raises-35m-for-ai-cloud-computing-workload-managment-platform/", description = "Lead investor announcement of the $35 million Series B, investor list, customers, team size, product and approximate cumulative funding."},
+  {label = "Intel Capital founder interview", url = "https://www.intelcapital.com/founder-qa-spot-founder-amiram-shachar-on-how-he-built-cloud-optimizing-services/", description = "Founder account of the Tel Aviv origins and product, Intel's investment, and more than 1,500 organizations using Spot by 2021."},
+  {label = "NetApp's 2020 acquisition announcement", url = "https://www.businesswire.com/news/home/20200603005856/en/NetApp-to-Acquire-Spot", description = "NetApp announcement of the acquisition agreement, Spot's historical product description and acquisition-era staffing."},
+  {label = "NetApp SEC 2021 filing", url = "https://www.sec.gov/Archives/edgar/data/1002047/000156459021009843/ntap-10q_20210129.htm", description = "NetApp reports acquisition of all Spot, Inc. shares for $340 million cash and that Spot was based in Israel."},
+  {label = "Globes on Spot's 2020 exit", url = "https://en.globes.co.il/en/article-from-college-project-to-450m-exit-1001337797", description = "CEO interview reporting a near-$450 million sale, an ongoing financing process at a $300 million valuation, and turnover in the tens of millions of dollars."},
+  {label = "NetApp announcement of the Flexera agreement", url = "https://investors.netapp.com/news/news-details/2025/Flexera-to-Acquire-FinOps-Business-from-NetApp-Inc--to-Strengthen-FinOps-Portfolio-01-15-2025/default.aspx", description = "Seller announcement that Flexera agreed to acquire the Spot by NetApp FinOps business; transaction terms were not disclosed in the release."},
+  {label = "NetApp SEC disclosure of the Flexera sale", url = "https://www.sec.gov/Archives/edgar/data/1002047/000095017025083705/R18.htm", description = "Reports $70 million upfront, up to $49 million contingent, March 3 closing, and $20 million of contingent consideration recognized at close."},
+  {label = "Flexera completion announcement", url = "https://www.flexera.com/about-us/press-center/flexera-completes-acquisition-of-netapps-spot-finops-portfolio", description = "Flexera confirms completion and describes acquired Eco, Ocean, Elastigroup, and CloudCheckr capabilities."},
+  {label = "Flexera Spot customer page", url = "https://www.flexera.com/more/spot", description = "Confirms the acquisition and customer/product transition; identifies the portfolio and Flexera's integration plan."},
+  {label = "Flexera Virtual Machine Optimization", url = "https://www.flexera.com/products/flexera-one/virtual-machine-optimization", description = "Current product page identifies this as formerly Spot Elastigroup and describes interruption prediction, replacement, and provisioning."},
+  {label = "Flexera September 2025 release notes", url = "https://docs.flexera.com/flexera-one/feature-list/new-features-in-2025/september-2025", description = "Confirms Spot Eco transitioned to Flexera One Cloud Commitment Management in September 2025."},
+  {label = "Globes report on the Israeli operation closure", url = "https://www.globes.co.il/news/article.aspx?did=1001527062", description = "Hebrew report of the November 2025 closure of Spot's Israeli operation and local layoffs; reports about 100 Spot-origin employees joined Flexera."},
+  {label = "Google Patents: System and Method for Infrastructure Scaling", url = "https://patents.google.com/patent/US20200167199A1/en", description = "Patent family filed by Spotinst Ltd., granted in 2023, and recorded as assigned to NetApp."},
+  {label = "AWS Spot Instance documentation", url = "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html", description = "Documents native spot capacity reclamation and interruption conditions."},
+  {label = "Microsoft Azure Spot VM documentation", url = "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms", description = "Documents native Azure Spot VM capacity, evictions, notice and the absence of an availability SLA."},
+  {label = "Google Cloud cost recommendation documentation", url = "https://docs.cloud.google.com/recommender/docs/understand-cost-recs", description = "Documents native Google Cloud cost optimization recommendations and their estimate basis."},
+  {label = "CAST AI documentation", url = "https://docs.cast.ai/docs/getting-started", description = "Describes a current cross-cloud Kubernetes optimization competitor with autoscaling, bin packing and spot automation."}
+]
 crawled_at = "2026-02-27T13:00:00+00:00"
-updated_at = "2026-07-31T18:47:36Z"
+updated_at = "2026-10-22T04:39:49+00:00"
+
+[intelligence]
+schema_version = 2
+
+[[intelligence.people]]
+name = "Amiram Shachar"
+role = "Founder and CEO (historical)"
+is_founder = true
+current = false
+background = "Described operating military cloud infrastructure and data centers before working in DevOps and studying computer science; he said a university project on cloud optimization inspired Spot."
+source_ids = ["highland-2018", "intel-2021-founder"]
+
+[[intelligence.people]]
+name = "Liran Polak"
+role = "Co-founder and Chief Architect (historical)"
+is_founder = true
+current = false
+source_ids = ["globes-2017-series-a", "highland-2018"]
+
+[[intelligence.people]]
+name = "Aharon Twizer"
+role = "Co-founder and CTO (historical)"
+is_founder = true
+current = false
+source_ids = ["globes-2017-series-a", "highland-2018", "globes-2025-israel"]
+
+[[intelligence.people]]
+name = "Yakir Daniel"
+role = "Reported co-founder in a 2016 contemporaneous article"
+is_founder = true
+current = false
+notes = "NoCamels named Yakir Daniel among founders; later 2017-2025 sources instead name Aharon Twizer with Amiram Shachar and Liran Polak. The sources reviewed do not resolve the discrepancy."
+source_ids = ["nocamels-2016"]
+
+[intelligence.company]
+company_id = "il-spot"
+legal_name = "Spot, Inc."
+aliases = ["Spot", "Spotinst", "Spotinst Ltd.", "Spot by NetApp"]
+operating_status = "acquired"
+business_model = "B2B cloud infrastructure optimization software for enterprises and managed-service providers; historical products covered compute orchestration, Kubernetes optimization, cloud cost visibility, and commitment management. Current commercial terms and the independent status of any legacy contracts are not disclosed."
+products = ["Elastigroup, now marketed within Flexera as Virtual Machine Optimization", "Ocean, now part of Flexera's container optimization portfolio", "Eco, transitioned to Flexera One Cloud Commitment Management in September 2025", "CloudCheckr cloud cost visibility, billing, governance, and optimization", "Spot Security, listed in Flexera's acquired Spot portfolio"]
+locations = ["Tel Aviv, Israel (historical base; local operation reportedly closed in November 2025)", "San Francisco, New York, Washington, and London were listed in NetApp's June 2020 acquisition announcement"]
+founded_on = "2015"
+source_ids = ["spot-pr-2016", "netapp-2020-announcement", "netapp-2021-sec", "flexera-2025-close", "flexera-spot-page", "flexera-vmo", "flexera-eco-sep25", "globes-2025-israel"]
+notes = "The SEC names the acquired target Spot, Inc.; Google Patents identifies Spotinst Ltd. as an original applicant/assignor. This record concerns the acquired Spot FinOps product business, not an asserted current standalone legal entity. No Israeli registry identifier or incorporation jurisdiction was established."
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "NetApp described Spot, Inc. as based in Israel; investor and company-era reporting places its founding and headquarters in Tel Aviv and names an Israeli founding team. Globes reported the Israeli operation closed in November 2025. The Israeli connection is historical and confirmed; the current product organization is inside Flexera."
+as_of = "2026-10-22"
+source_ids = ["netapp-2021-sec", "spot-pr-2016", "highland-2018", "intel-2021-founder", "globes-2025-israel"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Three completed venture financing announcements were identified: $2 million in 2016, $15 million in 2017, and $35 million in 2018. The 2016 and 2017 announcements both use the Series A label; they are kept as separate dated events, with the 2017 amount treated as an incremental follow-on to the earlier Series A. Globes described a financing process underway in 2020 at a reported $300 million valuation, but no amount, pre/post-money basis, or closing was found, so it is recorded only as targeted and not counted as raised. Highland Europe's 2018 investor announcement says approximately $52 million raised to date, while Globes reported $53 million in 2025; no company filing or source reconciliation was found, so reported_total_raised is omitted. Debt, grants, and other completed financing were not identified in the searches."
+history_status = "partial"
+coverage_through = "2026-10-22"
+
+[[intelligence.funding.rounds]]
+id = "series-a-2016"
+round_type = "Series A"
+instrument = "unknown"
+status = "closed"
+announced_on = "2016-03-08"
+closed_on = "2016-03-08"
+amount_status = "reported"
+amount = 2000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["PICO Venture Partners"]
+participating_investors = []
+source_ids = ["spot-pr-2016", "techcrunch-2016"]
+notes = "Spotinst's issuer release confirms that it closed a Series A led by PICO; TechCrunch reported the $2 million size. The instrument terms were not disclosed."
+
+[[intelligence.funding.rounds]]
+id = "series-a-extension-2017"
+round_type = "Series A"
+instrument = "unknown"
+status = "closed"
+announced_on = "2017-07-02"
+closed_on = "2017-07-02"
+amount_status = "reported"
+amount = 15000000
+amount_scope = "incremental_extension"
+currency = "USD"
+lead_investors = ["Intel Capital"]
+participating_investors = ["Vertex Venture Capital"]
+is_extension_of = "series-a-2016"
+source_ids = ["globes-2017-series-a"]
+notes = "Globes calls the 2017 $15 million event a completed Series A and cites the $2 million PICO financing from the prior year. It does not explicitly use the word extension; the separate incremental event and linkage to the 2016 Series A are an interpretation of the two dated announcements."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2018"
+round_type = "Series B"
+instrument = "unknown"
+status = "closed"
+announced_on = "2018-08-28"
+closed_on = "2018-08-28"
+amount_status = "reported"
+amount = 35000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Highland"]
+participating_investors = ["Leaders Fund", "Intel Capital", "Vertex Ventures"]
+source_ids = ["highland-2018"]
+notes = "Highland Europe's issuer/investor announcement reports the $35 million Series B and names the lead and participating investors."
+
+[[intelligence.funding.rounds]]
+id = "targeted-financing-2020"
+round_type = "Reported financing process before acquisition"
+instrument = "unknown"
+status = "targeted"
+announced_on = "2020-07-30"
+amount_status = "not_found"
+amount_scope = "unknown"
+lead_investors = []
+participating_investors = []
+source_ids = ["globes-2020-exit"]
+notes = "Globes reported that Spot was in the middle of a large financing process at a $300 million valuation when acquisition talks began. The expected round amount and whether the reported valuation was pre- or post-money are unspecified; no close was identified. It is not counted as funding raised."
+
+[[intelligence.investors]]
+name = "PICO Venture Partners"
+investor_type = "vc"
+website = "https://picojerusalem.com"
+round_ids = ["series-a-2016"]
+relationship = "historical"
+source_ids = ["spot-pr-2016"]
+
+[[intelligence.investors]]
+name = "Intel Capital"
+investor_type = "corporate"
+website = "https://www.intelcapital.com"
+round_ids = ["series-a-extension-2017", "series-b-2018"]
+relationship = "historical"
+source_ids = ["globes-2017-series-a", "highland-2018", "intel-2021-founder"]
+
+[[intelligence.investors]]
+name = "Vertex Venture Capital"
+investor_type = "vc"
+website = "https://www.vertexisrael.co.il"
+round_ids = ["series-a-extension-2017"]
+relationship = "historical"
+source_ids = ["globes-2017-series-a"]
+
+[[intelligence.investors]]
+name = "Vertex Ventures"
+investor_type = "vc"
+website = "https://www.vertexisrael.co.il"
+round_ids = ["series-b-2018"]
+relationship = "historical"
+source_ids = ["highland-2018"]
+notes = "Highland's 2018 announcement uses Vertex Ventures; this may be the same Israel-linked investor reported as Vertex Venture Capital in 2017."
+
+[[intelligence.investors]]
+name = "Highland"
+investor_type = "vc"
+website = "https://www.highlandeurope.com"
+round_ids = ["series-b-2018"]
+relationship = "historical"
+source_ids = ["highland-2018"]
+notes = "Highland Europe announced the round as lead investor and styled the lead simply as Highland."
+
+[[intelligence.investors]]
+name = "Leaders Fund"
+investor_type = "vc"
+website = "https://leadersfund.com"
+round_ids = ["series-b-2018"]
+relationship = "historical"
+source_ids = ["highland-2018"]
+
+[intelligence.ownership]
+status = "reported"
+summary = "NetApp acquired all outstanding Spot, Inc. shares in 2020. NetApp then sold the Spot by NetApp FinOps business to Flexera in 2025. Flexera is privately held. No current Spot standalone cap table or disclosed ownership percentages were found. The acquisition price reported for 2020 conflicts between NetApp's SEC filing and media reporting; the conflicting amounts are retained in the deal notes and research checks, and no single amount is populated."
+parent_company = "Flexera"
+cap_table_status = "undisclosed"
+shareholders = []
+holdings = []
+source_ids = ["netapp-2020-announcement", "netapp-2021-sec", "globes-2020-exit", "netapp-2025-agreement", "netapp-2025-sec", "flexera-2025-close", "flexera-spot-page"]
+
+[[intelligence.ownership.deals]]
+id = "netapp-acquisition-2020"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2020-06-03"
+completed_on = "2020-07-09"
+status = "completed"
+counterparty = "NetApp, Inc."
+amount_status = "conflicting"
+currency = "USD"
+source_ids = ["netapp-2020-announcement", "netapp-2021-sec", "globes-2020-exit", "globes-2025-israel"]
+notes = "NetApp's SEC filing reports $340 million cash for all outstanding shares, while Globes reported a sale near $450 million, including in a founder interview. These may use different consideration or valuation bases, but no reconciliation was found. The amount is therefore omitted and both direct reports are preserved in the research conflict and claim checks."
+
+[[intelligence.ownership.deals]]
+id = "flexera-acquisition-2025"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2025-01-15"
+completed_on = "2025-03-03"
+status = "completed"
+counterparty = "Flexera Software LLC"
+amount = 70000000
+amount_status = "reported"
+currency = "USD"
+source_ids = ["netapp-2025-agreement", "netapp-2025-sec", "flexera-2025-close"]
+notes = "The transferred asset was the Spot by NetApp FinOps business, not a reported purchase of Flexera or a new independent Spot company. NetApp states $70 million upfront plus up to $49 million contingent on 2025 performance; this amount field records only the disclosed upfront cash, not final total consideration. NetApp recognized $20 million of contingent consideration at closing; the final contingent payout was not established."
+
+[[intelligence.financials]]
+name = "Employees"
+value = "100"
+as_of = "2018-08-28"
+basis = "reported"
+metric = "employees"
+numeric_value = 100
+value_relation = "exact"
+unit = "people"
+source_ids = ["highland-2018"]
+notes = "Highland Europe's 2018 announcement said Spotinst employed 100 people; the announcement also said the company planned to double headcount, which is not treated as realized hiring."
+
+[[intelligence.financials]]
+name = "Employees"
+value = "more than 180"
+as_of = "2020-06-03"
+basis = "reported"
+metric = "employees"
+numeric_value = 180
+value_relation = "more_than"
+unit = "people"
+source_ids = ["netapp-2020-announcement"]
+notes = "NetApp's acquisition announcement said Spot had more than 180 staff across five offices. This is a historical acquisition-era figure, not current Flexera product-team headcount."
+
+[[intelligence.financials]]
+name = "Reported turnover, period unspecified"
+value = "tens of millions"
+as_of = "2020-07-30"
+basis = "reported"
+metric = "revenue"
+value_relation = "approximate"
+unit = "currency"
+currency = "USD"
+source_ids = ["globes-2020-exit"]
+notes = "Globes reported Spot's turnover as tens of millions of dollars in its 2020 founder interview. The period, accounting basis, and audited figure were not given; it is not a current or exact revenue metric."
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2018-08-28"
+description = "Highland Europe said Spotinst had accumulated more than 1,000 customers, including Sony, Samsung, Unilever, Qualcomm, and Ticketmaster. This is investor-published adoption evidence; it does not disclose active paying-customer counts or contract value."
+source_ids = ["highland-2018"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2021-02-24"
+description = "Intel Capital's founder interview said more than 1,500 organizations were using Spot. This company/investor-attributed usage claim is not an audited count of paying or retained customers."
+source_ids = ["intel-2021-founder"]
+
+[[intelligence.traction]]
+kind = "product"
+date = "2025-03-03"
+description = "Flexera announced completion of its acquisition and listed Spot Eco, Ocean, Ocean for Apache Spark, Elastigroup, Spot Security, and CloudCheckr in the acquired portfolio. Flexera subsequently documented Eco's September 2025 transition to Cloud Commitment Management and markets the Elastigroup lineage as Virtual Machine Optimization."
+source_ids = ["flexera-2025-close", "flexera-spot-page", "flexera-eco-sep25", "flexera-vmo"]
+
+[[intelligence.traction]]
+kind = "hiring"
+date = "2025-11-20"
+description = "Globes reported Flexera closed Spot's Israeli operation and laid off the local team; it said around 100 Spot-origin employees had joined Flexera in Israel. No current global product-line headcount was reported."
+source_ids = ["globes-2025-israel"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+date = "2023-07-04"
+description = "One U.S. patent family, System and Method for Infrastructure Scaling (US20200167199A1; granted as US11693698B2), lists Spotinst Ltd. as original assignee and NetApp as current assignee in Google Patents. It covers infrastructure scaling for container execution. The record does not establish whether or how this title transferred from NetApp to Flexera in 2025."
+source_ids = ["spot-patent-us"]
+notes = "Google Patents warns that current assignee/legal status may be inaccurate and is not a legal conclusion. This is one identified family, not an exhaustive IP search."
+
+[[intelligence.comparables]]
+name = "AWS EC2 Spot and native optimization"
+website = "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html"
+rationale = "AWS directly supplies discounted spare capacity, interruption notices, rebalance recommendations, and native fleet controls, so it is both Spot's core infrastructure supplier and a substitute for some orchestration functions."
+differentiation = "Spot historically added predictive cross-provider workload orchestration, replacement, fallback, and policy management above the provider-specific primitives."
+source_ids = ["aws-spot-docs", "flexera-vmo"]
+
+[[intelligence.comparables]]
+name = "Microsoft Azure Spot Virtual Machines"
+website = "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms"
+rationale = "Azure offers its own discounted interruptible VMs and eviction controls, which can meet simple batch or development workloads without a third-party optimizer."
+differentiation = "Spot's historical value was to manage replacement and workload policy across clouds and capacity types; the comparative value depends on automation, application recovery, and total cloud footprint."
+source_ids = ["azure-spot-vms", "flexera-vmo"]
+
+[[intelligence.comparables]]
+name = "Google Cloud native cost recommendations"
+website = "https://docs.cloud.google.com/recommender/docs/understand-cost-recs"
+rationale = "Google Cloud Active Assist provides provider-native recommendations for idle resources, over-provisioning, and pricing choices."
+differentiation = "Spot's portfolio historically combined cross-cloud infrastructure actions with container and commitment workflows; provider-native recommendations are limited to the applicable cloud environment."
+source_ids = ["gcp-cost-recs", "flexera-eco-sep25", "flexera-vmo"]
+
+[[intelligence.comparables]]
+name = "CAST AI"
+website = "https://docs.cast.ai/docs/getting-started"
+rationale = "CAST AI documents cross-cloud Kubernetes cost management with autoscaling, spot automation, and bin packing, overlapping directly with Spot Ocean and the container optimization portfolio."
+differentiation = "Spot's inherited portfolio also includes VM interruption handling and cloud commitments; CAST AI's current Kubernetes breadth means differentiation should be tested on a workload-by-workload basis."
+source_ids = ["castai-docs", "flexera-vmo", "flexera-eco-sep25"]
+
+[intelligence.research]
+researched_at = "2026-10-22T04:39:49Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Spotinst Spot company acquired NetApp 2020 funding investors series C official press release",
+  "Flexera Spot FinOps business acquisition completed March 3 2025 Spot official",
+  "Spotinst funding raised investors Series C Insight Partners official announcement",
+  "Spotinst founders CEO Spot company profile Israeli founded team",
+  "Spot Flexera Israel office shuts operations layoffs November 2025 Globes Spot Israel employees",
+  "site:flexera.com Spot Israel operations cease Israeli employees 2025",
+  "Spotinst funding $2 million 2016 $15 million 2017 round investors company announcement",
+  "Spotinst raises $7 million Series A 2016 Intel Capital Spot $15m funding",
+  "site:en.globes.co.il/en/article Spotinst raises $2m 2016 PICO Ventures Globes article",
+  "Spotinst $35 million Series B official company announcement Highland Europe 2018",
+  "site:intelcapital.com Spotinst investment funding Intel Capital 2016 2017",
+  "Spotinst patent Google Patents Spot Inc Spotinst cloud optimization",
+  "site:flexera.com/about-us/press-center Spot NetApp cloud FinOps business acquire January 2025 announcement",
+  "site:flexera.com/products/flexera-one/virtual-machine-optimization cloud commitment management spot portfolio",
+  "AWS official spot instances interruption rebalancing savings compute optimizer documentation",
+  "CAST AI official Kubernetes cost optimization spot instances automation product",
+  "Spotinst funding $2m 2016 PICO Ventures Globes article",
+  "Spot has raised $53 million Spotinst funding",
+  "Spotinst has raised $52m 2018 funding",
+  "Spot AI cloud optimization netapp acquisition SEC 2020 340 million 450 million",
+  "site:sec.gov/Archives/edgar/data/1002047 Spot Flexera $70 million $49 million contingent 2025",
+  "site:flexera.com March 3 2025 completed the acquisition Spot NetApp",
+  "Spotinst public sector defense government contract cloud optimization Spot use case",
+  "Spotinst patents patent search Spotinst Ltd",
+  "Spot by NetApp revenue ARR financials 2024 segment revenue standalone financial metrics",
+  "Spot.io Spot by NetApp customers case studies customer quote production deployment",
+  "Spot by NetApp government defense federal customers contract security clearance FedRAMP",
+  "Spotinst Ltd patents assignee USPTO cloud scaling",
+  "Spot OR Spotinst funding raised seed Series A Series B Series C investors acquisition",
+  "Spot by NetApp Spotinst valuation revenue customers ARR acquisition 2020 2025",
+  "Spot OR Spotinst patents Spotinst Ltd patent cloud optimization USPTO",
+  "Spot by NetApp Spotinst defense security government contract FedRAMP customer",
+  "site:learn.microsoft.com Azure Spot Virtual Machines eviction policy official",
+  "site:cloud.google.com spot VMs Cloud FinOps cost optimization official documentation",
+  "site:cloud.google.com cloud cost optimization recommender Google Cloud FinOps official",
+  "site:docs.kubecost.com cost monitoring Kubernetes official Kubecost",
+  "site:docs-spot.flexera.com/faqs/faqs-finops Cloud Commitment Management Eco migration",
+  "site:community.flexera.com Spot Eco migrate Cloud Commitment Management customers 2025",
+  "site:docs.flexera.com/spot Eco customers migration Flexera One Cloud Commitment Management"
+]
+gaps = [
+  "team: the current global Flexera product organization, named leaders, engineering headcount, retention, and roadmap authority are not publicly disclosed; the Israeli operation was reportedly closed in November 2025.",
+  "investors: historical named round investors are identified, but the private cap table, shareholder percentages, and realized investor proceeds are not disclosed.",
+  "financials: no standalone current Spot revenue, ARR, profitability, cash, burn, runway, or post-acquisition product-line economics were found; 2020 turnover was reported only as tens of millions of dollars with no period or accounts.",
+  "traction: adoption counts are historical investor/company-attributed statements; current paying customers, retention, workloads, and customer concentration after Flexera integration are not disclosed.",
+  "intellectual_property: one U.S. patent family was identified, but no exhaustive issued or pending portfolio search or confirmed NetApp-to-Flexera chain of title was established.",
+  "competition: there is no current independent head-to-head benchmark, market-share estimate, or verified customer comparison for savings, availability, and total cost of ownership.",
+  "dual_use: no Spot-specific defense customer, public defense contract, government deployment, FedRAMP authorization, or defense certification was found; defense applicability is inferred from commercial cloud orchestration functions.",
+  "funding: the 2018 investor source reports approximately $52 million cumulative funding while 2025 Globes reports $53 million; no primary issuer total reconciles the difference, so reported_total_raised is omitted. The 2020 financing process has no reported amount or pre/post-money valuation basis.",
+  "ownership: Flexera's product-business acquisition is documented, but the final contingent payout and the full legal asset schedule, including patent assignments, are not public in the sources reviewed.",
+  "team: early founder reporting differs on whether Yakir Daniel or Aharon Twizer was among the founding group; the 2016, 2017, and later company/investor sources are preserved rather than forcing a single unqualified account."
+]
+conflicts = [
+  "NetApp's SEC filing reports that it acquired all Spot, Inc. shares for $340 million cash in 2020; Globes reported a transaction near $450 million, including in a founder interview. The sources may use different consideration or valuation bases, but no reconciliation was found. The acquisition amount is omitted and marked conflicting.",
+  "Highland Europe's 2018 investor release says Spot had raised approximately $52 million since launch; Globes reported $53 million in November 2025. The numeric lifetime total is omitted because no issuer or filing source reconciles the difference.",
+  "A 2016 NoCamels article names Yakir Daniel in the founding team; later 2017-2025 reporting and Highland's investor release name Amiram Shachar, Liran Polak, and Aharon Twizer. The record keeps Yakir's reported attribution qualified.",
+  "Both the 2016 Spot issuer announcement and the 2017 Globes report describe a Series A. The 2017 event is recorded as a distinct incremental extension linked to the 2016 event because it is a later new amount under the same label; the source does not explicitly call it an extension, so this relationship is an inference.",
+  "Globes reported the 2025 sale for about $100 million; NetApp's SEC disclosure gives $70 million upfront plus up to $49 million contingent. The precise final contingent payout was not found, and the reported approximate amount is not substituted for the contractual terms."
+]
+diligence_questions = [
+  "Which Spot products, APIs, support commitments, and engineering teams remain active inside Flexera after the Israeli operation closed, and who owns the roadmap?",
+  "What are the current active paying-customer count, retention, ARR, gross margin, and cloud workload volume for the inherited Spot product lines, separated from Flexera's wider FinOps platform?",
+  "How much of NetApp's up-to-$49-million contingent consideration was ultimately earned and paid, and which assets and liabilities, including patents, transferred to Flexera?",
+  "For representative workloads, how do Spot's realized cost savings, interruption rates, availability, and operating overhead compare with AWS, Azure, Google Cloud, and CAST AI controls?",
+  "What deployment and authorization options, data-residency controls, security attestations, and support boundaries are available for government or defense customers?"
+]
+
+[[intelligence.research.sources]]
+id = "spot-pr-2016"
+url = "https://www.prnewswire.com/news-releases/spotinst-raises-series-a-funding-round-to-optimize-cloud-spot-market-utilization-571420891.html"
+title = "Spotinst Raises Series A Funding Round to Optimize Cloud 'Spot' Market Utilization"
+publisher = "Spotinst via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2016-03-08"
+claims = ["Spotinst said it closed a Series A led by PICO Venture Partners.", "The issuer described its Tel Aviv-based cloud optimization product and its machine-learning and workload-switching approach.", "Spotinst's release quotes IronSource's infrastructure lead describing use of the product; the quote is a company-selected customer statement."]
+
+[[intelligence.research.sources]]
+id = "techcrunch-2016"
+url = "https://techcrunch.com/2016/03/08/spotinst-which-helps-you-buy-aws-spot-instances-raises-2m-series-a/"
+title = "Spotinst, which helps you buy AWS spot instances, raises $2m Series A"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2016-03-08"
+claims = ["TechCrunch reported that Spotinst raised $2 million in the 2016 round led by PICO Venture Partners."]
+
+[[intelligence.research.sources]]
+id = "nocamels-2016"
+url = "https://nocamels.com/2016/03/spotinst-pico-partners/"
+title = "Cloud Startup Spotinst Raises $2M"
+publisher = "NoCamels"
+kind = "media"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2016-03-10"
+claims = ["NoCamels reported the 2016 $2 million PICO-led round and named Amiram Shachar, Yakir Daniel, and Liran Polak as founders."]
+
+[[intelligence.research.sources]]
+id = "globes-2017-series-a"
+url = "https://en.globes.co.il/en/article-israeli-cloud-cost-management-co-spotinst-raises-15m-1001195111"
+title = "Cloud cost management co Spotinst raises $15m"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2017-07-02"
+claims = ["Globes reported a completed $15 million Series A led by Intel Capital with Vertex Venture Capital participating.", "The article says Spotinst had raised $2 million from PICO in 2016 and identifies Amiram Shachar, Liran Polak, and Aharon Twizer as founders.", "The article describes multi-cloud compute workload optimization."]
+
+[[intelligence.research.sources]]
+id = "highland-2018"
+url = "https://www.highlandeurope.com/spotinst-raises-35m-for-ai-cloud-computing-workload-managment-platform/"
+title = "Spotinst raises $35M for AI cloud computing workload managment platform"
+publisher = "Highland Europe"
+kind = "investor"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2018-08-28"
+claims = ["Highland announced a $35 million Series B led by Highland with Leaders Fund, Intel Capital, and Vertex Ventures participating.", "Highland said Spot had raised approximately $52 million since launch.", "The investor said Spot had more than 1,000 customers including Sony, Samsung, Unilever, Qualcomm, and Ticketmaster, and employed 100 people.", "The announcement names Amiram Shachar, Liran Polak, and Aharon Twizer as founders and describes predictive spot-capacity management and workload migration."]
+
+[[intelligence.research.sources]]
+id = "intel-2021-founder"
+url = "https://www.intelcapital.com/founder-qa-spot-founder-amiram-shachar-on-how-he-built-cloud-optimizing-services/"
+title = "Founder Q&A: Spot Founder Amiram Shachar on How He Built Cloud Optimizing Services"
+publisher = "Intel Capital"
+kind = "investor"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2021-02-24"
+claims = ["Intel Capital said Spot was founded in Tel Aviv in 2015 and described its machine-learning and automation-based cloud optimization.", "The interview says more than 1,500 organizations were using the service and that NetApp acquired Spot in 2020.", "Intel Capital said it led a Series A and interviewed founder and CEO Amiram Shachar, who described military data-center and DevOps experience."]
+
+[[intelligence.research.sources]]
+id = "netapp-2020-announcement"
+url = "https://www.businesswire.com/news/home/20200603005856/en/NetApp-to-Acquire-Spot"
+title = "NetApp to Acquire Spot"
+publisher = "NetApp via Business Wire"
+kind = "company"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2020-06-03"
+claims = ["NetApp announced a definitive agreement to acquire Spot on June 3, 2020.", "NetApp described Spot as formerly Spotinst and a cloud workload optimization software company.", "NetApp said Spot had more than 180 staff across San Francisco, New York, Washington, Tel Aviv, and London."]
+
+[[intelligence.research.sources]]
+id = "netapp-2021-sec"
+url = "https://www.sec.gov/Archives/edgar/data/1002047/000156459021009843/ntap-10q_20210129.htm"
+title = "NetApp Form 10-Q, quarter ended January 29, 2021"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-22T04:39:49Z"
+claims = ["NetApp reports that it acquired all outstanding shares of Spot, Inc. on July 9, 2020 for $340 million cash.", "NetApp describes Spot as a provider of public-cloud compute management and cost optimization based in Israel."]
+
+[[intelligence.research.sources]]
+id = "globes-2020-exit"
+url = "https://en.globes.co.il/en/article-from-college-project-to-450m-exit-1001337797"
+title = "From college project to $450m exit"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2020-07-30"
+claims = ["Globes reported that Spot sold to NetApp for close to $450 million.", "The article says Spot was in the middle of a large financing round at a $300 million valuation when acquisition discussions began.", "Globes described Spot's turnover as tens of millions of dollars without a specified period or audited statements."]
+
+[[intelligence.research.sources]]
+id = "netapp-2025-agreement"
+url = "https://investors.netapp.com/news/news-details/2025/Flexera-to-Acquire-FinOps-Business-from-NetApp-Inc--to-Strengthen-FinOps-Portfolio-01-15-2025/default.aspx"
+title = "Flexera to Acquire FinOps Business from NetApp, Inc. to Strengthen FinOps Portfolio"
+publisher = "NetApp Investor Relations"
+kind = "company"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2025-01-15"
+claims = ["NetApp announced an agreement to sell the Spot by NetApp FinOps business to Flexera on January 15, 2025.", "The release says financial details would not be disclosed in the announcement and describes Kubernetes cost management and commitment management as portfolio additions."]
+
+[[intelligence.research.sources]]
+id = "netapp-2025-sec"
+url = "https://www.sec.gov/Archives/edgar/data/1002047/000095017025083705/R18.htm"
+title = "NetApp 2025 Form 10-K, sale of Spot by NetApp"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-22T04:39:49Z"
+claims = ["NetApp says sale consideration was $70 million upfront plus up to $49 million contingent on financial performance from January 1 through December 31, 2025.", "NetApp says the transaction closed March 3, 2025, the upfront cash was received, and $20 million of contingent consideration was recognized at closing."]
+
+[[intelligence.research.sources]]
+id = "flexera-2025-close"
+url = "https://www.flexera.com/about-us/press-center/flexera-completes-acquisition-of-netapps-spot-finops-portfolio"
+title = "Flexera Completes Acquisition of NetApp's Spot FinOps Portfolio"
+publisher = "Flexera"
+kind = "company"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2025-03-03"
+claims = ["Flexera announced completion of the Spot acquisition on March 3, 2025.", "Flexera described Eco, Ocean, Elastigroup, and CloudCheckr product capabilities and their contribution to its FinOps portfolio."]
+
+[[intelligence.research.sources]]
+id = "flexera-spot-page"
+url = "https://www.flexera.com/more/spot"
+title = "Flexera acquires Spot"
+publisher = "Flexera"
+kind = "company"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2025-03-03"
+claims = ["Flexera says it completed the acquisition of Spot from NetApp on March 3, 2025 and lists Eco, Ocean, Ocean for Apache Spark, Elastigroup, Spot Security, and CloudCheckr.", "The page says customer products remained unchanged on day one and that Flexera planned integration into its offerings.", "Flexera describes the acquired capability as expanding multi-cloud cost, container, and FinOps offerings."]
+
+[[intelligence.research.sources]]
+id = "flexera-vmo"
+url = "https://www.flexera.com/products/flexera-one/virtual-machine-optimization"
+title = "Virtual Machine Optimization (FinOps)"
+publisher = "Flexera"
+kind = "company"
+accessed_at = "2026-10-22T04:39:49Z"
+claims = ["Flexera labels Virtual Machine Optimization as formerly Spot Elastigroup.", "Flexera describes interruption prediction, proactive instance replacement, and provisioning across spot, on-demand, and reserved capacity."]
+
+[[intelligence.research.sources]]
+id = "flexera-eco-sep25"
+url = "https://docs.flexera.com/flexera-one/feature-list/new-features-in-2025/september-2025"
+title = "September 2025"
+publisher = "Flexera Documentation"
+kind = "company"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2025-09"
+claims = ["Flexera documents Spot Eco's transition to Flexera One Cloud Commitment Management in September 2025, covering reservations, savings plans, and committed-use discounts across AWS, Azure, and Google Cloud."]
+
+[[intelligence.research.sources]]
+id = "globes-2025-israel"
+url = "https://www.globes.co.il/news/article.aspx?did=1001527062"
+title = "לפני פחות משנה הסטראט־אפ הישראלי הזה נמכר. עכשיו הוא עומד להיסגר"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2025-11-20"
+claims = ["Globes reported that Flexera closed Spot's Israeli operation and laid off local employees in November 2025.", "The article says about 100 Spot-origin employees joined Flexera in Israel, attributing that count to LinkedIn.", "The article identifies Spot as formerly Spotinst and names Amiram Shachar, Liran Polak, and Aharon Twizer as founders.", "Globes reported $53 million raised and a 2020 sale for approximately $450 million."]
+
+[[intelligence.research.sources]]
+id = "spot-patent-us"
+url = "https://patents.google.com/patent/US20200167199A1/en"
+title = "US20200167199A1 - System and Method for Infrastructure Scaling"
+publisher = "Google Patents"
+kind = "other"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2020-05-28"
+claims = ["Google Patents lists Spotinst Ltd. as original assignee and NetApp as current assignee for a U.S. infrastructure scaling patent family.", "The family includes grant US11693698B2 dated July 4, 2023 and concerns infrastructure scheduling and scaling for containers.", "Google Patents cautions that listed assignee/legal status may be inaccurate and are not legal conclusions."]
+
+[[intelligence.research.sources]]
+id = "aws-spot-docs"
+url = "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html"
+title = "Spot Instance interruptions"
+publisher = "Amazon Web Services"
+kind = "other"
+accessed_at = "2026-10-22T04:39:49Z"
+claims = ["AWS states that it can reclaim Spot Instances when it needs capacity back and describes capacity, price, and request constraints as interruption causes."]
+
+[[intelligence.research.sources]]
+id = "azure-spot-vms"
+url = "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms"
+title = "About Azure Spot Virtual Machines"
+publisher = "Microsoft Learn"
+kind = "other"
+accessed_at = "2026-10-22T04:39:49Z"
+published_on = "2026-02-06"
+claims = ["Microsoft says Azure Spot VMs can be evicted when capacity is needed, have no high-availability guarantee or SLA, and can receive up to 30 seconds notice."]
+
+[[intelligence.research.sources]]
+id = "gcp-cost-recs"
+url = "https://docs.cloud.google.com/recommender/docs/understand-cost-recs"
+title = "Understanding how cost savings are calculated in recommendations"
+publisher = "Google Cloud Documentation"
+kind = "other"
+accessed_at = "2026-10-22T04:39:49Z"
+claims = ["Google Cloud's Active Assist recommendations identify idle resources, over-provisioning, and pricing options; Google says savings estimates depend on historical or list pricing and are estimates."]
+
+[[intelligence.research.sources]]
+id = "castai-docs"
+url = "https://docs.cast.ai/docs/getting-started"
+title = "Getting started"
+publisher = "CAST AI Documentation"
+kind = "other"
+accessed_at = "2026-10-22T04:39:49Z"
+claims = ["CAST AI describes cross-cloud Kubernetes optimization with cost reporting, autoscaling, spot instance automation, and bin packing."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-22T04:39:49Z"
+next_review_on = "2027-01-22"
+queries = ["Spotinst founders CEO Spot company profile Israeli founded team", "Flexera Spot FinOps business acquisition completed March 3 2025 Spot official", "Spot Flexera Israel office shuts operations layoffs November 2025 Globes Spot Israel employees"]
+source_ids = ["spot-pr-2016", "highland-2018", "netapp-2021-sec", "flexera-spot-page", "globes-2025-israel"]
+summary = "Identified Spot/Spotinst as a 2015 Tel Aviv-founded cloud infrastructure optimization business, acquired by NetApp and later transferred as a FinOps product business to Flexera. The current product line operates inside Flexera; the Israeli operation was reportedly closed in 2025."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-22T04:39:49Z"
+next_review_on = "2027-01-22"
+queries = ["Spot OR Spotinst funding raised seed Series A Series B Series C investors acquisition", "Spotinst funding $2 million 2016 $15 million 2017 round investors company announcement", "Spotinst $35 million Series B official company announcement Highland Europe 2018", "Spot by NetApp Spotinst valuation revenue customers ARR acquisition 2020 2025"]
+source_ids = ["spot-pr-2016", "techcrunch-2016", "globes-2017-series-a", "highland-2018", "globes-2020-exit", "globes-2025-israel"]
+summary = "Three completed venture-round disclosures and a targeted 2020 financing process were found. The lifetime total conflicts at approximately $52 million versus $53 million and is omitted."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T04:39:49Z"
+next_review_on = "2027-01-22"
+queries = ["Spotinst funding raised investors Series C Insight Partners official announcement", "site:en.globes.co.il/en/article Spotinst raises $2m 2016 PICO Ventures Globes article", "site:intelcapital.com Spotinst investment funding Intel Capital 2016 2017"]
+source_ids = ["spot-pr-2016", "globes-2017-series-a", "highland-2018", "intel-2021-founder"]
+summary = "PICO Venture Partners, Intel Capital, Vertex, Highland, and Leaders Fund are supported by round-specific announcements. No private cap table or investor ownership percentages were found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "conflicting"
+checked_at = "2026-10-22T04:39:49Z"
+next_review_on = "2027-01-22"
+queries = ["Spotinst founders CEO Spot company profile Israeli founded team", "Spot Flexera Israel office shuts operations layoffs November 2025 Globes Spot Israel employees"]
+source_ids = ["nocamels-2016", "globes-2017-series-a", "highland-2018", "intel-2021-founder", "netapp-2020-announcement", "globes-2025-israel"]
+summary = "Historical founder and headcount evidence is available, with a 2016 discrepancy over Yakir Daniel versus Aharon Twizer. Current global staff, leadership, and roadmap ownership are undisclosed; Globes reported the local Spot team was laid off after Israel operations closed."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-22T04:39:49Z"
+next_review_on = "2027-01-22"
+queries = ["Spot AI cloud optimization netapp acquisition SEC 2020 340 million 450 million", "site:sec.gov/Archives/edgar/data/1002047 Spot Flexera $70 million $49 million contingent 2025", "site:flexera.com/about-us/press-center Spot NetApp cloud FinOps business acquire January 2025 announcement"]
+source_ids = ["netapp-2020-announcement", "netapp-2021-sec", "globes-2020-exit", "netapp-2025-agreement", "netapp-2025-sec", "flexera-2025-close", "flexera-spot-page"]
+summary = "The 2020 share acquisition by NetApp and the 2025 sale of the Spot FinOps business to Flexera are supported by buyer/seller announcements and filings. Flexera is the parent of the acquired product business; standalone cap-table data is unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-22T04:39:49Z"
+next_review_on = "2027-01-22"
+queries = ["Spot by NetApp revenue ARR financials 2024 segment revenue standalone financial metrics", "Spot by NetApp Spotinst valuation revenue customers ARR acquisition 2020 2025"]
+source_ids = ["highland-2018", "netapp-2020-announcement", "globes-2020-exit", "netapp-2025-sec"]
+summary = "Historical headcount and a loosely reported 2020 turnover description were found. No current standalone revenue, ARR, profitability, burn, runway, or post-acquisition product financials were found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-22T04:39:49Z"
+next_review_on = "2027-01-22"
+queries = ["Spot.io Spot by NetApp customers case studies customer quote production deployment", "Spotinst founders CEO Spot company profile Israeli founded team"]
+source_ids = ["highland-2018", "intel-2021-founder", "flexera-2025-close", "flexera-spot-page", "flexera-vmo", "flexera-eco-sep25"]
+summary = "Investor/company sources report customer adoption above 1,000 in 2018 and more than 1,500 organizations using Spot in 2021. Product documentation verifies continued product capabilities and renaming after acquisition; current customer count and retention are unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-22T04:39:49Z"
+next_review_on = "2027-01-22"
+queries = ["Spotinst patents patent search Spotinst Ltd", "Spotinst Ltd patents assignee USPTO cloud scaling", "Spot OR Spotinst patents Spotinst Ltd patent cloud optimization USPTO"]
+source_ids = ["spot-patent-us"]
+summary = "One U.S. patent family concerning infrastructure scaling was identified. It names Spotinst Ltd. as original assignee and NetApp as current assignee in the record; the post-2025 chain of title and broader portfolio were not established."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T04:39:49Z"
+next_review_on = "2027-01-22"
+queries = ["AWS official spot instances interruption rebalancing savings compute optimizer documentation", "CAST AI official Kubernetes cost optimization spot instances automation product", "site:learn.microsoft.com Azure Spot Virtual Machines eviction policy official", "site:cloud.google.com cloud cost optimization recommender Google Cloud FinOps official"]
+source_ids = ["aws-spot-docs", "azure-spot-vms", "gcp-cost-recs", "castai-docs"]
+summary = "Primary product documentation confirms relevant native AWS, Azure, and Google alternatives and CAST AI's multi-cloud Kubernetes automation. No independent head-to-head comparison or market-share data was found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T04:39:49Z"
+next_review_on = "2027-01-22"
+queries = ["Spotinst public sector defense government contract cloud optimization Spot use case", "Spot by NetApp government defense federal customers contract security clearance FedRAMP", "Spot by NetApp Spotinst defense security government contract FedRAMP customer"]
+source_ids = ["flexera-vmo", "aws-spot-docs", "azure-spot-vms", "gcp-cost-recs"]
+summary = "The commercial workload and capacity capabilities can apply to authorized government/defense support workloads, but no public Spot-specific defense customer, government contract, or security authorization was identified. The defense applicability recorded in the site analysis is an inference, not a deployment claim."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Flexera states it completed the Spot acquisition and its current VMO and commitment-management pages continue to publish product documentation; this supports acquired status with continuing product-line activity inside Flexera."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["flexera-spot-page", "flexera-vmo", "flexera-eco-sep25"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "NetApp's SEC filing says Spot was based in Israel; issuer and investor-era sources place its origin in Tel Aviv. Globes later reported closure of the local operation, which does not remove the company's historical Israeli connection."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["netapp-2021-sec", "spot-pr-2016", "highland-2018", "globes-2025-israel"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2016.amount"
+support = "direct"
+summary = "TechCrunch reports a $2 million 2016 Series A; Spotinst's release confirms that it closed a Series A led by PICO."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["techcrunch-2016", "spot-pr-2016"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2016.lead_investors"
+support = "direct"
+summary = "Spotinst's issuer release says the 2016 Series A was led by PICO Venture Partners."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["spot-pr-2016"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-extension-2017.amount"
+support = "direct"
+summary = "Globes reports that Spotinst completed a $15 million Series A in July 2017."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["globes-2017-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-extension-2017.lead_investors"
+support = "direct"
+summary = "Globes names Intel Capital as lead for the 2017 Series A."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["globes-2017-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-extension-2017.participating_investors"
+support = "direct"
+summary = "Globes names Vertex Venture Capital as a participant in the 2017 Series A."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["globes-2017-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-extension-2017.is_extension_of"
+support = "inferred"
+summary = "The 2016 issuer release and 2017 Globes article both call their separately dated rounds Series A; the 2017 report also identifies the earlier $2 million PICO financing. The relationship as an incremental extension is inferred because no source explicitly calls it an extension."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["spot-pr-2016", "globes-2017-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2018.amount"
+support = "direct"
+summary = "Highland Europe's round announcement reports a $35 million Series B."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["highland-2018"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2018.lead_investors"
+support = "direct"
+summary = "Highland Europe's investor announcement identifies Highland as the lead investor."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["highland-2018"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2018.participating_investors"
+support = "direct"
+summary = "Highland's announcement names Leaders Fund, Intel Capital, and Vertex Ventures as participants."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["highland-2018"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "NetApp's SEC filing records the Spot FinOps business sale to Flexera, Flexera announced completion on March 3, 2025, and its current pages publish the inherited products within Flexera One."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["netapp-2025-sec", "flexera-2025-close", "flexera-vmo", "flexera-eco-sep25"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.netapp-acquisition-2020.status"
+support = "direct"
+summary = "NetApp's SEC filing reports that it acquired all Spot, Inc. shares on July 9, 2020; the earlier NetApp release documents the agreement."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["netapp-2020-announcement", "netapp-2021-sec"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.netapp-acquisition-2020.company_role"
+support = "direct"
+summary = "NetApp's release and SEC filing identify Spot, Inc. as the acquired company and target of the 2020 acquisition."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["netapp-2020-announcement", "netapp-2021-sec"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.netapp-acquisition-2020.amount"
+support = "conflicting"
+summary = "NetApp's SEC filing reports $340 million cash for all shares; Globes reports a transaction near $450 million. The bases are not reconciled, so the numeric deal amount is omitted."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["netapp-2021-sec", "globes-2020-exit", "globes-2025-israel"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.flexera-acquisition-2025.status"
+support = "direct"
+summary = "NetApp's SEC filing says the transaction closed on March 3, 2025, and Flexera announced completion on that date."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["netapp-2025-sec", "flexera-2025-close"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.flexera-acquisition-2025.company_role"
+support = "direct"
+summary = "NetApp's filing identifies the Spot by NetApp FinOps business as the asset it sold to Flexera."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["netapp-2025-agreement", "netapp-2025-sec"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.flexera-acquisition-2025.amount"
+support = "direct"
+summary = "NetApp's SEC filing reports $70 million upfront and separately up to $49 million contingent; the amount field records only the disclosed upfront cash, and notes identify the contingent component."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["netapp-2025-sec"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Employees@2018-08-28.numeric_value"
+support = "direct"
+summary = "Highland Europe's 2018 announcement states Spotinst employed 100 people."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["highland-2018"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Employees@2020-06-03.numeric_value"
+support = "direct"
+summary = "NetApp's acquisition announcement says Spot had more than 180 staff; the metric retains a more_than relation rather than treating 180 as an exact count."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["netapp-2020-announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.revenue@2020-07-30.value"
+support = "direct"
+summary = "Globes reported turnover in the tens of millions of dollars but gave no accounting period or exact amount."
+verified_at = "2026-10-22T04:39:49Z"
+source_ids = ["globes-2020-exit"]

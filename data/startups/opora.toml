@@ -1,72 +1,52 @@
 name = "Opora"
-description = "Opora was an Israeli cybersecurity startup that developed external, pre-compromise intelligence intended to identify attacks against an organization before they reached its network. Public reporting indicates that the company ran early pilots but did not turn the technology into a commercial product and wound down after reducing its workforce."
-detailed_description = """
-Opora Technologies developed an external-facing cyber-defense concept: monitor the early preparation of attacks, collect intelligence about potential attackers and their behavior, and warn or help contain a threat before it entered a customer network. That positioning is materially different from a conventional endpoint, network-monitoring, or post-compromise response product. The core proposition was to move useful detection earlier in the attack lifecycle, when adversaries were preparing infrastructure, selecting targets, or otherwise leaving observable signals outside the protected environment.
+description = "Opora Technologies was an Israeli cybersecurity company whose product evolved from external, pre-compromise adversary intelligence toward cyber supply-chain risk analysis. It raised a $2 million seed in 2019 and a $7 million JVP-led seed in 2020; CTech later reported around $10 million raised in total. In June 2023, the company said early pilots had not matured into a commercial product, and its Israeli company record is now listed as voluntarily liquidated."
+detailed_description = """Opora Technologies was an Israeli-founded cybersecurity startup associated with former Shin Bet director Yuval Diskin. It emerged from Diskin Advanced Technologies (DAT), initially operating in stealth and later presenting the OPORA Adversary Threat Protection platform. The public chronology is not clean: CTech reported an Opora incorporation in 2016, JVP and Globes said it was formed in 2018, and a 2023 company statement described it as established in 2020. A company-record mirror associates the legal name OPORA TECHNOLOGIES LTD with a 2012 registration date, which may reflect an earlier DAT vehicle; that linkage has not been established from a certified registry extract. This record therefore treats 2018 as the reported startup formation date while preserving the legal-date disagreement.
 
-The underlying problem is important for commercial security teams, government agencies, and operators of critical infrastructure. External threat intelligence can support attack-surface monitoring, malicious-infrastructure tracking, phishing and impersonation detection, and prioritization of defensive action. In practice, however, the product would have needed unusually high-quality telemetry and behavioral models, a disciplined way to distinguish preparation from noise, and integrations that let a security operations team act on the signal. Buyers would also have required evidence that the external warning produced better outcomes than the feeds, exposure-management tools, and managed detection services already in their stack.
+The early product thesis was to observe cyber adversaries outside a customer’s network, identify preparation behavior and attack infrastructure, estimate whether an organization was being targeted, and push preventive actions into existing security controls. JVP’s investor announcement described a continuously updated view of adversary infrastructure and containment workflows, with an ambition to warn days before an attack campaign. These are company and investor descriptions, not independently measured detection lead times. The product did not rely only on the classic perimeter or endpoint telemetry model: its proposed value was to connect external signals about actor behavior, infrastructure, targets, and readiness to a customer-specific response. That architecture could make an existing SOC more anticipatory, but only if the underlying observations were timely, attributable, legally usable, and sufficiently precise to trigger action.
 
-The market context was therefore attractive but unforgiving. Opora faced substitutes across threat intelligence, digital-risk protection, attack-surface management, detection and response, and security orchestration. Larger vendors had broader datasets, established procurement channels, and the ability to bundle adjacent controls. Smaller specialists could still win with a narrow, measurable workflow, but the company would have needed repeatable pilots, strong precision, and a clear economic case for a capability that is difficult for customers to validate when it successfully prevents an event. The available public evidence does not establish sustained revenue, a mature product, named customers, or a defensible distribution advantage.
+Evidence suggests the product was later presented more broadly as cyber risk quantification across the business ecosystem and supply chain. A TASE-hosted executive CV describes Opora from 2022 onward as assessing operational risk from cyber threats to suppliers using automated cognitive analysis, expert input, business-impact estimates, and prioritized recommendations. A product-design case study describes a management interface that attempted to explain risk scores across an organization, subsidiaries, suppliers, geography, and industry, then connect the score to potential financial, reputation, or productivity losses and a remediation plan. The case study is evidence of a designed user experience, not proof that the feature set shipped or that its scoring was independently validated. The apparent shift broadened the addressable workflow from adversary monitoring to enterprise and third-party cyber-risk prioritization, but also placed the company closer to established security-rating, attack-surface, and third-party-risk platforms.
 
-Commercialization evidence is negative but specific rather than merely inferred from an inactive website. CTech reported in June 2023 that Opora had raised approximately $10 million, including a $7 million seed round led by Jerusalem Venture Partners, had employed more than 20 people at its peak, and had laid off most employees. The same report quoted the company saying that initial customer pilots had not matured into a commercial product and that it was considering offers to purchase the technology. The current official domain remains the canonical web address supplied for the company, but the operating status and public reporting support treating the entity as wound down rather than as an active startup.
+The customer record remains ambiguous. JVP’s 2020 release said the company was validating technology with organizations in Germany, the United Kingdom, and the United States in banking, utilities, manufacturing, and pharmaceuticals; it also said an initial MVP had reached market and that a Securonix sales and delivery channel had been initiated. A TASE-hosted executive CV later listed customers in energy, healthcare, food, and communications but did not name organizations, contract values, or whether these were paying production accounts. In June 2023, Opora told CTech and Globes that it had run first customer pilots but had not matured the technology into a commercial product. These statements can coexist if “customers” referred to pilots, but the public material does not resolve the commercial status. No named production deployment, renewal, annual recurring revenue, or independently confirmed customer outcome was found.
 
-For national-security analysis, the technology has credible but bounded dual-use relevance. Earlier warning of cyber operations can matter to government networks, defense suppliers, critical infrastructure, and high-value public-sector targets, especially where adversary infrastructure and targeting behavior are visible before intrusion. That relevance should not be overstated: there is no verified public evidence here of defense deployment, government contracts, or operational success. The most realistic present-day strategic question is whether any surviving intellectual property, models, telemetry methods, or personnel could be reused by a larger security platform or public-sector integrator. As a standalone company, Opora is better treated as a case study in preemptive-defense commercialization risk than as an active investment opportunity.
-"""
-logo = "https://i.tracxn.com/logo/company/637228649ff0aa57d6275071a5d67642?devicePixelRatio=2&height=30&width=30"
+The shutdown evidence is more decisive than an inactive website alone. In June 2023, CTech reported that most employees had been laid off, the company was sharply reducing activity, and it was considering offers to buy the technology. The company’s own statement said the pilots had not become a commercial product. CTech reported a peak workforce above 20. A third-party Israeli company-record mirror now labels OPORA TECHNOLOGIES LTD voluntarily liquidated and displays accelerated dissolution/elimination events in 2025; because the mirror disclaims the accuracy of aggregated records and translations, formal status should be verified against an official extract if any asset transaction is pursued. The historical opora.io domain currently redirects to a GoDaddy sale page, so it is not a functioning official company site.
+
+Competitive substitutes span several layers rather than one exact peer group. Recorded Future combines external and internal telemetry in a broad threat-intelligence graph; Censys maps internet-facing hosts, domains, certificates, and services; SecurityScorecard combines security ratings, third- and fourth-party monitoring, and threat-informed supplier workflows. Opora’s proposed distinction was an earlier, adversary-centered warning signal joined to business-ecosystem impact, rather than only a rating of observed exposure or a broad intelligence feed. The distinction could be compelling when it identifies a target-specific attack before ordinary indicators appear. It would be weak if its data mostly restated commodity threat feeds, public exposure scans, or vendor ratings without better attribution, lead time, or response outcomes. Large incumbents also bring broader data, integration ecosystems, procurement credibility, and continuing investment that a small company would have had to overcome.
+
+The technical diligence problem is unusually demanding. “Pre-compromise” is an outcome buyers cannot easily observe in the counterfactual: a blocked attack does not prove that an alert was early or accurate. A surviving implementation would need to show source provenance and licensing, actor-to-infrastructure resolution, target relevance, confidence calibration, false-positive rates, alert lead-time distributions, and a defensible method for translating technical indicators into business loss. Adversaries rotate infrastructure, use compromised third parties, and deliberately generate noisy indicators. If the product’s later cognitive scoring depended on opaque or stale supplier graphs, executives could receive persuasive but misleading rankings. An integration that blocks traffic or changes controls also requires reversible actions, audit trails, and clear customer authorization; alert-only value would face a different willingness-to-pay threshold.
+
+The founding group combined relevant security experience with enterprise software experience: Diskin led the Israeli Security Agency for six years; Noam Jolles and Tsafrir Kats were described as former senior ISA figures; Chris Bell was described by JVP as a Securonix co-founder and CEO. A TASE-hosted CV also records Ronen Lago as Opora CEO and board member from 2022, with prior senior technology/security roles at Lockheed Martin and Daimler. These credentials support domain access and enterprise context, but they do not substitute for repeatable product-market fit. The 2023 commercialization outcome is the strongest observed evidence about execution, and the public record does not establish which technical assets, customer relationships, or personnel survived.
+
+Commercially, the original enterprise problem was real: security teams need earlier warning and must prioritize finite response capacity across suppliers and business dependencies. The main failure risk was converting a technically ambitious intelligence concept into a product with reproducible precision, a clear buyer, a short proof cycle, and measurable return on investment. Named customers, revenue, margins, burn, runway, and conversion rates are unavailable. The company’s announced Securonix channel is a distribution signal, not proof of a signed reseller contract or revenue. The 2023 statement that pilots failed to mature is direct evidence that interest did not become a durable product during the reported period.
+
+Dual-use relevance is credible at the capability level. Earlier warning about cyber targeting could support commercial enterprises, public agencies, defense suppliers, and critical infrastructure, while supplier-risk analysis could help protect connected government and industrial ecosystems. The founders’ security-service experience adds contextual expertise, but there is no verified evidence of military or intelligence deployment, government contracts, classified use, or defensive operational outcomes. No defense thesis should be inferred from founder backgrounds or from the fact that the product used intelligence language.
+
+For strategic or asset-level review, the priority is to establish whether any buyer completed a technology purchase and who now controls the code, models, source data, trademarks, customer information, and contractual rights. CTech reported only that offers were being considered in June 2023; no completed acquisition or IP transfer was identified. Any surviving asset would need an independent review of data rights, privacy and collection permissions, reproducibility, model validity, customer obligations, and the ability to rebuild integrations. As a standalone company, Opora is a wound-down entity with no substantiated going-concern case. Its record is useful for evaluating preemptive cyber defense and commercialization, while any residual value is conditional on verifiable assets and transferable rights."""
+logo = "Unknown"
 website = "https://www.opora.io"
 sector = "Cybersecurity"
-founded = "2020"
-headquarters = "Herzliya, Israel"
-employees = "0 / operations wound down; peak reported at more than 20"
-funding_stage = "Deadpooled; approximately $10 million reported total funding, including a $7 million seed round"
+founded = "2018 (formation reported by JVP and Globes; CTech reported 2016 incorporation and a 2023 company statement said established in 2020)"
+headquarters = "Ra'anana, Israel (development center; San Francisco office also reported in 2020)"
+employees = "Wound down; most staff laid off by June 2023; peak reported above 20; current headcount unavailable"
+funding_stage = "Deadpooled; disclosed $2 million seed in 2019 and $7 million JVP-led seed in 2020; CTech separately reported around $10 million lifetime funding"
 entity_type = "defunct_or_wound_down"
 dual_use = true
-dual_use_description = "Opora's core capability—external threat intelligence and pre-compromise detection—has substantive commercial and government-security applicability because it can support earlier warning for enterprise, public-sector, defense-supply-chain, and critical-infrastructure targets. The dual-use case is credible at the technology level, but no public evidence here verifies defense deployments or government contracts."
-key_technologies = [
-  "External threat-intelligence collection",
-  "Adversary behavioral-pattern analysis",
-  "Pre-compromise attack detection",
-  "Malicious infrastructure and targeting monitoring",
-  "Digital-risk and attack-surface intelligence",
-  "Security alerting and containment workflow orchestration",
-]
-use_cases = [
-  "Early warning of attacks targeting enterprise networks",
-  "Detection of attacker infrastructure and preparation activity",
-  "Phishing, impersonation, and malicious-domain monitoring",
-  "Security operations triage and threat prioritization",
-  "Protection of critical-infrastructure and defense-supply-chain organizations",
-  "Government and public-sector cyber-defense monitoring",
-  "High-value-target and executive exposure monitoring",
-]
+dual_use_description = "Opora's external adversary-intelligence and cyber supply-chain risk concepts have both commercial and defense/security applicability: earlier warning could inform enterprise SOCs, government networks, defense suppliers, and critical infrastructure, while supplier-risk analysis can prioritize dependencies across connected public and industrial systems. This is a technology-level use case only. No public evidence verifies a defense deployment, government contract, classified use, or operational outcome, and founder service backgrounds do not establish customer use."
+key_technologies = ["External cyber threat intelligence", "Adversary behavior and infrastructure monitoring", "Pre-compromise attack preparation detection", "Cyber supply-chain and business-ecosystem risk quantification", "Cognitive or machine-learning risk analysis", "Security alerting and containment integrations", "Executive risk scoring and remediation prioritization"]
+use_cases = ["Early warning of cyber campaigns targeting an enterprise", "Adversary infrastructure and behavior monitoring outside customer networks", "Prioritization of cyber exposure across subsidiaries and suppliers", "Translation of cyber threats into operational and business-loss scenarios", "SOC triage and preventive containment workflows", "Potential resilience support for government, critical infrastructure, and defense-supply-chain organizations, with no verified public deployments"]
 investible = false
-investment_rationale = "Opora should not be treated as an active investment target or operating-company priority. Public reporting describes layoffs, unsuccessful initial pilots, and discussions to sell the technology before closure; the relevant diligence path is instead an asset, intellectual-property, data-rights, or talent review if a verifiable owner and surviving artifacts can be identified. The category remains strategically meaningful, but the public record does not support a going-concern thesis."
-strategic_value = "Moderate technology-level value and low entity-level value. External pre-compromise intelligence could strengthen earlier warning, threat hunting, and interruption workflows inside a larger security vendor, government integrator, or critical-infrastructure program. Any value is contingent on surviving code, models, data provenance, operational know-how, and transferable rights; without those artifacts, the record is primarily useful as a commercialization and diligence case study."
-potential_score = 31.0
-technology_score = 65.0
-market_score = 32.0
-team_score = 35.0
-dual_use_score = 68.0
-strategic_alignment_score = 29.0
+investment_rationale = "Opora is not an active operating-company investment case: public reporting documents layoffs and an unsuccessful conversion of pilots into a commercial product, while a current third-party registry mirror lists the Israeli company as voluntarily liquidated. The 2023 technology-sale discussions were not followed by a verifiable public transaction. Diligence is therefore asset-specific: confirm the legal entity and dissolution record, identify any IP or data transfer, test whether code and models remain usable, and establish rights to customer or third-party data. The category remains strategically relevant, but no going-concern thesis or residual asset value is established by the public record."
+strategic_value = "Entity-level strategic value is low; potential technology value is conditional. The product thesis combined external adversary preparation signals with business dependency and loss prioritization, which could add an earlier-warning layer to a larger security platform or resilience program. The value would depend on transferable code, defensible data provenance, model quality, and integrations that produce measurable lead time or reduce response costs. CTech reported that Opora was considering technology-sale offers in June 2023, but no buyer or completed transfer is public. Until ownership and surviving artifacts are verified, the record is more useful as a case study in preemptive cyber defense and enterprise commercialization than as an available acquisition target."
+potential_score = 5
+technology_score = 54
+market_score = 35
+team_score = 18
+dual_use_score = 58
+strategic_alignment_score = 30
 stage = "unknown"
-stage_rationale = "Opora was founded in 2020 and reached seed financing and initial customer pilots, but public reporting in 2023 said the technology had not matured into a commercial product, most employees had been laid off, and the company was considering a technology sale before closure. The lifecycle is therefore unknown in the required stage taxonomy, while the entity status is separately classified as defunct_or_wound_down."
-competitors = [
-  "Recorded Future",
-  "Flashpoint",
-  "Microsoft Defender Threat Intelligence",
-  "Google Threat Intelligence",
-  "BlueVoyant",
-  "Censys",
-]
-competitive_edge = "Opora's proposed edge was temporal and operational: detect evidence of an attack before compromise rather than concentrate only on activity inside the customer's environment. That is a useful product thesis, but not a durable moat by itself. The company would have needed proprietary telemetry, superior signal precision, rapid customer action paths, and enough distribution to overcome established threat-intelligence and security-platform vendors. The public record shows conceptual differentiation and early interest, not a proven structural advantage or repeatable commercial engine."
-risk_factors = [
-  "Wound-down entity with no established operating continuity",
-  "Publicly reported failure of initial pilots to mature into a commercial product",
-  "Crowded market with well-funded threat-intelligence and security-platform substitutes",
-  "Dependence on difficult-to-source external telemetry and high-fidelity behavioral models",
-  "False-positive and attribution risk when inferring attacker preparation activity",
-  "Enterprise and government procurement cycles require substantial proof and integration effort",
-  "Unclear status of surviving intellectual property, data rights, code, and personnel",
-]
+stage_rationale = "The company reached seed financing, an MVP, and customer pilots, but its June 2023 statement said the pilots had not matured into a commercial product and that it was reducing activity. Its later legal status is listed as voluntarily liquidated by a third-party registry mirror. The operating lifecycle is therefore unknown in the site's stage taxonomy; the separate entity classification remains wound down."
+competitors = ["Recorded Future", "Censys Attack Surface Management", "SecurityScorecard"]
+competitive_edge = "Opora's intended edge was temporal and contextual: infer adversary preparation before compromise, then connect that signal to a particular customer or supplier ecosystem and a prioritized response. The 2022 executive CV and design case study suggest the company also tried to explain cyber exposure in business terms, including supplier criticality and potential financial, reputation, and productivity losses. That is more specific than simply publishing threat feeds, but the public evidence establishes a proposition and interface work, not a defensible technical moat. Recorded Future offers much broader multi-source threat intelligence; Censys supplies internet-wide asset discovery and exposure monitoring; SecurityScorecard combines vendor ratings, third- and fourth-party monitoring, and threat-informed workflows. Opora would have needed better target attribution, earlier reliable warning, explainable risk calculations, and integrations that turn an alert into an approved action. No public benchmark, patent portfolio, validated detection advantage, or repeatable sales channel proves that it achieved those advantages."
+risk_factors = ["Wound-down company; most employees were laid off by June 2023 and a company-record mirror lists voluntary liquidation", "Company statement said initial pilots did not mature into a commercial product", "Customer identities, paid status, deployment depth, retention, and revenue are undisclosed; CEO-CV customer-sector claims are not independently tied to contracts", "Conflicting formation and incorporation dates complicate legal-entity and asset-chain diligence", "No public patent portfolio or confirmed completed technology sale was found", "Unknown ownership of source code, models, telemetry, customer records, trademarks, and contractual rights", "Pre-compromise detection depends on difficult attribution, source coverage, and low false-positive rates", "Risk scores can mislead executives if supplier graphs or business-loss models are incomplete or opaque", "Large intelligence, attack-surface, and third-party-risk platforms have broader data, integrations, distribution, and ongoing investment", "No evidence of government or defense deployments despite credible capability-level dual-use relevance"]
 risk_level = "high"
 signals = [
   "Official domain remains the canonical company URL but does not establish active operations",
@@ -75,11 +55,476 @@ signals = [
   "CTech reported more than 20 employees at peak and early customer pilots",
 ]
 priority_rank = 0
-priority_rationale = "Low priority as an active company because public reporting supports a wound-down status and does not show a mature commercial product. Retain the record for strategic benchmarking and possible asset-level diligence: the pre-compromise cyber-defense thesis has credible dual-use relevance, but the low market, team, and operating-continuity scores outweigh its technology and security significance."
+priority_rationale = "Keep the company at low active-company priority because it is wound down, public reports say pilots did not become a commercial product, and no acquisition or surviving IP transfer is verified. Retain it for cyber-market benchmarking and tightly scoped asset diligence: its external adversary-intelligence and supplier-risk thesis has plausible dual-use value, but the public record does not establish a product moat, recurring revenue, active team, or transferable rights."
 public_sources = [
-  "https://www.calcalistech.com/ctechnews/article/r1dkh001wn",
-  "https://www.calcalist.co.il/calcalistech/article/bkuxnvkvh",
-  "https://www.opora.io",
+  { label = "JVP's OPORA funding and product announcement", url = "https://jvpvc.com/newsroom/cybersecurity-firm-opora-announces-7-million-seed-funding-round-led-jvp/", description = "Investor announcement with the $7 million round, prior $2 million seed, founders, product claims, pilot geographies/sectors, MVP, and Securonix channel." },
+  { label = "Globes on Opora's 2020 round and offices", url = "https://en.globes.co.il/en/article-ex-shin-bet-chiefs-cybersecurity-co-opora-raises-7m-1001332101", description = "Contemporaneous Israeli business reporting on the $7 million JVP-led round, 2018 formation, founders, Ra'anana and San Francisco offices, and team size." },
+  { label = "CTech on Opora's 2019 launch", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3766536,00.html", description = "Contemporaneous report on the company's early identity, reported 2016 incorporation, DAT origins, product concept, and initial team." },
+  { label = "CTech on the 2023 shutdown", url = "https://www.calcalistech.com/ctechnews/article/r1dkh001wn", description = "Reports layoffs, the company's statement that pilots did not mature into a commercial product, an approximate $10 million lifetime total, and technology-sale discussions." },
+  { label = "Globes on the 2023 shutdown", url = "https://www.globes.co.il/news/article.aspx?did=1001449031", description = "Hebrew reporting on layoffs, the company's commercialization statement, the $2 million and $7 million funding disclosures, and proposed IP sale." },
+  { label = "Ronen Lago CV hosted by the Tel Aviv Stock Exchange", url = "https://mayafiles.tase.co.il/rpdf/1466001-1467000/P1466123-02.pdf", description = "Executive CV describing Opora's 2022-onward CEO role, supply-chain risk product, prior roles, and asserted customer sectors; publication date and customer contract status are unclear." },
+  { label = "UI product-design case study for Opora", url = "https://ui.co.il/projects/opora/", description = "External design case study describing Opora's business-ecosystem risk interface, explainability goals, business-loss framing, and remediation planning." },
+  { label = "Opora's former official domain", url = "https://www.opora.io", description = "The historical company domain now redirects to a GoDaddy domain-sale page; no current official website or official logo metadata was available." },
+  { label = "CheckID company record for OPORA TECHNOLOGIES LTD", url = "https://en.checkid.co.il/company/OPORA%2BTECHNOLOGIES%2B%2BLTD-bdjmOwr-514756261", description = "Third-party Israeli company-record mirror showing company ID, Ra'anana address, voluntary liquidation, and dissolution-related changes; its data and translations are not an official certified extract." },
+  { label = "Recorded Future intelligence platform", url = "https://www.recordedfuture.com/platform", description = "Official product description of multi-source threat intelligence, internal and external telemetry, and security-workflow integration." },
+  { label = "Censys Attack Surface Management inventory", url = "https://docs.censys.com/docs/asm-inventory-assets", description = "Official documentation describing Censys inventory of internet-facing hosts, web entities, certificates, domains, storage buckets, and software." },
+  { label = "SecurityScorecard platform", url = "https://securityscorecard.com/", description = "Official product description of third-party risk, security ratings, continuous monitoring, threat intelligence, and supplier workflows." },
+  { label = "Aporia ML observability documentation", url = "https://docs.aporia.com/", description = "Describes Aporia's ML observability product; compared with Opora's cyber-threat sources for name disambiguation." },
+  { label = "Coralogix announcement of Aporia acquisition", url = "https://coralogix.com/blog/coralogix-acquires-aporia/", description = "Coralogix announced the acquisition of Aporia, an AI observability company, in December 2024." },
+  { label = "Israel Innovation Authority 2024 study of Israeli generative-AI companies", url = "https://www.innovationisrael.org.il/wp-content/uploads/2024/07/Generative_AI_company_overview-eng.pdf", description = "Lists Aporia at aporia.com as an ML production-observability company, distinguishing the similar-name record from Opora's cyber-threat business." },
+  { label = "KYC Israel secondary record for APORIA TECHNOLOGIES LTD", url = "https://www.kycisrael.com/companies/516080108/aporia-technologies-ltd/", description = "Lists registration number 516080108 for APORIA TECHNOLOGIES LTD; a secondary record, not a certified official extract." },
 ]
 crawled_at = "2026-03-30T10:14:49Z"
-updated_at = "2026-07-31T18:46:21Z"
+updated_at = "2026-10-22T01:54:26Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Yuval Diskin", role = "Founder/co-founder and president", is_founder = true, current = false, background = "Former director of Israel's Internal Security Agency (Shin Bet), which he led for six years; JVP and contemporaneous reporting describe him as the founder and company president.", source_ids = ["jvp_2020", "globes_2020", "ctech_2019", "ctech_2023"] },
+  { name = "Noam Jolles", role = "Co-founder; Chief Intelligence Officer / technology lead", is_founder = true, current = false, background = "Former senior ISA figure. JVP described her as co-founder and Chief Intelligence Officer; Globes described her as the company's technology executive and reported about 18 years of security-system experience.", source_ids = ["jvp_2020", "globes_2020", "globes_2023"] },
+  { name = "Tsafrir Kats", role = "Co-founder", is_founder = true, current = false, background = "Former senior ISA figure; also rendered as Tzafrir Katz in some contemporaneous reporting.", source_ids = ["jvp_2020", "globes_2020", "ctech_2023"] },
+  { name = "Chris Bell", role = "Co-founder and CEO (historical)", is_founder = true, current = false, background = "San Francisco-based cybersecurity entrepreneur; JVP described him as a Securonix co-founder and former COO.", source_ids = ["jvp_2020", "globes_2020"] },
+  { name = "Ronen Lago", role = "CEO and board member from 2022 (historical)", is_founder = false, current = false, background = "A TASE-hosted CV describes prior senior technology and security roles including international CTO at Lockheed Martin and head of security at Daimler; the CV also describes Opora's supplier-risk analytics product and customer sectors.", source_ids = ["tase_cv"] }
+]
+investors = [
+  { name = "Jerusalem Venture Partners (JVP)", investor_type = "vc", website = "https://jvpvc.com/", round_ids = ["seed-2020"], relationship = "historical", source_ids = ["jvp_2020", "globes_2020"], notes = "Named lead investor. Private angel participants are reported but not identified; no ownership percentage is disclosed." }
+]
+financials = [
+  { name = "employees", value = "More than 20 people at peak", as_of = "2023-06-08", basis = "reported", metric = "employees", numeric_value = 20, value_relation = "more_than", unit = "people", source_ids = ["ctech_2023"], notes = "Historical peak reported by CTech, not current headcount. The company had already laid off most staff by June 2023." }
+]
+traction = [
+  { kind = "customer", description = "JVP said Opora was testing its technology with organizations in Germany, the United Kingdom, and the United States across banking, utilities, manufacturing, and pharmaceuticals. The announcement does not name customers or establish paid production deployments.", date = "2020-06-11", source_ids = ["jvp_2020"] },
+  { kind = "product", description = "JVP said Opora had released an initial MVP and had initiated a strategic sales and delivery channel through Securonix. Public evidence does not establish channel terms, customer conversion, or revenue generated.", date = "2020-06-11", source_ids = ["jvp_2020"] },
+  { kind = "product", description = "A TASE-hosted executive CV describes Opora from 2022 onward as assessing cyber operational risk across supplier ecosystems with automated cognitive analysis, business-impact estimates, and prioritized risk-reduction recommendations. The CV's publication date is unknown.", date = "2022", source_ids = ["tase_cv"] },
+  { kind = "customer", description = "The same executive CV says customers included organizations in energy, healthcare, food, and communications, but names no organization and gives no contract, payment, or deployment details. In 2023 the company said first pilots had not matured into a commercial product. The CV's publication date is unknown.", date = "2022", source_ids = ["tase_cv", "ctech_2023", "globes_2023"], notes = "Treat the sector list as an executive's assertion, not verified paying-customer or production evidence." },
+  { kind = "product", description = "In June 2023 the company said its initial pilots had not matured into a commercial product, that it was reducing operations and costs, and that it was considering offers to purchase its technology.", date = "2023-06-08", source_ids = ["ctech_2023", "globes_2023"] }
+]
+intellectual_property = [
+  { kind = "other", description = "In June 2023 Opora said it was considering several offers to purchase its technology before closure. No buyer, completed transfer, patent filing, patent grant, or present IP owner was identified in the reviewed public sources.", date = "2023-06-08", source_ids = ["ctech_2023", "globes_2023"], notes = "A proposed sale is not evidence that an IP transaction closed. Targeted patent searches found no clearly attributable Opora filing; the absence of a public patent record is not proof that no proprietary IP exists." }
+]
+comparables = [
+  { name = "Recorded Future", website = "https://www.recordedfuture.com/platform", rationale = "Adjacent threat-intelligence platform that overlaps with Opora's external adversary intelligence and threat prioritization use cases.", differentiation = "Recorded Future describes a large multi-source graph combining external sources with internal telemetry and integrating intelligence into security workflows. Opora's proposed differentiation was customer-specific attack-preparation warning and containment, but no public benchmark shows superior lead time or attribution.", source_ids = ["recorded_future"] },
+  { name = "Censys Attack Surface Management", website = "https://docs.censys.com/docs/asm-inventory-assets", rationale = "Substitute for the external visibility portion of Opora's value proposition, especially discovery and monitoring of exposed internet assets.", differentiation = "Censys documents internet-wide inventory of hosts, domains, web entities, certificates, storage buckets, and software. That is exposure discovery rather than an asserted model of adversary intent or supplier business loss.", source_ids = ["censys_asm"] },
+  { name = "SecurityScorecard", website = "https://securityscorecard.com/", rationale = "Adjacent competitor and substitute for cyber risk ratings and supplier-ecosystem prioritization.", differentiation = "SecurityScorecard describes ratings, continuous third-party monitoring, threat intelligence, and supplier response workflows. Opora's proposed distinction was linking early adversary behavior to a quantified risk narrative; no public evidence establishes its data scale, workflow depth, or commercial advantage against this mature category.", source_ids = ["securityscorecard"] }
+]
+
+[intelligence.company]
+company_id = "il-opora-technologies"
+aliases = ["אופורה"]
+operating_status = "closed"
+business_model = "B2B enterprise cybersecurity software and analytics, described as an online threat-intelligence platform and later as cyber supply-chain risk quantification; pricing, contract structure, and realized revenue are undisclosed."
+products = ["Adversary Threat Protection (ATP) platform for external, pre-compromise adversary intelligence", "Cyber supply-chain and business-ecosystem risk analytics with business-impact scoring and remediation prioritization"]
+locations = ["Ra'anana, Israel", "San Francisco, United States"]
+country_of_incorporation = "Israel"
+registry_identifiers = [
+  { jurisdiction = "Israel", scheme = "Israeli company registration number", identifier = "514756261", source_ids = ["checkid_registry"], notes = "Reported by a third-party company-record mirror as OPORA TECHNOLOGIES LTD; no certified Israeli Corporations Authority extract was retrieved. Its displayed 2012 incorporation date conflicts with press chronology and may relate to an earlier DAT vehicle." }
+]
+source_ids = ["jvp_2020", "globes_2020", "ctech_2019", "ctech_2023", "globes_2023", "tase_cv", "checkid_registry", "opora_domain", "aporia_docs", "aporia_acquisition"]
+notes = "Formation and legal incorporation dates conflict: JVP and Globes report formation in 2018; CTech reported incorporation in 2016; a 2023 company statement said established in 2020; CheckID associates the legal name with a 2012 registration date. 2018 is used as the startup formation date, not a verified legal incorporation date. The CheckID mirror reports voluntary liquidation and 2025 dissolution-related entries, but is not a certified official extract. The checker surfaced a fuzzy name similarity to Aporia; these are distinct companies: Opora is the Israeli cyber-threat company associated with opora.io, while Aporia is an ML observability company at aporia.com acquired by Coralogix in 2024. The source-reported name OPORA TECHNOLOGIES LTD remains preserved in the cited source claims; because no certified Companies Authority extract was obtained, it is not asserted in the structured legal_name field."
+
+[intelligence.funding]
+status = "reported"
+summary = "Two public seed events are individually disclosed: USD 2 million through an unidentified private investor in May 2019, and USD 7 million led by JVP in June 2020, with private angels also reported but not named. CTech separately reported lifetime funding of around USD 10 million by June 2023. The event disclosures sum to USD 9 million; the rounded company total reported by CTech is retained separately and is not treated as an additional round. No valuation or full private financing history is public."
+reported_total_raised = 10000000
+reported_total_currency = "USD"
+total_source_ids = ["ctech_2023"]
+total_as_of = "2023-06-08"
+total_scope = "CTech reported a cumulative lifetime total of around USD 10 million. This is an approximate media-reported company total, not a sum-derived amount; the two individually disclosed rounds total USD 9 million and the difference is unreconciled."
+history_status = "partial"
+coverage_through = "2023-06-08"
+
+[[intelligence.funding.rounds]]
+id = "seed-2019"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+closed_on = "2019-05"
+amount_status = "reported"
+amount = 2000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = []
+participating_investors = ["Unidentified private investor"]
+source_ids = ["jvp_2020", "ctech_2019"]
+notes = "JVP's company announcement says OPORA raised USD 2 million in seed capital in May 2019 through a private investor. The investor was not named. CTech's 2019 report described an unnamed overseas investor and an initial raise of several million, without a precise amount."
+
+[[intelligence.funding.rounds]]
+id = "seed-2020"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2020-06-11"
+closed_on = "2020-06-11"
+amount_status = "reported"
+amount = 7000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Jerusalem Venture Partners (JVP)"]
+participating_investors = ["Unidentified private angel investors"]
+source_ids = ["jvp_2020", "globes_2020"]
+notes = "JVP and Globes report a USD 7 million seed led by JVP with private angel participation. No valuation or named angel participants were disclosed. This is a separate event from the May 2019 seed, not a cumulative restatement or extension."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "No public cap table, ownership percentages, parent-company relationship, or completed acquisition/technology transfer was verified. CTech reported that Opora was considering offers to buy its technology in June 2023, which is not evidence of a completed transaction. A third-party company-record mirror lists directors and option holders but supplies no percentages and warns that its gathered data may contain errors; those entries are not treated as disclosed shareholdings."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["ctech_2023", "globes_2023", "checkid_registry"]
+deals = []
+holdings = []
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders", "israeli_rd"]
+summary = "Opora was founded by Yuval Diskin and former senior ISA figures, operated an Israeli development center in Ra'anana, and maintained a reported San Francisco office. The company-record mirror lists its Israeli private-company record and a Ra'anana address."
+as_of = "2026-10-22"
+source_ids = ["jvp_2020", "globes_2020", "ctech_2019", "checkid_registry"]
+
+[intelligence.research]
+researched_at = "2026-10-22T01:54:26Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Opora cybersecurity Israeli startup company Opora Technologies funding raised seed JVP 2023", "Opora cybersecurity startup founders team Opora.io Israeli", "Opora cybersecurity startup Israel patents", "site:calcalistech.com Opora $10 million company layoffs pilots commercial product technology sale", "Opora Technologies \"commercial product\" pilots layoffs cybersecurity", "\"Opora\" \"10 million\" cybersecurity Israeli laid off", "\"Opora\" cybersecurity Israel wound down closed startup", "Opora May 2019 $2 million seed private investor Yuval Diskin", "site:calcalistech.com Opora 2019 \"2 million\" cybersecurity Yuval Diskin", "Opora Technologies seed 2 million May 2019 startup Israeli", "site:opora.io OPORA founders product Adversary Threat Protection", "Israel Companies Authority 514756261 Opora Technologies Ltd public lookup", "514756261 OPORA TECHNOLOGIES official Israeli Corporations Authority", "site:ica.justice.gov.il 514756261", "514756261 Opora Technologies voluntarily liquidated company registry", "\"514756261\" \"gov.il\"", "\"514756261\" \"אופורה\" רשות התאגידים", "\"514756261\" \"OPORA TECHNOLOGIES LTD\" -checkid", "\"OPORA TECHNOLOGIES LTD\" \"Voluntarily liquidated\"", "site:recordedfuture.com threat intelligence platform official real-time intelligence", "site:flashpoint.io threat intelligence platform official adversary intelligence", "site:censys.com attack surface management official internet-facing assets", "site:bitsight.com third-party risk management official cyber risk platform", "\"OPORA TECHNOLOGIES\" patent", "\"Opora Technologies Ltd\" patent cybersecurity", "\"Yuval Diskin\" patent cyber intelligence Opora", "site:patents.google.com \"Opora Technologies\" cybersecurity", "site:securityscorecard.com/products security ratings continuous monitoring vendors official", "Aporia AI observability company official site founded machine learning startup Israel", "Aporia company startup company domain official", "\"Opora\" revenue ARR profitability burn runway funding customers cybersecurity", "\"Opora Technologies\" ownership acquisition sale technology 2023 2024", "\"Opora Technologies\" patents cyber threat intelligence WIPO USPTO", "\"Opora\" government defense customer contract cyber Israel", "Opora Technologies Ltd cybersecurity Israeli startup Opora Aporia company identity founders 514756261", "Aporia Technologies Ltd Israeli company registration number Aporia AI company ID Israel", "\"516080108\" site:gov.il APORIA TECHNOLOGIES LTD", "\"514756261\" \"516080108\" OPORA APORIA company registry"]
+gaps = [
+  "team: founders and historical executives are documented, but no verified current staff roster or post-closure team is public.",
+  "investors: JVP is named and private angels are reported, but angel identities, exact participant allocations, ownership stakes, and full financing history are unavailable.",
+  "ownership: no public percentage cap table, parent relationship, completed acquisition, or completed technology transfer was verified; a certified official registry extract is still needed to confirm the mirror's dissolution record and legal history.",
+  "financials: no audited accounts, revenue, ARR, profitability, cash, burn, runway, or contract values were found; third-party directory estimates were inconsistent and were not treated as reported metrics.",
+  "traction: no named customer contracts, paid production deployments, renewals, revenue conversion, or measured security outcomes were verified; a later executive CV lists customer sectors but not customer names or contract status.",
+  "intellectual_property: no patent application or grant clearly attributable to Opora was found in targeted public searches; the present owner and outcome of the 2023 technology-sale discussions remain unknown.",
+  "competition: the reviewed official product pages identify relevant adjacent substitutes, but a complete historical competitor set and direct comparative performance data are unavailable.",
+  "identity: formation, legal incorporation, and predecessor-company dates differ across reports. Secondary mirrors list separate Opora and Aporia registry numbers, but certified Companies Authority extracts were not obtained; Opora's relationship to predecessor DAT also remains unresolved.",
+  "dual_use: public evidence supports capability-level relevance to government and critical-infrastructure cyber defense but no named defense customer, government contract, classified deployment, or outcome was found."
+]
+conflicts = [
+  "Formation date: JVP and 2020 Globes say Opora was formed in 2018; CTech reported incorporation in 2016; the company told CTech in 2023 that it was established in 2020. A CheckID mirror associates OPORA TECHNOLOGIES LTD with a 2012 date, possibly reflecting a prior DAT vehicle. The legal/startup chronology is unresolved; 2018 is used only as the reported formation year.",
+  "Lifetime funding: CTech reported around USD 10 million total, while the separately disclosed May 2019 USD 2 million seed and June 2020 USD 7 million seed sum to USD 9 million. No additional round or reconciliation was found, so the total remains an approximate reported cumulative figure and is not added to round amounts.",
+  "Commercial traction: a TASE-hosted executive CV says the company had customers in energy, healthcare, food, and communications, while the 2023 company statement says initial pilots did not mature into a commercial product. Since the CV gives no names or contract status, paying production customers remain unverified.",
+  "DAT chronology: CTech's 2019 profile dates Diskin Advanced Technologies to 2012, while CTech's 2023 account says Diskin established DAT with partners in 2013. This predecessor date does not resolve Opora's own formation or legal incorporation date.",
+  "Technology sale: in June 2023 the company said it was considering several offers to purchase its technology; no public source found a completed sale, buyer, or resulting ownership transfer."
+]
+diligence_questions = [
+  "Did any buyer complete a purchase of Opora's technology after the June 2023 announcement, and which legal entity now owns the source code, models, trademarks, customer data, and contractual rights?",
+  "Can the company or liquidator provide the certified Israeli company extract and name-history documents that reconcile the 2012 registry date, 2016 incorporation report, 2018 formation announcements, and 2020 company statement?",
+  "Which customer organizations participated in the reported pilots or later sector deployments, which were paid production accounts, and what measurable alert lead time, precision, renewal, or loss-avoidance evidence exists?",
+  "What external telemetry did the product use, under what licenses and privacy permissions, and can a buyer reproduce actor-to-infrastructure attribution and business-impact scores from retained data?",
+  "What were the round terms and the identity of private participants, and what cash, liabilities, customer obligations, or employee claims remained when operations were reduced?",
+  "Was the Securonix sales and delivery channel governed by a signed agreement, and did it produce any customers or revenue?"
+]
+
+[[intelligence.research.sources]]
+id = "jvp_2020"
+url = "https://jvpvc.com/newsroom/cybersecurity-firm-opora-announces-7-million-seed-funding-round-led-jvp/"
+title = "Cybersecurity Firm OPORA announces $7 Million seed funding Round Led by JVP"
+publisher = "Jerusalem Venture Partners"
+kind = "investor"
+accessed_at = "2026-10-22T01:34:55Z"
+published_on = "2020-06-06"
+claims = ["JVP describes a USD 7 million seed round led by JVP with private angel investors and states the announcement text is dated June 11, 2020.", "JVP says OPORA raised USD 2 million in seed capital through an unidentified private investor in May 2019.", "JVP says Opora was formed in 2018 by Yuval Diskin, Noam Jolles, Tsafrir Kats, and Chris Bell; it describes Bell as CEO and former Securonix co-founder/COO and Jolles as co-founder and Chief Intelligence Officer.", "JVP describes the Adversary Threat Protection product as monitoring adversary infrastructure and behavior outside customer networks and feeding preventive containment actions to existing systems.", "JVP says early customers were in Germany, the United Kingdom, and the United States across banking, utilities, manufacturing, and pharmaceuticals; it says an initial MVP had reached market and a Securonix sales and delivery channel had been initiated."]
+
+[[intelligence.research.sources]]
+id = "globes_2020"
+url = "https://en.globes.co.il/en/article-ex-shin-bet-chiefs-cybersecurity-co-opora-raises-7m-1001332101"
+title = "Ex Shin Bet chief's cybersecurity co Opora raises $7m"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-22T01:34:55Z"
+published_on = "2020-06-11"
+claims = ["Globes reports a USD 7 million financing round led by JVP with private investors and angels.", "Globes says Opora was founded in 2018 by Diskin, Noam Jolles, Tsafrir Katz, and Chris Bell; it describes the product as threat detection intended to preempt attacks before they reach an enterprise network.", "Globes reports offices in San Francisco and a development center in Ra'anana, and a team of 10 employees at the time.", "Globes says JVP founder Erel Margalit and principal Julia Kagan joined the board following the investment."]
+
+[[intelligence.research.sources]]
+id = "ctech_2019"
+url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3766536,00.html"
+title = "Former Shin Bet Director Launches Cybersecurity Company"
+publisher = "Calcalist Tech (CTech)"
+kind = "media"
+accessed_at = "2026-10-22T01:34:55Z"
+published_on = "2019-07-17"
+claims = ["CTech identifies the startup as Opora Technologies Ltd and reports a 2016 incorporation date, while describing it as a spinout of Diskin Advanced Technologies, which it dates to 2012.", "CTech describes external cyber threat intelligence intended to detect potential attacks before they reach an organization's network and identifies Yuval Diskin as founder/co-founder and chairman.", "CTech reports an early team of about 10, an unnamed overseas investor, several million dollars of initial financing, and pilot customers; it does not give an exact initial financing amount."]
+
+[[intelligence.research.sources]]
+id = "ctech_2023"
+url = "https://www.calcalistech.com/ctechnews/article/r1dkh001wn"
+title = "Former Shin Bet director's cyber startup Opora is shutting down"
+publisher = "Calcalist Tech (CTech)"
+kind = "media"
+accessed_at = "2026-10-22T01:34:55Z"
+published_on = "2023-06-08"
+claims = ["CTech reports that Opora laid off most employees, was on the verge of closure, and was considering offers to sell its technology.", "CTech reports a peak workforce above 20, a USD 7 million JVP-led seed in June 2020, and a cumulative lifetime funding total of around USD 10 million.", "CTech quotes the company saying initial customer pilots did not mature into a commercial product and that it reduced activity and costs.", "CTech says the product monitored potential attacks outside customer networks by collecting intelligence on potential attackers and early-stage behavior.", "CTech says Opora was spun out of DAT, which Diskin established with partners in 2013, and names Diskin, Noam Jolles, and Tsafrir Kats as founders."]
+
+[[intelligence.research.sources]]
+id = "globes_2023"
+url = "https://www.globes.co.il/news/article.aspx?did=1001449031"
+title = "חברת הסייבר הישראלית אופורה של ראש השבכ לשעבר נסגרת"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-22T01:34:55Z"
+published_on = "2023-06-08"
+claims = ["Globes reports Opora was preparing to close, had reduced activity and laid off most staff, and was preparing to sell its intellectual property.", "Globes says the company attributed its closure to technology that did not mature into a commercial product despite initial customer pilots.", "Globes reports a USD 2 million seed and a USD 7 million JVP-led round, and names Diskin, Jolles, Katz, and Bell as founders or early leaders."]
+
+[[intelligence.research.sources]]
+id = "tase_cv"
+url = "https://mayafiles.tase.co.il/rpdf/1466001-1467000/P1466123-02.pdf"
+title = "Ronen Lago CV (Hebrew, TASE-hosted PDF)"
+publisher = "Tel Aviv Stock Exchange (MAYA)"
+kind = "filing"
+accessed_at = "2026-10-22T01:34:55Z"
+claims = ["The CV identifies Ronen Lago as Opora CEO and board member from 2022 onward and describes previous senior security/technology roles including Lockheed Martin and Daimler.", "The CV describes Opora as assessing operational cyber risk across connected supplier ecosystems using cognitive automated analysis, expert input, business-impact scenarios, and mitigation recommendations.", "The CV asserts that Opora customers included organizations in energy, healthcare, food, and communications, but names no customer, contract, payment, or deployment status; the PDF publication date is not clear."]
+
+[[intelligence.research.sources]]
+id = "ui_project"
+url = "https://ui.co.il/projects/opora/"
+title = "Opora - UI - eXeperience the impact"
+publisher = "UI"
+kind = "other"
+accessed_at = "2026-10-22T01:34:55Z"
+claims = ["The product-design case study describes an Opora platform that maps cyber risk across an organization's ecosystem, including suppliers, customers, subsidiaries, geography, and industry.", "The case study says the interface was designed to explain risk scores, translate threats into potential business losses, and prioritize a remediation plan; it is design-agency material and does not establish independently verified product performance or deployment."]
+
+[[intelligence.research.sources]]
+id = "opora_domain"
+url = "https://www.opora.io"
+title = "Opora historical official domain (redirects to domain-sale page)"
+publisher = "Opora / GoDaddy redirect"
+kind = "company"
+accessed_at = "2026-10-22T01:34:55Z"
+claims = ["JVP's 2020 announcement links www.opora.io as the company domain; a live access check on October 22, 2026 redirected the domain to GoDaddy's domain-sale page, so no current official company website was available."]
+
+[[intelligence.research.sources]]
+id = "checkid_registry"
+url = "https://en.checkid.co.il/company/OPORA%2BTECHNOLOGIES%2B%2BLTD-bdjmOwr-514756261"
+title = "Ephra Technologies Ltd. / OPORA TECHNOLOGIES LTD - 514756261"
+publisher = "CheckID / Guideline Group"
+kind = "directory"
+accessed_at = "2026-10-22T01:34:55Z"
+claims = ["The CheckID page labels OPORA TECHNOLOGIES LTD as an Israeli private company with ID 514756261 and a Ra'anana address, and displays an incorporation date of March 26, 2012.", "The page labels the company voluntarily liquidated and displays accelerated voluntary dissolution on September 4, 2025 and automatic expedited voluntary elimination on December 13, 2025.", "The page lists directors and option holders but no ownership percentages and states that its aggregated data and translations may be inaccurate; it is not a certified official company extract."]
+
+[[intelligence.research.sources]]
+id = "recorded_future"
+url = "https://www.recordedfuture.com/platform"
+title = "Intelligence Platform"
+publisher = "Recorded Future"
+kind = "other"
+accessed_at = "2026-10-22T01:34:55Z"
+claims = ["Recorded Future describes a real-time threat-intelligence platform that connects internal telemetry with external sources and integrates into existing security tools and workflows."]
+
+[[intelligence.research.sources]]
+id = "censys_asm"
+url = "https://docs.censys.com/docs/asm-inventory-assets"
+title = "Inventory Assets"
+publisher = "Censys"
+kind = "other"
+accessed_at = "2026-10-22T01:34:55Z"
+claims = ["Censys documents its Attack Surface Management inventory as including internet-facing hosts, web entities, certificates, domains, storage buckets, and detected software based on Censys scans."]
+
+[[intelligence.research.sources]]
+id = "securityscorecard"
+url = "https://securityscorecard.com/"
+title = "SecurityScorecard | Supply Chain & Third-Party Risk Platform"
+publisher = "SecurityScorecard"
+kind = "other"
+accessed_at = "2026-10-22T01:34:55Z"
+claims = ["SecurityScorecard describes third-party risk management, security ratings, continuous monitoring, threat intelligence, and supplier response workflows in its official product materials."]
+
+[[intelligence.research.sources]]
+id = "aporia_docs"
+url = "https://docs.aporia.com/"
+title = "Aporia Docs"
+publisher = "Aporia"
+kind = "other"
+accessed_at = "2026-10-22T01:41:15Z"
+claims = ["Aporia describes its product as ML observability for production models, including model visualization, data-drift detection, performance monitoring, and data-integrity alerts; this distinguishes it from Opora's external cyber-threat product."]
+
+[[intelligence.research.sources]]
+id = "aporia_acquisition"
+url = "https://coralogix.com/blog/coralogix-acquires-aporia/"
+title = "Coralogix acquires Aporia"
+publisher = "Coralogix"
+kind = "company"
+accessed_at = "2026-10-22T01:41:15Z"
+published_on = "2024-12-23"
+claims = ["Coralogix announced on December 23, 2024 that it acquired Aporia, an AI observability and guardrails company founded in 2019; this is distinct from Israeli cyber-threat company Opora."]
+
+[[intelligence.research.sources]]
+id = "israel_innovation_authority_aporia"
+url = "https://www.innovationisrael.org.il/wp-content/uploads/2024/07/Generative_AI_company_overview-eng.pdf"
+title = "Study on Gen-AI Companies in Israel"
+publisher = "Israel Innovation Authority"
+kind = "government"
+accessed_at = "2026-10-22T01:46:47Z"
+published_on = "2024-06"
+claims = ["The Israel Innovation Authority's June 2024 study lists Aporia at aporia.com as a developer of an AI observability platform for ML production monitoring, including detection of performance issues and data drift."]
+
+[[intelligence.research.sources]]
+id = "aporia_registry_mirror"
+url = "https://www.kycisrael.com/companies/516080108/aporia-technologies-ltd/"
+title = "APORIA TECHNOLOGIES LTD - Israel Company Information"
+publisher = "KYC Israel Research Services Ltd"
+kind = "directory"
+accessed_at = "2026-10-22T01:48:17Z"
+claims = ["KYC Israel lists APORIA TECHNOLOGIES LTD under Israeli registration number 516080108, incorporated in 2019 in Ramat Gan. The site offers official extracts separately; this listing is a secondary registry mirror, not a certified extract."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-22T01:49:52Z"
+next_review_on = "2027-04-22"
+queries = ["Opora cybersecurity Israeli startup company Opora Technologies funding raised seed JVP 2023", "Opora cybersecurity startup founders team Opora.io Israeli", "Israel Companies Authority 514756261 Opora Technologies Ltd public lookup", "514756261 OPORA TECHNOLOGIES official Israeli Corporations Authority", "\"514756261\" \"OPORA TECHNOLOGIES LTD\" -checkid", "Aporia AI observability company official site founded machine learning startup Israel", "Aporia company startup company domain official", "Opora Technologies Ltd cybersecurity Israeli startup Opora Aporia company identity founders 514756261", "Aporia Technologies Ltd Israeli company registration number Aporia AI company ID Israel", "\"516080108\" site:gov.il APORIA TECHNOLOGIES LTD", "\"514756261\" \"516080108\" OPORA APORIA company registry"]
+source_ids = ["ctech_2019", "jvp_2020", "globes_2020", "ctech_2023", "checkid_registry", "opora_domain", "aporia_docs", "aporia_acquisition", "israel_innovation_authority_aporia", "aporia_registry_mirror"]
+summary = "The record is for Israeli-founded Opora Technologies Ltd, the cyber product described by CTech and JVP and historically associated with opora.io. The Israel Innovation Authority lists Aporia at aporia.com as an ML production-observability company. Secondary registry mirrors list OPORA TECHNOLOGIES LTD as 514756261 and APORIA TECHNOLOGIES LTD as 516080108; this supports distinct legal identities but is not a substitute for certified extracts. Aporia documentation and Coralogix’s 2024 acquisition announcement corroborate the separate product and corporate history. Formation, incorporation, and predecessor dates conflict and are documented in research.conflicts."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-22T01:42:41Z"
+next_review_on = "2027-04-22"
+queries = ["Opora cybersecurity Israeli startup company Opora Technologies funding raised seed JVP 2023", "site:calcalistech.com Opora $10 million company layoffs pilots commercial product technology sale", "Opora May 2019 $2 million seed private investor Yuval Diskin", "site:calcalistech.com Opora 2019 \"2 million\" cybersecurity Yuval Diskin", "Opora Technologies seed 2 million May 2019 startup Israeli"]
+source_ids = ["jvp_2020", "globes_2020", "ctech_2019", "ctech_2023", "globes_2023"]
+summary = "Two seed events are individually disclosed at USD 2 million in May 2019 and USD 7 million in June 2020. CTech separately reports a lifetime total around USD 10 million, which is not reconciled with the USD 9 million sum of those disclosed events. No valuation was found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T01:42:41Z"
+next_review_on = "2027-04-22"
+queries = ["Opora cybersecurity Israeli startup company Opora Technologies funding raised seed JVP 2023", "Opora May 2019 $2 million seed private investor Yuval Diskin", "site:calcalistech.com Opora 2019 \"2 million\" cybersecurity Yuval Diskin"]
+source_ids = ["jvp_2020", "globes_2020", "globes_2023"]
+summary = "JVP is the named lead investor in the 2020 seed. Public sources mention a private investor in 2019 and private angels in 2020 without identifying them; no ownership percentages or full syndicate were found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-22T01:42:41Z"
+next_review_on = "2027-04-22"
+queries = ["Opora cybersecurity startup founders team Opora.io Israeli", "Opora cybersecurity Israeli startup company Opora Technologies funding raised seed JVP 2023"]
+source_ids = ["ctech_2019", "jvp_2020", "globes_2020", "ctech_2023", "tase_cv"]
+summary = "Historical founders and executive roles are documented, including a later CEO role described in a TASE-hosted CV. No current staff or post-closure team roster is public."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T01:42:41Z"
+next_review_on = "2027-04-22"
+queries = ["514756261 Opora Technologies voluntarily liquidated company registry", "\"514756261\" \"gov.il\"", "\"514756261\" \"אופורה\" רשות התאגידים", "\"514756261\" \"OPORA TECHNOLOGIES LTD\" -checkid", "\"OPORA TECHNOLOGIES LTD\" \"Voluntarily liquidated\"", "\"Opora Technologies\" ownership acquisition sale technology 2023 2024"]
+source_ids = ["ctech_2023", "globes_2023", "checkid_registry"]
+summary = "No public cap table or ownership percentages were found. A 2023 technology sale was under consideration, but no completed transaction or buyer was identified. The current company-status evidence comes from a third-party mirror and should be checked against an official extract."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T01:42:41Z"
+next_review_on = "2027-04-22"
+queries = ["\"Opora\" revenue ARR profitability burn runway funding customers cybersecurity"]
+source_ids = ["ctech_2023", "globes_2023", "tase_cv"]
+summary = "A historical peak headcount above 20 is reported. No public revenue, ARR, profitability, cash, burn, runway, contract values, or audited accounts were found. Unattributed directory revenue estimates were not accepted as evidence."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "conflicting"
+checked_at = "2026-10-22T01:42:41Z"
+next_review_on = "2027-04-22"
+queries = ["Opora cybersecurity Israeli startup company Opora Technologies funding raised seed JVP 2023", "Opora \"commercial product\" pilots layoffs cybersecurity", "\"Opora\" revenue ARR profitability burn runway funding customers cybersecurity"]
+source_ids = ["jvp_2020", "ctech_2023", "globes_2023", "tase_cv", "ui_project"]
+summary = "Public sources document an MVP, early pilots, a Securonix channel, and later executive claims about customer sectors. The company said in 2023 the pilots had not become a commercial product. No customer names, contracts, paid status, renewals, or measured outcomes were verified."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-22T01:42:41Z"
+next_review_on = "2027-04-22"
+queries = ["Opora cybersecurity startup Israel patents", "\"OPORA TECHNOLOGIES\" patent", "\"Opora Technologies Ltd\" patent cybersecurity", "\"Yuval Diskin\" patent cyber intelligence Opora", "site:patents.google.com \"Opora Technologies\" cybersecurity", "\"Opora Technologies\" patents cyber threat intelligence WIPO USPTO"]
+source_ids = ["ctech_2023", "globes_2023"]
+summary = "No patent application or grant clearly attributable to Opora was found in the targeted searches. The company said it was considering technology-sale offers in June 2023, but no completed sale or current IP owner was identified. Lack of a public patent record does not establish lack of proprietary technology."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T01:42:41Z"
+next_review_on = "2027-04-22"
+queries = ["site:recordedfuture.com threat intelligence platform official real-time intelligence", "site:flashpoint.io threat intelligence platform official adversary intelligence", "site:censys.com attack surface management official internet-facing assets", "site:bitsight.com third-party risk management official cyber risk platform", "site:securityscorecard.com/products security ratings continuous monitoring vendors official"]
+source_ids = ["recorded_future", "censys_asm", "securityscorecard"]
+summary = "Official product information was reviewed for broad threat intelligence, external attack-surface mapping, and supplier cyber-risk workflows. These are adjacent substitutes with overlapping use cases, not proof of direct head-to-head competition during Opora's operating period."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-22T01:42:41Z"
+next_review_on = "2027-04-22"
+queries = ["\"Opora\" government defense customer contract cyber Israel", "Opora cybersecurity Israeli startup company Opora Technologies funding raised seed JVP 2023"]
+source_ids = ["jvp_2020", "globes_2020", "ctech_2023"]
+summary = "External early-warning and supplier-risk functions have plausible commercial and government-security use, including critical infrastructure and defense supply chains. No government or defense customer, contract, classified deployment, or validated operational outcome was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "CTech reported in June 2023 that the company was on the verge of closure after laying off most staff; the CheckID company-record mirror now labels OPORA TECHNOLOGIES LTD voluntarily liquidated and shows 2025 dissolution-related changes."
+verified_at = "2026-10-22T01:34:55Z"
+source_ids = ["ctech_2023", "checkid_registry"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "JVP and Globes identify Israeli founders and a Ra'anana development center; the company-record mirror lists an Israeli private company and Ra'anana address."
+verified_at = "2026-10-22T01:34:55Z"
+source_ids = ["jvp_2020", "globes_2020", "checkid_registry"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "CTech reports that Opora had raised around USD 10 million cumulatively by June 8, 2023. The figure is preserved as a rounded reported total, not derived from adding rounds."
+verified_at = "2026-10-22T01:34:55Z"
+source_ids = ["ctech_2023"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2019.amount"
+support = "direct"
+summary = "JVP says Opora raised USD 2 million in seed capital through an unidentified private investor in May 2019."
+verified_at = "2026-10-22T01:34:55Z"
+source_ids = ["jvp_2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2019.participating_investors"
+support = "direct"
+summary = "JVP identifies the May 2019 participant only as a private investor and does not name that investor."
+verified_at = "2026-10-22T01:34:55Z"
+source_ids = ["jvp_2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.amount"
+support = "direct"
+summary = "JVP and Globes report a completed USD 7 million seed round in June 2020."
+verified_at = "2026-10-22T01:34:55Z"
+source_ids = ["jvp_2020", "globes_2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.lead_investors"
+support = "direct"
+summary = "JVP and Globes identify Jerusalem Venture Partners as the lead investor in the June 2020 seed."
+verified_at = "2026-10-22T01:34:55Z"
+source_ids = ["jvp_2020", "globes_2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.participating_investors"
+support = "direct"
+summary = "The 2020 announcement says private angel investors participated but does not name them."
+verified_at = "2026-10-22T01:34:55Z"
+source_ids = ["jvp_2020", "globes_2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.employees@2023-06-08.numeric_value"
+support = "direct"
+summary = "CTech reports that Opora employed over 20 people at peak; the numeric lower bound is encoded as 20 with value_relation more_than."
+verified_at = "2026-10-22T01:34:55Z"
+source_ids = ["ctech_2023"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.aliases"
+support = "direct"
+summary = "Globes' June 2023 headline uses the Hebrew company name אופורה for the Israeli cybersecurity business, directly supporting this alias."
+verified_at = "2026-10-22T01:54:26Z"
+source_ids = ["globes_2023"]
+
+[identity_resolution]
+possible_duplicate = "aporia.toml"
+disposition = "distinct_entity"
+resolved_at = "2026-10-22T01:54:26Z"
+evidence_source_ids = ["ctech_2019", "jvp_2020", "opora_domain", "checkid_registry", "aporia_docs", "aporia_acquisition", "israel_innovation_authority_aporia", "aporia_registry_mirror"]
+rationale = "Opora is the cybersecurity business historically associated with opora.io and registered in a secondary mirror as OPORA TECHNOLOGIES LTD, 514756261. The fuzzy-match record concerns Aporia, an ML observability business at aporia.com; a separate secondary Israeli registry mirror lists APORIA TECHNOLOGIES LTD, 516080108. Different products, domains, legal names, and registration numbers support distinct identities. Registry numbers come from secondary mirrors; official certified extracts were not obtained."

@@ -1,46 +1,712 @@
 name = "Sesame Enable"
-description = "Sesame Enable developed camera-based, head-controlled accessibility software for smartphones, tablets, Windows PCs, and hands-free communication. Its official site says the Israeli company shut down in late 2019 but kept its software available for free."
-detailed_description = """
-Sesame Enable built a camera-first human-computer interface for people who could not reliably use touchscreens, a mouse, or a conventional keyboard. Its Open Sesame products tracked head movement through a standard front-facing camera and translated that movement into cursor, tap, and other input events. The official site describes Android and Windows products that control ordinary applications without additional hardware, plus a Sesame Talking Keyboard for hands-free text communication. The core proposition was practical accessibility: use commodity computing hardware and software rather than requiring a dedicated eye tracker or a custom switch installation.
+description = "Sesame Enable built camera-based, head-controlled access products for people with severe motor impairments. The company says it shut down in late 2019 after failing to find a sustainable business model; its Android, Windows, and communication products remain listed as free downloads. Historical support included grants, prizes, and crowdfunding, while no verified current operating team or equity financing terms were found."
+detailed_description = """Sesame Enable was an Israeli assistive-technology company founded by computer-vision developer Oded Ben-Dov and Giora Livne, an electrical engineer who became quadriplegic after an accident. Livne was the first intended user and helped define the product around a concrete access problem: controlling a normal smartphone privately and independently when hands cannot reach a touchscreen. The official site now describes the company as closed in late 2019 because it could not establish a sustainable business model, while continuing to offer its remaining software free.
 
-The primary customer and beneficiary segment was people living with severe motor impairments, including ALS, spinal-cord injury, multiple sclerosis, and other conditions associated with paralysis. Caregivers, occupational therapists, rehabilitation providers, disability organizations, and family members are relevant adoption influencers, even when the end user is the person operating the device. This is a socially important but difficult commercial market: purchasing can depend on clinical recommendation, reimbursement, charitable funding, device compatibility, and support continuity. A free distribution model improves access but does not itself demonstrate recurring revenue, institutional procurement, or a sustainable support organization.
+The core interaction used a device camera and computer-vision tracking to turn small head movements into cursor movement, selection, and touch-like commands. The original Sesame Phone was a modified Google Nexus 5; later products included Open Sesame for Android phones and tablets, a Windows PC version, and the Sesame Talking Keyboard for head-controlled message composition. The listed download pages claim operation without extra tracking hardware. Historical reporting describes voice commands alongside head input. The product therefore sat between a smartphone app and an accessibility input layer: the promise was control across ordinary apps without buying a dedicated eye-tracking system or attaching a special sensor.
 
-Sesame's differentiation was the combination of hands-free control, low hardware requirements, and coverage across more than one operating environment. The tradeoff is that camera-based head tracking generally has to cope with lighting changes, camera placement, posture, occlusion, calibration, fatigue, and unintended motion. It also competes with platform accessibility features such as voice control, switch access, pointer control, and newer camera-based accessibility functions, as well as specialist eye-tracking and augmentative-and-alternative-communication vendors. These substitutes may offer better clinical workflows, reliability, or support even when they cost more.
+The beneficiary was a person with ALS, spinal-cord injury, multiple sclerosis, cerebral palsy, Parkinson’s disease, or another condition that limited hand use but left enough head movement for tracking. Caregivers, rehabilitation staff, disability organizations, device vendors, and public subsidy programs were important routes to adoption. That route produced real but heterogeneous evidence: CBS reported the first 50 phones shipped in 2015; Forbes reported 100 units sold worldwide by February 2016; The Times of Israel later reported more than 1,200 customers globally. Those figures come from interviews and reporting, not audited active-user, revenue, or repeat-purchase data. Distribution through Beit Issie Shapiro and Google’s Go Ahead project and availability through Maryland’s public assistive-telecommunications program show that institutional channels existed, but do not establish that every user was a paying customer or that a recurring contract funded the company.
 
-The current official website remains an important product and evidence surface: it states that the solutions are now free, documents the late-2019 shutdown, and links to Android, Windows, and iOS downloads. That is evidence of continued availability, not evidence of an active company, current maintenance cadence, current users, or commercial traction. No active operating team, current revenue, institutional customer base, funding round, or defense contract is established by the available public evidence. The record should therefore be treated as a historical technology reference and possible reimplementation or asset-diligence lead, rather than as a live startup opportunity.
+Commercially, Sesame tried several delivery paths. Early devices were sold at a reported several-hundred-dollar price, while a later Android app broadened reach and the company discussed subscription software. Public subsidies and nonprofit distribution helped users afford a product whose value is high for an individual but whose market is served through fragmented clinical, family, charitable, and government purchasing. The company’s own closure statement is direct evidence that social need and adoption did not translate into a durable operating model. Public information does not settle the device-level economics, reimbursement coverage, support burden, manufacturing costs, or the degree to which paid sales subsidized free distribution.
 
-The technology has limited but real dual-use adjacency. A robust hands-free interface could be useful in vehicles, industrial settings, accessible emergency communications, or other contexts where manual input is difficult. However, the public product evidence is centered on disability access, not defense or security operations. There is no verified military deployment, ruggedized implementation, secure-system integration, or performance evidence under tactical conditions. Any defense relevance would require substantial new work on reliability, cybersecurity, offline operation, environmental testing, human factors, and integration with approved systems. The strongest strategic interpretation is therefore an accessibility-derived HMI capability with speculative defense spillover, not a defense technology company.
-"""
+The technical advantage was a low-hardware path to broad device control. A front-facing camera is cheaper and more discreet than a dedicated tracker, and the patent record describes tracking a controlling object from sequential image data and translating its trajectory into commands. The tradeoff is dependence on a clear camera view, lighting, stable positioning, calibration, head range, and operating-system access. A camera used for tracking may also be unavailable for ordinary photo or video capture. Specialist eye-gaze systems can cost more but provide purpose-built mounts, AAC software, clinical workflows, and support. Native mobile accessibility features have also expanded: Apple documents head and eye tracking, voice control, and switch control, while Android offers voice and switch access. These alternatives narrow Sesame’s historical product distinction and raise compatibility and maintenance questions for downloads that remain posted after the company closed.
+
+The available public patent record identifies one U.S. grant, US9761009B2, naming Sesame Enable Ltd as assignee and Oded Ben-Dov and Giora Livne as inventors. Google Patents labels it expired for a fee-related reason, while cautioning that its legal-status field is not a legal conclusion. That record is a useful technical and asset-diligence lead, not proof that Sesame still owns enforceable rights or that no other patents, source code, trademarks, or third-party licenses exist. The current legal owner, assignment history after shutdown, and availability of maintainable code are unresolved.
+
+There is limited adjacent use for hands-free interaction in vehicles, industrial workstations, or emergency communication, but the evidence reviewed concerns disability access. Proximity to Walter Reed, veteran-focused hiring language, or a founder’s military service does not establish defense adoption. No public military contract, security deployment, ruggedized product, secure integration, or mission-condition validation was found. The record should therefore be treated as a closed accessibility company and a historical HMI or asset-diligence reference, not as a live startup or defense supplier."""
 logo = "https://static.wixstatic.com/media/4b80c4_2b291551b6d147cbb2bc5a87f7a3e2b3~mv2.png/v1/crop/x_0%2Cy_108%2Cw_1401%2Ch_435/fill/w_300%2Ch_87%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/Sesame_Logo_Horizontal_Large.png"
 website = "https://www.sesame-enable.com"
 sector = "Assistive Technology / Computer Vision"
 founded = "2013"
-headquarters = "Caesarea, Israel"
-employees = "Unknown (organization shut down; no current operating team publicly identified)"
-funding_stage = "Defunct; operations shut down in late 2019; historical seed funding reported; software remains available free"
+headquarters = "Caesarea, Israel; the company opened a former U.S. headquarters in Bethesda, Maryland in 2017."
+employees = "No current team identified; Maryland reported five U.S. employees in 2017."
+funding_stage = "Defunct; historical grant, prize, angel-match, and crowdfunding support reported; no verified current financing."
 entity_type = "defunct_or_wound_down"
 dual_use = false
-dual_use_description = "The underlying camera-based HMI has plausible civilian crossover into vehicle, industrial, and accessible emergency interfaces, but public evidence does not establish substantive defense or security applicability. No military deployment, ruggedized product, secure integration, or mission-specific performance evidence was found; defense use would require significant new engineering and validation."
-key_technologies = ["Real-time camera-based head-pose tracking", "Facial and head-movement gesture recognition", "On-device motion-to-pointer and tap translation", "Android accessibility and touch-input integration", "Windows hands-free cursor control", "Head-controlled augmentative communication keyboard"]
-use_cases = ["Touch-free smartphone and tablet access for people with severe motor impairments", "Hands-free Windows PC access for users unable to operate a mouse or keyboard", "Head-controlled text composition for people who cannot speak or use their hands", "Assistive communication support in home, care, and rehabilitation settings", "Accessible device control for veterans and civilians with mobility injuries", "Exploratory hands-free control in vehicles or industrial workstations where manual input is constrained"]
+dual_use_description = """The commercial application was specific and demonstrated: accessible smartphone, tablet, PC, and communication control for people unable to use their hands. A camera-based hands-free interface could also help in some civilian settings where manual input is difficult, such as accessible emergency communication or constrained industrial interaction. That possibility is an extrapolation from the product capability. The reviewed disclosures do not establish defense or security customers, a military contract, secure-system integration, ruggedization, or performance in tactical conditions. Sesame Enable is therefore classified as not substantively dual-use on the available evidence."""
+key_technologies = ["Front-facing-camera computer vision and head-pose or head-movement tracking", "Trajectory-to-cursor and selection-command mapping", "Software accessibility input for Android phones and tablets", "Windows hands-free cursor control", "Head-controlled augmentative communication keyboard", "Voice-command activation alongside motion input"]
+use_cases = ["Hands-free smartphone and tablet access for people with severe motor impairments", "Windows computer access for people unable to use a mouse or keyboard", "Head-controlled text entry and communication for people who cannot speak or use their hands", "Personal use at home and in rehabilitation or care settings", "Distribution through disability organizations and public assistive-technology subsidy programs", "Possible civilian hands-free interaction where manual input is constrained, subject to new validation"]
 investible = false
-investment_rationale = "This is not an active equity-stage opportunity: the company publicly reports that it shut down in late 2019, and its products are offered free. The technology may merit historical research, reimplementation, licensing, or asset diligence, but there is no verified current team, revenue, financing, customer traction, or operating plan to support a live startup priority signal."
-strategic_value = "Sesame Enable is strategically relevant as an accessibility-derived HMI reference and as a case study in lowering the hardware barrier to computer access. Its residual value would be for an accessibility provider, platform integrator, or HMI researcher assessing algorithms, product lessons, or possible assets; defense relevance is indirect and unvalidated."
-public_sources = ["https://www.sesame-enable.com/", "https://next.obudget.org/i/org/company/514915354", "https://innovationisrael.org.il/article/%D7%A2%D7%9C-%D7%AA%D7%91%D7%95%D7%A0%D7%94-%D7%95%D7%A0%D7%92%D7%99%D7%A9%D7%95%D7%AA/", "https://play.google.com/store/apps/details?hl=en&id=com.sesame.phone_nougat", "https://apps.apple.com/us/app/sesame-talking-keyboard/id1478544364"]
-potential_score = 22.0
-technology_score = 65.0
-market_score = 25.0
-team_score = 10.0
-dual_use_score = 20.0
+investment_rationale = """This is not a current equity opportunity: Sesame Enable’s own site says the company closed in late 2019 and that its remaining solutions were made free. Historical reports document a Verizon $1 million prize, an award from the Genesis Generation Challenge, government support, crowdfunding, and an unnamed angel match, but amounts for early support and crowdfunding conflict and no company-announced lifetime total or financing terms were found. The Google.org $1 million project grant was awarded to Beit Issie Shapiro for a joint distribution and development initiative; it is not counted as capital raised by Sesame Enable. A buyer or researcher would need to confirm current ownership, software rights, patent status, source-code access, and user-support obligations before assigning asset value."""
+strategic_value = """Sesame Enable is strategically useful as a documented case of accessibility-first computer vision moving from a modified handset to a software layer and public distribution channels. Its user-led design, commodity-camera approach, and combination of free distribution with subsidies offer practical lessons for assistive-technology product and procurement design. The record also exposes a hard commercial question: meaningful individual impact, awards, and customer adoption did not prove a repeatable revenue base. Any residual value is conditional on verifiable rights, technical recoverability, and a support plan; the single located patent’s recorded fee status makes current IP diligence especially important."""
+public_sources = [
+  { label = "Sesame Enable official product and closure page", url = "https://www.sesame-enable.com/", description = "Company-stated late-2019 shutdown, free product availability, current product list, and legal-name footer." },
+  { label = "Maryland Department of Commerce: U.S. headquarters", url = "https://commerce.maryland.gov/media/israeli-tech-firm-opens-u-s-headquarters-in-maryland", description = "Government announcement of Bethesda headquarters, five U.S. employees, product release, and Maryland MAT access." },
+  { label = "Startup Nation Finder legacy company profile", url = "https://finder.startupnationcentral.org/company_page/sesame-enable?section=business", description = "Legacy identity, Caesarea location, company number, reported status, and itemized historical support; data last updated in 2020." },
+  { label = "CBS News: first phones and early funding", url = "https://www.cbsnews.com/news/this-smartphone-connects-for-those-with-disabilities/", description = "2015 reporting on shipped phones, matching grant and angel support, Verizon award, Genesis grant, and crowdfunding." },
+  { label = "NoCamels 2014: early grant and product", url = "https://nocamels.com/2014/01/israeli-startup-enables-touch-free-control-of-smart-devices-for-the-disabled/", description = "Early product and reporting on a $200,000 Chief Scientist grant with a required private match." },
+  { label = "NoCamels 2015: funding and crowdfunding", url = "https://nocamels.com/2015/02/sesame-phone-smartphone-disabled/", description = "Reports a $350,000 combined Chief Scientist and angel amount, $38,000 crowdfunding, and Verizon prize." },
+  { label = "Verizon announcement via PR Newswire", url = "https://www.prnewswire.com/news-releases/verizons-1m-powerful-answers-award-winners-boast-solutions-with-potential-to-change-our-world-for-the-better-300029638.html", description = "Verizon names Sesame Enable as the education-category $1 million award winner." },
+  { label = "Genesis Prize Foundation: Genesis Generation Challenge", url = "https://www.genesisprize.org/laureate-initiatives/genesis-generation", description = "Foundation lists Sesame among grant recipients; does not disclose the individual grant amount." },
+  { label = "Indiegogo campaign page", url = "https://www.indiegogo.com/en/projects/odedbendov/sesame-touch-free-smartphone", description = "Original campaign URL linked from contemporaneous reporting; its archived page now exposes little detail." },
+  { label = "BackerKit campaign record", url = "https://www.backerkit.com/projects/sesame-touch-free-smartphone", description = "Campaign tracker records $59,941 and 448 backers for the Indiegogo campaign ending January 6, 2015." },
+  { label = "ABILITY interview with co-founder Oded Ben-Dov", url = "https://abilitycorps.org/sesame-enable/", description = "Interview on origin, computer-vision background, founder roles, user needs, and early product design." },
+  { label = "Israel Innovation Authority 2018-19 report", url = "https://innovationisrael.org.il/en/wp-content/uploads/sites/3/2023/07/Israel-Innovation-Authority-2018-19-Innovation-Report.pdf", description = "Government report documents an Ezertech grant, U.S. subsidies, a New York public-education preference, and the Verizon prize." },
+  { label = "The Times of Israel: 2015 award and crowdfunding", url = "https://www.timesofisrael.com/hands-free-smartphone-opens-worlds-for-disabled/amp/", description = "Contemporaneous report on Verizon, the Chief Scientist grant and angel match, and $38,000 crowdfunding." },
+  { label = "The Times of Israel: reported customers", url = "https://www.timesofisrael.com/hands-free-phone-opens-worlds-for-paralyzed-users/", description = "2016 report that the company had reached more than 1,200 global customers and describes product functionality." },
+  { label = "Forbes: sales and Google project", url = "https://www.forbes.com/sites/elizabethmacbride/2016/02/16/israeli-entrepreneurs-touchless-phones-gain-traction-with-help-from-google/", description = "Interview-based report of 100 units sold, a $1 million Google-funded distribution project, and no profitability in 2016." },
+  { label = "Google Patents US9761009B2", url = "https://patents.google.com/patent/US9761009B2/en", description = "Patent record for motion-tracking control systems, named inventors and assignee, grant date, and qualified fee-related status." },
+  { label = "Apple mobility accessibility support", url = "https://support.apple.com/en-gb/guide/iphone/iph76d37ce7d/27/ios/27", description = "Current Apple documentation lists head tracking, eye tracking, voice control, and switch control for iPhone." },
+  { label = "Android accessibility developer documentation", url = "https://developer.android.com/guide/topics/ui/accessibility/testing?hl=en", description = "Google documentation describes Voice Access and Switch Access as alternative input methods." },
+  { label = "Tobii Dynavox TD I-Series", url = "https://us.tobiidynavox.com/pages/td-i-series", description = "Competitor product information on eye-gaze AAC, outdoor use, communication software, and dedicated hardware." },
+  { label = "IVC legacy company profile", url = "https://www.ivc-online.com/Google-Card?id=EBB2A7B7-4119-E311-924B-00237DE91982&type=1", description = "Legacy profile uses a different former-name and closure description, which could not be reconciled with company and government sources." },
+  { label = "Beit Issie Shapiro annual report", url = "https://kb.beitissie.org.il/digital/my%20catalog/files/assets/common/downloads/publication.pdf", description = "Organization report describes its Google partnership and distribution of Sesame Enable technology through Project Go Ahead." },
+  { label = "Ynet: Go Ahead distribution", url = "https://www.ynet.co.il/articles/0,7340,L-4830743,00.html", description = "Hebrew report says the Google-funded Beit Issie project had distributed the technology to 500 people by July 2016." }
+]
+potential_score = 15
+technology_score = 52
+market_score = 28
+team_score = 18
+dual_use_score = 4
 strategic_alignment_score = 18.0
 stage = "unknown"
-stage_rationale = "The official site states that the company shut down in late 2019, and public Israeli company information describes Sesame Enable Ltd as voluntarily liquidated. The conventional early, mid, and mature startup stages therefore no longer describe an operating entity. The products remain downloadable, but current ownership, maintenance, staffing, and commercialization are not publicly established."
-competitors = ["Tobii Dynavox eye-tracking and AAC products", "Apple and Google built-in accessibility controls", "Windows accessibility and hands-free input features", "EyeTech Digital Systems eye-tracking interfaces", "PRC-Saltillo and other AAC communication systems", "Switch-access and wheelchair-mounted input systems"]
-competitive_edge = "Sesame's historical edge was a software-only, camera-first approach that could control familiar devices without dedicated tracking hardware. That lowered the equipment barrier, but it also left the product exposed to camera, lighting, calibration, and platform-compatibility limitations. The edge is further weakened by native accessibility improvements and by specialist vendors with deeper clinical support, device integration, and reliability evidence."
-risk_factors = ["Defunct operating entity with no verified current team, revenue, funding, or support commitment", "Camera tracking can degrade with lighting variation, occlusion, posture changes, camera placement, and involuntary movement", "Platform dependency and deprecation risk across Android, Windows, and iOS distribution channels", "Assistive-technology procurement is fragmented and may depend on clinical recommendation, reimbursement, and support continuity", "Free distribution provides access but does not establish a sustainable commercialization model", "No public evidence of defense deployment, secure integration, ruggedization, or performance in mission conditions", "Potential privacy and safety concerns from camera-based interaction and unintended input"]
+stage_rationale = """The operating stage no longer applies because the company reports that it shut down in late 2019. Before closure, the product progressed from a modified Nexus phone to Android and Windows downloads, with reported customers and public distribution routes. The site continues to list free software, which proves availability on the site as accessed, not active company operations, current compatibility, maintenance, staff, or support."""
+competitors = ["Apple built-in head tracking, eye tracking, voice control, and switch control", "Google Android Voice Access and Switch Access", "Tobii Dynavox TD I-Series and other eye-gaze AAC systems", "External switch-access devices and other dedicated assistive input systems"]
+competitive_edge = """Sesame’s historical distinction was that it aimed to control ordinary mobile applications with a built-in camera rather than requiring a dedicated eye tracker or custom switch hardware. That made the approach potentially cheaper, less conspicuous, and easier to distribute through standard phones. It did not remove the practical limits of camera placement, lighting, involuntary movement, calibration, fatigue, or operating-system permissions. Apple’s built-in head and eye tracking and voice controls now offer native alternatives; Android’s Voice Access and Switch Access cover voice and external-switch workflows; Tobii Dynavox sells purpose-built eye-gaze communication devices with AAC software and support. Sesame’s differentiation was therefore affordability and broad-app access, while competitors could offer platform integration, clinical workflows, purpose-built hardware, and longer-term support. No comparative reliability or usability benchmark was found."""
+risk_factors = ["The company publicly reports closure in late 2019, leaving no verified operating team or support commitment", "No current owner, post-shutdown assignment, or maintainable source-code access is established", "Reported early grant and angel totals and crowdfunding proceeds conflict; no reliable company-announced lifetime total is available", "No audited revenue, ARR, burn, runway, or paid-versus-subsidized customer breakdown was found", "Camera input depends on lighting, framing, calibration, head mobility, and operating-system permissions", "Current downloads may be incompatible with supported platform versions or unavailable through linked stores", "The located U.S. patent is labeled expired for a fee-related reason by Google Patents, which warns that legal status is not a legal conclusion", "Native Apple and Android accessibility features and specialist AAC vendors create strong substitutes", "No public defense or security deployment, ruggedization, secure integration, or mission-condition validation was found"]
 risk_level = "high"
 signals = []
 priority_rank = 0
-priority_rationale = "Low priority for the active startup database: Sesame Enable has a technically meaningful accessibility product and limited HMI adjacency, but the company is defunct, reportedly voluntarily liquidated, and the public record does not establish a current operating entity or credible defense fit. Retain as a historical technology and possible asset-diligence reference, not as a live priority signal."
+priority_rationale = """Retain Sesame Enable as a historical accessibility and HMI reference, not as a live startup priority. Its camera-based interface reached reported customers and public distribution programs, but the company itself said it could not sustain the business and closed. The unresolved funding totals, current IP ownership, product maintainability, and lack of a supported defense or security use case leave no verified basis for active investment or procurement prioritization."""
 crawled_at = "2026-02-28T17:00:00Z"
-updated_at = "2026-07-31T19:19:44Z"
+updated_at = "2026-10-22T01:21:15Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Oded Ben-Dov", role = "Co-founder and CEO (reported in 2015 and 2017)", is_founder = true, current = false, background = "Computer-vision and gesture-technology developer who had demonstrated gesture-controlled games before adapting the technology to assistive smartphone control; Maryland’s 2017 release describes him as a technology expert who left gaming to build Sesame’s first product.", source_ids = ["ability", "maryland", "cbs"] },
+  { name = "Giora Livne", role = "Co-founder and first user; accessibility and user-needs lead", is_founder = true, current = false, background = "Quadriplegic after a spinal injury, former electrical/high-current engineer and Israeli Navy ship commander, and a Technion graduate. He approached Ben-Dov with the smartphone access problem and served as the first product user.", source_ids = ["ability", "cbs", "maryland"] }
+]
+investors = [
+  { name = "Israel Office of the Chief Scientist", investor_type = "government", website = "https://innovationisrael.org.il/", round_ids = ["early-support-2014"], relationship = "historical", source_ids = ["nocamels2014", "nocamels2015", "cbs", "finder"] },
+  { name = "Israel Innovation Authority", investor_type = "government", website = "https://innovationisrael.org.il/", round_ids = ["ezertech-grant"], relationship = "historical", source_ids = ["iia"] },
+  { name = "Verizon", investor_type = "corporate", website = "https://www.verizon.com/", round_ids = ["verizon-award-2015"], relationship = "historical", source_ids = ["verizon", "cbs", "toi2015"] },
+  { name = "Genesis Generation Challenge", investor_type = "other", website = "https://www.genesisprize.org/laureate-initiatives/genesis-generation", round_ids = ["genesis-grant-2015"], relationship = "historical", source_ids = ["genesis", "cbs"] }
+]
+financials = [
+  { name = "employees", value = "Five U.S. employees reported when the Bethesda headquarters opened", as_of = "2017-11-13", basis = "reported", metric = "employees", numeric_value = 5, value_relation = "exact", unit = "people", source_ids = ["maryland"] },
+  { name = "Profitability status", value = "Forbes reported the company was not yet profitable", as_of = "2016-02-16", basis = "reported", metric = "other", source_ids = ["forbes"] }
+]
+traction = [
+  { kind = "product", description = "CBS reported that Sesame Enable had shipped its first 50 phones; the CEO described the modified smartphone as available for independent use.", date = "2015-05-29", source_ids = ["cbs"] },
+  { kind = "customer", description = "Forbes reported 100 units sold worldwide, based on its interview with the founders. This is a historical sales count, not revenue or a current active-user number.", date = "2016-02-16", source_ids = ["forbes"] },
+  { kind = "customer", description = "The Times of Israel reported more than 1,200 global customers. The article does not define whether this means purchasers, subsidized recipients, or active users, so it should not be read as a paid subscription count.", date = "2016-11-20", source_ids = ["toi2016"] },
+  { kind = "partnership", description = "Project Go Ahead joined Sesame Enable, Google, and Beit Issie Shapiro to develop and distribute hands-free smartphone access in Israel. Contemporary reporting says Google.org’s $1 million grant was awarded to Beit Issie Shapiro for the project, not to Sesame Enable as startup financing.", date = "2016-01", source_ids = ["forbes", "beitissie", "ynet"] },
+  { kind = "customer", description = "Maryland said Open Sesame was available through its Maryland Accessible Telecommunications program and announced the company’s Bethesda U.S. headquarters. This establishes a public access route, not a disclosed contract value or usage count.", date = "2017-11-13", source_ids = ["maryland"] },
+  { kind = "customer", description = "The Israel Innovation Authority’s 2018-19 report says New York City chose Sesame’s product as a preferred solution for children with disabilities in its public education system and notes ongoing discussions with other municipalities and states; it does not establish a signed purchase contract.", source_ids = ["iia"] },
+  { kind = "product", description = "The company’s current site lists free Open Sesame Android, Open Sesame for Windows, and Sesame Talking Keyboard downloads while stating that the company shut down in late 2019. Continued listing is not proof of current support or compatibility.", date = "2019-12", source_ids = ["official"] }
+]
+intellectual_property = [
+  { kind = "patent", description = "U.S. patent US9761009B2, Motion tracking device control systems and methods, lists Sesame Enable Ltd as assignee and Oded Ben-Dov and Giora Livne as inventors; it was granted September 12, 2017. Google Patents currently labels it Expired - Fee Related and states that its status is not a legal conclusion. Verify USPTO status, assignments, and post-shutdown ownership before relying on the asset.", date = "2017-09-12", source_ids = ["patent"] }
+]
+comparables = [
+  { name = "Apple built-in accessibility", website = "https://www.apple.com/accessibility/", rationale = "Apple documents head tracking, eye tracking, voice control, and switch control as built-in iPhone mobility access methods.", differentiation = "Native OS integration can remove the need for a separate third-party app; Sesame historically emphasized head-controlled access across ordinary Android and Windows apps and a dedicated communication keyboard.", source_ids = ["apple"] },
+  { name = "Google Android accessibility", website = "https://www.android.com/accessibility/", rationale = "Android provides Voice Access and Switch Access for people with limited dexterity or difficulty using touch.", differentiation = "These are native voice or switch workflows rather than Sesame’s camera-based head cursor, but they are bundled platform alternatives and reduce dependence on a closed third-party company.", source_ids = ["android"] },
+  { name = "Tobii Dynavox TD I-Series", website = "https://us.tobiidynavox.com/pages/td-i-series", rationale = "A purpose-built eye-gaze AAC device for people with ALS, cerebral palsy, and related conditions, with communication software and outdoor-use claims.", differentiation = "Tobii sells specialized hardware and AAC workflows with support; Sesame’s historical pitch was a cheaper camera-first interface using common phones or PCs, with less evidence of clinical-grade reliability and continuity.", source_ids = ["tobii"] }
+]
+
+[intelligence.company]
+company_id = "il-sesame-enable"
+legal_name = "Sesame Enable Ltd."
+aliases = []
+operating_status = "closed"
+business_model = "Historically sold preconfigured touch-free smartphones and accessibility software, with later app distribution, subscription plans discussed, and public or nonprofit subsidy channels. After the company shut down in late 2019, its official site says remaining products are free to download."
+products = ["Sesame Phone", "Open Sesame! Touch Free Control for Android", "Open Sesame for Windows", "Sesame Talking Keyboard"]
+locations = ["Caesarea, Israel", "Bethesda, Maryland, United States (former U.S. headquarters opened 2017)"]
+founded_on = "2013"
+source_ids = ["official", "finder", "maryland", "iia"]
+notes = "The official site footer identifies Sesame Enable Ltd. Legacy Startup Nation Finder links company number 514915354 to the Israeli Companies Registrar and gives Caesarea as its location. IVC labels the company formerly Success Software Solutions and says it ceased operating in Q1 2023; the former-name relationship and later date are not corroborated and conflict with Sesame’s own late-2019 closure statement."
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number", identifier = "514915354", source_ids = ["finder"], notes = "Legacy Startup Nation Finder links this number to the Israeli Companies Registrar; current registry status was not independently verified." }]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel", "israeli_founders"]
+summary = "Sesame Enable was an Israel-based company headquartered in Caesarea, with Israeli founders Oded Ben-Dov and Giora Livne. The company number is listed in a legacy Israeli startup directory that links to the Companies Registrar."
+as_of = "2026-10-22"
+source_ids = ["maryland", "finder", "official", "ability"]
+
+[intelligence.funding]
+status = "reported"
+summary = """Historical non-equity and mixed support is reported, but no company-announced lifetime funding total or verified priced VC round was found. The early Chief Scientist grant and angel match are reported at $200,000, $215,000, and $350,000 in sources that may describe different scopes; the numeric round amount is therefore withheld. Indiegogo appears as both $38,000 in contemporaneous articles and $59,941 in a campaign tracker, so its amount is also withheld. Separately, Sesame won Verizon’s $1,000,000 prize and CBS reported a $100,000 Genesis Generation Challenge grant. The Innovation Authority later documented an Ezertech grant without amount or award date; it may overlap with earlier government support and is not added to any total. Google.org’s $1,000,000 project grant went to Beit Issie Shapiro, not Sesame Enable, and is recorded as a partnership rather than startup funding. Startup Nation Finder’s $1.22 million total is a legacy directory figure; its itemized $215,000, $59,940, and $1,000,000 entries sum to about $1.275 million and mix grants, a prize, and crowdfunding. No valuation or financing terms are verified."""
+history_status = "partial"
+coverage_through = "2019"
+
+[[intelligence.funding.rounds]]
+id = "early-support-2014"
+round_type = "Chief Scientist grant and matched private angel support"
+instrument = "unknown"
+status = "closed"
+announced_on = "2014"
+amount_status = "conflicting"
+amount_scope = "unknown"
+lead_investors = []
+participating_investors = ["Office of the Chief Scientist of Israel", "Undisclosed private angel investor"]
+source_ids = ["nocamels2014", "nocamels2015", "cbs", "finder", "toi2015"]
+notes = "The sources differ on the amount and on whether the figure refers to the government grant alone or combined grant-and-angel backing. Observations are source reports only and are not added to totals. The private angel is not named, and no ownership percentage or instrument terms were found."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "nocamels-grant-200k"
+amount = 200000
+currency = "USD"
+as_of = "2014"
+source_ids = ["nocamels2014"]
+notes = "NoCamels described a $200,000 Chief Scientist grant and said a private match was required; it did not report the match as already completed in that article."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "cbs-match-215k"
+amount = 215000
+currency = "USD"
+as_of = "2015-05-29"
+source_ids = ["cbs"]
+notes = "CBS reports $215,000 received from a matching grant and an angel investor without allocating the amount between them."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "finder-ocs-215k"
+amount = 215000
+currency = "USD"
+as_of = "2020-02-20"
+source_ids = ["finder"]
+notes = "Legacy Finder lists $215,000 as a May 2013 non-equity Office of the Chief Scientist entry; the record is stale and does not reconcile with press wording."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "nocamels-combined-350k"
+amount = 350000
+currency = "USD"
+as_of = "2015-02"
+source_ids = ["nocamels2015"]
+notes = "NoCamels calls $350,000 investments from the Office of the Chief Scientist together with a private angel investor, without clarifying if this is cumulative or incremental."
+
+[[intelligence.funding.rounds]]
+id = "indiegogo-2014"
+round_type = "Rewards crowdfunding campaign"
+instrument = "unknown"
+status = "closed"
+announced_on = "2014-11"
+closed_on = "2015-01"
+amount_status = "conflicting"
+amount_scope = "unknown"
+lead_investors = []
+participating_investors = []
+source_ids = ["indiegogo", "backerkit", "nocamels2015", "toi2015"]
+notes = "Campaign proceeds were described as funding free phones for people in need, not equity. Contemporary reporting gave $38,000 while the campaign tracker records $59,941 at close; amount is withheld pending reconciliation."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "press-38k"
+amount = 38000
+currency = "USD"
+as_of = "2015-02"
+source_ids = ["nocamels2015", "toi2015"]
+notes = "Contemporaneous reporting described $38,000 raised in the Indiegogo campaign."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "backerkit-59941"
+amount = 59941
+currency = "USD"
+as_of = "2015-01-06"
+source_ids = ["backerkit"]
+notes = "BackerKit’s campaign tracker records $59,941 from 448 backers by campaign end."
+
+[[intelligence.funding.rounds]]
+id = "verizon-award-2015"
+round_type = "Verizon Powerful Answers Award prize"
+instrument = "grant"
+status = "closed"
+announced_on = "2015-02-03"
+amount_status = "reported"
+amount = 1000000
+currency = "USD"
+amount_scope = "unknown"
+lead_investors = []
+participating_investors = ["Verizon"]
+source_ids = ["verizon", "cbs", "toi2015"]
+notes = "Non-dilutive contest prize, not a VC round. Verizon’s announcement names Sesame Enable as a $1 million winner; CBS and Times of Israel describe the award as received."
+
+[[intelligence.funding.rounds]]
+id = "genesis-grant-2015"
+round_type = "Genesis Generation Challenge grant"
+instrument = "grant"
+status = "closed"
+announced_on = "2015"
+amount_status = "reported"
+amount = 100000
+currency = "USD"
+amount_scope = "unknown"
+lead_investors = []
+participating_investors = ["Genesis Generation Challenge"]
+source_ids = ["cbs", "genesis"]
+notes = "CBS reports $100,000 from the Genesis award; the Foundation confirms Sesame was a grant recipient but does not state its individual amount."
+
+[[intelligence.funding.rounds]]
+id = "ezertech-grant"
+round_type = "Israel Innovation Authority Ezertech grant"
+instrument = "grant"
+status = "closed"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+lead_investors = []
+participating_investors = ["Israel Innovation Authority"]
+source_ids = ["iia"]
+notes = "The IIA report says a substantial grant was awarded through Ezertech in collaboration with the National Insurance Institute, but supplies no amount or award date. This may overlap with earlier government support and is not summed."
+
+[intelligence.ownership]
+status = "not_found"
+summary = "No parent company, acquisition, asset sale, public listing, or post-shutdown ownership transfer was found in the reviewed sources. The private cap table and the current legal owner of software and patent rights remain undisclosed or unverified. The company’s stated closure is operational status, not proof that the Israeli legal entity was dissolved."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["official", "finder", "ivc", "patent"]
+deals = []
+holdings = []
+
+[[intelligence.research.sources]]
+id = "official"
+url = "https://www.sesame-enable.com/"
+title = "Sesame Enable"
+publisher = "Sesame Enable"
+kind = "company"
+accessed_at = "2026-10-22T01:17:19Z"
+claims = ["The company says it shut down in late 2019 because a sustainable business model proved difficult.", "The company says its remaining solutions are free and lists Android, Windows, and Sesame Talking Keyboard products.", "The site footer identifies Sesame Enable Ltd."]
+
+[[intelligence.research.sources]]
+id = "maryland"
+url = "https://commerce.maryland.gov/media/israeli-tech-firm-opens-u-s-headquarters-in-maryland"
+title = "Israeli Tech Firm Opens U.S. Headquarters in Maryland"
+publisher = "Maryland Department of Commerce"
+kind = "government"
+accessed_at = "2026-10-22T01:17:19Z"
+published_on = "2017-11-13"
+claims = ["Sesame Enable was an Israel-based firm and opened a Bethesda U.S. headquarters.", "Maryland reported five U.S. employees and planned additional hiring.", "Open Sesame used head movements and voice control and was available through Maryland's MAT program.", "The Android 7 or later app had been released in 2017.", "The founders were Giora Livne and Oded Ben Dov."]
+
+[[intelligence.research.sources]]
+id = "finder"
+url = "https://finder.startupnationcentral.org/company_page/sesame-enable?section=business"
+title = "Sesame Enable — Industrial Technologies"
+publisher = "Startup Nation Finder"
+kind = "directory"
+accessed_at = "2026-10-22T01:17:19Z"
+published_on = "2020-02-20"
+claims = ["The legacy profile lists Caesarea as headquarters, company number 514915354, founding in May 2013, and ceased operations in December 2019.", "The profile lists $215,000 non-equity support, $59,940 crowdfunding, and a $1 million Verizon prize, while displaying a $1.22 million total.", "The profile identifies Giora Livne and Oded Ben-Dov as founders."]
+
+[[intelligence.research.sources]]
+id = "cbs"
+url = "https://www.cbsnews.com/news/this-smartphone-connects-for-those-with-disabilities/"
+title = "This smartphone connects for those with disabilities"
+publisher = "CBS News"
+kind = "media"
+accessed_at = "2026-10-22T01:17:19Z"
+published_on = "2015-05-29"
+claims = ["The CEO said the company had shipped its first 50 phones.", "CBS reported $215,000 from an Israeli Chief Scientist matching grant and an angel investor without allocating the sum.", "CBS reported a $1 million Verizon prize and $100,000 from Michael Bloomberg's Genesis Challenge.", "The company raised crowdfunding for donated devices and sold a preconfigured phone.", "The founders were Oded Ben-Dov and Giora Livne, with Livne as the first user."]
+
+[[intelligence.research.sources]]
+id = "nocamels2014"
+url = "https://nocamels.com/2014/01/israeli-startup-enables-touch-free-control-of-smart-devices-for-the-disabled/"
+title = "Israeli Startups Enables Touch-Free Control Of Smart Devices For The Disabled"
+publisher = "NoCamels"
+kind = "media"
+accessed_at = "2026-10-22T01:17:19Z"
+published_on = "2014-01"
+claims = ["Sesame Enable developed a head-movement-controlled Sesame Reader application.", "The article reports a $200,000 grant from the Israeli Office of the Chief Scientist and says half that amount needed a private match.", "The founders developed the company around a mobility-access problem."]
+
+[[intelligence.research.sources]]
+id = "nocamels2015"
+url = "https://nocamels.com/2015/02/sesame-phone-smartphone-disabled/"
+title = "Sesame Phone Caters To Disabled With Touch-Free Phone"
+publisher = "NoCamels"
+kind = "media"
+accessed_at = "2026-10-22T01:17:19Z"
+published_on = "2015-02"
+claims = ["NoCamels reports $350,000 combined Office of the Chief Scientist and private angel support.", "NoCamels reports $38,000 Indiegogo proceeds.", "Sesame Enable won a $1 million Verizon prize intended for phones for people in need.", "The company described the mobile head-tracking product and a need to reach users through a major operator."]
+
+[[intelligence.research.sources]]
+id = "verizon"
+url = "https://www.prnewswire.com/news-releases/verizons-1m-powerful-answers-award-winners-boast-solutions-with-potential-to-change-our-world-for-the-better-300029638.html"
+title = "Verizon's $1M Powerful Answers Award Winners Boast Solutions with Potential to Change our World for the Better"
+publisher = "Verizon via PR Newswire"
+kind = "investor"
+accessed_at = "2026-10-22T01:17:19Z"
+published_on = "2015-02-03"
+claims = ["Verizon names Sesame Enable the $1 million education-category winner of its Powerful Answers Award.", "The award recognized Sesame's touch-free smartphone and tablet technology for people who could not use touch input."]
+
+[[intelligence.research.sources]]
+id = "genesis"
+url = "https://www.genesisprize.org/laureate-initiatives/genesis-generation"
+title = "Social Entrepreneurship"
+publisher = "Genesis Prize Foundation"
+kind = "investor"
+accessed_at = "2026-10-22T01:17:19Z"
+claims = ["The Foundation lists Sesame as one of nine grant recipients of the Genesis Generation Challenge.", "The page does not disclose Sesame's individual grant amount."]
+
+[[intelligence.research.sources]]
+id = "indiegogo"
+url = "https://www.indiegogo.com/en/projects/odedbendov/sesame-touch-free-smartphone"
+title = "Sesame Touch-Free Smartphone by Oded Ben Dov"
+publisher = "Indiegogo"
+kind = "other"
+accessed_at = "2026-10-22T01:17:19Z"
+claims = ["Contemporaneous reporting links this original Indiegogo campaign to the Sesame Touch-Free Smartphone fundraiser."]
+
+[[intelligence.research.sources]]
+id = "backerkit"
+url = "https://www.backerkit.com/projects/sesame-touch-free-smartphone"
+title = "Track Sesame Touch-Free Smartphone on BackerTracker"
+publisher = "BackerKit"
+kind = "other"
+accessed_at = "2026-10-22T01:17:19Z"
+claims = ["The tracker reports $59,941 from 448 backers on a $30,000 goal, with the campaign ending January 6, 2015."]
+
+[[intelligence.research.sources]]
+id = "ability"
+url = "https://abilitycorps.org/sesame-enable/"
+title = "Sesame Enable"
+publisher = "ABILITY Corps / ABILITY Magazine"
+kind = "media"
+accessed_at = "2026-10-22T01:17:19Z"
+claims = ["Oded Ben-Dov describes prior gesture technology and computer-vision work and how Giora Livne proposed an accessibility use.", "The interview describes Livne as an electrical engineer, former Israeli Navy ship commander, quadriplegic, and Technion graduate.", "The founders describe the use of standard phone cameras and a software-based approach without special tracking hardware."]
+
+[[intelligence.research.sources]]
+id = "iia"
+url = "https://innovationisrael.org.il/en/wp-content/uploads/sites/3/2023/07/Israel-Innovation-Authority-2018-19-Innovation-Report.pdf"
+title = "Israel Innovation Authority 2018-19 Innovation Report"
+publisher = "Israel Innovation Authority"
+kind = "government"
+accessed_at = "2026-10-22T01:17:19Z"
+published_on = "2019"
+claims = ["The IIA says Sesame received a substantial Ezertech grant in collaboration with the National Insurance Institute, without amount or date.", "The report says Sesame won the Verizon $1 million prize and received U.S. government subsidies.", "The report says New York City selected Sesame as a preferred solution for children with disabilities in its public school system and that discussions with other municipalities were under way."]
+
+[[intelligence.research.sources]]
+id = "toi2015"
+url = "https://www.timesofisrael.com/hands-free-smartphone-opens-worlds-for-disabled/amp/"
+title = "Hands-free smartphone opens worlds for disabled"
+publisher = "The Times of Israel / JTA"
+kind = "media"
+accessed_at = "2026-10-22T01:17:19Z"
+published_on = "2015-02-21"
+claims = ["The company won a $1 million Verizon prize.", "The article describes the Office of the Chief Scientist grant matched by an angel investor.", "The article reports $38,000 from crowdfunding used to donate phones.", "The product used the Nexus 5 front-facing camera and computer vision to map head movements to a cursor."]
+
+[[intelligence.research.sources]]
+id = "toi2016"
+url = "https://www.timesofisrael.com/hands-free-phone-opens-worlds-for-paralyzed-users/"
+title = "Hands-free phone opens worlds for paralyzed users"
+publisher = "The Times of Israel"
+kind = "media"
+accessed_at = "2026-10-22T01:17:19Z"
+published_on = "2016-11-20"
+claims = ["The report says Sesame Enable had reached more than 1,200 customers globally by November 2016.", "The article describes Android head-movement control and user feedback as product inputs."]
+
+[[intelligence.research.sources]]
+id = "forbes"
+url = "https://www.forbes.com/sites/elizabethmacbride/2016/02/16/israeli-entrepreneurs-touchless-phones-gain-traction-with-help-from-google/"
+title = "Israeli Entrepreneurs' Touchless Phones Gain Traction With Help From Google"
+publisher = "Forbes"
+kind = "media"
+accessed_at = "2026-10-22T01:17:19Z"
+published_on = "2016-02-16"
+claims = ["Forbes reports 100 units sold worldwide based on founder interviews.", "Forbes reports the company was not yet profitable and planned to sell 1,000 units that year.", "The article describes a $1 million Google-funded distribution project and names Beit Issie Shapiro as distributor."]
+
+[[intelligence.research.sources]]
+id = "patent"
+url = "https://patents.google.com/patent/US9761009B2/en"
+title = "US9761009B2 - Motion tracking device control systems and methods"
+publisher = "Google Patents"
+kind = "filing"
+accessed_at = "2026-10-22T01:17:19Z"
+published_on = "2017-09-12"
+claims = ["US9761009B2 identifies Sesame Enable Ltd as original and current listed assignee and names Oded Ben-Dov and Giora Livne as inventors.", "The patent describes motion tracking and command control using sequential visual data, including smartphone and tablet embodiments.", "Google Patents labels the record Expired - Fee Related but cautions that legal status is an assumption and not a legal conclusion."]
+
+[[intelligence.research.sources]]
+id = "apple"
+url = "https://support.apple.com/en-gb/guide/iphone/iph76d37ce7d/27/ios/27"
+title = "Accessibility features for mobility on iPhone"
+publisher = "Apple Support"
+kind = "other"
+accessed_at = "2026-10-22T01:17:19Z"
+claims = ["Apple documents head tracking, eye tracking, Voice Control, and Switch Control as iPhone mobility access features."]
+
+[[intelligence.research.sources]]
+id = "android"
+url = "https://developer.android.com/guide/topics/ui/accessibility/testing?hl=en"
+title = "Test your app's accessibility"
+publisher = "Android Developers"
+kind = "other"
+accessed_at = "2026-10-22T01:17:19Z"
+claims = ["Google documents Voice Access for spoken device control and Switch Access for input through switches or buttons."]
+
+[[intelligence.research.sources]]
+id = "tobii"
+url = "https://us.tobiidynavox.com/pages/td-i-series"
+title = "TD I-Series eye-tracking speech-generating device"
+publisher = "Tobii Dynavox"
+kind = "other"
+accessed_at = "2026-10-22T01:17:19Z"
+claims = ["Tobii Dynavox describes a purpose-built eye-gaze AAC device with speech software, outdoor use, and multiple access methods."]
+
+[[intelligence.research.sources]]
+id = "ivc"
+url = "https://www.ivc-online.com/Google-Card?id=EBB2A7B7-4119-E311-924B-00237DE91982&type=1"
+title = "Sesame Enable Ltd. - IVC Data & Insights"
+publisher = "IVC Research Center"
+kind = "directory"
+accessed_at = "2026-10-22T01:17:19Z"
+claims = ["The profile labels Sesame Enable formerly Success Software Solutions and says ceased operating Q1 2023, conflicting with the official site’s late-2019 shutdown statement and other identity sources."]
+
+[[intelligence.research.sources]]
+id = "beitissie"
+url = "https://kb.beitissie.org.il/digital/my%20catalog/files/assets/common/downloads/publication.pdf"
+title = "Beit Issie Shapiro annual report: Go Ahead with Google"
+publisher = "Beit Issie Shapiro"
+kind = "customer"
+accessed_at = "2026-10-22T01:17:19Z"
+claims = ["Beit Issie Shapiro describes the 2015 launch of Project Go Ahead with Google and nationwide distribution of Sesame Enable technology."]
+
+[[intelligence.research.sources]]
+id = "ynet"
+url = "https://www.ynet.co.il/articles/0,7340,L-4830743,00.html"
+title = "העתיד עושה לכם עיניים"
+publisher = "Ynet"
+kind = "media"
+accessed_at = "2026-10-22T01:17:19Z"
+published_on = "2016-07-20"
+claims = ["The article says Google funded the Beit Issie Shapiro Go Ahead project with a $1 million grant and reports distribution to 500 people by July 2016."]
+
+[intelligence.research]
+researched_at = "2026-10-22T01:21:15Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "site:sesame-enable.com Sesame Enable company shutdown 2019 free Open Sesame founder",
+  "Sesame Enable raised funding seed investors funding Sesame Enable 2016",
+  "Sesame Enable Ltd voluntary liquidation Israeli company founders funding CTech",
+  "Sesame Enable funding raised seed Series A Series B Series C investors valuation acquired",
+  "Sesame Enable founder CEO revenue customers patents",
+  "Sesame Enable $200,000 $215,000 $350,000 Chief Scientist angel grant",
+  "Sesame Enable Indiegogo $38,000 $59,941 campaign",
+  "Sesame Touch-Free Smartphone BackerKit $59,941 Indiegogo",
+  "Sesame Enable Genesis grant Google.org Verizon $1 million",
+  "ססמי אינייבל גיוס השקעה מימון משקיעים",
+  "Sesame Enable military defense security government contract dual use",
+  "Sesame Enable acquired acquisition asset sale parent company ownership 514915354",
+  "Sesame Enable revenue ARR profitability burn runway customers deployments",
+  "Success Software Solutions Sesame Enable former name",
+  "Sesame Enable US9761009B2 patent camera tracking systems methods",
+  "site:apple.com accessibility eye tracking iPhone iOS hands-free official",
+  "site:android.com accessibility Voice Access Switch Access camera head control official Android",
+  "site:tobiidynavox.com eye tracking speech generating devices product official"
+]
+gaps = [
+  "identity: No current Israeli Companies Authority extract was obtained; IVC's claimed former name Success Software Solutions could not be confirmed and conflicts with other company history fields.",
+  "funding: No company-announced lifetime raised total, verified priced equity round, cap-table terms, or valuation was located. Early grant-and-angel reports conflict at $200,000, $215,000, and $350,000; Indiegogo reporting conflicts at $38,000 versus $59,941; the legacy Finder total does not reconcile with its itemized entries.",
+  "investors: The private angel is unnamed, and no named VC investor, ownership percentage, round terms, or complete investor list was found; named non-equity grant and prize providers are listed separately as historical capital sources.",
+  "team: The founders and historical CEO are identified, and Maryland reported five U.S. employees in 2017, but no current operating team or complete historical employee roster was found.",
+  "ownership: Current legal entity status, private cap table, parent company, and post-shutdown sale or assignment of the business, applications, source code, and patent rights remain unverified; no acquisition or parent was found.",
+  "financials: No dated revenue, ARR, cash, burn, runway, or quantified profitability disclosure was found. Forbes reported the company was not yet profitable in 2016; the only quantified headcount found is five U.S. employees in 2017.",
+  "traction: Historical shipment and customer figures are media-reported and their definitions are unclear; paid, subsidized, donated, active, and repeat users are not separated, and current usage or support levels are unknown.",
+  "intellectual_property: One U.S. patent was identified, but a complete global patent, trademark, software copyright, license, and assignment search was not established. Google Patents' fee-related expiration label needs verification against USPTO records.",
+  "competition: Current platform alternatives are documented, but no comparable performance benchmark, customer win/loss evidence, or post-closure competitive positioning was found.",
+  "dual_use: No public defense or security customer, contract, secure integration, ruggedized product, or mission-condition validation was found; civilian hands-free crossover remains unvalidated."
+]
+conflicts = [
+  "Early Chief Scientist and private angel support: NoCamels reports a $200,000 grant in 2014 and later $350,000 combined government-and-angel support; CBS reports $215,000 from a grant and angel without allocation; legacy Finder lists $215,000 as non-equity support. These may reflect different scopes or a restatement, so the round amount is absent and observations are preserved.",
+  "Indiegogo: NoCamels and The Times of Israel report $38,000, while BackerKit records $59,941 at campaign close. Neither amount is selected as the round amount.",
+  "Legacy funding total: Startup Nation Finder displays $1.22 million, while its itemized lines of $215,000, $59,940, and $1 million total about $1.275 million. The summary is not populated as company-announced lifetime funding.",
+  "Google project funds: Forbes and other reporting describe a $1 million Google-funded project, while Ynet and Beit Issie Shapiro identify Beit Issie as the grant recipient. The grant is not counted as funding raised by Sesame Enable.",
+  "Entity history: IVC labels the company formerly Success Software Solutions and says it ceased operating in Q1 2023, while the company’s site says it shut down in late 2019. The former-name relation and IVC closure date are not adopted as facts."
+]
+diligence_questions = [
+  "Who currently owns Sesame Enable Ltd, its applications, source code, trademarks, and patent rights, and were any of them assigned or licensed after the late-2019 shutdown?",
+  "Can grant, angel, prize, and crowdfunding award documents reconcile the $200,000, $215,000, and $350,000 reports and the $38,000 versus $59,941 Indiegogo totals without double-counting?",
+  "Which historic users were paying customers, subsidy recipients, or donations, and what were the unit economics, support costs, and repeat-use rates across the MAT, Beit Issie, and New York channels?",
+  "Do the linked Android, Windows, and iOS products still install and function on supported devices, and who handles security updates, camera privacy, accessibility testing, and user support?",
+  "Has the U.S. patent expired for nonpayment, been reinstated, or been assigned, and what other global patent, copyright, open-source, or third-party license obligations attach to a potential asset transfer?"
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-22T01:17:19Z"
+next_review_on = "2027-04-22"
+queries = ["site:sesame-enable.com Sesame Enable company shutdown 2019 free Open Sesame founder", "Sesame Enable Ltd voluntary liquidation Israeli company founders funding CTech", "Sesame Enable founded headquarters Israeli company", "Success Software Solutions Sesame Enable former name"]
+source_ids = ["official", "maryland", "finder", "ivc"]
+summary = "Official materials identify Sesame Enable Ltd, products, and late-2019 shutdown; Maryland identifies an Israel-based company and the former Bethesda headquarters. Legacy Finder links the company to Caesarea and Israeli company number 514915354. IVC's former-name claim remains unresolved."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-22T01:17:19Z"
+next_review_on = "2027-04-22"
+queries = ["Sesame Enable raised funding seed investors funding Sesame Enable 2016", "Sesame Enable funding raised seed Series A Series B Series C investors valuation acquired", "Sesame Enable $200,000 $215,000 $350,000 Chief Scientist angel grant", "Sesame Enable Indiegogo $38,000 $59,941 campaign", "Sesame Touch-Free Smartphone BackerKit $59,941 Indiegogo", "Sesame Enable Genesis grant Google.org Verizon $1 million", "ססמי אינייבל גיוס השקעה מימון משקיעים"]
+source_ids = ["nocamels2014", "nocamels2015", "cbs", "finder", "toi2015", "backerkit", "verizon", "genesis", "iia", "forbes", "ynet"]
+summary = "Non-equity awards, grants, and crowdfunding are reported, but early support and campaign totals conflict. No company-announced lifetime total or priced VC round was verified; the Google grant belonged to Beit Issie Shapiro’s project."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T01:17:19Z"
+next_review_on = "2027-04-22"
+queries = ["Sesame Enable investors angel investors venture capital financing", "Sesame Enable funding raised seed Series A Series B Series C investors", "Sesame Enable Chief Scientist Verizon Genesis grant investors"]
+source_ids = ["nocamels2014", "nocamels2015", "cbs", "verizon", "genesis", "finder"]
+summary = "Historical government grantors, Verizon, and the Genesis Generation Challenge are identified. Sources mention an unnamed private angel; no named VC or disclosed cap table was located."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-22T01:17:19Z"
+next_review_on = "2027-04-22"
+queries = ["Sesame Enable founder CEO revenue customers patents", "Sesame Enable founders executive team Oded Ben-Dov Giora Livne background", "Sesame Enable Maryland five employees 2017"]
+source_ids = ["ability", "maryland", "cbs", "toi2016", "finder"]
+summary = "The two founders and historical CEO Oded Ben-Dov are documented. The source record is insufficient to establish current staff or a complete historical roster; Maryland reported five U.S. employees in 2017."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "not_found"
+checked_at = "2026-10-22T01:17:19Z"
+next_review_on = "2027-04-22"
+queries = ["Sesame Enable acquired acquisition asset sale parent company ownership 514915354", "Sesame Enable Ltd Israeli company status registry liquidation", "Sesame Enable patent assignment ownership after shutdown"]
+source_ids = ["official", "finder", "ivc", "patent"]
+summary = "No parent, acquisition, or post-shutdown asset transfer was located. The private cap table and current legal status of the entity and IP remain unresolved."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-22T01:17:19Z"
+next_review_on = "2027-04-22"
+queries = ["Sesame Enable revenue ARR profitability burn runway customers deployments", "Sesame Enable company revenue profitability not profitable 2016", "Sesame Enable five employees U.S. headquarters Maryland 2017"]
+source_ids = ["forbes", "maryland", "cbs", "finder"]
+summary = "Forbes reported the company was not profitable in 2016; Maryland reported five U.S. employees in 2017. No revenue, ARR, cash, burn, or runway figures were found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-22T01:17:19Z"
+next_review_on = "2027-04-22"
+queries = ["Sesame Enable customers users phones shipped 2015 2016", "Sesame Enable Maryland MAT program government subsidy", "Sesame Enable Google Beit Issie Shapiro Go Ahead 500 users", "Sesame Enable New York public schools preferred solution"]
+source_ids = ["cbs", "forbes", "toi2016", "maryland", "iia", "beitissie", "ynet"]
+summary = "Historical shipment and customer counts, public distribution projects, and state access routes are documented, but sources do not separate paid, subsidized, donated, and active users or show current adoption."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-22T01:17:19Z"
+next_review_on = "2027-04-22"
+queries = ["Sesame Enable patents head tracking motion tracking patent", "Sesame Enable US9761009B2 patent camera tracking systems methods", "Sesame Enable WIPO PATENTSCOPE USPTO patents"]
+source_ids = ["patent", "iia"]
+summary = "One U.S. patent grant is identified, with the company listed as assignee. A complete portfolio and post-shutdown ownership review was not established; Google Patents’ fee-related status is explicitly non-final legal information."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T01:17:19Z"
+next_review_on = "2027-04-22"
+queries = ["site:apple.com accessibility eye tracking iPhone iOS hands-free official", "site:android.com accessibility Voice Access Switch Access camera head control official Android", "site:tobiidynavox.com eye tracking speech generating devices product official", "Sesame Enable competitors Umoove Tobii SmartNav head tracking AAC"]
+source_ids = ["apple", "android", "tobii", "ability"]
+summary = "Current platform accessibility features and a purpose-built eye-gaze AAC system provide specific alternatives. No head-to-head usability, reliability, or sales win/loss data was located."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T01:17:19Z"
+next_review_on = "2027-04-22"
+queries = ["Sesame Enable military defense security government contract dual use", "Sesame Enable defense security deployment ruggedized secure integration", "Sesame Enable Walter Reed veterans military product contract"]
+source_ids = ["official", "maryland", "iia", "patent"]
+summary = "The public product evidence is civilian accessibility. The reviewed sources do not disclose a defense or security contract, deployment, ruggedized version, or secure integration; proximity to a military medical center and veteran-focused support are not treated as defense sales."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The official company site explicitly says the company shut down in late 2019."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["official"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Maryland describes Sesame Enable as Israel-based, the legacy company profile locates it in Caesarea and links an Israeli company number, and the company site identifies its Israeli founders and Ltd. identity."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["maryland", "finder", "official"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.early-support-2014.amount_observations.nocamels-grant-200k.amount"
+support = "direct"
+summary = "NoCamels reported a $200,000 Office of the Chief Scientist grant and a required private match."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["nocamels2014"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.early-support-2014.amount_observations.cbs-match-215k.amount"
+support = "direct"
+summary = "CBS reported $215,000 received from a matching grant and angel investor without separating their shares."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["cbs"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.early-support-2014.amount_observations.finder-ocs-215k.amount"
+support = "direct"
+summary = "The legacy Finder itemizes a $215,000 May 2013 non-equity Office of the Chief Scientist entry."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["finder"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.early-support-2014.amount_observations.nocamels-combined-350k.amount"
+support = "direct"
+summary = "NoCamels reported $350,000 in Office of the Chief Scientist and private angel investments, without clarifying whether combined support was cumulative or incremental."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["nocamels2015"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.early-support-2014.participating_investors"
+support = "direct"
+summary = "Contemporaneous reports identify the Office of the Chief Scientist and an unnamed private angel as sources of matched support."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["nocamels2014", "nocamels2015", "cbs"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.indiegogo-2014.amount_observations.press-38k.amount"
+support = "direct"
+summary = "NoCamels and The Times of Israel each report $38,000 from the Indiegogo campaign."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["nocamels2015", "toi2015"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.indiegogo-2014.amount_observations.backerkit-59941.amount"
+support = "direct"
+summary = "BackerKit records $59,941 raised at campaign close."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["backerkit"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.verizon-award-2015.amount"
+support = "direct"
+summary = "Verizon’s announcement names Sesame Enable as a $1,000,000 Powerful Answers Award winner."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["verizon"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.verizon-award-2015.participating_investors"
+support = "direct"
+summary = "Verizon’s own contest announcement identifies Verizon as the award provider."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["verizon"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.genesis-grant-2015.amount"
+support = "direct"
+summary = "CBS reports a $100,000 grant from the Genesis award; the foundation confirms Sesame was a recipient but does not give an individual amount."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["cbs"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.genesis-grant-2015.participating_investors"
+support = "direct"
+summary = "The Genesis Prize Foundation lists Sesame as a grant recipient in the Genesis Generation Challenge."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["genesis"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.ezertech-grant.participating_investors"
+support = "direct"
+summary = "The Israel Innovation Authority report says it awarded the Ezertech grant in collaboration with the National Insurance Institute."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["iia"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.employees@2017-11-13.numeric_value"
+support = "direct"
+summary = "Maryland reported that the company had five employees in the United States when it opened its Bethesda headquarters."
+verified_at = "2026-10-22T01:17:19Z"
+source_ids = ["maryland"]

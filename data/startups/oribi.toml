@@ -1,83 +1,1000 @@
 name = "Oribi"
-description = "Oribi was an Israeli marketing-analytics company whose no-code Magic Events technology converted raw website interactions into structured events, customer journeys, and attribution insights. LinkedIn announced its acquisition in February 2022; the standalone product and website are not currently verifiable, so Oribi is best analyzed as an acquired product and technology asset rather than an independent startup."
+description = "Oribi Systems Ltd. was a Tel Aviv marketing-analytics startup founded in 2015 by Iris Shoor. Its Magic Events product automatically turned website interactions into named events, customer journeys, and marketing attribution data without conventional manual event tagging. LinkedIn agreed to acquire Oribi in February 2022, and later disclosures say the technology was integrated into LinkedIn Marketing Solutions; Oribi is an acquired asset, not an independent startup today."
 detailed_description = """
-Oribi built a no-code customer-data and marketing-analytics layer around its Magic Events technology. The product automatically collected website interactions and used models and rules to turn clicks, page views, form submissions, and other behavioral signals into named events without requiring a developer to hand-tag every action. Those events supported journey analysis, conversion funnels, audiences, and attribution. The important technical proposition was not simply another dashboard; it was reducing the implementation and taxonomy work between raw browser telemetry and a business-readable event model.
+Oribi Systems Ltd. built a B2B website analytics product for marketing and growth teams that wanted answers about conversions and campaign performance without maintaining a developer-owned event taxonomy. Contemporary Israeli reporting dates its founding to October 2015 and places it in Tel Aviv. LinkedIn’s company profile later labels the company as founded in 2016, so the earlier 2015 date is used here with the profile discrepancy preserved. The historical legal name appears as Oribi Systems Ltd. in founder-authored and company-database material; CTech also used the shorter Oribi Ltd. name.
 
-The target customer was a marketing or growth team that needed more than page-view reporting but lacked the engineering capacity or appetite for a lengthy analytics implementation. Oribi's lower-friction setup addressed a genuine operational pain: event schemas decay, tags are inconsistently maintained, and attribution data is difficult to reconcile with campaign decisions. The market was nevertheless crowded with Google Analytics, Adobe Analytics, product-analytics vendors, tag-management systems, and newer warehouse-based customer-data platforms. Automatic event inference could improve time to value, but it also made explainability and data-quality controls especially important.
+The product’s distinctive layer was Magic Events. Oribi described a lightweight web installation that collected interactions and used algorithms or models to infer meaningful events from otherwise unstructured behavior. The user-facing output was a customer-data layer: event labels, conversion goals, funnels, journey views, audience groupings, and channel attribution that a marketer could work with in a visual interface. The company profile claimed that Magic Events could expand the amount of customer data tenfold and create a customer data layer within hours; those are company claims, not independent performance measurements. The commercial promise was implementation speed and accessibility, not a new analytics category: turn browser events into a usable marketing vocabulary and make channel and visitor behavior legible to non-specialists.
 
-LinkedIn's official announcement said it had entered an agreement to acquire Oribi to accelerate attribution capabilities, with Oribi's technology intended for integration into LinkedIn's marketing solutions. LinkedIn's company profile records Oribi as founded in 2016, headquartered in Tel Aviv, and in the 51-200 employee range. These are useful identity and scale signals, but they are not evidence of current standalone operations, current product availability, or a continuing Oribi roadmap. The acquisition validates that a large platform saw strategic value in the technology and team; undisclosed terms and limited public operating metrics constrain a deeper return or traction assessment.
+That workflow addressed a real operating cost. Hand-built tracking plans require engineering time, documentation, quality checks, and ongoing repair when sites change. Oribi’s approach aimed to shorten that setup and make questions possible after installation, when a marketer noticed a new behavior or funnel. Founder Iris Shoor described an early product evolution from Facebook-ad analytics toward broader website and marketing analysis. In 2016 reporting, Oribi was in open beta and said to have reached about 2,500 small companies; this is beta-use evidence, not 2,500 paying customers. In 2019, CTech named Audi and Crowne Plaza among customers and also mentioned government agencies without naming them or describing contracts. By February 2021, CTech reported 1,000 subscribed customers and a Facebook collaboration selection. The same article described the Facebook relationship only at a high level, so it should not be read as a paid contract or production deployment. Globes quoted Shoor as saying thousands of customers had replaced Google Analytics, a broader company assertion that is not directly comparable to CTech’s subscribed-customer count.
 
-Its competitive edge was workflow compression: infer useful events, make them queryable, and present them in a marketing context with less manual instrumentation. That advantage was vulnerable to bundling by large analytics suites, open-source and warehouse-native alternatives, and the difficulty of proving that inferred events are complete and semantically correct. Browser privacy controls, consent requirements, ad-blocking, and the shift toward first-party data also affect the observable signal. The product therefore illustrates a valuable pattern in applied machine learning, but not an enduring moat that can be assumed after integration into LinkedIn.
+The funding record shows a reported $5.4 million first round in 2016, a $7 million Series A in February 2019, and a $15.5 million Series B in February 2021. Oribi’s February 2021 press release gave its cumulative funding as $27 million; the disclosed priced-round amounts sum to $27.9 million, a discrepancy that the sources do not reconcile. IVC’s public profile also lists a 2019 non-equity accelerator-assistance entry and a July 2021 Series C SAFE. Dealroom assigns $4.5 million to the latter and displays a $77.5 million valuation, but no company announcement or underlying terms were found; the amount is retained as a secondary-database report, while valuation fields remain blank because the basis and pre/post-money meaning are not stated. Acquisition-era media continued to describe Oribi’s raised capital as roughly $27 million to just under $28 million, so there is no reliable company-announced lifetime total after February 2021.
 
-The national-security case is limited and indirect. Event extraction, journey reconstruction, and anomaly-oriented analysis can inform OSINT or cyber-intelligence tooling, but Oribi's documented product was designed for consented commercial web analytics and marketing attribution, not classified data, endpoint telemetry, threat detection, or mission systems. Any security adaptation would require new collection controls, privacy and legal review, analyst workflows, and validation against adversarial or incomplete data. It should therefore be treated as a commercial analytics acquisition with modest transferable methods, not as a defense technology company. Current web research also needs disambiguation: the live Oribi site at oribi.ai describes a separate Spaaza Technologies BV retail-analytics product, not the acquired Tel Aviv company.
+Oribi’s competitive claim was the combination of automatically discovered events, low-friction installation, and marketing-oriented interpretation. Google Analytics was a direct substitute for web and channel measurement; current Google documentation describes event-based analytics and data-driven attribution. Heap is the closest technical analogue in automatic behavioral capture and retroactive event definition, while Mixpanel overlaps in event analysis, funnels, campaign reports, and paid multi-touch attribution. Adobe Customer Journey Analytics addresses larger enterprise teams with cross-channel data integration and attribution. Dreamdata works further down the B2B revenue stack by joining web behavior with CRM and account data. Oribi’s intended distinction was a friendlier, more automatic marketing workflow for SMB and mid-market users. Its narrowness could aid adoption, but the features were reproducible and the larger suites could bundle them into products with broader identity, data-governance, and advertising integrations.
+
+The technical risk follows directly from the product design. Inferred events save instrumentation effort, but customers still need to know which page element or behavior produced an event, whether a site redesign broke its meaning, and whether a model’s inferred category matches the business definition of a conversion. More captured behavior can increase the data available for analysis while also increasing noise, review burden, and exposure to consent or retention limits. Browser privacy settings, ad blocking, consent choices, and changes in identifier availability can make the event stream incomplete. LinkedIn’s acquisition announcement emphasized privacy-first attribution and existing data controls, but public sources do not document Oribi’s internal consent architecture, audit controls, or independent security certifications. No Oribi-assigned patent family was identified in the targeted public searches; that does not establish that no trade secrets or other protectable know-how existed.
+
+LinkedIn announced an agreement to acquire Oribi on February 28, 2022, saying it intended to integrate the technology into Marketing Solutions to improve campaign attribution. A Microsoft SEC proxy later listed Oribi Systems Ltd. among businesses acquired in fiscal 2022. Shoor’s 2024 LinkedIn post says the product and technology became part of LinkedIn’s advertising platform and that integration exceeded its goals. These are meaningful commercialization and integration signals, but they do not prove which Oribi features remain live as a distinct product or how much incremental value they generate today. LinkedIn never disclosed the price. Contemporary reports estimated about $80–90 million, while a Globes interview rounded the transaction to about $100 million; the amount therefore remains unreported in the structured deal record. Calcalist reported that customer-facing teams were largely laid off after the deal and that roughly 50 people remained in the LinkedIn-Israel operation. In August 2026, Calcalist reported that LinkedIn was ending most of that R&D operation; this describes a later organizational change, not a documented sunset of Oribi-derived features.
+
+Shoor was the public founder and CEO. She had founded Takipi/OverOps and Visual Tao before Oribi; Visual Tao was acquired by Autodesk. LinkedIn expected her and several Oribi colleagues to join its Tel Aviv office, and her later account describes leading the product through acquisition and integration before leaving LinkedIn in 2024. Public records disagree about other co-founders: IVC lists Avishai Bitton, while the legacy Startup Nation Finder profile lists Oren Shuster. The record therefore names only Shoor until a primary company or registry source resolves the discrepancy. Contemporary headcount reports also vary: 12 employees in February 2019, 30 in one February 2021 story, 40 in another the next day, and approximately 50 around acquisition. These figures are dated media reports, not audited staffing data.
+
+For investors, Oribi’s 2016 round named Sequoia Capital, TLV Partners, and angel Zohar Gilon; the 2019 round was led by S Capital with Sequoia and TLV Partners participating; Ibex Investors led the 2021 Series B with MoreTech and returning investors. Investor portfolio pages corroborate Oribi’s historical relationship with TLV Partners and Ibex. Private ownership percentages, the detailed cap table, post-acquisition asset title, financial performance, and revenue or retention metrics are not public in the sources reviewed.
+
+The dual-use case is weak and indirect. Event classification and journey analysis are general data-processing methods that might be adapted to authorized digital-service analytics, but Oribi’s documented product was designed for commercial website behavior and marketing attribution. No public evidence was found of a defense, intelligence, or cybersecurity product, contract, deployment, certification, or customer. The 2019 report’s unnamed government-agency customer category is not enough to establish a security or defense use. Adapting the technology for such work would require a distinct collection model, privacy and legal controls, adversarial-data validation, and operational security features. Oribi should therefore be treated as a commercially validated analytics acquisition and an example of low-code event inference, not as a defense technology company or a current investment opportunity.
 """
 logo = "https://media.licdn.com/dms/image/v2/C4E0BAQH95HC29bOJLw/company-logo_200_200/company-logo_200_200/0/1641229254278/oribi_logo?e=2147483647&t=zkeBhe4lrlyHL_ijp1kW4eHVuSOeVeppMx3nobHTHzQ&v=beta"
 website = "Unknown"
-sector = "Marketing Analytics / AI"
-founded = "2016"
+sector = "Marketing Analytics / Web Analytics"
+founded = "2015"
 headquarters = "Tel Aviv, Israel"
-employees = "51-200"
+employees = "Approximately 50 at acquisition (reported, 2022)"
 funding_stage = "Acquired"
 entity_type = "acquired_asset"
 dual_use = false
-dual_use_description = "Oribi's event inference and behavioral analytics methods have limited indirect relevance to OSINT or cyber-intelligence data processing, but the documented product served consented commercial marketing analytics and was not built for defense, security operations, or adversarial environments."
+dual_use_description = "Oribi's event inference and customer-journey methods have only indirect, generic relevance to authorized data analysis. Its documented product served commercial marketing analytics; no defense, intelligence, or cybersecurity deployment was found."
 key_technologies = [
-  "Automatic event inference from raw web interactions",
-  "No-code customer journey analytics",
-  "Multi-touch attribution and conversion analysis",
-  "Behavioral clustering and funnel reconstruction",
-  "Machine-learning-based signal classification",
-  "Marketing data normalization layer",
-  "Insight generation for non-technical users"
+  "Magic Events automatic event inference from website interactions",
+  "No-code web event collection and tagging",
+  "Customer data layer and behavioral event normalization",
+  "Conversion funnel and customer-journey analysis",
+  "Marketing-channel attribution and campaign measurement",
+  "Behavior-based audience construction",
+  "Algorithmic insights for non-technical marketing users"
 ]
 use_cases = [
-  "Website conversion and funnel optimization",
-  "Campaign attribution and ROI analysis",
-  "Customer journey mapping across sessions and events",
-  "No-code analytics setup for growth teams",
-  "Web telemetry normalization for OSINT-style analysis",
-  "Open-source influence and narrative monitoring from public web signals",
-  "Cyber threat intelligence support through public web behavior analysis"
+  "Discovering and naming website interactions without manual event tags",
+  "Measuring conversion funnels and visitor journeys",
+  "Attributing website conversions to marketing channels and campaigns",
+  "Building audiences from website behavior",
+  "Helping SMB and mid-market marketing teams evaluate campaign ROI",
+  "Exporting behavioral data to advertising and marketing tools"
 ]
 investible = false
-investment_rationale = "Oribi is not a current investible startup record: LinkedIn announced its acquisition in 2022 and intended to integrate the technology into its marketing solutions. The acquisition is evidence of commercial and strategic validation, but there is no independent company, equity opportunity, or current product roadmap to assess. Any technology-transfer thesis would require substantial new engineering and security validation."
-strategic_value = "The asset is useful as a reference case for automated event extraction, no-code instrumentation, and attribution workflows. Its strategic value to a dual-use database is limited because the original collection model and customer context were commercial, privacy-sensitive, and non-adversarial. The main diligence question is what capabilities survived integration into LinkedIn, not whether Oribi remains an independent platform."
+investment_rationale = "Oribi is not an independent investment opportunity: LinkedIn acquired the company and integrated its product and technology into its marketing platform. The acquisition and reported subscription base validate a real commercial problem and an attractive low-friction product approach, but undisclosed price and terms, absent audited revenue or retention data, and uncertain post-acquisition product status prevent a return analysis. The 2021 SAFE entry and total-funding figures also need primary-document reconciliation."
+strategic_value = "Oribi is strategically relevant as a case study in converting unstructured web events into usable marketing measurements and in acquiring a product team to accelerate attribution capabilities. LinkedIn’s founder-reported integration into advertising products shows the technology was operationally absorbed. The current value is therefore embedded in LinkedIn’s product and engineering history; no standalone Oribi asset or transfer opportunity is public."
 public_sources = [
-  { title = "LinkedIn company profile for Oribi", url = "https://www.linkedin.com/company/oribi", note = "Company description, product positioning, founded year, headquarters, employee range, and historical website reference." },
-  { title = "LinkedIn acquisition announcement", url = "https://news.linkedin.com/2022/february/acquisition-of-oribi?src=bl-po", note = "Official announcement of the acquisition and intended integration of Oribi technology into LinkedIn marketing solutions." },
-  { title = "LinkedIn product and attribution announcement", url = "https://www.linkedin.com/business/marketing/blog/linkedin-ads/helping-customers-build-smarter-campaigns-with-a-new-investment-in-marketing-attribution-technology", note = "Official description of automated tags, code-free technology, attribution goals, privacy commitments, and intended customer benefits." },
-  { title = "Oribi.ai / Spaaza product site", url = "https://oribi.ai/", note = "Current site for a separate Spaaza Technologies BV retail-analytics product; used to disambiguate it from the acquired Tel Aviv marketing-analytics company and not as Oribi's canonical website." }
+  { label = "Oribi LinkedIn company profile", url = "https://www.linkedin.com/company/oribi/", description = "Historical Magic Events product description, Tel Aviv location, and LinkedIn-acquired identity." },
+  { label = "LinkedIn acquisition announcement", url = "https://news.linkedin.com/2022/february/acquisition-of-oribi?src=bl-po", description = "Official acquisition agreement, Tel Aviv office plan, intended attribution integration, and terms undisclosed." },
+  { label = "LinkedIn marketing attribution announcement", url = "https://www.linkedin.com/business/marketing/blog/linkedin-ads/helping-customers-build-smarter-campaigns-with-a-new-investment-in-marketing-attribution-technology", description = "Official product rationale, automated tags, code-free conversion measurement, privacy commitments, and team plans." },
+  { label = "Iris Shoor on Oribi's first financing", url = "https://medium.com/@irisshoor/how-we-raised-5-4-million-for-our-startup-2d69c8644c72", description = "Founder account of the 2016 $5.4 million round, investors, and early product direction." },
+  { label = "Calcalist on Oribi's first round", url = "https://www.calcalist.co.il/local/articles/0,7340,L-3689622,00.html", description = "2016 round, Tel Aviv founding context, open beta, and early product description." },
+  { label = "CTech on Oribi's $7 million round", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3757153,00.html", description = "2019 round amount and investors, customers cited, and 12-person headcount." },
+  { label = "Geektime on Oribi's 2019 round", url = "https://www.geektime.co.il/oribi-raises-7m/", description = "October 2015 founding date, 2019 investor announcement, company-reported customer growth, and founder background." },
+  { label = "CTech on Oribi's Series B and customers", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3894318,00.html", description = "Series B amount and investors, 1,000 subscribed customers, Facebook collaboration selection, and 30-person headcount." },
+  { label = "Globes on Oribi's Series B", url = "https://en.globes.co.il/en/article-oribi-raises-155m-to-compete-with-google-analytics-1001361146", description = "Series B, reported cumulative funding, 40-person headcount, and founder-reported customer claims." },
+  { label = "Oribi company press release via Access Newswire", url = "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/oribi-raises-15.5m-for-its-no-code-marketing-analytics-630243", description = "Company-announced Series B and $27 million cumulative funding figure as of February 2021." },
+  { label = "TechCrunch on LinkedIn's acquisition", url = "https://techcrunch.com/2022/02/28/linkedin-acquires-israeli-web-analytics-startup-oribi-to-expand-its-marketing-technology/", description = "Acquisition completion reporting, estimated transaction value range, and acquisition-era funding context." },
+  { label = "Calcalist on LinkedIn's Oribi acquisition", url = "https://www.calcalist.co.il/calcalistech/article/s1tygx5gq", description = "Acquisition estimate, integration rationale, investor list, and Tel Aviv office plan." },
+  { label = "Globes interview on Oribi's sale", url = "https://www.globes.co.il/news/article.aspx?did=1001403995", description = "Founder account of sale rationale, approximate sale value, and reported team size." },
+  { label = "Calcalist on post-acquisition staffing", url = "https://www.calcalist.co.il/calcalistech/article/rygre8mz9", description = "Post-acquisition customer-team layoffs and estimated LinkedIn-Israel headcount." },
+  { label = "Microsoft 2022 proxy statement", url = "https://www.sec.gov/Archives/edgar/data/789019/000119312522270484/d318171ddef14a1.pdf", description = "SEC filing lists Oribi Systems Ltd. among businesses acquired in fiscal 2022." },
+  { label = "Iris Shoor on Oribi's LinkedIn integration", url = "https://www.linkedin.com/posts/irisshoor_thursday-was-my-last-day-at-linkedin-this-activity-7200427889836625920-1XIu", description = "Founder account that Oribi's technology and product became part of LinkedIn's advertising platform; post-acquisition departure." },
+  { label = "CTech on LinkedIn's 2026 Israel R&D changes", url = "https://www.calcalistech.com/ctechnews/article/rjrwxydizg", description = "Recent report on the LinkedIn Israel R&D closure and the prior integration of Oribi technology." },
+  { label = "Startup Nation Finder Oribi profile", url = "https://finder.startupnationcentral.org/company_page/oribi", description = "Legacy directory record, last updated in 2022, used for its reported company number and one conflicting co-founder entry." },
+  { label = "IVC Oribi Systems profile", url = "https://www.ivc-online.com/Google-Card?id=2C12F8DD-4151-E511-BD22-80C16E7D3630&type=1", description = "Company identity and historical database entries for a 2019 non-equity assistance event and July 2021 SAFE round." },
+  { label = "Dealroom Oribi profile", url = "https://app.dealroom.co/companies/oribi", description = "Secondary database entry for the July 2021 Series C amount and valuation; fields lack underlying transaction documentation." },
+  { label = "TLV Partners portfolio", url = "https://www.tlv.partners/portfolio/", description = "Investor's portfolio page identifies Oribi as a historical marketing analytics portfolio company." },
+  { label = "Ibex Investors private portfolio", url = "https://www.ibexinvestors.com/private-portfolio", description = "Investor's current portfolio page lists Oribi as a historical portfolio company." },
+  { label = "Spaaza's Oribi.ai product page", url = "https://www.spaaza.com/products/oribi-ai/", description = "Disambiguates the current Spaaza retail-data product named Oribi.ai from the acquired Tel Aviv company." },
+  { label = "Heap Autocapture", url = "https://www.heap.io/platform/autocapture", description = "Official product description for a close automatic event-capture and behavioral analytics competitor." },
+  { label = "Google Analytics attribution help", url = "https://support.google.com/analytics/answer/10596866?KBOpenTab=undefined", description = "Official current documentation for event attribution and data-driven attribution models." },
+  { label = "Dreamdata B2B attribution", url = "https://dreamdata.io/b2b-attribution", description = "Official product explanation of CRM and account-level B2B attribution workflows." },
+  { label = "Mixpanel pricing and features", url = "https://mixpanel.com/pricing/", description = "Official feature list for event analytics, funnels, campaign reporting, and multi-touch attribution." },
+  { label = "Adobe attribution overview", url = "https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-workspace/attribution/overview", description = "Official enterprise customer-journey and marketing attribution feature description." }
 ]
-potential_score = 35.0
+potential_score = 28.0
 technology_score = 72.0
 market_score = 58.0
-team_score = 62.0
-dual_use_score = 18.0
-strategic_alignment_score = 14.0
+team_score = 65.0
+dual_use_score = 12.0
+strategic_alignment_score = 17.0
 stage = "mature"
-stage_rationale = "LinkedIn announced the acquisition in February 2022 after Oribi had operated since 2016. The record is therefore mature and product-validated, but the independent venture stage has ended. LinkedIn's current profile retains historical company data but shows only a small set of visible employees, and no current standalone product or roadmap can be confirmed; present status should be attributed to LinkedIn rather than inferred from the historical startup profile."
-competitors = [
-  "Google Analytics",
-  "Amplitude",
-  "Mixpanel",
-  "Heap",
-  "Adobe Analytics",
-  "Piwik PRO"
-]
-competitive_edge = "Oribi's edge was the combination of automatic event inference, no-code setup, and marketing-oriented attribution in one workflow. This reduced implementation friction and shortened time to insight, but it was exposed to incumbent bundling, competing warehouse-native architectures, and the trust problem created when inferred events are difficult to audit."
+stage_rationale = "Oribi operated from 2015 until its 2022 acquisition, reached a reported subscription customer base, and had its technology and team integrated into LinkedIn. The independent company and product are no longer a current investment-stage startup. Post-acquisition feature continuity and the status of LinkedIn's Israeli R&D operation are not equivalent questions; the latter was reported to be winding down in 2026."
+competitors = ["Google Analytics", "Heap", "Mixpanel", "Adobe Customer Journey Analytics", "Dreamdata"]
+competitive_edge = "Oribi's strongest product advantage was workflow compression: a lightweight installation, automatic event discovery, and marketing-readable attribution in one product. Its event-inference layer reduced dependence on engineers and tracking-plan maintenance, while its focus on SMB and mid-market marketers avoided the complexity of some enterprise suites. That advantage did not create a defensible moat by itself. Heap offered a similar autocapture foundation; Google Analytics and Mixpanel covered many of the same measurement tasks; Adobe and Dreamdata addressed broader enterprise or B2B data joins. Oribi's lasting value is better evidenced by LinkedIn's integration than by an independently measured technical moat."
 risk_factors = [
-  "Acquisition means no standalone equity upside or product roadmap control",
-  "Privacy regulation can reduce the effectiveness of web tracking and event inference",
-  "Large analytics incumbents can bundle comparable capabilities into broader suites",
-  "Automatic event inference can misclassify behaviors and weaken trust in the data",
-  "Defense and intelligence use cases require substantial adaptation beyond the original product scope",
-  "Acquisition integration may have changed, absorbed, or discontinued the standalone product and its data practices",
-  "Consent, browser privacy, ad-blocking, and first-party-data shifts can reduce observable web behavior",
-  "Public evidence is insufficient to independently verify current customers, revenue, retention, or post-acquisition outcomes"
+  "LinkedIn acquisition ended Oribi's standalone company and equity opportunity",
+  "Company-announced cumulative funding differs from disclosed round sums, and an additional SAFE is only documented by secondary databases",
+  "Acquisition price was not disclosed and press estimates range from about $80 million to about $100 million",
+  "No audited revenue, ARR, profitability, burn, retention, or post-acquisition product metrics were found",
+  "Customer counts and 2021 headcount differ across contemporaneous reports",
+  "Other co-founder identity is inconsistent across legacy company directories",
+  "Automatic event inference can create misclassification, taxonomy, and explainability problems",
+  "Consent, browser privacy, ad blocking, and identifier changes can reduce the completeness of web behavior data",
+  "Large analytics platforms can bundle attribution and event analysis into broader suites",
+  "No Oribi-assigned patent family was identified in the targeted public searches; IP transfer and trade-secret scope remain unknown",
+  "No defense or cybersecurity deployment was publicly evidenced",
+  "The current Oribi.ai brand is used by a separate Spaaza retail analytics product, creating identity-confusion risk"
 ]
-risk_level = "medium"
+risk_level = "high"
 signals = []
 priority_rank = 0
-priority_rationale = "Low priority because Oribi is an acquired asset rather than an independent company, its standalone website is no longer verifiable, and its dual-use relevance is indirect. The record remains useful for comparative diligence on automated telemetry, event inference, privacy-sensitive data collection, and acquisition-driven commercialization, but it should not be treated as a current strategic or investment target."
+priority_rationale = "Low priority because Oribi is an acquired asset rather than an independent company, the standalone product and its post-acquisition roadmap are not publicly documented, and its defense relevance is indirect. The record remains useful for commercial analytics comparisons, acquisition integration, and low-code event-inference diligence, but should not be treated as a current investment or defense target."
 crawled_at = "2026-02-27T11:02:00+00:00"
-updated_at = "2026-07-31T19:02:35Z"
+updated_at = "2026-10-22T00:49:02+00:00"
+
+[intelligence]
+schema_version = 2
+intellectual_property = []
+
+[intelligence.company]
+company_id = "il-oribi"
+legal_name = "Oribi Systems Ltd."
+aliases = ["Oribi", "Oribi Ltd.", "Oribi Analytics"]
+operating_status = "acquired"
+business_model = "Historical B2B marketing analytics software sold to organizations; contemporaneous reporting describes subscribed customers, but pricing, contract form, and revenue mix are not public."
+products = ["Oribi web analytics platform", "Magic Events", "No-code customer data layer", "Marketing attribution and conversion analytics"]
+locations = ["Tel Aviv, Israel"]
+founded_on = "2015-10"
+notes = "Historical legal name and identity are supported by founder-authored and company-database material. A legacy Startup Nation Finder profile lists Israeli company number 515419216 and links to the Corporations Registrar; the underlying registry lookup was unavailable in this research pass, so the identifier is retained with that provenance caveat. LinkedIn's current company profile labels Oribi as founded in 2016, while contemporaneous reporting dates it to October 2015."
+source_ids = ["iris-medium-2016", "geektime-series-a-2019", "linkedin-company-profile", "snc-finder-2022", "ivc-profile", "sec-proxy-2022"]
+
+[[intelligence.company.registry_identifiers]]
+jurisdiction = "Israel"
+scheme = "Israeli Companies Registrar corporate number (ח.פ.)"
+identifier = "515419216"
+source_ids = ["snc-finder-2022"]
+notes = "Reported in the legacy Startup Nation Finder profile last updated 2022-10-19, which linked to the Israeli Companies Registrar. Direct registry lookup could not be independently opened during this pass."
+
+[[intelligence.people]]
+name = "Iris Shoor"
+role = "Founder and CEO; later Oribi integration lead at LinkedIn"
+is_founder = true
+current = false
+background = "Serial founder who previously founded Takipi/OverOps and Visual Tao; Visual Tao was acquired by Autodesk. Shoor led Oribi through the LinkedIn acquisition and later described its product integration into LinkedIn's advertising platform."
+source_ids = ["iris-medium-2016", "ctech-series-a-2019", "linkedin-marketing-blog", "globes-acquisition-2022", "iris-shoor-integration-2024"]
+
+[[intelligence.investors]]
+name = "Sequoia Capital"
+investor_type = "vc"
+website = "https://www.sequoiacap.com"
+relationship = "historical"
+round_ids = ["seed-2016", "series-a-2019", "series-b-2021"]
+source_ids = ["iris-medium-2016", "ctech-series-a-2019", "oribi-press-release-2021", "ctech-series-b-2021"]
+notes = "Named by Shoor in the first round and included as an existing investor in later round announcements."
+
+[[intelligence.investors]]
+name = "TLV Partners"
+investor_type = "vc"
+website = "https://www.tlv.partners"
+relationship = "historical"
+round_ids = ["seed-2016", "series-a-2019", "series-b-2021"]
+source_ids = ["iris-medium-2016", "ctech-series-a-2019", "oribi-press-release-2021", "tlv-portfolio"]
+notes = "Historical investor; TLV's portfolio page and team biographies identify Oribi as an investment and exit."
+
+[[intelligence.investors]]
+name = "Zohar Gilon"
+investor_type = "angel"
+relationship = "historical"
+round_ids = ["seed-2016"]
+source_ids = ["iris-medium-2016", "calcalist-seed-2016"]
+
+[[intelligence.investors]]
+name = "S Capital"
+investor_type = "vc"
+relationship = "historical"
+round_ids = ["series-a-2019", "series-b-2021"]
+source_ids = ["ctech-series-a-2019", "oribi-press-release-2021", "ctech-series-b-2021"]
+notes = "The 2019 round announcement names S Capital LP as lead; 2021 sources style the firm as S-Capital."
+
+[[intelligence.investors]]
+name = "Ibex Investors"
+investor_type = "vc"
+website = "https://www.ibexinvestors.com"
+relationship = "historical"
+round_ids = ["series-b-2021"]
+source_ids = ["oribi-press-release-2021", "ctech-series-b-2021", "ibex-portfolio"]
+
+[[intelligence.investors]]
+name = "MoreTech Ventures"
+investor_type = "vc"
+relationship = "historical"
+round_ids = ["series-b-2021"]
+source_ids = ["oribi-press-release-2021", "ctech-series-b-2021"]
+
+[intelligence.funding]
+status = "conflicting"
+summary = "Three disclosed venture rounds are reported at $5.4 million (2016), $7 million (2019), and $15.5 million (February 2021). Oribi's own February 2021 release states $27 million cumulative funding, while the three round amounts sum to $27.9 million. IVC also lists a 2019 non-equity accelerator-assistance entry and a July 2021 Series C SAFE; Dealroom reports $4.5 million for that SAFE, but no company announcement or underlying terms were found. Keep the company-announced cumulative figure dated to February 2021 and do not derive a later total."
+reported_total_raised = 27000000
+reported_total_currency = "USD"
+total_source_ids = ["oribi-press-release-2021"]
+total_as_of = "2021-02-17"
+total_scope = "Company-announced cumulative investment upon completion of Series B, as of 2021-02-17; rounded total reported directly and not recalculated from rounds."
+history_status = "partial"
+coverage_through = "2022-02"
+
+[[intelligence.funding.rounds]]
+id = "seed-2016"
+round_type = "Seed / first institutional round"
+instrument = "equity"
+status = "closed"
+announced_on = "2016-06-01"
+amount_status = "reported"
+amount = 5400000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Sequoia Capital", "TLV Partners"]
+participating_investors = ["Zohar Gilon"]
+source_ids = ["iris-medium-2016", "calcalist-seed-2016"]
+notes = "Founder says the first round was completed the previous June and reports the $5.4 million amount and investor names. The contemporaneous Calcalist article also calls it the company's first round."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2019"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2019-02-25"
+amount_status = "reported"
+amount = 7000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["S Capital"]
+participating_investors = ["Sequoia Capital", "TLV Partners"]
+source_ids = ["ctech-series-a-2019", "geektime-series-a-2019"]
+notes = "CTech and Geektime report the round as closed and identify S Capital as lead, with Sequoia and TLV Partners participating."
+
+[[intelligence.funding.rounds]]
+id = "accelerator-assistance-2019"
+round_type = "Non-equity accelerator assistance"
+instrument = "unknown"
+status = "closed"
+announced_on = "2019-04-01"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+source_ids = ["ivc-profile"]
+notes = "IVC's public profile lists non-equity assistance dated 2019-04-01 from a corporate accelerator, but the provider and value are hidden. This is not treated as a priced equity round or included in any total."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2021"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2021-02-17"
+closed_on = "2021-02-17"
+amount_status = "reported"
+amount = 15500000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Ibex Investors"]
+participating_investors = ["MoreTech Ventures", "Sequoia Capital", "TLV Partners", "S Capital"]
+source_ids = ["oribi-press-release-2021", "ctech-series-b-2021", "globes-series-b-2021"]
+notes = "Company release and contemporaneous CTech and Globes reporting agree on the $15.5 million Series B and investor group."
+
+[[intelligence.funding.rounds]]
+id = "series-c-safe-2021"
+round_type = "Series C SAFE (secondary-database record)"
+instrument = "convertible"
+status = "closed"
+announced_on = "2021-07-21"
+amount_status = "reported"
+amount = 4500000
+amount_scope = "round"
+currency = "USD"
+source_ids = ["ivc-profile", "dealroom-profile"]
+notes = "IVC lists a July 21, 2021 Series C and explicitly labels it a SAFE, while Dealroom displays $4.5 million and a $77.5 million valuation. Neither exposes underlying transaction documents or investor names. No valuation is stored because Dealroom does not identify the valuation basis or say whether it is pre- or post-money. Acquisition-era reports state total funding of roughly $27 million to under $28 million, so this secondary-only event and its amount need primary reconciliation."
+
+[intelligence.ownership]
+status = "conflicting"
+summary = "LinkedIn agreed to acquire Oribi on 2022-02-28; Microsoft later listed Oribi Systems Ltd. among companies acquired in fiscal 2022, and founder Iris Shoor confirmed the product and technology were integrated into LinkedIn's advertising platform. LinkedIn said it would not disclose financial terms. Press estimates vary from about $80 million to about $100 million. Oribi's cap table and acquisition ownership percentages were not public."
+parent_company = "LinkedIn Corporation (Microsoft-owned)"
+cap_table_status = "undisclosed"
+shareholders = ["LinkedIn Corporation (acquirer; percentage not publicly disclosed)"]
+source_ids = ["linkedin-acquisition", "sec-proxy-2022", "techcrunch-acquisition-2022", "iris-shoor-integration-2024"]
+
+[[intelligence.ownership.deals]]
+id = "linkedin-oribi-2022"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2022-02-28"
+status = "completed"
+counterparty = "LinkedIn Corporation"
+amount_status = "conflicting"
+source_ids = ["linkedin-acquisition", "sec-proxy-2022", "techcrunch-acquisition-2022", "calcalist-acquisition-2022", "globes-acquisition-2022"]
+notes = "LinkedIn's official announcement says the financial terms will not be disclosed. Media estimates vary: TechCrunch and some Calcalist reports cite about $80-90 million or $80 million, while Globes described about $100 million. No amount or currency is entered. Microsoft’s SEC proxy lists Oribi Systems Ltd. among businesses acquired in fiscal 2022; an exact closing date was not located."
+
+[[intelligence.financials]]
+name = "employees"
+value = "12"
+as_of = "2019-02-26"
+basis = "reported"
+metric = "employees"
+numeric_value = 12
+value_relation = "exact"
+unit = "people"
+source_ids = ["ctech-series-a-2019"]
+
+[[intelligence.financials]]
+name = "employees"
+value = "30"
+as_of = "2021-02-17"
+basis = "reported"
+metric = "employees"
+numeric_value = 30
+value_relation = "exact"
+unit = "people"
+source_ids = ["ctech-series-b-2021"]
+notes = "CTech reported 30 employees one day before Globes reported 40; the discrepancy is retained rather than treated as a same-day growth trend."
+
+[[intelligence.financials]]
+name = "employees"
+value = "40"
+as_of = "2021-02-18"
+basis = "reported"
+metric = "employees"
+numeric_value = 40
+value_relation = "exact"
+unit = "people"
+source_ids = ["globes-series-b-2021"]
+notes = "Globes reported 40 employees, compared with 30 in CTech the previous day."
+
+[[intelligence.financials]]
+name = "employees"
+value = "about 50"
+as_of = "2022-03-06"
+basis = "reported"
+metric = "employees"
+numeric_value = 50
+value_relation = "approximate"
+unit = "people"
+source_ids = ["calcalist-post-acquisition-2022"]
+notes = "Calcalist estimated approximately 50 people remained in LinkedIn-Israel after customer-facing Oribi teams were largely laid off."
+
+[[intelligence.traction]]
+kind = "product"
+date = "2016-06-01"
+description = "Calcalist reported Oribi's open beta had reached about 2,500 small companies. This is early beta adoption and does not establish 2,500 paying or active customers."
+source_ids = ["calcalist-seed-2016", "iris-medium-2016"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2019-02-26"
+description = "CTech named Audi and Crowne Plaza among Oribi customers and said its customer base included SMBs, corporations, and government agencies. The source does not name the agencies or establish contract value, duration, or defense use."
+source_ids = ["ctech-series-a-2019"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2021-02-17"
+description = "CTech reported 1,000 subscribed customers and a recent selection for a Facebook collaboration involving behavior-data sharing with advertisers. Subscription status is a reported commercial signal; the source does not disclose revenue, retention, or the collaboration's commercial terms."
+source_ids = ["ctech-series-b-2021"]
+
+[[intelligence.traction]]
+kind = "partnership"
+date = "2021-02-17"
+description = "CTech reported that Facebook selected Oribi for a collaboration on sending user-behavior information to advertisers. Scope, commercial terms, deployment status, and duration were not disclosed."
+source_ids = ["ctech-series-b-2021"]
+
+[[intelligence.traction]]
+kind = "product"
+date = "2022-02-28"
+description = "LinkedIn announced the intended integration of Oribi's automated, code-free conversion-measurement and attribution technology into LinkedIn Marketing Solutions. This was an announced integration plan, not evidence of a released product on that date."
+source_ids = ["linkedin-acquisition", "linkedin-marketing-blog"]
+
+[[intelligence.traction]]
+kind = "product"
+date = "2024-06"
+description = "Founder Iris Shoor later reported that Oribi's product and technology had become part of LinkedIn's advertising platform and that the integration exceeded its goals. This is a founder account; no independent outcome metric was published."
+source_ids = ["iris-shoor-integration-2024"]
+
+[[intelligence.comparables]]
+name = "Google Analytics"
+website = "https://analytics.google.com/analytics/web/"
+rationale = "Direct web analytics and marketing-attribution substitute; Oribi explicitly positioned itself as a simpler alternative."
+differentiation = "Google documents event-based analytics and data-driven attribution across ads and key events. Oribi's historical pitch emphasized automatic event discovery and a marketing-ready customer data layer with less manual setup."
+source_ids = ["calcalist-seed-2016", "geektime-series-a-2019", "google-attribution"]
+
+[[intelligence.comparables]]
+name = "Heap"
+website = "https://www.heap.io/"
+rationale = "Closest technical analogue in automatically capturing web behavior and defining events after collection."
+differentiation = "Heap's current product describes autocapture and retroactive event definitions; Oribi paired its Magic Events layer with marketing-channel attribution and marketer-facing recommendations."
+source_ids = ["linkedin-company-profile", "heap-autocapture"]
+
+[[intelligence.comparables]]
+name = "Mixpanel"
+website = "https://mixpanel.com/"
+rationale = "Named in early Oribi coverage as a competing analytics product and now offers event analysis, funnels, campaign reporting, and multi-touch attribution."
+differentiation = "Mixpanel is a broad product-analytics suite with event, retention, and experimentation workflows; Oribi focused on no-code website behavior and marketing attribution for less technical teams."
+source_ids = ["calcalist-seed-2016", "mixpanel-pricing"]
+
+[[intelligence.comparables]]
+name = "Adobe Customer Journey Analytics"
+website = "https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing"
+rationale = "Enterprise-scale substitute for cross-channel journey analysis and attribution."
+differentiation = "Adobe supports joining online and offline data and flexible attribution for enterprise analytics teams; Oribi's product proposition was a faster, lighter setup for smaller marketing teams."
+source_ids = ["adobe-attribution"]
+
+[[intelligence.comparables]]
+name = "Dreamdata"
+website = "https://dreamdata.io/"
+rationale = "Adjacent marketing-attribution product for B2B teams measuring customer journeys and revenue contribution."
+differentiation = "Dreamdata emphasizes CRM, account-level identity, and revenue attribution across B2B buying groups. Oribi focused on automatic web-event capture and accessible website conversion insights."
+source_ids = ["dreamdata-attribution", "linkedin-company-profile"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["headquarters_in_israel"]
+summary = "Oribi was headquartered in Tel Aviv and operated from Israel; LinkedIn's official profile lists its Tel Aviv address, and contemporaneous reporting describes the company as Tel Aviv-based."
+as_of = "2022-02-28"
+source_ids = ["linkedin-company-profile", "calcalist-seed-2016", "ctech-series-a-2019", "linkedin-acquisition"]
+
+[intelligence.research]
+researched_at = "2026-10-22T00:49:02+00:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Oribi company marketing analytics funding raised investors Series A Series B Israel",
+  "Oribi LinkedIn acquisition February 2022 official Oribi founders",
+  "Oribi Israel startup raised $30 million funding CTech",
+  "Oribi analytics company patents revenue customers founders",
+  "site:news.linkedin.com/2022/february/acquisition-of-oribi LinkedIn Oribi February 2022",
+  "site:ibexinvestors.com Oribi $15.5 million Series B February 2021",
+  "site:sequoiacap.com Oribi Iris Shoor investment 2016 2019",
+  "Oribi official funding announcement 2019 $7 million S Capital",
+  "Oribi $5.4 million June 2016 original announcement Sequoia TLV Iris Shoor",
+  "Oribi 2016 $5.4M investors Zohar Gilon Sequoia TLV Partners source",
+  "Oribi $7 million S Capital February 2019 company announcement",
+  "Oribi Series B 15.5 million investors MoreTech February 2021 official announcement",
+  "Oribi Iris Shoor LinkedIn acquisition team founders Avishai Sam Bitton",
+  "Oribi revenue ARR financials customers 2021 2022 marketing analytics",
+  "Oribi patents Iris Shoor Oribi Ltd patent Google patents",
+  "Oribi competitors Google Analytics Mixpanel Heap Segment marketing attribution official product",
+  "site:patents.google.com \"Oribi Ltd\"",
+  "USPTO patent Oribi Iris Shoor marketing analytics",
+  "Oribi Israeli marketing analytics patent application",
+  "Oribi company defense security government customer use case",
+  "site:heap.io product autocapture events official Heap Analytics",
+  "site:amplitude.com product analytics marketing attribution official event tracking",
+  "site:marketingplatform.google.com Google Analytics marketing analytics attribution official",
+  "Google Patents search assignee Oribi Ltd",
+  "site:support.google.com/analytics Google Analytics event based data model attribution official",
+  "site:dreamdata.io B2B attribution official product",
+  "site:mixpanel.com product analytics event tracking official",
+  "Oribi July 2021 $4.5 million SAFE financing 77.5m valuation",
+  "Oribi Series C July 2021 SAFE funding",
+  "Oribi 2021 funding July investor 4.5 SAFE",
+  "Oribi raised $4.5 million 2021 startup Tel Aviv",
+  "Oribi Systems Ltd SAFE 2021 financing",
+  "Oribi Series C 2021 investor July 21",
+  "Oribi 2021 SAFE investment valuation 77.5 million",
+  "Oribi Google accelerator funding Startup Campus Israel 2019",
+  "Oribi Google Startup Launchpad accelerator grant 2019",
+  "Oribi acquired product integrations LinkedIn Marketing Solutions 2024 official",
+  "site:ibexinvestors.com Oribi portfolio",
+  "site:moretech.vc Oribi portfolio",
+  "site:tlv.partners Oribi portfolio",
+  "site:scapital.vc Oribi portfolio",
+  "Oribi.ai Spaaza Technologies BV retail analytics Oribi official",
+  "Oribi.io acquired LinkedIn old company site Oribi login shut down",
+  "Iris Shoor Oribi funding 2021 blog Oribi official",
+  "Oribi analytics privacy policy website Magic Events data processing"
+]
+gaps = [
+  "team: Public sources consistently identify Iris Shoor, but other co-founders conflict across IVC and the legacy Startup Nation Finder profile; a complete historical and current leadership roster was not verified.",
+  "investors: Names and terms for the July 2021 SAFE are not disclosed in IVC's accessible profile, and no primary investor announcement was found; private cap-table percentages remain unavailable.",
+  "financials: No audited revenue, ARR, profitability, cash, burn, or runway data were located. Employee reports are dated and conflict for February 2021.",
+  "traction: CTech reports 1,000 subscribed customers while Globes quotes Shoor on thousands replacing Google Analytics; definitions, active status, revenue, and retention cannot be reconciled. A 2019 customer list includes unnamed government agencies without contract details.",
+  "intellectual_property: Targeted searches by company and founder name found no attributable Oribi patent family. Patent ownership, trade secrets, and the IP transferred to LinkedIn remain undisclosed.",
+  "competition: No independent win/loss, pricing, conversion-lift, or market-share benchmark was found to quantify Oribi's advantage against the listed peers.",
+  "ownership: LinkedIn disclosed no acquisition price; published estimates conflict. No public cap table, shareholder percentages, or detailed post-close asset-title schedule was found.",
+  "funding: Company-announced cumulative funding of $27 million differs from the $27.9 million sum of the three publicly announced rounds. The separate July 2021 SAFE is only supported by IVC and Dealroom, and acquisition-era cumulative funding reports do not explain it."
+]
+conflicts = [
+  "LinkedIn's current company profile says Oribi was founded in 2016, while contemporaneous Calcalist, Geektime, and IVC records date the company to 2015 or October 2015; the earlier date is used.",
+  "Oribi's February 2021 company press release reports $27 million cumulative funding, whereas the three disclosed equity rounds total $27.9 million; the discrepancy is unresolved and the reported total is kept as a separate dated claim.",
+  "IVC lists a July 2021 Series C SAFE and Dealroom reports $4.5 million, but no primary financing announcement was found and acquisition-era media report only about $27 million to under $28 million raised. The $4.5 million remains explicitly secondary-source only and is not used to calculate a company-announced lifetime total.",
+  "LinkedIn says acquisition terms are undisclosed; media estimates range from about $80 million to $90 million, $80 million, and approximately $100 million. No deal amount is entered.",
+  "Legacy IVC identifies Avishai Bitton as co-founder while the legacy Startup Nation Finder profile identifies Oren Shuster; only Iris Shoor is included as a verified founder pending primary evidence.",
+  "CTech reported 30 employees on 2021-02-17, while Globes reported 40 on 2021-02-18; the near-contemporaneous figures are recorded separately, not interpreted as one-day growth.",
+  "CTech reported 1,000 subscribed customers in February 2021; Globes quotes Shoor saying thousands had replaced Google Analytics. These may use different definitions, which are not disclosed."
+]
+diligence_questions = [
+  "What were the amount, investor, conversion cap, and treatment of the July 2021 Series C SAFE, and does it represent new cash or conversion of an earlier instrument?",
+  "How did Oribi define the 1,000 subscribed customers reported in February 2021, and what were paid-customer retention, net revenue retention, and acquisition cost by cohort?",
+  "Which Oribi event-inference and attribution components remain active in LinkedIn Campaign Manager after Shoor's 2024 integration account and the 2026 Israel R&D changes?",
+  "Which legal entity and shareholders held Oribi's IP immediately before acquisition, and what patents, code, trade secrets, and data rights transferred to LinkedIn?",
+  "Can primary company or registry records resolve whether Avishai Bitton or Oren Shuster was a co-founder, and identify the other senior technical leaders?",
+  "What consent, retention, event-quality, and privacy controls were built into Magic Events, and how were inferred events validated against ground-truth conversions?"
+]
+
+[[intelligence.research.sources]]
+id = "linkedin-company-profile"
+url = "https://www.linkedin.com/company/oribi/"
+title = "Oribi (Acquired by LinkedIn)"
+publisher = "LinkedIn"
+kind = "company"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["LinkedIn's historical company profile describes Magic Events, no-code data collection and tagging, and a Tel Aviv location.", "The profile labels Oribi as founded in 2016 and lists a 51-200 employee band; these profile fields conflict with contemporaneous year and headcount reporting and are treated as historical directory data."]
+
+[[intelligence.research.sources]]
+id = "linkedin-acquisition"
+url = "https://news.linkedin.com/2022/february/acquisition-of-oribi?src=bl-po"
+title = "Acquisition of Oribi to accelerate attribution technology capabilities and establish new office in Israel"
+publisher = "LinkedIn"
+kind = "company"
+published_on = "2022-02-28"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["LinkedIn announced an agreement to acquire Israel-based marketing analytics company Oribi.", "LinkedIn intended to integrate Oribi technology into marketing solutions and open an office in Tel Aviv.", "LinkedIn stated it would not disclose the financial terms."]
+
+[[intelligence.research.sources]]
+id = "linkedin-marketing-blog"
+url = "https://www.linkedin.com/business/marketing/blog/linkedin-ads/helping-customers-build-smarter-campaigns-with-a-new-investment-in-marketing-attribution-technology"
+title = "Helping Customers Build Smarter Campaigns With a New Investment in Marketing Attribution Technology"
+publisher = "LinkedIn"
+kind = "company"
+published_on = "2022-02-28"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["LinkedIn described automated tags and code-free website conversion measurement as expected benefits of integrating Oribi technology.", "LinkedIn said several Oribi employees, including founder Iris Shoor, were expected to join its Tel Aviv office after closing.", "LinkedIn said it would maintain privacy controls and commitments during technical integration."]
+
+[[intelligence.research.sources]]
+id = "iris-medium-2016"
+url = "https://medium.com/@irisshoor/how-we-raised-5-4-million-for-our-startup-2d69c8644c72"
+title = "How we raised $5.4 million for our startup"
+publisher = "Iris Shoor on Medium"
+kind = "company"
+published_on = "2018-02-26"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Shoor reported that Oribi completed its first investment round in June 2016 for $5.4 million from Sequoia Capital, TLV Partners, and Zohar Gilon.", "Shoor described a product that evolved from Facebook-ad analytics toward broader business analytics and said early beta adoption reached several thousand companies.", "Shoor identified herself as the founder of Oribi and described her prior startup experience."]
+
+[[intelligence.research.sources]]
+id = "calcalist-seed-2016"
+url = "https://www.calcalist.co.il/local/articles/0,7340,L-3689622,00.html"
+title = "Oribi של איריס שור מגייסת 5.4 מסקויה ו-TLV Partners"
+publisher = "Calcalist"
+kind = "media"
+published_on = "2016-06-01"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Calcalist reported a $5.4 million first round from Sequoia, TLV Partners, and Zohar Gilon.", "The article dates Oribi's founding to October 2015 and says it operated from Tel Aviv.", "The article described Oribi's early product and reported open-beta use by about 2,500 small companies."]
+
+[[intelligence.research.sources]]
+id = "ctech-series-a-2019"
+url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3757153,00.html"
+title = "Business Intelligence Company Oribi Raises $7 Million"
+publisher = "CTech / Calcalist"
+kind = "media"
+published_on = "2019-02-26"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["CTech reported a $7 million round led by S Capital with participation from Sequoia Capital and TLV Partners.", "CTech cited Audi, Crowne Plaza, and government agencies among customer categories, without contract details.", "CTech reported that Oribi employed 12 people in February 2019 and named Iris Shoor as founder."]
+
+[[intelligence.research.sources]]
+id = "geektime-series-a-2019"
+url = "https://www.geektime.co.il/oribi-raises-7m/"
+title = "אוריבי של איריס שור מגייסת 7 מיליון דולר כדי להחליף את גוגל אנליטיקס"
+publisher = "Geektime"
+kind = "media"
+published_on = "2019-02-25"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Geektime reported the $7 million round led by S Capital with Sequoia and TLV Partners participating.", "The article states that Oribi was founded in October 2015 by Iris Shoor.", "Shoor described a period of product iteration and month-over-month customer growth; the article described hundreds of customers, without audited metrics."]
+
+[[intelligence.research.sources]]
+id = "ctech-series-b-2021"
+url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3894318,00.html"
+title = "Oribi raises $15.5 million for its Google Analytics-alternative"
+publisher = "CTech / Calcalist"
+kind = "media"
+published_on = "2021-02-17"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["CTech reported a $15.5 million Series B led by Ibex Investors with MoreTech, TLV Partners, S Capital, and Sequoia participating.", "CTech reported 1,000 subscribed customers and 30 employees as of February 17, 2021.", "CTech said Facebook selected Oribi for a collaboration involving sharing user-behavior information with advertisers, without describing commercial terms."]
+
+[[intelligence.research.sources]]
+id = "globes-series-b-2021"
+url = "https://en.globes.co.il/en/article-oribi-raises-155m-to-compete-with-google-analytics-1001361146"
+title = "Oribi raises $15.5m to compete with Google Analytics"
+publisher = "Globes"
+kind = "media"
+published_on = "2021-02-18"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Globes reported a $15.5 million Series B led by Ibex and joined by MoreTech, Sequoia, TLV Partners, and S Capital.", "Globes reported $27 million as the company's cumulative investment after the round.", "Globes reported 40 employees and quoted Shoor saying thousands of customers had replaced Google Analytics."]
+
+[[intelligence.research.sources]]
+id = "oribi-press-release-2021"
+url = "https://www.accessnewswire.com/newsroom/en/business-and-professional-services/oribi-raises-15.5m-for-its-no-code-marketing-analytics-630243"
+title = "Oribi Raises $15.5M for its No-Code Marketing Analytics"
+publisher = "Access Newswire (Oribi company release)"
+kind = "company"
+published_on = "2021-02-17"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Oribi announced completion of a $15.5 million Series B led by Ibex with MoreTech, Sequoia, TLV Partners, and S Capital.", "The company release reported cumulative investment of $27 million as of the Series B.", "Shoor described Oribi's no-code user-behavior collection and marketing analytics product."]
+
+[[intelligence.research.sources]]
+id = "techcrunch-acquisition-2022"
+url = "https://techcrunch.com/2022/02/28/linkedin-acquires-israeli-web-analytics-startup-oribi-to-expand-its-marketing-technology/"
+title = "LinkedIn acquires Israeli web analytics startup Oribi for $80M-90M to expand its marketing technology"
+publisher = "TechCrunch"
+kind = "media"
+published_on = "2022-02-28"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["TechCrunch reported that LinkedIn acquired Oribi and estimated a price of $80 million to $90 million while noting LinkedIn did not disclose terms.", "TechCrunch reported just under $28 million in prior funding based on PitchBook data.", "The article describes LinkedIn's interest in expanding marketing attribution and analytics."]
+
+[[intelligence.research.sources]]
+id = "calcalist-acquisition-2022"
+url = "https://www.calcalist.co.il/calcalistech/article/s1tygx5gq"
+title = "רכישה ראשונה ללינקדאין בישראל - חברת ניתוח המידע העסקי אוריבי"
+publisher = "Calcalist"
+kind = "media"
+published_on = "2022-02-28"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Calcalist reported LinkedIn's acquisition of Oribi at approximately $90 million.", "The article identifies Ibex, MoreTech, Sequoia, S Capital, and TLV Partners as Oribi's Series B investors.", "Calcalist describes the intended attribution integration and Tel Aviv office plan."]
+
+[[intelligence.research.sources]]
+id = "globes-acquisition-2022"
+url = "https://www.globes.co.il/news/article.aspx?did=1001403995"
+title = "Iris Shoor: why I sold Oribi to LinkedIn"
+publisher = "Globes"
+kind = "media"
+published_on = "2022-03-01"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Globes described the acquisition price as approximately $100 million and Oribi's total capital raised as about $30 million.", "Shoor discussed why she considered a sale in the 2021 market and described Oribi as having about 50 employees.", "The interview identifies Shoor as Oribi founder and CEO."]
+
+[[intelligence.research.sources]]
+id = "calcalist-post-acquisition-2022"
+url = "https://www.calcalist.co.il/calcalistech/article/rygre8mz9"
+title = "לאחר שנרכשה על ידי לינקדאין, אוריבי הישראלית מפטרת עשרות עובדים"
+publisher = "Calcalist"
+kind = "media"
+published_on = "2022-03-06"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Calcalist reported that most customer-facing Oribi teams were laid off after acquisition and estimated that roughly 50 employees remained in LinkedIn-Israel.", "The article reports an approximately $90 million sale estimate."]
+
+[[intelligence.research.sources]]
+id = "sec-proxy-2022"
+url = "https://www.sec.gov/Archives/edgar/data/789019/000119312522270484/d318171ddef14a1.pdf"
+title = "Microsoft 2022 Proxy Statement"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Microsoft's proxy statement lists Oribi Systems Ltd. among companies acquired in fiscal 2022."]
+
+[[intelligence.research.sources]]
+id = "iris-shoor-integration-2024"
+url = "https://www.linkedin.com/posts/irisshoor_thursday-was-my-last-day-at-linkedin-this-activity-7200427889836625920-1XIu"
+title = "Iris Shoor on leaving LinkedIn after the Oribi integration"
+publisher = "Iris Shoor on LinkedIn"
+kind = "company"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Shoor says Oribi's product and technology became part of LinkedIn's advertising platform and that the integration exceeded expectations.", "Shoor described leaving LinkedIn after the integration and credited both the Oribi and LinkedIn teams."]
+
+[[intelligence.research.sources]]
+id = "ctech-linkedin-israel-close-2026"
+url = "https://www.calcalistech.com/ctechnews/article/rjrwxydizg"
+title = "LinkedIn to shut down Israeli R&D operations and lay off nearly all employees"
+publisher = "CTech / Calcalist"
+kind = "media"
+published_on = "2026-08-11"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["CTech reported that LinkedIn was ending most of its Israel R&D operations in 2026.", "The article says Oribi technology had been integrated into LinkedIn Marketing Solutions after the acquisition.", "The report does not state that Oribi-derived product features were discontinued."]
+
+[[intelligence.research.sources]]
+id = "snc-finder-2022"
+url = "https://finder.startupnationcentral.org/company_page/oribi"
+title = "Oribi - Business Software"
+publisher = "Startup Nation Finder"
+kind = "directory"
+published_on = "2022-10-19"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["The legacy profile describes Oribi as acquired and inactive, reports an October 2015 founding date, and lists Israeli company number 515419216.", "The profile names Oren Shuster as co-founder, conflicting with IVC's Avishai Bitton entry; this directory is used only to document the discrepancy and identifier provenance."]
+
+[[intelligence.research.sources]]
+id = "ivc-profile"
+url = "https://www.ivc-online.com/Google-Card?id=2C12F8DD-4151-E511-BD22-80C16E7D3630&type=1"
+title = "Oribi Systems Ltd."
+publisher = "IVC Data & Insights"
+kind = "directory"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["IVC identifies Oribi Systems Ltd. as acquired by LinkedIn, established in 2015, with a Tel Aviv address.", "IVC lists a non-equity assistance entry dated 2019-04-01 from a corporate accelerator but hides its contributor and amount.", "IVC lists a July 21, 2021 Series C round and explicitly describes it as a SAFE, but hides the amount and investor names.", "IVC names Iris Shoor and Avishai Bitton as co-founders, conflicting with a legacy Startup Nation Finder entry for Oren Shuster."]
+
+[[intelligence.research.sources]]
+id = "dealroom-profile"
+url = "https://app.dealroom.co/companies/oribi"
+title = "Oribi company information, funding & investors"
+publisher = "Dealroom.co"
+kind = "directory"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Dealroom lists a July 2021 Series C with $4.5 million and a $77.5 million valuation, without exposing transaction documents or a pre/post-money basis.", "Dealroom lists the 2016 $5.4 million, 2019 $7 million, and 2021 $15.5 million rounds and their reported investors.", "Dealroom identifies Oribi as acquired and headquartered in Tel Aviv."]
+
+[[intelligence.research.sources]]
+id = "tlv-portfolio"
+url = "https://www.tlv.partners/portfolio/"
+title = "Portfolio Companies"
+publisher = "TLV Partners"
+kind = "investor"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["TLV Partners' official portfolio lists Oribi as a historical marketing analytics company."]
+
+[[intelligence.research.sources]]
+id = "ibex-portfolio"
+url = "https://www.ibexinvestors.com/private-portfolio"
+title = "Our Private Portfolio"
+publisher = "Ibex Investors"
+kind = "investor"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Ibex Investors' official portfolio list includes Oribi among its private investments and exits."]
+
+[[intelligence.research.sources]]
+id = "spaaza-oribi-product"
+url = "https://www.spaaza.com/products/oribi-ai/"
+title = "Oribi.ai - AI-powered insights for your business"
+publisher = "Spaaza"
+kind = "company"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Spaaza describes a separate Oribi.ai product for retail sales, store operations, and customer-data analysis delivered through Spaaza applications."]
+
+[[intelligence.research.sources]]
+id = "heap-autocapture"
+url = "https://www.heap.io/platform/autocapture"
+title = "Autocapture - Heap"
+publisher = "Heap"
+kind = "other"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Heap describes automatic capture of user interactions and retroactive event organization without relying on engineers."]
+
+[[intelligence.research.sources]]
+id = "google-attribution"
+url = "https://support.google.com/analytics/answer/10596866?KBOpenTab=undefined"
+title = "Get started with attribution"
+publisher = "Google Analytics Help"
+kind = "other"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Google documents data-driven attribution and other models for assigning credit across advertising and conversion touchpoints."]
+
+[[intelligence.research.sources]]
+id = "dreamdata-attribution"
+url = "https://dreamdata.io/b2b-attribution"
+title = "B2B Attribution"
+publisher = "Dreamdata"
+kind = "other"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Dreamdata describes B2B attribution that cleans and joins CRM and web events at account level and supports multiple revenue attribution models."]
+
+[[intelligence.research.sources]]
+id = "mixpanel-pricing"
+url = "https://mixpanel.com/pricing/"
+title = "Mixpanel Pricing: Find Your Plan & Get Started"
+publisher = "Mixpanel"
+kind = "other"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Mixpanel's current product feature list includes event analytics, funnels, retention, campaign reporting, and multi-touch attribution on paid plans."]
+
+[[intelligence.research.sources]]
+id = "adobe-attribution"
+url = "https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-workspace/attribution/overview"
+title = "Attribution Overview"
+publisher = "Adobe Experience League"
+kind = "other"
+published_on = "2026-09-28"
+accessed_at = "2026-10-22T00:49:02+00:00"
+claims = ["Adobe Customer Journey Analytics supports flexible attribution models across customer-journey dimensions, segments, and marketing channels."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "conflicting"
+checked_at = "2026-10-22T00:49:02+00:00"
+next_review_on = "2027-04-22"
+queries = ["Oribi company marketing analytics funding raised investors Series A Series B Israel", "Oribi LinkedIn acquisition February 2022 official Oribi founders", "Oribi Israel startup raised $30 million funding CTech", "Oribi.io acquired LinkedIn old company site Oribi login shut down", "Oribi.ai Spaaza Technologies BV retail analytics Oribi official"]
+source_ids = ["linkedin-company-profile", "calcalist-seed-2016", "geektime-series-a-2019", "ivc-profile", "sec-proxy-2022", "spaaza-oribi-product"]
+summary = "Identity resolved to the Tel Aviv marketing analytics company historically known as Oribi Systems Ltd. It was acquired by LinkedIn; the live Spaaza Oribi.ai product is a separate same-name entity. Founding year sources disagree between 2015 and 2016."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-22T00:49:02+00:00"
+next_review_on = "2027-04-22"
+queries = ["Oribi $5.4 million June 2016 original announcement Sequoia TLV Iris Shoor", "Oribi $7 million S Capital February 2019 company announcement", "Oribi Series B 15.5 million investors MoreTech February 2021 official announcement", "Oribi July 2021 $4.5 million SAFE financing 77.5m valuation", "Oribi Series C July 2021 SAFE funding", "Oribi 2021 funding July investor 4.5 SAFE", "Oribi Systems Ltd SAFE 2021 financing"]
+source_ids = ["iris-medium-2016", "calcalist-seed-2016", "ctech-series-a-2019", "oribi-press-release-2021", "ctech-series-b-2021", "globes-series-b-2021", "ivc-profile", "dealroom-profile", "techcrunch-acquisition-2022"]
+summary = "Three company-announced or contemporaneously reported rounds are verified. The company announced $27 million cumulative funding after Series B, while round disclosures sum to $27.9 million. IVC and Dealroom add a secondary-only July 2021 SAFE report, leaving later cumulative totals unresolved."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T00:49:02+00:00"
+next_review_on = "2027-04-22"
+queries = ["site:ibexinvestors.com Oribi $15.5 million Series B February 2021", "site:sequoiacap.com Oribi Iris Shoor investment 2016 2019", "Oribi official funding announcement 2019 $7 million S Capital", "Oribi Series B 15.5 million investors MoreTech February 2021 official announcement", "site:tlv.partners Oribi portfolio"]
+source_ids = ["iris-medium-2016", "ctech-series-a-2019", "oribi-press-release-2021", "ctech-series-b-2021", "tlv-portfolio", "ibex-portfolio"]
+summary = "Round announcements identify Sequoia Capital, TLV Partners, Zohar Gilon, S Capital, Ibex Investors, and MoreTech Ventures. Investor names for the 2021 SAFE and private ownership percentages remain unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "conflicting"
+checked_at = "2026-10-22T00:49:02+00:00"
+next_review_on = "2027-04-22"
+queries = ["Oribi Iris Shoor LinkedIn acquisition team founders Avishai Sam Bitton", "Iris Shoor Oribi funding 2021 blog Oribi official", "Oribi analytics company patents revenue customers founders"]
+source_ids = ["iris-medium-2016", "ctech-series-a-2019", "linkedin-marketing-blog", "globes-acquisition-2022", "iris-shoor-integration-2024", "snc-finder-2022", "ivc-profile"]
+summary = "Iris Shoor is directly identified as Oribi founder and CEO, and prior startup experience is documented. IVC and Startup Nation Finder conflict on the other co-founder; a full executive roster was not found."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "conflicting"
+checked_at = "2026-10-22T00:49:02+00:00"
+next_review_on = "2027-04-22"
+queries = ["Oribi LinkedIn acquisition February 2022 official Oribi founders", "LinkedIn acquires Oribi Israeli web analytics 80 90 million", "Oribi acquisition 90 million LinkedIn Calcalist", "Iris Shoor Oribi sale LinkedIn 100 million", "Microsoft SEC proxy Oribi Systems Ltd acquisition"]
+source_ids = ["linkedin-acquisition", "sec-proxy-2022", "techcrunch-acquisition-2022", "calcalist-acquisition-2022", "globes-acquisition-2022"]
+summary = "The acquisition and integration are verified. LinkedIn officially withheld terms; media price estimates conflict, and no cap table or ownership percentages were found."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T00:49:02+00:00"
+next_review_on = "2027-04-22"
+queries = ["Oribi revenue ARR financials customers 2021 2022 marketing analytics", "Oribi financial statements revenue employees 2021 2022", "Oribi funding revenue and headcount acquisition"]
+source_ids = ["ctech-series-a-2019", "ctech-series-b-2021", "globes-series-b-2021", "globes-acquisition-2022"]
+summary = "No audited revenue, ARR, profit, burn, runway, or cash data were located. Only dated headcount estimates and customer reports are available."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-22T00:49:02+00:00"
+next_review_on = "2027-04-22"
+queries = ["Oribi analytics customers Audi Crowne Plaza government agencies", "Oribi 1000 subscribed customers Facebook collaboration 2021", "Oribi beta 2500 companies 2016", "Oribi product technology integrated LinkedIn advertising platform 2024"]
+source_ids = ["calcalist-seed-2016", "ctech-series-a-2019", "ctech-series-b-2021", "linkedin-marketing-blog", "iris-shoor-integration-2024"]
+summary = "Reported traction includes early beta use, named commercial customers, 1,000 subscribed customers, a Facebook collaboration selection, and later LinkedIn product integration. Contract values, retention, revenue, and usage definitions are not public."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-22T00:49:02+00:00"
+next_review_on = "2027-04-22"
+queries = ["Oribi patents Iris Shoor Oribi Ltd patent Google patents", "site:patents.google.com \"Oribi Ltd\"", "USPTO patent Oribi Iris Shoor marketing analytics", "Oribi Israeli marketing analytics patent application", "Google Patents search assignee Oribi Ltd"]
+source_ids = []
+summary = "Targeted exact-name public patent searches did not locate an attributable Oribi marketing-analytics patent family. The search is not an exhaustive legal opinion; trade secrets and acquisition IP schedules are not public."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T00:49:02+00:00"
+next_review_on = "2027-04-22"
+queries = ["Oribi competitors Google Analytics Mixpanel Heap Segment marketing attribution official product", "site:heap.io product autocapture events official Heap Analytics", "site:support.google.com/analytics Google Analytics event based data model attribution official", "site:dreamdata.io B2B attribution official product", "site:mixpanel.com product analytics event tracking official"]
+source_ids = ["calcalist-seed-2016", "heap-autocapture", "google-attribution", "dreamdata-attribution", "mixpanel-pricing", "adobe-attribution"]
+summary = "Primary competitor product materials support Google Analytics, Heap, Mixpanel, Adobe Customer Journey Analytics, and Dreamdata as relevant substitutes or adjacent products. No independent win/loss or market-share analysis was found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-22T00:49:02+00:00"
+next_review_on = "2027-04-22"
+queries = ["Oribi company defense security government customer use case", "Oribi security intelligence deployment government contract defense", "Oribi analytics cyber threat intelligence product"]
+source_ids = ["linkedin-company-profile", "linkedin-marketing-blog", "ctech-series-a-2019"]
+summary = "No public defense, intelligence, or cybersecurity deployment was found. LinkedIn and company descriptions are commercial marketing focused; the 2019 report's unnamed government-agency customer category has no contract or security-use detail."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "LinkedIn announced an acquisition agreement, Microsoft's SEC proxy later lists Oribi Systems Ltd. among fiscal 2022 acquisitions, and founder Iris Shoor confirms product integration into LinkedIn's advertising platform."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["linkedin-acquisition", "sec-proxy-2022", "iris-shoor-integration-2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "LinkedIn lists Oribi's location in Tel Aviv, and contemporaneous Calcalist/CTech reports describe it as Tel Aviv-based."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["linkedin-company-profile", "calcalist-seed-2016", "ctech-series-a-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Oribi's February 17, 2021 company press release states cumulative investment of $27 million after its Series B. The figure is retained as a reported company total, not recomputed from round amounts."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["oribi-press-release-2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2016.amount"
+support = "direct"
+summary = "Shoor reports a $5.4 million first round, corroborated by contemporaneous Calcalist coverage."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["iris-medium-2016", "calcalist-seed-2016"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2019.amount"
+support = "direct"
+summary = "CTech and Geektime report that Oribi closed a $7 million Series A in February 2019."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["ctech-series-a-2019", "geektime-series-a-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2021.amount"
+support = "direct"
+summary = "Oribi's company release and contemporaneous CTech and Globes coverage report a $15.5 million Series B completed on February 17, 2021."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["oribi-press-release-2021", "ctech-series-b-2021", "globes-series-b-2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-safe-2021.amount"
+support = "direct"
+summary = "Dealroom displays $4.5 million for the July 2021 Series C; IVC separately lists a Series C SAFE on July 21 but hides the amount. This verifies the secondary database report only; no primary transaction disclosure was found."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["dealroom-profile", "ivc-profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2016.lead_investors"
+support = "direct"
+summary = "Shoor names Sequoia Capital and TLV Partners among the first-round investors; Calcalist reports the same funds."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["iris-medium-2016", "calcalist-seed-2016"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2016.participating_investors"
+support = "direct"
+summary = "Shoor and Calcalist name angel investor Zohar Gilon as participating in the 2016 first round."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["iris-medium-2016", "calcalist-seed-2016"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2019.lead_investors"
+support = "direct"
+summary = "CTech and Geektime identify S Capital as the lead investor for the February 2019 round."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["ctech-series-a-2019", "geektime-series-a-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2019.participating_investors"
+support = "direct"
+summary = "CTech and Geektime name Sequoia Capital and TLV Partners as participants in the 2019 round."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["ctech-series-a-2019", "geektime-series-a-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2021.lead_investors"
+support = "direct"
+summary = "Oribi's company press release and contemporaneous CTech and Globes reports identify Ibex Investors as Series B lead."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["oribi-press-release-2021", "ctech-series-b-2021", "globes-series-b-2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2021.participating_investors"
+support = "direct"
+summary = "The Series B sources name MoreTech Ventures, Sequoia Capital, TLV Partners, and S Capital as participants alongside lead investor Ibex."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["oribi-press-release-2021", "ctech-series-b-2021", "globes-series-b-2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "LinkedIn's official acquisition announcement names LinkedIn as acquirer; Microsoft's SEC proxy identifies Oribi Systems Ltd. among fiscal 2022 acquisitions."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["linkedin-acquisition", "sec-proxy-2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.linkedin-oribi-2022.company_role"
+support = "direct"
+summary = "LinkedIn's acquisition announcement identifies Oribi as the company being acquired; Microsoft's SEC proxy later lists Oribi Systems Ltd. among fiscal 2022 acquisitions."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["linkedin-acquisition", "sec-proxy-2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.linkedin-oribi-2022.status"
+support = "direct"
+summary = "Microsoft's SEC proxy lists Oribi Systems Ltd. among businesses acquired in fiscal 2022, and Shoor later confirms the integration was completed."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["sec-proxy-2022", "iris-shoor-integration-2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.linkedin-oribi-2022.amount"
+support = "direct"
+summary = "LinkedIn states that it will not disclose the deal's financial terms. Media estimates conflict, so the numeric amount is omitted."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["linkedin-acquisition", "techcrunch-acquisition-2022", "calcalist-acquisition-2022", "globes-acquisition-2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.employees@2019-02-26.numeric_value"
+support = "direct"
+summary = "CTech reports that Oribi employed 12 people in February 2019."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["ctech-series-a-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.employees@2021-02-17.numeric_value"
+support = "direct"
+summary = "CTech reports 30 employees on February 17, 2021."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["ctech-series-b-2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.employees@2021-02-18.numeric_value"
+support = "direct"
+summary = "Globes reports 40 employees on February 18, 2021; this conflicts with CTech's 30-person figure one day earlier."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["globes-series-b-2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.employees@2022-03-06.numeric_value"
+support = "direct"
+summary = "Calcalist estimated approximately 50 employees remained in LinkedIn-Israel following post-acquisition layoffs."
+verified_at = "2026-10-22T00:49:02+00:00"
+source_ids = ["calcalist-post-acquisition-2022"]

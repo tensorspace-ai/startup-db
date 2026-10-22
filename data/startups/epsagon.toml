@@ -1,42 +1,790 @@
 name = "Epsagon"
-description = "Epsagon was a cloud-native observability company that built automated distributed tracing and application-performance monitoring for microservices, containers, and serverless workloads. Cisco completed its acquisition of Epsagon on October 8, 2021, so the asset is now best treated as part of Cisco's observability history rather than as an independent startup."
-detailed_description = """Epsagon developed a microservices-native observability platform for understanding application behavior across containers, serverless functions, APIs, and other distributed components. Its central value proposition was automated visibility: the product traced requests across service boundaries, presented application topology and individual transactions, surfaced latency and errors, and reduced the instrumentation and configuration work normally required to start monitoring a modern application. This made the product relevant to engineering teams that needed a faster path from deployment to a usable service map and root-cause workflow. Cisco's acquisition materials specifically describe Epsagon's expertise in distributed tracing for containers and serverless environments and its support for multiple telemetry types and open standards.
+description = "Epsagon was an Israel-founded cloud observability startup whose SaaS traced requests through serverless functions, containers, Kubernetes and microservices. Cisco completed its acquisition on 2021-10-08; the asset is now part of Cisco's observability history, with no verified standalone roadmap or current independent economics."
+detailed_description = """Epsagon was founded in 2017 by Nitzan Shapira and Ran Ribenzaft, Israeli technology and cyber-intelligence veterans, to monitor applications built from serverless functions and other distributed cloud services. Its early base was in Holon/Tel Aviv; by 2020 it had a New York headquarters and teams in New York, San Francisco and Tel Aviv. Cisco described Epsagon as headquartered in New York when it completed the acquisition in October 2021. These are compatible stages of an Israel-founded company's expansion, rather than evidence that the Israeli connection ended when the US office opened.
 
-The commercial problem was durable, but the category was highly competitive. Cloud-native architectures create large volumes of telemetry and make failures difficult to localize because a single user action can cross many ephemeral services. Epsagon therefore competed for developer and platform-engineering budgets against full-stack suites such as Datadog, New Relic, Dynatrace, and Cisco AppDynamics, as well as tracing-focused or open-source alternatives such as Honeycomb, Lightstep, Jaeger, and OpenTelemetry-based stacks. The product's practical differentiation was time-to-value and low-friction instrumentation for serverless and container workloads, not an exclusive data moat. As open standards matured and larger vendors bundled traces with logs, metrics, security, and infrastructure monitoring, standalone differentiation became harder to sustain.
+The product attacked an operational blind spot in cloud-native software. A customer request could invoke an API, several microservices, managed queues, databases, third-party services and short-lived serverless functions, often without an operator-controlled host on which to install a traditional monitoring agent. Epsagon's SaaS platform automatically instrumented and correlated those paths, displayed application topology and traces, and helped engineers move from an error or latency symptom to the service and transaction responsible. Company materials described support across serverless, containers and Kubernetes and highlighted payload visibility; Cisco later described capabilities spanning metrics, events, logs and traces, with support for open standards. A granted US patent assigned originally to Epsagon Ltd. describes correlating events across distributed resources using shared event fingerprints to produce traces. That patent is evidence of a technical implementation, not evidence by itself of exclusive rights, broad claim coverage, current Cisco ownership in every jurisdiction, or a durable commercial moat.
 
-Public evidence supports a substantial, technically focused company but not every historical claim in the prior record. LinkedIn lists Epsagon as founded in 2018, with a Tel Aviv-Yafo location, a 51-200 employee band, and a product description centered on application monitoring for containers and serverless systems. Cisco states that it completed the acquisition in October 2021 and that Epsagon's team and technology were intended to accelerate Cisco's full-stack observability roadmap. Cisco's page describes the acquired capability as part of a broader portfolio spanning application, infrastructure, network, and security visibility. The available evidence does not establish current standalone staffing, revenue, customer retention, or a continuing independent Epsagon product roadmap; those remain diligence questions rather than facts to infer from the acquisition.
+The reported business model was B2B SaaS, tiered according to the number of traces ingested. This connects usage to application activity and gives the vendor an expansion path as customers add services, but it also makes data volume, sampling, retention and bill predictability important buying questions. The platform competed for budgets held by application performance monitoring and observability teams. Epsagon's CEO named AppDynamics, Dynatrace, New Relic and Datadog as incumbent competitors in 2020. Current products from those vendors combine trace analysis with logs, metrics, service maps and broader operational workflows. OpenTelemetry and cloud-provider monitoring also reduce the cost of assembling a substitute stack. Epsagon's strongest historical distinction was lower setup friction for serverless and microservice systems, including visibility where customers could not access the host, plus payload-level context. Those advantages could shorten time to a useful trace, but the public record does not quantify setup-time savings against competitors, retention, win rates, or pricing power.
 
-The defense and national-security relevance is credible but indirect. Distributed tracing is a reliability and software-operations capability, not a defense-specific sensor or mission system. It can nevertheless support military, intelligence, public-sector, and critical-infrastructure teams that operate containerized services, hybrid cloud applications, or DevSecOps pipelines. In those settings, trace context can help operators distinguish application defects, dependency failures, configuration errors, and abnormal service behavior during incidents. The value is strongest where organizations can deploy telemetry collection inside controlled or disconnected environments and retain data governance; Cisco's public materials do not prove Epsagon deployment in classified systems, defense contracts, or security-certified environments. The appropriate conclusion is enabling dual-use relevance with meaningful deployment and procurement caveats, not demonstrated defense traction."""
+Public commercial evidence shows adoption signals but not audited scale. Epsagon's January 2020 financing announcement said its customer base had grown 300 percent over the prior year and named Via Transportation, Volta, Healthline, Freenet Group and Farmer's Fridge; it included a Via engineering manager's account of daily use. The release also described an AWS Advanced Technology Partner relationship and a Retail Competency. In July 2020 CTech reported 40 employees across New York, San Francisco and Tel Aviv. Calcalist reported about 60 employees, about 35 in Israel, and hundreds of clients including Deloitte and Toyota shortly before the acquisition. These are dated company or media reports, not audited employee records, paid-customer counts, contract values or proof of continued deployment after the acquisition. Revenue, ARR, gross margin, retention, customer concentration and post-close product continuity remain undisclosed in the sources reviewed.
+
+Cisco announced its intention to acquire Epsagon in August 2021 and completed the transaction on October 8, 2021. Cisco's completion notice said the team and technology would complement its full-stack observability work across application, infrastructure, network and security telemetry. Israeli and international media reported a price near $500 million; Cisco's official completion page does not give consideration, and TechCrunch reported that Cisco would not confirm that figure. The reported $500 million should therefore remain a press-reported transaction price, not a company-confirmed purchase price. CTech also reported that Epsagon had been close to a Series B described as tens of millions of dollars at a $200 million valuation, but chose Cisco's offer; neither the target amount nor whether the valuation was pre- or post-money was reported, and the proposed financing did not close. It is not raised capital and is excluded from funding totals.
+
+The company is an acquired asset, not an independent investment target. Cisco's acquisition demonstrates strategic interest in its tracing team and product, while the public evidence does not show which Epsagon modules remain separately sold, how its customers migrated, what proportion of the engineering team transferred, or whether the original SaaS can still be deployed. Cisco maintains an Epsagon support page, but that alone does not establish current standalone availability or a roadmap. The patent record lists Cisco Technology Inc. as a current assignee alongside Epsagon LLC; Google Patents itself warns that assignee data may be inaccurate, so assignment should be verified in official patent records before relying on it.
+
+Commercial use is straightforward: engineering and site-reliability teams use request traces to diagnose slow or failing services and protect application availability. There is also a credible, indirect defense and security application where military, intelligence, public-sector or critical-infrastructure organizations operate distributed logistics, identity, communications or administrative software. Correlating failures across service dependencies can help operators restore these systems during incidents. This is operational resilience, not endpoint protection, threat detection or a mission system. No public evidence located in the targeted searches establishes Epsagon defense customers, government contracts, classified deployments or security certifications. Payload visibility also creates a diligence issue: trace data may contain sensitive fields, so deployment architecture, redaction, access control, retention, tenant boundaries and data residency matter. Suitability for disconnected, sovereign or classified environments cannot be assumed from the historical commercial SaaS product."""
 logo = "https://media.licdn.com/dms/image/v2/C4D0BAQFFTPCY_nfKSw/company-logo_200_200/company-logo_200_200/0/1646663717701/epsagon_logo?e=2147483647&t=h3aPxxe8PW3LzkXo7YngH6vF7QUad4tj3y7MZ7SVt-Y&v=beta"
-website = "https://outshift.cisco.com/"
+website = "https://www.cisco.com/c/en/us/services/acquisitions/epsagon.html"
 sector = "Developer Tools / Cloud Observability"
-founded = "2018"
-headquarters = "Tel Aviv, Israel (Cisco also described Epsagon as headquartered in New York)"
-employees = "51-200 (historical LinkedIn range; current standalone count unconfirmed)"
-funding_stage = "Acquired by Cisco (completed 2021-10-08)"
+founded = "2017 (product launch and US expansion were reported in 2018-2020)"
+headquarters = "New York, United States at acquisition; Epsagon also maintained a Tel Aviv R&D office and was originally based in Holon, Israel"
+employees = "40 reported in July 2020; approximately 60 reported in August 2021, including about 35 in Israel; no current standalone count after acquisition"
+funding_stage = "Acquired by Cisco; completed 2021-10-08. Three completed public rounds were reported through July 2020; a proposed Series B was abandoned before closing."
 entity_type = "acquired_asset"
 dual_use = true
-dual_use_description = "Epsagon's core observability technology has substantive commercial and security-adjacent applicability because defense and public-sector software teams increasingly operate distributed, containerized, and serverless services. Tracing can improve incident localization and operational resilience, but the record contains no verified defense customer, classified deployment, government contract, or security certification. Dual-use value is therefore credible as an enabling capability, not demonstrated defense traction."
-key_technologies = ["Distributed tracing across microservices and service boundaries", "Automatic instrumentation for cloud-native applications", "Serverless function and container observability", "Application topology and dependency mapping", "Transaction-level latency and error analysis", "Correlated telemetry across traces, metrics, events, and logs", "OpenTelemetry and open-standards integration"]
-use_cases = ["Troubleshooting production microservices and API dependencies", "Monitoring AWS Lambda and other serverless workloads", "Mapping containerized application architecture", "Localizing latency, errors, and failed distributed transactions", "Supporting DevSecOps incident response in controlled cloud environments", "Operational resilience monitoring for public-sector and critical-infrastructure applications"]
+dual_use_description = """Epsagon's commercial application was production observability: tracing requests through cloud-native services to locate errors, latency and dependency failures. The security and defense relevance is enabling and indirect. Defense organizations and public agencies run distributed software for logistics, identity, communications and administration; trace-based fault localization can help operations teams restore availability and distinguish a failing dependency from a wider outage. It does not itself provide cyber defense, threat detection or battlefield sensing. The reviewed public sources disclose no defense customer, government contract, classified deployment, security certification or demonstrated use in a restricted environment. Payload collection makes data governance, redaction, disconnected deployment and sovereignty central diligence items."""
+key_technologies = ["Automatic distributed tracing for microservices", "Agentless or low-friction instrumentation for serverless workloads", "Trace correlation across containers and Kubernetes", "Application topology and service-dependency mapping", "Transaction-level latency, error and payload context", "Correlated metrics, events, logs and traces", "OpenTelemetry and other open-standard integration", "Event-fingerprint correlation for distributed-resource monitoring, as described in US patent 10,979,327 B2"]
+use_cases = ["Diagnosing latency and errors across production microservices", "Tracing AWS Lambda and other serverless request paths", "Mapping Kubernetes and containerized application dependencies", "Connecting traces to logs, metrics and relevant payload context", "Supporting site-reliability response to outages in public-sector or critical-infrastructure applications, subject to deployment and data-governance requirements"]
 investible = false
-investment_rationale = "Epsagon should not be treated as a current standalone investment signal because Cisco completed the acquisition in 2021. The transaction is useful evidence that a major platform vendor valued Epsagon's distributed-tracing capability and team, but it does not establish an investable independent entity, current product economics, or a separate financing opportunity. Strategic diligence should instead examine how the acquired technology was integrated into Cisco's observability products and whether comparable independent vendors retain differentiated distribution, data, or workflow advantages."
-strategic_value = "The asset's strategic value is as a reference point in the evolution of cloud-native observability. Automated tracing addressed a real bottleneck in modern software operations and could help defense or public-sector organizations operate distributed applications more reliably. Its relevance is strongest for software infrastructure, DevSecOps, and incident response rather than for weapons, sensing, or autonomous mission capabilities. Cisco ownership may provide enterprise distribution and integration potential, while also making standalone product direction, deployment boundaries, and availability for sovereign or air-gapped environments important diligence questions."
-public_sources = ["https://www.cisco.com/site/us/en/about/corporate-development/acquisitions/epsagon/index.html", "https://www.linkedin.com/company/epsagon", "https://outshift.cisco.com/"]
-potential_score = 61.0
-technology_score = 80.0
-market_score = 75.0
-team_score = 70.0
-dual_use_score = 62.0
+investment_rationale = """Epsagon is not investible as a standalone startup because Cisco completed its acquisition in 2021. The acquisition and three publicly described financings show that investors and a strategic buyer valued the product and team, but neither the reported transaction price nor the company's former customer growth establishes standalone unit economics. For historical portfolio analysis, the attractive signals were a concrete pain point in modern microservice operations, a differentiated low-friction approach to tracing serverless and container workloads, a technically credible founding team, named enterprise customers, and an apparent strategic fit with Cisco's observability portfolio. The main underwriting weaknesses were intense competition, product overlap with larger APM suites, trace-volume-linked cost sensitivity, limited public financial disclosure and uncertainty about post-acquisition product continuity. The appropriate classification is a completed strategic exit and technology reference, not a current financing opportunity or investment recommendation."""
+strategic_value = """The strategic value lay in bringing cloud-native distributed tracing, automatic instrumentation and a team familiar with serverless and container workloads into Cisco's broader observability program. Epsagon filled a product-era gap between traditional host-oriented monitoring and highly ephemeral services, while its claimed multi-telemetry support and open-standard compatibility could connect with Cisco AppDynamics, ThousandEyes and Intersight. Cisco's stated roadmap rationale documents intent; public material reviewed here does not prove the extent of product integration or ongoing Epsagon branding. For defense and critical infrastructure, the relevant value is software service reliability and incident localization in operational support applications. The historical asset is therefore a useful case study in observability consolidation and Israel-to-global strategic acquisition, not evidence of a defense deployment."""
+public_sources = [
+  { label = "Cisco completes Epsagon acquisition", url = "https://www.cisco.com/site/us/en/about/corporate-development/acquisitions/epsagon/index.html", description = "Cisco's completion date, acquired capability, strategic integration intent and New York headquarters statement." },
+  { label = "Epsagon seed financing announcement", url = "https://www.prnewswire.com/news-releases/epsagon-raises-41-million-to-make-application-performance-monitoring-for-serverless-architectures-great-again-676290833.html", description = "Company announcement of its $4.1 million seed round, investors, founding year and serverless product." },
+  { label = "CTech on Epsagon's seed round", url = "https://www.calcalistech.com/ctech/articles/0%2C7340%2CL-3733737%2C00.html", description = "Israeli reporting on the seed, founders, early Holon base and product." },
+  { label = "Epsagon Series A financing announcement", url = "https://www.prnewswire.com/news-releases/epsagon-raises-16-million-in-series-a-funding-led-by-usvp-300987989.html", description = "Company announcement of the $16 million Series A, total raised at that time, investors, product, customers and AWS relationship." },
+  { label = "CTech on the July 2020 financing", url = "https://www.calcalistech.com/ctech/articles/0%2C7340%2CL-3840995%2C00.html", description = "The $10 million DTCP-led follow-on, reported cumulative funding, named backers, locations and 40-person headcount." },
+  { label = "USVP portfolio-company funding notice", url = "https://www.usvp.com/portfolio-company-news/epsagon-increases-total-fundraising-to-30m-to-become-the-leading-applied-observability-platform-across-microservices-environments/", description = "Investor's July 2020 notice whose headline reports total fundraising of $30 million." },
+  { label = "Calcalist acquisition report", url = "https://www.calcalist.co.il/calcalistech/article/bkmdqdxgk", description = "Israeli report of the approximately $500 million acquisition price, founder background, customer names, staffing, offices and an inconsistent $26 million funding total." },
+  { label = "CTech report on the abandoned Series B", url = "https://www.calcalistech.com/ctech/articles/0%2C7340%2CL-3915194%2C00.html", description = "Reports that a proposed Series B of tens of millions at a $200 million valuation was stopped in favor of Cisco's offer." },
+  { label = "TechCrunch acquisition coverage", url = "https://techcrunch.com/2021/08/16/cisco-beefing-up-app-monitoring-portfolio-with-acquisition-of-epsagon-for-500m/", description = "Reports the $500 million sale price while noting Cisco would not confirm it, and describes acquisition strategy and the proposed Series B." },
+  { label = "Lightspeed Epsagon portfolio page", url = "https://lsvp.com/company/epsagon/", description = "Investor portfolio page identifying Epsagon as acquired by Cisco, the founders and Lightspeed's 2018 seed investment." },
+  { label = "Interview with Nitzan Shapira", url = "https://opsmatters.com/posts/applying-observability-conversation-nitzan-shapira-epsagon", description = "Founder background, 2017 founding, Technion education, Israeli intelligence service, New York headquarters and team locations." },
+  { label = "US Patent 10,979,327 B2", url = "https://patents.google.com/patent/US10979327B2/en", description = "Patent record for Epsagon's cloud monitoring invention, inventors, filing and grant dates, and listed original/current assignees." },
+  { label = "Epsagon CEO interview on competitors and pricing", url = "https://www.alleywatch.com/2020/01/epsagon-monitor-cloud-based-performance-nitzan-shapira/", description = "CEO-identified APM competitors and Epsagon's SaaS pricing by ingested traces." },
+  { label = "Cisco Epsagon support page", url = "https://www.cisco.com/c/en/us/services/acquisitions/epsagon.html", description = "Cisco's maintained Epsagon acquisition and customer-support page." },
+  { label = "Datadog APM product page", url = "https://www.datadoghq.com/product/apm/", description = "Current competing APM capabilities across traces, logs, metrics, security telemetry and serverless workloads." },
+  { label = "New Relic distributed tracing documentation", url = "https://docs.newrelic.com/docs/distributed-tracing/concepts/introduction-distributed-tracing/", description = "Current competing distributed tracing workflow across services, containers, serverless, virtual machines and cloud providers." },
+  { label = "Dynatrace distributed tracing documentation", url = "https://docs.dynatrace.com/docs/observe/application-observability/distributed-tracing", description = "Current competing tracing workflows, ingestion options and application troubleshooting use cases." }
+]
+potential_score = 36.0
+technology_score = 79.0
+market_score = 72.0
+team_score = 74.0
+dual_use_score = 45.0
 strategic_alignment_score = 58.0
 stage = "mature"
-stage_rationale = "Epsagon is mature as a historical startup asset: it had a defined commercial observability product and Cisco completed its acquisition in 2021. It is not current-stage independent startup inventory. The public record confirms the transaction and product domain, but does not justify claims about profitability, current standalone operations, or post-acquisition product continuity."
-competitors = ["Datadog APM and distributed tracing", "New Relic observability", "Dynatrace", "Cisco AppDynamics", "Honeycomb", "OpenTelemetry with Jaeger or other self-hosted backends"]
-competitive_edge = "Epsagon's defensible advantage was primarily workflow and adoption friction: automated instrumentation and a clear view from overall architecture to individual transactions were well matched to container and serverless teams. That positioning could shorten time to useful traces, but it was vulnerable to bundling by larger observability vendors and to open standards that make instrumentation more portable. Cisco's acquisition provided potential distribution and portfolio integration, while eliminating the standalone company as a separately assessable competitor."
-risk_factors = ["Acquisition obscures current product ownership, roadmap, staffing, and availability", "OpenTelemetry and self-hosted tracing reduce proprietary instrumentation differentiation", "Datadog, Dynatrace, New Relic, and Cisco can bundle observability across more telemetry types", "Telemetry collection can create data-governance, privacy, cost, and retention burdens", "Air-gapped or classified environments may restrict SaaS agents and external data paths", "No verified defense contracts, classified deployments, certifications, or mission-system integrations in the available record"]
-risk_level = "medium"
+stage_rationale = """Epsagon reached a commercial product, disclosed multiple equity rounds, named enterprise customers and an acquisition by Cisco. It is mature as a historical startup asset and acquired as of October 2021. Current operating status means the product and team should be evaluated within Cisco; public evidence reviewed does not establish an independent company, current standalone staffing, separate financials or a continuing Epsagon roadmap."""
+competitors = ["Datadog APM", "New Relic APM", "Dynatrace", "Cisco AppDynamics", "OpenTelemetry-based tracing stacks, including Jaeger", "Cloud-provider-native monitoring such as AWS X-Ray"]
+competitive_edge = """Epsagon's best-supported historical edge was adoption workflow. Company materials emphasized automated, agentless instrumentation for environments where the operator may not control the host; the CEO described a five-minute setup ambition, while the product exposed traces, topology and payload context for microservices and serverless systems. The Via customer statement and 2020 company announcement provide concrete adoption evidence, although they do not independently validate the speed or economic value of implementation. Its edge was not an exclusive data network: the buyer could instead use Datadog, New Relic, Dynatrace or AppDynamics, cloud-native tools, or an OpenTelemetry-based stack. Larger suites can correlate traces with logs, metrics, security signals and infrastructure, and can bundle these capabilities through existing enterprise contracts. A single US patent supports one technical claim family, but no patent portfolio or customer lock-in evidence located here offsets those distribution and standards risks. Cisco ownership may have improved distribution and integration options; the degree of that benefit remains unverified."""
+risk_factors = ["Epsagon was acquired by Cisco in 2021 and is not an independent financing opportunity.", "Standalone product availability, roadmap, team continuity and customer migration after closing are not established by the public record reviewed.", "Cisco did not disclose transaction consideration; approximately $500 million is a media-reported amount that the acquirer did not confirm to TechCrunch.", "Funding-total reporting conflicts: company and investor announcements report $30 million, while one 2021 Calcalist report says $26 million; the disclosed individual rounds sum to $30.1 million because published round figures are rounded.", "Larger APM suites can bundle tracing with logs, metrics, infrastructure and security workflows; OpenTelemetry and cloud-native tools lower substitution costs.", "Trace-volume pricing can expose customers to ingestion and retention cost growth, and payload data can include sensitive information.", "No public defense contract, classified deployment, security certification, revenue, ARR, profitability or retention evidence was found in the targeted review.", "A single patent record does not establish a broad or currently controlled patent moat; assignment and international coverage need confirmation."]
+risk_level = "high"
 signals = []
 priority_rank = 0
-priority_rationale = "Keep at the default non-ranked position because Epsagon is an acquired asset rather than an independent priority signal. Its technology is relevant to the database's dual-use and defense-software themes, but the evidence supports a historical strategic reference and acquisition case study, not a current investment or procurement recommendation."
+priority_rationale = """Keep priority_rank at its existing zero/default value. The asset matters for cloud observability, Israel-origin technology and Cisco's acquisition strategy, but it is no longer an independent company to fund or select as a vendor. Any live product or procurement assessment should start with Cisco's current product catalog, support commitments, deployment options and customer migration history."""
 crawled_at = "2026-02-27T14:30:00+00:00"
-updated_at = "2026-07-31T19:42:24Z"
+updated_at = "2026-10-22T02:58:13Z"
+
+[intelligence]
+schema_version = 2
+
+[intelligence.company]
+company_id = "il-epsagon"
+legal_name = "Epsagon Ltd."
+aliases = ["Epsagon", "Epsagon Inc."]
+operating_status = "acquired"
+business_model = "Historical B2B SaaS observability offering, with tiers reportedly priced by trace ingestion volume; standalone post-acquisition model is unverified."
+products = ["Epsagon cloud-native application monitoring and distributed tracing platform"]
+locations = ["Holon, Israel (early base)", "Tel Aviv, Israel (R&D office)", "New York, United States (headquarters by 2020 and at acquisition)", "San Francisco, United States (office reported in 2020)"]
+linkedin_url = "https://www.linkedin.com/company/epsagon"
+founded_on = "2017"
+source_ids = ["cisco-completion", "epsagon-seed", "ctech-seed", "epsagon-series-a", "ctech-follow-on", "lightspeed-profile", "founder-interview"]
+notes = "Cisco's acquisition materials name Epsagon LTD.; press articles also use Epsagon Inc. No registry extract was located to resolve the exact entity structure or incorporation jurisdiction."
+
+[intelligence.funding]
+status = "conflicting"
+summary = "Three completed public equity financings are individually reported: a USD 4.1 million seed in 2018, a USD 16 million Series A in January 2020, and a USD 10 million follow-on financing in July 2020. Company and investor announcements reported cumulative funding of USD 30 million by July 2020. The disclosed round amounts total USD 30.1 million because the publications round figures; a Calcalist acquisition article later reported USD 26 million. The company-reported cumulative figure is retained separately and the disagreement is documented. A proposed Series B reported in August 2021 was stopped before closing and is not raised capital."
+reported_total_raised = 30000000
+reported_total_currency = "USD"
+total_source_ids = ["ctech-follow-on", "usvp-total"]
+total_as_of = "2020-07-22"
+total_scope = "Company-announced cumulative financing through July 2020, reported rounded to USD 30 million; not calculated from round records and excludes acquisition consideration and the abandoned proposed Series B."
+history_status = "partial"
+coverage_through = "2021-10-08"
+
+[[intelligence.funding.rounds]]
+id = "seed-2018"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2018-03-08"
+closed_on = "2018-03-08"
+amount_status = "reported"
+amount = 4100000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["Lightspeed Venture Partners", "StageOne Ventures", "Ariel Maislos"]
+participating_investors = []
+source_ids = ["epsagon-seed", "ctech-seed"]
+notes = "Epsagon's release says the completed seed was led by Lightspeed, StageOne and Ariel Maislos; CTech independently reports the same amount and participants."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2020"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2020-01-16"
+closed_on = "2020-01-16"
+amount_status = "reported"
+amount = 16000000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["U.S. Venture Partners"]
+participating_investors = ["Lightspeed Venture Partners", "StageOne Ventures"]
+source_ids = ["epsagon-series-a"]
+notes = "Company announcement identifies this as a Series A led by USVP and states cumulative funding had reached USD 20 million at that point."
+
+[[intelligence.funding.rounds]]
+id = "follow-on-2020"
+round_type = "Follow-on financing"
+instrument = "equity"
+status = "closed"
+announced_on = "2020-07-22"
+closed_on = "2020-07-22"
+amount_status = "reported"
+amount = 10000000
+currency = "USD"
+amount_scope = "incremental_extension"
+is_extension_of = "series-a-2020"
+lead_investors = ["DTCP"]
+participating_investors = ["Lightspeed Venture Partners", "U.S. Venture Partners", "StageOne Ventures"]
+source_ids = ["ctech-follow-on", "usvp-total"]
+notes = "CTech calls this a separate completed financing round, but does not give it a formal series label. It is recorded as an incremental follow-on after the January Series A. The USD 10 million is incremental, not a restated cumulative amount."
+
+[[intelligence.funding.rounds]]
+id = "series-b-proposed-2021"
+round_type = "Proposed Series B"
+instrument = "equity"
+status = "cancelled"
+announced_on = "2021-08-15"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+source_ids = ["ctech-abandoned-series-b", "techcrunch-acquisition"]
+notes = "CTech reported that Epsagon was close to a Series B for tens of millions of dollars at a USD 200 million valuation before accepting Cisco's offer. Exact target amount and pre- versus post-money basis were not stated, and this financing did not close. The reported valuation is retained as a reported statement only, not assigned to pre_money_valuation or post_money_valuation."
+
+[[intelligence.people]]
+name = "Nitzan Shapira"
+role = "Co-founder and former CEO"
+is_founder = true
+current = false
+background = "Founded Epsagon with Ran Ribenzaft in 2017. In a 2020 interview he described more than 15 years in R&D and management, Israeli elite intelligence service experience, and bachelor's and master's degrees from Technion; company and press sources identify him as CEO through the acquisition period."
+source_ids = ["founder-interview", "ctech-seed", "ctech-follow-on", "calcalist-acquisition"]
+
+[[intelligence.people]]
+name = "Ran Ribenzaft"
+role = "Co-founder and former CTO"
+is_founder = true
+current = false
+background = "Co-founded Epsagon with Nitzan Shapira and served as CTO. Israeli reporting describes the founders as veterans of an Israeli military-intelligence technology unit; he is also named as a co-inventor on Epsagon's US cloud-monitoring patent."
+source_ids = ["ctech-seed", "ctech-follow-on", "calcalist-acquisition", "patent-us10979327"]
+
+[[intelligence.investors]]
+name = "Lightspeed Venture Partners"
+investor_type = "vc"
+website = "https://lsvp.com"
+round_ids = ["seed-2018", "series-a-2020", "follow-on-2020"]
+relationship = "historical"
+source_ids = ["epsagon-seed", "epsagon-series-a", "ctech-follow-on", "lightspeed-profile"]
+
+[[intelligence.investors]]
+name = "StageOne Ventures"
+investor_type = "vc"
+website = "https://stageonevc.com"
+round_ids = ["seed-2018", "series-a-2020", "follow-on-2020"]
+relationship = "historical"
+source_ids = ["epsagon-seed", "epsagon-series-a", "ctech-follow-on"]
+
+[[intelligence.investors]]
+name = "Ariel Maislos"
+investor_type = "unknown"
+round_ids = ["seed-2018"]
+relationship = "historical"
+source_ids = ["epsagon-seed", "ctech-seed", "calcalist-acquisition"]
+notes = "Named individual seed-round participant; the reviewed sources do not state a formal investor type."
+
+[[intelligence.investors]]
+name = "U.S. Venture Partners"
+investor_type = "vc"
+website = "https://www.usvp.com"
+round_ids = ["series-a-2020", "follow-on-2020"]
+relationship = "historical"
+source_ids = ["epsagon-series-a", "ctech-follow-on", "usvp-total"]
+
+[[intelligence.investors]]
+name = "DTCP"
+investor_type = "vc"
+website = "https://www.dtcp.capital"
+round_ids = ["follow-on-2020"]
+relationship = "historical"
+source_ids = ["ctech-follow-on"]
+notes = "CTech says the investment was advanced by DTCP Venture and Growth Fund II."
+
+[[intelligence.investors]]
+name = "Yevgeny Dibrov"
+investor_type = "unknown"
+round_ids = []
+relationship = "historical"
+source_ids = ["calcalist-acquisition"]
+notes = "Reported as an additional investor and Armis co-founder; no financing round attribution was found."
+
+[[intelligence.investors]]
+name = "Nadir Izrael"
+investor_type = "unknown"
+round_ids = []
+relationship = "historical"
+source_ids = ["calcalist-acquisition"]
+notes = "Reported as an additional investor and Armis co-founder; no financing round attribution was found."
+
+[intelligence.ownership]
+status = "reported"
+summary = "Cisco completed its acquisition of Epsagon on 2021-10-08. Public media reports put the consideration at approximately USD 500 million, but Cisco's completion notice does not disclose terms and TechCrunch reported that Cisco would not confirm the amount. Private shareholder percentages and a complete cap table were not located. Parent-company ticker: NASDAQ: CSCO."
+parent_company = "Cisco Systems, Inc."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["cisco-completion", "calcalist-acquisition", "ctech-abandoned-series-b", "techcrunch-acquisition"]
+holdings = []
+
+[[intelligence.ownership.deals]]
+id = "cisco-acquisition-2021"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2021-08-13"
+completed_on = "2021-10-08"
+status = "completed"
+counterparty = "Cisco Systems, Inc."
+amount = 500000000
+currency = "USD"
+amount_status = "reported"
+source_ids = ["cisco-completion", "calcalist-acquisition", "ctech-abandoned-series-b", "techcrunch-acquisition"]
+notes = "Approximately USD 500 million is reported by Calcalist and CTech; Cisco's official close announcement omits terms and TechCrunch says Cisco did not confirm the price. Store as media-reported consideration, not an acquirer-confirmed amount."
+
+[[intelligence.financials]]
+name = "Employees"
+value = "40 employees"
+as_of = "2020-07-22"
+basis = "reported"
+metric = "employees"
+numeric_value = 40
+value_relation = "exact"
+unit = "people"
+source_ids = ["ctech-follow-on"]
+notes = "Contemporaneous CTech report; this is a historical headcount, not a current standalone count."
+
+[[intelligence.financials]]
+name = "Employees"
+value = "Approximately 60 employees, about 35 in Israel"
+as_of = "2021-08-13"
+basis = "reported"
+metric = "employees"
+numeric_value = 60
+value_relation = "approximate"
+unit = "people"
+source_ids = ["calcalist-acquisition"]
+notes = "Calcalist reported the approximate total shortly before acquisition; source is media reporting, not a filed headcount."
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2020-01-16"
+description = "Epsagon's financing announcement said its customer base had grown 300 percent in the prior year and named Via Transportation, Volta, Healthline, Freenet Group and Farmer's Fridge. It included a Via engineering manager's statement that Via engineers used the product daily; the customer statement is evidence of use, not a disclosed contract value."
+source_ids = ["epsagon-series-a"]
+
+[[intelligence.traction]]
+kind = "partnership"
+date = "2020-01-16"
+description = "The company said it was an AWS Advanced Technology Partner with DevOps, Data and Analytics, and Retail Competencies and had been featured in an AWS re:Invent keynote. The announcement supports a partner relationship, not a paid government or production deployment."
+source_ids = ["epsagon-series-a"]
+
+[[intelligence.traction]]
+kind = "product"
+date = "2021-10-08"
+description = "Cisco completed the acquisition and said Epsagon's team and technology would complement its full-stack observability roadmap across cloud-native metrics, events, logs and traces, with open-standard support. The statement documents Cisco's planned product strategy; it does not establish which Epsagon components remain sold today."
+source_ids = ["cisco-completion"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2021-08-13"
+description = "Calcalist reported that Epsagon served hundreds of clients, including Deloitte, Toyota and Via, shortly before the acquisition. This is a dated media report and does not disclose contract values, customer concentration or post-acquisition retention."
+source_ids = ["calcalist-acquisition"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+date = "2021-04-13"
+description = "US Patent 10,979,327 B2, titled Monitoring cloud computing, names Ran Ribenzaft and Nitzan Shapira as inventors and Epsagon Ltd. as the original assignee. Filed 2019-10-17 with priority 2018-10-17, it describes correlating events across distributed application resources using shared data fields to create traces. Google Patents lists Epsagon LLC and Cisco Technology Inc. as current assignees but warns that assignee data may be inaccurate; verify legal assignment in the official register."
+source_ids = ["patent-us10979327"]
+
+[[intelligence.comparables]]
+name = "Datadog APM"
+website = "https://www.datadoghq.com/product/apm/"
+rationale = "Epsagon's CEO named Datadog among its incumbent APM competitors in 2020; both target engineering teams diagnosing distributed application performance."
+differentiation = "Datadog currently describes a broad telemetry platform that correlates traces with logs, metrics, security signals and serverless instrumentation. Epsagon's historical positioning emphasized rapid, agentless setup and payload visibility in serverless and microservice environments; comparative win-rate evidence is unavailable."
+source_ids = ["epsagon-competition", "datadog-apm"]
+
+[[intelligence.comparables]]
+name = "New Relic APM"
+website = "https://docs.newrelic.com/docs/distributed-tracing/concepts/introduction-distributed-tracing/"
+rationale = "Epsagon's CEO named New Relic as an incumbent APM competitor; the products address overlapping trace, service-map and application troubleshooting workflows."
+differentiation = "New Relic's documentation describes end-to-end traces across services, containers, serverless environments, virtual machines and cloud providers. Epsagon's reported edge was automated instrumentation for serverless and inaccessible-host environments, rather than a broader data platform."
+source_ids = ["epsagon-competition", "newrelic-apm"]
+
+[[intelligence.comparables]]
+name = "Dynatrace"
+website = "https://www.dynatrace.com/"
+rationale = "Epsagon's CEO named Dynatrace as an incumbent APM competitor; both products support distributed tracing and root-cause work across modern application environments."
+differentiation = "Dynatrace's current documentation describes trace ingestion through OneAgent or OpenTelemetry and analysis with logs and other signals at scale. Epsagon differentiated historically on simple adoption for serverless and microservices; the reviewed public record does not show current standalone product availability."
+source_ids = ["epsagon-competition", "dynatrace-tracing"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders", "israeli_rd"]
+summary = "Epsagon was founded in 2017 by Nitzan Shapira and Ran Ribenzaft, whom contemporaneous Israeli reporting described as veterans of an Israeli military-intelligence technology unit. It was initially based in Holon/Tel Aviv and retained a Tel Aviv team and R&D center while expanding its US headquarters and offices."
+as_of = "2026-10-22"
+source_ids = ["epsagon-seed", "ctech-seed", "ctech-follow-on", "founder-interview", "calcalist-acquisition"]
+
+[intelligence.research]
+researched_at = "2026-10-22T02:58:13Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "site:cisco.com Epsagon acquisition October 2021 Cisco completed acquisition",
+  "Epsagon funding raised investors seed series A 2020 2021",
+  "Epsagon founders CEO co-founders Tel Aviv observability",
+  "Epsagon revenue customers patents observability",
+  "Epsagon July 2020 Series A extension $11 million DTCP official funding",
+  "Epsagon Series B funding 2021 DTCP $25 million acquisition funding $30 million",
+  "site:epsagon.com \"Epsagon\" \"$\" \"funding\"",
+  "Epsagon patents USPTO Epsagon Inc.",
+  "site:outshift.cisco.com Epsagon",
+  "Epsagon competitors Datadog Honeycomb Cisco AppDynamics 2020 observability",
+  "Epsagon customer Via Transportation Epsagon customer story",
+  "Epsagon dual_use defense government contract classified deployment",
+  "site:cisco.com \"Epsagon\" \"Cloud Observability\" 2024 OR 2025 OR 2026",
+  "Epsagon Epsagon.com official site current product support after Cisco acquisition",
+  "Epsagon government contract defense customer",
+  "Epsagon $500 million Globes Cisco confirmed deal price",
+  "Epsagon 500 million acquisition Calcalist 2021 price",
+  "Epsagon patent \"Monitoring cloud computing\" patent US",
+  "site:epsagon.com blog Epsagon customers partnership AWS",
+  "Epsagon raises 4.1 million seed Lightspeed StageOne Ariel Maislos March 2018 official announcement",
+  "Epsagon patent US10979327B2 Monitoring cloud computing Google patents",
+  "Epsagon Via customer case study Epsagon 90% troubleshooting official",
+  "Epsagon customers Toyota Deloitte public announcement 2021",
+  "site:datadoghq.com/product/apm distributed tracing application performance monitoring",
+  "site:newrelic.com/platform/application-monitoring APM distributed tracing",
+  "site:dynatrace.com/platform/application-observability distributed traces",
+  "site:honeycomb.io product observability tracing",
+  "site:docs.newrelic.com/docs distributed tracing New Relic observability tracing service maps"
+]
+gaps = [
+  "financials: no public standalone revenue, ARR, profitability, cash, burn or runway disclosure was located; only dated historical employee counts were found.",
+  "traction: no customer contract values, retention or post-acquisition Epsagon product/customer continuity metrics were found.",
+  "intellectual_property: one US patent grant was identified; an exhaustive patent-family, assignment and international-jurisdiction search was not completed.",
+  "ownership: private cap table, shareholder percentages, consideration allocation and complete legal entity structure are undisclosed or unverified.",
+  "investors: two additional individual investors were reported in 2021 without public round attribution; post-acquisition cap-table positions are unknown.",
+  "dual_use: targeted public searches found no disclosed defense contract, government customer, classified deployment or relevant security certification; commercial enabling applicability remains an inference.",
+  "funding: the public round record is partial; reported cumulative totals conflict and no primary source identifies the exact proposed Series B target or valuation basis."
+]
+conflicts = [
+  "Founding year: company and CTech sources say founded in 2017; a 2021 Calcalist article says established in 2018. Use 2017 as founding year while describing 2018 as the product launch/expansion period; formal registry date was not verified.",
+  "Cumulative fundraising: company/round announcements and USVP's 2020 headline report USD 30 million; Calcalist's August 2021 article reports USD 26 million; the three disclosed round amounts add to USD 30.1 million because figures were rounded. Retain the company-reported USD 30 million total and preserve the discrepancy.",
+  "Acquisition price: Calcalist and CTech report approximately USD 500 million, while Cisco's completion notice omits terms and TechCrunch says Cisco did not confirm the amount. Treat USD 500 million as media-reported, not acquirer-confirmed consideration.",
+  "Headquarters changed over time: early sources place Epsagon in Holon/Tel Aviv; Shapira said it had recently opened its New York headquarters in 2020, and Cisco later called it headquartered in New York. Current record uses New York at acquisition and preserves the Israeli operating connection."
+]
+diligence_questions = [
+  "Which current Cisco product, if any, contains the Epsagon tracing and instrumentation code, and is it available as a separately licensed or deployable service?",
+  "How many Epsagon customers and engineers transferred into Cisco, and what were annual recurring revenue, gross retention, net retention and gross margin immediately before closing?",
+  "What were the acquisition's exact cash, stock, earnout and employee-retention terms, and can Cisco or a filing confirm the media-reported USD 500 million price?",
+  "What is the current legal assignment and geographic scope of US Patent 10,979,327 B2 and related patent family claims?",
+  "Could the product run in sovereign, disconnected or classified environments, and what payload redaction, retention and data-residency controls were available?",
+  "How did Epsagon perform against Datadog, New Relic and Dynatrace on deployment time, trace completeness, pricing and customer retention before acquisition?"
+]
+
+[[intelligence.research.sources]]
+id = "cisco-completion"
+url = "https://www.cisco.com/site/us/en/about/corporate-development/acquisitions/epsagon/index.html"
+title = "Cisco completes Epsagon acquisition"
+publisher = "Cisco"
+kind = "company"
+accessed_at = "2026-10-22T02:49:01Z"
+published_on = "2021-10-08"
+claims = ["Cisco completed the Epsagon LTD. acquisition on 2021-10-08.", "Cisco described Epsagon as headquartered in New York and focused on distributed tracing for containers and serverless environments.", "Cisco said Epsagon would complement its cloud-native full-stack observability work across metrics, events, logs and traces with open-standard support."]
+
+[[intelligence.research.sources]]
+id = "epsagon-seed"
+url = "https://www.prnewswire.com/news-releases/epsagon-raises-41-million-to-make-application-performance-monitoring-for-serverless-architectures-great-again-676290833.html"
+title = "Epsagon Raises $4.1 Million to Make Application Performance Monitoring for Serverless Architectures Great Again"
+publisher = "Epsagon via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-22T02:49:01Z"
+published_on = "2018-03-08"
+claims = ["Epsagon announced completion of a USD 4.1 million seed round on 2018-03-08.", "The release names Lightspeed Venture Partners, StageOne Ventures and Ariel Maislos as round leaders.", "Epsagon said it was founded in 2017 by Israeli cyber-intelligence veterans and described its serverless monitoring product."]
+
+[[intelligence.research.sources]]
+id = "ctech-seed"
+url = "https://www.calcalistech.com/ctech/articles/0%2C7340%2CL-3733737%2C00.html"
+title = "Israel-Based Serverless Systems Monitoring Startup Epsagon raises $4.1 Million in Seed Round"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-22T02:49:01Z"
+published_on = "2018-03-11"
+claims = ["CTech reported the USD 4.1 million seed and its Lightspeed, StageOne and Ariel Maislos participants.", "CTech described Epsagon as based in Holon and founded in 2017 by Nitzan Shapira and Ran Ribenzaft.", "CTech described both founders as Israeli military-intelligence veterans."]
+
+[[intelligence.research.sources]]
+id = "epsagon-series-a"
+url = "https://www.prnewswire.com/news-releases/epsagon-raises-16-million-in-series-a-funding-led-by-usvp-300987989.html"
+title = "Epsagon Raises $16 Million in Series A Funding led by USVP"
+publisher = "Epsagon via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-22T02:49:01Z"
+published_on = "2020-01-16"
+claims = ["Epsagon announced a USD 16 million Series A led by USVP with Lightspeed and StageOne participating, and said cumulative funding was USD 20 million.", "Epsagon described automated distributed tracing for containers, Kubernetes and serverless workloads.", "Epsagon said its customer base grew 300 percent and named Via, Volta, Healthline, Freenet Group and Farmer's Fridge.", "Epsagon described an AWS Advanced Technology Partner relationship and Retail Competency."]
+
+[[intelligence.research.sources]]
+id = "ctech-follow-on"
+url = "https://www.calcalistech.com/ctech/articles/0%2C7340%2CL-3840995%2C00.html"
+title = "Epsagon completes $10 million financing round led by DTCP"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-22T02:49:01Z"
+published_on = "2020-07-22"
+claims = ["CTech reported a completed USD 10 million round led by DTCP, with Lightspeed, USVP and StageOne as other backers.", "CTech reported that cumulative funding reached USD 30 million.", "CTech reported 40 employees in New York, San Francisco and Tel Aviv and identified Shapira and Ribenzaft as co-founders."]
+
+[[intelligence.research.sources]]
+id = "usvp-total"
+url = "https://www.usvp.com/portfolio-company-news/epsagon-increases-total-fundraising-to-30m-to-become-the-leading-applied-observability-platform-across-microservices-environments/"
+title = "Epsagon Increases Total Fundraising to $30M to Become the Leading Applied Observability Platform Across Microservices Environments"
+publisher = "U.S. Venture Partners"
+kind = "investor"
+accessed_at = "2026-10-22T02:49:01Z"
+published_on = "2020-07-21"
+claims = ["USVP's portfolio-company notice headline reports Epsagon's total fundraising had reached USD 30 million by July 2020."]
+
+[[intelligence.research.sources]]
+id = "calcalist-acquisition"
+url = "https://www.calcalist.co.il/calcalistech/article/bkmdqdxgk"
+title = "Epsagon to be acquired by Cisco for approximately $500 million"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-22T02:49:01Z"
+published_on = "2021-08-13"
+claims = ["Calcalist reported Cisco's acquisition of Epsagon for approximately USD 500 million.", "The article says Epsagon had raised USD 26 million, creating a conflict with company-announced USD 30 million totals.", "Calcalist identifies Shapira and Ribenzaft as founders and reports about 60 employees, about 35 in Israel, and hundreds of customers including Deloitte, Toyota and Via.", "Calcalist reports additional investors Yevgeny Dibrov, Nadir Izrael and Ariel Maislos.", "The article describes the founders as veterans of an Israeli military-intelligence technology unit."]
+
+[[intelligence.research.sources]]
+id = "ctech-abandoned-series-b"
+url = "https://www.calcalistech.com/ctech/articles/0%2C7340%2CL-3915194%2C00.html"
+title = "Epsagon stopped lucrative funding round in favor of $500 million Cisco acquisition"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-22T02:49:01Z"
+published_on = "2021-08-15"
+claims = ["CTech reports Epsagon stopped a proposed Series B described as tens of millions of dollars at a USD 200 million valuation after receiving Cisco's offer.", "CTech reports approximately USD 500 million for the acquisition and USD 30 million raised over three rounds.", "CTech reports about 60 staff, 35 in Israel, and hundreds of clients including Deloitte and Toyota."]
+
+[[intelligence.research.sources]]
+id = "techcrunch-acquisition"
+url = "https://techcrunch.com/2021/08/16/cisco-beefing-up-app-monitoring-portfolio-with-acquisition-of-epsagon-for-500m/"
+title = "Cisco beefing up app monitoring portfolio with acquisition of Epsagon for $500M"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-22T02:49:01Z"
+published_on = "2021-08-16"
+claims = ["TechCrunch reports the sale was pegged at USD 500 million and says Cisco would not confirm that price to TechCrunch.", "TechCrunch describes Epsagon's tracing for container and Kubernetes applications and reports a proposed Series B at about USD 200 million valuation.", "TechCrunch describes Cisco's intended integration with its application-monitoring portfolio."]
+
+[[intelligence.research.sources]]
+id = "lightspeed-profile"
+url = "https://lsvp.com/company/epsagon/"
+title = "Epsagon | Lightspeed"
+publisher = "Lightspeed Venture Partners"
+kind = "investor"
+accessed_at = "2026-10-22T02:49:01Z"
+claims = ["Lightspeed lists Epsagon as acquired by Cisco and identifies Nitzan Shapira as co-founder and CEO and Ran Ribenzaft as co-founder and CTO.", "Lightspeed lists its Epsagon investment in 2018 at the seed stage.", "Lightspeed summarizes Epsagon's serverless monitoring product."]
+
+[[intelligence.research.sources]]
+id = "founder-interview"
+url = "https://opsmatters.com/posts/applying-observability-conversation-nitzan-shapira-epsagon"
+title = "Applying Observability - In Conversation with Nitzan Shapira of Epsagon"
+publisher = "OpsMatters"
+kind = "media"
+accessed_at = "2026-10-22T02:49:01Z"
+published_on = "2020-06-23"
+claims = ["Shapira says he founded Epsagon with Ran Ribenzaft in 2017 and describes his R&D and management experience, Israeli intelligence service and Technion bachelor's and master's degrees.", "Shapira says the company had teams in Israel, New York and San Francisco and had recently opened its New York headquarters.", "The interview describes Epsagon's cloud application monitoring and distributed-tracing product context."]
+
+[[intelligence.research.sources]]
+id = "patent-us10979327"
+url = "https://patents.google.com/patent/US10979327B2/en"
+title = "US10979327B2 - Monitoring cloud computing"
+publisher = "Google Patents / United States patent record"
+kind = "filing"
+accessed_at = "2026-10-22T02:49:01Z"
+published_on = "2021-04-13"
+claims = ["US Patent 10,979,327 B2 names Ran Ribenzaft and Nitzan Shapira as inventors and Epsagon Ltd. as original assignee.", "The patent record gives 2019-10-17 filing and 2018-10-17 priority dates and describes correlating related events across distributed cloud resources to monitor applications.", "Google Patents lists Epsagon LLC and Cisco Technology Inc. as current assignees while warning its listed assignment information may be inaccurate."]
+
+[[intelligence.research.sources]]
+id = "epsagon-competition"
+url = "https://www.alleywatch.com/2020/01/epsagon-monitor-cloud-based-performance-nitzan-shapira/"
+title = "Epsagon Raises $16M for its Cloud Monitoring Solution"
+publisher = "AlleyWatch"
+kind = "media"
+accessed_at = "2026-10-22T02:49:01Z"
+published_on = "2020-01-16"
+claims = ["In a founder interview, Shapira names AppDynamics, Dynatrace, New Relic and Datadog as incumbent competitors.", "Shapira describes Epsagon as SaaS priced by the number of traces ingested from a customer's application environment.", "Shapira describes a five-minute setup as the product ambition and says the technical differentiation could be hard for nontechnical investors to understand."]
+
+[[intelligence.research.sources]]
+id = "cisco-epsagon-support"
+url = "https://www.cisco.com/c/en/us/services/acquisitions/epsagon.html"
+title = "Epsagon - Cisco"
+publisher = "Cisco"
+kind = "company"
+accessed_at = "2026-10-22T02:49:01Z"
+claims = ["Cisco maintains an Epsagon support page telling existing customers to continue the Epsagon technical-support process pending notice of change."]
+
+[[intelligence.research.sources]]
+id = "datadog-apm"
+url = "https://www.datadoghq.com/product/apm/"
+title = "Application Performance Monitoring (APM) | Datadog"
+publisher = "Datadog"
+kind = "company"
+accessed_at = "2026-10-22T02:49:01Z"
+claims = ["Datadog describes APM with distributed tracing correlated with logs, metrics, security signals and serverless instrumentation."]
+
+[[intelligence.research.sources]]
+id = "newrelic-apm"
+url = "https://docs.newrelic.com/docs/distributed-tracing/concepts/introduction-distributed-tracing/"
+title = "Distributed tracing: Track requests across your microservices"
+publisher = "New Relic"
+kind = "company"
+accessed_at = "2026-10-22T02:55:03Z"
+claims = ["New Relic documents distributed tracing across services, containers, serverless environments, virtual machines and different cloud providers."]
+
+[[intelligence.research.sources]]
+id = "dynatrace-tracing"
+url = "https://docs.dynatrace.com/docs/observe/application-observability/distributed-tracing"
+title = "Distributed Tracing - Dynatrace Docs"
+publisher = "Dynatrace"
+kind = "company"
+accessed_at = "2026-10-22T02:49:01Z"
+claims = ["Dynatrace documents distributed tracing ingestion through OneAgent or OpenTelemetry and troubleshooting, performance and trace-analysis use cases."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "conflicting"
+checked_at = "2026-10-22T02:58:13Z"
+next_review_on = "2027-04-22"
+queries = ["Epsagon founders CEO co-founders Tel Aviv observability", "site:cisco.com Epsagon acquisition October 2021 Cisco completed acquisition", "Epsagon.com official support current site Cisco acquisition legacy product availability"]
+source_ids = ["cisco-completion", "epsagon-seed", "ctech-seed", "ctech-follow-on", "founder-interview", "lightspeed-profile", "cisco-epsagon-support"]
+summary = "Identity is established as Epsagon Ltd., an Israel-founded observability company acquired by Cisco. Sources agree on founders and business but disagree between 2017 and 2018 founding dates; contemporaneous company and CTech sources support 2017, so 2018 is treated as product launch/expansion period. Exact corporate registry structure and present product availability remain unverified."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-22T02:58:13Z"
+next_review_on = "2027-04-22"
+queries = ["Epsagon funding raised investors seed series A 2020 2021", "Epsagon July 2020 Series A extension $11 million DTCP official funding", "Epsagon Series B funding 2021 DTCP $25 million acquisition funding $30 million", "Epsagon raises 4.1 million seed Lightspeed StageOne Ariel Maislos March 2018 official announcement"]
+source_ids = ["epsagon-seed", "ctech-seed", "epsagon-series-a", "ctech-follow-on", "usvp-total", "calcalist-acquisition", "ctech-abandoned-series-b"]
+summary = "Three completed rounds have primary or contemporaneous reporting and amounts. Company and investor announcements state USD 30 million cumulative funding through July 2020; a 2021 Calcalist report gives USD 26 million, while separate disclosed round amounts sum to USD 30.1 million due rounding. The proposed Series B was not completed and is not counted."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T02:58:13Z"
+next_review_on = "2027-04-22"
+queries = ["Epsagon funding raised investors seed series A 2020 2021", "Epsagon raises 4.1 million seed Lightspeed StageOne Ariel Maislos March 2018 official announcement", "Epsagon 500 million acquisition Calcalist 2021 price"]
+source_ids = ["epsagon-seed", "epsagon-series-a", "ctech-follow-on", "calcalist-acquisition"]
+summary = "Public announcements identify Lightspeed, StageOne, Ariel Maislos, USVP and DTCP across the three completed rounds. Calcalist identifies Yevgeny Dibrov and Nadir Izrael as additional investors but does not attribute them to a particular round. Cap-table percentages and current holdings are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-22T02:58:13Z"
+next_review_on = "2027-04-22"
+queries = ["Epsagon founders CEO co-founders Tel Aviv observability", "Epsagon raises 4.1 million seed Lightspeed StageOne Ariel Maislos March 2018 official announcement"]
+source_ids = ["ctech-seed", "ctech-follow-on", "founder-interview", "lightspeed-profile", "calcalist-acquisition", "patent-us10979327"]
+summary = "Nitzan Shapira and Ran Ribenzaft are the named co-founders; Lightspeed lists Shapira as CEO and Ribenzaft as CTO. Shapira's interview reports Technion degrees and Israeli intelligence experience. Current post-acquisition roles and team size are not disclosed in the reviewed sources."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-22T02:58:13Z"
+next_review_on = "2027-04-22"
+queries = ["Epsagon $500M Globes Cisco confirmed deal price", "Epsagon 500 million acquisition Calcalist 2021 price", "site:cisco.com Epsagon acquisition October 2021 Cisco completed acquisition"]
+source_ids = ["cisco-completion", "calcalist-acquisition", "ctech-abandoned-series-b", "techcrunch-acquisition"]
+summary = "Cisco completed the acquisition on 2021-10-08. Media reports place the consideration near USD 500 million, but the buyer's close notice omits the amount and TechCrunch reports Cisco did not confirm it. Private ownership percentages are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T02:58:13Z"
+next_review_on = "2027-04-22"
+queries = ["Epsagon revenue customers patents observability", "Epsagon Series B funding 2021 DTCP $25 million acquisition funding $30 million", "Epsagon 500 million acquisition Calcalist 2021 price"]
+source_ids = ["epsagon-series-a", "ctech-follow-on", "calcalist-acquisition", "ctech-abandoned-series-b", "techcrunch-acquisition"]
+summary = "No public standalone revenue, ARR, margin, cash, burn or runway figures were found. Dated headcount figures are reported: 40 in July 2020 and about 60 shortly before acquisition. The proposed USD 200 million Series B valuation was not a completed round and has no disclosed pre/post-money basis."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-22T02:58:13Z"
+next_review_on = "2027-04-22"
+queries = ["Epsagon revenue customers patents observability", "Epsagon Via customer case study Epsagon 90% troubleshooting official", "Epsagon customers Toyota Deloitte public announcement 2021", "site:epsagon.com Epsagon funding"]
+source_ids = ["epsagon-series-a", "ctech-follow-on", "calcalist-acquisition", "cisco-completion", "cisco-epsagon-support"]
+summary = "Company announcement names several customers and includes a Via customer quote; Calcalist later reports hundreds of clients including Deloitte and Toyota. Cisco confirms acquisition and strategic intent. No contract values or post-close customer retention evidence was located."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-22T02:58:13Z"
+next_review_on = "2027-04-22"
+queries = ["Epsagon patents USPTO Epsagon Inc.", "Epsagon patent US10979327B2 monitoring cloud computing Google patents"]
+source_ids = ["patent-us10979327"]
+summary = "One US grant, US 10,979,327 B2, was identified. Its original assignee is listed as Epsagon Ltd.; the current-assignee field includes Epsagon LLC and Cisco Technology Inc. and carries a data-accuracy caveat. No exhaustive family or assignment search was completed."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T02:58:13Z"
+next_review_on = "2027-04-22"
+queries = ["Epsagon competitors Datadog Honeycomb Cisco AppDynamics 2020 observability", "site:datadoghq.com/product/apm distributed tracing application performance monitoring", "site:newrelic.com/platform/application-monitoring APM distributed tracing", "site:dynatrace.com/platform/application-observability distributed traces", "site:docs.newrelic.com/docs distributed tracing New Relic observability tracing service maps"]
+source_ids = ["epsagon-competition", "datadog-apm", "newrelic-apm", "dynatrace-tracing", "cisco-completion"]
+summary = "Epsagon's CEO named AppDynamics, Dynatrace, New Relic and Datadog as incumbent competitors. Current competitor product pages show mature integrated tracing, logs, metrics, service maps and OpenTelemetry support. The historical Epsagon edge was lower-friction serverless and microservice instrumentation, though no independent comparative benchmarks were found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T02:58:13Z"
+next_review_on = "2027-04-22"
+queries = ["Epsagon government contract defense customer", "Epsagon founders CEO co-founders Tel Aviv observability", "Epsagon revenue customers patents observability"]
+source_ids = ["cisco-completion", "ctech-seed", "founder-interview", "calcalist-acquisition"]
+summary = "Distributed tracing can support reliability of defense, public-sector and critical-infrastructure applications, but this is an inferred enabling use. Targeted searches found no Epsagon government or defense contract, classified deployment, security certification or named national-security customer."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Cisco's acquisition page states that it completed the Epsagon LTD. acquisition on 2021-10-08."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["cisco-completion"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Epsagon's own seed announcement says it was founded in 2017 by Israeli cyber-intelligence veterans; CTech reports its early base in Holon and later sources document a Tel Aviv team and R&D center."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["epsagon-seed", "ctech-seed", "ctech-follow-on", "calcalist-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "CTech reports that the July 2020 completed financing brought Epsagon's company-announced total funding to USD 30 million; USVP's investor notice headline independently states the same reported total."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["ctech-follow-on", "usvp-total"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2018.amount"
+support = "direct"
+summary = "Epsagon's seed release reports a completed USD 4.1 million seed round."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["epsagon-seed", "ctech-seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2018.announced_on"
+support = "direct"
+summary = "Epsagon's release is dated 2018-03-08 and announces completion of the seed round."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["epsagon-seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2018.lead_investors"
+support = "direct"
+summary = "The company release names Lightspeed Venture Partners, StageOne Ventures and Ariel Maislos as the seed round leaders."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["epsagon-seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2020.amount"
+support = "direct"
+summary = "Epsagon announced a USD 16 million Series A."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["epsagon-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2020.announced_on"
+support = "direct"
+summary = "Epsagon's Series A announcement is dated 2020-01-16."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["epsagon-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2020.lead_investors"
+support = "direct"
+summary = "The company release says U.S. Venture Partners led the Series A."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["epsagon-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2020.participating_investors"
+support = "direct"
+summary = "The company release names Lightspeed Venture Partners and StageOne Ventures as participating prior investors."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["epsagon-series-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.follow-on-2020.amount"
+support = "direct"
+summary = "CTech reports the completed DTCP-led follow-on financing amount as USD 10 million."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["ctech-follow-on"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.follow-on-2020.announced_on"
+support = "direct"
+summary = "CTech published its report of the completed financing on 2020-07-22."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["ctech-follow-on"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.follow-on-2020.lead_investors"
+support = "direct"
+summary = "CTech identifies DTCP as the lead investor in the July 2020 financing."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["ctech-follow-on"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.follow-on-2020.participating_investors"
+support = "direct"
+summary = "CTech names Lightspeed Venture Partners, USVP and StageOne Ventures among the other backers."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["ctech-follow-on"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-proposed-2021.notes"
+support = "direct"
+summary = "CTech states that the stopped proposed Series B was expected to raise tens of millions at a USD 200 million valuation and does not specify pre- or post-money basis."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["ctech-abandoned-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Cisco's official acquisition page states the acquisition was completed; Cisco is the named acquirer."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["cisco-completion"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.cisco-acquisition-2021.status"
+support = "direct"
+summary = "Cisco's official page states that it completed the Epsagon acquisition on 2021-10-08."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["cisco-completion"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.cisco-acquisition-2021.company_role"
+support = "direct"
+summary = "Cisco's official page identifies Cisco as the acquirer and Epsagon as the acquired company."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["cisco-completion"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.cisco-acquisition-2021.amount"
+support = "direct"
+summary = "Calcalist and CTech report consideration near USD 500 million; TechCrunch says Cisco did not confirm the amount. The check verifies the media-reported figure and its caveat, not an official Cisco disclosure."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["calcalist-acquisition", "ctech-abandoned-series-b", "techcrunch-acquisition"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Employees@2020-07-22.numeric_value"
+support = "direct"
+summary = "CTech reported 40 Epsagon employees in July 2020."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["ctech-follow-on"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Employees@2021-08-13.numeric_value"
+support = "direct"
+summary = "Calcalist reported about 60 employees shortly before the acquisition; the metric is explicitly marked approximate."
+verified_at = "2026-10-22T02:49:01Z"
+source_ids = ["calcalist-acquisition"]

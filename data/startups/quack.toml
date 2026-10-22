@@ -1,46 +1,517 @@
 name = "Quack"
-description = "Quack is a customer-service AI agent platform acquired by Augmented Intelligence (AUI) in February 2026. Its product trains task-oriented agents on company-specific context, supports automated resolution and escalation, and adds analytics and quality controls to existing support operations."
-detailed_description = """
-Quack built trainable, task-oriented AI agents for customer support. Its product connects to support knowledge and historical interactions, represents company-specific context and policies, and uses that context to draft or execute responses, route work, and escalate exceptions. The product surface has included topic-specific configuration, AI-assisted help-center content, session recording, customer-feedback analytics, and configurable scorecards for evaluating agent interactions. The practical distinction from a generic chat widget is operational control: support leaders can decide which topics are automated, inspect performance, and expand coverage incrementally.
+description = "Quack built trainable AI agents for customer support, combining company-specific context, topic-level automation, and quality controls for human and AI interactions. AUI acquired Quack on February 23, 2026; AUI said the team joined it and existing customers would continue receiving service."
+detailed_description = """Quack developed a business-to-business customer support platform that connected a company’s CRM, ticketing tools, knowledge sources, and interaction history to configurable AI agents. The product was designed for support teams handling product-specific and exception-heavy questions, not just short FAQ exchanges. Quack promoted topic-by-topic training, multi-channel response and escalation, help-center content generation, voice-of-customer analysis, and quality assurance for both human and AI conversations. Its public SupportOS page describes scorecards tailored by product, team, or customer segment, an improvement tracker, and feedback from QA scores into agent behavior. Quack also marketed its platform as CRM-agnostic; a company announcement about Yotpo described an integration with Salesforce Service Cloud and Documents360.
 
-The target customer is a software, marketplace, fintech, or digital-services company with enough ticket volume and product complexity to justify controlled automation. Quack's customer page publicly references organizations including Yotpo, PayEm, Hologram, Auction Technology Group, Artlist, and others; one published case-study claim reports more than 65% of inquiries fully resolved for a customer, although the metric should be verified directly for scope, period, and denominator. These references indicate production usage signals, not proof of durable retention or broad market penetration. The commercial value proposition is lower repetitive workload, faster answers, consistent policy application, and a feedback loop from support conversations into product decisions.
+AUI’s acquisition announcement gives the strongest technical account of Quack’s approach: it says the company encoded a symbolic representation of the context agents needed for complex customer-service topics. This may have helped capture procedural details and edge cases that generic retrieval over help articles misses. Public evidence does not specify the representation’s implementation, architecture, model dependencies, or performance under independent evaluation, so this description should not be read as proof of a patented or uniquely difficult-to-copy method. Quack’s product pages demonstrate an operational workflow and QA surface, while AUI’s stated reason for the transaction was to bring that context-oriented approach together with Apollo-1’s neural and symbolic computation.
 
-The category is crowded. Intercom, Zendesk, Salesforce, Ada, Forethought, Decagon, Sierra, and internal platform teams can all offer overlapping agentic support capabilities. Quack's plausible edge is its training-centric workflow and its representation of specialized context, combined with gradual rollout and interaction QA. That can matter where generic retrieval produces brittle answers, but the moat is unproven: foundation-model access, retrieval tooling, observability, and support integrations are widely available. Diligence should therefore focus on automation rates by workflow, resolution quality, expansion and churn, implementation effort, gross margin, and whether the learned context and evaluation data remain differentiated after integration into AUI.
+Commercial evidence is meaningful but should be treated as reported claims. AUI said at acquisition that Quack had dozens of global paying customers and agents running in production, naming Artlist, Yotpo, WalkMe, and Hologram. In November 2025, Quack announced that Yotpo had renewed its contract, reported 70% of Yotpo support tickets automated and more than 50% growth in knowledge-base coverage, and identified Salesforce Service Cloud and Documents360 as integrations. Quack’s customer page carries an Artlist executive testimonial reporting more than 65% of inquiries fully resolved. The Yotpo and Artlist percentages have different scopes and definitions, and neither page specifies a comparable measurement window or denominator. Yotpo’s own June 2026 subprocessor list names Quack AI, Inc. for support and knowledge automation, which independently supports an operational vendor relationship but does not validate the reported automation rate. Fusion VC’s July 2025 profile of Quack’s CEO said the company had more than 40 paying customers and was on track to double revenue by year end; that is an investor-published forecast, not proof that the target was met.
 
-The company is no longer an independent startup: AUI announced its acquisition of Quack on February 23, 2026, saying that the full Quack team would join AUI and that the transaction would double AUI's Israeli R&D operation. AUI also described Quack as having dozens of global paying customers and AI agents running in production, while PR Newswire reported 15 employees and approximately $7M raised in seed funding. Those are meaningful commercialization and technical-team signals, but they now need to be assessed as part of AUI's product and integration strategy rather than as standalone Quack financing or hiring momentum. Continuity of customer service, product branding, and roadmap ownership are key open questions.
+Quack operated across Tel Aviv, San Francisco, and New York according to its 2025 company announcement. AUI said the acquisition doubled its Tel Aviv research and development operation and that the full Quack team joined AUI. The February announcement is the latest direct record found for the acquisition and service-continuity plan; the still-visible Quack product and customer pages do not establish how many staff, customer contracts, or product lines remain in active use after integration. Quack’s public footprint supports a production-stage product before the acquisition, but independent revenue, retention, implementation-cost, gross-margin, and customer-concentration data remain unavailable.
 
-The dual-use case is credible but indirect. The underlying capabilities—policy-constrained language generation, retrieval from controlled knowledge, workflow execution, audit-oriented scoring, and human escalation—could support enterprise IT service desks, logistics administration, regulated public services, or defense-adjacent back-office operations. There is no reliable public evidence here of defense customers, classified deployment, or mission-specific security products, so the record should not imply defense traction. Strategic relevance is primarily as an acquired component that may strengthen AUI's effort to build reliable, constraint-aware agents for organizations where correctness and controllability matter more than open-ended conversation.
-"""
+The product competed with support suites and agent vendors such as Intercom Fin, Zendesk AI agents, Forethought, Decagon, and Sierra. Incumbents can bundle AI into helpdesks and customer-data systems, while newer agent platforms offer workflow authoring, multichannel deployment, testing, and observability. Quack’s plausible distinction was the combination of topic-specific customer training, CRM-agnostic deployment, and QA across human and AI work. Those features are commercially relevant, yet the market’s rapid convergence makes measurable resolution quality, implementation effort, retention, and renewal economics more important than feature checklists. The acquisition shifts the key question from whether Quack can scale alone to whether AUI preserves its customer context, team knowledge, and delivery relationships inside a broader agent platform."""
 logo = "https://cdn.prod.website-files.com/689d7face94ab49c9c989ef5/689da4436bc8ea5aa8eeafc5_Logo.svg"
 website = "https://www.quack.ai"
 sector = "Customer Operations AI"
 founded = "2023"
-headquarters = "Tel Aviv, Israel; San Francisco, United States"
+headquarters = "Tel Aviv, Israel; San Francisco, United States. Quack also reported a presence in New York."
 employees = "15 at acquisition"
-funding_stage = "Acquired by AUI (2026); previously Seed"
+funding_stage = "Acquired by AUI in 2026; last verified standalone round: $7 million Seed (September 2025)."
 entity_type = "acquired_asset"
-dual_use = true
-dual_use_description = "Quack's core capabilities—controlled retrieval, policy-aware generation, workflow handoff, interaction scoring, and human escalation—can transfer to regulated enterprise, public-sector, logistics, and defense-adjacent service operations. The applicability is substantive at the architecture level but indirect: public sources do not establish defense customers, classified work, or mission-specific security deployment."
-key_technologies = ["Trainable AI support agents", "Retrieval over knowledge bases and ticket history", "Topic-level agent specialization", "Natural-language skill configuration", "Gradual rollout with caps and QA", "Interaction scoring and improvement loops", "Integrations with ticketing and collaboration systems"]
-use_cases = ["Tier-1 and tier-2 customer support deflection", "Ticket triage and routing", "Multilingual support operations", "Regulated fintech or marketplace support with policy controls", "Knowledge-base-assisted reply generation", "Agent QA and coaching from historical tickets", "Internal service desk automation for IT, ops, or HR", "Secure, policy-governed internal support for government or defense-adjacent organizations"]
+dual_use = false
+dual_use_description = "Quack’s documented product is customer support automation for commercial businesses. Its knowledge retrieval, policy-aware responses, routing, escalation, and quality scoring could be technically useful in other administrative service workflows, but no public government, defense, cybersecurity, classified, or mission-support customer or deployment was found. General transferability does not establish a substantive defense or security application, so this record does not classify Quack as dual-use."
+key_technologies = ["Topic-specific training of AI customer-service agents", "Company-specific context representation described by AUI as symbolic and encoded in software", "Retrieval and response generation using company knowledge and support interactions", "CRM and ticketing integrations", "Multichannel response, routing, and human escalation", "AI-generated help-center content", "Quality scoring and scorecards for human and AI support interactions", "Voice-of-customer analysis and QA feedback loops"]
+use_cases = ["Automating repetitive customer-support inquiries for SaaS and digital-service companies", "Resolving product-specific and multi-step support questions", "Routing uncertain or exception cases to human support staff", "Generating customer-specific help content from support interactions", "Scoring and improving the quality of human and AI customer-service conversations", "Analyzing support interactions for product and customer-experience insights"]
 investible = false
-investment_rationale = "Quack had credible startup signals: approximately $7M in seed financing, a 15-person team, and public evidence of dozens of global paying customers. It is not an independent investment candidate now because AUI acquired it in February 2026. The relevant diligence is strategic rather than a standalone financing case: determine whether Quack's customer base, context-representation technology, evaluation data, and team materially improve AUI's agent platform, and whether customer contracts and service levels survive the integration."
-strategic_value = "Quack may provide AUI with production customer-service deployments, a specialized representation of business context, evaluation and QA workflows, and an experienced Israeli R&D team. That is strategically relevant to reliable enterprise automation and potentially transferable to regulated or government-adjacent operations, but the value is contingent on integration, customer retention, and AUI's ability to preserve Quack's operational know-how."
-potential_score = 61.0
-technology_score = 76.0
-market_score = 78.0
-team_score = 70.0
-dual_use_score = 56.0
-strategic_alignment_score = 62.0
+investment_rationale = "Quack is not an independent financing candidate after AUI’s 2026 acquisition. Before the transaction it had the shape of a credible early commercial company: a reported $7 million Seed round in September 2025, a 15-person team at acquisition, AUI’s account of dozens of global paying customers, and customer-specific automation claims from Yotpo and Artlist. Those signals show that buyers were deploying the product, but public sources do not establish recurring revenue, retention, margin, customer concentration, or the cost of training each deployment. The financing history is also incomplete because a legacy directory lists earlier 2023 rounds that could not be matched to original announcements. Diligence should focus on the integration outcome, post-acquisition account retention, the definition and duration behind customer resolution claims, and the ownership and portability of Quack’s encoded context and evaluation data."
+strategic_value = "The clearest strategic value is to AUI. AUI said Quack had built a software representation of context for complex customer-service topics, had a team of 15, and served dozens of paying customers with agents in production. Combining that experience with Apollo-1 could give AUI a tested customer-facing workload, customer conversations through which to refine task execution, and a team familiar with operational support edge cases. AUI also said existing Quack customers would continue to receive service and the Quack team would join its Tel Aviv operation. The value depends on preserving those customer relationships and carrying the topic-specific training and QA practices into AUI’s product. No transaction price, integration milestones, assigned intellectual property schedule, or post-close retention figures were disclosed."
+potential_score = 50.0
+technology_score = 68.0
+market_score = 65.0
+team_score = 66.0
+dual_use_score = 5.0
+strategic_alignment_score = 27.0
 stage = "mid"
-stage_rationale = "Quack had moved beyond prototype into production deployments and reported dozens of global paying customers, but it was still a seed-stage company with limited publicly disclosed operating metrics. Its current status is an acquired asset: AUI announced the acquisition on February 23, 2026, and the team joined AUI. The appropriate maturity lens is therefore integration and product continuity, not independent startup scaling."
-competitors = ["Intercom Fin", "Zendesk AI", "Ada", "Forethought", "Decagon", "Sierra"]
-competitive_edge = "Quack's most credible edge was a training-centric operating model: specialized topic context, natural-language configuration, gradual rollout, and interaction QA designed for production support teams. AUI's stated interest in Quack's symbolic representation of complex customer-service context could strengthen that positioning. The advantage remains conditional, because competitors can reproduce many workflow features and the post-acquisition product architecture, ownership of data-derived improvements, and customer switching costs are not publicly documented."
-risk_factors = ["The support AI market is crowded and incumbent-heavy.", "Hallucinations or low-quality answers can quickly damage customer trust and create escalation overhead.", "Performance depends on clean knowledge bases, disciplined onboarding, and reliable integrations.", "Customers will demand clear ROI in deflection, resolution speed, or headcount leverage before expanding rollout.", "Privacy, compliance, and data residency constraints can limit deployment scope in regulated accounts.", "Feature convergence from broader platform vendors may compress differentiation as AI support becomes table stakes.", "Operational implementation may require enough services and tuning to pressure gross margins if not standardized."]
+stage_rationale = "The appropriate entity classification is acquired asset. At the time of sale, Quack had moved beyond a prototype: AUI reported dozens of paying customers and agents in production, while Quack had announced a renewed Yotpo contract and published customer-level automation claims. The company had raised a reported $7 million Seed round and employed 15 people at acquisition. These are signs of an early commercial operation rather than evidence of a mature standalone business, because revenue, gross margin, renewal rates, and customer concentration were not publicly disclosed. AUI announced that it had acquired Quack on February 23, 2026, and that the team joined AUI. The existing mid-stage label should be read as the maturity of the acquired product at that point, not as an independent company’s current financing stage."
+competitors = ["Intercom Fin", "Zendesk AI agents", "Forethought AI agents by Zendesk", "Decagon", "Sierra"]
+competitive_edge = "Quack’s most defensible public distinction was not a foundation model; it was the support workflow around customer-specific context. The company promoted CRM-agnostic connections, training by support topic, scorecards for separate teams or customer segments, QA across human and AI replies, and a loop that turned QA findings into agent improvements. AUI later described Quack’s approach as an encoded symbolic representation for complex topics, which gives a plausible technical reason for the acquisition. This could reduce the gap between a knowledge-base answer and a response that follows a company’s actual procedures. However, there are no public comparative evaluations, patent records identified in this search, or disclosed data rights that establish a durable moat. Intercom and Zendesk can bundle automation into incumbent service environments; Forethought, Decagon, and Sierra overlap in agent workflow, channel coverage, and monitoring. Quack’s advantage therefore rests on measurable accuracy, operating cost, and customer retention, not the existence of QA or topic configuration alone."
+risk_factors = ["The acquisition price, detailed transaction terms, closing date, and post-close product ownership were not disclosed by AUI; a media estimate of the price is not a reported transaction amount.", "Post-acquisition customer retention, renewal rates, product availability, and staff continuity after the February 2026 announcement are not established by later operating disclosures.", "No public ARR, revenue series, gross margin, profitability, cash, burn, runway, customer concentration, or implementation-cost data were found.", "Yotpo’s 70% ticket automation and Artlist’s more than 65% resolved-inquiry figures are company-hosted claims with different scopes and no shared measurement window or denominator.", "A legacy directory reports earlier funding rounds and a $7.17 million total that could not be reconciled to original financing announcements; the reported 2025 $7 million Seed round is treated separately.", "AI support errors, incomplete knowledge, outdated policies, integration failures, or overly broad agent permissions could create customer harm and costly human escalations.", "Incumbent helpdesks and well-funded agent vendors can bundle similar training, routing, analytics, and QA features, putting pressure on differentiation and pricing.", "No public patent portfolio, independent benchmark, or disclosed data and software assignment schedule was identified to establish a technical moat after acquisition.", "No government, defense, security, or classified deployment or relevant certification was found; defense applicability should not be inferred from generic customer support functionality."]
 risk_level = "high"
 signals = []
 priority_rank = 0
-priority_rationale = "Retain as a monitored strategic record, not an active standalone startup priority signal. Quack combines production customer-service evidence with technology that may strengthen AUI's constraint-aware agent strategy, but the acquisition removes independent investibility and makes continuity, integration, retention, and product ownership the decisive diligence questions. Its dual-use relevance is architectural and indirect, not evidence of defense-market traction."
-public_sources = ["https://www.aui.io/resources/welcoming-quack-ai-to-aui/", "https://www.prnewswire.com/news-releases/aui-acquires-quack-ai-developer-of-ai-customer-service-agent-technology-302694870.html", "https://www.quack.ai/customers", "https://www.quack.ai/supportos", "https://www.linkedin.com/company/thequack/"]
+priority_rationale = "Keep Quack as a low-priority strategic record because it is now part of AUI and no longer presents a standalone investment path. It remains relevant as an acquisition that may add a specialized customer-service workload, customer deployments, and a team experienced in encoding complex support context. Public evidence supports commercial use but leaves key questions about post-close product continuity, customer retention, integration into Apollo-1, legal ownership of data and software, and whether the reported resolution figures persist at scale. Its relevance to defense and security is too indirect to justify a defense priority: no government or security customer, classified deployment, security certification, or defense use was found."
+public_sources = [
+  { label = "AUI: Welcoming Quack AI", url = "https://www.aui.io/resources/welcoming-quack-ai-to-aui", description = "AUI’s acquisition announcement, technical rationale, staff, customers, and service-continuity statement." },
+  { label = "AUI acquisition release", url = "https://www.prnewswire.com/news-releases/aui-acquires-quack-ai-developer-of-ai-customer-service-agent-technology-302694870.html", description = "AUI-provided acquisition release with founders, headcount, funding, and named customers." },
+  { label = "Quack 2025 Seed announcement", url = "https://www.prnewswire.com/news-releases/quack-raises-7-million-seed-round-to-redefine-customer-experience-with-proactive-agentic-ai-302553806.html", description = "Company announcement of the $7 million Seed round, named investors, product positioning, and locations." },
+  { label = "Quack SupportOS", url = "https://www.quack.ai/supportos", description = "Official product page describing help-center generation, AI scorecards, hybrid QA, and improvement workflows." },
+  { label = "Quack customer page", url = "https://www.quack.ai/customers", description = "Official customer references and Artlist testimonial with a reported resolution figure." },
+  { label = "Quack’s Yotpo renewal announcement", url = "https://www.prnewswire.com/news-releases/yotpo-automates-70-of-customer-support-tickets-boosting-efficiency-with-quacks-proactive-agentic-ai-platform-302613000.html", description = "Quack-provided release reporting Yotpo renewal, automation and knowledge-coverage figures, and integrations." },
+  { label = "Yotpo subprocessors", url = "https://www.yotpo.com/subprocessors/", description = "Yotpo’s list identifies Quack AI, Inc. as a support and knowledge automation subprocessor." },
+  { label = "Fusion VC profile of Quack’s CEO", url = "https://blog.fusion-vc.com/p/building-for-2027-how-to-stay-relevant", description = "Investor-published founder profile with customer-count, team-size, and revenue-growth forecast statements." },
+  { label = "Fusion VC funding post", url = "https://www.linkedin.com/posts/fusion-vc_congratulations-to-our-portfolio-company-activity-7372932022463250432-BCnC", description = "Investor announcement of the Seed round and a qualified statement about sales." },
+  { label = "CTech acquisition coverage", url = "https://www.calcalistech.com/ctechnews/article/hkz000hfozx", description = "Israeli business-media coverage; reports an estimated acquisition value while saying terms were undisclosed." },
+  { label = "Startup Nation Finder legacy profile", url = "https://finder.startupnationcentral.org/company_page/quack", description = "Legacy Israeli startup directory profile used only to document unresolved older-round and registry leads." },
+  { label = "Intercom Helpdesk and Fin", url = "https://www.intercom.com/helpdesk", description = "Official description of the integrated helpdesk, AI agent, handoff, reporting, and integrations." },
+  { label = "Zendesk agentic AI documentation", url = "https://support.zendesk.com/hc/en-us/articles/8966284087066-About-AI-agents-with-agentic-AI", description = "Official description of Zendesk AI agents and their planning, execution, and support workflow capabilities." },
+  { label = "Forethought AI agents by Zendesk", url = "https://support.zendesk.com/hc/en-us/articles/10659079322394-About-Forethought-AI-agents-by-Zendesk", description = "Official description of Forethought’s automation, agent assistance, routing, analytics, and quality capabilities." },
+  { label = "Decagon", url = "https://decagon.ai/", description = "Official description of multichannel customer agents, workflow authoring, analytics, testing, and QA." },
+  { label = "Sierra", url = "https://sierra.ai/", description = "Official description of multichannel agents, guardrails, optimization, testing, and observability." }
+]
 crawled_at = "2026-02-15T16:56:11Z"
-updated_at = "2026-07-31T19:06:27Z"
+updated_at = "2026-10-22T06:28:47Z"
+
+[intelligence]
+schema_version = 2
+people = [
+  { source_ids = ["aui_welcome", "acquisition_release", "seed_release"], name = "Nadav Kemper", role = "Co-founder and CEO of Quack", is_founder = true, current = false, background = "AUI and Quack’s financing announcement identify him as Quack’s co-founder and CEO. A Fusion VC profile presents his views on customer-support operations and AI product strategy; no prior employer or education history was independently confirmed.", notes = "AUI said the entire Quack team joined AUI at acquisition; later individual employment status was not confirmed." },
+  { source_ids = ["aui_welcome", "acquisition_release", "seed_release"], name = "Aviram Roisman", role = "Co-founder and CTO of Quack", is_founder = true, current = false, background = "AUI and Quack’s financing announcement identify him as Quack’s co-founder and CTO. AUI described him as Quack’s technical leader; no prior employer or education history was independently confirmed.", notes = "AUI said the entire Quack team joined AUI at acquisition; later individual employment status was not confirmed." }
+]
+investors = [
+  { source_ids = ["seed_release", "acquisition_release", "fusion_post"], name = "Hanaco Ventures", investor_type = "vc", website = "https://hanacovc.com/", round_ids = ["seed-2025"], relationship = "historical", notes = "Named as a co-lead of the 2025 Seed round." },
+  { source_ids = ["seed_release", "acquisition_release", "fusion_post"], name = "Storytime Capital", investor_type = "vc", website = "https://www.storytime.capital/", round_ids = ["seed-2025"], relationship = "historical", notes = "Named as a co-lead of the 2025 Seed round." },
+  { source_ids = ["seed_release", "acquisition_release", "fusion_post"], name = "Fusion VC", investor_type = "vc", website = "https://www.fusion-vc.com/", round_ids = ["seed-2025"], relationship = "historical", notes = "Named as a participant; Quack also participated in the Fusion accelerator." },
+  { source_ids = ["seed_release", "acquisition_release", "fusion_post"], name = "Savyon Ventures", investor_type = "vc", website = "https://www.savyonventures.com/", round_ids = ["seed-2025"], relationship = "historical" },
+  { source_ids = ["seed_release", "acquisition_release", "fusion_post"], name = "Seed IL Ventures", investor_type = "vc", website = "https://seedil.com/", round_ids = ["seed-2025"], relationship = "historical" },
+  { source_ids = ["seed_release", "acquisition_release", "fusion_post"], name = "Dan Adika", investor_type = "angel", round_ids = ["seed-2025"], relationship = "historical", notes = "Named as a private investor; the company announcement identifies him as WalkMe’s founder and CEO at the time." }
+]
+financials = [
+  { source_ids = ["aui_welcome", "acquisition_release"], name = "Employees at acquisition", value = "15 employees, as reported by AUI on February 23, 2026", as_of = "2026-02-23", basis = "reported", metric = "employees", numeric_value = 15, value_relation = "exact", unit = "people" }
+]
+traction = [
+  { source_ids = ["yotpo_renewal", "yotpo_subprocessors"], kind = "customer", description = "Quack announced on November 12, 2025 that Yotpo had renewed its contract. Quack reported 70% of Yotpo support tickets automated and more than 50% growth in knowledge-base coverage, and named Salesforce Service Cloud and Documents360 as integrations. These are company-reported figures; the public release does not give a measurement window or denominator. Yotpo’s June 2026 subprocessor list independently identifies Quack AI, Inc. for support and knowledge automation.", date = "2025-11-12" },
+  { source_ids = ["quack_customers"], kind = "customer", description = "Quack’s official customer page carries a testimonial attributed to Hayley Johnson, Head of Customer Success at Artlist, reporting more than 65% of inquiries fully resolved. The page does not state the measurement period, denominator, or independent validation." },
+  { source_ids = ["aui_welcome", "acquisition_release"], kind = "customer", description = "At acquisition, AUI said Quack served dozens of global paying customers and had AI agents in production, naming Artlist, Yotpo, WalkMe, and Hologram. This is the acquirer’s account; customer counts and service volumes were not independently audited in the cited release.", date = "2026-02-23" },
+  { source_ids = ["fusion_blog"], kind = "other", description = "A July 2025 Fusion VC profile of CEO Nadav Kemper reported more than 40 paying customers and 15 team members, and said Quack was on track to double revenue by year end. The revenue statement is a forward-looking target, not a realized result; later outcome was not disclosed in the sources reviewed.", date = "2025-07-31" }
+]
+intellectual_property = []
+comparables = [
+  { source_ids = ["intercom"], name = "Intercom Fin", website = "https://www.intercom.com/helpdesk", rationale = "Customer-service agent sold with a full support helpdesk and broad integrations, competing for the same CX automation budget.", differentiation = "Fin is integrated with Intercom’s inbox and reporting, while Quack marketed a CRM-agnostic agent and topic-specific training. Public evidence does not establish a head-to-head performance advantage for Quack." },
+  { source_ids = ["zendesk_agents"], name = "Zendesk AI agents", website = "https://support.zendesk.com/hc/en-us/articles/8966284087066-About-AI-agents-with-agentic-AI", rationale = "Incumbent support platform offers agents that can plan and execute support workflows across service channels.", differentiation = "Zendesk can bundle AI with its existing ticketing distribution. Quack positioned a separate training and QA layer around customer-specific context; relative implementation cost and resolution quality are undisclosed." },
+  { source_ids = ["forethought"], name = "Forethought AI agents by Zendesk", website = "https://support.zendesk.com/hc/en-us/articles/10659079322394-About-Forethought-AI-agents-by-Zendesk", rationale = "Support automation, ticket routing, agent assistance, analytics, and QA overlap directly with Quack’s marketed workflow.", differentiation = "Zendesk describes Forethought as an omnichannel suite that can operate outside the Zendesk platform. Quack emphasized topic-level training and AUI’s later-described encoded context representation; no comparative tests were found." },
+  { source_ids = ["decagon"], name = "Decagon", website = "https://decagon.ai/", rationale = "Enterprise customer agent platform competing for automated service, workflow tooling, and interaction analytics.", differentiation = "Decagon publicly emphasizes natural-language Agent Operating Procedures, testing, observability, and chat, voice, and email coverage. Quack’s public distinction was customer-support topic training and hybrid QA, later connected by AUI to symbolic context." },
+  { source_ids = ["sierra"], name = "Sierra", website = "https://sierra.ai/", rationale = "Conversational agents for business customer experience with multichannel coverage and optimization tools.", differentiation = "Sierra describes agent building with guardrails, proactive optimization, experimentation, and observability across channels. Quack focused on CRM-connected support operations and scorecards for both AI and human interactions." }
+]
+
+[intelligence.company]
+company_id = "il-quack"
+legal_name = "Quack AI, Inc."
+aliases = ["Quack", "Quack AI"]
+operating_status = "acquired"
+business_model = "Business-to-business software for customer-support teams. Quack sold a CRM-agnostic platform to train and operate AI support agents, connect support and knowledge systems, automate or route customer inquiries, and measure interaction quality. Public pricing and contract terms were not found."
+products = ["Quack AI customer-support agent platform", "SupportOS product experience", "Topic-specific agent training and deployment", "AI help-center content generation", "AI and human interaction QA with configurable scorecards", "Voice-of-customer analytics and improvement tracking"]
+locations = ["Tel Aviv, Israel", "San Francisco, United States", "New York, United States"]
+founded_on = "2023"
+source_ids = ["aui_welcome", "acquisition_release", "seed_release", "quack_supportos", "quack_customers", "yotpo_subprocessors"]
+notes = "Yotpo’s official subprocessor list uses the name Quack AI, Inc. Quack’s Israeli operating-company structure and the relationship between any local entity and that US vendor name were not independently confirmed. The Startup Nation Finder legacy profile links Israeli registrar number 516807328, but the direct Companies Registrar lookup was unavailable in this research session."
+registry_identifiers = [
+  { jurisdiction = "Israel", scheme = "Companies Registrar number reported by Startup Nation Finder", identifier = "516807328", source_ids = ["snc_finder"], notes = "The legacy Finder profile associates this ID with Quack and links to the Israeli Companies Registrar. The live registrar page returned an error during this check, so the legal-entity mapping and current status are not independently confirmed." }
+]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_rd"]
+summary = "AUI states that Quack’s full team joined it and that the acquisition doubled AUI’s Israeli research and development site in Tel Aviv. Quack’s 2025 company announcement also lists Tel Aviv among its global locations. The Israeli connection is confirmed through R&D operations; this does not by itself establish the incorporation country of the parent company."
+as_of = "2026-02-23"
+source_ids = ["aui_welcome", "acquisition_release", "seed_release"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Quack announced a $7 million Seed financing on September 11, 2025, with named co-leads and participants. AUI repeated the $7 million figure at acquisition. A legacy directory lists two earlier 2023 rounds and a $7.17 million total, but no original announcements for those events were located; they are not included as verified rounds or added to a total. The company-announced lifetime total, if different from the 2025 round, remains unclear."
+history_status = "partial"
+coverage_through = "2026-02-23"
+[[intelligence.funding.rounds]]
+id = "seed-2025"
+round_type = "Seed"
+instrument = "unknown"
+status = "closed"
+announced_on = "2025-09-11"
+amount_status = "reported"
+amount = 7000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Hanaco Ventures", "Storytime Capital"]
+participating_investors = ["Fusion VC", "Savyon Ventures", "Seed IL Ventures", "Dan Adika"]
+source_ids = ["seed_release", "acquisition_release", "aui_welcome"]
+notes = "Quack said it had raised the Seed round. The exact closing date, instrument details, valuation, and whether any earlier financing is included in AUI’s later shorthand are not disclosed."
+
+[intelligence.ownership]
+status = "reported"
+summary = "AUI announced on February 23, 2026 that it had acquired Quack AI and that the entire Quack team would join AUI. No shareholding percentages, full cap table, or official transaction price were disclosed. CTech reported an estimate of about $15 million, which remains an estimate and is not entered as a deal amount."
+parent_company = "Augmented Intelligence (AUI) Inc."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["aui_welcome", "acquisition_release", "ctech"]
+holdings = []
+
+[[intelligence.ownership.deals]]
+id = "aui-acquisition-2026-02-23"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2026-02-23"
+status = "completed"
+counterparty = "Augmented Intelligence (AUI) Inc."
+amount_status = "undisclosed"
+source_ids = ["aui_welcome", "acquisition_release", "ctech"]
+notes = "AUI says it acquired Quack; no separate closing date is stated. CTech described an estimated value near $15 million while also reporting that financial terms were not disclosed. The estimate is not recorded as consideration."
+
+[intelligence.research]
+researched_at = "2026-10-22T06:28:47Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Quack.ai acquired Augmented Intelligence AUI February 23 2026 Quack company announcement",
+  "Quack AI startup Israel seed $7 million investors Hanaco Ventures Storytime Capital 2024 funding AUI",
+  "site:quack.ai Quack AI about customers Yotpo PayEm Hologram",
+  "Augmented Intelligence AUI Quack acquisition customers paying customers 15 employees $7M PR Newswire",
+  "Quack AI founders CEO CTO Nadav Kemper Aviram Roisman official about",
+  "Quack AI patents USPTO WIPO patent customer service AI",
+  "Quack AI revenue ARR customers paying customers 2025 company",
+  "Quack AI Israeli company registration Quack AI Ltd Tel Aviv",
+  "Quack AI pre-seed funding Fusion VC 2023 $165,000 Savyon Hanaco",
+  "Quack Fusion VC Savyon Ventures 2023 investment customer support AI",
+  "site:quack.ai How Yotpo uses Quack support AI",
+  "Yotpo Quack AI customer support 70% tickets renewed announcement 2025",
+  "Artlist Quack AI customer support over 65% fully resolved official",
+  "Quack AI defense government security customers cybersecurity contract",
+  "site:intercom.com/fin AI customer service agent resolution helpdesk official",
+  "site:zendesk.com AI agents customer service support official autonomous",
+  "Ada official AI customer service agents platform",
+  "Decagon official AI customer support platform agents resolution helpdesk",
+  "Sierra official AI customer service agents platform conversation workflows",
+  "Quack AI support agent product feature topics QA integrations CRM official site"
+]
+gaps = [
+  "funding: only the September 2025 $7 million Seed round has an original company announcement located; a legacy directory’s earlier 2023 rounds and cumulative amount remain unverified.",
+  "investors: named round participants are public, but the private cap table, ownership percentages, and precise allocations among investors are not disclosed.",
+  "team: founders and their Quack titles are confirmed, but verified prior-career biographies and post-acquisition individual roles were not found.",
+  "financials: no public actual revenue or ARR series, accounting period, profitability, gross margin, cash, burn, or runway was found. Fusion VC’s sales statement lacks a precise publication date and accounting period; its revenue-doubling statement is a forecast. The 15-person acquisition headcount is recorded separately.",
+  "traction: paying-customer counts and Yotpo and Artlist resolution claims are company or investor reported; independent measurement definitions, time windows, usage, renewal rates, retention, and customer concentration are unavailable.",
+  "intellectual_property: searches for patents under Quack and its reported names did not identify a verifiable patent record. A third-party trademark index surfaced a QUACK AI application, but its original USPTO record could not be retrieved, so no trademark or patent is entered as verified IP.",
+  "competition: official product pages establish overlapping offers, but no independent head-to-head benchmark, pricing comparison, or switching-cost evidence was found.",
+  "ownership: acquisition consideration, separate closing date, cap table, and ownership percentages are undisclosed. Israeli registry mapping is reported by a legacy directory, but the live authority lookup was unavailable.",
+  "dual_use: no public government, defense, security, classified, or mission-support customer, contract, deployment, or certification was found; commercial customer-service functionality alone is insufficient to establish dual-use applicability."
+]
+conflicts = [
+  "Startup Nation Finder’s legacy profile lists three financing rounds, including an April 2023 $165,000 Pre-Seed and a December 2023 undisclosed Seed, and reports $7.17 million total. The original announcements were not located, and the April date predates the profile’s stated May 2023 founding. Quack’s September 2025 release and AUI’s acquisition post support a $7 million Seed figure; older directory entries are not treated as verified events or added to a cumulative total.",
+  "CTech describes the AUI acquisition as estimated near $15 million, while AUI’s announcement says no financial terms. The media figure is an estimate, not a disclosed transaction price, and is omitted from the numeric amount field.",
+  "Third-party records and company materials describe multiple Quack legal-entity names. Yotpo’s official list identifies Quack AI, Inc.; the legacy Israeli startup profile links a Companies Registrar number. The exact parent/subsidiary and post-acquisition legal structure was not confirmed."
+]
+diligence_questions = [
+  "After integration into AUI, which Quack customer contracts renewed, what percentage of the acquired customer base remains active, and is the Quack product still sold or supported as a distinct service?",
+  "For Yotpo’s reported 70% automation and Artlist’s reported more than 65% resolved inquiries, what were the exact denominators, time windows, repeat-contact rules, human-review rates, and customer satisfaction outcomes?",
+  "What were Quack’s 2025 recognized revenue, ARR, gross margin, net retention, customer concentration, and onboarding hours per account, and did the July 2025 revenue-doubling forecast materialize?",
+  "Does AUI own or have durable rights to Quack’s software, customer-specific context models, evaluation data, and derived improvements, and what has been integrated into Apollo-1?",
+  "Can AUI clarify whether the $7 million 2025 Seed round was the company’s only financing, reconcile the older directory’s 2023 round entries, and disclose acquisition consideration and closing date?",
+  "What evidence, if any, exists for a government or security deployment, and what isolation, data-residency, access-control, and audit requirements would be needed before serving those customers?"
+]
+
+[[intelligence.research.sources]]
+id = "aui_welcome"
+url = "https://www.aui.io/resources/welcoming-quack-ai-to-aui"
+title = "Welcoming Quack AI to AUI"
+publisher = "Augmented Intelligence (AUI)"
+kind = "company"
+accessed_at = "2026-10-22T06:28:47Z"
+published_on = "2026-02-23"
+claims = ["AUI says it acquired Quack AI on February 23, 2026.", "AUI identifies Nadav Kemper and Aviram Roisman as Quack co-founders, reports 15 employees, $7 million raised, and dozens of global paying customers with agents in production.", "AUI describes Quack’s encoded symbolic representation of context for complex customer-service topics.", "AUI says the entire Quack team joined it, its Tel Aviv R&D site doubled, and existing Quack customers would continue receiving service."]
+
+[[intelligence.research.sources]]
+id = "acquisition_release"
+url = "https://www.prnewswire.com/news-releases/aui-acquires-quack-ai-developer-of-ai-customer-service-agent-technology-302694870.html"
+title = "AUI Acquires Quack AI, Developer of AI Customer Service Agent Technology"
+publisher = "PR Newswire, news provided by Augmented Intelligence (AUI) Inc."
+kind = "company"
+accessed_at = "2026-10-22T06:28:47Z"
+published_on = "2026-02-23"
+claims = ["AUI states it acquired Quack AI and expected to double the size of its Israeli R&D team in Tel Aviv.", "The release identifies Quack founders and roles, 15 employees, approximately $7 million raised in Seed, named investors, and dozens of global customers.", "AUI says customers would continue receiving uninterrupted service.", "The release does not disclose acquisition consideration."]
+
+[[intelligence.research.sources]]
+id = "seed_release"
+url = "https://www.prnewswire.com/news-releases/quack-raises-7-million-seed-round-to-redefine-customer-experience-with-proactive-agentic-ai-302553806.html"
+title = "Quack Raises $7 Million Seed Round to Redefine Customer Experience with Proactive Agentic AI"
+publisher = "PR Newswire, news provided by Quack"
+kind = "company"
+accessed_at = "2026-10-22T06:28:47Z"
+published_on = "2025-09-11"
+claims = ["Quack announced it had raised $7 million in a Seed round on September 11, 2025.", "The announcement names Hanaco Ventures and Storytime Capital as leads and Fusion VC, Savyon Ventures, Seed IL, and Dan Adika among participants.", "Quack describes a CRM-agnostic customer-support agent platform with topic-specific training, multichannel support, quality assurance, and Voice of Customer features.", "Quack reports a presence in Tel Aviv, San Francisco, and New York and identifies Nadav Kemper and Aviram Roisman as founders."]
+
+[[intelligence.research.sources]]
+id = "quack_supportos"
+url = "https://www.quack.ai/supportos"
+title = "SupportOS"
+publisher = "Quack"
+kind = "company"
+accessed_at = "2026-10-22T06:28:47Z"
+claims = ["Quack’s product page describes AI help-center content generation, configurable scorecards, QA for human and AI interactions, an improvement tracker, and QA feedback loops."]
+
+[[intelligence.research.sources]]
+id = "quack_customers"
+url = "https://www.quack.ai/customers"
+title = "Customers"
+publisher = "Quack"
+kind = "company"
+accessed_at = "2026-10-22T06:28:47Z"
+claims = ["Quack lists customer stories for Yotpo, PayEm, Hologram, Notable, Auction Technology Group, and Artlist.", "The page includes a testimonial attributed to Artlist’s Head of Customer Success reporting more than 65% of inquiries fully resolved; measurement scope and period are not specified."]
+
+[[intelligence.research.sources]]
+id = "yotpo_renewal"
+url = "https://www.prnewswire.com/news-releases/yotpo-automates-70-of-customer-support-tickets-boosting-efficiency-with-quacks-proactive-agentic-ai-platform-302613000.html"
+title = "Yotpo Automates 70% of Customer Support Tickets, Boosting Efficiency with Quack’s Proactive Agentic AI Platform"
+publisher = "PR Newswire, news provided by Quack"
+kind = "company"
+accessed_at = "2026-10-22T06:28:47Z"
+published_on = "2025-11-12"
+claims = ["Quack announced Yotpo renewed its contract on November 12, 2025.", "Quack reports 70% of Yotpo support tickets automated and more than 50% growth in support knowledge-base coverage, without stating a comparable measurement window or denominator.", "Quack names Salesforce Service Cloud and Documents360 integrations and includes a quotation attributed to Yotpo’s SVP of Client Services."]
+
+[[intelligence.research.sources]]
+id = "yotpo_subprocessors"
+url = "https://www.yotpo.com/subprocessors/"
+title = "Yotpo Subsidiaries and Sub-Processors"
+publisher = "Yotpo"
+kind = "customer"
+accessed_at = "2026-10-22T06:28:47Z"
+published_on = "2026-06-18"
+claims = ["Yotpo’s June 18, 2026 list names Quack AI, Inc. as a US-based support and knowledge automation subprocessor; this supports a vendor relationship and legal name, not the reported automation rate."]
+
+[[intelligence.research.sources]]
+id = "fusion_blog"
+url = "https://blog.fusion-vc.com/p/building-for-2027-how-to-stay-relevant"
+title = "Building for 2027: How to Stay Relevant in an AI World That’s Moving Too Fast"
+publisher = "Fusion VC"
+kind = "investor"
+accessed_at = "2026-10-22T06:28:47Z"
+published_on = "2025-07-31"
+claims = ["A Fusion VC profile of Quack CEO Nadav Kemper reports more than 40 paying customers and a 15-person team in July 2025.", "The profile says Quack was on track to double revenue by the end of 2025; this is a forecast, not a realized result.", "The article describes Quack’s positioning around customer-facing teams and its approach to customer-specific support workflows."]
+
+[[intelligence.research.sources]]
+id = "fusion_post"
+url = "https://www.linkedin.com/posts/fusion-vc_congratulations-to-our-portfolio-company-activity-7372932022463250432-BCnC"
+title = "Congratulations to our portfolio company Quack AI on raising $7M!"
+publisher = "Fusion VC"
+kind = "investor"
+accessed_at = "2026-10-22T06:28:47Z"
+claims = ["Fusion VC says Quack reached hundreds of thousands of dollars in sales and names Artlist, Yotpo, and WalkMe; the accessible post excerpt does not state an exact publication date, accounting basis, or sales period.", "Fusion VC identifies Storytime Capital and Hanaco Ventures as Seed co-leads and Savyon Ventures, SeedIL Ventures, and Dan Adika as participants.", "Fusion VC identifies Nadav Kemper and Aviram Roisman as Quack’s founders."]
+
+[[intelligence.research.sources]]
+id = "ctech"
+url = "https://www.calcalistech.com/ctechnews/article/hkz000hfozx"
+title = "Israeli AI firm AUI acquires Quack AI in push toward task-oriented systems"
+publisher = "CTech by Calcalist"
+kind = "media"
+accessed_at = "2026-10-22T06:28:47Z"
+published_on = "2026-02-23"
+claims = ["CTech reports AUI acquired Quack and that financial terms were not disclosed.", "CTech says the acquisition value was estimated near $15 million; it is a media estimate, not a disclosed price.", "CTech reports the transaction would double AUI’s Israeli R&D team and summarizes Quack’s founders, staff, funding, customers, and product."]
+
+[[intelligence.research.sources]]
+id = "snc_finder"
+url = "https://finder.startupnationcentral.org/company_page/quack"
+title = "Quack, Business Software profile"
+publisher = "Startup Nation Finder, legacy directory"
+kind = "directory"
+accessed_at = "2026-10-22T06:28:47Z"
+claims = ["The legacy directory lists Israeli registrar number 516807328 and Tel Aviv location and links to the Israeli Companies Registrar; the live registrar lookup was unavailable during this research.", "The profile lists a $7.17 million total and three rounds, including an April 2023 $165,000 Pre-Seed and a December 2023 undisclosed Seed; original announcements for those events were not located.", "The directory notes its operating service ended on August 31, 2026, so its historic profile data is treated as a lead rather than current authoritative data."]
+
+[[intelligence.research.sources]]
+id = "intercom"
+url = "https://www.intercom.com/helpdesk"
+title = "The helpdesk built for AI and humans"
+publisher = "Intercom"
+kind = "company"
+accessed_at = "2026-10-22T06:28:47Z"
+claims = ["Intercom describes a native AI agent and helpdesk system with shared inbox, human handoff, reporting, quality checks, and integrations."]
+
+[[intelligence.research.sources]]
+id = "zendesk_agents"
+url = "https://support.zendesk.com/hc/en-us/articles/8966284087066-About-AI-agents-with-agentic-AI"
+title = "About AI agents with agentic AI"
+publisher = "Zendesk"
+kind = "company"
+accessed_at = "2026-10-22T06:28:47Z"
+claims = ["Zendesk documents AI agents that can make decisions, plan, adapt, and execute support workflows across messaging, email, and voice."]
+
+[[intelligence.research.sources]]
+id = "forethought"
+url = "https://support.zendesk.com/hc/en-us/articles/10659079322394-About-Forethought-AI-agents-by-Zendesk"
+title = "About Forethought AI agents by Zendesk"
+publisher = "Zendesk"
+kind = "company"
+accessed_at = "2026-10-22T06:28:47Z"
+claims = ["Zendesk describes Forethought as an omnichannel support suite that can run outside Zendesk and automate, route, assist, report on, and review support interactions."]
+
+[[intelligence.research.sources]]
+id = "decagon"
+url = "https://decagon.ai/"
+title = "Decagon, the AI concierge for every customer"
+publisher = "Decagon"
+kind = "company"
+accessed_at = "2026-10-22T06:28:47Z"
+claims = ["Decagon describes natural-language workflow authoring, testing, observability, analytics, and unified chat, voice, and email agents."]
+
+[[intelligence.research.sources]]
+id = "sierra"
+url = "https://sierra.ai/"
+title = "Better customer experiences"
+publisher = "Sierra"
+kind = "company"
+accessed_at = "2026-10-22T06:28:47Z"
+claims = ["Sierra describes multichannel customer agents, built-in guardrails, agent optimization, experiments, and observability."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-22T06:28:47Z"
+next_review_on = "2027-04-22"
+queries = ["Quack.ai acquired Augmented Intelligence AUI February 23 2026 Quack company announcement", "Quack AI founders CEO CTO Nadav Kemper Aviram Roisman official about", "Quack AI Israeli company registration Quack AI Ltd Tel Aviv"]
+source_ids = ["aui_welcome", "acquisition_release", "seed_release", "snc_finder", "yotpo_subprocessors"]
+summary = "The target is Quack AI, the customer-support agent business founded in 2023 by Nadav Kemper and Aviram Roisman, not similarly named Quack AI products in web3 or developer tooling. AUI acquired it in 2026. The company reported Tel Aviv, San Francisco, and New York locations; its exact incorporation and parent/subsidiary structure remain unresolved."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-22T06:28:47Z"
+next_review_on = "2027-04-22"
+queries = ["Quack AI startup Israel seed $7 million investors Hanaco Ventures Storytime Capital 2024 funding AUI", "Quack AI pre-seed funding Fusion VC 2023 $165,000 Savyon Hanaco", "Quack Fusion VC Savyon Ventures 2023 investment customer support AI"]
+source_ids = ["seed_release", "acquisition_release", "aui_welcome", "fusion_post", "snc_finder"]
+summary = "The $7 million September 2025 Seed round is directly supported by Quack’s announcement and repeated by AUI. A legacy directory’s earlier 2023 rounds and $7.17 million aggregate are not backed by original announcements found in this search, so they remain unresolved and are excluded from the verified round list and lifetime total."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T06:28:47Z"
+next_review_on = "2027-04-22"
+queries = ["Quack AI 2025 Seed investors Hanaco Storytime Fusion Savyon Seed IL Dan Adika", "Quack AI Fusion VC portfolio investment Quack"]
+source_ids = ["seed_release", "acquisition_release", "fusion_post", "aui_welcome"]
+summary = "The September 2025 company announcement names Hanaco Ventures and Storytime Capital as leads and names Fusion VC, Savyon Ventures, Seed IL, and Dan Adika as participants. Private cap-table allocations and ownership percentages were not found."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-22T06:28:47Z"
+next_review_on = "2027-04-22"
+queries = ["Quack AI founders CEO CTO Nadav Kemper Aviram Roisman official about", "Quack AI team leadership customer support AI", "Quack AI team CEO CTO COO acquisition 2026"]
+source_ids = ["aui_welcome", "acquisition_release", "seed_release", "fusion_blog"]
+summary = "AUI and Quack identify Nadav Kemper as CEO and Aviram Roisman as CTO and co-founder; AUI describes Roisman as technical leader and says the whole team joined it. Public biographies establish company roles but not independently verified prior employers, education, or later individual roles."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-22T06:28:47Z"
+next_review_on = "2027-04-22"
+queries = ["Quack AI acquisition Augmented Intelligence AUI terms closing", "Quack AI acquisition estimated $15m AUI Israeli R&D", "Quack Technology Ltd registrar 516807328"]
+source_ids = ["aui_welcome", "acquisition_release", "ctech", "snc_finder"]
+summary = "AUI announced the acquisition on February 23, 2026, and says the team joined AUI. AUI did not disclose price or a separate closing date; CTech reported an estimate near $15 million. No cap table or post-acquisition ownership percentages were located."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T06:28:47Z"
+next_review_on = "2027-04-22"
+queries = ["Quack AI revenue ARR financials customers paying customers 2025 company", "Quack AI 15 employees acquisition AUI 2026", "Quack AI hundreds of thousands of dollars sales Fusion VC"]
+source_ids = ["aui_welcome", "acquisition_release", "fusion_blog", "fusion_post"]
+summary = "AUI reports 15 employees at acquisition and Fusion VC’s July 2025 founder profile includes a revenue-doubling forecast. A Fusion investor post says sales reached hundreds of thousands of dollars but gives no exact publication date, accounting basis, or period. No actual dated revenue/ARR series, profitability, margin, cash, burn, or runway was found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-22T06:28:47Z"
+next_review_on = "2027-04-22"
+queries = ["Quack AI Yotpo customer support 70 percent tickets renewal", "Artlist Quack AI customer support over 65% fully resolved official", "Quack AI customers paying customers production AUI"]
+source_ids = ["aui_welcome", "acquisition_release", "quack_customers", "yotpo_renewal", "yotpo_subprocessors", "fusion_blog"]
+summary = "AUI reports production agents and dozens of paying customers. Quack announced a Yotpo renewal and customer-specific automation results; its page carries an Artlist testimonial. Yotpo’s own subprocessor list corroborates a vendor relationship. Customer counts, reported resolution definitions, service volumes, and retention have not been independently audited in these sources."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-22T06:28:47Z"
+next_review_on = "2027-04-22"
+queries = ["Quack AI patents USPTO WIPO patent customer service AI", "Quack AI patents Nadav Kemper Aviram Roisman", "Quack Technology Ltd patent AI"]
+source_ids = []
+summary = "Named-company and founder searches in patent-oriented indexes did not identify a verifiable Quack patent record. A third-party trademark index surfaced a QUACK AI mark, but the original USPTO file could not be retrieved and is not entered as confirmed IP."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T06:28:47Z"
+next_review_on = "2027-04-22"
+queries = ["site:intercom.com/fin AI customer service agent resolution helpdesk official", "site:zendesk.com AI agents customer service support official autonomous", "Ada official AI customer service agents platform", "Decagon official AI customer support platform agents resolution helpdesk", "Sierra official AI customer service agents platform conversation workflows", "Quack AI support agent product feature topics QA integrations CRM official site"]
+source_ids = ["quack_supportos", "intercom", "zendesk_agents", "forethought", "decagon", "sierra"]
+summary = "Official product materials support the selected peer set: incumbent helpdesks and independent agent platforms overlap with Quack in ticket resolution, workflow configuration, channel handling, and interaction QA. No independent performance comparison or market-share conclusion is made."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T06:28:47Z"
+next_review_on = "2027-04-22"
+queries = ["Quack AI defense government security customers cybersecurity contract"]
+source_ids = ["aui_welcome", "acquisition_release", "seed_release", "quack_customers", "quack_supportos"]
+summary = "The company and acquirer describe commercial customer-support applications and name commercial customers. No public defense, government, security, classified, or mission-support customer, contract, deployment, or certification was found; no substantive defense application is inferred from general-purpose workflow features."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "AUI states that it acquired Quack AI on February 23, 2026, and the acquisition release repeats the transaction. This verifies acquired status, not continued standalone operation."
+verified_at = "2026-10-22T06:28:47Z"
+source_ids = ["aui_welcome", "acquisition_release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "AUI states that the acquisition doubled its Israeli R&D site in Tel Aviv and that the Quack team joined it; Quack’s company announcement lists Tel Aviv among its locations."
+verified_at = "2026-10-22T06:28:47Z"
+source_ids = ["aui_welcome", "seed_release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.amount"
+support = "direct"
+summary = "Quack announced that it had raised $7 million in Seed financing on September 11, 2025; AUI repeated the $7 million amount at acquisition. The numeric field is represented in absolute USD units."
+verified_at = "2026-10-22T06:28:47Z"
+source_ids = ["seed_release", "acquisition_release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.lead_investors"
+support = "direct"
+summary = "Quack names Hanaco Ventures and Storytime Capital as the two leads of the 2025 Seed round; AUI’s acquisition release repeats the lead names."
+verified_at = "2026-10-22T06:28:47Z"
+source_ids = ["seed_release", "acquisition_release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2025.participating_investors"
+support = "direct"
+summary = "Quack names Fusion VC, Savyon Ventures, Seed IL, and private investor Dan Adika among the participants in the 2025 Seed round; AUI’s release also identifies the named participants."
+verified_at = "2026-10-22T06:28:47Z"
+source_ids = ["seed_release", "acquisition_release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Employees at acquisition@2026-02-23.numeric_value"
+support = "direct"
+summary = "AUI’s acquisition announcement reports 15 Quack employees at acquisition; the numeric metric records that reported headcount, not current AUI staffing."
+verified_at = "2026-10-22T06:28:47Z"
+source_ids = ["aui_welcome", "acquisition_release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "AUI states that it acquired Quack AI and that the Quack team joined AUI, directly supporting AUI as the parent acquirer in this record."
+verified_at = "2026-10-22T06:28:47Z"
+source_ids = ["aui_welcome", "acquisition_release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.aui-acquisition-2026-02-23.status"
+support = "direct"
+summary = "AUI says it has acquired Quack AI; CTech reports the completed acquisition. The deal status is therefore recorded as completed."
+verified_at = "2026-10-22T06:28:47Z"
+source_ids = ["aui_welcome", "acquisition_release", "ctech"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.aui-acquisition-2026-02-23.amount"
+support = "direct"
+summary = "AUI’s announcement does not disclose transaction consideration. CTech reports an estimate near $15 million but says terms were undisclosed, so no numeric deal amount is entered."
+verified_at = "2026-10-22T06:28:47Z"
+source_ids = ["aui_welcome", "acquisition_release", "ctech"]
+
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.aui-acquisition-2026-02-23.company_role"
+support = "direct"
+summary = "AUI states that it acquired Quack AI, which directly verifies Quack’s role as the target in the acquisition."
+verified_at = "2026-10-22T06:29:17Z"
+source_ids = ["aui_welcome", "acquisition_release"]

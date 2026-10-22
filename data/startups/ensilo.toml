@@ -1,44 +1,960 @@
 name = "enSilo"
-description = "enSilo was a privately held endpoint-security company acquired by Fortinet in 2019. Its detection, prevention, containment, and response capabilities now live in Fortinet's FortiEDR and broader Security Fabric product motion, making this record an acquired-asset reference rather than a live standalone startup profile."
-detailed_description = """enSilo developed an endpoint security platform for preventing, detecting, containing, and remediating attacks before they could produce broader business disruption. Its core proposition combined a relatively lightweight endpoint agent with pre- and post-infection protection, behavioral monitoring, code-tracing, attack-chain visibility, and automated response. The important technical distinction was operational: the platform was designed to take defensive action on a compromised host, including isolating a device, blocking malicious communications, stopping data exfiltration, and undoing or limiting ransomware-related changes, rather than merely generating another alert for a security analyst.
-
-The current Fortinet product lineage shows how those capabilities were commercialized after the acquisition. FortiEDR is positioned as an endpoint protection and response layer for workstations, servers, cloud workloads, point-of-sale systems, and operational technology. Fortinet describes real-time breach prevention, attack-surface reduction, customizable incident-response playbooks, MITRE ATT&CK mapping, identity-aware response, and Security Fabric connectivity. Its deployment options include cloud-native, hybrid, and on-premises configurations, while its supported operating systems include current and legacy Windows, macOS, Linux, virtual desktop environments, and selected mobile platforms. That breadth is relevant for customers whose security estate cannot be standardized quickly or taken offline for extensive reimaging.
-
-The customer problem is a combination of endpoint compromise, analyst overload, and the cost of operational interruption. Enterprise security teams, public-sector organizations, manufacturers, retailers, and other distributed operators need to protect large numbers of heterogeneous devices while preserving uptime. In this category, value depends on detection quality, response latency, false-positive control, agent resource use, forensic context, policy flexibility, and integration with identity, network, email, and security-information systems. Fortinet's current materials emphasize automated playbooks, device isolation, domain and IP blocking, credential actions, and rollback or remediation workflows; these are useful traction signals for product maturity, but they are vendor claims rather than independent proof of performance in every environment.
-
-Competition is intense and increasingly organized around platform consolidation. CrowdStrike, SentinelOne, Microsoft, Palo Alto Networks, Sophos, and other vendors combine endpoint telemetry with cloud analytics, threat intelligence, managed detection, and XDR. enSilo's historical differentiation was the combination of low-footprint execution, real-time prevention, containment, and support for legacy or constrained systems. After acquisition, that differentiation is harder to evaluate as an independent product advantage because the roadmap, economics, staffing, and customer relationships are controlled by Fortinet. The acquisition nevertheless provided Fortinet with endpoint detection and response capabilities that could be connected to FortiSIEM, FortiNAC, FortiInsight, FortiGate, and related Security Fabric components.
-
-The national-security relevance is credible but bounded. Endpoint defense is directly applicable to government, defense contractors, critical infrastructure, industrial control environments, and other networks where an initial compromise can affect mission availability or expose sensitive data. Low-overhead agents, offline protection, legacy-system coverage, and automated containment are particularly relevant where patching and downtime are constrained. This does not establish military deployment, government contracts, or unique defense technology; it establishes a substantive dual-use adjacency based on the same defensive endpoint problem. The present record should therefore be used to study cyber capability acquisition and platform integration, not as evidence of an investable independent Israeli startup."""
+description = "Founded in 2014, enSilo built endpoint protection around a specific premise: an attacker may already be inside, so defenders also need to stop the damage and data theft that follow. Its lightweight, multi-platform agent combined next-generation antivirus, OS-level communication controls, code-tracing, endpoint detection and response, and automated containment. Fortinet acquired all outstanding shares in October 2019; Fortinet later mapped the acquired capability to FortiEDR, so this is an acquired-asset record rather than an independent startup profile."
+detailed_description = "enSilo emerged from Tel Aviv in 2015 with a point of view that was different from perimeter-first security: organizations would continue to be compromised, so endpoint controls should also prevent the consequences of compromise. Its early platform analyzed operating-system-level connection requests and applied policies at connection establishment to block malicious outbound communications before data could leave. A later enSilo patent describes analyzing stack-trace records associated with connection establishment to detect and block malicious communications. The technical bet was to use process context and where a program was in its execution path, rather than relying only on file signatures or alerting after an endpoint had already been breached. This is a concrete historical design choice, not proof that every later endpoint threat was covered or that the product outperformed the field in independent testing.\n\nThe commercial platform broadened that idea into a single agent. enSilo described the agent as combining next-generation antivirus, application communication control, real-time blocking EDR, threat hunting, incident response, and virtual patching, with cloud or on-premises management and multi-tenancy. Version 4.0 added policies that could block communications from vulnerable applications based on published CVEs, IoT discovery and assessment, USB control, and response playbooks connected to third-party security gateways. The intended buyer was an enterprise security team that wanted prevention and post-infection containment in the same deployment, including organizations with legacy operating systems, point-of-sale devices, or manufacturing and other IoT endpoints. The operating value proposition was to keep a compromised device from becoming an exfiltration or ransomware event while reducing the need for analysts to manually coordinate several separate tools.\n\nEvidence of use is real but uneven in quality and scope. In 2016, enSilo said that it had tens of deployments in the United States and that its platform was in use by a number of Fortune 100 companies, leading defense contractors, and payment solutions; it did not name those organizations or disclose contract values. In 2017, enSilo announced that Matrix42 would integrate the platform into its digital-workspace security suite and could sell it in Central Europe. A Matrix42 case study later described ZAE Bayern selecting Matrix42 EDR, powered by enSilo, after evaluating eight products and deploying it across its endpoints by mid-2018. This is useful customer and product evidence, but the case study is published by the channel partner and does not disclose subscription value, renewal, or later retention. The partnership itself should not be counted as a paying deployment.\n\nThe July 2019 company announcement reported more than 250% year-over-year revenue growth, a $23 million Series B led by Rembrandt Ventures, and more than $57 million in company-reported lifetime capital raised. Calcalist reported 86 employees at that time, including 53 in Israel. These figures indicate a meaningful commercial operation immediately before acquisition, but revenue growth is not an absolute revenue or ARR figure, the growth rate is company-reported, and neither Fortinet's filings nor public disclosures provide enSilo standalone revenue, margins, burn, customer retention, or post-acquisition headcount. The founder group brought relevant security and product experience: Lightspeed lists Roy Katmor as CEO, Udi Yavo as CTO, Tomer Bitton as VP Research, and Ido Kelson as VP Engineering; enSilo and local reporting connect the team to Akamai, Imperva, EMC, and Rafael. Those credentials support a plausible ability to build enterprise security software, while the public record does not permit a current standalone-team assessment after the acquisition.\n\nFortinet completed the acquisition of enSilo Ltd. on October 28, 2019. Its announcement highlighted patented code-tracing, a lightweight Linux/Windows/macOS agent, IoT coordination, cloud and on-premises deployment, and planned integration with FortiSIEM, FortiInsight, and FortiNAC. A later Fortinet acquisition timeline explicitly associates enSilo with FortiEDR, and the present FortiEDR product page describes prevention, detection, response playbooks, legacy operating-system support, and cloud, hybrid, and on-premises deployment. That establishes a product-family lineage and a strategic fit with Fortinet's broader security portfolio; it does not establish which enSilo code, staff, patents, or customers remain in the current FortiEDR product. Patent records show at least one enSilo-originated U.S. patent assigned to Fortinet after the acquisition.\n\nThe competitive context is a crowded EPP/EDR/XDR market in which CrowdStrike Falcon, SentinelOne Singularity, Microsoft Defender for Endpoint, Palo Alto Cortex XDR, Sophos, and other platforms combine endpoint telemetry with threat intelligence, automated investigation, and managed services. enSilo's historical distinction was its emphasis on preventing post-infection consequences through process-aware connection blocking, and packaging that with NGAV, EDR, virtual patching, and multi-tenant management in a single agent. Current rivals compete through broader ecosystem data, mature global distribution, and extensive integration and service offerings. Fortinet's distribution and Security Fabric connections could make the acquired capability more valuable inside a network-security suite, but that is an acquirer-level advantage. There is no public standalone enSilo retention, win/loss, pricing, or efficacy data with which to claim durable differentiation against today's competitors."
 logo = "https://www.fortinet.com/content/dam/fortinet/images/ngfw/fortinet-logo-navigation.svg"
-website = "https://www.fortinet.com/products/endpoint-security/fortiedr"
+website = "Unknown"
 sector = "Cyber Defense / Endpoint Security"
 founded = "2014"
 headquarters = "San Francisco, California, United States"
-employees = "51-200"
+employees = "86 (53 in Israel, reported July 2019)"
 funding_stage = "Acquired by Fortinet in 2019"
 entity_type = "acquired_asset"
 dual_use = true
-dual_use_description = "Endpoint detection, prevention, containment, and remediation have direct commercial and security-sector applicability. The capability can protect government, defense-industrial, critical-infrastructure, and industrial endpoints, but the available evidence supports a defensive cyber-use assessment rather than a claim of military deployment or a defense-specific product."
-key_technologies = ["Lightweight cross-platform endpoint agent", "Pre- and post-infection behavioral protection", "Real-time attack-chain and code-tracing telemetry", "Automated incident-response and remediation playbooks", "Endpoint isolation, application control, and virtual patching", "Offline and legacy operating-system protection", "Security Fabric and third-party integration APIs"]
-use_cases = ["Ransomware prevention, rollback, and post-compromise containment", "SOC triage, threat hunting, and automated endpoint remediation", "Protection of legacy Windows servers and constrained operational systems", "OT and manufacturing endpoint availability protection", "Point-of-sale and retail endpoint data-exfiltration prevention", "Cloud, hybrid, and virtual-desktop workload defense", "Government and defense-contractor endpoint hardening"]
+dual_use_description = "Commercial applicability is direct: endpoint prevention, data-exfiltration control, ransomware containment, incident response, and legacy-device protection address enterprise workstations, servers, retail/payment systems, and industrial environments. The same defensive controls apply to government networks, defense contractors, and critical infrastructure. enSilo said in 2016 that its platform was used by unnamed leading defense contractors, but no customer names, contracts, military deployments, or classified-program evidence were disclosed. This supports a defensive cybersecurity dual-use assessment without claiming a defense-specific product or government contract."
+key_technologies = [
+  "OS-level analysis of connection-establishment requests and stack-trace context to detect malicious communications",
+  "Single lightweight endpoint agent combining next-generation antivirus, application communication control, and EDR real-time blocking",
+  "Virtual patching and policy-based blocking for vulnerable applications",
+  "File-overwrite monitoring and safe redirection described in enSilo cryptoware patent records",
+  "Threat hunting, incident-response playbooks, USB control, and third-party security-gateway orchestration",
+  "IoT discovery, assessment, and control alongside Windows, macOS, and Linux endpoint coverage",
+  "Cloud or on-premises multi-tenant management"
+]
+use_cases = [
+  "Block malicious outbound connections and data exfiltration from a compromised endpoint",
+  "Prevent or contain ransomware and malicious file tampering",
+  "Combine endpoint prevention, detection, investigation, and response in one agent",
+  "Apply virtual patching where application or operating-system patching is delayed",
+  "Protect enterprise workstations and servers, including legacy Windows environments",
+  "Discover and control IoT, payment, and manufacturing endpoints",
+  "Deliver endpoint protection through managed-service and workspace-management partners",
+  "Apply defensive endpoint controls in government and defense-contractor environments; no specific contracts are verified"
+]
 investible = false
-investment_rationale = "enSilo is not an independent investment opportunity: Fortinet completed its acquisition in October 2019 and controls the resulting product and commercial roadmap. The asset remains strategically relevant for understanding endpoint-security consolidation and Fortinet's platform capabilities, but available evidence does not support treating it as a current standalone priority signal or making claims about separate revenue, staffing, valuation, or future financing."
-strategic_value = "The acquired capability gave Fortinet real-time endpoint prevention and response that could connect with network, identity, SIEM, and XDR controls. Its strategic value is strongest in heterogeneous environments where low agent overhead, legacy-system support, offline operation, and rapid containment reduce the chance that an endpoint incident becomes an availability or data-loss event."
-public_sources = ["https://investor.fortinet.com/news-releases/news-release-details/fortinet-acquires-advanced-endpoint-security-company-ensilo", "https://www.fortinet.com/products/endpoint-security/fortiedr", "https://www.fortinet.com/blog/business-and-technology/fortinet-acquires-endpoint-security-innovator-ensilo-", "https://www.linkedin.com/company/ensilo"]
-potential_score = 75.0
+investment_rationale = "enSilo is not independently investible: Fortinet acquired all outstanding shares in 2019, and the product, IP, commercial relationships, and roadmap are now part of the acquirer’s perimeter. The archived company is still relevant as a case study in Israeli endpoint-security formation, venture funding, channel commercialization, and technology acquisition. Public evidence supports a substantial pre-acquisition product and a reported growth period, but does not support a standalone revenue multiple, customer retention model, ownership-return calculation, or current operating-team assessment."
+strategic_value = "The asset addressed a gap between detecting endpoint compromise and limiting what an attacker could do next. OS-level connection analysis and code-tracing could complement network controls by stopping malicious egress on an already compromised host; virtual patching, lightweight-agent claims, and legacy-OS coverage also fit environments where patching or downtime is difficult. Fortinet's acquisition created an opportunity to join those controls with firewall, network-access, SIEM, and endpoint products. Fortinet stated its integration intent and later associated enSilo with FortiEDR, but the exact retained technology and economics are not public."
+public_sources = [
+  { label = "Fortinet acquisition announcement", url = "https://investor.fortinet.com/news-releases/news-release-details/fortinet-acquires-advanced-endpoint-security-company-ensilo/", description = "Acquisition completion, Fortinet's stated product capabilities and intended integrations." },
+  { label = "Fortinet acquisition Form 8-K", url = "https://www.sec.gov/Archives/edgar/data/1262039/000126203919000027/ftnt-form8xkacquisitio.htm", description = "Acquisition date and initial cash consideration disclosed to the SEC." },
+  { label = "Fortinet 2019 Form 10-K", url = "https://www.sec.gov/Archives/edgar/data/1262039/000126203920000011/ftnt-201910xk.htm", description = "Acquisition of all outstanding enSilo shares and preliminary purchase-price accounting." },
+  { label = "Fortinet 2020 annual report", url = "https://investor.fortinet.com/static-files/4b8f1655-0f3d-4c53-a2d0-450883ca43a0", description = "Later purchase-price and escrow accounting for enSilo." },
+  { label = "enSilo launch and seed announcement", url = "https://www.prnewswire.com/news-releases/israeli-cybersecurity-start-up-ensilo-emerges-from-stealth-mode-to-tackle-exfiltration-prevention-295720281.html", description = "Company-reported founding year, Israeli origin, seed investor, product approach, and CEO background." },
+  { label = "Calcalist on enSilo's 2015 financing", url = "https://www.calcalist.co.il/internet/articles/0%2C7340%2CL-3662000%2C00.html", description = "Local reporting on the $10 million Series A and earlier seed amount." },
+  { label = "enSilo Series A second tranche", url = "https://www.prnewswire.com/news-releases/cyber-security-startup-ensilo-passes-21-million-in-funding-570087811.html", description = "Company-announced $9 million second tranche, $19 million Series A cumulative total, and named participants." },
+  { label = "VentureBeat on the 2017 financing", url = "https://venturebeat.com/ai/ensilo-is-raising-a-series-b-to-monitor-and-remediate-cyber-threats", description = "Reports the $13 million Series A raised in 2017 and describes the product at the time." },
+  { label = "Rembrandt investment record", url = "https://finder.startupnationcentral.org/investor_page/rembrandt-venture-partners-1", description = "Legacy Israeli ecosystem investor profile records Rembrandt's enSilo investments, including the 2017 round." },
+  { label = "Dealroom enSilo profile", url = "https://app.dealroom.co/companies/ensilo", description = "Dynamic profile reports a €2.3 million seed amount; retained only as a conflicting secondary observation." },
+  { label = "enSilo 2019 Series B and product release", url = "https://www.prnewswire.com/news-releases/ensilo-unveils-advanced-platform-capabilities-announces-strong-growth-and-new-investment-300883062.html", description = "Company-announced $23 million Series B, more than $57 million lifetime funding, more than 250% growth, and version 4.0 capabilities." },
+  { label = "Calcalist on 2019 funding and company scale", url = "https://www.calcalist.co.il/local/articles/0%2C7340%2CL-3766158%2C00.html", description = "Reports 86 employees, 53 in Israel, offices, founders, and the $23 million round." },
+  { label = "Globes on Fortinet's acquisition of Israeli enSilo", url = "https://www.globes.co.il/news/article.aspx?did=1001305010", description = "Israeli reporting on enSilo's founders, offices, historical funding, and acquisition." },
+  { label = "Israeli registry-data record", url = "https://en.checkid.co.il/company/ENSILO%2BLTD-k8OkMpY-515122547", description = "Commercial registry-data page listing Israeli company number 515122547, Herzliya address, and merger status." },
+  { label = "Lightspeed enSilo portfolio page", url = "https://lsvp.com/company/ensilo/", description = "Investor source for company status, four founder roles, and product description." },
+  { label = "Israeli reporting on enSilo's founding team", url = "https://www.hanamer.co.il/2018/03/", description = "Historical Hebrew-language profile of the founders and their Rafael and Imperva backgrounds." },
+  { label = "Viola Ventures brand history", url = "https://www.viola-group.com/violanotes/carmel-now-viola-ventures/", description = "Investor source documenting Carmel Ventures' transition to the Viola Ventures name." },
+  { label = "enSilo and Matrix42 partnership", url = "https://www.prnewswire.com/news-releases/ensilo-and-matrix42-form-partnership-to-deliver-premier-managed-endpoint-security-services-solution-300533715.html", description = "Company announcement of a partner integration and reseller route; not evidence of a paid customer by itself." },
+  { label = "ZAE Bayern Matrix42 EDR case study", url = "https://www.matrix42.com/hubfs/Sucess-Stories/Matrix42-CS-EDR-0239-ZAE-Bayern-EN.pdf", description = "Partner-published customer account of evaluating eight tools and deploying EDR powered by enSilo." },
+  { label = "US Patent 10,334,083", url = "https://patents.google.com/patent/US10334083B2/en", description = "Patent record for malicious-code detection using connection and stack-trace analysis, with later Fortinet assignment." },
+  { label = "Fortinet acquisition timeline", url = "https://investor.fortinet.com/static-files/9bea81f9-cd8d-4db1-b26a-c31bb62056f9", description = "Fortinet investor presentation maps the 2019 enSilo acquisition to FortiEDR." },
+  { label = "Current FortiEDR product page", url = "https://www.fortinet.com/products/endpoint-security/fortiedr", description = "Current Fortinet product materials for the acquired product-family lineage and deployment model." },
+  { label = "Fortinet acquisition blog", url = "https://www.fortinet.com/blog/business-and-technology/fortinet-acquires-endpoint-security-innovator-ensilo-", description = "Fortinet's account of the acquisition and stated EPP/EDR integration rationale." },
+  { label = "CrowdStrike Falcon endpoint security", url = "https://www.crowdstrike.com/en-us/platform/endpoint-security/", description = "Official current product description of a direct endpoint-security competitor." },
+  { label = "SentinelOne Singularity Endpoint", url = "https://www.sentinelone.com/platform/endpoint-security/", description = "Official current EPP/EDR and automated-remediation product description." },
+  { label = "Microsoft Defender for Endpoint", url = "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint", description = "Official documentation for endpoint scope, response features, operating systems, and Microsoft ecosystem integration." },
+  { label = "Palo Alto Cortex XDR", url = "https://www.paloaltonetworks.com/cortex/cortex-xdr", description = "Official current cross-domain endpoint detection, response, and service description." },
+  { label = "Sophos EDR", url = "https://www.sophos.com/en-us/products/endpoint-security/edr", description = "Official current endpoint response and unified-agent product description." },
+  { label = "Historical enSilo LinkedIn profile", url = "https://www.linkedin.com/company/ensilo", description = "Legacy company profile link retained from the original record; not used to verify current operating status." }
+]
+potential_score = 8.0
 technology_score = 83.0
-market_score = 80.0
-team_score = 70.0
-dual_use_score = 86.0
-strategic_alignment_score = 78.0
+market_score = 75.0
+team_score = 64.0
+dual_use_score = 76.0
+strategic_alignment_score = 82.0
 stage = "mature"
-stage_rationale = "Fortinet completed the acquisition in 2019, so enSilo has moved beyond independent venture-stage operation. The underlying endpoint-security capabilities remain commercially active through FortiEDR, but the standalone company's roadmap, economics, and organizational status are no longer independently observable. Mature is therefore appropriate for the product capability and acquired-asset lifecycle."
+stage_rationale = "The product reached enterprise deployments, channel partnerships, and a reported Series B before Fortinet acquired the company in October 2019. The endpoint capability remains associated with FortiEDR, but enSilo no longer operates as an independently observable startup. Mature describes the acquired product and company lifecycle, not an independent financing stage."
 competitors = ["CrowdStrike Falcon", "SentinelOne Singularity", "Microsoft Defender for Endpoint", "Palo Alto Networks Cortex XDR", "Sophos Endpoint and XDR", "Trend Micro Vision One"]
-competitive_edge = "The historical edge was a combination of lightweight endpoint execution, pre- and post-infection protection, automated containment, and compatibility with legacy or constrained operating environments. Fortinet adds distribution and Security Fabric integration, but that is an acquirer-level advantage rather than evidence that enSilo remains a distinct standalone product or defensible company."
-risk_factors = ["No longer an independent company, limiting standalone diligence and investability", "Roadmap, product identity, and economics may change as capabilities are integrated into Fortinet", "Highly competitive EDR and XDR market with large platform vendors and strong switching costs", "Legacy operating-system support increases maintenance, testing, and vulnerability-management burden", "Automated isolation or remediation can disrupt production, OT, or business-critical workflows if policies are misconfigured", "Vendor-reported efficacy and customer examples do not substitute for environment-specific testing", "Endpoint agents operate in sensitive systems and create deployment, privacy, performance, and supply-chain diligence requirements"]
-risk_level = "medium"
+competitive_edge = "Historically, enSilo differentiated itself through process-aware controls at connection establishment, intended to block malicious outbound activity even after an endpoint had been infiltrated. It packaged that approach with NGAV, real-time blocking EDR, virtual patching, threat hunting, and response orchestration in one agent. Its customer case study offers a concrete example of selection after a multi-vendor evaluation, but it is a partner-published account rather than independent comparative testing. Fortinet's channel and Security Fabric are distribution advantages of the acquirer, not evidence of a continuing standalone enSilo moat."
+risk_factors = [
+  "Fortinet owns the acquired company and its product lineage; enSilo has no separate investment or operating profile",
+  "Standalone revenue, ARR, profitability, burn, renewal, customer concentration, and post-acquisition staffing are not public",
+  "The original technical advantage depends on endpoint visibility and process context; current efficacy against modern identity, cloud, fileless, and living-off-the-land attacks is not independently established",
+  "A privileged endpoint agent can create compatibility, performance, false-positive, and supply-chain risks",
+  "Automated blocking or virtual patching can interrupt business-critical services or industrial operations when policy is wrong",
+  "Legacy operating-system support increases maintenance and testing burden and does not itself establish safe or current protection",
+  "Customer and defense-contractor references before acquisition were not named, and no government contract or military deployment was verified",
+  "Fortinet patent assignments and product-family integration make it difficult to separate retained enSilo IP from later Fortinet development"
+]
+risk_level = "high"
 signals = []
 priority_rank = 0
-priority_rationale = "Retain as an archival strategic reference for endpoint-security innovation, cyber capability acquisition, and Fortinet platform expansion. It is not a live sourcing target because the asset is acquired and no longer independently investible; its priority is analytical and comparative rather than a recommendation signal."
+priority_rationale = "Keep enSilo as an archival strategic reference for Israeli cyber company formation, endpoint-security technology, and Fortinet's product expansion. Its historical funding, engineering approach, partner route to market, and acquisition make it useful for comparative research. The record is not a live sourcing target and does not imply an investment recommendation; the legacy priority rank remains unchanged."
 crawled_at = "2026-02-23T00:00:00Z"
-updated_at = "2026-07-31T18:50:15Z"
+updated_at = "2026-10-21T23:47:27Z"
+
+[intelligence]
+schema_version = 2
+
+[intelligence.company]
+company_id = "il-ensilo"
+legal_name = "enSilo Ltd."
+aliases = ["enSilo", "EnSilo", "enSilo Limited", "ENSILO LTD"]
+operating_status = "acquired"
+business_model = "B2B enterprise endpoint-security software and response services, sold directly and through channel and managed-service partners; subscription pricing and standalone revenue are not public."
+products = ["enSilo Endpoint Security Platform (historical)", "FortiEDR (Fortinet product family later associated with the enSilo acquisition)"]
+locations = ["San Francisco, California, United States (headquarters reported by Fortinet)", "Herzliya, Israel (historical office and engineering operation)"]
+founded_on = "2014"
+registry_identifiers = [{ jurisdiction = "Israel", scheme = "Israeli company number (ח.פ.)", identifier = "515122547", source_ids = ["src-checkid-registry"], notes = "A commercial registry-data page attributes this number to ENSILO LTD; it is not an official registry extract." }]
+source_ids = ["src-fortinet-acquisition", "src-ensilo-launch-2015", "src-calcalist-2019", "src-checkid-registry", "src-lightspeed-portfolio"]
+notes = "Fortinet filings use both enSilo Ltd. and enSilo Limited. The Israeli registry-data page lists ENSILO LTD, number 515122547, and a merger status; company-level operations were acquired by Fortinet in 2019."
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders", "israeli_rd"]
+summary = "enSilo launched from Tel Aviv as an Israeli cybersecurity startup; its historical founders included Israeli security-industry veterans, and 2019 reporting placed offices and 53 of 86 employees in Israel. Fortinet reported hiring and engineering growth across Israel before the acquisition. San Francisco was the stated headquarters, so headquarters_in_israel is not claimed."
+as_of = "2026-10-21"
+source_ids = ["src-ensilo-launch-2015", "src-calcalist-2019", "src-hanamer-team", "src-lightspeed-portfolio", "src-checkid-registry"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public sources identify an undisclosed 2015 seed round, a $10 million Series A in June 2015, a $9 million second tranche in February 2016 that brought that Series A to $19 million, a reported $13 million Series A extension in 2017, and a $23 million Series B announced in July 2019. enSilo said in July 2019 that cumulative capital raised exceeded $57 million. The reported total is recorded as a lower-bound threshold, not a precise sum; the seed amount and full syndicate terms remain unresolved. No round valuation was located."
+reported_total_raised = 57000000
+reported_total_currency = "USD"
+total_source_ids = ["src-ensilo-series-b-2019"]
+total_as_of = "2019-07-11"
+total_scope = "Company announcement says more than USD 57,000,000 lifetime capital raised as of 2019-07-11; 57,000,000 is the reported lower-bound threshold, not an exact total or a sum reconstructed from rounds."
+history_status = "partial"
+coverage_through = "2019-10-28"
+
+[[intelligence.funding.rounds]]
+id = "seed-2015"
+round_type = "Seed"
+instrument = "unknown"
+status = "closed"
+announced_on = "2015-03-10"
+amount_status = "conflicting"
+amount_scope = "unknown"
+lead_investors = ["Carmel Ventures"]
+participating_investors = []
+source_ids = ["src-ensilo-launch-2015", "src-calcalist-a-2015", "src-dealroom-profile"]
+notes = "enSilo's own March 2015 announcement confirms Carmel Ventures-backed seed funding but gives no amount. Calcalist later reported USD 3 million; Dealroom currently lists EUR 2.3 million for March 2015. The currencies and reporting bases cannot be reconciled without an unsupported conversion, so no round amount is set."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "calcalist-usd"
+amount = 3000000
+currency = "USD"
+as_of = "2015-06-16"
+source_ids = ["src-calcalist-a-2015"]
+notes = "Calcalist describes an earlier seed round of USD 3 million; the company did not disclose a seed amount in its own launch announcement."
+
+[[intelligence.funding.rounds.amount_observations]]
+id = "dealroom-eur"
+amount = 2300000
+currency = "EUR"
+as_of = "2015-03"
+source_ids = ["src-dealroom-profile"]
+notes = "Dynamic Dealroom profile currently lists EUR 2.3 million for the seed; its basis and exchange-rate convention are not provided."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2015"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2015-06-16"
+amount_status = "reported"
+amount = 10000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Lightspeed Venture Partners"]
+participating_investors = ["Carmel Ventures"]
+source_ids = ["src-calcalist-a-2015"]
+notes = "Calcalist reports a USD 10 million Series A led by Lightspeed with Carmel Ventures participating."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2016-extension"
+round_type = "Series A second tranche"
+instrument = "equity"
+status = "closed"
+announced_on = "2016-02-25"
+amount_status = "reported"
+amount = 9000000
+amount_scope = "incremental_extension"
+currency = "USD"
+lead_investors = ["Rembrandt Venture Partners"]
+participating_investors = ["Carmel Ventures", "Lightspeed Venture Partners"]
+is_extension_of = "series-a-2015"
+source_ids = ["src-ensilo-series-a-extension-2016"]
+notes = "enSilo called this the second tranche and stated that the total Series A reached USD 19 million. Record USD 9 million as incremental; do not count the cumulative USD 19 million again."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2017-extension"
+round_type = "Series A extension"
+instrument = "equity"
+status = "closed"
+announced_on = "2017-05"
+amount_status = "reported"
+amount = 13000000
+amount_scope = "incremental_extension"
+currency = "USD"
+lead_investors = []
+participating_investors = ["Rembrandt Venture Partners"]
+is_extension_of = "series-a-2015"
+source_ids = ["src-venturebeat-2019", "src-rembrandt-profile"]
+notes = "VentureBeat reports a USD 13 million Series A raised in 2017; the Rembrandt investment profile records its May 2017 enSilo investment. The lead and full syndicate were not established from the reviewed announcement record. This is tracked as a separate incremental event within the earlier Series A financing history."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2019"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2019-07-11"
+amount_status = "reported"
+amount = 23000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Rembrandt Venture Partners"]
+participating_investors = []
+source_ids = ["src-ensilo-series-b-2019", "src-calcalist-2019"]
+notes = "enSilo said this recently closed round was USD 23 million and led by Rembrandt. Other participants were not named in the company announcement."
+
+[[intelligence.people]]
+name = "Roy Katmor"
+role = "Co-founder and CEO"
+is_founder = true
+current = false
+background = "Before enSilo, Katmor led Akamai's security strategy and managed Imperva data-security product and architecture work, according to enSilo's 2015 company announcement."
+source_ids = ["src-ensilo-launch-2015", "src-lightspeed-portfolio", "src-hanamer-team"]
+
+[[intelligence.people]]
+name = "Udi Yavo"
+role = "Co-founder and CTO"
+is_founder = true
+current = false
+background = "Local Israeli reporting identifies Yavo as a former Rafael cyber-research technology leader; Lightspeed lists him as enSilo co-founder and CTO."
+source_ids = ["src-hanamer-team", "src-lightspeed-portfolio"]
+
+[[intelligence.people]]
+name = "Tomer Bitton"
+role = "Co-founder and VP Research"
+is_founder = true
+current = false
+background = "Local Israeli reporting identifies Bitton as a former Rafael security researcher; Lightspeed lists him as enSilo co-founder and VP Research."
+source_ids = ["src-hanamer-team", "src-lightspeed-portfolio"]
+
+[[intelligence.people]]
+name = "Ido Kelson"
+role = "Co-founder and VP Engineering"
+is_founder = true
+current = false
+background = "Local Israeli reporting identifies Kelson as a former senior development manager at Imperva; Lightspeed lists him as enSilo co-founder and VP Engineering."
+source_ids = ["src-hanamer-team", "src-lightspeed-portfolio"]
+
+[[intelligence.investors]]
+name = "Carmel Ventures (later rebranded as Viola Ventures)"
+investor_type = "vc"
+website = "https://www.viola-group.com/"
+round_ids = ["seed-2015", "series-a-2015", "series-a-2016-extension"]
+relationship = "historical"
+source_ids = ["src-ensilo-launch-2015", "src-calcalist-a-2015", "src-ensilo-series-a-extension-2016", "src-viola-rebrand"]
+notes = "Carmel Ventures was renamed Viola Ventures in 2017; the alias does not represent a separate investor for the earlier investments."
+
+[[intelligence.investors]]
+name = "Lightspeed Venture Partners"
+investor_type = "vc"
+website = "https://lsvp.com/"
+round_ids = ["series-a-2015", "series-a-2016-extension"]
+relationship = "historical"
+source_ids = ["src-calcalist-a-2015", "src-ensilo-series-a-extension-2016", "src-lightspeed-portfolio"]
+
+[[intelligence.investors]]
+name = "Rembrandt Venture Partners"
+investor_type = "vc"
+website = "https://rembrandtvc.com/"
+round_ids = ["series-a-2016-extension", "series-a-2017-extension", "series-b-2019"]
+relationship = "historical"
+source_ids = ["src-ensilo-series-a-extension-2016", "src-rembrandt-profile", "src-ensilo-series-b-2019"]
+
+[[intelligence.investors]]
+name = "O.G. Tech Ventures"
+investor_type = "vc"
+website = "https://www.ogtechventures.com/"
+round_ids = []
+relationship = "historical"
+source_ids = ["src-calcalist-2019"]
+notes = "Calcalist names O.G. Tech among historical backers but the reviewed primary financing announcements do not assign it to a specific round."
+
+[intelligence.ownership]
+status = "reported"
+summary = "Fortinet acquired all outstanding shares of enSilo Limited on October 28, 2019. Fortinet later reported a USD 15.8 million purchase price in its annual-report accounting, including a USD 2 million escrow component. The 2019 Form 8-K had initially described approximately USD 20 million in initial cash consideration; the disclosures use different timing and accounting bases, so the initial figure is not substituted for the later filed purchase price. No pre-acquisition cap table or ownership percentages were found. Parent-company ticker: NASDAQ: FTNT."
+parent_company = "Fortinet, Inc."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["src-fortinet-acquisition", "src-fortinet-8k-2019", "src-fortinet-10k-2019", "src-fortinet-10k-2020"]
+
+[[intelligence.ownership.deals]]
+id = "fortinet-acquisition-2019"
+deal_type = "acquisition"
+company_role = "target"
+announced_on = "2019-10-28"
+completed_on = "2019-10-28"
+status = "completed"
+counterparty = "Fortinet, Inc."
+amount = 15800000
+amount_status = "reported"
+currency = "USD"
+source_ids = ["src-fortinet-acquisition", "src-fortinet-8k-2019", "src-fortinet-10k-2019", "src-fortinet-10k-2020"]
+notes = "Fortinet's later annual reports state a USD 15.8 million purchase price after accounting for USD 5.4 million in net liabilities assumed. The 2019 8-K initially described approximately USD 20 million of initial cash consideration, including USD 2 million in escrow. These are preserved as distinct disclosure bases; USD 15.8 million is the later reported purchase-price figure, not a claim about shareholder proceeds."
+
+[[intelligence.financials]]
+name = "year_over_year_revenue_growth"
+value = "More than 250% year-over-year revenue growth, as reported by enSilo in July 2019"
+as_of = "2019-07-11"
+basis = "reported"
+metric = "other"
+numeric_value = 250
+value_relation = "more_than"
+unit = "percent"
+source_ids = ["src-ensilo-series-b-2019"]
+notes = "Company-reported growth rate; absolute revenue and comparison-period revenue were not disclosed."
+
+[[intelligence.financials]]
+name = "employees"
+value = "86 total employees, including 53 in Israel, reported in July 2019"
+as_of = "2019-07-11"
+basis = "reported"
+metric = "employees"
+numeric_value = 86
+value_relation = "exact"
+unit = "people"
+source_ids = ["src-calcalist-2019"]
+notes = "Dated local-media report; not a post-acquisition or current Fortinet headcount."
+
+[[intelligence.traction]]
+kind = "customer"
+description = "In its February 2016 release, enSilo said it had tens of U.S. deployments and that the platform was in use by a number of Fortune 100 companies, leading defense contractors, and payment solutions worldwide. The company did not name these organizations or report contract values, so this remains company-asserted traction rather than independently identified accounts."
+date = "2016-02-25"
+source_ids = ["src-ensilo-series-a-extension-2016"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "enSilo and Matrix42 announced that Matrix42 would integrate enSilo endpoint capabilities into its workspace-security suite and could sell the platform in Central Europe. The announcement describes a channel route and planned integration, not a named paid customer or realized partner revenue."
+date = "2017-10-10"
+source_ids = ["src-matrix42-partnership"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Matrix42's case study says ZAE Bayern selected Matrix42 EDR powered by enSilo after evaluating eight products and deployed the solution across its endpoints by mid-2018. The case study describes the customer's need to protect more than 300 devices; it does not disclose contract value, renewal, or later retention."
+date = "2018-06"
+source_ids = ["src-matrix42-case"]
+notes = "Partner-published customer evidence; the case study is not an independent security-efficacy evaluation."
+
+[[intelligence.traction]]
+kind = "product"
+description = "Version 4.0 added virtual-patching policies tied to published CVEs, IoT discovery and control, USB control, and response playbooks that could trigger actions through third-party security gateways. enSilo also reported a 2019 channel footprint extending into Latin America and Asia."
+date = "2019-07-11"
+source_ids = ["src-ensilo-series-b-2019"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "U.S. Patent 10,334,083, Systems and methods for malicious code detection, describes analyzing stack-trace records associated with a connection-establishment process to detect and block malicious network communications. The patent lists enSilo Ltd. as original assignee and records an assignment to Fortinet effective October 30, 2019. This is one verified example, not a complete patent-family or freedom-to-operate review."
+date = "2019-06-25"
+source_ids = ["src-patent-10334083"]
+notes = "Patent registry states active status but warns that legal status and assignee data are not legal conclusions; assignment records show Fortinet as assignee after the acquisition."
+
+[[intelligence.comparables]]
+name = "CrowdStrike Falcon"
+website = "https://www.crowdstrike.com/en-us/platform/endpoint-security/"
+rationale = "Direct EPP/EDR competitor in enterprise endpoint prevention, detection, investigation, and response."
+differentiation = "CrowdStrike positions a cloud-native Falcon sensor with cross-domain threat intelligence and a broader platform; enSilo historically emphasized OS-level connection controls and post-infection egress prevention."
+source_ids = ["src-crowdstrike"]
+
+[[intelligence.comparables]]
+name = "SentinelOne Singularity Endpoint"
+website = "https://www.sentinelone.com/platform/endpoint-security/"
+rationale = "Direct endpoint protection and response substitute for organizations evaluating a single-agent EPP/EDR platform."
+differentiation = "SentinelOne currently emphasizes autonomous AI-based detection and remediation across cloud, on-premises, hybrid, and air-gapped environments; enSilo's historical focus was process-aware connection blocking and exfiltration control."
+source_ids = ["src-sentinelone"]
+
+[[intelligence.comparables]]
+name = "Microsoft Defender for Endpoint"
+website = "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint"
+rationale = "A direct endpoint-security substitute with strong distribution through the Microsoft ecosystem and broad operating-system coverage."
+differentiation = "Microsoft connects endpoint signals to identity, email, cloud workloads, and the Defender portal; enSilo's historical product centered on its own lightweight agent and OS-level outbound-connection policy."
+source_ids = ["src-microsoft-defender"]
+
+[[intelligence.comparables]]
+name = "Palo Alto Networks Cortex XDR"
+website = "https://www.paloaltonetworks.com/cortex/cortex-xdr"
+rationale = "Competes for enterprise endpoint prevention and detection budgets, especially where customers want endpoint data correlated with network and cloud telemetry."
+differentiation = "Cortex XDR currently connects endpoint, network, cloud, identity, and email sources; enSilo's historical point of distinction was process-aware protection at connection establishment and response on the endpoint."
+source_ids = ["src-paloalto-cortex"]
+
+[[intelligence.comparables]]
+name = "Sophos EDR"
+website = "https://www.sophos.com/en-us/products/endpoint-security/edr"
+rationale = "Competes for endpoint protection and response deployments, including organizations using a unified endpoint agent and managed services."
+differentiation = "Sophos emphasizes an integrated endpoint and response stack with automated remediation and MDR; enSilo historically emphasized preventing exfiltration and limiting damage after compromise."
+source_ids = ["src-sophos-edr"]
+
+[intelligence.research]
+researched_at = "2026-10-21T23:47:27Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "site:fortinet.com enSilo acquisition 2019 Fortinet press release",
+  "enSilo funding raised investors Series A B C 2016 2017 2018",
+  "enSilo founder CEO team acquired Fortinet founders",
+  "enSilo acquired for price valuation Fortinet October 2019 CTech Calcalist",
+  "enSilo Series B 2019 23 million funding investor Fortinet 2019",
+  "enSilo seed round Carmel Ventures Lightspeed 2015 $10 million",
+  "enSilo 13 million 2017 funding round Hebrew",
+  "Rembrandt Venture Partners enSilo 13 million May 2017 official portfolio",
+  "515122547 enSilo company registrar",
+  "enSilo Israel founders Roy Katmor Israeli founded Herzliya source",
+  "enSilo revenue ARR profitability burn runway financials",
+  "enSilo customer deployments contracts Fortune 100 Matrix42 ZAE Bayern defense contractors",
+  "enSilo government customers contracts military defense cybersecurity deployment",
+  "enSilo patent code tracing patents assignee USPTO",
+  "Systems and methods malicious code detection enSilo Ltd Google Patents",
+  "CrowdStrike SentinelOne Microsoft Defender Palo Alto Cortex Sophos official endpoint detection response products",
+  "Palo Alto Networks Cortex XDR official product page endpoint protection detection response",
+  "Sophos Endpoint XDR official product page endpoint detection response"
+]
+gaps = [
+  "team: Historical founders and roles are documented, but no reliable standalone enSilo roster or post-acquisition reporting line was found.",
+  "investors: Named historical venture backers are documented, but private cap-table percentages, round-level terms, and the full syndicate for the 2017 and 2019 rounds are not public.",
+  "financials: No absolute standalone revenue, ARR, gross margin, profitability, cash, burn, or runway was located. The more-than-250% year-over-year growth rate is a company assertion; employee count is dated to July 2019.",
+  "traction: Most enterprise and defense-contractor accounts were unnamed. Matrix42 provides one partner-published deployment example, but customer contract values, renewals, concentration, and post-acquisition retention are unavailable.",
+  "intellectual_property: One enSilo-originated U.S. patent and its Fortinet assignment were verified; a complete patent-family, maintenance, licensing, and freedom-to-operate review was not performed.",
+  "competition: Current competitor product pages were reviewed, but no comparable independent efficacy test, historical win/loss dataset, or 2019 head-to-head benchmark for enSilo was located.",
+  "ownership: No public pre-acquisition cap table or shareholder percentages were found. Fortinet's 2019 initial-cash disclosure and later purchase-price accounting use different bases; shareholder proceeds are not established.",
+  "funding: The seed amount is unresolved across USD and EUR secondary reports; no round valuation or complete investor syndicate was found.",
+  "dual_use: enSilo asserted use by unnamed defense contractors, but no named government customer, contract notice, military deployment, defense-specific certification, or classified-program evidence was found."
+]
+conflicts = [
+  "Seed amount: enSilo's March 2015 announcement names Carmel Ventures but discloses no amount. Calcalist later reports USD 3 million, while Dealroom lists EUR 2.3 million for March 2015. The currencies and reporting bases are not reconciled; the numeric round amount is omitted and both observations are preserved.",
+  "Acquisition consideration: Fortinet's 2019 Form 8-K reports approximately USD 20 million in initial cash consideration, including USD 2 million held in escrow; its later annual reports state a USD 15.8 million purchase price after net liabilities assumed. The ownership deal records the later purchase-price accounting figure and notes the distinct initial-cash disclosure; it does not characterize them as equivalent proceeds.",
+  "Lifetime funding: enSilo's July 2019 company release says more than USD 57 million, while local media and legacy directories often round the figure to USD 57 million. The structured total is the company's USD 57 million lower-bound threshold, not an exact amount."
+]
+diligence_questions = [
+  "Which enSilo code, stack-trace analytics, virtual-patching rules, cryptoware defenses, and agent components remain in current FortiEDR, and which were replaced or independently rewritten by Fortinet?",
+  "Can Fortinet or former management provide named pre-acquisition customer cohorts, endpoint counts, renewal and churn data, and the standalone revenue and gross-margin series behind the reported 2019 growth rate?",
+  "How should the USD 20 million initial-cash disclosure in the 2019 Form 8-K be reconciled with the later USD 15.8 million purchase-price accounting, including escrow outcomes, assumed liabilities, and shareholder proceeds?",
+  "What is the complete patent-family and assignment history for the enSilo connection-tracing and cryptoware inventions, and are any licenses, liens, or maintenance gaps relevant to current FortiEDR?",
+  "What false-positive, performance, rollback, and availability results were measured in production environments with legacy Windows, payment, or manufacturing endpoints, and how were response playbooks prevented from disrupting critical operations?"
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-21T23:41:47Z"
+next_review_on = "2027-10-21"
+queries = ["site:fortinet.com enSilo acquisition 2019 Fortinet press release", "515122547 enSilo company registrar", "enSilo Israel founders Roy Katmor Israeli founded Herzliya source"]
+source_ids = ["src-fortinet-acquisition", "src-ensilo-launch-2015", "src-calcalist-2019", "src-checkid-registry", "src-lightspeed-portfolio"]
+summary = "Fortinet identifies enSilo Ltd. as a privately held endpoint-detection company headquartered in San Francisco and confirms acquisition. Company and local sources document the 2014 founding, Israeli origin, Herzliya operation, and corporate name variants."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-21T23:41:47Z"
+next_review_on = "2027-10-21"
+queries = ["enSilo funding raised investors Series A B C 2016 2017 2018", "enSilo seed round Carmel Ventures Lightspeed 2015 $10 million", "enSilo 13 million 2017 funding round Hebrew", "enSilo Series B 2019 23 million funding investor Fortinet 2019"]
+source_ids = ["src-ensilo-launch-2015", "src-calcalist-a-2015", "src-ensilo-series-a-extension-2016", "src-venturebeat-2019", "src-rembrandt-profile", "src-ensilo-series-b-2019", "src-dealroom-profile"]
+summary = "Four financing periods are identified from 2015 through July 2019, with the 2016 tranche explicitly cumulative to a USD 19 million Series A. The seed value is unresolved, and the company-announced lifetime total is more than USD 57 million. No valuation was disclosed in reviewed sources."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-21T23:41:47Z"
+next_review_on = "2027-10-21"
+queries = ["Rembrandt Venture Partners enSilo 13 million May 2017 official portfolio", "site:viola-group.com enSilo 13M 2017", "enSilo Series B 2019 23 million funding investor Fortinet 2019"]
+source_ids = ["src-ensilo-launch-2015", "src-calcalist-a-2015", "src-ensilo-series-a-extension-2016", "src-rembrandt-profile", "src-ensilo-series-b-2019", "src-viola-rebrand", "src-calcalist-2019"]
+summary = "Company and investor sources identify Carmel/Viola, Lightspeed, and Rembrandt; Rembrandt led the 2019 Series B. Calcalist names O.G. Tech among historical backers, but round-level allocation for that fund and the full 2017/2019 syndicates remain incomplete."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-21T23:41:47Z"
+next_review_on = "2027-10-21"
+queries = ["enSilo founder CEO team acquired Fortinet founders", "Roy Katmor Udi Yavo Tomer Bitton Ido Kelson founders enSilo Israel Rafael"]
+source_ids = ["src-lightspeed-portfolio", "src-ensilo-launch-2015", "src-hanamer-team", "src-calcalist-2019"]
+summary = "The four founders and their historical CEO, CTO, VP Research, and VP Engineering roles are corroborated by Lightspeed, enSilo, and local reporting. No separate current enSilo management team exists in the evidence after the acquisition."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-21T23:41:47Z"
+next_review_on = "2027-10-21"
+queries = ["enSilo acquired for price valuation Fortinet October 2019 CTech Calcalist", "site:fortinet.com enSilo acquisition 2019 Fortinet press release"]
+source_ids = ["src-fortinet-acquisition", "src-fortinet-8k-2019", "src-fortinet-10k-2019", "src-fortinet-10k-2020", "src-checkid-registry"]
+summary = "Fortinet completed its acquisition of all outstanding enSilo shares on October 28, 2019. Later Fortinet filings report a USD 15.8 million purchase price; the 2019 8-K's approximately USD 20 million initial-cash disclosure is preserved as a separate basis. Private shareholder percentages were not located."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-21T23:41:47Z"
+next_review_on = "2027-10-21"
+queries = ["enSilo revenue ARR profitability burn runway financials", "enSilo 2019 revenue growth employees 86 Herzliya Calcalist"]
+source_ids = ["src-ensilo-series-b-2019", "src-calcalist-2019", "src-fortinet-10k-2019"]
+summary = "A company-reported more-than-250% year-over-year growth rate and a local-media July 2019 employee count were found. Absolute revenue, ARR, profitability, burn, and runway were not disclosed as standalone company figures."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-21T23:41:47Z"
+next_review_on = "2027-10-21"
+queries = ["enSilo customer deployments contracts Fortune 100 Matrix42 ZAE Bayern defense contractors", "enSilo Matrix42 ZAE Bayern case study endpoint security"]
+source_ids = ["src-ensilo-series-a-extension-2016", "src-matrix42-partnership", "src-matrix42-case", "src-ensilo-series-b-2019"]
+summary = "The record contains a company-reported 2016 deployment claim, an announced Matrix42 channel relationship, one partner-published ZAE Bayern deployment account, and the 2019 version 4.0 product milestone. Named customer contracts and recurring revenue are not public."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-21T23:41:47Z"
+next_review_on = "2027-10-21"
+queries = ["enSilo patent code tracing patents assignee USPTO", "Systems and methods malicious code detection enSilo Ltd Google Patents", "System and methods detection of cryptoware enSilo Ltd patents.google.com"]
+source_ids = ["src-patent-10334083", "src-fortinet-acquisition", "src-ensilo-series-b-2019"]
+summary = "A U.S. patent for stack-trace and connection-establishment analysis was verified with an enSilo original-assignee record and later Fortinet assignment. Fortinet and enSilo also described patented code-tracing and cryptoware approaches, but the full portfolio was not exhaustively traced."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-21T23:41:47Z"
+next_review_on = "2027-10-21"
+queries = ["CrowdStrike SentinelOne Microsoft Defender Palo Alto Cortex Sophos official endpoint detection response products", "Palo Alto Networks Cortex XDR official product page endpoint protection detection response", "Sophos Endpoint XDR official product page endpoint detection response"]
+source_ids = ["src-crowdstrike", "src-sentinelone", "src-microsoft-defender", "src-paloalto-cortex", "src-sophos-edr", "src-fortiedr-product"]
+summary = "Official product sources confirm current EPP/EDR competition from CrowdStrike, SentinelOne, Microsoft, Palo Alto Networks, and Sophos. Product descriptions have evolved since enSilo's 2019 acquisition; no historical head-to-head test or independent enSilo win/loss record was found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-21T23:41:47Z"
+next_review_on = "2027-10-21"
+queries = ["enSilo government customers contracts military defense cybersecurity deployment", "enSilo customer deployments contracts Fortune 100 Matrix42 ZAE Bayern defense contractors"]
+source_ids = ["src-ensilo-series-a-extension-2016", "src-ensilo-series-b-2019", "src-matrix42-case", "src-fortinet-acquisition"]
+summary = "The product's defensive endpoint and ransomware controls have commercial and government/defense-contractor applicability, and enSilo reported unnamed defense-contractor use. No named government customer, contract, military use, or defense certification was found."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Fortinet announced completion of the enSilo acquisition on October 28, 2019; its annual report says it acquired all outstanding shares. This directly supports acquired status."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-fortinet-acquisition", "src-fortinet-10k-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "The 2015 company release identifies enSilo as an Israeli cybersecurity startup and is datelined Tel Aviv; local reporting documents Israeli founders, a Herzliya operation, and 53 Israel-based employees in 2019."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-ensilo-launch-2015", "src-hanamer-team", "src-calcalist-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "enSilo's July 2019 announcement says its cumulative capital raised exceeded USD 57 million. The numeric field stores 57 million as the stated lower-bound threshold, with total_scope clarifying that it is not an exact total."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-ensilo-series-b-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2015.amount"
+support = "conflicting"
+summary = "The company confirms seed funding but discloses no amount. Calcalist reports USD 3 million and Dealroom lists EUR 2.3 million; the numeric amount is omitted pending reconciliation."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-ensilo-launch-2015", "src-calcalist-a-2015", "src-dealroom-profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2015.amount_observations.calcalist-usd.amount"
+support = "direct"
+summary = "Calcalist's June 16, 2015 report describes the prior seed round as USD 3 million."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-calcalist-a-2015"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2015.amount_observations.dealroom-eur.amount"
+support = "direct"
+summary = "Dealroom's current company funding table lists a March 2015 seed amount of EUR 2.3 million."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-dealroom-profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2015.lead_investors"
+support = "direct"
+summary = "enSilo's own launch announcement says the company raised Seed funding from Carmel Ventures."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-ensilo-launch-2015"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2015.amount"
+support = "direct"
+summary = "Calcalist reports a USD 10 million Series A announced June 16, 2015."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-calcalist-a-2015"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2015.lead_investors"
+support = "direct"
+summary = "Calcalist identifies Lightspeed Venture Partners as a lead investor in the USD 10 million Series A."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-calcalist-a-2015"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2015.participating_investors"
+support = "direct"
+summary = "Calcalist names Carmel Ventures alongside Lightspeed in the USD 10 million Series A."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-calcalist-a-2015"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2016-extension.amount"
+support = "direct"
+summary = "enSilo reports a USD 9 million second tranche that brought the Series A cumulative amount to USD 19 million."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-ensilo-series-a-extension-2016"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2016-extension.lead_investors"
+support = "direct"
+summary = "enSilo identifies Rembrandt Venture Partners as lead for the USD 9 million second tranche."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-ensilo-series-a-extension-2016"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2016-extension.participating_investors"
+support = "direct"
+summary = "enSilo identifies Carmel Ventures and Lightspeed Venture Partners as participants in the USD 9 million second tranche."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-ensilo-series-a-extension-2016"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2017-extension.amount"
+support = "direct"
+summary = "VentureBeat reports a USD 13 million Series A raised in 2017; Rembrandt's investment profile records an enSilo financing in May 2017."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-venturebeat-2019", "src-rembrandt-profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2017-extension.participating_investors"
+support = "direct"
+summary = "Rembrandt Venture Partners' investment profile records a May 2017 enSilo investment, supporting its inclusion as a participant; the lead role and other participants were not established."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-rembrandt-profile"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2019.amount"
+support = "direct"
+summary = "enSilo announced a recently closed USD 23 million Series B on July 11, 2019."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-ensilo-series-b-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2019.lead_investors"
+support = "direct"
+summary = "enSilo identifies Rembrandt Ventures as lead for the USD 23 million Series B."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-ensilo-series-b-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Fortinet's SEC filing says it acquired all outstanding shares of enSilo Limited."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-fortinet-10k-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.fortinet-acquisition-2019.company_role"
+support = "direct"
+summary = "Fortinet's acquisition announcement identifies enSilo as the company being acquired, making its transaction role the target."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-fortinet-acquisition", "src-fortinet-8k-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.fortinet-acquisition-2019.status"
+support = "direct"
+summary = "Fortinet's acquisition announcement states that it completed the acquisition on October 28, 2019."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-fortinet-acquisition", "src-fortinet-10k-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.fortinet-acquisition-2019.amount"
+support = "direct"
+summary = "Fortinet's later 2019 and 2020 annual reports state a USD 15.8 million purchase price; the 2019 Form 8-K separately reported approximately USD 20 million initial cash consideration."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-fortinet-10k-2019", "src-fortinet-10k-2020", "src-fortinet-8k-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.year_over_year_revenue_growth@2019-07-11.numeric_value"
+support = "direct"
+summary = "enSilo's July 2019 announcement reports more than 250 percent year-over-year revenue growth; the field stores 250 with value_relation more_than."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-ensilo-series-b-2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.employees@2019-07-11.numeric_value"
+support = "direct"
+summary = "Calcalist reported 86 employees in July 2019, including 53 in Israel."
+verified_at = "2026-10-21T23:41:47Z"
+source_ids = ["src-calcalist-2019"]
+
+[[intelligence.research.sources]]
+id = "src-fortinet-acquisition"
+url = "https://investor.fortinet.com/news-releases/news-release-details/fortinet-acquires-advanced-endpoint-security-company-ensilo/"
+title = "Fortinet Acquires Advanced Endpoint Security Company enSilo"
+publisher = "Fortinet Investor Relations"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2019-10-28"
+claims = ["Fortinet completed the enSilo acquisition on October 28, 2019 and described enSilo as headquartered in San Francisco.", "Fortinet described patented code-tracing, lightweight cross-platform agent, IoT coordination, deployment options, and intended integrations with FortiSIEM, FortiInsight, and FortiNAC."]
+
+[[intelligence.research.sources]]
+id = "src-fortinet-8k-2019"
+url = "https://www.sec.gov/Archives/edgar/data/1262039/000126203919000027/ftnt-form8xkacquisitio.htm"
+title = "Fortinet Form 8-K, October 28, 2019"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2019-10-28"
+claims = ["Fortinet announced its enSilo acquisition and approximately USD 20 million initial cash consideration, with USD 2 million held in escrow.", "Fortinet is a public company trading as FTNT on Nasdaq."]
+
+[[intelligence.research.sources]]
+id = "src-fortinet-10k-2019"
+url = "https://www.sec.gov/Archives/edgar/data/1262039/000126203920000011/ftnt-201910xk.htm"
+title = "Fortinet 2019 Form 10-K"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["Fortinet acquired all outstanding shares of enSilo Limited on October 28, 2019.", "Fortinet reported a preliminary USD 15.8 million purchase price, including net liabilities assumed and a USD 2 million escrow component."]
+
+[[intelligence.research.sources]]
+id = "src-fortinet-10k-2020"
+url = "https://investor.fortinet.com/static-files/4b8f1655-0f3d-4c53-a2d0-450883ca43a0"
+title = "Fortinet 2020 Annual Report"
+publisher = "Fortinet, Inc."
+kind = "filing"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["Fortinet reports a USD 15.8 million enSilo purchase price and describes the USD 2 million escrow disposition during 2020."]
+
+[[intelligence.research.sources]]
+id = "src-ensilo-launch-2015"
+url = "https://www.prnewswire.com/news-releases/israeli-cybersecurity-start-up-ensilo-emerges-from-stealth-mode-to-tackle-exfiltration-prevention-295720281.html"
+title = "Israeli Cybersecurity Start-Up enSilo Emerges from Stealth Mode to Tackle Exfiltration Prevention"
+publisher = "enSilo via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2015-03-10"
+claims = ["enSilo says it was founded in 2014, identifies itself as an Israeli startup, and says it raised Seed funding from Carmel Ventures without disclosing an amount.", "The company describes OS-level connection-request analysis to enforce anti-exfiltration policies and names Roy Katmor as CEO with prior Akamai and Imperva experience.", "The company describes its security team as having experience at Imperva, Akamai, EMC, and Rafael."]
+
+[[intelligence.research.sources]]
+id = "src-calcalist-a-2015"
+url = "https://www.calcalist.co.il/internet/articles/0%2C7340%2CL-3662000%2C00.html"
+title = "enSilo גייסה 10 מיליון דולר"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2015-06-16"
+claims = ["Calcalist reports a USD 10 million Series A led by Lightspeed Venture Partners with Carmel Ventures.", "The article reports an earlier USD 3 million seed round approximately two months before the Series A."]
+
+[[intelligence.research.sources]]
+id = "src-ensilo-series-a-extension-2016"
+url = "https://www.prnewswire.com/news-releases/cyber-security-startup-ensilo-passes-21-million-in-funding-570087811.html"
+title = "Cyber-security Startup enSilo Passes $21 Million in Funding"
+publisher = "enSilo via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2016-02-25"
+claims = ["enSilo says the USD 9 million second tranche was led by Rembrandt Venture Partners with Carmel Ventures and Lightspeed participating, bringing the Series A total to USD 19 million and cumulative funding to USD 21 million.", "The company says it had tens of deployments in the United States and claims use among unnamed Fortune 100 companies, defense contractors, and payment solutions."]
+
+[[intelligence.research.sources]]
+id = "src-venturebeat-2019"
+url = "https://venturebeat.com/ai/ensilo-is-raising-a-series-b-to-monitor-and-remediate-cyber-threats"
+title = "EnSilo is raising a series B to monitor and remediate cyber threats (Updated)"
+publisher = "VentureBeat"
+kind = "media"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2019-06-11"
+claims = ["VentureBeat reports a USD 13 million Series A in 2017.", "The article describes enSilo's endpoint product, cloud and on-premises deployment, legacy operating-system support, and response tools."]
+
+[[intelligence.research.sources]]
+id = "src-rembrandt-profile"
+url = "https://finder.startupnationcentral.org/investor_page/rembrandt-venture-partners-1"
+title = "Rembrandt Venture Partners investor profile"
+publisher = "Startup Nation Finder"
+kind = "directory"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["The legacy Israeli ecosystem investor profile lists Rembrandt's enSilo investments, including a May 2017 USD 13 million Series A record and a February 2016 USD 9 million record.", "The profile lists enSilo as an acquired Israeli-portfolio company with USD 57 million raised; this is directory data, not an enSilo financing announcement."]
+
+[[intelligence.research.sources]]
+id = "src-dealroom-profile"
+url = "https://app.dealroom.co/companies/ensilo"
+title = "enSilo company information, funding and investors"
+publisher = "Dealroom"
+kind = "directory"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["The dynamic profile currently lists a March 2015 seed amount of EUR 2.3 million and describes enSilo as acquired, with San Francisco headquarters and Herzliya founding location."]
+
+[[intelligence.research.sources]]
+id = "src-ensilo-series-b-2019"
+url = "https://www.prnewswire.com/news-releases/ensilo-unveils-advanced-platform-capabilities-announces-strong-growth-and-new-investment-300883062.html"
+title = "enSilo Unveils Advanced Platform Capabilities, Announces Strong Growth and New Investment"
+publisher = "enSilo via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2019-07-11"
+claims = ["enSilo reports a recently closed USD 23 million Series B led by Rembrandt Ventures and says total capital raised exceeded USD 57 million.", "The company reports more than 250 percent year-over-year revenue growth and plans to hire across the United States and Israel.", "Version 4.0 adds virtual patching, IoT discovery and control, USB control, and playbook automation; the release describes the single-agent NGAV, EDR, threat-hunting, and virtual-patching platform."]
+
+[[intelligence.research.sources]]
+id = "src-calcalist-2019"
+url = "https://www.calcalist.co.il/local/articles/0%2C7340%2CL-3766158%2C00.html"
+title = "חברת הסייבר enSilo גייסה 23 מיליון דולר"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2019-07-11"
+claims = ["Calcalist reports an enSilo USD 23 million round led by Rembrandt and historical total fundraising of USD 57 million.", "The article reports 86 employees, 53 in Israel, offices in Herzliya and San Francisco, and the four founders and their historical roles."]
+
+[[intelligence.research.sources]]
+id = "src-globes-2019"
+url = "https://www.globes.co.il/news/article.aspx?did=1001305010"
+title = "הסטארט-אפ הישראלי enSilo נמכר לפורטינט האמריקאית"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2019-10-28"
+claims = ["Globes reports the Fortinet acquisition, enSilo's Israeli origin, founding team, Herzliya and San Francisco offices, and USD 57 million in historical fundraising.", "Globes says the company did not disclose the transaction price; an unnamed source described it as tens of millions of dollars, which is not used as a numeric deal amount."]
+
+[[intelligence.research.sources]]
+id = "src-checkid-registry"
+url = "https://en.checkid.co.il/company/ENSILO%2BLTD-k8OkMpY-515122547"
+title = "ENSILO LTD company record"
+publisher = "CheckID"
+kind = "directory"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["Commercial registry-data page lists ENSILO LTD as Israeli private company number 515122547, with Herzliya address and 2014-08-18 incorporation date.", "The page reports company status as eliminated due to merger and last annual report in 2022; it is not an official Companies Authority extract."]
+
+[[intelligence.research.sources]]
+id = "src-lightspeed-portfolio"
+url = "https://lsvp.com/company/ensilo/"
+title = "enSilo | Lightspeed"
+publisher = "Lightspeed Venture Partners"
+kind = "investor"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["Lightspeed lists enSilo as acquired by Fortinet and identifies Roy Katmor, Udi Yavo, Tomer Bitton, and Ido Kelson as co-founders with their historical executive roles.", "Lightspeed describes the single lightweight endpoint agent, NGAV, EDR, application communication control, real-time blocking, threat hunting, incident response, and virtual patching."]
+
+[[intelligence.research.sources]]
+id = "src-hanamer-team"
+url = "https://www.hanamer.co.il/2018/03/"
+title = "באו לבקר במאורת הנמר: גלית ניצן ואודי יאבו, אינסיילו"
+publisher = "פלי הנמר"
+kind = "media"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2018-03-11"
+claims = ["The Hebrew-language profile identifies Yavo and Bitton as former Rafael security leaders and Kelson as a former senior development manager at Imperva.", "The article identifies the four founders and Yavo's historical CTO role."]
+
+[[intelligence.research.sources]]
+id = "src-viola-rebrand"
+url = "https://www.viola-group.com/violanotes/carmel-now-viola-ventures/"
+title = "Carmel is now Viola Ventures!"
+publisher = "Viola Group"
+kind = "investor"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2017-11-01"
+claims = ["Viola says Carmel Ventures adopted the Viola Ventures brand in November 2017, supporting treatment as a rebrand rather than a distinct historical investor."]
+
+[[intelligence.research.sources]]
+id = "src-matrix42-partnership"
+url = "https://www.prnewswire.com/news-releases/ensilo-and-matrix42-form-partnership-to-deliver-premier-managed-endpoint-security-services-solution-300533715.html"
+title = "enSilo and Matrix42 Form Partnership to Deliver Premier Managed Endpoint Security Services Solution"
+publisher = "enSilo via PR Newswire"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2017-10-10"
+claims = ["The companies announced product integration and that Matrix42 could sell enSilo's platform in Central Europe.", "The announcement describes a channel and managed-services relationship, not a customer contract or disclosed revenue."]
+
+[[intelligence.research.sources]]
+id = "src-matrix42-case"
+url = "https://www.matrix42.com/hubfs/Sucess-Stories/Matrix42-CS-EDR-0239-ZAE-Bayern-EN.pdf"
+title = "Endpoint Security ZAE Bayern"
+publisher = "Matrix42"
+kind = "customer"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["The case study says ZAE Bayern selected Matrix42 EDR powered by enSilo after evaluating eight solutions and deployed it to its endpoints by mid-2018.", "The case study describes the challenge of protecting more than 300 PCs and laptops; it does not disclose contract value or later renewal."]
+
+[[intelligence.research.sources]]
+id = "src-patent-10334083"
+url = "https://patents.google.com/patent/US10334083B2/en"
+title = "US10334083B2: Systems and methods for malicious code detection"
+publisher = "Google Patents / USPTO record"
+kind = "filing"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2019-06-25"
+claims = ["The patent describes detecting malicious communications by analyzing stack-trace records during network connection establishment and blocking the connection.", "The record lists enSilo Ltd. as original assignee and an assignment to Fortinet effective October 30, 2019."]
+
+[[intelligence.research.sources]]
+id = "src-fortinet-history-2022"
+url = "https://investor.fortinet.com/static-files/9bea81f9-cd8d-4db1-b26a-c31bb62056f9"
+title = "Fortinet Accelerate 2022 Keynotes"
+publisher = "Fortinet Investor Relations"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["Fortinet's acquisition timeline maps the 2019 enSilo acquisition to FortiEDR."]
+
+[[intelligence.research.sources]]
+id = "src-fortiedr-product"
+url = "https://www.fortinet.com/products/endpoint-security/fortiedr"
+title = "EDR Solution | Endpoint Detection and Response Solution with FortiEDR"
+publisher = "Fortinet"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["Current FortiEDR materials describe a lightweight agent, real-time detection and defusing, automated playbooks, legacy operating-system support, and cloud, hybrid, or on-premises deployment.", "The current page presents FortiEDR as a Fortinet product; it does not establish which enSilo code or staff remain in the product."]
+
+[[intelligence.research.sources]]
+id = "src-fortinet-blog"
+url = "https://www.fortinet.com/blog/business-and-technology/fortinet-acquires-endpoint-security-innovator-ensilo-"
+title = "Fortinet's Acquisition of Endpoint Security Innovator enSilo"
+publisher = "Fortinet"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+published_on = "2019-10-28"
+claims = ["Fortinet states it completed the acquisition of enSilo, then headquartered in San Francisco, and describes automated containment, stopping data exfiltration, and ransomware protection."]
+
+[[intelligence.research.sources]]
+id = "src-crowdstrike"
+url = "https://www.crowdstrike.com/en-us/platform/endpoint-security/"
+title = "Secure the Endpoint, Stop the Breach | CrowdStrike Endpoint Security"
+publisher = "CrowdStrike"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["CrowdStrike positions Falcon as endpoint protection and EDR with cross-domain visibility, response, and a lightweight unified sensor."]
+
+[[intelligence.research.sources]]
+id = "src-sentinelone"
+url = "https://www.sentinelone.com/platform/endpoint-security/"
+title = "Singularity Endpoint Security Platform"
+publisher = "SentinelOne"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["SentinelOne describes a unified endpoint agent combining EPP, EDR, and automated remediation across endpoint and other environments."]
+
+[[intelligence.research.sources]]
+id = "src-microsoft-defender"
+url = "https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint"
+title = "Microsoft Defender for Endpoint overview"
+publisher = "Microsoft Learn"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["Microsoft describes Defender for Endpoint detection and response, cross-workload correlation, APIs, and support for Windows, macOS, Linux, Android, and iOS."]
+
+[[intelligence.research.sources]]
+id = "src-paloalto-cortex"
+url = "https://www.paloaltonetworks.com/cortex/cortex-xdr"
+title = "Transform Endpoint Security with Cortex XDR"
+publisher = "Palo Alto Networks"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["Palo Alto Networks describes Cortex XDR as connecting endpoint, network, cloud, identity, and email signals for detection, prevention, and response."]
+
+[[intelligence.research.sources]]
+id = "src-sophos-edr"
+url = "https://www.sophos.com/en-us/products/endpoint-security/edr"
+title = "Sophos EDR - Endpoint Detection and Response"
+publisher = "Sophos"
+kind = "company"
+accessed_at = "2026-10-21T23:41:47Z"
+claims = ["Sophos describes a unified endpoint agent, EDR investigations, automated responses, multi-platform coverage, and integrated Sophos Fusion services."]
