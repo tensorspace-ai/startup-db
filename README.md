@@ -9,7 +9,7 @@
 [![Checks](https://github.com/tensorspace-ai/startup-db/actions/workflows/ci.yml/badge.svg)](https://github.com/tensorspace-ai/startup-db/actions/workflows/ci.yml)
 [![Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-7ba7ff?labelColor=070d1f)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-7ee7ff?labelColor=070d1f)](pyproject.toml)
-[![1,894 records](https://img.shields.io/badge/Records-1%2C894-b8a6ff?labelColor=070d1f)](data/startups)
+[![1,925 records](https://img.shields.io/badge/Records-1%2C925-b8a6ff?labelColor=070d1f)](data/startups)
 
 **A startup database you can read, and a research agent whose work you can inspect.**
 
@@ -41,16 +41,16 @@ review them in Git, or use the CLI without starting an AI research provider.
 
 ## Dataset coverage
 
-The initial snapshot contains **1,894 TOML records**:
+The catalog contains **1,925 TOML records** as of October 22, 2026:
 
 | Coverage | Records |
 | --- | ---: |
-| Searchable company and organization profiles | 1,870 |
-| Structured schema-v2 dossiers | 477 |
-| Legacy profiles awaiting structured enrichment | 1,393 |
+| Searchable company and organization profiles | 1,901 |
+| Structured schema-v2 dossiers | 543 |
+| Legacy profiles awaiting structured enrichment | 1,358 |
 | Redirect records | 24 |
 
-All 477 structured dossiers pass the current publication contract with its
+All 543 structured dossiers pass the current publication contract with its
 default source and analysis requirements. Passing that contract establishes
 structural consistency; it does not independently verify every source or claim.
 Legacy profiles remain useful for search and selection, but their prose does not
@@ -62,6 +62,8 @@ The snapshot retains source timestamps and dated research checks. It is not a
 live market feed, a complete global investor portfolio database, or access to
 licensed commercial data. Inspect original sources before relying on a claim.
 Use `audit` to assess current coverage after editing or enriching the catalog.
+See the [October 22 data review](docs/data-review-2026-10-22.md) for the latest
+batch checks and remaining catalog limitations.
 
 ## Quick start
 
