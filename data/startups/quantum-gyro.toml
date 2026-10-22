@@ -1,15 +1,21 @@
 name = "Quantum Gyro Ltd"
-description = "Israeli deep-tech startup developing compact nuclear-magnetic-resonance (NMR) gyroscopes and quantum-enhanced inertial sensing for navigation when GNSS is unavailable, jammed, or unreliable."
+description = "Israeli startup developing a nuclear magnetic resonance gyroscope for compact inertial navigation in GNSS-denied conditions; a laboratory prototype and ME-Nav collaboration are issuer-reported, while commercial performance and sales remain unverified."
 
-detailed_description = """
-Quantum Gyro develops NMR-based inertial sensing for measuring rotation without depending on satellite signals. Its stated architecture detects shifts in the Larmor precession frequency of nuclear magnetic moments in an applied magnetic field, using an optically pumped magnetometer to read the weak signal. The company presents a chip-scale, lower-power design rather than a finished catalog product: its public development targets include 0.005 degrees per square-root hour angular random walk, 6 ppm scale-factor stability, and a bias-drift objective below 0.01 degrees per hour. These figures are targets or public company claims, not independently verified field results.
+detailed_description = """Quantum Gyro Ltd. is an Israeli private company incorporated in October 2025 to develop a nuclear magnetic resonance (NMR) gyroscope for rotation sensing and inertial navigation. Its core approach reads changes in the Larmor precession of nuclear spins in an alkali/noble-gas vapor cell. The Taurus Gold regulatory circular describes optical pumping of alkali atoms, spin exchange that transfers angular momentum to noble-gas nuclei, and optical readout using alkali-atom magnetometry. This is a concrete hardware research program rather than a software-only navigation proposition: success depends on controlling the cell, magnetic environment, optical readout, calibration, and packaging as one stable instrument.
 
-The technical program combines atomic-cell engineering, optical readout, magnetic-field control, and packaging. Quantum Gyro describes a single-laser dual-frequency/polarization readout, hydrogen-assisted wall passivation intended to extend transverse coherence time, and monolithic vapor cells with integrated coils and micro-heaters. The company website also describes a cell containing helium, xenon, and rubidium as part of its development proposal. If these elements can be made repeatable across temperature, vibration, magnetic interference, and manufacturing variation, the approach could occupy a useful middle ground between inexpensive MEMS gyroscopes and larger, more expensive high-grade inertial systems. The principal technical question is not whether NMR rotation sensing is physically plausible, but whether the complete sensor maintains calibration, startup behavior, reliability, and cost at vehicle level.
+The most specific public performance evidence is in Taurus Gold Corp.'s January 2026 management information circular. It reports that Quantum X Labs had demonstrated a working laboratory prototype validating the core principles, with angular random walk of 100×10⁻⁵ degrees per square-root hour (0.001°/√h), bias stability of 30×10⁻⁵ degrees per hour (0.0003°/h), scale-factor stability of 1 ppm, a 20×20×10 cm enclosure, and 15 W power consumption. These are issuer-reported laboratory figures, not results from an independent test house or a disclosed customer trial. The distinction between this reported bench unit and a saleable chip-scale product is material: the cited unit is still a relatively large lab assembly, and public information does not give environmental test protocols, uncertainty bounds, startup time, vibration performance, magnetic immunity, lifetime, calibration interval, manufacturing yield, or performance across production units. Those are the measurements needed to judge whether the claimed low drift persists on moving platforms and at an economically useful size, power, and price.
 
-The initial market is B2B and systems-led. Likely applications include unmanned aerial vehicles, ground and maritime autonomy, aerospace navigation, industrial robotics, and other platforms that need continuity through GNSS outages or interference. In November 2025, Maris-Tech disclosed a collaboration to develop ME-Nav, combining its edge-AI computing with Quantum Gyro sensing for GNSS-denied navigation. The announcement described a planned jointly owned commercialization entity, a milestone-based development plan, and intended exclusive manufacturing, marketing, and distribution rights for Maris-Tech; it did not establish product revenue, production deliveries, or customer qualification. In March 2026, Maris-Tech disclosed that Quantum Gyro had licensed relevant navigation technology from parent Quantum X Labs and that a U.S. provisional patent application had been filed by Quantum X Labs. These are meaningful commercialization and IP signals, but remain early-stage evidence.
+Quantum Gyro's first disclosed route to a system product is ME-Nav, a planned GNSS-denied navigation system integrating its sensor with Maris-Tech's edge-AI computing platform. Maris-Tech's November 10, 2025 SEC-filed announcement described a 24-month development path with quarterly milestones, a proposed approximately $1 million budget expected to be financed through loans subject to NewCo, Maris-Tech, and Quantum Gyro approvals, and a planned commercialization entity with Maris-Tech at 51% and Quantum Gyro at 49%. Maris-Tech also said it would have exclusive worldwide manufacturing, marketing, and distribution rights for ME-Nav. These terms concern a planned product venture and budget; they do not establish that the NewCo was formed, that the loans were approved or drawn, or that a customer bought or deployed ME-Nav. The collaboration provides a plausible integration and route-to-market partner, but leaves Quantum Gyro dependent on a partner-led system path and on continued delivery against the agreed milestones.
 
-Competition comes from mature MEMS, fiber-optic, ring-laser, and hemispherical-resonator inertial systems, as well as other atomic and cold-atom navigation programs. Quantum Gyro’s potential edge is a compact NMR sensor with lower drift and lower SWaP than conventional tactical-grade alternatives, coupled with a partner that can provide edge processing and access to defense and autonomous-platform integrators. That edge is conditional: published information does not yet show independent test data, a qualified production design, recurring customers, or a completed ME-Nav product. Defense relevance is credible because GNSS-denied navigation supports autonomy, mission continuity, and resilience in contested environments, but procurement, export-control, cybersecurity, and environmental qualification requirements may be substantial.
-"""
+The intellectual-property arrangement creates both a commercialization route and a financing burden. Quantum X Labs Ltd. filed U.S. Provisional Patent Application 64/000,184 on March 9, 2026, and is named as its assignee in Maris-Tech's March 20 release. Quantum Gyro received an exclusive worldwide license from Quantum X Labs for development, manufacture, and commercialization in navigation and GPS-replacement applications. Quantum X Labs' audited financial statements say the license requires a $100,000 upfront payment from Quantum Gyro, royalties of 4% to 6% of net sales, and 15% of sublicense receipts, subject to development milestones. Taurus Gold's circular also says Quantum Gyro bears patent-filing and patent-related expenses. The public record therefore supports licensed access to the core technology, not ownership by Quantum Gyro of the disclosed provisional filing. The license, patent prosecution, and milestone obligations should be reviewed together, including field scope, termination rights, enforcement control, improvements, and what happens if development or financing milestones slip.
+
+The initial commercial case is business-to-business supply or licensing of a sensor into navigation systems for UAVs, autonomous vehicles, maritime and underwater platforms, aerospace, and other operations that need to bridge GNSS disruption. These applications are stated targets, not verified users. A component supplier must pass the system integrator's requirements for inertial error growth, startup and alignment, shock and vibration, temperature, electromagnetic compatibility, power, interfaces, cybersecurity, traceability, and long-term support. The public collaboration points to military, urban, indoor, and autonomous use cases, but no paying customer, purchase order, production deployment, contract value, qualification, or recurring revenue was found. It is important not to treat a partner agreement or a target customer demonstration as proof of sales.
+
+The competitive set spans mature MEMS and tactical inertial units, fiber-optic gyroscopes, ring-laser and hemispherical-resonator systems, GNSS/INS combinations, and emerging quantum inertial sensors. Honeywell publicly markets compact and tactical navigation systems for UAVs and GNSS-denied operations; Exail sells fiber-optic-gyro inertial systems for demanding marine and subsea settings; Vector Atomic is an adjacent quantum-sensor developer working on navigation applications. These products are not technically identical to an NMR gyro, but buyers compare them on sustained navigation error, size, power, ruggedness, integration burden, service life, availability, and lifecycle cost. Quantum Gyro's possible advantage is a compact NMR architecture with promising issuer-reported laboratory drift metrics and an edge-computing partner. Its differentiation remains unproven at the product level because there is no public, same-test comparison against qualified alternatives, no production design, and no disclosed total-system navigation result during a GNSS outage.
+
+The public team record is thin. IVC's company directory lists Danny Neulander as CEO and Dr. Eliran Talker as CTO; a CheckID company listing identifies Yaakov Brans as a director. The reviewed public sources do not provide reliable biographies, a named technical founder, team size, hiring history, or a verified account of who built and tested the laboratory unit. This is a material execution question for a company whose core risks sit in atomic physics, precision optics, magnetic control, embedded electronics, manufacturing, and inertial-navigation integration. Quantum X Labs supplies technology and is a 40% shareholder, while Taurus Gold is described in issuer disclosures as a controlling shareholder. The full cap table and the identity of the IVC-listed seed investor are not public.
+
+The investment and strategic case is therefore asymmetric. Resilient navigation has clear commercial value for autonomous aircraft, maritime systems, robotics, and other platforms when satellite signals are weak or unavailable, and a sufficiently small, low-power inertial sensor could also serve defense and security platforms in contested environments. The same application creates long qualification and procurement cycles, export-control and security requirements, and close scrutiny of reliability. Near-term diligence should verify the prototype data independently, obtain the full patent and license package, reconcile the cap table and financing history, confirm whether the ME-Nav budget and NewCo were approved, and test the sensor against representative motion and environmental profiles. Until those steps are answered, Quantum Gyro is an early-stage technology opportunity with a technically interesting disclosure and a credible integration partner, but no public proof of repeatable production performance or commercial traction."""
 
 logo = "https://quantumgyro.xyz/wp-content/uploads/2025/12/Quantum-Gyro-dark-background-1.svg"
 website = "https://quantumgyro.xyz/"
@@ -17,46 +23,462 @@ sector = "Inertial navigation / Quantum sensors"
 founded = "2025"
 headquarters = "Tel Aviv, Israel"
 employees = "Unknown"
-funding_stage = "Unknown; early development funded through founder/parent and collaboration arrangements not fully disclosed"
+funding_stage = "Undisclosed; IVC lists a Seed entry with amount and investor identity unavailable, without independent round confirmation."
 entity_type = "startup"
 
 dual_use = true
-dual_use_description = "NMR inertial sensing has direct commercial and defense applicability because it is intended to preserve navigation during GNSS outages, jamming, or spoofing. Credible applications include autonomous aircraft, ground and maritime systems, industrial robotics, and resilient navigation modules; operational defense deployment remains unproven."
+dual_use_description = "The same inertial sensing capability has plausible commercial and defense uses: commercial targets include UAVs, autonomous ground vehicles, marine and underwater platforms, aerospace systems, and indoor or urban navigation; defense and security relevance follows from maintaining orientation and navigation during GNSS outage, jamming, or contested operation. Maris-Tech and Taurus Gold describe these applications, but the reviewed evidence shows a development collaboration and a laboratory prototype rather than a verified military customer, operational deployment, government contract, export approval, or field qualification. Dual-use relevance is credible at the capability level and remains unvalidated as a business line."
 
-key_technologies = ["Nuclear magnetic resonance rotation sensing", "Optically pumped magnetometer readout", "Atomic vapor cells using helium, xenon, and rubidium", "Single-laser dual-frequency and polarization readout", "Hydrogen-assisted wall passivation for longer spin coherence", "Integrated magnetic coils, micro-heaters, and chip-scale packaging", "GNSS-denied inertial and edge-AI sensor fusion"]
-use_cases = ["GNSS-denied navigation and stabilization for UAVs", "Resilient navigation for autonomous ground vehicles", "Uncrewed surface and subsurface maritime platforms", "Backup inertial sensing for aerospace systems during satellite outages", "Indoor, underground, and urban robotics", "Critical-infrastructure inspection in GPS-challenged locations", "Military and emergency-response autonomy where radio navigation is disrupted"]
+key_technologies = ["Nuclear magnetic resonance rotation sensing from nuclear-spin Larmor precession", "Alkali/noble-gas vapor-cell architecture", "Optical pumping and spin-exchange polarization", "Optical alkali-atom magnetometry readout", "GNSS-denied inertial navigation and edge-computing integration"]
+use_cases = ["UAV and autonomous-platform navigation during GNSS outages", "Autonomous ground-vehicle navigation", "Maritime and underwater navigation", "Aerospace and defense platform navigation", "Indoor and urban navigation where satellite signals are unavailable"]
 
 investible = true
-investment_rationale = "Quantum Gyro is a credible strategic-priority signal for a dual-use deep-tech database, not a recommendation. The company addresses a real navigation-resilience problem with a differentiated NMR architecture, has a public technical development program, and has disclosed collaboration and licensing arrangements involving Maris-Tech and Quantum X Labs. The evidence still supports an early technology-risk assessment: there is no public proof of independent performance, recurring revenue, production qualification, or customer acceptance. Priority diligence should focus on repeatable bias and drift data, environmental testing, IP ownership and freedom to operate, manufacturing yield, financing runway, and the status of the planned ME-Nav commercialization structure."
-strategic_value = "High strategic relevance but low demonstrated readiness. Compact inertial sensing that remains useful through GNSS denial could strengthen allied autonomy, unmanned systems, and emergency operations. Value depends on converting laboratory or prototype performance into a rugged, certifiable, supportable component and on navigating export, supply-chain, and security requirements."
+investment_rationale = "Quantum Gyro merits continued strategic diligence because public issuer filings describe a working NMR laboratory prototype, a provisional patent filing licensed exclusively for navigation commercialization, and a defined ME-Nav development collaboration with Maris-Tech. The reported prototype metrics are promising on their face, but the disclosed 20×20×10 cm and 15 W laboratory unit is not yet evidence of a compact production sensor, and the performance has not been independently reproduced. The only located seed entry is an IVC directory record with amount and investor identity masked; no company-announced lifetime raise, revenue, customer shipment, or standalone financials were found. The $1 million ME-Nav budget is conditional proposed loans for a planned venture, while the $100,000 license payment and ongoing royalties are obligations of Quantum Gyro. This is a high-risk early-stage research priority, not an investment recommendation."
+strategic_value = "A compact inertial sensor that can bridge satellite-navigation loss could help autonomous systems continue operating in urban canyons, indoors, at sea, underground, or in contested environments. Quantum Gyro's reported NMR approach is strategically relevant to Israeli and allied autonomy, aerospace, maritime safety, and defense resilience, while also supporting non-defense robotics and industrial navigation. The collaboration with Maris-Tech could connect sensing with onboard processing and system integration. Strategic value depends on verified field performance, ruggedization, a clear licensed-IP path, repeatable manufacturing, and customer qualification; public evidence does not yet show operational deployment or procurement."
 
 public_sources = [
-  { title = "Quantum Gyro official website", url = "https://quantumgyro.xyz/", note = "Company source describing NMR operation, development targets, optically pumped magnetometer readout, and compact-cell innovations." },
-  { title = "Maris-Tech SEC Exhibit: Quantum Gyro collaboration", url = "https://www.sec.gov/Archives/edgar/data/1872964/000121390025107957/ea026470001ex99-1_maristech.htm", note = "Primary disclosure dated November 10, 2025 describing ME-Nav, planned milestones, proposed ownership, and Maris-Tech commercialization rights." },
-  { title = "Maris-Tech SEC Exhibit: quantum navigation milestone", url = "https://www.sec.gov/Archives/edgar/data/1872964/000121390026032104/ea028269702ex99-1.htm", note = "Primary disclosure dated March 20, 2026 describing Quantum X Labs licensing, the provisional patent filing, and the hybrid quantum/AI navigation development focus." },
-  { title = "Quantum X Labs SEC filing", url = "https://www.sec.gov/Archives/edgar/data/797542/000149315226023096/ex99-1.htm", note = "Financial disclosure identifying Quantum Gyro's incorporation date, ownership context, and the March 2026 navigation-technology license." },
-  { title = "Quantum Gyro Ltd company registry listing", url = "https://en.checkid.co.il/company/QUANTUM%2BGYRO%2BLTD-VBodlxY-517234753", note = "Public registry-style listing corroborating the Israeli private-company identity, active status, incorporation date, and Tel Aviv address." }
+  { label = "Quantum Gyro official website", url = "https://quantumgyro.xyz/", description = "Canonical company website and official company identity." },
+  { label = "Quantum Gyro registry listing", url = "https://en.checkid.co.il/company/QUANTUM%2BGYRO%2BLTD-VBodlxY-517234753", description = "Israeli company number, incorporation date, active status, and Tel Aviv address as listed by CheckID." },
+  { label = "Quantum X Labs 2025 audited financial statements", url = "https://www.sec.gov/Archives/edgar/data/797542/000149315226023096/ex99-1.htm", description = "SEC-filed formation, 40% ownership, equity-method treatment, and exclusive license terms." },
+  { label = "Maris-Tech ME-Nav collaboration announcement", url = "https://www.sec.gov/Archives/edgar/data/1872964/000121390025107957/ea026470001ex99-1_maristech.htm", description = "SEC-filed development plan, proposed NewCo ownership, conditional loan budget, and Maris-Tech commercialization rights." },
+  { label = "Maris-Tech March 2026 development milestone", url = "https://www.sec.gov/Archives/edgar/data/1872964/000121390026032104/ea028269702ex99-1.htm", description = "SEC-filed exclusive license and provisional patent application disclosure." },
+  { label = "Taurus Gold management information circular", url = "https://newsfile.futunn.com/public/NN-PersistNoticeAttachment/7781/20260131/SEDAR_PLUS/CSA_SEDAR_PLUS_NOTICE_RECORD_ID_2311782.pdf", description = "Issuer-filed NMR architecture, reported laboratory prototype specifications, license terms, and development roadmap." },
+  { label = "IVC Quantum Gyro company profile", url = "https://www.ivc-online.com/Google-Card?id=b5ced425-291d-f111-b81d-00505695cd29", description = "Directory-listed executives, B2B model, and a seed-round line with amount and investor identity masked." },
+  { label = "Quantum X Labs Q2 2026 Form 10-Q", url = "https://www.sec.gov/Archives/edgar/data/797542/000149315226037811/form10-q.htm", description = "SEC filing describing Quantum Gyro as a 40%-owned affiliate and its NMR development focus." },
+  { label = "Quantum X Labs NMR patent announcement", url = "https://www.nasdaq.com/press-release/viewbix-quantum-x-labs-files-us-patent-application-nuclear-magnetic-resonance-nmr", description = "Company release identifying the provisional application and Taurus Gold's controlling-shareholder role." },
+  { label = "Honeywell navigation systems", url = "https://www.honeywellaerospace.com/us/en/products-and-services/products/navigation-and-sensors/navigation-systems", description = "Official compact and tactical navigation alternatives for UAV and GNSS-denied use." },
+  { label = "Exail inertial navigation for surface operations", url = "https://www.exail.com/product-range/inertial-navigation-for-surface-operations", description = "Official fiber-optic-gyro navigation systems and established maritime/subsea applications." },
+  { label = "Vector Atomic", url = "https://vectoratomic.com/", description = "Official adjacent quantum inertial-sensing and navigation technology program." }
 ]
 
-potential_score = 77.0
-technology_score = 84.0
-market_score = 65.0
-team_score = 58.0
-dual_use_score = 90.0
-strategic_alignment_score = 88.0
+potential_score = 64.0
+technology_score = 58.0
+market_score = 66.0
+team_score = 40.0
+dual_use_score = 84.0
+strategic_alignment_score = 78.0
 
 stage = "early"
-stage_rationale = "The company was incorporated on October 26, 2025. Public evidence shows an active technical development program, a collaboration and proposed commercialization path with Maris-Tech, and licensed navigation IP, but no verified production shipments, recurring revenue, or broad customer qualification."
+stage_rationale = "Quantum Gyro was incorporated in October 2025 and remains in early development. Taurus Gold's January 2026 circular reports a working laboratory prototype and gives issuer-reported performance, enclosure, and power figures; a March 2026 announcement identifies a provisional patent filing assigned to Quantum X Labs and an exclusive license to Quantum Gyro. Maris-Tech's ME-Nav path remains a development collaboration with conditional budget approvals and planned commercialization terms. No public evidence located confirms production qualification, shipment, revenue, a paying customer, or an operational deployment."
 
-competitors = ["Honeywell and Safran tactical inertial systems", "Northrop Grumman hemispherical-resonator gyroscopes", "Advanced MEMS gyroscope suppliers such as Bosch and Analog Devices", "Fiber-optic and ring-laser gyroscope vendors", "Cold-atom and optically pumped quantum-navigation programs", "Integrated GNSS/INS and visual-inertial navigation substitutes"]
-competitive_edge = "The potential edge is a chip-scale NMR gyroscope that could deliver materially lower drift than commodity MEMS while using less SWaP and cost than strategic-grade inertial units. The official design emphasizes single-laser readout and integrated vapor-cell packaging, while the Maris-Tech relationship could accelerate system integration. This remains a hypothesis until independent, environmental, lifecycle, and production data demonstrate that the claimed sensitivity survives real platform conditions."
+competitors = ["Honeywell compact and tactical inertial navigation systems", "Exail fiber-optic-gyro inertial navigation systems", "Vector Atomic quantum inertial-sensing programs", "MEMS, ring-laser, hemispherical-resonator, and GNSS/INS alternatives"]
+competitive_edge = "Quantum Gyro's potential edge is a vapor-cell NMR architecture with issuer-reported low-drift laboratory results, paired with a disclosed Maris-Tech integration plan for edge processing. The technical mechanism differs from MEMS, fiber-optic, ring-laser, and atom-interferometric systems, so it may create a useful performance and size trade-off if the prototype can be reduced and ruggedized. The reported 15 W, 20×20×10 cm unit and absence of independently reviewed test data leave the main promise unproven. Buyers will compare total navigation error, size, power, temperature and vibration tolerance, integration time, lifetime, supply assurance, and price against mature products, not mechanism alone."
 
-risk_factors = ["No independently verified public drift, bias, vibration, temperature, or lifetime test results", "Difficult magnetic shielding, thermal control, coherence, calibration, and packaging requirements", "Unclear manufacturing yield, supply chain, unit economics, and production scale for atomic cells and optical components", "Dependence on Quantum X Labs licensing and the still-developing Maris-Tech commercialization path", "Strong competition from qualified MEMS, fiber-optic, HRG, and integrated navigation suppliers", "Defense export controls, security requirements, procurement cycles, and possible dual-use compliance burdens", "Early-stage financing and execution risk before a product reaches customer qualification"]
+risk_factors = ["The disclosed laboratory metrics are issuer-reported and have no public independent replication, test protocol, uncertainty range, or multi-unit repeatability data", "The 20×20×10 cm, 15 W laboratory prototype has not been shown to meet a production chip-scale form factor or platform power budget", "No public customer order, product shipment, recurring revenue, qualification, or operational deployment was found", "The proposed approximately USD 1 million ME-Nav budget is subject to approvals and is not confirmed company funding; NewCo formation and delivery milestones need verification", "Quantum Gyro's license requires an upfront USD 100,000 payment, 4% to 6% royalties, 15% of sublicense receipts, and milestone compliance; patent-related expenses are also assigned to the licensee", "Quantum X Labs is named assignee of the disclosed provisional filing and holds a reported 40% stake; Taurus Gold is described as controlling shareholder, while the full cap table and exact Taurus percentage are unavailable", "The public leadership and technical-team record is incomplete, with no verified founder biography, headcount, or detailed prototype-team credentials", "Mature inertial suppliers have long qualification histories, robust service networks, and tested products; system-level comparison and unit economics are absent", "A defense-facing product may face export controls, security reviews, qualification demands, long procurement cycles, and supply-chain restrictions"]
 risk_level = "high"
 
 signals = []
 priority_rank = 0
-priority_rationale = "High-priority strategic signal because the core technology addresses resilient navigation and has disclosed industrial collaboration, but high technical, financing, and commercialization risk keeps the record firmly in early-stage diligence rather than validated traction."
+priority_rationale = "Keep this as an early-stage dual-use technology signal for diligence because the reported lab prototype, exclusive NMR license, and Maris-Tech integration plan provide more substance than a concept-only record. Keep priority moderate rather than treating the defense use case or the stated bench performance as proof of readiness: the company has no public standalone financials or confirmed customer traction, leadership biographies and technical-team depth are unclear, and both financing and IP obligations need confirmation."
 
 crawled_at = "2026-05-30T16:28:30Z"
-updated_at = "2026-07-31T19:11:37Z"
+updated_at = "2026-10-21T21:50:44Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+
+[intelligence.company]
+company_id = "il-quantum-gyro"
+legal_name = "Quantum Gyro Ltd."
+aliases = ["Quantum Gyro", "QUANTUM GYRO LTD"]
+operating_status = "active"
+business_model = "B2B development of NMR inertial-sensing hardware and licensed technology, with planned OEM/system commercialization through the ME-Nav collaboration; no public revenue or shipments verified."
+products = ["NMR gyroscope for rotation sensing and inertial navigation (in development)", "ME-Nav GNSS-denied navigation system concept integrating Quantum Gyro sensing with Maris-Tech edge computing"]
+locations = ["Tel Aviv, Israel"]
+country_of_incorporation = "Israel"
+founded_on = "2025-10-26"
+source_ids = ["checkid", "qxl-fs-2025", "maris-collab-2025"]
+
+[[intelligence.company.registry_identifiers]]
+jurisdiction = "Israel"
+scheme = "Israeli company number as listed by CheckID"
+identifier = "517234753"
+source_ids = ["checkid"]
+notes = "CheckID presents this as the company number; no separate official registry page was retrieved in this research pass."
+
+[intelligence.funding]
+status = "reported"
+summary = "IVC's directory page lists a Seed round dated December 1, 2025, but its amount and investor name are masked and the line was not corroborated by the reviewed issuer filings. The page displays investor type Venture Studio, without a usable identity. Maris-Tech's approximately USD 1 million ME-Nav budget was proposed for a planned commercialization entity and expected to be funded by loans subject to approvals; it is a conditional project budget, not confirmed Quantum Gyro funding. Quantum Gyro's USD 100,000 license payment is an obligation, not an inflow. No company-announced lifetime funding total was found; no total is inferred."
+rounds = [{ id = "seed-2025-12-01", round_type = "Seed", instrument = "unknown", status = "announced", announced_on = "2025-12-01", amount_status = "undisclosed", amount_scope = "unknown", lead_investors = [], participating_investors = [], source_ids = ["ivc"], notes = "IVC labels this as a Seed financial round and displays Round Date Dec. 1, 2025. It does not clarify whether the date is announcement or closing; the amount and investor name are masked, and no independent confirmation was found." }]
+history_status = "partial"
+coverage_through = "2026-10-21"
+
+[[intelligence.people]]
+name = "Danny Neulander"
+role = "CEO (listed by IVC)"
+is_founder = false
+current = true
+source_ids = ["ivc"]
+notes = "IVC profile lists him as CEO; company-published biography and independent current-role confirmation were not located."
+
+[[intelligence.people]]
+name = "Eliran Talker"
+role = "CTO (listed by IVC)"
+is_founder = false
+current = true
+source_ids = ["ivc"]
+notes = "IVC profile lists him as CTO; company-published biography and independent current-role confirmation were not located."
+
+[[intelligence.people]]
+name = "Yaakov Brans"
+role = "Director (CheckID transliteration of יעקב בראנס)"
+is_founder = false
+current = true
+source_ids = ["checkid"]
+notes = "CheckID lists a director under the Hebrew name and shows the information updated through 2026-04-15; English transliteration is approximate."
+
+[[intelligence.investors]]
+name = "Quantum X Labs Ltd."
+investor_type = "corporate"
+relationship = "current"
+round_ids = []
+source_ids = ["qxl-fs-2025", "qxl-q2-2026"]
+notes = "Reported 40% shareholder and technology licensor. No specific financing round is attributed to it in the reviewed sources."
+
+[[intelligence.investors]]
+name = "Taurus Gold Corp."
+investor_type = "corporate"
+relationship = "current"
+round_ids = []
+source_ids = ["taurus-circular", "nasdaq-patent"]
+notes = "Issuer disclosures describe Taurus as Quantum Gyro's controlling shareholder; an exact Quantum Gyro ownership percentage and any round-level allocation were not located."
+
+[intelligence.ownership]
+status = "reported"
+summary = "Quantum X Labs' Q2 2026 SEC filing describes Quantum Gyro as a 40%-owned affiliate. Taurus Gold's circular describes it as Taurus's subsidiary, and a March 2026 company release calls Taurus its controlling shareholder. Maris-Tech's release calls Quantum X Labs the parent, but Quantum X Labs' audited statements say it does not control Quantum Gyro and accounts for it as an equity-method associate. The full cap table and Taurus's exact percentage are not public; the remaining 60% is not assigned by inference."
+cap_table_status = "undisclosed"
+shareholders = ["Quantum X Labs Ltd. (40% reported as of 2026-06-30)", "Taurus Gold Corp. (described as controlling shareholder; exact percentage not located)"]
+source_ids = ["qxl-fs-2025", "qxl-q2-2026", "taurus-circular", "maris-milestone-2026", "nasdaq-patent"]
+deals = []
+holdings = [{ shareholder = "Quantum X Labs Ltd.", ownership_percent = 40.0, as_of = "2026-06-30", source_ids = ["qxl-q2-2026"], notes = "QXL's Q2 2026 filing calls Quantum Gyro a 40%-owned affiliate; this is not the full cap table." }]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Maris-Tech announced a collaboration to develop ME-Nav, combining its edge-AI computing platform with Quantum Gyro's NMR gyroscope. The release described a 24-month milestone schedule, a proposed NewCo owned 51% by Maris-Tech and 49% by Quantum Gyro, exclusive global manufacturing/marketing/distribution rights for Maris-Tech, and an approximately USD 1 million target budget expected from loans subject to approvals. The announcement does not verify that NewCo formed, loans were drawn, a customer paid, or a product shipped."
+date = "2025-11-10"
+source_ids = ["maris-collab-2025"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Taurus Gold's management circular reports a working laboratory prototype developed by Quantum X Labs that validates the core NMR gyro principle. It reports ARW of 0.001°/√h, bias stability of 0.0003°/h, scale-factor stability of 1 ppm, a 20×20×10 cm device, and 15 W consumption. These are issuer-reported laboratory figures without public independent replication or full test protocols, and do not establish a production-ready chip-scale device."
+date = "2026-01"
+source_ids = ["taurus-circular"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Maris-Tech's March 2026 release described a development milestone and identified the exclusive Quantum X Labs license and provisional NMR-gyro filing. Public material reviewed did not give a customer trial result, production milestone, or independent performance update."
+date = "2026-03-20"
+source_ids = ["maris-milestone-2026"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "Quantum X Labs Ltd. is named as assignee of U.S. Provisional Patent Application 64/000,184, filed March 9, 2026, covering NMR gyroscope technology. Quantum Gyro received an exclusive worldwide license for development, manufacture, and commercialization in navigation and GPS-replacement applications under a March 6, 2026 agreement. The application is provisional, not a granted patent; Quantum Gyro's license and patent-related expenses should be distinguished from ownership of the filing."
+date = "2026-03-09"
+source_ids = ["maris-milestone-2026", "qxl-fs-2025", "taurus-circular"]
+
+[[intelligence.comparables]]
+name = "Honeywell Aerospace"
+website = "https://www.honeywellaerospace.com/us/en/products-and-services/products/navigation-and-sensors/navigation-systems"
+rationale = "A direct substitute supplier of compact and tactical inertial navigation systems for UAVs and GNSS-denied operation."
+differentiation = "Honeywell's published offering is a mature integrated navigation portfolio with platform and sensor-fusion products; Quantum Gyro is pursuing an NMR rotation sensor with no disclosed qualified system or production record."
+source_ids = ["honeywell"]
+
+[[intelligence.comparables]]
+name = "Exail"
+website = "https://www.exail.com/product-range/inertial-navigation-for-surface-operations"
+rationale = "A direct inertial-navigation alternative for maritime, subsea, and other GNSS-outage settings."
+differentiation = "Exail markets fielded fiber-optic-gyro navigation systems with a long operational track record; Quantum Gyro's proposed differentiator is NMR sensing and potential compactness, which remains to be demonstrated in deployed hardware."
+source_ids = ["exail"]
+
+[[intelligence.comparables]]
+name = "Vector Atomic"
+website = "https://vectoratomic.com/"
+rationale = "An adjacent quantum-sensor developer targeting navigation and mission-critical applications."
+differentiation = "Vector Atomic describes atomic inertial sensors and other quantum measurement products; its approach is an adjacent quantum-sensing path rather than the disclosed NMR gyro architecture."
+source_ids = ["vector-atomic"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel", "headquarters_in_israel"]
+summary = "Quantum Gyro is listed as an Israeli private company incorporated on 2025-10-26 with a Tel Aviv-Jaffa address; Quantum X Labs' SEC-filed financial statements also identify it as incorporated in Israel."
+as_of = "2026-10-21"
+source_ids = ["checkid", "qxl-fs-2025"]
+
+[intelligence.research]
+researched_at = "2026-10-21T21:50:44Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "\"Quantum Gyro Ltd\" quantum gyro funding investors founder revenue customers patents 2025 2026",
+  "\"Quantum Gyro\" Maris-Tech ME-Nav Quantum X Labs SEC 2025 2026",
+  "\"Quantum Gyro Ltd\" Israel registry address incorporation Quantum X Labs",
+  "\"Quantum Gyro\" quantum gyro NMR gyroscope competitors GNSS denied navigation",
+  "\"Quantum Gyro Ltd\" founder CEO CTO team Quantum X Labs Israel Bar founder",
+  "site:quantumgyro.xyz \"Quantum Gyro\" NMR gyro target drift bias angular random walk",
+  "\"Quantum Gyro\" patents USPTO 64/000,184 2026 patent",
+  "\"Quantum Gyro\" funding raised seed 2025 2026",
+  "Taurus Gold \"Quantum Gyro\" \"$200,000\" private placement March 2026",
+  "site:quantumgyro.xyz \"Our Innovation\" NMR gyro Quantum Gyro",
+  "\"Quantum Gyro\" \"customer\" pilot revenue ME-Nav 2026",
+  "\"Quantum Gyro\" revenue employees patent funding October 2026",
+  "\"קוואנטום ג'יירו\" מימון Quantum Gyro השקעה 2026",
+  "Quantum Gyro Ltd defense dual use GNSS denied navigation 2026",
+  "Honeywell official inertial navigation tactical IMU gyroscope product navigation",
+  "Exail official fiber optic gyroscope inertial navigation system PHINS",
+  "Vector Atomic quantum inertial navigation gyroscope official"
+]
+gaps = [
+  "funding: the IVC Seed line masks amount and investor identity, and issuer filings reviewed do not confirm whether the directory entry is a closed round; no reported lifetime total was found.",
+  "investors: the full cap table and the identity of the IVC-listed venture-studio investor are unavailable; Taurus Gold's exact Quantum Gyro ownership percentage is not disclosed.",
+  "team: IVC lists a CEO and CTO and CheckID lists a director, but no company-sourced biographies, confirmed founder identity, or verified current headcount were located.",
+  "ownership: public filings use inconsistent parent/subsidiary language; Quantum X Labs' 40% associate stake is disclosed, but the complete cap table and other share percentages are not.",
+  "financials: no standalone Quantum Gyro revenue, ARR, profit, cash, burn, runway, or audited accounts were found; Quantum X Labs parent figures cannot be attributed to this associate.",
+  "traction: no confirmed paying customer, shipment, production deployment, qualification, contract value, or completed customer demonstration was found; ME-Nav remains a disclosed development collaboration.",
+  "intellectual_property: the disclosed application is provisional and assigned to Quantum X Labs; the complete application, prosecution history, license schedule, improvement ownership, and freedom-to-operate analysis were not available.",
+  "competition: no public apples-to-apples test against Honeywell, Exail, MEMS, ring-laser, HRG, or other quantum inertial systems was found.",
+  "dual_use: the applications have a credible commercial and defense/security rationale, but no verified defense customer, government contract, export approval, security certification, or operational deployment was found."
+]
+conflicts = [
+  "Funding evidence is unresolved: IVC lists a Seed round dated 2025-12-01 with a masked amount and unnamed venture-studio investor, while reviewed Quantum X Labs and Taurus issuer disclosures do not confirm a Quantum Gyro funding round. The directory entry is retained as an undisclosed lead and not treated as a disclosed amount or verified close.",
+  "Ownership language differs across issuers: Quantum X Labs' audited statements and Q2 2026 filing report a 40% equity-method affiliate, while Taurus Gold describes Quantum Gyro as its subsidiary and Maris-Tech calls Quantum X Labs its parent. The evidence supports QXL's 40% holding and Taurus as a controlling shareholder, but not an exact Taurus percentage or a complete cap table."
+]
+diligence_questions = [
+  "Can Quantum Gyro provide independent test reports, raw data, test conditions, and repeatability statistics for the reported 0.001°/√h ARW, 0.0003°/h bias stability, and 1 ppm scale-factor stability, including temperature, vibration, magnetic-field, startup, and lifetime behavior?",
+  "Was the ME-Nav commercialization NewCo actually formed, were the proposed loans and approximately USD 1 million budget approved or drawn, and what quarterly milestones, customer demonstrations, and commercialization rights are currently in force?",
+  "What does the full Quantum X Labs license say about the USD 100,000 payment status, milestone deadlines, royalty base, sublicense economics, field exclusions, termination rights, patent prosecution/control, and ownership of improvements?",
+  "What is the complete Quantum Gyro cap table, including Taurus Gold's exact stake, the identity and terms of the IVC-listed Seed investor, options or convertibles, and any founder or employee equity?",
+  "Who designed and tested the prototype, what are the current CEO/CTO and technical leads' relevant credentials, and what cell, optical, magnetic-control, electronics, and manufacturing capabilities are available in-house versus outsourced?",
+  "What is the system-level error growth, size, weight, power, unit-cost target, and integration burden versus qualified MEMS, FOG, ring-laser, and HRG alternatives in a specific customer platform?",
+  "What customer evidence exists beyond the Maris-Tech collaboration: funded pilots, letters of intent, purchase orders, field trials, qualification plans, or government procurement activity?"
+]
+
+[[intelligence.research.sources]]
+id = "qg-site"
+url = "https://quantumgyro.xyz/"
+title = "Quantum Gyro official website"
+publisher = "Quantum Gyro Ltd."
+kind = "company"
+accessed_at = "2026-10-21T21:50:44Z"
+claims = ["The site is the official web presence identified for Quantum Gyro; its technical subpages did not render substantive text in this browser fetch, so technical claims are supported from filings instead."]
+
+[[intelligence.research.sources]]
+id = "checkid"
+url = "https://en.checkid.co.il/company/QUANTUM%2BGYRO%2BLTD-VBodlxY-517234753"
+title = "QUANTUM GYRO LTD - company listing"
+publisher = "CheckID"
+kind = "directory"
+accessed_at = "2026-10-21T21:50:44Z"
+claims = ["Lists QUANTUM GYRO LTD as an active Israeli private company with company number 517234753, incorporation date 2025-10-26, and a Tel Aviv-Jaffa address.", "Lists a director as יעקב בראנס and notes that owner/manager information was updated through 2026-04-15."]
+
+[[intelligence.research.sources]]
+id = "qxl-fs-2025"
+url = "https://www.sec.gov/Archives/edgar/data/797542/000149315226023096/ex99-1.htm"
+title = "Quantum X Labs Ltd. Consolidated Financial Statements, December 31, 2025"
+publisher = "U.S. Securities and Exchange Commission / Quantum X Labs Ltd."
+kind = "filing"
+accessed_at = "2026-10-21T21:50:44Z"
+published_on = "2026-05-14"
+claims = ["Quantum X Labs Ltd. and Taurus Gold Corp. formed Quantum Gyro Ltd. in Israel on 2025-10-26; Quantum X Labs held a 40% interest and treated it as an equity-method investment, not a controlled subsidiary.", "The March 6, 2026 exclusive worldwide license permits Quantum Gyro to develop, manufacture, and commercialize quantum gyroscope technology for navigation and GPS replacement; QG owes USD 100,000 upfront, 4%-6% sales royalties, and 15% of sublicense receipts subject to milestones."]
+
+[[intelligence.research.sources]]
+id = "maris-collab-2025"
+url = "https://www.sec.gov/Archives/edgar/data/1872964/000121390025107957/ea026470001ex99-1_maristech.htm"
+title = "Maris-Tech collaboration agreement announcement, November 10, 2025"
+publisher = "U.S. Securities and Exchange Commission / Maris-Tech Ltd."
+kind = "filing"
+accessed_at = "2026-10-21T21:50:44Z"
+published_on = "2025-11-10"
+claims = ["Maris-Tech and Quantum Gyro announced development of ME-Nav, a GNSS-denied system combining edge-AI compute and QG's NMR gyroscope, with an expected 24-month milestone schedule.", "The release describes a planned NewCo owned 51% by Maris-Tech and 49% by Quantum Gyro, exclusive ME-Nav manufacturing/marketing/distribution rights for Maris-Tech, and an approximately USD 1 million target budget expected from loans subject to approvals."]
+
+[[intelligence.research.sources]]
+id = "maris-milestone-2026"
+url = "https://www.sec.gov/Archives/edgar/data/1872964/000121390026032104/ea028269702ex99-1.htm"
+title = "Maris-Tech development milestone announcement, March 20, 2026"
+publisher = "U.S. Securities and Exchange Commission / Maris-Tech Ltd."
+kind = "filing"
+accessed_at = "2026-10-21T21:50:44Z"
+published_on = "2026-03-20"
+claims = ["Maris-Tech reports that Quantum Gyro has an exclusive license from Quantum X Labs for certain navigation/GPS-replacement gyroscope technology.", "Quantum X Labs is named as assignee of U.S. Provisional Patent Application 64/000,184, filed 2026-03-09, for NMR gyroscope technology."]
+
+[[intelligence.research.sources]]
+id = "taurus-circular"
+url = "https://newsfile.futunn.com/public/NN-PersistNoticeAttachment/7781/20260131/SEDAR_PLUS/CSA_SEDAR_PLUS_NOTICE_RECORD_ID_2311782.pdf"
+title = "Taurus Gold Corp. Management Information Circular"
+publisher = "Taurus Gold Corp. / SEDAR+ filing copy"
+kind = "filing"
+accessed_at = "2026-10-21T21:50:44Z"
+claims = ["Describes Quantum Gyro as a newly incorporated Taurus subsidiary with an exclusive worldwide NMR gyro license from Quantum X Labs and assigns patent-filing expenses to Quantum Gyro.", "Reports a working laboratory prototype developed by Quantum X Labs with ARW 100×10⁻⁵ degrees/√h, bias stability 30×10⁻⁵ degrees/hour, scale factor stability 1 ppm, 20×20×10 cm size, and 15 W consumption; these are issuer-reported figures.", "Describes a future development roadmap and applications across aerospace, defense, autonomous vehicles, and maritime navigation."]
+
+[[intelligence.research.sources]]
+id = "ivc"
+url = "https://www.ivc-online.com/Google-Card?id=b5ced425-291d-f111-b81d-00505695cd29"
+title = "Quantum Gyro Ltd. company profile"
+publisher = "IVC Data & Insights"
+kind = "directory"
+accessed_at = "2026-10-21T21:50:44Z"
+claims = ["Lists Quantum Gyro as a B2B NMR-navigation company based in Tel Aviv and names Danny Neulander as CEO and Dr. Eliran Talker as CTO.", "Shows a Seed financial-round entry dated 2025-12-01, with the amount and investor name masked and investor type shown as Venture Studio."]
+
+[[intelligence.research.sources]]
+id = "qxl-q2-2026"
+url = "https://www.sec.gov/Archives/edgar/data/797542/000149315226037811/form10-q.htm"
+title = "Quantum X Labs Inc. Quarterly Report for the Quarter Ended June 30, 2026"
+publisher = "U.S. Securities and Exchange Commission / Quantum X Labs Inc."
+kind = "filing"
+accessed_at = "2026-10-21T21:50:44Z"
+published_on = "2026-08"
+claims = ["Describes Quantum Gyro as a 40%-owned affiliate of Quantum X Labs developing chip-scale NMR gyroscope sensors for navigation where GPS is unavailable or jammed."]
+
+[[intelligence.research.sources]]
+id = "nasdaq-patent"
+url = "https://www.nasdaq.com/press-release/viewbix-quantum-x-labs-files-us-patent-application-nuclear-magnetic-resonance-nmr"
+title = "Quantum X Labs files U.S. patent application for NMR gyroscope technology"
+publisher = "Nasdaq / Quantum X Labs Inc."
+kind = "company"
+accessed_at = "2026-10-21T21:50:44Z"
+published_on = "2026-03-20"
+claims = ["Identifies Taurus Gold Corp. as Quantum Gyro's controlling shareholder and says Taurus completed a USD 200,000 equity investment in Viewbix as a license closing condition; that investment was into the public parent, not a disclosed Quantum Gyro financing round."]
+
+[[intelligence.research.sources]]
+id = "honeywell"
+url = "https://www.honeywellaerospace.com/us/en/products-and-services/products/navigation-and-sensors/navigation-systems"
+title = "Honeywell Aerospace Navigation Systems"
+publisher = "Honeywell Aerospace"
+kind = "company"
+accessed_at = "2026-10-21T21:50:44Z"
+claims = ["Describes compact and tactical integrated inertial/navigation systems for UAVs, GNSS outage, and contested or GPS-denied environments."]
+
+[[intelligence.research.sources]]
+id = "exail"
+url = "https://www.exail.com/product-range/inertial-navigation-for-surface-operations"
+title = "Inertial navigation for surface operations"
+publisher = "Exail"
+kind = "company"
+accessed_at = "2026-10-21T21:50:44Z"
+claims = ["Describes fiber-optic-gyro inertial navigation systems used in demanding marine, offshore, subsea, and long-term GNSS-denied environments, supported by an established operational track record."]
+
+[[intelligence.research.sources]]
+id = "vector-atomic"
+url = "https://vectoratomic.com/"
+title = "Vector Atomic"
+publisher = "Vector Atomic"
+kind = "company"
+accessed_at = "2026-10-21T21:50:44Z"
+claims = ["Describes quantum inertial sensors for navigation and mission-critical uses and an atomic gyroscope planned for demonstration, making it an adjacent quantum-sensing competitor rather than an NMR-specific rival."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-21T21:50:44Z"
+next_review_on = "2027-04-21"
+queries = ["\"Quantum Gyro Ltd\" Israel registry address incorporation Quantum X Labs", "\"Quantum Gyro\" Maris-Tech ME-Nav Quantum X Labs SEC 2025 2026"]
+source_ids = ["qg-site", "checkid", "qxl-fs-2025", "maris-collab-2025"]
+summary = "The legal identity, Israeli incorporation date, Tel Aviv location, and official website are supported by registry-style and SEC-filed sources."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-21T21:50:44Z"
+next_review_on = "2027-04-21"
+queries = ["\"Quantum Gyro\" funding raised seed 2025 2026", "Taurus Gold \"Quantum Gyro\" \"$200,000\" private placement March 2026", "\"Quantum Gyro\" revenue employees patent funding October 2026"]
+source_ids = ["ivc", "maris-collab-2025", "qxl-fs-2025", "taurus-circular"]
+summary = "One directory-listed Seed entry has no usable amount or investor identity and lacks issuer confirmation. The ME-Nav budget is conditional loans to a planned venture, not a confirmed QG round; no public lifetime total was found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-21T21:50:44Z"
+next_review_on = "2027-04-21"
+queries = ["\"Quantum Gyro Ltd\" quantum gyro funding investors founder revenue customers patents 2025 2026", "Taurus Gold \"Quantum Gyro\" \"$200,000\" private placement March 2026"]
+source_ids = ["qxl-fs-2025", "qxl-q2-2026", "taurus-circular", "nasdaq-patent", "ivc"]
+summary = "Quantum X Labs' 40% holding and Taurus Gold's controlling-shareholder status are disclosed, but the full cap table and the IVC-listed seed investor's identity are not."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-21T21:50:44Z"
+next_review_on = "2027-04-21"
+queries = ["\"Quantum Gyro Ltd\" founder CEO CTO team Quantum X Labs Israel Bar founder"]
+source_ids = ["ivc", "checkid"]
+summary = "IVC lists a CEO and CTO, and CheckID lists a director; no verifiable company-published biographies or named founder profile were found."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "conflicting"
+checked_at = "2026-10-21T21:50:44Z"
+next_review_on = "2027-04-21"
+queries = ["Taurus Gold Quantum Gyro Ltd 60% ownership Quantum X Labs 40% 2026", "\"Quantum Gyro Ltd\" Israel registry address incorporation Quantum X Labs"]
+source_ids = ["qxl-fs-2025", "qxl-q2-2026", "taurus-circular", "maris-milestone-2026", "nasdaq-patent"]
+summary = "QXL filings report a 40% non-controlling associate; Taurus and Maris-Tech use subsidiary/parent language and a release identifies Taurus as controlling shareholder. Exact cap-table percentages beyond QXL's 40% are not established."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-21T21:50:44Z"
+next_review_on = "2027-04-21"
+queries = ["\"Quantum Gyro\" revenue employees patent funding October 2026", "\"Quantum Gyro\" \"customer\" pilot revenue ME-Nav 2026"]
+source_ids = ["qxl-fs-2025", "qxl-q2-2026", "ivc"]
+summary = "No standalone revenue, cash, burn, runway, profitability, or audited Quantum Gyro accounts were located. Parent-company financials are not attributed to this non-consolidated affiliate."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-21T21:50:44Z"
+next_review_on = "2027-04-21"
+queries = ["\"Quantum Gyro\" \"customer\" pilot revenue ME-Nav 2026", "\"Quantum Gyro\" Maris-Tech ME-Nav Quantum X Labs SEC 2025 2026"]
+source_ids = ["maris-collab-2025", "maris-milestone-2026", "taurus-circular"]
+summary = "Evidence consists of a reported lab prototype and a development collaboration with Maris-Tech; no disclosed paying customer or production deployment was found."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-21T21:50:44Z"
+next_review_on = "2027-04-21"
+queries = ["\"Quantum Gyro\" patents USPTO 64/000,184 2026 patent", "site:quantumgyro.xyz \"Quantum Gyro\" NMR gyro target drift bias angular random walk"]
+source_ids = ["maris-milestone-2026", "qxl-fs-2025", "taurus-circular"]
+summary = "A provisional U.S. filing is disclosed under Quantum X Labs as assignee, with an exclusive license to Quantum Gyro; the full filing and any granted claims were not located."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-21T21:50:44Z"
+next_review_on = "2027-04-21"
+queries = ["\"Quantum Gyro\" quantum gyro NMR gyroscope competitors GNSS denied navigation", "Honeywell official inertial navigation tactical IMU gyroscope product navigation", "Exail official fiber optic gyroscope inertial navigation system PHINS", "Vector Atomic quantum inertial navigation gyroscope official"]
+source_ids = ["honeywell", "exail", "vector-atomic"]
+summary = "Relevant substitutes include Honeywell's integrated inertial products and Exail's fielded FOG systems; Vector Atomic is an adjacent quantum-sensor developer. No head-to-head QG benchmark was found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-21T21:50:44Z"
+next_review_on = "2027-04-21"
+queries = ["Quantum Gyro Ltd defense dual use GNSS denied navigation 2026", "\"Quantum Gyro\" Maris-Tech ME-Nav Quantum X Labs SEC 2025 2026"]
+source_ids = ["maris-collab-2025", "maris-milestone-2026", "taurus-circular", "honeywell", "exail"]
+summary = "GNSS-denied autonomy has both commercial and defense/security applicability and is explicitly discussed in issuer releases, but no defense contract, customer deployment, or qualification was verified."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "CheckID's listing identifies the company as active, and Quantum X Labs' 2026 Q2 filing continues to describe Quantum Gyro as a 40%-owned operating affiliate focused on NMR gyroscopes."
+verified_at = "2026-10-21T21:50:44Z"
+source_ids = ["checkid", "qxl-q2-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "CheckID lists an Israeli private company incorporated on 2025-10-26 at a Tel Aviv-Jaffa address, and Quantum X Labs' audited statements say Quantum Gyro was incorporated in Israel."
+verified_at = "2026-10-21T21:50:44Z"
+source_ids = ["checkid", "qxl-fs-2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "company.founded_on"
+support = "direct"
+summary = "CheckID lists the incorporation date as 2025-10-26; Quantum X Labs' audited statements independently state the same formation date."
+verified_at = "2026-10-21T21:50:44Z"
+source_ids = ["checkid", "qxl-fs-2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.holdings.Quantum X Labs Ltd.@2026-06-30.ownership_percent"
+support = "direct"
+summary = "Quantum X Labs' Q2 2026 SEC filing describes Quantum Gyro as a 40%-owned affiliate, directly supporting the disclosed holding at the quarter end."
+verified_at = "2026-10-21T21:50:44Z"
+source_ids = ["qxl-q2-2026"]

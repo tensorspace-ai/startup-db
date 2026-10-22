@@ -1,44 +1,1299 @@
 name = "Gong"
-description = "Gong is a private enterprise-software company whose Revenue AI OS captures customer interactions and CRM context, then turns them into intelligence and governed workflows for sales, customer success, enablement, and forecasting teams."
-detailed_description = """
-Gong’s core product sits at the intersection of conversation intelligence, revenue operations, and applied enterprise AI. It captures calls, meetings, emails, and deal activity, applies speech recognition, speaker and entity understanding, search, summarization, and task automation, and links those signals to CRM records. The useful output is not merely a transcript: it is a structured view of customer reality that can expose objections, buying intent, deal risk, coaching opportunities, renewal signals, and follow-up obligations. Gong’s current product framing calls this a Revenue AI Operating System, with the Revenue Graph as a context layer and applications such as Engage, Forecast, Enable, and Gong Agents as operating surfaces.
+description = "Gong is a privately held B2B Revenue AI software company. Its platform captures customer conversations and connected CRM activity, then turns those signals into deal intelligence, seller coaching, forecasting, engagement, and governed AI workflows."
+detailed_description = """Gong has expanded from conversation intelligence into a broader Revenue AI operating platform for sales, customer success, revenue operations, and enablement teams. The software captures calls, meetings, emails, and other customer-facing activity, transcribes and indexes conversations, and links those interactions to accounts, opportunities, and CRM records. Gong describes its Revenue Graph as the context layer that connects interactions and commercial outcomes; Engage, Forecast, Enable, Gong Assistant, and custom agents expose that information in seller and manager workflows. The June 2026 Revenue Harness announcement adds a governed execution layer for agents, including permission controls and human oversight. Gong's public product pages list integrations with Salesforce, Zoom, Microsoft Teams, Slack, Okta, and more than 300 integrations through its partner ecosystem.
 
-The customer and market signal is substantial, but should be read as company-reported rather than independently audited in this record. Gong’s official site and newsroom say it serves more than 5,000 companies; a May 2026 company release says ARR exceeded $500 million and recent growth was above 55% year over year. Those claims are consistent with a scaled late-stage vendor, and the product is marketed across technology, financial services, healthcare, manufacturing, and other enterprise segments. Its commercial proposition is strongest where managers need a shared evidence base for pipeline inspection, forecasting, rep ramp, account reviews, and customer retention rather than another isolated note-taking tool.
+This design addresses a persistent operating gap: CRM records are often incomplete and entered after the fact, while frontline conversations contain objections, intent, stakeholder changes, product feedback, next steps, and evidence about why deals move or stall. Gong's value depends on collecting that evidence across channels, linking it to the right business entities, and converting it into a repeatable action such as coaching, a forecast change, a follow-up, or an escalation. That is a deeper workflow proposition than meeting transcription alone. It also makes deployment more demanding: recordings, CRM mappings, permission models, retention settings, and change management all affect whether the resulting intelligence is trustworthy and adopted.
 
-Competition is both direct and architectural. Clari, Outreach, Salesloft, Zoom Revenue Accelerator, Salesforce, Microsoft, and increasingly general-purpose meeting assistants can cover parts of the same workflow. Gong’s defensibility therefore depends on the breadth and quality of captured interaction data, the Revenue Graph’s cross-object context, reliable integrations, manager adoption, measurable revenue outcomes, and the ability to turn model output into controlled action. A large installed base can create useful data and workflow advantages, but it also raises expectations around accuracy, privacy, administration, and return on spend. CRM and collaboration vendors can bundle adjacent functionality, while buyers may consolidate tools during budget pressure.
+Scale is material, although most operating metrics are company or executive statements rather than audited results. Gong's May 2026 release says ARR exceeded $500 million, quarterly year-over-year growth was above 55%, the company served more than 5,000 businesses, and half of its customers used multiple products. The release also says half of the Fortune 10 were customers and cites customer-reported outcomes for Anthropic, Uber for Business, Canva, and Paycor. Those are useful demand and cross-sell signals, not independent measurements of retention, gross margin, or causal return. Globes reported around 1,700 employees in May 2026, including roughly 500 in Israel. Gong remains private, and its public information does not disclose accounting revenue, profitability, cash, burn, or runway.
 
-For strategic and national-security diligence, Gong is a useful enterprise-AI reference but not a defense platform. The underlying capabilities could transfer to controlled contact-center quality assurance, training, multilingual interaction review, procurement or supplier communication analysis, and audit-oriented workflow support. That adjacency is conditional: recordings and inferred intent are sensitive data, and government or regulated deployment would require careful review of consent, retention, access controls, data residency, model governance, and deployment architecture. There is no reliable evidence here of defense contracts, mission-system integration, or a core security product. Gong should therefore be assessed as commercially mature SaaS with limited, non-core dual-use potential rather than forced into a defense thesis.
-"""
+The product's defensibility is strongest in accumulated interaction context and workflow penetration. A mature customer's call, email, CRM, and outcome history can support company-specific topic discovery, coaching patterns, and pipeline alerts that are difficult to recreate from generic prompts alone. Gong has also acquired ONDiGO, Vayo, and RightBound to add adjacent sales intelligence, cross-platform data analysis, and account/contact data capabilities. The company documents at least one issued U.S. patent on unsupervised topic detection and conversation segmentation, plus a later U.S. patent on extracting ordered conversation structure. Those patents support specific technical claims; they do not establish that all product value is protected or that competitors cannot achieve similar outcomes with other methods.
+
+Competition now spans standalone revenue workflow suites and products bundled into CRM and collaboration platforms. Clari and Salesloft completed a merger in December 2025 and now operate under Salesloft's brand, combining forecasting, conversation intelligence, sales execution, and AI agents. Salesforce offers Einstein Conversation Insights and Revenue Intelligence inside Sales Cloud, while Zoom sells Revenue Accelerator across meetings, phone, conversation analytics, coaching, and pipeline workflows. Outreach also positions an agentic platform across engagement, retention, coaching, and revenue intelligence. Gong's cross-channel interaction graph and mature installed base may help it win platform consolidation, but suite vendors can bundle adjacent features and already own important workflow surfaces. Buyers will compare accuracy, adoption, integrations, governance, price, and measurable forecast or productivity impact rather than the AI label alone.
+
+The company has substantial Israeli roots in its corporate structure and operating footprint while identifying San Francisco as its commercial headquarters. Gong's privacy policy names Gong.io Ltd. as the parent headquartered in Israel and Gong.io Inc. as its U.S. subsidiary. Its current About page lists a Tel Aviv office at the ICON Tower in Ramat Gan, and Israeli reporting describes a large local engineering and product organization. This is a significant Israeli enterprise software scale-up, but that fact should not be confused with a defense product. Public evidence reviewed here does not establish defense contracts, intelligence work, mission-system integration, or security operations deployments."""
 logo = "https://www.gong.io/wp-content/uploads/gong-logo.svg"
 website = "https://www.gong.io"
 sector = "Revenue Intelligence / SaaS"
 founded = "2015"
 headquarters = "San Francisco, CA, United States; major office in Tel Aviv, Israel"
-employees = "1,001-5,000 (LinkedIn company-size range)"
-funding_stage = "Series E (2021); private company; later financing not verified"
+employees = "Around 1,700 worldwide (May 2026 media report; approximately 500 in Israel)"
+funding_stage = "Series E (2021); no later company equity round identified through 2026-10-21. CTech reported separate secondary activity in late 2025 that Gong said it did not approve."
 entity_type = "startup"
 dual_use = false
-dual_use_description = "Gong’s core product is commercial revenue intelligence, not defense technology. Conversation capture, multilingual analysis, search, and workflow controls could support controlled government or regulated contact-center QA, training, procurement communications, or audit workflows, but those are conditional adjacencies; no defense program or mission-system role is established by the sources reviewed."
-key_technologies = ["Automatic speech recognition for meetings and calls", "Speaker diarization and conversation indexing", "LLM-assisted summarization and insight extraction", "Revenue graph / customer interaction graph modeling", "CRM, email, and conferencing integrations", "Workflow automation and alerting for revenue teams", "Enterprise security, privacy, and retention controls"]
-use_cases = ["Sales and account-call analysis for objections, buying signals, competitor mentions, and winning talk tracks", "Forecast inspection and pipeline-risk detection from interaction signals linked to CRM activity", "Rep coaching, onboarding, and manager scorecards based on observed behavior patterns", "Revenue-operations automation for meeting notes, follow-up tasks, opportunity edits, and handoffs", "Customer-success monitoring for renewal risk, escalations, and product feedback", "Regulated contact-center quality assurance and training where consent, access, and retention controls are enforced", "Procurement or supplier-communication review in a compliant government-adjacent environment", "Multilingual interaction search and summarization for distributed enterprise teams"]
+dual_use_description = "Gong's commercial product analyzes customer interactions and applies insights to sales, forecasting, coaching, and follow-up workflows. The same capture, search, summarization, and audit controls could have a limited administrative use for defense suppliers or government-facing commercial teams, subject to contract authorization, consent, retention, and data-residency requirements. Gong's standard terms include a clause for federal-government end use, but the sources reviewed do not establish a government customer, defense contract, intelligence use, or mission-system deployment. This record therefore treats defense and security relevance as conditional adjacency rather than demonstrated dual-use capability."
+key_technologies = [
+  "Multichannel capture, transcription, indexing, and search for calls, meetings, emails, and other customer-facing activity",
+  "Conversation topic discovery and segmentation, including company-specific topic models",
+  "Revenue Graph linking interaction context with accounts, opportunities, CRM data, and outcomes",
+  "Revenue-specific AI models used with leading large language models for summarization, insight, and recommendations",
+  "Forecasting, engagement, coaching, enablement, and seller workflow applications",
+  "Governed AI agents and workflow execution through the Revenue Harness, with permissions and human oversight",
+  "Enterprise integrations, identity controls, data access, and configurable retention"
+]
+use_cases = [
+  "Sales-call and meeting review for objections, buying signals, stakeholder changes, and follow-up obligations",
+  "Deal inspection and pipeline forecasting using interaction and CRM context",
+  "Seller coaching, onboarding, role-play, and enablement based on observed interaction patterns",
+  "Customer-success monitoring for renewals, escalations, and account handoffs",
+  "Revenue operations automation, including meeting follow-up and governed agent actions",
+  "Cross-channel customer feedback and market trend analysis for product and go-to-market leaders",
+  "Conditional administrative review for defense suppliers or government-facing commercial teams, if contract and privacy controls permit"
+]
 investible = false
-investment_rationale = "Gong is a strong commercial SaaS reference with clear product-market fit, but its relevance to a dual-use or defense-oriented diligence thesis is limited. The company’s value is concentrated in revenue workflows, so it is better treated as a mature enterprise AI benchmark than a priority strategic target."
-strategic_value = "Moderate as an enterprise AI reference, low as a defense or national-security asset. Gong shows how conversational data can be structured into high-utility workflows at scale, but the direct strategic overlap with Claw & Talon’s dual-use focus is thin."
-public_sources = ["https://www.gong.io/", "https://www.gong.io/about/", "https://www.gong.io/press/gong-growth-accelerates-past-55-yoy-arr-tops-500m", "https://www.gong.io/press/gong-raises-250-million-in-series-e-funding-at-7-25-billion-valuation", "https://www.linkedin.com/company/gong-io"]
-potential_score = 69.0
-technology_score = 89.0
-market_score = 92.0
-team_score = 84.0
-dual_use_score = 15.0
-strategic_alignment_score = 21.0
+investment_rationale = "Gong is a commercially validated late-stage SaaS company with company-reported ARR above $500 million, more than 5,000 customers, a broadening product suite, and a substantial Israel-based organization. The strongest diligence case is its ability to convert interaction data into repeatable forecast, coaching, and workflow outcomes and to maintain customer expansion as AI functions broaden. The public record does not show a company equity raise after 2021, does not provide audited financials, and contains only a reported, company-unapproved 2025 secondary valuation signal. Treat this as a mature commercial benchmark and strategic ecosystem company, not an investment recommendation or a defense-led target."
+strategic_value = """Gong is strategically relevant as an Israeli-rooted enterprise software scale-up that has productized AI over sensitive business communications at global scale. Its disclosed parent is headquartered in Israel, its operating page lists a large Ramat Gan office, and Israeli media reports approximately 500 local employees. The company is a useful reference for how proprietary interaction data, domain-specific models, third-party LLMs, CRM context, and agent permissions can be assembled into a commercial workflow platform.
+
+Direct defense value is limited on current evidence. Conversation intelligence might help defense suppliers manage sales, support, or procurement communications, but there is no public proof of operational defense adoption, cleared environments, or integration into a mission workflow. The strategic value is therefore high as an Israeli commercial AI company and product benchmark, and low as a demonstrated national-security capability."""
+public_sources = [
+  { label = "About Gong", url = "https://www.gong.io/about", description = "Company leadership, offices, and corporate story." },
+  { label = "Gong Privacy Policy", url = "https://www.gong.io/legal/privacy-policy", description = "Discloses Gong.io Ltd as Israel-headquartered parent and Gong.io Inc as U.S. subsidiary; describes data locations." },
+  { label = "Gong Terms and Conditions", url = "https://www.gong.io/legal/terms-and-conditions", description = "Identifies the customer contracting entity and federal-government end-use terms." },
+  { label = "Series A funding announcement", url = "https://www.gong.io/press/gong-io-raises-6m-in-series-a-to-pioneer-sales-conversation-intelligence-software", description = "2016 Series A amount, lead investors, founders, and original product." },
+  { label = "Series A1 funding announcement", url = "https://www.gong.io/press/gong-io-raises-20-million-in-series-a1-funding-to-transform-sales-conversations", description = "2017 Series A1 amount, investors, founding year, and product claims." },
+  { label = "Cisco A1 extension announcement", url = "https://www.gong.io/press/gong-io-extends-a1-funding-round-with-investment-from-cisco-investments", description = "Confirms a separately announced Cisco investment in the A1 extension without disclosing amount." },
+  { label = "Series B funding announcement", url = "https://www.gong.io/press/gong-io-raises-40-million-to-transform-sales-with-ai", description = "2019 Series B amount, total raised as then reported, and participants." },
+  { label = "Series C funding announcement", url = "https://www.gong.io/press/gong-raises-65m-in-series-c-led-by-sequoia-capital", description = "2019 Series C amount, company cumulative total, investors, and traction." },
+  { label = "Series D funding announcement", url = "https://www.gong.io/press/gong-raises-200-million-in-series-d-funding", description = "2020 Series D amount, reported valuation, participants, total raised, and customers." },
+  { label = "Series E funding announcement", url = "https://www.gong.io/press/gong-raises-250-million-in-series-e-funding-at-7-25-billion-valuation", description = "2021 Series E amount, reported company valuation, total funding, investors, and scale." },
+  { label = "2026 ARR and growth announcement", url = "https://www.gong.io/press/gong-growth-accelerates-past-55-yoy-arr-tops-500m", description = "Company-reported ARR, quarterly growth, customers, product adoption, and customer examples." },
+  { label = "CTech May 2026 ARR report", url = "https://www.calcalistech.com/ctechnews/article/hj4rgjgkzg", description = "Interview with Gong CEO on ARR, large contracts, customers, and reported secondary activity." },
+  { label = "Globes May 2026 ARR report", url = "https://en.globes.co.il/en/article-gong-arr-exceeds-500m-calming-ai-fears-1001542789", description = "Local reporting on ARR, employee count, Israeli workforce, customers, and pricing model." },
+  { label = "CTech November 2025 secondary report", url = "https://www.calcalistech.com/ctechnews/article/r1sdmq00ebx", description = "Media report on a proposed secondary round at an indicated company valuation, not company financing." },
+  { label = "CTech September 2025 hiring report", url = "https://www.calcalistech.com/ctechnews/article/b110gipqee", description = "Reported hiring and Ramat Gan engineering expansion." },
+  { label = "Gong Revenue AI platform", url = "https://www.gong.io/platform", description = "Current Revenue Graph, Revenue Harness, applications, integrations, customer count, and product workflows." },
+  { label = "Revenue Harness product announcement", url = "https://www.gong.io/press/gong-launches-mission-big-dipper-revenue-harness", description = "2026 agent execution layer, custom agents, MCP support, governance, and human-in-the-loop controls." },
+  { label = "Gong topic detection patent announcement", url = "https://www.gong.io/blog/gongs-topic-detection-technology-is-issued-a-patent", description = "Company description of U.S. Patent 10,642,889 and topic discovery/segmentation capability." },
+  { label = "USPTO Gazette Patent 12,183,332", url = "https://patentsgazette.uspto.gov/week53/OG/html/1529-5/US12183332-20241231.html", description = "Official patent gazette record for Gong.io Ltd's conversation-structure patent." },
+  { label = "ONDiGO acquisition announcement", url = "https://www.gong.io/press/gong-io-acquires-ondigo-to-extend-its-conversation-intelligence-platform", description = "Gong's 2018 acquisition of ONDiGO." },
+  { label = "Vayo acquisition announcement", url = "https://www.gong.io/press/gong-acquires-vayo-to-enhance-its-revenue-intelligence-platform", description = "Gong's 2020 acquisition of Vayo and undisclosed transaction terms." },
+  { label = "RightBound acquisition announcement", url = "https://www.gong.io/blog/gong-acquires-rightbound-to-add-account-and-contact-data", description = "Gong's 2025 acquisition and the team's data aggregation capabilities." },
+  { label = "Salesloft platform", url = "https://www.salesloft.com/platform-overview", description = "Current competitor product covering engagement, conversation intelligence, forecasting, and AI workflows." },
+  { label = "Clari and Salesloft merger completion", url = "https://www.salesloft.com/company/newsroom/clari-salesloft-merger", description = "Official confirmation that Clari and Salesloft completed their merger in December 2025." },
+  { label = "Zoom Revenue Accelerator", url = "https://www.zoom.com/en/products/conversation-intelligence/", description = "Competitor product for conversation intelligence, coaching, pipeline, and sales workflows." },
+  { label = "Salesforce AI for Sales", url = "https://www.salesforce.com/sales/ai", description = "CRM-bundled AI, conversation insights, sales engagement, and revenue analytics." },
+  { label = "Outreach AI revenue platform", url = "https://www.outreach.ai/platform?section=sales-intelligence", description = "Competitor platform spanning engagement, retention, coaching, and revenue intelligence." },
+  { label = "Sequoia Capital Gong portfolio page", url = "https://sequoiacap.com/companies/gong", description = "Investor portfolio confirmation and company description." }
+]
+potential_score = 48
+technology_score = 82
+market_score = 91
+team_score = 79
+dual_use_score = 18
+strategic_alignment_score = 34
 stage = "mature"
-stage_rationale = "Founded in 2015, privately held after a 2021 Series E, and now reporting more than 5,000 customers and over $500 million in ARR, Gong fits a mature late-stage enterprise SaaS profile. Its product has expanded from conversation intelligence into a broader Revenue AI OS, while the available funding evidence does not establish a later round."
-competitors = ["Clari", "Zoom Revenue Accelerator", "Salesforce revenue AI / conversation intelligence features", "Microsoft ecosystem partners around Teams and Dynamics 365", "Outreach", "Salesloft"]
-competitive_edge = "Gong’s edge is the combination of a large installed base, broad interaction capture, a Revenue Graph that connects conversations to deals and accounts, and applications that operationalize insight in coaching, forecasting, engagement, and enablement. This can create workflow and data advantages when managers use the system continuously. The edge is not unassailable: it must outperform bundled CRM, collaboration, and meeting-assistant features on accuracy, governance, integrations, and measurable revenue impact."
-risk_factors = ["Suite bundling risk: CRM and collaboration platforms can absorb enough functionality to pressure standalone pricing", "Consent and recording-law risk: call capture rules differ by jurisdiction and can create liability if mishandled", "Model quality risk: transcription, summarization, and recommendation errors can distort coaching and forecast decisions", "Integration dependence: product utility relies on stable APIs from CRM, telephony, and conferencing vendors", "Security and data-residency requirements can limit adoption in government or highly regulated environments", "Category saturation risk as buyers consolidate vendors and scrutinize ROI more aggressively"]
+stage_rationale = "Gong is a private company founded in 2015, with a 2021 Series E, more than 5,000 customers, and company-reported ARR above $500 million in May 2026. Its suite now spans engagement, forecasting, enablement, and agent workflows, while an estimated 1,700-person workforce and global offices indicate scaled operations. These metrics are largely company or media reported rather than audited, and the latest disclosed primary equity round remains 2021."
+competitors = [
+  "Salesloft (including Clari capabilities after their 2025 merger)",
+  "Zoom Revenue Accelerator",
+  "Salesforce Sales Cloud Einstein / Revenue Intelligence",
+  "Outreach"
+]
+competitive_edge = """Gong's clearest differentiator is the breadth of customer-interaction context it connects to accounts, deals, CRM fields, and commercial outcomes. The Revenue Graph can support company-specific topic discovery, coaching patterns, forecast signals, and agent actions across a customer's recorded history. Its large customer base and reported 300-plus integrations create a route to cross-sell Engage, Forecast, Enable, and AI functions into established deployments. ONDiGO, Vayo, and RightBound broadened adjacent data and sales-intelligence capabilities, while the Revenue Harness emphasizes permissioned execution rather than answer generation alone.
+
+These advantages need to be tested against data quality and the pace of bundling. Salesloft now combines the former Clari forecasting and revenue intelligence portfolio with engagement, conversation intelligence, and AI agents. Salesforce can ground call insights and forecasts directly in its CRM, and Zoom can bundle meeting capture and live coaching with its communications footprint. Outreach overlaps in prospect engagement, retention, coaching, and revenue intelligence. Gong must show that its cross-platform context produces better customer outcomes at a justifiable total price, with transparent evidence of accuracy, adoption, forecast lift, and customer expansion."""
+risk_factors = [
+  "Privacy, consent, employment-monitoring, retention, and cross-border data-transfer obligations are central because the product processes recordings, transcripts, and inferred business insights.",
+  "Bundled CRM and collaboration products can reduce the need for a standalone system or pressure prices, especially as Clari and Salesloft integrate their combined suite.",
+  "Transcription, summarization, topic classification, and agent actions can be wrong; errors may distort forecasts, seller coaching, or account decisions unless users can inspect and correct evidence.",
+  "Value depends on reliable CRM mapping, conferencing and telephony integrations, recording policies, and sustained user adoption across sales teams.",
+  "Private-company financial disclosure is limited; ARR is not audited accounting revenue, and public evidence does not establish margin, renewal, churn, customer concentration, burn, or cash.",
+  "Gong's last disclosed company equity round was in 2021; later company financing is not established, while 2025 secondary reporting was not approved by Gong.",
+  "Generative AI adoption may raise inference and support costs; Globes reported a planned shift from seat-based fees toward token-volume pricing, whose customer economics and margin impact are not public.",
+  "Customer interaction data creates security and confidentiality exposure, including risk from misconfigured access, retention, subprocessors, or model-use controls.",
+  "No public defense or intelligence deployment evidence was found; government relevance should not be valued as a contracted market or security capability."
+]
 risk_level = "medium"
 signals = []
 priority_rank = 0
-priority_rationale = "Gong scores strongly on enterprise AI maturity, market traction, and commercialization, but remains a low-priority record for a dual-use or defense-led pipeline. Its core product is revenue operations software, and the limited security or government adjacency identified here is conditional rather than a demonstrated strategic capability; investible remains false as a legacy internal priority flag."
+priority_rationale = "Gong merits a high-quality commercial company record because it combines deep enterprise software execution, large reported usage, strong growth claims, and a meaningful Israeli footprint. Its core product remains revenue operations software. The only defense/security adjacency identified is conditional use for commercial or administrative communications, with no public deployment evidence. Keep the existing priority rank unchanged and investible false; Gong is a mature-market benchmark rather than a defense-led pipeline priority."
 crawled_at = "2026-01-30T15:45:00+00:00"
-updated_at = "2026-07-31T18:41:51Z"
+updated_at = "2026-10-21T21:43:03Z"
+
+[intelligence]
+schema_version = 2
+
+[intelligence.company]
+company_id = "gong"
+legal_name = "Gong.io Inc."
+aliases = ["Gong.io"]
+operating_status = "active"
+business_model = "Enterprise B2B SaaS sold through customer order forms. Gong historically charged per seat; Globes reported that the company planned to add AI usage pricing based on token volume. Contract pricing, gross margin, and current mix are not publicly disclosed."
+products = ["Gong Revenue AI Operating System", "Gong Revenue Graph", "Gong Revenue Harness", "Gong Engage", "Gong Forecast", "Gong Enable", "Gong Assistant", "Custom Agents"]
+locations = ["San Francisco, California, United States (commercial headquarters)", "Tel Aviv/Ramat Gan, Israel", "Lehi, Utah", "Chicago, Illinois", "New York, New York", "Austin, Texas", "Singapore", "Dublin, Ireland"]
+founded_on = "2015"
+source_ids = ["s_about", "s_privacy", "s_terms", "s_platform", "s_arr_2026", "s_globes_2026", "s_a1_2017"]
+notes = "The public terms identify Gong.io Inc. as the customer-facing contracting entity; the company privacy policy identifies Gong.io Ltd. as its parent and says the parent is headquartered in Israel. Country of incorporation and registry numbers were not established from the sources used."
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["other"]
+summary = "Gong's own privacy policy states that Gong.io Ltd., its parent company, is headquartered in Israel. The current company About page lists a Tel Aviv office at the ICON Tower in Ramat Gan, and Israeli reporting describes a substantial local engineering and product workforce. The company identifies San Francisco as its commercial headquarters, so this record does not classify the overall operating headquarters as Israel."
+as_of = "2026-10-21"
+source_ids = ["s_privacy", "s_about", "s_ctech_jobs", "s_globes_2026"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Original company announcements document a $6 million 2016 Series A, a separate $20 million Series A1 in 2017, an undisclosed Cisco investment in a 2018 A1 extension, a $40 million Series B, $65 million Series C, $200 million Series D, and $250 million Series E. Gong said in its Series E announcement that cumulative funding was $584 million. The 2018 extension amount and any early unannounced financing are not itemized, so the total is retained as company-reported rather than rebuilt from round amounts. No later company equity round was found through 2026-10-21. CTech separately reported 2025 secondary activity; it is not treated as Gong fundraising."
+reported_total_raised = 584000000
+reported_total_currency = "USD"
+total_source_ids = ["s_e_2021"]
+total_as_of = "2021-06-03"
+total_scope = "Company-announced cumulative funding total through Series E; the company announcement does not itemize instruments or reconcile every earlier event."
+history_status = "partial"
+coverage_through = "2026-10-21"
+
+[[intelligence.funding.rounds]]
+id = "series-a-2016"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2016-06-21"
+amount_status = "reported"
+amount = 6000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Norwest Venture Partners", "Shlomo Kramer"]
+participating_investors = []
+source_ids = ["s_a_2016"]
+notes = "Company announcement says the round was led by Norwest Venture Partners and Check Point co-founder Shlomo Kramer. No valuation was reported."
+
+[[intelligence.funding.rounds]]
+id = "series-a1-2017"
+round_type = "Series A1"
+instrument = "equity"
+status = "closed"
+announced_on = "2017-07-12"
+amount_status = "reported"
+amount = 20000000
+amount_scope = "incremental_extension"
+currency = "USD"
+lead_investors = ["Norwest Venture Partners", "Shlomo Kramer"]
+participating_investors = ["Wing Venture Capital", "NextWorld Capital"]
+is_extension_of = "series-a-2016"
+source_ids = ["s_a1_2017"]
+notes = "The company labels this a separate Series A1 round. Its announcement reports $20 million, with no valuation."
+
+[[intelligence.funding.rounds]]
+id = "a1-cisco-extension-2018"
+round_type = "Series A1 extension"
+instrument = "equity"
+status = "closed"
+announced_on = "2018-04-16"
+amount_status = "undisclosed"
+amount_scope = "incremental_extension"
+lead_investors = []
+participating_investors = ["Cisco Investments"]
+is_extension_of = "series-a1-2017"
+source_ids = ["s_cisco_2018"]
+notes = "Gong announced that it received an investment from Cisco Investments in an extension of A1 but did not disclose the amount. No amount is inferred from later cumulative totals."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2019"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2019-02-07"
+amount_status = "reported"
+amount = 40000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Battery Ventures"]
+participating_investors = ["Norwest Venture Partners", "Shlomo Kramer", "Wing Venture Capital", "NextWorld Capital", "Cisco Investments"]
+source_ids = ["s_b_2019"]
+notes = "Company announcement says its cumulative total at Series B was $68 million. The separately reported round amount is $40 million."
+
+[[intelligence.funding.rounds]]
+id = "series-c-2019"
+round_type = "Series C"
+instrument = "equity"
+status = "closed"
+announced_on = "2019-12-03"
+amount_status = "reported"
+amount = 65000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Sequoia Capital"]
+participating_investors = ["Battery Ventures", "Norwest Venture Partners", "Shlomo Kramer", "Wing Venture Capital", "NextWorld Capital", "Cisco Investments"]
+source_ids = ["s_c_2019"]
+notes = "Company announcement says the cumulative funding total after Series C was $134 million. It did not disclose a pre- or post-money valuation in this announcement."
+
+[[intelligence.funding.rounds]]
+id = "series-d-2020"
+round_type = "Series D"
+instrument = "equity"
+status = "closed"
+announced_on = "2020-08-12"
+amount_status = "reported"
+amount = 200000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Coatue"]
+participating_investors = ["Index Ventures", "Salesforce Ventures", "Thrive Capital", "Battery Ventures", "NextWorld Capital", "Norwest Venture Partners", "Sequoia Capital", "Wing Venture Capital"]
+source_ids = ["s_d_2020"]
+notes = "Gong reported a $2.2 billion company valuation and $334 million cumulative funding. The release does not explicitly identify the valuation as pre- or post-money; the amount is recorded separately in financials rather than assigning it to a pre/post field."
+
+[[intelligence.funding.rounds]]
+id = "series-e-2021"
+round_type = "Series E"
+instrument = "equity"
+status = "closed"
+announced_on = "2021-06-03"
+amount_status = "reported"
+amount = 250000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Franklin Templeton"]
+participating_investors = ["Coatue", "Salesforce Ventures", "Sequoia Capital", "Thrive Capital", "Tiger Global"]
+source_ids = ["s_e_2021"]
+notes = "Gong's announcement title reports a $7.25 billion valuation and the body reports $584 million in cumulative funding. The release does not explicitly identify the valuation as pre- or post-money; the amount is recorded separately in financials."
+
+[[intelligence.people]]
+name = "Amit Bendov"
+role = "CEO and Co-founder"
+is_founder = true
+current = true
+background = "Gong's About page says Bendov previously led SiSense as CEO and served as CMO at Panaya; it credits him with more than 20 years of enterprise-software leadership experience."
+source_ids = ["s_about", "s_a1_2017"]
+
+[[intelligence.people]]
+name = "Eilon Reshef"
+role = "Chief Product Officer and Co-founder"
+is_founder = true
+current = true
+background = "Previously co-founded Webcollage; Gong's company materials describe him as leading product and engineering and as a founder of Gong in 2015."
+source_ids = ["s_about", "s_a1_2017", "s_rightbound_2025"]
+
+[[intelligence.people]]
+name = "Tim Ritters"
+role = "Chief Financial Officer"
+is_founder = false
+current = true
+background = "Gong says he joined from Pure Storage, where he led global financial and accounting operations, and spent 10 years at Google overseeing planning and budgeting."
+source_ids = ["s_about"]
+
+[[intelligence.people]]
+name = "Shane Evans"
+role = "Chief Revenue Architect"
+is_founder = false
+current = true
+background = "Gong's current leadership page cites more than 25 years of revenue and enterprise go-to-market experience, including work at Qualtrics, MX, and Talkdesk."
+source_ids = ["s_about"]
+
+[[intelligence.people]]
+name = "Sandi Kochhar"
+role = "Chief People Officer"
+is_founder = false
+current = true
+background = "Gong's leadership page describes more than two decades of people experience at SuccessFactors, Atlassian, and Ripple."
+source_ids = ["s_about"]
+
+[[intelligence.people]]
+name = "Joe FitzGerald"
+role = "Chief Legal Officer"
+is_founder = false
+current = true
+background = "Gong says FitzGerald has more than 25 years in compliance, corporate development, litigation, governance, and transactions; he previously served as CLO at Pure Storage and Lacework."
+source_ids = ["s_about"]
+
+[[intelligence.investors]]
+name = "Norwest Venture Partners"
+investor_type = "vc"
+website = "https://www.nvp.com"
+round_ids = ["series-a-2016", "series-a1-2017", "series-b-2019", "series-c-2019", "series-d-2020"]
+relationship = "historical"
+source_ids = ["s_a_2016", "s_a1_2017", "s_b_2019", "s_c_2019", "s_d_2020"]
+
+[[intelligence.investors]]
+name = "Shlomo Kramer"
+investor_type = "angel"
+round_ids = ["series-a-2016", "series-a1-2017", "series-b-2019", "series-c-2019"]
+relationship = "historical"
+source_ids = ["s_a_2016", "s_a1_2017", "s_b_2019", "s_c_2019"]
+
+[[intelligence.investors]]
+name = "Wing Venture Capital"
+investor_type = "vc"
+website = "https://wing.vc"
+round_ids = ["series-a1-2017", "series-b-2019", "series-c-2019", "series-d-2020"]
+relationship = "historical"
+source_ids = ["s_a1_2017", "s_b_2019", "s_c_2019", "s_d_2020"]
+
+[[intelligence.investors]]
+name = "NextWorld Capital"
+investor_type = "vc"
+website = "https://www.nextworldcap.com"
+round_ids = ["series-a1-2017", "series-b-2019", "series-c-2019", "series-d-2020"]
+relationship = "historical"
+source_ids = ["s_a1_2017", "s_b_2019", "s_c_2019", "s_d_2020"]
+
+[[intelligence.investors]]
+name = "Cisco Investments"
+investor_type = "corporate"
+website = "https://www.cisco.com"
+round_ids = ["a1-cisco-extension-2018", "series-b-2019", "series-c-2019"]
+relationship = "historical"
+source_ids = ["s_cisco_2018", "s_b_2019", "s_c_2019"]
+
+[[intelligence.investors]]
+name = "Battery Ventures"
+investor_type = "vc"
+website = "https://www.battery.com"
+round_ids = ["series-b-2019", "series-c-2019", "series-d-2020"]
+relationship = "historical"
+source_ids = ["s_b_2019", "s_c_2019", "s_d_2020"]
+
+[[intelligence.investors]]
+name = "Sequoia Capital"
+investor_type = "vc"
+website = "https://sequoiacap.com"
+round_ids = ["series-c-2019", "series-d-2020", "series-e-2021"]
+relationship = "historical"
+source_ids = ["s_c_2019", "s_d_2020", "s_e_2021", "s_sequoia"]
+
+[[intelligence.investors]]
+name = "Coatue"
+investor_type = "vc"
+website = "https://www.coatue.com"
+round_ids = ["series-d-2020", "series-e-2021"]
+relationship = "historical"
+source_ids = ["s_d_2020", "s_e_2021"]
+
+[[intelligence.investors]]
+name = "Index Ventures"
+investor_type = "vc"
+website = "https://www.indexventures.com"
+round_ids = ["series-d-2020"]
+relationship = "historical"
+source_ids = ["s_d_2020"]
+
+[[intelligence.investors]]
+name = "Salesforce Ventures"
+investor_type = "corporate"
+website = "https://www.salesforce.com/ventures"
+round_ids = ["series-d-2020", "series-e-2021"]
+relationship = "historical"
+source_ids = ["s_d_2020", "s_e_2021"]
+
+[[intelligence.investors]]
+name = "Thrive Capital"
+investor_type = "vc"
+website = "https://www.thrivecap.com"
+round_ids = ["series-d-2020", "series-e-2021"]
+relationship = "historical"
+source_ids = ["s_d_2020", "s_e_2021"]
+
+[[intelligence.investors]]
+name = "Franklin Templeton"
+investor_type = "other"
+website = "https://www.franklintempleton.com"
+round_ids = ["series-e-2021"]
+relationship = "historical"
+source_ids = ["s_e_2021"]
+
+[[intelligence.investors]]
+name = "Tiger Global"
+investor_type = "vc"
+website = "https://www.tigerglobal.com"
+round_ids = ["series-e-2021"]
+relationship = "historical"
+source_ids = ["s_e_2021"]
+
+[intelligence.ownership]
+status = "reported"
+summary = "Gong is privately held. Its privacy policy identifies Gong.io Ltd. as the parent of U.S. subsidiary Gong.io Inc. Gong's historical funding releases name institutional and angel investors, but no current cap table or ownership percentages are disclosed. Company announcements confirm acquisitions of ONDiGO, Vayo, and RightBound without published consideration. CTech reported a 2025 secondary transaction at an indicated $4.5 billion company valuation; a later report said Gong did not approve those transactions. That secondary report is not treated as a company financing or a confirmed current valuation."
+parent_company = "Gong.io Ltd."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["s_privacy", "s_terms", "s_ondiGO", "s_vayo", "s_rightbound_2025", "s_ctech_secondary", "s_ctech_may_2026"]
+holdings = []
+
+[[intelligence.ownership.deals]]
+id = "ondigo-acquisition-2018"
+deal_type = "acquisition"
+company_role = "buyer"
+announced_on = "2018-04-16"
+completed_on = "2018-04-16"
+status = "completed"
+counterparty = "ONDiGO"
+amount_status = "undisclosed"
+source_ids = ["s_ondiGO"]
+notes = "Gong announced that it had acquired ONDiGO and said ONDiGO's team would join Gong. The announcement did not disclose consideration."
+
+[[intelligence.ownership.deals]]
+id = "vayo-acquisition-2020"
+deal_type = "acquisition"
+company_role = "buyer"
+announced_on = "2020-09-01"
+completed_on = "2020-09-01"
+status = "completed"
+counterparty = "Vayo"
+amount_status = "undisclosed"
+source_ids = ["s_vayo"]
+notes = "Gong explicitly said it acquired Vayo, that the Vayo team joined, and that deal terms were not disclosed."
+
+[[intelligence.ownership.deals]]
+id = "rightbound-acquisition-2025"
+deal_type = "acquisition"
+company_role = "buyer"
+announced_on = "2025-12-02"
+completed_on = "2025-12-02"
+status = "completed"
+counterparty = "RightBound"
+amount_status = "undisclosed"
+source_ids = ["s_rightbound_2025"]
+notes = "Gong announced the acquisition and said RightBound's team would join it; no transaction consideration was reported in the announcement."
+
+[[intelligence.ownership.deals]]
+id = "employee-investor-secondary-2025"
+deal_type = "secondary"
+company_role = "unknown"
+announced_on = "2025-11-17"
+completed_on = "2025"
+status = "completed"
+counterparty = "Unidentified Gong employees and investors and unidentified buyers"
+amount_status = "undisclosed"
+source_ids = ["s_ctech_secondary", "s_ctech_may_2026"]
+notes = "CTech first reported an advanced-stage secondary offering for employees and investors at an indicated company valuation of about $4.5 billion, then reported that secondary transactions occurred at the end of 2025 and Gong did not approve them. No share-sale consideration or company proceeds were disclosed; the reported valuation is not entered as a transaction amount or current company valuation."
+
+[[intelligence.financials]]
+name = "annual_recurring_revenue"
+value = "More than USD 500 million ARR, reported at the end of April 2026"
+as_of = "2026-05-12"
+basis = "reported"
+metric = "arr"
+numeric_value = 500000000
+value_relation = "more_than"
+unit = "currency"
+currency = "USD"
+source_ids = ["s_arr_2026", "s_ctech_may_2026", "s_globes_2026"]
+notes = "Company-announced run-rate metric, not audited accounting revenue. Globes explicitly distinguishes ARR from accounting revenue."
+
+[[intelligence.financials]]
+name = "latest_quarter_year_over_year_growth"
+value = "More than 55% year-over-year growth in the most recent quarter as of May 2026"
+as_of = "2026-05-12"
+basis = "reported"
+metric = "other"
+numeric_value = 55
+value_relation = "more_than"
+unit = "percent"
+source_ids = ["s_arr_2026", "s_ctech_may_2026", "s_globes_2026"]
+notes = "Company and CEO-reported growth claim; the exact quarter-end date and audited revenue base are not published in the announcement."
+
+[[intelligence.financials]]
+name = "employees"
+value = "Around 1,700 employees worldwide, including around 500 in Israel"
+as_of = "2026-05-12"
+basis = "reported"
+metric = "employees"
+numeric_value = 1700
+value_relation = "approximate"
+unit = "people"
+source_ids = ["s_globes_2026"]
+notes = "Reported by Globes based on CEO comments; employee counts are approximate and not a company filing."
+
+[[intelligence.financials]]
+name = "series_d_company_valuation"
+value = "USD 2.2 billion valuation reported with the August 2020 Series D"
+as_of = "2020-08-12"
+basis = "reported"
+metric = "other"
+numeric_value = 2200000000
+value_relation = "exact"
+unit = "currency"
+currency = "USD"
+source_ids = ["s_d_2020"]
+notes = "Gong's announcement reports the company valuation but does not explicitly label it pre-money or post-money."
+
+[[intelligence.financials]]
+name = "series_e_company_valuation"
+value = "USD 7.25 billion valuation reported with the June 2021 Series E"
+as_of = "2021-06-03"
+basis = "reported"
+metric = "other"
+numeric_value = 7250000000
+value_relation = "exact"
+unit = "currency"
+currency = "USD"
+source_ids = ["s_e_2021"]
+notes = "Gong's Series E announcement title reports this valuation but does not explicitly label it pre-money or post-money. It is not a current valuation."
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Gong reported more than 700 customer companies and 45,000 sales professionals using the platform at the Series C announcement, alongside reported 2018 fivefold and 2019 year-to-date threefold revenue growth. These are company-reported historical metrics."
+date = "2019-12-03"
+source_ids = ["s_c_2019"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "The Series E announcement reported more than 2,000 customer companies, more than 550 global employees, and over half a billion customer interactions analyzed since founding."
+date = "2021-06-03"
+source_ids = ["s_e_2021"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Gong reported more than 5,000 companies globally, half of the Fortune 10 among its customer base, and multi-product adoption by 50% of customers. The 2026 release also named Anthropic, Cisco, Docusign, Google, ADP, Thomson Reuters, Canva, Paycor, and Uber for Business as customers or customer examples."
+date = "2026-05-12"
+source_ids = ["s_arr_2026", "s_ctech_may_2026", "s_globes_2026"]
+notes = "Customer numbers and product adoption are company statements. Named customer use does not establish contract size or deployment scope unless the source specifically says so."
+
+[[intelligence.traction]]
+kind = "contract"
+description = "CEO Amit Bendov told CTech that the number of new customers signing contracts worth more than $1 million in the prior two quarters exceeded the number in the preceding six quarters combined. This is an executive-reported sales milestone, not a published contract list."
+date = "2026-05-12"
+source_ids = ["s_ctech_may_2026"]
+
+[[intelligence.traction]]
+kind = "hiring"
+description = "CTech reported Gong planned to add 100 engineering and product roles at its Ramat Gan development center in 2025, after hiring more than 70 people over the prior year. The article said the center was expected to reach 500 employees by year-end."
+date = "2025-09-09"
+source_ids = ["s_ctech_jobs"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Gong announced Revenue Harness, an agentic execution layer for its Revenue AI OS that governs and connects agents across revenue workflows. The release described custom agent creation, Gong Assistant expansions, MCP support, and human-in-the-loop controls."
+date = "2026-06-24"
+source_ids = ["s_big_dipper"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "Gong reported that the USPTO issued U.S. Patent 10,642,889, 'Unsupervised automated topic detection, segmentation and labeling of conversations,' on May 5, 2020. The company describes the patent as covering automated discovery and labeling of topics in recorded customer conversations."
+date = "2020-05-05"
+source_ids = ["s_patent_blog"]
+notes = "The company's account describes the patent scope; it is not an independent evaluation of enforceability or freedom to operate."
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "The USPTO Official Gazette records U.S. Patent 12,183,332, 'Unsupervised automated extraction of conversation structure from recorded conversations,' assigned to and filed by Gong.io Ltd. The claim concerns modeling ordered conversation parts and segmenting a conversation according to that structure."
+date = "2024-12-31"
+source_ids = ["s_patent_uspto"]
+
+[[intelligence.comparables]]
+name = "Salesloft (including former Clari capabilities)"
+website = "https://www.salesloft.com"
+rationale = "The combined company covers sales engagement, conversation intelligence, deal management, forecasting, revenue analytics, and AI agents, overlapping Gong's platform direction."
+differentiation = "Salesloft's combination emphasizes prospecting and execution workflows with Clari forecasting and revenue context. Gong differentiates through its Revenue Graph and long-running corpus of customer interactions tied to commercial outcomes; the combined competitor now has broader end-to-end coverage than either legacy product alone."
+source_ids = ["s_salesloft_platform", "s_clari_merger"]
+
+[[intelligence.comparables]]
+name = "Zoom Revenue Accelerator"
+website = "https://www.zoom.com/en/products/conversation-intelligence/"
+rationale = "Zoom sells conversation intelligence, coaching, deal visibility, analytics, and pipeline features to the same sales and revenue teams."
+differentiation = "Zoom's differentiation is a native fit with Zoom Meetings and Zoom Phone, and it promotes live call assistance and a unified communications surface. Gong's product spans interactions and CRM context across multiple platforms and has expanded into forecasting, enablement, and broader revenue workflows."
+source_ids = ["s_zoom", "s_platform"]
+
+[[intelligence.comparables]]
+name = "Salesforce Sales Cloud Einstein and Revenue Intelligence"
+website = "https://www.salesforce.com/sales/ai"
+rationale = "Salesforce offers AI call insights, call summaries, sales engagement, account insights, and forecasting in and around its CRM."
+differentiation = "Salesforce benefits from native CRM records, customer data, and suite bundling. Gong positions itself as a cross-platform interaction and revenue context layer with dedicated coaching, conversation, and forecasting products. Salesforce's bundle is a major pricing and workflow substitution risk for Gong."
+source_ids = ["s_salesforce", "s_platform"]
+
+[[intelligence.comparables]]
+name = "Outreach"
+website = "https://www.outreach.ai"
+rationale = "Outreach describes an AI revenue platform spanning prospect engagement, customer retention, coaching, and revenue intelligence."
+differentiation = "Outreach's center of gravity is sales execution and engagement orchestration, with AI agents across the lifecycle. Gong's center is the Revenue Graph built from recorded customer interactions and their CRM-linked outcomes; both are expanding into overlapping agent and analytics workflows."
+source_ids = ["s_outreach", "s_platform"]
+
+[[intelligence.research.sources]]
+id = "s_about"
+url = "https://www.gong.io/about"
+title = "About Gong"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+claims = ["Current leadership page identifies Amit Bendov as CEO and co-founder and Eilon Reshef as Chief Product Officer and co-founder.", "Company leadership page describes the background of its CFO, Chief Revenue Architect, Chief People Officer, and Chief Legal Officer.", "Company page lists San Francisco, Tel Aviv/Ramat Gan, Lehi, Chicago, New York, Austin, Singapore, and Dublin offices.", "The company says Gong was founded in 2015 and lists the current office in Ramat Gan, Israel."]
+
+[[intelligence.research.sources]]
+id = "s_privacy"
+url = "https://www.gong.io/legal/privacy-policy"
+title = "Gong Privacy Policy"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2026-09-29"
+claims = ["Gong identifies Gong.io Ltd. as its parent company and says the parent is headquartered in Israel.", "Gong identifies Gong.io Inc. as its U.S. subsidiary.", "The policy describes personal data processing, data locations, international transfers, retention, and customer responsibilities for lawful collection and recording."]
+
+[[intelligence.research.sources]]
+id = "s_terms"
+url = "https://www.gong.io/legal/terms-and-conditions"
+title = "Terms and Conditions"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2026-06"
+claims = ["Gong.io Inc. and its affiliates provide the services under customer order forms.", "The terms include a clause for ultimate federal-government end use and require additional negotiated rights for rights beyond the standard terms.", "The terms do not identify any government customer, defense contract, or deployment."]
+
+[[intelligence.research.sources]]
+id = "s_a_2016"
+url = "https://www.gong.io/press/gong-io-raises-6m-in-series-a-to-pioneer-sales-conversation-intelligence-software"
+title = "Gong.io Raises $6M in Series A to Pioneer Sales Conversation Intelligence Software"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2016-06-21"
+claims = ["Gong announced a $6 million Series A led by Norwest Venture Partners and Shlomo Kramer.", "The release describes AI and machine learning analysis of B2B sales conversations and CRM integration.", "The release identifies Amit Bendov and Eilon Reshef as co-founders."]
+
+[[intelligence.research.sources]]
+id = "s_a1_2017"
+url = "https://www.gong.io/press/gong-io-raises-20-million-in-series-a1-funding-to-transform-sales-conversations"
+title = "Gong.io Raises $20 Million in Series A1 Funding to Transform Sales Conversations"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2017-07-12"
+claims = ["Gong announced a $20 million Series A1 round led by Norwest Venture Partners and Shlomo Kramer, with Wing Venture Capital and NextWorld Capital participating.", "The release says Amit Bendov and Eilon Reshef co-founded Gong in 2015.", "The release describes automatic recording, transcription, AI/ML analysis, and a patented platform."]
+
+[[intelligence.research.sources]]
+id = "s_cisco_2018"
+url = "https://www.gong.io/press/gong-io-extends-a1-funding-round-with-investment-from-cisco-investments"
+title = "Gong.io Extends A1 Funding Round with Investment from Cisco Investments"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2018-04-16"
+claims = ["Gong announced it received an investment from Cisco Investments in an extension of its A1 funding round.", "The announcement does not disclose the investment amount."]
+
+[[intelligence.research.sources]]
+id = "s_b_2019"
+url = "https://www.gong.io/press/gong-io-raises-40-million-to-transform-sales-with-ai"
+title = "Gong.io Raises $40 Million to Transform Sales with AI"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2019-02-07"
+claims = ["Gong announced $40 million in Series B funding and said the total raised was then $68 million.", "Battery Ventures led the Series B; Norwest, Shlomo Kramer, Wing, NextWorld, and Cisco Investments participated.", "The announcement describes AI use on phone, video, and text conversations for coaching, win rates, and decisions."]
+
+[[intelligence.research.sources]]
+id = "s_c_2019"
+url = "https://www.gong.io/press/gong-raises-65m-in-series-c-led-by-sequoia-capital"
+title = "Gong Raises $65M in Series C Led by Sequoia Capital"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2019-12-03"
+claims = ["Gong announced a $65 million Series C led by Sequoia Capital and reported cumulative funding of $134 million.", "Battery Ventures, Norwest, Shlomo Kramer, Wing, NextWorld, and Cisco Investments participated.", "Gong reported more than 700 customer companies, 45,000 sales professionals, NPS of 65, and over 200 employees."]
+
+[[intelligence.research.sources]]
+id = "s_d_2020"
+url = "https://www.gong.io/press/gong-raises-200-million-in-series-d-funding"
+title = "Gong Raises $200 Million in Series D Funding at $2.2 Billion Valuation"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2020-08-12"
+claims = ["Gong announced a $200 million Series D and a company valuation of $2.2 billion.", "Coatue led the round; Index Ventures, Salesforce Ventures, Thrive Capital, Battery, NextWorld, Norwest, Sequoia, and Wing participated.", "Gong said cumulative funding was $334 million and reported over 1,100 customers and 64,000 sales and support professionals."]
+
+[[intelligence.research.sources]]
+id = "s_e_2021"
+url = "https://www.gong.io/press/gong-raises-250-million-in-series-e-funding-at-7-25-billion-valuation"
+title = "Gong Raises $250 Million in Series E Funding at $7.25 Billion Valuation"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2021-06-03"
+claims = ["Gong announced a $250 million Series E led by Franklin Templeton and reported total funding of $584 million.", "The company announcement title reports a $7.25 billion valuation; the body names Coatue, Salesforce Ventures, Sequoia, Thrive Capital, and Tiger Global as participants.", "Gong reported more than 2,000 customers, more than 550 employees, and over half a billion customer interactions analyzed."]
+
+[[intelligence.research.sources]]
+id = "s_arr_2026"
+url = "https://www.gong.io/press/gong-growth-accelerates-past-55-yoy-arr-tops-500m"
+title = "Gong Growth Accelerates Past 55% YoY as Enterprises Adopt Revenue AI; ARR Tops $500M"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2026-05-12"
+claims = ["Gong announced ARR above $500 million and growth above 55% year over year in its most recent quarter.", "Gong said it served more than 5,000 companies, 50% of customers used multiple products, and half of the Fortune 10 were customers.", "The release describes the Revenue Graph, proprietary revenue-specific AI models combined with leading LLMs, Engage, Forecast, Enable, and Gong Assistant.", "The release names customer examples and gives company-reported productivity outcomes."]
+
+[[intelligence.research.sources]]
+id = "s_ctech_may_2026"
+url = "https://www.calcalistech.com/ctechnews/article/hj4rgjgkzg"
+title = "Gong hits $500 million revenue run rate as AI demand accelerates"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2026-05-12"
+claims = ["CTech reports Gong's CEO said ARR reached $500 million with more than 55% latest-quarter year-over-year growth.", "The CEO said large enterprises were signing contracts over $1 million at increased frequency and that recent quarters added more such customers than the prior six quarters combined.", "The article reports the company served half of the Fortune 10 and describes secondary transactions at the end of 2025 at an indicated valuation that Gong did not approve."]
+
+[[intelligence.research.sources]]
+id = "s_globes_2026"
+url = "https://en.globes.co.il/en/article-gong-arr-exceeds-500m-calming-ai-fears-1001542789"
+title = "Gong ARR exceeds $500m calming AI fears"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2026-05-12"
+claims = ["Globes reports ARR exceeded $500 million at the end of April and 55% annual growth.", "The article reports around 1,700 employees worldwide, including around 500 in Israel.", "The article says the company historically charged per seat and planned to add token-volume pricing for AI usage.", "The article names enterprise customers and attributes productivity claims to the CEO."]
+
+[[intelligence.research.sources]]
+id = "s_ctech_secondary"
+url = "https://www.calcalistech.com/ctechnews/article/r1sdmq00ebx"
+title = "Gong's valuation slips to $4.5 billion in new secondary deal talks"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2025-11-17"
+claims = ["CTech reported an advanced-stage secondary offering for Gong employees and investors at an indicated company valuation of about $4.5 billion.", "The article reported more than 4,500 customers and around 1,300 employees in November 2025.", "The report did not disclose transaction consideration or Gong proceeds."]
+
+[[intelligence.research.sources]]
+id = "s_ctech_jobs"
+url = "https://www.calcalistech.com/ctechnews/article/b110gipqee"
+title = "AI unicorn Gong to add 100 jobs following revenue surge"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2025-09-09"
+claims = ["CTech reported a plan for 100 additional software, engineering, and product roles in Gong's Ramat Gan development center.", "The company expected the Ramat Gan center to reach 500 employees by year-end 2025.", "The article reported more than 4,500 customers, more than 1,500 global employees expected soon, and ten AI agents."]
+
+[[intelligence.research.sources]]
+id = "s_platform"
+url = "https://www.gong.io/platform"
+title = "Gong Revenue AI OS"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+claims = ["Gong describes the Revenue Graph, Revenue Harness, and applications as layers of its Revenue AI OS.", "The platform connects automatic capture, coaching, engagement, pipeline, and forecasting workflows.", "Gong advertises more than 300 integrations and names Salesforce, Microsoft Teams, Zoom, Microsoft 365 Copilot, Slack, and Okta integrations.", "The page says Gong is trusted by more than 5,000 customers."]
+
+[[intelligence.research.sources]]
+id = "s_big_dipper"
+url = "https://www.gong.io/press/gong-launches-mission-big-dipper-revenue-harness"
+title = "Gong Launches Mission Big Dipper; Unveils Industry-First Revenue Harness"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2026-06-24"
+claims = ["Gong introduced Revenue Harness as an agent execution layer that governs, orchestrates, and connects agents across revenue workflows.", "The announcement describes custom agents, Gong Assistant, Gong Enable, MCP support, and human-in-the-loop control.", "The company says custom agents use permission models and customer conversation context."]
+
+[[intelligence.research.sources]]
+id = "s_patent_blog"
+url = "https://www.gong.io/blog/gongs-topic-detection-technology-is-issued-a-patent"
+title = "Gong's topic detection technology is issued a patent"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2020-05-06"
+claims = ["Gong says the USPTO issued Patent 10,642,889 for unsupervised topic detection, segmentation, and labeling of conversations.", "The company describes its method as finding company-specific topics from conversation segments rather than relying only on keywords."]
+
+[[intelligence.research.sources]]
+id = "s_patent_uspto"
+url = "https://patentsgazette.uspto.gov/week53/OG/html/1529-5/US12183332-20241231.html"
+title = "United States Patent 12,183,332: Unsupervised automated extraction of conversation structure from recorded conversations"
+publisher = "United States Patent and Trademark Office"
+kind = "government"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2024-12-31"
+claims = ["The USPTO Gazette identifies Gong.io Ltd. as assignee and filer of U.S. Patent 12,183,332.", "The patent describes creating an ordered conversation-structure model and segmenting a conversation according to that ordered structure."]
+
+[[intelligence.research.sources]]
+id = "s_ondiGO"
+url = "https://www.gong.io/press/gong-io-acquires-ondigo-to-extend-its-conversation-intelligence-platform"
+title = "Gong.io Acquires ONDiGO To Extend Its Conversation Intelligence Platform"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2018-04-16"
+claims = ["Gong announced it acquired ONDiGO, an AI-powered sales intelligence platform.", "The announcement says ONDiGO's team would join Gong and its technology would extend Gong's product."]
+
+[[intelligence.research.sources]]
+id = "s_vayo"
+url = "https://www.gong.io/press/gong-acquires-vayo-to-enhance-its-revenue-intelligence-platform"
+title = "Gong Acquires Vayo to Enhance its Revenue Intelligence Platform"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2020-09-01"
+claims = ["Gong announced it acquired Vayo, an Israel-based sales analytics startup, and said its entire team would join Gong.", "The company said transaction terms were not disclosed."]
+
+[[intelligence.research.sources]]
+id = "s_rightbound_2025"
+url = "https://www.gong.io/blog/gong-acquires-rightbound-to-add-account-and-contact-data"
+title = "Gong acquires RightBound to add account and contact data, insights, and signals into the Gong Revenue AI OS"
+publisher = "Gong"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2025-12-02"
+claims = ["Gong announced an acquisition of RightBound and said the RightBound team would join Gong.", "The company said RightBound's expertise in aggregating, synthesizing, and verifying third-party data would bolster the Revenue Graph."]
+
+[[intelligence.research.sources]]
+id = "s_salesloft_platform"
+url = "https://www.salesloft.com/platform-overview"
+title = "Meet the #1 Predictive Revenue System"
+publisher = "Salesloft"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+claims = ["Salesloft describes Cadence, conversation intelligence, Deals, Rhythm, Clari Forecast, Inspect, Analytics, AI agents, and revenue workflows on its current platform page.", "Salesloft says its platform combines revenue signals, AI, and workflow execution."]
+
+[[intelligence.research.sources]]
+id = "s_clari_merger"
+url = "https://www.salesloft.com/company/newsroom/clari-salesloft-merger"
+title = "Clari and Salesloft Complete Merger and Appoint Steve Cox as CEO to Build the First Predictive Revenue System"
+publisher = "Salesloft"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+published_on = "2025-12-03"
+claims = ["Salesloft announced that Clari and Salesloft completed their merger and appointed Steve Cox as CEO of the combined company.", "The combined portfolio includes revenue context, AI agents, forecasting, conversation intelligence, and sales engagement."]
+
+[[intelligence.research.sources]]
+id = "s_zoom"
+url = "https://www.zoom.com/en/products/conversation-intelligence/"
+title = "Conversation intelligence software that accelerates revenue"
+publisher = "Zoom"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+claims = ["Zoom Revenue Accelerator includes conversation intelligence, pipeline and deal views, coaching, analytics, CRM integration, and AI assistance.", "Zoom positions integration with its Meetings and Phone products as a product differentiator."]
+
+[[intelligence.research.sources]]
+id = "s_salesforce"
+url = "https://www.salesforce.com/sales/ai"
+title = "AI for Sales"
+publisher = "Salesforce"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+claims = ["Salesforce lists Einstein Conversation Insights, Sales Analytics, Sales Engagement, and Data Cloud in its sales AI portfolio.", "Salesforce positions call insights, conversation search, sales signals, and CRM-based forecasting as product capabilities."]
+
+[[intelligence.research.sources]]
+id = "s_outreach"
+url = "https://www.outreach.ai/platform?section=sales-intelligence"
+title = "What is Outreach? Agentic AI Revenue Platform"
+publisher = "Outreach"
+kind = "company"
+accessed_at = "2026-10-21T21:43:03Z"
+claims = ["Outreach describes a revenue platform spanning prospect engagement, customer retention, coaching, revenue intelligence, and AI agents."]
+
+[[intelligence.research.sources]]
+id = "s_sequoia"
+url = "https://sequoiacap.com/companies/gong"
+title = "Gong | Sequoia Capital"
+publisher = "Sequoia Capital"
+kind = "investor"
+accessed_at = "2026-10-21T21:43:03Z"
+claims = ["Sequoia Capital lists Gong as a portfolio company and describes its customer-interaction intelligence platform."]
+
+[intelligence.research]
+researched_at = "2026-10-21T21:43:03Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "site:investors.gong.io Gong Series E $250 million funding press release 2021",
+  "site:gong.io/newsroom Gong funding raised Series D Series C Series B Series A funding",
+  "Gong.io funding history 2021 Series E $250M total raised $583m Reuters",
+  "Gong legal name headquarters founded Israel company about Gong.io",
+  "site:gong.io/press Gong 2014 seed funding 2015 3 million",
+  "site:gong.io/press Gong raises $20 million Series A July 2017",
+  "site:gong.io/press Gong Cisco Investments $2 million April 2018 Series A",
+  "site:gong.io/press Gong $65 million Series C December 2019 750 million valuation",
+  "Gong official May 2026 ARR $500 million growth 55% CEO Amit Bendov",
+  "site:gong.io/press Gong 2026 ARR $500 million customers 5,000",
+  "Gong May 2026 500 million ARR 55% growth Calcalist CTech",
+  "Gong current CEO leadership Amit Bendov Eilon Reshef executive team 2026",
+  "site:gong.io/press Gong acquisition ONDiGO acquired company 2025 2026",
+  "Gong acquired startup 2025 acquisition 2026 Gong.io",
+  "Gong 2025 secondary transaction $4.5 billion valuation Gong shares company did not approve",
+  "Gong ownership parent company Gong.io Ltd parent headquartered in Israel privacy policy legal terms",
+  "site:gong.io Gong Revenue Graph Revenue AI OS product official Gong Engage Forecast Enable Agents",
+  "site:patents.google.com Gong.io patent conversation intelligence",
+  "USPTO patents Gong.io Ltd assignee conversation intelligence patent",
+  "Gong Revenue AI competitors Clari official revenue platform Outreach Salesloft official",
+  "Clari official platform revenue orchestration forecast deal management AI Clari.com",
+  "Outreach official sales execution platform AI revenue intelligence sales engagement outreach.io",
+  "Zoom Revenue Accelerator official sales conversation intelligence Zoom",
+  "Microsoft Dynamics 365 Sales Copilot conversation intelligence official",
+  "Gong investors portfolio Norwest Battery Sequoia Franklin Templeton official Gong investment",
+  "Gong.io government defense national security contract public sector customer defense AI",
+  "site:gong.io defense government Gong customer government contract military intelligence",
+  "Gong cybersecurity dual use intelligence defense security applications Gong.io",
+  "Gong acquired Yobs September 2026 announcement",
+  "site:gong.io Yobs acquisition Gong 2026"
+]
+gaps = [
+  "funding: no original company or investor source was found for a pre-2016 seed round, and no new primary company equity round after Series E was located through 2026-10-21; absence of disclosure is not zero funding.",
+  "funding: the Cisco A1 extension amount is undisclosed; company cumulative totals do not provide a complete itemized ledger, so the extension amount and any early unannounced financing remain unknown.",
+  "investors: named investors are participants in historical rounds; private current ownership, investor retention, security classes, and ownership percentages are not public.",
+  "team: current company leadership page was reviewed, but a complete board roster, individual employment dates, and detailed biographies for the broader team were not established.",
+  "ownership.shareholders and ownership.holdings: no current cap table or disclosed ownership percentages were found; empty lists mean no holdings verified, not that no shareholders exist.",
+  "ownership: the reported 2025 secondary activity is based on CTech reports; Gong said it did not approve those transactions, and no transaction consideration or confirmed company seller was disclosed.",
+  "ownership: a third-party M&A listing suggested an additional Yobs acquisition in 2026, but no Gong announcement or accessible original transaction source was located; it is not entered as a confirmed deal.",
+  "financials: public sources provide company-reported ARR and media-reported headcount, but not audited accounting revenue, gross margin, profitability, cash, burn, runway, renewal, churn, or customer concentration.",
+  "traction: customer and productivity metrics are company or executive statements; independent cohort retention, expansion, win/loss, and causal ROI data were not found.",
+  "intellectual_property: two specific U.S. patents were verified, but the complete global patent family, pending applications, ownership encumbrances, and freedom-to-operate position were not assessed.",
+  "competition: product comparisons are based on official competitor descriptions; no independent price comparison, customer win/loss data, product quality benchmark, or implementation comparison was found.",
+  "dual_use: targeted searches found no Gong defense contract, government customer, military/intelligence deployment, cleared environment, or mission-system integration. The federal end-use clause in standard terms is not evidence of a deployment.",
+  "identity: no corporate registry identifier or country of incorporation was established from the primary sources used; those optional fields are omitted."
+]
+conflicts = [
+  "Funding lifetime total: Gong's official June 2021 Series E announcement reports $584 million total funding, while CTech's September 2025 hiring article reports $583 million across seven rounds. The company announcement is retained as the reported_total_raised; the unexplained difference is not allocated to a round.",
+  "Secondary activity: CTech reported in November 2025 that a secondary offering at an indicated $4.5 billion valuation was in advanced stages; its May 2026 article says transactions occurred at the end of 2025 but Gong did not approve them. This is recorded as media-reported secondary activity, not primary company financing or a current company valuation.",
+  "Founding year: Gong's official 2017 funding release says Bendov and Reshef co-founded Gong in 2015, while CTech's September 2025 hiring article refers to a 2016 founding. The company release is used for founded_on; the difference may reflect launch timing and is not resolved by the sources reviewed.",
+  "Valuation precision: Gong's Series E release title reports $7.25 billion, while later local media rounds it to about $7.2 billion. The exact company-reported figure is retained as a historical Series E valuation, with no pre/post-money interpretation."
+]
+diligence_questions = [
+  "What are gross and net retention, expansion rates, and customer concentration by cohort, product, and contract size, and how much of reported ARR depends on Engage, Forecast, Enable, or AI agents?",
+  "How does Gong validate transcription, topic classification, forecast, and agent-action accuracy across languages and noisy recordings, and what evidence links those outputs to customer revenue outcomes?",
+  "What are model inference and data-processing costs per customer, and how will a shift from seat-based pricing to token-volume pricing affect gross margin and adoption?",
+  "What data rights, customer consent, employee notice, retention, access, residency, and model-training controls apply to each captured channel and to any customer-specific AI agents?",
+  "Can Gong provide its current cap table, any post-2021 primary financing details, and documentation explaining the reported 2025 employee/investor secondary activity and its lack of company approval?",
+  "Which patent families remain in force across jurisdictions, how do those claims map to current products, and what freedom-to-operate or competitive design-around analysis has been completed?",
+  "Has any government or defense organization deployed Gong beyond ordinary commercial revenue teams, and what deployment controls, contract terms, security assessments, and data separation would be required?"
+]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-21T21:43:03Z"
+next_review_on = "2027-04-21"
+queries = ["Gong legal name headquarters founded Israel company about Gong.io", "Gong current CEO leadership Amit Bendov Eilon Reshef executive team 2026"]
+source_ids = ["s_about", "s_privacy", "s_terms", "s_a1_2017"]
+summary = "Confirmed the Gong group, customer-contracting U.S. subsidiary, disclosed Israeli parent, 2015 founding year, active operations, business model, products, locations, and founders from company sources."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-21T21:43:03Z"
+next_review_on = "2027-04-21"
+queries = ["site:investors.gong.io Gong Series E $250 million funding press release 2021", "site:gong.io/newsroom Gong funding raised Series D Series C Series B Series A funding", "Gong.io funding history 2021 Series E $250M total raised $583m Reuters", "site:gong.io/press Gong 2014 seed funding 2015 3 million", "site:gong.io/press Gong raises $20 million Series A July 2017", "site:gong.io/press Gong Cisco Investments $2 million April 2018 Series A", "site:gong.io/press Gong $65 million Series C December 2019 750 million valuation"]
+source_ids = ["s_a_2016", "s_a1_2017", "s_cisco_2018", "s_b_2019", "s_c_2019", "s_d_2020", "s_e_2021", "s_ctech_jobs"]
+summary = "Official company releases document seven distinct equity financing events through Series E, including two separately identified A1 events. The lifetime total differs between the company's $584 million statement and a later CTech report of $583 million; the company total is retained and the difference is not allocated."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-21T21:43:03Z"
+next_review_on = "2027-04-21"
+queries = ["Gong investors portfolio Norwest Battery Sequoia Franklin Templeton official Gong investment", "site:gong.io/press Gong Series E investors Franklin Templeton Coatue Salesforce Ventures Sequoia Thrive Tiger Global", "site:gong.io/press Gong Cisco Investments A1 extension"]
+source_ids = ["s_a_2016", "s_a1_2017", "s_cisco_2018", "s_b_2019", "s_c_2019", "s_d_2020", "s_e_2021", "s_sequoia"]
+summary = "Recorded named leads and participants from each company financing announcement and cross-checked Sequoia's portfolio page. No current holdings or ownership percentages were inferred from historical round participation."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-21T21:43:03Z"
+next_review_on = "2027-04-21"
+queries = ["Gong current CEO leadership Amit Bendov Eilon Reshef executive team 2026", "Gong legal name headquarters founded Israel company about Gong.io"]
+source_ids = ["s_about", "s_a1_2017", "s_rightbound_2025"]
+summary = "Company leadership page confirms two co-founders and current CEO, CPO, CFO, Chief Revenue Architect, Chief People Officer, and CLO, with selected previous-company backgrounds."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "conflicting"
+checked_at = "2026-10-21T21:43:03Z"
+next_review_on = "2027-04-21"
+queries = ["site:gong.io/press Gong acquisition ONDiGO acquired company 2025 2026", "Gong acquired startup 2025 acquisition 2026 Gong.io", "Gong 2025 secondary transaction $4.5 billion valuation Gong shares company did not approve", "Gong ownership parent company Gong.io Ltd parent headquartered in Israel privacy policy legal terms", "Gong acquired Yobs September 2026 announcement", "site:gong.io Yobs acquisition Gong 2026"]
+source_ids = ["s_privacy", "s_terms", "s_ondiGO", "s_vayo", "s_rightbound_2025", "s_ctech_secondary", "s_ctech_may_2026"]
+summary = "The company discloses its parent and subsidiary relationship and three acquisition announcements were verified. CTech reports secondary activity but also reports Gong did not approve it; the cap table remains undisclosed. A possible Yobs deal from third-party listings lacked an original Gong transaction source and is excluded."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-21T21:43:03Z"
+next_review_on = "2027-04-21"
+queries = ["Gong official May 2026 ARR $500 million growth 55% CEO Amit Bendov", "site:gong.io/press Gong 2026 ARR $500 million customers 5,000", "Gong May 2026 500 million ARR 55% growth Calcalist CTech"]
+source_ids = ["s_arr_2026", "s_ctech_may_2026", "s_globes_2026", "s_d_2020", "s_e_2021"]
+summary = "Company sources disclose ARR and growth; Israeli media report approximate employee count and token-volume pricing plans. Historical company valuation figures are reported without an explicit pre/post-money label. No audited income statement, margin, burn, cash, or runway was found."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-21T21:43:03Z"
+next_review_on = "2027-04-21"
+queries = ["Gong official May 2026 ARR $500 million growth 55% CEO Amit Bendov", "site:gong.io/press Gong 2026 ARR $500 million customers 5,000", "Gong May 2026 500 million ARR 55% growth Calcalist CTech", "Gong current CEO leadership Amit Bendov Eilon Reshef executive team 2026"]
+source_ids = ["s_c_2019", "s_e_2021", "s_arr_2026", "s_ctech_may_2026", "s_globes_2026", "s_ctech_jobs", "s_big_dipper"]
+summary = "Public evidence includes historical customer and user counts, current customer scale and product adoption claims, executive-reported large contracts, hiring, and a 2026 agentic product launch. Metrics are attributed and are not independently audited."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-21T21:43:03Z"
+next_review_on = "2027-04-21"
+queries = ["site:gong.io Gong Revenue Graph Revenue AI OS product official Gong Engage Forecast Enable Agents", "site:patents.google.com Gong.io patent conversation intelligence", "USPTO patents Gong.io Ltd assignee conversation intelligence patent"]
+source_ids = ["s_patent_blog", "s_patent_uspto", "s_platform", "s_big_dipper"]
+summary = "Verified one company-described 2020 topic-detection patent and one later USPTO patent on conversation-structure extraction. A complete patent family and freedom-to-operate analysis was not performed."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-21T21:43:03Z"
+next_review_on = "2027-04-21"
+queries = ["Gong Revenue AI competitors Clari official revenue platform Outreach Salesloft official", "Clari official platform revenue orchestration forecast deal management AI Clari.com", "Outreach official sales execution platform AI revenue intelligence sales engagement outreach.io", "Zoom Revenue Accelerator official sales conversation intelligence Zoom", "Microsoft Dynamics 365 Sales Copilot conversation intelligence official"]
+source_ids = ["s_salesloft_platform", "s_clari_merger", "s_zoom", "s_salesforce", "s_outreach"]
+summary = "Official competitor pages confirm overlapping products in sales engagement, conversation intelligence, forecasting, coaching, CRM-bundled analytics, and revenue agents. Clari and Salesloft merged in 2025 and operate under the Salesloft brand."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-21T21:43:03Z"
+next_review_on = "2027-04-21"
+queries = ["Gong.io government defense national security contract public sector customer defense AI", "site:gong.io defense government Gong customer government contract military intelligence", "Gong cybersecurity dual use intelligence defense security applications Gong.io"]
+source_ids = ["s_terms", "s_privacy", "s_platform", "s_big_dipper"]
+summary = "Searches found no specific Gong defense or intelligence customer, contract, or operational deployment. Standard federal-government end-use contract language exists, but it does not establish a government sale or defense capability."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Gong's current About page lists active leadership, locations, and hiring, and its May 2026 release reports current customers and ARR."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_about", "s_arr_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Gong's privacy policy identifies Gong.io Ltd. as the parent headquartered in Israel; the About page lists the Tel Aviv/Ramat Gan office."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_privacy", "s_about"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Gong's Series E announcement states that the $250 million round brought total funding raised to $584 million."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_e_2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2016.amount"
+support = "direct"
+summary = "The company Series A release reports $6 million."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_a_2016"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a1-2017.amount"
+support = "direct"
+summary = "The company Series A1 release reports $20 million."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_a1_2017"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2019.amount"
+support = "direct"
+summary = "The company Series B release reports $40 million."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_b_2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2019.amount"
+support = "direct"
+summary = "The company Series C release reports $65 million."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_c_2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2020.amount"
+support = "direct"
+summary = "The company Series D release reports $200 million."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_d_2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-e-2021.amount"
+support = "direct"
+summary = "The company Series E release reports $250 million."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_e_2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2016.lead_investors"
+support = "direct"
+summary = "The company names Norwest Venture Partners and Shlomo Kramer as Series A leads."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_a_2016"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a1-2017.lead_investors"
+support = "direct"
+summary = "The company names Norwest Venture Partners and Shlomo Kramer as Series A1 leads."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_a1_2017"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a1-2017.participating_investors"
+support = "direct"
+summary = "The company names Wing Venture Capital and NextWorld Capital as new Series A1 investors."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_a1_2017"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.a1-cisco-extension-2018.participating_investors"
+support = "direct"
+summary = "The company identifies Cisco Investments as the investor in an A1 extension."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_cisco_2018"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2019.lead_investors"
+support = "direct"
+summary = "The company names Battery Ventures as the Series B lead."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_b_2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2019.participating_investors"
+support = "direct"
+summary = "The company names Norwest Venture Partners, Shlomo Kramer, Wing Venture Capital, NextWorld Capital, and Cisco Investments as Series B participants."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_b_2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2019.lead_investors"
+support = "direct"
+summary = "The company names Sequoia Capital as the Series C lead."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_c_2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2019.participating_investors"
+support = "direct"
+summary = "The company names Battery Ventures, Norwest Venture Partners, Shlomo Kramer, Wing Venture Capital, NextWorld Capital, and Cisco Investments as Series C participants."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_c_2019"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2020.lead_investors"
+support = "direct"
+summary = "The company names Coatue as the Series D lead."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_d_2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2020.participating_investors"
+support = "direct"
+summary = "The company names Index Ventures, Salesforce Ventures, Thrive Capital, Battery Ventures, NextWorld Capital, Norwest Venture Partners, Sequoia Capital, and Wing Venture Capital as Series D participants."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_d_2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-e-2021.lead_investors"
+support = "direct"
+summary = "The company names Franklin Templeton as the Series E lead."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_e_2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-e-2021.participating_investors"
+support = "direct"
+summary = "The company names Coatue, Salesforce Ventures, Sequoia, Thrive Capital, and Tiger Global as Series E participants."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_e_2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.annual_recurring_revenue@2026-05-12.numeric_value"
+support = "direct"
+summary = "Gong announced ARR above $500 million; CTech and Globes report that the company said it had crossed the threshold by the end of April 2026."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_arr_2026", "s_ctech_may_2026", "s_globes_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.latest_quarter_year_over_year_growth@2026-05-12.numeric_value"
+support = "direct"
+summary = "Gong and local media report growth above 55% year over year in its most recent quarter."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_arr_2026", "s_ctech_may_2026", "s_globes_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.employees@2026-05-12.numeric_value"
+support = "direct"
+summary = "Globes reports approximately 1,700 employees worldwide and around 500 in Israel."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_globes_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.series_d_company_valuation@2020-08-12.numeric_value"
+support = "direct"
+summary = "Gong's Series D announcement says the company valuation was $2.2 billion."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_d_2020"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.series_e_company_valuation@2021-06-03.numeric_value"
+support = "direct"
+summary = "Gong's Series E announcement title states a $7.25 billion valuation."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_e_2021"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.parent_company"
+support = "direct"
+summary = "Gong's privacy policy explicitly identifies Gong.io Ltd. as its parent company."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_privacy"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.ondigo-acquisition-2018.status"
+support = "direct"
+summary = "Gong announced that it had acquired ONDiGO and that its team would join Gong."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_ondiGO"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.ondigo-acquisition-2018.amount"
+support = "direct"
+summary = "The ONDiGO announcement contains no transaction consideration; no amount is entered."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_ondiGO"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.vayo-acquisition-2020.status"
+support = "direct"
+summary = "Gong states that it acquired Vayo and that Vayo's entire team joined Gong."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_vayo"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.vayo-acquisition-2020.amount"
+support = "direct"
+summary = "Gong explicitly says Vayo deal terms were not disclosed; no amount is entered."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_vayo"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.rightbound-acquisition-2025.status"
+support = "direct"
+summary = "Gong's acquisition announcement says RightBound's team would join Gong and describes the acquisition as completed."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_rightbound_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.rightbound-acquisition-2025.amount"
+support = "direct"
+summary = "The RightBound announcement reports no consideration; no amount is entered."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_rightbound_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.employee-investor-secondary-2025.status"
+support = "direct"
+summary = "CTech first reported an advanced-stage secondary and later reported transactions at the end of 2025, while reporting that Gong did not approve them."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_ctech_secondary", "s_ctech_may_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.employee-investor-secondary-2025.amount"
+support = "direct"
+summary = "CTech reported an indicated company valuation but disclosed no sale consideration or company proceeds; no deal amount is entered."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_ctech_secondary", "s_ctech_may_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.ondigo-acquisition-2018.company_role"
+support = "direct"
+summary = "Gong's own announcement says Gong acquired ONDiGO, identifying Gong as the buyer."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_ondiGO"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.vayo-acquisition-2020.company_role"
+support = "direct"
+summary = "Gong's own announcement says Gong acquired Vayo, identifying Gong as the buyer."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_vayo"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.rightbound-acquisition-2025.company_role"
+support = "direct"
+summary = "Gong's own announcement says it acquired RightBound, identifying Gong as the buyer."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_rightbound_2025"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.employee-investor-secondary-2025.company_role"
+support = "direct"
+summary = "CTech describes secondary transactions involving Gong employee and investor shares but does not identify Gong as a buyer or seller, so the company's role remains unknown."
+verified_at = "2026-10-21T21:43:03Z"
+source_ids = ["s_ctech_secondary", "s_ctech_may_2026"]

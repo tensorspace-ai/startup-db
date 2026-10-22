@@ -1,83 +1,1155 @@
 name = "Varonis"
-description = "Varonis is a public data-security company whose platform discovers, classifies, monitors, and protects sensitive information across cloud, SaaS, and on-premises environments. It combines data visibility, permissions analysis, threat detection, and automated remediation to reduce exposure and breach blast radius."
-detailed_description = """
-Varonis is a mature data-security vendor built around a straightforward problem: organizations create and share data faster than security teams can understand or govern it. The platform inventories and classifies sensitive data across file systems, Microsoft 365, cloud storage, SaaS applications, databases, and other repositories; maps permissions and access paths; monitors activity; and helps security teams reduce excessive access. Its current product direction extends that foundation into data security posture management, AI security posture management, database activity monitoring, data-loss prevention, and email security. The common thread is control of the data layer rather than only control of endpoints or network borders.
+description = "Varonis Systems, Inc. is a Miami-headquartered, Israeli-founded public data-security company whose platform discovers and classifies sensitive information, maps access, monitors user and data activity, and supports remediation across hybrid and cloud estates. Its 2025 revenue was $623.5 million and SaaS ARR reached $726 million at 2026-06-30. Proofpoint agreed to acquire Varonis for approximately $6.3 billion on 2026-10-15; the merger remains pending."
+detailed_description = """Varonis Systems, Inc. was founded by Yaki Faitelson and Ohad Korkus in 2005. The company is incorporated in Delaware, is headquartered in Miami, and has a substantial Israeli operating connection: company materials identify the founders and a Herzliya office, while its 2025 Form 10-K reported 916 of 2,658 employees and contractors in Israel at year end. It remains listed on NASDAQ as VRNS as of this research date. On October 15, 2026, Proofpoint announced a definitive agreement to buy Varonis in an all-cash transaction valued at approximately $6.3 billion, or $49.75 per share. Closing is expected in the first half of 2027 subject to shareholder, regulatory, and other customary conditions. This is a pending transaction, not a completed change of control; until closing Varonis remains a public standalone issuer.
 
-The technical value proposition is a feedback loop between visibility, analytics, and action. Metadata collection and content inspection provide an inventory of sensitive information; identity and permissions analysis reveals who can reach it and how much damage a compromised account could cause; behavioral analytics and threat policies identify unusual access or exfiltration; and automated remediation can remove stale permissions, risky sharing, or other exposure. This is useful where data is distributed across hybrid infrastructure and manual entitlement reviews are too slow. The important diligence question is how much of the outcome is differentiated product capability versus configuration, services, and integrations that larger suites can increasingly bundle.
+The core product problem is the gap between the volume of enterprise data and an organization's ability to see where it lives, what it contains, who can reach it, and whether access is being used normally. Varonis's Data Security Platform combines sensitive-data discovery and classification with permission analysis, user and entity behavior analytics, activity monitoring, threat detection, and remediation workflows. SEC product descriptions cover Microsoft 365, Windows and network-attached storage, cloud repositories, databases, and hybrid environments. The product value is strongest where data is dispersed across repositories and identity changes or copied content make periodic access reviews stale. A practical technical test is whether its connectors and classification retain sufficient coverage and context at scale, and whether recommended or automated access changes are accurate enough for production use.
 
-Commercially, Varonis sells into a durable but crowded market spanning DSPM, DLP, insider-risk management, data discovery, identity governance, and security analytics. Microsoft Purview and other platform vendors can use existing identity, productivity, and cloud relationships to compress buying decisions, while BigID, Rubrik, Proofpoint, Netskope, Forcepoint, and specialist vendors compete for adjacent budgets. Varonis' defensibility is therefore primarily accumulated metadata expertise, broad connectors, policy content, workflow integration, and the operational trust required to automate changes in a customer's data estate. Its public-company scale and reported 8,000-plus-customer ecosystem are commercialization signals, but they do not by themselves prove retention, expansion, or product superiority in every segment.
+The product portfolio now reaches beyond the original file and email governance base. Varonis sells data security posture management and data access governance capabilities, managed data detection and response, database activity monitoring through the Cyral acquisition, AI security posture functionality from AllTrue, and email threat capabilities associated with SlashNext and Varonis Interceptor. Varonis also announced a Claude integration. These additions extend the data-security control plane toward databases, AI systems, and phishing-originated compromise. Announced integrations and acquisitions establish product direction; they do not by themselves establish paid adoption, operating contribution, or successful integration. Diligence should inspect common inventory and policy models, product overlap, license attachment, and whether customer workflows stay coherent across the combined portfolio.
 
-The AI-security opportunity is strategically credible but should be measured carefully. As enterprises deploy copilots, agents, and retrieval systems, permissions and data lineage become prerequisites for safe adoption: an AI system that can reach an overexposed repository can magnify an existing governance failure. Varonis' access graph, classification, activity monitoring, and policy automation can help identify those conditions, and its announced Microsoft collaboration is relevant to that workflow. The company has also announced a shift toward an all-SaaS model and the end-of-life of its legacy self-hosted product by the end of 2026. That may improve recurring delivery and product focus, while creating migration, trust, and deployment risks for customers with strict data-residency or disconnected-environment requirements.
+The commercial evidence is that of a scaled software company rather than an early-stage startup. Varonis reported $623.532 million in FY2025 revenue, including $462.595 million of SaaS revenue, and reported $180.023 million revenue in Q2 2026. SaaS ARR was $726.0 million on June 30, 2026, of which $598.1 million excluded conversions from self-hosted subscriptions. ARR is a point-in-time annualization of contractual recurring subscriptions, not GAAP revenue or a forecast. The company reported a SaaS dollar renewal rate above 90 percent and remaining performance obligations of $1.0845 billion at June 30, 2026. It reported customers in more than 95 countries and no customer accounting for more than 10 percent of FY2025 revenue. Those figures show breadth and recurring scale, but they do not answer net retention by cohort, customer concentration within verticals, seat or data-volume expansion, or the level of services and implementation work required.
 
-From a defense and national-security lens, Varonis has substantive but bounded dual-use relevance. The same controls can protect sensitive operational documents, intelligence support data, engineering repositories, administrative systems, and AI inputs in defense, government, and critical-infrastructure environments. The applicability is defensive and information-centric, not a claim of weapons, battlefield, or classified-program capability. Diligence should verify deployment options, agency and contractor authorizations where relevant, data handling boundaries, disconnected or sovereign-cloud support, incident-response performance, and whether automated remediation can be safely governed in high-consequence environments. Overall, Varonis is strategically relevant as a data-security platform and ecosystem reference, but its public-company maturity means it is better treated as a benchmark or partner context than as a startup priority."""
+The business is in a consequential delivery transition. Varonis has moved customers toward its SaaS platform and set December 31, 2026 as the end of life for its self-hosted product. SaaS can centralize product updates and support a recurring model, while reducing customer-managed infrastructure. The same migration can be difficult for organizations with strict residency requirements, isolated networks, or operational workflows built around self-hosting. The company reported $911.5 million of cash, deposits, and short- and long-term marketable securities at June 30, 2026, but this aggregate should not be mistaken for cash alone. It reported a first-half 2026 GAAP net loss of $83.663 million alongside $80.1 million of operating cash flow. A diligence review should separate stock-based compensation and acquisition accounting from cash generation, and track SaaS gross margin, renewal, migration completion, and customer concessions as the self-hosted deadline passes.
+
+Competition spans broad platform vendors and specialists. Microsoft Purview can benefit from Microsoft's existing productivity, identity, and cloud footprint; BigID emphasizes discovery, classification, and data intelligence across heterogeneous estates; Rubrik positions DSPM within a broader data protection and cyber-resilience platform. Varonis's possible wedge is the combination of data permissions, activity history, threat analytics, and remediation, together with long-lived connectors and policy workflows. This is a comparative hypothesis, not proof of a technical or commercial moat. Buyers may prefer suite consolidation, cloud-native controls, or backup and recovery platforms that already have budget and telemetry. The strongest evidence of defensibility would be independent comparative detection quality, deployment time, accurate remediation, renewal and expansion by product cohort, and wins in environments where simpler suite controls fail.
+
+The leadership evidence includes Yaki Faitelson as co-founder, CEO, president, and chair; the company reports prior work at NetVision and Network Appliance. Ohad Korkus is a co-founder and director and served as CTO until February 2018. The public proxy identifies other current executive officers and directors, while the Israel workforce count indicates meaningful local operations. The available sources do not establish a complete technical leadership map, succession depth, engineering retention, or the post-merger organization. Founder tenure and public reporting offer accountability, while founder concentration and the lack of a complete bench assessment remain diligence items. Public proxy ownership disclosures provide only a point-in-time view and do not replace a full cap table or current beneficial ownership refresh.
+
+The company has substantive but bounded dual-use relevance. Data discovery, least-privilege access, audit trails, insider-risk detection, and data exfiltration controls apply to commercial enterprises and to government, defense-support, and critical-infrastructure information estates. The FedRAMP Marketplace lists Varonis Data Security Platform at the Moderate impact level; Varonis also announced a GovRAMP authorization in its Q2 release. A company case study describes an unnamed federal agency securing controlled unclassified information in a hybrid estate. These are evidence of public-sector applicability, not proof of classified deployments, named defense contracts, mission-system use, or contract value. There is no basis here to claim weapons, battlefield, or offensive capability. High-consequence use requires separate validation of data boundaries, residency, support access, disconnection tolerance, remediation controls, and authorization scope.
+
+Strategically, Varonis is relevant as a mature data-security platform, public-market benchmark, potential ecosystem participant, and Israeli-founded company with a large Israeli workforce. It should not be treated as a startup investment opportunity or as a recommendation. The pending Proofpoint transaction adds near-term uncertainty around standalone roadmap, customer contracting, employee retention, integration priorities, and the future of the Varonis brand and product organization. The transaction has not closed, and no assumption about approval or integration should be made. For diligence, track closing conditions, the self-hosted end-of-life transition, revenue quality and SaaS conversion, acquisition contribution, and independent product performance against Microsoft Purview, BigID, Rubrik, and other alternatives."""
 logo = "https://www.varonis.com/hubfs/varonis-logo.svg"
-website = "https://www.varonis.com"
+website = "Unknown"
 sector = "Cybersecurity"
 founded = "2005"
 headquarters = "Miami, FL, USA"
-employees = "2,400+"
-funding_stage = "Public (NASDAQ: VRNS)"
+employees = "2,400+ on the company site; 2,658 employees and contractors at 2025-12-31 in the SEC filing"
+funding_stage = "Public (NASDAQ: VRNS); Proofpoint merger announced 2026-10-15 and pending, with expected close in H1 2027"
 entity_type = "public_company"
 dual_use = true
-dual_use_description = "Varonis has credible dual-use potential because data discovery, access governance, insider-threat detection, and audit controls support both commercial enterprises and defense, intelligence, government, and critical-infrastructure organizations. The applicability is defensive and information-centric: it can reduce unauthorized access, improve auditability, and help detect exfiltration or misuse across heterogeneous data estates, but it is not evidence of weapons or mission-system capability."
+dual_use_description = """Varonis has evidence-backed defensive dual-use relevance: its discovery, classification, access governance, behavioral monitoring, audit, and remediation capabilities can protect commercial data estates and government or defense-support information systems. The FedRAMP Marketplace lists its Data Security Platform at Moderate impact, and a vendor case study describes an unnamed federal agency protecting controlled unclassified information. These sources do not establish classified deployments, named defense contracts, contract value, weapons applications, or mission-system use. Applicability should be evaluated against the customer's deployment, authorization, data-residency, and disconnected-operation requirements."""
 key_technologies = [
-  "Sensitive data discovery and content classification",
+  "Sensitive-data discovery and content classification",
   "Permissions analysis, access graphs, and blast-radius mapping",
-  "User and entity behavior analytics",
-  "Data-centric threat detection and forensic audit trails",
+  "User and entity behavior analytics and activity monitoring",
+  "Data-centric threat detection, forensic audit trails, and managed response",
   "Automated access remediation and policy enforcement",
-  "Cloud, SaaS, and hybrid data connectors",
-  "AI security posture and database activity monitoring"
+  "Cloud, SaaS, file, database, and hybrid data connectors",
+  "AI security posture management and AI-data access governance",
+  "Database activity monitoring and AI-enabled email threat detection"
 ]
 use_cases = [
-  "Enterprise data security posture management",
-  "Insider-threat investigation and abnormal-access detection",
-  "Ransomware and data-exfiltration response",
-  "Cloud, SaaS, and Microsoft 365 permission hygiene",
-  "AI agent, copilot, and retrieval-data governance",
-  "Database activity monitoring across hybrid estates",
-  "Defense, public-sector, and critical-infrastructure data protection",
-  "Compliance evidence, access review, and audit support"
+  "Enterprise data security posture management and exposure reduction",
+  "Insider-risk investigation and anomalous data access detection",
+  "Excessive permission discovery and least-privilege remediation",
+  "Cloud, SaaS, and Microsoft 365 data governance",
+  "AI agent, copilot, and retrieval-system data access review",
+  "Database activity monitoring across hybrid environments",
+  "Email-originated phishing and social engineering detection",
+  "Government and critical-infrastructure protection of controlled information, subject to authorization and deployment requirements"
 ]
 investible = false
-investment_rationale = "Varonis is not a startup-stage direct diligence target: it is an established NASDAQ-listed company with public-market liquidity, mature go-to-market operations, and an expanding platform portfolio. Its data-security capabilities merit ecosystem, partner, and competitive diligence, but this record should not imply a private-startup allocation or investment recommendation."
-strategic_value = "Varonis is strategically relevant where sensitive data is distributed across hybrid infrastructure and access, insider misuse, exfiltration, or AI-driven overexposure are material concerns. Its value to the Claw and Talon thesis is strongest as a defensive data-security benchmark and possible ecosystem reference for government, critical-infrastructure, and enterprise security workflows."
+investment_rationale = """Varonis is a mature NASDAQ-listed company with substantial reported revenue and SaaS ARR, not a startup-stage investment target. Its data-centric access and behavior analytics capabilities make it a useful competitive benchmark and potential ecosystem reference. The pending Proofpoint merger changes the near-term ownership and product context, but closing remains conditional. This assessment is strategic research, not an investment recommendation; diligence should focus on SaaS conversion economics, retention, product differentiation, acquisition integration, and merger execution."""
+strategic_value = """Varonis is relevant to enterprise, government, and critical-infrastructure security where sensitive data is distributed across hybrid repositories and excess access can increase breach impact. Its combination of classification, permissions context, activity history, and remediation offers a useful benchmark for data-centric security and AI access governance. The company's Israeli founding and 916-person Israel workforce at 2025 year end are relevant ecosystem signals. Public-sector product evidence supports defensive applicability, while the pending Proofpoint acquisition and absence of public classified-contract evidence bound the strategic case."""
 public_sources = [
-  "https://www.varonis.com/company",
-  "https://www.varonis.com/company/contact",
-  "https://www.varonis.com/blog/why-were-going-all-in-on-saas",
-  "https://www.varonis.com/blog/microsoft-partnership",
-  "https://ir.varonis.com/financial-information/sec-filings",
-  "https://www.sec.gov/Archives/edgar/data/1361113/000162828026005450/vrns-20251231.htm"
+  { label = "Varonis company overview", url = "https://www.varonis.com/company", description = "Company identity, founders, CEO, headquarters, offices, employee count, products, and public listing." },
+  { label = "Varonis 2025 Form 10-K", url = "https://www.sec.gov/Archives/edgar/data/1361113/000162828026005450/vrns-20251231.htm", description = "SEC filing for legal identity, workforce, product and SaaS transition, revenue, customer footprint, acquisitions, and convertible notes." },
+  { label = "Varonis Q2 2026 Form 10-Q", url = "https://www.sec.gov/Archives/edgar/data/1361113/000162828026050630/vrns-20260630.htm", description = "SEC filing for Q2 financial metrics, ARR, liquidity, debt, and AllTrue acquisition accounting." },
+  { label = "Varonis Q2 2026 results", url = "https://www.sec.gov/Archives/edgar/data/1361113/000117184326004948/exh_991.htm", description = "Company earnings release filed with the SEC, including Q2 metrics, GovRAMP assertion, and Claude integration." },
+  { label = "Varonis 2026 proxy statement", url = "https://www.sec.gov/Archives/edgar/data/1361113/000114036126015263/ny20065926x1_def14a.htm", description = "SEC proxy for leadership roles and disclosed beneficial ownership as of 2026-04-06." },
+  { label = "Varonis merger Form 8-K", url = "https://www.sec.gov/Archives/edgar/data/1361113/000121390026109904/ea0308610-8k_varonis.htm", description = "SEC merger agreement filing; the pending transaction does not make Varonis an acquired subsidiary before closing." },
+  { label = "Proofpoint acquisition announcement", url = "https://www.proofpoint.com/uk/newsroom/press-releases/proofpoint-acquire-varonis-creating-global-leader-data-and-ai-security", description = "Buyer announcement of the approximately $6.3 billion all-cash transaction, per-share consideration, and expected close." },
+  { label = "Varonis S-1/A", url = "https://www.sec.gov/Archives/edgar/data/1361113/000119312514071832/d587800ds1a.htm", description = "SEC IPO registration statement with preferred equity classes and historical Series D and E financing details." },
+  { label = "Accel Varonis company profile", url = "https://www.accel.com/companies/varonis-systems", description = "Investor portfolio page identifying Accel's initial Series A investment and Varonis's subsequent IPO." },
+  { label = "Globes 2009 financing report", url = "https://en.globes.co.il/en/article-1000419282", description = "Contemporaneous reporting on the $15 million Series D financing, named investors, reported post-money valuation, and a historical raised-total claim." },
+  { label = "Dealroom Varonis profile", url = "https://app.dealroom.co/companies/varonis_systems", description = "Secondary funding database reporting a $13 million May 2006 Series A and historical investor names; amount conflicts with Startup Nation Finder." },
+  { label = "Startup Nation Finder Varonis profile", url = "https://finder.startupnationcentral.org/company_page/varonis-systems?section=financials", description = "Legacy directory reporting a $10.14 million May 2006 Series B and investor names; data is not a current official filing and conflicts with Dealroom." },
+  { label = "Varonis 2015 Form 10-K", url = "https://www.sec.gov/Archives/edgar/data/1361113/000117184316007861/f10k_021216.htm", description = "SEC filing confirming March 2014 IPO date and $106.1 million net proceeds to Varonis." },
+  { label = "FedRAMP Marketplace Varonis listing", url = "https://www.fedramp.gov/marketplace/products/FR2421252636/", description = "Government marketplace record for Varonis Data Security Platform authorization and impact level." },
+  { label = "Varonis federal government industry page", url = "https://www.varonis.com/industry/federal-government", description = "Company-published description and anonymized government use cases." },
+  { label = "Varonis government customer case study", url = "https://www.varonis.com/hubfs/Web%20Assets/Website_Reboot/Case_Studies/EN-Case-Studies/CaseStudy-US-government.pdf?hsLang=en", description = "Vendor-supplied anonymized federal agency case study concerning controlled unclassified information." },
+  { label = "Varonis AllTrue acquisition announcement", url = "https://www.varonis.com/blog/varonis-acquires-alltrue-ai-security", description = "Company announcement describing the AllTrue acquisition and AI security posture product expansion." },
+  { label = "Varonis SlashNext acquisition announcement", url = "https://www.varonis.com/blog/varonis-to-acquire-slash-next-email-security", description = "Company announcement of its SlashNext email security acquisition." },
+  { label = "SecurityWeek SlashNext acquisition report", url = "https://www.securityweek.com/varonis-acquires-email-security-firm-slashnext/", description = "Reports up to $150 million consideration including performance-based retention awards, with the amount attributed to a Varonis spokesperson." },
+  { label = "Microsoft Purview DSPM", url = "https://learn.microsoft.com/en-us/purview/data-security-posture-management-application-card", description = "Microsoft product documentation for an adjacent data security posture management offering." },
+  { label = "BigID DSPM", url = "https://bigid.com/data-security-posture-management/", description = "BigID product page for data discovery, classification, exposure, and remediation capabilities." },
+  { label = "Rubrik Data Security Posture", url = "https://docs.rubrik.com/en-us/saas/dspm/overview_dsp.html", description = "Rubrik documentation describing DSPM visibility, classification, access context, and remediation." }
 ]
-potential_score = 84.0
-technology_score = 90.0
-market_score = 88.0
-team_score = 86.0
-dual_use_score = 84.0
-strategic_alignment_score = 86.0
+potential_score = 79.0
+technology_score = 87.0
+market_score = 86.0
+team_score = 82.0
+dual_use_score = 76.0
+strategic_alignment_score = 89.0
 stage = "mature"
-stage_rationale = "Varonis commenced operations in 2005 and is listed on NASDAQ under VRNS. Its established customer base, global offices, public filings, and platform expansion place it firmly in the mature public-company category, even though the SaaS transition and AI-security roadmap remain active strategic changes."
-competitors = [
-  "Microsoft Purview",
-  "BigID",
-  "Rubrik",
-  "Proofpoint",
-  "Netskope",
-  "Forcepoint"
-]
-competitive_edge = "Varonis' strongest edge is the combination of deep data discovery, permission and blast-radius analysis, behavior analytics, threat detection, and remediation in one data-centric operating model. Years of connectors, metadata, policy logic, and deployment experience can make the platform more useful than a collection of point tools. That edge is vulnerable if hyperscalers and security suites provide sufficiently integrated alternatives or if the SaaS transition narrows support for difficult environments."
+stage_rationale = """Varonis began operations in 2005, is listed on NASDAQ, reported $623.5 million FY2025 revenue, and reported $726.0 million SaaS ARR at 2026-06-30. It has a global customer footprint and public-company reporting. The proposed Proofpoint transaction was announced but had not closed by 2026-10-22, so its operating status remains public and independent pending customary conditions."""
+competitors = ["Microsoft Purview", "BigID", "Rubrik"]
+competitive_edge = """Varonis's plausible edge is a long-developed data inventory and permissions context joined to activity analytics, threat detection, and remediation across mixed repositories. Its public filings, breadth of connectors, and recurring subscription base support scale, while the AllTrue, Cyral, and SlashNext acquisitions extend the portfolio into AI posture, databases, and email threats. The edge remains a hypothesis until verified through independent coverage, precision, deployment-effort, renewal, and win/loss evidence. Microsoft can bundle controls through its existing tenant footprint; BigID competes in discovery and classification; Rubrik embeds DSPM in a data protection suite. SaaS migration, suite competition, and integration complexity may erode differentiation."""
 risk_factors = [
-  "Platform vendors can bundle overlapping DSPM, DLP, identity, and insider-risk features",
-  "The move from self-hosted software to SaaS can create migration, trust, residency, and disconnected-environment friction",
-  "Enterprise security sales cycles, implementation effort, and budget scrutiny can delay expansion",
-  "Automated remediation can disrupt business access or operations if classification and policy tuning are wrong",
-  "A broad platform roadmap may increase integration complexity and dilute product differentiation",
-  "Public-company growth expectations and acquisition-led expansion create execution and retention pressure"
+  "Microsoft and other suites can bundle overlapping discovery, DSPM, DLP, identity, and insider-risk controls through existing customer relationships.",
+  "The December 31, 2026 end of life for self-hosted products may create migration costs, residency objections, or churn among disconnected and regulated customers.",
+  "Reported ARR is not GAAP revenue; conversion ARR, renewal rates, cash generation, and net retention require cohort-level review.",
+  "Automated access remediation can disrupt business operations if classification, identity mapping, or policy tuning is inaccurate.",
+  "AllTrue, Cyral, and SlashNext increase portfolio breadth but create integration, product overlap, and retention risks.",
+  "The pending Proofpoint merger remains subject to shareholder and regulatory approvals and may change roadmap, staffing, contracts, and customer support.",
+  "The public record reviewed does not establish classified deployments, named defense contracts, or defense-specific revenue."
 ]
 risk_level = "medium"
 signals = []
 priority_rank = 0
-priority_rationale = "High strategic relevance as a data-centric security benchmark and potential ecosystem reference, but public-company status keeps Varonis outside the core startup-priority set. The scores reflect strong technology and market position while discounting platform competition, SaaS-transition execution risk, and the limited evidence for a distinct defense product."
+priority_rationale = """High strategic relevance as a data-centric security benchmark and possible ecosystem reference, tempered by its mature public-company status and pending acquisition. Scores reflect a strong, technically broad product with reported commercial scale while discounting platform competition, self-hosted migration risk, acquisition integration, and limited public evidence for classified or defense-specific deployments."""
 crawled_at = "2026-01-30T15:10:00+00:00"
-updated_at = "2026-07-31T18:38:33Z"
+updated_at = "2026-10-22T04:30:00Z"
+
+[intelligence]
+schema_version = 2
+
+[intelligence.company]
+company_id = "us-varonis-systems"
+legal_name = "Varonis Systems, Inc."
+aliases = ["Varonis Systems"]
+operating_status = "public"
+business_model = "Enterprise cybersecurity software sold primarily through recurring subscriptions; the company has transitioned delivery toward a SaaS platform and has set an end-of-life date for its legacy self-hosted product."
+products = ["Varonis Data Security Platform", "Data Security Posture Management", "Data Access Governance", "Data Detection and Response", "Managed Data Detection and Response", "Varonis Interceptor email security", "AI security posture capabilities from AllTrue", "Database activity monitoring from Cyral"]
+locations = ["Miami, Florida, United States (headquarters)", "Herzliya, Israel"]
+country_of_incorporation = "United States"
+founded_on = "2005"
+registry_identifiers = [{ jurisdiction = "United States", scheme = "SEC CIK", identifier = "0001361113", source_ids = ["s_10k25"] }]
+source_ids = ["s_about", "s_10k25", "s_10q26", "s_merger_8k"]
+notes = "The October 15, 2026 Proofpoint agreement is pending. Varonis remains a public issuer until and unless the merger closes."
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders"]
+summary = "Co-founders Yaki Faitelson and Ohad Korkus founded Varonis in 2005; the company also maintains a Herzliya office and reported 916 of 2,658 employees and contractors in Israel at 2025-12-31. The issuer is incorporated in Delaware and headquartered in Miami."
+as_of = "2026-10-22"
+source_ids = ["s_about", "s_10k25"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public records identify early preferred equity financings, a 2014 IPO, and two convertible-note issues. The 2006 Series B amount conflicts between Dealroom ($13.0 million) and the legacy Startup Nation Finder record ($10.14 million); neither value is used as the round amount. A contemporaneous 2009 report states $15 million for the Series D round and a $90 million post-money valuation. The 2011 Series E issuance funded a founder share repurchase and is recorded separately as secondary. IPO proceeds and debt are separate from venture equity. No current company-announced lifetime funding total was located, and no total is derived by summing these different event types."
+history_status = "partial"
+coverage_through = "2026-10-22"
+
+[[intelligence.funding.rounds]]
+id = "series-a-2004"
+round_type = "Series A preferred equity"
+instrument = "equity"
+status = "closed"
+announced_on = "2004"
+closed_on = "2004"
+amount_status = "not_found"
+amount_scope = "round"
+lead_investors = ["Accel"]
+source_ids = ["s_accel", "s_s1"]
+notes = "Accel describes its initial Series A investment in 2004. The reviewed sources do not establish a reliable amount; do not substitute directory estimates."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2006"
+round_type = "Series B preferred equity"
+instrument = "equity"
+status = "closed"
+announced_on = "2006-05"
+amount_status = "conflicting"
+amount_scope = "round"
+currency = "USD"
+lead_investors = []
+participating_investors = ["Accel", "Pitango", "Evergreen Venture Partners"]
+amount_observations = [
+  { id = "dealroom-2006", amount = 13000000, currency = "USD", as_of = "2006-05", source_ids = ["s_dealroom"], notes = "Dealroom labels this a Series A, while the SEC prospectus establishes a Series B preferred class; use the observation only for the reported amount." },
+  { id = "snc-2006", amount = 10140000, currency = "USD", as_of = "2006-05", source_ids = ["s_snc"], notes = "Legacy Startup Nation Finder labels this a B Round. Its funding history is not an issuer filing." }
+]
+source_ids = ["s_s1", "s_dealroom", "s_snc"]
+notes = "The SEC S-1 confirms a Series B preferred class but does not establish the amount in the available cited passages. Dealroom reports $13.0 million and labels the event Series A; legacy Startup Nation Finder reports $10.14 million and labels it B Round. Preserve both reported observations and do not choose a numeric amount."
+
+[[intelligence.funding.rounds]]
+id = "series-c-undated"
+round_type = "Series C preferred equity"
+instrument = "equity"
+status = "closed"
+amount_status = "not_found"
+amount_scope = "unknown"
+source_ids = ["s_s1"]
+notes = "The SEC prospectus establishes historical Series C preferred stock but the reviewed public record did not resolve a distinct announcement date, amount, or investor list."
+
+[[intelligence.funding.rounds]]
+id = "series-d-2008"
+round_type = "Series D preferred equity"
+instrument = "equity"
+status = "closed"
+announced_on = "2009-01-22"
+closed_on = "2008-12-22"
+amount_status = "reported"
+amount = 15000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["EMC"]
+participating_investors = ["Accel", "Pitango", "Evergreen Venture Partners"]
+post_money_valuation = 90000000
+valuation_currency = "USD"
+valuation_basis = "reported"
+source_ids = ["s_globes2009", "s_s1"]
+notes = "Globes contemporaneously reported EMC-led $15 million financing at a $90 million post-money valuation and named Pitango, Accel, and Evergreen as participants. The SEC prospectus gives a Series D preferred financing agreement date of 2008-12-22."
+
+[[intelligence.funding.rounds]]
+id = "series-e-secondary-2011"
+round_type = "Series E preferred issuance used for founder share repurchase"
+instrument = "secondary"
+status = "closed"
+announced_on = "2011-02-24"
+closed_on = "2011-02-24"
+amount_status = "reported"
+amount = 2500003
+amount_scope = "round"
+currency = "USD"
+lead_investors = []
+participating_investors = ["Accel", "Pitango"]
+source_ids = ["s_s1"]
+notes = "The S-1 describes 217,752 shares at $11.48 per share, total $2,500,003, and says proceeds were used to purchase founders' common shares. This is secondary liquidity, not operating-capital equity."
+
+[[intelligence.funding.rounds]]
+id = "ipo-2014"
+round_type = "Initial public offering"
+instrument = "ipo"
+status = "closed"
+announced_on = "2014-03-05"
+closed_on = "2014-03-05"
+amount_status = "reported"
+amount = 106100000
+amount_scope = "round"
+currency = "USD"
+source_ids = ["s_10k2015"]
+notes = "The company received approximately $106.1 million net of underwriting discounts, commissions, and issuer offering expenses. This excludes shares sold by a selling shareholder and is not venture funding."
+
+[[intelligence.funding.rounds]]
+id = "convertible-notes-2020"
+round_type = "1.25% Convertible Senior Notes due 2025"
+instrument = "debt"
+status = "closed"
+announced_on = "2020-05-11"
+closed_on = "2020-05-11"
+amount_status = "reported"
+amount = 253000000
+amount_scope = "round"
+currency = "USD"
+source_ids = ["s_10q26"]
+notes = "Issued $253 million aggregate principal; the notes matured and were settled in 2025. Debt is not equity funding."
+
+[[intelligence.funding.rounds]]
+id = "convertible-notes-2024"
+round_type = "1.00% Convertible Senior Notes due 2029"
+instrument = "debt"
+status = "closed"
+announced_on = "2024-09-10"
+closed_on = "2024-09-10"
+amount_status = "reported"
+amount = 460000000
+amount_scope = "round"
+currency = "USD"
+source_ids = ["s_10q26"]
+notes = "Issued $460 million aggregate principal; outstanding at 2026-06-30. Debt is not equity funding."
+
+[intelligence.ownership]
+status = "reported"
+summary = "Varonis remained an independent public company as of 2026-10-22, with NASDAQ ticker VRNS. Its proxy reports selected beneficial ownership as of 2026-04-06, not a complete cap table. Proofpoint announced a pending all-cash merger; no ownership transfer had closed by the research date."
+stock_ticker = "NASDAQ: VRNS"
+cap_table_status = "reported"
+shareholders = ["BlackRock"]
+source_ids = ["s_proxy", "s_10q26", "s_merger_8k", "s_proofpoint"]
+holdings = [
+  { shareholder = "BlackRock", ownership_percent = 9.1, as_of = "2026-04-06", share_class = "common stock", source_ids = ["s_proxy"], notes = "The proxy's table reports 9.1%; a footnote separately gives voting and dispositive share counts that do not reconcile to the table percentage. The reported percentage is retained as published and not recalculated." }
+]
+deals = [
+  { id = "proofpoint-merger-2026", deal_type = "merger", company_role = "target", announced_on = "2026-10-15", status = "announced", counterparty = "Proofpoint, Inc. (a Thoma Bravo portfolio company)", amount = 6300000000, amount_status = "reported", currency = "USD", source_ids = ["s_merger_8k", "s_proofpoint"], notes = "Approximately $6.3 billion all-cash transaction; shareholders are to receive $49.75 per share. Expected close in H1 2027, subject to shareholder and regulatory approvals and other customary conditions. The transaction is not completed." },
+  { id = "alltrue-acquisition-2026", deal_type = "acquisition", company_role = "buyer", announced_on = "2026-02-03", completed_on = "2026-02-06", status = "completed", counterparty = "AllTrue.ai", amount = 180276000, amount_status = "reported", currency = "USD", source_ids = ["s_alltrue", "s_10q26"], notes = "The Q2 2026 filing reports a $180.276 million transaction price including contingent performance and employee-service-related amounts; it is not all cash paid at closing." },
+  { id = "slashnext-acquisition-2025", deal_type = "acquisition", company_role = "buyer", announced_on = "2025-09-02", completed_on = "2025-08-28", status = "completed", counterparty = "SlashNext, Inc.", amount_status = "conflicting", currency = "USD", source_ids = ["s_10k25", "s_slashnext", "s_securityweek"], notes = "The SEC filing describes acquisition accounting transaction-price components totaling $114.771 million before distinguishing the prior-relationship settlement; SecurityWeek reports up to $150 million including performance-based retention awards based on a Varonis spokesperson. Because these amounts have different and incompletely reconciled scopes, no single deal amount is assigned." },
+  { id = "cyral-acquisition-2025", deal_type = "acquisition", company_role = "buyer", completed_on = "2025-03-17", status = "completed", counterparty = "Cyral, Inc.", amount = 25486000, amount_status = "reported", currency = "USD", source_ids = ["s_10k25"], notes = "SEC disclosure labels $25.486 million as transaction price, plus aggregate conditional consideration of $2.435 million; the purchase price allocation is $23.051 million after accounting adjustments. The amount field records only the stated transaction-price component. Announcement date was not established in the reviewed source." }
+]
+
+[[intelligence.people]]
+name = "Yaki Faitelson"
+role = "Co-founder, CEO, president, and chair"
+is_founder = true
+current = true
+background = "Company and SEC proxy describe him as a co-founder and current CEO, president, and chair. Company biography reports prior roles at NetVision and Network Appliance."
+source_ids = ["s_about", "s_proxy"]
+
+[[intelligence.people]]
+name = "Ohad Korkus"
+role = "Co-founder and director; former CTO"
+is_founder = true
+current = true
+background = "Company sources identify him as a co-founder. The 2026 proxy says he served as CTO until February 2018 and is a director."
+source_ids = ["s_about", "s_proxy"]
+notes = "Current as a director; not represented as a current operating executive."
+
+[[intelligence.people]]
+name = "Guy Melamed"
+role = "Chief Financial Officer and Chief Operating Officer"
+is_founder = false
+current = true
+background = "Listed among Varonis executive officers in the 2026 proxy."
+source_ids = ["s_proxy"]
+
+[[intelligence.people]]
+name = "David Bass"
+role = "Chief Technology Officer"
+is_founder = false
+current = true
+background = "Listed as CTO in Varonis company leadership materials and the 2026 proxy."
+source_ids = ["s_about", "s_proxy"]
+
+[[intelligence.investors]]
+name = "Accel"
+investor_type = "vc"
+website = "https://www.accel.com"
+round_ids = ["series-a-2004", "series-b-2006", "series-d-2008", "series-e-secondary-2011"]
+relationship = "historical"
+source_ids = ["s_accel", "s_s1", "s_globes2009", "s_dealroom", "s_snc"]
+notes = "Accel states that it made the initial Series A investment in 2004; historical participation in later rounds is reported by the cited sources."
+
+[[intelligence.investors]]
+name = "Pitango"
+investor_type = "vc"
+round_ids = ["series-b-2006", "series-d-2008", "series-e-secondary-2011"]
+relationship = "historical"
+source_ids = ["s_s1", "s_globes2009", "s_dealroom", "s_snc"]
+
+[[intelligence.investors]]
+name = "Evergreen Venture Partners"
+investor_type = "vc"
+round_ids = ["series-b-2006", "series-d-2008"]
+relationship = "historical"
+source_ids = ["s_globes2009", "s_dealroom", "s_snc"]
+
+[[intelligence.investors]]
+name = "EMC"
+investor_type = "corporate"
+round_ids = ["series-d-2008"]
+relationship = "historical"
+source_ids = ["s_globes2009"]
+notes = "Contemporaneous reporting names EMC as the Series D lead investor."
+
+[[intelligence.financials]]
+name = "FY2025 revenue"
+value = "$623.532 million"
+as_of = "2025-12-31"
+basis = "reported"
+metric = "revenue"
+numeric_value = 623532000
+unit = "currency"
+currency = "USD"
+period_start = "2025-01-01"
+period_end = "2025-12-31"
+source_ids = ["s_10k25"]
+
+[[intelligence.financials]]
+name = "Q2 2026 revenue"
+value = "$180.023 million"
+as_of = "2026-06-30"
+basis = "reported"
+metric = "revenue"
+numeric_value = 180023000
+unit = "currency"
+currency = "USD"
+period_start = "2026-04-01"
+period_end = "2026-06-30"
+source_ids = ["s_10q26", "s_q2release"]
+
+[[intelligence.financials]]
+name = "Q2 2026 SaaS ARR"
+value = "$726.0 million at quarter end"
+as_of = "2026-06-30"
+basis = "reported"
+metric = "arr"
+numeric_value = 726000000
+unit = "currency"
+currency = "USD"
+period_start = "2026-06-30"
+period_end = "2026-06-30"
+source_ids = ["s_10q26", "s_q2release"]
+notes = "Company-defined annualized recurring revenue from contractual subscriptions, not GAAP revenue or a forecast."
+
+[[intelligence.financials]]
+name = "Q2 2026 SaaS ARR excluding conversions"
+value = "$598.1 million at quarter end"
+as_of = "2026-06-30"
+basis = "reported"
+metric = "arr"
+numeric_value = 598100000
+unit = "currency"
+currency = "USD"
+period_start = "2026-06-30"
+period_end = "2026-06-30"
+source_ids = ["s_10q26"]
+notes = "Excludes ARR converted from self-hosted subscriptions; not GAAP revenue."
+
+[[intelligence.financials]]
+name = "Liquidity resources"
+value = "$911.5 million of cash, deposits, and short- and long-term marketable securities"
+as_of = "2026-06-30"
+basis = "reported"
+metric = "other"
+numeric_value = 911500000
+unit = "currency"
+currency = "USD"
+source_ids = ["s_q2release", "s_10q26"]
+notes = "This aggregate is not cash alone."
+
+[[intelligence.financials]]
+name = "H1 2026 net loss"
+value = "GAAP net loss of $83.663 million"
+as_of = "2026-06-30"
+basis = "reported"
+metric = "net_income"
+numeric_value = -83663000
+unit = "currency"
+currency = "USD"
+period_start = "2026-01-01"
+period_end = "2026-06-30"
+source_ids = ["s_10q26"]
+
+[[intelligence.financials]]
+name = "H1 2026 operating cash flow"
+value = "$80.1 million generated from operations"
+as_of = "2026-06-30"
+basis = "reported"
+metric = "other"
+numeric_value = 80100000
+unit = "currency"
+currency = "USD"
+period_start = "2026-01-01"
+period_end = "2026-06-30"
+source_ids = ["s_q2release", "s_10q26"]
+
+[[intelligence.financials]]
+name = "SaaS dollar renewal rate"
+value = "More than 90%"
+as_of = "2026-06-30"
+basis = "reported"
+metric = "other"
+numeric_value = 90
+value_relation = "more_than"
+unit = "percent"
+source_ids = ["s_10q26"]
+
+[[intelligence.financials]]
+name = "Employees and contractors"
+value = "2,658 employees and contractors"
+as_of = "2025-12-31"
+basis = "reported"
+metric = "employees"
+numeric_value = 2658
+unit = "people"
+source_ids = ["s_10k25"]
+notes = "The filing reports 1,139 in the United States, 916 in Israel, and 603 elsewhere."
+
+[[intelligence.financials]]
+name = "Remaining performance obligations"
+value = "$1,084.5 million"
+as_of = "2026-06-30"
+basis = "reported"
+metric = "other"
+numeric_value = 1084500000
+unit = "currency"
+currency = "USD"
+source_ids = ["s_10q26"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Varonis reported customers in more than 95 countries and no single customer represented more than 10% of FY2025 revenue."
+date = "2025-12-31"
+source_ids = ["s_10k25"]
+notes = "Country coverage is a company-reported footprint measure; it does not disclose current customer count or revenue per segment."
+
+[[intelligence.traction]]
+kind = "regulatory"
+description = "The FedRAMP Marketplace lists Varonis Data Security Platform as authorized at the Moderate impact level."
+date = "2025-05-14"
+source_ids = ["s_fedramp"]
+notes = "Marketplace authorization supports federal suitability within the listed scope; it does not establish a particular contract, customer, or classified deployment."
+
+[[intelligence.traction]]
+kind = "regulatory"
+description = "Varonis announced GovRAMP authorization for its platform in its Q2 2026 results release."
+date = "2026-07-28"
+source_ids = ["s_q2release"]
+notes = "This is a company assertion; authorization scope was not independently expanded here."
+
+[[intelligence.traction]]
+kind = "customer"
+description = "A Varonis case study describes an unnamed federal agency using the platform to secure controlled unclassified information in a hybrid environment."
+source_ids = ["s_usgov_case"]
+notes = "Vendor-supplied and anonymized case study; agency name, contract value, deployment scale, and independent confirmation are not disclosed."
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Varonis announced an integration with Anthropic Claude to support data-security workflows for AI use."
+date = "2026-07-28"
+source_ids = ["s_q2release"]
+notes = "Product integration announcement only; not evidence of a commercial partnership payment or customer deployment."
+
+[[intelligence.traction]]
+kind = "product"
+description = "The 2025 Form 10-K states that Varonis's self-hosted product is scheduled to reach end of life on December 31, 2026 as the company transitions customers toward SaaS delivery."
+date = "2025-12-31"
+source_ids = ["s_10k25"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "Varonis's company biography says co-founder Yaki Faitelson and Ohad Korkus designed its MetaData Framework and hold numerous patents."
+source_ids = ["s_about"]
+notes = "Company-reported IP statement; no patent identifier or exhaustive patent-family, current ownership, grant, expiry, litigation, or freedom-to-operate map was verified from an accessible patent-register record."
+
+[[intelligence.comparables]]
+name = "Microsoft Purview"
+website = "https://www.microsoft.com/en-us/security/business/information-protection/microsoft-purview"
+rationale = "Microsoft documents DSPM workflows and can bring data protection, insider-risk, and productivity telemetry through its existing Microsoft 365 footprint."
+differentiation = "Purview is a direct platform substitute for portions of data discovery and posture management; Varonis's proposed distinction is cross-repository access and behavior context with remediation. Relative effectiveness requires head-to-head testing."
+source_ids = ["s_microsoft", "s_10k25"]
+
+[[intelligence.comparables]]
+name = "BigID"
+website = "https://bigid.com"
+rationale = "BigID's product materials describe data discovery, classification, exposure analysis, and remediation across cloud, SaaS, hybrid, and on-premises environments."
+differentiation = "BigID overlaps most directly in discovery and data intelligence; Varonis emphasizes joining data permissions and activity analytics with threat detection and automated remediation. Vendor claims alone do not establish comparative accuracy or customer outcomes."
+source_ids = ["s_bigid", "s_10k25"]
+
+[[intelligence.comparables]]
+name = "Rubrik"
+website = "https://www.rubrik.com"
+rationale = "Rubrik documents DSPM visibility into sensitive data, identities, activity, posture violations, and remediation within a broader data protection and cyber-resilience platform."
+differentiation = "Rubrik can combine posture workflows with protection and recovery; Varonis centers on data access governance, user behavior, and threat detection. The products overlap, but their broader platform emphasis differs."
+source_ids = ["s_rubrik", "s_10k25"]
+
+[intelligence.research]
+researched_at = "2026-10-22T04:30:00Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "site:varonis.com/company Varonis founders headquarters founded 2005 Israel Miami",
+  "Varonis funding raised Series A Series B Series C IPO 2014 investors",
+  "site:ir.varonis.com 2026 second quarter results revenue ARR customers Varonis",
+  "site:sec.gov Varonis 2025 10-K founders Israel executive leadership revenue 2025",
+  "site:varonis.com \"Proofpoint\" acquisition October 2026 Varonis",
+  "site:ir.varonis.com Proofpoint acquire Varonis October 2026 merger agreement",
+  "site:proofpoint.com Varonis acquisition 2026 $6.3 billion",
+  "Varonis Proofpoint acquisition October 2026 price merger agreement SEC 14A",
+  "site:sec.gov/Archives/edgar/data/1361113 Varonis 2026 10-Q June 30 2026",
+  "site:ir.varonis.com 2026 second quarter results Varonis annual recurring revenue SaaS revenue",
+  "Varonis 2026 Q2 financial results SaaS ARR July 28 2026",
+  "Varonis 2014 S-1 IPO Series A B C D E investors 2006 2011 filing",
+  "Varonis Yaki Faitelson Ohad Korkus leadership executive management 2026 Varonis",
+  "Varonis patents inventor Yaki Faitelson Ohad Korkus Google Patents WIPO",
+  "site:varonis.com customers 8000 customer stories Varonis 2026",
+  "Varonis GovRAMP authorization critical data AI official 2026",
+  "Varonis Series A 2006 $13 million Accel Pitango Evergreen official announcement Series E 2011",
+  "Varonis Series funding 2009 Series D 2008 Series E 2011 funding history Accel EMC",
+  "Varonis company investors Accel Pitango Evergreen EMC Varonis prospectus shares Series A preferred",
+  "Varonis lifetime funding raised total before IPO 2014",
+  "Varonis 2006 funding $10 million Pitango Accel Evergreen round",
+  "Varonis 2004 $3.5 million funding Accel Varonis Series A",
+  "Varonis raised $28 million before IPO funding Series B EMC 2009",
+  "Varonis $2.5 million March 2011 round $1 million 2012 financing",
+  "Microsoft Purview Data Security Posture Management official product page",
+  "BigID Data Security Posture Management official product page",
+  "Rubrik Security Cloud data security posture management official",
+  "site:varonis.com/blog Varonis GovRAMP Authorization 2026",
+  "site:fedramp.gov Varonis Data Security Platform moderate authorization",
+  "site:elibrary.gsa.gov Varonis Systems GS-35F-0511T",
+  "site:acquisition.gov Varonis DHS CDM CMaaS BPA",
+  "site:varonis.com \"Government Agency Uses Varonis\" CUI",
+  "\"Varonis\" seed funding",
+  "\"Varonis Systems\" \"valuation\" series funding",
+  "\"Varonis Systems\" \"founder\" \"revenue\" \"customers\" patents",
+  "Varonis defense government contracts FedRAMP GovRAMP official",
+  "site:sec.gov/Archives/edgar/data/1361113 2026 DEF 14A Varonis beneficial ownership Faitelson April 2026",
+  "Varonis 2026 proxy beneficial ownership Faitelson Vanguard BlackRock stockholders",
+  "Varonis Systems 2026 proxy beneficial ownership table 5% shareholders",
+  "Varonis Systems 2015 10-K raised approximately 106.1 million IPO net proceeds SEC",
+  "site:varonis.com/blog \"AllTrue.ai\" acquisition February 2026",
+  "site:varonis.com/blog SlashNext acquisition August 2025",
+  "site:rubrik.com/products DSPM data security posture management Rubrik Security Cloud",
+  "site:rubrik.com \"Data Security Posture Management\" Rubrik product",
+  "site:ipindia.gov.in \"Data Governance for Email Systems\" Varonis",
+  "Varonis SlashNext $150 million Axios September 2 2025 acquisition"
+]
+gaps = [
+  "funding: No current company-announced lifetime funding total was located. The Series B amount conflicts between Dealroom and legacy Startup Nation Finder, Series C terms and participants remain unresolved, and secondary, IPO, and debt proceeds must remain separate.",
+  "investors: Historical named investors are partially documented, but no full historical private cap table or complete round-by-round investor register is public in the reviewed sources. Public beneficial ownership is point-in-time.",
+  "team: Founders, selected executives, and workforce distribution are verified; a complete technical leadership bench, succession plan, employee attrition profile, and post-merger organization are not publicly established.",
+  "financials: The latest reviewed filing covers 2026-06-30. No segment-level SaaS cohort retention, customer acquisition cost, forward forecast, or explicit burn/runway figure was established. ARR is distinct from recognized revenue.",
+  "traction: Customer presence in more than 95 countries is reported, but current customer count, named government contracts, contract values, product-level adoption, and independent verification of the anonymized federal case are unavailable.",
+  "intellectual_property: Company materials claim the founders hold numerous patents, but accessible sources did not establish patent identifiers or current status; an assignee-verified patent-family, expiry, litigation, and freedom-to-operate review was not completed.",
+  "competition: Official product evidence supports overlap with Microsoft Purview, BigID, and Rubrik, but no independent head-to-head accuracy, pricing, win/loss, or deployment-effort data was found.",
+  "dual_use: Public-sector authorization and one anonymized CUI case support defensive applicability; no named classified deployment, defense contract value, mission-system use, or classified authorization evidence was found.",
+  "ownership: The Proofpoint merger is pending rather than completed. The proxy's BlackRock ownership percentage does not reconcile with the voting and dispositive share counts in its footnote."
+]
+conflicts = [
+  "Series B 2006: Dealroom reports $13.0 million and labels the event Series A, while the legacy Startup Nation Finder record reports $10.14 million and labels it a B Round. The SEC S-1 confirms a Series B preferred class but does not resolve either amount. Both source observations are preserved and neither is placed in the numeric round amount.",
+  "SlashNext acquisition: SecurityWeek reports up to $150 million including performance-based retention awards, while the 2025 SEC filing reports accounting transaction-price components at a different scope. The sources do not reconcile these measures into one comparable total, so the deal amount is omitted.",
+  "BlackRock beneficial ownership: The 2026 proxy table reports 9.1%, while its footnote lists voting and dispositive share counts that do not reconcile to that percentage. The stated table percentage is retained with an explicit caveat; no percentage is recalculated.",
+  "Historical financing databases also list additional small 2010 and 2012 rounds, but the cited SEC prospectus identifies a 2011 Series E issuance used to repurchase founder shares. Those database entries are not represented as verified issuer financing events."
+]
+diligence_questions = [
+  "What are SaaS gross retention, net retention, and expansion by customer cohort after excluding migrated self-hosted ARR, and how much migration remains before the December 31, 2026 self-hosted end-of-life?",
+  "Which products and connectors account for independent customer wins against Microsoft Purview, BigID, and Rubrik, and what are measured classification precision, false-positive rates, deployment time, and remediation rollback rates?",
+  "What are the approved closing conditions and latest regulatory and shareholder milestones for Proofpoint's proposed acquisition, and how will customer contracts, roadmap, support, and the Israel workforce be handled after closing?",
+  "What is the product-level revenue, renewal, and retention contribution from AllTrue, Cyral, and SlashNext, and which acquired products or teams are being integrated, maintained, or retired?",
+  "Which FedRAMP and GovRAMP services, deployment configurations, data boundaries, and authorization scopes are active, and what evidence supports use beyond controlled unclassified information?"
+]
+
+[[intelligence.research.sources]]
+id = "s_about"
+url = "https://www.varonis.com/company"
+title = "Company"
+publisher = "Varonis"
+kind = "company"
+accessed_at = "2026-10-22T04:30:00Z"
+claims = ["Varonis was founded in 2005 by Yaki Faitelson and Ohad Korkus.", "The company is headquartered in Miami, has a Herzliya office and 14 offices, and reports more than 2,400 employees.", "Yaki Faitelson is CEO, president, co-founder, and chair; Ohad Korkus is a co-founder and former CTO.", "Company materials describe its Data Security Platform and say the founders designed the MetaData Framework and hold numerous patents."]
+
+[[intelligence.research.sources]]
+id = "s_10k25"
+url = "https://www.sec.gov/Archives/edgar/data/1361113/000162828026005450/vrns-20251231.htm"
+title = "Form 10-K for the fiscal year ended December 31, 2025"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-22T04:30:00Z"
+published_on = "2026-02-04"
+claims = ["Varonis Systems, Inc. is a Delaware corporation and began operations in 2005.", "The company reported 2,658 employees and contractors at 2025-12-31, including 916 in Israel.", "FY2025 revenue was $623.532 million and SaaS revenue was $462.595 million.", "The company reported customers in more than 95 countries and no individual customer above 10% of FY2025 revenue.", "The filing describes Data Security Platform products and sets the self-hosted product end-of-life at 2026-12-31.", "The filing reports acquisitions of Cyral and SlashNext and 2020 and 2024 convertible notes."]
+
+[[intelligence.research.sources]]
+id = "s_10q26"
+url = "https://www.sec.gov/Archives/edgar/data/1361113/000162828026050630/vrns-20260630.htm"
+title = "Form 10-Q for the quarterly period ended June 30, 2026"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-22T04:30:00Z"
+published_on = "2026-07-29"
+claims = ["Q2 2026 revenue was $180.023 million.", "SaaS ARR was $726.0 million and SaaS ARR excluding conversions was $598.1 million at 2026-06-30.", "The company reported more than 90% SaaS dollar renewal and $1,084.5 million of remaining performance obligations.", "The company reported H1 2026 GAAP net loss of $83.663 million and issued $460 million aggregate principal 2024 convertible notes.", "The filing states AllTrue acquisition completion on 2026-02-06 and reports its transaction-price components.", "The filing states Varonis remained a public company and the proposed Proofpoint transaction had not closed as of the reporting date."]
+
+[[intelligence.research.sources]]
+id = "s_q2release"
+url = "https://www.sec.gov/Archives/edgar/data/1361113/000117184326004948/exh_991.htm"
+title = "Varonis Announces Second Quarter 2026 Financial Results"
+publisher = "Varonis Systems, Inc. / U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-22T04:30:00Z"
+published_on = "2026-07-28"
+claims = ["Varonis reported Q2 2026 revenue of $180.0 million and SaaS ARR of $726.0 million.", "The company reported $911.5 million of cash, deposits, and short- and long-term marketable securities and $80.1 million of H1 operating cash flow.", "The company announced a GovRAMP authorization and a Claude integration."]
+
+[[intelligence.research.sources]]
+id = "s_proxy"
+url = "https://www.sec.gov/Archives/edgar/data/1361113/000114036126015263/ny20065926x1_def14a.htm"
+title = "Definitive Proxy Statement"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-22T04:30:00Z"
+published_on = "2026-04-17"
+claims = ["Yaki Faitelson is co-founder, CEO, president, and chair; Ohad Korkus is a co-founder and director and served as CTO until February 2018.", "The proxy identifies current executive officers including Guy Melamed and David Bass.", "As of 2026-04-06 the ownership table reports BlackRock beneficial ownership of 9.1%, with separately stated voting and dispositive share counts in a footnote."]
+
+[[intelligence.research.sources]]
+id = "s_merger_8k"
+url = "https://www.sec.gov/Archives/edgar/data/1361113/000121390026109904/ea0308610-8k_varonis.htm"
+title = "Form 8-K regarding Agreement and Plan of Merger"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-22T04:30:00Z"
+published_on = "2026-10-15"
+claims = ["Varonis entered into a merger agreement with Proofpoint and its wholly owned merger subsidiary on 2026-10-15.", "At closing Varonis is expected to survive as a wholly owned Proofpoint subsidiary, subject to conditions; the agreement was not a completed acquisition at the research date."]
+
+[[intelligence.research.sources]]
+id = "s_proofpoint"
+url = "https://www.proofpoint.com/uk/newsroom/press-releases/proofpoint-acquire-varonis-creating-global-leader-data-and-ai-security"
+title = "Proofpoint to Acquire Varonis in a $6.3 Billion Transaction"
+publisher = "Proofpoint"
+kind = "company"
+accessed_at = "2026-10-22T04:30:00Z"
+published_on = "2026-10-15"
+claims = ["Proofpoint announced an approximately $6.3 billion all-cash acquisition of Varonis.", "The announced consideration is $49.75 per Varonis share.", "The companies expected closing in the first half of 2027, subject to shareholder, regulatory, and other customary closing conditions."]
+
+[[intelligence.research.sources]]
+id = "s_s1"
+url = "https://www.sec.gov/Archives/edgar/data/1361113/000119312514071832/d587800ds1a.htm"
+title = "Registration Statement on Form S-1/A"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-22T04:30:00Z"
+published_on = "2014-02-27"
+claims = ["The prospectus describes historical Series A through Series E preferred-stock classes, including a Series D agreement dated 2008-12-22.", "The 2011 Series E financing issued 217,752 shares at $11.48 per share for $2,500,003 and proceeds were used to buy founders' common shares.", "The Series E investor list includes Accel and Pitango.", "The prospectus establishes historical preferred classes but does not resolve the cited 2006 Series B round amount."]
+
+[[intelligence.research.sources]]
+id = "s_accel"
+url = "https://www.accel.com/companies/varonis-systems"
+title = "Varonis Systems"
+publisher = "Accel"
+kind = "investor"
+accessed_at = "2026-10-22T04:30:00Z"
+claims = ["Accel identifies Varonis as a portfolio company and says its initial Series A investment was in 2004.", "Accel's profile notes Varonis's NASDAQ IPO."]
+
+[[intelligence.research.sources]]
+id = "s_globes2009"
+url = "https://en.globes.co.il/en/article-1000419282"
+title = "EMC leads $15m round for Varonis"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-22T04:30:00Z"
+published_on = "2009-01-22"
+claims = ["Globes reported an EMC-led $15 million Varonis financing and a $90 million post-money valuation.", "Globes named Pitango, Accel, and Evergreen as participating investors.", "Globes reported $28 million raised in two rounds as of January 2009; this historical cumulative statement is not used as a current total.", "The article reported hundreds of customers at the time, not current customer count."]
+
+[[intelligence.research.sources]]
+id = "s_dealroom"
+url = "https://app.dealroom.co/companies/varonis_systems"
+title = "Varonis Systems company information, funding & investors"
+publisher = "Dealroom.co"
+kind = "directory"
+accessed_at = "2026-10-22T04:30:00Z"
+claims = ["Dealroom reports a May 2006 $13.0 million financing and names Accel, Pitango, and Evergreen; it labels the event Series A.", "Dealroom also lists later small 2010 and 2012 events that are not treated as verified issuer financings."]
+
+[[intelligence.research.sources]]
+id = "s_snc"
+url = "https://finder.startupnationcentral.org/company_page/varonis-systems?section=financials"
+title = "Varonis Systems — Cyber Security"
+publisher = "Startup Nation Central Finder"
+kind = "directory"
+accessed_at = "2026-10-22T04:30:00Z"
+claims = ["Legacy Finder reports $10.14 million in May 2006 as a B Round and names Accel, Pitango, and Evergreen.", "The page states Finder operations ended on 2026-08-31, so the record is used as a dated historical research lead and corroborated where possible.", "Its headline total-funding figure is not treated as a current issuer-announced cumulative total."]
+
+[[intelligence.research.sources]]
+id = "s_10k2015"
+url = "https://www.sec.gov/Archives/edgar/data/1361113/000117184316007861/f10k_021216.htm"
+title = "Form 10-K for the fiscal year ended December 31, 2015"
+publisher = "U.S. Securities and Exchange Commission"
+kind = "filing"
+accessed_at = "2026-10-22T04:30:00Z"
+published_on = "2016-02-12"
+claims = ["Varonis closed its IPO on 2014-03-05 and received approximately $106.1 million net of underwriting discounts, commissions, and issuer offering expenses."]
+
+[[intelligence.research.sources]]
+id = "s_fedramp"
+url = "https://www.fedramp.gov/marketplace/products/FR2421252636/"
+title = "Varonis Data Security Platform"
+publisher = "FedRAMP Marketplace, U.S. General Services Administration"
+kind = "government"
+accessed_at = "2026-10-22T04:30:00Z"
+claims = ["The government marketplace lists Varonis Data Security Platform as FedRAMP authorized at Moderate impact level.", "The listing records its authorization date as 2025-05-14."]
+
+[[intelligence.research.sources]]
+id = "s_usgov_case"
+url = "https://www.varonis.com/hubfs/Web%20Assets/Website_Reboot/Case_Studies/EN-Case-Studies/CaseStudy-US-government.pdf?hsLang=en"
+title = "U.S. Government Agency Varonis Case Study"
+publisher = "Varonis"
+kind = "customer"
+accessed_at = "2026-10-22T04:30:00Z"
+claims = ["An anonymized Varonis case study describes a federal agency using Varonis to secure controlled unclassified information in a hybrid environment.", "The case study does not name the agency or provide contract value."]
+
+[[intelligence.research.sources]]
+id = "s_alltrue"
+url = "https://www.varonis.com/blog/varonis-acquires-alltrue-ai-security"
+title = "Varonis acquires AllTrue.ai to secure AI"
+publisher = "Varonis"
+kind = "company"
+accessed_at = "2026-10-22T04:30:00Z"
+published_on = "2026-02-03"
+claims = ["Varonis announced the AllTrue.ai acquisition and described the product direction as AI security posture management."]
+
+[[intelligence.research.sources]]
+id = "s_slashnext"
+url = "https://www.varonis.com/blog/varonis-to-acquire-slash-next-email-security"
+title = "Varonis Acquires SlashNext, AI-Native Email Security"
+publisher = "Varonis"
+kind = "company"
+accessed_at = "2026-10-22T04:30:00Z"
+published_on = "2025-09-02"
+claims = ["Varonis announced its acquisition of SlashNext and positioned it as an extension into AI-native email security."]
+
+[[intelligence.research.sources]]
+id = "s_securityweek"
+url = "https://www.securityweek.com/varonis-acquires-email-security-firm-slashnext/"
+title = "Varonis Acquires Email Security Firm SlashNext"
+publisher = "SecurityWeek"
+kind = "media"
+accessed_at = "2026-10-22T04:30:00Z"
+published_on = "2025-09-02"
+claims = ["SecurityWeek reports up to $150 million for SlashNext including performance-based retention awards, attributing the statement to a Varonis spokesperson."]
+
+[[intelligence.research.sources]]
+id = "s_microsoft"
+url = "https://learn.microsoft.com/en-us/purview/data-security-posture-management-application-card"
+title = "Application card for Microsoft Purview Data Security Posture Management"
+publisher = "Microsoft Learn"
+kind = "other"
+accessed_at = "2026-10-22T04:30:00Z"
+claims = ["Microsoft documents Purview DSPM dashboards and workflows across data security, DLP, insider risk, and related Purview services."]
+
+[[intelligence.research.sources]]
+id = "s_bigid"
+url = "https://bigid.com/data-security-posture-management/"
+title = "DSPM Solution"
+publisher = "BigID"
+kind = "company"
+accessed_at = "2026-10-22T04:30:00Z"
+claims = ["BigID describes DSPM capabilities in data discovery, classification, exposure and access analytics, and remediation across cloud, SaaS, hybrid, and on-premises environments."]
+
+[[intelligence.research.sources]]
+id = "s_rubrik"
+url = "https://docs.rubrik.com/en-us/saas/dspm/overview_dsp.html"
+title = "Data Security Posture overview"
+publisher = "Rubrik"
+kind = "company"
+accessed_at = "2026-10-22T04:30:00Z"
+claims = ["Rubrik documents a DSPM view of sensitive data locations, identities, access activity, data posture, policy violations, and remediation guidance."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-22T04:30:00Z"
+next_review_on = "2027-01-22"
+queries = ["site:varonis.com/company Varonis founders headquarters founded 2005 Israel Miami", "site:sec.gov Varonis 2025 10-K founders Israel executive leadership revenue 2025", "Varonis Yaki Faitelson Ohad Korkus leadership executive management 2026 Varonis"]
+source_ids = ["s_about", "s_10k25", "s_proxy"]
+summary = "Official company materials and SEC filings identify Varonis Systems, Inc., its Miami headquarters, Delaware incorporation, 2005 founding, public listing, and founders."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-22T04:30:00Z"
+next_review_on = "2027-01-22"
+queries = ["Varonis funding raised Series A Series B Series C IPO 2014 investors", "Varonis 2014 S-1 IPO Series A B C D E investors 2006 2011 filing", "Varonis Series A 2006 $13 million Accel Pitango Evergreen official announcement Series E 2011", "Varonis Series funding 2009 Series D 2008 Series E 2011 funding history Accel EMC", "Varonis lifetime funding raised total before IPO 2014", "Varonis 2006 funding $10 million Pitango Accel Evergreen round", "Varonis raised $28 million before IPO funding Series B EMC 2009", "Varonis $2.5 million March 2011 round $1 million 2012 financing", "Varonis Systems 2015 10-K raised approximately 106.1 million IPO net proceeds SEC"]
+source_ids = ["s_s1", "s_accel", "s_globes2009", "s_dealroom", "s_snc", "s_10k2015", "s_10q26"]
+summary = "Reviewed the SEC prospectus and annual filings, investor portfolio, contemporaneous Israeli reporting, and historical financing databases. 2006 amount is unresolved; Series D and E, IPO, and convertible debt are recorded as distinct event types. No current company-announced lifetime total is asserted."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T04:30:00Z"
+next_review_on = "2027-01-22"
+queries = ["Varonis company investors Accel Pitango Evergreen EMC Varonis prospectus shares Series A preferred", "Varonis 2006 funding $10 million Pitango Accel Evergreen round", "Varonis Series funding 2009 Series D 2008 Series E 2011 funding history Accel EMC"]
+source_ids = ["s_accel", "s_s1", "s_globes2009", "s_dealroom", "s_snc"]
+summary = "Named historical investors include Accel, Pitango, Evergreen, and EMC. Public evidence is partial and does not reveal a full historical cap table."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-22T04:30:00Z"
+next_review_on = "2027-01-22"
+queries = ["Varonis Yaki Faitelson Ohad Korkus leadership executive management 2026 Varonis", "site:sec.gov/Archives/edgar/data/1361113 2026 DEF 14A Varonis beneficial ownership Faitelson April 2026"]
+source_ids = ["s_about", "s_proxy", "s_10k25"]
+summary = "Verified co-founders, selected current executives, former CTO tenure, and workforce distribution; complete technical leadership depth and attrition are not established."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "conflicting"
+checked_at = "2026-10-22T04:30:00Z"
+next_review_on = "2027-01-22"
+queries = ["site:varonis.com \"Proofpoint\" acquisition October 2026 Varonis", "site:ir.varonis.com Proofpoint acquire Varonis October 2026 merger agreement", "site:proofpoint.com Varonis acquisition 2026 $6.3 billion", "Varonis Proofpoint acquisition October 2026 price merger agreement SEC 14A", "Varonis 2026 proxy beneficial ownership Faitelson Vanguard BlackRock stockholders", "Varonis Systems 2026 proxy beneficial ownership table 5% shareholders", "site:sec.gov/Archives/edgar/data/1361113 2026 DEF 14A Varonis beneficial ownership Faitelson April 2026"]
+source_ids = ["s_merger_8k", "s_proofpoint", "s_proxy", "s_10q26"]
+summary = "Verified current public status, selected beneficial ownership, four recent acquisitions, and a pending Proofpoint merger. The transaction has not closed; one proxy ownership percentage has an internal share-count discrepancy."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-22T04:30:00Z"
+next_review_on = "2027-01-22"
+queries = ["site:ir.varonis.com 2026 second quarter results revenue ARR customers Varonis", "site:sec.gov/Archives/edgar/data/1361113 Varonis 2026 10-Q June 30 2026", "Varonis 2026 Q2 financial results SaaS ARR July 28 2026", "site:sec.gov Varonis 2025 10-K founders Israel executive leadership revenue 2025"]
+source_ids = ["s_10k25", "s_10q26", "s_q2release"]
+summary = "Recorded FY2025 and Q2 2026 reported revenue, SaaS ARR, renewal rate, liquidity resources, net loss, operating cash flow, RPO, and headcount, with metric definitions and periods."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-22T04:30:00Z"
+next_review_on = "2027-01-22"
+queries = ["site:varonis.com customers 8000 customer stories Varonis 2026", "Varonis GovRAMP authorization critical data AI official 2026", "site:varonis.com/blog Varonis GovRAMP Authorization 2026", "site:fedramp.gov Varonis Data Security Platform moderate authorization", "site:varonis.com \"Government Agency Uses Varonis\" CUI", "Varonis defense government contracts FedRAMP GovRAMP official"]
+source_ids = ["s_10k25", "s_q2release", "s_fedramp", "s_usgov_case"]
+summary = "Verified country footprint from the SEC filing and public-sector product evidence from the government marketplace and vendor materials. No customer count or government contract value is inferred."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-22T04:30:00Z"
+next_review_on = "2027-01-22"
+queries = ["Varonis patents inventor Yaki Faitelson Ohad Korkus Google Patents WIPO", "site:ipindia.gov.in \"Data Governance for Email Systems\" Varonis"]
+source_ids = ["s_about"]
+summary = "Company materials claim the founders hold numerous patents. An official patent-register entry was not fully accessible in this review, so no specific patent identifier or current status is asserted."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T04:30:00Z"
+next_review_on = "2027-01-22"
+queries = ["Microsoft Purview Data Security Posture Management official product page", "BigID Data Security Posture Management official product page", "Rubrik Security Cloud data security posture management official", "site:rubrik.com/products DSPM data security posture management Rubrik Security Cloud", "site:rubrik.com \"Data Security Posture Management\" Rubrik product"]
+source_ids = ["s_microsoft", "s_bigid", "s_rubrik", "s_10k25"]
+summary = "Compared official product descriptions for Microsoft Purview, BigID, and Rubrik with Varonis filings. This identifies overlap and positioning, not a verified product superiority or win/loss ranking."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-22T04:30:00Z"
+next_review_on = "2027-01-22"
+queries = ["Varonis defense government contracts FedRAMP GovRAMP official", "site:fedramp.gov Varonis Data Security Platform moderate authorization", "site:acquisition.gov Varonis DHS CDM CMaaS BPA", "site:varonis.com \"Government Agency Uses Varonis\" CUI"]
+source_ids = ["s_fedramp", "s_q2release", "s_usgov_case"]
+summary = "Public-sector sources support defensive data-security applicability for government and controlled unclassified information. No classified deployment, named defense contract, or mission-system claim was verified."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "SEC filings identify Varonis as a public NASDAQ issuer and state the Proofpoint agreement remains subject to closing conditions; the buyer announcement gives an expected future close."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10q26", "s_merger_8k", "s_proofpoint"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Company materials identify Israeli co-founders and a Herzliya office; the 2025 SEC filing reports 916 employees and contractors in Israel."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_about", "s_10k25"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2006.amount_observations.dealroom-2006.amount"
+support = "direct"
+summary = "Dealroom reports a $13.0 million May 2006 amount, while labeling it Series A; the observation is retained as a source report, not selected as the round amount."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_dealroom"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2006.amount_observations.snc-2006.amount"
+support = "direct"
+summary = "The legacy Startup Nation Finder page reports a $10.14 million May 2006 B Round amount; the observation is retained without resolving the conflict."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_snc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2006.participating_investors"
+support = "direct"
+summary = "Dealroom and legacy Startup Nation Finder both name Accel, Pitango, and Evergreen as participants in the 2006 financing."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_dealroom", "s_snc"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2004.lead_investors"
+support = "direct"
+summary = "Accel's company portfolio page identifies its initial Series A investment in Varonis in 2004."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_accel"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2008.amount"
+support = "direct"
+summary = "Globes contemporaneously reported an EMC-led $15 million round."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_globes2009"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2008.post_money_valuation"
+support = "direct"
+summary = "Globes reported the round at a $90 million post-money valuation."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_globes2009"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2008.lead_investors"
+support = "direct"
+summary = "Globes names EMC as the lead investor in the $15 million round."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_globes2009"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2008.participating_investors"
+support = "direct"
+summary = "Globes names Accel, Pitango, and Evergreen as participants in the EMC-led round."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_globes2009"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-e-secondary-2011.amount"
+support = "direct"
+summary = "The SEC prospectus states 217,752 shares at $11.48 each, totaling $2,500,003, used to purchase founders' common shares."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_s1"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-e-secondary-2011.participating_investors"
+support = "direct"
+summary = "The SEC prospectus identifies Accel and Pitango in the Series E secondary transaction."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_s1"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.ipo-2014.amount"
+support = "direct"
+summary = "The SEC 10-K states the March 2014 IPO yielded approximately $106.1 million net proceeds to the company."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10k2015"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.convertible-notes-2020.amount"
+support = "direct"
+summary = "The SEC 2026 10-Q identifies the 2020 convertible notes as $253 million aggregate principal."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10q26"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.convertible-notes-2024.amount"
+support = "direct"
+summary = "The SEC 2026 10-Q identifies the 2024 convertible notes as $460 million aggregate principal."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10q26"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.holdings.BlackRock@2026-04-06.ownership_percent"
+support = "direct"
+summary = "The 2026 proxy ownership table reports BlackRock at 9.1% as of 2026-04-06; its footnote share counts do not reconcile, and the table's reported figure is retained without recalculation."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_proxy"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.proofpoint-merger-2026.status"
+support = "direct"
+summary = "The merger agreement and buyer announcement establish an announced, pending transaction subject to closing conditions."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_merger_8k", "s_proofpoint"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.proofpoint-merger-2026.company_role"
+support = "direct"
+summary = "The merger agreement identifies Varonis as the target to be acquired by Proofpoint."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_merger_8k"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.proofpoint-merger-2026.amount"
+support = "direct"
+summary = "Proofpoint reports an approximately $6.3 billion all-cash transaction value."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_proofpoint"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.alltrue-acquisition-2026.status"
+support = "direct"
+summary = "The Q2 filing reports AllTrue acquisition completion on 2026-02-06."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10q26"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.alltrue-acquisition-2026.company_role"
+support = "direct"
+summary = "The SEC filing records Varonis as the acquiring company in the AllTrue transaction."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10q26"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.alltrue-acquisition-2026.amount"
+support = "direct"
+summary = "The SEC filing reports a $180.276 million transaction price including contingent and employee-service-related components."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10q26"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.slashnext-acquisition-2025.status"
+support = "direct"
+summary = "The 2025 SEC filing reports acquisition completion on 2025-08-28; company and media releases followed on September 2."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10k25", "s_slashnext"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.slashnext-acquisition-2025.company_role"
+support = "direct"
+summary = "The SEC filing and company announcement identify Varonis as the buyer of SlashNext."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10k25", "s_slashnext"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.slashnext-acquisition-2025.amount"
+support = "conflicting"
+summary = "The SEC acquisition-accounting components and SecurityWeek's up-to-$150 million report include different, unreconciled transaction scopes; no numeric deal amount is selected."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10k25", "s_securityweek"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.cyral-acquisition-2025.status"
+support = "direct"
+summary = "The 2025 Form 10-K reports Cyral acquisition completion on 2025-03-17."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10k25"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.cyral-acquisition-2025.company_role"
+support = "direct"
+summary = "The SEC filing identifies Varonis as the buyer in the Cyral acquisition."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10k25"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.cyral-acquisition-2025.amount"
+support = "direct"
+summary = "The SEC filing labels $25.486 million as the Cyral transaction price and separately reports conditional consideration and purchase price allocation adjustments."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10k25"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.FY2025 revenue@2025-12-31.numeric_value"
+support = "direct"
+summary = "The 2025 Form 10-K reports annual revenue of $623.532 million."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10k25"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Q2 2026 revenue@2026-06-30.numeric_value"
+support = "direct"
+summary = "The SEC Q2 filing and earnings release report quarterly revenue of $180.023 million."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10q26", "s_q2release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Q2 2026 SaaS ARR@2026-06-30.numeric_value"
+support = "direct"
+summary = "The Q2 filing reports SaaS ARR of $726.0 million at quarter end."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10q26", "s_q2release"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Q2 2026 SaaS ARR excluding conversions@2026-06-30.numeric_value"
+support = "direct"
+summary = "The Q2 filing reports $598.1 million of SaaS ARR excluding self-hosted conversions."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10q26"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Liquidity resources@2026-06-30.numeric_value"
+support = "direct"
+summary = "The company reports $911.5 million across cash, deposits, and short- and long-term marketable securities."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_q2release", "s_10q26"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.H1 2026 net loss@2026-06-30.numeric_value"
+support = "direct"
+summary = "The Q2 filing reports a GAAP net loss of $83.663 million for the six months ended 2026-06-30."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10q26"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.H1 2026 operating cash flow@2026-06-30.numeric_value"
+support = "direct"
+summary = "The company reports $80.1 million of cash generated from operations in the first half of 2026."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_q2release", "s_10q26"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.SaaS dollar renewal rate@2026-06-30.numeric_value"
+support = "direct"
+summary = "The Q2 filing reports a SaaS dollar renewal rate greater than 90 percent."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10q26"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Employees and contractors@2025-12-31.numeric_value"
+support = "direct"
+summary = "The 2025 Form 10-K reports 2,658 employees and contractors at year end."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10k25"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Remaining performance obligations@2026-06-30.numeric_value"
+support = "direct"
+summary = "The Q2 filing reports $1,084.5 million in remaining performance obligations."
+verified_at = "2026-10-22T04:30:00Z"
+source_ids = ["s_10q26"]

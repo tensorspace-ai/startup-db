@@ -1,12 +1,20 @@
 name = "Evinced"
-description = "Evinced provides AI-enabled digital-accessibility software that finds, explains, prioritizes, and helps prevent web and mobile application defects inside enterprise development, design, and testing workflows."
-detailed_description = """Evinced is a privately held digital-accessibility software company whose core product is an automated quality layer for web and mobile interfaces. Its platform combines accessibility scanning, flow analysis, annotated reporting, and remediation guidance to identify issues that can be difficult to find through static rule checks alone. Evinced describes its AI approach in terms of machine learning, computer vision, and natural-language processing, with product functions spanning detection, suggested fixes, and monitoring of user flows. The mobile offering addresses native applications as well as web views and provides platform-specific guidance for SwiftUI, Android, Kotlin, Java, and React Native. This is best understood as developer and QA infrastructure for accessibility rather than as a general-purpose foundation-model company.
+description = "Evinced builds enterprise accessibility automation for web and mobile software, combining visual UI analysis, CI integrations, issue tracking, and agentic tools that test and help fix accessibility defects during development."
+detailed_description = """Evinced, Inc. is a California-headquartered, Delaware-registered software startup founded in 2018. Its origin is unusually specific: co-founders Navin Thadani and Gal Moav had worked together on infrastructure software at Ravello Systems, and the company was created to address accessibility failures that enterprise engineering teams could not keep up with through manual audits and syntax-only scanners. The legal entity record lists Ican, Inc. as a previous legal name. Evinced now operates across the United States, Europe, and Israel, with an Israeli team led by co-founder Gal Moav. This is a US legal entity with a confirmed Israeli founding and engineering connection, not an Israeli-incorporated company on the evidence reviewed.
 
-The target customer is an enterprise engineering organization responsible for many frequently changing digital properties, where a periodic manual audit cannot keep pace with releases. Evinced integrates with established test and delivery environments, including Selenium, Cypress, WebdriverIO, XCUITest, Espresso, and Appium, and its reporting is designed to give engineers reproducible evidence, screenshots, standards references, and remediation context. That workflow orientation is commercially important: accessibility findings become more valuable when they are deduplicated, assigned, tracked, and prevented from recurring in CI/CD instead of being delivered as a disconnected compliance report. The product can therefore sit across development, quality assurance, design-system, and accessibility-program teams, although the breadth of stakeholders may also lengthen procurement and deployment decisions.
+The product is an enterprise B2B software layer for accessibility teams, designers, developers, and QA engineers. Its platform analyzes rendered interfaces as well as code: Evinced describes using computer vision, rule sets, AI, and algorithmic models to infer the purpose of interface elements, compare that inferred intent with implementation, and detect problems that a static markup checker may miss. It is designed to handle changing DOM states in interactive flows, group repeated findings around a shared component, assign stable issue identifiers, and track findings across scans. That workflow is aimed at large portfolios of frequently changed sites and apps, where a small number of flawed components can generate many repeated defects and where the cost of manually triaging every scan is material. The company says its engine detects an average of 19 times more critical accessibility issues than legacy tools; the public technology page does not give an independent benchmark design, dataset, false-positive rate, or sensitivity analysis, so that performance claim needs third-party validation.
 
-Market evidence is meaningful but should be read with discipline. Evinced announced a $55 million Series C in December 2024, bringing company-reported total funding to $112 million, with Insight Partners leading and existing investors including M12, BGV, Capital One Ventures, and Engineering Capital, plus Vertex Ventures. Its public materials and company profile position it as serving large enterprises, and the website displays recognizable enterprise customer logos; those signals support commercial traction but do not establish revenue, retention, contract size, or independently verified customer usage. The current product expansion into AI-assisted detection, remediation, monitoring, and MCP-server access suggests an effort to become a broader accessibility development platform. Competition remains substantial because mature vendors such as Deque, Level Access, and Siteimprove already have compliance relationships, while developer-tool vendors and open-source rules engines can be embedded at lower cost.
+Evinced connects its testing engine to existing engineering workflows rather than requiring a separate audit-only process. Company materials describe browser debugging and site scanning, design and component testing, web and native-mobile automation SDKs, production monitoring, and integrations for tools such as Selenium, Cypress, WebdriverIO, XCUITest, Espresso, and Appium. Its Web and Mobile MCP servers expose analysis and remediation guidance to AI coding environments. In July 2026, Evinced announced Autopilot, Harness, and Resolve: company-described agentic features that work with a customer's existing coding model, identify issues in CI or during interactive development, generate fixes, test those fixes, and leave a developer able to review proposed changes. The architecture can make Evinced a specialist verification layer around general coding agents. It also introduces a new trust boundary: buyers need to understand where source code and test data flow, how generated patches are constrained, and whether deterministic checks catch regressions that the same agent introduces.
 
-The national-security relevance is real but bounded. Accessibility and interface assurance matter for government services, public-sector software, and mission-support applications used by personnel with varied abilities; automated validation can reduce the chance that a release introduces a usability or policy defect. Evinced's public team page includes a director of US Federal Government sales, which is a channel signal, not proof of a government contract. The same technology could assist defense organizations validating internal portals, logistics applications, training systems, or command-support interfaces, but the public evidence does not show defense-specific deployments, authorizations, or mission-system integrations. The strongest thesis is therefore dual-use software assurance with public-sector adjacency, not defense technology in the narrow sense. Diligence should focus on independently verified ARR and retention, false-negative performance against expert audits, security and data-handling controls, procurement readiness, product differentiation after AI features become commonplace, and whether federal or regulated-enterprise sales can scale efficiently."""
+There is public evidence of enterprise use, but it is stronger on workflow fit than on financial quality. Capital One's engineering team described Evinced as part of its software delivery lifecycle, using browser plugins, automation SDKs, and monitoring of customer-facing assets. Evinced's own testimonial page quotes Capital One staff saying monthly testing fell from three or four weeks to a few hours, and quotes BECU on expanded coverage; these are customer statements curated by the vendor, not audited performance data. The company reported in its December 2024 financing announcement that it served large financial, media, SaaS, healthcare, and retail companies, but did not publish customer names for most of those categories, contract values, renewal rates, revenue, or concentration. A May 2025 CTech interview listed 130 employees and 15–20 open roles, which is a dated company-reported scale indicator rather than a current headcount. The announced funding record comprises a previously undisclosed $2.5 million seed raised in early 2019, a $17 million Series A in February 2021, a $38 million Series B in June 2022, and a $55 million Series C in December 2024. Evinced reported $112 million in total funding after the Series C; the rounded headline amounts sum to $112.5 million, and no reconciliation or round valuation was published in the primary announcements reviewed.
+
+The buyer case is supported by recurring accessibility work, legal and procurement obligations, and the difficulty of maintaining consistent usability across large digital estates. US federal agencies must make covered information and communication technology accessible under Section 508, giving Evinced's web and mobile testing capability a plausible public-sector use case. The company lists a director of US Federal Government sales, but that is a go-to-market signal, not evidence of a federal contract, agency deployment, security authorization, or defense customer. A bounded defense-adjacent use would be accessibility assurance for non-mission-critical personnel, training, benefits, logistics, or administrative applications used by a defense organization. The underlying tool does not provide combat, cyber-defense, or intelligence capability. Evinced's product is therefore a commercial accessibility platform with plausible public-sector and defense-support applicability; defense demand remains unverified.
+
+Competition is direct and active. Deque's axe DevTools pairs a widely adopted open-source engine with paid web, mobile, IDE, CI, guided-test, and AI features. Level Access sells a broad accessibility platform spanning automated testing, remediation, reporting, and expert services. Siteimprove combines automated accessibility findings with governance, monitoring, and manual testing. Customers can also assemble open-source checks, manual audits, internal accessibility specialists, and general QA platforms. Evinced's clearest differentiation is its emphasis on visual and flow-aware inference, mobile support, component-level clustering, persistent issue tracking, and recent agentic remediation within development workflows. These are workflow and coverage advantages rather than an exclusive category: competitors are adding AI, MCP integrations, and CI features, and a higher issue count has little commercial value if it increases false positives or misses usability problems that require human testing. Automated scanning should augment expert screen-reader, keyboard, and contextual evaluation, not be sold as proof of full conformance.
+
+The founders bring relevant enterprise infrastructure experience: Calcalist reports that Thadani was part of Ravello's founding team and later led product development at Oracle after Oracle acquired Ravello in 2016; Moav worked with him at Ravello and is now listed by Evinced as co-founder and GM Israel, while the company lists Ben Bracha as CTO. The founding team's technical and enterprise background fits a workflow-heavy product, but public evidence does not establish current executive depth, customer concentration, retention, or operating efficiency. A US patent application published as US20250028777A1 covers accessibility analysis of web content undergoing mutations and is listed as pending by Google Patents; one pending application is evidence of active IP work, not proof of an issued, broad, or defensible patent portfolio.
+
+The opportunity is credible but diligence-sensitive. The company has raised meaningful institutional capital, names global enterprise customers, and has expanded from scanning into continuous developer workflows and agentic repair. Its commercial value depends on improving release-cycle economics while maintaining trustworthy issue precision; financial evidence is incomplete because revenue, ARR, gross margin, burn, runway, renewals, and pricing are not publicly disclosed. Before treating the product claims as durable advantage, diligence should benchmark precision and recall against expert audits across dynamic web flows and native mobile assistive technology; reconcile paid-customer, renewal, expansion, and concentration data; compare repair acceptance and regression rates for Autopilot, Harness, and Resolve; review data retention and private-cloud controls for agent workflows; and establish whether federal procurement can proceed with the security controls and authorization evidence required by target agencies. The internal watch case rests on specialized workflow technology and enterprise adjacency, while the score is moderated by undisclosed economics, strong incumbents, automation limits, and no verified defense deployments."""
 logo = "https://res.cloudinary.com/evinced-inc/image/upload/v1749166475/Evinced_logo_dark_dce7354133_24e7ebbdc8.svg"
 website = "https://www.evinced.com"
 sector = "AI / Digital Accessibility / Developer Tools"
@@ -16,27 +24,812 @@ employees = "51-200"
 funding_stage = "Series C"
 entity_type = "startup"
 dual_use = true
-dual_use_description = "Evinced's accessibility and interface-assurance software has substantive commercial and public-sector applicability, including government digital services and potentially defense support systems, but the defense relevance is indirect and no public evidence here establishes defense contracts or deployments."
-key_technologies = ["AI-assisted accessibility defect detection", "Machine-learning and computer-vision UI analysis", "Web and mobile flow analysis", "Accessibility issue clustering and prioritization", "AI-assisted remediation guidance", "CI/CD and automated test-framework integrations", "MCP servers for accessibility analysis by AI assistants"]
-use_cases = ["Continuous accessibility testing for enterprise websites", "Native iOS and Android application testing", "WebView accessibility analysis in mobile apps", "CI/CD regression gates and release prevention", "Developer remediation with annotated screenshots and standards guidance", "Government digital-service accessibility and compliance workflows", "Accessibility assurance for defense support and mission-administration interfaces"]
+dual_use_description = "The commercial use is continuous accessibility testing and remediation for enterprise web and mobile products. Federal agencies have Section 508 obligations, and Evinced lists a US Federal Government sales role, making accessibility assurance for public services and potentially non-mission-critical defense support applications plausible. Public evidence reviewed does not establish defense customers, contracts, authorizations, or operational deployments; this is a software assurance adjacency rather than a defense capability."
+key_technologies = ["Computer-vision and AI analysis of rendered interfaces", "Rule-based inference of UI purpose and accessibility semantics", "Dynamic DOM and user-flow accessibility testing", "Component clustering and persistent issue tracking across scans", "Web and native iOS/Android automation SDKs", "CI/CD test integrations", "MCP servers for AI coding workflows", "Agentic accessibility remediation with post-fix verification"]
+use_cases = ["Continuous accessibility regression testing for enterprise websites", "Native iOS and Android app accessibility checks", "Testing dynamic, authenticated, and multi-step user flows", "Issue clustering and release-gate triage in developer CI pipelines", "AI-assisted repair with developer review and retesting", "Section 508-oriented testing for federal web and mobile services", "Potential accessibility assurance for non-mission-critical defense support applications"]
 investible = true
-investment_rationale = "Evinced is a credible strategic-priority signal for a software and dual-use thesis because it has reached Series C, raised substantial institutional capital, and productized a difficult enterprise workflow around accessibility detection and remediation. Its strongest value is commercial developer infrastructure, while the public-sector and defense case is an adjacency that requires validation through customer, security, procurement, and retention diligence. The company merits monitoring for platform adoption and federal-market traction; this flag is not an investment recommendation."
-strategic_value = "Evinced could serve as an assurance layer for software teams that need accessibility evidence continuously across web, mobile, and AI-assisted development. Its strategic value is highest where regulated or public-facing systems must remain usable and demonstrably compliant while changing rapidly. The company is relevant to resilience and inclusive access, but it is not itself a defense platform and should not be valued on an assumed government or military customer base."
-public_sources = ["https://www.evinced.com/", "https://www.evinced.com/technology", "https://www.evinced.com/ai/overview", "https://www.evinced.com/products/flow-analyzer-for-mobile", "https://developer.evinced.com/mcp-servers/intro/", "https://www.evinced.com/about", "https://www.prnewswire.com/news-releases/evinced-secures-55m-series-c-to-drive-global-lead-in-ai-driven-digital-accessibility-302329145.html", "https://www.linkedin.com/company/evinced"]
-potential_score = 75.0
-technology_score = 85.0
-market_score = 81.0
-team_score = 78.0
-dual_use_score = 58.0
-strategic_alignment_score = 60.0
+investment_rationale = "Evinced merits an internal watch flag for a technically specialized developer workflow with named enterprise usage, three institutional growth rounds, a confirmed Israeli engineering connection, and current expansion into agent-assisted repair. The 2024 company-reported funding total is $112 million. Commercial quality cannot be assessed from public sources because ARR, retention, margins, contract sizes, and customer concentration are undisclosed. The internal flag is not a return forecast; diligence should prioritize independent defect-quality benchmarks, renewal economics, product adoption across modules, code-data controls, and federal procurement readiness."
+strategic_value = "Evinced could help enterprises and public agencies keep frequently updated web and mobile services accessible by moving analysis into design, test, CI, and remediation workflows. Section 508 makes the capability relevant to federal ICT, while the product's private-cloud deployment option may fit some sensitive environments if validated through customer security review. Its potential defense value is limited to inclusive access and usability assurance for support software such as training, personnel, benefits, and logistics portals. No public source reviewed verifies a defense contract, an authorization such as FedRAMP, or use in a mission system."
+public_sources = [
+  {label = "Company legal entity and LEI record", url = "https://lei.bloomberg.com/leis/view/254900D9N9ULXRZ6FT29", description = "Legal name, previous name, Delaware entity identifier, creation date, status, and parent disclosure."},
+  {label = "Evinced leadership and team", url = "https://evinced.com/about", description = "Current founders, executive roles, Israeli GM, and federal sales role."},
+  {label = "Evinced product overview", url = "https://evinced.com/", description = "Current web and mobile accessibility workflow and integrations."},
+  {label = "Evinced technology overview", url = "https://evinced.com/technology", description = "Company-described computer-vision analysis, dynamic DOM testing, issue clustering, and issue tracking."},
+  {label = "Evinced MCP tools", url = "https://www.evinced.com/products/mcp-tools", description = "AI coding workflow integration and company-described deployment/security options."},
+  {label = "Evinced Web MCP documentation", url = "https://developer.evinced.com/mcp-servers/web-mcp-server/", description = "Web accessibility analysis and remediation guidance for coding agents."},
+  {label = "Evinced Series C announcement", url = "https://www.prnewswire.com/news-releases/evinced-secures-55m-series-c-to-drive-global-lead-in-ai-driven-digital-accessibility-302329145.html", description = "December 2024 Series C, named investors, company-reported total, and company-reported enterprise customer categories."},
+  {label = "Evinced Series B announcement", url = "https://www.prnewswire.com/news-releases/evinced-raises-38m-series-b-as-enterprises-shift-digital-accessibility-efforts-toward-software-model-301573307.html", description = "June 2022 Series B, participants, cumulative total, and company-reported customer categories."},
+  {label = "CTech Series A report", url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3891331,00.html", description = "Series A amount and investor roles, seed investor, founding, Tel Aviv headquarters, and founder background."},
+  {label = "VentureBeat funding and product profile", url = "https://venturebeat.com/technology/evinced-nabs-17-million-to-bring-automated-web-accessibility-tools-to-enterprise-developers", description = "Previously undisclosed 2019 seed amount, Series A reporting, early products, and an alternate Series A lead list."},
+  {label = "M12 Evinced investment announcement", url = "https://m12.vc/news/welcoming-evinced-to-the-m12-portfolio/", description = "M12's Series A co-lead role, other investors, and founders' enterprise infrastructure background."},
+  {label = "Insight Partners investment article", url = "https://www.insightpartners.com/ideas/behind-the-investment-evinced/", description = "Insight's Series B and Series C investment history and its company-reported customer expansion narrative."},
+  {label = "Capital One engineering article", url = "https://www.capitalone.com/tech/software-engineering/digital-accessibility-at-scale/?v=1784809090365", description = "Customer-side description of Evinced use across Capital One's software delivery lifecycle."},
+  {label = "Evinced customer testimonials", url = "https://evinced.com/testimonials", description = "Vendor-curated customer statements, including Capital One and BECU."},
+  {label = "CTech 2025 company interview", url = "https://www.calcalistech.com/ctechnews/article/ey4pruv8b", description = "Company-reported 130 employees, open roles, founding team, and reported total funding as of May 2025."},
+  {label = "Calcalist Series C report", url = "https://www.calcalist.co.il/calcalistech/article/hymumb00njl", description = "Hebrew report on the $55 million Series C, $112 million company total, Palo Alto headquarters, Tel Aviv team, and founders."},
+  {label = "Google Patents US20250028777A1", url = "https://patents.google.com/patent/US20250028777A1/en", description = "Published application for accessibility analysis of web content undergoing mutations, listed as pending."},
+  {label = "Deque axe DevTools", url = "https://www.deque.com/Axe/devtools/", description = "Official web and mobile accessibility testing, AI features, developer integrations, and manual-testing limitations."},
+  {label = "Level Access platform", url = "https://www.levelaccess.com/", description = "Official accessibility platform spanning automated testing, remediation, governance, and expert services."},
+  {label = "Siteimprove accessibility testing", url = "https://www.siteimprove.com/testing-services/", description = "Official integrated accessibility platform and manual testing services."},
+  {label = "Section508.gov", url = "https://www.section508.gov/", description = "Federal accessibility requirements and GSA support for accessible information and communication technology."},
+  {label = "Evinced agentic product launch", url = "https://www.prnewswire.com/news-releases/evinced-harnesses-agentic-coding-to-automatically-and-reliably-fix-accessibility-problems-302837307.html", description = "July 2026 launch announcement for Autopilot, Harness, and Resolve."},
+  {label = "BGV portfolio", url = "https://www.benhamouglobalventures.com/portfolio", description = "BGV's current Evinced portfolio listing and Israel classification."},
+  {label = "Capital One Ventures portfolio", url = "https://capitaloneventures.com/portfolio", description = "Capital One Ventures portfolio listing Evinced as accessibility automation software."},
+  {label = "Engineering Capital", url = "https://www.engineeringcapital.com/", description = "Official investor site describing its venture capital model and portfolio."},
+  {label = "Vertex Ventures Israel portfolio", url = "https://www.vertexventures.co.il/", description = "Official portfolio listing Evinced and describing the Israel-based venture fund."}
+]
+potential_score = 67.0
+technology_score = 80.0
+market_score = 73.0
+team_score = 72.0
+dual_use_score = 32.0
+strategic_alignment_score = 48.0
 stage = "mid"
-stage_rationale = "The December 2024 Series C and reported $112 million in cumulative funding place Evinced beyond early-stage validation, while its private-company status, ongoing product expansion, and need to prove repeatable enterprise and public-sector scale support a mid-stage rather than mature classification."
-competitors = ["Deque Systems / axe DevTools", "Level Access", "Siteimprove", "AudioEye", "Qualtrics Accessibility", "BrowserStack and enterprise QA substitutes"]
-competitive_edge = "Evinced differentiates around prevention-first, workflow-integrated accessibility analysis across web and mobile, combining flow-level findings, clustering, annotated evidence, and remediation context. Its advantage is strongest when large engineering teams need actionable continuous testing rather than a one-time audit, but established compliance vendors, open-source rules engines, and broader QA platforms can narrow the gap."
-risk_factors = ["Accessibility budgets can be narrower and more compliance-driven than broader application-security or QA budgets.", "False positives, missed defects, or weak recommendations would damage trust in a tool used for compliance-sensitive decisions.", "Automated checks cannot replace expert human assessment of usability, assistive-technology behavior, or inclusive design quality.", "Enterprise procurement can require security review, legal participation, accessibility expertise, and lengthy proof-of-value cycles.", "Large QA, developer-platform, and compliance vendors could bundle comparable accessibility features into existing contracts.", "The AI product narrative creates model-quality, explainability, privacy, and data-governance diligence questions.", "The defense thesis is indirect; public-sector demand, federal procurement readiness, and defense adoption remain unproven from the cited public evidence."]
+stage_rationale = "The latest announced round remains the December 2024 Series C, and the company continued product expansion with agentic coding tools announced in July 2026. The enterprise customer evidence and 130-person May 2025 company-reported workforce place Evinced beyond early validation, while private status, undisclosed economics, and unproven repeatable scale support a mid-stage classification rather than mature."
+competitors = ["Deque Systems / axe DevTools and axe-core", "Level Access", "Siteimprove", "Internal accessibility teams and manual audit providers", "Open-source accessibility engines embedded in general QA platforms"]
+competitive_edge = "The product combines rendered-interface and code analysis, dynamic flow checks, component-level clustering, persistent issue identity, and test-framework integrations across web and mobile. The 2026 Autopilot, Harness, and Resolve announcements extend this specialist test engine into AI coding workflows by detecting issues, suggesting or applying patches, and rechecking proposed changes. Evinced claims higher critical-issue coverage than legacy tools, but no independent benchmark or published false-positive rate was found. Deque, Level Access, and Siteimprove already combine automation with AI, governance, manual review, or broad enterprise distribution, so workflow adoption and trusted precision matter more than feature count."
+risk_factors = ["No public revenue, ARR, gross margin, burn, runway, customer concentration, renewal, or contract-size disclosure was found.", "The company's comparative issue-detection claims lack a public independent benchmark, precision/recall study, and false-positive rate.", "Automated scanning cannot establish full accessibility conformance; complex assistive-technology and contextual testing still needs human review.", "Deque, Level Access, Siteimprove, and open-source engines offer credible alternatives and are adding AI, workflow, and developer tooling.", "Agentic code changes create source-code privacy, access-control, patch review, regression, and auditability questions even when customers supply their own model.", "Enterprise security review and procurement can lengthen sales cycles; a private-cloud option and vendor-claimed SOC 2 Type II status do not establish FedRAMP or agency authorization.", "The federal sales role and Section 508 fit do not prove a government contract, defense deployment, or defense-specific product requirement.", "A single published patent application does not establish granted patent protection or a durable technical moat."]
 risk_level = "medium"
 signals = []
 priority_rank = 0
-priority_rationale = "Track as a mid-stage software company with strong accessibility automation capabilities, meaningful institutional funding, and a plausible public-sector software-assurance adjacency. The moderate dual-use and strategic-alignment scores reflect that its core market is commercial accessibility engineering and that defense relevance remains unverified."
+priority_rationale = "Track as a mid-stage enterprise software company with a distinctive accessibility-testing workflow and a plausible public-sector adjacency. Keep the internal priority moderate because independent accuracy, recurring-revenue quality, procurement readiness, and any defense deployment remain unverified."
 crawled_at = "2026-02-28T18:30:00Z"
-updated_at = "2026-07-31T19:24:01Z"
+updated_at = "2026-10-22T02:19:03Z"
+
+[intelligence]
+schema_version = 2
+
+[intelligence.company]
+company_id = "il-evinced"
+legal_name = "Evinced, Inc."
+aliases = ["Evinced", "Ican, Inc."]
+operating_status = "active"
+business_model = "Enterprise B2B accessibility software licensing and subscription for product engineering, QA, and accessibility teams. Historical reporting describes a SaaS subscription and the current product offers company-hosted or private-cloud deployment; current contract pricing and services revenue mix are not public."
+products = ["Web accessibility scanning and developer tools", "Web and native mobile automation SDKs", "User-flow testing and production issue monitoring", "Web and Mobile MCP servers for AI coding tools", "Autopilot, Harness, and Resolve agentic accessibility workflows"]
+locations = ["Palo Alto, California, United States (operational headquarters reported by company and media)", "Los Altos Hills, California, United States (headquarters address in LEI record)", "Tel Aviv, Israel (office and Israeli team)"]
+source_ids = ["lei_bloomberg", "company_about", "company_homepage", "press_c_2024", "calcalist_c_2024", "ctech_series_a", "press_agentic_2026"]
+country_of_incorporation = "United States (Delaware)"
+founded_on = "2018-08-15"
+registry_identifiers = [{jurisdiction = "US-DE", scheme = "Delaware Division of Corporations entity ID", identifier = "7014902", source_ids = ["lei_bloomberg"]}]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders", "israeli_rd"]
+summary = "Evinced is legally registered in Delaware and operates from California, but it was founded by Navin Thadani and Gal Moav, had its early headquarters in Tel Aviv, and retains an Israel team led by co-founder Gal Moav as GM Israel. Company and investor materials continue to list an Israeli office and classify Evinced as an Israel portfolio company."
+as_of = "2026-10-22"
+source_ids = ["company_about", "ctech_series_a", "calcalist_c_2024", "press_c_2024", "bgv_portfolio"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Public announcements support four distinct rounds: a $2.5 million seed raised in early 2019 and disclosed in 2021; a $17 million Series A announced February 2021; a $38 million Series B announced June 2022; and a $55 million Series C announced December 2024. Evinced reported $112 million of total funding after the Series C. The headline round amounts sum to $112.5 million, so the company-reported cumulative figure is retained as reported rather than recomputed. No debt, grant, secondary, extension, or round valuation was confirmed in the primary sources reviewed."
+reported_total_raised = 112000000
+reported_total_currency = "USD"
+total_source_ids = ["press_c_2024", "calcalist_c_2024"]
+total_as_of = "2024-12-12"
+total_scope = "Company-announced total funding to date; use the reported rounded figure and do not recompute from round headlines."
+history_status = "partial"
+coverage_through = "2026-10-22"
+
+[[intelligence.funding.rounds]]
+id = "seed-2019"
+round_type = "Seed"
+instrument = "unknown"
+status = "closed"
+announced_on = "2021-02-03"
+amount_status = "reported"
+amount = 2500000
+amount_scope = "round"
+currency = "USD"
+lead_investors = []
+participating_investors = ["Engineering Capital"]
+source_ids = ["seed_vb", "ctech_series_a"]
+notes = "Reported as a previously undisclosed $2.5 million seed raised in early 2019 and disclosed alongside the Series A. Exact closing date, security terms, lead, and full participant list were not published. CTech identifies Engineering Capital as the seed investor."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2021"
+round_type = "Series A"
+instrument = "unknown"
+status = "closed"
+announced_on = "2021-02-03"
+amount_status = "reported"
+amount = 17000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["M12", "Benhamou Global Ventures"]
+participating_investors = ["Capital One Ventures", "Engineering Capital"]
+source_ids = ["ctech_series_a", "seed_vb", "m12_series_a"]
+notes = "CTech reports M12 and BGV as joint leads, with Capital One Ventures and seed investor Engineering Capital participating. M12 confirms its own co-lead role. VentureBeat describes Capital One Ventures as an additional co-lead, so the exact lead list is conflicting; retain the more specific CTech lead split and preserve the disagreement."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2022"
+round_type = "Series B"
+instrument = "unknown"
+status = "closed"
+announced_on = "2022-06-23"
+amount_status = "reported"
+amount = 38000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Insight Partners"]
+participating_investors = ["M12", "Benhamou Global Ventures", "Capital One Ventures", "Engineering Capital"]
+source_ids = ["press_b_2022", "insight_followon"]
+notes = "Company announcement states the $38 million round brought total raised to $57 million. No valuation or instrument terms were disclosed."
+
+[[intelligence.funding.rounds]]
+id = "series-c-2024"
+round_type = "Series C"
+instrument = "unknown"
+status = "closed"
+announced_on = "2024-12-12"
+amount_status = "reported"
+amount = 55000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Insight Partners"]
+participating_investors = ["M12", "Benhamou Global Ventures", "Capital One Ventures", "Engineering Capital", "Vertex Ventures"]
+source_ids = ["press_c_2024", "calcalist_c_2024", "insight_followon"]
+notes = "Company and local press sources report Insight Partners leading, existing investors M12, BGV, Capital One Ventures, and Engineering Capital participating, and new investor Vertex Ventures joining. Calcalist names the new participant Vertex Ventures Israel. No valuation or instrument terms were disclosed."
+
+[[intelligence.people]]
+name = "Navin R. Thadani"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Part of the founding team at Ravello Systems; after Oracle acquired Ravello in 2016, Calcalist reported that he served as Oracle VP of Product Development."
+source_ids = ["company_about", "ctech_series_a", "calcalist_c_2024"]
+
+[[intelligence.people]]
+name = "Gal Moav"
+role = "Co-founder and GM Israel"
+is_founder = true
+current = true
+background = "Worked with Thadani at Ravello Systems and co-founded Evinced. Earlier reporting described him as CTO; the current company team page lists him as GM Israel."
+source_ids = ["company_about", "ctech_series_a", "calcalist_c_2024"]
+
+[[intelligence.people]]
+name = "Ben Bracha"
+role = "CTO"
+is_founder = false
+current = true
+source_ids = ["company_about"]
+
+[[intelligence.people]]
+name = "Amandeep Dhillon"
+role = "Director of Sales, US Federal Government"
+is_founder = false
+current = true
+source_ids = ["company_about"]
+notes = "Company team listing is a federal go-to-market signal; no government award or deployment is inferred."
+
+[[intelligence.investors]]
+name = "Insight Partners"
+investor_type = "vc"
+website = "https://www.insightpartners.com"
+round_ids = ["series-b-2022", "series-c-2024"]
+relationship = "current"
+source_ids = ["press_b_2022", "press_c_2024", "insight_followon"]
+
+[[intelligence.investors]]
+name = "M12"
+investor_type = "corporate"
+website = "https://m12.vc"
+round_ids = ["series-a-2021", "series-b-2022", "series-c-2024"]
+relationship = "current"
+source_ids = ["m12_series_a", "press_b_2022", "press_c_2024"]
+notes = "Microsoft's venture fund."
+
+[[intelligence.investors]]
+name = "Benhamou Global Ventures"
+investor_type = "vc"
+website = "https://www.benhamouglobalventures.com"
+round_ids = ["series-a-2021", "series-b-2022", "series-c-2024"]
+relationship = "current"
+source_ids = ["ctech_series_a", "press_b_2022", "press_c_2024", "bgv_portfolio"]
+
+[[intelligence.investors]]
+name = "Capital One Ventures"
+investor_type = "corporate"
+website = "https://capitaloneventures.com"
+round_ids = ["series-a-2021", "series-b-2022", "series-c-2024"]
+relationship = "current"
+source_ids = ["ctech_series_a", "m12_series_a", "press_b_2022", "press_c_2024", "capitalone_ventures"]
+
+[[intelligence.investors]]
+name = "Engineering Capital"
+investor_type = "vc"
+website = "https://www.engineeringcapital.com"
+round_ids = ["seed-2019", "series-a-2021", "series-b-2022", "series-c-2024"]
+relationship = "current"
+source_ids = ["ctech_series_a", "press_b_2022", "press_c_2024", "engineering_capital"]
+
+[[intelligence.investors]]
+name = "Vertex Ventures"
+investor_type = "vc"
+website = "https://www.vertexventures.co.il"
+round_ids = ["series-c-2024"]
+relationship = "current"
+source_ids = ["press_c_2024", "calcalist_c_2024", "vertex_israel"]
+notes = "The company release uses Vertex Ventures; Calcalist identifies the new investor as Vertex Ventures Israel."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "The LEI record marks Evinced, Inc. active and does not provide direct-parent information. No acquisition, IPO, or public shareholder-percentage disclosure was found in the reviewed sources. Investors named in funding announcements are not a cap table; beneficial ownership and dilution remain undisclosed."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["lei_bloomberg", "press_c_2024", "capitalone_ventures"]
+deals = []
+holdings = []
+
+[[intelligence.financials]]
+name = "Employees"
+value = "130 employees reported by Evinced's VP of HR in a May 2025 interview"
+as_of = "2025-05-20"
+basis = "reported"
+metric = "employees"
+numeric_value = 130
+value_relation = "exact"
+unit = "people"
+source_ids = ["ctech_headcount"]
+notes = "A dated company-reported snapshot, not a verified 2026 headcount."
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Capital One's engineering team described using Evinced across its software delivery lifecycle, including browser plugins before code commits, automation SDKs in functional tests, and monitoring of customer-facing assets. This is customer-side evidence of operational use; contract value and current renewal status were not disclosed."
+date = "2023-05-17"
+source_ids = ["capitalone_case"]
+
+[[intelligence.traction]]
+kind = "hiring"
+description = "Evinced VP of HR reported 130 employees and 15–20 open positions; the figure is a company-reported May 2025 snapshot."
+date = "2025-05-20"
+source_ids = ["ctech_headcount"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Evinced announced Autopilot, Harness, and Resolve for AI-assisted accessibility detection and repair inside CI and coding-agent workflows. The launch announcement describes product capabilities; it does not establish customer adoption or validated repair performance."
+date = "2026-07-29"
+source_ids = ["press_agentic_2026"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "US20250028777A1, Accessibility Analysis of Web Content Undergoing Mutations, was published on 2025-01-23 and is listed by Google Patents as pending with Evinced Inc. as current assignee. It concerns revalidation of accessibility as web content changes; a pending application is not a granted patent."
+date = "2025-01-23"
+source_ids = ["patent_google"]
+notes = "Google Patents warns that legal status is an assumption. One publication was verified; a complete patent-family, grant, and freedom-to-operate review was not performed."
+
+[[intelligence.comparables]]
+name = "Deque Systems / axe DevTools"
+website = "https://www.deque.com/Axe/devtools/"
+rationale = "Direct competitor in automated web and mobile accessibility testing with browser, CI, developer, mobile, guided-test, and AI capabilities."
+differentiation = "Deque's axe-core ecosystem has broad developer adoption and its commercial tools pair automated coverage with guided/manual tests. Evinced emphasizes visual intent inference, flow-aware checks, component clustering, and persistent issue tracking. Both need human testing for issues automation cannot determine."
+source_ids = ["deque_axe", "company_technology"]
+
+[[intelligence.comparables]]
+name = "Level Access"
+website = "https://www.levelaccess.com/"
+rationale = "Enterprise digital-accessibility platform spanning web, mobile, software, documents, testing, remediation, governance, and services."
+differentiation = "Level Access has a broader compliance and expert-services proposition; Evinced focuses more narrowly on developer workflow automation and its own visual/flow-analysis engine."
+source_ids = ["level_access", "company_homepage"]
+
+[[intelligence.comparables]]
+name = "Siteimprove"
+website = "https://www.siteimprove.com/"
+rationale = "Accessibility testing and monitoring provider with automated findings, platform reporting, and expert manual testing."
+differentiation = "Siteimprove integrates accessibility with a broader digital governance platform and human testing; Evinced differentiates on web/mobile development integrations and issue-level remediation automation."
+source_ids = ["siteimprove_testing", "company_technology"]
+
+[intelligence.research]
+researched_at = "2026-10-22T02:19:03Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Evinced December 2024 Series C $55 million company newsroom $112 million",
+  "site:evinced.com/news Evinced funding Series C 55M December 2024",
+  "Evinced company founders CEO headquarters founded Israeli founders",
+  "Evinced funding raised Series A Series B investors",
+  "Evinced 2019 seed $2.5 million funding Engineering Capital",
+  "Evinced $38 million Series B June 2022 company announcement investors",
+  "Evinced patents patent Evinced Inc accessibility USPTO",
+  "Evinced annual revenue ARR revenue customers employee headcount 2025",
+  "site:engineeringcapital.com Evinced seed financing 2019",
+  "site:evinced.com \"Evinced MCP\" accessibility AI products product",
+  "site:evinced.com \"customer\" \"case study\"",
+  "Evinced customer case study accessibility Evinced Capital One official customer",
+  "Evinced customer partnership production accessibility case study official company 2024",
+  "Evinced federal government contract USASpending contract",
+  "site:evinced.com/news Evinced 2026 Launch Harness Resolve Evinced 500",
+  "site:insightpartners.com Evinced investment portfolio",
+  "site:m12.vc Evinced portfolio",
+  "site:bgv.vc Evinced portfolio",
+  "Evinced Inc ownership parent company acquisition public company",
+  "Deque axe DevTools accessibility testing official product page",
+  "Level Access accessibility testing platform official digital accessibility testing product",
+  "Siteimprove accessibility checker official product accessibility testing",
+  "Section 508 official federal agencies accessibility requirements software",
+  "Evinced August 2026 launches Harness Resolve accessibility agents",
+  "Evinced 500 May 21 2026 official launch Evinced",
+  "Evinced 2026 agentic coding accessibility auto fix Evinced official",
+  "Evinced defense contractor government contract accessibility software",
+  "Evinced Inc Form D SEC filing",
+  "Evinced patent application USPTO Google Patents Evinced Ltd assignee",
+  "Evinced Inc public company acquisition acquired parent company 2026",
+  "Siteimprove Accessibility product automated accessibility testing official",
+  "Evinced funding raised seed Series A Series B Series C investors valuation acquired founder revenue customers patents",
+  "\"Ican, Inc.\" Evinced accessibility startup funding acquired",
+  "\"Ican, Inc.\" Evinced funding raised seed Series A Series B Series C investors valuation acquired founder revenue customers patents",
+  "Evinced founder Navin Thadani Gal Moav Ravello Oracle 2016",
+  "Evinced revenue ARR profitability burn runway 2026",
+  "Evinced Benhamou Global Ventures portfolio official",
+  "Evinced Capital One Ventures portfolio official",
+  "Evinced Engineering Capital portfolio official",
+  "Evinced Vertex Ventures portfolio official",
+  "Engineering Capital Evinced investment official portfolio Engineering Capital website",
+  "Vertex Ventures Israel Evinced investment official portfolio",
+  "BGV Evinced portfolio official website investors",
+  "site:evinced.com \"Ican, Inc.\""
+]
+gaps = [
+  "funding: the 2019 seed lead, complete participant list, closing date, instrument terms, and any grants, debt, or secondary sales were not established; the company-reported $112 million cumulative total does not reconcile exactly with $112.5 million in rounded round headlines.",
+  "investors: public announcements name round participants but do not disclose a complete investor list, private cap table, ownership percentages, or dilution; the Series A lead list has conflicting reporting.",
+  "team: current company biographies are sparse; independent verification of current executive responsibilities, board composition, attrition, and detailed leadership background is incomplete.",
+  "financials: no public revenue, ARR, margin, profitability, cash, burn, runway, contract-size, or audited-account disclosure was found; the 130-employee figure is a dated company-reported snapshot.",
+  "traction: named customer evidence confirms Capital One workflow use, but paid contract status, renewal, retention, ACV, current customer counts, customer concentration, and deployment depth beyond published examples are not disclosed.",
+  "intellectual_property: only one pending US patent application was confirmed; full patent families, grant status in each jurisdiction, claim scope, trade secrets, and freedom to operate remain unreviewed.",
+  "competition: no independent, apples-to-apples accuracy, false-positive, mobile coverage, pricing, or workflow benchmark was found for Deque, Level Access, Siteimprove, and Evinced.",
+  "ownership: beneficial ownership, shareholder percentages, and parent-company information are unavailable; the LEI record does not provide direct-parent information, and no ownership deal was identified.",
+  "identity: public sources report Palo Alto as the operating headquarters, while the current LEI record lists a headquarters address in Los Altos Hills; the exact current office municipality should be confirmed.",
+  "dual_use: federal accessibility applicability and a federal sales role are documented, but no public defense contract, agency deployment, FedRAMP authorization, CMMC status, ATO, or mission-system use was found."
+]
+conflicts = [
+  "Series A lead attribution differs: CTech reports M12 and BGV as joint leads, M12 confirms its own co-lead role and lists BGV among participants, while VentureBeat also calls Capital One Ventures a co-lead. The structured lead field uses the CTech account and the discrepancy is retained in the round notes; Capital One's lead status remains unresolved.",
+  "Evinced reported $112 million total funding after its $55 million Series C, while the four disclosed headline round amounts ($2.5 million, $17 million, $38 million, and $55 million) sum arithmetically to $112.5 million. The difference is consistent with rounding but is not reconciled by the company; the reported total is preserved and not recomputed.",
+  "Operational headquarters reporting says Palo Alto, while the August 2026 LEI record lists a headquarters address in Los Altos Hills. Both are in California; the top-level operational location remains Palo Alto and both reports are retained in company.locations."
+]
+diligence_questions = [
+  "What are current ARR, gross and net retention, gross margin, ACV, services mix, customer concentration, CAC payback, and the trend in renewal and expansion rates?",
+  "On a blinded benchmark of dynamic web flows and native mobile apps, what are precision, recall, false-positive and false-negative rates versus expert manual audits and Deque axe, including screen-reader and keyboard testing?",
+  "For Autopilot, Harness, and Resolve, how often are proposed patches accepted, how often do they introduce regressions, and what evidence shows repaired issues stay fixed after deployment?",
+  "What source code, screen content, and test telemetry leave a customer's environment during agentic workflows; what is retained; and what contractual, private-cloud, SOC 2, FedRAMP, or agency authorization evidence is available?",
+  "Which federal contracts or procurement vehicles are active, and has Evinced obtained any agency authorization or delivered Section 508 testing in production? The federal sales role alone does not answer this.",
+  "What is the complete issued and pending patent family, the claim coverage relevant to visual and dynamic-flow analysis, and how does Evinced defend its differentiation as Deque and platform vendors add AI and agent integrations?"
+]
+
+[[intelligence.research.sources]]
+id = "lei_bloomberg"
+url = "https://lei.bloomberg.com/leis/view/254900D9N9ULXRZ6FT29"
+title = "EVINCED, INC. - LEI: 254900D9N9ULXRZ6FT29"
+publisher = "Bloomberg LEI"
+kind = "filing"
+accessed_at = "2026-10-22T02:15:34Z"
+published_on = "2026-08-12"
+claims = ["Legal name EVINCED, INC.; prior legal name Ican, Inc.", "Delaware legal jurisdiction, Division of Corporations entity ID 7014902, entity creation date 2018-08-15, entity status active.", "Headquarters address is listed in Los Altos Hills, California; direct parent information is not provided."]
+
+[[intelligence.research.sources]]
+id = "company_about"
+url = "https://evinced.com/about"
+title = "About Evinced"
+publisher = "Evinced"
+kind = "company"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["Current company team lists Gal Moav as Co-Founder and GM Israel and Navin R. Thadani as Co-Founder and CEO.", "Current team listing identifies Ben Bracha as CTO and Amandeep Dhillon as Director of Sales, US Federal Government."]
+
+[[intelligence.research.sources]]
+id = "company_homepage"
+url = "https://evinced.com/"
+title = "Evinced"
+publisher = "Evinced"
+kind = "company"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["Company markets accessibility detection, issue clustering, prioritization, tracking, and prevention for web and mobile products.", "Company lists integrations with web and mobile automated testing frameworks."]
+
+[[intelligence.research.sources]]
+id = "company_technology"
+url = "https://evinced.com/technology"
+title = "Our Technology"
+publisher = "Evinced"
+kind = "company"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["Company describes rendered-interface analysis using rule sets, computer vision, AI, and algorithms to infer UI intent and compare against implementation.", "Company describes handling DOM mutations, clustering related component issues, and tracking unique issues across scans.", "Company claims an average of 19 times more critical accessibility issues than legacy solutions; independent benchmark design is not presented on the page."]
+
+[[intelligence.research.sources]]
+id = "company_mcp_tools"
+url = "https://www.evinced.com/products/mcp-tools"
+title = "MCP Tools"
+publisher = "Evinced"
+kind = "company"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["MCP tools expose Evinced accessibility guidance and browser testing to AI coding systems.", "Company says MCP Tools are SOC 2 Type II compliant and can be deployed in its secure cloud or a customer's private cloud."]
+
+[[intelligence.research.sources]]
+id = "company_mcp_docs"
+url = "https://developer.evinced.com/mcp-servers/web-mcp-server/"
+title = "Web MCP Server"
+publisher = "Evinced Developer Documentation"
+kind = "company"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["Web MCP server analyzes WCAG issues and supplies remediation guidance to AI agents and developers.", "Documentation describes CI and coding workflow integration, authenticated-page support, issue prioritization, and validation after remediation."]
+
+[[intelligence.research.sources]]
+id = "press_c_2024"
+url = "https://www.prnewswire.com/news-releases/evinced-secures-55m-series-c-to-drive-global-lead-in-ai-driven-digital-accessibility-302329145.html"
+title = "Evinced Secures $55M Series C to Drive Global Lead in AI-Driven Digital Accessibility"
+publisher = "PR Newswire (news provided by Evinced)"
+kind = "company"
+accessed_at = "2026-10-22T02:15:34Z"
+published_on = "2024-12-12"
+claims = ["Evinced announced a $55 million Series C on December 12, 2024, led by Insight Partners, with M12, BGV, Capital One Ventures, Engineering Capital, and Vertex Ventures participating.", "Evinced reported $112 million total funding to date.", "Company said it was headquartered in California with offices across the United States, Europe, and Israel, and reported large-enterprise customer categories."]
+
+[[intelligence.research.sources]]
+id = "press_b_2022"
+url = "https://www.prnewswire.com/news-releases/evinced-raises-38m-series-b-as-enterprises-shift-digital-accessibility-efforts-toward-software-model-301573307.html"
+title = "Evinced Raises $38M Series B as Enterprises Shift Digital Accessibility Efforts Toward Software Model"
+publisher = "PR Newswire (news provided by Evinced / BAM Communications)"
+kind = "company"
+accessed_at = "2026-10-22T02:15:34Z"
+published_on = "2022-06-23"
+claims = ["Evinced announced a $38 million Series B led by Insight Partners, with M12, BGV, Capital One Ventures, and Engineering Capital participating.", "Company announcement said total raised reached $57 million.", "Company described Fortune 500 adoption and software products for web and mobile accessibility."]
+
+[[intelligence.research.sources]]
+id = "ctech_series_a"
+url = "https://www.calcalistech.com/ctech/articles/0,7340,L-3891331,00.html"
+title = "Israel’s Evinced raises $17 million in series A round led by M12 and BGV"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-22T02:15:34Z"
+published_on = "2021-02-03"
+claims = ["Evinced announced a $17 million Series A jointly led by M12 and BGV, with Capital One Ventures and Engineering Capital participating.", "The announcement reported $19.5 million total raised after the Series A.", "Article identifies Navin Thadani and Gal Moav as founders, reports the company then headquartered in Tel Aviv, and describes their Ravello Systems work and Thadani's Oracle role."]
+
+[[intelligence.research.sources]]
+id = "seed_vb"
+url = "https://venturebeat.com/technology/evinced-nabs-17-million-to-bring-automated-web-accessibility-tools-to-enterprise-developers"
+title = "Evinced nabs $17 million to bring automated web accessibility tools to enterprise developers"
+publisher = "VentureBeat"
+kind = "media"
+accessed_at = "2026-10-22T02:15:34Z"
+published_on = "2021-02-03"
+claims = ["Reports a previously undisclosed $2.5 million seed raised in early 2019.", "Reports the $17 million Series A and describes early SaaS, web, mobile, CI, and testing products.", "Describes Evinced's early visual UI analysis approach and names M12, BGV, and Capital One Ventures as co-leads, creating a lead-attribution discrepancy with CTech."]
+
+[[intelligence.research.sources]]
+id = "m12_series_a"
+url = "https://m12.vc/news/welcoming-evinced-to-the-m12-portfolio/"
+title = "Welcoming Evinced to the M12 portfolio"
+publisher = "M12"
+kind = "investor"
+accessed_at = "2026-10-22T02:15:34Z"
+published_on = "2021-02-03"
+claims = ["M12 says it co-led the Series A alongside BGV, Capital One Ventures, and Engineering Capital participating.", "M12 describes founders Navin Thadani and Gal Moav as experienced in enterprise infrastructure and virtualization software."]
+
+[[intelligence.research.sources]]
+id = "insight_followon"
+url = "https://www.insightpartners.com/ideas/behind-the-investment-evinced/"
+title = "Behind the Investment: Evinced"
+publisher = "Insight Partners"
+kind = "investor"
+accessed_at = "2026-10-22T02:15:34Z"
+published_on = "2025-01-21"
+claims = ["Insight says it led Evinced's Series B in 2022 and participated in a $55 million Series C.", "Insight describes enterprise customer expansion and cites Capital One and Verizon as adopters; this is investor commentary, not audited operating data."]
+
+[[intelligence.research.sources]]
+id = "capitalone_case"
+url = "https://www.capitalone.com/tech/software-engineering/digital-accessibility-at-scale/?v=1784809090365"
+title = "Getting technical with digital accessibility at Capital One"
+publisher = "Capital One"
+kind = "customer"
+accessed_at = "2026-10-22T02:15:34Z"
+published_on = "2023-05-17"
+claims = ["Capital One describes using Evinced browser plugins, automation SDKs, and monitoring of customer-facing assets across its software delivery lifecycle.", "The customer article describes the workflow and tools but does not disclose contract value or renewal status."]
+
+[[intelligence.research.sources]]
+id = "evinced_testimonials"
+url = "https://evinced.com/testimonials"
+title = "Testimonials"
+publisher = "Evinced"
+kind = "company"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["Vendor-curated testimonials quote Capital One staff on reducing monthly testing time from weeks to hours and BECU staff on expanded coverage.", "Testimonials are customer statements selected and published by Evinced, not audited performance measures."]
+
+[[intelligence.research.sources]]
+id = "ctech_headcount"
+url = "https://www.calcalistech.com/ctechnews/article/ey4pruv8b"
+title = "For Evinced, the AI revolution ‘is cultural, strategic, and deeply human’"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-22T02:15:34Z"
+published_on = "2025-05-20"
+claims = ["Interview with Evinced VP of HR Maya Blanc listed 130 employees and 15–20 open positions in May 2025.", "Company-provided interview profile lists founders, Series C stage, and $112 million total funding."]
+
+[[intelligence.research.sources]]
+id = "calcalist_c_2024"
+url = "https://www.calcalist.co.il/calcalistech/article/hymumb00njl"
+title = "חברת Evinced גייסה 55 מיליון דולר להגברת הנגישות הדיגיטלית"
+publisher = "Calcalist"
+kind = "media"
+accessed_at = "2026-10-22T02:15:34Z"
+published_on = "2024-12-12"
+claims = ["Reports a $55 million Series C led by Insight Partners, existing investor participants, Vertex Ventures Israel joining, and $112 million total funding.", "Reports 2018 founding, Palo Alto headquarters, Tel Aviv office, more than 100 employees, and 45 employees in Israel at the time."]
+
+[[intelligence.research.sources]]
+id = "patent_google"
+url = "https://patents.google.com/patent/US20250028777A1/en"
+title = "US20250028777A1 - Accessibility Analysis of Web Content Undergoing Mutations"
+publisher = "Google Patents"
+kind = "filing"
+accessed_at = "2026-10-22T02:15:34Z"
+published_on = "2025-01-23"
+claims = ["Publication US20250028777A1 concerns accessibility analysis of web content undergoing mutations, with a 2024-07-15 US filing date.", "Google Patents lists Evinced Inc. as current assignee and the application as pending; its legal-status notice cautions that status is not a legal conclusion."]
+
+[[intelligence.research.sources]]
+id = "deque_axe"
+url = "https://www.deque.com/Axe/devtools/"
+title = "Axe DevTools: Automate accessibility testing"
+publisher = "Deque Systems"
+kind = "other"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["Deque offers web and mobile accessibility automation, AI features, developer and CI integrations, and issue reporting.", "Deque states automated testing complements manual screen-reader testing and argues higher issue counts can reflect false positives; this is competitor positioning, not evidence about Evinced's actual accuracy."]
+
+[[intelligence.research.sources]]
+id = "level_access"
+url = "https://www.levelaccess.com/"
+title = "End-to-End Digital Accessibility"
+publisher = "Level Access"
+kind = "other"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["Level Access describes an accessibility platform spanning web, mobile, software, IoT, and documents, including testing, remediation, governance, reporting, and expert services."]
+
+[[intelligence.research.sources]]
+id = "siteimprove_testing"
+url = "https://www.siteimprove.com/testing-services/"
+title = "Accessibility Testing Services"
+publisher = "Siteimprove"
+kind = "other"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["Siteimprove integrates automated accessibility data with manual testing, expert evaluation, platform reporting, and remediation guidance.", "Siteimprove says automated scanning alone does not capture all WCAG issues; this is vendor guidance and positioning."]
+
+[[intelligence.research.sources]]
+id = "section508"
+url = "https://www.section508.gov/"
+title = "Section 508 of the Rehabilitation Act"
+publisher = "U.S. General Services Administration / Section508.gov"
+kind = "government"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["Federal agencies must ensure covered information and communication technology is accessible and usable by people with disabilities.", "GSA Office of Government-wide Policy provides technical assistance on agency compliance."]
+
+[[intelligence.research.sources]]
+id = "press_agentic_2026"
+url = "https://www.prnewswire.com/news-releases/evinced-harnesses-agentic-coding-to-automatically-and-reliably-fix-accessibility-problems-302837307.html"
+title = "Evinced Harnesses Agentic Coding to Automatically and Reliably Fix Accessibility Problems"
+publisher = "PR Newswire (news provided by Evinced)"
+kind = "company"
+accessed_at = "2026-10-22T02:15:34Z"
+published_on = "2026-07-29"
+claims = ["Evinced announced Autopilot, Harness, and Resolve for CI detection, interactive coding-agent assistance, automated remediation, retesting, and developer review.", "Company describes the new products as working with a customer's existing AI systems; claims about reliability and market leadership are company assertions.", "Company release says Evinced is headquartered in California with offices in the United States, Europe, and Israel."]
+
+[[intelligence.research.sources]]
+id = "bgv_portfolio"
+url = "https://www.benhamouglobalventures.com/portfolio"
+title = "Portfolio"
+publisher = "Benhamou Global Ventures"
+kind = "investor"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["BGV's current portfolio lists Evinced as an active Israel company and describes its digital accessibility software."]
+
+[[intelligence.research.sources]]
+id = "capitalone_ventures"
+url = "https://capitaloneventures.com/portfolio"
+title = "Portfolio Companies"
+publisher = "Capital One Ventures"
+kind = "investor"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["Capital One Ventures portfolio page lists Evinced as accessibility automation software.", "Capital One Ventures describes itself as a strategic investor in startups."]
+
+[[intelligence.research.sources]]
+id = "engineering_capital"
+url = "https://www.engineeringcapital.com/"
+title = "Engineering Capital"
+publisher = "Engineering Capital"
+kind = "investor"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["Engineering Capital describes itself as a venture capital investor that leads seed rounds in technology companies."]
+
+[[intelligence.research.sources]]
+id = "vertex_israel"
+url = "https://www.vertexventures.co.il/"
+title = "Vertex Ventures Israel"
+publisher = "Vertex Ventures Israel"
+kind = "investor"
+accessed_at = "2026-10-22T02:15:34Z"
+claims = ["Vertex Ventures Israel portfolio page lists Evinced as enterprise software for accessibility in web and mobile development.", "The firm is part of the global Vertex Ventures network of venture funds."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-22T02:19:03Z"
+next_review_on = "2027-04-22"
+queries = ["Evinced company founders CEO headquarters founded Israeli founders", "Evinced Inc public company acquisition acquired parent company 2026", "\"Ican, Inc.\" Evinced funding raised seed Series A Series B Series C investors valuation acquired founder revenue customers patents"]
+source_ids = ["lei_bloomberg", "company_about", "ctech_series_a", "calcalist_c_2024", "press_agentic_2026"]
+summary = "Identified the Delaware legal entity Evinced, Inc., prior legal name Ican, Inc., 2018 creation date, current active status, California headquarters reporting, and Tel Aviv/Israel operations. Operational headquarters city differs between Palo Alto reporting and the Los Altos Hills LEI address."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-22T02:19:03Z"
+next_review_on = "2027-04-22"
+queries = ["Evinced 2019 seed $2.5 million funding Engineering Capital", "Evinced funding raised Series A Series B investors", "Evinced $38 million Series B June 2022 company announcement investors", "Evinced December 2024 Series C $55 million company newsroom $112 million", "Evinced Inc Form D SEC filing"]
+source_ids = ["seed_vb", "ctech_series_a", "m12_series_a", "press_b_2022", "press_c_2024", "calcalist_c_2024"]
+summary = "Found seed, Series A, Series B, and Series C announcements. Company-reported lifetime funding is $112 million. Exact seed close date, round instruments, valuations, debt/grant history, and complete funding record remain unavailable; no Evinced Form D result surfaced in the targeted search."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T02:19:03Z"
+next_review_on = "2027-04-22"
+queries = ["site:m12.vc Evinced portfolio", "site:bgv.vc Evinced portfolio", "Evinced Benhamou Global Ventures portfolio official", "Evinced Capital One Ventures portfolio official", "Evinced Engineering Capital portfolio official", "Evinced Vertex Ventures portfolio official"]
+source_ids = ["m12_series_a", "press_b_2022", "press_c_2024", "ctech_series_a", "bgv_portfolio", "capitalone_ventures", "engineering_capital", "vertex_israel"]
+summary = "Round announcements and investor portfolio pages identify M12, BGV, Capital One Ventures, Engineering Capital, Insight Partners, and Vertex Ventures. The full investor syndicate and ownership percentages are not public, and Series A lead attribution differs across contemporary reporting."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-22T02:19:03Z"
+next_review_on = "2027-04-22"
+queries = ["Evinced company founders CEO headquarters founded Israeli founders", "Evinced founder Navin Thadani Gal Moav Ravello Oracle 2016", "Evinced annual revenue ARR revenue customers employee headcount 2025"]
+source_ids = ["company_about", "ctech_series_a", "calcalist_c_2024", "ctech_headcount", "m12_series_a"]
+summary = "Verified the two co-founders, CEO, current CTO, Israel GM, and US Federal Government sales director from company and press materials. Found historical Ravello/Oracle experience and one dated company-reported headcount snapshot; independent biographies, board composition, and attrition are incomplete."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T02:19:03Z"
+next_review_on = "2027-04-22"
+queries = ["Evinced Inc ownership parent company acquisition public company", "Evinced Inc public company acquisition acquired parent company 2026", "\"Ican, Inc.\" Evinced accessibility startup funding acquired"]
+source_ids = ["lei_bloomberg", "press_c_2024", "capitalone_ventures"]
+summary = "The LEI record does not provide a direct parent. Searches did not identify an acquisition or IPO. Public funding participants are known, but private shareholder ownership, cap table, and percentages were not disclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T02:19:03Z"
+next_review_on = "2027-04-22"
+queries = ["Evinced revenue ARR profitability burn runway 2026", "Evinced annual revenue ARR revenue customers employee headcount 2025", "Evinced Inc Form D SEC filing"]
+source_ids = ["ctech_headcount", "press_c_2024", "press_b_2022", "lei_bloomberg"]
+summary = "A May 2025 interview reported 130 employees. No company-filed or independently corroborated revenue, ARR, margins, profitability, burn, cash, runway, or pricing was found. Third-party directory revenue ranges were not used as facts."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-22T02:19:03Z"
+next_review_on = "2027-04-22"
+queries = ["Evinced customer case study accessibility Evinced Capital One official customer", "Evinced customer partnership production accessibility case study official company 2024", "Evinced 2026 agentic coding accessibility auto fix Evinced official"]
+source_ids = ["capitalone_case", "evinced_testimonials", "press_c_2024", "ctech_headcount", "press_agentic_2026"]
+summary = "Capital One provides customer-side evidence of use across software delivery and monitoring; Evinced publishes selected customer testimonials and enterprise-category claims. Product releases and a dated reported headcount show continued activity, but paid contract terms, renewals, and customer concentration are unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-22T02:19:03Z"
+next_review_on = "2027-04-22"
+queries = ["Evinced patents patent Evinced Inc accessibility USPTO", "Evinced patent application USPTO Google Patents Evinced Ltd assignee"]
+source_ids = ["patent_google", "lei_bloomberg"]
+summary = "Verified one published US application on accessibility analysis during web-content mutation, listed as pending and assigned to Evinced Inc. A comprehensive search of families, grants, and other jurisdictions was not completed."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T02:19:03Z"
+next_review_on = "2027-04-22"
+queries = ["Deque axe DevTools accessibility testing official product page", "Level Access accessibility testing platform official digital accessibility testing product", "Siteimprove accessibility checker official product accessibility testing", "Siteimprove Accessibility product automated accessibility testing official"]
+source_ids = ["deque_axe", "level_access", "siteimprove_testing", "company_technology"]
+summary = "Reviewed official product information for Deque axe DevTools, Level Access, and Siteimprove. All compete in automated testing or broader accessibility programs; independent comparative accuracy, pricing, and feature-breadth tests were not found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T02:19:03Z"
+next_review_on = "2027-04-22"
+queries = ["Evinced federal government contract USASpending contract", "Evinced defense contractor government contract accessibility software", "Evinced defense contract government use", "Section 508 official federal agencies accessibility requirements software"]
+source_ids = ["company_about", "section508", "press_agentic_2026", "calcalist_c_2024"]
+summary = "Federal ICT accessibility is a clear potential use case and the company lists a federal sales role. No public defense contract, agency deployment, FedRAMP authorization, CMMC status, ATO, or mission-system use was found. Defense-support applicability is an inference about product fit, not a customer claim."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The legal entity record lists Evinced, Inc. as active, and the company issued a product launch announcement in July 2026."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["lei_bloomberg", "press_agentic_2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "The current company team page lists co-founder Gal Moav as GM Israel; Calcalist reports a Tel Aviv team and Israeli employees, and the company and BGV list Israel operations/portfolio presence."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["company_about", "calcalist_c_2024", "press_c_2024", "bgv_portfolio"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Evinced's December 2024 Series C announcement reports $112 million in total funding to date; Calcalist's contemporaneous Hebrew report repeats the same company total."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["press_c_2024", "calcalist_c_2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2019.amount"
+support = "direct"
+summary = "VentureBeat reports a previously undisclosed $2.5 million seed raised in early 2019."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["seed_vb"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2019.participating_investors"
+support = "direct"
+summary = "CTech identifies Engineering Capital as Evinced's seed investor; the full participant list is not public."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["ctech_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.amount"
+support = "direct"
+summary = "CTech and VentureBeat independently report a $17 million Series A announced on February 3, 2021."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["ctech_series_a", "seed_vb"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.lead_investors"
+support = "direct"
+summary = "CTech reports M12 and BGV as joint leads, and M12 confirms its own co-lead role. VentureBeat also calls Capital One Ventures a co-lead; that separate discrepancy is retained in research.conflicts and the round notes."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["ctech_series_a", "m12_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.participating_investors"
+support = "direct"
+summary = "CTech names Capital One Ventures and Engineering Capital as participants; M12 also lists them alongside BGV."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["ctech_series_a", "m12_series_a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.amount"
+support = "direct"
+summary = "The company announcement reports a $38 million Series B on June 23, 2022."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["press_b_2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.lead_investors"
+support = "direct"
+summary = "The company announcement names Insight Partners as Series B lead."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["press_b_2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.participating_investors"
+support = "direct"
+summary = "The company announcement names M12, BGV, Capital One Ventures, and Engineering Capital as Series B participants."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["press_b_2022"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2024.amount"
+support = "direct"
+summary = "The company announcement reports a $55 million Series C announced December 12, 2024."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["press_c_2024", "calcalist_c_2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2024.lead_investors"
+support = "direct"
+summary = "The company announcement and Calcalist report Insight Partners as Series C lead."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["press_c_2024", "calcalist_c_2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2024.participating_investors"
+support = "direct"
+summary = "The company announcement names M12, BGV, Capital One Ventures, Engineering Capital, and new investor Vertex Ventures as Series C participants."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["press_c_2024", "calcalist_c_2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Employees@2025-05-20.numeric_value"
+support = "direct"
+summary = "A CTech company profile based on an interview with Evinced VP of HR Maya Blanc lists 130 employees in May 2025."
+verified_at = "2026-10-22T02:15:34Z"
+source_ids = ["ctech_headcount"]

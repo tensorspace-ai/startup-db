@@ -1,55 +1,82 @@
 name = "Vicarius"
-description = "Vicarius develops vRx, a remediation-first exposure management platform that discovers software risk, prioritizes exploitable vulnerabilities, and applies patches, scripts, or patchless protections across heterogeneous enterprise environments."
+description = "Vicarius develops vRx, an enterprise vulnerability-remediation platform that discovers and prioritizes software exposures, then coordinates patch deployment, custom scripts, or patchless protections and verifies remediation across mixed IT environments."
 entity_type = "startup"
-detailed_description = """
-Vicarius addresses the operational gap between finding a vulnerability and reducing the exposure in a live environment. Its vRx platform combines asset and software discovery, contextual prioritization, remediation orchestration, and post-action verification. The current product positioning separates several remediation paths: vPatch for operating-system and third-party application updates, vScript for custom or community remediation playbooks, and vShield for patchless protection when a patch is unavailable or cannot yet be deployed. The platform also presents agent-based and agentless discovery, SBOM-oriented coverage, and policy controls for distributed assets. These are concrete enterprise security operations capabilities, not a research prototype.
+detailed_description = """Vicarius sells a vulnerability-remediation workflow for organizations that already have scanners, endpoint tools, and patch processes but struggle to turn findings into safe changes on production systems. The company was founded in 2016 and now operates under the Vicarius brand through Vicarius Ltd. and Vicarius Inc., as named together in its current terms. It identifies New York as its headquarters and maintains an office in Tel Aviv-Yafo. The Israeli connection is confirmed by its Israeli founders, Tel Aviv operations, and Israeli company address; the public material reviewed does not establish the incorporation jurisdiction of each named entity.
 
-The customer problem is persistent in large and mixed estates. Security teams may know that a CVE is present, while IT teams own the change window, application owners control the service, and legacy systems cannot tolerate a normal upgrade. Vicarius sells a single workflow intended to reduce those handoffs across Windows, macOS, Linux, third-party applications, and other asset classes. Its official materials cite coverage of more than 20,000 third-party applications, compliance reporting, and automated validation; those are company-reported product claims that should be tested in diligence for coverage, false positives, rollback behavior, and performance at the buyer's scale. The likely commercial value is lower manual coordination and shorter time from exposure identification to a verified fix.
+The product problem is concrete: security teams identify a vulnerable version or configuration, while IT and application owners control maintenance windows and bear the consequences of failed changes. Vicarius positions vRx as the operating layer between those groups. Its current product descriptions combine asset and software discovery, vulnerability validation and prioritization, patch selection, rollout policy, scripts for fixes outside normal patch catalogs, and a follow-up check that the vulnerable version or exposure is gone. This closed-loop emphasis is the most specific part of its commercial proposition: success is supposed to mean a verified reduction in exposure, not just a scan report or a patch job marked complete.
 
-The market is crowded and buyers commonly have overlapping tools from Tenable, Qualys, Rapid7, Microsoft, Tanium, Automox, endpoint platforms, and IT service-management suites. Vicarius' differentiation is therefore workflow depth and remediation outcomes rather than a unique market category. Its 2024 Series B announcement and later official materials indicate meaningful commercial traction, including a growing international customer base, but public evidence does not establish recurring revenue, retention, gross margin, or independent validation of the company's outcome metrics. A serious diligence process should request cohort retention, deployment time by environment, patch success and rollback rates, percentage of findings with an automated fix path, and the amount of engineering or services work required for custom scripts.
+The company describes vRadar as agent-based and agentless discovery, vScore as risk ranking using data such as CVSS, EPSS, and known-exploited-vulnerability signals, and vPatch as policy-driven patch deployment across Windows, macOS, Linux, and a catalog of more than 20,000 third-party applications. vScript and ScriptAI address remediation that does not fit a vendor patch, while vShield provides patchless protection for cases where an upgrade cannot be applied immediately. Vicarius says vShield uses in-memory protection and dynamic binary instrumentation; that mechanism and its coverage should be independently tested on the buyer's software and operating systems. vIntelligence is described as an intelligence and validation layer. These are company product claims, not independent tests of efficacy or breadth.
 
-The defense and national-security relevance is credible but indirect. Vulnerability discovery, exploitability prioritization, patch orchestration, virtual patching, and audit-ready remediation records are useful for government, defense contractors, critical infrastructure, and other organizations that must maintain availability while reducing cyber exposure. Patchless protection can be particularly relevant for legacy or mission-critical software, although the claimed in-memory protection and any agentless coverage would require technical review in the target operating environments. There is no evidence in the reviewed sources of a specific defense contract or classified deployment, so Vicarius should be treated as a dual-use cyber-resilience company rather than a defense-native platform.
+The buyer value is strongest in estates where third-party applications, remote endpoints, Linux servers, multiple business units, and strict change windows make a single patching routine insufficient. The software is aimed at security and IT teams, with the operational buyer likely to be a vulnerability-management leader, infrastructure team, or managed service provider. Vicarius terms describe customer subscriptions and reseller or MSP delivery, while the company has promoted self-service evaluation. This mix could shorten evaluation time and widen channel reach, but published sources do not disclose list pricing, average contract value, channel contribution, implementation effort, or renewal terms. Diligence should separate trial accounts from paid production deployments and establish whether the product replaces existing tooling or is added alongside it.
 
-Vicarius is an independent, privately held startup at a mid-stage growth phase. Its product is commercially legible and its funding and customer claims indicate that it has moved beyond early experimentation, but the investment and strategic case remains execution-sensitive. The key question is whether a remediation-first product can maintain adoption and pricing as larger security vendors add automated fixing, while preserving safety, interoperability, and customer trust when automation changes production systems.
-"""
+Public traction is meaningful but not fully reconciled. TechCrunch reported 150-plus customers, including the UK National Health Service and Ingram Micro, in February 2022. In January 2024, CTech and TechCrunch reported more than 400 customers and named PepsiCo, HPE, Bupa, and Equinix; the coverage also reported more than two dozen Fortune 500 customers. Vicarius' current About page says over 500 customers across 50 countries, while its historical timeline labels 2024 as 500-plus customers in 60-plus countries and more than two million assets protected. Its current LinkedIn profile states 800-plus customers in over 65 countries, but the profile gives no measurement date. These numbers suggest continued reach, yet the changing and internally inconsistent snapshots are not a substitute for customer cohorts, contracted recurring revenue, active usage, retention, or concentration data.
+
+One useful deployment example is Vicarius' company-hosted EL AL case study. It describes a production rollout across 500 Windows and 250 Linux servers and reports 98 percent monthly server coverage, a 95 percent reduction in manual patching effort, and patch planning reduced from a full-time task to one day. The case study quotes EL AL's infrastructure deputy director and explains that agents were distributed through SCCM for Windows and scripts for Linux, with an on-premises proxy. This is evidence of a real commercial use case in an availability-sensitive airline environment, but its outcome figures remain vendor-published customer claims. It does not demonstrate military procurement or a government contract.
+
+The competitive field is wider than vulnerability scanners. Tenable One, Qualys VMDR with Patch Management, and Rapid7 InsightVM all offer asset discovery, risk prioritization, remediation guidance, and integrations; Qualys also describes automated patch jobs across operating systems and third-party applications. Buyers can also combine Microsoft or endpoint-management products with vulnerability scanners, ITSM workflows, or patch specialists such as Automox. Vicarius' clearest distinction is the bundled remediation loop, including custom scripts and patchless protection, rather than exclusive access to vulnerability data. That distinction is not a durable moat by itself: the larger vendors already cover parts of the workflow, and product overlap is increasing. Competitive diligence should compare patch and script coverage by software version, actual successful closures, operational guardrails, and total cost against the customer's existing licenses.
+
+The founding group includes Michael Assraf, Roi Cohen, and Yossi Ze'evi. Current Vicarius materials list Roi Cohen as CEO and co-founder and Yossi Ze'evi as CTO and co-founder; they also list COO Ohad Rubin, board chair Orna Mintz-Dov, SVP R&D Yaniv Bigger, VP Finance Moran Shushan, and regional sales leaders. TechCrunch still described Michael Assraf as CEO in January 2024, so the CEO transition date and Michael's current role are not established by the public leadership page. Roi Cohen's Forbes Technology Council profile describes prior malware-research leadership at CyberArk and CYBERTINEL and vulnerability-research work; the other named executives' backgrounds are not detailed in the sources reviewed. LinkedIn lists Vicarius as privately held with 51–200 employees.
+
+Funding confirms a company beyond prototype stage, but both the history and the cumulative total require care. JVP announced a $1 million investment award to Vicarius in its 2018 NYC Play competition. Vicarius and Globes announced a $5 million seed on January 22, 2020; IVC's JVP portfolio data separately records a $2.6 million first round on that same date. The conflicting 2020 amount is left unresolved. Vicarius announced a $24 million Series A on February 9, 2022, which IVC classifies as a first-round extension. In January 2024 the company announced a $30 million Series B led by Bright Pixel Capital. TechCrunch reported an approximate $56.7 million cumulative total while CTech said over $56 million; the exact company-announced lifetime total and treatment of earlier investment awards are not public. No later Series C or new financing announcement was found in searches through October 2026. Revenue, ARR, profitability, burn, runway, cap table, investor ownership, and valuation terms remain undisclosed.
+
+The dual-use case is a consequence of the product's defensive function: reducing software exposure and coordinating controlled remediation supports ordinary enterprise IT as well as public-sector, critical-infrastructure, and defense networks that must preserve availability. Patchless mitigation and staged fixes could be valuable where downtime is costly, and the EL AL deployment provides a commercial example of operating under demanding uptime constraints. There is no verified defense contract, classified deployment, government procurement, or security certification specific to Vicarius in the sources reviewed. It should therefore be assessed as a commercial cyber-resilience supplier with plausible government applicability, not as a defense-native company.
+
+The main execution risks follow directly from the product's authority to change systems. A bad patch, generated script, or in-memory control can cause outages, leave an exposure open, or create a new failure mode. Buyers need evidence about permissions, approvals, staged rollout, rollback, logging, script provenance, false-positive handling, agentless visibility limits, and the behavior of patchless controls under endpoint protection and application updates. The commercial case also depends on proving that a broad patch catalog stays current, that customers use remediation after installation, and that automation reduces labor without creating hidden support costs. Priority diligence questions are the discrepancy in funding and customer reports, retention and revenue quality, production success and rollback rates by environment, patchless coverage and safety, and competitive win rates against installed vulnerability and endpoint-management suites."""
 logo = "https://cdn.prod.website-files.com/66f277960b716d6f5a4f06a2/66f27a4b2a9628501058f464_vicarius_favicon.svg"
 website = "https://www.vicarius.io"
 sector = "Vulnerability Remediation / Exposure Management"
 founded = "2016"
-headquarters = "New York, New York, United States; Tel Aviv-Yafo, Israel"
+headquarters = "New York City, United States (company-designated headquarters); Tel Aviv-Yafo, Israel (company office)"
 employees = "51-200"
-funding_stage = "Series B (announced January 2024)"
+funding_stage = "Series B; last verified round announced January 2024"
 dual_use = true
-dual_use_description = "Vicarius has substantive dual-use potential because vulnerability discovery, exploitability-aware prioritization, patch orchestration, scripted fixes, and patchless protection apply to both enterprise security and defense or public-sector cyber resilience. The strongest relevance is continuity of mission-critical and legacy systems under constrained maintenance windows; there is no verified evidence here of a specific defense contract, classified deployment, or offensive capability."
+dual_use_description = "Vicarius is a commercial cyber-resilience company. Its vulnerability prioritization, patch orchestration, custom scripts, and patchless protection could help public-sector, critical-infrastructure, and defense operators reduce exposure while maintaining availability. An airline case study supports an availability-sensitive commercial use case; no specific defense contract, classified deployment, or government procurement was verified."
 key_technologies = [
-  "Exploitability-aware vulnerability prioritization",
-  "Automated patch orchestration",
-  "Virtual patching and patchless protection",
-  "Script-based remediation workflows",
-  "Agent-based and agentless asset coverage",
-  "Software discovery and exposure analytics",
-  "Cross-platform remediation policy control",
+  "Asset and software inventory with agent-based and agentless discovery",
+  "Vulnerability validation and risk ranking using CVSS, EPSS, and known-exploited signals",
+  "Policy-driven operating-system and third-party application patch deployment",
+  "Custom script remediation and company-described AI-assisted script authoring",
+  "Patchless in-memory protection for vulnerabilities without an immediately deployable patch",
+  "Post-action rescan and exposure-closure validation"
 ]
 use_cases = [
-  "Reducing critical vulnerability backlogs across enterprise fleets",
-  "Applying temporary mitigations when immediate patching is not possible",
-  "Automating remediation for endpoints, servers, and cloud workloads",
-  "Lowering exposure windows after zero-day disclosures",
-  "Supporting compliance and audit remediation workflows",
-  "Hardening mission-critical systems that cannot tolerate frequent downtime",
-  "Coordinating mitigation across mixed OS and third-party software estates",
-  "Improving cyber resilience for public-sector and defense-adjacent networks",
+  "Prioritizing vulnerability backlogs against exploitability and asset context",
+  "Coordinating patch windows across security and IT for Windows, Linux, macOS, and third-party applications",
+  "Applying custom scripts to configuration and remediation work outside a vendor patch catalog",
+  "Using temporary patchless protection where a software update cannot be safely deployed yet",
+  "Providing auditors with asset-level remediation and compliance evidence",
+  "Reducing manual patch planning in uptime-sensitive commercial environments",
+  "Supporting public-sector and critical-infrastructure cyber resilience where maintenance windows are constrained"
 ]
 investible = true
-investment_rationale = "Vicarius is a credible strategic-fit signal for a dual-use cyber infrastructure database because it targets a measurable operational bottleneck and its remediation controls can matter in constrained environments. The 2024 Series B and publicly described customer expansion support mid-stage commercialization, but this is not an investment recommendation: diligence should focus on retention, gross margin, fix coverage, automation safety, and whether larger platform vendors can replicate the workflow."
-strategic_value = "Vicarius can convert vulnerability intelligence into controlled action across mixed estates, which is strategically useful for enterprise hygiene, public-sector resilience, and defense-adjacent operators. Its value is greatest where patch windows are limited or legacy software must remain available. The strategic case is based on cyber resilience and remediation infrastructure, not on a verified defense program or proprietary military technology."
+investment_rationale = "Vicarius has a specific enterprise pain point, a released product, named enterprise customer evidence, and a closed-loop remediation proposition. The 2018 JVP investment award and later 2020, 2022, and 2024 financings show investor support, but the 2020 amount conflicts across sources and no exact lifetime total, revenue, ARR, retention, margins, or valuation has been disclosed. The strategic case depends on proving safe automation, broad third-party coverage, and durable customer economics against increasingly integrated incumbent platforms. This is research context, not investment advice."
+strategic_value = "Vicarius can connect vulnerability intelligence to controlled changes across Windows, macOS, Linux, and third-party applications. That capability is relevant to enterprise hygiene and to operators that cannot patch freely during production hours. Its strongest strategic contribution is remediation and continuity, not offensive cyber capability or verified military technology."
 public_sources = [
-  "https://www.vicarius.io",
-  "https://www.vicarius.io/about-us",
-  "https://www.vicarius.io/solution/vulnerability-remediation",
-  "https://www.vicarius.io/articles/introducing-vrx-2-0-the-platform-that-scans-scores-and-fixes",
-  "https://www.linkedin.com/company/vicarius",
-  "https://venturebeat.com/ai/vicarius-raises-30m-to-expand-ai-powered-vulnerability-remediation",
+  {label = "Vicarius company website", url = "https://www.vicarius.io", description = "Official company and product site retained from the original record."},
+  {label = "About Vicarius", url = "https://www.vicarius.io/about-us", description = "Current company profile, locations, products, leaders, investor list, and company-reported milestones."},
+  {label = "Vicarius legal terms", url = "https://www.vicarius.io/terms-conditions-quote", description = "Names Vicarius Ltd. and Vicarius Inc. together and gives the Tel Aviv company address."},
+  {label = "Vicarius on LinkedIn", url = "https://www.linkedin.com/company/vicarius", description = "Company-reported status, headquarters, size band, product summary, and customer reach."},
+  {label = "Vicarius seed announcement", url = "https://www.vicarius.io/vsociety/posts/vicarius-is-funded-now-what", description = "Company announcement of the $5 million 2020 seed and named investors."},
+  {label = "Globes seed coverage", url = "https://en.globes.co.il/en/article-israeli-cyberthreat-prediction-co-vicarius-raises-5m-1001315773", description = "Independent Israeli coverage of the 2020 funding, founders, and Israeli operations."},
+  {label = "JVP NYC Play investment announcement", url = "https://jvpvc.com/newsroom/vicarius-mmuze-awarded-top-prize-1st-nyc-play-jvps-international-startup-competition-jvp-decides-double-prize-2-million-worth-investments-winners-vicarius-mmuze/", description = "JVP's primary announcement of the $1 million Vicarius investment award in 2018."},
+  {label = "Startup Nation Central Finder profile", url = "https://finder.startupnationcentral.org/company_page/vicarius", description = "Legacy profile last updated in 2024; includes an Israeli registrar identifier and funding data not fully corroborated elsewhere."},
+  {label = "IVC JVP portfolio data", url = "https://www.ivc-online.com/Google-Card?id=206d9de0-d510-e811-80e2-00155d0b832c", description = "Investor-portfolio database entry reporting $2.6 million in 2020 and labeling the 2022 financing an extension."},
+  {label = "IVC Vicarius profile", url = "https://www.ivc-online.com/Google-Card?id=54cab033-58a6-e611-9113-80c16e7d3630", description = "Israeli company data page with historical rounds and grant records; some fields are obscured."},
+  {label = "JVP Series A announcement", url = "https://jvpvc.com/newsroom/vicarius-announces-24-million-series-funding-rebuild-vulnerability-remediation-market-todays-remote-cloud-based-world-round-led-allegiscyber-capital-jvp-alleycorp/", description = "Lead investor announcement of the $24 million February 2022 Series A and named lead firms."},
+  {label = "Vicarius Series A announcement", url = "https://www.vicarius.io/vsociety/posts/vicarius-raises-24m-series-a-round", description = "Company announcement of the $24 million Series A."},
+  {label = "TechCrunch Series A coverage", url = "https://techcrunch.com/2022/02/09/vicarius-vulnerability-remediation/", description = "Independent coverage of the Series A, customer count, and product positioning."},
+  {label = "Vicarius Series B announcement", url = "https://www.vicarius.io/vsociety/posts/vicarius-30m-series-b-vulnerability-scanning-is-dead-long-live-vulnerability-remediation-1", description = "Company announcement dated January 17, 2024, of its $30 million Series B."},
+  {label = "CTech Series B coverage", url = "https://www.calcalistech.com/ctechnews/article/skhninsk6", description = "Israeli reporting on the Series B, named investors, customer claims, and reported cumulative funding."},
+  {label = "TechCrunch Series B coverage", url = "https://techcrunch.com/2024/01/17/vicarius-lands-30m-for-its-ai-powered-vulnerability-detection-tools/", description = "Independent Series B report, investor list, customer names, approximate cumulative total, and undisclosed valuation."},
+  {label = "Vicarius vulnerability-remediation product", url = "https://www.vicarius.io/solution/vulnerability-remediation", description = "Official product description for discovery, prioritization, patching, scripts, patchless protection, and validation."},
+  {label = "EL AL customer case study", url = "https://www.vicarius.io/case-studies/el-al-airlines", description = "Company-hosted customer account describing a production patch-management rollout and reported results."},
+  {label = "Roi Cohen profile", url = "https://councils.forbes.com/profile/Roi-Cohen-CEO-Vicarius/2d7b0b73-01dd-4e45-a4db-34c2ba0cf730", description = "Profile with Roi Cohen's self-reported cybersecurity and malware-research background."},
+  {label = "USPTO Patent Public Search", url = "https://www.uspto.gov/patents/search/patent-public-search/", description = "Official patent search resource used in keyword searches; it does not itself establish the absence of filings."},
+  {label = "Tenable vulnerability management", url = "https://www.tenable.com/products/vulnerability-management?li_fat_id=1a82f074-2a2b-4996-954f-e996499c9dea", description = "Official description of Tenable's vulnerability discovery, prioritization, and remediation workflows."},
+  {label = "Qualys VMDR with Patch Management", url = "https://www.qualys.com/apps/vmdr-patch", description = "Official description of integrated risk prioritization and automated patch remediation."},
+  {label = "Rapid7 InsightVM documentation", url = "https://docs.rapid7.com/insightvm/", description = "Official product documentation for vulnerability discovery, asset organization, and remediation prioritization."},
+  {label = "Vicarius vRx 2.0 article", url = "https://www.vicarius.io/articles/introducing-vrx-2-0-the-platform-that-scans-scores-and-fixes", description = "Existing product source retained from the original record."},
+  {label = "VentureBeat Series B coverage", url = "https://venturebeat.com/ai/vicarius-raises-30m-to-expand-ai-powered-vulnerability-remediation", description = "Existing funding source retained from the original record."}
 ]
 potential_score = 83.0
 technology_score = 85.0
@@ -58,23 +85,18 @@ team_score = 80.0
 dual_use_score = 86.0
 strategic_alignment_score = 88.0
 stage = "mid"
-stage_rationale = "Vicarius is a privately held Series B company founded in 2016, with an established product, enterprise-oriented sales motion, and reported international customer base. It fits a mid-stage classification rather than mature status because public evidence does not establish late-stage scale, profitability, or market dominance."
-competitors = [
-  "Tenable",
-  "Qualys",
-  "Rapid7",
-  "Automox",
-  "Tanium",
-  "Microsoft Defender Vulnerability Management",
-]
-competitive_edge = "Vicarius is organized around the full remediation loop: discover, prioritize, patch or shield, script a workaround when needed, and verify closure. That is operationally differentiated from scanner-led products that primarily report findings and hand the fix to another system. The edge is not a proven structural moat; it depends on breadth of application coverage, safe automation, integration quality, and evidence that customers close more risk with less labor than they would using incumbent tools."
+stage_rationale = "Mid-stage private cybersecurity vendor: founded in 2016, released enterprise product, several disclosed financings, and public reports of hundreds of customers. The latest verified financing is the January 2024 Series B; public evidence does not establish revenue scale, profitability, or late-stage market leadership."
+competitors = ["Tenable", "Qualys", "Rapid7", "Microsoft Defender Vulnerability Management", "Automox", "Tanium"]
+competitive_edge = "Vicarius' strongest product distinction is its bundled discovery-to-remediation workflow, including custom script fixes, patchless protection, and a verification step after changes. Tenable and Rapid7 offer broad exposure or vulnerability management, and Qualys pairs VMDR with patch automation, so the distinction is narrower than a claim of category exclusivity. The edge depends on reliable coverage of third-party applications, safe controls over production changes, and measurable reductions in verified exposure and staff effort."
 risk_factors = [
-  "Crowded market with overlapping vulnerability, patch management, and endpoint vendors",
-  "Customers may already be standardized on larger security or systems-management suites",
-  "Remediation reliability and breadth of integrations are hard to scale without failures",
-  "Proof of measurable exposure reduction is required to defend pricing and retention",
-  "Complex heterogeneous environments can slow deployment and time-to-value",
-  "Category convergence could compress differentiation over time",
+  "The reported 2020 financing amount conflicts: company and media sources report $5 million while IVC's JVP portfolio data lists $2.6 million for the same date.",
+  "Company customer counts and country totals differ across its About page and current LinkedIn profile, and the latest profile metric is undated.",
+  "No public revenue, ARR, retention, profitability, burn, runway, valuation, or customer-concentration data was found.",
+  "Tenable, Qualys, Rapid7, Microsoft, and endpoint-management vendors overlap with parts of discovery, prioritization, and remediation.",
+  "Automated patching and custom scripts run with system-level authority; failed changes, incomplete rollback, or false closure can disrupt production or leave exposure unresolved.",
+  "Patchless protection may have application, operating-system, performance, or endpoint-protection compatibility limits that need independent testing.",
+  "Third-party application coverage, content freshness, and integration quality must scale across customer estates without high support or services costs.",
+  "No specific government or defense contract, classified deployment, or public-sector procurement was verified."
 ]
 risk_level = "medium"
 signals = [
@@ -87,4 +109,752 @@ signals = [
 priority_rank = 0
 priority_rationale = "High-priority dual-use cyber infrastructure record because Vicarius addresses the practical remediation bottleneck and maps to constrained, mission-critical environments. The priority is supported by product specificity, Series B commercialization, and strategic relevance, but is moderated by crowded competition, unverified defense traction, and the need to prove safe automation and durable customer economics."
 crawled_at = "2026-02-16T20:41:00Z"
-updated_at = "2026-07-31T18:51:05Z"
+updated_at = "2026-10-22T00:18:43Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+intellectual_property = []
+
+[intelligence.company]
+company_id = "vicarius"
+legal_name = "Vicarius Ltd. and Vicarius Inc."
+aliases = ["Vicarius Ltd.", "Vicarius Inc."]
+operating_status = "active"
+business_model = "B2B enterprise software sold through customer subscriptions, with direct, reseller, and managed service provider routes described in company terms. Pricing and contract metrics are not public."
+products = ["vRx (formerly TOPIA)", "vRadar", "vScore", "vPatch", "vScript and ScriptAI", "vShield Patchless Protection", "vIntelligence"]
+locations = ["New York City, United States (headquarters)", "Tel Aviv-Yafo, Israel", "Melbourne, Australia", "Sao Paulo, Brazil", "Santiago, Chile", "Dusseldorf, Germany", "Bengaluru, India", "Singapore", "Pontypool, United Kingdom"]
+linkedin_url = "https://www.linkedin.com/company/vicarius"
+founded_on = "2016"
+source_ids = ["s-about", "s-legal", "s-linkedin", "s-globes-seed", "s-finder"]
+notes = "Official terms name Vicarius Ltd. and Vicarius Inc. together and give a Tel Aviv address; current company materials identify New York as headquarters and Tel Aviv as an office. Finder's legacy profile lists Israeli Companies Registrar number 515458966, but the linked registrar endpoint returned an error during this research; the jurisdiction of incorporation for the named entities was therefore not inferred."
+registry_identifiers = [{jurisdiction = "Israel", scheme = "Israeli Companies Registrar (ח.פ.)", identifier = "515458966", source_ids = ["s-finder"], notes = "Legacy Startup Nation Central Finder profile labels this as the Israeli Companies Registrar identifier and links to the registrar. The linked official lookup did not return a company record during this research, so the identifier is directory-reported rather than independently confirmed."}]
+
+[intelligence.funding]
+status = "conflicting"
+summary = "Four financing events were verified: JVP's 2018 $1 million investment award, the 2020 seed/first-round event, the 2022 $24 million Series A that IVC classifies as an extension, and the January 2024 $30 million Series B. The 2020 amount is unresolved because company and media reports state $5 million while IVC's JVP portfolio data lists $2.6 million for the same date. No exact company-announced lifetime total was identified; media reports give approximately $56.7 million or more than $56 million, while the public round record is not reconciled. Finder and IVC also contain earlier pre-seed or grant entries that lack matching primary announcements or public terms, so they are not promoted to confirmed numeric rounds. No later Series C was found through October 2026."
+history_status = "partial"
+coverage_through = "2026-10-22"
+
+[[intelligence.funding.rounds]]
+id = "jvp-nyc-play-2018"
+round_type = "JVP NYC Play investment award"
+instrument = "unknown"
+status = "announced"
+announced_on = "2018-06-19"
+amount_status = "reported"
+amount = 1000000
+amount_scope = "unknown"
+currency = "USD"
+lead_investors = ["JVP"]
+participating_investors = []
+source_ids = ["s-jvp-2018"]
+notes = "JVP described the award as a $1 million investment. Securities, instrument, and closing date were not disclosed; this is kept separate from later priced rounds."
+
+[[intelligence.funding.rounds]]
+id = "first-round-2020"
+round_type = "Seed (company announcement; IVC labels the same-date event a first round/Series A)"
+instrument = "equity"
+status = "closed"
+announced_on = "2020-01-22"
+amount_status = "conflicting"
+amount_scope = "unknown"
+currency = "USD"
+lead_investors = ["JVP"]
+participating_investors = ["Innogy Ventures", "Goldbell Investments"]
+source_ids = ["s-seed", "s-globes-seed", "s-ivc-jvp", "s-finder"]
+notes = "Vicarius' announcement and Globes report a $5 million Seed; IVC's JVP portfolio table lists a $2.6 million first round on the same date. The sources also differ on stage naming. Neither amount is selected pending primary term or closing documentation. Finder lists other participants for this round, but those participants are not corroborated by the primary funding announcement."
+amount_observations = [
+  {id = "company-seed-announcement", amount = 5000000, currency = "USD", source_ids = ["s-seed", "s-globes-seed"], as_of = "2020-01-22", notes = "Company announcement and independent Israeli coverage report the announced Seed amount."},
+  {id = "ivc-jvp-portfolio-record", amount = 2600000, currency = "USD", source_ids = ["s-ivc-jvp"], as_of = "2020-01-22", notes = "IVC's JVP portfolio table records the 2020 first round at $2.6 million."}
+]
+
+[[intelligence.funding.rounds]]
+id = "series-a-extension-2022"
+round_type = "Series A (company-announced; IVC classifies it as a first-round extension)"
+instrument = "equity"
+status = "closed"
+announced_on = "2022-02-09"
+amount_status = "reported"
+amount = 24000000
+amount_scope = "incremental_extension"
+currency = "USD"
+lead_investors = ["AllegisCyber Capital", "JVP", "AlleyCorp"]
+participating_investors = []
+is_extension_of = "first-round-2020"
+source_ids = ["s-jvp-a", "s-vicarius-a", "s-techcrunch-a", "s-ivc-jvp"]
+notes = "Vicarius and its lead investor announced a $24 million Series A. IVC describes the financing as a first-round extension and records the 2020 event as the first round; the 2022 transaction is kept as a separate event and its $24 million is treated as incremental financing. Company and investor releases also mention unnamed executives from Okta, SecurityScorecard, and Exabeam as additional capital providers; no individual names or terms were disclosed."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2024"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2024-01-17"
+amount_status = "reported"
+amount = 30000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Bright Pixel Capital"]
+participating_investors = ["AllegisCyber Capital", "AlleyCorp", "Strait Capital"]
+source_ids = ["s-vicarius-b", "s-calcalist-b", "s-techcrunch-b"]
+notes = "TechCrunch reports that the round had closed by the January 17, 2024 announcement. The current company timeline groups the Series B under 2023, while the dated company post and independent coverage announce it on January 17, 2024; the latter is used as the announcement date, and no separate close date is asserted. The published valuation was described as twice the previous valuation, but the CEO declined to disclose a numeric valuation."
+
+[[intelligence.investors]]
+name = "JVP"
+investor_type = "vc"
+website = "https://jvpvc.com"
+round_ids = ["jvp-nyc-play-2018", "first-round-2020", "series-a-extension-2022"]
+relationship = "current"
+source_ids = ["s-jvp-2018", "s-seed", "s-jvp-a", "s-about"]
+
+[[intelligence.investors]]
+name = "Innogy Ventures"
+investor_type = "corporate"
+round_ids = ["first-round-2020"]
+relationship = "unknown"
+source_ids = ["s-seed", "s-globes-seed"]
+notes = "The 2020 seed announcement names Innogy Ventures; current company investor materials do not list it, but that does not establish whether it remains a shareholder."
+
+[[intelligence.investors]]
+name = "Goldbell Investments"
+investor_type = "corporate"
+round_ids = ["first-round-2020"]
+relationship = "current"
+source_ids = ["s-seed", "s-globes-seed", "s-about"]
+notes = "The 2020 announcement uses Goldbell Investments; the current company investor page lists GoldBell."
+
+[[intelligence.investors]]
+name = "AllegisCyber Capital"
+investor_type = "vc"
+round_ids = ["series-a-extension-2022", "series-b-2024"]
+relationship = "current"
+source_ids = ["s-jvp-a", "s-vicarius-a", "s-techcrunch-a", "s-calcalist-b", "s-techcrunch-b", "s-about"]
+
+[[intelligence.investors]]
+name = "AlleyCorp"
+investor_type = "vc"
+round_ids = ["series-a-extension-2022", "series-b-2024"]
+relationship = "current"
+source_ids = ["s-jvp-a", "s-vicarius-a", "s-techcrunch-a", "s-calcalist-b", "s-techcrunch-b", "s-about"]
+
+[[intelligence.investors]]
+name = "Bright Pixel Capital"
+investor_type = "vc"
+round_ids = ["series-b-2024"]
+relationship = "current"
+source_ids = ["s-calcalist-b", "s-techcrunch-b", "s-about"]
+
+[[intelligence.investors]]
+name = "Strait Capital"
+investor_type = "unknown"
+round_ids = ["series-b-2024"]
+relationship = "unknown"
+source_ids = ["s-calcalist-b", "s-techcrunch-b"]
+
+[[intelligence.investors]]
+name = "Future Energy"
+investor_type = "unknown"
+round_ids = []
+relationship = "current"
+source_ids = ["s-about"]
+notes = "Listed as an investor on Vicarius' current company page, but no primary announcement linking it to a named funding round was found."
+
+[[intelligence.people]]
+name = "Roi Cohen"
+role = "CEO and co-founder"
+is_founder = true
+current = true
+background = "His Forbes Technology Council profile describes prior malware-research leadership at CyberArk and CYBERTINEL, vulnerability research work, and an MBA from Tel Aviv University; this is self-reported profile information."
+source_ids = ["s-about", "s-forbes", "s-globes-seed"]
+
+[[intelligence.people]]
+name = "Yossi Ze'evi"
+role = "CTO and co-founder"
+is_founder = true
+current = true
+source_ids = ["s-about", "s-globes-seed", "s-techcrunch-a"]
+
+[[intelligence.people]]
+name = "Michael Assraf"
+role = "Co-founder; reported as CEO in 2024 coverage"
+is_founder = true
+current = false
+source_ids = ["s-jvp-2018", "s-jvp-a", "s-techcrunch-a", "s-techcrunch-b", "s-calcalist-b", "s-about"]
+notes = "2024 reporting still identified Assraf as CEO; the current company leadership page names Roi Cohen as CEO and does not list Assraf. The date and terms of the role transition were not found."
+
+[[intelligence.people]]
+name = "Ohad Rubin"
+role = "COO"
+is_founder = false
+current = true
+source_ids = ["s-about"]
+
+[[intelligence.people]]
+name = "Orna Mintz-Dov"
+role = "Chairman of the Board"
+is_founder = false
+current = true
+source_ids = ["s-about"]
+
+[[intelligence.people]]
+name = "Yaniv Bigger"
+role = "SVP R&D"
+is_founder = false
+current = true
+source_ids = ["s-about"]
+
+[[intelligence.people]]
+name = "Guillermo Gurvich"
+role = "VP Sales, LATAM"
+is_founder = false
+current = true
+source_ids = ["s-about"]
+
+[[intelligence.people]]
+name = "Moran Shushan"
+role = "VP Finance"
+is_founder = false
+current = true
+source_ids = ["s-about"]
+
+[[intelligence.people]]
+name = "Oren Maguid"
+role = "VP Sales, APAC"
+is_founder = false
+current = true
+source_ids = ["s-about"]
+
+[intelligence.ownership]
+status = "not_found"
+summary = "Vicarius is privately held in company-profile data. Public sources reviewed do not disclose the cap table, ownership percentages, parent company, or any acquisition, merger, or exit. The two legal entities named in the company's terms are not treated as parent-subsidiary evidence."
+cap_table_status = "undisclosed"
+shareholders = []
+source_ids = ["s-legal", "s-linkedin", "s-finder"]
+deals = []
+holdings = []
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2022-02-09"
+description = "TechCrunch reported 150-plus customers, including the UK National Health Service and Ingram Micro, at the time of the Series A announcement. This is contemporaneous company-reported customer evidence, not audited customer revenue."
+source_ids = ["s-techcrunch-a", "s-jvp-a"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2024-01-17"
+description = "CTech and TechCrunch reported more than 400 customers, naming PepsiCo, HPE, Bupa, and Equinix, and reporting more than two dozen Fortune 500 customers. The sources do not establish contract value, deployment scope, or whether each named company was a paying production customer."
+source_ids = ["s-calcalist-b", "s-techcrunch-b"]
+
+[[intelligence.traction]]
+kind = "customer"
+date = "2024"
+description = "Vicarius' historical company timeline states 500-plus customers in 60-plus countries and more than two million protected assets. The figures are company assertions."
+source_ids = ["s-about"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Vicarius' current LinkedIn profile claims 800-plus customers in over 65 countries. The profile gives no measurement date; its reach claim differs from the current About-page statement of over 500 customers across 50 countries."
+source_ids = ["s-linkedin", "s-about"]
+notes = "Company-reported and undated profile metrics are retained separately rather than treated as a verified growth series."
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Vicarius' EL AL case study describes a production rollout across 500 Windows and 250 Linux servers and reports 98 percent monthly server coverage, a 95 percent reduction in manual effort, and patch planning reduced from a full-time task to one day. The study quotes EL AL's deputy director of infrastructure but is published by Vicarius and has no disclosed publication date."
+source_ids = ["s-elal"]
+notes = "Vendor-hosted customer case-study results; not independently audited."
+
+[[intelligence.traction]]
+kind = "product"
+description = "The current vRx product description covers Windows, macOS, Linux, and a company-claimed catalog of 20,000-plus third-party applications. It describes discovery, risk ranking, patching, scripts, patchless protection, and validation as one workflow."
+source_ids = ["s-product"]
+notes = "Product breadth and performance are company claims and require environment-specific testing."
+
+[[intelligence.comparables]]
+name = "Tenable"
+website = "https://www.tenable.com"
+rationale = "Tenable One combines broad vulnerability and exposure visibility with risk prioritization and remediation workflows, making it a direct incumbent alternative for organizations with an established Tenable deployment."
+differentiation = "Tenable emphasizes broad exposure data and guided remediation; Vicarius differentiates around bundled patch execution, custom scripts, patchless protection, and post-action closure verification. The degree of unique coverage is unproven."
+source_ids = ["s-tenable", "s-product"]
+
+[[intelligence.comparables]]
+name = "Qualys"
+website = "https://www.qualys.com"
+rationale = "Qualys VMDR with Patch Management combines asset inventory, risk-based prioritization, patch mapping, and automated patch jobs across major operating systems and third-party applications."
+differentiation = "Qualys is a close functional substitute with an integrated platform and established agent base; Vicarius' case rests on custom scripts and patchless protection as well as workflow ergonomics, not on remediation automation alone."
+source_ids = ["s-qualys", "s-product"]
+
+[[intelligence.comparables]]
+name = "Rapid7"
+website = "https://www.rapid7.com"
+rationale = "InsightVM provides vulnerability scanning, asset organization, exploit context, risk prioritization, and remediation reporting, and can anchor a customer's current vulnerability-management process."
+differentiation = "Rapid7 documentation centers on discovery, risk analysis, and remediation guidance; Vicarius positions its own patch, script, and patchless execution tools as an additional closed-loop layer. Buyers may use both rather than replace one with the other."
+source_ids = ["s-rapid7", "s-product"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders"]
+summary = "Vicarius was founded by Israeli cybersecurity entrepreneurs Michael Assraf, Roi Cohen, and Yossi Ze'evi, and maintains a Tel Aviv-Yafo office. Current official materials identify New York as headquarters; no incorporation jurisdiction is inferred from the Israeli address or legacy registry listing."
+as_of = "2026-10-22"
+source_ids = ["s-globes-seed", "s-about", "s-legal"]
+
+[intelligence.research]
+researched_at = "2026-10-22T00:18:43Z"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "site:vicarius.io Vicarius company/about leadership vRx customers 2026",
+  "Vicarius Series B $30 million January 2024 official investors",
+  "Vicarius funding seed Series A investors funding raised",
+  "Vicarius Israeli cybersecurity company founders patents revenue customers",
+  "site:brightpixel.pt Vicarius $30 million Series B 2024",
+  "site:vicarius.io/vsociety/posts Vicarius $30M Series B January 2024",
+  "Vicarius Inc founders Michael Assraf Yossi Ze'evi Roi Cohen cybersecurity",
+  "Vicarius patents USPTO vulnerability remediation vRx",
+  "Vicarius revenue ARR financials 2025 2026 headcount employees",
+  "Vicarius patents inventor assignee patent USPTO",
+  "Vicarius customer case study EL AL customer government defense deployment contract",
+  "Vicarius \"24 million\" Series A funding February 2022 JVP AllegisCyber AlleyCorp",
+  "Vicarius patents cybersecurity vulnerability remediation",
+  "site:patents.google.com/patent Vicarius vulnerability",
+  "site:gov.il Vicarius cybersecurity contract OR procurement",
+  "Vicarius current CEO Roi Cohen Michael Assraf 2025 CEO",
+  "Tenable official vulnerability management remediation exposure management platform",
+  "Vicarius $105,000 pre-seed grant 2017 funding round",
+  "site:gov.il Vicarius Israel Innovation Authority grant OR procurement",
+  "site:qualys.com vulnerability management patch management official remediation product",
+  "site:rapid7.com vulnerability management remediation official InsightVM",
+  "site:automox.com product patch management vulnerability remediation platform official",
+  "site:tanium.com patch vulnerability management official product",
+  "Vicarius Series C funding 2025 2026 financing",
+  "Vicarius acquired acquisition parent company buyout 2025 2026",
+  "Vicarius valuation Series B 2024 valuation",
+  "JVP Doubles Investment Award in Startup Competition Vicarius $1m",
+  "Vicarius JVP $1 million award 2018 investment competition",
+  "Vicarius Jerusalem Development Authority grant $50,000 2017",
+  "Vicarius $105,000 pre-seed"
+]
+gaps = [
+  "identity: The legal terms name Vicarius Ltd. and Vicarius Inc., but their incorporation jurisdictions and relationship are not specified. Finder lists Israeli registrar number 515458966; the linked government lookup failed to load, so that identifier remains directory-reported.",
+  "funding: The 2020 company-announced $5 million seed conflicts with IVC's $2.6 million first-round record on the same date. Earlier pre-seed and grant entries in legacy directories lack corroborating primary terms, and the exact company-announced lifetime total, financing instruments, and valuation terms remain unavailable.",
+  "investors: Published announcements identify named lead firms, but unnamed executive participants, exact investor allocations, and current shareholdings are not public. Future Energy is on the current company investor page without a verified round attribution.",
+  "team: Public sources do not give the date Michael Assraf ceased to be identified as CEO, and biographies for most current executives were not found.",
+  "ownership: Vicarius is listed as privately held, but no cap table, ownership percentages, ultimate parent, acquisition, merger, or exit was disclosed in the sources reviewed.",
+  "financials: No reliable public revenue, ARR, gross margin, profitability, burn, runway, or audited financial statement was found; employee-band data is not a substitute for financial disclosure.",
+  "traction: Customer counts differ by source and date, and the current LinkedIn reach figure is undated. Customer revenue, active usage, cohort retention, expansion, concentration, and independently audited deployment outcomes are not public.",
+  "intellectual_property: Keyword searches of the USPTO public search resource and web-indexed patent records did not identify a Vicarius-owned patent family. This does not rule out filings under other assignees or in Israeli/WIPO registries; the founder's reported personal patent work does not establish company ownership.",
+  "competition: No independent win/loss analysis, customer-side comparative benchmark, or published pricing comparison was found for Tenable, Qualys, Rapid7, or bundled endpoint-management alternatives.",
+  "dual_use: No specific defense contract, classified deployment, government procurement, or Vicarius-specific security certification was verified. Defense and public-sector relevance is inferred from the defensive remediation capability and availability-sensitive commercial use case."
+]
+conflicts = [
+  "The January 22, 2020 financing is reported as a $5 million Seed by Vicarius and Globes, but IVC's JVP portfolio data lists a $2.6 million first round on that same date. The round amount is omitted and both direct observations are retained.",
+  "IVC classifies the February 2022 $24 million Series A as a first-round extension, while Vicarius and JVP announce a Series A without calling it an extension. It is retained as a separate event linked to the 2020 event, with the IVC classification noted.",
+  "Company and media reports do not provide one reconciled cumulative funding total: TechCrunch reports approximately $56.7 million and CTech says over $56 million. The company announcement itself does not state an exact lifetime total, so no aggregate numeric field is populated.",
+  "Startup Nation Central Finder, last updated March 12, 2024, reports $60.16 million across six rounds and lists pre-2020 pre-seed and non-equity/grant entries not corroborated by primary announcements. It also lists the 2018 JVP award, which is verified separately through JVP.",
+  "Vicarius' current About page groups the $30 million Series B under its 2023 timeline, while the official funding post and independent coverage date the announcement January 17, 2024. The dated announcement is recorded, and no separate closing date is asserted.",
+  "Vicarius' current About page says over 500 customers across 50 countries, its historical 2024 timeline says 500-plus across 60-plus countries, and its current LinkedIn profile claims 800-plus across 65-plus countries without a measurement date.",
+  "January 2024 media identifies Michael Assraf as CEO, while the current official leadership page identifies Roi Cohen as CEO. The role transition date was not found."
+]
+diligence_questions = [
+  "Can Vicarius reconcile the $5 million company-announced January 2020 seed with IVC's $2.6 million first-round record, and provide executed round terms plus a company-reported lifetime capital total that separates the 2018 JVP investment award, grants, and equity?",
+  "What are ARR, gross and net retention, customer concentration, paid production deployments, average contract value, and channel-sourced revenue by cohort, and how do those figures reconcile the 2024 and current customer-count claims?",
+  "Across Windows, Linux, macOS, and the highest-volume third-party applications, what are patch success, false-closure, rollback, outage, and support-escalation rates, measured independently over customer production deployments?",
+  "For vShield and AI-assisted scripts, what exploit classes and software versions are supported, what human approvals and rollback safeguards apply, and what performance or compatibility tradeoffs appear under endpoint protection and routine software updates?",
+  "In competitive evaluations against customers' installed Tenable, Qualys, Rapid7, Microsoft, or endpoint-management products, what is the win/loss rate, replacement versus add-on mix, and measurable risk reduction per dollar?",
+  "What are the operating and data-processing roles of Vicarius Ltd. and Vicarius Inc., where are customer data and support personnel located, and which government, export-control, or certification requirements can the product meet today?"
+]
+
+[[intelligence.research.sources]]
+id = "s-about"
+url = "https://www.vicarius.io/about-us"
+title = "About Vicarius – makers of vRx vulnerability remediation"
+publisher = "Vicarius"
+kind = "company"
+accessed_at = "2026-10-22T00:18:43Z"
+claims = ["Vicarius describes vRx as a vulnerability-remediation platform with patching, patchless protection, and scripting.", "The page identifies New York as headquarters and Tel Aviv-Yafo as a company location.", "The page timeline says founded in 2016, 150-plus customers and a $24 million Series A in 2022, a $30 million Series B in 2023, and 500-plus customers in 60-plus countries with more than 2 million assets in 2024.", "The current About page says over 500 customers across 50 countries and lists investors Bright Pixel Capital, AlleyCorp, GoldBell, JVP, Future Energy, and AllegisCyber.", "The current leadership list names Roi Cohen as CEO and co-founder, Yossi Ze'evi as CTO and co-founder, and other current executives."]
+
+[[intelligence.research.sources]]
+id = "s-legal"
+url = "https://www.vicarius.io/terms-conditions-quote"
+title = "Terms & Conditions Quote"
+publisher = "Vicarius"
+kind = "company"
+accessed_at = "2026-10-22T00:18:43Z"
+claims = ["The company terms identify Vicarius Ltd. and Vicarius Inc. collectively as Vicarius.", "The terms give Derech Menachem Begin 154, Tel Aviv-Yafo, Israel as the company address.", "The terms describe customer subscriptions and reseller or managed-service-provider use of Vicarius products."]
+
+[[intelligence.research.sources]]
+id = "s-linkedin"
+url = "https://www.linkedin.com/company/vicarius"
+title = "Vicarius | LinkedIn"
+publisher = "LinkedIn"
+kind = "company"
+accessed_at = "2026-10-22T00:18:43Z"
+claims = ["Vicarius' company profile identifies it as privately held, founded in 2016, headquartered in New York, with a 51–200 employee size band.", "The profile describes vRx and vIntelligence and claims 800-plus customers in over 65 countries; the profile does not date that customer figure."]
+
+[[intelligence.research.sources]]
+id = "s-seed"
+url = "https://www.vicarius.io/vsociety/posts/vicarius-is-funded-now-what"
+title = "Vicarius Raises $5M to Protect Apps & Assets Against Vulnerabilities"
+publisher = "Vicarius"
+kind = "company"
+accessed_at = "2026-10-22T00:18:43Z"
+published_on = "2020-01-22"
+claims = ["Vicarius announced closing a $5 million Seed round led by JVP, with Innogy Ventures and Goldbell Investments participating.", "The company described TOPIA as a product being funded by the seed investment."]
+
+[[intelligence.research.sources]]
+id = "s-globes-seed"
+url = "https://en.globes.co.il/en/article-israeli-cyberthreat-prediction-co-vicarius-raises-5m-1001315773"
+title = "Israeli cyberthreat prediction co Vicarius raises $5m"
+publisher = "Globes"
+kind = "media"
+accessed_at = "2026-10-22T00:18:43Z"
+published_on = "2020-01-22"
+claims = ["Globes reports a $5 million seed led by JVP with Innogy Innovation Hub and Goldbell investing.", "Globes identifies Vicarius as an Israeli cybersecurity provider, founded in 2016 by Michael Assraf, Roi Cohen, and Yossi Ze'evi, with Tel Aviv and US offices."]
+
+[[intelligence.research.sources]]
+id = "s-jvp-2018"
+url = "https://jvpvc.com/newsroom/vicarius-mmuze-awarded-top-prize-1st-nyc-play-jvps-international-startup-competition-jvp-decides-double-prize-2-million-worth-investments-winners-vicarius-mmuze/"
+title = "Vicarius & mmuze Awarded Top Prize in 1st NYC Play – JVP’s International Startup Competition"
+publisher = "Jerusalem Venture Partners"
+kind = "investor"
+accessed_at = "2026-10-22T00:18:43Z"
+published_on = "2018-06-19"
+claims = ["JVP states Vicarius received a $1 million investment prize in the NYC Play competition.", "JVP identifies Vicarius as an Israeli startup founded in 2016 and names Michael Assraf as CEO and founder at the time."]
+
+[[intelligence.research.sources]]
+id = "s-finder"
+url = "https://finder.startupnationcentral.org/company_page/vicarius"
+title = "Vicarius — Cyber Security | Finder"
+publisher = "Startup Nation Central"
+kind = "directory"
+accessed_at = "2026-10-22T00:18:43Z"
+claims = ["The legacy Finder profile says it was last updated March 12, 2024 and lists Israeli Companies Registrar identifier 515458966.", "The profile reports $60.16 million across six rounds and lists the 2018 JVP investment, 2020 $5 million seed, 2022 $24 million Series A, and 2024 $30 million Series B.", "The profile also lists pre-2020 pre-seed and non-equity/grant events that were not corroborated by primary funding announcements.", "The profile contains customer-count, employee-count, and funding totals that do not reconcile with all current company-profile snapshots."]
+
+[[intelligence.research.sources]]
+id = "s-ivc-jvp"
+url = "https://www.ivc-online.com/Google-Card?id=206d9de0-d510-e811-80e2-00155d0b832c"
+title = "Jerusalem Venture Partners (JVP) VIII - IVC Data & Insights"
+publisher = "IVC Data & Insights"
+kind = "directory"
+accessed_at = "2026-10-22T00:18:43Z"
+claims = ["IVC's JVP portfolio table lists a Vicarius first round dated January 22, 2020 at $2.6 million.", "The same table lists a $24 million first-round extension dated February 9, 2022 and a $30 million second round dated January 17, 2024."]
+
+[[intelligence.research.sources]]
+id = "s-ivc-company"
+url = "https://www.ivc-online.com/Google-Card?id=54cab033-58a6-e611-9113-80c16e7d3630"
+title = "Vicarius Ltd. - IVC Data & Insights"
+publisher = "IVC Data & Insights"
+kind = "directory"
+accessed_at = "2026-10-22T00:18:43Z"
+claims = ["IVC's Vicarius profile lists the February 2022 transaction as Series A - Extended and lists R&D grant rows dated September 2017 and June 2020, with amounts obscured in the fetched page.", "The page's visible fields include current executives and New York and Tel Aviv company addresses."]
+
+[[intelligence.research.sources]]
+id = "s-jvp-a"
+url = "https://jvpvc.com/newsroom/vicarius-announces-24-million-series-funding-rebuild-vulnerability-remediation-market-todays-remote-cloud-based-world-round-led-allegiscyber-capital-jvp-alleycorp/"
+title = "Vicarius Announces $24 Million Series A Funding"
+publisher = "Jerusalem Venture Partners"
+kind = "investor"
+accessed_at = "2026-10-22T00:18:43Z"
+published_on = "2022-02-09"
+claims = ["JVP's announcement states Vicarius announced a $24 million Series A led by AllegisCyber Capital, JVP, and AlleyCorp.", "The release says executives from Okta, SecurityScorecard, and Exabeam also provided capital without naming those individuals.", "The release identifies Michael Assraf, Yossi Ze'evi, and Roi Cohen as founders and describes TOPIA's vulnerability discovery and remediation function."]
+
+[[intelligence.research.sources]]
+id = "s-vicarius-a"
+url = "https://www.vicarius.io/vsociety/posts/vicarius-raises-24m-series-a-round"
+title = "Vicarius Raises $24M Series A Round"
+publisher = "Vicarius"
+kind = "company"
+accessed_at = "2026-10-22T00:18:43Z"
+published_on = "2022-02-09"
+claims = ["Vicarius announced that it closed a $24 million Series A led by AllegisCyber Capital with JVP and AlleyCorp participating."]
+
+[[intelligence.research.sources]]
+id = "s-techcrunch-a"
+url = "https://techcrunch.com/2022/02/09/vicarius-vulnerability-remediation/"
+title = "Vicarius raises $24M to build out its vulnerability remediation platform"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-22T00:18:43Z"
+published_on = "2022-02-09"
+claims = ["TechCrunch reports a $24 million Series A led by AllegisCyber Capital, JVP, and AlleyCorp, two years after a $5 million seed round.", "TechCrunch reports 150 customers, including the UK National Health Service and Ingram Micro, at the time of the Series A.", "TechCrunch identifies Michael Assraf as CEO and describes a cloud-based platform for vulnerability analysis and remediation."]
+
+[[intelligence.research.sources]]
+id = "s-vicarius-b"
+url = "https://www.vicarius.io/vsociety/posts/vicarius-30m-series-b-vulnerability-scanning-is-dead-long-live-vulnerability-remediation-1"
+title = "Vicarius 30M Series B: Vulnerability scanning is dead, long live vulnerability remediation"
+publisher = "Vicarius"
+kind = "company"
+accessed_at = "2026-10-22T00:18:43Z"
+published_on = "2024-01-17"
+claims = ["Vicarius' official post is dated January 17, 2024 and refers to its $30 million Series B."]
+
+[[intelligence.research.sources]]
+id = "s-calcalist-b"
+url = "https://www.calcalistech.com/ctechnews/article/skhninsk6"
+title = "Cyber startup Vicarius raises $30 million Series B for vulnerability remediation platform"
+publisher = "CTech / Calcalist"
+kind = "media"
+accessed_at = "2026-10-22T00:18:43Z"
+published_on = "2024-01-17"
+claims = ["CTech reports a $30 million Series B announced January 17, 2024 led by Bright Pixel Capital, with AllegisCyber Capital, AlleyCorp, and Strait Capital participating.", "CTech reports total funding of over $56 million and says the company had over 400 customers, including PepsiCo, HPE, Bupa, Equinix, and more than two dozen Fortune 500 companies.", "CTech identifies Michael Assraf, Yossi Ze'evi, and Roi Cohen as founders and Assraf as CEO at the time."]
+
+[[intelligence.research.sources]]
+id = "s-techcrunch-b"
+url = "https://techcrunch.com/2024/01/17/vicarius-lands-30m-for-its-ai-powered-vulnerability-detection-tools/"
+title = "Vicarius lands $30M for its AI-powered vulnerability detection tools"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-22T00:18:43Z"
+published_on = "2024-01-17"
+claims = ["TechCrunch reports a closed $30 million Series B led by Bright Pixel Capital with AllegisCyber Capital, AlleyCorp, and Strait Capital participating.", "TechCrunch reports an approximate $56.7 million total raised, says the CEO declined to disclose valuation, and reports a 43-person team at the time.", "TechCrunch reports more than 400 customer brands, including PepsiCo, HPE, and Equinix, and identifies Michael Assraf as co-founder and CEO.", "TechCrunch describes vRx, the vuln_GPT script tool, patchless in-memory protection, and a community of security researchers."]
+
+[[intelligence.research.sources]]
+id = "s-product"
+url = "https://www.vicarius.io/solution/vulnerability-remediation"
+title = "Automated vulnerability remediation software | Vicarius vRx"
+publisher = "Vicarius"
+kind = "company"
+accessed_at = "2026-10-22T00:18:43Z"
+claims = ["Vicarius describes vRx discovery with agents and agentless vRadar, risk ranking with vScore, patch deployment, vScript, vShield patchless protection, and vIntelligence validation.", "The company claims support for Windows, macOS, Linux, and more than 20,000 third-party applications.", "The product page describes ScriptAI as a script-authoring aid, memory-level patchless protection, and company-controlled remediation policies."]
+
+[[intelligence.research.sources]]
+id = "s-elal"
+url = "https://www.vicarius.io/case-studies/el-al-airlines"
+title = "Vicarius | vRx Case Study | EL AL Airlines"
+publisher = "Vicarius"
+kind = "company"
+accessed_at = "2026-10-22T00:18:43Z"
+claims = ["Vicarius' case study describes deployment across 500 Windows and 250 Linux servers at EL AL.", "The case study reports 98 percent monthly server coverage, 95 percent less manual effort, and patch planning reduced from a full-time job to one day.", "The study quotes EL AL Deputy Director of Infrastructure Tal Shachar and describes an agent-based rollout via SCCM for Windows and scripts for Linux."]
+
+[[intelligence.research.sources]]
+id = "s-forbes"
+url = "https://councils.forbes.com/profile/Roi-Cohen-CEO-Vicarius/2d7b0b73-01dd-4e45-a4db-34c2ba0cf730"
+title = "Roi Cohen | CEO - Vicarius | Forbes Technology Council"
+publisher = "Forbes Technology Council"
+kind = "other"
+accessed_at = "2026-10-22T00:18:43Z"
+claims = ["Roi Cohen's profile identifies him as Vicarius CEO and co-founder and describes prior malware-research leadership at CyberArk and CYBERTINEL, vulnerability research and patent submissions, and an MBA from Tel Aviv University."]
+
+[[intelligence.research.sources]]
+id = "s-uspto"
+url = "https://www.uspto.gov/patents/search/patent-public-search/"
+title = "Patent Public Search"
+publisher = "United States Patent and Trademark Office"
+kind = "government"
+accessed_at = "2026-10-22T00:18:43Z"
+published_on = "2024-06-06"
+claims = ["USPTO describes its Patent Public Search tool as public access to U.S. patents and published patent applications."]
+
+[[intelligence.research.sources]]
+id = "s-tenable"
+url = "https://www.tenable.com/products/vulnerability-management?li_fat_id=1a82f074-2a2b-4996-954f-e996499c9dea"
+title = "Tenable One Vulnerability Management"
+publisher = "Tenable"
+kind = "company"
+accessed_at = "2026-10-22T00:18:43Z"
+claims = ["Tenable describes continuous asset scanning, risk-based vulnerability prioritization, guided remediation, patching actions, and exposure-management workflows."]
+
+[[intelligence.research.sources]]
+id = "s-qualys"
+url = "https://www.qualys.com/apps/vmdr-patch"
+title = "VMDR with Patch Management"
+publisher = "Qualys"
+kind = "company"
+accessed_at = "2026-10-22T00:18:43Z"
+claims = ["Qualys describes VMDR with Patch Management as a risk-based workflow that discovers assets, prioritizes vulnerabilities, maps patches, and automates patch jobs across operating systems and third-party applications."]
+
+[[intelligence.research.sources]]
+id = "s-rapid7"
+url = "https://docs.rapid7.com/insightvm/"
+title = "Welcome to Vulnerability Management (InsightVM)"
+publisher = "Rapid7"
+kind = "company"
+accessed_at = "2026-10-22T00:18:43Z"
+claims = ["Rapid7 describes InsightVM as a vulnerability-management resource combining vulnerability and exploit knowledge, exposure analytics, scanning, asset organization, risk prioritization, and remediation reporting."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-22T00:18:43Z"
+next_review_on = "2027-04-22"
+queries = ["site:vicarius.io Vicarius company/about leadership vRx customers 2026", "Vicarius Israeli cybersecurity company founders patents revenue customers", "Vicarius Inc founders Michael Assraf Yossi Ze'evi Roi Cohen cybersecurity"]
+source_ids = ["s-about", "s-legal", "s-linkedin", "s-globes-seed", "s-finder"]
+summary = "Canonical brand is Vicarius. Official terms name Vicarius Ltd. and Vicarius Inc.; official materials show New York headquarters and a Tel Aviv office. The company is active, privately held, and founded in 2016. Finder lists an Israeli registrar number, but the linked registrar lookup did not load, so incorporation jurisdiction is not asserted."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "conflicting"
+checked_at = "2026-10-22T00:18:43Z"
+next_review_on = "2027-04-22"
+queries = ["Vicarius Series B $30 million January 2024 official investors", "Vicarius funding seed Series A investors funding raised", "Vicarius $105,000 pre-seed grant 2017 funding round", "Vicarius Series C funding 2025 2026 financing", "Vicarius valuation Series B 2024 valuation", "JVP Doubles Investment Award in Startup Competition Vicarius $1m"]
+source_ids = ["s-jvp-2018", "s-seed", "s-globes-seed", "s-ivc-jvp", "s-ivc-company", "s-jvp-a", "s-vicarius-a", "s-vicarius-b", "s-calcalist-b", "s-techcrunch-b", "s-finder"]
+summary = "Primary announcements verify the 2018 JVP investment award, 2020 seed event, 2022 Series A, and 2024 Series B. The 2020 amount conflicts with IVC data; the 2022 financing is called a Series A by company/investor sources and an extension by IVC. Searches through October 2026 found no later Series C. No exact company-announced cumulative total or valuation was found."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T00:18:43Z"
+next_review_on = "2027-04-22"
+queries = ["Vicarius Series B $30 million January 2024 official investors", "Vicarius funding seed Series A investors funding raised", "site:brightpixel.pt Vicarius $30 million Series B 2024", "Vicarius \"24 million\" Series A funding February 2022 JVP AllegisCyber AlleyCorp"]
+source_ids = ["s-about", "s-jvp-2018", "s-seed", "s-globes-seed", "s-jvp-a", "s-vicarius-a", "s-techcrunch-a", "s-calcalist-b", "s-techcrunch-b"]
+summary = "Funding announcements name JVP, Innogy Ventures, Goldbell Investments, AllegisCyber Capital, AlleyCorp, Bright Pixel Capital, and Strait Capital. Vicarius currently lists Future Energy as an investor without a primary round attribution. Exact cap-table holdings and allocations are undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "conflicting"
+checked_at = "2026-10-22T00:18:43Z"
+next_review_on = "2027-04-22"
+queries = ["Vicarius Inc founders Michael Assraf Yossi Ze'evi Roi Cohen cybersecurity", "Vicarius current CEO Roi Cohen Michael Assraf 2025 CEO", "Roi Cohen CEO Vicarius Forbes Technology Council background"]
+source_ids = ["s-about", "s-forbes", "s-jvp-2018", "s-jvp-a", "s-techcrunch-a", "s-techcrunch-b", "s-calcalist-b"]
+summary = "Current official materials list Roi Cohen as CEO and Yossi Ze'evi as CTO; 2024 coverage identifies Michael Assraf as CEO and co-founder. The transition date is not published. The official current leader list gives names and roles but few biographies."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T00:18:43Z"
+next_review_on = "2027-04-22"
+queries = ["Vicarius acquired acquisition parent company buyout 2025 2026", "Vicarius valuation Series B 2024 valuation", "Vicarius funding seed Series A investors funding raised"]
+source_ids = ["s-legal", "s-linkedin", "s-finder", "s-techcrunch-b"]
+summary = "Vicarius remains privately held in company-profile data. No parent, acquisition, merger, exit, public ticker, or disclosed cap table was found. The company terms name two legal entities but do not describe their ownership relationship."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "not_found"
+checked_at = "2026-10-22T00:18:43Z"
+next_review_on = "2027-04-22"
+queries = ["Vicarius revenue ARR financials 2025 2026 headcount employees", "Vicarius valuation Series B 2024 valuation", "Vicarius Series C funding 2025 2026 financing"]
+source_ids = ["s-linkedin", "s-techcrunch-b", "s-calcalist-b", "s-finder"]
+summary = "Searches found company-size bands, funding reports, and customer-count claims but no dated public revenue, ARR, margin, cash, burn, runway, or audited accounts. The approximate funding total reported by TechCrunch is not a financial operating metric."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "conflicting"
+checked_at = "2026-10-22T00:18:43Z"
+next_review_on = "2027-04-22"
+queries = ["Vicarius customer case study EL AL customer government defense deployment contract", "site:vicarius.io Vicarius company/about leadership vRx customers 2026", "Vicarius revenue ARR financials 2025 2026 headcount employees"]
+source_ids = ["s-about", "s-linkedin", "s-techcrunch-a", "s-calcalist-b", "s-techcrunch-b", "s-elal", "s-finder"]
+summary = "Customer and deployment evidence spans 150-plus in 2022, over 400 in 2024, a company timeline of 500-plus in 2024, an undated current LinkedIn claim of 800-plus, and a vendor-hosted EL AL case study. The claims differ by date and source and are not a verified revenue or retention series."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-22T00:18:43Z"
+next_review_on = "2027-04-22"
+queries = ["Vicarius patents USPTO vulnerability remediation vRx", "Vicarius patents inventor assignee patent USPTO", "Vicarius patents cybersecurity vulnerability remediation", "site:patents.google.com/patent Vicarius vulnerability", "Vicarius $105,000 pre-seed"]
+source_ids = ["s-uspto", "s-forbes", "s-product"]
+summary = "No company-owned patent family was verified in USPTO and web-indexed keyword searches. A founder profile reports personal patent submissions from earlier work; that does not establish Vicarius ownership. Israeli and WIPO records under alternate assignees remain unchecked."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T00:18:43Z"
+next_review_on = "2027-04-22"
+queries = ["Tenable official vulnerability management remediation exposure management platform", "site:qualys.com vulnerability management patch management official remediation product", "site:rapid7.com vulnerability management remediation official InsightVM", "site:automox.com product patch management vulnerability remediation platform official", "site:tanium.com patch vulnerability management official product"]
+source_ids = ["s-product", "s-tenable", "s-qualys", "s-rapid7"]
+summary = "Official product documentation confirms substantial workflow overlap with Tenable, Qualys, and Rapid7. Qualys directly combines vulnerability prioritization with patch automation; no independent comparative benchmark or win/loss data was found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-22T00:18:43Z"
+next_review_on = "2027-04-22"
+queries = ["Vicarius customer case study EL AL customer government defense deployment contract", "site:gov.il Vicarius cybersecurity contract OR procurement", "site:gov.il Vicarius Israel Innovation Authority grant OR procurement"]
+source_ids = ["s-product", "s-elal", "s-about", "s-calcalist-b"]
+summary = "The product supports defensive vulnerability remediation and the EL AL case study describes an availability-sensitive commercial deployment. Searches did not verify a defense contract, classified use, or government procurement; public-sector applicability remains a capability-based inference."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Current Vicarius About and LinkedIn pages are active and describe the live product and company; LinkedIn labels Vicarius privately held."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-about", "s-linkedin"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Globes identifies Vicarius as an Israeli provider founded by Israeli cybersecurity entrepreneurs; current Vicarius About and terms identify the active Tel Aviv-Yafo office and company address."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-globes-seed", "s-about", "s-legal"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.jvp-nyc-play-2018.amount"
+support = "direct"
+summary = "JVP's primary release states that Vicarius received a $1 million investment prize in June 2018."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-jvp-2018"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.jvp-nyc-play-2018.lead_investors"
+support = "direct"
+summary = "JVP's primary announcement says JVP provided the $1 million investment prize to Vicarius."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-jvp-2018"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.first-round-2020.amount"
+support = "conflicting"
+summary = "The company and Globes report $5 million, while IVC's JVP portfolio table reports $2.6 million for the same January 22, 2020 first-round event; no single numeric amount is selected."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-seed", "s-globes-seed", "s-ivc-jvp"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.first-round-2020.amount_observations.company-seed-announcement.amount"
+support = "direct"
+summary = "Vicarius' dated seed announcement and Globes' same-day report each state $5 million. This check verifies what those sources reported, not the reconciled transaction amount."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-seed", "s-globes-seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.first-round-2020.amount_observations.ivc-jvp-portfolio-record.amount"
+support = "direct"
+summary = "IVC's JVP portfolio table records the January 22, 2020 first round at $2.6 million. This check verifies the directory's reported amount, not the reconciled transaction amount."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-ivc-jvp"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.first-round-2020.lead_investors"
+support = "direct"
+summary = "Vicarius and Globes identify JVP as the lead investor in the 2020 seed announcement."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-seed", "s-globes-seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.first-round-2020.participating_investors"
+support = "direct"
+summary = "Vicarius and Globes identify Innogy Ventures/Innovation Hub and Goldbell as participating investors in the 2020 seed announcement."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-seed", "s-globes-seed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-extension-2022.amount"
+support = "direct"
+summary = "Vicarius and JVP report a $24 million Series A dated February 9, 2022; IVC also lists a $24 million first-round extension on that date."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-jvp-a", "s-vicarius-a", "s-ivc-jvp"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-extension-2022.lead_investors"
+support = "direct"
+summary = "JVP's primary release names AllegisCyber Capital, JVP, and AlleyCorp as lead investors."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-jvp-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2024.amount"
+support = "direct"
+summary = "Vicarius' dated post, CTech, and TechCrunch report a $30 million Series B announced January 17, 2024."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-vicarius-b", "s-calcalist-b", "s-techcrunch-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2024.lead_investors"
+support = "direct"
+summary = "CTech and TechCrunch identify Bright Pixel Capital as the Series B lead."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-calcalist-b", "s-techcrunch-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2024.participating_investors"
+support = "direct"
+summary = "CTech and TechCrunch name AllegisCyber Capital, AlleyCorp, and Strait Capital as Series B participants."
+verified_at = "2026-10-22T00:18:43Z"
+source_ids = ["s-calcalist-b", "s-techcrunch-b"]

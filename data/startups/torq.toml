@@ -1,84 +1,1137 @@
 name = "Torq"
-description = "Agentic AI SOC and security hyperautomation platform that helps enterprise and managed security teams triage, investigate, and remediate security events across their existing tool stacks."
-detailed_description = """
-Torq builds an agentic AI security operations platform centered on hyperautomation, case management, and workflow execution. HyperSOC groups alerts into cases, enriches them with context, prioritizes them, and supports investigation through Socrates, while the underlying Hyperautomation layer connects security, identity, IT, and business systems. The product combines deterministic playbooks with AI agents for runbook creation, investigation, remediation, and case management. That architecture matters because it gives customers a controlled path from natural-language intent to repeatable actions rather than asking an LLM to operate without the surrounding workflow, evidence, and approval context.
+description = "Torq sells an enterprise AI SOC and security hyperautomation platform combining workflow execution, case management, alert triage, and AI agents across customers' existing security tools."
+detailed_description = """Torq is an enterprise cybersecurity software company whose product has evolved from no-code security workflow automation into a broader AI SOC platform. Its current stack combines Hyperautomation integrations and deterministic playbooks with alert triage, case management, Socrates orchestration, configurable AI agents, and the Agentic Builder. The product aims to carry a security event from intake and enrichment through investigation, evidence capture, human escalation, and bounded response. Its commercial proposition is to coordinate tools that a customer already owns, reduce repeated analyst work, and standardize response across a large and changing security environment.
 
-The market problem is persistent: SOC teams face high alert volumes, fragmented telemetry, staffing constraints, and pressure to reduce mean time to respond. Torq sells into enterprise security teams and MSSPs that already own many detection and response tools but need an orchestration layer across them. Its use cases include phishing response, identity and access actions, threat-intelligence enrichment, alert investigation, fraud workflows, and operational ticket automation. The commercial value proposition is therefore less about replacing every security control than about making the existing stack produce a faster, more consistently governed response.
+Torq's commercial wedge is workflow execution across a heterogeneous stack rather than replacement of every detection source. Public product material describes integrations with security, identity, cloud, communications, and ticketing systems. Deepwatch says it standardized on Torq across its global security infrastructure and uses the platform in its MDR service. Check Point's CISO describes Torq investigating, triaging, and remediating many internal alerts without human intervention when policy conditions are met, while routing high-risk or complex cases for review. These are meaningful customer adoption signals, but the case studies are published by Torq and do not disclose contract values, seat counts, renewal rates, or independently audited before-and-after results.
 
-Commercially, Torq has moved well beyond an early niche tool. The company reported 300% revenue growth and 200% employee growth in 2024, opened a London EMEA headquarters, and lists enterprise and MSSP customer stories involving organizations such as Check Point, RSM, Valvoline, Kenvue, and Deepwatch. In January 2026 it announced a $140 million Series D led by Merlin Ventures at a reported $1.2 billion valuation, bringing total funding to $332 million; those figures are company-reported and should be confirmed in diligence. Torq's own company page now reports 400+ employees, while its customer page reports large automation volumes and response improvements. These signals indicate substantial adoption and financing, but they do not substitute for checking recurring revenue quality, retention, gross margins, deployment concentration, and the proportion of outcomes attributable to customer-specific services.
+The product is moving from predictable workflow automation toward agentic work. Torq documentation describes agents operating through approved tools and case context, visible action logs, review and override controls, and configurable underlying models. Its 2026 Agentic Builder adds natural-language planning, workflow and agent generation, testing, and correction. The Revrod acquisition added multi-agent retrieval-augmented generation capabilities; the May 2026 Jit acquisition brought a context-graph capability intended to connect identities, assets, business context, and operating procedures to investigations. This architecture could improve relevance and reduce manual context assembly, but its value depends on context freshness, permission boundaries, evaluation quality, behavior under adversarial inputs, and safe handling of containment actions.
 
-From a defense and national-security perspective, the overlap is substantive but bounded. Automated triage, evidence collection, case orchestration, and policy-constrained containment can support government SOCs, critical-infrastructure defenders, cyber defense units, and MSSP operations serving those customers. The technology does not itself provide offensive capability, battlefield sensing, or mission hardware; its relevance is in defensive cyber operations and the resilience of security teams. Torq's 2026 announcement explicitly identifies expansion into the U.S. federal market, but public materials reviewed here do not establish government contracts, certifications, or production deployment in defense organizations. Those deployment, compliance, data-residency, auditability, human-approval, and fail-safe questions are central to validating the dual-use thesis."""
+Torq reports strong scale signals. It announced 300% revenue growth and 500% customer growth in 2023, 300% revenue growth and 200% employee growth in 2024, and its current About page lists 430+ employees worldwide. Company releases list customer additions and deployments including Blackstone, Carvana, Deepwatch, Nubank, Riskified, Rivian, Check Point, LEGO, Marriott, PepsiCo, Procter & Gamble, Siemens, Uber, Valvoline, Virgin Atlantic, and Wiz. Torq also advertises 100 million daily security automations. These remain company-reported figures. The company set a $100 million ARR target for 2026 in its 2024 Series C announcement; no actual ARR or absolute revenue figure was located in reviewed public sources, so the target must not be treated as achieved revenue.
+
+Torq is Israeli-incorporated, with an Israeli corporate address in Tel Aviv, an Americas headquarters in Denver, and an EMEA headquarters in London. Its co-founders Ofer Smadari, Leonid Belkind, and Eldad Livni previously built Luminate Security, acquired by Symantec. The company page lists Smadari as CEO, Belkind as CTO, Livni as CINO, and a leadership group across revenue, marketing, customer success, people, finance, security, and engineering. The founders' previous operating history and Torq's financing and team scale are strengths; independent background information for the wider executive team is thinner in public materials.
+
+Torq's commercial differentiation may come from integrating workflow execution, customer-specific context, case history, and approved response logic into a control plane with meaningful switching costs. This is a thesis to test. The market is crowded, and large security vendors can bundle AI and automation into existing SIEM or XDR contracts. Public product descriptions from Tines, Swimlane, Microsoft, Google, Palo Alto Networks, and D3 show overlap in automation, investigation, agentic response, or case management. Torq should be compared on deployment time, workflow coverage, analyst time saved, response quality, integration upkeep, and renewal economics rather than feature lists or vendor-reported automation counts.
+
+The dual-use case is specific to defensive cyber operations. Alert triage, evidence collection, case coordination, and policy-constrained containment can support enterprise SOCs and could also support government, critical-infrastructure, and defense cyber defense teams. In September 2026, Merlin named Torq as a technology partner in its federal SOC modernization architecture and said it was supporting Torq's FedRAMP path. That is a partner-led route to market and compliance effort, not evidence of an agency award, FedRAMP authorization, or production federal deployment. Public evidence supports defensive security operations, not offensive cyber capability or battlefield sensing.
+
+The 2026 Series D provides growth capital at a reported $1.2 billion valuation. Torq separately reports $332 million in total funding, while six individually announced rounds found in this review sum to $330 million; its 2024 Series C release also reported $192 million cumulative funding while then-itemized rounds sum to $190 million. These company totals are preserved as reported and the unexplained difference is not assigned to an invented event. Core diligence questions are current ARR and recurring-revenue quality, retention and customer concentration, gross margins and services mix, cash use, agent error and escalation rates, federal compliance progress, and integration and retention outcomes from Revrod and Jit."""
 logo = "https://torq.io/wp-content/uploads/2023/04/Torq-Logo-Black.svg"
 website = "https://torq.io/"
 sector = "Cybersecurity"
 founded = "2020"
-headquarters = "Tel Aviv, Israel / Denver, CO"
-employees = "400+"
-funding_stage = "Series D ($140M announced in 2026)"
+headquarters = "Tel Aviv, Israel (Israeli corporate address); Denver, Colorado (Americas HQ); London, UK (EMEA HQ)"
+employees = "430+"
+funding_stage = "Series D ($140M closed January 2026; company reports $332M total funding)"
 entity_type = "startup"
 dual_use = true
-dual_use_description = "Torq's security automation, case orchestration, and response tooling have clear commercial SOC value and credible applicability to government, critical-infrastructure, and defense cyber operations. The adjacency is defensive and operational: reducing analyst load, accelerating investigation, and executing governed containment, with public-sector deployment and compliance still requiring verification."
-key_technologies = [
-  "Multi-agent AI for SOC triage, investigation, and remediation",
-  "Security hyperautomation and SOAR workflow orchestration",
-  "Alert correlation, case creation, prioritization, and evidence assembly",
-  "Natural-language runbook and workflow generation",
-  "Policy-constrained deterministic and agentic response playbooks",
-  "Threat-intelligence enrichment across security and identity systems",
-  "Large connector and integration layer for enterprise security stacks"
-]
-use_cases = [
-  "High-volume SOC alert triage and prioritization",
-  "Automated enrichment of suspicious events with threat intelligence",
-  "Incident investigation, case timelines, and evidence gathering",
-  "Containment and remediation across endpoint, identity, email, and cloud tools",
-  "Phishing, identity, fraud, and abuse response workflows",
-  "Security operations automation for MSSPs and multi-tenant customers",
-  "Government, critical-infrastructure, and defense cyber defense center workflows",
-  "Custom workflow generation for repetitive security and IT processes"
-]
+dual_use_description = "Torq supports defensive cyber operations in enterprise SOCs and could serve government, critical-infrastructure, and defense security centers through alert triage, investigation, case coordination, and policy-constrained response. Merlin named Torq a partner in a federal SOC modernization architecture in September 2026 and is supporting its FedRAMP path. The reviewed public evidence does not establish FedRAMP authorization, a government contract award, or a production federal deployment."
+key_technologies = ["AI agents that investigate security cases through customer-approved tools and context", "Security hyperautomation combining deterministic playbooks with agentic workflows", "Alert triage, prioritization, case management, evidence capture, and response", "Natural-language workflow and agent generation with pre-deployment testing", "Multi-agent RAG capabilities integrated from Revrod", "Context graph capability integrated from Jit", "Connectors across security, identity, cloud, ticketing, and communications tools"]
+use_cases = ["SOC alert triage, deduplication, enrichment, and prioritization", "Security case investigation, evidence collection, and incident timelines", "Policy-bounded containment across identity, endpoint, email, and cloud tools", "Phishing, suspicious login, malware, and identity response workflows", "Natural-language authoring and maintenance of security workflows and AI agents", "MSSP and MDR operations across customer environments", "Context-aware investigations using identities, assets, relationships, and case history", "Potential government and critical-infrastructure defensive SOC workflows, subject to authorization and procurement"]
 investible = true
-investment_rationale = "Torq fits the site's dual-use technology thesis because its core product applies agentic AI and workflow orchestration to a mission-critical cybersecurity bottleneck. The Series D, reported customer expansion, and 400+ employee scale are credible maturity signals, while deep workflow and integration adoption could create operational stickiness. The priority signal is offset by a crowded market, high valuation expectations, and the need to verify retention, unit economics, model safety, and public-sector readiness; this field is not an investment recommendation."
-strategic_value = "Torq's strategic value lies in owning the control plane between security detections and operational action. If its agents can reliably correlate alerts, gather evidence, and execute bounded responses across heterogeneous tools, it can improve cyber-defense capacity without proportional analyst growth. That is relevant to enterprises, MSSPs, critical infrastructure, and government SOCs. The value is strongest as defensive cyber infrastructure, but depends on auditability, deployment controls, data handling, and the ability to coexist with incumbent SIEM, XDR, identity, and case-management systems."
-potential_score = 89
-technology_score = 90
-market_score = 88
-team_score = 89
-dual_use_score = 84
-strategic_alignment_score = 89
+investment_rationale = """Torq merits a high internal diligence priority because it combines a large private financing base, a reported 430+ person team, named multinational customers, customer-described production use, and product expansion from automation into agentic SOC work. A control point between detection, context, and action could support sticky enterprise deployments if Torq proves reliable integrations, measurable analyst savings, and repeatable customer expansion. Its founders have prior security-company operating experience, and the Revrod and Jit acquisitions add agentic RAG and context-graph capabilities. These strengths do not establish investment attractiveness: absolute ARR, retention, margins, concentration, burn, and acquisition terms remain private; reported cumulative funding is $2 million above the individually disclosed rounds found here; and the $1.2 billion valuation makes durable growth and differentiation important diligence questions. This is an internal research priority, not a recommendation."""
+strategic_value = """Torq's strategic value is its potential to connect security signals to explainable, permissioned action across fragmented enterprise environments. For a commercial SOC, that can reduce repeated investigation work and make response more consistent without replacing endpoint, identity, cloud, or SIEM controls. The Jit context graph may help agents reason about why an otherwise similar alert matters differently for a particular user, asset, or business process; Revrod's multi-agent RAG work is intended to improve research and planning. For government and critical infrastructure, the same defensive capabilities could support capacity-constrained security centers. Merlin's federal SOC partnership and FedRAMP support provide a path into that market, while authorization, procurement access, data handling, human control, and deployed references still need proof."""
+potential_score = 85
+technology_score = 87
+market_score = 85
+team_score = 84
+dual_use_score = 78
+strategic_alignment_score = 86
 stage = "mature"
-stage_rationale = "Torq remains an independent private startup, but its operating profile is that of a mature growth company: founded in 2020, reporting 400+ employees, broad enterprise and MSSP adoption, and a $140M Series D announced in early 2026. The scale and financing support a mature classification, while private-company operating metrics and public-sector traction still require diligence."
-competitors = [
-  "Tines",
-  "Palo Alto Networks Cortex XSOAR",
-  "Swimlane",
-  "Microsoft Security Copilot and Sentinel automation",
-  "Google Security Operations automation",
-  "D3 Security",
-  "Splunk SOAR"
-]
-competitive_edge = "Torq differentiates through the combination of a broad hyperautomation layer, case management, natural-language runbook creation, and a multi-agent SOC workflow rather than a single AI assistant. Its reported migration stories suggest that customers can reuse existing processes while expanding automation across a fragmented stack. That can create workflow-level switching costs and a credible platform narrative, but the edge is not permanent: SIEM, XDR, cloud-security, and ITSM incumbents can bundle adjacent agents, and customers may prefer controls already included in their security suites."
-risk_factors = [
-  "Crowded SOAR, AI SOC, SIEM, XDR, and security-platform market with strong incumbents",
-  "Unsafe or opaque autonomous actions could create security, compliance, or customer-trust failures",
-  "Integration maintenance and permissions complexity grow with heterogeneous customer stacks",
-  "Long enterprise and federal sales cycles increase implementation and working-capital requirements",
-  "Model quality, hallucination, prompt-injection, and data-leakage risks affect agent reliability",
-  "Feature convergence and bundling may pressure pricing and differentiation",
-  "Reported growth and valuation require diligence on retention, margins, concentration, and services mix"
-]
+stage_rationale = """Torq is a mature private growth company rather than an early-stage startup: it was founded in 2020, reports 430+ employees, has named multinational customers and customer-described production use, and closed a $140M Series D in January 2026. Its two acquisitions and product move into agentic AI SOC workflows indicate an expansion phase. Actual ARR, margins, retention, cash runway, and acquisition integration outcomes remain undisclosed, so maturity describes operating scale and financing stage rather than verified financial performance."""
+competitors = ["Tines", "Swimlane Turbine", "Palo Alto Networks Cortex XSOAR", "Microsoft Sentinel and Security Copilot", "Google Security Operations", "D3 Security Morpheus", "Splunk SOAR"]
+competitive_edge = """Torq's potential distinction is the combination of enterprise workflow execution, case management, agentic investigation, a natural-language builder, and customer-specific context from Jit. Check Point's case study describes dozens of AI playbooks deployed within days and policy-conditioned automation of many internal alerts; Deepwatch says it standardized Torq across global infrastructure. These stories suggest practical time-to-value and workflow reuse, but remain vendor-published examples. Tines emphasizes broad, governed automation and AI SOC workflows; Swimlane combines case management, low-code playbooks, agentic AI, and MSSP features; Microsoft and Google integrate AI with their own security telemetry and suites; Palo Alto and D3 combine orchestration, case management, and agentic features. Torq must prove lower operating cost, reliable controls, measurable response quality, and cross-stack breadth against those alternatives."""
+risk_factors = ["Crowded SOAR and AI SOC market with security-suite incumbents and agentic automation specialists", "Bundled SIEM, XDR, identity, and cloud features may pressure Torq's independent platform pricing and advantage", "Autonomous containment can disrupt customers if models, context, tool permissions, or policy thresholds are wrong", "Model errors, prompt injection, stale context, and data exposure require strong tenant boundaries, evaluation, logging, and rollback", "Large connector surfaces and customer-specific permissions can increase integration maintenance and implementation cost", "Private revenue, ARR, margins, concentration, cash use, and runway limit assessment of growth quality and capital efficiency", "Company-reported $332M lifetime funding exceeds the sum of disclosed rounds by $2M, and the reported valuation raises execution expectations", "Federal sales depend on authorization, procurement access, and references; partnership and FedRAMP path do not establish authorization or an agency contract", "Revrod and Jit acquisitions bring integration, IP ownership, employee retention, and roadmap execution risks"]
 risk_level = "medium"
 signals = [ ]
 priority_rank = 0
-priority_rationale = "Torq merits a high internal priority rank because it combines substantial private-company scale, a current Series D financing signal, an AI-native security-operations product, and credible defensive cyber relevance. The record should be read as a diligence priority rather than a recommendation: the key unresolved questions are public-sector qualification, agent safety, customer retention, economics, and whether the platform can preserve differentiation against bundled incumbents."
+priority_rationale = """Torq merits continued internal diligence priority because it has grown from workflow automation into a scaled defensive cyber operations platform with named production customers, substantial financing, a large reported team, and two capability-focused acquisitions. Government relevance is credible as a defensive use case and partner-led market entry, but public materials establish a federal modernization partnership and FedRAMP path, not certification or deployment. Keep the priority conditional on recurring revenue and retention, actual customer outcomes, agent safety under failure and adversarial inputs, data governance, and acquisition integration. This priority flag is an internal research signal, not a recommendation."""
 crawled_at = "2026-01-30T14:18:00+00:00"
 public_sources = [
-  "https://torq.io/",
-  "https://torq.io/company/",
-  "https://torq.io/contact-us/",
-  "https://torq.io/news/torq-seriesd/",
-  "https://torq.io/news/torq-announces-revenue-and-employee-growth/",
-  "https://torq.io/customers/",
-  "https://kb.torq.io/en/articles/9267556-finding-your-way-around-torq"
+  {label="About Torq", url="https://torq.io/company/", description="Company history, founders, leadership, headcount, and locations."},
+  {label="Torq Privacy Policy", url="https://torq.io/privacy/", description="Israeli incorporation and Tel Aviv corporate address."},
+  {label="Torq AI SOC Platform", url="https://torq.io/", description="Current product description and AI SOC functions."},
+  {label="AI in Torq documentation", url="https://kb.torq.io/en/articles/13424122-ai-in-torq", description="Agent tools, human review, auditability, model options, and governance."},
+  {label="Torq Series D", url="https://torq.io/news/torq-seriesd/", description="Series D, valuation, reported funding total, investors, and customer statements."},
+  {label="Reuters Series D report", url="https://www.streetinsider.com/Reuters/Israeli%2Bcyber%2Bstartup%2BTorq%2Braises%2B%24140%2Bmillion%2Bat%2B%241.2%2Bbillion%2Bvaluation/25832686.html?classic=1", description="Independent Series D and valuation reporting."},
+  {label="Israel Hayom report", url="https://www.israelhayom.co.il/tech/tech-news/article/19687775", description="Hebrew-language local coverage of Torq's financing and scale claims."},
+  {label="StackPulse seed and Series A", url="https://techcrunch.com/2021/01/19/stackpulse-announces-28m-investment-to-help-developers-manage-outages/", description="Seed and Series A amounts, dates, investors, and former name."},
+  {label="Bessemer on StackPulse", url="https://www.bvp.com/news/out-of-stealth-stackpulse-raises-28-million-to-improve-the-reliability-of-software-services", description="Seed lead and founders' prior Luminate experience."},
+  {label="Insight Partners Torq history", url="https://www.insightpartners.com/ideas/torq-leadership/", description="Founders' prior company, early funding, and product milestones."},
+  {label="Torq Series B", url="https://techcrunch.com/2021/12/07/torq-raises-50m-series-b-for-its-no-code-security-automation-platform/", description="Series B amount and participants."},
+  {label="Torq Series B extension", url="https://techcrunch.com/2024/01/23/cybersecurity-automation-firm-torq-lands-42m-in-expanded-series-b/", description="Incremental Series B extension and participants."},
+  {label="Torq Series C", url="https://torq.io/news/torqseriesc/", description="Series C, investors, cumulative funding claim, and ARR target."},
+  {label="Torq 2023 growth", url="https://torq.io/news/momentum2023/", description="Company-reported 2023 revenue and customer growth."},
+  {label="Torq 2024 growth", url="https://torq.io/news/torq-announces-revenue-and-employee-growth/", description="Company-reported 2024 growth and London EMEA HQ."},
+  {label="Deepwatch customer announcement", url="https://torq.io/news/mdr/", description="Deepwatch's global infrastructure adoption of Torq."},
+  {label="Check Point case study", url="https://torq.io/resources/check-point-case-study/", description="Customer testimony on policy-conditioned production automation."},
+  {label="Torq acquisition of Revrod", url="https://torq.io/news/hypersoc2o/", description="Acquisition and integrated multi-agent RAG product capabilities."},
+  {label="SecurityWeek Revrod report", url="https://www.securityweek.com/cybersecurity-ma-roundup-31-deals-announced-in-april-2025/", description="Secondary, unconfirmed report of Revrod consideration above $20M."},
+  {label="Torq acquisition of Jit", url="https://torq.io/news/torq-acquires-jit/", description="Acquisition and integration of context-graph technology."},
+  {label="Torq Agentic Builder", url="https://torq.io/news/agentic-builder/", description="Product launch and workflow build-test-validate claims."},
+  {label="Merlin federal partnership", url="https://www.prnewswire.com/news-releases/merlin-names-torq-a-key-partner-for-federal-ai-soc-modernization-302870578.html", description="Federal SOC modernization partnership and FedRAMP path."},
+  {label="FedRAMP Marketplace guide", url="https://www.fedramp.gov/marketplace/guide/", description="Government explanation of authorization and agency decisions."},
+  {label="Tines AI SOC", url="https://www.tines.com/solutions/security/ai-soc/", description="Official product description for an automation peer."},
+  {label="Swimlane Turbine", url="https://swimlane.com/swimlane-turbine/", description="Official agentic SOC and security automation product."},
+  {label="Microsoft Security Copilot with Sentinel", url="https://learn.microsoft.com/en-us/azure/sentinel/sentinel-security-copilot", description="Official Sentinel and Security Copilot product documentation."},
+  {label="Google Security Operations Agentic SOC", url="https://cloud.google.com/solutions/security/agentic-soc", description="Official agentic investigation, triage, and response product description."},
+  {label="Palo Alto Cortex XSOAR", url="https://www.paloaltonetworks.com/cortex/cortex-xsoar", description="Official security orchestration and incident response product page."},
+  {label="D3 Morpheus", url="https://d3security.com/soar-platform/", description="Official agentic SOC alternative description."}
 ]
-updated_at = "2026-07-31T18:45:46Z"
+updated_at = "2026-10-22T02:38:20+00:00"
+
+[intelligence]
+schema_version = 2
+intellectual_property = []
+
+[intelligence.company]
+company_id = "il-torq"
+legal_name = "Torq Technologies Ltd."
+aliases = ["StackPulse"]
+operating_status = "active"
+business_model = "B2B enterprise cybersecurity software platform for security teams and MSSP/MDR operators, sold through enterprise deployments and channel relationships; standard pricing, contract structure, and consumption economics are not publicly disclosed."
+products = ["Torq AI SOC Platform", "Torq Hyperautomation", "Torq HyperSOC", "Socrates", "Torq AI Agents / HyperAgents", "Agentic Builder", "Context Graph capability integrated from Jit"]
+locations = ["Tel Aviv, Israel (Israeli corporate address)", "Denver, Colorado (Americas headquarters)", "London, United Kingdom (EMEA headquarters)", "Additional team presence across the United States, Canada, Israel, and Europe"]
+country_of_incorporation = "Israel"
+founded_on = "2020"
+source_ids = ["torq-company", "torq-privacy", "techcrunch-seed-a", "torq-seriesd", "torq-growth-2024"]
+notes = "Torq's current About page states 2020. The official privacy notice identifies Torq Technologies Ltd. as an Israeli-incorporated data controller and gives a Tel Aviv address; it may not enumerate every operating affiliate."
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel"]
+summary = "Torq's official privacy notice identifies Torq Technologies Ltd. as incorporated under Israeli law and lists its corporate mailing address in Tel Aviv. The company separately lists Denver as its Americas headquarters and London as its EMEA headquarters."
+as_of = "2026-10-22"
+source_ids = ["torq-privacy", "torq-company", "torq-growth-2024"]
+
+[intelligence.funding]
+status = "reported"
+summary = "Six public equity rounds were identified: $8M seed, $20M Series A, $50M Series B, $42M incremental Series B extension, $70M Series C, and $140M Series D. These amounts sum to $330M. Torq separately reports $332M lifetime funding after the Series D and reported $192M after the 2024 Series C, while the then-itemized rounds sum to $190M. Preserve the cumulative amounts as company-reported figures; do not infer an unreported $2M event."
+reported_total_raised = 332000000
+reported_total_currency = "USD"
+total_source_ids = ["torq-seriesd", "reuters-seriesd"]
+total_as_of = "2026-01-12"
+total_scope = "Company-announced lifetime funding total; not derived by summing public round amounts."
+history_status = "partial"
+coverage_through = "2026-10-22"
+
+[[intelligence.funding.rounds]]
+id = "seed-2020"
+round_type = "Seed"
+instrument = "equity"
+status = "closed"
+announced_on = "2021-01-19"
+amount_status = "reported"
+amount = 8000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Bessemer Venture Partners"]
+participating_investors = []
+source_ids = ["techcrunch-seed-a", "bvp-stackpulse"]
+notes = "Publicly disclosed on January 19, 2021 as a previously unannounced seed; actual close date was not stated."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2021"
+round_type = "Series A"
+instrument = "equity"
+status = "closed"
+announced_on = "2021-01-19"
+amount_status = "reported"
+amount = 20000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["GGV Capital"]
+participating_investors = ["Bessemer Venture Partners"]
+source_ids = ["techcrunch-seed-a", "bvp-stackpulse"]
+
+[[intelligence.funding.rounds]]
+id = "series-b-2021"
+round_type = "Series B"
+instrument = "equity"
+status = "closed"
+announced_on = "2021-12-07"
+amount_status = "reported"
+amount = 50000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Insight Partners"]
+participating_investors = ["SentinelOne", "GGV Capital", "Bessemer Venture Partners"]
+source_ids = ["techcrunch-series-b"]
+
+[[intelligence.funding.rounds]]
+id = "series-b-extension-2024"
+round_type = "Series B extension"
+instrument = "equity"
+status = "closed"
+announced_on = "2024-01-23"
+amount_status = "reported"
+amount = 42000000
+amount_scope = "incremental_extension"
+currency = "USD"
+lead_investors = []
+participating_investors = ["Bessemer Venture Partners", "GGV Capital", "Insight Partners", "Greenfield Partners", "Evolution Equity Partners"]
+is_extension_of = "series-b-2021"
+source_ids = ["techcrunch-series-b-extension"]
+notes = "Reported as an extension to the 2021 Series B; no lead investor was named."
+
+[[intelligence.funding.rounds]]
+id = "series-c-2024"
+round_type = "Series C"
+instrument = "equity"
+status = "closed"
+announced_on = "2024-09-24"
+amount_status = "reported"
+amount = 70000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Evolution Equity Partners"]
+participating_investors = ["Bessemer Venture Partners", "Notable Capital", "Greenfield Partners", "Strait Capital"]
+source_ids = ["torq-series-c"]
+
+[[intelligence.funding.rounds]]
+id = "series-d-2026"
+round_type = "Series D"
+instrument = "equity"
+status = "closed"
+announced_on = "2026-01-12"
+amount_status = "reported"
+amount = 140000000
+amount_scope = "round"
+currency = "USD"
+lead_investors = ["Merlin Ventures"]
+participating_investors = ["Evolution Equity Partners", "Notable Capital", "Bessemer Venture Partners", "Insight Partners", "Greenfield Partners"]
+post_money_valuation = 1200000000
+valuation_currency = "USD"
+valuation_basis = "reported"
+source_ids = ["torq-seriesd", "reuters-seriesd"]
+notes = "Torq page header says January 9, the press-release dateline says January 12, and Reuters reported the raise January 11; announced_on follows the company dateline."
+
+[intelligence.ownership]
+status = "undisclosed"
+summary = "Torq remains private and public sources reviewed did not disclose a current cap table, fully diluted ownership, or parent company. It announced acquisitions of Revrod in April 2025 and Jit in May 2026; neither Torq announcement disclosed consideration. SecurityWeek reported an unconfirmed price above $20M for Revrod; no number is entered."
+cap_table_status = "undisclosed"
+shareholders = []
+holdings = []
+source_ids = ["torq-revrod", "securityweek-revrod", "torq-jit"]
+
+[[intelligence.ownership.deals]]
+id = "revrod-2025"
+deal_type = "acquisition"
+company_role = "buyer"
+announced_on = "2025-04-16"
+status = "completed"
+counterparty = "Revrod"
+amount_status = "undisclosed"
+source_ids = ["torq-revrod", "securityweek-revrod"]
+notes = "Torq announced the acquisition and integration of Revrod's multi-agent RAG technology. The official announcement omitted consideration; SecurityWeek relayed an unconfirmed report of over $20M."
+
+[[intelligence.ownership.deals]]
+id = "jit-2026"
+deal_type = "acquisition"
+company_role = "buyer"
+announced_on = "2026-05-19"
+status = "completed"
+counterparty = "Jit"
+amount_status = "undisclosed"
+source_ids = ["torq-jit"]
+notes = "The Torq page is dated May 18 and the dateline says May 19; consideration and a separate completion date were not disclosed."
+
+[[intelligence.people]]
+name = "Ofer Smadari"
+role = "CEO and Co-Founder"
+is_founder = true
+current = true
+background = "Previously co-founded Luminate Security and served as its CEO; the company was acquired by Symantec."
+source_ids = ["torq-company", "bvp-stackpulse", "insight-torq-background"]
+
+[[intelligence.people]]
+name = "Leonid Belkind"
+role = "CTO and Co-Founder"
+is_founder = true
+current = true
+background = "Previously co-founded Luminate Security and served as its CTO; the company was acquired by Symantec."
+source_ids = ["torq-company", "bvp-stackpulse", "insight-torq-background"]
+
+[[intelligence.people]]
+name = "Eldad Livni"
+role = "CINO and Co-Founder"
+is_founder = true
+current = true
+background = "Previously co-founded Luminate Security and served as its CPO; the company was acquired by Symantec."
+source_ids = ["torq-company", "bvp-stackpulse", "insight-torq-background"]
+
+[[intelligence.people]]
+name = "Josh Morris"
+role = "Chief Revenue Officer"
+is_founder = false
+current = true
+source_ids = ["torq-company"]
+
+[[intelligence.people]]
+name = "Don Jeter"
+role = "Chief Marketing Officer"
+is_founder = false
+current = true
+source_ids = ["torq-company"]
+
+[[intelligence.people]]
+name = "Marco Garcia"
+role = "Chief Customer Officer"
+is_founder = false
+current = true
+source_ids = ["torq-company"]
+
+[[intelligence.people]]
+name = "Karin Ophir Zimet"
+role = "Chief People Officer"
+is_founder = false
+current = true
+source_ids = ["torq-company"]
+
+[[intelligence.people]]
+name = "Yaron Bartov"
+role = "Chief Financial Officer"
+is_founder = false
+current = true
+source_ids = ["torq-company"]
+
+[[intelligence.people]]
+name = "Aner Izraeli"
+role = "Chief Information Security Officer"
+is_founder = false
+current = true
+source_ids = ["torq-company"]
+
+[[intelligence.people]]
+name = "Uri Landau"
+role = "Senior Vice President, Engineering"
+is_founder = false
+current = true
+source_ids = ["torq-company"]
+
+[[intelligence.investors]]
+name = "Bessemer Venture Partners"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["seed-2020", "series-a-2021", "series-b-2021", "series-b-extension-2024", "series-c-2024", "series-d-2026"]
+source_ids = ["bvp-stackpulse", "techcrunch-seed-a", "techcrunch-series-b", "techcrunch-series-b-extension", "torq-series-c", "torq-seriesd"]
+
+[[intelligence.investors]]
+name = "GGV Capital"
+investor_type = "vc"
+relationship = "historical"
+round_ids = ["series-a-2021", "series-b-2021", "series-b-extension-2024"]
+source_ids = ["techcrunch-seed-a", "techcrunch-series-b", "techcrunch-series-b-extension"]
+notes = "Kept under the name used in the round reports; not merged with later Notable Capital references."
+
+[[intelligence.investors]]
+name = "Insight Partners"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["series-b-2021", "series-b-extension-2024", "series-d-2026"]
+source_ids = ["techcrunch-series-b", "techcrunch-series-b-extension", "torq-seriesd"]
+
+[[intelligence.investors]]
+name = "SentinelOne"
+investor_type = "corporate"
+website = "https://www.sentinelone.com/"
+relationship = "historical"
+round_ids = ["series-b-2021"]
+source_ids = ["techcrunch-series-b"]
+
+[[intelligence.investors]]
+name = "Evolution Equity Partners"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["series-b-extension-2024", "series-c-2024", "series-d-2026"]
+source_ids = ["techcrunch-series-b-extension", "torq-series-c", "torq-seriesd"]
+
+[[intelligence.investors]]
+name = "Greenfield Partners"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["series-b-extension-2024", "series-c-2024", "series-d-2026"]
+source_ids = ["techcrunch-series-b-extension", "torq-series-c", "torq-seriesd"]
+
+[[intelligence.investors]]
+name = "Notable Capital"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["series-c-2024", "series-d-2026"]
+source_ids = ["torq-series-c", "torq-seriesd"]
+
+[[intelligence.investors]]
+name = "Strait Capital"
+investor_type = "vc"
+relationship = "historical"
+round_ids = ["series-c-2024"]
+source_ids = ["torq-series-c"]
+
+[[intelligence.investors]]
+name = "Merlin Ventures"
+investor_type = "vc"
+relationship = "current"
+round_ids = ["series-d-2026"]
+source_ids = ["torq-seriesd", "merlin-federal"]
+
+[[intelligence.financials]]
+name = "Revenue growth, company-reported"
+value = "300% growth during 2023"
+as_of = "2023-12-31"
+basis = "reported"
+metric = "other"
+numeric_value = 300
+value_relation = "exact"
+unit = "percent"
+period_start = "2023-01-01"
+period_end = "2023-12-31"
+source_ids = ["torq-momentum-2023"]
+notes = "Growth percentage only; no underlying revenue base or absolute revenue disclosed."
+
+[[intelligence.financials]]
+name = "Revenue growth, company-reported"
+value = "300% growth during 2024"
+as_of = "2024-12-31"
+basis = "reported"
+metric = "other"
+numeric_value = 300
+value_relation = "exact"
+unit = "percent"
+period_start = "2024-01-01"
+period_end = "2024-12-31"
+source_ids = ["torq-growth-2024"]
+notes = "Growth percentage only; no absolute revenue or ARR disclosed."
+
+[[intelligence.financials]]
+name = "Employee growth, company-reported"
+value = "200% growth during 2024"
+as_of = "2024-12-31"
+basis = "reported"
+metric = "other"
+numeric_value = 200
+value_relation = "exact"
+unit = "percent"
+period_start = "2024-01-01"
+period_end = "2024-12-31"
+source_ids = ["torq-growth-2024"]
+
+[[intelligence.financials]]
+name = "Worldwide employees shown on company About page"
+value = "430+ employees"
+as_of = "2026-10-22"
+basis = "reported"
+metric = "employees"
+numeric_value = 430
+value_relation = "at_least"
+unit = "people"
+source_ids = ["torq-company"]
+notes = "The official About page displayed 430+ Torqers when accessed on the research date; no separate measurement date is given."
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Deepwatch announced adoption of Torq Hyperautomation across its global security infrastructure and MDR platform. This is a company-published announcement; no contract value was disclosed."
+date = "2023-11-28"
+source_ids = ["torq-deepwatch"]
+
+[[intelligence.traction]]
+kind = "customer"
+description = "Check Point CISO Jonathan Fischbein said Torq deployed more than two dozen AI playbooks within days during a proof of concept and that the production platform handles many internal alerts without human intervention when policy conditions are met."
+date = "2025-01-23"
+source_ids = ["check-point-case", "torq-growth-2024"]
+notes = "Customer testimony appears in Torq-published case study and release; no independent performance audit was located."
+
+[[intelligence.traction]]
+kind = "product"
+description = "Torq launched HyperSOC-2o with multi-agent RAG capability integrated from Revrod, describing agents for investigation, case management, runbooks, and remediation."
+date = "2025-04-16"
+source_ids = ["torq-revrod"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Torq unveiled Agentic Builder for natural-language planning and generation of security workflows and AI agents, with testing and validation described in the release."
+date = "2026-03-18"
+source_ids = ["torq-agentic-builder"]
+
+[[intelligence.traction]]
+kind = "product"
+description = "Torq announced its acquisition of Jit and the integration of Jit's context graph to ground investigations in organization-specific identities, assets, relationships, and operating context."
+date = "2026-05-19"
+source_ids = ["torq-jit"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Merlin named Torq a partner in its federal SOC modernization architecture and said it supports Torq's path to FedRAMP authorization. This is a route to market, not a government award, authorization, or production deployment."
+date = "2026-09-08"
+source_ids = ["merlin-federal", "fedramp-guide"]
+
+[[intelligence.comparables]]
+name = "Tines"
+website = "https://www.tines.com/"
+rationale = "Vendor-agnostic workflow automation peer with an AI SOC offering for alert intake, triage, remediation, and analyst escalation."
+differentiation = "Tines positions a broad secure environment for workflows, apps, and agents; Torq positions a purpose-built AI SOC with integrated case lifecycle and response. Compare workflow flexibility, governance, deployment effort, and out-of-box SOC depth."
+source_ids = ["tines-ai-soc", "torq-home"]
+
+[[intelligence.comparables]]
+name = "Swimlane Turbine"
+website = "https://swimlane.com/swimlane-turbine/"
+rationale = "Direct security automation and agentic SOC peer with playbooks, case management, integrations, and MSSP capabilities."
+differentiation = "Swimlane emphasizes Turbine, Hero AI, multi-tenant MSSP operations, and configurable playbooks. Torq emphasizes HyperSOC, Socrates, Agentic Builder, and Jit's context graph. Compare governance, scale, integration upkeep, and total operating cost."
+source_ids = ["swimlane-turbine", "torq-home", "torq-jit"]
+
+[[intelligence.comparables]]
+name = "Palo Alto Networks Cortex XSOAR"
+website = "https://www.paloaltonetworks.com/cortex/cortex-xsoar"
+rationale = "Established enterprise orchestration, case management, and investigation platform with a broad security ecosystem."
+differentiation = "Cortex XSOAR emphasizes orchestration and incident management, while Palo Alto is extending its broader security platform with agentic products. Torq competes as an independent cross-stack AI SOC platform; Palo Alto can benefit from its installed base and suite bundling."
+source_ids = ["paloalto-xsoar", "torq-home"]
+
+[[intelligence.comparables]]
+name = "Microsoft Sentinel and Security Copilot"
+website = "https://learn.microsoft.com/en-us/azure/sentinel/sentinel-security-copilot"
+rationale = "Bundled security data, incident analysis, hunting, automation, and AI for organizations standardized on Microsoft security products."
+differentiation = "Microsoft connects Copilot to Sentinel and Defender data and has native automation. Torq's opportunity is to coordinate across a mixed vendor stack; it must show enough measurable value to justify an additional platform alongside suite-native tooling."
+source_ids = ["microsoft-sentinel-copilot", "torq-home"]
+
+[[intelligence.comparables]]
+name = "Google Security Operations"
+website = "https://cloud.google.com/solutions/security/agentic-soc"
+rationale = "Cloud SIEM and SOAR platform with agentic triage, investigation, threat hunting, deterministic playbooks, and Mandiant intelligence."
+differentiation = "Google's strength is integration with Google SecOps and its threat-intelligence ecosystem. Torq targets heterogeneous environments with a cross-stack automation layer; both now overlap in agentic investigation and response."
+source_ids = ["google-agentic-soc", "torq-home"]
+
+[[intelligence.comparables]]
+name = "D3 Security Morpheus"
+website = "https://d3security.com/soar-platform/"
+rationale = "Agentic SOC and SOAR replacement platform with investigation, integrations, case management, and response."
+differentiation = "D3 markets runtime investigations and self-healing integrations; Torq markets broad hyperautomation, multi-agent workflows, and context graph. Compare action explainability, alert coverage, integration upkeep, and deployment economics."
+source_ids = ["d3-morpheus", "torq-home"]
+
+[intelligence.research]
+researched_at = "2026-10-22T02:38:20+00:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = [
+  "Torq company legal name aliases founders headquarters Israel official",
+  "Torq Technologies Ltd incorporated Israel Torq privacy policy",
+  "Torq raises $140M Series D at $1.2B valuation Merlin Ventures January 2026",
+  "Torq funding seed Series A StackPulse $8 million $20 million GGV Bessemer",
+  "Torq $50 million Series B 2021 Insight Partners SentinelOne",
+  "Torq $42 million expanded Series B January 2024 investors",
+  "Torq $70 million Series C 2024 investors lifetime funding",
+  "Torq revenue ARR 2025 2026 profitability burn runway financial metrics",
+  "Torq 300% revenue growth 200% employee growth 2024 official",
+  "Torq founders Ofer Smadari Leonid Belkind Eldad Livni company leadership",
+  "Torq Series D investors Merlin Ventures Bessemer Evolution Notable Insight Greenfield",
+  "Torq acquired Jit May 2026 official acquisition consideration",
+  "Torq acquired Revrod official announcement April 16 2025 acquisition price",
+  "Torq patent patents Torq Technologies Ltd AI security automation",
+  "site:patents.google.com/patent Torq Technologies cybersecurity",
+  "Torq AI SOC competitors Tines Swimlane Microsoft Sentinel 2026",
+  "site:tines.com security automation SOC workflow automation official",
+  "site:swimlane.com Turbine agentic AI automation platform official",
+  "site:fedramp.gov Torq cybersecurity FedRAMP authorization",
+  "site:sam.gov Torq cybersecurity contract federal",
+  "Torq federal contracts government customer FedRAMP authorization Marketplace 2026",
+  "Torq Merlin SOC Modernization Program September 2026 partnership announcement",
+  "site:torq.io/news/ Torq Deepwatch Check Point customer case study",
+  "Torq 2026 AI SOC dual-use federal government security operations"
+]
+gaps = [
+  "financials: Absolute revenue and ARR, profitability, cash, burn, runway, gross margin, renewals, and customer concentration were not disclosed. The $100M ARR figure was a 2026 target announced in 2024, not a reported result. Growth percentages and headcount are company-reported.",
+  "investors: Private cap-table percentages, dilution, board rights, individual check sizes, and current ownership percentages were not disclosed; only named round participants are listed.",
+  "team: Public sources identify current roles and founders' prior Luminate experience, but do not provide independently verified biographies and tenure for the full executive team.",
+  "ownership: No public cap table, fully diluted ownership, or parent company was identified. Torq did not disclose Revrod or Jit consideration; a secondary Revrod price report remains unconfirmed.",
+  "traction: Customer count, concentration, contract values, renewal rates, independently validated volumes, and cohort outcomes are not public. Merlin's partnership does not establish an agency contract or federal deployment.",
+  "intellectual_property: Public patent searches using Torq Technologies and related terms did not locate a relevant patent family. This does not establish that Torq has no patents; trade secrets, acquired IP, and unpublished applications require diligence.",
+  "competition: Vendor materials describe product positioning but not independent benchmarks, win/loss data, pricing comparisons, or customer migration results.",
+  "funding: Company-reported $332M lifetime funding exceeds the six located round amounts totaling $330M by $2M; a 2024 $192M cumulative report likewise exceeds then-itemized rounds totaling $190M. No extra event is inferred."
+]
+conflicts = [
+  "Lifetime funding: Torq and Reuters report $332M after the Series D, while the six disclosed rounds sum to $330M. Torq reported $192M after the Series C, while then-itemized amounts sum to $190M. The $2M differences remain unexplained.",
+  "Series D date: The Torq page header is January 9, its release dateline January 12, and Reuters reported the round January 11. announced_on follows the company dateline.",
+  "Revrod consideration: SecurityWeek relayed an unconfirmed report that Torq paid over $20M; Torq's official announcement disclosed no consideration. Numeric amount remains blank.",
+  "2025 revenue growth: Israel Hayom reports about 300% growth for 2025, but no matching dated metric was found in Torq's official Series D release; it is excluded from structured financials."
+]
+diligence_questions = [
+  "What were actual ARR, net and gross retention, gross margin, services mix, customer concentration, and cash runway at year end 2025 and through the latest 2026 quarter? Can management reconcile $332M reported lifetime funding with the $330M publicly itemized total?",
+  "Across production use, what are the agent false-positive and false-negative rates, action reversal rates, human escalation rates, and approval gates for high-impact containment? How are prompt injection and poisoned context tested?",
+  "What is the exact FedRAMP status and authorization boundary, what data and model providers are in scope, and is there an agency-sponsored system or vehicle? Which federal uses are in production versus partner demonstrations or pipeline?",
+  "How much recurring revenue and product usage came from Revrod and Jit after acquisition, which IP and employee assignments transferred, and what retention milestones or integration costs remain?",
+  "For Deepwatch, Check Point, Valvoline, and other reference customers, what are paid scope, renewal history, implementation effort, hours saved, measured outcomes, and direct-reference availability?",
+  "What deployment and data-residency models are available for regulated customers, how are agent permissions constrained, and what logs and rollback controls do customer security teams receive?"
+]
+
+[[intelligence.research.sources]]
+id = "torq-company"
+url = "https://torq.io/company/"
+title = "About Torq | The Leading AI SOC Platform"
+publisher = "Torq"
+kind = "company"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["Torq identifies Ofer Smadari, Leonid Belkind, and Eldad Livni as founders and says it was founded in 2020.", "The company lists 430+ employees, current leadership, and Denver as its Americas HQ.", "Torq advertises 100 million daily security automations and describes the Jit context graph addition."]
+
+[[intelligence.research.sources]]
+id = "torq-privacy"
+url = "https://torq.io/privacy/"
+title = "Privacy Policy"
+publisher = "Torq"
+kind = "company"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["Torq's notice identifies Torq Technologies Ltd. as incorporated under Israeli law and gives its corporate mailing address as 3 HaMelacha Street, Tel Aviv."]
+
+[[intelligence.research.sources]]
+id = "torq-home"
+url = "https://torq.io/"
+title = "Torq AI SOC Platform | AI Agents and Agentic SecOps"
+publisher = "Torq"
+kind = "company"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["Torq describes an AI SOC platform for alert triage, investigation, case management, agentic response, and threat hunting.", "The product page describes oversight, transparent audit logs, and manual override as product controls."]
+
+[[intelligence.research.sources]]
+id = "torq-ai-docs"
+url = "https://kb.torq.io/en/articles/13424122-ai-in-torq"
+title = "AI in Torq"
+publisher = "Torq Knowledge Base"
+kind = "company"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["Torq describes configured tools, case context, action visibility, logging, human review, and override.", "Torq documentation describes Socrates Builder planning, building, testing, fixing, and maintaining workflows.", "Documentation says Torq supports managed and bring-your-own AI model subscriptions and claims ISO 42001 certification."]
+
+[[intelligence.research.sources]]
+id = "torq-seriesd"
+url = "https://torq.io/news/torq-seriesd/"
+title = "Torq Secures $140M Series D at $1.2B Valuation to Lead the AI SOC and Agentic AI Era"
+publisher = "Torq"
+kind = "company"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2026-01-09"
+claims = ["The release body says Torq closed a $140M Series D at a $1.2B valuation and reports $332M total funding; body dateline is January 12, while page header is January 9.", "Merlin Ventures led; Evolution Equity Partners, Notable Capital, Bessemer Venture Partners, Insight Partners, and Greenfield Partners were named as participants.", "Torq describes U.S. federal expansion and quotes customer executives."]
+
+[[intelligence.research.sources]]
+id = "reuters-seriesd"
+url = "https://www.streetinsider.com/Reuters/Israeli%2Bcyber%2Bstartup%2BTorq%2Braises%2B%24140%2Bmillion%2Bat%2B%241.2%2Bbillion%2Bvaluation/25832686.html?classic=1"
+title = "Israeli cyber startup Torq raises $140 million at $1.2 billion valuation"
+publisher = "Reuters via StreetInsider"
+kind = "media"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2026-01-11"
+claims = ["Reuters reports the $140M Series D, $1.2B valuation, and company-reported $332M total funding.", "Reuters identifies Merlin Ventures as lead and names existing investors."]
+
+[[intelligence.research.sources]]
+id = "israelhayom-seriesd"
+url = "https://www.israelhayom.co.il/tech/tech-news/article/19687775"
+title = "פותחים חזק את 2026: Torq מגייסת 140 מיליון דולר ו-450 מיליון דולר לקרנות ישראליות"
+publisher = "Israel Hayom"
+kind = "media"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2026-01-15"
+claims = ["Hebrew-language reporting describes the Series D, $1.2B valuation, and Merlin Ventures lead.", "The article reports over 350 employees and about 300% revenue growth in 2025; these secondary claims were not used as structured 2025 metrics."]
+
+[[intelligence.research.sources]]
+id = "techcrunch-seed-a"
+url = "https://techcrunch.com/2021/01/19/stackpulse-announces-28m-investment-to-help-developers-manage-outages/"
+title = "StackPulse announces $28M investment to help developers manage outages"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2021-01-19"
+claims = ["The announced $28M comprised a previously unannounced $8M seed and a new $20M Series A.", "Bessemer led the seed and participated in the Series A; GGV led the Series A.", "The company previously used the name StackPulse."]
+
+[[intelligence.research.sources]]
+id = "bvp-stackpulse"
+url = "https://www.bvp.com/news/out-of-stealth-stackpulse-raises-28-million-to-improve-the-reliability-of-software-services"
+title = "Out of Stealth: StackPulse raises $28 million to improve the reliability of software services"
+publisher = "Bessemer Venture Partners"
+kind = "investor"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2021-01-19"
+claims = ["Bessemer says it led StackPulse's seed round.", "Bessemer identifies Ofer Smadari as CEO, Leonid Belkind as CTO, and Eldad Livni as CPO, and says the founders previously built Luminate Security, acquired by Symantec."]
+
+[[intelligence.research.sources]]
+id = "insight-torq-background"
+url = "https://www.insightpartners.com/ideas/torq-leadership/"
+title = "How Torq is leading the autonomous SecOps revolution"
+publisher = "Insight Partners"
+kind = "investor"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["Insight describes the founders' previous Luminate Security company and its acquisition by Symantec.", "Insight recounts early funding, customers, and Torq's Hyperautomation and Socrates milestones."]
+
+[[intelligence.research.sources]]
+id = "techcrunch-series-b"
+url = "https://techcrunch.com/2021/12/07/torq-raises-50m-series-b-for-its-no-code-security-automation-platform/"
+title = "Torq raises $50M Series B for its no-code security automation platform"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2021-12-07"
+claims = ["Torq announced a $50M Series B led by Insight Partners, with SentinelOne, GGV Capital, and Bessemer Venture Partners participating.", "The report describes Torq as formerly StackPulse and summarizes its security workflow automation."]
+
+[[intelligence.research.sources]]
+id = "techcrunch-series-b-extension"
+url = "https://techcrunch.com/2024/01/23/cybersecurity-automation-firm-torq-lands-42m-in-expanded-series-b/"
+title = "Cybersecurity automation firm Torq lands $42M in expanded Series B"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2024-01-23"
+claims = ["Torq raised a $42M Series B extension from Bessemer Venture Partners, GGV Capital, Insight Partners, Greenfield Partners, and Evolution Equity Partners.", "The report says the extension brought total raised to $120M; no lead investor was named."]
+
+[[intelligence.research.sources]]
+id = "torq-series-c"
+url = "https://torq.io/news/torqseriesc/"
+title = "Torq Announces $70M Series C to Double Down on Generative AI for Security Operations Platform"
+publisher = "Torq"
+kind = "company"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2024-09-24"
+claims = ["Torq announced a $70M Series C led by Evolution Equity Partners, with Bessemer, Notable Capital, Greenfield, and Strait Capital participating.", "Torq reported $192M cumulative funding after the round and set a $100M ARR target for 2026."]
+
+[[intelligence.research.sources]]
+id = "torq-momentum-2023"
+url = "https://torq.io/news/momentum2023/"
+title = "Torq Achieves 300% Revenue Growth and 500% Customer Growth Across 2023"
+publisher = "Torq"
+kind = "company"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2024-01-23"
+claims = ["Torq reported 300% revenue growth and 500% customer growth for 2023.", "Torq named customer additions and reported $120M total funding in January 2024."]
+
+[[intelligence.research.sources]]
+id = "torq-growth-2024"
+url = "https://torq.io/news/torq-announces-revenue-and-employee-growth/"
+title = "Torq Announces 300% Revenue Growth and 200% Employee Growth"
+publisher = "Torq"
+kind = "company"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2025-01-23"
+claims = ["Torq reported 300% revenue growth and 200% employee growth during 2024.", "Torq announced a London EMEA HQ and repeated its $100M ARR target.", "The release quotes Check Point's CISO on policy-conditioned automated response."]
+
+[[intelligence.research.sources]]
+id = "torq-deepwatch"
+url = "https://torq.io/news/mdr/"
+title = "Deepwatch Standardizes on Torq Hyperautomation Across Global Security"
+publisher = "Torq"
+kind = "customer"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2023-11-28"
+claims = ["Deepwatch announced Torq adoption across its global infrastructure and MDR platform.", "Deepwatch's CEO described productivity and efficiency benefits; contract value was not disclosed."]
+
+[[intelligence.research.sources]]
+id = "check-point-case"
+url = "https://torq.io/resources/check-point-case-study/"
+title = "Check Point Eases Alert Fatigue and Speeds Up Their SOC with Torq"
+publisher = "Torq, quoting Check Point"
+kind = "customer"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["Check Point CISO Jonathan Fischbein said Torq deployed over two dozen AI playbooks within days during a proof of concept.", "The case study describes policy-conditioned production response and human review for high-priority or complex incidents."]
+
+[[intelligence.research.sources]]
+id = "torq-revrod"
+url = "https://torq.io/news/hypersoc2o/"
+title = "Torq Acquires Stealth AI Startup and Adds Advanced Multi-Agent RAG Capabilities to HyperSOC-2o"
+publisher = "Torq"
+kind = "company"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2025-04-16"
+claims = ["Torq announced the acquisition of Israeli stealth startup Revrod and integrated its multi-agent RAG technology into HyperSOC-2o.", "Torq said Revrod's engineering and R&D team joined; the announcement disclosed no consideration."]
+
+[[intelligence.research.sources]]
+id = "securityweek-revrod"
+url = "https://www.securityweek.com/cybersecurity-ma-roundup-31-deals-announced-in-april-2025/"
+title = "Cybersecurity M&A Roundup: 31 Deals Announced in April 2025"
+publisher = "SecurityWeek"
+kind = "media"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2025-05-05"
+claims = ["SecurityWeek reports Torq's Revrod acquisition and relays an unconfirmed report of a price above $20M; Torq's release disclosed no price."]
+
+[[intelligence.research.sources]]
+id = "torq-jit"
+url = "https://torq.io/news/torq-acquires-jit/"
+title = "Torq Acquires Jit to Unleash the Enterprise AI SOC Context Graph"
+publisher = "Torq"
+kind = "company"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2026-05-18"
+claims = ["Torq's page dated May 18 with a May 19 dateline says it acquired Jit and integrated its context graph.", "Torq describes context for identities, assets, relationships, business drivers, and operating procedures.", "The announcement disclosed no consideration or separate completion date."]
+
+[[intelligence.research.sources]]
+id = "torq-agentic-builder"
+url = "https://torq.io/news/agentic-builder/"
+title = "Torq Becomes the Cursor of Security Operations With New Agentic Builder"
+publisher = "Torq"
+kind = "company"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2026-03-18"
+claims = ["Torq announced Agentic Builder for natural-language planning and generation of workflows and agents with testing and validation.", "The release quotes Valvoline's CISO on the product preview and names customers."]
+
+[[intelligence.research.sources]]
+id = "merlin-federal"
+url = "https://www.prnewswire.com/news-releases/merlin-names-torq-a-key-partner-for-federal-ai-soc-modernization-302870578.html"
+title = "Merlin Names Torq a Key Partner for Federal AI SOC Modernization"
+publisher = "Merlin Group via PR Newswire"
+kind = "other"
+accessed_at = "2026-10-22T02:38:20+00:00"
+published_on = "2026-09-08"
+claims = ["Merlin named Torq a technology partner in its federal SOC modernization architecture.", "Merlin said it supports Torq's path to FedRAMP authorization; the release does not identify an agency contract or completed authorization."]
+
+[[intelligence.research.sources]]
+id = "fedramp-guide"
+url = "https://www.fedramp.gov/marketplace/guide/"
+title = "FedRAMP Marketplace Quick Start Guide"
+publisher = "FedRAMP"
+kind = "government"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["FedRAMP explains that certification supplies reusable security evidence while agencies make authorization decisions for particular systems and use cases."]
+
+[[intelligence.research.sources]]
+id = "tines-ai-soc"
+url = "https://www.tines.com/solutions/security/ai-soc/"
+title = "AI SOC Solutions: Build the AI SOC your team actually needs"
+publisher = "Tines"
+kind = "other"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["Tines describes a vendor-agnostic AI SOC workflow platform for alert intake, triage, remediation, and analyst escalation."]
+
+[[intelligence.research.sources]]
+id = "swimlane-turbine"
+url = "https://swimlane.com/swimlane-turbine/"
+title = "Swimlane Turbine Agentic AI Automation Platform"
+publisher = "Swimlane"
+kind = "other"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["Swimlane describes agentic security automation, playbooks, case management, integrations, and MSSP features."]
+
+[[intelligence.research.sources]]
+id = "microsoft-sentinel-copilot"
+url = "https://learn.microsoft.com/en-us/azure/sentinel/sentinel-security-copilot"
+title = "Security Copilot with Microsoft Sentinel"
+publisher = "Microsoft Learn"
+kind = "other"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["Microsoft documents use of Sentinel data with Security Copilot for incident analysis, hunting queries, and guided response."]
+
+[[intelligence.research.sources]]
+id = "google-agentic-soc"
+url = "https://cloud.google.com/solutions/security/agentic-soc"
+title = "Agentic SOC | Google Cloud"
+publisher = "Google Cloud"
+kind = "other"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["Google describes agents for triage, investigation, threat hunting, and detection engineering, combined with deterministic playbooks and human oversight for critical actions."]
+
+[[intelligence.research.sources]]
+id = "paloalto-xsoar"
+url = "https://www.paloaltonetworks.com/cortex/cortex-xsoar"
+title = "Optimize Operations with Cortex XSOAR"
+publisher = "Palo Alto Networks"
+kind = "other"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["Palo Alto describes Cortex XSOAR for security orchestration and incident response and presents its broader Cortex agentic direction."]
+
+[[intelligence.research.sources]]
+id = "d3-morpheus"
+url = "https://d3security.com/soar-platform/"
+title = "SOAR Platform Replacement | Agentic SOC with a Full SOAR Engine"
+publisher = "D3 Security"
+kind = "other"
+accessed_at = "2026-10-22T02:38:20+00:00"
+claims = ["D3 describes Morpheus as an agentic SOC alternative with runtime investigation, response workflows, and self-healing integrations."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-22T02:38:20+00:00"
+next_review_on = "2027-04-22"
+queries = ["Torq company legal name aliases founders headquarters Israel official", "Torq Technologies Ltd incorporated Israel Torq privacy policy"]
+source_ids = ["torq-company", "torq-privacy", "techcrunch-seed-a"]
+summary = "Torq is the canonical cybersecurity company at torq.io, formerly StackPulse. Its privacy notice identifies an Israeli-incorporated entity and Tel Aviv address. Torq states it was founded in 2020, lists 430+ employees and Denver as Americas HQ, and established an EMEA HQ in London."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-22T02:38:20+00:00"
+next_review_on = "2027-04-22"
+queries = ["Torq raises $140M Series D at $1.2B valuation Merlin Ventures January 2026", "Torq funding seed Series A StackPulse $8 million $20 million GGV Bessemer", "Torq $50 million Series B 2021 Insight Partners SentinelOne", "Torq $42 million expanded Series B January 2024 investors", "Torq $70 million Series C 2024 investors lifetime funding"]
+source_ids = ["torq-seriesd", "reuters-seriesd", "techcrunch-seed-a", "techcrunch-series-b", "techcrunch-series-b-extension", "torq-series-c"]
+summary = "Six equity events were sourced individually through the $140M Series D. The $42M 2024 extension is a distinct incremental event. Torq's cumulative $332M statement is recorded separately from the $330M in located round amounts; the difference is unresolved."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T02:38:20+00:00"
+next_review_on = "2027-04-22"
+queries = ["Torq Series D investors Merlin Ventures Bessemer Evolution Notable Insight Greenfield", "Torq $20M Series A GGV Capital Bessemer investors", "Torq $50M Series B investors Insight SentinelOne Bessemer GGV", "Torq Series B extension participants Bessemer GGV Insight Greenfield Evolution", "Torq Series C participants Evolution Bessemer Notable Greenfield Strait"]
+source_ids = ["techcrunch-seed-a", "techcrunch-series-b", "techcrunch-series-b-extension", "torq-series-c", "torq-seriesd"]
+summary = "Named leads and round participants are recorded from announcements. Private check sizes, ownership shares, board rights, and a complete cap table remain unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-22T02:38:20+00:00"
+next_review_on = "2027-04-22"
+queries = ["Torq founders Ofer Smadari Leonid Belkind Eldad Livni company leadership", "Torq leadership page CFO CRO CMO CTO 2026", "Torq founders Luminate Security Symantec acquisition background"]
+source_ids = ["torq-company", "bvp-stackpulse", "insight-torq-background"]
+summary = "Torq's official page identifies the co-founders and current leadership roles. Bessemer and Insight describe their prior Luminate Security company and its Symantec acquisition. Independent biographies for the wider executive team were not located."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-22T02:38:20+00:00"
+next_review_on = "2027-04-22"
+queries = ["Torq acquired Jit May 2026 official acquisition consideration", "Torq acquired Revrod official announcement April 16 2025 acquisition price", "Torq cap table parent company ownership shareholders"]
+source_ids = ["torq-revrod", "securityweek-revrod", "torq-jit"]
+summary = "Torq announced acquisitions of Revrod and Jit; consideration and private ownership percentages were not disclosed. SecurityWeek relayed an unconfirmed price report for Revrod, retained as a conflict rather than a numeric amount."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "reported"
+checked_at = "2026-10-22T02:38:20+00:00"
+next_review_on = "2027-04-22"
+queries = ["Torq revenue ARR 2025 2026 profitability burn runway financial metrics", "Torq 300% revenue growth 200% employee growth 2024 official", "Torq 2026 ARR target Series C $100 million"]
+source_ids = ["torq-momentum-2023", "torq-growth-2024", "torq-series-c", "torq-company", "israelhayom-seriesd"]
+summary = "Torq reported 300% revenue growth in 2023 and 2024, 200% employee growth in 2024, and a current 430+ headcount claim. It set a $100M ARR target for 2026; no absolute revenue, actual ARR, profit, cash, burn, or runway was found. Israel Hayom's 2025 growth figure was not corroborated in a dated official release and is excluded from structured metrics."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-22T02:38:20+00:00"
+next_review_on = "2027-04-22"
+queries = ["site:torq.io/news/ Torq Deepwatch Check Point customer case study", "Torq Check Point internal alerts without human intervention CISO", "Torq Valvoline deployment 48 hours AI SOC", "Torq Agentic Builder March 2026 release", "Torq 100 million daily security automations"]
+source_ids = ["torq-deepwatch", "check-point-case", "torq-growth-2024", "torq-agentic-builder", "torq-jit", "torq-seriesd", "torq-company"]
+summary = "Company-published customer evidence supports Deepwatch's standardization and Check Point's policy-conditioned production use; Torq quotes Valvoline and lists multinational customers. Product releases document Agentic Builder, Revrod integration, and Jit's context graph. Customer cohort economics and independent validation are unavailable."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-22T02:38:20+00:00"
+next_review_on = "2027-04-22"
+queries = ["Torq patent patents Torq Technologies Ltd AI security automation", "site:patents.google.com/patent Torq Technologies cybersecurity", "Torq Technologies Ltd USPTO WIPO patent security automation"]
+source_ids = []
+summary = "Public patent searches using Torq Technologies and related security-automation terms did not locate a relevant patent family. This bounded result does not show that Torq has no patents or proprietary IP; assignments, trade secrets, acquisitions, and unpublished applications remain diligence topics."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T02:38:20+00:00"
+next_review_on = "2027-04-22"
+queries = ["Torq AI SOC competitors Tines Swimlane Microsoft Sentinel 2026", "site:tines.com security automation SOC workflow automation official", "site:swimlane.com Turbine agentic AI automation platform official", "Microsoft Security Copilot Sentinel automation official", "Google Security Operations agentic SOC official", "Palo Alto Networks Cortex XSOAR official", "D3 Morpheus agentic SOC official"]
+source_ids = ["torq-home", "tines-ai-soc", "swimlane-turbine", "microsoft-sentinel-copilot", "google-agentic-soc", "paloalto-xsoar", "d3-morpheus"]
+summary = "Official materials confirm overlap in workflow automation, case management, investigation, agentic triage, and response. Differentiation is a product-positioning comparison; no independent benchmark, win/loss, or price data was found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "reported"
+checked_at = "2026-10-22T02:38:20+00:00"
+next_review_on = "2027-04-22"
+queries = ["Torq federal contracts government customer FedRAMP authorization Marketplace 2026", "site:fedramp.gov Torq cybersecurity FedRAMP authorization", "site:sam.gov Torq cybersecurity contract federal", "Torq Merlin SOC Modernization Program September 2026 partnership announcement", "Torq 2026 AI SOC dual-use federal government security operations"]
+source_ids = ["torq-seriesd", "merlin-federal", "fedramp-guide", "check-point-case"]
+summary = "Torq has direct commercial defensive-cyber use and a Merlin partnership for federal SOC modernization with a stated FedRAMP path. The reviewed sources do not establish FedRAMP authorization, a government contract award, or a named federal deployment. The dual-use case is defensive cyber operations."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Torq's current company page describes a live product, current leadership, customers, and 2026 product and acquisition activity."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-company", "torq-home"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Torq's official privacy notice states Torq Technologies Ltd. is incorporated under Israeli law and lists a Tel Aviv address."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-privacy"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "Torq's Series D release reports $332M total funding and Reuters independently repeats the company-reported figure."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-seriesd", "reuters-seriesd"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.amount"
+support = "direct"
+summary = "TechCrunch reports an $8M previously undisclosed seed; Bessemer says it led the seed."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["techcrunch-seed-a", "bvp-stackpulse"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2020.lead_investors"
+support = "direct"
+summary = "Bessemer states it led StackPulse's seed round."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["bvp-stackpulse"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.amount"
+support = "direct"
+summary = "TechCrunch identifies the new Series A as $20M."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["techcrunch-seed-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.lead_investors"
+support = "direct"
+summary = "TechCrunch identifies GGV Capital as the Series A lead."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["techcrunch-seed-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.participating_investors"
+support = "direct"
+summary = "TechCrunch says Bessemer Venture Partners also participated in the Series A."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["techcrunch-seed-a"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2021.amount"
+support = "direct"
+summary = "TechCrunch reports a $50M Series B."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["techcrunch-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2021.lead_investors"
+support = "direct"
+summary = "TechCrunch identifies Insight Partners as lead."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["techcrunch-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2021.participating_investors"
+support = "direct"
+summary = "TechCrunch names SentinelOne, GGV Capital, and Bessemer Venture Partners as participants."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["techcrunch-series-b"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-extension-2024.amount"
+support = "direct"
+summary = "TechCrunch reports an incremental $42M extension to the Series B."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["techcrunch-series-b-extension"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-extension-2024.participating_investors"
+support = "direct"
+summary = "TechCrunch names Bessemer, GGV, Insight, Greenfield, and Evolution Equity as participants; no lead is identified."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["techcrunch-series-b-extension"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2024.amount"
+support = "direct"
+summary = "Torq's Series C release reports $70M."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-series-c"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2024.lead_investors"
+support = "direct"
+summary = "Torq identifies Evolution Equity Partners as Series C lead."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-series-c"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-c-2024.participating_investors"
+support = "direct"
+summary = "Torq names Bessemer, Notable Capital, Greenfield, and Strait Capital as Series C participants."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-series-c"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2026.amount"
+support = "direct"
+summary = "Torq and Reuters report the $140M Series D."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-seriesd", "reuters-seriesd"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2026.post_money_valuation"
+support = "direct"
+summary = "Torq announced the Series D at a reported $1.2B valuation; Reuters reported the same figure."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-seriesd", "reuters-seriesd"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2026.lead_investors"
+support = "direct"
+summary = "Torq and Reuters identify Merlin Ventures as lead."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-seriesd", "reuters-seriesd"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-d-2026.participating_investors"
+support = "direct"
+summary = "Torq names Evolution Equity, Notable Capital, Bessemer, Insight, and Greenfield as existing participants."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-seriesd"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.revrod-2025.status"
+support = "direct"
+summary = "Torq's April 16, 2025 announcement says it acquired Revrod and integrated the technology."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-revrod"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.revrod-2025.amount"
+support = "direct"
+summary = "Torq's announcement discloses no consideration; a secondary report says over $20M without primary confirmation, so amount remains undisclosed."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-revrod", "securityweek-revrod"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.jit-2026.status"
+support = "direct"
+summary = "Torq's May 2026 release says it acquired Jit and integrated its context graph."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-jit"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.jit-2026.amount"
+support = "direct"
+summary = "Torq's release does not disclose consideration or a separate completion date; amount remains undisclosed."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-jit"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.revrod-2025.company_role"
+support = "direct"
+summary = "Torq's announcement states that Torq acquired Revrod, identifying Torq as buyer."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-revrod"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.deals.jit-2026.company_role"
+support = "direct"
+summary = "Torq's announcement states that Torq acquired Jit, identifying Torq as buyer."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-jit"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Revenue growth, company-reported@2023-12-31.numeric_value"
+support = "direct"
+summary = "Torq reported 300% revenue growth during 2023."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-momentum-2023"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Revenue growth, company-reported@2024-12-31.numeric_value"
+support = "direct"
+summary = "Torq reported 300% revenue growth during 2024."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-growth-2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Employee growth, company-reported@2024-12-31.numeric_value"
+support = "direct"
+summary = "Torq reported 200% employee growth during 2024."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-growth-2024"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.Worldwide employees shown on company About page@2026-10-22.numeric_value"
+support = "direct"
+summary = "Torq's About page displayed 430+ employees when accessed on the research date."
+verified_at = "2026-10-22T02:38:20+00:00"
+source_ids = ["torq-company"]
