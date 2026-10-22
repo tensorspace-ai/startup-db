@@ -1,0 +1,627 @@
+name = "Balance"
+description = "Israeli-founded fintech company providing embedded payments, trade credit and order-to-cash infrastructure for B2B commerce."
+detailed_description = """Balance (legal entity Balance Payments, Inc.) sells financial infrastructure to B2B merchants, marketplaces and commerce platforms. Its platform is intended to replace the disconnected checkout, credit approval, invoicing, collections and reconciliation steps that make a business purchase slower than a consumer checkout. A merchant can embed Balance in a storefront or buyer portal, present payment choices such as card, bank transfer or pay-by-invoice/net terms, and use Balance's onboarding, fraud and credit-risk workflow to support the transaction. For marketplaces, the product also addresses seller payments and platform-specific transaction flows. Current product pages group capabilities across B2B payments, pay-by-invoice, B2B buy-now-pay-later, marketplace infrastructure and order-to-cash tools such as invoicing, collections and cash application. These are company-described capabilities; public sources do not disclose the product-level split of software fees, transaction fees, credit income or loss-sharing arrangements."""
+logo = "https://www.getbalance.com/wp-content/uploads/2026/07/Frame-17.svg"
+website = "https://www.getbalance.com/"
+sector = "Fintech"
+founded = "2020"
+headquarters = "New York, United States; Tel Aviv, Israel operations"
+employees = "Around 60 reported in July 2022; current total not disclosed"
+funding_stage = "Series B (last publicly disclosed equity round: July 2022)"
+entity_type = "startup"
+dual_use = false
+dual_use_description = "Balance's disclosed product is commercial B2B payments and credit infrastructure. The reviewed product, partner and funding sources describe merchant onboarding, trade credit, payment processing, invoicing and receivables workflows. No defense, intelligence, government-security or military customer/use was identified. The risk, fraud and underwriting functions have general financial-crime and fraud-prevention relevance, but that alone does not establish a defense or security deployment; the company is therefore not assigned a dual-use thesis here."
+key_technologies = ["Embedded B2B payments APIs", "Digital trade credit and pay-by-invoice", "Credit underwriting and fraud controls", "Marketplace financial infrastructure", "Accounts receivable automation", "Bank-payment rails and reconciliation"]
+use_cases = ["B2B online checkout", "Net terms and business buyer financing", "Marketplace seller and buyer payment flows", "Invoice issuance and collection", "Cash application and reconciliation", "Buyer onboarding and credit risk management"]
+investible = false
+investment_rationale = """Balance addresses a structural commerce problem: business purchases often require negotiated terms, credit checks, invoices, approvals and bank transfers, while many digital commerce stacks were designed around immediate consumer card payment. Its product thesis is coherent because it attaches financing and payment choices to the same checkout and receivables workflow. If Balance can make a seller's checkout convert better while taking operational work away from the seller, it can earn both software and transaction-related revenue and become difficult to remove after integration. The company has also expanded its product framing from an early B2B checkout layer toward the broader invoice-to-cash lifecycle, which can increase its share of a merchant's workflow and generate more data for underwriting.
+
+The evidence of market access is meaningful but should be read precisely. In 2022 the company described hundreds of merchants, marketplaces and customers in aggregate and named a set of commerce relationships; that combined figure is not a count of paying, unique merchants. Subsequent company announcements document an RTP-enabled bank-payment feature, a B-Stock partnership and a Shopware integration announced for North American merchants. These announcements show continued product and channel activity through 2026. They do not disclose transaction volume, attach rate, credit utilization, repayment performance, renewal rates or customer economics. The public record therefore supports continued commercial execution and distribution work, but not a conclusion that the business has reached a particular revenue scale or has proven attractive unit economics.
+
+The financing record gives Balance room to build and a notable specialist investor group. Public reporting identifies a $5.5 million seed in 2021, a $25 million Series A later that year and a $56 million Series B in 2022. A contemporaneous reported cumulative figure was $87 million, which is rounded relative to the disclosed round amounts totaling $86.5 million. A separate $350 million credit-facility commitment was reported in November 2022. That facility is a financing capacity for extending credit, not equity raised and not proof that the entire commitment was drawn. For an underwriting-led fintech, access to committed lending capacity can support seller payout and buyer terms, but it introduces lender, covenant, funding-cost and asset-performance dependencies. The company has not publicly supplied current credit losses, delinquencies, receivable duration, facility utilization or the share of risk retained versus transferred.
+
+The core diligence case is consequently conditional. A growth investor would need current gross payment volume, net revenue retention, take rate by product, contribution margin after funding and servicing costs, cohort repayment curves, loss rates by segment, exposure limits and concentration by platform and lender. It would also be important to establish which modules are live products versus marketing categories, how much underwriting is automated versus manually reviewed, and whether Balance is principal, agent, servicer or technology provider in each transaction and jurisdiction. Because the last publicly identified equity round was in 2022, present cash runway, later financing, and strategic ownership changes also need verification. Those missing facts matter more than a broad estimate of B2B commerce market size."""
+strategic_value = """For a commerce platform or financial institution, Balance could provide an embedded layer that links buyer identity and credit decisions to order acceptance, seller payout, receivables and reconciliation. The strategic value is strongest where a marketplace or vertical software platform has many business buyers and suppliers but does not want to build credit operations, payment orchestration or collections infrastructure itself. A successful integration can shorten implementation work for a platform and give merchants a choice of payment terms without each merchant separately assembling lenders, payment processors and receivables software. The public Shopware announcement is evidence of a distribution integration being offered; it is not evidence of deployed volume across the Shopware base.
+
+The company has potential data advantages only if transaction and repayment data are sufficiently broad, permissioned and predictive. Order, invoice, payment and repayment events can improve risk decisions and let Balance reconcile balances with less manual work. That advantage is not automatic: marketplace data may be siloed, adverse selection may concentrate risk, and credit models can fail when economic conditions or customer mix shift. The moat therefore depends on underwriting results, funding reliability, integration quality, compliance operations and repeatable economics rather than on the mere presence of an AI label or API. As an Israeli-founded company with Tel Aviv roles and US commercial operations, it also sits between Israel's fintech engineering base and a large North American B2B market, while navigating a cross-border operating footprint."""
+public_sources = [
+  { label = "Lightspeed portfolio profile", url = "https://lsvp.com/company/balance/", description = "Investor profile identifying Balance as a private portfolio company and listing its leadership." },
+  { label = "Balance About page", url = "https://www.getbalance.com/about/", description = "Official company identity and links to current product and case-study material." },
+  { label = "Balance official homepage", url = "https://www.getbalance.com/", description = "Current company positioning, platform modules and customer-facing claims." },
+  { label = "Balance terms", url = "https://www.getbalance.com/legal/balance-website-terms/", description = "Legal entity and terms describing company software and intellectual property." },
+  { label = "TechCrunch seed report", url = "https://techcrunch.com/2021/02/03/lightspeed-and-max-levchin-bet-on-balance-to-bring-b2b-payments-into-the-digital-world/", description = "Seed amount, founders, early product and Israel founding connection." },
+  { label = "Lightspeed seed announcement", url = "https://lsvp.com/stories/meet-balance-b2b-payments-done-right/", description = "Lead investor's account of the seed round and product thesis." },
+  { label = "TechCrunch Series A report", url = "https://techcrunch.com/2021/08/25/balance-raises-25m-in-a-ribbit-capital-led-series-a-to-grow-its-consumer-like-b2b-checkout-platform/", description = "Series A amount, lead and reported participants." },
+  { label = "TechCrunch Series B report", url = "https://techcrunch.com/2022/07/26/balance-56m-one-click-checkout-b2b-merchants/", description = "Series B amount, investor syndicate, reported cumulative raise and traction examples." },
+  { label = "Calcalist/CTech Series B report", url = "https://www.calcalistech.com/ctechnews/article/by11qkcpn5", description = "Israeli reporting on Series B, company footprint, aggregate merchant/customer figure and employees." },
+  { label = "Axios credit facility report", url = "https://www.axios.com/pro/retail-deals/2022/11/22/balance-350m-facility-to-extend-credit-to-others", description = "Reported $350 million facility and Viola Credit participation." },
+  { label = "Balance 2022 retrospective", url = "https://www.getbalance.com/post/a-year-in-the-life-of-b2b-payments-looking-back-on-2022/", description = "Company's retrospective on the credit facility and product development." },
+  { label = "Balance careers", url = "https://www.getbalance.com/careers/", description = "Current role listings in Tel Aviv, New York and Bulgaria." },
+  { label = "Salesforce Ventures Balance profile", url = "https://salesforceventures.com/companies/balance/", description = "Private status and named founders/leadership." },
+  { label = "Balance RTP release", url = "https://www.getbalance.com/news/balance-integrates-rtp-rails-to-deliver-frictionless-b2b-ach-payments-and-improve-merchants-cash-flow/", description = "Company-announced bank-payment product milestone in 2025." },
+  { label = "Balance and B-Stock release", url = "https://www.getbalance.com/news/b-stock-balance-flexible-payments-and-terms-b2b-recommerce-platform/", description = "Company-announced B-Stock partnership and net-term offering." },
+  { label = "Balance and Shopware release", url = "https://www.getbalance.com/news/shopware-and-balance-partner-to-enable-flexible-b2b-payments-for-shopware-merchants-in-north-america/", description = "2026 integration announcement and product use case." },
+  { label = "Balance B2B payments product", url = "https://www.getbalance.com/products/b2b-payments/", description = "Payment portal, API, fraud and compliance claims on the product page." },
+  { label = "Resolve product", url = "https://resolvepay.com/product/b2b-payments/", description = "Comparable B2B credit, invoicing and receivables product positioning." },
+  { label = "TreviPay company profile", url = "https://www.trevipay.com/official-information-about-trevipay/", description = "Comparable enterprise B2B payment and managed receivables offering." },
+  { label = "Hokodo trade account", url = "https://www.hokodo.co/trade-account", description = "Comparable digital trade credit and B2B payments product positioning." }
+]
+potential_score = 57
+technology_score = 61
+market_score = 72
+team_score = 58
+dual_use_score = 0
+strategic_alignment_score = 55
+stage = "mid"
+stage_rationale = """Balance is beyond initial product discovery: it raised three publicly reported equity rounds through a $56 million Series B in 2022, announced a substantial separate credit facility, and has since announced payment-rail and commerce-platform partnerships through March 2026. These events indicate a scaled venture-backed operating company with a live product suite and go-to-market partnerships. The last public equity financing located is four years old as of this review, and the company's latest revenue, employee count, transaction volume and credit performance are unavailable. The `mid` designation reflects the disclosed Series B stage and operating evidence, not a claim about current valuation, growth rate or profitability."""
+competitors = ["Resolve", "TreviPay", "Hokodo", "Stripe and other payment orchestration providers", "Merchant-built credit and accounts-receivable workflows"]
+competitive_edge = """Balance's claimed differentiation is the combination of checkout, business credit, payments and receivables operations in a single embedded product. Its target users can configure buyer-specific payment choices and seller payout flows without independently building a credit team, payment integrations and invoice collection stack. This is a more workflow-heavy proposition than a gateway that simply routes card transactions. The early investor account emphasized handling checkout through KYB and financing approvals into invoice and buyer-approval flows; current company material extends the scope through collections and reconciliation. Announcements with B-Stock and Shopware show the platform is pursuing both marketplace and commerce-software distribution.
+
+Resolve is a close product comparison around B2B net terms, credit decisions, invoicing and receivables automation. Hokodo presents digital trade accounts, payment terms and credit-risk management with a strong international trade-credit framing. TreviPay competes for enterprise B2B payment programs through a broader, more established managed network and accounts-receivable service model. Payment processors and commerce platforms can also assemble portions of this functionality, while larger merchants may use an internal credit team and separate AR systems. Balance may win where one integration reduces operational complexity and its underwriting economics are competitive. Public sources do not provide independent benchmarks, customer win/loss evidence, comparative default rates or migration costs, so claimed speed, conversion improvement and model performance remain diligence topics rather than verified advantages."""
+risk_factors = [
+  "Credit losses, delinquencies, fraud and adverse selection could exceed pricing or reserves; no current cohort outcomes or loss ratios were located.",
+  "The $350 million facility is a reported commitment, not evidence of drawn funds; lender concentration, covenants, cost, renewal and risk-sharing terms are undisclosed.",
+  "No current ARR, net revenue, gross margin, payment volume, profitability, burn, runway or exact headcount was found in public sources.",
+  "The last disclosed equity round located was July 2022, leaving current financing and capitalization uncertain.",
+  "Dependence on marketplace and commerce-platform integrations may create channel concentration, implementation delays or platform disintermediation.",
+  "Financial-services, lending, payments, privacy and credit-decision obligations vary by product structure and jurisdiction; the public record does not establish all applicable licenses or legal counterparties.",
+  "AI-underwriting language is company positioning; model validation, explainability, fairness controls, human review and performance under stress were not independently evidenced.",
+  "The company faces established payment processors, specialist trade-credit platforms, enterprise receivables networks and in-house merchant alternatives."
+]
+risk_level = "medium"
+signals = ["Three disclosed equity rounds through Series B in 2022", "Separate $350 million credit facility reported in 2022", "Company-announced RTP, B-Stock and Shopware product/partner milestones in 2025–2026", "Tel Aviv engineering and product roles listed on current careers page", "No recent public financial or credit-performance metrics located"]
+priority_rank = 0
+priority_rationale = "Track as an active Israeli-founded fintech with strong product-market relevance and meaningful historical financing. Do not assign internal investment priority until current scale, credit performance, facility utilization and post-2022 capitalization are verified."
+crawled_at = "2026-10-22T05:28:39+03:00"
+updated_at = "2026-10-22T05:28:39+03:00"
+
+[intelligence]
+schema_version = 2
+people = [
+  { name = "Bar Geron", role = "Co-founder and Chief Executive Officer", background = "Former PayPal employee and Behalf executive; co-founded Balance with Yoni Shuster. Current CEO role is listed by Salesforce Ventures.", is_founder = true, current = true, source_ids = ["seed-techcrunch", "balance-salesforce"] },
+  { name = "Yoni Shuster", role = "Co-founder and Chief Technology Officer", background = "Former PayPal employee; co-founded Balance with Bar Geron. Current CTO role is listed by Salesforce Ventures.", is_founder = true, current = true, source_ids = ["seed-techcrunch", "balance-salesforce"] }
+]
+investors = [
+  { name = "Lightspeed Venture Partners", investor_type = "vc", relationship = "historical", round_ids = ["seed-2021", "series-a-2021", "series-b-2022"], source_ids = ["seed-lightspeed", "series-a-techcrunch", "series-b-techcrunch"] },
+  { name = "Stripe", investor_type = "corporate", relationship = "historical", round_ids = ["seed-2021", "series-a-2021"], source_ids = ["seed-lightspeed", "series-a-techcrunch"] },
+  { name = "SciFi VC", investor_type = "vc", relationship = "historical", round_ids = ["seed-2021", "series-a-2021"], source_ids = ["seed-lightspeed", "series-a-techcrunch"] },
+  { name = "UpWest", investor_type = "vc", relationship = "historical", round_ids = ["seed-2021", "series-a-2021", "series-b-2022"], source_ids = ["seed-techcrunch", "series-a-techcrunch", "series-b-techcrunch"] },
+  { name = "Ribbit Capital", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2021", "series-b-2022"], source_ids = ["series-a-techcrunch", "series-b-techcrunch"] },
+  { name = "Avid Ventures", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2021", "series-b-2022"], source_ids = ["series-a-techcrunch", "series-b-techcrunch"] },
+  { name = "Y Combinator Continuity Fund", investor_type = "vc", relationship = "historical", round_ids = ["series-a-2021"], source_ids = ["series-a-techcrunch"] },
+  { name = "Forerunner Ventures", investor_type = "vc", relationship = "historical", round_ids = ["series-b-2022"], source_ids = ["series-b-techcrunch", "series-b-calcalist"] },
+  { name = "Salesforce Ventures", investor_type = "corporate", relationship = "historical", round_ids = ["series-b-2022"], source_ids = ["series-b-techcrunch", "series-b-calcalist"] },
+  { name = "HubSpot Ventures", investor_type = "corporate", relationship = "historical", round_ids = ["series-b-2022"], source_ids = ["series-b-techcrunch", "series-b-calcalist"] },
+  { name = "Lyra Ventures", investor_type = "vc", relationship = "historical", round_ids = ["series-b-2022"], source_ids = ["series-b-techcrunch"] },
+  { name = "Gramercy Ventures", investor_type = "vc", relationship = "historical", round_ids = ["series-b-2022"], source_ids = ["series-b-techcrunch"] },
+  { name = "Jibe Ventures", investor_type = "vc", relationship = "historical", round_ids = ["series-b-2022"], source_ids = ["series-b-techcrunch"] },
+  { name = "Viola Credit", investor_type = "other", relationship = "historical", round_ids = ["credit-facility-2022"], source_ids = ["credit-facility-axios"] },
+  { name = "Nellie Levchin", investor_type = "angel", relationship = "historical", round_ids = ["seed-2021"], source_ids = ["seed-techcrunch", "seed-lightspeed"] },
+  { name = "Jacqueline Reses", investor_type = "angel", relationship = "historical", round_ids = ["series-a-2021"], source_ids = ["series-a-techcrunch"] },
+  { name = "Jeff Wisener", investor_type = "angel", relationship = "historical", round_ids = ["series-b-2022"], source_ids = ["series-b-techcrunch"] },
+  { name = "Marcelo Cortes", investor_type = "angel", relationship = "historical", round_ids = ["series-b-2022"], source_ids = ["series-b-techcrunch"] }
+]
+financials = [
+  { name = "employees", value = "Around 60", metric = "employees", as_of = "2022-07", numeric_value = 60, value_relation = "approximate", unit = "people", basis = "reported", source_ids = ["series-b-calcalist"], notes = "Calcalist/CTech reported around 60 employees; this is a dated approximate figure, not a current headcount." }
+]
+traction = [
+  { date = "2022-07", kind = "customer", description = "Calcalist/CTech reported more than 300 merchants, marketplaces and customers combined. The categories are aggregated and do not establish 300 distinct paying merchant accounts.", source_ids = ["series-b-calcalist"] },
+  { date = "2025-05", kind = "product", description = "Balance announced instant bank connection using RTP rails for eligible Balance customers; this is a company-announced product availability claim.", source_ids = ["balance-rtp-2025"] },
+  { date = "2025-10", kind = "partnership", description = "Balance and B-Stock announced flexible payment terms for eligible buyers on B-Stock's B2B recommerce platform. The release does not report transaction volume or customer conversion outcomes.", source_ids = ["balance-bstock-2025"] },
+  { date = "2026-03", kind = "partnership", description = "Balance and Shopware announced an integration allowing North American Shopware merchants to add pay-by-invoice and B2B BNPL at checkout and buyer portals. Announcement does not quantify live merchant deployments.", source_ids = ["balance-shopware-2026"] }
+]
+intellectual_property = []
+comparables = [
+  { name = "Resolve", rationale = "Direct competition in B2B net terms, credit decisions, invoicing and receivables automation.", differentiation = "Resolve's public product material emphasizes financing and receivables tools; Balance's announced product scope combines embedded checkout, marketplace flows and order-to-cash services. Relative performance is not independently benchmarked.", source_ids = ["resolve-product"] },
+  { name = "TreviPay", rationale = "Competes for enterprise B2B payment and managed receivables programs.", differentiation = "TreviPay's profile emphasizes an established managed network and global enterprise services, while Balance positions an API and platform-integrated checkout/credit layer. No independent comparative win/loss evidence was located.", source_ids = ["trevipay-about"] },
+  { name = "Hokodo", rationale = "Overlaps in digital trade accounts, credit underwriting, payment terms and risk management.", differentiation = "Hokodo emphasizes international digital trade credit; Balance emphasizes North American embedded marketplace and commerce-platform integrations. Product overlap remains substantial.", source_ids = ["hokodo-trade"] }
+]
+
+[intelligence.company]
+company_id = "il-balance-b2b-payments"
+legal_name = "Balance Payments, Inc."
+aliases = ["Balance Payments, Inc."]
+founded_on = "2020"
+operating_status = "active"
+products = ["B2B payments", "Pay-by-invoice and B2B BNPL", "Marketplace payment infrastructure", "Order-to-cash: invoicing, collections and cash application"]
+locations = ["New York, United States", "Tel Aviv, Israel", "Bulgaria"]
+business_model = "B2B financial infrastructure sold to merchants, marketplaces and commerce platforms; embeds payment acceptance, trade credit and accounts-receivable workflows. Public pricing and revenue mix are undisclosed."
+source_ids = ["balance-terms", "balance-home", "balance-careers", "balance-salesforce", "seed-techcrunch", "series-b-calcalist"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["israeli_founders", "israeli_rd"]
+summary = "Co-founders Bar Geron and Yoni Shuster were based in Israel when the company launched, contemporary Israeli reporting identifies Balance as an Israeli fintech, and the current careers page lists Tel Aviv engineering, product and business roles. The company also has a New York headquarters and North American commercial focus."
+as_of = "2026-10-22"
+source_ids = ["seed-techcrunch", "series-b-calcalist", "balance-careers"]
+
+[intelligence.funding]
+history_status = "partial"
+coverage_through = "2026-10-22"
+status = "reported"
+reported_total_raised = 87000000
+reported_total_currency = "USD"
+total_source_ids = ["series-b-techcrunch", "series-b-calcalist"]
+total_as_of = "2022-07-26"
+total_scope = "Company's publicly reported cumulative equity fundraising as of the Series B announcement; reported as $87 million. This is not a sum including the separate credit facility. Individually disclosed equity rounds total $86.5 million, so the cumulative headline appears rounded."
+summary = "Original company and investor announcements plus business reporting identify a $5.5 million seed in February 2021, a $25 million Series A in August 2021 and a $56 million Series B in July 2022. A November 2022 $350 million credit facility is recorded separately as debt capacity, not equity. No later equity round was located in the reviewed sources; private activity and unannounced financings remain possible, so the public history is partial."
+
+[[intelligence.funding.rounds]]
+id = "seed-2021"
+round_type = "seed"
+instrument = "equity"
+announced_on = "2021-02-03"
+status = "announced"
+amount_status = "reported"
+amount = 5500000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["Lightspeed Venture Partners"]
+participating_investors = ["SciFi VC", "Stripe", "UpWest"]
+source_ids = ["seed-techcrunch", "seed-lightspeed"]
+notes = "TechCrunch reported $5.5 million. Lightspeed's investor announcement identifies Lightspeed as lead and names SciFi and Stripe; TechCrunch also names UpWest."
+
+[[intelligence.funding.rounds]]
+id = "series-a-2021"
+round_type = "series_a"
+instrument = "equity"
+announced_on = "2021-08-25"
+status = "announced"
+amount_status = "reported"
+amount = 25000000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["Ribbit Capital"]
+participating_investors = ["Avid Ventures", "Lightspeed Venture Partners", "Stripe", "Y Combinator Continuity Fund", "SciFi VC", "UpWest", "Jacqueline Reses"]
+source_ids = ["series-a-techcrunch"]
+notes = "TechCrunch reported a $25 million Series A led by Ribbit Capital and named the listed participants."
+
+[[intelligence.funding.rounds]]
+id = "series-b-2022"
+round_type = "series_b"
+instrument = "equity"
+announced_on = "2022-07-26"
+status = "announced"
+amount_status = "reported"
+amount = 56000000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["Forerunner Ventures"]
+participating_investors = ["Salesforce Ventures", "HubSpot Ventures", "Lyra Ventures", "Gramercy Ventures", "Jeff Wisener", "Marcelo Cortes", "Ribbit Capital", "Lightspeed Venture Partners", "Avid Ventures", "UpWest", "Jibe Ventures"]
+source_ids = ["series-b-techcrunch", "series-b-calcalist"]
+notes = "TechCrunch and Calcalist/CTech report the $56 million Series B led by Forerunner and identify investors. Calcalist states valuation was not disclosed."
+
+[[intelligence.funding.rounds]]
+id = "credit-facility-2022"
+round_type = "credit_facility"
+instrument = "debt"
+announced_on = "2022-11-22"
+status = "announced"
+amount_status = "reported"
+amount = 350000000
+currency = "USD"
+amount_scope = "unknown"
+lead_investors = ["Viola Credit"]
+participating_investors = []
+source_ids = ["credit-facility-axios", "credit-facility-company"]
+notes = "Reported commitment to fund credit extended to Balance customers; public sources do not establish facility draw, utilization, pricing or the amount outstanding. Excluded from equity raised and the company's equity total."
+
+[intelligence.ownership]
+status = "undisclosed"
+cap_table_status = "undisclosed"
+summary = "Balance is a private company and no cap table, parent company, acquisition, exit, transaction price or ownership percentage was disclosed in the reviewed sources."
+shareholders = []
+source_ids = ["balance-terms", "balance-salesforce", "series-b-techcrunch", "series-b-calcalist"]
+deals = []
+holdings = []
+
+[intelligence.research]
+researched_at = "2026-10-22T05:28:39+03:00"
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+search_queries = ["Balance B2B payments startup Israeli founders", "Balance Payments Inc getbalance.com", "Balance funding raised seed Series A Series B investors", "Balance ownership acquired parent", "Balance revenue ARR payment volume credit losses employees", "Balance patents patent credit underwriting", "Balance competitors Resolve TreviPay Hokodo", "Balance defense government military customer", "Balance Bar Geron Yoni Shuster team"]
+gaps = [
+  "funding: public research confirms three equity rounds through July 2022 and one separate credit-facility commitment; later private or unannounced financings and any unverified pre-seed are not established, so history_status is partial.",
+  "investors: the list contains publicly named participants only; private cap table, beneficial ownership, exact holdings and any undisclosed angel syndicate are unavailable.",
+  "team: founders and CEO/CTO roles are sourced, but a complete current executive roster, biographies, board composition and current headcount were not verified.",
+  "ownership: cap table is private; no public parent, acquisition, exit or disclosed holdings were identified in reviewed sources, so deals and holdings are empty.",
+  "financials: no current revenue, ARR, profitability, burn, runway, payment volume, credit losses, delinquency, facility utilization or exact headcount was found; the only structured metric is an approximate July 2022 employee count.",
+  "traction: the >300 figure aggregates merchants, marketplaces and customers; public sources do not disclose current paying customer count, payment volume, conversion lift, retention, concentration or independent customer outcomes. Partner announcements do not prove broad deployment.",
+  "intellectual_property: searches of company name, legal name and domain with patent terms did not identify a patent or application record; company terms describe software and other IP generally but do not establish specific patent ownership.",
+  "competition: comparison uses public product descriptions only; there are no independent win/loss, market-share, pricing, credit-performance or feature-benchmark data.",
+  "dual_use: no defense, intelligence, military or government-security customer or use was located; ordinary fraud prevention and financial underwriting do not establish a defense application."
+]
+conflicts = ["Funding total: TechCrunch and Calcalist/CTech report $87 million cumulative funding by the July 2022 Series B. The specifically disclosed $5.5 million seed, $25 million Series A and $56 million Series B sum to $86.5 million. The total is retained as the reported rounded cumulative figure and is not treated as an additional round or used to overwrite the announced round amounts."]
+diligence_questions = [
+  "What are current monthly payment volume, net revenue, gross margin and cohort retention by pay-by-invoice, BNPL, payments and order-to-cash modules, and how do those metrics compare with 2022?",
+  "For the Viola Credit facility, what amount is committed, drawn and currently available; who retains each credit exposure; and what are delinquency, net loss, recovery, funding-cost and covenant metrics by origination cohort?",
+  "What are the current legal counterparties, licenses and compliance responsibilities for underwriting, payment processing, collections and lending in each operating market?",
+  "How many Shopware and B-Stock integrations are in production, what share of eligible buyers use Balance terms, and what independently measured conversion or repeat-purchase lift has resulted?",
+  "Has Balance raised equity or changed ownership since the July 2022 Series B, and what are current cash runway, employee count, board composition and beneficial ownership?",
+  "Which underwriting decisions are made by models versus human review, how are models validated and monitored for bias or drift, and what data rights support cross-merchant risk assessment?"
+]
+
+[[intelligence.research.sources]]
+id = "seed-techcrunch"
+url = "https://techcrunch.com/2021/02/03/lightspeed-and-max-levchin-bet-on-balance-to-bring-b2b-payments-into-the-digital-world/"
+title = "Lightspeed and Levchin bet on Balance to bring B2B payments into the digital world"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-22T05:28:39+03:00"
+published_on = "2021-02-03"
+claims = ["Balance raised a $5.5 million seed round and named Lightspeed, Stripe, SciFi VC and UpWest among investors.", "Co-founders Bar Geron and Yoni Shuster were based in Israel when the company launched and had PayPal backgrounds.", "The early product supported B2B checkout, payments and risk underwriting; the CEO described a historical factoring fee around 2 percent, varying by risk."]
+
+[[intelligence.research.sources]]
+id = "seed-lightspeed"
+url = "https://lsvp.com/stories/meet-balance-b2b-payments-done-right/"
+title = "Meet Balance — B2B Payments Done Right"
+publisher = "Lightspeed Venture Partners"
+kind = "investor"
+accessed_at = "2026-10-22T05:28:39+03:00"
+published_on = "2021-02-03"
+claims = ["Lightspeed says it led Balance's seed round and names SciFi VC and Stripe as participants.", "The investor describes Balance's checkout, KYB, financing approval, invoicing and buyer approval product thesis."]
+
+[[intelligence.research.sources]]
+id = "balance-lightspeed-portfolio"
+url = "https://lsvp.com/company/balance/"
+title = "Balance"
+publisher = "Lightspeed Venture Partners"
+kind = "investor"
+accessed_at = "2026-10-22T05:28:39+03:00"
+claims = ["Lightspeed lists Balance as a private portfolio company founded in 2020 with Bar Geron and Yoni Shuster in leadership."]
+
+[[intelligence.research.sources]]
+id = "series-a-techcrunch"
+url = "https://techcrunch.com/2021/08/25/balance-raises-25m-in-a-ribbit-capital-led-series-a-to-grow-its-consumer-like-b2b-checkout-platform/"
+title = "Balance raises $25M in a Ribbit Capital-led Series A to grow its consumer-like B2B checkout platform"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-22T05:28:39+03:00"
+published_on = "2021-08-25"
+claims = ["Balance announced a $25 million Series A led by Ribbit Capital.", "The report names Avid Ventures, Lightspeed, Stripe, Y Combinator Continuity Fund, SciFi VC, UpWest and Jacqueline Reses among participants.", "The report describes founders, early product use and the company's Tel Aviv and New York footprint."]
+
+[[intelligence.research.sources]]
+id = "series-b-techcrunch"
+url = "https://techcrunch.com/2022/07/26/balance-56m-one-click-checkout-b2b-merchants/"
+title = "Balance raises $56M to tip the one-click checkout scales in favor of B2B merchants"
+publisher = "TechCrunch"
+kind = "media"
+accessed_at = "2026-10-22T05:28:39+03:00"
+published_on = "2022-07-26"
+claims = ["Balance announced a $56 million Series B led by Forerunner and named participating investors.", "The company reported $87 million total funding by the Series B.", "The report describes nearly 70 employees, merchants and marketplaces and named marketplace relationships as of 2022."]
+
+[[intelligence.research.sources]]
+id = "series-b-calcalist"
+url = "https://www.calcalistech.com/ctechnews/article/by11qkcpn5"
+title = "PayPal alums raise $56 million for fintech startup Balance"
+publisher = "Calcalist / CTech"
+kind = "media"
+accessed_at = "2026-10-22T05:28:39+03:00"
+published_on = "2022-07-26"
+claims = ["Israeli reporting identifies the $56 million Series B, lead and named participants, and $87 million cumulative funding.", "The report describes New York and Tel Aviv offices, more than 300 merchants, marketplaces and customers combined, and around 60 employees.", "The report says valuation was not disclosed."]
+
+[[intelligence.research.sources]]
+id = "credit-facility-axios"
+url = "https://www.axios.com/pro/retail-deals/2022/11/22/balance-350m-facility-to-extend-credit-to-others"
+title = "Balance gets $350M to help it extend credit to others"
+publisher = "Axios Pro"
+kind = "media"
+accessed_at = "2026-10-22T05:28:39+03:00"
+published_on = "2022-11-22"
+claims = ["Axios reports that Balance secured a $350 million credit facility from Viola Credit to support customer credit extension.", "The report describes the facility as debt capacity rather than an equity financing round."]
+
+[[intelligence.research.sources]]
+id = "credit-facility-company"
+url = "https://www.getbalance.com/post/a-year-in-the-life-of-b2b-payments-looking-back-on-2022/"
+title = "A year in the life of B2B payments: Looking back on 2022"
+publisher = "Balance"
+kind = "company"
+accessed_at = "2026-10-22T05:28:39+03:00"
+published_on = "2023-11-28"
+claims = ["Balance's retrospective says it secured a $350 million facility in November 2022 to provide working capital."]
+
+[[intelligence.research.sources]]
+id = "balance-terms"
+url = "https://www.getbalance.com/legal/balance-website-terms/"
+title = "Terms and Conditions"
+publisher = "Balance Payments, Inc."
+kind = "company"
+accessed_at = "2026-10-22T05:28:39+03:00"
+published_on = "2025-04"
+claims = ["The official terms identify Balance Payments, Inc. as the legal company operating getbalance.com and provide its New York address.", "The terms describe company or licensor ownership of software, platforms, algorithms and related intellectual property without naming patent registrations."]
+
+[[intelligence.research.sources]]
+id = "balance-home"
+url = "https://www.getbalance.com/"
+title = "Balance | Financial Infrastructure for B2B Commerce"
+publisher = "Balance"
+kind = "company"
+accessed_at = "2026-10-22T05:28:39+03:00"
+claims = ["Balance currently markets financial infrastructure for B2B commerce with payment, risk, capital and order-to-cash capabilities.", "The homepage presents named customer testimonials; these are company-presented endorsements, not independent performance verification."]
+
+[[intelligence.research.sources]]
+id = "balance-about"
+url = "https://www.getbalance.com/about/"
+title = "About - Balance"
+publisher = "Balance"
+kind = "company"
+accessed_at = "2026-10-22T05:28:39+03:00"
+claims = ["The company's About page presents its current brand and links to product and case-study material."]
+
+[[intelligence.research.sources]]
+id = "balance-careers"
+url = "https://www.getbalance.com/careers/"
+title = "Careers at Balance | Build the Future of B2B Payments"
+publisher = "Balance"
+kind = "company"
+accessed_at = "2026-10-22T05:28:39+03:00"
+claims = ["The current careers page lists engineering and product roles in Tel Aviv and roles in New York and Bulgaria, evidencing an active hiring presence in Israel and the United States."]
+
+[[intelligence.research.sources]]
+id = "balance-salesforce"
+url = "https://salesforceventures.com/companies/balance/"
+title = "Balance | Salesforce Ventures"
+publisher = "Salesforce Ventures"
+kind = "investor"
+accessed_at = "2026-10-22T05:28:39+03:00"
+claims = ["Salesforce Ventures describes Balance as private and identifies Bar Geron as CEO and Yoni Shuster as CTO and co-founder."]
+
+[[intelligence.research.sources]]
+id = "balance-rtp-2025"
+url = "https://www.getbalance.com/news/balance-integrates-rtp-rails-to-deliver-frictionless-b2b-ach-payments-and-improve-merchants-cash-flow/"
+title = "Balance Integrates RTP Rails to Deliver Frictionless B2B ACH Payments and Improve Merchants' Cash Flow"
+publisher = "Balance"
+kind = "company"
+accessed_at = "2026-10-22T05:28:39+03:00"
+published_on = "2025-05-25"
+claims = ["Balance announced an instant bank connection feature using RTP rails for eligible customers."]
+
+[[intelligence.research.sources]]
+id = "balance-bstock-2025"
+url = "https://www.getbalance.com/news/b-stock-balance-flexible-payments-and-terms-b2b-recommerce-platform/"
+title = "B-Stock Partners with Balance to Power Flexible Payments and Terms on its B2B Recommerce Platform"
+publisher = "Balance"
+kind = "company"
+accessed_at = "2026-10-22T05:28:39+03:00"
+published_on = "2025-10-14"
+claims = ["Balance and B-Stock announced an offering of flexible payment terms for eligible buyers on the B-Stock platform; the announcement does not quantify transaction volume."]
+
+[[intelligence.research.sources]]
+id = "balance-shopware-2026"
+url = "https://www.getbalance.com/news/shopware-and-balance-partner-to-enable-flexible-b2b-payments-for-shopware-merchants-in-north-america/"
+title = "Shopware and Balance Partner to Enable Flexible B2B Payments for Shopware Merchants in North America"
+publisher = "Balance"
+kind = "company"
+accessed_at = "2026-10-22T05:28:39+03:00"
+published_on = "2026-03-26"
+claims = ["Balance and Shopware announced North American merchants can integrate Balance at checkout and buyer portals for pay-by-invoice and B2B BNPL.", "The source is the company's announcement and does not establish broad deployment or measured customer outcomes."]
+
+[[intelligence.research.sources]]
+id = "balance-product"
+url = "https://www.getbalance.com/products/b2b-payments/"
+title = "B2B Payments"
+publisher = "Balance"
+kind = "company"
+accessed_at = "2026-10-22T05:28:39+03:00"
+claims = ["The product page describes payment portals, invoice and account tools, fraud functionality, APIs and company security/compliance claims."]
+
+[[intelligence.research.sources]]
+id = "resolve-product"
+url = "https://resolvepay.com/product/b2b-payments/"
+title = "B2B Payments Growth | Streamlined Invoicing & Credit Solutions"
+publisher = "Resolve"
+kind = "company"
+accessed_at = "2026-10-22T05:28:39+03:00"
+claims = ["Resolve's product page describes B2B net terms, AI-supported credit checks, invoicing and receivables tools relevant to the competitive comparison."]
+
+[[intelligence.research.sources]]
+id = "trevipay-about"
+url = "https://www.trevipay.com/official-information-about-trevipay/"
+title = "Official Information About TreviPay"
+publisher = "TreviPay"
+kind = "company"
+accessed_at = "2026-10-22T05:28:39+03:00"
+claims = ["TreviPay describes enterprise B2B payments, invoice terms and managed accounts-receivable services relevant to the competitive comparison."]
+
+[[intelligence.research.sources]]
+id = "hokodo-trade"
+url = "https://www.hokodo.co/trade-account"
+title = "Discover Hokodo's Digital Trade Account Solution for B2B"
+publisher = "Hokodo"
+kind = "company"
+accessed_at = "2026-10-22T05:28:39+03:00"
+claims = ["Hokodo describes digital B2B trade accounts, net terms, credit underwriting, risk protection, payments and collections relevant to the competitive comparison."]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-22T05:28:39+03:00"
+next_review_on = "2027-04-22"
+queries = ["Balance B2B payments startup Israeli founders", "Balance Payments Inc B2B payments getbalance.com", "getbalance.com", "Balance b2b trade finance infrastructure", "getbalance"]
+source_ids = ["balance-terms", "balance-home", "seed-techcrunch", "series-b-calcalist", "balance-careers", "balance-salesforce"]
+summary = "Official terms identify Balance Payments, Inc.; the official getbalance.com brand and product, investor profile and dated company announcements identify an active private B2B fintech. Targeted lookup.py searches for Balance, the domain, legal name and founders returned no matching catalog identity; other similarly named businesses have different domains, founders and products."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-22T05:28:39+03:00"
+next_review_on = "2027-04-22"
+queries = ["Balance getbalance.com funding raised seed Series A Series B investors valuation acquired", "Balance Payments fintech $5.5 million seed Lightspeed 2021", "Balance $25 million Series A Ribbit 2021", "Balance $56 million Series B Forerunner 2022 $87 million total", "Balance $350 million credit facility Viola Credit 2022", "Balance funding revenue 2023 2024 2025 2026"]
+source_ids = ["seed-techcrunch", "seed-lightspeed", "series-a-techcrunch", "series-b-techcrunch", "series-b-calcalist", "credit-facility-axios", "credit-facility-company"]
+summary = "Three announced equity rounds and a separate credit facility were found in company/investor announcements and business reporting. The company-reported $87 million cumulative figure is rounded compared with the disclosed $86.5 million round sum. No later equity round was found; the public history is partial."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T05:28:39+03:00"
+next_review_on = "2027-04-22"
+queries = ["Balance getbalance.com investors seed Series A Series B", "Balance 2021 Lightspeed SciFi Stripe seed", "Balance 2021 Ribbit Avid investors Series A", "Balance 2022 Forerunner Salesforce HubSpot investors Series B", "Balance Viola Credit facility"]
+source_ids = ["seed-techcrunch", "seed-lightspeed", "series-a-techcrunch", "series-b-techcrunch", "series-b-calcalist", "credit-facility-axios"]
+summary = "Named round participants are recorded only where the cited round reporting identifies them. They are historical investors or facility provider; their current ownership percentages and cap table positions are not public."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-22T05:28:39+03:00"
+next_review_on = "2027-04-22"
+queries = ["Balance Bar Geron Yoni Shuster founders PayPal", "Balance CEO CTO leadership", "Balance fintech founders Israel", "site:getbalance.com/careers Balance Tel Aviv"]
+source_ids = ["seed-techcrunch", "balance-salesforce", "balance-careers", "series-b-calcalist"]
+summary = "The two founders and CEO/CTO roles and relevant PayPal backgrounds are sourced. Current vacancies confirm Tel Aviv roles, but a complete current executive, board and headcount profile was not found."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T05:28:39+03:00"
+next_review_on = "2027-04-22"
+queries = ["Balance Payments Inc acquired acquisition parent ownership", "Balance getbalance.com acquired merger buyout", "Balance Israeli fintech acquisition 2023 2024 2025 2026", "Balance Payments company ownership cap table"]
+source_ids = ["balance-terms", "balance-salesforce", "series-b-techcrunch", "series-b-calcalist"]
+summary = "The company is described as private; no parent, acquisition, exit or disclosed ownership percentage was identified in reviewed sources. Private ownership data are unavailable and are not inferred."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T05:28:39+03:00"
+next_review_on = "2027-04-22"
+queries = ["Balance getbalance.com revenue ARR profitability burn runway 2024 2025 2026", "Balance fintech payment volume transaction volume credit losses delinquencies", "Balance employees headcount 2022 2023 2024 2025", "Balance Viola Credit facility utilization drawn"]
+source_ids = ["series-b-calcalist", "series-b-techcrunch", "credit-facility-axios", "balance-home"]
+summary = "The reviewed sources disclose an approximate employee count in July 2022 and a credit-facility commitment, but no current revenue, profitability, payment volume, credit-loss, facility-utilization or runway metric. The $350 million commitment is not treated as drawn debt."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-22T05:28:39+03:00"
+next_review_on = "2027-04-22"
+queries = ["Balance getbalance.com customers merchants marketplaces 2022", "Balance customers B-Stock 2025 partnership", "Balance Shopware partnership March 2026", "Balance RTP payments launch 2025", "Balance payments customer case studies"]
+source_ids = ["series-b-calcalist", "series-b-techcrunch", "balance-rtp-2025", "balance-bstock-2025", "balance-shopware-2026"]
+summary = "Public evidence includes a 2022 combined merchant/marketplace/customer figure, current company product claims, a 2025 RTP feature and B-Stock partnership, and a 2026 Shopware integration. Customer volume and partner deployment scale remain unknown."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "not_found"
+checked_at = "2026-10-22T05:28:39+03:00"
+next_review_on = "2027-04-22"
+queries = ["Balance getbalance.com patents patent payments credit underwriting", "site:patents.google.com/patent \"Balance Payments\" B2B", "site:patents.google.com \"getbalance.com\" payment credit", "Balance fintech startup patents trademark Balance Payments Bar Geron"]
+source_ids = ["balance-terms"]
+summary = "No patent or published application record was identified in the reviewed searches. Company terms describe software, platforms, algorithms and other IP generally but do not name a filing or establish registered patent ownership; the structured IP list is empty for that reason."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T05:28:39+03:00"
+next_review_on = "2027-04-22"
+queries = ["Balance B2B payments competitors Resolve TreviPay Hokodo", "Resolve B2B credit invoice accounts receivable product", "TreviPay B2B payments managed receivables official", "Hokodo digital trade account net terms official"]
+source_ids = ["resolve-product", "trevipay-about", "hokodo-trade", "balance-product"]
+summary = "Official competitor product materials show overlap in B2B terms, credit, payment and receivables workflows. Comparative performance, pricing, market share and customer win/loss evidence was not found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-22T05:28:39+03:00"
+next_review_on = "2027-04-22"
+queries = ["Balance getbalance.com defense government military customer contract", "Balance fintech security government contract Israel", "Balance B2B payments intelligence defense dual use"]
+source_ids = ["balance-home", "balance-bstock-2025", "balance-shopware-2026"]
+summary = "Reviewed product and partnership materials describe commercial B2B finance and payment functions only. No military, government-security or defense deployment was found; general fraud prevention and credit risk are not treated as proof of a defense use."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "The official site continues to describe and sell a current product suite, the careers page lists active roles, and Salesforce Ventures labels the company private; dated 2025–2026 product/partner releases corroborate continued operation."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["balance-home", "balance-careers", "balance-salesforce", "balance-rtp-2025", "balance-shopware-2026"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "TechCrunch reports that both founders were based in Israel at launch; Calcalist/CTech identifies the company as Israeli and reports a Tel Aviv office; current company careers lists Tel Aviv engineering and product roles."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["seed-techcrunch", "series-b-calcalist", "balance-careers"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.reported_total_raised"
+support = "direct"
+summary = "TechCrunch and Calcalist/CTech reported $87 million cumulative funding by the July 2022 Series B; the listed equity round amounts sum to $86.5 million, consistent with a rounded reported total."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["series-b-techcrunch", "series-b-calcalist"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2021.amount"
+support = "direct"
+summary = "TechCrunch reports the $5.5 million seed; Lightspeed's announcement confirms the seed round and lead investor."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["seed-techcrunch", "seed-lightspeed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2021.lead_investors"
+support = "direct"
+summary = "Lightspeed states it led Balance's seed round."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["seed-lightspeed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2021.participating_investors"
+support = "direct"
+summary = "Lightspeed names SciFi VC and Stripe, and TechCrunch names UpWest, as seed investors."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["seed-techcrunch", "seed-lightspeed"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.amount"
+support = "direct"
+summary = "TechCrunch reports Balance raised a $25 million Series A in August 2021."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["series-a-techcrunch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.lead_investors"
+support = "direct"
+summary = "TechCrunch identifies Ribbit Capital as the Series A lead."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["series-a-techcrunch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-a-2021.participating_investors"
+support = "direct"
+summary = "TechCrunch names the listed Series A participants."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["series-a-techcrunch"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.amount"
+support = "direct"
+summary = "TechCrunch and Calcalist/CTech report the $56 million Series B."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["series-b-techcrunch", "series-b-calcalist"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.lead_investors"
+support = "direct"
+summary = "TechCrunch and Calcalist/CTech identify Forerunner as the Series B lead."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["series-b-techcrunch", "series-b-calcalist"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.series-b-2022.participating_investors"
+support = "direct"
+summary = "TechCrunch and Calcalist/CTech name the listed Series B participants."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["series-b-techcrunch", "series-b-calcalist"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.credit-facility-2022.amount"
+support = "direct"
+summary = "Axios reports the $350 million Viola Credit facility; the company retrospective also describes the facility."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["credit-facility-axios", "credit-facility-company"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.credit-facility-2022.lead_investors"
+support = "direct"
+summary = "Axios identifies Viola Credit as provider of the facility."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["credit-facility-axios"]
+
+[[intelligence.research.claim_checks]]
+field_path = "financials.employees@2022-07.numeric_value"
+support = "direct"
+summary = "Calcalist/CTech reports around 60 employees in July 2022; the structured value is explicitly approximate and dated."
+verified_at = "2026-10-22T05:28:39+03:00"
+source_ids = ["series-b-calcalist"]

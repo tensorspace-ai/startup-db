@@ -1,0 +1,633 @@
+name = "Soda Labs"
+description = "Israeli cryptography startup building garbled-circuit multi-party computation infrastructure for confidential on-chain applications."
+detailed_description = """Soda Labs is an Israeli cryptography company developing Bubble, a privacy layer for blockchain applications based on garbled-circuit multi-party computation (GC-MPC). The company positions its system as an alternative to execution models that expose application inputs or rely on fully homomorphic encryption. Its October 2026 seed announcement describes a stack built from garbled circuits and standard AES/SHA-256 primitives that can run on ordinary cloud CPUs. This is a company description of its implementation; independent evaluation of its comparative security and cost claims remains limited.
+
+The company is legally registered in Israel as SODA BUBBLE LABS LTD (Israeli company number 516892551), with a registration date of November 20, 2023. Its website and LinkedIn profile identify Tel Aviv as its headquarters; a registry-derived profile lists a registered address in Oranit. Bubble is presented as a programmable confidentiality layer for financial and other smart-contract use cases. Soda Labs says it has deployed on COTI and supports Ethereum, Polygon, Arbitrum and Base, and its site reports a July 2026 benchmark of 500 confidential transactions per second end to end on Arbitrum across more than 15,000 transfers. These are vendor-reported product claims, not audited commercial results.
+
+The team is led by co-founders Avishay Yanai, CEO, and Meital Levy, CTO. Their academic and engineering backgrounds are relevant to the product: Yanai has a PhD in cryptography and secure MPC from Bar-Ilan University and prior enterprise MPC work at VMware; Levy has a PhD in algorithm optimization from Tel Aviv University and experience in distributed systems and cryptographic protocols. Their 2026 gcVM paper with collaborators describes publicly auditable MPC for private EVM-compatible computation. The paper is a research preprint, and the operational security, decentralization assumptions and production performance of the commercial service require separate diligence.
+
+Soda Labs announced a $3 million seed round on October 8, 2026, fully funded by Luxembourg-based NextBlock. It also received recognition as the first recipient of a COTI Foundation ecosystem growth grant in January 2024, but the grant amount to Soda was not disclosed; the $25 million figure in that announcement was the size of the overall COTI fund. No company-announced lifetime total, revenue, ARR, profitability or customer contract value was found. Soda reports COTI integration and pilots with Chainlink Labs and the European Central Bank Pioneer programme, while the latter pilot claims are currently supported by company material. Pilots and ecosystem usage do not establish paid customer adoption. The company also says products built with its tools are used by applications such as Zoniqx and PriveX; reported trading volume for PriveX is not Soda Labs revenue or a Soda-specific transaction count."""
+logo = "https://www.sodalabs.xyz/brand/soda-labs-lockup-horizontal-light.svg"
+website = "https://www.sodalabs.xyz"
+sector = "Cryptography; blockchain infrastructure; privacy-preserving computation"
+founded = "2023"
+headquarters = "Tel Aviv, Israel (registered address: Oranit, Israel)"
+employees = "2–10 (LinkedIn company-size band; not a reported exact headcount)"
+funding_stage = "Seed"
+entity_type = "startup"
+key_technologies = ["Garbled-circuit multi-party computation (GC-MPC)", "Confidential EVM-compatible computation", "Cryptographic protocol engineering"]
+use_cases = ["Confidential smart-contract execution", "Privacy-preserving on-chain finance", "Selective disclosure in tokenization and decentralized finance"]
+dual_use = false
+dual_use_description = "Soda Labs' disclosed product is confidential computation for on-chain financial and application data. Cryptographic privacy has general security relevance, but the reviewed public sources do not establish a defense, intelligence, military or government security deployment. The company's claimed ECB programme and Chainlink pilot are not evidence of defense use. The record therefore treats the product as commercial privacy infrastructure and does not assign a substantive defense dual-use thesis."
+stage = "early"
+risk = "high"
+risk_level = "high"
+investible = false
+priority_rank = 0
+potential_score = 62
+technology_score = 80
+market_score = 60
+team_score = 78
+dual_use_score = 15
+strategic_alignment_score = 68
+competitors = ["Zama", "Fhenix", "Arcium"]
+signals = ["October 2026 seed round announced", "Company-reported COTI deployment", "Two U.S. patent grants verified in reviewed records", "Company-reported Chainlink and ECB pilots"]
+investment_rationale = """Soda Labs addresses a real engineering constraint in blockchain applications: public execution makes many financial and identity workflows difficult to operate without exposing sensitive inputs. Its GC-MPC approach is a technically differentiated option in a category where FHE, trusted execution environments, zero-knowledge proofs and conventional access-controlled services all compete. A potentially attractive product wedge is allowing existing EVM-compatible applications to use confidential state without requiring a new application-specific privacy primitive. The company says Bubble is live with COTI and supports several EVM networks, but broad chain compatibility should be verified at the contract, tooling and production-operations levels rather than inferred from a product list.
+
+The seed round supplies disclosed early financing and a named lead investor, while the 2024 COTI Foundation grant provides evidence of earlier ecosystem support. The grant's amount and terms remain undisclosed, so it cannot be combined with the seed into a precise total raised. The financing evidence is too thin to assess capital efficiency, dilution, runway or follow-on financing needs. No public revenue, recurring revenue, gross margin, customer concentration or independently verified paid deployments were found. The company's stated plan to use seed proceeds for the next 12–18 months is a forward-looking plan, not a verified cash runway.
+
+The strongest potential commercial evidence is a product deployment connected to COTI and named downstream applications, plus pilots that could validate demand. The public record does not yet establish which deployments pay Soda Labs, how much private workload is Soda-specific, whether integrations are production workloads, or what users will pay for confidential execution. The reported 125 million figure appears on the company site as a confidential-transaction count, while COTI separately describes more than 125 million total network transactions since launch. Those quantities should not be treated as equivalent without a transparent metric definition and third-party attribution. The 500 transactions-per-second figure is a company benchmark on Arbitrum over a specified test, not evidence of sustained production throughput under adversarial load.
+
+Accordingly, the investment case rests on technical promise and the possibility that privacy becomes a required feature in tokenization, decentralized finance and institutional on-chain workflows. It does not yet rest on demonstrated recurring software revenue or a proven sales motion. Diligence should establish paying customer count, deployment scope, fees and renewal behavior; separate a partner's network-wide activity from workloads attributable to Soda; and quantify the performance/security tradeoffs of its GC-MPC design relative to alternatives. The undisclosed grant and seed instrument, latest cap table, actual runway, and third patent status also need primary documentation."""
+strategic_value = """If it works as described, confidential computation can expand the set of financial workflows that can use public or shared blockchain infrastructure. Token issuance, collateral management, settlement instructions, identity-linked eligibility and institutional trading may need selective disclosure: parties need to compute against data without publishing every input to the network. Soda Labs' strategy is to provide that capability as infrastructure for existing smart-contract environments, rather than market a standalone consumer application. That strategy can create leverage through integrations, developer tools and shared protocols, but it also exposes the company to the adoption and architecture decisions of host chains and ecosystem partners.
+
+COTI is both an early ecosystem relationship and a concentration risk. The COTI Foundation's grant and Soda's reported deployment establish a historical connection, but public evidence does not reveal the grant amount, exclusivity, commercial terms or the share of Soda's activity attributable to COTI. The company's claim that Bubble also supports Ethereum, Polygon, Arbitrum and Base could reduce single-network dependence if customers can use those deployments in production. Product documentation, independent workload measurements and customer references are needed to determine whether the deployment list translates into diversified demand.
+
+The January 2024 COTI grant, subsequent academic publication, patent grants and 2026 seed announcement form a plausible development chronology from research to product. The European Central Bank Pioneer programme claim could provide useful validation of a problem and prototype, but it should be treated as a pilot until the programme or a customer independently confirms scope, procurement and production status. Likewise, a completed Chainlink Labs pilot may signal technical fit without representing a commercial contract. These distinctions matter because pilots can consume engineering resources without creating recurring revenue.
+
+The company's strategic value will depend on whether it can make privacy composable, auditable and operationally dependable. Institutional users will require an explicit data-access model, key and participant governance, recovery behavior, auditability, monitoring, predictable latency, and clear responsibility when a computation fails. A cryptographic primitive alone is not sufficient. The company needs to show how its system handles collusion assumptions, sequencer or executor availability, upgrades, incident response, and independent audits in the exact current product configuration."""
+competitive_edge = """Soda Labs differentiates around garbled-circuit MPC for private EVM-compatible computation. Its gcVM work emphasizes public auditability of MPC execution, and the commercial product claims to use common cryptographic primitives and standard cloud CPUs. If the company can demonstrate a strong threat model with practical throughput and low integration burden, GC-MPC could be attractive for developers who need protected computation but do not want to move business logic into specialized hardware or a closed execution environment. Its founders' cryptography and distributed-systems backgrounds are a relevant capability advantage, and two U.S. patents identify formal work in MPC and blockchain mechanisms.
+
+The comparison is not simply a contest of raw throughput. Zama's fhEVM and Fhenix's confidential EVM approach use fully homomorphic encryption, allowing computation over encrypted data with a different performance, trust and programmability profile. Arcium offers MPC-based encrypted computation in the Solana ecosystem. Trusted execution environments, private database services, zero-knowledge proof systems and application-specific permissioned networks are also substitutes, especially when customers value simpler operations or selective disclosure more than general-purpose private computation. Soda must show where GC-MPC wins on end-to-end cost, privacy guarantees, composability and deployability, not only on an isolated benchmark.
+
+Independent audits provide useful but time-bounded evidence. Hacken's 2025 review of Soda/COTI components recorded numerous findings; the published summaries indicate most were resolved, with some accepted or mitigated. A separate go-ethereum scope describes a centralized operating model at that time and availability risks around its sequencer/executor arrangement. These are not proof of current defects, but they make the current architecture, remediation evidence, decentralization roadmap and re-audit status essential diligence. The company's own current security page says the service is independently audited, but the specific scope and date of the current production release should be reconciled against public reports.
+
+Intellectual property is an additional differentiator only if it protects commercially important implementation and is owned, maintained and enforceable. USPTO material corroborates two Soda Bubble Labs grants in April 2026; another blockchain virtual-machine application was pending in the reviewed patent data. The company website says three granted U.S. patents. This discrepancy needs a patent number and prosecution-status reconciliation. Patent counts alone do not demonstrate freedom to operate or technical defensibility."""
+stage_rationale = """Soda Labs fits an early-stage profile: a 2023 Israeli entity, a disclosed 2026 seed round, research output, product claims and ecosystem pilots, with no public recurring revenue or audited financial statements located. A dated LinkedIn profile places the company in the 2–10 employee band, but that is a platform range rather than verified headcount. The evidence supports a company progressing from cryptographic research to early deployment, not a mature commercial vendor. The stage label should move only with verifiable customer contracts, production usage attributable to Soda, repeatable sales and financial disclosure."""
+priority_rationale = """The legacy internal priority flag is left off. The company merits further tracking because it combines a technically specific privacy approach, experienced founders, a named seed investor, patents and an apparent live ecosystem deployment. The priority case is constrained by sparse financing history, no public unit economics, unverified customer conversion, reliance on partner ecosystems, a difficult-to-compare performance claim, unresolved patent-count discrepancy and audit questions about the earlier operating model. Priority should be revisited if independent customer evidence, current security attestations and a clear revenue model become public. This is a catalog signal, not an investment recommendation."""
+risk_factors = ["No public revenue, ARR, profitability, cash balance or audited accounts located.", "Company-reported transaction and benchmark figures are not independently attributable to Soda workloads or sustained production performance.", "COTI is an early ecosystem relationship; grant amount, economics and customer concentration are undisclosed.", "2025 audits reported findings, accepted items and an earlier centralized operating model; current release scope and remediation need verification.", "Company website claims three granted U.S. patents while USPTO and patent records reviewed corroborate two grants and one pending application.", "No disclosed round valuation, seed instrument, full cap table, exact headcount or customer contract values."]
+public_sources = [
+  { label = "Soda Labs homepage", url = "https://www.sodalabs.xyz/", description = "Official product, deployment and company-reported benchmark claims." },
+  { label = "Soda Labs About", url = "https://www.sodalabs.xyz/about", description = "Official company and founder biographies, programmes and patent claim." },
+  { label = "Soda Labs seed announcement", url = "https://www.sodalabs.xyz/news/seed-round-nextblock", description = "Official October 2026 seed round announcement and investor." },
+  { label = "Soda Labs case studies", url = "https://www.sodalabs.xyz/case-studies", description = "Company-reported deployment and pilot evidence." },
+  { label = "Soda Labs security", url = "https://www.sodalabs.xyz/security", description = "Company security model, audit and patent claims." },
+  { label = "LinkedIn company profile", url = "https://www.linkedin.com/company/sodalabs-security", description = "Company location and employee-size band." },
+  { label = "IACR ePrint gcVM paper", url = "https://eprint.iacr.org/2026/170", description = "Technical preprint by Soda Labs founders and collaborators." },
+  { label = "Hacken MPC audit", url = "https://hacken.io/audits/soda-labs/l1-soda-labs-mpc-jan2025/", description = "Independent scoped audit findings and reported remediation." },
+  { label = "Hacken go-ethereum audit", url = "https://hacken.io/audits/soda-labs/l1-soda-labs-goethereum-feb2025/", description = "Independent audit of an earlier Soda/COTI integration scope." },
+  { label = "COTI memorandum", url = "https://coti.io/memorandum/", description = "Partner description of COTI privacy technology and network-wide transaction count." },
+  { label = "COTI garbled circuits article", url = "https://coti.io/blog/garbled-circuits-explained/", description = "Partner technical explanation and earlier gcVM benchmark context." },
+  { label = "COTI ecosystem grant announcement", url = "https://decrypt.co/213341/coti-launches-25m-ecosystem-growth-fund-to-accelerate-pr", description = "Chainwire-republished announcement of COTI's overall fund and Soda as first recipient." },
+  { label = "Israel Innovation Authority", url = "https://innovationisrael.org.il/en/importWinner/516892551/", description = "Israeli company number and government programme listing." },
+  { label = "CheckID company profile", url = "https://en.checkid.co.il/company/SODA%2BBUBBLE%2BLABS%2BLTD-0O3jWW8-516892551", description = "Registry-derived legal identity, active status and registered address." },
+  { label = "USPTO patent grant 12603757", url = "https://patents.google.com/patent/US12603757B2/en", description = "Patent bibliographic record for Soda Bubble Labs MPC patent." },
+  { label = "USPTO patent grant 12603793", url = "https://patents.google.com/patent/US12603793B2/en", description = "Patent bibliographic record for Soda Bubble Labs blockchain patent." },
+  { label = "Patent application 20250377922", url = "https://patents.google.com/patent/US20250377922A1/en", description = "Patent application record for confidential blockchain VM data." },
+  { label = "USPTO Patentee Index, 2026 week 15", url = "https://patentsgazette.uspto.gov/week15/OG/patentee/alphaS_Utility.html", description = "Official patent gazette listing two Soda Bubble Labs grants." },
+  { label = "Fhenix", url = "https://www.fhenix.io/", description = "Official FHE-based confidential EVM comparator." },
+  { label = "Zama fhEVM", url = "https://www.zama.ai/products-and-services/fhevm", description = "Official fully homomorphic encryption EVM comparator." },
+  { label = "Arcium build", url = "https://www.arcium.com/build", description = "Official MPC encrypted-computation comparator in the Solana ecosystem." },
+  { label = "NextBlock investments", url = "https://nextblock.vc/investments", description = "Investor background and portfolio context." },
+  { label = "CB Insights Soda Labs profile", url = "https://www.cbinsights.com/company/soda-labs", description = "Third-party profile used only to record a conflicting and inaccurate funding attribution." }
+]
+crawled_at = "2026-10-22T04:01:18Z"
+updated_at = "2026-10-22T04:01:18Z"
+
+[intelligence]
+schema_version = 2
+financials = []
+
+[intelligence.company]
+company_id = "il-soda-bubble-labs"
+legal_name = "SODA BUBBLE LABS LTD"
+aliases = ["Soda Bubble Labs Ltd.", "סודה באבלאבס בע\"מ"]
+operating_status = "active"
+founded_on = "2023-11-20"
+country_of_incorporation = "Israel"
+business_model = "B2B cryptographic infrastructure and licensing/service model for confidential computation in smart-contract applications; commercial terms and pricing are undisclosed."
+products = ["Bubble privacy layer", "GC-MPC / gcVM confidential EVM computation"]
+locations = ["Tel Aviv, Israel", "Registered address: Oranit, Israel"]
+registry_identifiers = [{ scheme = "Israeli company number", jurisdiction = "Israel", identifier = "516892551", source_ids = ["iia", "checkid"] }]
+source_ids = ["company_about", "seed_announcement", "iia", "checkid", "linkedin"]
+
+[intelligence.israel_connection]
+status = "confirmed"
+basis = ["incorporated_in_israel"]
+summary = "Israeli private company SODA BUBBLE LABS LTD, company number 516892551, registered in Israel; the company and its founders also identify Tel Aviv as its headquarters."
+as_of = "2026-10-22"
+source_ids = ["iia", "checkid", "linkedin"]
+
+[intelligence.funding]
+status = "reported"
+history_status = "partial"
+coverage_through = "2026-10-08"
+summary = "Official sources document a 2026 $3 million seed round funded by NextBlock and a 2024 COTI Foundation ecosystem grant whose amount to Soda was not disclosed. Searches did not locate a company-announced lifetime raised total, valuation, debt facility, or other priced financing. A third-party profile misattributes the $25 million size of COTI's overall fund to Soda; the original announcement does not disclose Soda's grant amount."
+
+[[intelligence.funding.rounds]]
+id = "coti-ecosystem-grant-2024"
+round_type = "grant"
+instrument = "grant"
+announced_on = "2024-01-18"
+status = "announced"
+amount_status = "undisclosed"
+amount_scope = "unknown"
+lead_investors = ["COTI Foundation"]
+source_ids = ["coti_grant"]
+notes = "COTI named Soda Labs as the first recipient of its $25 million ecosystem growth fund. The $25 million is the overall fund size, not Soda's grant amount. Treat COTI Foundation as grantor, not as an equity investor; grant terms and amount to Soda were not disclosed."
+
+[[intelligence.funding.rounds]]
+id = "seed-2026"
+round_type = "seed"
+instrument = "unknown"
+announced_on = "2026-10-08"
+status = "closed"
+amount_status = "reported"
+amount = 3000000
+currency = "USD"
+amount_scope = "round"
+lead_investors = ["NextBlock"]
+source_ids = ["seed_announcement"]
+notes = "Company announced a closed $3 million seed round fully funded by NextBlock. Equity/security instrument, valuation, close date more precise than announcement, and terms were not disclosed."
+
+[[intelligence.people]]
+name = "Avishay Yanai"
+role = "Co-founder and CEO"
+is_founder = true
+current = true
+background = "Company biography says he holds a PhD in cryptography and secure multi-party computation from Bar-Ilan University and spent five years working on enterprise MPC at VMware. The gcVM preprint lists him as an author."
+source_ids = ["company_about", "iacr_paper"]
+
+[[intelligence.people]]
+name = "Meital Levy"
+role = "Co-founder and CTO"
+is_founder = true
+current = true
+background = "Company biography says she holds a PhD in algorithm optimization from Tel Aviv University and has 15 years of distributed-systems and cryptographic-protocol experience; the company credits her with leading development of SCAPI. The gcVM preprint lists her as an author."
+source_ids = ["company_about", "iacr_paper"]
+
+[[intelligence.investors]]
+name = "NextBlock"
+investor_type = "vc"
+website = "https://nextblock.vc"
+relationship = "current"
+round_ids = ["seed-2026"]
+source_ids = ["seed_announcement", "nextblock"]
+
+[[intelligence.investors]]
+name = "COTI Foundation"
+investor_type = "other"
+website = "https://coti.io"
+relationship = "historical"
+round_ids = ["coti-ecosystem-grant-2024"]
+source_ids = ["coti_grant", "coti_memorandum"]
+
+[intelligence.ownership]
+status = "reported"
+cap_table_status = "undisclosed"
+shareholders = ["Avishay Yanai", "Meital Levy", "VLT Partners", "Nir Zion"]
+summary = "Registry-derived profile lists Avishay Yanai, Meital Levy, VLT Partners and Nir Zion as shareholders in its March 2026 update, without percentages or a complete cap table. A later July 2026 share allocation and October seed round mean that snapshot is not a current ownership schedule. No disclosed parent, acquisition, sale or exit was found."
+source_ids = ["checkid"]
+deals = []
+holdings = []
+
+[[intelligence.traction]]
+kind = "partnership"
+date = "2025-03"
+description = "COTI privacy network integration: Soda Labs says its privacy technology has been live with COTI since March 2025. COTI describes Soda as its GC-MPC technology partner and reports network-wide transaction activity; public material does not isolate Soda-attributable private transactions or establish Soda revenue."
+source_ids = ["case_studies", "coti_memorandum", "seed_announcement"]
+
+[[intelligence.traction]]
+kind = "product"
+date = "2026-07"
+description = "Bubble confidential throughput benchmark: Company reports 500 confidential transactions per second end to end on Arbitrum over more than 15,000 transfers. Test configuration, independent reproduction, sustained-load behavior and relation to the February 2026 gcVM preprint's 83 measured/500 projected results need clarification."
+source_ids = ["company_home", "iacr_paper", "coti_technical"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Chainlink Labs pilot: Soda Labs says it completed a pilot with Chainlink Labs. No public evidence located that it converted to a paid production contract."
+source_ids = ["case_studies", "company_about"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "European Central Bank Pioneer programme: Soda Labs says it was selected for and presented work through the ECB Pioneer programme. Scope, procurement, payment and deployment are not independently established in the sources reviewed."
+source_ids = ["case_studies", "company_about"]
+
+[[intelligence.traction]]
+kind = "partnership"
+description = "Zoniqx and PriveX applications: Soda's seed announcement says products built with its tooling support Zoniqx and PriveX. The announcement cites PriveX trading volume above $20 billion, which is a platform-reported figure and not Soda revenue or Soda-specific transaction volume."
+source_ids = ["seed_announcement"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "Granted U.S. patent US12603757B2, Garbling scheme-based secure multi-party computation (MPC), granted 2026-04-14; assignee Soda Bubble Labs Ltd; inventors Avishay Yanai and Meital Levy."
+source_ids = ["patent_mpc", "uspto_gazette"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "Granted U.S. patent US12603793B2, Oracle-driven blockchain, granted 2026-04-14; assignee Soda Bubble Labs Ltd; inventors Avishay Yanai, Meital Levy and Asaf Kozovsky."
+source_ids = ["patent_oracle", "uspto_gazette"]
+
+[[intelligence.intellectual_property]]
+kind = "patent"
+description = "Pending U.S. application US18/738,377, published as US20250377922A1 on 2025-12-11, Protecting confidential data in a blockchain virtual machine; assignee Soda Bubble Labs Ltd."
+source_ids = ["patent_vm"]
+
+[[intelligence.comparables]]
+name = "Zama"
+website = "https://www.zama.ai/products-and-services/fhevm"
+rationale = "FHE-based confidential EVM tooling is a substitute technical approach to encrypted smart-contract computation. Zama focuses on fully homomorphic encryption and its associated developer/protocol stack, while Soda markets garbled-circuit MPC. Performance, trust assumptions and production integration need like-for-like testing."
+differentiation = "Zama focuses on fully homomorphic encryption and its associated developer/protocol stack, while Soda markets garbled-circuit MPC. Performance, trust assumptions and production integration need like-for-like testing."
+source_ids = ["zama"]
+
+[[intelligence.comparables]]
+name = "Fhenix"
+website = "https://www.fhenix.io/"
+rationale = "Fhenix is another EVM confidentiality approach using FHE; Soda's stated distinction is GC-MPC and a claimed cross-chain layer."
+differentiation = "Fhenix uses FHE, while Soda markets GC-MPC and a claimed cross-chain privacy layer."
+source_ids = ["fhenix"]
+
+[[intelligence.comparables]]
+name = "Arcium"
+website = "https://www.arcium.com/build"
+rationale = "Arcium is closer in broad MPC category but differs in ecosystem and deployment model; Soda targets EVM compatibility and GC-MPC."
+differentiation = "Arcium is oriented to the Solana ecosystem; Soda targets EVM compatibility and GC-MPC."
+source_ids = ["arcium"]
+
+[intelligence.research]
+researched_at = "2026-10-22T04:01:18Z"
+search_queries = [
+  "Soda Labs official company about founders Bubble sodalabs.xyz",
+  "Soda Labs funding raised seed Series A investors valuation acquired",
+  "Soda Labs NextBlock $3 million seed October 2026",
+  "Soda Labs COTI grant 25 million ecosystem fund January 2024 Soda first recipient",
+  "SODA BUBBLE LABS LTD 516892551 Israel company registration Hebrew סודה באבלאבס",
+  "Soda Labs team founder Avishay Yanai Meital Levy revenue customers hiring headcount",
+  "Soda Labs patents Avishay Yanai Meital Levy Soda Bubble Labs USPTO",
+  "Soda Labs financials revenue ARR profitability burn runway customers contracts",
+  "Soda Labs GC-MPC competitors Zama Fhenix Arcium confidential EVM",
+  "Soda Labs GC-MPC defense security intelligence government customer military deployment",
+  "Soda Labs COTI transactions 125 million 500 confidential transactions per second",
+  "Soda Labs Chainlink pilot ECB Pioneer programme COTI deployment audit"
+]
+topics_checked = ["identity", "funding", "investors", "team", "ownership", "financials", "traction", "intellectual_property", "competition", "dual_use"]
+conflicts = [
+  "funding: CB Insights associates $25 million with Soda Labs/COTI in January 2024. The original COTI announcement says $25 million was the total ecosystem growth fund and names Soda as the first recipient without stating Soda's allocation. The company-level amount remains undisclosed and is not entered as a numeric round. Sources: cbinsights, coti_grant.",
+  "intellectual_property: Soda Labs' website says it has three granted U.S. patents. The official April 2026 USPTO gazette and records reviewed identify two grants; a third relevant application, US18/738,377, is listed as pending. A third grant number or updated prosecution record was not located. Sources: company_about, company_security, uspto_gazette, patent_mpc, patent_oracle, patent_vm."
+]
+gaps = [
+  "funding: No company-announced lifetime funding total, seed instrument, valuation, or grant allocation was found. The COTI grant amount and terms remain undisclosed; do not treat the $25 million fund size as Soda funding. Sources: seed_announcement, coti_grant.",
+  "investors: Beyond NextBlock as seed funder and COTI Foundation as grantor, no complete investor syndicate or current private cap table was public. Registry names are a stale shareholder snapshot without percentages. Sources: seed_announcement, coti_grant, checkid.",
+  "team: Founders are identified, but current executive roster, exact headcount, employee retention and hiring trend were not verified; LinkedIn provides only a 2–10 band. Sources: company_about, linkedin.",
+  "ownership: Shareholding percentages, fully diluted cap table, current post-seed ownership, parent-company status and any undisclosed security rights were not found. Sources: checkid, seed_announcement.",
+  "financials: No dated revenue/ARR, profitability, burn, cash, runway, audited accounts or customer contract values were publicly disclosed. Sources: seed_announcement, linkedin.",
+  "traction: Paid customer count, contract values, renewal rates, production workload attribution and Soda-specific transaction definitions remain undisclosed; pilots are not treated as paying production customers. Sources: case_studies, coti_memorandum, seed_announcement.",
+  "intellectual_property: A third patent grant number matching the company claim was not located; freedom-to-operate, assignments, maintenance status and full claim scope were not evaluated. Sources: company_security, uspto_gazette, patent_vm.",
+  "competition: No independently reproduced, like-for-like production benchmark, customer win/loss evidence or comparative total-cost study was found across GC-MPC, FHE, TEE and proof-based alternatives. Sources: iacr_paper, zama, fhenix, arcium.",
+  "dual_use: No public defense, intelligence, military or security-agency contract, deployment or customer reference was found; no defense use is inferred from generic cryptographic capability. Sources: company_home, case_studies."
+]
+diligence_questions = [
+  "What share of the cited 125 million transactions and 500 cTPS benchmark is attributable to Soda's private workloads, and can a customer or independent evaluator reproduce those measures on the current production release?",
+  "What are the current GC-MPC threat model, collusion and availability assumptions, and which 2025 Hacken findings were fixed or accepted in the exact version now deployed? Has the production architecture changed from the audited sequencer/executor model?",
+  "Which integrations have signed paid production contracts, what are their contract value and renewal terms, and what proportion of usage or revenue depends on COTI?",
+  "What security or equity instrument did NextBlock fund, what was the seed valuation and post-money cap table, and how much was the 2024 COTI grant?",
+  "What is the patent number and current status of the company's claimed third granted U.S. patent, and do the assignments and claims cover the shipped Bubble implementation?"
+]
+
+[[intelligence.research.sources]]
+id = "company_home"
+url = "https://www.sodalabs.xyz/"
+title = "Soda Labs: Confidential infrastructure for on-chain finance"
+publisher = "Soda Labs"
+kind = "company"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Official brand and Bubble product positioning", "Company-reported supported networks and 125 million transaction claim", "Company-reported July 2026 Arbitrum throughput benchmark", "Company statement that it has three granted U.S. patents"]
+
+[[intelligence.research.sources]]
+id = "company_about"
+url = "https://www.sodalabs.xyz/about"
+title = "About Soda Labs"
+publisher = "Soda Labs"
+kind = "company"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Founder names, roles and biographies", "Company-reported pilot/programme participation", "Company statement about three granted U.S. patents"]
+
+[[intelligence.research.sources]]
+id = "seed_announcement"
+url = "https://www.sodalabs.xyz/news/seed-round-nextblock"
+title = "Soda Labs raises $3 million seed round from NextBlock"
+publisher = "Soda Labs"
+kind = "company"
+published_on = "2026-10-08"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Closed $3 million seed round fully funded by NextBlock", "Company product and COTI deployment claims", "Company-reported downstream applications and pilot pipeline", "Seed proceeds intended to fund the next 12 to 18 months"]
+
+[[intelligence.research.sources]]
+id = "case_studies"
+url = "https://www.sodalabs.xyz/case-studies"
+title = "Soda Labs case studies"
+publisher = "Soda Labs"
+kind = "company"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Company-reported COTI deployment since March 2025", "Company-reported 125 million-plus confidential transactions", "Company-reported Chainlink pilot and ECB Pioneer programme"]
+
+[[intelligence.research.sources]]
+id = "company_security"
+url = "https://www.sodalabs.xyz/security"
+title = "Soda Labs security"
+publisher = "Soda Labs"
+kind = "company"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Company security model and audit assertion", "Company statement of three granted U.S. patents", "Company bug-bounty programme"]
+
+[[intelligence.research.sources]]
+id = "linkedin"
+url = "https://www.linkedin.com/company/sodalabs-security"
+title = "Soda Labs company profile"
+publisher = "LinkedIn"
+kind = "directory"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["LinkedIn lists Tel Aviv as company location", "LinkedIn reports a 2 to 10 employee-size band", "Profile links company website"]
+
+[[intelligence.research.sources]]
+id = "iacr_paper"
+url = "https://eprint.iacr.org/2026/170"
+title = "gcVM: Publicly Auditable MPC via Garbled Circuits with Applications to Private EVM-Compatible Computation"
+publisher = "IACR Cryptology ePrint Archive"
+kind = "other"
+published_on = "2026-02-05"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Paper authors include Avishay Yanai and Meital Levy", "Preprint reports 83 measured confidential transactions per second and 500 projected", "Paper describes publicly auditable garbled-circuit MPC for private EVM computation"]
+
+[[intelligence.research.sources]]
+id = "hacken_mpc"
+url = "https://hacken.io/audits/soda-labs/l1-soda-labs-mpc-jan2025/"
+title = "Soda Labs MPC audit"
+publisher = "Hacken"
+kind = "other"
+published_on = "2025-08-04"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Audit reports 55 findings, 53 resolved and 2 accepted", "Report documents historical issues and post-fix scope"]
+
+[[intelligence.research.sources]]
+id = "hacken_evm"
+url = "https://hacken.io/audits/soda-labs/l1-soda-labs-goethereum-feb2025/"
+title = "Soda Labs go-ethereum integration audit"
+publisher = "Hacken"
+kind = "other"
+published_on = "2025-08-12"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Audit reports 15 findings with mixed resolved, accepted and mitigated status", "Audit describes earlier centralized sequencer and executor availability assumptions"]
+
+[[intelligence.research.sources]]
+id = "coti_memorandum"
+url = "https://coti.io/memorandum/"
+title = "COTI technical memorandum"
+publisher = "COTI"
+kind = "company"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["COTI describes its privacy system as developed with Soda Labs", "COTI reports more than 125 million total network transactions since launch, not a Soda-attributed private transaction total"]
+
+[[intelligence.research.sources]]
+id = "coti_technical"
+url = "https://coti.io/blog/garbled-circuits-explained/"
+title = "Garbled circuits explained"
+publisher = "COTI"
+kind = "company"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["COTI describes GC-MPC technology partnership", "Earlier testnet result is reported as 83 peak and 500 projected transactions per second, distinct from later company benchmark"]
+
+[[intelligence.research.sources]]
+id = "coti_grant"
+url = "https://decrypt.co/213341/coti-launches-25m-ecosystem-growth-fund-to-accelerate-pr"
+title = "COTI launches $25M ecosystem growth fund"
+publisher = "Decrypt (reprinting Chainwire announcement)"
+kind = "media"
+published_on = "2024-01-18"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["COTI Foundation announced an overall $25 million ecosystem growth fund", "Soda Labs named as the first grant recipient", "Announcement does not disclose the amount allocated to Soda"]
+
+[[intelligence.research.sources]]
+id = "iia"
+url = "https://innovationisrael.org.il/en/importWinner/516892551/"
+title = "Israel Innovation Authority company/programme record 516892551"
+publisher = "Israel Innovation Authority"
+kind = "government"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Israeli company number 516892551 associated with SODA BUBBLE LABS LTD", "Government programme listing with no additional funding amount shown"]
+
+[[intelligence.research.sources]]
+id = "checkid"
+url = "https://en.checkid.co.il/company/SODA%2BBUBBLE%2BLABS%2BLTD-0O3jWW8-516892551"
+title = "SODA BUBBLE LABS LTD company profile"
+publisher = "CheckID (registry-derived data)"
+kind = "directory"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Legal name, Israel company number 516892551 and active status", "Registration date November 20, 2023 and registered Oranit address", "Registry-derived shareholder names shown on profile as of March 2026", "Later July 2026 share-allocation event means the displayed shareholder snapshot is not a current cap table"]
+
+[[intelligence.research.sources]]
+id = "patent_mpc"
+url = "https://patents.google.com/patent/US12603757B2/en"
+title = "US12603757B2 Garbling scheme-based secure multi-party computation (MPC)"
+publisher = "Google Patents (USPTO bibliographic data)"
+kind = "filing"
+published_on = "2026-04-14"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Patent granted April 14, 2026", "Soda Bubble Labs Ltd identified as assignee", "Avishay Yanai and Meital Levy named inventors"]
+
+[[intelligence.research.sources]]
+id = "patent_oracle"
+url = "https://patents.google.com/patent/US12603793B2/en"
+title = "US12603793B2 Oracle-driven blockchain"
+publisher = "Google Patents (USPTO bibliographic data)"
+kind = "filing"
+published_on = "2026-04-14"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Patent granted April 14, 2026", "Soda Bubble Labs Ltd identified as assignee", "Avishay Yanai, Meital Levy and Asaf Kozovsky named inventors"]
+
+[[intelligence.research.sources]]
+id = "patent_vm"
+url = "https://patents.google.com/patent/US20250377922A1/en"
+title = "US20250377922A1 Protecting confidential data in a blockchain virtual machine"
+publisher = "Google Patents (USPTO bibliographic data)"
+kind = "filing"
+published_on = "2025-12-11"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Application US18/738,377 published December 11, 2025", "Application listed as pending in the patent record reviewed", "Soda Bubble Labs Ltd identified as assignee"]
+
+[[intelligence.research.sources]]
+id = "uspto_gazette"
+url = "https://patentsgazette.uspto.gov/week15/OG/patentee/alphaS_Utility.html"
+title = "Official Gazette, week 15 2026, patentee index S"
+publisher = "United States Patent and Trademark Office"
+kind = "government"
+published_on = "2026-04-14"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Official patent gazette lists grants US12603757 and US12603793 for Soda Bubble Labs", "Gazette evidence reviewed corroborates two grants, not the company's claim of three grants"]
+
+[[intelligence.research.sources]]
+id = "fhenix"
+url = "https://www.fhenix.io/"
+title = "Fhenix confidential smart contracts"
+publisher = "Fhenix"
+kind = "other"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Fhenix describes FHE-based confidential EVM technology"]
+
+[[intelligence.research.sources]]
+id = "zama"
+url = "https://www.zama.ai/products-and-services/fhevm"
+title = "fhEVM"
+publisher = "Zama"
+kind = "other"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Zama describes fully homomorphic encryption tools for confidential EVM computation"]
+
+[[intelligence.research.sources]]
+id = "arcium"
+url = "https://www.arcium.com/build"
+title = "Build with Arcium"
+publisher = "Arcium"
+kind = "other"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Arcium describes MPC encrypted computation for its developer ecosystem"]
+
+[[intelligence.research.sources]]
+id = "nextblock"
+url = "https://nextblock.vc/investments"
+title = "Investments"
+publisher = "NextBlock"
+kind = "investor"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Investor website and portfolio context for NextBlock"]
+
+[[intelligence.research.sources]]
+id = "cbinsights"
+url = "https://www.cbinsights.com/company/soda-labs"
+title = "Soda Labs company profile"
+publisher = "CB Insights"
+kind = "directory"
+accessed_at = "2026-10-22T03:55:58Z"
+claims = ["Third-party database has inconsistent company identity/location and funding attribution", "Profile's COTI association was checked against original COTI grant announcement and not used as evidence of a $25 million Soda financing"]
+
+[[intelligence.research.topic_checks]]
+topic = "identity"
+status = "reported"
+checked_at = "2026-10-22T03:55:58Z"
+next_review_on = "2027-04-22"
+queries = ["SODA BUBBLE LABS LTD 516892551", "Soda Labs official about founders Bubble", "Soda Labs headquarters Tel Aviv"]
+source_ids = ["company_about", "iia", "checkid", "linkedin"]
+summary = "Confirmed the official sodalabs.xyz identity, Israeli legal entity and registration number; disambiguated it from unrelated same-name businesses."
+
+[[intelligence.research.topic_checks]]
+topic = "funding"
+status = "reported"
+checked_at = "2026-10-22T03:55:58Z"
+next_review_on = "2027-04-22"
+queries = ["Soda Labs funding raised seed Series A investors valuation acquired", "Soda Labs NextBlock $3 million seed October 2026", "Soda Labs COTI grant 25 million January 2024"]
+source_ids = ["seed_announcement", "coti_grant", "cbinsights"]
+summary = "Found the 2026 $3 million seed and a 2024 grant with undisclosed company allocation; no company-announced cumulative total or valuation found. Resolved the $25 million discrepancy as the overall COTI fund size, not Soda proceeds."
+
+[[intelligence.research.topic_checks]]
+topic = "investors"
+status = "reported"
+checked_at = "2026-10-22T03:55:58Z"
+next_review_on = "2027-04-22"
+queries = ["Soda Labs NextBlock investors portfolio", "Soda Labs COTI Foundation grant investor", "Soda Labs cap table shareholders"]
+source_ids = ["seed_announcement", "nextblock", "coti_grant", "checkid"]
+summary = "NextBlock is named as sole seed funder; COTI Foundation is documented as grantor, not equity investor. Full investor syndicate and private cap table are undisclosed."
+
+[[intelligence.research.topic_checks]]
+topic = "team"
+status = "reported"
+checked_at = "2026-10-22T03:55:58Z"
+next_review_on = "2027-04-22"
+queries = ["Soda Labs team founder Avishay Yanai Meital Levy", "Avishay Yanai VMware MPC Bar-Ilan", "Meital Levy Soda Labs distributed systems SCAPI"]
+source_ids = ["company_about", "iacr_paper", "linkedin"]
+summary = "Verified co-founders and roles from company biographies and academic paper authorship. Beyond founders, public role histories are incomplete; LinkedIn employee names do not establish executive roles."
+
+[[intelligence.research.topic_checks]]
+topic = "ownership"
+status = "reported"
+checked_at = "2026-10-22T03:55:58Z"
+next_review_on = "2027-04-22"
+queries = ["SODA BUBBLE LABS LTD shareholders 516892551", "Soda Labs acquired acquisition ownership parent company", "Soda Bubble Labs July 2026 share allocation"]
+source_ids = ["checkid", "iia"]
+summary = "Registry-derived listing provides shareholder names only as of March 2026; no percentages or current cap table. A later share allocation and subsequent seed round make the snapshot stale. No acquisition or parent found."
+
+[[intelligence.research.topic_checks]]
+topic = "financials"
+status = "no_public_disclosure"
+checked_at = "2026-10-22T03:55:58Z"
+next_review_on = "2027-04-22"
+queries = ["Soda Labs revenue ARR profitability burn runway customers contracts", "Soda Labs financial statements revenue", "Soda Labs employee headcount LinkedIn"]
+source_ids = ["seed_announcement", "linkedin", "checkid"]
+summary = "No revenue, ARR, profitability, burn, cash or runway figures found. LinkedIn provides only a 2–10 employee band. The company's 12–18 month proceeds plan is not an audited runway metric."
+
+[[intelligence.research.topic_checks]]
+topic = "traction"
+status = "reported"
+checked_at = "2026-10-22T03:55:58Z"
+next_review_on = "2027-04-22"
+queries = ["Soda Labs customers COTI deployment confidential transactions", "Soda Labs Chainlink pilot ECB Pioneer customers", "Soda Labs Zoniqx PriveX production deployment"]
+source_ids = ["case_studies", "seed_announcement", "coti_memorandum", "coti_technical"]
+summary = "Found company-reported COTI deployment, pilots, downstream application references and benchmark claims. Paid contracts and Soda-attributed workload volumes are not public; COTI's network-wide total is distinct."
+
+[[intelligence.research.topic_checks]]
+topic = "intellectual_property"
+status = "reported"
+checked_at = "2026-10-22T03:55:58Z"
+next_review_on = "2027-04-22"
+queries = ["Soda Bubble Labs patents Avishay Yanai Meital Levy", "USPTO Soda Bubble Labs patent grants 2026", "Soda Labs three granted patents"]
+source_ids = ["patent_mpc", "patent_oracle", "patent_vm", "uspto_gazette", "company_security"]
+summary = "Verified two U.S. grants and one pending application in the reviewed records. Company says three U.S. patents are granted; the third grant identifier was not located."
+
+[[intelligence.research.topic_checks]]
+topic = "competition"
+status = "reported"
+checked_at = "2026-10-22T03:55:58Z"
+next_review_on = "2027-04-22"
+queries = ["confidential EVM FHE Zama Fhenix official", "Arcium MPC encrypted computation official", "Soda Labs GC-MPC alternatives confidential smart contracts"]
+source_ids = ["zama", "fhenix", "arcium", "iacr_paper"]
+summary = "Compared Soda's stated GC-MPC approach with FHE-based Zama/Fhenix, MPC-oriented Arcium and broader confidential-computing substitutes. No independent like-for-like benchmark or customer switching evidence found."
+
+[[intelligence.research.topic_checks]]
+topic = "dual_use"
+status = "not_found"
+checked_at = "2026-10-22T03:55:58Z"
+next_review_on = "2027-04-22"
+queries = ["Soda Labs GC-MPC defense security intelligence government customer military deployment", "Soda Labs defense contract security agency", "Soda Labs government procurement dual use"]
+source_ids = ["company_home", "case_studies", "coti_memorandum"]
+summary = "No public evidence found of defense, intelligence, military or security-agency deployment or contract. The product has general cryptographic-security relevance, but no substantive defense dual-use thesis is supported."
+
+[[intelligence.research.claim_checks]]
+field_path = "company.operating_status"
+support = "direct"
+summary = "Company's October 2026 seed announcement describes ongoing operations and product; registry-derived profile lists the Israeli entity as active."
+verified_at = "2026-10-22T03:55:58Z"
+source_ids = ["seed_announcement", "checkid"]
+
+[[intelligence.research.claim_checks]]
+field_path = "israel_connection"
+support = "direct"
+summary = "Israel Innovation Authority record associates company number 516892551 with SODA BUBBLE LABS LTD; registry-derived profile gives Israeli registration/address and LinkedIn lists Tel Aviv."
+verified_at = "2026-10-22T03:55:58Z"
+source_ids = ["iia", "checkid", "linkedin"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.amount"
+support = "direct"
+summary = "Soda Labs' dated October 8 announcement states that the company closed a $3 million seed round."
+verified_at = "2026-10-22T03:55:58Z"
+source_ids = ["seed_announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.seed-2026.lead_investors"
+support = "direct"
+summary = "The same company announcement states the round was fully funded by NextBlock."
+verified_at = "2026-10-22T03:55:58Z"
+source_ids = ["seed_announcement"]
+
+[[intelligence.research.claim_checks]]
+field_path = "funding.rounds.coti-ecosystem-grant-2024.lead_investors"
+support = "direct"
+summary = "The COTI Foundation announcement names Soda Labs as first recipient of its ecosystem growth grant; it does not disclose Soda's grant amount."
+verified_at = "2026-10-22T03:55:58Z"
+source_ids = ["coti_grant"]
+
+[[intelligence.research.claim_checks]]
+field_path = "ownership.shareholders"
+support = "direct"
+summary = "Registry-derived profile lists Avishay Yanai, Meital Levy, VLT Partners and Nir Zion as shareholders in its March 2026 snapshot, without percentages; later activity means it is not a current cap table."
+verified_at = "2026-10-22T03:55:58Z"
+source_ids = ["checkid"]
